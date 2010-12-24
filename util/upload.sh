@@ -42,8 +42,7 @@ if [ "$1" = "-h" ] || [ "$1" = "--help" ]; then
   usage 0
 fi
 
-dest="stelweb:/home/users/m/ma/matthewg42/htdocs/"
-#dest="stelweb:/home/groups/s/st/stellarium/htdocs/"
+dest="stelweb:/home/groups/s/st/stellarium/htdocs/"
 src="./*"
 if [ $# -gt 0 ]; then
   src="$@"
