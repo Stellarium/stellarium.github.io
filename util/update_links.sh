@@ -34,7 +34,7 @@ for f in "$@"; do
   sed -i~ \
     -e 's%"http://.*exe"%"http://downloads.sourceforge.net/stellarium/stellarium-0.10.6.1.exe"%' \
     -e 's%"http://.*\.tar\.gz"%"http://downloads.sourceforge.net/stellarium/stellarium-0.10.6.1.tar.gz"%' \
-    -e 's%"http://.*dmg"%"http://downloads.sourceforge.net/stellarium/stellarium-0.10.5.dmg"%' \
+    -e 's%"http://.*dmg"%"http://downloads.sourceforge.net/stellarium/stellarium-0.10.6-Intel.dmg"%' \
     "$f"
 done
 
