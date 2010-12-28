@@ -8,7 +8,7 @@
 <link rel="shortcut icon" href="../favicon.ico" type="image/x-icon" />
 <link rel="stylesheet" href="../css/stellarium.css" type="text/css" media="screen" />
 <!--[if lt IE 7.]>
-<script defer type="text/javascript" src="pngfix.js"></script>
+<script defer type="text/javascript" src="../pngfix.js"></script>
 <![endif]-->
 </head>
 <body>
@@ -17,7 +17,7 @@
     <h1>Stellarium</h1>
   </div>
   <div id="topbar">
-    <div id="description"><A href="http://www.stellarium.org/screenshots.html"><IMG src="../img/rotation/rotate.php" alt="screen preview" name="previewscreen" width="201" height="209" border="0" id="previewscreen"></A>
+    <div id="description"><A href="./screenshots.html"><IMG src="../img/rotation/rotate.php" alt="экран предварительного просмотра" name="previewscreen" width="201" height="209" border="0" id="previewscreen"></A>
       <div id="desctext">Stellarium &mdash; это свободный планетарий для Вашего компьютера с открытым исходным кодом. Он отображает небо таким, каким Вы видите его невооружённым глазом,
         в бинокль или телескоп. Просто введите свои координаты и исследуйте небо! <span><a href="http://www.stellarium.org/screenshots.html">Посмотреть скриншоты</a></span></div>
     </div>
@@ -159,7 +159,7 @@
           Тестер: Barry Gerdes<br>
           и каждый в сообществе пользователей. </p>
         <h2>сторонники и друзья</h2>
-        <p>Stellarium создаётся усилиями команды разработчиков с помощью и поддержкой <a href="http://www.stellarium.org/sponsors.php">следующих людей и организаций</a></p>
+        <p>Stellarium создаётся усилиями команды разработчиков с помощью и поддержкой <a href="./sponsors.php">следующих людей и организаций</a></p>
       </div>
     </div>
   </div>
