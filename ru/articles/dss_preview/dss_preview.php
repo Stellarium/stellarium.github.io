@@ -28,15 +28,15 @@
   </div>
   <div id="content">
     <h2 style="clear: both">Снимки экрана</h2>
-    <p style="clear: both"><a href="img/smc_without_dss.jpg"><img src="img/smc_without_dss.jpg" alt="screenshot showing the SMC without DSS images" hspace="8" vspace="8" border="0" width="150" height="112" align="left" /></a>
+    <p style="clear: both"><a href="/articles/dss_preview/img/smc_without_dss.jpg"><img src="/articles/dss_preview/img/smc_without_dss.jpg" alt="screenshot showing the SMC without DSS images" hspace="8" vspace="8" border="0" width="150" height="112" align="left" /></a>
        First, a screen shot showing Stellarium before any of the DSS images are visible.  This should be pretty familiar to Stellarium regulars.  We are looking at the Small Magellanic Cloud.</p>
-    <p style="clear: both"><a href="img/smc_with_dss.jpg"><img src="img/smc_with_dss.jpg" alt="screenshot showing the SMC with DSS images" hspace="8" vspace="8" border="0" width="150" height="112" align="left" /></a>
+    <p style="clear: both"><a href="/articles/dss_preview/img/smc_with_dss.jpg"><img src="/articles/dss_preview/img/smc_with_dss.jpg" alt="screenshot showing the SMC with DSS images" hspace="8" vspace="8" border="0" width="150" height="112" align="left" /></a>
        In this screenshot, wide angle DSS images are visible.  You can see there are some aesthetic problems with the images - visible borders between image plates, and an area at the bottom where no DSS has been loaded. If you look carefully, you will also see some little linear errors from the survey imagery (presumably satellite trails or similar). Even so, some nice structure is visible in the SMC itself.</p>
 
-    <p style="clear: both"><a href="img/smc_dss_detail1.jpg"><img src="img/smc_dss_detail1.jpg" alt="screenshot showing the SMC with DSS images" hspace="8" vspace="8" border="0" width="150" height="112" align="left" /></a>
+    <p style="clear: both"><a href="/articles/dss_preview/img/smc_dss_detail1.jpg"><img src="/articles/dss_preview/img/smc_dss_detail1.jpg" alt="screenshot showing the SMC with DSS images" hspace="8" vspace="8" border="0" width="150" height="112" align="left" /></a>
        Here is a slightly more zoomed in image.  You can see a lot more structure in the SMC, as Stellarium has downloaded higher resolution images for the same area.  The survey images are stored in multiple resolutions, and as you zoom, more detailed images are retrieved from the server.</p>
 
-    <p style="clear: both"><a href="img/smc_dss_detail2.jpg"><img src="img/smc_dss_detail2.jpg" alt="screenshot showing the SMC with DSS images" hspace="8" vspace="8" border="0" width="150" height="112" align="left" /></a>
+    <p style="clear: both"><a href="/articles/dss_preview/img/smc_dss_detail2.jpg"><img src="/articles/dss_preview/img/smc_dss_detail2.jpg" alt="screenshot showing the SMC with DSS images" hspace="8" vspace="8" border="0" width="150" height="112" align="left" /></a>
        This last image shows the highest resolution images in the survey.  Looks nice!</p>
 
     <h2 style="clear: both">Issues to sort out</h2>
