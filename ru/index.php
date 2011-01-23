@@ -19,7 +19,7 @@
   <div id="topbar">
     <div id="description"><A href="./screenshots.html"><IMG src="../img/rotation/rotate.php" alt="экран предварительного просмотра" name="previewscreen" width="201" height="209" border="0" id="previewscreen"></A>
       <div id="desctext">Stellarium &mdash; это свободный планетарий для Вашего компьютера с открытым исходным кодом. Он отображает небо таким, каким Вы видите его невооружённым глазом,
-        в бинокль или телескоп. Просто введите свои координаты и исследуйте небо! <span><a href="http://www.stellarium.org/screenshots.html">Посмотреть скриншоты</a></span></div>
+        в бинокль или телескоп. Просто введите свои координаты и исследуйте небо! <span><a href="http://www.stellarium.org/ru/screenshots.html">Посмотреть скриншоты</a></span></div>
     </div>
     <div id="downloads">
       <h2> Downloads </h2>
