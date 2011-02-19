@@ -5,10 +5,10 @@
 <meta name="Description" content="Stellarium is planetarium software that shows exactly what you see when you look up at the stars. It's easy to use, and free." />
 <meta name="Keywords" content="Stellarium, planetarium, astronomy, stars, planets, constellations, meteors, universe, open source, free software, Fabien Chéreau, astro, freeware, download, stars, planets, realistic, software, sky, program, scientific, educational, free, real, time, Windows, Linux, Apple, Mac, GPL, alioth, milky way, moon, mercury, venus, mars, earth, venus, jupiter, saturn, sun, real time, 3D, openGL, graphic, GL, glut, glu, chart, map, twinkle, photo-realistic, brightness, source, screenshot, Orion, 2001, computer" />
 <title>Stellarium</title>
-<link rel="shortcut icon" href="../../favicon.ico" type="image/x-icon" />
-<link rel="stylesheet" href="../../css/stellarium.css" type="text/css" media="screen" />
+<link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
+<link rel="stylesheet" href="../../../css/stellarium.css" type="text/css" media="screen" />
 <!--[if lt IE 7.]>
-<script defer type="text/javascript" src="../../pngfix.js"></script>
+<script defer type="text/javascript" src="../../../pngfix.js"></script>
 <![endif]-->
 </head>
 <body>
@@ -37,7 +37,7 @@
   <div id="content">
     <h2 style="clear: both">Revamped User Interface</h2>
     <p>The most obvious change is the new graphical user interface (GUI).  The old interface was hand-crafted, lightweight, efficient and looked alright, but it was really limited.  With version 0.10.0 we started to use the GUI features of the QT framework.  Recent changes to QT have made it possible to customise the look and feel of QT widgets using style sheets, and to use them in OpenGL apps more smoothly than before.</p>
-    <p><a href="../../img/screenshots/0.10-stel_gui.jpg"><img src="../../img/screenshots/0.10-stel_gui.jpg" alt="screenshot showing new GUI elements" hspace="8" vspace="8" border="0" width="150" height="112" align="left" /></a>
+    <p><a href="../../../img/screenshots/0.10-stel_gui.jpg"><img src="../../../img/screenshots/0.10-stel_gui.jpg" alt="screenshot showing new GUI elements" hspace="8" vspace="8" border="0" width="150" height="112" align="left" /></a>
     The result is a much more comfortable set of dialogs to configure Stellarium, search for objects, set the observer location and so on.  Finally we have a usable way to set the date and time without trying to click on tiny little spin buttons or using the text menu.</p>
     <p>Some of the keyboard shortcuts have been updated too.  The goal here is to try to be consistent with common key bindings in other applications such as F1 for help (instead of the old 'h' key binding).  Other dialogs can be opened with keys F2 ... F6, or you can use the new dialog toolbar on the bottom left of the screen.</p> 
     <p>Stellarium's always been quite intuitive to use - we hope that these changes will make it even easier for new users to get up and running. Of course, not everything has changed - all those application-specific shortcuts, like toggling constellation lines remain the same.  Hit F1 and you will see a full list of the key bindings.</p>
@@ -47,7 +47,7 @@
     <p>We have also introduced a second button bar, with buttons to show the various dialogs of the new GUI.  This will also hide itself until the mouse is nearby.</p>
 
     <h2 style="clear: both">Location Database</h2>
-    <a href="../../img/screenshots/0.10-location.jpg"><img src="../../img/screenshots/0.10-location.jpg" alt="screenshot showing location dialog" hspace="8" vspace="8" border="0" width="150"  height="112"  align="left" /></a>
+    <a href="../../../img/screenshots/0.10-location.jpg"><img src="../../../img/screenshots/0.10-location.jpg" alt="screenshot showing location dialog" hspace="8" vspace="8" border="0" width="150"  height="112"  align="left" /></a>
     <p>
     Setting the location of the observer is an important step for those who want to use Stellarium to see what the sky looks like at some specific location (e.g. where they are, or from the Apollo lunar landing sites).  The new location dialog includes a database of world cities (and spacecraft landing sites on other planetary bodies).  The user can easily search this database to find a nearby city, and can then tweak the exact position.  It is also possible to create user-defined locations, so you can set up a location for your home, work, observatory, holiday locations and so on.</p>
 
@@ -55,7 +55,7 @@
     <p>The startup time as been improved dramatically, so you won't have to wait as long to check out what's in the sky tonight.  Rendering performance has also been improved, so you should be able to squeeze a few more frames per second from your video hardware.
 
     <h2 style="clear: both">Light Pollution Simulation / Bortle Scale</h2>
-    <a href="../../img/screenshots/0.10-bortle.jpg"><img src="../../img/screenshots/0.10-bortle.jpg" alt="composite screenshot illustrating bortle scale" hspace="8" vspace="8" border="0" width="150"  height="112"  align="left" /></a>
+    <a href="../../../img/screenshots/0.10-bortle.jpg"><img src="../../../img/screenshots/0.10-bortle.jpg" alt="composite screenshot illustrating bortle scale" hspace="8" vspace="8" border="0" width="150"  height="112"  align="left" /></a>
     <p>
     Light pollution is an increasing problem for star-gazers around the planet.  Stellarium 0.9.1 introduced a simple simulation of light pollution. Version 0.10.0 extends this feature, adding customisability though the GUI, and calibrating the setting to the <a href="http://en.wikipedia.org/wiki/Bortle_Dark-Sky_Scale">Bortle Light Pollution Scale</a></p>
 
@@ -64,12 +64,12 @@
     <p>Stellarium now includes a feature to dynamically "stop down" the sensitivity of the virtual eye which generates the images for the program.  It looks kind of like how a camera with auto-exposure settings look as it adjusts itself.</p>
 
     <h2 style="clear: both">More Information</h2>
-    <a href="../../img/screenshots/0.10-starlore.jpg"><img src="../../img/screenshots/0.10-starlore.jpg" alt="screenshot showing extra info about sky cultures" hspace="8" vspace="8" border="0" width="150"  height="112"  align="left" /></a>
+    <a href="../../../img/screenshots/0.10-starlore.jpg"><img src="../../../img/screenshots/0.10-starlore.jpg" alt="screenshot showing extra info about sky cultures" hspace="8" vspace="8" border="0" width="150"  height="112"  align="left" /></a>
     <p>
     Stellarium now comes with constellations from eleven different sky-gazing cultures.  We have also added some basic information about the history of these sky cultures, and what they were used for.</p>
 
     <h2 style="clear: both">Mars Landscape</h2>
-    <a href="../../img/screenshots/0.10-mars_landscape.jpg"><img src="../../img/screenshots/0.10-mars_landscape.jpg" alt="screenshot showing mars landscape" hspace="8" vspace="8" border="0" width="150"  height="112"  align="left" /></a>
+    <a href="../../../img/screenshots/0.10-mars_landscape.jpg"><img src="../../../img/screenshots/0.10-mars_landscape.jpg" alt="screenshot showing mars landscape" hspace="8" vspace="8" border="0" width="150"  height="112"  align="left" /></a>
     <p>
     The default installation now ships with a nice landscape made with images from images from the Mars rover, Spirit.</p>
 

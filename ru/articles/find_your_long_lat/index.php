@@ -5,10 +5,10 @@
 <meta name="Description" content="Stellarium is planetarium software that shows exactly what you see when you look up at the stars. It's easy to use, and free." />
 <meta name="Keywords" content="Stellarium, longitude, latitude, planetarium, astronomy, stars, planets, constellations, meteors, universe, open source, free software, astro, freeware, download, stars, planets, realistic, software, sky, program, scientific, educational, free, real, time, Windows, Linux, Apple, Mac, GPL, alioth, milky way, moon, mercury, venus, mars, earth, venus, jupiter, saturn, sun, real time, 3D, openGL, graphic, GL, glut, glu, chart, map, twinkle, photo-realistic, brightness, source, screenshot, Orion, 2001, computer" />
 <title>Stellarium</title>
-<link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
-<link rel="stylesheet" href="../../css/stellarium.css" type="text/css" media="screen" />
+<link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
+<link rel="stylesheet" href="../../../css/stellarium.css" type="text/css" media="screen" />
 <!--[if lt IE 7.]>
-<script defer type="text/javascript" src="../../pngfix.js"></script>
+<script defer type="text/javascript" src="../../../pngfix.js"></script>
 <![endif]-->
 </head>
 <body>

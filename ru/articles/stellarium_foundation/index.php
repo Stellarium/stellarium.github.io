@@ -5,10 +5,10 @@
 <meta name="Description" content="Stellarium is planetarium software that shows exactly what you see when you look up at the stars. It's easy to use, and free." />
 <meta name="Keywords" content="Stellarium, Stellarium foundation, planetarium, astronomy, software, stars, planets, constellations, meteors, universe, open source, free software, Fabien Chéreau, astro, freeware, download, stars, planets, realistic, software, sky, program, scientific, educational, free, real, time, Windows, Linux, Apple, Mac, GPL, alioth, milky way, moon, mercury, venus, mars, earth, venus, jupiter, saturn, sun, real time, 3D, openGL, graphic, GL, glut, glu, chart, map, twinkle, photo-realistic, brightness, source, screenshot, Orion, 2001, computer" />
 <title>Stellarium</title>
-<link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
-<link rel="stylesheet" href="../../css/stellarium.css" type="text/css" media="screen" />
+<link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
+<link rel="stylesheet" href="../../../css/stellarium.css" type="text/css" media="screen" />
 <!--[if lt IE 7.]>
-<script defer type="text/javascript" src="../../pngfix.js"></script>
+<script defer type="text/javascript" src="../../../pngfix.js"></script>
 <![endif]-->
 </head>
 <body>
@@ -27,7 +27,7 @@
   </div>
   <div id="content">
     <h2 style="clear: both">Цели Фонда Stellarium</h2>
-    <p>Прозрачная и нейтральная обработка финансовых аспектов проекта. Ранее обработка пожертвований была довольно специфичной (т.е. они накапливались на PayPal-счету Фабиена). Фонд призван сделать упрощённый приём пожертвований и предоставлять для жертвователей информацию о расходовании средств и т.д.<li>
+    <p>Прозрачная и нейтральная обработка финансовых аспектов проекта. Ранее обработка пожертвований была довольно специфичной (т.е. они накапливались на PayPal-счету Фабиена). Фонд призван сделать упрощённый приём пожертвований и предоставлять для жертвователей информацию о расходовании средств и т.д.</p>
     <p>Выступать в качестве координирующего органа для поощрения Stellarium'а.</p>
     <p>Выступать в качестве формального контакта проекта в юридических целях.</p>
     <p>Фонд зарегистрирован французским правительством в качестве <a href="http://www.journal-officiel.gouv.fr/association/index.php?ctx=eJwtjEEOwiAQRecoplsXMsMwAx7AE7gnTYOxCUql1POLaZO*!Xl5L2Z4VIjfN4zrWiaIH1hbynms8*Y6TaUupY4tXVpN6TrcyzJAnOCMSIEwWDJWfVCj3ssOOLCochDFwIY6wh0oKYoj20UOqBqEjpQ1xomw*0Ptxx!G9X3i0DI5YuxZhfic223LGcjBD7rILj0_&cref=4&ACTION=reset&WHAT=stellarium">некоммерческой ассоциации</a>.</p>
