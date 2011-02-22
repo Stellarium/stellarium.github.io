@@ -219,10 +219,14 @@ select {
 	vertical-align: top;
 }
 abbr, acronym, .explain {
-	border-bottom: 1px dotted black;
-	color: black;
+	border-bottom: 1px dotted white;
+	color: white;
 	background: none;
 	cursor: help;
+}
+abbr.newpage {
+	color: red;
+	font-weight: bold;
 }
 q {
 	font-family: Times, "Times New Roman", serif;
@@ -1139,7 +1143,7 @@ head:first-child+body #footer li { white-space: nowrap; }
 div.prefsectiontip {
 	font-size: 95%;
 	margin-top: 0;
-	background-color: #FFC1C1;
+	/*background-color: #FFCC00;*/
 	padding: .2em .7em;
 	clear: both;
 }
@@ -1203,6 +1207,11 @@ div#userlogin .captcha {
 
 #userloginlink a, #wpLoginattempt, #wpCreateaccount {
 	font-weight: bold;
+}
+
+/* The color of the ReCaptcha box - Bogdan Marinov */
+div.captcha {
+	background-color: #313439!important;
 }
 
 /* @media screen, projection { */
