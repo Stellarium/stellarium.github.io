@@ -41,6 +41,7 @@
 <ul id="stelsponsors">
       <li><a href="http://www.hypnosekreis.de/">Praxis Beatrice Ohms</a></li>
       <li><a href="http://obviouslycloe.com/">Portfolio of Cloe (working on new constellation art)</a></li>
+      <li><a href="http://www.chatocracy.com/">Chatocracy (a webcam chat website made by Fabien)</a></li>
     </ul>
 </div>
   </div>
