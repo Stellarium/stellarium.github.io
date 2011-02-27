@@ -75,11 +75,11 @@
         <p> Вики &mdash; это место, где пользователи Stellarium получают необходимые знания
           о программе и где Вы сами можете внести вклад в её развитие.</p>
         <ul class="largelist">
-          <li> <a href="http://www.stellarium.org/wiki">главная страница</a> </li>
-          <li> <a href="http://www.stellarium.org/wiki/index.php/Quickstart_guide">быстрый старт</a> </li>
+          <li> <a href="http://www.stellarium.org/wiki/index.php/Главная_страница">главная страница</a> </li>
+          <li> <a href="http://www.stellarium.org/wiki/index.php/Быстрый_старт">быстрый старт</a> </li>
           <li> <a href="http://www.stellarium.org/wiki/index.php/FAQ">частые вопросы</a> </li>
           <li> <a href="http://www.stellarium.org/wiki/index.php/Category:User%27s_Guide">руководства</a> </li>
-          <li> <a href="http://www.stellarium.org/wiki/index.php/Scripts">сценарии</a> </li>
+          <li> <a href="http://www.stellarium.org/wiki/index.php/Сценарии">сценарии</a> </li>
         </ul>
       </div>
     </div>

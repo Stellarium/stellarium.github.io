@@ -41,6 +41,7 @@
 <ul id="stelsponsors">
       <li><a href="http://www.hypnosekreis.de/">Практика Беатрис Омс</a></li>
       <li><a href="http://obviouslycloe.com/">Портфолио Хлои (работает над новыми изображениями созвездий)</a></li>
+      <li><a href="http://www.chatocracy.com/">Чатократия (чат с вебкамерами, сайт сделан Фабиеном)</a></li>
     </ul>
 </div>
   </div>
