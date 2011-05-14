@@ -22,7 +22,7 @@
         в бинокль или телескоп. Просто введите свои координаты и исследуйте небо! <span><a href="http://www.stellarium.org/ru/screenshots.html">Посмотреть скриншоты</a></span></div>
     </div>
     <div id="downloads">
-      <h2> Downloads </h2>
+      <h2> загрузки </h2>
       <div class="download"><a href="http://downloads.sourceforge.net/stellarium/stellarium-0.10.6.tar.gz"><img class="downloadimg" src="../img/download-linux.png" alt="linux download link" width="63" height="42"><span class="downloadlink">для Linux (исх. код)</span></a> </div>
       <div class="download"> <a href="http://downloads.sourceforge.net/stellarium/stellarium-0.10.6-Intel.dmg"><img class="downloadimg" src="../img/download-mac.png" alt="Mac download link" width="63" height="42"><span class="downloadlink">для Mac OS X</span></a> </div>
       <div class="download"> <a href="http://downloads.sourceforge.net/stellarium/stellarium-0.10.6.1.exe"><img class="downloadimg" src="../img/download-win.png" alt="Windows download link" width="63" height="42"><span class="downloadlink">для Windows</span></a> </div>
@@ -86,6 +86,12 @@
     <div id="center">
       <div id="news">
         <h2> новости </h2>
+	<p><span class="newsdate">2011/05/05</span><br>
+	<span class="newstitle">Представление плагина SVMT</span><br>
+	<p>Плагин SVMT расшифровывается как "Инструмент визуализации и мониторинга обзоров" и предназначен он
+	для профессиональных астрономов. Используется ими он на <abbr title="Европейская южная обсерватория">ESO</abbr>
+	для мониторинга процесса обработки данных больших обзоров неба.
+	<p>В своём блоге Фабьен <a href="http://goo.gl/LIuj3">опубликовал</a> описание этого плагина с видеороликами примеров его использования.
         <p><span class="newsdate">2010/12/21</span><br>
         <span class="newstitle">Требуются волонтёры</span><br>
         <p>Нам требуются волонтёры &mdash; программировать не требуется. Нам необходим кто-то для
