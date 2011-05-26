@@ -1,8 +1,27 @@
+<?php
+$locale = (isset($_GET['lang']))? $_GET['lang'] : 'en';
+
+if ($locale!='en') {
+    require('streams.php');
+    require('gettext.php');
+    $streamer = new FileReader('./locale/' . $locale . '/stellarium-website.mo');
+    $wohoo = new gettext_reader($streamer);
+}
+
+function q_($msgid) {
+    global $locale;
+    if ($locale=='en')
+        return $msgid;
+    global $wohoo;
+    return $wohoo ? $wohoo->translate($msgid) : $msgid;
+}
+?>
+
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0//EN" "http://www.w3.org/TR/REC-html40/strict.dtd">
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<meta name="Description" content="<?php q_( "Stellarium is planetarium software that shows exactly what you see when you look up at the stars. It's easy to use, and free.");?>" />
+<meta name="Description" <?php printf('content="%s"', q_("Stellarium is planetarium software that shows exactly what you see when you look up at the stars. It's easy to use, and free."));?> />
 <meta name="Keywords" content="Stellarium, planetarium, astronomy, stars, planets, constellations, meteors, universe, open source, free software, Fabien Chéreau, astro, freeware, download, stars, planets, realistic, software, sky, program, scientific, educational, free, real, time, Windows, Linux, Apple, Mac, GPL, alioth, milky way, moon, mercury, venus, mars, earth, venus, jupiter, saturn, sun, real time, 3D, openGL, graphic, GL, glut, glu, chart, map, twinkle, photo-realistic, brightness, source, screenshot, Orion, 2001, computer" />
 <title>Stellarium</title>
 <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
@@ -13,23 +32,6 @@
 </head>
 <body>
 
-<?php
-require('streams.php');
-require('gettext.php');
-
-$locale = (isset($_GET['lang']))? $_GET['lang'] : 'en';
-$streamer = new FileReader('./locale/' . $locale . '/stellarium-website.mo');
-$wohoo = new gettext_reader($streamer);
-
-function q_($msgid) {
-    global $wohoo;
-    print $wohoo ? $wohoo->translate($msgid) : $msgid;
-}
-?>
-
-
-
-
 <div id="wrap">
   <!--  <div id="stickynote">
 	<p>sticky note</p>
@@ -38,83 +40,125 @@ function q_($msgid) {
 	<h1>Stellarium</h1>
   </div>
   <div id="topbar">
-	<div id="description"><a href="screenshots.html"><img src="img/rotation/rotate.php" alt="screen preview" width="201" height="209" border="0" id="previewscreen"></a>
+	<?php printf('
+	  <div id="description"><a href="screenshots.html"><img src="img/rotation/rotate.php" alt="screen preview" width="201" height="209" border="0" id="previewscreen"></a>
 	  <div id="desctext">
-	  
-	  <?php q_("Stellarium is a free open source planetarium for your computer. It shows a realistic sky in 3D, just like what you see with the naked eye, binoculars or a telescope. <br>
-		It is being used in planetarium projectors. Just set your coordinates and go.");?> <span><a href="screenshots.html"><?php q_("view screenshots");?></a></span></div>
+	  %s<br>%s <span><a href="screenshots.html">%s</a></span></div>
 	</div>
 	<div id="downloads">
-	  <h2> <?php q_("Downloads");?> </h2>
-	  <div class="download"><a href="http://downloads.sourceforge.net/stellarium/stellarium-0.10.6.tar.gz"><img class="downloadimg" src="img/download-linux.png" alt="linux download link" width="63" height="42"><span class="downloadlink"><?php q_("for Linux (source)");?></span></a> </div>
-	  <div class="download"> <a href="http://downloads.sourceforge.net/stellarium/stellarium-0.10.6-Intel.dmg"><img class="downloadimg" src="img/download-mac.png" alt="Mac download link" width="63" height="42"><span class="downloadlink"><?php q_("for Mac OS X");?></span></a> </div>
-	  <div class="download"> <a href="http://downloads.sourceforge.net/stellarium/stellarium-0.10.6.1.exe"><img class="downloadimg" src="img/download-win.png" alt="Windows download link" width="63" height="42"><span class="downloadlink"><?php q_("for Windows");?></span></a> </div>
-	  <div class="download"> <a href="http://downloads.sourceforge.net/stellarium/stellarium_user_guide-0.10.2-1.pdf"><img class="downloadimg" src="img/download-pdf.png" alt="pdf download link" width="63" height="42"><span class="downloadlink"><?php q_("user's guide");?></span></a></div>
+	  <h2>%s</h2>
+	  <div class="download"><a href="http://downloads.sourceforge.net/stellarium/stellarium-0.10.6.tar.gz"><img class="downloadimg" src="img/download-linux.png" alt="linux download link" width="63" height="42"><span class="downloadlink">%s</span></a> </div>
+	  <div class="download"> <a href="http://downloads.sourceforge.net/stellarium/stellarium-0.10.6-Intel.dmg"><img class="downloadimg" src="img/download-mac.png" alt="Mac download link" width="63" height="42"><span class="downloadlink">%s</span></a> </div>
+	  <div class="download"> <a href="http://downloads.sourceforge.net/stellarium/stellarium-0.10.6.1.exe"><img class="downloadimg" src="img/download-win.png" alt="Windows download link" width="63" height="42"><span class="downloadlink">%s</span></a> </div>
+	  <div class="download"> <a href="http://downloads.sourceforge.net/stellarium/stellarium_user_guide-0.10.2-1.pdf"><img class="downloadimg" src="img/download-pdf.png" alt="pdf download link" width="63" height="42"><span class="downloadlink">%s</span></a></div>
 	</div>
-  </div>
-  <div id="content">
+	</div>',
+	q_("Stellarium is a free open source planetarium for your computer. It shows a realistic sky in 3D, just like what you see with the naked eye, binoculars or a telescope."), 
+	q_("It is being used in planetarium projectors. Just set your coordinates and go."),
+	q_("view screenshots"),
+	q_("Downloads"),
+	q_("for Linux (source)"),
+	q_("for Mac OS X"),
+	q_("for Windows"),
+	q_("user's guide")
+	); 
+  
+  print '<div id="content">
 	<div id="left">
-	  <div id="features">
-		<h2><?php q_("features");?> </h2>
-		<p><span id="version"><?php q_("in version 0.10.6");?></span></p>
-		<?php q_("<h3>sky</h3>
+	  <div id="features">';
+
+	    printf('<h2>%s</h2><p><span id="version">%s</span></p>',
+	    q_("features"),
+	    q_("in version 0.10.6"));
+	    
+		printf('
+		<h3>%s</h3>
 		<ul>
-		  <li> default catalogue of over 600,000 stars </li>
-		  <li> extra catalogues with more than 210 million stars </li>
-		  <li> asterisms and illustrations of the constellations </li>
-		  <li> constellations for twelve different cultures </li>
-		  <li> images of nebulae (full Messier catalogue)</li>
-		  <li> realistic Milky Way </li>
-		  <li> very realistic atmosphere, sunrise and sunset </li>
-		  <li> the planets and their satellites </li>
-		</ul>");?>
-		<?php q_("<h3>interface</h3>
+		  <li>%s</li> <li>%s</li> <li>%s</li> <li>%s</li> <li>%s</li> <li>%s</li> <li>%s</li> <li>%s</li>
+		</ul>',
+		q_("sky"),
+		q_("default catalogue of over 600,000 stars"),
+		q_("extra catalogues with more than 210 million stars"),
+		q_("asterisms and illustrations of the constellations"),
+		q_("constellations for twelve different cultures"),
+		q_("images of nebulae (full Messier catalogue)"),
+		q_("realistic Milky Way"),
+		q_("very realistic atmosphere, sunrise and sunset"),
+		q_("the planets and their satellites")
+		);
+		
+		printf('
+		<h3>%s</h3>
 		<ul>
-		  <li> a powerful zoom </li>
-		  <li> time control </li>
-		  <li> multilingual interface </li>
-		  <li> fisheye projection for planetarium domes </li>
-		  <li> spheric mirror projection for your own low-cost dome </li>
-		  <li> all new graphical interface and extensive keyboard control </li>
-		  <li> telescope control </li>
-		</ul>");?>
-		<?php q_( "<h3>visualisation</h3>
+		  <li>%s</li> <li>%s</li> <li>%s</li> <li>%s</li> <li>%s</li> <li>%s</li> <li>%s</li>
+		</ul>',
+		q_("interface"),
+		q_("a powerful zoom"),
+		q_("time control"),
+		q_("multilingual interface"),
+		q_("fisheye projection for planetarium domes"),
+		q_("spheric mirror projection for your own low-cost dome"),
+		q_("all new graphical interface and extensive keyboard control"),
+		q_("telescope control")
+		);
+		
+		printf('<h3>%s</h3>
 		<ul>
-		  <li> equatorial and azimuthal grids </li>
-		  <li> star twinkling </li>
-		  <li> shooting stars </li>
-		  <li> eclipse simulation </li>
-		  <li> skinnable landscapes, now with spheric panorama projection </li>
-		</ul>");?>
-		<?php q_( "<h3>customizability</h3>
+		  <li>%s</li> <li>%s</li> <li>%s</li> <li>%s</li> <li>%s</li>
+		</ul>',
+		q_("visualisation"),
+		q_("equatorial and azimuthal grids"),
+		q_("star twinkling"),
+		q_("shooting stars"),
+		q_("eclipse simulation"),
+		q_("skinnable landscapes, now with spheric panorama projection")
+		);
+		
+		printf('
+		<h3>%s</h3>
 		<ul>
-	      <li> plugin system adding artifical satellites, ocular simulation, telescope configuration and more </li>
-		  <li> ability to add new solar system objects from online resources... </li>
-		  <li> add your own deep sky objects, landscapes, constellation images, scripts... </li>
-		</ul>");?>
-	  </div>
-	  <div id="wiki">
-		<?php q_("<h2>wiki</h2>
-		<p> The wiki is the place where stellarium users maintain all the knowledge about the program, and where you can contribute as well.</p>");?>
+	      <li>%s</li> <li>%s</li> <li>%s</li>
+		</ul>',
+		q_("customizability"),
+		q_("plugin system adding artifical satellites, ocular simulation, telescope configuration and more"),
+		q_("ability to add new solar system objects from online resources..."),
+		q_("add your own deep sky objects, landscapes, constellation images, scripts...")
+		);
+	  
+	    print '</div>'; // End features
+
+        printf('<div id="wiki">
+        <h2>%s</h2>
+		<p>%s</p>
 		<ul class="largelist">
-		  <li> <a href="http://www.stellarium.org/wiki">main page</a> </li>
-		  <li> <a href="http://www.stellarium.org/wiki/index.php/Quickstart_guide">quickstart</a> </li>
-		  <li> <a href="http://www.stellarium.org/wiki/index.php/FAQ">FAQ</a> </li>
-		  <li> <a href="http://www.stellarium.org/wiki/index.php/Category:User%27s_Guide">user's guide</a> </li>
-		  <li> <a href="http://www.stellarium.org/wiki/index.php/Scripts">scripts</a> </li>
+		  <li> <a href="http://www.stellarium.org/wiki">%s</a> </li>
+		  <li> <a href="http://www.stellarium.org/wiki/index.php/Quickstart_guide">%s</a> </li>
+		  <li> <a href="http://www.stellarium.org/wiki/index.php/FAQ">%s</a> </li>
+		  <li> <a href="http://www.stellarium.org/wiki/index.php/Category:User%%27s_Guide">%s</a> </li>
+		  <li> <a href="http://www.stellarium.org/wiki/index.php/Scripts">%s</a> </li>
 		</ul>
-	  </div>
+	    </div>',
+		q_("wiki"),
+		q_("The wiki is the place where stellarium users maintain all the knowledge about the program, and where you can contribute as well."),
+		q_("main page"),
+		q_("quickstart"),
+		q_("FAQ"),
+		q_("user's guide"),
+		q_("scripts")
+		);
+	  ?>
 	</div>
+	
 	<div id="center">
 	  <div id="news">
-		<?php q_("<h2>news</h2>");
-		 include("rss2html/rss2html.php"); ?>
+		<h2>news</h2>
+		 <?php include("rss2html/rss2html.php"); ?>
 	  </div>
 	</div>
 	<div id="right">
 	  <div id="development">
-		<?php q_("<h2>collaborate</h2>
-		<p>You can learn more about Stellarium, get support and help the project from these links: </p>");?>
+		<h2>collaborate</h2>
+		<p>You can learn more about Stellarium, get support and help the project from these links: </p>
 		<ul class="largelist">
 		  <li> <a href="http://launchpad.net/stellarium">summary</a> </li>
 		  <li> <a href="http://sourceforge.net/forum/forum.php?forum_id=278769">forum</a> </li>
