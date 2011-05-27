@@ -197,7 +197,9 @@ function q_($msgid) {
 		q_("browse Bazaar"),
 		q_("instructions (wiki)"),
 		q_("irc"),
-		q_("Real time chat about Stellarium can be had in the <a href='irc://irc.freenode.org/stellarium'>#stellarium</a> IRC channel on the <a href='http://freenode.net'>freenode</a> IRC network.  Use your favorite IRC client to connect to <a href='irc://irc.freenode.org/stellarium'>chat.freenode.net</a> or try the <a href='http://webchat.freenode.net/?channels=stellarium&uio=MTE9MjQ255'>web-based interface</a>."));
+		sprintf(q_("Real time chat about Stellarium can be had in the %s#stellarium%s IRC channel on the %sfreenode%s IRC network. Use your favorite IRC client to connect to %schat.freenode.net%s or try the %sweb-based interface%s."),
+		"<a href='irc://irc.freenode.org/stellarium'>", "</a>", "<a href='http://freenode.net'>", "</a>", "<a href='irc://irc.freenode.org/stellarium'>", "</a>", "<a href='http://webchat.freenode.net/?channels=stellarium&uio=MTE9MjQ255'>", "</a>")
+		);
 		
 		
 		printf('<h2>%s</h2>
@@ -226,12 +228,12 @@ function q_($msgid) {
 		printf('<h2>%s</h2>
 		<p>%s</p>',
 		q_("supporters and friends"),
-		q_("Stellarium is produced by the efforts of the developer team, with the help and support of the <a href='sponsors.php'>following people and organisations</a>"));
+		sprintf(q_("Stellarium is produced by the efforts of the developer team, with the help and support of the %sfollowing people and organisations%s"), "<a href='sponsors.php'>", "</a>"));
 		?>
 	  </div>
 	</div>
   </div>
-  <?php printf('<div id="languages">%s', q_("Other languages:"));
+  <?php printf('<div id="languages">%s ', q_("Other languages:"));
 	 include("languages.inc"); ?>
   </div>
   <div id="footer"><a href="http://sourceforge.net/donate/index.php?group_id=48857"><img src="http://images.sourceforge.net/images/project-support.jpg" alt="Support This Project" width="88" height="32" border="0" /></a> <a href="http://sourceforge.net/projects/stellarium"><img src="http://sourceforge.net/sflogo.php?group_id=48857&amp;type=5" alt="SourceForge.net Logo" width="108" height="32" border="0" /></a> </div>
