@@ -22,7 +22,7 @@ function q_($msgid) {
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <meta name="Description" <?php printf('content="%s"', q_("Stellarium is a planetarium software that shows exactly what you see when you look up at the stars. It's easy to use, and free."));?> />
-<meta name="Keywords" content="Stellarium, planetarium, astronomy, stars, planets, constellations, meteors, universe, open source, free software, Fabien Chéreau, astro, freeware, download, stars, planets, realistic, software, sky, program, scientific, educational, free, real, time, Windows, Linux, Apple, Mac, GPL, alioth, milky way, moon, mercury, venus, mars, earth, venus, jupiter, saturn, sun, real time, 3D, openGL, graphic, GL, glut, glu, chart, map, twinkle, photo-realistic, brightness, source, screenshot, Orion, 2001, computer" />
+<meta name="Keywords" content="Stellarium, planetarium, astronomy, software, stars, planets, constellations, meteors, universe, open source, free software, astro, freeware, download, stars, planets, realistic, software, sky, program, scientific, educational, free, real, time, Windows, Linux, Apple, Mac, GPL, milky way, moon, mercury, venus, mars, earth, venus, jupiter, saturn, sun, real time, 3D, openGL, graphic, GL, chart, map, twinkle, photo-realistic, brightness, screenshot" />
 <title>Stellarium</title>
 <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
 <link rel="stylesheet" href="css/stellarium.css" type="text/css" media="screen" />
