@@ -13,7 +13,7 @@ function q_($msgid) {
     if ($locale=='en')
         return $msgid;
     global $wohoo;
-    return $wohoo ? $wohoo->translate($msgid) : $msgid;
+    return $wohoo ? htmlspecialchars($wohoo->translate($msgid)) : $msgid;
 }
 ?>
 
