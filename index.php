@@ -151,53 +151,88 @@ function q_($msgid) {
 	
 	<div id="center">
 	  <div id="news">
-		<h2>news</h2>
-		 <?php include("rss2html/rss2html.php"); ?>
+		 <?php printf('<h2>%s</h2>', q_("news"));
+		 include("rss2html/rss2html.php"); ?>
 	  </div>
 	</div>
 	<div id="right">
 	  <div id="development">
-		<h2>collaborate</h2>
-		<p>You can learn more about Stellarium, get support and help the project from these links: </p>
+		<?php printf('<h2>%s</h2>
+		<p>%s</p>
 		<ul class="largelist">
-		  <li> <a href="http://launchpad.net/stellarium">summary</a> </li>
-		  <li> <a href="http://sourceforge.net/forum/forum.php?forum_id=278769">forum</a> </li>
-		  <li> <a href="https://answers.launchpad.net/stellarium">get support</a> </li>
-		  <li> <a href="http://bugs.launchpad.net/stellarium">report bugs, request new features</a> </li>
-		  <li> <a href="http://sourceforge.net/project/showfiles.php?group_id=48857">older releases</a>
+		  <li> <a href="http://launchpad.net/stellarium">%s</a> </li>
+		  <li> <a href="http://sourceforge.net/forum/forum.php?forum_id=278769">%s</a> </li>
+		  <li> <a href="https://answers.launchpad.net/stellarium">%s</a> </li>
+		  <li> <a href="http://bugs.launchpad.net/stellarium">%s</a> </li>
+		  <li> <a href="http://sourceforge.net/project/showfiles.php?group_id=48857">%s</a>
 			<ul class="sublist">
-			  <li> <a href="http://sourceforge.net/project/showfiles.php?group_id=48857&package_id=52048">for Linux (source)</a> </li>
-			  <li> <a href="http://sourceforge.net/project/showfiles.php?group_id=48857&package_id=42042">for Mac OSX</a> </li>
-			  <li> <a href="http://sourceforge.net/project/showfiles.php?group_id=48857&package_id=52047">for Windows</a> </li>
+			  <li> <a href="http://sourceforge.net/project/showfiles.php?group_id=48857&package_id=52048">%s</a> </li>
+			  <li> <a href="http://sourceforge.net/project/showfiles.php?group_id=48857&package_id=42042">%s</a> </li>
+			  <li> <a href="http://sourceforge.net/project/showfiles.php?group_id=48857&package_id=52047">%s</a> </li>
 			</ul>
 		  </li>
-		</ul>
-		<h2> bzr </h2>
-		<p> The latest development snapshot of Stellarium is kept in Bazaar, a distributed revision control system. If you want to compile development versions of Stellarium, this is the place to get the source code.</p>
+		</ul>',
+		q_("collaborate"),
+		q_("You can learn more about Stellarium, get support and help the project from these links:"),
+		q_("summary"),
+		q_("forum"),
+		q_("get support"),
+		q_("report bugs, request new features"),
+		q_("older releases"),
+		q_("for Linux (source)"),
+		q_("for Mac OSX"),
+		q_("for Windows")
+		);
+		
+		printf('<h2>%s</h2>
+		<p>%s</p>
 		<ul class="largelist">
-		  <li><a href="http://bazaar.launchpad.net/~stellarium/stellarium/trunk/files">browse Bazaar</a></li>
-		  <li><a href="http://stellarium.org/wiki/index.php/Bzr_checkout">instructions (wiki)</a></li>
+		  <li><a href="http://bazaar.launchpad.net/~stellarium/stellarium/trunk/files">%s</a></li>
+		  <li><a href="http://stellarium.org/wiki/index.php/Bzr_checkout">%s</a></li>
 		</ul>
-		<h2> irc </h2>
-		<p> Real time chat about Stellarium can be had in the <a href="irc://irc.freenode.org/stellarium">#stellarium</a> IRC channel on the <a href="http://freenode.net">freenode</a> IRC network.  Use your favorite IRC client to connect to <a href="irc://irc.freenode.org/stellarium">chat.freenode.net</a> or try the <a href="http://webchat.freenode.net/?channels=stellarium&uio=MTE9MjQ255">web-based interface</a>. </p>
-		<h2> developers </h2>
-		<p> Project coordinator: <a href="http://f4bien.blogspot.com/">Fabien Ch&eacute;reau</a><br>
-		  Doc author/developer: <a href="http://porpoisehead.net/">Matthew Gates</a><br>
+		<h2>%s</h2>
+		<p>%s</p>',
+		q_("bzr"),
+		q_("The latest development snapshot of Stellarium is kept in Bazaar, a distributed revision control system. If you want to compile development versions of Stellarium, this is the place to get the source code."),
+		q_("browse Bazaar"),
+		q_("instructions (wiki)"),
+		q_("irc"),
+		q_("Real time chat about Stellarium can be had in the <a href='irc://irc.freenode.org/stellarium'>#stellarium</a> IRC channel on the <a href='http://freenode.net'>freenode</a> IRC network.  Use your favorite IRC client to connect to <a href='irc://irc.freenode.org/stellarium'>chat.freenode.net</a> or try the <a href='http://webchat.freenode.net/?channels=stellarium&uio=MTE9MjQ255'>web-based interface</a>."));
+		
+		
+		printf('<h2>%s</h2>
+		<p>%s<a href="http://f4bien.blogspot.com/">Fabien Ch&eacute;reau</a><br>
+		  %s<a href="http://porpoisehead.net/">Matthew Gates</a><br>
 		  <!-- Graphic/other designer: <a href="http://users.pandora.be/jomejom">Johan Meuris</a><br> -->
-		  OSX Developer: Nigel Kerr<br>
-		  OSX Developer: <a href="mailto:diego.marcos%20(at)%20gmail.com">Diego Marcos</a><br>
-          Developer: <a href="http://badlyhonedbytes.wordpress.com/">Bogdan Marinov</a><br>
-          Developer: <a href="mailto:treaves%20(at)%20silverfieldstech.com">Timothy Reaves</a><br>
-          Developer: <a href="http://charlie137-2.blogspot.com/">Guillaume Ch&eacute;reau</a><br>
-          Tester: Barry Gerdes<br>
-		  and everyone else in the community. </p>
-		<h2>supporters and friends</h2>
-		<p>Stellarium is produced by the efforts of the developer team, with the help and support of the <a href="sponsors.php">following people and organisations</a></p>
+		  %s Nigel Kerr<br>
+		  %s <a href="mailto:diego.marcos%20(at)%20gmail.com">Diego Marcos</a><br>
+          %s <a href="http://badlyhonedbytes.wordpress.com/">Bogdan Marinov</a><br>
+          %s <a href="mailto:treaves%20(at)%20silverfieldstech.com">Timothy Reaves</a><br>
+          %s <a href="http://charlie137-2.blogspot.com/">Guillaume Ch&eacute;reau</a><br>
+          %s Barry Gerdes<br>
+		  %s</p>',
+		  q_("developers"),
+		  q_("Project coordinator:"),
+		  q_("Doc author/developer:"),
+		  q_("OSX Developer:"),
+		  q_("OSX Developer:"),
+		  q_("Developer:"),
+		  q_("Developer:"),
+		  q_("Developer:"),
+		  q_("Tester:"),
+		  q_("and everyone else in the community.")
+		  );
+		  
+		printf('<h2>%s</h2>
+		<p>%s</p>',
+		q_("supporters and friends"),
+		q_("Stellarium is produced by the efforts of the developer team, with the help and support of the <a href='sponsors.php'>following people and organisations</a>"));
+		?>
 	  </div>
 	</div>
   </div>
-  <div id="languages">Other languages:
-	<?php include("languages.inc"); ?>
+  <?php printf('<div id="languages">%s', q_("Other languages:"));
+	 include("languages.inc"); ?>
   </div>
   <div id="footer"><a href="http://sourceforge.net/donate/index.php?group_id=48857"><img src="http://images.sourceforge.net/images/project-support.jpg" alt="Support This Project" width="88" height="32" border="0" /></a> <a href="http://sourceforge.net/projects/stellarium"><img src="http://sourceforge.net/sflogo.php?group_id=48857&amp;type=5" alt="SourceForge.net Logo" width="108" height="32" border="0" /></a> </div>
 </div>
