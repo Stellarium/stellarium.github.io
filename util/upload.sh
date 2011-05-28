@@ -50,6 +50,7 @@ fi
 
 rsync -av \
   --exclude util/ \
+  --exclude po/ \
   --exclude wiki/LocalSettings.php \
   --exclude .bzr/ \
   --exclude .bzrignore \
