@@ -26,6 +26,7 @@ function q_($msgid) {
 <title>Stellarium</title>
 <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
 <link rel="stylesheet" href="css/stellarium.css" type="text/css" media="screen" />
+<link rel="alternate" type="application/rss+xml" title="Stellarium: Project News" href="https://sourceforge.net/export/rss2_projnews.php?group_id=48857&rss_fulltext=1" />
 <!--[if lt IE 7.]>
 <script defer type="text/javascript" src="pngfix.js"></script>
 <![endif]-->
