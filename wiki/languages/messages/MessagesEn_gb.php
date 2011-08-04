@@ -9,29 +9,27 @@
  *
  * @author Jon Harald Søby
  * @author Reedy
+ * @author The Evil IP address
  */
 
 $specialPageAliases = array(
 	'Uncategorizedpages'        => array( 'UncategorisedPages' ),
 	'Uncategorizedcategories'   => array( 'UncategorisedCategories' ),
-	'Uncategorizedimages'       => array( 'UncategorisedImages' ),
+	'Uncategorizedimages'       => array( 'UncategorisedFiles', 'UncategorisedImages' ),
 	'Uncategorizedtemplates'    => array( 'UncategorisedTemplates' ),
 );
 
 $messages = array(
-# Main script and global functions
-'nosuchactiontext' => 'The action specified by the URL is not recognised by the wiki',
-
 # Miscellaneous special pages
 'uncategorizedpages'      => 'Uncategorised pages',
 'uncategorizedcategories' => 'Uncategorised categories',
 'uncategorizedimages'     => 'Uncategorised files',
 'uncategorizedtemplates'  => 'Uncategorised templates',
 
-# Rollback
+# Edit tokens
 'sessionfailure' => 'There seems to be a problem with your login session;
 this action has been cancelled as a precaution against session hijacking.
-Please hit "back" and reload the page you came from, then try again.',
+Go back to the previous page, reload that page and then try again.',
 
 # Block/unblock
 'blockiptext' => 'Use the form below to block write access from a specific IP address or username.

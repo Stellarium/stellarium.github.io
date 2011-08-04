@@ -2,14 +2,10 @@
 
 class ConfirmEditHooks {
 	static function getInstance() {
-		global $wgCaptcha, $wgCaptchaClass, $wgExtensionMessagesFiles;
+		global $wgCaptcha, $wgCaptchaClass;
 		static $done = false;
 		if ( !$done ) {
 			$done = true;
-			wfLoadExtensionMessages( 'ConfirmEdit' );
-			if ( isset( $wgExtensionMessagesFiles[$wgCaptchaClass] ) ) {
-				wfLoadExtensionMessages( $wgCaptchaClass );
-			}
 			$wgCaptcha = new $wgCaptchaClass;
 		}
 		return $wgCaptcha;
@@ -46,6 +42,14 @@ class ConfirmEditHooks {
 	static function confirmUserLogin( $u, $pass, &$retval ) {
 		return self::getInstance()->confirmUserLogin( $u, $pass, $retval );
 	}
+
+	static function injectEmailUser( &$form ) {
+		return self::getInstance()->injectEmailUser( $form );
+	}
+
+	static function confirmEmailUser( $from, $to, $subject, $text, &$error ) {
+		return self::getInstance()->confirmEmailUser( $from, $to, $subject, $text, $error );
+	}
 }
 
 class CaptchaSpecialPage extends UnlistedSpecialPage {
@@ -64,7 +68,7 @@ class CaptchaSpecialPage extends UnlistedSpecialPage {
 }
 
 class SimpleCaptcha {
-	function SimpleCaptcha() {
+	function __construct() {
 		global $wgCaptchaStorageClass;
 		$this->storage = new $wgCaptchaStorageClass;
 	}
@@ -72,7 +76,10 @@ class SimpleCaptcha {
 	function getCaptcha() {
 		$a = mt_rand( 0, 100 );
 		$b = mt_rand( 0, 10 );
-		$op = mt_rand( 0, 1 ) ? '+' : '-';
+
+		/* Minus sign is used in the question. UTF-8,
+		   since the api uses text/plain, not text/html */
+		$op = mt_rand( 0, 1 ) ? '+' : '−';
 
 		$test = "$a $op $b";
 		$answer = ( $op == '+' ) ? ( $a + $b ) : ( $a - $b );
@@ -136,6 +143,28 @@ class SimpleCaptcha {
 		# Obtain a more tailored message, if possible, otherwise, fall back to
 		# the default for edits
 		return wfEmptyMsg( $name, $text ) ? wfMsg( 'captcha-edit' ) : $text;
+	}
+
+	/**
+	 * Inject whazawhoo
+	 * @fixme if multiple thingies insert a header, could break
+	 * @param HTMLForm
+	 * @return bool true to keep running callbacks
+	 */
+	function injectEmailUser( &$form ) {
+		global $wgCaptchaTriggers, $wgOut, $wgUser;
+		if ( $wgCaptchaTriggers['sendemail'] ) {
+			if ( $wgUser->isAllowed( 'skipcaptcha' ) ) {
+				wfDebug( "ConfirmEdit: user group allows skipping captcha on email sending\n" );
+				return true;
+			}
+			$form->addFooterText( 
+				"<div class='captcha'>" .
+				$wgOut->parse( $this->getMessage( 'sendemail' ) ) .
+				$this->getForm() .
+				"</div>\n" );
+		}
+		return true;
 	}
 
 	/**
@@ -455,7 +484,7 @@ class SimpleCaptcha {
 		$res = $dbr->select( 'externallinks', array( 'el_to' ),
 			array( 'el_from' => $id ), __METHOD__ );
 		$links = array();
-		while ( $row = $dbr->fetchObject( $res ) ) {
+		foreach ( $res as $row ) {
 			$links[] = $row->el_to;
 		}
 		return $links;
@@ -555,9 +584,42 @@ class SimpleCaptcha {
 
 			$this->trigger = "post-badlogin login '" . $u->getName() . "'";
 			if ( !$this->passCaptcha() ) {
-				$message = wfMsg( 'captcha-badlogin-fail' );
 				// Emulate a bad-password return to confuse the shit out of attackers
 				$retval = LoginForm::WRONG_PASS;
+				return false;
+			}
+		}
+		return true;
+	}
+
+	/**
+	 * Check the captcha on Special:EmailUser 
+	 * @param $from MailAddress
+	 * @param $to MailAddress
+	 * @param $subject String
+	 * @param $text String
+	 * @param $error String reference
+	 * @return Bool true to continue saving, false to abort and show a captcha form
+	 */
+	function confirmEmailUser( $from, $to, $subject, $text, &$error ) {
+		global $wgCaptchaTriggers, $wgUser;
+		if ( $wgCaptchaTriggers['sendemail'] ) {
+			if ( $wgUser->isAllowed( 'skipcaptcha' ) ) {
+				wfDebug( "ConfirmEdit: user group allows skipping captcha on email sending\n" );
+				return true;
+			}
+			if ( $this->isIPWhitelisted() )
+				return true;
+		
+			if ( defined( 'MW_API' ) ) {
+				# API mode
+				# Asking for captchas in the API is really silly
+				$error = wfMsg( 'captcha-disabledinapi' );
+				return false;
+			}
+			$this->trigger = "{$wgUser->getName()} sending email";
+			if ( !$this->passCaptcha() ) {
+				$error = wfMsg( 'captcha-sendemail-fail' );
 				return false;
 			}
 		}
@@ -648,7 +710,8 @@ class SimpleCaptcha {
 		} else {
 			$text = $rev->getText();
 			if ( $section != '' ) {
-				return Article::getSection( $text, $section );
+				global $wgParser;
+				return $wgParser->getSection( $text, $section );
 			} else {
 				return $text;
 			}
@@ -674,7 +737,7 @@ class SimpleCaptcha {
 	 * Show a page explaining what this wacky thing is.
 	 */
 	function showHelp() {
-		global $wgOut, $ceAllowConfirmedEmail;
+		global $wgOut;
 		$wgOut->setPageTitle( wfMsg( 'captchahelp-title' ) );
 		$wgOut->addWikiText( wfMsg( 'captchahelp-text' ) );
 		if ( $this->storage->cookiesNeeded() ) {

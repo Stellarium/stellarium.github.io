@@ -96,7 +96,6 @@ $messages = array(
 # Vector skin
 'vector-action-delete'   => 'Tutui',
 'vector-action-move'     => 'Ɖɔli eƒe nɔƒe',
-'vector-namespace-main'  => 'Axa',
 'vector-view-create'     => 'Dze egɔme',
 'vector-view-edit'       => 'Trɔ asi le eŋu',
 'vector-view-history'    => 'Kpɔ xoxoawo',
@@ -189,6 +188,7 @@ $messages = array(
 'viewsourcefor'   => '$1 tɔwo',
 
 # Login and logout pages
+'remembermypassword'         => 'Ɖo ŋku nyeƒe dzesi ŋkɔ dzi le mɔ sia dzi (vaseɖe {{PLURAL:$1|ŋkeke|ŋkeke}} $1 megbe)',
 'login'                      => 'Ge ɖe eme',
 'nav-login-createaccount'    => 'Geɖe me / Ŋlɔ ŋkɔ',
 'userlogin'                  => 'Ge ɖe eme / ŋlɔ ŋkɔ daɖi',
@@ -241,7 +241,7 @@ Wo ŋlɔe xoxo.',
 'last'                 => 'mamlea',
 'page_first'           => 'gbãtɔ',
 'page_last'            => 'mamlea',
-'histlegend'           => "Vovo tatia: de dzesi tata siwo ƒe vovototowo wò di be yea kpɔ ɖa eye na tia 'enter' alo kpe si le eɖome.<br/>
+'histlegend'           => "Vovo tatia: de dzesi tata siwo ƒe vovototowo wò di be yea kpɔ ɖa eye na tia 'enter' alo kpe si le eɖome.<br />
 Gɔmeɖeɖe: '''({{int:cur}})''' = vovototo tso tata mamlea gbɔ, '''({{int:last}})''' = vovototo tso tata si do ŋgɔ gbɔ, '''{{int:minoreditletter}}''' = tɔtrɔ sue.",
 'history-show-deleted' => 'Esiwo wotutu ko',
 'histfirst'            => 'Xoxoɔwu',
@@ -419,7 +419,6 @@ Zã [[Special:Search|nuwo didi le wiki sia dzi]] kpɔ na axa yeyeawo.',
 'listgrouprights-group' => 'Hame',
 
 # Watchlist
-'watchlistfor'  => "(na '''$1''')",
 'watch'         => 'Le ŋku ɖe eŋu',
 'watchthispage' => 'Le ŋku ɖe axa sia ŋu',
 'wlnote'        => "Afisia wofia {{PLURAL:$1|tɔtrɔ '''1''' mamlea|tɔtrɔ '''$1''' mamleawo}} le {{PLURAL:$2|gaƒoƒo mamlea si|gaƒoƒo '''$2''' mamleawo siwo}} vayi la me.",

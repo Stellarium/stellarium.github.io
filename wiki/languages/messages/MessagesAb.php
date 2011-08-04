@@ -15,6 +15,67 @@
 
 $fallback = 'ru';
 
+$namespaceNames = array(
+	NS_MEDIA            => 'Амедиа',
+	NS_SPECIAL          => 'Цастәи',
+	NS_TALK             => 'Ахцәажәара',
+	NS_USER             => 'Алахәыла',
+	NS_USER_TALK        => 'Алахәыла_ахцәажәара',
+	NS_PROJECT_TALK     => '$1_ахцәажәара',
+	NS_FILE             => 'Афаил',
+	NS_FILE_TALK        => 'Афаил_ахцәажәара',
+	NS_MEDIAWIKI        => 'Амедиавики',
+	NS_MEDIAWIKI_TALK   => 'Амедиавики_ахцәажәара',
+	NS_TEMPLATE         => 'Ашаблон',
+	NS_TEMPLATE_TALK    => 'Ашаблон_ахцәажәара',
+	NS_HELP             => 'Ацхыраара',
+	NS_HELP_TALK        => 'Ацхыраара_ахцәажәара',
+	NS_CATEGORY         => 'Акатегориа',
+	NS_CATEGORY_TALK    => 'Акатегориа_ахцәажәара',
+);
+
+$namespaceAliases = array(
+	'Иалахә'             => NS_USER,
+
+	// Backward compat. Fallbacks from 'ru'.
+	'Медиа'                => NS_MEDIA,
+	'Служебная'            => NS_SPECIAL,
+	'Обсуждение'           => NS_TALK,
+	'Участник'             => NS_USER,
+	'Обсуждение_участника' => NS_USER_TALK,
+	'Обсуждение_$1'        => NS_PROJECT_TALK,
+	'Файл'                 => NS_FILE,
+	'Обсуждение_файла'     => NS_FILE_TALK,
+	'MediaWiki'            => NS_MEDIAWIKI,
+	'Обсуждение_MediaWiki' => NS_MEDIAWIKI_TALK,
+	'Шаблон'               => NS_TEMPLATE,
+	'Обсуждение_шаблона'   => NS_TEMPLATE_TALK,
+	'Справка'              => NS_HELP,
+	'Обсуждение_справки'   => NS_HELP_TALK,
+	'Категория'            => NS_CATEGORY,
+	'Обсуждение_категории' => NS_CATEGORY_TALK
+);
+
+$specialPageAliases = array(
+	'Recentchanges'             => array( 'АрҽеираҾыцқәа' ),
+	'Upload'                    => array( 'Аҭагалара' ),
+	'Newimages'                 => array( 'АфаилқәаҾыц' ),
+	'Randompage'                => array( 'Машәырлатәи' ),
+	'Newpages'                  => array( 'АдаҟьақәаҾыц' ),
+	'Specialpages'              => array( 'ЦастәиАдаҟьақәа' ),
+	'Categories'                => array( 'Акатегориақәа' ),
+	'Mypage'                    => array( 'Садаҟьа' ),
+	'Mytalk'                    => array( 'Сахцәажәара' ),
+	'Mycontributions'           => array( 'Архиарақәа' ),
+	'Search'                    => array( 'Аҧшаара' ),
+);
+
+$magicWords = array(
+	'language'              => array( '0', '#АБЫЗШӘА:', '#ЯЗЫК:', '#LANGUAGE:' ),
+	'special'               => array( '0', 'цастәи', 'служебная', 'special' ),
+	'index'                 => array( '1', '__АИНДЕКС__', '__ИНДЕКС__', '__INDEX__' ),
+);
+
 $messages = array(
 # Dates
 'sunday'        => 'амҽыш',
@@ -75,20 +136,12 @@ $messages = array(
 'qbspecialpages' => 'Цастәи адаҟьақәа',
 
 # Vector skin
-'vector-namespace-category' => 'Акатегориа',
-'vector-namespace-help'     => 'Ацхыраара адаҟьа',
-'vector-namespace-image'    => 'Афаил',
-'vector-namespace-main'     => 'Адаҟьа',
-'vector-namespace-project'  => 'Апроект',
-'vector-namespace-special'  => 'Цастәи адаҟьа',
-'vector-namespace-talk'     => 'Ахцәажәара',
-'vector-namespace-template' => 'Ашаблон',
-'vector-namespace-user'     => 'Иалахә Адаҟьа',
-'vector-view-create'        => 'Арҿиара',
-'vector-view-edit'          => 'Ариашамҭа',
-'vector-view-history'       => 'Аҭоурых',
-'vector-view-view'          => 'Аҧхьара',
-'vector-view-viewsource'    => 'Ахәаҧшра',
+'vector-action-move'     => 'Ахьӡ аҧсахра',
+'vector-view-create'     => 'Арҿиара',
+'vector-view-edit'       => 'Ариашамҭа',
+'vector-view-history'    => 'Аҭоурых',
+'vector-view-view'       => 'Аҧхьара',
+'vector-view-viewsource' => 'Ахәаҧшра',
 
 'help'             => 'Ацхыраара',
 'search'           => 'Аҧшаара',
@@ -128,7 +181,7 @@ $messages = array(
 
 # Short words for each namespace, by default used in the namespace tab in monobook
 'nstab-main'     => 'Адаҟьа',
-'nstab-user'     => 'Иалахә',
+'nstab-user'     => 'Алахәыла',
 'nstab-special'  => 'Цастәи адаҟьа',
 'nstab-image'    => 'Афаил',
 'nstab-template' => 'Ашаблон',
@@ -158,20 +211,20 @@ $messages = array(
 'preferences'       => 'Архиарақәа',
 'mypreferences'     => 'Архиарақәа',
 'searchresultshead' => 'Аҧшаара',
-'uid'               => 'Иалоу ID:',
+'uid'               => 'Алахәыла ID:',
 'yourlanguage'      => 'Абызшәа:',
+'prefs-signature'   => 'Анапынҵамҭа',
 
 # Groups
-'group-user' => 'Иалоуқәа',
+'group-user' => 'Алахәылацәа',
 
-'group-user-member' => 'Иалахә',
+'group-user-member' => 'алахәыла',
 
 'grouppage-sysop' => '{{ns:project}}:Администраторцәа',
 
 # Recent changes
-'recentchanges'                => 'Арҽеира ҿыцқәа',
-'recentchanges-legend-newpage' => '$1 — адаҟьа ҿыц',
-'newpageletter'                => 'Ҿ',
+'recentchanges' => 'Арҽеира ҿыцқәа',
+'newpageletter' => 'Ҿ',
 
 # Recent changes linked
 'recentchangeslinked'         => 'Еимадоу ариашарақәа',
@@ -182,7 +235,7 @@ $messages = array(
 'upload' => 'Афаил аҭагалара',
 
 # File description page
-'filehist-user' => 'Иалоу',
+'filehist-user' => 'Алахәыла',
 
 # Random page
 'randompage' => 'Машәырлатәи аҩымҭа',
@@ -190,10 +243,12 @@ $messages = array(
 'brokenredirects-edit' => 'ариашамҭа',
 
 # Miscellaneous special pages
-'newpages-username' => 'Иалахә:',
+'newpages-username' => 'Алахәыла:',
+'move'              => 'Ахьӡ аҧсахра',
+'movethispage'      => 'Ахьӡ аҧсахра ари адаҟьа',
 
 # Special:Log
-'specialloguserlabel' => 'Иалахә:',
+'specialloguserlabel' => 'Алахәыла:',
 
 # Special:AllPages
 'alphaindexline' => '$1 ... $2',
@@ -221,6 +276,9 @@ $messages = array(
 
 # Block/unblock
 'contribslink' => 'алагала',
+
+# Move page
+'movearticle' => 'Ахьӡ аҧсахра:',
 
 # Namespace 8 related
 'allmessages-language' => 'Абызшәа:',

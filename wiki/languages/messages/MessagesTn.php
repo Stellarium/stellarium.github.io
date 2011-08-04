@@ -88,13 +88,13 @@ $messages = array(
 'viewsource' => 'Lebelela motswedi',
 
 # Login and logout pages
-'welcomecreation'    => '== Amogelesega, $1! == 
+'welcomecreation'    => '== Amogelesega, $1! ==
 
 O ipuletse akhaonte. O seka wa lebala go fetola tse o di dikgatlhegelo tsa gago tsa {{SITENAME}}.',
 'yourname'           => 'Leina la modirisi:',
 'yourpassword'       => 'Selotlolo sa sephiri:',
 'yourpasswordagain'  => 'Kwala selotlolo sa gago sa sephiri gape:',
-'remembermypassword' => 'Gakologelwa ikwadiso yame mo khompiutareng e',
+'remembermypassword' => 'Gakologelwa ikwadiso yame mo khompiutareng e (for a maximum of $1 {{PLURAL:$1|day|days}})',
 'login'              => 'Ikwadise',
 'userlogin'          => 'Ikwadise / ipulela tsebe',
 'logout'             => 'Tswala',

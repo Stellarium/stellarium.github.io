@@ -1,5 +1,5 @@
 <?php
-/** Traditional Gan script (贛語(繁體))
+/** Traditional Gan script (‪贛語(繁體)‬)
  *
  * See MessagesQqq.php for message documentation incl. usage of parameters
  * To improve a translation please visit http://translatewiki.net
@@ -7,6 +7,8 @@
  * @ingroup Language
  * @file
  *
+ * @author Mark85296341
+ * @author Reedy
  * @author Symane
  * @author Urhixidur
  * @author Vipuser
@@ -67,8 +69,7 @@ $messages = array(
 'tog-editsection'             => '可以用[編寫]連結來編寫個別段落',
 'tog-editsectiononrightclick' => '可以按右鍵來編寫隻把子段落（JavaScript）',
 'tog-showtoc'                 => '超過三隻標題就顯到目錄',
-'tog-rememberpassword'        => '到箇隻電腦記到偶嗰密碼',
-'tog-editwidth'               => '加闊修改欄到完個螢幕',
+'tog-rememberpassword'        => '到箇隻電腦記到偶嗰密碼 (for a maximum of $1 {{PLURAL:$1|day|days}})',
 'tog-watchcreations'          => '拿偶開嘞嗰頁面加到偶嗰監視列表',
 'tog-watchdefault'            => '拿偶改嘞嗰頁面加到偶嗰監視列表',
 'tog-watchmoves'              => '拿偶動嘞嗰頁面加到偶嗰監視列表',
@@ -214,31 +215,20 @@ $messages = array(
 'faqpage'        => 'Project:問得蠻多嗰問題',
 
 # Vector skin
-'vector-action-addsection'   => '添主題',
-'vector-action-delete'       => '刪吥',
-'vector-action-move'         => '移吥',
-'vector-action-protect'      => '護到',
-'vector-action-undelete'     => '望下刪吥嗰頁面',
-'vector-action-unprotect'    => '解除保護',
-'vector-namespace-category'  => '分類',
-'vector-namespace-help'      => '幫助頁',
-'vector-namespace-image'     => '檔案',
-'vector-namespace-main'      => '頁面',
-'vector-namespace-media'     => '媒體頁',
-'vector-namespace-mediawiki' => '介面',
-'vector-namespace-project'   => '計劃頁',
-'vector-namespace-special'   => '特別頁',
-'vector-namespace-talk'      => '談詑',
-'vector-namespace-template'  => '模板',
-'vector-namespace-user'      => '用戶頁',
-'vector-view-create'         => '創建',
-'vector-view-edit'           => '編輯',
-'vector-view-history'        => '望下歷史',
-'vector-view-view'           => '讀',
-'vector-view-viewsource'     => '望下原始碼',
-'actions'                    => '動作',
-'namespaces'                 => '空間名',
-'variants'                   => '變換',
+'vector-action-addsection' => '添主題',
+'vector-action-delete'     => '刪吥',
+'vector-action-move'       => '移吥',
+'vector-action-protect'    => '護到',
+'vector-action-undelete'   => '望下刪吥嗰頁面',
+'vector-action-unprotect'  => '解除保護',
+'vector-view-create'       => '創建',
+'vector-view-edit'         => '編輯',
+'vector-view-history'      => '望下歷史',
+'vector-view-view'         => '讀',
+'vector-view-viewsource'   => '望下原始碼',
+'actions'                  => '動作',
+'namespaces'               => '空間名',
+'variants'                 => '變換',
 
 'errorpagetitle'    => '錯誤',
 'returnto'          => '去歸$1。',
@@ -317,8 +307,8 @@ $1',
 'policy-url'           => 'Project:政策',
 'portal'               => '社區',
 'portal-url'           => 'Project:社區',
-'privacy'              => '隱私政策',
-'privacypage'          => 'Project:隱私政策',
+'privacy'              => '隱私權政策',
+'privacypage'          => 'Project:隱私權政策',
 
 'badaccess'        => '許可權錯誤',
 'badaccess-group0' => '倷嗰要求冇拕批准。',
@@ -447,13 +437,14 @@ $2',
 'yourname'                   => '用戶名：',
 'yourpassword'               => '密碼：',
 'yourpasswordagain'          => '輸過道密碼：',
-'remembermypassword'         => '讓電腦記到密碼',
+'remembermypassword'         => '讓電腦記到密碼 (for a maximum of $1 {{PLURAL:$1|day|days}})',
 'yourdomainname'             => '倷嗰域名：',
 'externaldberror'            => '外部驗證資料庫出錯，或倷更新伓正倷嗰外部帳戶。',
 'login'                      => '登入',
 'nav-login-createaccount'    => '登入/新開隻帳戶',
 'loginprompt'                => '要開到cookies才登入得正{{SITENAME}}。',
 'userlogin'                  => '登入/新開隻帳戶',
+'userloginnocreate'          => '登入',
 'logout'                     => '退出',
 'userlogout'                 => '退出',
 'notloggedin'                => '冇登入',
@@ -463,13 +454,14 @@ $2',
 'gotaccount'                 => "有嘍帳戶？ '''$1'''.",
 'gotaccountlink'             => '登入',
 'createaccountmail'          => '通過email',
+'createaccountreason'        => '原因:',
 'badretype'                  => '倷輸嗰密碼伓合。',
 'userexists'                 => '倷輸嗰用戶名係人家嗰，選過隻嘍！',
 'loginerror'                 => '登入錯誤',
 'nocookiesnew'               => '帳戶扤正嘞！測到倷關吥嘞Cookies，麻煩倷開到佢登入過。',
 'nocookieslogin'             => '箇首要用 Cookies 登入，測到倷關吥嘞Cookies，麻煩倷開到佢登入過。',
 'noname'                     => '倷冇輸正有效嗰用戶名。',
-'loginsuccesstitle'          => '登入正嘞',
+'loginsuccesstitle'          => '登入正哩',
 'loginsuccess'               => '倷搦到"$1"嗰身份登到{{SITENAME}}。',
 'nosuchuser'                 => '箇首冇叫"$1"嗰用戶。望吖倷嗰拼寫，要伓建過隻新帳戶。',
 'nosuchusershort'            => '箇首冇叫"<nowiki>$1</nowiki>"嗰用戶。請望吖倷嗰拼寫。',
@@ -501,15 +493,17 @@ $2',
 'loginlanguagelabel'         => '語言: $1',
 
 # Password reset dialog
-'resetpass'           => '設過帳戶密碼',
-'resetpass_announce'  => '倷係用到臨時email嗰代碼登入嗰。要登正入，倷要到箇首設定隻新密碼:',
-'resetpass_header'    => '設過密碼',
-'oldpassword'         => '老密碼：',
-'newpassword'         => '新密碼：',
-'retypenew'           => '確認密碼:',
-'resetpass_submit'    => '設定密碼同到登入',
-'resetpass_success'   => '倷嗰密碼改正嘍！正幫倷登入...',
-'resetpass_forbidden' => '到{{SITENAME}}上改伓正密碼',
+'resetpass'                 => '設過帳戶密碼',
+'resetpass_announce'        => '倷係用到臨時email嗰代碼登入嗰。要登正入，倷要到箇首設定隻新密碼:',
+'resetpass_header'          => '設過密碼',
+'oldpassword'               => '老密碼：',
+'newpassword'               => '新密碼：',
+'retypenew'                 => '確認密碼:',
+'resetpass_submit'          => '設定密碼同到登入',
+'resetpass_success'         => '倷嗰密碼改正嘍！正幫倷登入...',
+'resetpass_forbidden'       => '到{{SITENAME}}上改伓正密碼',
+'resetpass-submit-loggedin' => '設過帳戶密碼',
+'resetpass-submit-cancel'   => '取消',
 
 # Edit page toolbar
 'bold_sample'     => '粗體字',
@@ -589,21 +583,21 @@ $2',
 要係倷伓係特試來到箇首，捺吖瀏覽器嗰「返回」鍵即可去還。',
 'anontalkpagetext'                 => "---- ''箇係匿名用戶嗰討論頁，話伓定佢哈冇開隻帳戶。別人單用得正IP地址同佢聯繫。箇隻IP地址可能有好幾隻用戶共用。如果倷係匿名用戶，覺得箇頁嗰內容同倷冇關，歡迎去[[Special:UserLogin|開隻新帳戶或登入]]，省得同別嗰匿名用戶扤混來。''",
 'noarticletext'                    => '眼下箇頁哈冇內容，倷可以到別嗰頁面[[Special:Search/{{PAGENAME}}|尋吖箇頁嗰標題]]，
-<span class="plainlinks">[{{fullurl:{{#Special:Log}}|page={{FULLPAGENAMEE}}}} 尋吖有關日誌]或[{{fullurl:{{FULLPAGENAME}}|action=edit}} 編寫箇頁]。',
+<span class="plainlinks">[{{fullurl:{{#Special:Log}}|page={{FULLPAGENAMEE}}}} 尋吖有關日誌]或[{{fullurl:{{FULLPAGENAME}}|action=edit}} 編寫箇頁]</span>。',
 'clearyourcache'                   => "'''注意:''' 保存之後, 倷要清吥瀏覽器嗰緩存才眵得正改嗰內容。 '''Mozilla / Firefox / Safari:''' 按到 ''Shift'' 接到按''刷新''（或按吖''Ctrl-Shift-R''，到蘋果Mac上按''Cmd-Shift-R''）；'''IE:''' 按到 ''Ctrl''接到按''刷新''，或按吖''Ctrl-F5''；'''Konqueror:''' 單只要按 ''刷新''；'''Opera:''' 用戶要到 ''工具-設置'' 完全嗰清除緩存。",
 'usercssyoucanpreview'             => "'''提示:''' 存到前請用'望吖起'來測吖倷嗰新CSS 。",
 'userjsyoucanpreview'              => "'''提示:''' 存到前請用'望吖起'來測吖倷嗰新JS 。",
 'usercsspreview'                   => "'''注意倷單係到預覽倷個人嗰 CSS，內容哈冇保存！'''",
 'userjspreview'                    => "'''注意倷單係到測試／預覽倷個人嗰 JavaScript，內容哈冇保存！'''",
-'userinvalidcssjstitle'            => "'''警告:''' 冇\"\$1\"嗰皮膚。請記到自定義嗰 .css 同 .js 頁要用小寫。就話，{{ns:user}}:Foo/monobook.css 伓等同 {{ns:user}}:Foo/Monobook.css。",
+'userinvalidcssjstitle'            => "'''警告:''' 冇\"\$1\"嗰皮膚。請記到自定義嗰 .css 同 .js 頁要用小寫。就話，{{ns:user}}:Foo/vector.css 伓等同 {{ns:user}}:Foo/Vector.css。",
 'updated'                          => '（更新正嘍）',
 'note'                             => "'''注意:'''",
 'previewnote'                      => "'''請記到箇光係預覽，內容哈冇保存！'''",
 'previewconflict'                  => '箇隻預覽係上首文字編輯區嗰內容。倷選擇保存嗰話佢才會保存到。',
 'session_fail_preview'             => "'''對伓住！箇隻段落嗰資料跌吥嘞，偶個俚處理伓正倷嗰編輯。請試過吖。哈係扤伓正嗰話，試吖退出後登入過。'''",
-'session_fail_preview_html'        => "'''對伓住！相關嗰程式資料跌吥嘞，偶個俚處理伓正倷嗰編輯。''' 
+'session_fail_preview_html'        => "'''對伓住！相關嗰程式資料跌吥嘞，偶個俚處理伓正倷嗰編輯。'''
 
-''箇隻wiki開放正嘞原HTML碼，預覽弆到嘞以防止JavaScript嗰攻擊。'' 
+''箇隻wiki開放正嘞原HTML碼，預覽弆到嘞以防止JavaScript嗰攻擊。''
 
 '''要係佢係合法編輯嗰，請試過吖。哈係扤伓正嗰話，試吖退出後登入過。'''",
 'token_suffix_mismatch'            => "'''倷嗰用戶端嗰編輯信毀吥嘞嚸標點符號字符，噉嗰話倷嗰編輯就拕拒絕嘞。
@@ -629,8 +623,6 @@ $2',
 'copyrightwarning2'                => "請記得別嗰人編得正、改得正或者刪得正倷到{{SITENAME}}嗰全部貢獻。要係倷伓想自家嗰編輯好嚟嚟拕改吥，唉就莫遞交。<br />
 倷都要話正倷嗰文字係倷自家寫嗰，或者係公有領域或別嗰自由資源複製到嗰（望吖$1有別嗰資料）。
 '''冇任何許可嗰情況下請莫遞交有版權嗰作品！'''",
-'longpagewarning'                  => "'''警告：箇頁有$1 kilobytes咁長；有嗰瀏覽器會編伓正超吥32 kb嗰頁面。
-請考慮吖拿佢分到細嚸嗰小段落。'''",
 'longpageerror'                    => "'''錯誤：倷遞交嗰文字有$1 kilobytes咁長，佢長過最大嗰$2 kilobytes。存伓正倷遞交嗰文字。'''",
 'readonlywarning'                  => "'''警告: 資料庫鎖到嘞進行定期修護，眼下倷存伓正倷嗰改動。倷可以拿佢存到文檔再著。'''",
 'protectedpagewarning'             => "'''警告: 箇頁已經受保護，單只管理員許可權嗰用戶才改得正。'''",
@@ -656,6 +648,7 @@ $2',
 為到方便，箇頁嗰刪除記錄已經到下底提供:",
 'moveddeleted-notice'              => '箇隻版面已經拕刪吥嘍。
 下頭提供箇隻版面嗰刪除日誌，以供參考。',
+'edit-conflict'                    => '編輯仗。',
 
 # "Undo" feature
 'undo-success' => '箇隻編輯可以拕取銷。請檢查吖以確定箇係倷想扤嗰，接到保存修改去完成撤銷編輯。',
@@ -681,8 +674,8 @@ $2',
 'last'                   => '之前',
 'page_first'             => '最早',
 'page_last'              => '最晏',
-'histlegend'             => '差異選擇: 標到伓同版本嗰單選鍵，接到按吖督上嗰鍵比較下。<br />
-說明: （眼下） 指同目前版本嗰比較，（之前） 指同之前修改版本嗰比較，細 = 細修改。',
+'histlegend'             => '差異選擇：標到伓同版本嗰單選鍵，接到按吖督上嗰鍵比較下。<br />
+說明：（眼下） 指同目前版本嗰比較，（之前） 指同之前修改版本嗰比較，細 = 細修改。',
 'history-fieldset-title' => '瀏覽歷史',
 'histfirst'              => '最早版本',
 'histlast'               => '最晏版本',
@@ -702,6 +695,7 @@ $2',
 'rev-deleted-text-permission' => '箇頁嗰改動從共用文檔挪吥嘞。到[{{fullurl:{{#Special:Log}}/suppress|page={{PAGENAMEE}}}} 刪除日誌] 裡度倷話伓定有詳細嗰資料。',
 'rev-deleted-text-view'       => '箇頁嗰改動從共用文檔挪吥嘞。作為本站嗰管理員，倷查看得正；到[{{fullurl:{{#Special:Log}}/suppress|page={{FULLPAGENAMEE}}}} 刪除日誌] 裡度有詳細嗰資料。',
 'rev-delundel'                => '顯示/弆到',
+'rev-showdeleted'             => '敨開',
 'revisiondelete'              => '刪除/反刪除修改',
 'revdelete-nooldid-title'     => '冇目標修訂',
 'revdelete-nooldid-text'      => '倷冇话箇隻操作嗰目标修改。',
@@ -726,7 +720,9 @@ $2',
 'revdelete-success'           => "'''修訂嗰可見性設置正嘍。'''",
 'logdelete-success'           => "'''事件嗰可見性設置正嘍。'''",
 'revdel-restore'              => '改動可見性',
+'pagehist'                    => '文章歷史',
 'deletedhist'                 => '刪吥嗰歷史',
+'revdelete-uname'             => '用戶名',
 'revdelete-hid'               => '弆到 $1',
 
 # History merging
@@ -836,7 +832,7 @@ $2',
 'guesstimezone'             => '到瀏覽器上填',
 'allowemail'                => '接受別嗰用戶嗰郵件',
 'defaultns'                 => '默認搜索嗰名字空間:',
-'default'                   => '默認',
+'default'                   => '預設',
 'prefs-files'               => '檔案',
 'youremail'                 => '電子郵件：',
 'username'                  => '用戶名：',
@@ -981,7 +977,6 @@ $2',
 'file-thumbnail-no'           => "箇隻檔案名係以'''<tt>$1</tt>'''開頭。佢好像一隻圖像嗰縮小版''（縮圖）''。如果倷有箇隻圖像嗰完整版，伓然請再改過隻檔名。",
 'fileexists-forbidden'        => '箇隻檔案名已存在；請回頭並換過隻新嗰名稱來上傳箇隻檔案。[[File:$1|thumb|center|$1]]',
 'fileexists-shared-forbidden' => '到共用檔案庫裡度有嘞同名嗰檔案；請回頭並換過隻新嗰名稱來上傳箇隻檔案。[[File:$1|thumb|center|$1]]',
-'successfulupload'            => '上傳正嘞',
 'uploadwarning'               => '上傳警告',
 'savefile'                    => '保存檔案',
 'uploadedimage'               => '上傳正嘞"[[$1]]"',
@@ -999,6 +994,7 @@ $2',
 倷要想正係真嗰上傳箇隻檔案。
 為到方便起見，箇隻檔案嗰刪除記錄到下底提供嘞:",
 'filename-bad-prefix'         => "倷上傳嗰檔案名係以'''\"\$1\"'''做開頭嗰，通常箇種冇意義嗰名字係數碼相機度嗰自動編排。請到倷嗰檔案揀過隻更加有意義嗰名字。",
+'upload-success-subj'         => '上傳正嘞',
 
 'upload-proto-error'      => '協定錯誤',
 'upload-proto-error-text' => '遠程上傳要求 URL 用 <code>http://</code> 或 <code>ftp://</code> 開頭。',
@@ -1059,7 +1055,7 @@ $2',
 'filerevert'                => '恢復$1',
 'filerevert-legend'         => '恢復檔案',
 'filerevert-intro'          => "眼下倷恢復嘚'''[[Media:$1|$1]]'''到[$4 於$2 $3嗰版本]。",
-'filerevert-comment'        => '說明:',
+'filerevert-comment'        => '理由：',
 'filerevert-defaultcomment' => '恢復到嘞$1, $2嗰版本',
 'filerevert-submit'         => '恢復',
 'filerevert-success'        => "'''[[Media:$1|$1]]'''恢復到嘞[$4 於$2 $3嗰版本]。",
@@ -1083,7 +1079,7 @@ $2',
 ** 檔案重複',
 
 # MIME search
-'mimesearch'         => 'MIME 搜索',
+'mimesearch'         => 'MIME 搜尋',
 'mimesearch-summary' => '箇隻頁面啟用檔案MIME類型篩檢程式。輸入：內容類型/子類型，像 <tt>image/jpeg</tt>。',
 'mimetype'           => 'MIME 類型:',
 'download'           => '下載',
@@ -1122,7 +1118,6 @@ $2',
 'statistics-edits-average'     => '每頁嗰平均編輯數',
 'statistics-views-total'       => '查看嗰統共數',
 'statistics-views-peredit'     => '每到編輯查看數',
-'statistics-jobqueue'          => '[http://www.mediawiki.org/wiki/Manual:Job_queue 工作隊列]嗰長度',
 'statistics-users'             => '註冊過嗰[[Special:ListUsers|用戶]]',
 'statistics-users-active'      => '活躍用戶',
 'statistics-users-active-desc' => '頭$1日操作過嗰用戶',
@@ -1230,10 +1225,13 @@ $2',
 
 # Special:Categories
 'categories'         => '頁面分類',
-'categoriespagetext' => '下底嗰分類包到頁面或係媒體文件。',
+'categoriespagetext' => '下底嗰分類包到頁面或係媒體文件。
+[[Special:UnusedCategories|Unused categories]] are not shown here.
+Also see [[Special:WantedCategories|wanted categories]].',
 
 # Special:LinkSearch
-'linksearch' => '外部連結',
+'linksearch'    => '外部連結',
+'linksearch-ok' => '尋吖',
 
 # Special:ListUsers
 'listusersfrom'      => '顯示噉樣用戶條件:',
@@ -1271,13 +1269,12 @@ $2',
 # Watchlist
 'watchlist'            => '監視列表',
 'mywatchlist'          => '偶嗰監視列表',
-'watchlistfor'         => "（'''$1'''嗰監視列表'）",
 'nowatchlist'          => '倷嗰監視列表什哩都冇有。',
 'watchlistanontext'    => '請$1眵吖或改吖倷嗰監視列表。',
 'watchnologin'         => '冇登入',
 'watchnologintext'     => '倷要[[Special:UserLogin|登入]]起才改得正倷嗰監視列表。',
 'addedwatch'           => '加到嘞監視列表',
-'addedwatchtext'       => "頁面\"[[:\$1]]\" 加到嘞倷嗰[[Special:Watchlist|監視列表]]。箇頁同佢嗰討論頁嗰全部改動以後都會列到許首，佢會用'''粗體''' 列到[[Special:RecentChanges|最近更改]]讓倷更加容易識別。 倷以後要係拿佢到監視列表刪卟佢嗰話，就到導航條點吖「莫眏到」。",
+'addedwatchtext'       => "頁面「[[:$1]]」加到嘞倷嗰[[Special:Watchlist|監視列表]]。箇頁同佢嗰討論頁嗰全部改動以後都會列到許首，佢會用'''粗體''' 列到[[Special:RecentChanges|最近更改]]讓倷更加容易識別。 倷以後要係拿佢到監視列表刪卟佢嗰話，就到導航條點吖「莫眏到」。",
 'removedwatch'         => '莫眏到',
 'removedwatchtext'     => '頁面[[:$1]]到[[Special:Watchlist|倷嗰監視列表]]刪卟哩。',
 'watch'                => '眏到',
@@ -1364,7 +1361,9 @@ $NEWPAGE
 'editcomment'      => "編輯介紹: \"''\$1''\"。",
 'revertpage'       => '返回由[[Special:Contributions/$2|$2]] （[[User talk:$2|對話]]）嗰編輯；恢復到[[User:$1|$1]]嗰最末一隻版本',
 'rollback-success' => '返回由$1嗰編輯；恢復到$2嗰最末一隻版本。',
-'sessionfailure'   => '倷嗰登入好像有嚸問題，為到防範未然，箇隻動作拕取消嘞。
+
+# Edit tokens
+'sessionfailure' => '倷嗰登入好像有嚸問題，為到防範未然，箇隻動作拕取消嘞。
 
 請按吖“後退”再試過囉！',
 
@@ -1526,7 +1525,6 @@ $1',
 'ipb-edit-dropdown'           => '編寫封鎖原因',
 'ipb-unblock-addr'            => '解封$1',
 'ipb-unblock'                 => '解封用戶名或IP地址',
-'ipb-blocklist-addr'          => '望吖$1目前嗰封禁',
 'ipb-blocklist'               => '望吖目前嗰封禁',
 'unblockip'                   => '解封IP地址',
 'unblockiptext'               => '用下底嗰表格去恢復早先拕封嗰IP嗰編寫權。',
@@ -1643,7 +1641,7 @@ $1',
 'exportcuronly'     => '獨今吖嗰改動，伓係全部嗰歷史。',
 'exportnohistory'   => "----
 '''注意:''' 由於性能嗰原因，箇隻表格導出嗰頁面嗰全部歷史都拕禁用。",
-'export-submit'     => '導出',
+'export-submit'     => '匯出',
 'export-addcattext' => '從分類裡頭加進頁面:',
 'export-addcat'     => '加入',
 'export-download'   => '提供一隻檔案去另存',
@@ -1865,10 +1863,10 @@ $1',
 'imagemaxsize'         => '檔案解釋頁嗰圖像大細限制到:',
 'thumbsize'            => '縮略圖大細:',
 'widthheightpage'      => '$1×$2,$3頁',
-'file-info'            => '（檔案大細: $1, MIME 類型: $2）',
-'file-info-size'       => '（$1 × $2 像素，檔案大細：$3 ，MIME類型：$4）',
+'file-info'            => '檔案大細: $1, MIME 類型: $2',
+'file-info-size'       => '$1 × $2 像素，檔案大細：$3 ，MIME類型：$4',
 'file-nohires'         => '<small>冇更高解像度嗰圖像。</small>',
-'svg-long-desc'        => '（SVG檔案，表面大細： $1 × $2 像素，檔案大細：$3）',
+'svg-long-desc'        => 'SVG檔案，表面大細： $1 × $2 像素，檔案大細：$3',
 'show-big-image'       => '完整解析度',
 'show-big-image-thumb' => '<small>箇幅縮略圖嗰解析度: $1 × $2 像素</small>',
 
@@ -2182,11 +2180,11 @@ $1',
 'confirmemail_loggedin'   => '倷嗰email地址已得到確認。',
 'confirmemail_error'      => '確認過程出錯。',
 'confirmemail_subject'    => '{{SITENAME}}電子郵件地址確認',
-'confirmemail_body'       => 'IP地址$1嗰用戶（可能係倷）到{{SITENAME}}註冊嘞帳戶"$2"，並一同用嘞倷嗰email地址。 
+'confirmemail_body'       => 'IP地址$1嗰用戶（可能係倷）到{{SITENAME}}註冊嘞帳戶"$2"，並一同用嘞倷嗰email地址。
 
-請確認箇隻帳戶係歸倷嗰，接到啟動{{SITENAME}}裡頭嗰email功能。請到瀏覽器開到下底嗰連結: 
+請確認箇隻帳戶係歸倷嗰，接到啟動{{SITENAME}}裡頭嗰email功能。請到瀏覽器開到下底嗰連結:
 
-$3 
+$3
 
 如果箇*伓係*倷，就冇必要打開箇隻連結。確認碼會到$4時間過期。',
 

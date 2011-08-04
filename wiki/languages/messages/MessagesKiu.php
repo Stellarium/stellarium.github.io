@@ -15,22 +15,21 @@ $fallback = 'tr';
 $messages = array(
 # User preference toggles
 'tog-underline'               => 'Bınê girey de xete bonce:',
-'tog-highlightbroken'         => 'Girêunê thalu {a href="" class="new"}nia{/a} (alternative: nia{a 
+'tog-highlightbroken'         => 'Gireunê thalu {a href="" class="new"}nia{/a} (alternatif: nia{a
 href="" class="internal"}?{/a}) basne.',
 'tog-justify'                 => 'Paragrafu ayar ke',
-'tog-hideminor'               => 'Vurnaisunê senıku pela vurnaisê peyêni de wedare',
+'tog-hideminor'               => 'Vurnaisunê senıku pela vurnaisunê peyênu de wedare',
 'tog-hidepatrolled'           => 'Vurnaisunê qontrolkerdu pela vurnaisê peyêni de wedare',
 'tog-newpageshidepatrolled'   => 'Pelunê qontrolkerdu lista pelunê newu de wedare',
-'tog-extendwatchlist'         => 'Lista şêrkerdene serba, teyna tewr peyênu nê, diyaena pêro vurnaisu hira ke',
+'tog-extendwatchlist'         => 'Lista şêrkerdene hira bıke ke vurnaişi pêro basê, teyna tewr peyêni nê',
 'tog-usenewrc'                => 'Vurnaisunê peyênunê hirakerdiu bıgurene (JavaScript lazımo)',
 'tog-numberheadings'          => 'Sernustu be ho numra cı sane',
 'tog-showtoolbar'             => 'Gozagunê hacetunê vurnaişi basne (JavaScript lazımo)',
 'tog-editondblclick'          => 'Pê dı rey teqnaene pele sero bıguriye (JavaScript lazımo)',
-'tog-editsection'             => 'Vurnaena qısımi ebe girêunê [bıvurne] ra feal ke',
-'tog-editsectiononrightclick' => 'Qısımu teqnaena serrêze be gozaga raste bıvurne (JavaScript lazımo)',
+'tog-editsection'             => 'Vurnaena qısımi ebe gireunê [bıvurne] ra feal ke',
+'tog-editsectiononrightclick' => 'Qısımu be teqnaena serrêze ra ebe gozaga raste bıvurne (JavaScript lazımo)',
 'tog-showtoc'                 => 'Tabloê tedeesteu basne (de pelunê be hirê sernustu ra jêdêri de)',
-'tog-rememberpassword'        => 'Parola mı bia ho viri',
-'tog-editwidth'               => 'Warê nustey hira ke, ke verıniya pela cıdaena nustey tam baso',
+'tog-rememberpassword'        => 'Parola mı nê cıcêraoği de bia ho viri (serba tewr jêde $1 {{PLURAL:$1|roze|rozu}}).',
 'tog-watchcreations'          => 'Pelê ke mı afernê, lista mına şêrkerdişi ke',
 'tog-watchdefault'            => 'Pelê ke mı vurnê, lista mına şêrkerdişi ke',
 'tog-watchmoves'              => 'Pelê ke mı kırısnê, lista mına şêrkerdişi ke',
@@ -38,28 +37,28 @@ href="" class="internal"}?{/a}) basne.',
 'tog-minordefault'            => 'Vurnaisunê ho pêrune ‘vurnaiso qızkek’ nisan bıde',
 'tog-previewontop'            => 'Verqayti pela nustene ser de basne',
 'tog-previewonfirst'          => 'Vurnaiso verên de verqayti tım basne',
-'tog-nocache'                 => 'Pelu mia ho viri',
-'tog-enotifwatchlistpages'    => 'Pela ke ez şêr kenune eke vurnê mı rê e-mail bırusne',
-'tog-enotifusertalkpages'     => 'Pela mına hurênaişi ke vurnê mı rê e-mail bırusne',
-'tog-enotifminoredits'        => 'Vurnaisunê qızkeku de ki mı rê e-mail bırusne',
-'tog-enotifrevealaddr'        => 'E-mailadresa mı emailunê xeberu de bıasne',
-'tog-shownumberswatching'     => 'Amarê karberunê şêrkerdoğu bıasne',
+'tog-nocache'                 => 'Pelunê cıcêraoği mia ho viri',
+'tog-enotifwatchlistpages'    => 'Pela ke ez şêr kenune eke vurnê mı rê e-poste bırusne',
+'tog-enotifusertalkpages'     => 'Pela mına hurênaişi ke vurnê mı rê e-poste bırusne',
+'tog-enotifminoredits'        => 'Vurnaisunê qızkeku de ki mı rê e-poste bırusne',
+'tog-enotifrevealaddr'        => 'Adresa e-postê mı postê xeberu de basne',
+'tog-shownumberswatching'     => 'Amorê karberunê şêrkerdoğu basne',
 'tog-oldsig'                  => 'Verqaytê imza mewcude:',
 'tog-fancysig'                => 'İmza rê mamelê wikimeqaley bıke (bê gireo otomatik)',
-'tog-externaleditor'          => 'Editorê teberi standart bıgurene (teyna serba ekspertuno, komputerê sıma de ayarê xusuşiy lazımê)',
-'tog-externaldiff'            => 'Têversanaene pê programê teberi vıraze (teyna serba ekspertuno, komputerê sıma de ayarê xusuşiy lazımê)',
+'tog-externaleditor'          => 'Editorê teberi standart bıgurene (teyna serba ekspertuno, komputerê sıma de ayarê xısuşiy lazımê. [http://www.mediawiki.org/wiki/Manual:External_editors Melumato jêdêr.])',
+'tog-externaldiff'            => 'Têversanaene pê programê teberi vıraze (teyna serba ekspertuno, komputerê sıma de ayarê xısuşiy lazımê. [http://www.mediawiki.org/wiki/Manual:External_editors Melumato jêdêr.])',
 'tog-showjumplinks'           => 'Girê "so"y feal ke',
 'tog-uselivepreview'          => 'Verqayto cınde bıgurene (JavaScript) (hona cerrebnaene dero)',
 'tog-forceeditsummary'        => 'Mı ke xulasa kerde cı vira, hay be mı ser de',
 'tog-watchlisthideown'        => 'Vurnaisunê mı lista mına şêrkerdişi de wedare',
 'tog-watchlisthidebots'       => 'Vurnaisunê boti lista mına şêrkerdişi de wedare',
 'tog-watchlisthideminor'      => 'Vurnaisunê qızkeku lista mına şêrkerdişi de wedare',
-'tog-watchlisthideliu'        => 'Lista şêrkerdışi ra vurnaisunê karberunê cıkotu wedare',
-'tog-watchlisthideanons'      => 'Lista şêrkerdışi ra vurnaisunê karberunê anonimu wedare',
-'tog-watchlisthidepatrolled'  => 'Lista şêrkerdışi ra vurnaisunê qontrolkerdu wedare',
-'tog-ccmeonemails'            => 'E-mailunê ke ez karberunê binu rê rusnenu, mı rê kopya inu bırusne',
-'tog-diffonly'                => 'Qıyasê verziyonu de tek ferqu bıasne, pela butıne nê',
-'tog-showhiddencats'          => 'Kategoriunê nımıtu bıasne',
+'tog-watchlisthideliu'        => 'Lista şêrkerdişi ra vurnaisunê karberunê cıkotu wedare',
+'tog-watchlisthideanons'      => 'Lista şêrkerdişi ra vurnaisunê karberunê anonimu wedare',
+'tog-watchlisthidepatrolled'  => 'Lista şêrkerdişi ra vurnaisunê qontrolkerdu wedare',
+'tog-ccmeonemails'            => 'E-postunê ke ez karberunê binu rê rusnenu, mı rê kopya inu bırusne',
+'tog-diffonly'                => 'Qıyasê versiyonu de tek ferqu basne, pela butıne nê',
+'tog-showhiddencats'          => 'Kategoriunê dızdêni basne',
 'tog-norollbackdiff'          => 'Peyserardene ra dıme ferqi caverde',
 
 'underline-always'  => 'Tım',
@@ -78,7 +77,7 @@ href="" class="internal"}?{/a}) basne.',
 'monday'        => 'Dıseme',
 'tuesday'       => 'Şêseme',
 'wednesday'     => 'Çarseme',
-'thursday'      => 'Phoncseme',
+'thursday'      => 'Phonseme',
 'friday'        => 'Yene',
 'saturday'      => 'Seme',
 'sun'           => 'Baz',
@@ -94,7 +93,7 @@ href="" class="internal"}?{/a}) basne.',
 'april'         => 'Nisane',
 'may_long'      => 'Gulane',
 'june'          => 'Hezirane',
-'july'          => 'Temmuze',
+'july'          => 'Temuze',
 'august'        => 'Tebaxe',
 'september'     => 'Eylule',
 'october'       => 'Keşkelun',
@@ -105,8 +104,8 @@ href="" class="internal"}?{/a}) basne.',
 'march-gen'     => 'Marti',
 'april-gen'     => 'Nisane',
 'may-gen'       => 'Gulane',
-'june-gen'      => 'Hazirani',
-'july-gen'      => 'Temmuzi',
+'june-gen'      => 'Hezirani',
+'july-gen'      => 'Temuze',
 'august-gen'    => 'Tebaxe',
 'september-gen' => 'Eylule',
 'october-gen'   => 'Keşkeluni',
@@ -117,7 +116,7 @@ href="" class="internal"}?{/a}) basne.',
 'mar'           => 'Mar',
 'apr'           => 'Nis',
 'may'           => 'Gul',
-'jun'           => 'Haz',
+'jun'           => 'Hez',
 'jul'           => 'Tem',
 'aug'           => 'Teb',
 'sep'           => 'Eyl',
@@ -127,39 +126,39 @@ href="" class="internal"}?{/a}) basne.',
 
 # Categories related messages
 'pagecategories'                 => '{{PLURAL:$1|Kategoriye|Kategoriy}}',
-'category_header'                => 'Pela ke kategoriya "$1" dera',
+'category_header'                => 'Pelê ke kategoriya "$1" derê',
 'subcategories'                  => 'Kategoriyê bınêni',
 'category-media-header'          => 'Medyawa ke kategoriya "$1" dera',
-'category-empty'                 => "''Na kategoriye de nıka pelgi ya ki medya çinê.''",
-'hidden-categories'              => '{{PLURAL:$1|Kategoriya nımıtiye|Kategoriyê nımıtey}}',
-'hidden-category-category'       => 'Kategoriyê nımıtey',
+'category-empty'                 => "''Na kategoriye de hona qet nustey ya ki medya çinê.''",
+'hidden-categories'              => '{{PLURAL:$1|Kategoriya wedariyaiye|Kategoriyê wedariyaey}}',
+'hidden-category-category'       => 'Kategoriyê wedariyaey',
 'category-subcat-count'          => '{{PLURAL:$2|Na kategoriye de ana kategoriya bınêne esta.|Na kategoriye de $2 ra pêro pia, {{PLURAL:$1|ana kategoriya bınêne esta|ani $1 kategoriyê bınêni estê.}}, be $2 ra pia.}}',
 'category-subcat-count-limited'  => 'Na kategoriye de {{PLURAL:$1|ana kategoriya bınêne esta|ani $1 kategoriyê bınêni estê}}.',
 'category-article-count'         => '{{PLURAL:$2|Na kategoriye de teyna ana pele esta.|Na kategoriye de $2 ra pêro pia, {{PLURAL:$1|ana pele esta|ani $1 peli estê.}}, be $2 ra pêro pia}}',
 'category-article-count-limited' => '{{PLURAL:$1|Ana pele kategoriya peyêne dera|Ani $1 peli kategoriya peyêne derê}}.',
 'category-file-count'            => '{{PLURAL:$2|Na kategoriye de teyna ana dosya esta.|Na kategoriye de $2 ra pêro pia, {{PLURAL:$1|ana dosya esta|ani $1 dosyey estê.}}}}',
 'category-file-count-limited'    => '{{PLURAL:$1|Ana dosya kategoriya peyêne dera|Ani $1 dosyey kategoriya peyêne derê}}.',
-'listingcontinuesabbrev'         => 'işt.',
+'listingcontinuesabbrev'         => 'dewam',
 'index-category'                 => 'Pelê endeksıni',
-'noindex-category'               => 'Pelê bêendekşi',
+'noindex-category'               => 'Pelê bêendeksıni',
 
 'linkprefix'        => '/^(.*?)([a-zA-Z\\x80-\\xff]+)$/sD',
-'mainpagetext'      => "'''MediaWiki ebe mıwefeq instale bi.'''",
+'mainpagetext'      => "'''MediaWiki fist ra ser, vıraziya.'''",
 'mainpagedocfooter' => "Serba melumatê gurenaena ''wiki software''i [http://meta.wikimedia.org/wiki/Help:Contents İdarê karberi] de mıracaet ke.
 
 == Gamê verêni ==
-* [http://www.mediawiki.org/wiki/Manual:Configuration_settings Lista ayarunê vıraştene]
+* [http://www.mediawiki.org/wiki/Manual:Configuration_settings Lista ayarunê vırastene]
 * [http://www.mediawiki.org/wiki/Manual:FAQ MediaWiki de ÇZP]
 * [https://lists.wikimedia.org/mailman/listinfo/mediawiki-announce MediaWiki ra lista serbest-daena postey]",
 
 'about'         => 'Heqa',
-'article'       => 'Pela tede-esteun',
-'newwindow'     => '(pençereo newe de beno ra)',
-'cancel'        => 'Bıtexelne',
+'article'       => 'Pela tedeesteyu',
+'newwindow'     => '(zerrê pençerê dê newey de beno ra)',
+'cancel'        => 'Texelnaene',
 'moredotdotdot' => 'Jêde...',
 'mypage'        => 'Pela mı',
-'mytalk'        => 'Hurênaisê mı',
-'anontalk'      => "Hurênaisê ni ''IP''y",
+'mytalk'        => 'Pela mına hurênaişi',
+'anontalk'      => "Pela hurênaisê ni ''IP''y",
 'navigation'    => 'Pusula',
 'and'           => '&#32;u',
 
@@ -168,90 +167,80 @@ href="" class="internal"}?{/a}) basne.',
 'qbbrowse'       => 'Çım ra viarne',
 'qbedit'         => 'Bıvurne',
 'qbpageoptions'  => 'Na pele',
-'qbpageinfo'     => 'Girê',
+'qbpageinfo'     => 'Gire',
 'qbmyoptions'    => 'Pelê mı',
-'qbspecialpages' => 'Pelê xususiy',
-'faq'            => 'ÇZP',
-'faqpage'        => 'Project:ÇZP',
+'qbspecialpages' => 'Pelê xısusiy',
+'faq'            => 'PZP (Persê ke zaf perşinê)',
+'faqpage'        => 'Project:PZP',
 
 # Vector skin
-'vector-action-addsection'   => 'Mewzu ilawe ke',
-'vector-action-delete'       => 'Bıestere',
-'vector-action-move'         => 'Bere',
-'vector-action-protect'      => 'Bısevekne',
-'vector-action-undelete'     => 'Esterıtene peyser bıcê',
-'vector-action-unprotect'    => 'Seveknaene wedare',
-'vector-namespace-category'  => 'Kategoriye',
-'vector-namespace-help'      => 'Pela phoşti',
-'vector-namespace-image'     => 'Dosya',
-'vector-namespace-main'      => 'Pele',
-'vector-namespace-media'     => 'Pela weseti',
-'vector-namespace-mediawiki' => 'Mesac',
-'vector-namespace-project'   => 'Pela procey',
-'vector-namespace-special'   => 'Pela xususiye',
-'vector-namespace-talk'      => 'Hurênais',
-'vector-namespace-template'  => 'Şablon',
-'vector-namespace-user'      => 'Pela karberi',
-'vector-view-create'         => 'Bıaferne',
-'vector-view-edit'           => 'Bıvurne',
-'vector-view-history'        => 'Tarixi bıasne',
-'vector-view-view'           => 'Bıwane',
-'vector-view-viewsource'     => 'Çımey bıvêne',
-'actions'                    => 'Kerdeni',
-'namespaces'                 => 'Caê namey',
-'variants'                   => 'Varyanti',
+'vector-action-addsection'       => 'Mewzu ilawe ke',
+'vector-action-delete'           => 'Bestere',
+'vector-action-move'             => 'Bere',
+'vector-action-protect'          => 'Bısevekne',
+'vector-action-undelete'         => 'Esterıtene peyser bıcê',
+'vector-action-unprotect'        => 'Rake',
+'vector-simplesearch-preference' => 'Tewsiyunê cıcêraişiê raverberdu rake (Teyna vector skin de)',
+'vector-view-create'             => 'Vıraze',
+'vector-view-edit'               => 'Bıvurne',
+'vector-view-history'            => 'Tarixi basne',
+'vector-view-view'               => 'Bıwane',
+'vector-view-viewsource'         => 'Çımey bıvêne',
+'actions'                        => 'Kerdey',
+'namespaces'                     => 'Caê namey',
+'variants'                       => 'Varyanti',
 
 'errorpagetitle'    => 'Xeta',
 'returnto'          => 'Peyser so $1.',
 'tagline'           => '{{SITENAME}} ra',
 'help'              => 'Phoşti',
-'search'            => 'Cıfeteliyaene',
+'search'            => 'Cıfeteliye',
 'searchbutton'      => 'Cıfeteliye',
 'go'                => 'So',
 'searcharticle'     => 'So',
-'history'           => 'Tarixçê pele',
+'history'           => 'Tarixê pele',
 'history_short'     => 'Tarix',
 'updatedmarker'     => 'cıkotena mına peyêne ra dıme biya rocaniye',
 'info_short'        => 'Melumat',
 'printableversion'  => 'Asaena çapkerdene',
-'permalink'         => 'Girêo daimki',
-'print'             => 'Çapkerdis',
+'permalink'         => 'Gireo daimki',
+'print'             => 'Çap ke',
 'edit'              => 'Bıvurne',
 'create'            => 'Vıraze',
 'editthispage'      => 'Na pele bıvurne',
-'create-this-page'  => 'Na pele bıaferne',
-'delete'            => 'Esterıtis',
-'deletethispage'    => 'Na pele bıestere',
-'undelete_short'    => '{{PLURAL:$1|Jü vurnaişi|$1 Vurnaisun}} meestere',
-'protect'           => 'Sıtar ke',
+'create-this-page'  => 'Na pele baferne',
+'delete'            => 'Bestere',
+'deletethispage'    => 'Na pele bestere',
+'undelete_short'    => '{{PLURAL:$1|Jü vurnaişi|$1 Vurnaisu}} mestere',
+'protect'           => 'Bısevekne',
 'protect_change'    => 'bıvurne',
-'protectthispage'   => 'Na pele sıtar ke',
-'unprotect'         => 'Sıtar meke',
-'unprotectthispage' => 'Na pele sıtar meke',
+'protectthispage'   => 'Na pele bısevekne',
+'unprotect'         => 'Rake',
+'unprotectthispage' => 'Na pele rake',
 'newpage'           => 'Pela newiye',
 'talkpage'          => 'Na pele sero hurêne',
 'talkpagelinktext'  => 'Hurênais',
-'specialpage'       => 'Pela xususiye',
+'specialpage'       => 'Pela xısusiye',
 'personaltools'     => 'Hacetê keşi',
 'postcomment'       => 'Qısımo newe',
-'articlepage'       => 'Pela tedeesteu bıvêne',
+'articlepage'       => 'Pela zerreki bıvêne',
 'talk'              => 'Hurênais',
-'views'             => 'Asaeni',
+'views'             => 'Asaişi',
 'toolbox'           => 'Qutiya hacetu',
 'userpage'          => 'Pela karberi bıvêne',
 'projectpage'       => 'Pela procey bıvêne',
 'imagepage'         => 'Pela dosya bıvêne',
-'mediawikipage'     => 'Pela mesacun bıvêne',
-'templatepage'      => 'Pela nımunun bıvêne',
+'mediawikipage'     => 'Pela mesacu bıvêne',
+'templatepage'      => 'Pela nımunu bıvêne',
 'viewhelppage'      => 'Pela phoşti bıvêne',
-'categorypage'      => 'Pela kategoriu bıvêne',
+'categorypage'      => 'Pela kategoriye bıvêne',
 'viewtalkpage'      => 'Hurênaişi bıvêne',
-'otherlanguages'    => 'Zonunê binun de',
+'otherlanguages'    => 'Zonunê binu de',
 'redirectedfrom'    => '($1 ra ard)',
-'redirectpagesub'   => 'Pela ardene',
-'lastmodifiedat'    => 'Na pela tewr peyên $1 de, $2 de vuriye.',
-'viewcount'         => 'Na pele hata nıka {{PLURAL:$1|jü rae|$1 rey}} vêniye.',
-'protectedpage'     => 'Pela kılit-kerdiye',
+'redirectpagesub'   => 'Pela berdene',
+'lastmodifiedat'    => 'Na pele tewr peyên roca $2, $1 de biya rocaniye.',
+'viewcount'         => 'Na pele {{PLURAL:$1|jü rae|$1 rey}} vêniya.',
+'protectedpage'     => 'Pela sevekiyaiye',
 'jumpto'            => 'So be:',
 'jumptonavigation'  => 'pusula',
 'jumptosearch'      => 'cıfeteliye',
@@ -260,33 +249,36 @@ Hedê ho ra jêde karberi kenê ke şêrê na pele bıkerê.
 Sıma rê zamet, tenê vınderê, hata ke reyna kenê ke na pele kuyê.
 
 $1',
+'pool-timeout'      => 'Kilıtbiyaene sero waxtê vınetişi',
+'pool-queuefull'    => 'Rêza hewze pırra',
+'pool-errorunknown' => 'Xeta nêzanıtiye',
 
 # All link text and link target definitions of links into project namespace that get used by other message strings, with the exception of user group pages (see grouppage) and the disambiguation template definition (see disambiguations).
 'aboutsite'            => 'Heqa {{SITENAME}} de',
 'aboutpage'            => 'Project:Heqa',
-'copyright'            => 'Zerrek bınê $1i dero.',
+'copyright'            => 'Zerrek bınê $1 dero.',
 'copyrightpage'        => '{{ns:project}}:Telifheqiye',
-'currentevents'        => 'Veng u vac',
-'currentevents-url'    => 'Project:Veng u vac',
+'currentevents'        => 'Veng u vaz',
+'currentevents-url'    => 'Project:Veng u vaz',
 'disclaimers'          => 'Diwanê mesuliyeti',
 'disclaimerpage'       => 'Project:Diwanê mesuliyetê bıngey',
 'edithelp'             => 'Phoştdariya vurnaişi',
-'edithelppage'         => 'Help:Vurnais',
-'helppage'             => 'Help:Tede estey',
+'edithelppage'         => 'Help:Pele çıturi vurnina',
+'helppage'             => 'Help:Tedeestey',
 'mainpage'             => 'Pela Seri',
-'mainpage-description' => 'Pela Seri',
+'mainpage-description' => 'Pela seri',
 'policy-url'           => 'Project:Poliça',
-'portal'               => 'Portalê cemaeti',
-'portal-url'           => 'Project:Portalê cemaeti',
-'privacy'              => 'Maddê dızdêni',
-'privacypage'          => 'Project:Maddê dızdêni',
+'portal'               => 'Portalê kome',
+'portal-url'           => 'Project:Portalê kome',
+'privacy'              => 'Madê dızdêni',
+'privacypage'          => 'Project:Madê dızdêni',
 
 'badaccess'        => 'Xeta desturi',
-'badaccess-group0' => 'Faeliyeto ke sıma wazenê, sıma nêşikinê ney ravêr berê.',
+'badaccess-group0' => 'Faeliyeto ke sıma wazenê, sıma nêşikinê ney raver berê.',
 'badaccess-groups' => 'No faeliyet teyna, keso ke {{PLURAL:$2|grube|grubu ra jüye}}: $1 dero, serba dino.',
 
-'versionrequired'     => 'MediaWiki ra vurnaisê $1i lazımo',
-'versionrequiredtext' => 'MediaWiki ra vurnaisê $1i lazımo ke na pele bıgurenê. Qaytê [[Special:Version|vurnaisê pele]] ke.',
+'versionrequired'     => 'MediaWiki ra vurnaisê $1 lazımo',
+'versionrequiredtext' => 'MediaWiki ra vurnaisê $1 lazımo ke na pele bıgurenê. Qaytê [[Special:Version|vurnaisê pele]] ke.',
 
 'ok'                      => 'Temam',
 'pagetitle-view-mainpage' => '',
@@ -302,19 +294,19 @@ $1',
 'editlink'                => 'bıvurne',
 'viewsourcelink'          => 'çıme bıvêne',
 'editsectionhint'         => 'Qısımê $1 bıvurne',
-'toc'                     => 'Tede estey',
-'showtoc'                 => 'bıasne',
+'toc'                     => 'Tedeestey',
+'showtoc'                 => 'basne',
 'hidetoc'                 => 'bınımne',
-'thisisdeleted'           => '$1i bıasne ya ki peyser biya?',
-'viewdeleted'             => '$1i bıasne?',
+'thisisdeleted'           => '$1i basne ya ki peyser biya?',
+'viewdeleted'             => '$1 basne?',
 'restorelink'             => '{{PLURAL:$1|jü vurnaiso esterıte|$1 vurnaisê esterıtey}}',
 'feedlinks'               => 'Cı de:',
 'feed-invalid'            => 'Aboneo nêvêrdoğ.',
-'feed-unavailable'        => 'Qutê sendikasyoni çino',
+'feed-unavailable'        => 'Weyikerdena sendikasyoni çina',
 'site-rss-feed'           => '$1 Weyikerdena RSSi',
 'site-atom-feed'          => '$1 Weyikerdena Atomi',
-'page-rss-feed'           => '"$1" RSS Qut',
-'page-atom-feed'          => '"$1" Qutê Atomi',
+'page-rss-feed'           => '"$1" Weyikerdena RSSi',
+'page-atom-feed'          => '"$1" Weyikerdena Atomi',
 'feed-atom'               => 'Atom',
 'feed-rss'                => 'RSS',
 'red-link-title'          => '$1 (pele çina)',
@@ -333,8 +325,8 @@ $1',
 
 # Main script and global functions
 'nosuchaction'      => 'Çiyo de nianên çino',
-'nosuchactiontext'  => "Faeliyeto ke hetê URL ra tesnif biyo, nêvêreno. 
-To, beno ke URL ğelet nusno ya ki tı girêo de ğelet dıma şiya. 
+'nosuchactiontext'  => "Faeliyeto ke hetê URL ra tesnif biyo, nêvêreno.
+To, beno ke URL ğelet nusno ya ki tı girêo de ğelet dıma şiya.
 No mısneno ke, ''software''o ke terefê {{SITENAME}} ra gurenino, jü ğeleliye tede esta.",
 'nosuchspecialpage' => 'Pela de xususiya nianêne çina',
 'nospecialpagetext' => '<strong>Sıma pela xususiya de nêvêrdiye kerde ra.</strong>
@@ -373,6 +365,7 @@ Kerem kerê, nae be namê ''URL''i jü [[Special:ListUsers/sysop|karber]]i ra va
 'readonly_lag'         => "Panga daeyu otomatikman qapan biye ''slave-database-servers''i ra be hata ''master''i",
 'internalerror'        => 'Xeta zerrey',
 'internalerror_info'   => 'Xeta zerrey: $1',
+'fileappenderrorread'  => 'İlawe ke bi "$1" nêşikiya bıwaniyo.',
 'fileappenderror'      => 'Dosya "$1"ine dosya "$2"ine ser nêbena.',
 'filecopyerror'        => 'Dosya "$1"i kopya nêbiye be dosya "$2".',
 'filerenameerror'      => 'Namê dosya "$1"i nêvuriya be dosya "$2".',
@@ -390,7 +383,7 @@ Beno ke, verênde terefê kesê de bini ra esteriya.',
 Beno ke, tede jü ya ki jêdê isareti estê ke sernameu de nêgurinê.",
 'perfcached'           => 'Ni daey nımıteyê u beno ke rocaney niyê.',
 'perfcachedts'         => 'Ni daey nımıteyê, u tewr peyên $1 de biyê rocaniy.',
-'querypage-no-updates' => 'Rocane-biyaena na pele nıka cadaiyê. 
+'querypage-no-updates' => 'Rocane-biyaena na pele nıka cadaiyê.
 Daey ita nıka newe nêbenê.',
 'wrong_wfQuery_params' => 'Parametreo ğelet serba wfPers()<br />
 Fonksiyon: $1<br />
@@ -404,7 +397,7 @@ Kerem kerê, deqêna oncia bıcerrebnê.",
 'viewsourcetext'       => 'Sıma şikinê çımê na pele bıvênê u kopya kerê:',
 'protectedinterface'   => "Na pele ''software'' rê meqalunê caunê bırnau dana, u qapana ke suıstımalu rê engel bo.",
 'editinginterface'     => "'''Teme:''' Sıma hao jü pela ke serba ''software'' meqalunê caunê bırnau dana, vurnenê.
-Vurnaisê na pele karberunê binu rê serpela karberi kena ke bıasno. 
+Vurnaisê na pele karberunê binu rê serpela karberi kena ke bıasno.
 Serba çarnais, yardımê [http://translatewiki.net/wiki/Main_Page?setlang=kiu translatewiki.net]yê procê dos-kerdene rê diqet kerê.",
 'sqlhidden'            => '(Persê SQLi nımıteo)',
 'cascadeprotected'     => 'Na pele esterıtene ra sıtar biya, çıke na zerrê {{PLURAL:$1|pela ke|pelunê ke}} dera/derê be "cascading" opsiyoni kılit biya, $2 de bena ra.',
@@ -420,70 +413,74 @@ Sebebê ho ''$2'' dero.",
 'virus-unknownscanner' => "''antivirus''o nêzanıte:",
 
 # Login and logout pages
-'logouttext'              => "'''Sıma nıka cı ra veciyê.'''
+'logouttext'               => "'''Sıma nıka cı ra veciyê.'''
 
 Sıma şikinê dızdêni {{SITENAME}} de dewam kerê, ya jê eyni karberi ya ki jê jüyê de bini [[Special:UserLogin|oncia cıkuyê]].
 Beno ke taê peli sıma hona cıkote asnenê, hata ke sıma ''browser cache''ê ho kerd pak.",
-'welcomecreation'         => '== Xêr amê, $1! ==
+'welcomecreation'          => '== Xêr amê, $1! ==
 Hesabê sıma vıraciya.
 Vurnaena [[Special:Preferences|melumatanê {{SITENAME}}]] ho vira mekerê.',
-'yourname'                => 'Namê karberi:',
-'yourpassword'            => 'Parola:',
-'yourpasswordagain'       => 'Parola tekrar ke:',
-'remembermypassword'      => 'Mı na komputeri de biya ho viri',
-'yourdomainname'          => 'Bandıra sıma:',
-'externaldberror'         => 'Cıfeteliyaisê naskerdene de ya xeta esta ya ki tebera vırastena hesabê sıma rê destur çino.',
-'login'                   => 'Cıkuye',
-'nav-login-createaccount' => 'Cıkuye / hesab vıraze',
-'loginprompt'             => "Cıkotena {{SITENAME}} rê gunê ''cookies'' akerdey bê.",
-'userlogin'               => 'Cıkuye / hesab vıraze',
-'userloginnocreate'       => 'Cıkuye',
-'logout'                  => 'Veciye',
-'userlogout'              => 'Veciye',
-'notloggedin'             => 'Cı nêkota',
-'nologin'                 => "Hesabê sıma çino? '''$1'''.",
-'nologinlink'             => 'Jü hesab rake',
-'createaccount'           => 'Hesab vıraze',
-'gotaccount'              => "Hesabê sıma ke esto? '''$1'''.",
-'gotaccountlink'          => 'Cıkuye',
-'createaccountmail'       => 'e-poste sera',
-'badretype'               => 'Parola sıma nêvêrena.',
-'userexists'              => 'No namê karberi guretiyo.
+'yourname'                 => 'Namê karberi:',
+'yourpassword'             => 'Parola:',
+'yourpasswordagain'        => 'Parola tekrar ke:',
+'remembermypassword'       => 'Cıkotena mı na komputeri de bia ho viri ($1 {{PLURAL:$1|roze|rozu}} ra seba zu zêdêrêni)',
+'securelogin-stick-https'  => 'Cıkotene ra dıme HTTPS rê giredae bımane',
+'yourdomainname'           => 'Bandıra sıma:',
+'externaldberror'          => 'Cıfeteliyaisê naskerdene de ya xeta esta ya ki tebera vırastena hesabê sıma rê destur çino.',
+'login'                    => 'Cıkuye',
+'nav-login-createaccount'  => 'Cıkuye / hesab vıraze',
+'loginprompt'              => "Cıkotena {{SITENAME}} rê gunê ''cookies'' akerdey bê.",
+'userlogin'                => 'Cıkuye / hesab vıraze',
+'userloginnocreate'        => 'Cıkuye',
+'logout'                   => 'Veciye',
+'userlogout'               => 'Veciye',
+'notloggedin'              => 'Cı nêkota',
+'nologin'                  => "Hesabê sıma çino? '''$1'''.",
+'nologinlink'              => 'Jü hesab rake',
+'createaccount'            => 'Hesab vıraze',
+'gotaccount'               => "Hesabê sıma ke esto? '''$1'''.",
+'gotaccountlink'           => 'Cıkuye',
+'createaccountmail'        => 'e-poste sera',
+'createaccountreason'      => 'Sebeb:',
+'badretype'                => 'Parola sıma nêvêrena.',
+'userexists'               => 'No namê karberi guretiyo.
 Kerem ke, namêna weçine.',
-'loginerror'              => 'Xeta cıkotene',
-'createaccounterror'      => 'Hesab nêvırajino: $1',
-'nocookiesnew'            => 'Hesabê karberi vıraziya, hama sıma nêşikiyay cı kuyê.
-Serba rakerdena hesabi çerezê {{SITENAME}}i gurêninê. 
+'loginerror'               => 'Xeta cıkotene',
+'createaccounterror'       => 'Hesab nêvırajino: $1',
+'nocookiesnew'             => 'Hesabê karberi vıraziya, hama sıma nêşikiyay cı kuyê.
+Serba rakerdena hesabi çerezê {{SITENAME}}i gurêninê.
 Sıma çerezi qapan kerdi.
 Ravêri ine rakerê, dıma be name u parola sımawa newiye cı kuyê.',
-'nocookieslogin'          => 'Serba rakerdena hesabi çerezê {{SITENAME}}i gurêninê. 
+'nocookieslogin'           => 'Serba rakerdena hesabi çerezê {{SITENAME}}i gurêninê.
 Sıma çerezi qapan kerdi.
 Ravêri ine rakerê u reyna bıcerrebnê.',
-'noname'                  => 'Ebe namê do vêrdoği ra cınêkota.',
-'loginsuccesstitle'       => 'Cıkotene biye ra',
-'loginsuccess'            => "'''Sıta {{SITENAME}} de ebe namê karberi \"\$1\" kota cı.'''",
-'nosuchuser'              => 'Ebe namê "$1"i jü karber çino. 
+'noname'                   => 'Ebe namê do vêrdoği ra cınêkota.',
+'loginsuccesstitle'        => 'Cıkotene biye ra',
+'loginsuccess'             => "'''Sıta {{SITENAME}} de ebe namê karberi \"\$1\" kota cı.'''",
+'nosuchuser'               => 'Ebe namê "$1"i jü karber çino.
 Nustena namunê karberu de herfa pil u qıze rê diqet kerê.
 Nustena ho qonrol kerê, ya ki [[Special:UserLogin/signup|jü hesabo newe rakerê]].',
-'nosuchusershort'         => 'Karberê do ebe namê "<nowiki>$1</nowiki>" çino. 
+'nosuchusershort'          => 'Karberê do ebe namê "<nowiki>$1</nowiki>" çino.
 Nustena cı qontrol ke.',
-'nouserspecified'         => 'Gunê namê jü karberi bıdekernê.',
-'wrongpassword'           => 'Parola ğelete kota cı.
+'nouserspecified'          => 'Gunê namê jü karberi bıdekernê.',
+'login-userblocked'        => 'No karber engel biyo. Cıkotene rê mısade cı nêdino.',
+'wrongpassword'            => 'Parola ğelete kota cı.
 Kerem ke, oncia bıcerrebne.',
-'wrongpasswordempty'      => 'Parola thale kota cı.
+'wrongpasswordempty'       => 'Parola thale kota cı.
 Kerem ke, oncia bıcerrebne.',
-'passwordtooshort'        => 'Paroley tewr senık ebe {{PLURAL:$1|1 karakter|$1 karakteru}} gunê derg bê.',
-'password-name-match'     => 'Parola sıma namê sımaê karberi ra gunê ferqın bo.',
-'mailmypassword'          => 'E-mail sera parola newiye bırusne',
-'passwordremindertitle'   => 'Serba {{SITENAME}} parola newiya vêrdoğe',
-'noemail'                 => 'Adresa de e-posteya ke ebe namê karberi "$1" beqeyda, çina.',
-'mailerror'               => 'Xeta rusnaena e-postey: $1',
-'emailconfirmlink'        => 'Adresa e-postê ho tesdiq ke',
-'accountcreated'          => 'Hesab vırajiya',
-'accountcreatedtext'      => 'Serba $1i hesabê karberi vırajiya.',
-'createaccount-title'     => 'Serba {{SITENAME}}i vırajiyaene hesabê karberi',
-'usernamehasherror'       => 'Namê karberi de karakteri gunê têwerte ra mebê',
-'loginlanguagelabel'      => 'Zon: $1',
+'passwordtooshort'         => 'Paroley tewr senık ebe {{PLURAL:$1|1 karakter|$1 karakteru}} gunê derg bê.',
+'password-name-match'      => 'Parola sıma namê sımaê karberi ra gunê ferqın bo.',
+'password-login-forbidden' => 'Namê nê karberi u gurenaena parola qedeğen biya.',
+'mailmypassword'           => 'E-mail sera parola newiye bırusne',
+'passwordremindertitle'    => 'Serba {{SITENAME}} parola newiya vêrdoğe',
+'noemail'                  => 'Adresa de e-posteya ke ebe namê karberi "$1" beqeyda, çina.',
+'mailerror'                => 'Xeta rusnaena e-postey: $1',
+'emailconfirmlink'         => 'Adresa e-postê ho tesdiq ke',
+'accountcreated'           => 'Hesab vırajiya',
+'accountcreatedtext'       => 'Serba $1i hesabê karberi vırajiya.',
+'createaccount-title'      => 'Serba {{SITENAME}}i vırajiyaene hesabê karberi',
+'usernamehasherror'        => 'Namê karberi de karakteri gunê têwerte ra mebê',
+'loginlanguagelabel'       => 'Zon: $1',
 
 # Password reset dialog
 'resetpass'                 => 'Parola bıvurne',
@@ -547,16 +544,18 @@ Sırewo ke to qaytê pele kerdêne, beno ke no kırışiyo ya ki esteriyo.',
 'loginreqpagetext'                 => 'Serba diyaena pelunê binu tı gunê $1 bıbê.',
 'accmailtitle'                     => 'Parola rusniye.',
 'newarticle'                       => '(Newe)',
-'newarticletext'                   => "To jü girê teqna be jü pela ke hona çina. 
-Serba afernaena pele qutiya metnê cêrêni bıgurêne. Serba melumati qaytê [[{{MediaWiki:Helppage}}|pela phoşti]] ke. 
+'newarticletext'                   => "To jü girê teqna be jü pela ke hona çina.
+Serba afernaena pele qutiya metnê cêrêni bıgurêne. Serba melumati qaytê [[{{MediaWiki:Helppage}}|pela phoşti]] ke.
 Eke be ğeletêni ama ita, wa gozaga '''peyser'''i programê ho de bıteqne.",
 'noarticletext'                    => 'Na pele de hona thowa çino.
-Tı şikina zerrê pelunê binu de [[Special:Search/{{PAGENAME}}|seba sernamê na pele cıfeteliyê]], 
+Tı şikina zerrê pelunê binu de [[Special:Search/{{PAGENAME}}|seba sernamê na pele cıfeteliyê]],
 <span class="plainlinks">[{{fullurl:{{#Special:Log}}|page={{FULLPAGENAMEE}}}} cıkotena aide rê cıfeteliyê],
 ya ki [{{fullurl:{{FULLPAGENAME}}|action=edit}} na pele bıvurnê]</span>.',
 'userpage-userdoesnotexist'        => 'Hesabê karberi "$1" qeyd nêbiyo.
 Kerem ke, tı ke wazena na pele vırazê/bıvurnê, qontrol ke.',
 'userpage-userdoesnotexist-view'   => 'Hesabê karberi "$1" qeyd nêbiyo.',
+'userinvalidcssjstitle'            => "'''Teme:''' Mewzuyê \"\$1\" çino.
+Dosyunê ebe namê .css u .js'y de herfa hurdiye bıgurêne, mesela hurêndia {{ns:user}}:Foo/Vector.css'i de {{ns:user}}:Foo/vector.css bınuse.",
 'updated'                          => '(Bi rozane)',
 'note'                             => "'''Not:'''",
 'previewnote'                      => "'''Bıfıkıriye ke no teyna jü verqayto.'''
@@ -568,7 +567,7 @@ Vurnaişê to hona qeyd nêbiyê!",
 'yourtext'                         => 'Metnê to',
 'storedversion'                    => 'Metıno qeydkerde',
 'yourdiff'                         => 'Ferqi',
-'copyrightwarning'                 => "Diqet ke, iştırakê ke benê be pela {{SITENAME}}i, pêro bınê $2 de rakerde vêrenê (serba daêna melumati qaytê $1 ke). 
+'copyrightwarning'                 => "Diqet ke, iştırakê ke benê be pela {{SITENAME}}i, pêro bınê $2 de rakerde vêrenê (serba daêna melumati qaytê $1 ke).
 İştırakunê ho, eke nêwazena wa terefê binu ra bıvuriyê ya ki caunê binu ra vıla bê, o taw ita menuse.<br />
 Zobina ki ebe ita nustene ra sond wena ke nê iştıraki terefê to ra nuşiyê, ya çımê do rakerdey ra ya ki çımê do serbest ra kopya biyê.
 '''Gurêo ke ebe telifheqiye ra sevekiyo bê destur ita darde meke!'''",
@@ -646,7 +645,7 @@ Sıma be idarekerênia ho ra şikinê hona [$1 nê ferqi bıvênê], eke wazenê
 'revdelete-show-file-confirm' => 'Sıma eminê ke wazenê çımraviarnaena esterıtiya na dosya "<nowiki>$1</nowiki>" $2 ra $3 de bıvênê?',
 'revdelete-show-file-submit'  => 'Heya',
 'revdelete-selected'          => "'''[[:$1]]: ra {{PLURAL:$2|Çımraviarnaiso weçinıte|Çımraviarnaisê weçinıtey}}'''",
-'revdelete-text'              => "Çımraviarnaişê esterıtey u kerdişi hewna tarixê pele u qeydan de asenê, hama parçê zerrekê dine areze nêbenê.''' 
+'revdelete-text'              => "Çımraviarnaişê esterıtey u kerdişi hewna tarixê pele u qeydan de asenê, hama parçê zerrekê dine areze nêbenê.'''
 Eke şertê ilawekerdey ke niyê ro, idarekerê bini {{SITENAME}} de nêşikinê hona bıresê zerrekê nımıtey u şikinê ey oncia na eyni mianpele ra peyser biarê.",
 'revdelete-suppress-text'     => "Wedardene gunê '''teyna''' nê halunê cêrênu de bıguriyo:
 * Melumatê kıfırio mıhtemel
@@ -708,6 +707,7 @@ Eke şertê ilawekerdey ke niyê ro, idarekerê bini {{SITENAME}} de nêşikinê
 'searchhelp-url'            => 'Help:Tedeestey',
 'searchprofile-articles'    => 'Pelê tedeesteu',
 'searchprofile-images'      => 'Multimedya',
+'searchprofile-everything'  => 'Her çi',
 'search-result-size'        => '$1 ({{PLURAL:$2|1 çekuye|$2 çekuy}})',
 'search-redirect'           => '(hetêcıraberdene $1)',
 'search-section'            => '(qısımo $1)',
@@ -717,7 +717,8 @@ Eke şertê ilawekerdey ke niyê ro, idarekerê bini {{SITENAME}} de nêşikinê
 'search-interwiki-more'     => '(zafêr)',
 'search-mwsuggest-enabled'  => 'ebe teklifu',
 'search-mwsuggest-disabled' => 'teklifi çinê',
-'searchrelated'             => 'aleqeder',
+'search-relatedarticle'     => 'alaqedar',
+'searchrelated'             => 'alaqedar',
 'searchall'                 => 'pêro',
 'nonefound'                 => "'''Not''': Teyna taê namê cau jê saybiyau cı fetelino.
 Verê cıfeteliyaene de be ilawekerdena verbendê '''all:'''i ra (ebe pelunê hurênaişi, şablonu uêb.) bıcerebnê ya ki namê cayo ke wajino jê verbendi bıgurênê.",
@@ -731,7 +732,7 @@ Verê cıfeteliyaene de be ilawekerdena verbendê '''all:'''i ra (ebe pelunê hu
 'powersearch-togglenone'    => 'Qet',
 'search-external'           => 'Cıcêraisê teberi',
 'searchdisabled'            => "Cıcêraisê {{SITENAME}} qapan biyo.
-Sıma şikinê na sıre ''Google'' de şêr kerê. 
+Sıma şikinê na sıre ''Google'' de şêr kerê.
 Diqet kerê, beno ke tedeestê {{SITENAME}} uza endi rozane niyê.",
 
 # Quickbar
@@ -880,10 +881,6 @@ Sıma ke ney bıgurenê, karê sıma de no namdarêni dano.',
 'recentchanges'                  => 'Vurnaisê peyêni',
 'recentchanges-legend'           => 'Alternatifê vurnaisunê peyênu',
 'recentchanges-feed-description' => 'Na weiyekerdena wiki de vurnaisê tewrpeyêne ke biyê ine teqib ke.',
-'recentchanges-label-legend'     => 'Arezekerdeni: $1.',
-'recentchanges-legend-newpage'   => '$1 - pela newiye',
-'recentchanges-legend-minor'     => '$1 vurnaiso qızkek',
-'recentchanges-legend-bot'       => '$1 - vurnaisê boti',
 'rcnote'                         => "Cêr {{PLURAL:$1|'''1''' vurnaiso peyên|'''$1''' vurnaisê peyêni}} be {{PLURAL:$2|roza peyêne|'''$2''' rozunê peyênunê}} $5, $4 ra estê.",
 'rclistfrom'                     => '$1 ra hata nıka vurnaisunê newu bıasne',
 'rcshowhideminor'                => '$1 vurnaisê qızkeki',
@@ -936,17 +933,21 @@ Sıma ke ney bıgurenê, karê sıma de no namdarêni dano.',
 'watchthisupload'            => 'Na dosya de şêr ke',
 
 # Special:ListFiles
-'imgfile'        => 'dosya',
-'listfiles'      => 'Lista dosya',
-'listfiles_date' => 'Tarix',
-'listfiles_name' => 'Name',
-'listfiles_user' => 'Karber',
+'imgfile'               => 'dosya',
+'listfiles'             => 'Lista dosya',
+'listfiles_date'        => 'Tarix',
+'listfiles_name'        => 'Name',
+'listfiles_user'        => 'Karber',
+'listfiles_size'        => 'Ebad',
+'listfiles_description' => 'Terif',
 
 # File description page
 'file-anchor-link'          => 'Dosya',
 'filehist'                  => 'Tarixê dosya',
 'filehist-help'             => "Serba diyaena viartê dosya tarixê ke qısımê tarix/zeman'i derê inu bıteqne.",
+'filehist-deleteall'        => 'Pêrune bıestere',
 'filehist-deleteone'        => 'bıestere',
+'filehist-revert'           => 'raçarne',
 'filehist-current'          => 'nıkaên',
 'filehist-datetime'         => 'Tarix/Dem',
 'filehist-thumb'            => 'Resmo qızkek',
@@ -955,6 +956,7 @@ Sıma ke ney bıgurenê, karê sıma de no namdarêni dano.',
 'filehist-dimensions'       => 'Budi',
 'filehist-filesize'         => 'Gırşênia dosya',
 'filehist-comment'          => 'Areze-kerdene',
+'filehist-missing'          => 'Dosya vindbiyaiya',
 'imagelinks'                => 'Girê dosya',
 'linkstoimage'              => 'Ano {{PLURAL:$1|girê pele|$1 girê pelu}} be na dosya:',
 'sharedupload'              => 'Na dosya depoê $1 rawa u beno ke procunê binu de gurenina.',
@@ -962,12 +964,15 @@ Sıma ke ney bıgurenê, karê sıma de no namdarêni dano.',
 'shared-repo-from'          => '$1 ra',
 
 # File reversion
+'filerevert'         => '$1 raçarne',
+'filerevert-legend'  => 'Dosya raçarne',
 'filerevert-comment' => 'Arezekerdene:',
 'filerevert-submit'  => 'Raçarne',
 
 # File deletion
 'filedelete'                  => 'Bıestere $1',
 'filedelete-legend'           => 'Dosya bıestere',
+'filedelete-comment'          => 'Sebeb:',
 'filedelete-submit'           => 'Bıestere',
 'filedelete-reason-otherlist' => 'Sebebo bin',
 
@@ -981,6 +986,7 @@ Sıma ke ney bıgurenê, karê sıma de no namdarêni dano.',
 'brokenredirects-edit'   => 'bıvurne',
 'brokenredirects-delete' => 'bıestere',
 
+'withoutinterwiki-legend' => 'Verbend',
 'withoutinterwiki-submit' => 'Bıasne',
 
 # Miscellaneous special pages
@@ -1016,6 +1022,7 @@ Sıma ke ney bıgurenê, karê sıma de no namdarêni dano.',
 # Special:AllPages
 'allpages'       => 'Peli pêro',
 'alphaindexline' => '$1 bere $2',
+'nextpage'       => 'Pela peyê coy ($1)',
 'prevpage'       => 'Pela verêne ($1)',
 'allpagesfrom'   => 'Pelê ke be na herfe dest niyo pıra bıasne:',
 'allpagesto'     => 'Pelunê ke be na herfe qedinê bıasne:',
@@ -1029,7 +1036,8 @@ Sıma ke ney bıgurenê, karê sıma de no namdarêni dano.',
 'sp-deletedcontributions-contribs' => 'iştıraki',
 
 # Special:LinkSearch
-'linksearch' => 'Girê teberi',
+'linksearch'    => 'Girê teberi',
+'linksearch-ok' => 'Cıfeteliye',
 
 # Special:ListUsers
 'listusers-submit' => 'Bıasne',
@@ -1040,16 +1048,21 @@ Sıma ke ney bıgurenê, karê sıma de no namdarêni dano.',
 
 # Special:ListGroupRights
 'listgrouprights-group'   => 'Kome',
+'listgrouprights-rights'  => 'Heqi',
 'listgrouprights-members' => '(lista azau)',
 
 # E-mail user
-'emailuser' => 'Nê karberi rê e-poste bırusne',
-'emailsend' => 'Bırusne',
+'emailuser'    => 'Nê karberi rê e-poste bırusne',
+'emailpage'    => 'Karberi rê e-poste bırusne',
+'emailfrom'    => 'Kami ra:',
+'emailto'      => 'Kami rê:',
+'emailsubject' => 'Mewzu:',
+'emailmessage' => 'Mesac:',
+'emailsend'    => 'Bırusne',
 
 # Watchlist
 'watchlist'         => 'Pela mına şêrkerdene',
 'mywatchlist'       => 'Lista mına şêrkerdışi',
-'watchlistfor'      => "(serba '''$1''')",
 'addedwatch'        => 'Kerd be lista şêrkerdişi ser',
 'addedwatchtext'    => "Pela \"[[:\$1]]\"i ilawe biye be [[Special:Watchlist|pela şêrkerdişi]].
 Nara dıme, vurnaisê na pele u pela hurênaisê dawa alaqedare ita bena lista, u pele [[Special:RecentChanges|lista vurnaisunê peyênu]] de '''qolınd''' asena ke cı ra asan weçiniyo.",
@@ -1066,8 +1079,11 @@ Nara dıme, vurnaisê na pele u pela hurênaisê dawa alaqedare ita bena lista, 
 'watching'   => 'Şêr ke…',
 'unwatching' => 'Şêr meke…',
 
+'changed' => 'vuriya',
+
 # Delete
 'deletepage'            => 'Pele bıestere',
+'delete-legend'         => 'Bıestere',
 'confirmdeletetext'     => 'Tı hawo kena ke jü pele be tarixê dae pêro bıne ra bıesterê.
 Eke ferqê neticê na kerdene de bena u no kar be gorê [[{{MediaWiki:Policy-url}}|qeydunê esterıtene]] beno, wa gurêy tesdiq ke.',
 'actioncomplete'        => 'Kar bi temam',
@@ -1107,9 +1123,11 @@ Tı şikina sewiya sevekiyaena na pele bıvurnê, hema yê nae sevekiyaena qedem
 'restriction-level'           => 'Sinorê desturi:',
 
 # Undelete
-'undeletebtn'      => 'Peyser bia',
-'undeletelink'     => 'bıvêne/peyser bia',
-'undeletedarticle' => 'peyser ard "[[$1]]"',
+'undeletebtn'               => 'Peyser bia',
+'undeletelink'              => 'bıvêne/peyser bia',
+'undeletecomment'           => 'Sebeb:',
+'undeletedarticle'          => 'peyser ard "[[$1]]"',
+'undelete-show-file-submit' => 'Heya',
 
 # Namespace form on various pages
 'namespace'      => 'Caê namey:',
@@ -1127,6 +1145,7 @@ Tı şikina sewiya sevekiyaena na pele bıvurnê, hema yê nae sevekiyaena qedem
 
 'sp-contributions-newbies'  => 'Teyna iştırakunê neweqeydbiyaoğu basne',
 'sp-contributions-blocklog' => 'qeydê engeli',
+'sp-contributions-talk'     => 'hurênais',
 'sp-contributions-search'   => 'Ebe iştıraku cı feteliye',
 'sp-contributions-username' => 'IP ya ki karber:',
 'sp-contributions-submit'   => 'Cıfeteliye',
@@ -1157,7 +1176,7 @@ Tı şikina sewiya sevekiyaena na pele bıvurnê, hema yê nae sevekiyaena qedem
 'unblocklink'                     => 'ra ke',
 'change-blocklink'                => 'mani bıvurne',
 'contribslink'                    => 'iştıraki',
-'autoblocker'                     => 'Sıma otomatikmen kılit biy, çıke adresa sımawa \'\'IP\'\'y terefê "[[User:$1|$1]]" gurenina. 
+'autoblocker'                     => 'Sıma otomatikmen kılit biy, çıke adresa sımawa \'\'IP\'\'y terefê "[[User:$1|$1]]" gurenina.
 Sebebê kılit-biyaena $1\'i: "$2"o',
 'blocklogpage'                    => 'Protokolê kilıti',
 'blocklogentry'                   => '[[$1]] hata peyê $2 $3ine kilıt bi',
@@ -1172,15 +1191,16 @@ Serba men- u kilıt-biyaene nıkaêne qaytê [[Special:IPBlockList|lista kilıt-
 'block-log-flags-noemail'         => 'e-mail kilıt bi',
 'block-log-flags-nousertalk'      => 'pela hurênaişi ho nêşikina bıvurnê',
 'block-log-flags-angry-autoblock' => 'kilıto otomatiko qewetın bi ra',
+'block-log-flags-hiddenname'      => 'namê karberi wedariyaeo',
 'range_block_disabled'            => 'Qabılıyetê idarekeri be afernaena komuna têdine qapan bi.',
 'ipb_expiry_invalid'              => 'Xêlê zeman nêvêreno.',
 
 # Move page
-'movepagetext'     => "Ebe gurênaena formê cêrêni namê jü pele vurino, qeydê cıyê verêni pêro tede sonê be namê newey ser. 
-Nameo khan jü pela de cihetiê be namê newey cêna. 
-Tı şikina ita de cihetu otomatikman hetê namê oricinali ser rocane kerê. 
+'movepagetext'     => "Ebe gurênaena formê cêrêni namê jü pele vurino, qeydê cıyê verêni pêro tede sonê be namê newey ser.
+Nameo khan jü pela de cihetiê be namê newey cêna.
+Tı şikina ita de cihetu otomatikman hetê namê oricinali ser rocane kerê.
 Eke tı nêwazena otomatikman bıkerê, gunê [[Special:DoubleRedirects|cihetunê çıftu]] ya ki [[Special:BrokenRedirects|cihetunê nêvêrdeyu]] pêroine be ho duz kerê.
-Ho vira meke ke be na vurnaiso ke tı kena, gurênaisê girêu be caunê rastu pêroine ra tı mesula. 
+Ho vira meke ke be na vurnaiso ke tı kena, gurênaisê girêu be caunê rastu pêroine ra tı mesula.
 
 Diqet ke, namê newey de hora ke jü madde esto, vurnaisê namey '''nêbeno''', wa no ke thalo ya ki jü cihetiserberdiso u vurnaisê huyo verên çino. No yeno na mana ke tı şikina namê jü pele peyser bıcêrê, koti ra ke namê ae vuriyo, beno ke to ğelet kerd u zobina ki qarısê pela de bine nêbena.
 
@@ -1214,10 +1234,15 @@ Kerem ke, zerreki ebe ho dest bere.'''",
 'export' => 'Pelu qeyd ke',
 
 # Namespace 8 related
-'allmessages' => 'Mesacê sistemi',
+'allmessages'               => 'Mesacê sistemi',
+'allmessages-language'      => 'Zon:',
+'allmessages-filter-submit' => 'So',
 
 # Thumbnails
 'thumbnail-more' => 'Gırs ke',
+
+# Special:Import
+'import-upload-filename' => 'Namê dosya:',
 
 # Tooltip help for the actions
 'tooltip-pt-userpage'             => 'Pela sımawa karberi',
@@ -1280,7 +1305,7 @@ Tı şikina çımunê dae bıvênê',
 'tooltip-recreate'                => 'Na pele esterıte bo ki, nae oncia bıaferne',
 'tooltip-upload'                  => 'Dest be bar-kerdene ke',
 'tooltip-rollback'                => '"Peyser bia" ebe jü tık pela iştırak(un)ê peyên|i(u) peyser ano.',
-'tooltip-undo'                    => '"Peyser" ni vurnaişi peyser ano u modusê verqayt de vurnaisê formi keno ra.  
+'tooltip-undo'                    => '"Peyser" ni vurnaişi peyser ano u modusê verqayt de vurnaisê formi keno ra.
 Têser-kerdena jü sebebi rê xulasa de imkan dano cı.',
 
 # Stylesheets
@@ -1304,9 +1329,9 @@ Serba areze-kerdene qaytê ''math/README''y ke.",
 'nextdiff'     => 'Vurnaena newêre →',
 
 # Media information
-'file-info-size'       => '($1 × $2 piksel, gırsênia dosya: $3, MIME tipê cı: $4)',
+'file-info-size'       => '$1 × $2 piksel, gırsênia dosya: $3, MIME tipê cı: $4',
 'file-nohires'         => '<small>Tewrêna berz rovıleşiyaene nêbena.</small>',
-'svg-long-desc'        => '(Dosya SVGy, seha ke $1 × $2 pixels, gırşênia dosya: $3)',
+'svg-long-desc'        => 'Dosya SVGy, seha ke $1 × $2 pixels, gırşênia dosya: $3',
 'show-big-image'       => 'Rovıleşiyaena tame',
 'show-big-image-thumb' => '<small>Gırsênia verqayti: $1 × $2 piksel</small>',
 
@@ -1359,11 +1384,11 @@ Variants for Chinese language
 
 # Metadata
 'metadata'          => 'Daê seri',
-'metadata-help'     => 'Na dosya de mıxtemelen melumatê ilawekerdeyê ke terefê kamera dicitale u cıfeteliyaoği ra darde biyê, estê. 
+'metadata-help'     => 'Na dosya de mıxtemelen melumatê ilawekerdeyê ke terefê kamera dicitale u cıfeteliyaoği ra darde biyê, estê.
 Eke dosya de peydêna vuriyais biyo ki, beno ke taê melumati gorê vurnaisê newey khan mendê.',
 'metadata-expand'   => 'Arezekerdu bıasne',
 'metadata-collapse' => 'Arezekerdu measne',
-'metadata-fields'   => "Meydanê EXIF metadataê ke na pele de benê lista, pela resımasnaene de ke tabloê metadata gına waro, gureninê. 
+'metadata-fields'   => "Meydanê EXIF metadataê ke na pele de benê lista, pela resımasnaene de ke tabloê metadata gına waro, gureninê.
 İ bini zê ''saekerdoğu'' nıminê.
 * make
 * model
@@ -1373,19 +1398,41 @@ Eke dosya de peydêna vuriyais biyo ki, beno ke taê melumati gorê vurnaisê ne
 * isospeedratings
 * focallength",
 
+# EXIF tags
+'exif-imagewidth'  => 'Verındêni',
+'exif-imagelength' => 'Berzêni',
+
+'exif-meteringmode-255' => 'Bin',
+
 # External editor support
 'edit-externally'      => 'Na dosya be mırecaetê de teberi bıvurne',
 'edit-externally-help' => '(Serba daêna melumati qaytê pelga [http://www.mediawiki.org/wiki/Manual:External_editors ayarê gurenaena teberi] be)',
 
 # 'all' in various places, this might be different for inflected languages
-'watchlistall2' => 'pêro',
-'namespacesall' => 'pêro',
-'monthsall'     => 'pêro',
+'recentchangesall' => 'pêro',
+'imagelistall'     => 'pêro',
+'watchlistall2'    => 'pêro',
+'namespacesall'    => 'pêro',
+'monthsall'        => 'pêro',
+'limitall'         => 'pêro',
+
+# action=purge
+'confirm_purge_button' => 'Temam',
+
+# Table pager
+'table_pager_limit_submit' => 'So',
 
 # Watchlist editing tools
 'watchlisttools-view' => 'Vurnaisunê alaqadaru bımısne',
 'watchlisttools-edit' => 'Lista şêrkerdene bıvêne u vıraze',
 'watchlisttools-raw'  => 'Lista şêrkerdena xame vıraze',
+
+# Special:FilePath
+'filepath-page'   => 'Dosya:',
+'filepath-submit' => 'So',
+
+# Special:FileDuplicateSearch
+'fileduplicatesearch-filename' => 'Namê dosya:',
 
 # Special:SpecialPages
 'specialpages'                   => 'Pelê xaşi',
@@ -1407,5 +1454,9 @@ Eke dosya de peydêna vuriyais biyo ki, beno ke taê melumati gorê vurnaisê ne
 
 # Special:BlankPage
 'blankpage' => 'Pela thale',
+
+# Special:ComparePages
+'compare-page1' => 'Pele 1',
+'compare-page2' => 'Pele 2',
 
 );

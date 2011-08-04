@@ -23,7 +23,7 @@ class MathCaptcha extends SimpleCaptcha {
 
 		$form = '<table><tr><td>' . $this->fetchMath( $sum ) . '</td>';
 		$form .= '<td>' . Xml::input( 'wpCaptchaWord', false, false, array( 'tabindex' => '1' ) ) . '</td></tr></table>';
-		$form .= Xml::hidden( 'wpCaptchaId', $index );
+		$form .= Html::hidden( 'wpCaptchaId', $index );
 		return $form;
 	}
 

@@ -9,10 +9,12 @@
  *
  * @author AdiJapan
  * @author Cin
+ * @author Danutz
  * @author Emily
  * @author Firilacroco
  * @author KlaudiuMihaila
  * @author Laurap
+ * @author Malafaya
  * @author Memo18
  * @author Mihai
  * @author Minisarm
@@ -20,6 +22,7 @@
  * @author SCriBu
  * @author Silviubogan
  * @author Stelistcristi
+ * @author Strainu
  * @author Urhixidur
  * @author לערי ריינהארט
  */
@@ -94,7 +97,7 @@ $magicWords = array(
 	'img_page'              => array( '1', 'pagina=$1', 'pagina $1', 'page=$1', 'page $1' ),
 	'img_upright'           => array( '1', 'dreaptasus', 'dreaptasus=$1', 'dreaptasus $1', 'upright', 'upright=$1', 'upright $1' ),
 	'img_border'            => array( '1', 'chenar', 'border' ),
-	'img_baseline'          => array( '1', 'linia de bază', 'baseline' ),
+	'img_baseline'          => array( '1', 'linia_de_bază', 'baseline' ),
 	'img_sub'               => array( '1', 'indice', 'sub' ),
 	'img_super'             => array( '1', 'exponent', 'super', 'sup' ),
 	'img_top'               => array( '1', 'sus', 'top' ),
@@ -189,94 +192,94 @@ $namespaceAliases = array(
 );
 
 $specialPageAliases = array(
-	'DoubleRedirects'           => array( 'Redirectări duble' ),
-	'BrokenRedirects'           => array( 'Redirectări invalide' ),
+	'DoubleRedirects'           => array( 'Redirectări_duble' ),
+	'BrokenRedirects'           => array( 'Redirectări_invalide' ),
 	'Disambiguations'           => array( 'Dezambiguizări' ),
 	'Userlogin'                 => array( 'Autentificare' ),
-	'Userlogout'                => array( 'Ieşire' ),
+	'Userlogout'                => array( 'Ieșire' ),
 	'CreateAccount'             => array( 'Înregistrare' ),
-	'Preferences'               => array( 'Preferinţe' ),
-	'Watchlist'                 => array( 'Pagini urmărite' ),
-	'Recentchanges'             => array( 'Schimbări recente' ),
+	'Preferences'               => array( 'Preferințe' ),
+	'Watchlist'                 => array( 'Pagini_urmărite' ),
+	'Recentchanges'             => array( 'Schimbări_recente' ),
 	'Upload'                    => array( 'Încărcare' ),
-	'Listfiles'                 => array( 'Listă imagini' ),
-	'Newimages'                 => array( 'Imagini noi' ),
-	'Listusers'                 => array( 'Listă utilizatori' ),
-	'Listgrouprights'           => array( 'Listă drepturi grup' ),
+	'Listfiles'                 => array( 'Listă_fișiere' ),
+	'Newimages'                 => array( 'Imagini_noi' ),
+	'Listusers'                 => array( 'Listă_utilizatori' ),
+	'Listgrouprights'           => array( 'Listă_drepturi_grup' ),
 	'Statistics'                => array( 'Statistici' ),
-	'Randompage'                => array( 'Aleatoriu', 'Pagină aleatorie' ),
-	'Lonelypages'               => array( 'Pagini orfane' ),
-	'Uncategorizedpages'        => array( 'Pagini necategorizate' ),
-	'Uncategorizedcategories'   => array( 'Categorii necategorizate' ),
-	'Uncategorizedimages'       => array( 'Imagini necategorizate' ),
-	'Uncategorizedtemplates'    => array( 'Formate necategorizate' ),
-	'Unusedcategories'          => array( 'Categorii nefolosite' ),
-	'Unusedimages'              => array( 'Imagini nefolosite' ),
-	'Wantedpages'               => array( 'Pagini dorite', 'Legături invalide' ),
-	'Wantedcategories'          => array( 'Categorii dorite' ),
-	'Wantedfiles'               => array( 'Fişiere dorite' ),
-	'Wantedtemplates'           => array( 'Formate dorite' ),
-	'Mostlinked'                => array( 'Legături multe' ),
-	'Mostlinkedcategories'      => array( 'Categorii des folosite' ),
-	'Mostlinkedtemplates'       => array( 'Formate des folosite' ),
-	'Mostimages'                => array( 'Imagini multe' ),
-	'Mostcategories'            => array( 'Categorii multe' ),
-	'Mostrevisions'             => array( 'Revizii multe' ),
-	'Fewestrevisions'           => array( 'Revizii puţine' ),
-	'Shortpages'                => array( 'Pagini scurte' ),
-	'Longpages'                 => array( 'Pagini lungi' ),
-	'Newpages'                  => array( 'Pagini noi' ),
-	'Ancientpages'              => array( 'Pagini vechi' ),
-	'Deadendpages'              => array( 'Pagini fără legături' ),
-	'Protectedpages'            => array( 'Pagini protejate' ),
-	'Protectedtitles'           => array( 'Titluri protejate' ),
-	'Allpages'                  => array( 'Toate paginile' ),
+	'Randompage'                => array( 'Aleatoriu', 'Pagină_aleatorie' ),
+	'Lonelypages'               => array( 'Pagini_orfane' ),
+	'Uncategorizedpages'        => array( 'Pagini_necategorizate' ),
+	'Uncategorizedcategories'   => array( 'Categorii_necategorizate' ),
+	'Uncategorizedimages'       => array( 'Imagini_necategorizate' ),
+	'Uncategorizedtemplates'    => array( 'Formate_necategorizate' ),
+	'Unusedcategories'          => array( 'Categorii_nefolosite' ),
+	'Unusedimages'              => array( 'Imagini_nefolosite' ),
+	'Wantedpages'               => array( 'Pagini_dorite', 'Legături_invalide' ),
+	'Wantedcategories'          => array( 'Categorii_dorite' ),
+	'Wantedfiles'               => array( 'Fișiere_dorite' ),
+	'Wantedtemplates'           => array( 'Formate_dorite' ),
+	'Mostlinked'                => array( 'Legături_multe' ),
+	'Mostlinkedcategories'      => array( 'Categorii_des_folosite' ),
+	'Mostlinkedtemplates'       => array( 'Formate_des_folosite' ),
+	'Mostimages'                => array( 'Imagini_multe' ),
+	'Mostcategories'            => array( 'Categorii_multe' ),
+	'Mostrevisions'             => array( 'Revizii_multe' ),
+	'Fewestrevisions'           => array( 'Revizii_puține' ),
+	'Shortpages'                => array( 'Pagini_scurte' ),
+	'Longpages'                 => array( 'Pagini_lungi' ),
+	'Newpages'                  => array( 'Pagini_noi' ),
+	'Ancientpages'              => array( 'Pagini_vechi' ),
+	'Deadendpages'              => array( 'Pagini_fără_legături' ),
+	'Protectedpages'            => array( 'Pagini_protejate' ),
+	'Protectedtitles'           => array( 'Titluri_protejate' ),
+	'Allpages'                  => array( 'Toate_paginile' ),
 	'Prefixindex'               => array( 'Index' ),
-	'Ipblocklist'               => array( 'Listă IP blocat' ),
-	'Specialpages'              => array( 'Pagini speciale' ),
-	'Contributions'             => array( 'Contribuţii' ),
-	'Emailuser'                 => array( 'Email utilizator' ),
-	'Confirmemail'              => array( 'Confirmă email' ),
-	'Whatlinkshere'             => array( 'Ce se leagă aici' ),
-	'Recentchangeslinked'       => array( 'Modificări corelate' ),
-	'Movepage'                  => array( 'Mută pagina' ),
+	'Ipblocklist'               => array( 'Listă_IP_blocat' ),
+	'Specialpages'              => array( 'Pagini_speciale' ),
+	'Contributions'             => array( 'Contribuții' ),
+	'Emailuser'                 => array( 'Email_utilizator' ),
+	'Confirmemail'              => array( 'Confirmă_email' ),
+	'Whatlinkshere'             => array( 'Ce_se_leagă_aici' ),
+	'Recentchangeslinked'       => array( 'Modificări_corelate' ),
+	'Movepage'                  => array( 'Mută_pagina' ),
 	'Blockme'                   => array( 'Blochează-mă' ),
-	'Booksources'               => array( 'Referinţe în cărţi' ),
+	'Booksources'               => array( 'Referințe_în_cărți' ),
 	'Categories'                => array( 'Categorii' ),
 	'Export'                    => array( 'Exportă' ),
 	'Version'                   => array( 'Versiune' ),
-	'Allmessages'               => array( 'Toate mesajele' ),
+	'Allmessages'               => array( 'Toate_mesajele' ),
 	'Log'                       => array( 'Jurnal', 'Jurnale' ),
-	'Blockip'                   => array( 'Blochează IP' ),
+	'Blockip'                   => array( 'Blochează_IP' ),
 	'Undelete'                  => array( 'Restaurează' ),
 	'Import'                    => array( 'Importă' ),
-	'Lockdb'                    => array( 'Blochează BD' ),
-	'Unlockdb'                  => array( 'Deblochează BD' ),
-	'Userrights'                => array( 'Drepturi utilizator' ),
-	'MIMEsearch'                => array( 'Căutare MIME' ),
-	'FileDuplicateSearch'       => array( 'Căutare fişier duplicat' ),
-	'Unwatchedpages'            => array( 'Pagini neurmărite' ),
-	'Listredirects'             => array( 'Listă redirectări' ),
-	'Revisiondelete'            => array( 'Şterge revizie' ),
-	'Unusedtemplates'           => array( 'Formate nefolosite' ),
-	'Randomredirect'            => array( 'Redirectare aleatorie' ),
-	'Mypage'                    => array( 'Pagina mea' ),
-	'Mytalk'                    => array( 'Discuţiile mele' ),
-	'Mycontributions'           => array( 'Contribuţiile mele' ),
-	'Listadmins'                => array( 'Listă administratori' ),
-	'Listbots'                  => array( 'Listă roboţi' ),
-	'Popularpages'              => array( 'Pagini populare' ),
+	'Lockdb'                    => array( 'Blochează_BD' ),
+	'Unlockdb'                  => array( 'Deblochează_BD' ),
+	'Userrights'                => array( 'Drepturi_utilizator' ),
+	'MIMEsearch'                => array( 'Căutare_MIME' ),
+	'FileDuplicateSearch'       => array( 'Căutare_fișier_duplicat' ),
+	'Unwatchedpages'            => array( 'Pagini_neurmărite' ),
+	'Listredirects'             => array( 'Listă_redirectări' ),
+	'Revisiondelete'            => array( 'Şterge_revizie' ),
+	'Unusedtemplates'           => array( 'Formate_nefolosite' ),
+	'Randomredirect'            => array( 'Redirectare_aleatorie' ),
+	'Mypage'                    => array( 'Pagina_mea' ),
+	'Mytalk'                    => array( 'Discuțiile_mele' ),
+	'Mycontributions'           => array( 'Contribuțiile_mele' ),
+	'Listadmins'                => array( 'Listă_administratori' ),
+	'Listbots'                  => array( 'Listă_roboți' ),
+	'Popularpages'              => array( 'Pagini_populare' ),
 	'Search'                    => array( 'Căutare' ),
-	'Resetpass'                 => array( 'Resetează parola' ),
-	'Withoutinterwiki'          => array( 'Fără legături interwiki' ),
-	'MergeHistory'              => array( 'Istoria combinărilor' ),
-	'Filepath'                  => array( 'Cale fişier' ),
-	'Invalidateemail'           => array( 'Invalidează email' ),
-	'Blankpage'                 => array( 'Pagină goală' ),
-	'LinkSearch'                => array( 'Căutare legături' ),
-	'DeletedContributions'      => array( 'Contibuţii şterse' ),
+	'Resetpass'                 => array( 'Resetează_parola' ),
+	'Withoutinterwiki'          => array( 'Fără_legături_interwiki' ),
+	'MergeHistory'              => array( 'Istoria_combinărilor' ),
+	'Filepath'                  => array( 'Cale_fișier' ),
+	'Invalidateemail'           => array( 'Invalidează_email' ),
+	'Blankpage'                 => array( 'Pagină_goală' ),
+	'LinkSearch'                => array( 'Căutare_legături' ),
+	'DeletedContributions'      => array( 'Contibuții_șterse' ),
 	'Tags'                      => array( 'Etichete' ),
-	'Activeusers'               => array( 'Utilizatori activi' ),
+	'Activeusers'               => array( 'Utilizatori_activi' ),
 );
 
 $datePreferences = false;
@@ -293,7 +296,7 @@ $linkTrail = '/^([a-zăâîşţșțĂÂÎŞŢȘȚ]+)(.*)$/sDu';
 
 $messages = array(
 # User preference toggles
-'tog-underline'               => 'Subliniază legăturile',
+'tog-underline'               => 'Sublinierea legăturilor:',
 'tog-highlightbroken'         => 'Afișează <a href="" class="new">așa</a> legăturile către paginile inexistente (alternativă: așa<a href="" class="internal">?</a>).',
 'tog-justify'                 => 'Aranjează justificat paragrafele',
 'tog-hideminor'               => 'Ascunde modificările minore în schimbări recente',
@@ -308,16 +311,15 @@ $messages = array(
 'tog-editsectiononrightclick' => 'Activează modificarea secţiunilor prin clic dreapta
 pe titlul secțiunii (JavaScript)',
 'tog-showtoc'                 => 'Arată cuprinsul (pentru paginile cu mai mult de 3 paragrafe cu titlu)',
-'tog-rememberpassword'        => 'Amintește-ți între sesiuni',
-'tog-editwidth'               => 'Extinde câmpul de editare pe tot ecranul',
+'tog-rememberpassword'        => 'Autentificare automată de la acest navigator (expiră după $1 {{PLURAL:$1|zi|zile}})',
 'tog-watchcreations'          => 'Adaugă paginile pe care le creez la lista mea de urmărire',
 'tog-watchdefault'            => 'Adaugă paginile pe care le modific la lista mea de urmărire',
-'tog-watchmoves'              => 'Adaugă paginile pe care le mut la lista mea de urmărire',
-'tog-watchdeletion'           => 'Adaugă paginile pe care le șterg în lista mea de urmărire',
+'tog-watchmoves'              => 'Adaugă paginile pe care le redenumesc la lista de pagini urmărite',
+'tog-watchdeletion'           => 'Adaugă paginile pe care le șterg în lista de pagini urmărite',
 'tog-minordefault'            => 'Marchează din oficiu toate modificările ca fiind minore',
 'tog-previewontop'            => 'Arată previzualizarea deasupra căsuței de modificare',
 'tog-previewonfirst'          => 'Arată previzualizarea la prima modificare',
-'tog-nocache'                 => 'Dezactivează cache-ul paginilor',
+'tog-nocache'                 => 'Dezactivează opțiunea navigatorului de memorare în cache a paginilor',
 'tog-enotifwatchlistpages'    => 'Trimite-mi un email la modificările paginilor',
 'tog-enotifusertalkpages'     => 'Trimite-mi un email când pagina mea de discuții este modificată',
 'tog-enotifminoredits'        => 'Trimite-mi un email de asemenea pentru modificările minore ale paginilor',
@@ -325,19 +327,19 @@ pe titlul secțiunii (JavaScript)',
 'tog-shownumberswatching'     => 'Arată numărul utilizatorilor care urmăresc',
 'tog-oldsig'                  => 'Previzualizarea semnăturii actuale:',
 'tog-fancysig'                => 'Tratează semnătura ca wikitext (fără o legătură automată)',
-'tog-externaleditor'          => 'Utilizează, în mod implicit, un editor extern (doar pentru experți, necesită setări speciale pe calculatorul dumneavoastră)',
-'tog-externaldiff'            => 'Utilizează diferențele externe ca standard',
+'tog-externaleditor'          => 'Utilizează, în mod implicit, un editor extern (Doar pentru experți; necesită setări speciale pe calculatorul dumneavoastră. [http://www.mediawiki.org/wiki/Manual:External_editors Mai multe informații.])',
+'tog-externaldiff'            => 'Utilizează, în mod implicit, un program extern pentru diferențele între versiuni (Doar pentru experți; necesită setări speciale pe calculatorul dumneavoastră. [http://www.mediawiki.org/wiki/Manual:External_editors Mai multe informații.])',
 'tog-showjumplinks'           => 'Activează legăturile de accesibilitate „sari la”',
-'tog-uselivepreview'          => 'Folosește previzualizarea în timp real (JavaScript) (Experimental)',
+'tog-uselivepreview'          => 'Folosește previzualizarea în timp real (JavaScript) (experimental)',
 'tog-forceeditsummary'        => 'Avertizează-mă când uit să descriu modificările',
 'tog-watchlisthideown'        => 'Ascunde modificările mele la lista mea de urmărire',
 'tog-watchlisthidebots'       => 'Ascunde modificările boților la lista mea de urmărire',
-'tog-watchlisthideminor'      => 'Ascunde modificările minore la lista mea de urmărire',
+'tog-watchlisthideminor'      => 'Ascunde modificările minore din lista de pagini urmărite',
 'tog-watchlisthideliu'        => 'Ascunde modificările făcute de utilizatori anonimi din lista de pagini urmărite',
 'tog-watchlisthideanons'      => 'Ascunde modificările făcute de utilizatori anonimi din lista de pagini urmărite',
 'tog-watchlisthidepatrolled'  => 'Ascunde paginile patrulate din lista de pagini urmărite',
 'tog-nolangconversion'        => 'Dezactivează conversia variabilelor',
-'tog-ccmeonemails'            => 'Trimite-mi o copie când trimit un email altui utilizator',
+'tog-ccmeonemails'            => 'Doresc să primesc o copie a mesajelor e-mail pe care le trimit',
 'tog-diffonly'                => 'Nu arăta conținutul paginii sub dif',
 'tog-showhiddencats'          => 'Arată categoriile ascunse',
 'tog-noconvertlink'           => 'Dezactivați conversia titlurilor',
@@ -426,17 +428,17 @@ pe titlul secțiunii (JavaScript)',
 
 'linkprefix'        => '/^(.*?)([a-zA-Z\\x80-\\xff]+)$/sD',
 'mainpagetext'      => "'''Programul Wiki a fost instalat cu succes.'''",
-'mainpagedocfooter' => 'Consultă [http://meta.wikimedia.org/wiki/Help:Contents Ghidul utilizatorului (en)] pentru informații despre utilizarea programului wiki.
+'mainpagedocfooter' => 'Consultați [http://meta.wikimedia.org/wiki/Help:Contents Ghidul utilizatorului (en)] pentru informații despre utilizarea software-ului wiki.
 
 == Primii pași ==
 * [http://www.mediawiki.org/wiki/Manual:Configuration_settings Lista parametrilor configurabili (en)]
 * [http://www.mediawiki.org/wiki/Manual:FAQ Întrebări frecvente despre MediaWiki (en)]
-* [https://lists.wikimedia.org/mailman/listinfo/mediawiki-announce Listă discuții MediaWiki (en)]',
+* [https://lists.wikimedia.org/mailman/listinfo/mediawiki-announce Lista de discuții a MediaWiki (en)]',
 
 'about'         => 'Despre',
 'article'       => 'Articol',
 'newwindow'     => '(se deschide într-o fereastră nouă)',
-'cancel'        => 'Renunţă',
+'cancel'        => 'Revocare',
 'moredotdotdot' => 'Mai mult…',
 'mypage'        => 'Pagina mea',
 'mytalk'        => 'Discuții',
@@ -447,7 +449,7 @@ pe titlul secțiunii (JavaScript)',
 # Cologne Blue skin
 'qbfind'         => 'Găsește',
 'qbbrowse'       => 'Răsfoiește',
-'qbedit'         => 'Modifică',
+'qbedit'         => 'Modificare',
 'qbpageoptions'  => 'Opțiuni ale paginii',
 'qbpageinfo'     => 'Informații ale paginii',
 'qbmyoptions'    => 'Paginile mele',
@@ -456,40 +458,30 @@ pe titlul secțiunii (JavaScript)',
 'faqpage'        => 'Project:Întrebări frecvente',
 
 # Vector skin
-'vector-action-addsection'   => 'Adaugă subiect',
-'vector-action-delete'       => 'Șterge',
-'vector-action-move'         => 'Redenumește',
-'vector-action-protect'      => 'Protejează',
-'vector-action-undelete'     => 'Recuperare',
-'vector-action-unprotect'    => 'Deprotejează',
-'vector-namespace-category'  => 'Categorie',
-'vector-namespace-help'      => 'Pagină de ajutor',
-'vector-namespace-image'     => 'Fișier',
-'vector-namespace-main'      => 'Articol',
-'vector-namespace-media'     => 'Pagină media',
-'vector-namespace-mediawiki' => 'Mesaj',
-'vector-namespace-project'   => 'Pagină de proiect',
-'vector-namespace-special'   => 'Pagină specială',
-'vector-namespace-talk'      => 'Discuție',
-'vector-namespace-template'  => 'Format',
-'vector-namespace-user'      => 'Pagină de utilizator',
-'vector-view-create'         => 'Creează',
-'vector-view-edit'           => 'Modifică',
-'vector-view-history'        => 'Istoric',
-'vector-view-view'           => 'Citește',
-'vector-view-viewsource'     => 'Vezi sursă',
-'actions'                    => 'Acțiuni',
-'namespaces'                 => 'Spații de nume',
-'variants'                   => 'Variante',
+'vector-action-addsection'       => 'Mesaj nou',
+'vector-action-delete'           => 'Ștergere',
+'vector-action-move'             => 'Redenumire',
+'vector-action-protect'          => 'Protejare',
+'vector-action-undelete'         => 'Recuperare',
+'vector-action-unprotect'        => 'Deprotejare',
+'vector-simplesearch-preference' => 'Permite sugestii de căutare superioară (numai interfața Vector)',
+'vector-view-create'             => 'Creare',
+'vector-view-edit'               => 'Modificare',
+'vector-view-history'            => 'Istoric',
+'vector-view-view'               => 'Lectură',
+'vector-view-viewsource'         => 'Sursă pagină',
+'actions'                        => 'Acțiuni',
+'namespaces'                     => 'Spații de nume',
+'variants'                       => 'Variante',
 
 'errorpagetitle'    => 'Eroare',
 'returnto'          => 'Înapoi la $1.',
 'tagline'           => 'De la {{SITENAME}}',
 'help'              => 'Ajutor',
-'search'            => 'Caută',
-'searchbutton'      => 'Caută',
-'go'                => 'Du-te',
-'searcharticle'     => 'Du-te',
+'search'            => 'Căutare',
+'searchbutton'      => 'Căutare',
+'go'                => 'Salt',
+'searcharticle'     => 'Salt',
 'history'           => 'Istoricul paginii',
 'history_short'     => 'Istoric',
 'updatedmarker'     => 'încărcat de la ultima mea vizită',
@@ -497,22 +489,22 @@ pe titlul secțiunii (JavaScript)',
 'printableversion'  => 'Versiune de tipărit',
 'permalink'         => 'Legătură permanentă',
 'print'             => 'Tipărire',
-'edit'              => 'Modifică',
-'create'            => 'Creează',
-'editthispage'      => 'Modifică pagina',
-'create-this-page'  => 'Crează această pagină',
-'delete'            => 'Șterge',
+'edit'              => 'Modificare',
+'create'            => 'Creare',
+'editthispage'      => 'Modificați pagina',
+'create-this-page'  => 'Creați această pagină',
+'delete'            => 'Ștergere',
 'deletethispage'    => 'Șterge pagina',
-'undelete_short'    => 'Recuperarea {{PLURAL:$1|unei editări|a $1 editări}}',
-'protect'           => 'Protejează',
+'undelete_short'    => 'Recuperarea {{PLURAL:$1|unei modificări|a $1 modificări}}',
+'protect'           => 'Protejare',
 'protect_change'    => 'schimbă protecția',
-'protectthispage'   => 'Protejează pagina',
+'protectthispage'   => 'Protejați această pagină',
 'unprotect'         => 'Deprotejare',
-'unprotectthispage' => 'Deprotejează pagina',
+'unprotectthispage' => 'Deprotejați această pagină',
 'newpage'           => 'Pagină nouă',
-'talkpage'          => 'Discută această pagină',
+'talkpage'          => 'Discutați această pagină',
 'talkpagelinktext'  => 'Discuție',
-'specialpage'       => 'Pagină Specială',
+'specialpage'       => 'Pagină specială',
 'personaltools'     => 'Unelte personale',
 'postcomment'       => 'Secțiune nouă',
 'articlepage'       => 'Vedeți articolul',
@@ -520,7 +512,7 @@ pe titlul secțiunii (JavaScript)',
 'views'             => 'Vizualizări',
 'toolbox'           => 'Trusa de unelte',
 'userpage'          => 'Vizualizați pagina utilizatorului',
-'projectpage'       => 'Vezi pagina proiectului',
+'projectpage'       => 'Vizualizați pagina proiectului',
 'imagepage'         => 'Vizualizați pagina fișierului',
 'mediawikipage'     => 'Vizualizați pagina mesajului',
 'templatepage'      => 'Vizualizați pagina formatului',
@@ -530,17 +522,20 @@ pe titlul secțiunii (JavaScript)',
 'otherlanguages'    => 'În alte limbi',
 'redirectedfrom'    => '(Redirecționat de la $1)',
 'redirectpagesub'   => 'Pagină de redirecționare',
-'lastmodifiedat'    => 'Ultima modificare $2, $1.',
+'lastmodifiedat'    => 'Ultima modificare efectuată la $2, $1.',
 'viewcount'         => 'Pagina a fost vizitată {{PLURAL:$1|odată|de $1 ori}}.',
 'protectedpage'     => 'Pagină protejată',
 'jumpto'            => 'Salt la:',
 'jumptonavigation'  => 'navigare',
 'jumptosearch'      => 'căutare',
 'view-pool-error'   => 'Ne pare rău, dar serverele sunt supraîncărcare în acest moment.
-Prea multi utilizatori încearcă să vizualizeze această pagină.
-Vă rugăm să așteptați un moment înainte să încercați să accesați pagina din nou.
+Prea mulți utilizatori încearcă să vizualizeze această pagină.
+Vă rugăm să așteptați un moment înainte de a reîncerca accesarea paginii.
 
 $1',
+'pool-timeout'      => 'Timpul alocat așteptării pentru blocare a expirat',
+'pool-queuefull'    => 'Coada de așteptare este plină',
+'pool-errorunknown' => 'Eroare necunoscută',
 
 # All link text and link target definitions of links into project namespace that get used by other message strings, with the exception of user group pages (see grouppage) and the disambiguation template definition (see disambiguations).
 'aboutsite'            => 'Despre {{SITENAME}}',
@@ -570,16 +565,16 @@ $1',
 'versionrequiredtext' => 'Versiunea $1 MediaWiki este necesară pentru a folosi această pagină. Vezi [[Special:Version|versiunea actuală]].',
 
 'ok'                      => 'OK',
-'retrievedfrom'           => 'Adus de la "$1"',
+'retrievedfrom'           => 'Adus de la „$1”',
 'youhavenewmessages'      => 'Aveți $1 ($2).',
 'newmessageslink'         => 'mesaje noi',
 'newmessagesdifflink'     => 'comparație cu versiunea precedentă',
 'youhavenewmessagesmulti' => 'Aveți mesaje noi la $1',
-'editsection'             => 'modifică',
-'editold'                 => 'modifică',
+'editsection'             => 'modificare',
+'editold'                 => 'modificare',
 'viewsourceold'           => 'vizualizați sursa',
-'editlink'                => 'modifică',
-'viewsourcelink'          => 'vezi sursa',
+'editlink'                => 'modificare',
+'viewsourcelink'          => 'sursă pagină',
 'editsectionhint'         => 'Modifică secțiunea: $1',
 'toc'                     => 'Cuprins',
 'showtoc'                 => 'arată',
@@ -614,7 +609,9 @@ $1',
 S-ar putea să fi introdus greșit URL-ul, sau să fi urmat o legătură incorectă.
 Aceasta s-ar putea să indice și un bug în programul folosit de {{SITENAME}}.',
 'nosuchspecialpage' => 'Această pagină specială nu există',
-'nospecialpagetext' => 'Ai cerut o [[Special:SpecialPages|pagină specială]] care nu este recunoscută de {{SITENAME}}.',
+'nospecialpagetext' => '<strong>Ați cerut o [[Special:SpecialPages|pagină specială]] invalidă.</strong>
+
+O listă cu paginile speciale valide se poate găsi la [[Special:SpecialPages|{{int:specialpages}}]].',
 
 # General errors
 'error'                => 'Eroare',
@@ -670,7 +667,7 @@ Poate conține unul sau mai multe caractere ce nu poate fi folosit în titluri.'
 'wrong_wfQuery_params' => 'Număr incorect de parametri pentru wfQuery()<br />
 Funcția: $1<br />
 Interogarea: $2',
-'viewsource'           => 'Vezi sursa',
+'viewsource'           => 'Sursă pagină',
 'viewsourcefor'        => 'pentru $1',
 'actionthrottled'      => 'Acțiune limitată',
 'actionthrottledtext'  => 'Ca o măsură anti-spam, aveți permisiuni limitate în a efectua această acțiune de prea multe ori într-o perioadă scurtă de timp, iar dv. tocmai ați depășit această limită.
@@ -700,16 +697,17 @@ Motivul invocat este ''$2''.",
 Contul dumneavoatră a fost creat. Nu uitați să vă personalizați [[Special:Preferences|preferințele]] în {{SITENAME}}.',
 'yourname'                   => 'Nume de utilizator:',
 'yourpassword'               => 'Parolă:',
-'yourpasswordagain'          => 'Repetă parola',
-'remembermypassword'         => 'Reține-mi parola între sesiuni',
-'yourdomainname'             => 'Domeniul tău',
+'yourpasswordagain'          => 'Repetați parola:',
+'remembermypassword'         => 'Autentificare automată de la acest calculator (expiră după {{PLURAL:$1|24 de ore|$1 zile}})',
+'securelogin-stick-https'    => 'Rămâi conectat la HTTPS după autentificare',
+'yourdomainname'             => 'Domeniul dumneavoastră:',
 'externaldberror'            => 'A fost fie o eroare de bază de date pentru o autentificare extenă sau nu aveți permisiunea să actualizați contul extern.',
 'login'                      => 'Autentificare',
 'nav-login-createaccount'    => 'Creare cont / Autentificare',
 'loginprompt'                => 'Trebuie să ai modulele cookie activate pentru a te autentifica la {{SITENAME}}.',
 'userlogin'                  => 'Creare cont / Autentificare',
 'userloginnocreate'          => 'Autentificare',
-'logout'                     => 'Închide sesiunea',
+'logout'                     => 'Închidere sesiune',
 'userlogout'                 => 'Închide sesiunea',
 'notloggedin'                => 'Nu sunteți autentificat',
 'nologin'                    => "Nu aveți cont încă? '''$1'''.",
@@ -718,7 +716,8 @@ Contul dumneavoatră a fost creat. Nu uitați să vă personalizați [[Special:P
 'gotaccount'                 => "Aveți deja un cont de utilizator? '''$1'''.",
 'gotaccountlink'             => 'Autentificați-vă',
 'createaccountmail'          => 'după e-mail',
-'badretype'                  => 'Parolele pe care le-ai introdus diferă.',
+'createaccountreason'        => 'Motiv:',
+'badretype'                  => 'Parolele pe care le-ați introdus diferă.',
 'userexists'                 => 'Numele de utilizator pe care l-ați introdus există deja. Încercați cu un alt nume.',
 'loginerror'                 => 'Eroare de autentificare',
 'createaccounterror'         => 'Nu pot crea contul: $1',
@@ -726,17 +725,18 @@ Contul dumneavoatră a fost creat. Nu uitați să vă personalizați [[Special:P
 'nocookieslogin'             => '{{SITENAME}} folosește module cookie pentru a autentifica utilizatorii. Browser-ul dvs. are cookie-urile dezactivate. Vă rugăm să le activați și să incercați din nou.',
 'noname'                     => 'Numele de utilizator pe care l-ai specificat este invalid.',
 'loginsuccesstitle'          => 'Autentificare reușită',
-'loginsuccess'               => 'Ați fost autentificat în {{SITENAME}} ca "$1".',
+'loginsuccess'               => "'''Ați fost autentificat la {{SITENAME}} ca „$1”.'''",
 'nosuchuser'                 => 'Nu există nici un utilizator cu numele „$1”.
 Numele de utilizatori sunt sensibile la majuscule.
 Verifică dacă ai scris corect sau [[Special:UserLogin/signup|creează un nou cont de utilizator]].',
 'nosuchusershort'            => 'Nu este nici un utilizator cu numele „<nowiki>$1</nowiki>”. Verificați dacă ați scris corect.',
 'nouserspecified'            => 'Trebuie să specificați un nume de utilizator.',
 'login-userblocked'          => 'Acest utilizator este blocat. Autentificarea nu este permisă.',
-'wrongpassword'              => 'Parola pe care ai introdus-o este greșită. Te rugăm să încerci din nou.',
+'wrongpassword'              => 'Parola pe care ați introdus-o este incorectă. Vă rugăm să încercați din nou.',
 'wrongpasswordempty'         => 'Spațiul pentru introducerea parolei nu a fost completat. Vă rugăm să încercați din nou.',
 'passwordtooshort'           => 'Parola trebuie să aibă cel puțin {{PLURAL:$1|1 caracter|$1 caractere}}.',
 'password-name-match'        => 'Parola dumneavoastră trebuie să fie diferită de numele de utilizator.',
+'password-login-forbidden'   => 'Utilizarea acestui nume de utilizator și a acestei parole este interzisă.',
 'mailmypassword'             => 'Trimite-mi parola pe e-mail!',
 'passwordremindertitle'      => 'Noua parolă temporară la {{SITENAME}}',
 'passwordremindertext'       => 'Cineva (probabil dumneavoastră, de la adresa $1)
@@ -744,8 +744,8 @@ a cerut să vi se trimită o nouă parolă pentru {{SITENAME}} ($4).
 O parolă temporară pentru utilizatorul "$2" este acum "$3".
 Parola temporară va expirs {{PLURAL:$5|într-o zi|în $5 zile}}.
 
-Dacă această cerere a fost efectuată de altcineva sau dacă v-ați amintit 
-parola și nu doriți să o schimbați, ignorați acest mesaj și continuați 
+Dacă această cerere a fost efectuată de altcineva sau dacă v-ați amintit
+parola și nu doriți să o schimbați, ignorați acest mesaj și continuați
 să folosiți vechea parolă.',
 'noemail'                    => 'Nu este nici o adresă de e-mail înregistrată pentru utilizatorul „$1”.',
 'noemailcreate'              => 'Trebuie oferită o adresă e e-mail validă.',
@@ -774,21 +774,24 @@ Vă rugăm să așteptați până să mai încercați.',
 'loginlanguagelabel'         => 'Limba: $1',
 'suspicious-userlogout'      => 'Cererea dumneavoastră de a închide sesiunea a fost refuzată întrucât pare că a fost trimisă printr-o eroare a navigatorului sau de un proxy memorat în cache.',
 
+# E-mail sending
+'php-mail-error-unknown' => 'Eroare necunoscută în funcția PHP mail()',
+
 # Password reset dialog
 'resetpass'                 => 'Modifică parola',
-'resetpass_announce'        => 'Sunteți autentificat cu un cod temporar trimis pe mail. Pentru a termina acțiunea de autentificare, trebuie să setați o parolă nouă aici:',
-'resetpass_text'            => '<!-- Adaugă text aici -->',
+'resetpass_announce'        => 'Sunteți autentificat cu un cod temporar trimis pe e-mail. Pentru a termina acțiunea de autentificare, trebuie să setați o parolă nouă aici:',
+'resetpass_text'            => '<!-- Adăugați text aici -->',
 'resetpass_header'          => 'Modifică parola',
-'oldpassword'               => 'Parola veche',
-'newpassword'               => 'Parola nouă',
-'retypenew'                 => 'Repetă parola nouă',
+'oldpassword'               => 'Parola veche:',
+'newpassword'               => 'Parola nouă:',
+'retypenew'                 => 'Reintroduceți noua parolă:',
 'resetpass_submit'          => 'Setează parola și autentifică',
 'resetpass_success'         => 'Parola a fost schimbată cu succes! Autentificare în curs...',
 'resetpass_forbidden'       => 'Parolele nu pot fi schimbate.',
 'resetpass-no-info'         => 'Trebuie să fiți autentificat pentru a accesa această pagină direct.',
 'resetpass-submit-loggedin' => 'Modifică parola',
 'resetpass-submit-cancel'   => 'Revocare',
-'resetpass-wrong-oldpass'   => 'Parolă curentă sau temporară incorectă. 
+'resetpass-wrong-oldpass'   => 'Parolă curentă sau temporară incorectă.
 Este posibil să fi reușit deja schimbarea parolei sau să fi cerut o parolă temporară nouă.',
 'resetpass-temp-password'   => 'Parolă temporară:',
 
@@ -818,16 +821,18 @@ Este posibil să fi reușit deja schimbarea parolei sau să fi cerut o parolă t
 'summary'                          => 'Rezumat:',
 'subject'                          => 'Subiect / titlu:',
 'minoredit'                        => 'Aceasta este o editare minoră',
-'watchthis'                        => 'Urmărește această pagină',
-'savearticle'                      => 'Salvează pagina',
+'watchthis'                        => 'Monitorizează această pagină',
+'savearticle'                      => 'Salvare pagină',
 'preview'                          => 'Previzualizare',
 'showpreview'                      => 'Previzualizare',
 'showlivepreview'                  => 'Previzualizare live',
-'showdiff'                         => 'Arată diferențele',
+'showdiff'                         => 'Afișare diferențe',
 'anoneditwarning'                  => "'''Atenție:''' Nu v-ați autentificat. Adresa IP vă va fi înregistrată în istoricul acestei pagini.",
+'anonpreviewwarning'               => "''Nu v-ați autentificat. Dacă salvați pagina adresa dumneavoastră IP va fi înregistrată în istoric.''",
 'missingsummary'                   => "'''Atenție:''' Nu ați completat caseta „descriere modificări”. Dacă apăsați din nou butonul „salvează pagina” modificările vor fi salvate fără descriere.",
 'missingcommenttext'               => 'Vă rugăm să introduceți un comentariu.',
-'missingcommentheader'             => "'''Atenție:''' Nu ați furnizat un titlu/subiect pentru acest comentariu. Dacă dați click pe \"Salvați din nou\", modificarea va fi salvată fără titlu.",
+'missingcommentheader'             => "'''Atenție,''' nu ați pus titlu sau subiect la acest comentariu.
+Dacă dați din nou clic pe „{{int:savearticle}}” modificarea va fi salvată fără titlu.",
 'summary-preview'                  => 'Previzualizare descriere:',
 'subject-preview'                  => 'Previzualizare subiect/titlu:',
 'blockedtitle'                     => 'Utilizatorul este blocat',
@@ -868,7 +873,7 @@ Vă rugăm să includeți detaliile de mai sus în orice interogări pe care le 
 'nosuchsectiontext'                => 'Ați încercat să modificați o secțiune care nu există.
 Aceasta fie a fost mutată, fie a fost ștearsă în timp ce vizualizați pagina.',
 'loginreqtitle'                    => 'Necesită autentificare',
-'loginreqlink'                     => 'autentifici',
+'loginreqlink'                     => 'autentificați',
 'loginreqpagetext'                 => 'Trebuie să te $1 pentru a vizualiza alte pagini.',
 'accmailtitle'                     => 'Parola a fost trimisă.',
 'accmailtext'                      => "Parola generată automat pentru [[User talk:$1|$1]] a fost trimisă la $2.
@@ -880,12 +885,13 @@ Parola pentru acest nou cont poate fi schimbată după autentificare din ''[[Spe
 De aceea trebuie să folosim adresă IP pentru a identifica această persoană.
 O adresă IP poate fi folosită în comun de mai mulți utilizatori.
 Dacă sunteți un astfel de utilizator și credeți că vă sunt adresate mesaje irelevante, vă rugăm să [[Special:UserLogin/signup|vă creați un cont]] sau să [[Special:UserLogin|vă autentificați]] pentru a evita confuzii cu alți utilizatori anonimi în viitor.''",
-'noarticletext'                    => 'În acest moment nu este niciun text în această pagină.
+'noarticletext'                    => 'Actualmente, această pagină este lipsită de conținut.
 Puteți [[Special:Search/{{PAGENAME}}|căuta acest titlu]] în alte pagini,
-<span class="plainlinks">[{{fullurl:{{#Special:Log}}|page={{FULLPAGENAMEE}}}} căuta înregistrări în jurnale], sau [{{fullurl:{{FULLPAGENAME}}|action=edit}} crea această pagină]</span>.',
-'noarticletext-nopermission'       => 'Nu este niciun text în această pagină.
-Puteți [[Special:Search/{{PAGENAME}}|căuta titlul paginii]] în alte pagini,
-sau <span class="plainlinks">[{{fullurl:{{#Special:Log}}|page={{FULLPAGENAMEE}}}} să căutați în jurnale]</span>.',
+puteți <span class="plainlinks">[{{fullurl:{{#Special:Log}}|page={{FULLPAGENAMEE}}}} căuta înregistrări în jurnale] 
+sau puteți [{{fullurl:{{FULLPAGENAME}}|action=edit}} crea această pagină]</span>.',
+'noarticletext-nopermission'       => 'Actualmente, această pagină este lipsită de conținut.
+Puteți [[Special:Search/{{PAGENAME}}|căuta acest titlu]] în alte pagini
+sau puteți <span class="plainlinks">[{{fullurl:{{#Special:Log}}|page={{FULLPAGENAMEE}}}} căuta înregistrări în jurnale]</span>.',
 'userpage-userdoesnotexist'        => 'Contul de utilizator "$1" nu este înregistrat. Verificați dacă doriți să creați/modificați această pagină.',
 'userpage-userdoesnotexist-view'   => 'Contul de utilizator "$1" nu este înregistrat.',
 'blocked-notice-logextract'        => 'Acest utilizator este momentan blocat.
@@ -895,7 +901,11 @@ Ultima intrare în jurnalul blocărilor este afișată mai jos pentru referinț�
 'userjsyoucanpreview'              => "'''Sfat:''' Folosiți butonul „{{int:showpreview}}” pentru a testa noul JavaScript înainte de a-l salva.",
 'usercsspreview'                   => "'''Reține că urmărești doar o previzualizare a css-ului tău de utilizator, acesta nu este încă salvat!'''",
 'userjspreview'                    => "'''Reține că urmărești doar un test/o previzualizare a javascript-ului tău de utilizator, acesta nu este încă salvat!'''",
-'userinvalidcssjstitle'            => '<b>Avertizare:</b> Nu există skin "$1". Amintește-ți că paginile .css and .js specifice utilizatorilor au titluri care încep cu literă mică, de exemplu {{ns:user}}:Foo/monobook.css în comparație cu {{ns:user}}:Foo/Monobook.css.',
+'sitecsspreview'                   => "'''Rețineți că doar previzualizați această foaie de stil.'''
+'''Ea nu a fost salvată încă!'''",
+'sitejspreview'                    => "'''Rețineți că doar previzualizați acest cod JavaScript.'''
+'''El nu a fost salvat încă!'''",
+'userinvalidcssjstitle'            => '<b>Avertizare:</b> Nu există skin "$1". Amintește-ți că paginile .css and .js specifice utilizatorilor au titluri care încep cu literă mică, de exemplu {{ns:user}}:Foo/vector.css în comparație cu {{ns:user}}:Foo/Vector.css.',
 'updated'                          => '(Actualizat)',
 'note'                             => "'''Notă:'''",
 'previewnote'                      => "Aceasta este doar o previzualizare! Pentru a salva pagina în forma actuală, descrieți succint modificările efectuate și apăsați butonul '''Salvează pagina'''.",
@@ -903,7 +913,7 @@ Ultima intrare în jurnalul blocărilor este afișată mai jos pentru referinț�
 'session_fail_preview'             => "'''Ne pare rău! Nu am putut procesa modificarea dumneavoastră din cauza pierderii datelor sesiunii.
 Vă rugăm să încercați din nou.
 Dacă tot nu funcționează, încercați să [[Special:UserLogout|închideți sesiunea]] și să vă autentificați din nou.'''",
-'session_fail_preview_html'        => "'''Ne pare rău! Modificările dvs. nu au putut fi procesate din cauza pierderii datelor sesiunii.''' 
+'session_fail_preview_html'        => "'''Ne pare rău! Modificările dvs. nu au putut fi procesate din cauza pierderii datelor sesiunii.'''
 
 ''Deoarece {{SITENAME}} are activat HTML brut, previzualizarea este ascunsă ca măsură de precauție împotriva atacurilor JavaScript.''
 
@@ -915,11 +925,11 @@ Acest fapt se poate întâmpla atunci când folosești un serviciu proxy anonim.
 'editingsection'                   => 'modificare $1 (secțiune)',
 'editingcomment'                   => 'Modificare $1 (secțiune nouă)',
 'editconflict'                     => 'Conflict de modificare: $1',
-'explainconflict'                  => "Altcineva a modificat această pagină de când ai început să o editezi.
+'explainconflict'                  => "Altcineva a modificat această pagină de când ați început editarea.
 Caseta de text de sus conține pagina așa cum este ea acum (după editarea celeilalte persoane).
-Pagina cu modificările tale (așa cum ai încercat să o salvezi) se află în caseta de jos.
-Va trebui să editezi manual caseta de sus pentru a reflecta modificările pe care tocmai le-ai făcut în cea de jos.
-'''Numai''' textul din caseta de sus va fi salvat atunci când vei apăsa pe \"Salvează pagina\".",
+Pagina cu modificările dumneavoastră (așa cum ați încercat să o salvați) se află în caseta de jos.
+Va trebui să editați manual caseta de sus pentru a reflecta modificările pe care tocmai le-ați făcut în cea de jos.
+'''Numai''' textul din caseta de sus va fi salvat atunci când veți apăsa pe „{{int:savearticle}}”.",
 'yourtext'                         => 'Textul tău',
 'storedversion'                    => 'Versiunea curentă',
 'nonunicodebrowser'                => "'''ATENŢIE: Browser-ul dumneavoastră nu este compilant unicode, vă rugăm să îl schimbați înainte de a începe modificarea unui articol.'''",
@@ -933,7 +943,6 @@ De asemenea, ne asigurați că ceea ce ați scris a fost compoziție proprie sau
 Dacă nu doriți ca ceea ce scrieți să fie modificat fără milă și redistribuit în voie, atunci nu trimiteți materialele respective aici.<br />
 De asemenea, ne asigurați că ceea ce ați scris a fost compoziție proprie sau copie dintr-o resursă publică sau liberă (vedeți $1 pentru detalii).
 '''NU INTRODUCEŢI MATERIALE CU DREPTURI DE AUTOR FĂRĂ PERMISIUNE!'''",
-'longpagewarning'                  => "'''ATENŢIE! Conținutul acestei pagini are $1 kB; unele browsere au probleme la modificarea paginilor în jur de 32 kB sau mai mari. Te rugăm să iei în considerare posibilitatea de a împărți pagina în mai multe secțiuni.'''",
 'longpageerror'                    => "'''EROARE: Textul pe care vrei să-l salvezi are $1 kilobytes,
 ceea ce înseamnă mai mult decât maximum de $2 kilobytes. Salvarea nu este posibilă.'''",
 'readonlywarning'                  => "'''ATENŢIE: Baza de date a fost blocată pentru întreținere, deci nu veți putea salva modificările în acest moment. Puteți copia textul într-un fișier text local pentru a-l salva când va fi posibil.'''
@@ -1038,7 +1047,7 @@ E posibil să fi fost ștearsă sau redenumită.
 Încearcă să [[Special:Search|cauți]] pe wiki pentru pagini noi semnificative.',
 
 # Revision deletion
-'rev-deleted-comment'         => '(comentariu șters)',
+'rev-deleted-comment'         => '(descrierea modificării ștearsă)',
 'rev-deleted-user'            => '(nume de utilizator șters)',
 'rev-deleted-event'           => '(intrare ștearsă)',
 'rev-deleted-user-contribs'   => '[nume de utilizator sau adresă IP ștearsă - modificare ascunsă din contribuții]',
@@ -1067,9 +1076,9 @@ Ca administrator puteți [$1 vedea diferența] în continuare, dacă doriți ace
 Ca administrator puteți vedea în continuare acest diff; s-ar putea să existe detalii în [{{fullurl:{{#Special:Log}}/delete|page={{FULLPAGENAMEE}}}} jurnalul ștergerilor].",
 'rev-suppressed-diff-view'    => "Una dintre reviziile acestui diff a fost '''suprimată'''.
 Ca administrator puteți vedea în continuare acest diff; s-ar putea să existe detalii în [{{fullurl:{{#Special:Log}}/suppress|page={{FULLPAGENAMEE}}}} jurnalul suprimărilor].",
-'rev-delundel'                => 'arată/ascunde',
+'rev-delundel'                => 'șterge/recuperează',
 'rev-showdeleted'             => 'arată',
-'revisiondelete'              => 'Șterge/recuperează revizii',
+'revisiondelete'              => 'Șterge/recuperează versiuni',
 'revdelete-nooldid-title'     => 'Versiune invalidă',
 'revdelete-nooldid-text'      => 'Nu ai specificat revizie pentru a efectua această
 funcție, revizia specificată nu există, sau ești pe cale să ascunzi revizia curentă.',
@@ -1078,52 +1087,52 @@ funcție, revizia specificată nu există, sau ești pe cale să ascunzi revizia
 'revdelete-nologid-title'     => 'Intrare în jurnal invalidă',
 'revdelete-nologid-text'      => 'Ori nu nu ai specificat o țintă pentru jurnal pentru a efectua această funcție sau intrarea specificată nu există.',
 'revdelete-no-file'           => 'Fișierul specificat nu există.',
-'revdelete-show-file-confirm' => 'Ești sigur că dorești să vezi o revizie ștearsă a fișierului "<nowiki>$1</nowiki>" din $2 la $3?',
+'revdelete-show-file-confirm' => 'Sigur doriți să vedeți versiunea ștearsă a fișierului „<nowiki>$1</nowiki>” din $2 ora $3?',
 'revdelete-show-file-submit'  => 'Da',
-'revdelete-selected'          => "'''{{PLURAL:$2|Revizia aleasă|Reviziile alese}} pentru [[:$1]]:'''",
+'revdelete-selected'          => "'''{{PLURAL:$2|Versiunea aleasă|Versiunile alese}} pentru [[:$1]]:'''",
 'logdelete-selected'          => "'''{{PLURAL:$1|Revizia aleasă|Reviziile alese}}:'''",
-'revdelete-text'              => "'''Reviziile șterse vor apărea în istoricul paginii, dar conținutul lor nu va fi accesibil publicului.'''
-Alți administratori {{SITENAME}} vor putea accesa conținutul ascuns și îl pot recupera prin aceeași interfață, dacă nu este impusă altă restricție de către operatorii sitului.",
+'revdelete-text'              => "'''Versiunile șterse vor apărea în istoricul paginii, dar conținutul lor nu va fi accesibil publicului.''' Administratorii {{SITENAME}} pot accesa conținutul șters și îl pot recupera prin aceeași interfață, dacă nu este impusă altă restricție de către operatorii sitului.",
 'revdelete-confirm'           => 'Vă rugăm să confirmați că intenționați să faceți acest lucru, că înțelegeți consecințele și că faceți asta în conformitate cu [[{{MediaWiki:Policy-url}}|politica]].',
 'revdelete-suppress-text'     => "Suprimarea trebuie folosită '''doar''' în următoarele cazuri:
 * Informații personale inadecvate
 *: ''adrese și numere de telefon personale, CNP, numere de securitate socială, etc.''",
-'revdelete-legend'            => 'Setează restricții pentru vizualizare',
-'revdelete-hide-text'         => 'Ascunde textul reviziei',
-'revdelete-hide-image'        => 'Ascunde conținutul fișierului',
-'revdelete-hide-name'         => 'Ascunde acțiunea și destinația',
-'revdelete-hide-comment'      => 'Ascunde descrierea modificării',
-'revdelete-hide-user'         => 'Ascunde numele de utilizator/IP-ul editorului',
+'revdelete-legend'            => 'Restricții de afișare',
+'revdelete-hide-text'         => 'Șterge textul versiunii',
+'revdelete-hide-image'        => 'Șterge conținutul fișierului',
+'revdelete-hide-name'         => 'Șterge operația și obiectul',
+'revdelete-hide-comment'      => 'Șterge descrierea modificării',
+'revdelete-hide-user'         => 'Șterge numele de utilizator sau adresa IP',
 'revdelete-hide-restricted'   => 'Ascunde informațiile față de administratori și față de alți utilizatori',
 'revdelete-radio-same'        => '(nu schimba)',
 'revdelete-radio-set'         => 'Da',
 'revdelete-radio-unset'       => 'Nu',
-'revdelete-suppress'          => 'Ascunde de asemenea reviziile față de administratori',
-'revdelete-unsuppress'        => 'Elimină restricțiile în reviziile restaurate',
-'revdelete-log'               => 'Motiv:',
-'revdelete-submit'            => 'Aplică {{PLURAL:$1|reviziei selectate|reviziilor selectate}}',
-'revdelete-logentry'          => 'vizibilitatea reviziei pentru [[$1]] a fost modificată',
+'revdelete-suppress'          => 'Ascunde versiunile și față de administratori',
+'revdelete-unsuppress'        => 'Anulează restricțiile la versiunile restaurate',
+'revdelete-log'               => 'Motivul ștergerii:',
+'revdelete-submit'            => 'Aplică {{PLURAL:$1|versiunii selectate|versiunilor selectate}}',
+'revdelete-logentry'          => 'a modificat vizibilitatea unor elemente din istoricul paginii [[$1]]',
 'logdelete-logentry'          => 'a fost modificată vizibilitatea evenimentului [[$1]]',
-'revdelete-success'           => "'''Vizibilitatea reviziilor a fost schimbată cu succes.'''",
-'revdelete-failure'           => "'''Vizibilitatea reviziei nu poate fi actualizată:'''
+'revdelete-success'           => "'''Vizibilitatea versiunilor a fost schimbată cu succes.'''",
+'revdelete-failure'           => "'''Nu s-a putut modifica vizibilitatea versiunii:'''
 $1",
 'logdelete-success'           => "'''Jurnalul vizibilității a fost configurat cu succes.'''",
 'logdelete-failure'           => "'''Vizibilitatea jurnalului nu poate fi definită:'''
 $1",
 'revdel-restore'              => 'Schimbă vizibilitatea',
+'revdel-restore-deleted'      => 'versiuni șterse',
+'revdel-restore-visible'      => 'versiuni vizibile',
 'pagehist'                    => 'Istoricul paginii',
 'deletedhist'                 => 'Istoric șters',
-'revdelete-content'           => 'conținut',
-'revdelete-summary'           => 'sumarul modificărilor',
-'revdelete-uname'             => 'nume de utilizator',
+'revdelete-content'           => 'textul versiunii',
+'revdelete-summary'           => 'descrierea modificărilor',
+'revdelete-uname'             => 'numele de utilizator',
 'revdelete-restricted'        => 'restricții aplicate administratorilor',
 'revdelete-unrestricted'      => 'restricții eliminate pentru administratori',
-'revdelete-hid'               => 'ascuns $1',
-'revdelete-unhid'             => 'arată $1',
-'revdelete-log-message'       => '$1 pentru $2 {{PLURAL:$2|versiune|versiuni}}',
+'revdelete-hid'               => 'a șters $1',
+'revdelete-unhid'             => 'a recuperat $1',
+'revdelete-log-message'       => '$1, pentru {{PLURAL:$2|o versiune|$2 versiuni}}',
 'logdelete-log-message'       => '$1 pentru $2 {{PLURAL:$2|eveniment|evenimente}}',
-'revdelete-hide-current'      => 'Eroare la ascunderea elementului datat $2, $1: reprezintă revizia curentă.
-Nu poate fi ascuns.',
+'revdelete-hide-current'      => 'Eroare la ștergerea elementului datat $2, $1: reprezintă versiunea curentă și nu poate fi ștearsă.',
 'revdelete-show-no-access'    => 'Eroare la afișarea elementului datat $2, $1: elementul a fost marcat ca "restricționat".
 Nu ai acces la acest element.',
 'revdelete-modify-no-access'  => 'Eroare la modificarea elementului datat $2, $1: acest element a fost marcat "restricționat".
@@ -1132,12 +1141,14 @@ Nu ai acces asupra lui.',
 'revdelete-no-change'         => "'''Atenție:''' elementul datat $2, $1 are deja aplicată vizibilitatea cerută.",
 'revdelete-concurrent-change' => 'Eroare la modificarea elementului datat $2, $1: statutul său a fost modificat de altcineva în timpul acestei modificări.',
 'revdelete-only-restricted'   => 'Eroare în timpul suprimării elementului datat $1, $2: nu puteți suprima elemente la vizualizarea de către administratori fără a marca una din celelalte opțiuni de suprimare.',
-'revdelete-reason-dropdown'   => '*Motive de ștergere
-** Violare drepturi de autor
-** Informații personale inadecvate',
-'revdelete-otherreason'       => 'Motiv diferit/adițional',
+'revdelete-reason-dropdown'   => '*Motive de ascundere
+** Violarea drepturilor de autor
+** Informații personale
+** Obscenități
+** Atacuri la persoană',
+'revdelete-otherreason'       => 'Motiv suplimentar, detalii',
 'revdelete-reasonotherlist'   => 'Alt motiv',
-'revdelete-edit-reasonlist'   => 'Modifică motivele ștergerii',
+'revdelete-edit-reasonlist'   => 'Modifică lista de motive',
 'revdelete-offender'          => 'Autorul reviziei:',
 
 # Suppression log
@@ -1177,13 +1188,15 @@ Folosirea linkurilor de navigare va reseta această coloană.',
 'mergelogpagetext'   => 'Mai jos este o listă a celor mai recente combinări ale istoricului unei pagini cu al alteia.',
 
 # Diffs
-'history-title'            => 'Istoria reviziilor pentru "$1"',
+'history-title'            => 'Istoricul versiunilor pentru „$1”',
 'difference'               => '(Diferența dintre versiuni)',
+'difference-multipage'     => '(Diferență între pagini)',
 'lineno'                   => 'Linia $1:',
 'compareselectedversions'  => 'Compară versiunile marcate',
-'showhideselectedversions' => 'Arată/ascunde reviziile marcate',
-'editundo'                 => 'anulează',
-'diff-multi'               => '({{PLURAL:$1|O revizie intermediară neafișată|$1 revizii intermediare neafișate}})',
+'showhideselectedversions' => 'Șterge/recuperează versiunile marcate',
+'editundo'                 => 'anulare',
+'diff-multi'               => '({{PLURAL:$1|O revizie intermediară|$1 revizii intermediare}} efectuată de {{PLURAL:$2|un utilizator|$2 utilizatori}} {{PLURAL:$1|neafișată|neafișate}})',
+'diff-multi-manyusers'     => '({{PLURAL:$1|O versiune intermediară efectuată de|$1 (de) versiuni intermediare efectuate de peste}} $2 {{PLURAL:$2|utilizator|utilizatori}} {{PLURAL:$1|neafișată|neafișate}})',
 
 # Search results
 'searchresults'                    => 'Rezultatele căutării',
@@ -1192,9 +1205,9 @@ Folosirea linkurilor de navigare va reseta această coloană.',
 'searchsubtitle'                   => 'Ai căutat \'\'\'[[:$1]]\'\'\' ([[Special:Prefixindex/$1|toate paginile care încep cu "$1"]]{{int:pipe-separator}}[[Special:WhatLinksHere/$1|toate paginile care se leagă de "$1"]])',
 'searchsubtitleinvalid'            => 'Pentru căutarea "$1"',
 'toomanymatches'                   => 'Prea multe rezultate au fost întoarse, încercă o căutare diferită',
-'titlematches'                     => 'Rezultate în titlurile articolelor',
+'titlematches'                     => 'Rezultate din titlurile paginilor',
 'notitlematches'                   => 'Nici un rezultat în titlurile articolelor',
-'textmatches'                      => 'Rezultate în textele articolelor',
+'textmatches'                      => 'Rezultate din conținutul paginilor',
 'notextmatches'                    => 'Nici un rezultat în textele articolelor',
 'prevn'                            => 'anterioarele {{PLURAL:$1|$1}}',
 'nextn'                            => 'următoarele {{PLURAL:$1|$1}}',
@@ -1203,8 +1216,8 @@ Folosirea linkurilor de navigare va reseta această coloană.',
 'shown-title'                      => 'Arată $1 {{PLURAL:$1|rezultat|rezultate}} pe pagină',
 'viewprevnext'                     => 'Vezi ($1 {{int:pipe-separator}} $2) ($3).',
 'searchmenu-legend'                => 'Opțiuni căutare',
-'searchmenu-exists'                => "* Pagina '''[[$1]]'''",
-'searchmenu-new'                   => "'''Creează pagina \"[[:\$1]]\" pe acest wiki!'''",
+'searchmenu-exists'                => "'''Există o pagină cu titlul „[[:$1]]'” pe acest site.'''",
+'searchmenu-new'                   => "'''Creați pagina „[[:$1]]” pe acest wiki!'''",
 'searchhelp-url'                   => 'Help:Ajutor',
 'searchmenu-prefix'                => '[[Special:PrefixIndex/$1|Răsfoiește paginile cu acest prefix]]',
 'searchprofile-articles'           => 'Pagini cu conținut',
@@ -1218,10 +1231,11 @@ Folosirea linkurilor de navigare va reseta această coloană.',
 'searchprofile-everything-tooltip' => 'Caută în tot conținutul (incluzând paginile de discuție)',
 'searchprofile-advanced-tooltip'   => 'Caută în namespace-uri personalizate',
 'search-result-size'               => '$1 ({{PLURAL:$2|1 cuvânt|$2 cuvinte}})',
+'search-result-category-size'      => '$1 {{PLURAL:$1|element|elemente}} ($2 {{PLURAL:$2|categorie|categorii}}, $3 {{PLURAL:$3|fișier|fișiere}})',
 'search-result-score'              => 'Relevanță: $1%',
 'search-redirect'                  => '(redirecționare către $1)',
 'search-section'                   => '(secțiunea $1)',
-'search-suggest'                   => 'Te-ai referit la: $1',
+'search-suggest'                   => 'V-ați referit la: $1',
 'search-interwiki-caption'         => 'Proiecte înrudite',
 'search-interwiki-default'         => '$1 rezultate:',
 'search-interwiki-more'            => '(mai mult)',
@@ -1241,7 +1255,7 @@ Folosirea linkurilor de navigare va reseta această coloană.',
 'powersearch'                      => 'Căutare avansată',
 'powersearch-legend'               => 'Căutare avansată',
 'powersearch-ns'                   => 'Căutare în spațiile de nume:',
-'powersearch-redir'                => 'Afișează redirectările',
+'powersearch-redir'                => 'Afișează redirecționările',
 'powersearch-field'                => 'Caută după',
 'powersearch-togglelabel'          => 'Marchează:',
 'powersearch-toggleall'            => 'Tot',
@@ -1269,14 +1283,14 @@ Folosirea linkurilor de navigare va reseta această coloană.',
 'prefs-math'                    => 'Aspect formule',
 'datedefault'                   => 'Nici o preferință',
 'prefs-datetime'                => 'Data și ora',
-'prefs-personal'                => 'Date de utilizator',
+'prefs-personal'                => 'Informații personale',
 'prefs-rc'                      => 'Schimbări recente',
 'prefs-watchlist'               => 'Listă de urmărire',
 'prefs-watchlist-days'          => 'Numărul de zile care apar în lista paginilor urmărite:',
-'prefs-watchlist-days-max'      => '(maxim 7 zile)',
+'prefs-watchlist-days-max'      => 'Maxim 7 zile',
 'prefs-watchlist-edits'         => 'Numărul de editări care apar în lista extinsă a paginilor urmărite:',
-'prefs-watchlist-edits-max'     => '(număr maxim: 1000)',
-'prefs-watchlist-token'         => 'Jeton pentru lista de urmărire:',
+'prefs-watchlist-edits-max'     => 'Număr maxim: 1000',
+'prefs-watchlist-token'         => 'Jeton pentru lista de pagini urmărite:',
 'prefs-misc'                    => 'Parametri diverși',
 'prefs-resetpass'               => 'Modifică parola',
 'prefs-email'                   => 'Opțiuni e-mail',
@@ -1287,19 +1301,20 @@ Folosirea linkurilor de navigare va reseta această coloană.',
 'prefs-editing'                 => 'Modificare',
 'prefs-edit-boxsize'            => 'Mărimea ferestrei de modificare.',
 'rows'                          => 'Rânduri:',
-'columns'                       => 'Coloane',
+'columns'                       => 'Coloane:',
 'searchresultshead'             => 'Parametri căutare',
 'resultsperpage'                => 'Numărul de rezultate per pagină',
 'contextlines'                  => 'Numărul de linii per rezultat',
 'contextchars'                  => 'Numărul de caractere per linie',
 'stub-threshold'                => 'Valoarea minimă pentru un <a href="#" class="stub">ciot</a> (octeți):',
+'stub-threshold-disabled'       => 'Dezactivat',
 'recentchangesdays'             => 'Numărul de zile afișate în schimbări recente:',
 'recentchangesdays-max'         => '(maxim {{PLURAL:$1|o zi|$1 zile}})',
-'recentchangescount'            => 'Numărul modificărilor arătate implicit:',
+'recentchangescount'            => 'Numărul modificărilor afișate implicit:',
 'prefs-help-recentchangescount' => 'Sunt incluse schimbările recente, istoricul paginilor și jurnalele.',
-'prefs-help-watchlist-token'    => 'Completând această căsuță cu o cheie secretă va genera un flux RSS pentru lista dumneavoastră de urmărire.
-Oricine vă știe cheia din această căsuță va fi capabil să citească lista dumneavoastră de urmărire, deci alegeți o valoare sigură.
-Aici este o valoare generată întâmplător pe care o puteți folosi: $1',
+'prefs-help-watchlist-token'    => 'Completând această căsuță cu o cheie secretă se va genera un flux RSS pentru lista dumneavoastră de pagini urmărite.
+Oricine cunoaște cheia din această căsuță va putea citi această listă, așa că alegeți o combinație sigură.
+Aici se află o combinație generată întâmplător pe care o puteți folosi: $1',
 'savedprefs'                    => 'Preferințele dumneavoastră au fost salvate.',
 'timezonelegend'                => 'Fus orar:',
 'localtime'                     => 'Ora locală:',
@@ -1318,7 +1333,7 @@ Aici este o valoare generată întâmplător pe care o puteți folosi: $1',
 'timezoneregion-europe'         => 'Europa',
 'timezoneregion-indian'         => 'Oceanul Indian',
 'timezoneregion-pacific'        => 'Oceanul Pacific',
-'allowemail'                    => 'Activează email de la alți utilizatori',
+'allowemail'                    => 'Acceptă e-mail de la alți utilizatori',
 'prefs-searchoptions'           => 'Opțiuni de căutare',
 'prefs-namespaces'              => 'Spații de nume',
 'defaultns'                     => 'Altfel, caută în aceste spații de nume:',
@@ -1326,44 +1341,53 @@ Aici este o valoare generată întâmplător pe care o puteți folosi: $1',
 'prefs-files'                   => 'Fișiere',
 'prefs-custom-css'              => 'CSS personalizat',
 'prefs-custom-js'               => 'JS personalizat',
+'prefs-common-css-js'           => 'Pagini CSS și JavaScript comune pentru toate interfețele:',
 'prefs-reset-intro'             => 'Poți folosi această pagină pentru a reseta preferințele la valorile implicite.
 Acțiunea nu este reversibilă.',
 'prefs-emailconfirm-label'      => 'Confirmare e-mail:',
 'prefs-textboxsize'             => 'Mărimea căsuței de modificare',
-'youremail'                     => 'E-mail',
+'youremail'                     => 'Adresa de e-mail:',
 'username'                      => 'Nume de utilizator:',
 'uid'                           => 'ID utilizator:',
 'prefs-memberingroups'          => 'Membru în {{PLURAL:$1|grupul|grupurile}}:',
 'prefs-registration'            => 'Data înregistrării:',
 'yourrealname'                  => 'Nume real:',
-'yourlanguage'                  => 'Limbă:',
+'yourlanguage'                  => 'Interfață în limba:',
 'yourvariant'                   => 'Varianta:',
 'yournick'                      => 'Semnătură:',
-'prefs-help-signature'          => 'Comentariile de pe paginile de discuții trebuie să fie semnate cu "<nowiki>~~~~</nowiki>" care va fi transformat în semnătura dumneavoastră urmată de ora la care ați introdus comentariul.',
-'badsig'                        => 'Semnătură brută incorectă; verificați tag-urile HTML.',
+'prefs-help-signature'          => 'Comentariile de pe paginile de discuții vor trebuie semnate cu „<nowiki>~~~~</nowiki>”, tildele transformându-se în semnătura dumneavoastră urmată de ora la care ați introdus comentariul.',
+'badsig'                        => 'Semnătură brută incorectă; verificați tagurile HTML.',
 'badsiglength'                  => 'Semnătura este prea lungă.
-Dimensiunea trebuie să fie mai mică de $1 {{PLURAL:$1|caracter|caractere}}.',
+Lungimea trebuie să fie mai mică de $1 {{PLURAL:$1|caracter|caractere}}.',
 'yourgender'                    => 'Gen:',
 'gender-unknown'                => 'Nespecificat',
 'gender-male'                   => 'Bărbat',
 'gender-female'                 => 'Femeie',
-'prefs-help-gender'             => 'Opțional - sexul utilizatorului: folosit pentru adresarea corectă de către software. Această informație va fi publică.',
+'prefs-help-gender'             => 'Opțional: sexul utilizatorului este folosit pentru adresarea corectă de către software.
+Această informație va fi publică.',
 'email'                         => 'E-mail',
-'prefs-help-realname'           => '* Numele dumneavoastră real (opțional): Dacă decideți introducerea numelui real aici, acesta va fi folosit pentru a vă atribui munca.<br />',
+'prefs-help-realname'           => 'Numele real este opțional.
+Dacă decideți furnizarea sa, acesta va fi folosit pentru a vă atribui munca.',
 'prefs-help-email'              => '*Adresa de e-mail (opțional): Permite altor utilizatori să vă contacteze prin e-mail via {{SITENAME}}, fără a vă divulga identitatea. De asemenea, permite recuperarea parolei în cazul în care o uitați.',
 'prefs-help-email-required'     => 'Adresa de e-mail este necesară.',
 'prefs-info'                    => 'Informații de bază',
 'prefs-i18n'                    => 'Internaționalizare',
 'prefs-signature'               => 'Semnătură',
 'prefs-dateformat'              => 'Format dată',
-'prefs-timeoffset'              => 'Decalaj orar:',
+'prefs-timeoffset'              => 'Decalaj orar',
 'prefs-advancedediting'         => 'Opțiuni avansate',
 'prefs-advancedrc'              => 'Opțiuni avansate',
 'prefs-advancedrendering'       => 'Opțiuni avansate',
 'prefs-advancedsearchoptions'   => 'Opțiuni avansate',
 'prefs-advancedwatchlist'       => 'Opțiuni avansate',
-'prefs-display'                 => 'Opțiuni afișare',
+'prefs-displayrc'               => 'Opțiuni de afișare',
+'prefs-displaysearchoptions'    => 'Opțiuni de afișare',
+'prefs-displaywatchlist'        => 'Opțiuni de afișare',
 'prefs-diffs'                   => 'Diferențe',
+
+# User preference: e-mail validation using jQuery
+'email-address-validity-valid'   => 'Adresa de e-mail pare validă',
+'email-address-validity-invalid' => 'Introduceți o adresă de e-mail validă',
 
 # User rights
 'userrights'                   => 'Administrarea permisiunilor de utilizator',
@@ -1448,6 +1472,7 @@ Dimensiunea trebuie să fie mai mică de $1 {{PLURAL:$1|caracter|caractere}}.',
 'right-hideuser'              => 'Blochează un nume de utilizator, ascunzându-l de public',
 'right-ipblock-exempt'        => 'Nu au fost afectați de blocarea făcută IP-ului.',
 'right-proxyunbannable'       => 'Treci peste blocarea automată a proxy-urilor',
+'right-unblockself'           => 'Se deblochează singur',
 'right-protect'               => 'Schimbă nivelurile de protejare și modifică pagini protejate',
 'right-editprotected'         => 'Modificare pagini protejate (fără protejare în cascadă)',
 'right-editinterface'         => 'Modificare interfața cu utilizatorul',
@@ -1470,7 +1495,6 @@ Dimensiunea trebuie să fie mai mică de $1 {{PLURAL:$1|caracter|caractere}}.',
 'right-siteadmin'             => 'Blochează și deblochează baza de date',
 'right-reset-passwords'       => 'Resetarea parolelor altor utilizatori',
 'right-override-export-depth' => 'Exportă inclusiv paginile legate până la o adâncime de 5',
-'right-versiondetail'         => 'Arată informații extise despre versiunea programului',
 'right-sendemail'             => 'Trimite e-mail altor utilizatori',
 
 # User rights log
@@ -1519,26 +1543,21 @@ Dimensiunea trebuie să fie mai mică de $1 {{PLURAL:$1|caracter|caractere}}.',
 'nchanges'                          => '$1 {{PLURAL:$1|modificare|modificări}}',
 'recentchanges'                     => 'Schimbări recente',
 'recentchanges-legend'              => 'Opțiuni schimbări recente',
-'recentchangestext'                 => 'Schimbări recente ... (Log)',
+'recentchangestext'                 => 'Urmăriți în această pagină cele mai recente modificări de pe site.',
 'recentchanges-feed-description'    => 'Urmărește cele mai recente schimbări folosind acest flux.',
-'recentchanges-label-legend'        => 'Legendă: $1.',
-'recentchanges-legend-newpage'      => '$1 - pagină nouă',
 'recentchanges-label-newpage'       => 'Această modificare a creat o pagină nouă',
-'recentchanges-legend-minor'        => '$1 - modificare minoră',
 'recentchanges-label-minor'         => 'Aceasta este o modificare minoră',
-'recentchanges-legend-bot'          => '$1 - modificare efectuată de un robot',
 'recentchanges-label-bot'           => 'Această modificare a fost efectuată de un robot',
-'recentchanges-legend-unpatrolled'  => '$1 - modificare nepatrulată',
 'recentchanges-label-unpatrolled'   => 'Această modificare nu a fost patrulată încă',
 'rcnote'                            => "Mai jos se află {{PLURAL:$|ultima modificare|ultimele '''$1''' modificări}} din {{PLURAL:$2|ultima zi|ultimele '''$2''' zile}}, începând cu $5, $4.",
 'rcnotefrom'                        => 'Dedesubt sunt modificările de la <b>$2</b> (maxim <b>$1</b> de modificări sunt afișate - schimbă numărul maxim de linii alegând altă valoare mai jos).',
-'rclistfrom'                        => 'Arată modificările începând de la $1',
+'rclistfrom'                        => 'Arată modificările începând cu $1',
 'rcshowhideminor'                   => '$1 modificările minore',
-'rcshowhidebots'                    => '$1 roboți',
-'rcshowhideliu'                     => '$1 utilizatori autentificați',
-'rcshowhideanons'                   => '$1 utilizatori anonimi',
+'rcshowhidebots'                    => '$1 roboții',
+'rcshowhideliu'                     => '$1 utilizatorii autentificați',
+'rcshowhideanons'                   => '$1 utilizatorii anonimi',
 'rcshowhidepatr'                    => '$1 modificările patrulate',
-'rcshowhidemine'                    => '$1 editările mele',
+'rcshowhidemine'                    => '$1 contribuțiile mele',
 'rclinks'                           => 'Arată ultimele $1 modificări din ultimele $2 zile.<br />
 $3',
 'diff'                              => 'dif',
@@ -1571,7 +1590,7 @@ Paginile pe care le [[Special:Watchlist|urmăriți]] apar în '''aldine'''.",
 'recentchangeslinked-to'       => 'Afișează schimbările în paginile care se leagă de pagina dată',
 
 # Upload
-'upload'                      => 'Încarcă fișier',
+'upload'                      => 'Încărcare fișier',
 'uploadbtn'                   => 'Încarcă fișier',
 'reuploaddesc'                => 'Revocare încărcare și întoarcere la formularul de trimitere.',
 'upload-tryagain'             => 'Trimiteți descrierea fișierului modificată',
@@ -1580,13 +1599,15 @@ Paginile pe care le [[Special:Watchlist|urmăriți]] apar în '''aldine'''.",
 'upload_directory_missing'    => 'Directorul în care sunt încărcate fișierele ($1) lipsește și nu poate fi creat de serverul web.',
 'upload_directory_read_only'  => 'Directorul de încărcare ($1) nu poate fi scris de server.',
 'uploaderror'                 => 'Eroare la trimitere fișier',
-'uploadtext'                  => "Folosește formularul de mai jos pentru a trimite fișiere. 
-Pentru a vizualiza sau căuta imagini deja trimise, mergi la [[Special:FileList|lista de imagini]], încărcările și ștergerile sunt de asemenea înregistrate în [[Special:Log/upload|jurnalul fișierelor trimise]], ștergerile în [[Special:Log/delete|jurnalul fișierelor șterse]].
+'upload-recreate-warning'     => "'''Atenție, un fișier cu același nume a fost șters sau redenumit.'''
+Iată aici înregistrările relevante din jurnalul de ștergeri și redenumiri:",
+'uploadtext'                  => "Utilizați formularul de mai jos pentru a trimite fișiere.
+Pentru a vizualiza sau căuta imagini deja trimise, mergeți la [[Special:FileList|lista cu imagini]]; (re)încărcările și ștergerile sunt de asemenea înregistrate în [[Special:Log/upload|jurnalul fișierelor trimise]], respectiv [[Special:Log/delete|jurnalul fișierelor șterse]].
 
-Pentru a include un fișier de sunet într-un articol, folosești o legătură de forma:
+Pentru a insera un fișier într-o pagină, folosiți o legătură de forma:
 * '''<tt><nowiki>[[</nowiki>{{ns:file}}<nowiki>:Fișier.jpg]]</nowiki></tt>''' pentru a include versiunea integrală a unui fișier
-* '''<tt><nowiki>[[</nowiki>{{ns:file}}<nowiki>:Fișier.png|200px|thumb|left|alt text]]</nowiki></tt>''' pentru a introduce o imagine de 200px într-un chenar cu textul 'alt text' în partea stângă ca descriere
-* '''<tt><nowiki>[[</nowiki>{{ns:media}}<nowiki>:Fișier.ogg]]</nowiki></tt>''' pentru a lega direct fișierul fără a-l afișa",
+* '''<tt><nowiki>[[</nowiki>{{ns:file}}<nowiki>:Fișier.png|200px|thumb|left|informații]]</nowiki></tt>''' pentru a introduce o imagine cu o lățime de 200 de pixeli într-un chenar plasat în partea stângă, având ca descriere textul „informații”
+* '''<tt><nowiki>[[</nowiki>{{ns:media}}<nowiki>:Fișier.ogg]]</nowiki></tt>''' pentru o legătură directă către fișier, fără a-l afișa",
 'upload-permitted'            => 'Tipuri de fișiere permise: $1.',
 'upload-preferred'            => 'Tipuri de fișiere preferate: $1.',
 'upload-prohibited'           => 'Tipuri de fișiere interzise: $1.',
@@ -1611,9 +1632,20 @@ Vezi [[Special:NewFiles|galeria fișierelor noi]] pentru o mai bună vizualizare
 'filetype-bad-ie-mime'        => 'Nu puteți încărca acest fișier deoarece Internet Explorer îl va detecta ca și "$1", care este nepermis și poate fi un format periculos.',
 'filetype-unwanted-type'      => "'''\".\$1\"''' este un tip de fișier nedorit.
 {{PLURAL:\$3|Tipul de fișier preferat este|Tipurile de fișiere preferate sunt}} \$2.",
-'filetype-banned-type'        => "'''\".\$1\"''' este un tip de fișier nepermis. 
+'filetype-banned-type'        => "'''\".\$1\"''' este un tip de fișier nepermis.
 {{PLURAL:\$3|Tip de fișier permis:|Tipuri de fișiere permise:}} \$2.",
 'filetype-missing'            => 'Fișierul nu are extensie (precum ".jpg").',
+'empty-file'                  => 'Fișierul pe care l-ați trimis este gol.',
+'file-too-large'              => 'Fișierul pe care l-ați trimis este prea mare.',
+'filename-tooshort'           => 'Numele fișierului este prea scurt.',
+'filetype-banned'             => 'Acest tip de fișier este interzis.',
+'verification-error'          => 'Fișierul nu a trecut testele.',
+'hookaborted'                 => 'Modificarea pe care ați încercat s-o faceți a fost oprită de apelul unei extensii.',
+'illegal-filename'            => 'Numele de fișier nu este permis.',
+'overwrite'                   => 'Nu este permisă suprascrierea unui fișier existent.',
+'unknown-error'               => 'S-a produs o eroare necunoscută.',
+'tmp-create-error'            => 'Nu s-a putut crea un fișier temporar.',
+'tmp-write-error'             => 'Eroare de scriere la un fișier temporar.',
 'large-file'                  => 'Este recomandat ca fișierele să nu fie mai mari de $1; acest fișier are $2.',
 'largefileserver'             => 'Fișierul este mai mare decât este configurat serverul să permită.',
 'emptyfile'                   => 'Fișierul pe care l-ați încărcat pare a fi gol. Aceasta poate fi datorită unei greșeli în numele fișierului. Verificați dacă într-adevăr doriți să încărcați acest fișier.',
@@ -1637,25 +1669,26 @@ Dacă ai această imagine la rezoluție mare încarc-o pe aceasta, altfel schimb
 Mergeți înapoi și încărcați acest fișier sub un nume nou. [[File:$1|thumb|center|$1]]',
 'fileexists-shared-forbidden' => 'Un fișier cu acest nume există deja în magazia de imagini comune; mergeți înapoi și încărcați fișierul sub un nou nume. [[File:$1|thumb|center|$1]]',
 'file-exists-duplicate'       => 'Acest fișier este dublura {{PLURAL:$1|fișierului|fișierelor}}:',
-'file-deleted-duplicate'      => 'Un fișier identic cu acesta ([[$1]]) a fost șters anterior. Verificați istoricul ștergerilor fișierului înainte de a-l reîncărca.',
-'successfulupload'            => 'Fișierul a fost trimis',
+'file-deleted-duplicate'      => 'Un fișier identic cu acesta ([[:$1]]) a fost șters anterior. Verificați istoricul ștergerilor fișierului înainte de a-l reîncărca.',
 'uploadwarning'               => 'Avertizare la trimiterea fișierului',
 'uploadwarning-text'          => 'Vă rugăm să modificați descrierea fișierului mai jos și să încercați din nou.',
 'savefile'                    => 'Salvează fișierul',
 'uploadedimage'               => 'a trimis [[$1]]',
 'overwroteimage'              => 'încărcat o versiune nouă a fișierului "[[$1]]"',
 'uploaddisabled'              => 'Ne pare rău, trimiterea de imagini este dezactivată.',
+'copyuploaddisabled'          => 'Trimiterea prin URL este dezactivată.',
+'uploadfromurl-queued'        => 'Fișierul a fost pus în șirul de așteptare.',
 'uploaddisabledtext'          => 'Încărcările de fișiere sunt dezactivate.',
 'php-uploaddisabledtext'      => 'Încărcarea de fișiere este dezactivată în PHP.
 Vă rugăm să verificați setările din file_uploads.',
 'uploadscripted'              => 'Fișierul conține HTML sau cod script care poate fi interpretat în mod eronat de un browser.',
 'uploadvirus'                 => 'Fișierul conține un virus! Detalii: $1',
 'upload-source'               => 'Fișier sursă',
-'sourcefilename'              => 'Nume fișier sursă:',
+'sourcefilename'              => 'Numele fișierului sursă:',
 'sourceurl'                   => 'URL sursă:',
 'destfilename'                => 'Numele fișierului de destinație:',
 'upload-maxfilesize'          => 'Mărimea maximă a unui fișier: $1',
-'upload-description'          => 'Descrierea fișierului',
+'upload-description'          => 'Descriere fișier',
 'upload-options'              => 'Opțiuni de încărcare',
 'watchthisupload'             => 'Urmărește acest fișier',
 'filewasdeleted'              => 'Un fișier cu acest nume a fost anterior încărcat și apoi șters. Ar trebui să verificați $1 înainte să îl încărcați din nou.',
@@ -1665,6 +1698,14 @@ Vă rugăm să aveți în vedere dacă este utilă reîncărcarea acestuia.
 Jurnalul pentru această ștergere este disponibil aici:",
 'filename-bad-prefix'         => "Numele fișierului pe care îl încărcați începe cu '''\"\$1\"''', care este un nume non-descriptiv alocat automat în general de camerele digitale.
 Vă rugăm, alegeți un nume mai descriptiv pentru fișerul dumneavoastră.",
+'upload-success-subj'         => 'Fișierul a fost trimis',
+'upload-success-msg'          => 'Încărcarea de la [$2] s-a încheiat cu succes. Rezultatul este disponibil aici: [[:{{ns:file}}:$1]]',
+'upload-failure-subj'         => 'Problemă la trimitere',
+'upload-failure-msg'          => 'A apărut o problemă cu încărcarea de la [$2]:
+
+$1',
+'upload-warning-subj'         => 'Avertizare la încărcare',
+'upload-warning-msg'          => 'A apărut o problemă în timpul încărcării de la [$2]. Vă puteți întoarce la [[Special:Upload/stash/$1|formularul de trimitere]]pentru a corecta această problemă.',
 
 'upload-proto-error'        => 'Protocol incorect',
 'upload-proto-error-text'   => 'Importul de la distanță necesită adrese URL care încep cu <code>http://</code> sau <code>ftp://</code>.',
@@ -1680,22 +1721,23 @@ Dacă problema persistă, contactați un [[Special:ListUsers/sysop|administrator
 'upload-http-error'         => 'A avut loc o eroare HTTP: $1',
 
 # img_auth script messages
-'img-auth-accessdenied' => 'Acces interzis',
-'img-auth-nopathinfo'   => 'PATH_INFO lipsește.
+'img-auth-accessdenied'     => 'Acces interzis',
+'img-auth-nopathinfo'       => 'PATH_INFO lipsește.
 Serverul dumneavoastră nu a fost setat pentru a trece aceste informații.
 S-ar putea să fie bazat pe CGI și să nu suporte img_auth.
 Vedeți http://www.mediawiki.org/wiki/Manual:Image_Authorization.',
-'img-auth-notindir'     => 'Adresa cerută nu este în directorul pentru încărcări configurat.',
-'img-auth-badtitle'     => 'Nu s-a putut construi un titlu valid din "$1".',
-'img-auth-nologinnWL'   => 'Nu sunteți autentificat și "$1" nu este pe lista albă.',
-'img-auth-nofile'       => 'Fișierul "$1" nu există.',
-'img-auth-isdir'        => 'Încercați să accesați directorul "$1".
+'img-auth-notindir'         => 'Adresa cerută nu este în directorul pentru încărcări configurat.',
+'img-auth-badtitle'         => 'Nu s-a putut construi un titlu valid din "$1".',
+'img-auth-nologinnWL'       => 'Nu sunteți autentificat și "$1" nu este pe lista albă.',
+'img-auth-nofile'           => 'Fișierul "$1" nu există.',
+'img-auth-isdir'            => 'Încercați să accesați directorul "$1".
 Numai accesul la fișiere este permis.',
-'img-auth-streaming'    => 'Derularea continuă a "$1".',
-'img-auth-public'       => 'Funcția img_auth.php este pentru a exporta fișiere de pe un wiki privat.
+'img-auth-streaming'        => 'Derularea continuă a "$1".',
+'img-auth-public'           => 'Funcția img_auth.php este pentru a exporta fișiere de pe un wiki privat.
 Acest wiki este configurat ca unul public.
 Pentru securitate optimă, img_auth.php este dezactivat.',
-'img-auth-noread'       => 'Acest utilizator nu are acces să citească "$1".',
+'img-auth-noread'           => 'Acest utilizator nu are acces să citească "$1".',
+'img-auth-bad-query-string' => 'Adresa URL are un șir de interogare invalid.',
 
 # HTTP errors
 'http-invalid-url'      => 'URL invalid: $1',
@@ -1712,16 +1754,16 @@ Pentru securitate optimă, img_auth.php este dezactivat.',
 'upload-curl-error6-text'  => 'Adresa URL introdusă nu a putut fi atinsă.
 Vă rugăm, verificați că adresa URL este corectă și că situl este funcțional.',
 'upload-curl-error28'      => 'Încărcarea a expirat',
-'upload-curl-error28-text' => 'Sitelui îi ia prea mult timp pentru a răspunde.
-Te rog verifică dacă situl este activ, așteaptă puțin și încearcă apoi.
-Poate dorești să încerci la o oră mai puțin ocupată.',
+'upload-curl-error28-text' => 'Site-ului îi ia prea mult timp pentru a răspunde.
+Vă rugăm să verificați dacă site-ul este activ, așteptați puțin și apoi reîncercați.
+Poate doriți să încercați la o oră mai puțin ocupată.',
 
 'license'            => 'Licențiere:',
 'license-header'     => 'Licențiere',
 'nolicense'          => 'Nici una selectată',
 'license-nopreview'  => '(Previzualizare indisponibilă)',
 'upload_source_url'  => ' (un URL valid, accesibil public)',
-'upload_source_file' => ' (un fișier de pe computerul tău)',
+'upload_source_file' => ' (un fișier de pe computerul dv.)',
 
 # Special:ListFiles
 'listfiles-summary'     => 'Această pagină specială arată toate fișierele încărcate.
@@ -1730,6 +1772,7 @@ O apăsare pe antetul coloanei schimbă sortarea.',
 'listfiles_search_for'  => 'Caută imagine după nume:',
 'imgfile'               => 'fișier',
 'listfiles'             => 'Lista imaginilor',
+'listfiles_thumb'       => 'Miniatură',
 'listfiles_date'        => 'Data',
 'listfiles_name'        => 'Nume',
 'listfiles_user'        => 'Utilizator',
@@ -1761,8 +1804,7 @@ Următoarea listă arată {{PLURAL:$1|prima legătură|primele $1 legături}} c�
 O [[Special:WhatLinksHere/$2|listă completă]] este disponibilă.',
 'nolinkstoimage'            => 'Nici o pagină nu utilizează această imagine.',
 'morelinkstoimage'          => 'Vedeți [[Special:WhatLinksHere/$1|mai multe legături]] către acest fișier.',
-'redirectstofile'           => 'The following {{PLURAL:$1|file redirects|$1 files redirect}} to this file:
-{{PLURAL:$1|Fișierul următor|Următoarele $1 fișiere}} redirectează la acest fișier:',
+'redirectstofile'           => '{{PLURAL:$1|Următorul fișier|Următoarele $1 fișiere}} redirecționează către acest fișier:',
 'duplicatesoffile'          => '{{PLURAL:$1|Fișierul următor este duplicat|Următoarele $1 fișiere sunt duplicate}} ale acestui fișier ([[Special:FileDuplicateSearch/$2|mai multe detalii]]):',
 'sharedupload'              => 'Acest fișier provine de la $1 și poate fi folosit și de alte proiecte.',
 'sharedupload-desc-there'   => 'Fișierul acesta este de la $1 și poate fi folosit de alte proiecte.
@@ -1770,7 +1812,7 @@ Vezi [$2 pagina de descriere a fișierului] pentru mai multe detalii.',
 'sharedupload-desc-here'    => 'Fișierul acesta este de la $1 și poate fi folosit de alte proiecte.
 Descrierea de mai jos poate fi consultată la [$2 pagina de descriere a fișierului].',
 'filepage-nofile'           => 'Nu există niciun fișier cu acest nume.',
-'filepage-nofile-link'      => 'Nu există niciun fișier cu acest nume, dar îl poți [$1 încărca].',
+'filepage-nofile-link'      => 'Nu există niciun fișier cu acest nume, dar îl puteți [$1 încărca].',
 'uploadnewversion-linktext' => 'Încarcă o versiune nouă a acestui fișier',
 'shared-repo-from'          => 'de la $1',
 'shared-repo'               => 'un depozit partajat',
@@ -1811,11 +1853,11 @@ Input: contenttype/subtype, e.g. <tt>image/jpeg</tt>.
 
 
 Această pagină specială permite căutarea fișierelor în funcție de tipul MIME (Multipurpose Internet Mail Extensions). Cele mai des întâlnite sunt:
-* Imagini : <code>image/jpeg</code> 
-* Diagrame : <code>image/png</code>, <code>image/svg+xml</code> 
-* Imagini animate : <code>image/gif</code> 
-* Fișiere sunet : <code>audio/ogg</code>, <code>audio/x-ogg</code> 
-* Fișiere video : <code>video/ogg</code>, <code>video/x-ogg</code> 
+* Imagini : <code>image/jpeg</code>
+* Diagrame : <code>image/png</code>, <code>image/svg+xml</code>
+* Imagini animate : <code>image/gif</code>
+* Fișiere sunet : <code>audio/ogg</code>, <code>audio/x-ogg</code>
+* Fișiere video : <code>video/ogg</code>, <code>video/x-ogg</code>
 * Fișiere PDF : <code>application/pdf</code>
 
 Lista tipurilor MIME recunoscute de MediaWiki poate fi găsită la [http://svn.wikimedia.org/viewvc/mediawiki/trunk/phase3/includes/mime.types?view=markup fișiere mime.types].',
@@ -1844,10 +1886,10 @@ Lista tipurilor MIME recunoscute de MediaWiki poate fi găsită la [http://svn.w
 
 # Statistics
 'statistics'                   => 'Statistici',
-'statistics-header-pages'      => 'Statisticile paginii',
-'statistics-header-edits'      => 'Editează statisticile',
+'statistics-header-pages'      => 'Statistici pagini',
+'statistics-header-edits'      => 'Statistici modificări',
 'statistics-header-views'      => 'Vizualizează statisticile',
-'statistics-header-users'      => 'Statistici legate de utilizatori',
+'statistics-header-users'      => 'Statistici utilizatori',
 'statistics-header-hooks'      => 'Alte statistici',
 'statistics-articles'          => 'Articole',
 'statistics-pages'             => 'Pagini',
@@ -1856,8 +1898,8 @@ Lista tipurilor MIME recunoscute de MediaWiki poate fi găsită la [http://svn.w
 'statistics-edits'             => 'Editări de la instalarea {{SITENAME}}',
 'statistics-edits-average'     => 'Media editărilor pe pagină',
 'statistics-views-total'       => 'Număr de vizualizări',
+'statistics-views-total-desc'  => 'Vizualizările paginilor inexistente și a paginilor speciale nu sunt incluse',
 'statistics-views-peredit'     => 'Vizualizări pe editare',
-'statistics-jobqueue'          => 'Lungime [http://www.mediawiki.org/wiki/Manual:Job_queue listă de așteptare]',
 'statistics-users'             => '[[Special:ListUsers|Utilizatori]] înregistrați',
 'statistics-users-active'      => 'Utilizatori activi',
 'statistics-users-active-desc' => 'Utilizatori care au efectuat o acțiune în {{PLURAL:$1|ultima zi|ultimele $1 zile}}',
@@ -1872,13 +1914,13 @@ O pagină este considerată o pagină de dezambiguizare dacă folosește formate
 'doubleredirects'            => 'Redirecționări duble',
 'doubleredirectstext'        => 'Această listă conține pagini care redirecționează la alte pagini de redirecționare.
 Fiecare rând conține legături la primele două redirecționări, precum și ținta celei de-a doua redirecționări, care este de obicei pagina țintă "reală", către care ar trebui să redirecționeze prima pagină.
-Intrările <s>tăiate</s> au fost rezolvate.',
+Intrările <del>tăiate</del> au fost rezolvate.',
 'double-redirect-fixed-move' => '[[$1]] a fost mutat, acum este un redirect către [[$2]]',
 'double-redirect-fixer'      => 'Corector de redirecționări',
 
 'brokenredirects'        => 'Redirecționări greșite',
 'brokenredirectstext'    => 'Următoarele redirecționări conduc spre articole inexistente:',
-'brokenredirects-edit'   => 'modifică',
+'brokenredirects-edit'   => 'modificare',
 'brokenredirects-delete' => 'șterge',
 
 'withoutinterwiki'         => 'Pagini fără legături interwiki',
@@ -1892,9 +1934,11 @@ Intrările <s>tăiate</s> au fost rezolvate.',
 'nbytes'                  => '{{PLURAL:$1|un octet|$1 octeți}}',
 'ncategories'             => '{{PLURAL:$1|o categorie|$1 categorii}}',
 'nlinks'                  => '{{PLURAL:$1|o legătură|$1 legături}}',
-'nmembers'                => '$1 {{PLURAL:$1|un membru|membri}}',
+'nmembers'                => '$1 {{PLURAL:$1|membru|membri}}',
 'nrevisions'              => '{{PLURAL:$1|o revizie|$1 revizii}}',
 'nviews'                  => '{{PLURAL:$1|o accesare|$1 accesări}}',
+'nimagelinks'             => 'Utilizat pe $1 {{PLURAL:$1|pagină|pagini}}',
+'ntransclusions'          => 'utilizat pe $1 {{PLURAL:$1|pagină|pagini}}',
 'specialpage-empty'       => 'Această pagină este goală.',
 'lonelypages'             => 'Pagini orfane',
 'lonelypagestext'         => 'La următoarele pagini nu se leagă nici o altă pagină din {{SITENAME}}.',
@@ -1937,7 +1981,7 @@ Intrările <s>tăiate</s> au fost rezolvate.',
 'newpages'                => 'Pagini noi',
 'newpages-username'       => 'Nume de utilizator:',
 'ancientpages'            => 'Cele mai vechi articole',
-'move'                    => 'Mută',
+'move'                    => 'Redenumire',
 'movethispage'            => 'Mută această pagină',
 'unusedimagestext'        => 'Următoarele fișiere există dar nu sunt incluse în nicio altă pagină.
 Vă rugăm să aveți în vedere faptul că alte saituri web pot avea o legătură directă către acest URL și s-ar putea afla aici chiar dacă nu sunt în utlizare activă.',
@@ -1952,9 +1996,9 @@ Vă rugăm să aveți în vedere faptul că alte saituri web pot avea o legătur
 
 # Book sources
 'booksources'               => 'Surse de cărți',
-'booksources-search-legend' => 'Caută surse pentru cărți',
-'booksources-go'            => 'Du-te',
-'booksources-text'          => 'Mai jos se află o listă de legături înspre alte situri care vând cărți noi sau vechi, și care pot oferi informații suplimentare despre cărțile pe care le căutați:',
+'booksources-search-legend' => 'Căutare surse pentru cărți',
+'booksources-go'            => 'Salt',
+'booksources-text'          => 'Mai jos se află o listă de legături înspre alte situri care vând cărți noi sau vechi și care pot oferi informații suplimentare despre cărțile pe care le căutați:',
 'booksources-invalid-isbn'  => 'Codul ISBN oferit nu este valid; verificați dacă a fost copiat corect de la sursa originală.',
 
 # Special:Log
@@ -1980,7 +2024,7 @@ Puteți limita vizualizarea selectând tipul jurnalului, numele de utilizator sa
 'allpagesprev'      => 'Anterior',
 'allpagesnext'      => 'Următor',
 'allpagessubmit'    => 'Trimite',
-'allpagesprefix'    => 'Afișează paginile cu prefix:',
+'allpagesprefix'    => 'Se afișează paginile cu prefixul:',
 'allpagesbadtitle'  => 'Titlul paginii este nevalid sau conține un prefix inter-wiki. Este posibil să conțină unul sau mai multe caractere care nu pot fi folosite în titluri.',
 'allpages-bad-ns'   => '{{SITENAME}} nu are spațiul de nume „$1”.',
 
@@ -2051,45 +2095,50 @@ Pot exista [[{{MediaWiki:Listgrouprights-helppage}}|informații adiționale]] de
 'listgrouprights-removegroup-self-all' => 'Pot fi șterse toate grupurile din contul propriu',
 
 # E-mail user
-'mailnologin'      => 'Nu există adresă de trimitere',
-'mailnologintext'  => 'Trebuie să fii [[Special:UserLogin|autentificat]] și să ai o adresă validă de e-mail în [[Special:Preferences|preferințe]] pentru a trimite e-mail altor utilizatori.',
-'emailuser'        => 'Trimite e-mail',
-'emailpage'        => 'E-mail către utilizator',
-'emailpagetext'    => 'Poți folosi formularul de mai jos pentru a trimite un e-mail acestui utilizator.
+'mailnologin'          => 'Nu există adresă de trimitere',
+'mailnologintext'      => 'Trebuie să fii [[Special:UserLogin|autentificat]] și să ai o adresă validă de e-mail în [[Special:Preferences|preferințe]] pentru a trimite e-mail altor utilizatori.',
+'emailuser'            => 'Trimiteți un e-mail',
+'emailpage'            => 'E-mail către utilizator',
+'emailpagetext'        => 'Poți folosi formularul de mai jos pentru a trimite un e-mail acestui utilizator.
 Adresa de e-mail introdusă de tine în [[Special:Preferences|preferințele de utilizator]] va apărea ca adresa expeditorului e-mail-ului, deci destinatarul va putea să îți răspundă direct.',
-'usermailererror'  => 'Obiectul de mail a dat eroare:',
-'defemailsubject'  => 'E-mail {{SITENAME}}',
-'noemailtitle'     => 'Fără adresă de e-mail',
-'noemailtext'      => 'Utilizatorul nu a specificat o adresă validă de e-mail.',
-'nowikiemailtitle' => 'Nu este permis e-mail-ul',
-'nowikiemailtext'  => 'Acest utilizator a ales să nu primească e-mail-uri de la alți utilizatori.',
-'email-legend'     => 'Trimite e-mail altui utilizator de la {{SITENAME}}',
-'emailfrom'        => 'De la:',
-'emailto'          => 'Către:',
-'emailsubject'     => 'Subiect:',
-'emailmessage'     => 'Mesaj:',
-'emailsend'        => 'Trimite',
-'emailccme'        => 'Trimite-mi pe e-mail o copie a mesajului meu.',
-'emailccsubject'   => 'O copie a mesajului la $1: $2',
-'emailsent'        => 'E-mail trimis',
-'emailsenttext'    => 'E-mailul tău a fost trimis.',
-'emailuserfooter'  => 'Acest mesaj a fost trimis de $1 către $2 prin intermediul funcției „Trimite e-mail” de la {{SITENAME}}.',
+'usermailererror'      => 'Obiectul de mail a dat eroare:',
+'defemailsubject'      => 'E-mail {{SITENAME}}',
+'usermaildisabled'     => 'E-mail dezactivat',
+'usermaildisabledtext' => 'Nu puteți trimite e-mail altor utilizatori ai acestui wiki.',
+'noemailtitle'         => 'Fără adresă de e-mail',
+'noemailtext'          => 'Utilizatorul nu a specificat o adresă validă de e-mail.',
+'nowikiemailtitle'     => 'Nu este permis e-mail-ul',
+'nowikiemailtext'      => 'Acest utilizator a ales să nu primească e-mail-uri de la alți utilizatori.',
+'email-legend'         => 'Trimite e-mail altui utilizator de la {{SITENAME}}',
+'emailfrom'            => 'De la:',
+'emailto'              => 'Către:',
+'emailsubject'         => 'Subiect:',
+'emailmessage'         => 'Mesaj:',
+'emailsend'            => 'Trimite',
+'emailccme'            => 'Trimite-mi pe e-mail o copie a mesajului meu.',
+'emailccsubject'       => 'O copie a mesajului la $1: $2',
+'emailsent'            => 'E-mail trimis',
+'emailsenttext'        => 'E-mailul tău a fost trimis.',
+'emailuserfooter'      => 'Acest mesaj a fost trimis de $1 către $2 prin intermediul funcției „Trimite e-mail” de la {{SITENAME}}.',
+
+# User Messenger
+'usermessage-summary' => 'a lăsat un mesaj de sistem',
+'usermessage-editor'  => 'Mesager de sistem',
 
 # Watchlist
 'watchlist'            => 'Pagini urmărite',
 'mywatchlist'          => 'Pagini urmărite',
-'watchlistfor'         => "(pentru '''$1''')",
+'watchlistfor2'        => 'Pentru $1 $2',
 'nowatchlist'          => 'Nu ați ales să urmăriți nici o pagină.',
 'watchlistanontext'    => 'Te rugăm să $1 pentru a vizualiza sau edita itemii de pe lista ta de urmărire.',
 'watchnologin'         => 'Nu sunteți autentificat',
 'watchnologintext'     => 'Trebuie să fiți [[Special:UserLogin|autentificat]] pentru a vă modifica lista de pagini urmărite.',
 'addedwatch'           => 'Adăugată la lista de pagini urmărite',
-'addedwatchtext'       => 'Pagina „[[:$1]]” a fost adăugată la lista dv. de [[Special:Watchlist|articole urmărite]]. Modificările viitoare ale acestei pagini și a paginii asociate de discuții vor fi listate aici și, în plus, ele vor apărea cu <b>caractere îngroșate</b> în pagina de [[Special:RecentChanges|modificări recente]] pentru evidențiere.
-
-Dacă doriți să eliminați această pagină din lista dv. de pagini urmărite în viitor, apăsați pe „Nu mai urmări” în bara de comenzi în timp ce această pagină este vizibilă.',
-'removedwatch'         => 'Ştearsă din lista de pagini urmărite',
-'removedwatchtext'     => 'Pagina "[[:$1]]" a fost eliminată din [[Special:Watchlist|lista de pagini urmărite]].',
-'watch'                => 'Urmărește',
+'addedwatchtext'       => 'Pagina „[[:$1]]” a fost adăugată la lista dumneavoastră de [[Special:Watchlist|pagini urmărite]].
+Modificările viitoare efectuate asupra acestei pagini dar și asupra paginii de discuție asociată vor fi listate acolo și, în plus, ele vor apărea cu <b>caractere îngroșate</b> în pagina cu [[Special:RecentChanges|schimbări recente]] pentru evidențiere.',
+'removedwatch'         => 'Eliminată din lista de pagini urmărite',
+'removedwatchtext'     => 'Pagina „[[:$1]]” a fost eliminată din [[Special:Watchlist|lista de pagini urmărite]].',
+'watch'                => 'Urmărire',
 'watchthispage'        => 'Urmărește pagina',
 'unwatch'              => 'Nu mai urmări',
 'unwatchthispage'      => 'Nu mai urmări',
@@ -2098,21 +2147,21 @@ Dacă doriți să eliminați această pagină din lista dv. de pagini urmărite 
 'watchnochange'        => 'Nici una dintre paginile pe care le urmăriți nu a fost modificată în perioada de timp afișată.',
 'watchlist-details'    => '{{PLURAL:$1|O pagină|$1 pagini urmărite}}, excluzând paginile de discuție.',
 'wlheader-enotif'      => '*Notificarea email este activată',
-'wlheader-showupdated' => "* Paginile care au modificări de la ultima ta vizită sunt afișate '''îngroșat'''",
+'wlheader-showupdated' => "* Paginile care au fost modificate după ultima dumneavoastră vizită sunt afișate '''îngroșat'''",
 'watchmethod-recent'   => 'căutarea schimbărilor recente pentru paginile urmărite',
 'watchmethod-list'     => 'căutarea paginilor urmărite pentru schimbări recente',
 'watchlistcontains'    => 'Lista de pagini urmărite conține $1 {{PLURAL:$1|element|elemente}}.',
 'iteminvalidname'      => "E o problemă cu elementul '$1', numele este invalid...",
 'wlnote'               => "Mai jos se află {{PLURAL:$1|ultima schimbare|ultimele $1 schimbări}} din {{PLURAL:$2|ultima oră|ultimele '''$2''' ore}}.",
 'wlshowlast'           => 'Arată ultimele $1 ore $2 zile $3',
-'watchlist-options'    => 'Opțiunile listei de pagini urmărite',
+'watchlist-options'    => 'Opțiuni listă de pagini urmărite',
 
 # Displayed when you click the "watch" button and it is in the process of watching
-'watching'   => 'Urmărește...',
+'watching'   => 'Se urmărește...',
 'unwatching' => 'Așteptați...',
 
 'enotif_mailer'                => 'Sistemul de notificare {{SITENAME}}',
-'enotif_reset'                 => 'Marchează toate paginile vizitate.',
+'enotif_reset'                 => 'Marchează toate paginile vizitate',
 'enotif_newpagetext'           => 'Aceasta este o pagină nouă.',
 'enotif_impersonal_salutation' => '{{SITENAME}} utilizator',
 'changed'                      => 'modificat',
@@ -2123,7 +2172,7 @@ Dacă doriți să eliminați această pagină din lista dv. de pagini urmărite 
 'enotif_anon_editor'           => 'utilizator anonim $1',
 'enotif_body'                  => 'Domnule/Doamnă $WATCHINGUSERNAME,
 
-Pagina $PAGETITLE de la {{SITENAME}} a fost $CHANGEDORCREATED la $PAGEEDITDATE de către $PAGEEDITOR. Vedeți la $PAGETITLE_URL versiunea curentă.
+Pagina $PAGETITLE de la {{SITENAME}} a fost $CHANGEDORCREATED în data de $PAGEEDITDATE de către $PAGEEDITOR. Vedeți la $PAGETITLE_URL versiunea curentă.
 
 $NEWPAGE
 
@@ -2133,15 +2182,19 @@ Puteți contacta utilizatorul:
 e-mail: $PAGEEDITOR_EMAIL
 wiki: $PAGEEDITOR_WIKI
 
-Nu veți mai primi notificări în cazul unor viitoare modificări în afara cazului în care vizitați pagina. Puteți de asemenea reseta notificările pentru alte pagini urmărite.
+Nu veți mai primi notificări în cazul unor viitoare modificări până când nu veți vizitați pagina. 
+Puteți de asemenea reseta notificările pentru toate pagini pe care le urmăriți.
 
-             Al dvs. amic, sistemul de notificare de la {{SITENAME}}
+             Al dumneavoastră amic, sistemul de notificare de la {{SITENAME}}
 
 --
-Pentru a modifica preferințele listei de urmărire vizitați
+Pentru a modifica setările notificării prin e-mail, vizitați
+{{fullurl:{{#special:Preferences}}}}
+
+Pentru a modifica setările listei de pagini urmărite, vizitați
 {{fullurl:{{#special:Watchlist}}/edit}}
 
-Pentru a nu mai urmări pagina vizitați 
+Pentru a nu mai urmări pagina, vizitați
 $UNWATCHURL
 
 Asistență și suport:
@@ -2195,7 +2248,10 @@ Ultima editare a fost făcută de către [[User:$3|$3]] ([[User talk:$3|discuți
 'revertpage-nouser' => 'Anularea modificărilor efectuate de (nume de utilizator șters) și revenirea la ultima modificare de către [[User:$1|$1]]',
 'rollback-success'  => 'Anularea modificărilor făcute de $1;
 revenire la ultima versiune de $2.',
-'sessionfailure'    => 'Se pare că este o problemă cu sesiunea de autentificare; această acțiune a fost oprită ca o precauție împotriva hijack. Apăsați "back" și reîncărcați pagina de unde ați venit, apoi reîncercați.',
+
+# Edit tokens
+'sessionfailure-title' => 'Eroare de sesiune',
+'sessionfailure'       => 'Se pare că este o problemă cu sesiunea de autentificare; această acțiune a fost oprită ca o precauție împotriva hijack. Apăsați "back" și reîncărcați pagina de unde ați venit, apoi reîncercați.',
 
 # Protect
 'protectlogpage'              => 'Jurnal protecții',
@@ -2204,7 +2260,7 @@ revenire la ultima versiune de $2.',
 'modifiedarticleprotection'   => 'schimbat nivelul de protecție pentru "[[$1]]"',
 'unprotectedarticle'          => 'a deprotejat "[[$1]]"',
 'movedarticleprotection'      => 'setările de protecție au fost mutate de la „[[$2]]” la „[[$1]]”',
-'protect-title'               => 'Protejare "$1"',
+'protect-title'               => 'Protejare „$1”',
 'prot_1movedto2'              => 'a mutat [[$1]] la [[$2]]',
 'protect-legend'              => 'Confirmă protejare',
 'protectcomment'              => 'Motiv:',
@@ -2249,7 +2305,7 @@ Puteți schimba nivelul de protejare al acestei pagini, dar asta nu va afecta pr
 'pagesize'                    => '(octeți)',
 
 # Restrictions (nouns)
-'restriction-edit'   => 'Modifică',
+'restriction-edit'   => 'Modificare',
 'restriction-move'   => 'Mută',
 'restriction-create' => 'Creează',
 'restriction-upload' => 'Încarcă',
@@ -2277,7 +2333,7 @@ Puteți schimba nivelul de protejare al acestei pagini, dar asta nu va afecta pr
 S-ar putea ca această legătură să fie greșită, sau revizia a fost restaurată ori ștearsă din arhivă.',
 'undelete-nodiff'              => 'Nu s-a găsit vreo revizie anterioară.',
 'undeletebtn'                  => 'Recuperează',
-'undeletelink'                 => 'vezi/recuperează',
+'undeletelink'                 => 'vizualizare/recuperare',
 'undeleteviewlink'             => 'vezi',
 'undeletereset'                => 'Resetează',
 'undeleteinvert'               => 'Exclude spațiul',
@@ -2297,44 +2353,48 @@ Consultați [[Special:Log/delete|jurnalul ștergerilor]] pentru a vedea toate ș
 'undelete-no-results'          => 'Nicio pagină potrivită nu a fost găsită în arhiva paginilor șterse.',
 'undelete-filename-mismatch'   => 'Nu poate fi restaurată revizia fișierului din data $1: nume nepotrivit',
 'undelete-bad-store-key'       => 'Nu poate fi restaurată revizia fișierului din data $1: fișierul lipsea înainte de ștergere.',
-'undelete-cleanup-error'       => 'Eroare la ștergerea arhivei nefolosite "$1".',
+'undelete-cleanup-error'       => 'Eroare la ștergerea arhivei nefolosite „$1”.',
 'undelete-missing-filearchive' => 'Nu poate fi restaurată arhiva fișierul cu ID-ul $1 pentru că nu există în baza de date.
-S-ar putea ca ea să fie deja restaurată.',
+S-ar putea ca ea să fi fost deja restaurată.',
 'undelete-error-short'         => 'Eroare la restaurarea fișierului: $1',
 'undelete-error-long'          => 'S-au găsit erori la ștergerea fișierului:
 
 $1',
-'undelete-show-file-confirm'   => 'Sunteți sigur că doriți să vizualizați o versiune ștearsă a fișierului "<nowiki>$1</nowiki>" din $2 ora $3?',
+'undelete-show-file-confirm'   => 'Sunteți sigur că doriți să vizualizați o versiune ștearsă a fișierului „<nowiki>$1</nowiki>” din $2, ora $3?',
 'undelete-show-file-submit'    => 'Da',
 
 # Namespace form on various pages
 'namespace'      => 'Spațiu de nume:',
-'invert'         => 'Inversează selecţia',
+'invert'         => 'Inversează selecția',
 'blanknamespace' => 'Articole',
 
 # Contributions
 'contributions'       => 'Contribuțiile utilizatorului',
-'contributions-title' => 'Contribuțiile utilizatorului pentru $1',
+'contributions-title' => 'Contribuțiile utilizatorului $1',
 'mycontris'           => 'Contribuții',
 'contribsub2'         => 'Pentru $1 ($2)',
 'nocontribs'          => 'Nu a fost găsită nici o modificare care să satisfacă acest criteriu.',
 'uctop'               => '(sus)',
 'month'               => 'Din luna (și dinainte):',
-'year'                => 'Începând cu anul (și precedenții):',
+'year'                => 'Până în anul:',
 
-'sp-contributions-newbies'        => 'Arată doar contribuțiile conturilor noi',
-'sp-contributions-newbies-sub'    => 'Pentru începători',
-'sp-contributions-newbies-title'  => 'Contribuțiile utilizatorului pentru conturile noi',
-'sp-contributions-blocklog'       => 'jurnal blocări',
-'sp-contributions-deleted'        => 'contribuțiile șterse ale utilizatorului',
-'sp-contributions-logs'           => 'jurnale',
-'sp-contributions-talk'           => 'discuție',
-'sp-contributions-userrights'     => 'administrarea permisiunilor de utilizator',
-'sp-contributions-blocked-notice' => 'Acest utilizator este momentan blocat.
+'sp-contributions-newbies'             => 'Arată doar contribuțiile conturilor noi',
+'sp-contributions-newbies-sub'         => 'Pentru începători',
+'sp-contributions-newbies-title'       => 'Contribuțiile utilizatorului pentru conturile noi',
+'sp-contributions-blocklog'            => 'jurnal blocări',
+'sp-contributions-deleted'             => 'contribuțiile șterse ale utilizatorului',
+'sp-contributions-uploads'             => 'încărcări',
+'sp-contributions-logs'                => 'jurnale',
+'sp-contributions-talk'                => 'discuție',
+'sp-contributions-userrights'          => 'administrarea permisiunilor de utilizator',
+'sp-contributions-blocked-notice'      => 'Acest utilizator este momentan blocat.
 Ultima blocare este indicată mai jos pentru informare:',
-'sp-contributions-search'         => 'Caută contribuții',
-'sp-contributions-username'       => 'Adresă IP sau nume de utilizator:',
-'sp-contributions-submit'         => 'Caută',
+'sp-contributions-blocked-notice-anon' => 'Această adresă IP este blocată acum.
+Iată aici ultima înregistrare relevantă din jurnalul blocărilor:',
+'sp-contributions-search'              => 'Căutare contribuții',
+'sp-contributions-username'            => 'Adresă IP sau nume de utilizator:',
+'sp-contributions-toponly'             => 'Afișează numai versiunile recente',
+'sp-contributions-submit'              => 'Caută',
 
 # What links here
 'whatlinkshere'            => 'Ce trimite aici',
@@ -2349,16 +2409,16 @@ Ultima blocare este indicată mai jos pentru informare:',
 'whatlinkshere-prev'       => '{{PLURAL:$1|anterioara|anterioarele $1}}',
 'whatlinkshere-next'       => '{{PLURAL:$1|următoarea|urmatoarele $1}}',
 'whatlinkshere-links'      => '← legături',
-'whatlinkshere-hideredirs' => '$1 redirecționări',
+'whatlinkshere-hideredirs' => '$1 redirecționările',
 'whatlinkshere-hidetrans'  => '$1 transcluderile',
-'whatlinkshere-hidelinks'  => '$1 legături',
-'whatlinkshere-hideimages' => '$1 legături către imagine',
+'whatlinkshere-hidelinks'  => '$1 legăturile',
+'whatlinkshere-hideimages' => '$1 legăturile către imagine',
 'whatlinkshere-filters'    => 'Filtre',
 
 # Block/unblock
-'blockip'                         => 'Blochează utilizator / IP',
-'blockip-title'                   => 'Blochează utilizator',
-'blockip-legend'                  => 'Blochează utilizator / IP',
+'blockip'                         => 'Blocare utilizator',
+'blockip-title'                   => 'Blocare utilizator',
+'blockip-legend'                  => 'Blocare utilizator/adresă IP',
 'blockiptext'                     => "Pentru a bloca un utilizator completați rubricile de mai jos.<br />
 '''Respectați [[{{MediaWiki:Policy-url}}|politica de blocare]].'''<br />
 Precizați motivul blocării; de exemplu indicați paginile vandalizate de acest utilizator.",
@@ -2369,7 +2429,7 @@ Precizați motivul blocării; de exemplu indicați paginile vandalizate de acest
 'ipbreasonotherlist'              => 'Alt motiv',
 'ipbreason-dropdown'              => '*Motivele cele mai frecvente
 ** Introducere de informații false
-** Ştergere conținut fără explicații
+** Ștergere conținut fără explicații
 ** Introducere de legături externe de publicitate (spam)
 ** Creare pagini fără sens
 ** Tentative de intimidare
@@ -2393,18 +2453,17 @@ Precizați motivul blocării; de exemplu indicați paginile vandalizate de acest
 'blockipsuccesstext'              => '[[Special:Contributions/$1|$1]] a fost blocată.<br />
 Vezi [[Special:IPBlockList|lista de adrese IP și conturi blocate]] pentru a revizui adresele blocate.',
 'ipb-edit-dropdown'               => 'Modifică motivele blocării',
-'ipb-unblock-addr'                => 'Deblochează $1',
+'ipb-unblock-addr'                => 'Deblochează utilizatorul $1',
 'ipb-unblock'                     => 'Deblocați un nume de utilizator sau o adresă IP',
-'ipb-blocklist-addr'              => 'Blocări existente pentru $1',
 'ipb-blocklist'                   => 'Vezi blocările existente',
-'ipb-blocklist-contribs'          => 'Contribuții la $1',
+'ipb-blocklist-contribs'          => 'Contribuțiile utilizatorului $1',
 'unblockip'                       => 'Deblochează adresă IP',
 'unblockiptext'                   => 'Folosiți formularul de mai jos pentru a restaura permisiunea de scriere pentru adrese IP sau nume de utilizator blocate anterior.',
 'ipusubmit'                       => 'Elimină blocarea',
 'unblocked'                       => '[[User:$1|$1]] a fost deblocat',
 'unblocked-id'                    => 'Blocarea $1 a fost eliminată',
-'ipblocklist'                     => 'Lista adreselor IP și a conturilor blocate',
-'ipblocklist-legend'              => 'Găsește un utilizator blocat',
+'ipblocklist'                     => 'Utilizatori blocați',
+'ipblocklist-legend'              => 'Găsire utilizator blocat',
 'ipblocklist-username'            => 'Nume de utilizator sau adresă IP:',
 'ipblocklist-sh-userblocks'       => '$1 blocări de conturi',
 'ipblocklist-sh-tempblocks'       => '$1 blocări temporare',
@@ -2433,10 +2492,10 @@ Motivul blocării utilizatorului $1 este: „$2”',
 Jurnalul blocărilor este indicat mai jos:',
 'blocklog-showsuppresslog'        => 'Acest utilizator a fost blocat și suprimat în trecut.
 Jurnalul suprimărilor este indicat mai jos:',
-'blocklogentry'                   => 'a blocat "[[$1]]" pe o perioadă de $2 $3',
+'blocklogentry'                   => 'a blocat utilizatorul „[[$1]]” pe o perioadă de $2 $3',
 'reblock-logentry'                => 'a fost schimbată blocarea pentru [[$1]] cu data expirării la $2 $3',
 'blocklogtext'                    => 'Acest jurnal cuprinde acțiunile de blocare și deblocare. Adresele IP blocate automat nu sunt afișate. Vizitați [[Special:IPBlockList|lista de adrese blocate]] pentru o listă explicită a adreselor blocate în acest moment.',
-'unblocklogentry'                 => 'a deblocat $1',
+'unblocklogentry'                 => 'a deblocat utilizatorul $1',
 'block-log-flags-anononly'        => 'doar utilizatorii anonimi',
 'block-log-flags-nocreate'        => 'crearea de conturi dezactivată',
 'block-log-flags-noautoblock'     => 'autoblocarea dezactivată',
@@ -2448,7 +2507,7 @@ Jurnalul suprimărilor este indicat mai jos:',
 'ipb_expiry_invalid'              => 'Dată de expirare invalidă.',
 'ipb_expiry_temp'                 => 'Blocarea numelor de utilizator ascunse trebuie să fie permanentă.',
 'ipb_hide_invalid'                => 'Imposibil de a suprima acest cont; acesta poate avea prea multe modificări.',
-'ipb_already_blocked'             => '"$1" este deja blocat',
+'ipb_already_blocked'             => '„$1” este deja blocat',
 'ipb-needreblock'                 => '== Deja blocat ==
 $1 este deja blocat. Vrei să schimbi parametrii?',
 'ipb-otherblocks-header'          => '{{PLURAL:$1|Altă blocare|Alte blocări}}',
@@ -2460,12 +2519,16 @@ Face parte din area de blocare $2, care nu poate fi deblocată.',
 'blockme'                         => 'Blochează-mă',
 'proxyblocker'                    => 'Blocaj de proxy',
 'proxyblocker-disabled'           => 'Această funcție este dezactivată.',
-'proxyblockreason'                => 'Adresa ta IP a fost blocată pentru că este un proxy deschis. Te rog, contactează provider-ul tău de servicii Internet sau tehnicieni IT și informează-i asupra acestei probleme serioase de securitate.',
+'proxyblockreason'                => 'Adresa dumneavoastră IP a fost blocată pentru că este un proxy deschis.
+Vă rugăm să vă contactați furnizorul de servicii Internet sau tehnicienii IT și să-i informați asupra acestei probleme serioase de securitate.',
 'proxyblocksuccess'               => 'Realizat.',
 'sorbsreason'                     => 'Adresa dumneavoastră IP este listată ca un proxy deschis în DNSBL.',
-'sorbs_create_account_reason'     => 'Adresa dvs. IP este listată la un proxy deschis în lista neagră DNS. Nu vă puteți crea un cont',
-'cant-block-while-blocked'        => 'Nu poți bloca alți utilizatori cât timp și tu ești blocat.',
+'sorbs_create_account_reason'     => 'Adresa dumneavoastră IP este listată ca un proxy deschis în lista neagră DNS.
+Nu vă puteți crea un cont',
+'cant-block-while-blocked'        => 'Nu puteți bloca alți utilizatori în timp ce sunteți dumneavoastră înșivă blocat.',
 'cant-see-hidden-user'            => 'Utilizatorul pe care încercați să îl blocați este deja blocat și ascuns. Atata timp cât nu aveți drept de hideuser, nu puteți vedea sau modifica blocarea acestuia.',
+'ipbblocked'                      => 'Nu puteți bloca sau debloca alți utilizatori în timp ce sunteți dumneavoastră înșivă blocat.',
+'ipbnounblockself'                => 'Nu aveți permisiunea de a vă debloca singur',
 
 # Developer tools
 'lockdb'              => 'Blochează baza de date',
@@ -2505,9 +2568,20 @@ Rețineți că pagina '''nu va fi mutată''' dacă există deja o pagină cu nou
 o redirecționare și în plus nu are nici o istorie de modificare.
 Cu alte cuvinte, veți putea muta înapoi o pagină pe care ați mutat-o greșit, dar nu veți putea suprascrie o pagină validă existentă prin mutarea alteia.
 
-'''ATENŢIE!'''
+'''ATENȚIE!'''
 Aceasta poate fi o schimbare drastică și neașteptată pentru o pagină populară;
 vă rugăm, să vă asigurați că înțelegeți toate consecințele înainte de a continua.",
+'movepagetext-noredirectfixer' => "Completând formularul de mai jos veți redenumi o pagină, mutând tot istoricul la noul nume.
+Vechiul titlu va deveni o pagină de redirecționare către noul titlu.
+Fiți sigur că ați verificat lista redirecționărilor [[Special:DoubleRedirects|duble]] sau [[Special:BrokenRedirects|nefuncționale]].
+Vă rugăm să rețineți că aveți responsabilitatea de a verifica dacă nu cumva destinația inițială a vechilor legături s-a modificat.
+
+Nu uitați că pagina '''nu va fi redenumită''' dacă o pagină cu noul titlul există deja, cu excepția cazurilor în care aceasta este complet goală și nu are istoric de modificări sau este o pagină de redirecționare.
+Acest lucru înseamnă că veți putea redenumi la titlul inițial o pagină greșit redenumită, dar nu veți putea suprascrie o pagină existentă.
+
+'''Atenție!'''
+Această acțiune poate determina o schimbare dramatică, neașteptată pentru o pagină cu trafic crescut;
+asigurați-vă că înțelegeți toate consecințele înainte de a continua.",
 'movepagetalktext'             => "Pagina asociată de discuții, dacă există, va fi mutată
 automat odată cu aceasta '''afară de cazul că''':
 * Mutați pagina în altă secțiune a {{SITENAME}}
@@ -2516,7 +2590,7 @@ automat odată cu aceasta '''afară de cazul că''':
 
 În oricare din cazurile de mai sus va trebui să muți sau să unifici
 manual paginile de discuții, dacă dorești acest lucru.",
-'movearticle'                  => 'Mută pagina',
+'movearticle'                  => 'Pagina de redenumit:',
 'moveuserpage-warning'         => "'''Atenție''': sunteți pe cale să redenumiți o pagină de utilizator. Vă rugăm să rețineți că singura redenumită va fi pagina, nu și utilizatorul.",
 'movenologin'                  => 'Nu ești autentificat',
 'movenologintext'              => 'Trebuie să fii un utilizator înregistrat și să te [[Special:UserLogin|autentifici]] pentru a muta o pagină.',
@@ -2532,19 +2606,19 @@ manual paginile de discuții, dacă dorești acest lucru.",
 'movepage-moved-redirect'      => 'O redirecționare a fost creată.',
 'movepage-moved-noredirect'    => 'Crearea redirecționărilor a fost suprimată.',
 'articleexists'                => 'O pagină cu același nume există deja, sau numele pe care l-ați ales este invalid. Sunteți rugat să alegeți un alt nume.',
-'cantmove-titleprotected'      => 'Nu poți muta o pagina în această locație, pentru că noul titlu a fost protejat la creare',
+'cantmove-titleprotected'      => 'Nu puteți muta o pagină la această locație, pentru că noul titlu a fost protejat la creare',
 'talkexists'                   => "'''Pagina în sine a fost mutată cu succes, dar pagina de discuții nu a putut fi mutată deoarece o alta deja există la noul titlu.
 Te rugăm să le unifici manual.'''",
 'movedto'                      => 'mutată la',
-'movetalk'                     => 'Mută pagina de discuții asociată',
+'movetalk'                     => 'Redenumește pagina de discuții asociată',
 'move-subpages'                => 'Mută subpaginile (până la $1)',
 'move-talk-subpages'           => 'Mută subpaginile paginii de discuții (până la $1)',
 'movepage-page-exists'         => 'Pagina $1 există deja și nu poate fi rescrisă automat.',
 'movepage-page-moved'          => 'Pagina $1 a fost mutată la $2.',
 'movepage-page-unmoved'        => 'Pagina $1 nu a putut fi mutată la $2.',
 'movepage-max-pages'           => 'Maxim $1 {{PLURAL:$1|pagină a fost mutată|pagini au fost mutate}}, nicio altă pagină nu va mai fi mutată automat.',
-'1movedto2'                    => 'a mutat [[$1]] la [[$2]]',
-'1movedto2_redir'              => 'a mutat [[$1]] la [[$2]] prin redirecționare',
+'1movedto2'                    => 'a redenumit [[$1]] în [[$2]]',
+'1movedto2_redir'              => 'a redenumit [[$1]] în [[$2]] înlocuind redirecționarea',
 'move-redirect-suppressed'     => 'redirecționarea a fost suprimată',
 'movelogpage'                  => 'Jurnal mutări',
 'movelogpagetext'              => 'Mai jos se află o listă cu paginile mutate.',
@@ -2554,18 +2628,19 @@ Te rugăm să le unifici manual.'''",
 'movereason'                   => 'Motiv:',
 'revertmove'                   => 'revenire',
 'delete_and_move'              => 'Șterge și redenumește',
-'delete_and_move_text'         => '==Ştergere necesară==
+'delete_and_move_text'         => '==Ștergere necesară==
 
-Articolul de destinație "[[:$1]]" există deja. Doriți să îl ștergeți pentru a face loc mutării?',
+Pagina destinație „[[:$1]]” există deja. Doriți să o ștergeți pentru a face loc redenumirii?',
 'delete_and_move_confirm'      => 'Da, șterge pagina.',
-'delete_and_move_reason'       => 'Şters pentru a face loc mutării',
+'delete_and_move_reason'       => 'Șters pentru a face loc redenumirii',
 'selfmove'                     => 'Titlurile sursei și ale destinației sunt aceleași; nu puteți muta o pagină peste ea însăși.',
-'immobile-source-namespace'    => 'Nu se pot muta paginile din spațiul de nume "$1"',
-'immobile-target-namespace'    => 'Nu se pot muta paginile în spațiul de nume "$1"',
-'immobile-target-namespace-iw' => 'Legătura interwiki nu este o țintă validă pentru mutare.',
+'immobile-source-namespace'    => 'Nu se pot redenumi paginile din spațiul de nume „$1”',
+'immobile-target-namespace'    => 'Nu se pot redenumi paginile în spațiul de nume „$1”',
+'immobile-target-namespace-iw' => 'Legătura interwiki nu este o țintă validă pentru redenumire.',
 'immobile-source-page'         => 'Această pagină nu poate fi mutată.',
 'immobile-target-page'         => 'Nu poate fi mutat la destinația cu acest titlu.',
 'imagenocrossnamespace'        => 'Fișierul nu poate fi mutat la un spațiu de nume care nu este destinat fișierelor',
+'nonfile-cannot-move-to-file'  => 'Entitatea (care nu este un fișier) nu poate fi mutată în spațiul de nume destinat fișierelor',
 'imagetypemismatch'            => 'Extensia nouă a fișierului nu se potrivește cu tipul acestuia',
 'imageinvalidfilename'         => 'Numele fișierului destinație este invalid',
 'fix-double-redirects'         => 'Actualizează toate redirecționările care trimit la titlul original',
@@ -2575,13 +2650,13 @@ Ultima intrare în jurnal este afișată mai jos pentru referință:",
 'semiprotectedpagemovewarning' => "'''Observație: această pagină a fost protejată, putând fi redenumiră doar de către utilizatorii înregistrați.'''
 Ultima intrare în jurnal este afișată mai jos pentru referință:",
 'move-over-sharedrepo'         => '== Fișierul există ==
-[[:$1]] există deja într-un depozit împărțit. Mutând un fișier la acest titlu va suprapune fișierul împărțit și îl va face inaccesibil.',
+[[:$1]] există deja într-un depozit partajat. Redenumirea fișierului la acest titlu va suprascrie fișierul partajat și îl va face inaccesibil.',
 'file-exists-sharedrepo'       => 'Numele ales al fișierului este deja în utilizare într-un depozit împărțit.
 Alegeți un alt nume.',
 
 # Export
-'export'            => 'Exportă pagini',
-'exporttext'        => 'Puteți exporta textul și istoricul unei pagini anume sau ale unui grup de pagini în XML. 
+'export'            => 'Exportare de pagini',
+'exporttext'        => 'Puteți exporta textul și istoricul unei pagini anume sau ale unui grup de pagini în XML.
 Acesta poate fi apoi importate în alt wiki care rulează software MediaWiki prin [[Special:Import|pagina de importare]].
 
 Pentru a exporta, introduceți titlurile în căsuța de mai jos, unul pe linie, și alegeți dacă doriți să exportați doar această versiune sau și cele mai vechi, cu istoricul lor, sau versiunea curentă cu informații despre ultima modificare.
@@ -2616,7 +2691,7 @@ Vă rugăm să vizitați [http://www.mediawiki.org/wiki/Localisation MediaWiki L
 'allmessages-filter-submit'     => 'Du-te',
 
 # Thumbnails
-'thumbnail-more'           => 'Extinde',
+'thumbnail-more'           => 'Extindere',
 'filemissing'              => 'Fișier lipsă',
 'thumbnail_error'          => 'Eroare la generarea previzualizării: $1',
 'djvu_page_error'          => 'Numărul paginii DjVu eronat',
@@ -2638,11 +2713,12 @@ Vă rugăm să vizitați [http://www.mediawiki.org/wiki/Localisation MediaWiki L
 'import-interwiki-namespace' => 'Transferă către spațiul de nume:',
 'import-upload-filename'     => 'Nume fișier:',
 'import-comment'             => 'Comentariu:',
-'importtext'                 => 'Te rog exportă fișierul din sursa wiki folosind [[Special:Export|utilitarul de exportare]].
-Salvează-l pe discul tău și trimite-l aici.',
+'importtext'                 => 'Vă rugăm să exportați fișierul din wikiul sursă folosind [[Special:Export|utilitarul de exportare]].
+Salvați-l pe calculatorul dumneavoastră și încărcați-l aici.',
 'importstart'                => 'Se importă paginile...',
 'import-revision-count'      => '$1 {{PLURAL:$1|versiune|versiuni}}',
 'importnopages'              => 'Nu există pagini de importat.',
+'imported-log-entries'       => '{{PLURAL:$1|A fost importată $1 înregistrare de jurnal|Au fost importate $1 înregistrări de jurnal}}.',
 'importfailed'               => 'Import eșuat: $1',
 'importunknownsource'        => 'Tipul sursei de import este necunoscut',
 'importcantopen'             => 'Fișierul importat nu a putut fi deschis',
@@ -2669,7 +2745,7 @@ Un dosar temporar lipsește.',
 # Import log
 'importlogpage'                    => 'Log import',
 'importlogpagetext'                => 'Imoprturi administrative de pagini de la alte wiki, cu istoricul editărilor.',
-'import-logentry-upload'           => '$1 importate prin upload',
+'import-logentry-upload'           => 'a importat [[$1]] prin încărcare de fișier',
 'import-logentry-upload-detail'    => '$1 {{PLURAL:$1|versiune|versiuni}}',
 'import-logentry-interwiki'        => 'transwikificat $1',
 'import-logentry-interwiki-detail' => '$1 {{PLURAL:$1|versiune|versiuni}} de la $2',
@@ -2682,24 +2758,24 @@ Un dosar temporar lipsește.',
 'tooltip-pt-preferences'          => 'Preferințele dumneavoastră',
 'tooltip-pt-watchlist'            => 'Lista paginilor pe care le monitorizați',
 'tooltip-pt-mycontris'            => 'Listă de contribuții',
-'tooltip-pt-login'                => 'Ești încurajat să te autentifici, deși acest lucru nu este obligatoriu.',
-'tooltip-pt-anonlogin'            => 'Ești încurajat să te autentifici, deși acest lucru nu este obligatoriu.',
-'tooltip-pt-logout'               => 'Închide sesiunea',
+'tooltip-pt-login'                => 'Sunteți încurajat să vă autentificați, deși acest lucru nu este obligatoriu.',
+'tooltip-pt-anonlogin'            => 'Sunteți încurajat să vă autentificați, deși acest lucru nu este obligatoriu.',
+'tooltip-pt-logout'               => 'Închideți sesiunea de lucru',
 'tooltip-ca-talk'                 => 'Discuții despre această pagină',
 'tooltip-ca-edit'                 => 'Puteți modifica această pagină. Înainte de a o salva vă rugăm s-o previzualizați.',
 'tooltip-ca-addsection'           => 'Adaugă o nouă secțiune.',
 'tooltip-ca-viewsource'           => 'Această pagină este protejată. Puteți vizualiza doar codul sursă',
 'tooltip-ca-history'              => 'Versiunile anterioare ale paginii și autorii lor.',
-'tooltip-ca-protect'              => 'Protejează această pagină.',
-'tooltip-ca-unprotect'            => 'Deprotejează această pagină',
-'tooltip-ca-delete'               => 'Șterge această pagină.',
-'tooltip-ca-undelete'             => 'Restaureaza editările făcute acestui document, înainte să fi fost șters.',
-'tooltip-ca-move'                 => 'Redenumește această pagină.',
-'tooltip-ca-watch'                => 'Adaugă la lista de pagini urmărite',
-'tooltip-ca-unwatch'              => 'Elimină această pagină din lista mea de monitorizare',
+'tooltip-ca-protect'              => 'Protejați această pagină.',
+'tooltip-ca-unprotect'            => 'Deprotejați această pagină',
+'tooltip-ca-delete'               => 'Ștergeți această pagină.',
+'tooltip-ca-undelete'             => 'Restaurează modificările efectuate asupra acestui document înainte de a fi fost șters',
+'tooltip-ca-move'                 => 'Redenumiți această pagină.',
+'tooltip-ca-watch'                => 'Adăugați la lista de pagini urmărite',
+'tooltip-ca-unwatch'              => 'Eliminați această pagină din lista dumneavoastră de monitorizare',
 'tooltip-search'                  => 'Căutare în {{SITENAME}}',
 'tooltip-search-go'               => 'Du-te la pagina cu acest nume dacă există',
-'tooltip-search-fulltext'         => 'Caută paginile pentru acest text',
+'tooltip-search-fulltext'         => 'Căutați paginile pentru acest text',
 'tooltip-p-logo'                  => 'Pagina principală',
 'tooltip-n-mainpage'              => 'Vedeți pagina principală',
 'tooltip-n-mainpage-description'  => 'Vizitați pagina principală',
@@ -2707,14 +2783,14 @@ Un dosar temporar lipsește.',
 'tooltip-n-currentevents'         => 'Informații despre evenimentele curente',
 'tooltip-n-recentchanges'         => 'Lista ultimelor schimbări realizate în acest wiki.',
 'tooltip-n-randompage'            => 'Afișează o pagină aleatoare',
-'tooltip-n-help'                  => 'Locul în care găsești ajutor.',
+'tooltip-n-help'                  => 'Locul în care găsiți ajutor',
 'tooltip-t-whatlinkshere'         => 'Lista tuturor paginilor wiki care conduc spre această pagină',
 'tooltip-t-recentchangeslinked'   => 'Schimbări recente în legătură cu această pagină',
 'tooltip-feed-rss'                => 'Alimentează fluxul RSS pentru această pagină',
 'tooltip-feed-atom'               => 'Alimentează fluxul Atom pentru această pagină',
 'tooltip-t-contributions'         => 'Vezi lista de contribuții ale acestui utilizator',
 'tooltip-t-emailuser'             => 'Trimite un e-mail acestui utilizator',
-'tooltip-t-upload'                => 'Încarcă fișiere',
+'tooltip-t-upload'                => 'Încărcare de fișiere',
 'tooltip-t-specialpages'          => 'Lista tuturor paginilor speciale',
 'tooltip-t-print'                 => 'Versiunea de tipărit a acestei pagini',
 'tooltip-t-permalink'             => 'Legătura permanentă către această versiune a paginii',
@@ -2739,6 +2815,8 @@ Un dosar temporar lipsește.',
 'tooltip-rollback'                => '„Revenire” anulează modificarea(ările) de pe această pagină a ultimului contribuitor printr-o singură apăsare',
 'tooltip-undo'                    => '"Anulează" șterge această modificare și deschide formularul de modificare în modulul de previzualizare.
 Permite adăugarea unui motiv în descrierea modificărilor',
+'tooltip-preferences-save'        => 'Salvează preferințele',
+'tooltip-summary'                 => 'Descrieți pe scurt modificarea',
 
 # Stylesheets
 'common.css'      => '/** CSS plasate aici vor fi aplicate tuturor aparițiilor */',
@@ -2746,7 +2824,7 @@ Permite adăugarea unui motiv în descrierea modificărilor',
 'nostalgia.css'   => '/* CSS plasate aici vor afecta utilizatorii stilului Nostalgia  */',
 'cologneblue.css' => '/* CSS plasate aici vor afecta utilizatorii stilului Cologne Blue */',
 'monobook.css'    => '/* modificați acest fișier pentru a adapta înfățișarea monobook-ului pentru tot situl*/',
-'myskin.css'      => '/* CSS plasate aici vor afecta utilizatorii stilului Myskin */',
+'myskin.css'      => '/* CSS plasate aici vor afecta utilizatorii stilului MySkin */',
 'chick.css'       => '/* CSS plasate aici vor afecta utilizatorii stilului Chick */',
 'simple.css'      => '/* CSS plasate aici vor afecta utilizatorii stilului Simple */',
 'modern.css'      => '/* CSS plasate aici vor afecta utilizatorii stilului Modern */',
@@ -2787,12 +2865,12 @@ Permite adăugarea unui motiv în descrierea modificărilor',
 'numtalkauthors' => 'Număr de autori distincți (pagini de discuții): $1',
 
 # Skin names
-'skinname-standard'    => 'Normală',
+'skinname-standard'    => 'Clasic',
 'skinname-nostalgia'   => 'Nostalgie',
 'skinname-cologneblue' => 'Albastru de Cologne',
 'skinname-monobook'    => 'Monobook',
 'skinname-myskin'      => 'StilulMeu',
-'skinname-chick'       => 'Şic',
+'skinname-chick'       => 'Șic',
 'skinname-simple'      => 'Simplu',
 'skinname-modern'      => 'Modern',
 'skinname-vector'      => 'Vector',
@@ -2811,7 +2889,7 @@ Permite adăugarea unui motiv în descrierea modificărilor',
 'math_unknown_function' => 'funcție necunoscută',
 'math_lexing_error'     => 'eroare lexicală',
 'math_syntax_error'     => 'eroare de sintaxă',
-'math_image_error'      => 'Conversiune în PNG eșuată',
+'math_image_error'      => 'Conversiune în PNG eșuată; verificați corectitudinea instalării sistemelor LaTex sau dvipng (sau dvips + gs + convert)',
 'math_bad_tmpdir'       => 'Nu se poate crea sau nu se poate scrie în directorul temporar pentru formule matematice',
 'math_bad_output'       => 'Nu se poate crea sau nu se poate scrie în directorul de ieșire pentru formule matematice',
 'math_notexvc'          => 'Lipsește executabilul texvc; vezi math/README pentru configurare.',
@@ -2843,7 +2921,7 @@ Permite adăugarea unui motiv în descrierea modificărilor',
 $1',
 'filedelete-missing'              => 'Fișierul „$1” nu poate fi șters, deoarece nu există.',
 'filedelete-old-unregistered'     => 'Revizia specificată a fișierului "$1" nu este în baza de date.',
-'filedelete-current-unregistered' => 'Fișierul specificat "$1" nu este în baza de date.',
+'filedelete-current-unregistered' => 'Fișierul specificat „$1” nu este în baza de date.',
 'filedelete-archive-read-only'    => 'Directorul arhivei "$1" nu poate fi scris de serverul web.',
 
 # Browsing diffs
@@ -2857,14 +2935,17 @@ Executându-l, sistemul dvs. poate fi compromis.",
 'thumbsize'            => 'Dimensiunea miniaturii:',
 'widthheight'          => '$1x$2',
 'widthheightpage'      => '$1×$2, $3 {{PLURAL:$3|pagină|pagini}}',
-'file-info'            => '(mărime fișier: $1, tip MIME: $2)',
-'file-info-size'       => '($1 × $2 pixeli, mărime fișier: $3, tip MIME: $4)',
+'file-info'            => 'mărime fișier: $1, tip MIME: $2',
+'file-info-size'       => '$1 × $2 pixeli, mărime fișier: $3, tip MIME: $4',
 'file-nohires'         => '<small>Rezoluții mai mari nu sunt disponibile.</small>',
-'svg-long-desc'        => '(fișier SVG, cu dimensiunea nominală de $1 × $2 pixeli, mărime fișier: $3)',
+'svg-long-desc'        => 'fișier SVG, cu dimensiunea nominală de $1 × $2 pixeli, mărime fișier: $3',
 'show-big-image'       => 'Mărește rezoluția imaginii',
 'show-big-image-thumb' => '<small>Mărimea acestei previzualizări: $1 × $2 pixeli</small>',
 'file-info-gif-looped' => 'în buclă',
 'file-info-gif-frames' => '$1 {{PLURAL:$1|imagine|imagini}}',
+'file-info-png-looped' => 'în buclă',
+'file-info-png-repeat' => 'redat {{PLURAL:$1|o dată|de $1 ori}}',
+'file-info-png-frames' => '$1 {{PLURAL:$1|cadru|cadre}}',
 
 # Special:NewFiles
 'newimages'             => 'Galeria de imagini noi',
@@ -2889,7 +2970,7 @@ Orice legături ce urmează pe aceeași linie sunt considerate excepții, adică
 
 # Metadata
 'metadata'          => 'Informații',
-'metadata-help'     => 'Acest fișier conține informații suplimentare, introduse probabil de aparatul fotografic digital sau scanerul care l-a generat. 
+'metadata-help'     => 'Acest fișier conține informații suplimentare, introduse probabil de aparatul fotografic digital sau scanerul care l-a generat.
 Dacă fișierul a fost modificat între timp, este posibil ca unele detalii să nu mai fie valabile.',
 'metadata-expand'   => 'Afișează detalii suplimentare',
 'metadata-collapse' => 'Ascunde detalii suplimentare',
@@ -2939,8 +3020,8 @@ Altele vor fi ascunse implicit.
 'exif-colorspace'                  => 'Spațiu de culoare',
 'exif-componentsconfiguration'     => 'Semnificația componentelor',
 'exif-compressedbitsperpixel'      => 'Mod de comprimare a imaginii',
-'exif-pixelydimension'             => 'Lățimea validă a imaginii',
-'exif-pixelxdimension'             => 'Valind image height',
+'exif-pixelydimension'             => 'Lățimea imaginii',
+'exif-pixelxdimension'             => 'Înălțimea imaginii',
 'exif-makernote'                   => 'Observațiile producătorului',
 'exif-usercomment'                 => 'Comentariile utilizatorilor',
 'exif-relatedsoundfile'            => 'Fișierul audio asemănător',
@@ -2956,9 +3037,9 @@ Altele vor fi ascunse implicit.
 'exif-spectralsensitivity'         => 'Sensibilitate spectrală',
 'exif-isospeedratings'             => 'Evaluarea vitezei ISO',
 'exif-oecf'                        => 'Factorul de conversie optoelectronic',
-'exif-shutterspeedvalue'           => 'Viteza de închidere',
-'exif-aperturevalue'               => 'Diafragmă',
-'exif-brightnessvalue'             => 'Luminozitate',
+'exif-shutterspeedvalue'           => 'Viteza obturatorului în APEX',
+'exif-aperturevalue'               => 'Diafragmă în APEX',
+'exif-brightnessvalue'             => 'Luminozitate în APEX',
 'exif-exposurebiasvalue'           => 'Ajustarea expunerii',
 'exif-maxaperturevalue'            => 'Apertura maximă',
 'exif-subjectdistance'             => 'Distanța față de subiect',
@@ -2981,7 +3062,7 @@ Altele vor fi ascunse implicit.
 'exif-customrendered'              => 'Prelucrarea imaginii',
 'exif-exposuremode'                => 'Mod de expunere',
 'exif-whitebalance'                => 'Balanța albă',
-'exif-digitalzoomratio'            => 'Raportul zoom-ului digital',
+'exif-digitalzoomratio'            => 'Raportul transfocării digitale',
 'exif-focallengthin35mmfilm'       => 'Distanță focală pentru film de 35 mm',
 'exif-scenecapturetype'            => 'Tipul de surprindere a scenei',
 'exif-gaincontrol'                 => 'Controlul scenei',
@@ -3022,6 +3103,7 @@ Altele vor fi ascunse implicit.
 'exif-gpsareainformation'          => 'Numele domeniului GPS',
 'exif-gpsdatestamp'                => 'Data GPS',
 'exif-gpsdifferential'             => 'Corecția diferențială GPS',
+'exif-objectname'                  => 'Titlu scurt',
 
 # EXIF attributes
 'exif-compression-1' => 'Necomprimată',
@@ -3082,15 +3164,15 @@ Altele vor fi ascunse implicit.
 'exif-lightsource-255' => 'Altă sursă de lumină',
 
 # Flash modes
-'exif-flash-fired-0'    => 'Flash-ul nu a fost declanșat',
-'exif-flash-fired-1'    => 'Flash declanșat',
+'exif-flash-fired-0'    => 'Blițul nu a declanșat',
+'exif-flash-fired-1'    => 'Bliț declanșat',
 'exif-flash-return-0'   => 'niciun stroboscop nu întoarce funcție de detecție',
 'exif-flash-return-2'   => 'stroboscopul întoarce o lumină nedetectată',
 'exif-flash-return-3'   => 'stroboscopul întoarce o lumină detectată',
-'exif-flash-mode-1'     => 'obligatorie declanșarea flash-ului',
-'exif-flash-mode-2'     => 'obligatorie suprimarea flash-ului',
+'exif-flash-mode-1'     => 'declanșarea obligatorie a blițului',
+'exif-flash-mode-2'     => 'suprimarea obligatorie a blițului',
 'exif-flash-mode-3'     => 'modul automat',
-'exif-flash-function-1' => 'Fără funcție flash',
+'exif-flash-function-1' => 'Fără funcție pentru bliț',
 'exif-flash-redeye-1'   => 'mod de îndepărtare a ochilor roșii',
 
 'exif-focalplaneresolutionunit-2' => 'țoli',
@@ -3103,6 +3185,8 @@ Altele vor fi ascunse implicit.
 'exif-sensingmethod-7' => 'Senzor triliniar',
 'exif-sensingmethod-8' => 'Senzorul linear al culorii secvențiale',
 
+'exif-filesource-3' => 'Aparat de fotografiat digital',
+
 'exif-scenetype-1' => 'O imagine fotografiată direct',
 
 'exif-customrendered-0' => 'Prelucrare normală',
@@ -3112,8 +3196,8 @@ Altele vor fi ascunse implicit.
 'exif-exposuremode-1' => 'Expunere manuală',
 'exif-exposuremode-2' => 'Serie automată de expuneri',
 
-'exif-whitebalance-0' => 'Auto-balanța albă',
-'exif-whitebalance-1' => 'Balanța manuală albă',
+'exif-whitebalance-0' => 'Balanță alb automată',
+'exif-whitebalance-1' => 'Balanță alb manuală',
 
 'exif-scenecapturetype-0' => 'Standard',
 'exif-scenecapturetype-1' => 'Portret',
@@ -3179,44 +3263,66 @@ Altele vor fi ascunse implicit.
 'limitall'         => 'toate',
 
 # E-mail address confirmation
-'confirmemail'             => 'Confirmă adresa de email',
-'confirmemail_noemail'     => 'Nu aveți o adresă de email validă setată la [[Special:Preferences|preferințe]].',
-'confirmemail_text'        => '{{SITENAME}} necesită validarea adresei de e-mail înaintea folosirii funcțiilor e-mail. 
-Apăsați butonul de dedesupt pentru a trimite un e-mail de confirmare către adresa dvs. 
-Acesta va include o legătură care va conține codul; 
-încărcați legătura în browser pentru a valida adresa de e-mail.',
-'confirmemail_pending'     => 'Un cod de confirmare a fost trimis deja la adresa de e-mail indicată;
-dacă ai creat recent contul, ar fi bine să aștepți câteva minute e-mailul de confirmare, înainte de a cere un nou cod.',
-'confirmemail_send'        => 'Trimite un cod de confirmare',
-'confirmemail_sent'        => 'E-mailul de confirmare a fost trimis.',
-'confirmemail_oncreate'    => 'Un cod de confirmare a fost trimis la adresa de e-mail.
-Acest cod nu este necesar pentru autentificare, dar trebuie transmis înainte de activarea oricăror proprietăți bazate pe e-mail din wiki.',
-'confirmemail_sendfailed'  => 'Nu am putut trimite e-mailul de confirmare. Verificați adresa după caractere invalide.
+'confirmemail'              => 'Confirmă adresa de e-mail',
+'confirmemail_noemail'      => 'Nu aveți o adresă de e-mail validă setată la [[Special:Preferences|preferințe]].',
+'confirmemail_text'         => '{{SITENAME}} solicită validarea adresei de e-mail înaintea utilizării funcțiilor specifice poștei electronice.
+Apăsați butonul de mai jos pentru ca un e-mail de confirmare să fie trimis către adresa dumneavoastră.
+Acesta va include o legătură conținând un cod;
+încărcați legătura în navigator pentru a valida adresa de e-mail.',
+'confirmemail_pending'      => 'Un cod de confirmare a fost trimis deja la adresa de e-mail indicată;
+dacă ați creat recent contul, ar fi bine să așteptați câteva minute e-mailul de confirmare înainte de a cere un nou cod.',
+'confirmemail_send'         => 'Trimite un cod de confirmare',
+'confirmemail_sent'         => 'E-mailul de confirmare a fost trimis.',
+'confirmemail_oncreate'     => 'Un cod de confirmare a fost trimis la adresa dumnevoastră de e-mail.
+Acest cod nu este necesar pentru autentificare, dar trebuie transmis înainte de activarea oricăror funcții din wiki specifice e-mailului.',
+'confirmemail_sendfailed'   => 'Nu am putut trimite e-mailul de confirmare. Verificați adresa după caractere invalide.
 
 Serverul de mail a returnat: $1',
-'confirmemail_invalid'     => 'Cod de confirmare invalid. Acest cod poate fi expirat.',
-'confirmemail_needlogin'   => 'Trebuie să vă $1 pentru a vă confirma adresa de email.',
-'confirmemail_success'     => 'Adresa de e-mail a fost confirmată. Acum vă puteți [[Special:UserLogin|autentifica]] și bucura de wiki.',
-'confirmemail_loggedin'    => 'Adresa de email a fost confirmată.',
-'confirmemail_error'       => 'Ceva nu a funcționat la salvarea confirmării.',
-'confirmemail_subject'     => 'Confirmare adresă email la {{SITENAME}}',
-'confirmemail_body'        => 'Cineva, probabil dumneavoastră de la adresa IP $1, și-a înregistrat la {{SITENAME}} contul „$2” cu această adresă de e-mail.
+'confirmemail_invalid'      => 'Cod de confirmare invalid. Acest cod poate fi expirat.',
+'confirmemail_needlogin'    => 'Trebuie să vă $1 pentru a vă confirma adresa de e-mail.',
+'confirmemail_success'      => 'Adresa de e-mail a fost confirmată. Acum vă puteți [[Special:UserLogin|autentifica]] și bucura de wiki.',
+'confirmemail_loggedin'     => 'Adresa de e-mail a fost confirmată.',
+'confirmemail_error'        => 'Ceva nu a funcționat la salvarea confirmării.',
+'confirmemail_subject'      => 'Confirmarea adresei de e-mail la {{SITENAME}}',
+'confirmemail_body'         => 'Cineva, probabil dumneavoastră de la adresa IP $1, și-a înregistrat la {{SITENAME}} contul „$2” cu această adresă de e-mail.
 
 Pentru a confirma că acest cont vă aparține într-adevăr și pentru a vă activa funcțiile de e-mail de la {{SITENAME}}, accesați pagina:
 
 $3
 
-Dacă însă NU e contul dumneavoastră, accesați pagina:
+Dacă însă NU este contul dumneavoastră, accesați pagina:
 
 $5
 
 Acest cod de confirmare va expira la $4.',
-'confirmemail_invalidated' => 'Confirmarea adresei de e-mail a fost anulată',
-'invalidateemail'          => 'Anulează confirmarea adresei de e-mail',
+'confirmemail_body_changed' => 'Cineva, probabil dumneavoastră de la adresa IP $1, a schimbat adresa de e-mail asociată contului „$2” de la {{SITENAME}} cu adresa la care ați primit acest mesaj.
+
+Pentru a confirma că acest cont vă aparține într-adevăr și pentru a vă activa funcțiile de e-mail de la {{SITENAME}}, accesați pagina:
+
+$3
+
+Dacă însă NU este contul dumneavoastră, accesați pagina de mai jos pentru a anula modificarea:
+
+$5
+
+Acest cod de confirmare va expira la $4.',
+'confirmemail_body_set'     => 'Cineva, probabil dumneavoastră de la adresa IP $1, a asociat prezenta adresă de e-mail contului „$2” de la la {{SITENAME}}.
+
+Pentru a confirma că acest cont vă aparține într-adevăr și pentru a vă reactiva funcțiile de e-mail de la {{SITENAME}}, accesați pagina:
+
+$3
+
+Dacă însă NU este contul dumneavoastră, accesați pagina de mai jos pentru a anula confirmarea adresei de e-mail:
+
+$5
+
+Acest cod de confirmare va expira la $4.',
+'confirmemail_invalidated'  => 'Confirmarea adresei de e-mail a fost anulată',
+'invalidateemail'           => 'Anulează confirmarea adresei de e-mail',
 
 # Scary transclusion
 'scarytranscludedisabled' => '[Transcluderea interwiki este dezactivată]',
-'scarytranscludefailed'   => '[Şiretlicul formatului a dat greș pentru $1]',
+'scarytranscludefailed'   => '[Șiretlicul formatului a dat greș pentru $1]',
 'scarytranscludetoolong'  => '[URL-ul este prea lung]',
 
 # Trackbacks
@@ -3227,8 +3333,8 @@ $1',
 'trackbackdeleteok' => 'Urmăritorul a fost șters cu succes.',
 
 # Delete conflict
-'deletedwhileediting' => "'''Atenție''': Această pagină a fost ștearsă după ce ai început să o modifici!",
-'confirmrecreate'     => "Utilizatorul [[User:$1|$1]] ([[User talk:$1|discuție]]) a șters acest articol după ce ați început să contribuți la el din motivul:
+'deletedwhileediting' => "'''Atenție''': Această pagină a fost ștearsă după ce ați început s-o modificați!",
+'confirmrecreate'     => "Utilizatorul [[User:$1|$1]] ([[User talk:$1|discuție]]) a șters acest articol după ce ați început să contribuiți la el din motivul:
 : ''$2''
 Vă rugăm să confirmați faptul că într-adevăr doriți să recreați acest articol.",
 'recreate'            => 'Recreează',
@@ -3252,11 +3358,12 @@ Vă rugăm să confirmați faptul că într-adevăr doriți să recreați acest 
 'table_pager_first'        => 'Prima pagină',
 'table_pager_last'         => 'Ultima pagină',
 'table_pager_limit'        => 'Arată $1 itemi pe pagină',
+'table_pager_limit_label'  => 'Elemente pe pagină:',
 'table_pager_limit_submit' => 'Du-te',
 'table_pager_empty'        => 'Nici un rezultat',
 
 # Auto-summaries
-'autosumm-blank'   => 'Şters conținutul paginii',
+'autosumm-blank'   => 'Ștergerea conținutului paginii',
 'autosumm-replace' => 'Pagină înlocuită cu „$1”',
 'autoredircomment' => 'Redirecționat înspre [[$1]]',
 'autosumm-new'     => 'Pagină nouă: $1',
@@ -3275,14 +3382,14 @@ Vă rugăm să confirmați faptul că într-adevăr doriți să recreați acest 
 # Watchlist editor
 'watchlistedit-numitems'       => 'Lista ta de pagini urmărite conține {{PLURAL:$1|1 titlu|$1 titluri}}, excluzând paginile de discuții.',
 'watchlistedit-noitems'        => 'Lista de pagini urmărite este goală.',
-'watchlistedit-normal-title'   => 'Editează lista de urmărire',
-'watchlistedit-normal-legend'  => 'Şterge titluri din lista de urmărire',
+'watchlistedit-normal-title'   => 'Modificarea listei paginilor urmărite',
+'watchlistedit-normal-legend'  => 'Ștergere titluri din lista de urmărire',
 'watchlistedit-normal-explain' => 'Lista de mai jos cuprinde paginile pe care le urmăriți.
 Pentru a elimina un titlu, bifați-l și apăsați „{{int:Watchlistedit-normal-submit}}”.
 Puteți edita și direct [[Special:Watchlist/raw|listă brută]].',
-'watchlistedit-normal-submit'  => 'Şterge titluri',
+'watchlistedit-normal-submit'  => 'Șterge titluri',
 'watchlistedit-normal-done'    => '{{PLURAL:$1|1 titlu a fost șters|$1 titluri au fost șterse}} din lista de urmărire:',
-'watchlistedit-raw-title'      => 'Modifică lista brută a paginilor urmărite',
+'watchlistedit-raw-title'      => 'Modificarea listei brute a paginilor urmărite',
 'watchlistedit-raw-legend'     => 'Modifică lista brută de pagini urmărite',
 'watchlistedit-raw-explain'    => 'Lista de mai jos cuprinde paginile pe care le urmăriți. O puteți modifica adăugînd sau ștergînd titluri (cîte un titlu pe rînd).
 După ce terminați apăsați „{{int:Watchlistedit-raw-submit}}”.
@@ -3308,6 +3415,7 @@ Puteți folosi în schimb [[Special:Watchlist/edit|editorul standard]].',
 'version-specialpages'             => 'Pagini speciale',
 'version-parserhooks'              => 'Hook-uri parser',
 'version-variables'                => 'Variabile',
+'version-skins'                    => 'Aspect',
 'version-other'                    => 'Altele',
 'version-mediahandlers'            => 'Suport media',
 'version-hooks'                    => 'Hook-uri',
@@ -3319,6 +3427,13 @@ Puteți folosi în schimb [[Special:Watchlist/edit|editorul standard]].',
 'version-hook-subscribedby'        => 'Subscris de',
 'version-version'                  => '(Versiune $1)',
 'version-license'                  => 'Licență',
+'version-poweredby-credits'        => "Acest wiki este dezvoltat de '''[http://www.mediawiki.org/ MediaWiki]''', drepturi de autor © 2001-$1 $2.",
+'version-poweredby-others'         => 'alții',
+'version-license-info'             => 'MediaWiki este un software liber pe care îl puteți redistribui și/sau modifica sub termenii Licenței Publice Generale GNU publicată de Free Software Foundation – fie a doua versiune a acesteia, fie, la alegerea dumneavoastră, orice altă versiune ulterioară. 
+
+MediaWiki este distribuit în speranța că va fi folositor, dar FĂRĂ VREO GARANȚIE, nici măcar cea implicită de COMERCIALIZARE sau de ADAPTARE PENTRU UN UN SCOP ANUME. Vedeți Licența Publică Generală GNU pentru mai multe detalii. 
+
+În cazul în care nu ați primit [{{SERVER}}{{SCRIPTPATH}}/COPYING o copie a  Licenței Publice Generale GNU] împreună cu acest program, scrieți la Free Software Foundation, Inc, 51, Strada Franklin, etajul cinci, Boston, MA 02110-1301, Statele Unite ale Americii sau [http://www.gnu.org/licenses/old-licenses/gpl-2.0.html citiți-o online].',
 'version-software'                 => 'Software instalat',
 'version-software-product'         => 'Produs',
 'version-software-version'         => 'Versiune',
@@ -3333,11 +3448,11 @@ Imaginile sunt afișate la rezoluția lor maximă, în timp ce alte tipuri de fi
 Introduceți numele fișierului fără prefixul „{{ns:file}}:”.',
 
 # Special:FileDuplicateSearch
-'fileduplicatesearch'          => 'Caută fișiere duplicate',
+'fileduplicatesearch'          => 'Căutare fișiere duplicate',
 'fileduplicatesearch-summary'  => 'Caută fișiere duplicat bazate pe valoarea sa hash.
 
 Introdu numele fișierului fără prefixul "{{ns:file}}:".',
-'fileduplicatesearch-legend'   => 'Caută un duplicat',
+'fileduplicatesearch-legend'   => 'Căutare duplicat',
 'fileduplicatesearch-filename' => 'Nume fișier:',
 'fileduplicatesearch-submit'   => 'Caută',
 'fileduplicatesearch-info'     => '$1 × $2 pixeli<br />Mărime fișier: $3<br />Tip MIME: $4',
@@ -3377,17 +3492,26 @@ Introdu numele fișierului fără prefixul "{{ns:file}}:".',
 #Pune toate fragmentele regex deasupra aceastei linii. Lasă această linie exact așa cum este</pre>',
 
 # Special:Tags
-'tags'                    => 'Taguri de modificare valide',
-'tag-filter'              => 'Filtrează [[Special:Tags|etichetele]]:',
+'tags'                    => 'Etichete valabile pentru marcarea modificărilor',
+'tag-filter'              => 'Filtru pentru [[Special:Tags|etichete]]:',
 'tag-filter-submit'       => 'Filtru',
 'tags-title'              => 'Etichete',
-'tags-intro'              => 'Această pagină afișează etichetele pe care software-ul le poate marca cu o editare, și semnificația lor.',
-'tags-tag'                => 'Nume de etichetă internă',
-'tags-display-header'     => 'Aspect în listele schimbărilor',
-'tags-description-header' => 'Descriere completă a sensului',
+'tags-intro'              => 'Această pagină afișează etichetele, inclusiv semnificația lor, pe care software-ul le poate folosi la marcarea modificărilor.',
+'tags-tag'                => 'Numele etichetei',
+'tags-display-header'     => 'Apariția în listele cu schimbări',
+'tags-description-header' => 'Descrierea completă a sensului',
 'tags-hitcount-header'    => 'Modificări etichetate',
-'tags-edit'               => 'modifică',
-'tags-hitcount'           => '$1 {{PLURAL:$1|schimbare|schimbări}}',
+'tags-edit'               => 'modificare',
+'tags-hitcount'           => '$1 {{PLURAL:$1|modificare|modificări}}',
+
+# Special:ComparePages
+'comparepages'     => 'Comparație între pagini',
+'compare-selector' => 'Comparație între versiuni',
+'compare-page1'    => 'Pagina 1',
+'compare-page2'    => 'Pagina 2',
+'compare-rev1'     => 'Versiunea 1',
+'compare-rev2'     => 'Versiunea 2',
+'compare-submit'   => 'Comparație',
 
 # Database error messages
 'dberr-header'      => 'Acest site are o problemă',
@@ -3405,8 +3529,13 @@ Introdu numele fișierului fără prefixul "{{ns:file}}:".',
 'htmlform-float-invalid'       => 'Valoarea specificată nu este un număr.',
 'htmlform-int-toolow'          => 'Valoarea specificată este sub maximul $1',
 'htmlform-int-toohigh'         => 'Valoarea specificată este peste maximul $1',
+'htmlform-required'            => 'Completare obligatorie',
 'htmlform-submit'              => 'Trimite',
 'htmlform-reset'               => 'Anulează modificările',
 'htmlform-selectorother-other' => 'Altul',
+
+# SQLite database support
+'sqlite-has-fts' => '$1 cu suport de căutare în tot textul',
+'sqlite-no-fts'  => '$1 fără suport de căutare în tot textul',
 
 );

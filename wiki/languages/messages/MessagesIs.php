@@ -9,6 +9,7 @@
  *
  * @author Cessator
  * @author Friðrik Bragi Dýrfjörð
+ * @author Gott wisst
  * @author Jóna Þórunn
  * @author Krun
  * @author Maxí
@@ -211,7 +212,7 @@ $specialPageAliases = array(
 	'Invalidateemail'           => array( 'Rangt netfang' ),
 );
 
-$separatorTransformTable = array(',' => '.', '.' => ',' );
+$separatorTransformTable = array( ',' => '.', '.' => ',' );
 $linkPrefixExtension = true;
 $linkTrail = '/^([áðéíóúýþæöa-z-–]+)(.*)$/sDu';
 
@@ -223,7 +224,7 @@ $messages = array(
 'tog-hideminor'               => 'Fela minniháttar breytingar í nýlegum breytingum',
 'tog-hidepatrolled'           => 'Fela yfirfarnar breytingar í nýlegum breytingum',
 'tog-newpageshidepatrolled'   => 'Fela yfirfarnar breytingar í listanum yfir nýjar síður',
-'tog-extendwatchlist'         => 'Útvíkka vaktlistann svo hann sýni allar viðeigandi breytingar',
+'tog-extendwatchlist'         => 'Sýna allar breytingar á vaktlistanum, ekki einungis þær nýjustu',
 'tog-usenewrc'                => 'Endurbættar auknar nýlegar breytingar (þarfnast JavaScript)',
 'tog-numberheadings'          => 'Númera fyrirsagnir sjálfkrafa',
 'tog-showtoolbar'             => 'Sýna breytingarverkfærastiku (JavaScript)',
@@ -231,8 +232,7 @@ $messages = array(
 'tog-editsection'             => 'Virkja hlutabreytingu með [breyta] tenglum',
 'tog-editsectiononrightclick' => 'Virkja hlutabreytingu með því að hægrismella á hlutafyrirsagnir (JavaScript)',
 'tog-showtoc'                 => 'Sýna efnisyfirlit (fyrir síður með meira en 3 fyrirsagnir)',
-'tog-rememberpassword'        => 'Munda innskráninguna mína á þessari tölvu',
-'tog-editwidth'               => 'Breytingarkassi hefur fulla breidd',
+'tog-rememberpassword'        => 'Muna innskráninguna mína í þessum vafra (í allt að $1 {{PLURAL:$1|dag|daga}})',
 'tog-watchcreations'          => 'Bæta síðum sem ég bý til á vaktlistann minn',
 'tog-watchdefault'            => 'Bæta síðum sem ég breyti á vaktlistann minn',
 'tog-watchmoves'              => 'Bæta síðum sem ég færi á vaktlistann minn',
@@ -240,7 +240,7 @@ $messages = array(
 'tog-minordefault'            => 'Merkja allar breytingar sem minniháttar sjálfgefið',
 'tog-previewontop'            => 'Sýna forskoðun á undan breytingarkassanum',
 'tog-previewonfirst'          => 'Sýna forskoðun með fyrstu breytingu',
-'tog-nocache'                 => 'Óvirkja skyndiminni síðna',
+'tog-nocache'                 => 'Slökkva á flýtiminni vafrans',
 'tog-enotifwatchlistpages'    => 'Senda mér tölvupóst þegar síðu á vaktlistanum mínu er breytt',
 'tog-enotifusertalkpages'     => 'Senda mér tölvupóst þegar notandaspjallinu mínu er breytt',
 'tog-enotifminoredits'        => 'Senda mér einnig tölvupóst vegna minniháttar breytinga á síðum',
@@ -266,6 +266,13 @@ $messages = array(
 'underline-always'  => 'Alltaf',
 'underline-never'   => 'Aldrei',
 'underline-default' => 'skv. vafrastillingu',
+
+# Font style option in Special:Preferences
+'editfont-style'     => 'Breyta leturgerð í textareitum',
+'editfont-default'   => 'skv. vafrastillingu',
+'editfont-monospace' => 'Monospaced letur',
+'editfont-sansserif' => 'Sans-serif font',
+'editfont-serif'     => 'Serif letur',
 
 # Dates
 'sunday'        => 'sunnudagur',
@@ -368,27 +375,20 @@ $messages = array(
 'faqpage'        => 'Project:Algengar spurningar',
 
 # Vector skin
-'vector-action-addsection'   => 'Bæta við umræðu',
-'vector-action-delete'       => 'Eyða',
-'vector-action-move'         => 'Færa',
-'vector-action-protect'      => 'Vernda',
-'vector-action-unprotect'    => 'Afvernda',
-'vector-namespace-category'  => 'Flokkur',
-'vector-namespace-help'      => 'Hjálparsíða',
-'vector-namespace-image'     => 'Skrá',
-'vector-namespace-main'      => 'Síða',
-'vector-namespace-mediawiki' => 'Melding',
-'vector-namespace-project'   => 'Verkefnissíða',
-'vector-namespace-special'   => 'Kerfissíða',
-'vector-namespace-talk'      => 'Umræða',
-'vector-namespace-template'  => 'Snið',
-'vector-namespace-user'      => 'Notandasíða',
-'vector-view-create'         => 'Skapa',
-'vector-view-edit'           => 'Breyta',
-'vector-view-history'        => 'Breytingaskrá',
-'vector-view-view'           => 'Lesa',
-'vector-view-viewsource'     => 'Sýna frumkóða',
-'namespaces'                 => 'Nafnrými',
+'vector-action-addsection' => 'Bæta við umræðu',
+'vector-action-delete'     => 'Eyða',
+'vector-action-move'       => 'Færa',
+'vector-action-protect'    => 'Vernda',
+'vector-action-undelete'   => 'Hætta við eyðingu',
+'vector-action-unprotect'  => 'Afvernda',
+'vector-view-create'       => 'Skapa',
+'vector-view-edit'         => 'Breyta',
+'vector-view-history'      => 'Breytingaskrá',
+'vector-view-view'         => 'Lesa',
+'vector-view-viewsource'   => 'Sýna frumkóða',
+'actions'                  => 'Aðgerðir',
+'namespaces'               => 'Nafnrými',
+'variants'                 => 'Útgáfur',
 
 'errorpagetitle'    => 'Villa',
 'returnto'          => 'Aftur á: $1.',
@@ -604,7 +604,7 @@ Ekki gleyma að breyta [[Special:Preferences|{{SITENAME}}-stillingunum]] þínum
 'yourname'                   => 'Notandanafn:',
 'yourpassword'               => 'Lykilorð:',
 'yourpasswordagain'          => 'Endurrita lykilorð:',
-'remembermypassword'         => 'Muna innskráningu mína á þessari tölvu',
+'remembermypassword'         => 'Muna innskráninguna mína í þessum vafra (í allt að $1 {{PLURAL:$1|dag|daga}})',
 'yourdomainname'             => 'Þitt lén:',
 'login'                      => 'Innskrá',
 'nav-login-createaccount'    => 'Innskrá / Búa til aðgang',
@@ -632,23 +632,25 @@ Gjörðu svo vel og opnaðu fyrir þær, skráðu þig svo inn með notandanafni
 'noname'                     => 'Þú hefur ekki tilgreint gilt notandanafn.',
 'loginsuccesstitle'          => 'Innskráning tókst',
 'loginsuccess'               => "'''Þú ert nú innskráð(ur) á {{SITENAME}} sem „$1“.'''",
-'nosuchuser'                 => 'Það er enginn notandi með nafnið „$1“.
-Athugaðu stafsetning, eða [[Special:UserLogin/signup|búðu til aðgang]].',
+'nosuchuser'                 => 'Það er enginn notandi með þetta nafn: "$1".
+Gerður er greinarmunur á há- og lágstöfum.
+Athugaðu hvort um innsláttavillu er að ræða eða [[Special:UserLogin/signup|búðu til nýtt notendanafn]].',
 'nosuchusershort'            => 'Það er enginn notandi með nafnið „<nowiki>$1</nowiki>“. Athugaðu hvort nafnið sé ritað rétt.',
 'nouserspecified'            => 'Þú verður að taka fram notandanafn.',
+'login-userblocked'          => 'Þessi notandi hefur verið settur í bann.  Innskráning ekki leyfð.',
 'wrongpassword'              => 'Uppgefið lykilorð er rangt. Vinsamlegast reyndu aftur.',
 'wrongpasswordempty'         => 'Lykilorðsreiturinn var auður. Vinsamlegast reyndu aftur.',
-'passwordtooshort'           => 'Lykilorðið þitt er ógilt eða of stutt.
-Það verður að hafa að minnsta kosti {{PLURAL:$1|1 rittákn|$1 rittákn}} og einnig frábrugðið notandanafninu þínu.',
+'passwordtooshort'           => 'Lykilorð skal vera að minnsta kosti {{plural: $1 |einn stafur|$1 stafir}}.',
 'password-name-match'        => 'Þarf að lykilorð þitt sé öðruvísi notandanafni þínu',
+'password-login-forbidden'   => 'Notkun þessa notendanafns og lykilorðs er ekki leyfileg.',
 'mailmypassword'             => 'Senda nýtt lykilorð með tölvupósti',
 'passwordremindertitle'      => 'Nýtt tímabundið aðgangsorð fyrir {{SITENAME}}',
 'passwordremindertext'       => 'Einhver (líklegast þú, á vistfanginu $1) hefur beðið um að fá nýtt
 lykilorð fyrir {{SITENAME}} ($4). Tímabundið lykilorð fyrir notandan „$2“
-hefur verið búið til og er núna „$3“. Ef þetta var vilji þinn, þarfu að skrá
-þig inn og velja nýtt lykilorð.
+hefur verið búið til og er núna „$3“. Ef þetta er það sem þú vildir, þarfu að skrá
+þig inn og velja nýtt lykilorð.  Þetta tímabundna lykilorð rennur út eftir {{PLURAL:$5|einn dag|$5 daga}}.
 
-Ef einhver annar fór fram á þessa beiðni, eða ef þú mannst lykilorðið þitt,
+Ef það var ekki þú sem fórst fram á þetta, eða ef þú mannst lykilorðið þitt,
 og vilt ekki lengur breyta því, skaltu hunsa þetta skilaboð og
 halda áfram að nota gamla lykilorðið.',
 'noemail'                    => 'Það er ekkert netfang skráð fyrir notandan "$1".',
@@ -660,8 +662,8 @@ Vinsamlegast skráðu þig inn á ný þegar þú hefur móttekið það.',
 'throttled-mailpassword'     => 'Áminning fyrir lykilorð hefur nú þegar verið send, innan við {{PLURAL:$1|síðasta klukkutímans|$1 síðustu klukkutímanna}}.
 Til að koma í veg fyrir misnotkun, er aðeins ein áminning send {{PLURAL:$1|hvern klukkutíma|hverja $1 klukkutíma}}.',
 'mailerror'                  => 'Upp kom villa við sendingu tölvupósts: $1',
-'acct_creation_throttle_hit' => 'Því miður, þú hefur nú þegar búið til {{PLURAL:$1|1 aðgang|$1 aðganga}}.
-Þú getur ekki búið til fleiri.',
+'acct_creation_throttle_hit' => 'Því miður, hafa verið búnir til {{PLURAL:$1|1 aðgang|$1 aðganga}} nýr aðgangar í dag sem er hámarksfjöldi nýskráninga á einum degi.
+Þú getur því miður ekki búið til nýjan aðgang frá þessari IP-tölu að svo stöddu.',
 'emailauthenticated'         => 'Netfang þitt var staðfest þann $2 klukkan $3.',
 'emailnotauthenticated'      => 'Veffang þitt hefur ekki enn verið sannreynt. Enginn póstur verður sendur af neinum af eftirfarandi eiginleikum.',
 'noemailprefs'               => 'Tilgreindu netfang svo þessar aðgerðir virki.',
@@ -675,8 +677,9 @@ Gjörðu svo vel og settu inn netfang á gildu formi eða tæmdu reitinn.',
 Þú ættir að skrá þig inn og breyta lykilorðinu núna.
 
 Þú getur hunsað þetta skilaboð, ef villa hefur átt sér stað.',
-'login-throttled'            => 'Þú hefur gert of margar tilraunir nýlega á lykilorð þessa aðgangs.
-Gjörðu svo vel og bíddu áður en að þú reynir aftur.',
+'usernamehasherror'          => 'Notendanöfn mega ekki innihalda kassa (#)',
+'login-throttled'            => 'Þér hefur mistekist að skrá þig inn undir þessu notendanafni of oft.
+Vinsamlegast reynið aftur síðar.',
 'loginlanguagelabel'         => 'Tungumál: $1',
 
 # Password reset dialog
@@ -810,7 +813,8 @@ Vinsamlegast reyndu aftur síðar. Ef það virkar ekki heldur skaltu reyna að 
 'editingsection'                   => 'Breyti $1 (hluta)',
 'editingcomment'                   => 'Breyti $1 (nýr hluti)',
 'editconflict'                     => 'Breytingaárekstur: $1',
-'explainconflict'                  => 'Síðunni hefur verið breytt síðan þú byrjaðir að gera breytingar á henni, textinn í efri reitnum inniheldur núverandi útgáfu úr gagnagrunni og sá neðri inniheldur þína útgáfu, þú þarft hér að færa breytingar sem þú vilt halda úr neðri reitnum í þann efri og vista síðuna. <strong>Aðeins</strong> texti úr efri reitnum mun vera vistaður þegar þú vistar.',
+'explainconflict'                  => "Síðunni hefur verið breytt síðan þú byrjaðir að gera breytingar á henni, textinn í efri reitnum inniheldur núverandi útgáfu úr gagnagrunni og sá neðri inniheldur þína útgáfu, þú þarft hér að færa breytingar sem þú vilt halda úr neðri reitnum í þann efri og vista síðuna. 
+'''Aðeins''' texti úr efri reitnum mun vera vistaður þegar þú vistar.",
 'yourtext'                         => 'Þinn texti',
 'storedversion'                    => 'Geymd útgáfa',
 'editingold'                       => "'''ATH: Þú ert að breyta gamalli útgáfu þessarar síðu og munu allar breytingar sem gerðar hafa verið á henni frá þeirri útgáfu vera fjarlægðar ef þú vistar.'''",
@@ -822,9 +826,6 @@ Vinsamlegast reyndu aftur síðar. Ef það virkar ekki heldur skaltu reyna að 
 Ef þú vilt ekki að textanum verði breytt skaltu ekki senda hann inn hér.<br />
 Þú lofar okkur einnig að þú hafir skrifað þetta sjálfur, að efnið sé í almannaeigu eða að það heyri undir frjálst leyfi. (sjá $1).
 '''EKKI SENDA INN HÖFUNDARRÉTTARVARIÐ EFNI ÁN LEYFIS RÉTTHAFA!'''",
-'longpagewarning'                  => "'''VIÐVÖRUN: Þessi síða er $1 kílóbæta löng; sumir
-vafrar gætu átt erfitt með að gera breytingar á síðum sem nálgast eða eru lengri en 32 kb.
-Vinsamlegast íhugaðu að skipta síðunni niður í smærri einingar.'''",
 'longpageerror'                    => "'''VILLA: Textinn sem þú sendir inn er $1 kílóbæti að lengd, en hámarkið er $2 kílóbæti. Ekki er hægt að vista textann.'''",
 'readonlywarning'                  => "'''AÐVÖRUN: Gagnagrunninum hefur verið læst til að unnt sé að framkvæma viðhaldsaðgerðir, svo þú getur ekki vistað breytingar þínar núna.
 Þú kannt að vilja að klippa og líma textann í textaskjal og vista hann fyrir síðar.'''
@@ -1044,7 +1045,7 @@ Athugaðu að skrár þeirra yfir {{SITENAME}}-efni kunna að vera úreltar.',
 'prefs-watchlist-days'      => 'Fjöldi daga sem vaktlistinn nær yfir:',
 'prefs-watchlist-days-max'  => '(hámark 7 dagar)',
 'prefs-watchlist-edits'     => 'Fjöldi breytinga sem vaktlistinn nær yfir:',
-'prefs-watchlist-edits-max' => '(hámarkstala: 1000)',
+'prefs-watchlist-edits-max' => 'Hámarkstala: 1000',
 'prefs-misc'                => 'Aðrar stillingar',
 'prefs-resetpass'           => 'Breyta lykilorði',
 'prefs-email'               => 'Tölvupóststillingar',
@@ -1228,14 +1229,9 @@ Ef þú kýst að gefa það upp, verður það notað til að gefa þér heiðu
 'recentchanges-legend'              => 'Stillingar nýlegra breytinga',
 'recentchangestext'                 => 'Hér geturðu fylgst með nýjustu breytingunum.',
 'recentchanges-feed-description'    => 'Hér er hægt að fylgjast með nýlegum breytingum á {{SITENAME}}.',
-'recentchanges-label-legend'        => 'Skýring: $1.',
-'recentchanges-legend-newpage'      => '$1 - ný síða',
 'recentchanges-label-newpage'       => 'Þessi breyting skapaði nýja síðu',
-'recentchanges-legend-minor'        => '$1 - smá breyting',
 'recentchanges-label-minor'         => 'Þetta er minniháttar breyting',
-'recentchanges-legend-bot'          => '$1 - breyting vélmennis',
 'recentchanges-label-bot'           => 'Þessi breytingar var gerð af vélmenni',
-'recentchanges-legend-unpatrolled'  => '$1 - breyting án eftirlits',
 'recentchanges-label-unpatrolled'   => 'Þessi breyting hefur ekki verið yfirfarin',
 'rcnote'                            => "Að neðan {{PLURAL:$1|er '''1''' breyting|eru síðustu '''$1''' breytingar}} síðast {{PLURAL:$2|liðinn dag|liðna '''$2''' daga}}, frá $5, $4.",
 'rcnotefrom'                        => "Að neðan eru breytingar síðan '''$2''' (allt að '''$1''' sýndar).",
@@ -1315,7 +1311,6 @@ Gjörðu svo vel og endurnefndu skrána og hladdu henni inn aftur.',
 'large-file'             => 'Það er mælt með að skrár séu ekki stærri en $1; þessi skrá er $2.',
 'fileexists'             => "Skrá með þessu nafni er þegar til, skoðaðu '''<tt>[[:$1]]</tt>''' ef þú ert óviss um hvort þú viljir breyta henni, ekki verður skrifað yfir gömlu skránna hlaðiru inn nýrri með sama nafni heldur verður núverandi útgáfa geymd í útgáfusögu.
 [[$1|thumb]]",
-'successfulupload'       => 'Innhlaðning tókst',
 'uploadwarning'          => 'Aðvörun',
 'savefile'               => 'Vista',
 'uploadedimage'          => 'hlóð inn „[[$1]]“',
@@ -1327,6 +1322,7 @@ Gjörðu svo vel og endurnefndu skrána og hladdu henni inn aftur.',
 'upload-maxfilesize'     => 'Hámarks skráarstærð: $1',
 'watchthisupload'        => 'Vakta þessa skrá',
 'filewasdeleted'         => 'Skrá af sama nafni hefur áður verið hlaðið inn og síðan eytt. Þú ættir að athuga $1 áður en þú hleður skránni inn.',
+'upload-success-subj'    => 'Innhlaðning tókst',
 
 'upload-proto-error'  => 'Vitlaus samskiptaregla',
 'upload-file-error'   => 'Innri villa',
@@ -1440,7 +1436,6 @@ Hér fyrir neðan er afrit af [$2 skráarsíðunni þar].',
 'statistics-edits-average'     => 'Meðal breytingafjöldi á síðu',
 'statistics-views-total'       => 'Uppflettingar alls',
 'statistics-views-peredit'     => 'Uppflettingar á hverja breytingu (meðaltal)',
-'statistics-jobqueue'          => 'Lengd [http://www.mediawiki.org/wiki/Manual:Job_queue vinnuraðar]',
 'statistics-users'             => 'Skráðir  [[Special:ListUsers|notendur]]',
 'statistics-users-active'      => 'Virkir notendur',
 'statistics-users-active-desc' => 'Notendur sem hafa framkvæmt aðgerð {{PLURAL:$1|síðastliðin dag|síðastliðna $1 daga}}',
@@ -1614,7 +1609,6 @@ Sjá einnig [[Special:WantedCategories|eftirsótta flokka]].',
 # Watchlist
 'watchlist'            => 'Vaktlistinn',
 'mywatchlist'          => 'Vaktlistinn',
-'watchlistfor'         => "(fyrir '''$1''')",
 'nowatchlist'          => 'Vaktlistinn er tómur.',
 'watchlistanontext'    => 'Vinsamlegast $1 til að skoða eða breyta vaktlistanum þínum.',
 'watchnologin'         => 'Óinnskráð(ur)',
@@ -1861,7 +1855,6 @@ Sjá [[Special:IPBlockList|bannaðar notendur og vistföng]] fyrir yfirlit yfir 
 'ipb-edit-dropdown'           => 'Breyta ástæðu fyrir banni',
 'ipb-unblock-addr'            => 'Afbanna $1',
 'ipb-unblock'                 => 'Afbanna notanda eða vistfang',
-'ipb-blocklist-addr'          => 'Núverandi bönn fyrir $1',
 'ipb-blocklist'               => 'Sjá núverandi bönn',
 'ipb-blocklist-contribs'      => 'Framlög fyrir $1',
 'unblockip'                   => 'Afbanna notanda',
@@ -2190,10 +2183,10 @@ Allir innflutningar eru skráð í [[Special:Log/import|innflutningsskránna]].'
 'imagemaxsize'         => 'Takmarka myndir á skráarlýsingasíðum við:',
 'thumbsize'            => 'Stærð smámynda:',
 'widthheightpage'      => '$1×$2, $3 {{PLURAL:$3|síða|síður}}',
-'file-info'            => '(stærð skráar: $1, MIME-tegund: $2)',
-'file-info-size'       => '($1 × $2 dílar, stærð skráar: $3, MIME-gerð: $4)',
+'file-info'            => 'stærð skráar: $1, MIME-tegund: $2',
+'file-info-size'       => '$1 × $2 dílar, stærð skráar: $3, MIME-gerð: $4',
 'file-nohires'         => '<small>Það er engin hærri upplausn til.</small>',
-'svg-long-desc'        => '(SVG-skrá, að nafni til $1 × $2 dílar, skráarstærð: $3)',
+'svg-long-desc'        => 'SVG-skrá, að nafni til $1 × $2 dílar, skráarstærð: $3',
 'show-big-image'       => 'Mesta upplausn',
 'show-big-image-thumb' => '<small>Myndin er í upplausninni $1 × $2 </small>',
 
@@ -2294,9 +2287,8 @@ Ef skránni hefur verið breytt, kann að vera að einhverjar upplýsingar eigi 
 'confirmemail'             => 'Staðfesta netfang',
 'confirmemail_noemail'     => 'Þú hefur ekki gefið upp gilt netfang í [[Special:Preferences|notandastillingum]] þínum.',
 'confirmemail_text'        => '{{SITENAME}} krefst þess að þú staðfestir netfangið þitt áður en að þú getur notað eiginleika tengt því. Smelltu á hnappinn að neðan til að fá staðfestingarpóst sendan á netfangið. Pósturinn mun innihalda tengil með kóða í sér; opnaðu tengilinn í vafranum til að staðfesta að netfangið sé rétt.',
-'confirmemail_pending'     => 'Þú hefur nú þegar fengið staðfestingarpóst sendann; ef það er stutt síðan
-þú bjóst til aðganginn þinn, væri ráð að býða í nokkrar mínútur eftir póstinum
-áður en að þú byður um að fá nýjan kóða sendann.',
+'confirmemail_pending'     => 'Þér hefur þegar verið sendur staðfestingarkóði á netfang þitt;
+ef þú varst að enda við að búa til nýtt notendanafn skaltu bíða í nokkrar mínútur og sjá hvort staðfestingarkóðinn berist þér ekki í pósti á næstunni áður en þú reynir aftur að fá nýjan staðfestingarkóða.',
 'confirmemail_send'        => 'Senda staðfestingarkóða með tölvupósti',
 'confirmemail_sent'        => 'Staðfestingartölvupóstur sendur.',
 'confirmemail_oncreate'    => 'Staðfestingarkóði hefur verði sendur á netfangið.

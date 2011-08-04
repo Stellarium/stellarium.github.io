@@ -9,10 +9,11 @@
  *
  * @author Arastein
  * @author Asoxor
+ * @author George Animal
  * @author Marmzok
  */
 
-$fallback = 'ckb-arab';
+$fallback = 'ckb';
 
 $digitTransformTable = array(
 	'0' => '٠', # &#x0660;
@@ -30,6 +31,8 @@ $digitTransformTable = array(
 );
 
 $messages = array(
+'underline-never' => 'Qet na',
+
 # Dates
 'january' => 'کانوونی دووەم',
 

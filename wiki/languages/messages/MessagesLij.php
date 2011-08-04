@@ -9,6 +9,7 @@
  *
  * @author Dario vet
  * @author Dedee
+ * @author Gastaz
  * @author Malafaya
  * @author Urhixidur
  * @author ZeneizeForesto
@@ -124,16 +125,25 @@ $specialPageAliases = array(
 
 $messages = array(
 # User preference toggles
-'tog-underline'            => 'Sottolineâ i collegamenti',
-'tog-justify'              => 'Alliniamento di paragrafi giustificòu',
-'tog-showtoolbar'          => 'Fâ vedde a barra de strumenti de modìffica (con JavaScript)',
-'tog-rememberpassword'     => "Arregorda a mæ paròlla d'ordine",
-'tog-editwidth'            => 'Spaçio pe cangiâ a larghessa pinn-a',
-'tog-previewontop'         => "Veddi l'anteprimma de d'äto a-o spaçio pe cangiâ",
-'tog-previewonfirst'       => "Veddi l'anteprimma a-o primmo cangiamento",
-'tog-enotifwatchlistpages' => "Fammelo savéi via e-mail quande 'na paggina inta mæ lista in osservassion a va cangiaa.",
-'tog-enotifusertalkpages'  => "Màndime un messaggio e-mail se gh'é de-e modìffiche inta pagina de discuscion da mæ pagina d'utente.",
-'tog-showhiddencats'       => 'Fa vedde e categorîe ascose',
+'tog-underline'               => 'Sottolineâ i collegamenti',
+'tog-highlightbroken'         => 'Evidensia <a href="" class="new">coscì</a> i collegamenti a-e paggine inexisténti (se disattivou: coscì<a href="" class="internal">?</a>)',
+'tog-justify'                 => 'Alliniamento di paragrafi giustificòu',
+'tog-hideminor'               => 'asconde e modifiche minori inte ùrtime modifiche',
+'tog-hidepatrolled'           => 'Ascondi e modifiche verifichè inte ùrtime modifiche',
+'tog-newpageshidepatrolled'   => 'Ascondi e paggine verifiché da-o elenco de paggine ciù reçenti',
+'tog-extendwatchlist'         => 'mostrâ tùtte e modifiche a-i òsserve speciali',
+'tog-usenewrc'                => 'Usâ e ùrtime modifiche avansê (serve Javascript)',
+'tog-numberheadings'          => 'Nùmeraçion aotomàtica di tìtoli de seçión',
+'tog-showtoolbar'             => 'Fâ vedde a barra de strumenti de modìffica (con JavaScript)',
+'tog-editondblclick'          => 'Modifica e paggine co-o dópio clic (serve Javascrpt)',
+'tog-editsection'             => 'Modifica e seçión co-o colegamento [modifica]',
+'tog-editsectiononrightclick' => 'Modifica e seçión co-o clic destro in sciô tìtolo (serve Javascipt)',
+'tog-rememberpassword'        => "Arregorda a mæ paròlla d'ordine (a-o màscimo pe $1 {{PLURAL:$1|day|days}})",
+'tog-previewontop'            => "Veddi l'anteprimma de d'äto a-o spaçio pe cangiâ",
+'tog-previewonfirst'          => "Veddi l'anteprimma a-o primmo cangiamento",
+'tog-enotifwatchlistpages'    => "Fammelo savéi via e-mail quande 'na paggina inta mæ lista in osservassion a va cangiaa.",
+'tog-enotifusertalkpages'     => "Màndime un messaggio e-mail se gh'é de-e modìffiche inta pagina de discuscion da mæ pagina d'utente.",
+'tog-showhiddencats'          => 'Fa vedde e categorîe ascose',
 
 'underline-always' => 'Sempre',
 'underline-never'  => 'Mâi',
@@ -343,7 +353,7 @@ O to account o l'è stæto creoö. Non te ascordà de cangiâ e toe preferençe 
 'yourname'                   => 'Nomme',
 'yourpassword'               => 'Pòula segretta:',
 'yourpasswordagain'          => 'Ri-scriï a pòula segretta',
-'remembermypassword'         => "Arregordâ a mæ paròlla d'ordine",
+'remembermypassword'         => "Arregordâ a mæ paròlla d'ordine (for a maximum of $1 {{PLURAL:$1|day|days}})",
 'yourdomainname'             => 'Indirisso do scito:',
 'login'                      => 'Intra',
 'nav-login-createaccount'    => 'Intra / Registrate',
@@ -373,7 +383,7 @@ A dêve contegnî mìnimo $1 caratteri e esse diverza da-o teu nómme utente.",
 'mailmypassword'             => "Inviâ paròlla d'ordine (password) via e-mail",
 'passwordremindertitle'      => "Servissio Password Reminder (nêuva paròlla d'ordine temporannia) de {{SITENAME}}",
 'passwordremindertext'       => "Quarchedûn (probabilmente ti, con indirisso IP \$1) o g'ha domandòu l'invîo de 'na nêuva paròlla d'ordine pe l'accesso a {{SITENAME}} (\$4).
-A paròlla d'ordine pe l'ûtente \"\$2\" a l'è stæta impostâa a \"\$3\". 
+A paròlla d'ordine pe l'ûtente \"\$2\" a l'è stæta impostâa a \"\$3\".
 O se conseggia de fâ l'accesso quanto primma e cangiâ a paròlla d'ordine immediatamente.
 Se no ti è stæto ti a fâ 'sta domanda, oppûre se ti g'hæ ritrovòu a têu paròlla d'ordine e no ti vêu cangiâla ciû, ti pêu ignorâ 'sto messaggio e andâ avanti ûsando a vegia paròlla d'ordine.",
 'noemail'                    => 'No gh\'è nisciûn indirisso e-mail registròu pe l\'ûtente "$1".',
@@ -449,7 +459,7 @@ A raxon dæta a l'è stæta:
 * Inissio do blòcco: \$8
 * Fin do blòcco: \$6
 
-Ti pêu contattâ \$1 ou 'n âtro 
+Ti pêu contattâ \$1 ou 'n âtro
 [[{{MediaWiki:Grouppage-sysop}}|amministratô]] pe parlâ inscio blòcco.
 
 Dagghe a mente a che no ti pêu ûsâ o comando \"manda na littia elettronega a sto utente\" se non ti g'hæ 'n indirisso de posta elettronega registroö in te têu [[Special:Preferences|preferense]] e se o no l'è stæto bloccòu ascì.
@@ -479,8 +489,6 @@ Se o s'ha intròu inte 'sto collegamento pe sbàllio, o basta sciaccâ '''Inderr
 Se no ti veu che i testi teu pêuan esse modificæ da quarchedùn sensa limitaçioìn, no mandâli a {{SITENAME}}.<br />
 Inviando o testo ti diciâri, sott'a teu responsabilitæ, ch'o l'é stæto scrîto da ti personalmente oppure ch'o l'é stæto piggiòu da 'na fonte de pùbrico domìnio òu anàlogamente lìbea.<br />
 '''NO INVIÂ MATERIÂLE COVERTO DA DRÎTI D'AUTÔ SENSA OUTORIZAÇION!'''",
-'longpagewarning'            => "'''ATTENSION: 'Sta paggina chì a g'ha $1 kilobyte; çerti browser porieivan avei di problemmi inta modiffica de-e paggine che s'avvixinn-an o che ecceddan i 32 kB.
-Pe piaxei conscidera l'opportûnitæ de soddividde a paggina in sessioîn ciû piccinn-e.'''",
 'templatesused'              => "Template dêuviæ inte 'sta paggina:",
 'templatesusedpreview'       => "Template dêuviæ inte 'st'anteprimma:",
 'template-protected'         => '(protezûo)',
@@ -773,7 +781,6 @@ Ti te peu strinza a vista se ti te çerni un tipo de registro, un nomme de un ut
 # Watchlist
 'watchlist'         => 'A mæ lista in osservassion',
 'mywatchlist'       => 'Lista in osservaçion',
-'watchlistfor'      => "(pe '''$1''')",
 'watchnologin'      => "Non ti t'æ entroö",
 'watchnologintext'  => 'Devvi [[Special:UserLogin|entrâ]] pe cangiâ a toa lista in osservaçion.',
 'addedwatch'        => 'Azzonto a a lista in osservaçion',
@@ -813,7 +820,7 @@ Ti te peu strinza a vista se ti te çerni un tipo de registro, un nomme de un ut
 'rollbacklink'  => 'rollback',
 'cantrollback'  => "O no se pêu tornâ inderê; l'ûtente ch'à fæto quelle modiffiche o l'è stæto l'ûnico contribûente.",
 'alreadyrolled' => "O no se peû tornâ inderê a-i ûrtimi cangiamenti da pagina [[:$1]]
-da [[User:$2|$2]] ([[User talk:$2|Ciæti]]); quarche âtro 
+da [[User:$2|$2]] ([[User talk:$2|Ciæti]]); quarche âtro
 o l'à cangiâ ò o l'è zà tornòu inderê.
 L'ûrtimo cangiamento o ghe l'à fæto [[User:$3|$3]] ([[User talk:$3|Ciæti]]).",
 'revertpage'    => 'E modificaçioin de [[Special:Contributions/$2|$2]] ([[User talk:$2|Ciæti]]) son stæte eliminæ; riportæ a verscion de primma de [[User:$1|$1]]',
@@ -1034,9 +1041,9 @@ Inte 'sti câxi, se o se vêu fâ coscì, o se deive stramûâ ò azzonze manual
 
 # Media information
 'thumbsize'            => 'Dimescion da a imàginetta:',
-'file-info-size'       => '($1 × $2 pixel, dimenscioîn: $3, tippo MIME: $4)',
+'file-info-size'       => '$1 × $2 pixel, dimenscioîn: $3, tippo MIME: $4',
 'file-nohires'         => '<small>No ghe son verscioîn a resolûxon ciû ærta.</small>',
-'svg-long-desc'        => "(archivvio in formato SVG, dimensioîn nominâli $1 × $2 pixel, dimension de l'archivvio: $3)",
+'svg-long-desc'        => "archivvio in formato SVG, dimensioîn nominâli $1 × $2 pixel, dimension de l'archivvio: $3",
 'show-big-image'       => "Verscion d'ærta resolûxon",
 'show-big-image-thumb' => "<small>Dimensioîn de 'st'anteprimma: $1 × $2 pixel</small>",
 

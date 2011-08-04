@@ -29,8 +29,7 @@ $messages = array(
 'tog-editsection'             => 'Changer une section avec les liens [changer]',
 'tog-editsectiononrightclick' => 'Changer une section en faisant un clic droit sus son nom (JavaScript)',
 'tog-showtoc'                 => 'Montrer la table des matières (pour les pages avec plus que 3 têtes)',
-'tog-rememberpassword'        => 'Garder mon mot de passe',
-'tog-editwidth'               => 'Montrer la fenêtre des changements en pleine largeur',
+'tog-rememberpassword'        => 'Garder mon mot de passe (for a maximum of $1 {{PLURAL:$1|day|days}})',
 'tog-watchcreations'          => 'Additionner les pages que je crée à ma liste des pages guettées',
 'tog-watchdefault'            => 'Additionner les pages que je change à ma liste des pages guettées',
 'tog-watchmoves'              => 'Additionner les pages que je renomme à ma liste des pages guettées',
@@ -165,8 +164,8 @@ $messages = array(
 'print'             => 'Imprimer',
 'edit'              => 'Changer',
 'editthispage'      => 'Faire un changement',
-'delete'            => 'Ôter',
-'deletethispage'    => 'Ôter cette page',
+'delete'            => 'Supprimer',
+'deletethispage'    => 'Supprimer cette page',
 'undelete_short'    => 'Rétablir {{PLURAL:$1|un changement|$1 changements}}',
 'protect'           => 'Protéger',
 'protect_change'    => 'Changer le niveau de protection',
@@ -279,7 +278,7 @@ MySQL a retourné l\'erreur "$3: $4".',
 'readonly'             => "La base d'information est barrée.",
 'enterlockreason'      => "Écrire une raison pour le barrage avec un temps estimé
 d'équand le barrage va être ôté.",
-'readonlytext'         => "À présent, la base d'information est barrée aux nouveaux changements, peut-être pour le soutien habituel de la base d'information, et ça va retourner à normal t'à l'heure.  
+'readonlytext'         => "À présent, la base d'information est barrée aux nouveaux changements, peut-être pour le soutien habituel de la base d'information, et ça va retourner à normal t'à l'heure.
 
 L'administrateur qui l'a barrée a donné cette explication: $1",
 'readonly_lag'         => "La base d'information s'a barré pendant que les serveurs de la base d'information rapprochont le maître.",
@@ -327,7 +326,7 @@ Votre compte a été créé.  Oubliez pas de changer votre réglage sus {{SITENA
 'yourname'                   => "Nom d'useur:",
 'yourpassword'               => 'Mot de passe:',
 'yourpasswordagain'          => 'Mot de passe encore:',
-'remembermypassword'         => 'Se rappeler de mon mot de passe:',
+'remembermypassword'         => 'Se rappeler de mon mot de passe (for a maximum of $1 {{PLURAL:$1|day|days}})',
 'yourdomainname'             => 'Votre domaine:',
 'externaldberror'            => "Soit y avait une erreur avec la base d'information de certification extérieur, soit vous avez pas la permission de renouveler votre compte extérieur.",
 'login'                      => 'Connecter',
@@ -428,19 +427,19 @@ Si quèqu\'une d\'autre a demandé ce mot de passe ou si vous vous rappelez de v
 'blockedtitle'               => "L'useur est bloqué",
 'blockedtext'                => "'''Votre compte d'useur (ou votre adresse IP) est bloqué.'''
 
-Le blocage a été fait par $1.  La raison donnée est ''$2''.  
+Le blocage a été fait par $1.  La raison donnée est ''$2''.
 
 * La date du blocage: $8
 * Le blocage va être ôté: $6
-* L'useur bloqué: $7  
+* L'useur bloqué: $7
 
 Vous pouvez contacter $1 ou un autre [[{{MediaWiki:Grouppage-sysop}}|administrateur]] pour discuter le blocage.  Vous pouvez pas user la fonction 'envoyer un e-mail à cet useur' hormis que vous avez une adresse e-mail confirmée dans votre [[Special:Preferences|réglage de compte]] et vous avez la permission de l'user.  Votre adresse IP est $3, et le numéro du blocage est #$5.  Mettez donc cette information dans toutes vos demandes.",
-'autoblockedtext'            => "Le système a bloqué votre adresse IP parce qu'alle a été usée par un autre useur qu'était bloqué par $1.  
+'autoblockedtext'            => "Le système a bloqué votre adresse IP parce qu'alle a été usée par un autre useur qu'était bloqué par $1.
 
-La raison donnée est: ''$2''  
+La raison donnée est: ''$2''
 
 * La date du blocage: $8
-* Le blocage va être ôté: $6  
+* Le blocage va être ôté: $6
 
 Vous pouvez contacter $1 ou un autre [[{{MediaWiki:Grouppage-sysop}}|administrateur]] pour discuter le blocage.
 
@@ -460,8 +459,8 @@ Votre numéro de blocage est #$5.  Mettez donc cette information dans toutes vos
 'accmailtitle'               => 'Mot de passe envoyé.',
 'accmailtext'                => 'Le mot de passe pour "$1" a été envoyé à $2.',
 'newarticle'                 => '(Nouveau)',
-'newarticletext'             => "Vous avez suit un lien à une page qu'existe pas encore. 
-Pour créer la page, mettez des mots dans la boëte en bas (voyez la [[{{MediaWiki:Helppage}}|page d'aide]] pour plus d'information). 
+'newarticletext'             => "Vous avez suit un lien à une page qu'existe pas encore.
+Pour créer la page, mettez des mots dans la boëte en bas (voyez la [[{{MediaWiki:Helppage}}|page d'aide]] pour plus d'information).
 Si vous êtes ici par erreur, cliquez le bouton \"back\" sus votre navigateur.",
 'anontalkpagetext'           => "----''Ça ici, c'est la page de discussion pour un useur sans nom qu'a pas encore créé un compte ou qui l'use pas.  Ça fait, il faut user l'adresse IP numérique pour l'identifier.  Une adresse comme ça pourrait être usée par plusieurs useurs.  Si vous êtes un useur sans nom et vous croyez que des messages sans rapport ont été envoyés à vous, [[Special:UserLogin|créer un compte ou connecter]] pour empêcher la confusion avec des autres useurs sans nom dans l'avenir.''",
 'noarticletext'              => 'À présent, y a pas de texte sus cette page.
@@ -472,13 +471,13 @@ Vous pouvez [[Special:Search/{{PAGENAME}}|charcher pour le titre de cette page]]
 'usercsspreview'             => "'''Rappelez-vous que vous êtes après regarder votre feuille CSS qu'a pas encore été sauvée!'''",
 'userjspreview'              => "'''Rappelez-vous que vous êtes juste après regarder ou tester votre code JavaScript qu'a pas encore été sauvé!'''",
 'userinvalidcssjstitle'      => "'''Attention:''' Y a pas de style \"\$1\".  Rappelez-vous qu'il faut user les petites lettres dans le sujet des pages personnelles avec les extensions .css et .js.
-Exemple:  {{ns:user}}:Foo/monobook.css (bon)  {{ns:user}}:Foo/Monobook.css (mauvais)",
+Exemple:  {{ns:user}}:Foo/vector.css (bon)  {{ns:user}}:Foo/Vector.css (mauvais)",
 'updated'                    => '(Renouvelé)',
 'note'                       => "'''Notez:'''",
 'previewnote'                => "'''Ça ici, c'est juste une vue d'avance; les changements ont pas encore été sauvés!'''",
 'previewconflict'            => "Cette vue d'avance montre le texte qu'est dans la boëte de changements en haut comme ça serait si vous choisirait de le sauver.",
 'session_fail_preview'       => "'''Ça fait de la peine!  Votre changement pouvait pas être sauvé à cause d'une perte d'information de la session.  Assayez donc encore.  Si ça travaille pas toujours, assayez de déconnecter et reconnecter.'''",
-'session_fail_preview_html'  => "'''Ça fait de la peine!  Votre changement pouvait pas être sauvé à cause d'une perte d'information de votre session.''' 
+'session_fail_preview_html'  => "'''Ça fait de la peine!  Votre changement pouvait pas être sauvé à cause d'une perte d'information de votre session.'''
 
 ''La vue d'avance est cachée pour empêcher les attaques JavaScript parce que ce wiki use le HTML brute.''
 
@@ -492,7 +491,7 @@ Exemple:  {{ns:user}}:Foo/monobook.css (bon)  {{ns:user}}:Foo/Monobook.css (mauv
 La boëtte de changements en haut contient le texte de la page comme c'est asteur.
 Vos changements sont montrés dans la boëtte de changements en bas.
 Il foudra que vous mettez vos changements dans le texte qu'est là asteur.
-'''Juste''' le texte dans la boëtte de changements en haut va être sauvé quand vous pèsez \"Sauvez\".",
+'''Juste''' le texte dans la boëtte de changements en haut va être sauvé quand vous pèsez \"{{int:savearticle}}\".",
 'yourtext'                   => 'Votre texte',
 'storedversion'              => 'Version sauvée',
 'nonunicodebrowser'          => "'''ATTENTION: Votre navigateur supporte pas les caractères unicode.  Une solution de peu de durée a été trouvée pour que vous peuvez changer des articles sans problèmes.  Les caractères qui sont pas ASCII va apparaître dans la boëte de changements comme des codes hexadécimaux.'''",
@@ -500,7 +499,6 @@ Il foudra que vous mettez vos changements dans le texte qu'est là asteur.
 'yourdiff'                   => 'Différences',
 'copyrightwarning'           => "Notez donc que toutes les contributions à {{SITENAME}} sont considérées d'être libérées sous le $2 (voyez $1 pour les détails).  Si vous voulez pas que votre écriture soye changée sans pitié et redistribuée à volonté, mettez donc pas votre écriture ici.<br />  Vous êtes après nous promettre aussi que vous l'avez écrit vous-même ou que vous l'avez copié du domain public ou un autre ressource libre. ''' METTEZ PAS DE L'OUVRAGE SOUS COPYRIGHT ICI SANS PERMISSION!'''",
 'copyrightwarning2'          => "Notez donc que toutes les contributions à {{SITENAME}} pourriont être changées ou ôtées par des autres useurs.  Si vous voulez pas que votre écriture soye changée sans pitié, mettez donc pas votre écriture ici.<br />  Vous êtes après nous promettre aussi que vous l'avez écrit vous-même ou que vous l'avez copié du domain public ou un autre ressource libre (voyez $1 pour les détails). ''' METTEZ PAS DE L'OUVRAGE SOUS COPYRIGHT ICI SANS PERMISSION!'''",
-'longpagewarning'            => "'''ATTENTION: Cette page a une taille de $1 kilobytes; ça pourrait créer des problèmes quand un useur assaye de changer une page qu'a une taille qu'est plus grande que 32 kb.  Considérez donc de couper la page en morceaux plus courts.'''",
 'longpageerror'              => "'''ERREUR: Le texte que vous avec mis a une taille de $1 kilobytes qu'est plus grande que le maximum de $2 kilobytes.  Ça peut pas être sauvé.'''",
 'readonlywarning'            => "'''ATTENTION: La base d'information a été barrée, ça fait, vous serez pas capable de sauver votres changements asteur.  Vous ferait mieux de copier et coller le texte dans un dossier texte et le sauver pour plus tard.'''",
 'protectedpagewarning'       => "'''ATTENTION: Cette page a été barrée pour que ça peuve être changée juste par les administrateurs.'''",
@@ -517,15 +515,15 @@ Il foudra que vous mettez vos changements dans le texte qu'est là asteur.
 'nocreate-loggedin'          => 'Vous avez pas la permission de créer des nouvelles pages.',
 'permissionserrors'          => 'Erreur de permissions',
 'permissionserrorstext'      => 'Vous avez pas la permission de faire ça pour {{PLURAL:$1|cette raison|ces raisons}}:',
-'recreate-moveddeleted-warn' => "'''Attention: Vous êtes après recréer une page qu'a déjà été ôtée.'''  
+'recreate-moveddeleted-warn' => "'''Attention: Vous êtes après recréer une page qu'a déjà été ôtée.'''
 
-Vous devrait considérer si c'est à propos de continuer à changer cette page.  
+Vous devrait considérer si c'est à propos de continuer à changer cette page.
 Les notes d'ôtage pour cette page sont données ici pour vous aider:",
 
 # "Undo" feature
 'undo-success' => "Le changement peut être renversé.  Regardez donc la comparaison en bas pour être sûr que c'est comme vous voulez, et puis sauvez les changements en bas pour finir le renversage du changement.",
 'undo-failure' => "Le changement pouvait pas être renversé à cause d'une dispute de changements.",
-'undo-summary' => 'Ôter le changement $1 de [[Special:Contributions/$2|$2]] ([[User talk:$2|Discussion]])',
+'undo-summary' => 'Défaire la révision $1 par [[Special:Contributions/$2|$2]] ([[User talk:$2|Discussion]])',
 
 # Account creation failure
 'cantcreateaccounttitle' => 'Impossible de créer le compte',
@@ -565,7 +563,7 @@ Assayez de [[Special:Search|charcher dans le wiki]] pour des nouvelles pages.',
 'rev-deleted-text-permission' => "Cette page a été ôtée de la liste des pages publiques.  Il pourrait y avoir des détails dans les [{{fullurl:{{#Special:Log}}/suppress|page={{FULLPAGENAMEE}}}} notes d'ôtage].",
 'rev-deleted-text-view'       => "Cette version de la page a été ôtée de la liste des pages publiques.  Comme administrateur sus ce wiki vous pouvez le voir; il pourrait y avoir des détails dans les [{{fullurl:{{#Special:Log}}/suppress|page={{FULLPAGENAMEE}}}} notes d'ôtage].",
 'rev-delundel'                => 'montrer/cacher',
-'revisiondelete'              => 'Ôter/rétablir les changements',
+'revisiondelete'              => 'Supprimer/rétablir les changements',
 'revdelete-nooldid-title'     => 'Aucun changement choisi',
 'revdelete-nooldid-text'      => 'Vous avez pas choisi le ou les changement(s) pour user cette fonction.',
 'revdelete-selected'          => "'''{{PLURAL:$2|Changement choisi|Changements choisis}} de [[:$1]]'''",
@@ -580,8 +578,8 @@ Des autres administrateurs sus ce wiki ont la permission de voir et de rétablir
 'revdelete-hide-comment'      => 'Cacher la remarque du changement',
 'revdelete-hide-user'         => "Cacher le nom ou l'adresse IP de l'useur",
 'revdelete-hide-restricted'   => 'Appliquer ces restrictions aux administrateurs et les autres useurs',
-'revdelete-suppress'          => "Ôter de l'information des administrateurs et les autres useurs",
-'revdelete-unsuppress'        => 'Ôter les restrictions des versions rétablies',
+'revdelete-suppress'          => 'Supprimer les données des administrateurs ainsi que celles des autres utilisateurs',
+'revdelete-unsuppress'        => 'Enlever les restrictions des versions rétablies',
 'revdelete-log'               => 'Raison:',
 'revdelete-submit'            => 'Appliquer à la version choisie',
 'revdelete-logentry'          => 'La visibilité pour la version a été changée pour [[$1]]',

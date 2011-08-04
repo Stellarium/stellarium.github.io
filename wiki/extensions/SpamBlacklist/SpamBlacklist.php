@@ -12,7 +12,6 @@ $wgExtensionCredits['other'][] = array(
 	'name'           => 'SpamBlacklist',
 	'author'         => 'Tim Starling',
 	'url'            => 'http://www.mediawiki.org/wiki/Extension:SpamBlacklist',
-	'description'    => 'Regex-based anti-spam tool',
 	'descriptionmsg' => 'spam-blacklist-desc',
 );
 
@@ -42,13 +41,6 @@ $wgHooks['ArticleSaveComplete'][] = 'wfSpamBlacklistArticleSave';
 $wgHooks['APIEditBeforeSave'][] = 'wfSpamBlacklistFilterAPIEditBeforeSave';
 
 /**
- * Internationalization messages
- */
-function wfSpamBlacklistLoadMessages() {
-	wfLoadExtensionMessages('SpamBlackList');
-}
-
-/**
  * Get an instance of SpamBlacklist and do some first-call initialisation.
  * All actual functionality is implemented in that object
  */
@@ -62,7 +54,6 @@ function wfSpamBlacklistObject() {
 			$spamObj->files = $wgSpamBlacklistFiles;
 		}
 		$spamObj->previousFilter = $wgPreSpamFilterCallback;
-		wfSpamBlacklistLoadMessages();
 	}
 	return $spamObj;
 }
@@ -73,7 +64,9 @@ function wfSpamBlacklistObject() {
 function wfSpamBlacklistFilter( &$title, $text, $section, &$hookErr, $editSummary ) {
 	$spamObj = wfSpamBlacklistObject();
 	$ret = $spamObj->filter( $title, $text, $section, $editSummary );
-	if ( $ret !== false ) EditPage::spamPage( $ret );
+	if ( $ret !== false ){
+		EditPage::spamPage( $ret );
+	}
 	return ( $ret !== false );
 }
 
@@ -91,7 +84,9 @@ function wfSpamBlacklistFilterMerged( $editPage, $text, &$hookErr, $editSummary 
 	$spamObj = wfSpamBlacklistObject();
 	$title = $editPage->mArticle->getTitle();
 	$ret = $spamObj->filter( $title, $text, '', $editSummary, $editPage );
-	if ( $ret !== false ) $editPage->spamPage( $ret );
+	if ( $ret !== false ){
+		$editPage->spamPageWithContent( $ret );
+	}
 	// Return convention for hooks is the inverse of $wgFilterCallback
 	return ( $ret === false );
 }

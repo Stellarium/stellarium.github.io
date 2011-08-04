@@ -27,7 +27,7 @@ $namespaceNames = array(
 	NS_FILE_TALK        => 'Боомгин_туск_меткән',
 	NS_MEDIAWIKI        => 'MediaWiki',
 	NS_MEDIAWIKI_TALK   => 'MediaWiki_туск_меткән',
-	NS_TEMPLATE         => 'Зура',
+	NS_TEMPLATE         => 'Кевләр',
 	NS_TEMPLATE_TALK    => 'Зуран_туск_меткән',
 	NS_HELP             => 'Цәәлһлһн',
 	NS_HELP_TALK        => 'Цәәлһлһин_туск_меткән',
@@ -44,6 +44,7 @@ $namespaceAliases = array(
 	'Зург'                    => NS_FILE,
 	'Зургин_тускар_ухалвр'    => NS_FILE_TALK,
 	'MediaWiki_тускар_ухалвр' => NS_MEDIAWIKI_TALK,
+	'Зура'     => NS_TEMPLATE,
 	'Зуран_тускар_ухалвр'     => NS_TEMPLATE_TALK,
 	'Цəəлһлһн'                => NS_HELP,
 	'Цəəлһлһин_тускар_ухалвр' => NS_HELP_TALK,
@@ -67,8 +68,7 @@ $messages = array(
 'tog-editsection'             => '«Чиклх» заавр болвчн хүвд үзүлх',
 'tog-editsectiononrightclick' => 'Һарчига барун индстлһар хүвиг чиклх (JavaScript кергтә)',
 'tog-showtoc'                 => 'Һарг үзүлх (3 икәр толһата халхсд)',
-'tog-rememberpassword'        => 'Намаг эн тоолдврд тодлх',
-'tog-editwidth'               => 'Чикллһнә тег цуг харата болулх',
+'tog-rememberpassword'        => 'Намаг эн тоолдврт тодлх ($1 {{PLURAL:$1|өдрт|өдрмүдт}} икәр биш)',
 'tog-watchcreations'          => 'Би эврәннь немгдсн халхс шинҗллһнә сеткүлд немх',
 'tog-watchdefault'            => 'Би эврәннь чиклсн халхс шинҗллһнә сеткүлд немх',
 'tog-watchmoves'              => 'Би эврәннь көндсн халхс шинҗллһнә сеткүлд немх',
@@ -76,7 +76,7 @@ $messages = array(
 'tog-minordefault'            => 'Цуг сольлһн баһ чинртә таасн болулх',
 'tog-previewontop'            => 'Сольлһна теегин өмн хәләвр үзүлх',
 'tog-previewonfirst'          => 'Сольхла, хәләвр үзүлх.',
-'tog-nocache'                 => 'Халхин кешлһн унтрах',
+'tog-nocache'                 => 'Халхин кешлһн браузерт унтрах',
 'tog-enotifwatchlistpages'    => 'Шинҗлсн халх сольхла, нанд e-mail бичг йовулх',
 'tog-enotifusertalkpages'     => 'Мини ухалвр халх сольхла, нанд e-mail бичг йовулх',
 'tog-enotifminoredits'        => 'Баһ сольлһн болв чигн болхла, нанд e-mail бичг йовулх',
@@ -84,8 +84,8 @@ $messages = array(
 'tog-shownumberswatching'     => 'Тер халх шинҗлдг демнчнрин то үзүлх',
 'tog-oldsig'                  => 'Бәәдг тәвсн һарна хәләвр:',
 'tog-fancysig'                => 'Эврән тәвсн һарна бики темдлһн (авто заалһта уга)',
-'tog-externaleditor'          => 'Һаза чикллгч олзлх (һанцхн эрдмчнрт, тана тоолцврт шишлң көг кергтә)',
-'tog-externaldiff'            => 'Һаза йилһән үзүлдг програм олзлх (һанцхн эрдмчнрт, тана тоолцврт шишлң көг кергтә)',
+'tog-externaleditor'          => 'Һаза чикллгч олзлх (һанцхн эрдмчнрт, тана тоолцврт шишлң көг кергтә. [http://www.mediawiki.org/wiki/Manual:External_editors Дәкәд өггцн.])',
+'tog-externaldiff'            => 'Һаза йилһән үзүлдг програм олзлх (һанцхн эрдмчнрт, тана тоолцврт шишлң көг кергтә [http://www.mediawiki.org/wiki/Manual:External_editors Дәкәд өггцн.])',
 'tog-showjumplinks'           => 'Туслмҗ заалһуд «-д/-т һарх» йовулх',
 'tog-uselivepreview'          => 'Шамдһа хәләвр олзлх (JavaScript кергтә, амслһн)',
 'tog-forceeditsummary'        => 'Учр-утх хоосн бәәхлә медүлх',
@@ -212,31 +212,20 @@ $messages = array(
 'faqpage'        => 'Project:Юм би',
 
 # Vector skin
-'vector-action-addsection'   => 'Төриг немх',
-'vector-action-delete'       => 'Һарһх',
-'vector-action-move'         => 'Көндәх',
-'vector-action-protect'      => 'Харсх',
-'vector-action-undelete'     => 'Һарһх биш',
-'vector-action-unprotect'    => 'Харсх биш',
-'vector-namespace-category'  => 'Әәшл',
-'vector-namespace-help'      => 'Цәәлһлһнә халх',
-'vector-namespace-image'     => 'Боомг',
-'vector-namespace-main'      => 'Халх',
-'vector-namespace-media'     => 'Аһарин халх',
-'vector-namespace-mediawiki' => 'Зәңг',
-'vector-namespace-project'   => 'Төслин халх',
-'vector-namespace-special'   => 'Көдлхнә халх',
-'vector-namespace-talk'      => 'Меткән',
-'vector-namespace-template'  => 'Кевләр',
-'vector-namespace-user'      => 'Демнчна халх',
-'vector-view-create'         => 'Бүтәх',
-'vector-view-edit'           => 'Чиклх',
-'vector-view-history'        => 'Тууҗин хәләвр',
-'vector-view-view'           => 'Умшлһн',
-'vector-view-viewsource'     => 'Темдгллһнә хәләвр',
-'actions'                    => 'Үүлд',
-'namespaces'                 => 'Нернә ус',
-'variants'                   => 'Суңһлтс',
+'vector-action-addsection' => 'Төриг немх',
+'vector-action-delete'     => 'Һарһх',
+'vector-action-move'       => 'Көндәх',
+'vector-action-protect'    => 'Харсх',
+'vector-action-undelete'   => 'Һарһх биш',
+'vector-action-unprotect'  => 'Харсх биш',
+'vector-view-create'       => 'Бүтәх',
+'vector-view-edit'         => 'Чиклх',
+'vector-view-history'      => 'Тууҗин хәләвр',
+'vector-view-view'         => 'Умшлһн',
+'vector-view-viewsource'   => 'Темдгллһнә хәләвр',
+'actions'                  => 'Үүлд',
+'namespaces'               => 'Нернә ус',
+'variants'                 => 'Суңһлтс',
 
 'errorpagetitle'    => 'Эндү',
 'returnto'          => '«$1» тал хәрү ирх.',
@@ -289,7 +278,7 @@ $messages = array(
 'lastmodifiedat'    => 'Тер халх эн цагт сүл чикләд болҗ: $2, $1.',
 'viewcount'         => 'Тер халхд $1 {{PLURAL:$1|дәкҗ|дәкҗ|дәкҗ}} орҗ.',
 'protectedpage'     => 'Харссн халх',
-'jumpto'            => 'Тал ирх:',
+'jumpto'            => 'Ирх тал:',
 'jumptonavigation'  => 'Һазр медлһн',
 'jumptosearch'      => 'хәәлһн',
 'view-pool-error'   => 'Гемим тәвтн, ода серверүд хар-хату көдлмштә.
@@ -323,7 +312,7 @@ $1',
 'badaccess-groups' => 'Эн үүл һанцхн {{PLURAL:$2|багас|багудас}} $1 кеҗ чадна.',
 
 'versionrequired'     => "MediaWiki'н $1 һарц кергтә",
-'versionrequiredtext' => "Тер халх олзхар, MediaWiki'н $1 һарц кергтә. 
+'versionrequiredtext' => "Тер халх олзхар, MediaWiki'н $1 һарц кергтә.
 [[Special:Version|Һарца халх]] хәләтн.",
 
 'ok'                      => 'Тиим',
@@ -389,11 +378,11 @@ $1',
 «$1»
 «$2» функцас һарад бәәнә.
 Өггцнә баз «$3: $4» эндү хәрү өгв.',
-'missing-article'     => 'Өггцнә халһлд сурсн халхин бичг олв уга. Эн халх олх йоста: "$1" нертә $2. 
+'missing-article'     => 'Өггцнә халһлд сурсн халхин бичг олв уга. Эн халх олх йоста: "$1" нертә $2.
 
-Тер йовдл һарһсн халхна тууҗин өңгрсн заалһиг дахлһна арһ болад бәәнә. 
+Тер йовдл һарһсн халхна тууҗин өңгрсн заалһиг дахлһна арһ болад бәәнә.
 
-Эс гиҗ, тиим болх зөвтә, та заклһна теткүлин эндүһиг олв. 
+Эс гиҗ, тиим болх зөвтә, та заклһна теткүлин эндүһиг олв.
 Буйн болтха, URL заалһ бичәд, тер йовдлин туск [[Special:ListUsers/sysop|закрачд]] келтн.',
 'missingarticle-rev'  => '($1 тойгта халхна янз)',
 'missingarticle-diff' => '(йилһән: $1, $2)',
@@ -424,7 +413,7 @@ $1',
 'yourname'                => 'Демнчна нернь:',
 'yourpassword'            => 'Нууц үг:',
 'yourpasswordagain'       => 'Нууц үгиг давтн:',
-'remembermypassword'      => 'Мини нерн эн тоолдврд тодлх',
+'remembermypassword'      => 'Намаг эн тоолдврд тодлх ($1 {{PLURAL:$1|өдрт|өдрмүдт}} икәр биш)',
 'yourdomainname'          => 'Тана домен:',
 'login'                   => 'Орлһн',
 'nav-login-createaccount' => 'Харһх / бичгдлһн кех',
@@ -440,15 +429,15 @@ $1',
 'gotaccount'              => "Бичгдлһтә? '''$1'''.",
 'gotaccountlink'          => 'Харһтн',
 'createaccountmail'       => 'электрона улаһар',
-'userexists'              => 'Эн нер олзлдг юмн. 
+'userexists'              => 'Эн нер олзлдг юмн.
 Буйн болтха, талдан нернь автн.',
 'loginerror'              => 'Орлһна эндү',
 'createaccounterror'      => 'Бичгдлһиг бүтәх болшго: $1',
 'noname'                  => 'Та зөвтә демнчна нернь бичв уга.',
 'loginsuccesstitle'       => 'Йовудта орлһн',
 'loginsuccess'            => "''' Тадн ода «$1» нертә {{SITENAME}} гидг нерәдлһтә төсвд бәәнәт.'''",
-'nosuchuser'              => '«$1» гидг нерәдлһтә демнч бәәшго. 
-Демнчна нерт баһ болн ик үзгүд әдл биш болна. 
+'nosuchuser'              => '«$1» гидг нерәдлһтә демнч бәәшго.
+Демнчна нерт баһ болн ик үзгүд әдл биш болна.
 «<nowiki>$1</nowiki>» гидг нерәдлһтә демнч бәәшго.
 Бичлһиг шүүтн аль [[Special:UserLogin/signup|бигчдлһиг бүтәтн]].',
 'nosuchusershort'         => '«<nowiki>$1</nowiki>» гидг нерәдлһтә демнч бәәшго.
@@ -457,11 +446,12 @@ $1',
 'login-userblocked'       => 'Тер демнч бүслсн, харһад орҗ болшго бәәнә.',
 'wrongpassword'           => 'Та буру нууц үг бичв.
 Дәкәд арһ хәәтн.',
-'wrongpasswordempty'      => 'Та хоосн нууц үгиг бичв. 
+'wrongpasswordempty'      => 'Та хоосн нууц үгиг бичв.
 Дәкәд арһ хәәтн.',
 'passwordtooshort'        => 'Нууц үг баһар биш $1 {{PLURAL:$1|үзгтә|үзгүдта|үзгүдта}} бәәх йоста.',
 'password-name-match'     => 'Нууц үг денмнчна нертә әдл биш бәәх йоста.',
 'mailmypassword'          => 'Шин нууц үгиг E-mail бичгәр йовулҗ',
+'emailauthenticated'      => 'Тана e-mail хайг $2 өдрт, $3 цагт батлсн.',
 'accountcreated'          => 'Бичгдллһн бүтәв.',
 'loginlanguagelabel'      => 'Келн: $1',
 
@@ -512,16 +502,16 @@ $1',
 'loginreqlink'                     => 'харһх',
 'accmailtitle'                     => 'Нууц үгтә бичг йовулла.',
 'newarticle'                       => '(Шин)',
-'newarticletext'                   => "Та заалһиг дахад бәәдг уга халхд ирв. 
-Терүг бүтәҗ болхла, дораһар терзд бичтн (дәкәд өггцнә төлә [[{{MediaWiki:Helppage}}|тәәлвр]] хәләтн). 
+'newarticletext'                   => "Та заалһиг дахад бәәдг уга халхд ирв.
+Терүг бүтәҗ болхла, дораһар терзд бичтн (дәкәд өггцнә төлә [[{{MediaWiki:Helppage}}|тәәлвр]] хәләтн).
 Та эн һазрт эндүһәр бәәхлә, '''Хәрү''' дарциг дартн.",
 'noarticletext'                    => "Эн халх хоосн. Та [[Special:Search/{{PAGENAME}}|эн нернә сананд орулһна хәәх]] , <span class=\"plainlinks\">[{{fullurl:{{#Special:Log}}|page={{FULLPAGENAMEE}}}} бүртклин бичгт хәәх], аль '''[{{fullurl:{{FULLPAGENAME}}|action=edit}} бүтәх]'''</span>.",
 'clearyourcache'                   => "'''Оньган өгтн:''' Кесн сольлһн үзхәр, тана хәләлгчин кеш цеврүлтн: '''Mozilla / Firefox''': ''Ctrl+Shift+R'', '''IE:''' ''Ctrl+F5'', '''Safari''': ''Cmd+Shift+R'', '''Konqueror''': ''F5'', '''Opera''': ''Tools→Preferences'' менүһәс.",
-'usercssyoucanpreview'             => "'''Селвг:''' тана шин CSS боомг шүүҗ хадһлар, «Хәләвр» товч олзлтн.",
-'userjsyoucanpreview'              => "'''Селвг:''' тана шин JS боомг шүүҗ хадһлар, «Хәләвр» товч олзлтн.",
+'usercssyoucanpreview'             => "'''Селвг:''' тана шин CSS боомг шүүҗ хадһлар, «{{int:showpreview}}» товч олзлтн.",
+'userjsyoucanpreview'              => "'''Селвг:''' тана шин JS боомг шүүҗ хадһлар, «{{int:showpreview}}» товч олзлтн.",
 'usercsspreview'                   => "'''Тана CSS боомгин мел хәләвр бәәдг тускар тодлтн, тер ода чигн хадһлсн уга!'''",
 'userjspreview'                    => "'''Тана JavaScript боомгин мел хәләвр бәәдг тускар тодлтн. Тана сольлһн ода чигн хадһлсн уга!'''",
-'userinvalidcssjstitle'            => "'''Оньг өгтн:''' «$1» гидг нерәдлһтә хувцнь олҗ биш. Күүнә .css болн .js халхс һанцхн бичкн үзгүдтә бичсн кергтә, үлгүрнь «{{ns:user}}:Болвчн/monobook.css»; «{{ns:user}}:Болвчн/Monobook.css» - буру.",
+'userinvalidcssjstitle'            => "'''Оньг өгтн:''' «$1» гидг нерәдлһтә хувцнь олҗ биш. Күүнә .css болн .js халхс һанцхн бичкн үзгүдтә бичсн кергтә, үлгүрнь «{{ns:user}}:Болвчн/vector.css»; «{{ns:user}}:Болвчн/Vector.css» - буру.",
 'updated'                          => '(Шинрүлсн)',
 'note'                             => "'''Аҗгллһн:'''",
 'previewnote'                      => "'''Эн мел хәләвр бәәдг тускар тодлтн.'''
@@ -537,7 +527,7 @@ $1',
 'yourdiff'                         => 'Йилһән',
 'copyrightwarning'                 => "Буйн болтха, цуг өгүллһн {{SITENAME}} төлә $2 гидг закаһар кесн, тоолсн бәәдг тускар тодлтн (Дәкәд өггцд төлә $1 хәләтн).  Та тана бичсн чилклсн аль делгрңсн бәәҗ седхлә биш, эн ормд бичә бичтн.<br /> Дәкәд та маднд эн эврәнь бичсн, күмн әмтнә хазас аль цацу сул медснәс бәәдг үгән өгнәт. '''Зөвән авхла уга, харссн бичсн күүнә көдлмш бичә тәвтн!'''",
 'copyrightwarning2'                => "Буйн болтха, цуг өгүллһн {{SITENAME}} төлә чиклсн аль һарһсн бәәдг чадта тускар тодлтн.  Та тана бичсн чилклсн аль делгрңсн бәәҗ седхлә биш, эн ормд бичә бичтн.<br /> Дәкәд та маднд эн эврәнь бичсн, күмн әмтнә хазас аль цацу сул медснәс бәәдг үгән өгнәт ($1 хәләтн). '''Зөвән авхла уга, харссн бичсн күүнә көдлмш бичә тәвтн!'''",
-'semiprotectedpagewarning'         => "'''Оньган өгтн:''' тер халх харссн болҗана, тер учрар эниг бичгдлһтә демнчнр һанцхн чиклҗ чадна. 
+'semiprotectedpagewarning'         => "'''Оньган өгтн:''' тер халх харссн болҗана, тер учрар эниг бичгдлһтә демнчнр һанцхн чиклҗ чадна.
 Нөкд төлә, эн шидрә сеткүлин бичвр:",
 'templatesused'                    => 'Эн халхд олзлсн {{PLURAL:$1|зурас|зурас}}:',
 'templatesusedpreview'             => '{{PLURAL:$1|Кевләр|Кевләрмүд}} эн хәләврт олзлсн:',
@@ -650,7 +640,7 @@ $1',
 'prefs-rc'                    => 'Шидрә сольлһн',
 'prefs-watchlist'             => 'Шинҗллһнә сеткүл',
 'prefs-watchlist-days'        => 'Шинҗллһнә седкүлд үзүлсн ик гисн өдрин то:',
-'prefs-watchlist-days-max'    => '(ик гисн 7 хонг)',
+'prefs-watchlist-days-max'    => 'Ик гисн 7 хонг',
 'prefs-misc'                  => 'Талдан',
 'prefs-resetpass'             => 'Нууц угиг сольҗ',
 'prefs-email'                 => "E-mail'ын көгүд",
@@ -679,6 +669,7 @@ $1',
 'timezoneregion-europe'       => 'Европ',
 'timezoneregion-indian'       => 'Энетекгин дала',
 'timezoneregion-pacific'      => 'Номһн дала',
+'allowemail'                  => 'Талдан демнчнрәс ирсн e-mail бичг зөвшәрх',
 'prefs-searchoptions'         => 'Хәәлһнә көг',
 'prefs-namespaces'            => 'Нернә ус',
 'prefs-custom-css'            => 'Онц CSS',
@@ -701,6 +692,7 @@ $1',
 'email'                       => 'E-mail хайг',
 'prefs-help-realname'         => 'Үнн нернь та эврә дурар бичнәт. Бичлхлә, эн тәвсн һарт элзлдг бәәх.',
 'prefs-help-email'            => 'E-mail хайг та эврә дурар бичнәт. Бичхлә, тадн шин түлкүр үгиг бичгәр йовулсн өгҗ чаднат (мартхла). Тадн дәкәд талдан улсд тана күндллһнә халхар күндлҗ зөв өгҗ чаднат, тана E-mail үзүләд уга.',
+'prefs-info'                  => 'Һол медә',
 'prefs-i18n'                  => 'Олн орни бәәлһн',
 'prefs-signature'             => 'Тәвсн һаран',
 'prefs-advancedediting'       => 'Дәкәд көгүд',
@@ -747,12 +739,8 @@ $1',
 'recentchanges-legend'           => 'Шидрә сольлһна көгүд',
 'recentchangestext'              => 'Эн цагин дараһар бичсн шидрә сольлһн',
 'recentchanges-feed-description' => 'Эн зәңгллһд шидрә хүврһд шинҗлх.',
-'recentchanges-label-legend'     => 'Тәәлвр: $1.',
-'recentchanges-legend-newpage'   => '$1 — шин халх',
 'recentchanges-label-newpage'    => 'Тер үүләр шин халх бүтәв',
-'recentchanges-legend-minor'     => '$1 — баһ сольлһн',
 'recentchanges-label-minor'      => 'Эн баһ чинртә сольлһн',
-'recentchanges-legend-bot'       => '$1 — көдлврә сольлһн',
 'recentchanges-label-bot'        => 'Эн сольлһн көдлвр (робот) кехв',
 'rcnote'                         => "{{PLURAL:$1|'''$1''' шидрә сольлһн|'''$1''' шидрә сольлһн|'''$1''' шидрә сольлһн}}, '''$2''' өдрә,  $5 $4 цагин.",
 'rclistfrom'                     => 'Тер цагас авн сольлһн үзүлх: $1.',
@@ -785,17 +773,17 @@ $1',
 'recentchangeslinked-to'       => 'Зөрүһәр, эн халхд заалдг халхсин хүврлһиг үзүлх',
 
 # Upload
-'upload'            => 'Боомгиг тәвх',
-'uploadbtn'         => 'Боомгиг тәвх',
-'uploadnologintext' => 'Та [[Special:UserLogin|харһх]] кергтә.',
-'uploaderror'       => 'Тәвллһнә эндү',
-'uploadlogpage'     => 'Тәвллһнә сеткүл',
-'filename'          => 'Боомгна нернь',
-'filedesc'          => 'Учр-утх',
-'fileuploadsummary' => 'Учр-утх:',
-'successfulupload'  => 'Йовудта тәвллһн',
-'savefile'          => 'Хадһлх',
-'uploadedimage'     => '«[[$1]]» тәвв',
+'upload'              => 'Боомгиг тәвх',
+'uploadbtn'           => 'Боомгиг тәвх',
+'uploadnologintext'   => 'Та [[Special:UserLogin|харһх]] кергтә.',
+'uploaderror'         => 'Тәвллһнә эндү',
+'uploadlogpage'       => 'Тәвллһнә сеткүл',
+'filename'            => 'Боомгна нернь',
+'filedesc'            => 'Учр-утх',
+'fileuploadsummary'   => 'Учр-утх:',
+'savefile'            => 'Хадһлх',
+'uploadedimage'       => '«[[$1]]» тәвв',
+'upload-success-subj' => 'Йовудта тәвллһн',
 
 'license'        => 'Закан:',
 'license-header' => 'Закан:',
@@ -845,7 +833,6 @@ $1',
 'statistics-edits-average'     => 'Халхарн сольлһна то',
 'statistics-views-total'       => 'Цуг хәләврин то',
 'statistics-views-peredit'     => 'Сольлһарн хәләврин то',
-'statistics-jobqueue'          => '[http://www.mediawiki.org/wiki/Manual:Job_queue Даалһврин дарана] кемҗән',
 'statistics-users'             => 'Бичгдлһтә [[Special:ListUsers|демнчнр]]',
 'statistics-users-active'      => 'Үүлтә демнчнр',
 'statistics-users-active-desc' => '{{PLURAL:$1|$1 өдрт|$1 өдрмүдт|$1 өдрмүдт}} болв чигн үүл кесн демнчнр',
@@ -897,7 +884,6 @@ $1',
 # Watchlist
 'watchlist'         => 'Шинҗллһнә сеткүл',
 'mywatchlist'       => 'Шинҗллһнә сеткүл',
-'watchlistfor'      => "('''$1''' төлә)",
 'addedwatch'        => 'Шинҗллһнә сеткүлд немв.',
 'addedwatchtext'    => "«[[:$1]]» гидг нерәдлһтә халх тана [[Special:Watchlist|шинҗллһнә сеткүлд]] немв.
 Тегәд тер халхна болн терүнә ухалврин сольлһн энд шиҗлсн болх. Эн халх '''тарһн'' үзгәр [[Special:RecentChanges|шидрә сольлһна]] халхд бичсн (амр умшхар) болх.",
@@ -1040,7 +1026,7 @@ $2 шидрә һарһлһна төлә хәләтн.',
 'ipbreason'                => 'Учр:',
 'ipbreasonotherlist'       => 'Талдан учр',
 'ipboptions'               => '2 часуд:2 hours,1 өдр:1 day,3 өдрмүд:3 days,1 долан хонг:1 week,2 долан хонгуд:2 weeks,1 сар:1 month,3 сармуд:3 months,6 сармуд:6 months,1 җил:1 year,мөнк:infinite',
-'ipblocklist'              => 'Бүслсн IP хайгуд болн демнчнр',
+'ipblocklist'              => 'Бүслсн болн демнчнр',
 'blocklink'                => 'бүслх',
 'unblocklink'              => 'бүслх биш',
 'change-blocklink'         => 'бүслһиг сольх',
@@ -1052,14 +1038,14 @@ $2 шидрә һарһлһна төлә хәләтн.',
 'blockme'                  => 'Намаг бүслчк',
 
 # Move page
-'movepagetext'     => "Та дораһар цаасар, халхин сольлһна тууҗ көндәд, терүнә нериг сольх. 
-Хуучн нерн шин нерд авч оддг болх. 
-Та хуучн нерд эврәр авч одлһн шинрүлҗ чаднат. 
-Эн кехлә уга, буйн болтха, [[Special:DoubleRedirects|давхр]] болн [[Special:BrokenRedirects|татасн]] авч одлһн шүүтн. 
-Та заалһуд чик үлдг даавртә бәәнәт. 
+'movepagetext'     => "Та дораһар цаасар, халхин сольлһна тууҗ көндәд, терүнә нериг сольх.
+Хуучн нерн шин нерд авч оддг болх.
+Та хуучн нерд эврәр авч одлһн шинрүлҗ чаднат.
+Эн кехлә уга, буйн болтха, [[Special:DoubleRedirects|давхр]] болн [[Special:BrokenRedirects|татасн]] авч одлһн шүүтн.
+Та заалһуд чик үлдг даавртә бәәнәт.
 
-Шинҗлтн: тер нертә халх бәәдг (авч оддг, хоосн, тууҗта уга йовдлас биш) бәәхлә, халх '''көндх уга'''. 
-Тер учрар, эндүһәр көндлһн кехлә, та халхиг хәрү көндҗ чаднат, болв бәәдг халхиг зүлгхшт. 
+Шинҗлтн: тер нертә халх бәәдг (авч оддг, хоосн, тууҗта уга йовдлас биш) бәәхлә, халх '''көндх уга'''.
+Тер учрар, эндүһәр көндлһн кехлә, та халхиг хәрү көндҗ чаднат, болв бәәдг халхиг зүлгхшт.
 
 '''УРДАСНЬ ЗӘҢГ!'''
 Көндллһн «ачта» халхин ик-генткн хүврлһиг кеҗ чадна. Цаараньдн кехәр, тадна үүлдин ашуд медтн.",
@@ -1163,10 +1149,10 @@ $2 шидрә һарһлһна төлә хәләтн.',
 'nextdiff'     => 'Дарук сольлһн →',
 
 # Media information
-'file-info'            => '(боомгин кемҗә: $1, MIME төрл: $2)',
-'file-info-size'       => '($1 × $2 цегтә, боомгин кемҗән: $3, MIME янз: $4)',
+'file-info'            => 'боомгин кемҗә: $1, MIME төрл: $2',
+'file-info-size'       => '$1 × $2 цегтә, боомгин кемҗән: $3, MIME янз: $4',
 'file-nohires'         => '<small>Икәр чинртә янз уга.</small>',
-'svg-long-desc'        => '(SVG боомг, $1 × $2 мет цегтә, боомгин кемҗән: $3)',
+'svg-long-desc'        => 'SVG боомг, $1 × $2 мет цегтә, боомгин кемҗән: $3',
 'show-big-image'       => 'Күцц чинр',
 'show-big-image-thumb' => '<small>Урдаснь хәләврин кемҗән: $1 × $2 цегтә</small>',
 'file-info-gif-looped' => 'билцгсн',
@@ -1183,7 +1169,7 @@ $2 шидрә һарһлһна төлә хәләтн.',
 'metadata-help'     => 'Эн боомг дәкәд өггцтә. Тер өггцн то камерар аль сканерар немсмн. Боомг бүтәлһнә хөөн чиклсн бәәхлә, зәрм кемҗәд одахн зургд әдл биш болх.',
 'metadata-expand'   => 'Ик тодрхасиг үзүлх',
 'metadata-collapse' => 'Ик тодрхасиг бултулх',
-'metadata-fields'   => 'Эн җигсәмҗд нерлгдсн мета өггцин аһу, дүрслгч халхд герәсләр үзүлгдх, наадкснь бултулгдх. 
+'metadata-fields'   => 'Эн җигсәмҗд нерлгдсн мета өггцин аһу, дүрслгч халхд герәсләр үзүлгдх, наадкснь бултулгдх.
 * make
 * model
 * datetimeoriginal

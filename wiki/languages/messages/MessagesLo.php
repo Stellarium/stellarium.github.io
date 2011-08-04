@@ -108,8 +108,7 @@ $messages = array(
 'tog-editsection'             => 'ໃຫ້ສາມາດ ດັດແກ້ເປັນພາກ ໂດຍ ກົດລິ້ງຄ໌ [ດັດແກ້]',
 'tog-editsectiononrightclick' => 'ໃຫ້ສາມາດ ດັດແກ້ ໂດຍກົດປຸ່ມຂວາ ຂອງເມົາສ໌ ຢູ່ <br /> ຫົວຂໍ້ຂອງພາກ (JavaScript)',
 'tog-showtoc'                 => 'ສະແດງເນື້ອໃນ (ຂອງ ໝ້າທີ່ມີຫຼາຍກວ່າ 3 ໜາຍເລກຫົວຂໍ້)',
-'tog-rememberpassword'        => 'ຈົດຈໍາການເຊັນເຂົ້າຂອງຂ້ອຍ ຢູ່ ຄອມພິວເຕີໜ່ວຍນີ້',
-'tog-editwidth'               => 'ໃຫ້ ຊ່ອງດັດແກ້ ກ້ວາງທີ່ສຸດ',
+'tog-rememberpassword'        => 'ຈົດຈໍາການເຊັນເຂົ້າຂອງຂ້ອຍ ຢູ່ ຄອມພິວເຕີໜ່ວຍນີ້ (for a maximum of $1 {{PLURAL:$1|day|days}})',
 'tog-watchcreations'          => 'ເພີ່ມ ໜ້າທີ່ຂ້ອຍສ້າງ ເຂົ້າໃນ ລາຍການຕິດຕາມ ຂອງ ຂ້ອຍ',
 'tog-watchdefault'            => 'ເພີ່ມໜ້າ ທີ່ ຂ້ອຍດັດແກ້ ໃສ່ ລາຍຕິດຕາມ ຂອງ ຂ້ອຍ',
 'tog-watchmoves'              => 'ເພີ່ມ ໜ້າທີ່ຂອ້ຍຍ້າຍ ໃສ່ ລາຍການຕິດຕາມຂອງຂ້ອຍ',
@@ -356,7 +355,7 @@ $messages = array(
 'yourname'                   => 'ຊື່ຜູ້ໃຊ້',
 'yourpassword'               => 'ລະຫັດຜ່ານ',
 'yourpasswordagain'          => 'ພິມລະຫັດຜ່ານອີກ',
-'remembermypassword'         => 'ຈົດຈໍາການເຊັນເຂົ້າຂອງຂ້ອຍ ຢູ່ ຄອມພິວເຕີໜ່ວຍນີ້',
+'remembermypassword'         => 'ຈົດຈໍາການເຊັນເຂົ້າຂອງຂ້ອຍ ຢູ່ ຄອມພິວເຕີໜ່ວຍນີ້ (for a maximum of $1 {{PLURAL:$1|day|days}})',
 'yourdomainname'             => 'ໂດເມນ ຂອງ ທ່ານ',
 'login'                      => 'ເຊັນເຂົ້າ',
 'nav-login-createaccount'    => 'ເຊັນເຂົ້າ / ສ້າງບັນຊີ',
@@ -690,7 +689,9 @@ $messages = array(
 
 # Special:Categories
 'categories'         => 'ໝວດ',
-'categoriespagetext' => 'ມີ ບັນດາ ໝວດ ຕໍ່ໄປນີ້ ຢູ່ ວິກີ.',
+'categoriespagetext' => 'ມີ ບັນດາ ໝວດ ຕໍ່ໄປນີ້ ຢູ່ ວິກີ.
+[[Special:UnusedCategories|Unused categories]] are not shown here.
+Also see [[Special:WantedCategories|wanted categories]].',
 
 # Special:LinkSearch
 'linksearch' => 'ຄົ້ນຫາການເຊື່ອມຕໍ່ຫາເວັບ',
@@ -723,7 +724,6 @@ $messages = array(
 # Watchlist
 'watchlist'            => 'ລາຍການຕິດຕາມ',
 'mywatchlist'          => 'ລາຍການຕິດຕາມ',
-'watchlistfor'         => "(ສຳຫຼັບ '''$1''')",
 'watchlistanontext'    => 'ກະລຸນາ $1 ເພື່ອເບິ່ງ ຫຼື ດັດແກ້ ໜ້າຢູ່ໃນລາຍການຕິດຕາມຂອງທ່ານ.',
 'watchnologin'         => 'ບໍ່ໄດ້ເຊັນເຂົ້າ',
 'addedwatch'           => 'ເພີ່ມໃສ່ລາຍການຕິດຕາມແລ້ວ',
@@ -840,7 +840,7 @@ $messages = array(
 'newtitle'                => 'ຫາ ຫົວຂໍ້ໃໝ່',
 'move-watch'              => 'ຕິດຕາມໜ້ານີ້',
 'movepagebtn'             => 'ຍ້າຍໜ້າ',
-'articleexists'           => 'ມີໜ້າຊື່ນີ້ແລ້ວ ຫຼື ຊື່ບໍ່ຖືກ. 
+'articleexists'           => 'ມີໜ້າຊື່ນີ້ແລ້ວ ຫຼື ຊື່ບໍ່ຖືກ.
 ກະລຸນາເລືອກຊື່ອື່ນ.',
 'movedto'                 => 'ໄດ້ຖືກຍ້າຍໄປ',
 'movetalk'                => 'ຍ້າຍທັງ ໜ້າສົນທະນາ ທີ່ ກ່ຽວພັນ.',
@@ -918,7 +918,7 @@ $messages = array(
 # Media information
 'imagemaxsize'         => 'ກຳນົດຄວາມໃຫຍ່ຂອງ ຮູບ ຫຼື ໜ້າອະທິບາຍຮູບ ບໍ່ໃຫ້ກາຍ:',
 'thumbsize'            => 'ຂະໜາດສະແດງ:',
-'file-info-size'       => '($1 × $2  ປິກເຊລ, ຂະໜາດໄຟລ໌: $3, MIME type: $4)',
+'file-info-size'       => '$1 × $2  ປິກເຊລ, ຂະໜາດໄຟລ໌: $3, MIME type: $4',
 'file-nohires'         => 'ບໍ່ມີຂະໜາດລະອຽດກວ່າ',
 'show-big-image'       => 'ເຕັມຂະໜາດ',
 'show-big-image-thumb' => '<small>ຂະໜາດລອງເບິ່ງ: $1 × $2 ປິກເຊລ</small>',

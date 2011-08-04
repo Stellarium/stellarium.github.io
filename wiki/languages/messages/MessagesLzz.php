@@ -9,6 +9,7 @@
  *
  * @author Bombola
  * @author Dato deutschland
+ * @author Dawid Deutschland
  * @author Ibero-kolxi
  * @author The Evil IP address
  */
@@ -19,7 +20,7 @@ $messages = array(
 # User preference toggles
 'tog-underline'        => "Link'iş tude kogu3’uxaçki:",
 'tog-highlightbroken'  => 'Upşu linkepe <a href="" class="new">am şekilite</a> (alternatifi: am şekilite<a href="" class="internal">?</a>) ko3\'iri.',
-'tog-rememberpassword' => 'Parola-skani goişini',
+'tog-rememberpassword' => 'Parola-skani goişini (for a maximum of $1 {{PLURAL:$1|day|days}})',
 'tog-showhiddencats'   => "Şinaxeri k'at'egorepe ko3'iri",
 
 'underline-always' => "P'anda",
@@ -118,14 +119,8 @@ $messages = array(
 'qbspecialpages' => 'Doxmeli sayfape',
 
 # Vector skin
-'vector-action-delete'       => 'Jili',
-'vector-namespace-category'  => "K'at'egori",
-'vector-namespace-help'      => "Meşvelaş t'aba",
-'vector-namespace-image'     => 'Dosya',
-'vector-namespace-mediawiki' => 'Mesaji',
-'vector-namespace-project'   => "P'rojeşi t'aba",
-'vector-namespace-special'   => 'Doxmeli sayfa',
-'vector-view-edit'           => 'Doktiri',
+'vector-action-delete' => 'Jili',
+'vector-view-edit'     => 'Doktiri',
 
 'errorpagetitle'   => 'Çilata',
 'returnto'         => '$1 butʼkʼaşa goikti.',
@@ -218,14 +213,14 @@ Muşeni? Çunki am butʼkʼa, jileri na ren a butʼkʼaşi golaxteri versiyoni r
 Eger sebebi aya na va renna, pʼrogramis ar çilata z*irit.
 Mu iqʼven! Aya, a [[Special:ListUsers/sysop|adminis]], URL-ti çʼareli şekʼilite rapʼortʼi doçʼarit.',
 'missingarticle-rev' => '(revizyoni#: $1)',
-'badtitletext'       => 'Na içʼaren butʼkʼaşi coxo ya çilatoni ren ya boşi ren varna inter-nena do inter-vikʼişi kʼontʼaktʼis na uğutʼu şeni mtini varen. 
+'badtitletext'       => 'Na içʼaren butʼkʼaşi coxo ya çilatoni ren ya boşi ren varna inter-nena do inter-vikʼişi kʼontʼaktʼis na uğutʼu şeni mtini varen.
 Dudicoxopes oxmaruşi yasaği na ren ar, varna daha dido kʼarakʼtʼeri uğun.',
 'viewsource'         => 'Odudes o3ʼkʼedi',
 
 # Login and logout pages
 'yourname'                => 'Skani maxmare-coxo:',
 'yourpassword'            => 'Pʼarola-skani:',
-'remembermypassword'      => 'Parola-skani goişini',
+'remembermypassword'      => 'Parola-skani goişini (for a maximum of $1 {{PLURAL:$1|day|days}})',
 'login'                   => 'Sitʼeşa amaxti',
 'nav-login-createaccount' => 'Sitʼeşa amaxti / hesabi dokʼidi',
 'userlogin'               => 'Sitʼeşa amaxti / hesabi dokʼidi',
@@ -280,7 +275,7 @@ varna am butʼkʼa [{{fullurl:{{FULLPAGENAME}}|action=edit}} gaktirinen]</span>.
 'previewnote'                      => "'''Aya, xvala, \"Evvelişen i3ʼkʼedi\" fonkʼsioni ren do oktirobape-skani kʼayitʼi var ixvenu çkva!'''",
 'editing'                          => '"$1" butʼkʼa iktirinen a3ʼi',
 'editingsection'                   => '"$1" butʼkʼas burme iktirinen',
-'copyrightwarning'                 => "'''Mu iqʼven kʼun3xi:''' {{SITENAME}} sitʼeşa na ixvenu mteli meşvelape <i>$2</i> 
+'copyrightwarning'                 => "'''Mu iqʼven kʼun3xi:''' {{SITENAME}} sitʼeşa na ixvenu mteli meşvelape <i>$2</i>
 paktʼiş doloxe ren (detayepe şeni $1's o3ʼkʼedi).
 Na qʼvi meşvelaşa başka makʼaturepeşkʼelen pʼatʼi mutxanepe ixvenen varna xemoşletinerot do uoçodinurot başka svapeşa niçinen, aya kʼabuli qʼvi varna am sitʼe şeni mutu mo ikip!<br />
 Edo amuş metʼi, ak mxuciş meçamu ginonna, meşvelape ti-skani kʼala oçʼaruşi re, varna ofi3ialurişa gon3ʼkʼimeri na ren ar kʼaynağişen (odudeşen) varna başka oxoşkveri kʼaynağepeşen (odudepeşen) na ezdi kʼabuli oxvenuşi re.<br />
@@ -488,7 +483,6 @@ Ogoruşi dudis '''all:''' pʼrefiksi okʼatute doloçʼareli na ren iri şeyi (o
 # Watchlist
 'watchlist'         => 'çkimi gotxozu listʼe',
 'mywatchlist'       => 'Çkimi gotxozu listʼe',
-'watchlistfor'      => "('''$1''' şeni)",
 'addedwatch'        => 'Skani gotxozu listʼeşa ikʼayitʼinu.',
 'addedwatchtext'    => '"<nowiki>[[:$1]]</nowiki>" coxoni butʼkʼa [[Special:Watchlist|gotxozu listʼes]] ikʼayitʼinu.
 
@@ -606,9 +600,9 @@ Am butʼkʼaşi oçvuşi sinori gaktirinen; ama am oktiroba, kʼademoni oçvalu�
 'block-log-flags-nocreate' => 'hesabi okʼidu geinkʼilu',
 
 # Move page
-'movepagetext'     => "Tude na ren formi oxmarute butʼkʼaşi coxo iktirinen. Edo xolo mteli golaxteri kʼayitʼepeti ağani coxos itiren. 
-Mcveşi coxo, ağani coxoşa redirektʼi xali aqʼven. 
-Otomatikurot mcveşi stʼatʼiaşa na ixvenen redirektʼepe gaktirinen. 
+'movepagetext'     => "Tude na ren formi oxmarute butʼkʼaşi coxo iktirinen. Edo xolo mteli golaxteri kʼayitʼepeti ağani coxos itiren.
+Mcveşi coxo, ağani coxoşa redirektʼi xali aqʼven.
+Otomatikurot mcveşi stʼatʼiaşa na ixvenen redirektʼepe gaktirinen.
 Am dulya otomatikurot oxvenu va ginonna [[Special:DoubleRedirects|tʼkʼubi]] varna [[Special:BrokenRedirects|tʼaxeri]] na renan redirektʼepe ti-skani kʼala oktiruşi re. Na qʼvare am oktirobate mteli kʼontʼaktʼepe dido kʼai oçalişu ren, amuşen si sorumli re.
 
 Eger ağani coxos ar butʼkʼa zate korenna coxoşi oktiroba '''var ixvenasen'''. Amuş metʼi, coxoşi oktirobaşen pişmani qʼvi na, am oktiroba ipʼtʼali gaxvenen, aşoten başka butʼkʼapeşati zarari meçameri va gaqʼven.
@@ -704,9 +698,9 @@ Mu iqʼven başka coxo doçʼari.',
 'nextdiff'     => 'Ukʼaçxineri versiyoni kʼala na ren farkʼi →',
 
 # Media information
-'file-info-size'       => '($1 × $2 pikseli, dosyaşi didinoba: $3, MIME type: $4)',
+'file-info-size'       => '$1 × $2 pikseli, dosyaşi didinoba: $3, MIME type: $4',
 'file-nohires'         => '<small>Çkva kʼai ozʼiramuşis na uğun versiyoni va ren.</small>',
-'svg-long-desc'        => '(SVG dosya, coxoten $1 × $2 pʼikʼseli, dosyaşi didinoba: $3)',
+'svg-long-desc'        => 'SVG dosya, coxoten $1 × $2 pʼikʼseli, dosyaşi didinoba: $3',
 'show-big-image'       => 'Tam ozʼiramuşi',
 'show-big-image-thumb' => '<small>"Evvelişen i3ʼkʼedi" fonkʼsionişi didinoba: $1 × $2 pikseli</small>',
 

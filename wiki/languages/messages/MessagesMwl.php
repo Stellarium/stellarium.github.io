@@ -7,6 +7,7 @@
  * @ingroup Language
  * @file
  *
+ * @author Alchimista
  * @author Cecílio
  * @author MCruz
  * @author Malafaya
@@ -92,8 +93,7 @@ $messages = array(
 'tog-editsection'             => "Possiblitar l'eidiçon de cachos cun lhigaçones [eiditar]",
 'tog-editsectiononrightclick' => "Posseblitar l'eidiçon de cachos por clique cul boton dreito ne l títalo de la seçon (JavaScrit)",
 'tog-showtoc'                 => 'Amostrar índice (para páiginas cun mais de trés cachos)',
-'tog-rememberpassword'        => 'Recordar la mie palabra-chabe antre sessones',
-'tog-editwidth'               => "Oumentar l'anchura de la caixa d'eidiçon para prencher toda la pantalha",
+'tog-rememberpassword'        => 'Recordar la mie palabra-chabe antre sessones (for a maximum of $1 {{PLURAL:$1|day|days}})',
 'tog-watchcreations'          => 'Ajuntar las páiginas que you criar a las minhas páiginas begiadas',
 'tog-watchdefault'            => 'Ajuntar las páiginas que you eiditar a las minhas páiginas begiadas',
 'tog-watchmoves'              => ' Ajuntar las páiginas que you mober a las minhas páiginas begiadas',
@@ -373,7 +373,7 @@ Puode tener un ó mais carateres que nun puoden ser outelizados an títalos.',
 'yourname'                => 'Nome de Outelizador',
 'yourpassword'            => 'Palabra chabe',
 'yourpasswordagain'       => 'Repite la tue palabra-chabe',
-'remembermypassword'      => 'Lhembrar-se de mi neste cumputador',
+'remembermypassword'      => 'Lhembrar-se de mi neste cumputador (for a maximum of $1 {{PLURAL:$1|day|days}})',
 'yourdomainname'          => 'L tou domínio',
 'login'                   => 'Antrar',
 'nav-login-createaccount' => 'Antrar / criar cuonta',
@@ -397,9 +397,9 @@ Bei cumo screbiste, ó [[Special:UserLogin/signup|cria ua nuoba cuonta]].',
 'nosuchusershort'         => 'Nun eisiste nanhun outelizador cul nome "<nowiki>$1</nowiki>".
 Bei se l screbiste bien.',
 'nouserspecified'         => 'Tenes que dezir un nome de outelizador.',
-'wrongpassword'           => 'La palabra chabe ye ambálida. 
+'wrongpassword'           => 'La palabra chabe ye ambálida.
 Por fabor, spurmenta outra beç.',
-'wrongpasswordempty'      => 'Tenes que poner la palabra chabe. 
+'wrongpasswordempty'      => 'Tenes que poner la palabra chabe.
 Por fabor, spurmenta outra beç.',
 'passwordtooshort'        => 'La tue palabra chabe ye ambálida ó mui pequeinha.
 Debe de tener pul menos {{PLURAL:$1|1 caracter|$1 caracteres}}.',
@@ -477,7 +477,7 @@ La tue morada de IP atual ye $3 i l ID de l bloqueio ye $5. Por fabor, anclui un
 
 La palabra-chabe para esta nuoba cuonta puode ser demudada na páigina pa ''[[Special:ChangePassword|demudar palabra-chabe]]'' apuis de la outenticaçon.",
 'newarticle'                       => '(Nuoba)',
-'newarticletext'                   => "Tu bejiteste ua lhigaçon para ua páigina que inda nun eisiste. 
+'newarticletext'                   => "Tu bejiteste ua lhigaçon para ua páigina que inda nun eisiste.
 Para criar la páigina, ampeça a screbir an la caixa ambaixo (bei la [[{{MediaWiki:Helppage}}|páigina de ajuda]] pa mais detailhes).
 Se stás eiqui por anganho, carrega ne l boton '''retornar''' de l tou nabegador de la Anternete.",
 'noarticletext'                    => 'Nun hai neste sfergante testo nesta páigina.
@@ -493,9 +493,6 @@ Tu puodes [[Special:Search/{{PAGENAME}}|percurar pul títalo desta páigina]] no
 'copyrightwarning'                 => "Por fabor, bei que todas las tues cuntribuiçones an {{SITENAME}} son cunsideradas cumo feitas ne ls termos de la lhicença $2 (bei $1 pa detailhes). Se nun quieres que l tou testo seia eiditado sin piedade i reçtribuído cunsante la gana, nun l ambies.<br />
 Tu stás, al mesmo tiempo, a garantir-mos qu'esto ye algo screbido por ti, ó algo copiado d'ua fuonte de testos an domínio público ó parecido de teor lhibre.
 '''NUN AMBIES TRABALHO PORTEGIDO POR DREITOS D'OUTOR SIEN L DEBIDO PERMISSO!'''",
-'longpagewarning'                  => "'''Abiso: Esta páigina ten$1 kilobytes; alguns
-nabegadores de la anternete ténen porblemas al eiditar páiginas cun mais de 32 kb.
-Por fabor, pensa an scachar la páigina an cachos mais pequeinhos.'''",
 'templatesused'                    => '{{PLURAL:$1|Modelo ousado|Modelos ousados}} nesta páigina:',
 'templatesusedpreview'             => '{{PLURAL:$1|Modelo outelizado|Modelos outelizados}} neste amostra:',
 'template-protected'               => '(portegida)',
@@ -508,7 +505,7 @@ Pode boltar atrás i editar unha página yá eisistente, o [[Special:UserLogin|a
 
 Bei bien se ye própio cuntinar a eiditar esta páigina.
 L registro de la eileminaçon i de l arrastrar ye amostrado eiqui por cumbeniéncia:",
-'moveddeleted-notice'              => 'Esta páigina fui apagada. 
+'moveddeleted-notice'              => 'Esta páigina fui apagada.
 L registro de la eileminaçon i de l arrastrar stá ambaixo pa refréncia.',
 
 # History pages
@@ -547,12 +544,13 @@ Legenda: (atu) = defrénças de la berson atual,
 'revertmerge' => 'Çfazer ounion',
 
 # Diffs
-'history-title'           => 'Stórico de eidiçones de "$1"',
-'difference'              => '(Defréncias antre rebisones)',
-'lineno'                  => 'Lhinha $1:',
-'compareselectedversions' => 'Cumparar las bersones marcadas',
-'editundo'                => 'çfazer',
-'diff-multi'              => '({{PLURAL:$1|ua eidiçon antermédia nun stá a ser amostrada|$1 eidiçones antermédias nun stan a ser amostradas}}.)',
+'history-title'            => 'Stórico de eidiçones de "$1"',
+'difference'               => '(Defréncias antre rebisones)',
+'lineno'                   => 'Lhinha $1:',
+'compareselectedversions'  => 'Cumparar las bersones marcadas',
+'showhideselectedversions' => 'Amostrar/ocultar bersones selecionadas',
+'editundo'                 => 'çfazer',
+'diff-multi'               => '({{PLURAL:$1|ua eidiçon antermédia nun stá a ser amostrada|$1 eidiçones antermédias nun stan a ser amostradas}}.)',
 
 # Search results
 'searchresults'             => 'Resultados de la percura',
@@ -669,8 +667,6 @@ Causo l çponiblizes, este será outelizado pa te dar crédito pul tou trabalho.
 'recentchanges'                  => 'Redadeiras altaraçones',
 'recentchanges-legend'           => 'Oupçones de las redadeiras altaraçones',
 'recentchanges-feed-description' => 'Acumpanha las redadeiras altaraçones de l biqui por esta semiente.',
-'recentchanges-legend-newpage'   => '$1 - nuoba páigina',
-'recentchanges-legend-minor'     => '$1 - eidiçon pequerrixa',
 'rcnote'                         => "A seguir {{PLURAL:$1|stá listada '''ua''' altaraçon feita|stan '''$1''' altaraçones feitas}} {{PLURAL:$2|ne l redadeiro die|ne ls redadeiros '''$2''' dies}}, a partir de las $5 de $4.",
 'rcnotefrom'                     => 'Alteraçones feitas zde <b>$2</b> (amostradas até <b>$1</b>).',
 'rclistfrom'                     => 'Amostrar las noubas altaraçones a partir de $1',
@@ -877,7 +873,6 @@ Páiginas que steian ne ls [[Special:Watchlist|tous begiados]] son amostradas an
 # Watchlist
 'watchlist'         => 'Ls mius begiados',
 'mywatchlist'       => 'Las mies páiginas begiadas',
-'watchlistfor'      => "(para '''$1''')",
 'addedwatch'        => 'Ajuntada a las páiginas begiadas',
 'addedwatchtext'    => "La páigina \"[[:\$1]]\" fui ajuntada a la tue [[Special:Watchlist|lista de páiginas begiadas]].
 Altaraçones feturas na tal páigina i páiginas de çcusson a eilha associadas seran listadas alhá, cun la páigina aparecendo a '''negrito''' na [[Special:RecentChanges|lista de redadeiras altaraçones]], para que se pouda ancuntrar cun maior facelidade.",
@@ -1125,9 +1120,9 @@ Premite ajuntar la rezon de la eidiçon ne l sumário.',
 'nextdiff'     => 'Redadeira eidiçon →',
 
 # Media information
-'file-info-size'       => '($1 × $2 pixel, tamanho: $3, tipo MIME: $4)',
+'file-info-size'       => '$1 × $2 pixel, tamanho: $3, tipo MIME: $4',
 'file-nohires'         => '<small>Sin resoluçon maior çponible.</small>',
-'svg-long-desc'        => '(fexeiro SVG, de $1 × $2 pixeles, tamanho: $3)',
+'svg-long-desc'        => 'fexeiro SVG, de $1 × $2 pixeles, tamanho: $3',
 'show-big-image'       => 'Resoluçon cumpleta',
 'show-big-image-thumb' => '<small>Tamanho desta prebison: $1 × $2 pixeles</small>',
 

@@ -16,7 +16,7 @@ $messages = array(
 # User preference toggles
 'tog-underline'            => 'Ngaahi fehokotaki ʻoku laineʻi ʻi lalo:',
 'tog-highlightbroken'      => 'Ngaohi ʻa e ngaahi fehokotaki maumau ʻoku <a href="" class="new">pehē</a> (meʻa kehe ʻoku pehē <a href="" class="internal">?</a>).',
-'tog-rememberpassword'     => 'Manatuʻi ʻeku kau-ki-ai ʻi he komipiuta ʻeni',
+'tog-rememberpassword'     => 'Manatuʻi ʻeku kau-ki-ai ʻi he komipiuta ʻeni (for a maximum of $1 {{PLURAL:$1|day|days}})',
 'tog-watchcreations'       => 'Tānaki ngaahi peesi ʻoku fakatupu ʻe au ki he hokohoko leʻo',
 'tog-watchdefault'         => 'Tānaki ngaahi peesi ʻoku fatu ʻe au ki he hokohoko leʻo',
 'tog-watchmoves'           => 'Tānaki ki heʻeku hokohoko leʻo ʻa e ngaahi peesi kuo ʻunu ʻe au',
@@ -269,7 +269,7 @@ Kuo fakatupu hoʻo tohi kau-ki-ai. ʻOua ʻe ngalo ke liliu hoʻo faʻiteliha {{
 'yourname'                   => 'Hingoa ʻetita',
 'yourpassword'               => 'Leatapu',
 'yourpasswordagain'          => 'Toe ʻai leatapu',
-'remembermypassword'         => 'Manatuʻi au',
+'remembermypassword'         => 'Manatuʻi au (for a maximum of $1 {{PLURAL:$1|day|days}})',
 'yourdomainname'             => 'ho ngāueʻanga',
 'login'                      => 'Kau ki ai',
 'nav-login-createaccount'    => 'Kau ki ai',
@@ -378,7 +378,7 @@ Kapau naʻe kole ia ʻe he tokotaha kehe, pea ʻosi hoʻo manatuʻi ʻo e leatap
 Ko e konga ʻi olunga, ko e kupu ia he onopooni.
 Ko e konga ʻi lalo, ko hoʻo ngaahi liliu ia.
 ʻE pau te ke fakataha hoʻo liliu ʻi loto ʻo e kupu ʻoku tuʻu.
-Ko e konga ʻi olunga, ko e '''konga pē ʻe taha''' ʻe haofaki ʻi he lomiʻi ʻo e meʻalolomi \"haofaki e pēsí\".",
+Ko e konga ʻi olunga, ko e '''konga pē ʻe taha''' ʻe haofaki ʻi he lomiʻi ʻo e meʻalolomi \"{{int:savearticle}}\".",
 'yourtext'                => 'tohi ʻaʻau',
 'storedversion'           => 'Ko e paaki kuo tuku',
 'editingold'              => "'''FAKATOKANGA: ʻOku ke fatu ʻi he paaki fakaonoʻaho ʻo e pēsi. Kapau te ke haofaki ia, ʻe mole ʻa e ngaahi liliu kotoa talu mei ai.'''",
@@ -567,7 +567,6 @@ Ko e ʻuhinga loka ko e $1 ia.",
 [[$1|thumb]]",
 'fileexists-forbidden'        => 'ʻOku toka ʻi ai ha peesi mo e hingoa ē, pea ʻe ʻikai lava liliu; fakamolemole ʻe foki pea hiki hake ʻa e failé ni mo e ha hingoa foʻou. [[File:$1|thumb|center|$1]]',
 'fileexists-shared-forbidden' => 'ʻOku toka ʻi ai ha peesi mo e hingoa ē ʻi he kalasi vahevahe; fakamolemole ʻe foki pea hiki hake ʻa e failé ni mo e ha hingoa foʻou. [[File:$1|thumb|center|$1]]',
-'successfulupload'            => 'Kuo ola ʻa e hiki hake',
 'uploadwarning'               => 'Tokanga hiki hake',
 'savefile'                    => 'Haofaki faitaá ni',
 'uploadedimage'               => '"[[$1]]" ʻosi hiki hake',
@@ -578,6 +577,7 @@ Ko e ʻuhinga loka ko e $1 ia.",
 'destfilename'                => 'Hingoa ʻo e faile ʻe ʻalu ki ai:',
 'watchthisupload'             => 'Leʻo he pēsí ni',
 'filewasdeleted'              => 'Kuo hiki hake ʻa e faile mo e hingoa ʻeni pea naʻe tāmateʻi ia. Kuo pau te ke vakai ki he $1 ʻi muʻa haʻo feinga ʻo toe hiki hake ia.',
+'upload-success-subj'         => 'Kuo ola ʻa e hiki hake',
 
 'license'        => 'Laiseni:',
 'license-header' => 'Laiseni:',
@@ -723,7 +723,9 @@ Ko e ʻuhinga loka ko e $1 ia.",
 
 # Special:Categories
 'categories'         => 'Faʻahinga',
-'categoriespagetext' => 'ʻOku ʻi ai ha ngaahi faʻahinga pehē.',
+'categoriespagetext' => 'ʻOku ʻi ai ha ngaahi faʻahinga pehē.
+[[Special:UnusedCategories|Unused categories]] are not shown here.
+Also see [[Special:WantedCategories|wanted categories]].',
 
 # Special:DeletedContributions
 'deletedcontributions'       => 'Ngaahi foaki ʻo ha ʻetita kuo tāmateʻi',
@@ -763,7 +765,6 @@ Ko e ʻuhinga loka ko e $1 ia.",
 # Watchlist
 'watchlist'            => 'Hokohoko leʻo ʻaʻaku',
 'mywatchlist'          => 'Hokohoko leʻo ʻaʻaku',
-'watchlistfor'         => "(maʻa e '''$1''')",
 'nowatchlist'          => 'ʻOku ʻikai ha meʻa ʻi hoʻo hokohoko leʻo.',
 'watchlistanontext'    => 'Kātaki, ʻe $1 kapau te ke fievakai pe fiefatu ha ngaahi meʻa ʻi hoʻo hokohoko leʻo.',
 'watchnologin'         => 'Teʻeki kau ki ai',

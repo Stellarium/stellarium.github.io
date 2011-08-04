@@ -34,7 +34,7 @@ $namespaceNames = array(
 	NS_CATEGORY         => 'Turkum',
 	NS_CATEGORY_TALK    => 'Turkum_munozarasi',
 );
-	
+
 $namespaceAliases = array(
 	'Mediya'                => NS_MEDIA,
 	'MediyaViki'            => NS_MEDIAWIKI,
@@ -131,6 +131,13 @@ $messages = array(
 'qbedit'         => 'Tahrirlash',
 'qbspecialpages' => 'Maxsus sahifalar',
 
+# Vector skin
+'vector-view-create'     => 'Yarat',
+'vector-view-edit'       => 'Tahrirla',
+'vector-view-history'    => 'Tarix',
+'vector-view-view'       => 'Mutolaa',
+'vector-view-viewsource' => 'Manbasini koʻrsat',
+
 'errorpagetitle'   => 'Xato',
 'returnto'         => '$1 sahifasiga qaytish.',
 'tagline'          => '{{SITENAME}} dan',
@@ -143,9 +150,11 @@ $messages = array(
 'history_short'    => 'Tarix',
 'printableversion' => 'Bosma uchun versiya',
 'permalink'        => "Doimiy bog'",
+'print'            => 'Chop et',
 'edit'             => 'Tahrirlash',
 'create'           => 'Yarat',
 'editthispage'     => 'Sahifani tahrirla',
+'create-this-page' => 'Bu sahifani yarat',
 'delete'           => "O'chirish",
 'protect'          => 'Himoyalash',
 'protectthispage'  => 'Bu sahifani himoyala',
@@ -155,14 +164,18 @@ $messages = array(
 'talkpagelinktext' => 'Munozara',
 'specialpage'      => 'Maxsus sahifa',
 'personaltools'    => 'Shaxsiy uskunalar',
+'postcomment'      => 'Yangi boʻlim',
 'talk'             => 'Munozara',
 'views'            => "Ko'rinishlar",
 'toolbox'          => 'Asboblar',
+'categorypage'     => 'Turkum sahifasi',
+'viewtalkpage'     => 'Munozara',
 'otherlanguages'   => 'Boshqa tillarda',
 'redirectedfrom'   => '($1dan yoʻnaltirildi)',
 'redirectpagesub'  => 'Yoʻnaltiruvchi sahifa',
 'lastmodifiedat'   => 'Bu sahifa oxirgi marta $2, $1 sanasida tahrirlangan.',
 'viewcount'        => 'Bu sahifaga {{PLURAL:$1|bir marta|$1 marta}} murojaat qilingan.',
+'protectedpage'    => 'Himoyalangan sahifa',
 'jumpto'           => 'Oʻtish:',
 'jumptonavigation' => 'foydalanish',
 'jumptosearch'     => 'Qidir',
@@ -209,6 +222,7 @@ $messages = array(
 'nstab-category' => 'Turkum',
 
 # General errors
+'error'             => 'Xato',
 'badtitle'          => 'Notoʻgʻri sarlavha',
 'viewsource'        => "Ko'rib chiqish",
 'viewsourcefor'     => '$1 uchun',
@@ -223,7 +237,7 @@ Shuni e'tiborga olingki, ayrim sahifalar siz brauzeringiz keshini tozalamaguning
 'yourname'                => 'Foydalanuvchi nomi',
 'yourpassword'            => "Maxfiy so'z",
 'yourpasswordagain'       => "Maxfiy so'zni qayta kiriting",
-'remembermypassword'      => "Hisob ma'lumotlarini shu kompyuterda eslab qolish",
+'remembermypassword'      => "Hisob ma'lumotlarini shu kompyuterda eslab qolish (for a maximum of $1 {{PLURAL:$1|day|days}})",
 'login'                   => 'Kirish',
 'nav-login-createaccount' => 'Kirish / Hisob yaratish',
 'loginprompt'             => "{{SITENAME}}ga kirish uchun kukilar yoqilgan bo'lishi kerak.",
@@ -293,8 +307,6 @@ Siz shuningdek bu yozganlaringiz sizniki yoki erkin litsenziya ostida ekanligini
 'copyrightwarning2'          => "Iltimos, shuni esda tutingki, {{SITENAME}} sahifalaridagi barcha matnlar boshqa foydalanuvchilar tomonidan tahrirlanishi, almashtirilishi yoki o'chirilishi mumkin. Agar siz yozgan ma'lumotlaringizni bunday tartibda tahrirlanishiga rozi bo'lmasangiz, unda uni bu yerga joylashtirmang.<br />
 Bundan tashqari, siz ushbu ma'lumotlarni o'zingiz yozgan bo'lishingiz yoki ruxsat berilgan internet manzilidan yoki shu kabi erkin resursdan nusxa olgan bo'lishingiz lozim (Qo'shimcha ma'lumotlar ushun $1 sahifasiga murojaat qiling).
 '''MUALLIFLIK HUQUQI QO'YILGAN ISHLARNI RUXSATSIZ BU YERGA JOYLASHTIRMANG!'''",
-'longpagewarning'            => "'''DIQQAT: Ushbu sahifa hajmi $1 kilobaytdir; ayrim browser'lar 32 kb dan oshiq hajmli sahifalarni tahrirlashda muammolarga duch kelishi mumkin.
-Agar sizda shunday muammolar yuzaga kelsa, iltimos, sahifani butunlay emas, qismlab tahrirlang.'''",
 'templatesused'              => 'Ushbu sahifada ishlatilgan andozalar:',
 'template-protected'         => '(himoyalangan)',
 'template-semiprotected'     => '(yarim-himoyalangan)',
@@ -475,7 +487,9 @@ Bu yerda: (joriy) = hozirgi koʻrinish bilan farq,
 
 # Special:Categories
 'categories'         => 'Turkumlar',
-'categoriespagetext' => 'Ushbu turkumlarda sahifa yoki fayllar mavjud.',
+'categoriespagetext' => 'Ushbu turkumlarda sahifa yoki fayllar mavjud.
+[[Special:UnusedCategories|Unused categories]] are not shown here.
+Also see [[Special:WantedCategories|wanted categories]].',
 
 # Special:Log/newusers
 'newuserlog-create-entry' => 'Yangi foydalanuvchi',
@@ -486,7 +500,6 @@ Bu yerda: (joriy) = hozirgi koʻrinish bilan farq,
 # Watchlist
 'watchlist'        => 'Kuzatuv roʻyxatim',
 'mywatchlist'      => 'Kuzatuv roʻyxatim',
-'watchlistfor'     => "('''$1''' uchun)",
 'nowatchlist'      => "Kuzatuv ro'yxatingizda hech narsa yo'q.",
 'addedwatch'       => "Kuzatuv ro'yxatiga qo'shildi",
 'addedwatchtext'   => "\"[[:\$1]]\" sahifasi sizning [[Special:Watchlist|kuzatuv ro'yxatingizga]] qo'shildi. Bu sahifada va unga mos munozara sahifasida bo'ladigan kelajakdagi o'zgarishlar bu yerda ro'yxatga olinadi, hamda bu sahifa topish qulay bo'lishi uchun [[Special:RecentChanges|yangi o'zgarishlar ro'yxati]]da '''qalin''' harflar bilan ko'rsatiladi.
@@ -638,9 +651,9 @@ Yaqinda sodir etilgan yoʻqotishlar uchun $2ni koʻring.',
 # Media information
 'imagemaxsize'         => "Tasvir ta'rifi sahifasidagi tasvirning kattaligi:",
 'thumbsize'            => 'Tasvirning kichiklashtirilgan versiyasining kattaligi:',
-'file-info-size'       => '($1 × $2 piksel, fayl hajmi: $3, MIME tipi: $4)',
+'file-info-size'       => '$1 × $2 piksel, fayl hajmi: $3, MIME tipi: $4',
 'file-nohires'         => '<small>Bundan kattaroq tasvir yoʻq.</small>',
-'svg-long-desc'        => '(SVG fayl, asl oʻlchamlari $1 × $2 piksel, fayl hajmi: $3)',
+'svg-long-desc'        => 'SVG fayl, asl oʻlchamlari $1 × $2 piksel, fayl hajmi: $3',
 'show-big-image'       => 'Asl hajmdagi tasvir',
 'show-big-image-thumb' => '<small>Ushbu koʻrinish oʻlchamlari: $1 × $2 piksel</small>',
 

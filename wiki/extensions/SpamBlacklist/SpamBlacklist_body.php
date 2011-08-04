@@ -13,7 +13,7 @@ class SpamBlacklist {
 	var $warningChance = 100;
     var $ignoreEditSummary = false;
 
-	function SpamBlacklist( $settings = array() ) {
+	function __construct( $settings = array() ) {
 		foreach ( $settings as $name => $value ) {
 			$this->$name = $value;
 		}
@@ -190,7 +190,7 @@ class SpamBlacklist {
 	 * @return Matched text if the edit should not be allowed, false otherwise
 	 */
 	function filter( &$title, $text, $section, $editsummary = '', EditPage &$editPage = null ) {
-		global $wgVersion, $wgOut, $wgParser, $wgUser;
+		global $wgParser, $wgUser;
 
 		$fname = 'wfSpamBlacklistFilter';
 		wfProfileIn( $fname );
@@ -287,7 +287,7 @@ class SpamBlacklist {
 		$res = $dbr->select( 'externallinks', array( 'el_to' ),
 			array( 'el_from' => $id ), __METHOD__ );
 		$links = array();
-		while ( $row = $dbr->fetchObject( $res ) ) {
+		foreach ( $res as $row ) {
 			$links[] = $row->el_to;
 		}
 		return $links;

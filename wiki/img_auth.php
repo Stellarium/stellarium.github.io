@@ -38,11 +38,28 @@ if ( $wgImgAuthPublicTest
 }
 
 // Extract path and image information
-if( !isset( $_SERVER['PATH_INFO'] ) )
-	wfForbidden('img-auth-accessdenied','img-auth-nopathinfo');
+if( !isset( $_SERVER['PATH_INFO'] ) ) {
+	$path = $wgRequest->getText( 'path' );
+	if( !$path ) {
+        wfForbidden( 'img-auth-accessdenied', 'img-auth-nopathinfo' );
+	}
+	$path = "/$path";
+} else {
+	$path = $_SERVER['PATH_INFO'];
+}
 
-$path = $_SERVER['PATH_INFO'];
-$filename = realpath( $wgUploadDirectory . $_SERVER['PATH_INFO'] );
+// Check for bug 28235: QUERY_STRING overriding the correct extension
+$dotPos = strpos( $path, '.' );
+$whitelist = array();
+if ( $dotPos !== false ) {
+	$whitelist[] = substr( $path, $dotPos + 1 );
+}
+if ( !$wgRequest->checkUrlExtension( $whitelist ) )
+{
+	return;
+}
+
+$filename = realpath( $wgUploadDirectory . $path );
 $realUpload = realpath( $wgUploadDirectory );
 
 // Basic directory traversal check

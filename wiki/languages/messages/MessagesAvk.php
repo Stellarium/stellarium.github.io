@@ -111,8 +111,7 @@ $messages = array(
 'tog-editsection'             => 'Betara va gabot kan "[Betara]" gluyasiki',
 'tog-editsectiononrightclick' => 'Betara va gabot talton vulegason<br /> va gabotvergumvelt',
 'tog-showtoc'                 => 'Nedira va ugak<br /> (icde teliz dem lo 3 gabot)',
-'tog-rememberpassword'        => 'Va jinaf remravlem setiker (cookie)',
-'tog-editwidth'               => 'Betaxo mantanhon nediwer',
+'tog-rememberpassword'        => 'Va jinaf remravlem setiker (cookie) (for a maximum of $1 {{PLURAL:$1|day|days}})',
 'tog-watchcreations'          => 'Kosuzdasikira va jinon betayan bueem',
 'tog-watchdefault'            => 'Va jinon reduyun ik betayan telizeem suzdá',
 'tog-watchmoves'              => 'Kosuzdasikira va jinon arrundayan bueem',
@@ -430,7 +429,7 @@ Me vulkul da rupeson va "Lodamaceem" bu va intaf {{SITENAME}} rotuilkal.',
 'yourname'                   => 'Rinaf favesikyolt',
 'yourpassword'               => 'Rinaf remravlem',
 'yourpasswordagain'          => 'Va rinaf remravlem tolon bazel',
-'remembermypassword'         => 'Setikera va jinaf remravlem (cookie)',
+'remembermypassword'         => 'Setikera va jinaf remravlem (cookie) (for a maximum of $1 {{PLURAL:$1|day|days}})',
 'yourdomainname'             => 'Rinaf ind',
 'externaldberror'            => 'Ont divefa origakrokla va pilkomodara ont va rinafa divefa pata me ronuskel.',
 'login'                      => 'Pilkomodá',
@@ -447,7 +446,7 @@ Me vulkul da rupeson va "Lodamaceem" bu va intaf {{SITENAME}} rotuilkal.',
 'gotaccountlink'             => 'Dogluyara',
 'createaccountmail'          => 'kan e-mail',
 'badretype'                  => 'Toloy suteyen remravlem tid menuxaf.',
-'userexists'                 => 'Favesikyolt rinon suteyen ixam zo faver. 
+'userexists'                 => 'Favesikyolt rinon suteyen ixam zo faver.
 Va amidaf yolt gokiblal.',
 'loginerror'                 => 'Pilkomodajara',
 'nocookiesnew'               => "Le compte utilisateur a été créé, mais vous n'êtes pas connecté. {{SITENAME}} utilise des cookies pour la connexion mais vous avez les cookies désactives. Merci de les activer et de vous reconnecter.",
@@ -542,7 +541,7 @@ Ta da wan zo pilkomodal, va warzaf remravlem batlize gobazel :",
 'blockedtitle'                     => 'Elekan favesik',
 'blockedtext'                      => '\'\'\'Rinafa favesikpata oku IP mane tid elekayane.\'\'\'
 
-Elekara skuyuna gan $1. 
+Elekara skuyuna gan $1.
 Lazava tir \'\'$2\'\'.
 
 * Elekaratoza : $8
@@ -586,8 +585,11 @@ oke [{{fullurl:{{FULLPAGENAME}}|action=edit}} va batu bu robetal]</span>.',
 'editingsection'                   => 'betara va $1 (gabot)',
 'editingcomment'                   => 'Betara va $1 (warzaf gabot)',
 'editconflict'                     => 'Betarakoboda : $1',
-'explainconflict'                  => "<b>Cette page a été sauvegardée après que vous avez commencé à la modifier.
-La zone d'édition supérieure contient le texte tel qu'il est enregistré actuellement dans la base de données. Vos modifications apparaissent dans la zone d'édition inférieure. Vous allez devoir apporter vos modifications au texte existant. Seul le texte de la zone supérieure sera sauvegardé.<br />",
+'explainconflict'                  => "Cette page a été sauvegardée après que vous avez commencé à la modifier.
+La zone d'édition supérieure contient le texte tel qu'il est enregistré actuellement dans la base de données.
+Vos modifications apparaissent dans la zone d'édition inférieure.
+Vous allez devoir apporter vos modifications au texte existant.
+Seul le texte de la zone supérieure sera sauvegardé.",
 'yourtext'                         => 'Rinaf krent',
 'storedversion'                    => 'Koverteyen siatos',
 'editingold'                       => "'''Obral : rin va savsaf siatos ke batu bu betal. Ede giwal, kot betaks skuyun mali bat siatos di zo deokar.'''",
@@ -598,7 +600,6 @@ Dere, kan rinaf suteks ik suteks male sangiskafa nuyafa klita, anton webel !
 'copyrightwarning2'                => "Vay stragal da kot webeks va {{SITENAME}} gan ar webesik zo robetar ike zo roataler ike zo rosular. Ede me djumel da rinaf suteks yo zo robetad, vaon batliz me staksel !<br />
 Rin dere abdiplekul da va webeks miv suteyel ike mal sangiskafa ok gundafa nuyafa klita ksudal (va $1 loon wil).
 '''VA COPYRIGHT SUTEKS ARIEKON MERICTANON VOL WEBEL !'''",
-'longpagewarning'                  => "'''WALZERA : batu bu tir kaikasu va $1 ko; konaki exulesiki va bu pokefu ok kaikefu gu 32 ko bak sutelara pofejed. Ton lopinaf gabot yo va bu rotir gosolparsal.'''",
 'longpageerror'                    => "'''ROKLA : Atoen krent tir $1 kilobytes. Batcoba tir lodabrotcafa dam $2 kilobytes cuge. In tir merogiwan.'''",
 'readonlywarning'                  => "'''OBRAL : batu bu kiewaginon zo abdinendar, acum va betara dure me rogiwatal. Ko iyeltak ta radimifa giwara va krent roksudal.'''",
 'protectedpagewarning'             => "'''WALZERA : batu bu zo nendar. Antaf ristus favesik vaon robetar.'''",
@@ -820,9 +821,9 @@ Kan ''all:'' laganeyal ta varafa exulera (gon keyaksexo is teza ikz-), oke wetce
 'prefs-rc'                  => 'Noeltaf betakseem',
 'prefs-watchlist'           => 'Suzdasiki',
 'prefs-watchlist-days'      => 'Cugafa vielota gonedina koe suzdasiki :',
-'prefs-watchlist-days-max'  => '(cugon 7 viel)',
+'prefs-watchlist-days-max'  => 'Cugon 7 viel',
 'prefs-watchlist-edits'     => 'Betaracugota gonedina koe mantafi suzdasiki :',
-'prefs-watchlist-edits-max' => '(cugafa ota : 1000)',
+'prefs-watchlist-edits-max' => 'Cugafa ota : 1000',
 'prefs-misc'                => 'Gedrafa lodamaca yo',
 'prefs-resetpass'           => 'Betara va remravlem',
 'saveprefs'                 => 'Va lodamaceem tuená',
@@ -1050,7 +1051,7 @@ Ta kobura va iyeltak, koe tazukasiki va gluyasiki favel
 'illegalfilename'             => '« $1 » iyeltakyolt va biuna staa koe buvergumvelt ruldar. Vay, vaon tolyoltal aze tolksudal.',
 'badfilename'                 => 'Tolyoltayana ewava « $1 ».',
 'filetype-badmime'            => 'Iyeltak ton "$1" MIME ord tir merokalvajan.',
-'filetype-unwanted-type'      => "'''\".\$1\"''' tir iyeltakordaj. 
+'filetype-unwanted-type'      => "'''\".\$1\"''' tir iyeltakordaj.
 {{PLURAL:\$3|iyeltakord tir|iyeltakord tid}} \$2.",
 'filetype-banned-type'        => "'''\".\$1\"''' tir merictan iyeltakord. Rictan iyeltakord {{PLURAL:\$3|tir|tid}} \$2.",
 'filetype-missing'            => 'Iyeltak tir oxiaciskaf (tulon ".jpg").',
@@ -1074,7 +1075,6 @@ Ede va man iyeltak soe co-djukalvajal, vay dimpil ise va warzaf yolt favel.
 'fileexists-shared-forbidden' => 'Koe pakano iyeltakxo milyoltaf iyeltak ixam tir.
 Ede va man iyeltak soe co-djukalvajal, vay dimpil ise va warzaf yolt favel. [[File:$1|thumb|center|$1]]',
 'file-exists-duplicate'       => 'Bat iyeltak tir jontolaca ke {{PLURAL:$1|iyeltak|iyeltak}}:',
-'successfulupload'            => 'Ksudanhara',
 'uploadwarning'               => 'Obral !',
 'savefile'                    => 'Giwara va iyeltak',
 'uploadedimage'               => '« [[$1]] » ksudayan mo zanisiko',
@@ -1091,6 +1091,7 @@ Ede va man iyeltak soe co-djukalvajal, vay dimpil ise va warzaf yolt favel. [[Fi
 
 Gokrafial ede tolkalvajara va bat iyeltak tir vodanhafa.
 Sulara \"log\" va batu bu krafiason batlize zo nedir :",
+'upload-success-subj'         => 'Ksudanhara',
 
 'upload-proto-error'     => 'Kitsendaj',
 'upload-file-error'      => 'Koefa rokla',
@@ -1311,7 +1312,9 @@ Abdi sulara, setikel da va ari skedasiki va teza stujel.',
 
 # Special:Categories
 'categories'                    => 'Bulomeem',
-'categoriespagetext'            => 'Radimiasa loma se moe wiki krulded :',
+'categoriespagetext'            => 'Radimiasa loma se moe wiki krulded.
+[[Special:UnusedCategories|Unused categories]] are not shown here.
+Also see [[Special:WantedCategories|wanted categories]].',
 'categoriesfrom'                => 'Nedira va loma tozakirafa gu :',
 'special-categories-sort-count' => 'Otafa mubera',
 'special-categories-sort-abc'   => 'Abavafa mubera',
@@ -1374,7 +1377,6 @@ L'adresse électronique que vous avez indiquée dans vos préférences apparaît
 # Watchlist
 'watchlist'            => 'Suzdasiki',
 'mywatchlist'          => 'Jinafi suzdasiki',
-'watchlistfor'         => "(tori '''$1''')",
 'nowatchlist'          => 'Rinafi suzdasiki va nedoy teliz ruldar.',
 'watchlistanontext'    => 'Ta wira ik betara va ra ke rinafi suzdasiki vay $1.',
 'watchnologin'         => 'Dogluyariskaf',
@@ -1458,7 +1460,7 @@ Vay gruyel da djuskul ise va maletireem vangrupel ise tarkason va [[{{MediaWiki:
 'actioncomplete'         => 'Skuyuna sulara',
 'deletedtext'            => '« <nowiki>$1</nowiki> » tir sulayan.
 Ta vexala dem noeltaf sulareem va $2 disukel.',
-'deletedarticle'         => 'al sular va « $1 »',
+'deletedarticle'         => 'al sular va « [[$1]] »',
 'suppressedarticle'      => '"[[$1]]" sulayan',
 'dellogpage'             => 'Izvot va sulareem',
 'dellogpagetext'         => 'Tir tela vexala dem noeltaf sulareem.
@@ -1634,7 +1636,6 @@ Va lazavanha (tulon ozwason va cidayanu bu se) vlevon bazel !',
 'ipb-edit-dropdown'        => 'Betara va elekaralazava',
 'ipb-unblock-addr'         => 'Va $1 dimelekara',
 'ipb-unblock'              => 'Dimelekara va favesikyolt ok IP mane',
-'ipb-blocklist-addr'       => 'Tis elekareem va $1',
 'ipb-blocklist'            => 'Wira va tis elekareem',
 'ipb-blocklist-contribs'   => 'Webereem ke $1',
 'unblockip'                => 'Grielekara va IP mane',
@@ -1959,10 +1960,10 @@ $1',
 # Media information
 'thumbsize'            => 'Aluklum :',
 'widthheightpage'      => '$1×$2, $3 {{PLURAL:$3|bu|bu}}',
-'file-info'            => '(iyeltakaldo : $1, MIME ord : $2)',
-'file-info-size'       => '($1 × $2 pixel, iyeltakaldo : $3, MIME ord : $4)',
+'file-info'            => 'iyeltakaldo : $1, MIME ord : $2',
+'file-info-size'       => '$1 × $2 pixel, iyeltakaldo : $3, MIME ord : $4',
 'file-nohires'         => '<small>Me roderaykan logijaf lum.</small>',
-'svg-long-desc'        => '(SVG iyeltak, prekson $1 × $2 pixels, iyeltakaldo : $3)',
+'svg-long-desc'        => 'SVG iyeltak, prekson $1 × $2 pixels, iyeltakaldo : $3',
 'show-big-image'       => 'Geltraf lum',
 'show-big-image-thumb' => '<small>Lum ke bata abdinedira : $1 × $2 pixels</small>',
 

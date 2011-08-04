@@ -14,7 +14,6 @@ require_once( 'SpamBlacklist_body.php' );
  */
 function cleanupArticle( $rev, $regexes, $match ) {
 	$title = $rev->getTitle();
-	$reverted = false;
 	$revId = $rev->getId();
 	while ( $rev ) {
 		$matches = false;
@@ -35,7 +34,7 @@ function cleanupArticle( $rev, $regexes, $match ) {
 		}
 	}
 	$dbw = wfGetDB( DB_MASTER );
-	$dbw->immediateBegin();
+	$dbw->begin();
 	if ( !$rev ) {
 		// Didn't find a non-spammy revision, delete the page
 /*
@@ -54,28 +53,8 @@ function cleanupArticle( $rev, $regexes, $match ) {
 		$article = new Article( $title );
 		$article->updateArticle( $rev->getText(), "Cleaning up links to $match", false, false );
 	}
-	$dbw->immediateCommit();
+	$dbw->commit();
 	wfDoUpdates();
-}
-
-
-/**
- * Do any deferred updates and clear the list
- * TODO: This could be in Wiki.php if that class made any sense at all
- */
-if ( !function_exists( 'wfDoUpdates' ) ) {
-	function wfDoUpdates()
-	{
-		global $wgPostCommitUpdateList, $wgDeferredUpdateList;
-		foreach ( $wgDeferredUpdateList as $update ) { 
-			$update->doUpdate();
-		}
-		foreach ( $wgPostCommitUpdateList as $update ) {
-			$update->doUpdate();
-		}
-		$wgDeferredUpdateList = array();
-		$wgPostCommitUpdateList = array();
-	}
 }
 
 //------------------------------------------------------------------------------

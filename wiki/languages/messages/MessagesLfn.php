@@ -9,6 +9,7 @@
  *
  * @author Cgboeree
  * @author Malafaya
+ * @author Reedy
  * @author Urhixidur
  */
 
@@ -47,8 +48,7 @@ $messages = array(
 'tog-editsection'             => 'Engrana la edita de sesion via lias de {edita}.',
 'tog-editsectiononrightclick' => 'Engrana la edita de sesion par clica a la destra a titulos de sesion (JavaScript)',
 'tog-showtoc'                 => 'Mostra la table de contenis (per pajes con plu ce tre titulos)',
-'tog-rememberpassword'        => 'Memora me sinia per entra a esta computador',
-'tog-editwidth'               => 'La caxa de editas ave la longia masima',
+'tog-rememberpassword'        => 'Memora me sinia per entra a esta computador (for a maximum of $1 {{PLURAL:$1|day|days}})',
 'tog-watchcreations'          => 'Junta la pajes ce me ia creada a me lista de pajes oservada',
 'tog-watchdefault'            => 'Junta pajes ce me ia edita a me lista de pajes oservada',
 'tog-watchmoves'              => 'Junta pajes ce me ia moveda a me lista de pajes oservada',
@@ -288,7 +288,7 @@ $messages = array(
 'yourname'                => 'Nom de usor:',
 'yourpassword'            => 'Sinia de entra:',
 'yourpasswordagain'       => 'Retape la sinia:',
-'remembermypassword'      => 'Memora me sinia de entra a esta computador',
+'remembermypassword'      => 'Memora me sinia de entra a esta computador (for a maximum of $1 {{PLURAL:$1|day|days}})',
 'yourdomainname'          => 'Tu domina:',
 'login'                   => 'Identifia',
 'nav-login-createaccount' => 'Sinia per entra',
@@ -378,7 +378,7 @@ La razon donada es ''$2''.
 * Ci algun intende impedi: $7
 
 Tu pote contata $1 o un otra [[{{MediaWiki:Grouppage-sysop}}|dirijor]] per discute esta impedi.
-Tu no pote usa la 'envia un eposta a esta usor' sin un adirije de eposta legal es indicada en tu 
+Tu no pote usa la 'envia un eposta a esta usor' sin un adirije de eposta legal es indicada en tu
 [[Special:Preferences|preferis de conta]] e tu no es impedida de usa el.
 Tu adirije de IP es aora $3, e la identia de la impedi es #$5.
 Per favore inclui tota esta detales en tu demandas.",
@@ -390,7 +390,7 @@ Si tu es asi par era, clica a la boton '''retro''' de tu surfador.",
 'noarticletext'              => 'Es aora no testo a esta paje.
 Tu pote [[Special:Search/{{PAGENAME}}|xerca per la titulo de esta paje]] en otra pajes,
 <span class="plainlinks">[{{fullurl:{{#Special:Log}}|page={{FULLPAGENAMEE}}}} xerca la arcivos relatada],
-o [{{fullurl:{{FULLPAGENAME}}|action=edit}} edita esta paje].',
+o [{{fullurl:{{FULLPAGENAME}}|action=edit}} edita esta paje]</span>.',
 'previewnote'                => "'''Esta sola un previde; cambias no es fisada ja'''",
 'editing'                    => 'En la prosede de edita $1',
 'editingsection'             => 'Edita $1 (sesion)',
@@ -399,8 +399,6 @@ o [{{fullurl:{{FULLPAGENAME}}|action=edit}} edita esta paje].',
 'copyrightwarning'           => "Per favore nota ce tota labora a {{SITENAME}} es judida ce el es relasada su la $2 (vide $1 per detalias). Si tu no desira ce tu scrives ta es editada sin compati e redistribui sin tu permite, no sumita el asi!<br />
 Tu ance promete a nos ce tu ia scriveda esta par tu mesma, o copiada esta de un domina publica o otra orijin libre.
 '''NO SUMITA LABORA SU DIRETOS DE AUTOR SIN PERMITE!!'''",
-'longpagewarning'            => "'''AVISA: Esta paje usa $1 kilotetas; alga surfadores pote ave problemes con la edita de pajes plu grande ce 32 ko.
-Per favore, considera parti la paje en pesos plu poca.'''",
 'templatesused'              => '{{PLURAL:$1|Modele|Modeles}} usada en esta paje:',
 'templatesusedpreview'       => '{{PLURAL:$1|Modele|Modeles}} usada en esta previde:',
 'template-protected'         => '(protejeda)',
@@ -671,7 +669,9 @@ Pajes a [[Special:Watchlist|tu lista de pajes oservada]] es en leteras '''forte'
 
 # Special:Categories
 'categories'         => 'Categorias',
-'categoriespagetext' => 'Es la categorias seguente en la vici.',
+'categoriespagetext' => 'Es la categorias seguente en la vici.
+[[Special:UnusedCategories|Unused categories]] are not shown here.
+Also see [[Special:WantedCategories|wanted categories]].',
 
 # Special:LinkSearch
 'linksearch-ok' => 'Xerca',
@@ -688,7 +688,6 @@ Pajes a [[Special:Watchlist|tu lista de pajes oservada]] es en leteras '''forte'
 # Watchlist
 'watchlist'         => 'Pajes oservada',
 'mywatchlist'       => 'Me lista de pajes oservada',
-'watchlistfor'      => "(per '''$1''')",
 'nowatchlist'       => 'Tu ave no cosas en tu lista oservada',
 'addedwatch'        => 'Juntada a la lista de pajes oservada',
 'addedwatchtext'    => "La paje \"[[:\$1]]\" ia es juntada a tu [[Special:Watchlist|lista de pajes oservada]].
@@ -918,9 +917,9 @@ En esta casos, tu va nesesa move o fusa la paje per mano, si desirada.",
 
 # Media information
 'widthheightpage'      => '$1×$2, $3 {{PLURAL:$3|paje|pajes}}',
-'file-info-size'       => '($1 × $2 pixel, grandia de fix: $3, MIME tipo: $4)',
+'file-info-size'       => '$1 × $2 pixel, grandia de fix: $3, MIME tipo: $4',
 'file-nohires'         => '<small>No plu densia posable.</small>',
-'svg-long-desc'        => '(SVG fix, per nom $1 × $2 pixeles, grandia de fix: $3)',
+'svg-long-desc'        => 'SVG fix, per nom $1 × $2 pixeles, grandia de fix: $3',
 'show-big-image'       => 'Densia masima',
 'show-big-image-thumb' => '<small>Grandia de eesta previde: $1 × $2 pixeles</small>',
 

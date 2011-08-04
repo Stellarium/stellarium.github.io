@@ -8,6 +8,7 @@
  * @file
  *
  * @author Geoleplubo
+ * @author Hercule
  */
 
 $fallback = 'fr';
@@ -26,8 +27,7 @@ $messages = array(
 'tog-editsection'             => "Pérmet l'édichion del sekchion via [edit] loïens",
 'tog-editsectiononrightclick' => "Pérmet l'édichion del sekchion par un droé buke su ch'tite del sekchion (i feut JavaScript)",
 'tog-showtoc'                 => "Aficher l'tabe ed ches étnus (pou ches paches aveuc plu ed 3 intétes)",
-'tog-rememberpassword'        => "Warder min lodjine su chl'ordinateu-lo.",
-'tog-editwidth'               => "Alatcher l'boéte d'édichon pou rimplir tout ch'cassi",
+'tog-rememberpassword'        => "Warder min lodjine su chl'ordinateu-lo (for a maximum of $1 {{PLURAL:$1|day|days}})",
 'tog-watchcreations'          => "Ajouter ches paches qu'éj crée su em lisse",
 'tog-watchdefault'            => "Ajouter ches paches qu'éj édite su em lisse.",
 'tog-watchmoves'              => "Ajouter ches paches qu'éj déplache su m'lisse.",
@@ -133,27 +133,28 @@ $messages = array(
 'qbbrowse'       => 'Trifouille',
 'qbedit'         => 'Editer',
 'qbpageoptions'  => 'Chol pache-lo',
+'qbpageinfo'     => 'Conteske',
 'qbmyoptions'    => 'Mes paches',
 'qbspecialpages' => 'Espéciales paches',
 'faq'            => 'FAQ',
 'faqpage'        => 'Project:FAQ',
 
 # Vector skin
-'vector-action-delete'       => 'Défacer',
-'vector-action-move'         => "Canger ch'nom",
-'vector-namespace-help'      => "Pache d'aïude",
-'vector-namespace-image'     => 'Fichié',
-'vector-namespace-main'      => 'Pache',
-'vector-namespace-mediawiki' => 'Message',
-'vector-namespace-special'   => 'Pache éspéchiale',
-'vector-namespace-talk'      => 'Pérlache',
-'vector-namespace-template'  => 'Modéle',
-'vector-namespace-user'      => 'Pache dechl uzeu',
-'vector-view-create'         => 'Créer',
-'vector-view-edit'           => 'Éditer',
-'vector-view-history'        => "Vir l'histoère",
-'vector-view-view'           => 'Lire',
-'vector-view-viewsource'     => "Vir l'source",
+'vector-action-addsection'       => 'Rajouter un sujeut',
+'vector-action-delete'           => 'Défacer',
+'vector-action-move'             => "Canger ch'nom",
+'vector-action-protect'          => 'Garantir',
+'vector-action-undelete'         => "N'poin défacher",
+'vector-action-unprotect'        => "N'poin garantir",
+'vector-simplesearch-preference' => "Déhousser chés avanches d'ércherche améliorées (seulemint pour Vector)",
+'vector-view-create'             => 'Créer',
+'vector-view-edit'               => 'Éditer',
+'vector-view-history'            => "Vir l'histoère",
+'vector-view-view'               => 'Lire',
+'vector-view-viewsource'         => "Vir l'source",
+'actions'                        => 'Acchons',
+'namespaces'                     => "Éspaces d'chés noms",
+'variants'                       => 'Ércanjantes',
 
 'errorpagetitle'    => 'Bérlure',
 'returnto'          => 'Értrouve $1.',
@@ -165,6 +166,7 @@ $messages = array(
 'searcharticle'     => 'Aller',
 'history'           => 'Pache historique',
 'history_short'     => 'Histoère',
+'updatedmarker'     => 'Cangé édpui em darinne visite',
 'info_short'        => 'Informachion',
 'printableversion'  => 'Imprimabe vérchon',
 'permalink'         => 'Loïen pérmanint',
@@ -213,6 +215,8 @@ $messages = array(
 'aboutpage'            => 'Project:à pérpos',
 'copyright'            => "Ch'contnu, il est disponipe dsou $1.",
 'copyrightpage'        => '{{ns:project}}:Copyrights',
+'currentevents'        => 'Darinnetés picardes',
+'currentevents-url'    => 'Project:Darinnetés picardes',
 'disclaimers'          => 'Démintis',
 'disclaimerpage'       => 'Project:Déminti général',
 'edithelp'             => 'Éditer el aiyude',
@@ -221,6 +225,7 @@ $messages = array(
 'mainpage'             => 'Moaite Pache',
 'mainpage-description' => 'Moaite Pache',
 'portal'               => 'Portal del conmeunauté',
+'portal-url'           => 'Project:Accueul del conminnité',
 'privacy'              => "Politique d'éscrè",
 'privacypage'          => "Project:Politique d'éscrè",
 
@@ -303,7 +308,7 @@ Si s'n'est poin ch'cas-lo, pététe éq ch'est un bogue din ch'businkillache. <b
 'yourname'                => "nom d'uzeu:",
 'yourpassword'            => "Mot d'passe:",
 'yourpasswordagain'       => "Intrer à nouvieu ch'mot d'passe:",
-'remembermypassword'      => "Inrégistrer m'loguine su echl ordinateu-lo",
+'remembermypassword'      => "Intrer oùtonmatiquemint l'prochaine fouos (pour un maximum éd $1 {{PLURAL:$1|jour|jours}})",
 'yourdomainname'          => 'Vote donmène:',
 'login'                   => 'Intrer',
 'nav-login-createaccount' => 'Intrer / créer vote conpte',
@@ -599,7 +604,6 @@ Ale doét mie éte pu longue éq $1 {{PLURAL:$1|caracter|caractéres}}.',
 # Watchlist
 'watchlist'         => 'Em lisse à suire',
 'mywatchlist'       => "M'lisse à suire",
-'watchlistfor'      => "(pou '''$1''')",
 'addedwatch'        => "Rajouté su l'lisse à suire",
 'addedwatchtext'    => "L' pache « [[:$1]] » o té rajoutée à vote [[Special:Watchlist|lisse à suire]].<br /> Chés  canjemints à vnir del pache-lo pi del page éd pérlache sront mis din l'lisse. L'pache sro '''in cros''' din el [[Special:RecentChanges|lisse d'chés darins canjemints]] pou les értreuver fachilmint. Pou értirer chol pache del ''lisse à suire'', bukez su « {{MediaWiki:Unwatch}} ».",
 'removedwatch'      => 'Értiré del lisse à suire',
@@ -682,6 +686,7 @@ Vlo chés réglages del pache '''$1''' à ch'momint-chi:",
 'sp-contributions-blocklog' => 'jornal éd chés blotcåjhes',
 'sp-contributions-search'   => 'Tracher pou chés contérbuchons',
 'sp-contributions-username' => "Adérche IP ou nom d'uzeu",
+'sp-contributions-toponly'  => "n'montrer qu'chés darins canjemints",
 'sp-contributions-submit'   => 'Tracher',
 
 # What links here
@@ -689,6 +694,8 @@ Vlo chés réglages del pache '''$1''' à ch'momint-chi:",
 'whatlinkshere-title'      => 'Paches qu\'il ont des loïens aveuc "$1"',
 'whatlinkshere-page'       => 'Pache:',
 'linkshere'                => "Chés paches-lo il sont érliées à '''[[:$1]]''':",
+'nolinkshere'              => "i n'y o poin d'pache aveuc un loïen vers  '''[[:$1]]'''.",
+'nolinkshere-ns'           => "i n'y o poin d'pache aveuc un loïen vers '''[[:$1]]''' dins echl'éspace d'noms coési.",
 'isredirect'               => 'pache érdirigée',
 'istemplate'               => 'transclusion',
 'isimage'                  => "Loïen aveuc l'imache",
@@ -698,11 +705,18 @@ Vlo chés réglages del pache '''$1''' à ch'momint-chi:",
 'whatlinkshere-hideredirs' => '$1 érdireccions',
 'whatlinkshere-hidetrans'  => 'transclusions éd $1',
 'whatlinkshere-hidelinks'  => '$1 loïens',
+'whatlinkshere-hideimages' => '$1 chés loïés fichiés',
 'whatlinkshere-filters'    => 'Filtes',
 
 # Block/unblock
-'blockip'                  => 'uzeu blotché',
+'blockip'                  => "Blotcher l'uzeu",
+'blockip-title'            => "Blotcher l'uzeu",
+'blockip-legend'           => "Blotcher l'uzeu",
+'blockiptext'              => "Uzer dech teske-lo pour blotcher l’ahérse aux canjemints foaits dpui eune adrèche IP éspéchifique o bin d’un nom d’uzeu.
+I feut l'foaire seleumint pour inréyer ech vindalime et pi i feut ète acordant aveuc chés [[{{MediaWiki:Policy-url}}|usages intérnes]].
+Donner apré ch'motif  (pèr egzimpe chiter chés paches qu'ont té vindalisées).",
 'ipboptions'               => '2 heures:2 hours,1 jour:1 day,3 jours:3 days,1 ésminne:1 week,2 ésminnes:2 weeks,1 moés:1 month,3 moés:3 months,6 moés:6 months,1 an:1 year,infini:infinite',
+'ipbotheroption'           => 'eute',
 'ipblocklist'              => "Adréches IP pi noms d'uzeu blotchés",
 'blocklink'                => 'blotcher',
 'unblocklink'              => 'déblotcher',
@@ -737,7 +751,7 @@ Din chés cas-lo, I feut érlonmer ou ratatouiller l'pache aveuc l'main.",
 'movetalk'         => "Canjer ch'nom del pache d'pérlache apparièe",
 '1movedto2'        => 'déplacher [[$1]] dsus [[$2]]',
 '1movedto2_redir'  => "il o déplaché [[$1]] su [[$2]] in écatant l'érsin",
-'movelogpage'      => "Déplacher ch'jornal",
+'movelogpage'      => 'Jornal éd chés déplachemints',
 'movereason'       => 'Motif:',
 'revertmove'       => 'invérser',
 
@@ -804,15 +818,19 @@ Os pouvez vir l'source",
 'tooltip-watch'                   => 'Ajouter chol pache-lo à vo lisse à suire',
 'tooltip-rollback'                => '« Racacher » cancéle aveuc un clic el (ou chés) modificachon(s) del pache-lo pèr sin darin contérbucheu.',
 'tooltip-undo'                    => "« Undo » ( ''démangler'' ) értire ch'canjemint-lo pi ouvre l' fénéte d'édichon din ch'mode ''prévir''. <br /> In put mette un motif din ch'résumé.",
+'tooltip-preferences-save'        => 'Warder chés préférinches.',
+
+# Info page
+'numedits' => 'Nombe ed canjemints (pache) : $1',
 
 # Browsing diffs
 'previousdiff' => '← Pu vieille édition',
 'nextdiff'     => 'Nouvèle édichon →',
 
 # Media information
-'file-info-size'       => '($1 × $2 picséls, diminchon dech fichié: $3, MIME tipe: $4)',
+'file-info-size'       => '$1 × $2 picséls, diminchon dech fichié: $3, MIME tipe: $4',
 'file-nohires'         => '<small>Poin éd pu grande résoluchon possibe.</small>',
-'svg-long-desc'        => '(Fichié SVG, résoluchon éd $1 × $2 picsels, diminchon: $3)',
+'svg-long-desc'        => 'Fichié SVG, résoluchon éd $1 × $2 picsels, diminchon: $3',
 'show-big-image'       => 'Plinne résoluchon',
 'show-big-image-thumb' => '<small>Diminchon del intérvue-lo : $1 × $2 picséls</small>',
 
@@ -845,12 +863,44 @@ Chés eutes cans is s'ront muchés pèr défeut.
 'namespacesall' => 'tous',
 'monthsall'     => 'tertous',
 
+# Multipage image navigation
+'imgmultipageprev' => '← pache édvant',
+
+# Table pager
+'table_pager_next'  => 'Pache apré',
+'table_pager_first' => 'Prumière pache',
+'table_pager_last'  => 'Darinne pache',
+
 # Watchlist editing tools
 'watchlisttools-view' => 'Vir chés consécants cangemints',
 'watchlisttools-edit' => "Vir pi éditer l'lisse à suire",
 'watchlisttools-raw'  => 'Éditer eune brute lisse à suire',
 
+# Special:Version
+'version-specialpages' => 'Paches éspéchiales',
+
+# Special:FilePath
+'filepath-page' => 'Fichié :',
+
 # Special:SpecialPages
-'specialpages' => 'Paches éspéchiales',
+'specialpages'             => 'Paches éspéchiales',
+'specialpages-group-users' => 'Uzeus pi leus droués',
+'specialpages-group-pages' => "Lisses d'chés paches",
+
+# Special:BlankPage
+'blankpage' => 'Blanke pache',
+
+# Special:ComparePages
+'compare-page1'  => 'Pache 1',
+'compare-page2'  => 'Pache 2',
+'compare-rev1'   => 'Canjemint 1',
+'compare-rev2'   => 'Canjemint 2',
+'compare-submit' => 'Aconparer',
+
+# Database error messages
+'dberr-header' => 'Ech wiki-lo il o dés problémes',
+
+# HTML forms
+'htmlform-reset' => "n'poin foaire chés canjemints",
 
 );

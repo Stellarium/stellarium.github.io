@@ -1,5 +1,5 @@
 <?php
-if (!defined('MEDIAWIKI')) die();
+if ( !defined( 'MEDIAWIKI' ) ) die();
 
 global $wgContLang, $wgContLanguageCode, $wgCiteDefaultText;
 
@@ -9,13 +9,12 @@ $file = file_exists( "${dir}cite_text-$code" ) ? "${dir}cite_text-$code" : "${di
 $wgCiteDefaultText = file_get_contents( $file );
 
 class SpecialCite extends SpecialPage {
-	function SpecialCite() {
-		SpecialPage::SpecialPage( 'Cite' );
+	function __construct() {
+		parent::__construct( 'Cite' );
 	}
 
 	function execute( $par ) {
-		global $wgOut, $wgRequest, $wgUseTidy;
-		wfLoadExtensionMessages( 'SpecialCite' );
+		global $wgRequest, $wgUseTidy;
 
 		// Having tidy on causes whitespace and <pre> tags to
 		// be generated around the output of the CiteOutput
@@ -48,7 +47,7 @@ class SpecialCite extends SpecialPage {
 class CiteForm {
 	var $mTitle;
 
-	function CiteForm( &$title ) {
+	function __construct( &$title ) {
 		$this->mTitle =& $title;
 	}
 
@@ -94,7 +93,7 @@ class CiteOutput {
 	var $mTitle, $mArticle, $mId;
 	var $mParser, $mParserOptions;
 
-	function CiteOutput( &$title, &$article, $id ) {
+	function __construct( &$title, &$article, $id ) {
 		global $wgHooks, $wgParser;
 
 		$this->mTitle =& $title;
@@ -110,12 +109,12 @@ class CiteOutput {
 	}
 
 	function execute() {
-		global $wgOut, $wgUser, $wgParser, $wgHooks, $wgCiteDefaultText;
+		global $wgOut, $wgParser, $wgHooks, $wgCiteDefaultText;
 
 		$wgHooks['ParserGetVariableValueTs'][] = array( $this, 'timestamp' );
 
 		$msg = wfMsgForContentNoTrans( 'cite_text' );
-		if( $msg == '' ) {
+		if ( $msg == '' ) {
 			$msg = $wgCiteDefaultText;
 		}
 		$this->mArticle->fetchContent( $this->mId, false );

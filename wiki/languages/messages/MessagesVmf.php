@@ -33,28 +33,28 @@ $namespaceNames = array(
 );
 
 $specialPageAliases = array(
-	'DoubleRedirects'           => array( 'Dobâldâ Wajdârlajdungân' ),
+	'DoubleRedirects'           => array( 'Dobâldâ_Wajdârlajdungân' ),
 	'Userlogin'                 => array( 'Ôômäldâ' ),
 	'Userlogout'                => array( 'Ôbmäldâ' ),
 	'Preferences'               => array( 'Ôischtälungâ' ),
 	'Watchlist'                 => array( 'Bäoobôchdungslisdâ' ),
-	'Recentchanges'             => array( 'Lädsdâ Änârungâ' ),
+	'Recentchanges'             => array( 'Lädsdâ_Änârungâ' ),
 	'Upload'                    => array( 'Hoochlaadâ' ),
 	'Statistics'                => array( 'Schdadisdign' ),
-	'Newpages'                  => array( 'Nojâ Sajdâ' ),
-	'Allpages'                  => array( 'Ôlâ Sajdâ' ),
+	'Newpages'                  => array( 'Nojâ_Sajdâ' ),
+	'Allpages'                  => array( 'Ôlâ_Sajdâ' ),
 	'Prefixindex'               => array( 'Indägs' ),
 	'Specialpages'              => array( 'Schbädsjaalsajdâ' ),
 	'Contributions'             => array( 'Bajdräächâ' ),
 	'Emailuser'                 => array( 'Iimäjlâ' ),
-	'Confirmemail'              => array( 'Iimäjl bschdädigâ' ),
-	'Movepage'                  => array( 'Sajdâ färschiibâ' ),
+	'Confirmemail'              => array( 'Iimäjl_bschdädigâ' ),
+	'Movepage'                  => array( 'Sajdâ_färschiibâ' ),
 	'Categories'                => array( 'Gadâgoriin' ),
 	'Export'                    => array( 'Ägsbordiirn' ),
-	'Allmessages'               => array( 'Ôlâ Nôôchrichdâ' ),
+	'Allmessages'               => array( 'Ôlâ_Nôôchrichdâ' ),
 	'Undelete'                  => array( 'Wiidârhärschdälâ' ),
 	'Import'                    => array( 'Imbordiirn' ),
-	'Unwatchedpages'            => array( 'Unbäoobôchdâdâ Sajdn' ),
+	'Unwatchedpages'            => array( 'Unbäoobôchdâdâ_Sajdn' ),
 );
 
 $messages = array(
@@ -65,8 +65,7 @@ $messages = array(
 'tog-hideminor'              => 'Glaane ändrungn ned ôôdsajchn',
 'tog-hidepatrolled'          => 'Ned dsajchn in dâ „Ledschdâ Ändrungn“, was an andrar schon brüüfd had',
 'tog-showtoc'                => 'Inhalds-fârdsajchnis ôôdsajchn baj määr wi 3 iiwârschrifdn',
-'tog-rememberpassword'       => 'Uf dem Ghombjuudâr schdändich ôôgmäld blajwn',
-'tog-editwidth'              => "S'âjgaawefäld sol soo braad wi dr bildschirm wärn",
+'tog-rememberpassword'       => 'Uf dem Ghombjuudâr schdändich ôôgmäld blajwn (for a maximum of $1 {{PLURAL:$1|day|days}})',
 'tog-watchcreations'         => 'Ale fon miir sälwâr gmachdn sajdn soln uf mâj beoobachdungs-lischdn',
 'tog-watchdefault'           => 'Ale fon miir gändârdnd sajdn soln uf mâj beoobachdungs-lischdn',
 'tog-watchmoves'             => 'Ale fon miir fârschoobnen sajdn soln uf mâj beoobachdungs-lischdn',
@@ -164,30 +163,19 @@ ausghenn, mr mus dâdsuu ufm ajchnen rächnâr was âjrichdn ghenn)',
 'faqpage'        => 'Project:FAQ',
 
 # Vector skin
-'vector-action-addsection'   => 'Ân najn abschnid ôôfangn',
-'vector-action-delete'       => 'Leschn',
-'vector-action-move'         => 'Umdaafn',
-'vector-action-protect'      => 'Schidsn',
-'vector-action-undelete'     => 'Leschn riggängich machn',
-'vector-action-unprotect'    => 'Schuds ufgeebn',
-'vector-namespace-category'  => 'Ghadegorii',
-'vector-namespace-help'      => 'Hilfe-sajdn',
-'vector-namespace-image'     => 'Dadhaj',
-'vector-namespace-main'      => 'Sajdn',
-'vector-namespace-media'     => 'Meedjân-sajdn',
-'vector-namespace-mediawiki' => 'Mäldung fon MediaWiki',
-'vector-namespace-project'   => 'Brojägd-sajdn',
-'vector-namespace-special'   => 'Sondâr-sajdn',
-'vector-namespace-talk'      => 'Disghusjoon',
-'vector-namespace-template'  => 'Foorlaach',
-'vector-namespace-user'      => 'Benudsâr-sajdn',
-'vector-view-create'         => 'Ôôleechn',
-'vector-view-edit'           => 'Bearbajdn',
-'vector-view-history'        => 'Wärsjoonsfolche',
-'vector-view-view'           => 'Leesn',
-'vector-view-viewsource'     => 'Gwäl-dhägsd ôôgugn',
-'namespaces'                 => 'Nôômsrajm',
-'variants'                   => 'Warjandn',
+'vector-action-addsection' => 'Ân najn abschnid ôôfangn',
+'vector-action-delete'     => 'Leschn',
+'vector-action-move'       => 'Umdaafn',
+'vector-action-protect'    => 'Schidsn',
+'vector-action-undelete'   => 'Leschn riggängich machn',
+'vector-action-unprotect'  => 'Schuds ufgeebn',
+'vector-view-create'       => 'Ôôleechn',
+'vector-view-edit'         => 'Bearbajdn',
+'vector-view-history'      => 'Wärsjoonsfolche',
+'vector-view-view'         => 'Leesn',
+'vector-view-viewsource'   => 'Gwäl-dhägsd ôôgugn',
+'namespaces'               => 'Nôômsrajm',
+'variants'                 => 'Warjandn',
 
 'errorpagetitle'    => 'Feelär',
 'returnto'          => 'Dsrig dsur sajdn $1.',
@@ -310,7 +298,7 @@ $1",
 
 # Main script and global functions
 'nosuchaction'      => 'Des schded ned dsur auswaal',
-'nosuchactiontext'  => "Di agdsjoon, dii in dr URL schdäd, ged ned. 
+'nosuchactiontext'  => "Di agdsjoon, dii in dr URL schdäd, ged ned.
 Filajchd is di URL falsch gschriiwn, odr duu bisch âm falschn lingg nôôch.
 S'ghend aa â brogramiirfäälâr in dr sofdwäâr sâj, dii baj {{SITENAME}} lefd.",
 'nosuchspecialpage' => "Dii sôndâr-sajdn gajd's ned",
@@ -339,7 +327,7 @@ aus dr fungdsjoon "<tt>$2</tt>". Un dôôdruf had dan di daadnbangg den feelâr 
 Gschbärd is se desdâweechn: $1",
 'missing-article'    => "Di daadnbangh had dii sajdn „$1“ $2 ned gfundn.
 
-Wen des basiird, dan massdn`s, wemma â dsu alde bearbajdung ôôschaua wil odâ ane fonra gleschdn sajdn.  
+Wen des basiird, dan massdn`s, wemma â dsu alde bearbajdung ôôschaua wil odâ ane fonra gleschdn sajdn.
 
 Wen's des ned is, bisd womeeglich iwa ân feela in dr sofdwäâr gschdolbäd. In dämm Fall melds´däs, bidde mid där URL, am [[Special:ListUsers/sysop|Administrator]].",
 'missingarticle-rev' => '(wärsjoonsnumâr: $1)',
@@ -349,7 +337,7 @@ Wen's des ned is, bisd womeeglich iwa ân feela in dr sofdwäâr gschdolbäd. In
 # Login and logout pages
 'yourname'                => 'Benudsârnôômâ',
 'yourpassword'            => 'Bhaswôrd:',
-'remembermypassword'      => 'Af dem ghombjuudâr schdändich ôôgmäld blajm',
+'remembermypassword'      => 'Af dem ghombjuudâr schdändich ôôgmäld blajm (for a maximum of $1 {{PLURAL:$1|day|days}})',
 'login'                   => 'Ôômeldn',
 'nav-login-createaccount' => 'Oomeldn / Ghondoo ooleeng',
 'userlogin'               => 'Ôômeldn / Als Bajdräächâr ajschrajm',
@@ -415,7 +403,7 @@ Schrajb des bide als dâdsu, wen De Dich meldsd.",
 Um dii sajdn ôôdsleechn, schrajb Dajn dhägsd in deen rôôma dô undn naj (fir aandslhajdn, schau af dâr [[{{MediaWiki:Helppage}}|hilfesajdn]] nôôch).
 Wen'D dich awâr hiirhäär bloos fârlaafn hasd, glig ââfach af '''Zurück''' in Dajm brausâr, dan geedâr dôôhi dsrig, wos'D häärghumma bisd.",
 'noarticletext'                    => 'Dii sajdn gibd\'s bis eds no ned.
-Duu ghâusch nach däm ausdrug aa [[Special:Search/{{PAGENAME}}|in alle sajdn suchng]], 
+Duu ghâusch nach däm ausdrug aa [[Special:Search/{{PAGENAME}}|in alle sajdn suchng]],
 <span class="plainlinks"> [{{fullurl:{{#special:Log}}|page={{FULLPAGENAMEE}}}} in di dsugheerichng log-biichâr suchng] odâr dii sajdn [{{fullurl:{{FULLPAGENAME}}|action=edit}} ôôleeng un najschrajm]</span>.',
 'previewnote'                      => "'''Hiir siggsd bloos, wii's wärn dääd, dii sajdn is ôbâr no ned gschbaichärd!'''",
 'editing'                          => 'Beärbâdn fon $1',
@@ -684,7 +672,6 @@ S'gajd awâr aa â [[Special:WhatLinksHere/$2|lisdn mid alâ fârwajs]].",
 # Watchlist
 'watchlist'         => 'Maj beoobachdungs-lisdn',
 'mywatchlist'       => 'Mâj beoobachdungslisdn',
-'watchlistfor'      => "(fär '''$1''')",
 'addedwatch'        => 'Wärd ab jeds beoobachd',
 'addedwatchtext'    => "Di sajdn „[[:$1]]“ schdäd eds mid af dajnâr [[Special:Watchlist|beoobachdungs-lisdn]] .
 
@@ -917,10 +904,10 @@ Bidde gug's mi´m foorschau-gnobf ôô fôrm schbajchan",
 'modern.css'      => "/* CSS hiir beâjflusd nôr dii Modern-schelfn. Wen'd ale uf ôômôôl beâjflusn wilsch, muâsch an MediaWiki:Common.css was ändârn. */
 
 /* Dii glôôschrajwung im nawigadsjoonsberajch fârhindârd des: */
-.portlet h5,  
-.portlet h6,  
-#p-personal ul,  
-#p-cactions li a,  
+.portlet h5,
+.portlet h6,
+#p-personal ul,
+#p-cactions li a,
 #preftoc a {
      text-transform: none;
 }",
@@ -936,9 +923,9 @@ Bidde gug's mi´m foorschau-gnobf ôô fôrm schbajchan",
 'nextdiff'     => 'Undârschiid fo där nägsdn ändrung →',
 
 # Media information
-'file-info-size'       => '($1 × $2 pigsl, dadajgrääsn: $3, MIME-tib: $4)',
+'file-info-size'       => '$1 × $2 pigsl, dadajgrääsn: $3, MIME-tib: $4',
 'file-nohires'         => "<small>A he´äre aafleesung gibd's ghaane.</small>",
-'svg-long-desc'        => '(SVG-dadaj, ufleesung: $1 × $2 pigsl, dadajgreesn: $3)',
+'svg-long-desc'        => 'SVG-dadaj, ufleesung: $1 × $2 pigsl, dadajgreesn: $3',
 'show-big-image'       => 'Bild in hegsdâr aufleesung',
 'show-big-image-thumb' => '<small>Greäs fo där schbigg-ôôsichd: $1 × $2 bhigsl</small>',
 
