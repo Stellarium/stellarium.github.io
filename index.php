@@ -230,7 +230,7 @@ printf('
 		<li><a href="http://sourceforge.net/forum/forum.php?forum_id=278769">%s</a></li>
 		<li><a href="./wiki/">%s</a></li>
 		<li><a href="./wiki/index.php/FAQ">%s</a></li>		
-		<li><a href="./wiki/index.php/Stellarium_User_Guide">%s</a></li>
+		<li><a href="./wiki/index.php/Category:User\'s_Guide">%s</a></li>
 		<li><a href="./doc/">%s</a></li>
 		<li><a href="https://answers.launchpad.net/stellarium">%s</a></li>
 		<li><a href="http://bugs.launchpad.net/stellarium">%s</a></li>
