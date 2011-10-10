@@ -55,7 +55,6 @@ printf('
 	<div id="latestversion" class="block"><a href="/">%s %s</a></div>
 	<div id="downloadbar" class="block">
 		<div id="release" class="block">
-			%s
 			<div class="download linux">
 				<a href="http://downloads.sourceforge.net/stellarium/stellarium-0.11.0.tar.gz">Linux<span>(%s)</span></a>
 			</div>
@@ -70,7 +69,6 @@ printf('
 			</div>
 		</div>
 		<div id="additional" class="block">
-			%s
 			<div class="download pdf">
 				<a href="http://downloads.sourceforge.net/stellarium/stellarium_user_guide-0.10.2-1.pdf/download">PDF<span>0.10.2-1</span></a>
 			</div>
@@ -82,9 +80,7 @@ printf('
 </div>',
   q_("latest version"),
   $version,
-  q_("Release:"),
-  q_("source"),
-  q_("User's Guide:"));
+  q_("source"));
 printf('  
 <div id="home">
 	<div id="home-describe" class="block">
