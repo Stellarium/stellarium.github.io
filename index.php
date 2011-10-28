@@ -16,6 +16,17 @@ function q_($msgid) {
     return $wohoo ? htmlspecialchars($wohoo->translate($msgid)) : $msgid;
 }
 
+$language = array("ar"=>"‫العربية‬", "pt_BR"=>"Português (Brazil)",
+		  "bg"=>"български", "ca"=>"Català",
+		  "hr"=>"Hrvatski", "cs"=>"česky",
+		  "nl"=>"Nederlands", "fi"=>"Suomen",
+		  "fr"=>"français", "de"=>"Deutsch",
+		  "el"=>"Ελληνικά", "en"=>"English",
+		  "hrx"=>"Hunns-rikk", "it"=>"Italiano",
+		  "ja"=>"日本語", "pl"=>"Polski",
+		  "pt"=>"Português", "ru"=>"русский",
+		  "es"=>"español");
+
 $version = "0.11.0";
 
 printf('<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0//EN" "http://www.w3.org/TR/REC-html40/strict.dtd">
@@ -47,8 +58,16 @@ printf('<body>
 <div id="wrapper">
   <div id="langbar">%s ',
   q_("Other languages:"));     
-include("./languages.inc");
-print '  </div>';
+print '<select id="language" onchange="changelang(this.value)">';
+foreach ($language as $langcode => $langname) {
+	if ($langcode==$locale) {
+		print '<option value="'.$langcode.'" selected="selected">'.$langname.' ('.$langcode.')</option>';
+	} else {
+		print '<option value="'.$langcode.'">'.$langname.' ('.$langcode.')</option>';
+	}
+};
+
+print '</select>  </div>';
 
 printf('
 <div id="header">
