@@ -162,14 +162,14 @@ function q_($msgid) {
 		<p>%s</p>
 		<ul class="largelist">
 		  <li> <a href="http://launchpad.net/stellarium">%s</a> </li>
-		  <li> <a href="http://sourceforge.net/forum/forum.php?forum_id=278769">%s</a> </li>
+		  <li> <a href="http://sourceforge.net/projects/stellarium/forums/forum/278769">%s</a> </li>
 		  <li> <a href="https://answers.launchpad.net/stellarium">%s</a> </li>
 		  <li> <a href="http://bugs.launchpad.net/stellarium">%s</a> </li>
-		  <li> <a href="http://sourceforge.net/project/showfiles.php?group_id=48857">%s</a>
+		  <li> <a href="http://sourceforge.net/projects/stellarium/files/">%s</a>
 			<ul class="sublist">
-			  <li> <a href="http://sourceforge.net/project/showfiles.php?group_id=48857&package_id=52048">%s</a> </li>
-			  <li> <a href="http://sourceforge.net/project/showfiles.php?group_id=48857&package_id=42042">%s</a> </li>
-			  <li> <a href="http://sourceforge.net/project/showfiles.php?group_id=48857&package_id=52047">%s</a> </li>
+			  <li> <a href="http://sourceforge.net/projects/stellarium/files/Stellarium-sources/">%s</a> </li>
+			  <li> <a href="http://sourceforge.net/projects/stellarium/files/Stellarium-MacOSX/">%s</a> </li>
+			  <li> <a href="http://sourceforge.net/projects/stellarium/files/Stellarium-win32/">%s</a> </li>
 			</ul>
 		  </li>
 		</ul>',
