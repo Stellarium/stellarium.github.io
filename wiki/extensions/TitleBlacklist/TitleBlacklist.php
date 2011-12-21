@@ -14,7 +14,7 @@ $wgExtensionCredits[version_compare($wgVersion, '1.17alpha', '>=') ? 'antispam' 
 	'name'           => 'Title Blacklist',
 	'author'         => array( 'Victor Vasiliev', 'Fran Rogers' ),
 	'version'        => '1.4.2',
-	'url'            => 'http://www.mediawiki.org/wiki/Extension:Title_Blacklist',
+	'url'            => 'https://www.mediawiki.org/wiki/Extension:Title_Blacklist',
 	'descriptionmsg' => 'titleblacklist-desc',
 );
 
@@ -40,6 +40,12 @@ $wgTitleBlacklistCaching = array(
 	'warningexpiry' => 600,
 );
 
+$dir = dirname( __FILE__ );
+
+// Register the API method
+$wgAutoloadClasses['ApiQueryTitleBlacklist'] = "$dir/api/ApiQueryTitleBlacklist.php";
+$wgAPIModules['titleblacklist'] = 'ApiQueryTitleBlacklist';
+
 $wgAvailableRights[] = 'tboverride';	// Implies tboverride-account
 $wgAvailableRights[] = 'tboverride-account';	// For account creation
 $wgGroupPermissions['sysop']['tboverride'] = true;
@@ -52,16 +58,5 @@ $wgHooks['CentralAuthAutoCreate'][] = 'TitleBlacklistHooks::centralAuthAutoCreat
 $wgHooks['EditFilter'][] = 'TitleBlacklistHooks::validateBlacklist';
 $wgHooks['ArticleSaveComplete'][] = 'TitleBlacklistHooks::clearBlacklist';
 $wgHooks['UserCreateForm'][] = 'TitleBlacklistHooks::addOverrideCheckbox';
-
-/**
- * Initialize the title blacklist
- */
-function efInitTitleBlacklist() {
-	global $wgTitleBlacklist;
-	if( isset( $wgTitleBlacklist ) && $wgTitleBlacklist ) {
-		return;
-	}
-	$wgTitleBlacklist = new TitleBlacklist();
-}
 
 //@}

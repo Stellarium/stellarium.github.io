@@ -16,16 +16,13 @@ class TitleBlacklistHooks {
 	/**
 	 * getUserPermissionsErrorsExpensive hook
 	 *
-	 * @static
-	 * @param Title $title
-	 * @param User $user
-	 * @param  $action
-	 * @param  $result
+	 * @param $title Title
+	 * @param $user User
+	 * @param $action
+	 * @param $result
 	 * @return bool
 	 */
 	public static function userCan( $title, $user, $action, &$result ) {
-		global $wgTitleBlacklist;
-
 		# Some places check createpage, while others check create.
 		# As it stands, upload does createpage, but normalize both
 		# to the same action, to stop future similar bugs.
@@ -33,8 +30,7 @@ class TitleBlacklistHooks {
 			$action = 'create';
 		}
 		if( $action == 'create' || $action == 'edit' || $action == 'upload' ) {
-			efInitTitleBlacklist();
-			$blacklisted = $wgTitleBlacklist->userCannot( $title, $user, $action );
+			$blacklisted = TitleBlacklist::singleton()->userCannot( $title, $user, $action );
 			if( $blacklisted instanceof TitleBlacklistEntry ) {
 				$result = array( $blacklisted->getErrorMessage( 'edit' ),
 					htmlspecialchars( $blacklisted->getRaw() ),
@@ -48,19 +44,17 @@ class TitleBlacklistHooks {
 	/**
 	 * AbortMove hook
 	 *
-	 * @static
-	 * @param Title $old
-	 * @param Title $nt
-	 * @param User $user
-	 * @param  $err
+	 * @param $old Title
+	 * @param $nt Title
+	 * @param $user User
+	 * @param $err
 	 * @return bool
 	 */
 	public static function abortMove( $old, $nt, $user, &$err ) {
-		global $wgTitleBlacklist;
-		efInitTitleBlacklist();
-		$blacklisted = $wgTitleBlacklist->userCannot( $nt, $user, 'move' );
+		$titleBlacklist = TitleBlacklist::singleton();
+		$blacklisted = $titleBlacklist->userCannot( $nt, $user, 'move' );
 		if( !$blacklisted ) {
-			$blacklisted = $wgTitleBlacklist->userCannot( $old, $user, 'edit' );
+			$blacklisted = $titleBlacklist->userCannot( $old, $user, 'edit' );
 		}
 		if( $blacklisted instanceof TitleBlacklistEntry ) {
 			$err = wfMsgWikiHtml( $blacklisted->getErrorMessage( 'move' ),
@@ -92,8 +86,8 @@ class TitleBlacklistHooks {
 		return true;
 	}
 
-	/** AbortNewAccount hook
-	 *
+	/**
+	 * AbortNewAccount hook
 	 *
 	 * @param User $user
 	 */
@@ -107,23 +101,23 @@ class TitleBlacklistHooks {
 	public static function centralAuthAutoCreate( $user, $userName ) {
 		$message = ''; # Will be ignored
 		$anon = new User;
-		global $wgUser;
 		return self::acceptNewUserName( $userName, $anon, $message );
 	}
 
-	/** EditFilter hook
+	/**
+	 * EditFilter hook
 	 *
-	 * @param EditPage $editor
+	 * @param $editor EditPage
 	 */
 	public static function validateBlacklist( $editor, $text, $section, $error ) {
-		global $wgTitleBlacklist, $wgUser;
-		efInitTitleBlacklist();
+		global $wgUser;
 		$title = $editor->mTitle;
 
 		if( $title->getNamespace() == NS_MEDIAWIKI && $title->getDBkey() == 'Titleblacklist' ) {
 
-			$bl = $wgTitleBlacklist->parseBlacklist( $text );
-			$ok = $wgTitleBlacklist->validate( $bl );
+			$blackList = TitleBlacklist::singleton();
+			$bl = $blackList->parseBlacklist( $text );
+			$ok = $blackList->validate( $bl );
 			if( count( $ok ) == 0 ) {
 				return true;
 			}
@@ -143,7 +137,7 @@ class TitleBlacklistHooks {
 			# Block redirects to nonexistent blacklisted titles
 			$retitle = Title::newFromRedirect( $text );
 			if( $retitle !== null && !$retitle->exists() )  {
-				$blacklisted = $wgTitleBlacklist->userCannot( $retitle, $wgUser, 'create' );
+				$blacklisted = TitleBlacklist::singleton()->userCannot( $retitle, $wgUser, 'create' );
 				if( $blacklisted instanceof TitleBlacklistEntry ) {
 					$error = Html::openElement( 'div', array( 'class' => 'errorbox' ) ) .
 						wfMsg( 'titleblacklist-forbidden-edit',
@@ -159,7 +153,8 @@ class TitleBlacklistHooks {
 		return true;
 	}
 
-	/** ArticleSaveComplete hook
+	/**
+	 * ArticleSaveComplete hook
 	 *
 	 * @param Article $article
 	 */
@@ -168,9 +163,7 @@ class TitleBlacklistHooks {
 	{
 		$title = $article->getTitle();
 		if( $title->getNamespace() == NS_MEDIAWIKI && $title->getDBkey() == 'Titleblacklist' ) {
-			global $wgTitleBlacklist;
-			efInitTitleBlacklist();
-			$wgTitleBlacklist->invalidate();
+			TitleBlacklist::singleton()->invalidate();
 		}
 		return true;
 	}

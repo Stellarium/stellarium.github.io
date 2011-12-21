@@ -34,12 +34,20 @@ please correct {{PLURAL:$1|it|them}} before saving:',
  * @author Beau
  * @author Purodha
  * @author The Evil IP address
+ * @author Umherirrender
+ * @author Yekrats
  */
 $messages['qqq'] = array(
 	'titleblacklist-desc' => '{{desc}}',
+	'titleblacklist' => 'The [http://www.mediawiki.org/wiki/Extension:TitleBlacklist extension Title Blacklist] gives the ability to block certain unallowed words appearing in the title through regular expressions.
+This will be the first explanatory paragraph of the blacklist. (Characters after the #-signs are ignored.)  
+To see an example list in context, see: http://www.mediawiki.org/wiki/MediaWiki:Titleblacklist',
+	'titlewhitelist' => 'The whitelist is a feature of the  [http://www.mediawiki.org/wiki/Extension:TitleBlacklist extension Title Blacklist], which gives the ability to block certain words (or explicitly allow them) appearing in the title through regular expressions.
+This will be the explanatory paragraph of the blacklist. (Characters after the #-signs are ignored.)  
+To see an example list in context, see: http://www.mediawiki.org/wiki/MediaWiki:Titlewhitelist',
 	'titleblacklist-override' => "Check box label on \"Create account\" form if the user has the user right ''tboverride-account''. If checked, the [[MediaWiki:Titleblacklist]] is ignored during account creation.",
-	'right-tboverride' => '{{doc-right}}',
-	'right-tboverride-account' => '{{doc-right}}',
+	'right-tboverride' => '{{doc-right|tboverride}}',
+	'right-tboverride-account' => '{{doc-right|tboverride-account}}',
 );
 
 /** Aragonese (Aragonés)
@@ -76,11 +84,11 @@ $messages['ar'] = array(
 # هذه لا تتأثر بحالة الحروف افتراضيا',
 	'titleblacklist-forbidden-edit' => 'العنوان "$2" تم منعه من الإنشاء.
 هو يطابق المدخلة التالية في القائمة السوداء: <code>$1</code>',
-	'titleblacklist-forbidden-move' => '"$2" لا يمكن نقلها إلى "$3"، لأن العنوان "$3" تم منعه من الإنشاء.
-هو يطابق المدخلة التالية في القائمة السوداء : <code>$1</code>',
-	'titleblacklist-forbidden-upload' => 'اسم الملف "$2" تم منعه من الإنشاء.
+	'titleblacklist-forbidden-move' => 'لا يمكن نقل "$2" إلى "$3"، لأن إنشاء العنوان "$3" ممنوع.
 هو يطابق المدخلة التالية في القائمة السوداء: <code>$1</code>',
-	'titleblacklist-forbidden-new-account' => 'اسم المستخدم "$2" تم منعه من الإنشاء.
+	'titleblacklist-forbidden-upload' => 'إنشاء اسم الملف "$2" ممنوع.
+هو يطابق المدخلة التالية في القائمة السوداء: <code>$1</code>',
+	'titleblacklist-forbidden-new-account' => 'إنشاء اسم المستخدم "$2" ممنوع.
 هو يطابق مدخلة القائمة السوداء التالية: <code>$1</code>',
 	'titleblacklist-invalid' => '{{PLURAL:$1||السطر التالي|السطران التاليان|السطور التالية}} في قائمة العناوين السوداء {{PLURAL:$1||غير صحيح|غير صحيحان|غير صحيحة}}؛ من فضلك {{PLURAL:$1||صححه|صححهما|صححهم}} قبل الحفظ:',
 	'titleblacklist-override' => 'تجاهل القائمة السوداء',
@@ -523,7 +531,7 @@ por favor corríge{{PLURAL:$1|la|las}} antes de grabar:',
  * @author Pikne
  */
 $messages['et'] = array(
-	'titleblacklist-desc' => 'Võimaldab ülematel vastavalt [[MediaWiki:Titleblacklist|mustale]] ja [[MediaWiki:Titlewhitelist|valgele nimekirjale]] keelata lehekülgede ja kasutajakontode loomise.',
+	'titleblacklist-desc' => 'Võimaldab administraatoritel vastavalt [[MediaWiki:Titleblacklist|mustale]] ja [[MediaWiki:Titlewhitelist|valgele nimekirjale]] keelata lehekülgede ja kasutajakontode loomise.',
 	'titleblacklist' => '# See on pealkirjade must nimekiri. Siinsetele regulaaravaldistele vastavaid pealkirju ega kasutajaid ei saa luua.
 # Kommentaariks kasuta märki "#".
 # Vaikimisi on see tõstutundetu',
@@ -576,11 +584,11 @@ $messages['fa'] = array(
  * @author Str4nd
  */
 $messages['fi'] = array(
-	'titleblacklist-desc' => 'Antaa ylläpitäjälle mahdollisuuden estää sivujen luonti nimen perusteella: [[MediaWiki:Titleblacklist|estolista]] ja [[MediaWiki:Titlewhitelist|poikkeuslista]].',
-	'titleblacklist' => '# Tämä on nimien musta luettelo. Sivuja tai käyttäjiä, jotka vastaavat täällä määritettyihin säännöllisiin lausekkeisiin, ei voi luoda.
+	'titleblacklist-desc' => 'Antaa ylläpitäjille mahdollisuuden estää sivujen ja käyttäjätunnusten luonti nimen perusteella: [[MediaWiki:Titleblacklist|estolista]] ja [[MediaWiki:Titlewhitelist|poikkeuslista]].',
+	'titleblacklist' => '# Tämä on nimien estolista. Sivuja tai käyttäjiä, jotka vastaavat täällä määritettyihin säännöllisiin lausekkeisiin, ei voi luoda.
 # Käytä #-merkkiä kommentointiin.
 # Oletusarvoisesti tämä on riippuvainen kirjainkoosta',
-	'titlewhitelist' => '# Tämä on nimien valkoinen luettelo. Käytä #-merkkiä kommentointiin.
+	'titlewhitelist' => '# Tämä on nimien poikkeuslista. Käytä #-merkkiä kommentointiin.
 # Oletusarvoisesti tämä on riippuvainen kirjainkoosta',
 	'titleblacklist-forbidden-edit' => 'Sivun ”$2” luonti on estetty, koska se täsmää seuraavaan osaan estolistassa: <code>$1</code>',
 	'titleblacklist-forbidden-move' => 'Sivua ”$2” ei voi siirtää nimelle ”$3”, koska sivun ”$3” luonti on estetty. Se täsmää seuraavaan osaan estolistassa: <code>$1</code>',
@@ -588,7 +596,9 @@ $messages['fi'] = array(
 	'titleblacklist-forbidden-new-account' => 'Käyttäjätunnuksen ”$2” luonti on estetty.
 Tunnus täsmää seuraavaan estolistan sääntöön: <code>$1</code>',
 	'titleblacklist-invalid' => '{{PLURAL:$1|Seuraava listan rivi ei ole kelvollinen|Seuraavat listan rivit eivät ole kelvollisia}}. Korjaa {{PLURAL:$1|se|ne}} ennen tallentamista.',
-	'right-tboverride' => 'Ohittaa sivunimien mustalista',
+	'titleblacklist-override' => 'Ohita estolista',
+	'right-tboverride' => 'Ohittaa sivunimien estolista',
+	'right-tboverride-account' => 'Ohittaa käyttäjänimien estolista',
 );
 
 /** French (Français)
@@ -624,7 +634,7 @@ Il correspond à l’entrée suivante de la liste noire : <code>$1</code>',
  * @author ChrisPtDe
  */
 $messages['frp'] = array(
-	'titleblacklist-desc' => 'Pèrmèt ux administrators de dèfendre la crèacion de pâges et de comptos utilisator d’aprés una [[MediaWiki:Titleblacklist|lista nêre]] et una [[MediaWiki:Titlewhitelist|lista blanche]].',
+	'titleblacklist-desc' => 'Pèrmèt ux administrators de dèfendre la crèacion de pâges et de comptos usanciér d’aprés una [[MediaWiki:Titleblacklist|lista nêre]] et una [[MediaWiki:Titlewhitelist|lista blanche]].',
 	'titleblacklist' => '# O est la lista nêre des titros. Los titros et los utilisators que corrèspondont a una èxprèssion racionèla presenta sur ceta pâge pôvont pas étre fêts.
 # Utilisâd « # » por entrebetar des comentèros.
 # Per dèfôt, les entrâs sont pas sensibles a la câssa.',
@@ -642,6 +652,7 @@ Dens la lista nêre, corrèspond a ceta entrâ : <code>$1</code>',
 {{PLURAL:$1|la|les}} volyéd corregiér devant qu’encartar :',
 	'titleblacklist-override' => 'Ignorar la lista nêre',
 	'right-tboverride' => 'Ignorar la lista nêre des titros',
+	'right-tboverride-account' => 'Ignorar la lista nêre des noms d’utilisator',
 );
 
 /** Irish (Gaeilge)
@@ -994,7 +1005,7 @@ $messages['kk-arab'] = array(
 	'titleblacklist-invalid' => 'اتاۋلاردىڭ قارا تىزىمىندەگى كەلەسى {{PLURAL:$1|جول|جولدار}} {{PLURAL:$1||}} جارامسىز; ساقتاۋ الدىندا {{PLURAL:$1|بۇنى|بۇلاردى}} دۇرىستاپ شىعىڭىز:',
 );
 
-/** Kazakh (Cyrillic) (Қазақша (Cyrillic))
+/** Kazakh (Cyrillic script) (‪Қазақша (кирил)‬)
  * @author AlefZet
  */
 $messages['kk-cyrl'] = array(
@@ -1007,7 +1018,7 @@ $messages['kk-cyrl'] = array(
 	'titleblacklist-invalid' => 'Атаулардың қара тізіміндегі келесі {{PLURAL:$1|жол|жолдар}} {{PLURAL:$1||}} жарамсыз; сақтау алдында {{PLURAL:$1|бұны|бұларды}} дұрыстап шығыңыз:',
 );
 
-/** Kazakh (Latin) (Қазақша (Latin)) */
+/** Kazakh (Latin script) (‪Qazaqşa (latın)‬) */
 $messages['kk-latn'] = array(
 	'titleblacklist' => '# Bul atawlardıñ qara tizimi. Jüýeli aýtılımdarğa (regex) säýkes mındağı atawlar jaratılmaýdı.
 Mändemeler üşin «#» nışanın qoldanıñız.',
@@ -1125,10 +1136,13 @@ $messages['li'] = array(
 	'titleblacklist-forbidden-upload' => 'Het bestand "$2" kan niet toegevoegd worden. Deze bestandsnaam voldoet aan de volgende beperking op de zwarte lijst: <code>$1</code>',
 	'titleblacklist-forbidden-new-account' => 'De gebroekersnaam "$2" kan neet aangemaak waere ómdet \'t voldeit aan de volgende beperking op de zwarte lies: <code>$1</code>',
 	'titleblacklist-invalid' => 'De volgende {{PLURAL:$1|regel|regels}} in de zwarte lijst veur paginaname {{PLURAL:$1|is|zijn}} ongeldig. Verbeter die {{PLURAL:$1|regel|regels}} asjeblieft veurdat ge de lijst opslaat:',
+	'titleblacklist-override' => 'Negeer zwarte lies',
 	'right-tboverride' => 'De zwarte lies veur pazjenaname negere',
+	'right-tboverride-account' => 'De zwarte lies veur gebroekersname negere',
 );
 
 /** Lithuanian (Lietuvių)
+ * @author Eitvys200
  * @author Homo
  * @author Matasg
  */
@@ -1149,6 +1163,7 @@ Jis atitinką šį juodojo sąrašo įrašą: <code>$1</code>',
 Jis atitinką šį juodojo sąrašo įrašą: <code>$1</code>',
 	'titleblacklist-invalid' => 'Žemiau {{PLURAL:$1|esanti linija|esančios linijos}} juodajame sąraše {{PLURAL:$1|yra|yra}} netinkama;
 prašome {{PLURAL:$1|ją|jas}} pataisyti prieš išsaugant:',
+	'titleblacklist-override' => 'Ignoruoti juodąjį sąrašą',
 	'right-tboverride' => 'Nepaisyti juodojo sąrašo',
 );
 
@@ -1203,6 +1218,7 @@ $messages['ml'] = array(
 
 /** Marathi (मराठी)
  * @author Kaustubh
+ * @author Rahuldeshmukh101
  */
 $messages['mr'] = array(
 	'titleblacklist-desc' => '[[MediaWiki:Titleblacklist]] व [[MediaWiki:Titlewhitelist]] मध्ये दिलेल्या शीर्षकांचे लेख बनविण्यापासून रोखा',
@@ -1215,7 +1231,9 @@ $messages['mr'] = array(
 	'titleblacklist-forbidden-upload' => '"$2" या शीर्षकाची संचिका बनवू शकत नाही. खाली ब्लॉक केलेल्या शीर्षकांच्या यादीतील नोंद आहे:
 <code>$1</code>',
 	'titleblacklist-invalid' => 'शीर्षक ब्लॉक यादीतील खालील {{PLURAL:$1|ओळ चुकीची आहे|ओळी चुकीच्या आहेत}}; कृपया जतन करण्यापूर्वी {{PLURAL:$1|ती|त्या}} दुरुस्त करा:',
+	'titleblacklist-override' => 'काळ्या यादीकडे दुर्लक्ष करा',
 	'right-tboverride' => 'शीर्षक ब्लॅकयादी कडे दुर्लक्ष करा',
+	'right-tboverride-account' => 'खते काळ्या यादीकडे  दुर्लक्ष करा',
 );
 
 /** Malay (Bahasa Melayu)
@@ -1227,9 +1245,9 @@ $messages['ms'] = array(
 	'titleblacklist-desc' => 'Membolehkan pentadbir mengawal penciptaan laman dan pengguna tertentu menggunakan [[MediaWiki:Titleblacklist|senarai hitam]] dan [[MediaWiki:Titlewhitelist|senarai putih]]',
 	'titleblacklist' => '# Ini ialah senarai hitam tajuk. Tajuk atau pengguna yang sepadan dengan mana-mana ungkapan nalar di sini tidak boleh dicipta.
 # Gunakan "#" untuk komen.
-# Secara tersedia, ini tidak peka huruf (mengabaikan besar kecil huruf)',
+# Secara asali, ini tidak peka huruf (mengabaikan besar kecil huruf)',
 	'titlewhitelist' => '# Ini ialah senarai hitam tajuk. Gunakan "#" untuk komen.
-# Secara tersedia, ini tidak peka huruf (mengabaikan besar kecil huruf)',
+# Secara asali, ini tidak peka huruf (mengabaikan besar kecil huruf)',
 	'titleblacklist-forbidden-edit' => 'Tajuk "$2" telah diharamkan.
 Tajuk tersebut sepadan dengan entri senarai hitam berikut: <code>$1</code>',
 	'titleblacklist-forbidden-move' => '"$2" tidak boleh dipindahkan ke "$3" kerana tajuk "$3" telah diharamkan.
@@ -1358,6 +1376,31 @@ Correspond a l’entrada seguenta de la lista negra : <code>$1</code>',
 	'right-tboverride' => 'Ignorar la lista negra dels títols',
 );
 
+/** Oriya (ଓଡ଼ିଆ)
+ * @author Psubhashish
+ */
+$messages['or'] = array(
+	'titleblacklist-desc' => 'ପରିଛାମାନଙ୍କୁ [[MediaWiki:Titleblacklist|ବାସନ୍ଦ ତାଲିକା]] ଓ [[MediaWiki:Titlewhitelist|ଅନୁମତି ତାଲିକା]] ଅନୁସାରେ ପୃଷ୍ଠା ଓ ସଭ୍ୟ ଖାତା ତିଆରି ପାଇଁ ଅନୁମତି ଦେଇଥାଏ',
+	'titleblacklist' => '# ଏହା ଏକ ନାମ ଅଟକତାଲିକା । ନାମ ଓ ସଭ୍ୟସବୁ ମେଳ ନଖାଇଲେ ଏଠାରେ ତାହା ଗଢ଼ାଯାଇପାରିବ ନାହିଁ ।
+# ମତାମତ ନିମନ୍ତେ "#" ବ୍ୟବହାର କରନ୍ତୁ ।
+# ଏହା ଆପେ ଆପେ ବଡ଼ ଓ ସାନ ଅକ୍ଷରକୁ ଏକ ଭାବରେ ନେଇଥାଏ',
+	'titlewhitelist' => '# ଏହା ଏକ ଅନୁମୋଦିତ ନାମ ତାଲିକା । ମତାମତ ପାଇଁ "#" ବ୍ୟବହାର କରନ୍ତୁ । 
+# ଏହା ଆପେ ଆପେ ବଡ଼ ଓ ସାନ ଅକ୍ଷରକୁ ସମଭାବେ ନେଇଥାଏ',
+	'titleblacklist-forbidden-edit' => '"$2" ନାମଟି ତିଆରି କରିବାରୁ ଅଟକାଯାଇଛି ।
+ଏହା ବାସନ୍ଦ ତାଲିକା ସହ ମେଳ ଖାଇଥାଏ: <code>$1</code>',
+	'titleblacklist-forbidden-move' => '"$2" ରୁ "$3" ଘୁଞ୍ଚାଯାଇପାରିବ ନାହିଁ, କାରଣ "$3" ତିଆରି କରିବାରୁ ଅଟକାଯାଇଛି ।
+ଏହା ଏହି ବାସନ୍ଦତାଲିକା ସହ ମେଳ ଖାଉଛି: <code>$1</code>',
+	'titleblacklist-forbidden-upload' => '"$2" ନାମଟି ତିଆରି କରିବାରୁ ଅଟକାଯାଇଛି ।
+ଏହା ବାସନ୍ଦ ତାଲିକା ସହ ମେଳ ଖାଉଛି: <code>$1</code>',
+	'titleblacklist-forbidden-new-account' => '"$2" ନାମଟି ତିଆରି କରିବାରୁ ଅଟକାଯାଇଛି ।
+ଏହା ବାସନ୍ଦ ତାଲିକା ସହ ମେଳ ଖାଉଛି: <code>$1</code>',
+	'titleblacklist-invalid' => 'ବାସନ୍ଦ ତାଲିକାରେ ଥିବା ତଳଲିଖିତ {{PLURAL:$1|ଧାଡ଼ିଟି|ଧାଡ଼ିସବୁ}} ଅଚଳ {{PLURAL:$1|ଅଟେ|ଅଟନ୍ତି}};
+ଦୟାକରି {{PLURAL:$1|ତାହାକୁ|ସେସବୁକୁ}} ସାଇତିବା ଆଗରୁ ସୁଧାରି ଦିଅନ୍ତୁ:',
+	'titleblacklist-override' => 'ଅଟକତାଲିକାକୁ ଅଣଦେଖା କରିବେ',
+	'right-tboverride' => 'ଅଟକ ତାଲିକାର ନାମକୁ ଅଜାଣତରେ ଅଣଦେଖା କରିବା',
+	'right-tboverride-account' => 'ଇଉଜର ନାମ ଅଟକ ତାଲିକାକୁ ଅଜାଣତରେ ଅଣଦେଖା କରିବା',
+);
+
 /** Polish (Polski)
  * @author Beau
  * @author Derbeth
@@ -1408,6 +1451,30 @@ për piasì {{PLURAL:$1|coregg-la|coregg-je}} prima ëd salvé:",
 	'titleblacklist-override' => 'Ignoré la lista nèira',
 	'right-tboverride' => 'Sàuta la blacklist dij tìtoj',
 	'right-tboverride-account' => "Ignoré la lista nèira djë stranòm d'utent",
+);
+
+/** Western Punjabi (پنجابی)
+ * @author Khalid Mahmood
+ */
+$messages['pnb'] = array(
+	'titleblacklist-desc' => 'مکھیانواں نوں اجازت دیندا اے جے اوہ صفے بنن توں روکن تے ورتن کھاتے [[MediaWiki:Titleblacklist|blacklist]] تے [[MediaWiki:Titlewhitelist|whitelist]]',
+	'titleblacklist' => '# ایہ اک سرخی روک لسٹ اے۔ سرناویں تے ورتن والے اکو جۓ لگن تے تے اوہ نئیں بناۓ جاسکدے.
+# کومنٹ لئی ورتو "#" .
+# اے کیس سینسیٹو نئیں۔',
+	'titlewhitelist' => '# ایہ اک سرناواں چٹیلسٹ اے۔ 
+ڈیفالٹ ولوں ای ایہ کیس سینسیٹو نئیں۔',
+	'titleblacklist-forbidden-edit' => 'سرناواں "$2" بنن توں روک دتا گیا اے۔
+ایہ تھلے دتی ہوئی بلیکلسٹ انٹری نال رلدا اے: <code>$1</code>',
+	'titleblacklist-forbidden-move' => '"$2" نوں "$3" ول نئیں لیایا جاسکدا کیوں جے سرناواں "$3" بنن توں روک دتی گئی اے۔
+اے تھلے دتی گئی کالی لسٹ انٹری نال رلدی اے: <code>$1</code>',
+	'titleblacklist-forbidden-upload' => 'فائل ناں "$2" بنن توں روک دتی گئی اے۔
+ایہ تھلے دتی گئی کالی لسٹ انٹری نال رلدا اے: <code>$1</code>',
+	'titleblacklist-forbidden-new-account' => 'ورتن ناں "$2" بنن توں روک دتا گیا اے۔
+اے تھلے دتی گئی کالیلسٹ انٹری نال رلدی اے: <code>$1</code>',
+	'titleblacklist-invalid' => 'تھلے دتی {{انیک:$1|لین|لیناں }} کالیلسٹ سرناویں {{انیک:$1|ہے|ہیں}}چ  ناں منیا جان والا؛ مہربانی کرکے بچان توں پہلے {{انیک:$1|it|اوناں نون}} اینوں.',
+	'titleblacklist-override' => 'روکنلسٹ پعل جاؤ',
+	'right-tboverride' => 'ٹاغٹل شلیکلسٹ تے لکھو۔',
+	'right-tboverride-account' => 'ورتن ناں بلیکلسٹ تے لکھو۔',
 );
 
 /** Portuguese (Português)
@@ -1568,7 +1635,7 @@ $messages['rue'] = array(
 	'right-tboverride-account' => 'Переконаня чорной листины назв сторінок',
 );
 
-/** Yakut (Саха тыла)
+/** Sakha (Саха тыла)
  * @author HalanTul
  */
 $messages['sah'] = array(
@@ -1691,7 +1758,7 @@ ju lutemi {{PLURAL:$1|korrigjojeni|korrigjojini}} përpara ruajtjes:',
 	'right-tboverride-account' => 'Refuzoni emrin e përdoruesit të listës së zezë',
 );
 
-/** Serbian Cyrillic ekavian (‪Српски (ћирилица)‬)
+/** Serbian (Cyrillic script) (‪Српски (ћирилица)‬)
  * @author Millosh
  * @author Sasa Stefanovic
  * @author Жељко Тодоровић
@@ -1707,7 +1774,7 @@ $messages['sr-ec'] = array(
 	'right-tboverride' => 'Преписује црни списак наслова.',
 );
 
-/** Serbian Latin ekavian (‪Srpski (latinica)‬)
+/** Serbian (Latin script) (‪Srpski (latinica)‬)
  * @author Michaello
  */
 $messages['sr-el'] = array(
@@ -1728,11 +1795,11 @@ $messages['stq'] = array(
 	'titleblacklist' => '# Dit is ne Swotte Lieste.
 # Älke Siede- un Benutsernoome, ap dän do foulgjende reguläre Uutdrukke touträffe, kon nit moaked wäide.
 # Text bääte ne Ruute „#“ wäd as Kommentoar betrachted.
-# Standoardmäitich wäd nit twiske Groot- un Littikschrieuwenge unnerschat.',
+# Standoardmäitich wäd nit twiske Groot- un Littikskrieuwenge unnerskat.',
 	'titlewhitelist' => '# Dit is ju Uutnoamelieste fon ju Swotte Lieste fon nit wonskede Siedennoomen. Benuts „#“ foar Kommentoare',
 	'titleblacklist-forbidden-edit' => "'''Ne Siede mäd dän Tittel „$2“ kon nit moaked wäide.''' <br />
 Die Tittel kollidiert mäd dissen Speerbegriep: '''''$1'''''",
-	'titleblacklist-forbidden-move' => "'''Ju Siede „$2“ kon nit ätter „$3“ ferschäuwen wäide.''' <br />
+	'titleblacklist-forbidden-move' => "'''Ju Siede „$2“ kon nit ätter „$3“ ferskäuwen wäide.''' <br />
 Die Tittel kollidiert mäd dissen Speerbegriep: '''''$1'''''",
 	'titleblacklist-forbidden-upload' => "'''Ne Doatäi mäd dän Noome „$2“ kon nit hoochleeden wäide.''' <br />
 Die Tittel kollidiert mäd dissen Speerbegriep: <code>$1</code>",
@@ -1794,7 +1861,7 @@ $messages['te'] = array(
 	'right-tboverride' => 'శీర్షికల నిరోధపు జాబితాని  అధిగమించగలగడం',
 );
 
-/** Tajik (Cyrillic) (Тоҷикӣ (Cyrillic))
+/** Tajik (Cyrillic script) (Тоҷикӣ)
  * @author Ibrahim
  */
 $messages['tg-cyrl'] = array(
@@ -1808,7 +1875,7 @@ $messages['tg-cyrl'] = array(
 	'titleblacklist-invalid' => '{{PLURAL:$1|Сатри|Сатрҳои}} зерин дар феҳристи сиёҳи унвонҳо ғайримиҷоз {{PLURAL:$1|аст|ҳастанд}}; лутфан {{PLURAL:$1|он|онҳо}}ро қабл аз захира кардан, ислоҳ кунед:',
 );
 
-/** Tajik (Latin) (Тоҷикӣ (Latin))
+/** Tajik (Latin script) (tojikī)
  * @author Liangent
  */
 $messages['tg-latn'] = array(
@@ -2015,10 +2082,11 @@ $messages['yue'] = array(
  * @author Fdcn
  * @author Hydra
  * @author Liangent
+ * @author PhiLiP
  * @author Shinjiman
  */
 $messages['zh-hans'] = array(
-	'titleblacklist-desc' => '容许禁止建立指定标题的页面: [[MediaWiki:Titleblacklist]] 和 [[MediaWiki:Titlewhitelist]]',
+	'titleblacklist-desc' => '允许管理员通过[[MediaWiki:Titleblacklist|黑名单]]和[[MediaWiki:Titlewhitelist|白名单]]禁止页面和用户帐户的创建',
 	'titleblacklist' => '# 本页面为“标题黑名单”。任何匹配本名单正则表达式的标题会被阻止建立和编辑。
 # 请使用"#"来添加注释。
 # 默认忽略大小写',
