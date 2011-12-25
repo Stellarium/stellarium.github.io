@@ -48,9 +48,9 @@ function q_($msgid) {
 	</div>
 	<div id="downloads">
 	  <h2>%s</h2>
-	  <div class="download"><a href="http://downloads.sourceforge.net/stellarium/stellarium-0.10.6.tar.gz"><img class="downloadimg" src="img/download-linux.png" alt="linux download link" width="63" height="42"><span class="downloadlink">%s</span></a> </div>
-	  <div class="download"> <a href="http://downloads.sourceforge.net/stellarium/stellarium-0.10.6-Intel.dmg"><img class="downloadimg" src="img/download-mac.png" alt="Mac download link" width="63" height="42"><span class="downloadlink">%s</span></a> </div>
-	  <div class="download"> <a href="http://downloads.sourceforge.net/stellarium/stellarium-0.10.6.1.exe"><img class="downloadimg" src="img/download-win.png" alt="Windows download link" width="63" height="42"><span class="downloadlink">%s</span></a> </div>
+	  <div class="download"><a href="http://sourceforge.net/projects/stellarium/files/Stellarium-sources/0.11.1/stellarium-0.11.1.tar.gz/download"><img class="downloadimg" src="img/download-linux.png" alt="linux download link" width="63" height="42"><span class="downloadlink">%s</span></a> </div>
+	  <div class="download"> <a href="http://sourceforge.net/projects/stellarium/files/Stellarium-MacOSX/0.11.1/Stellarium-0.11.1-Universal.dmg/download"><img class="downloadimg" src="img/download-mac.png" alt="Mac download link" width="63" height="42"><span class="downloadlink">%s</span></a> </div>
+	  <div class="download"> <a href="http://sourceforge.net/projects/stellarium/files/Stellarium-win32/0.11.1/stellarium-0.11.1-win32.exe/download"><img class="downloadimg" src="img/download-win.png" alt="Windows download link" width="63" height="42"><span class="downloadlink">%s</span></a> </div>
 	  <div class="download"> <a href="http://downloads.sourceforge.net/stellarium/stellarium_user_guide-0.10.2-1.pdf"><img class="downloadimg" src="img/download-pdf.png" alt="pdf download link" width="63" height="42"><span class="downloadlink">%s</span></a></div>
 	</div>
 	</div>',
