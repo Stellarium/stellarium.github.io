@@ -48,10 +48,10 @@ function q_($msgid) {
 	</div>
 	<div id="downloads">
 	  <h2>%s</h2>
-	  <div class="download"><a href="http://sourceforge.net/projects/stellarium/files/Stellarium-sources/0.11.1/stellarium-0.11.1.tar.gz/download"><img class="downloadimg" src="img/download-linux.png" alt="linux download link" width="63" height="42"><span class="downloadlink">%s</span></a> </div>
-	  <div class="download"> <a href="http://sourceforge.net/projects/stellarium/files/Stellarium-MacOSX/0.11.1/Stellarium-0.11.1-Universal.dmg/download"><img class="downloadimg" src="img/download-mac.png" alt="Mac download link" width="63" height="42"><span class="downloadlink">%s</span></a> </div>
-	  <div class="download"> <a href="http://sourceforge.net/projects/stellarium/files/Stellarium-win32/0.11.1/stellarium-0.11.1-win32.exe/download"><img class="downloadimg" src="img/download-win.png" alt="Windows download link" width="63" height="42"><span class="downloadlink">%s</span></a> </div>
-	  <div class="download"> <a href="http://downloads.sourceforge.net/stellarium/stellarium_user_guide-0.10.2-1.pdf"><img class="downloadimg" src="img/download-pdf.png" alt="pdf download link" width="63" height="42"><span class="downloadlink">%s</span></a></div>
+	  <div class="download"><a href="http://sourceforge.net/projects/stellarium/files/Stellarium-sources/0.11.2/stellarium-0.11.2.tar.gz/download"><img class="downloadimg" src="img/download-linux.png" alt="linux download link" width="63" height="42"><span class="downloadlink">%s</span></a> </div>
+	  <div class="download"> <a href="http://sourceforge.net/projects/stellarium/files/Stellarium-MacOSX/0.11.2/Stellarium-0.11.2-Universal.dmg/download"><img class="downloadimg" src="img/download-mac.png" alt="Mac download link" width="63" height="42"><span class="downloadlink">%s</span></a> </div>
+	  <div class="download"> <a href="http://sourceforge.net/projects/stellarium/files/Stellarium-win32/0.11.2/stellarium-0.11.2-win32.exe/download"><img class="downloadimg" src="img/download-win.png" alt="Windows download link" width="63" height="42"><span class="downloadlink">%s</span></a> </div>
+	  <div class="download"> <a href="http://sourceforge.net/projects/stellarium/files/Stellarium-user-guide/0.10.2-1/stellarium_user_guide-0.10.2-1.pdf/download"><img class="downloadimg" src="img/download-pdf.png" alt="pdf download link" width="63" height="42"><span class="downloadlink">%s</span></a></div>
 	</div>
 	</div>',
 	q_("Stellarium is a free open source planetarium for your computer. It shows a realistic sky in 3D, just like what you see with the naked eye, binoculars or a telescope."), 
@@ -70,7 +70,7 @@ function q_($msgid) {
 
 	    printf('<h2>%s</h2><p><span id="version">%s</span></p>',
 	    q_("features"),
-	    q_("in version 0.10.6"));
+	    q_("in version 0.11.2"));
 	    
 		printf('
 		<h3>%s</h3>
