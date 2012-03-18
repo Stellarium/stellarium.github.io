@@ -24,7 +24,7 @@ $language = array(
     'de'=>'Deutsch',
     'el'=>'Ελληνικά',
     'en'=>'English',
-    'es'=>'español'
+    'es'=>'español',
     'fi'=>'Suomen',
     'fr'=>'français',
     'hr'=>'Hrvatski',
@@ -101,7 +101,7 @@ printf('
 		</div>
 		<div id="additional" class="block">
 			<div class="download pdf">
-				<a href="%s">PDF<span>0.10.2-1</span></a>
+				<a href="%s">%s<span>0.10.2-1</span></a>
 			</div>
 			<div class="download pdf">
 				<a href="http://www.stellarium.org/wiki/index.php/Stellarium_User_Guide">WIKI<span>%s</span></a>
@@ -112,11 +112,12 @@ printf('
   q_('latest version'),
   $version,
   $download_link_linux,
-  q_('source')),
+  q_('source'),
   $download_link_osx_u,
   $download_link_win32,
   $download_link_guide,
-  q_('current');
+  q_('User guide'),
+  q_('current'));
 
 printf('  
 <div id="home">
@@ -252,7 +253,9 @@ printf('
 <div id="news" class="block">
 	<h2>%s</h2>',
 q_("news"));
+
 include("rss2html/rss2html.php"); 
+
 printf('
 </div>
 <div id="development" class="block">
