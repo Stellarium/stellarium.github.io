@@ -24,6 +24,7 @@
       <li>Sourceforge for hosting the project files, website and SVN repositories.  Sourceforge have pushed many terabytes of data for Stellarium during the life of the project.</li>
       <li>Launchpad for hosting the project trackers and translation system.</li>
       <li>The <a href="http://www.eso.org/public/">European Southern Observatory</a> for sponsoring and hosting the 2007 Stellarium developer meeting.</li>
+      <li><a href="http://www.andalux.com">Sergio Trujillo</a> for paying and transfering the stellarium.org domain to us.</li>
     </ul>
     <h2>Community</h2>
     <p>Special thanks go out to all members of the Stellarium user community.
@@ -35,6 +36,13 @@
       <li>Wiki authors</li>
       <li>Testers and bug reporters</li>
       <li>Donators</li>
+    </ul>
+    <h2>Past Developers</h2>
+    <p>Several people have made significant contributions but no longer active. Their work has made a big different to the project:</p>
+    <ul id="stelsponsors">
+      <li>Johan Meuris</a> (graphic designer)</li>
+      <li>Johannes Gajdosik (developer)</li>
+      <li>Rob Spearman (developer)</li>
     </ul>
 
 <h2>Friends</h2>

@@ -16,18 +16,33 @@ function q_($msgid) {
     return $wohoo ? htmlspecialchars($wohoo->translate($msgid)) : $msgid;
 }
 
-$language = array("ar"=>"‫العربية‬", "pt_BR"=>"Português (Brazil)",
-		  "bg"=>"български", "ca"=>"Català",
-		  "hr"=>"Hrvatski", "cs"=>"česky",
-		  "nl"=>"Nederlands", "fi"=>"Suomen",
-		  "fr"=>"français", "de"=>"Deutsch",
-		  "el"=>"Ελληνικά", "en"=>"English",
-		  "hrx"=>"Hunns-rikk", "it"=>"Italiano",
-		  "ja"=>"日本語", "pl"=>"Polski",
-		  "pt"=>"Português", "ru"=>"русский",
-		  "es"=>"español");
+$language = array(
+    'ar'=>'‫العربية‬', 
+    'bg'=>'български',
+    'ca'=>'Català',
+    'cs'=>'česky',
+    'de'=>'Deutsch',
+    'el'=>'Ελληνικά',
+    'en'=>'English',
+    'es'=>'español'
+    'fi'=>'Suomen',
+    'fr'=>'français',
+    'hr'=>'Hrvatski',
+    'hr'=>'Hunns-rikk',
+    'it'=>'Italiano',
+    'ja'=>'日本語',
+    'nl'=>'Nederlands',
+    'pl'=>'Polski',
+    'pt_BR'=>'Português (Brazil)',
+    'pt'=>'Português',
+    'ru'=>'русский',
+);
 
-$version = "0.11.0";
+$version = '0.11.2';
+$download_link_win32 = 'http://sourceforge.net/projects/stellarium/files/Stellarium-win32/0.11.2/stellarium-0.11.2-win32.exe/download';
+$download_link_osx_u = 'http://sourceforge.net/projects/stellarium/files/Stellarium-MacOSX/0.11.2/Stellarium-0.11.2-Universal.dmg/download';
+$download_link_linux = 'http://sourceforge.net/projects/stellarium/files/Stellarium-sources/0.11.2/stellarium-0.11.2.tar.gz/download';
+$download_link_guide = 'http://sourceforge.net/projects/stellarium/files/Stellarium-user-guide/0.10.2-1/stellarium_user_guide-0.10.2-1.pdf/download';
 
 printf('<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0//EN" "http://www.w3.org/TR/REC-html40/strict.dtd">
 <html>
@@ -75,31 +90,34 @@ printf('
 	<div id="downloadbar" class="block">
 		<div id="release" class="block">
 			<div class="download linux">
-				<a href="http://downloads.sourceforge.net/stellarium/stellarium-0.11.0.tar.gz">Linux<span>(%s)</span></a>
+				<a href="%s">Linux<span>(%s)</span></a>
 			</div>
 			<div class="download macosx">
-				<a href="http://sourceforge.net/projects/stellarium/files/Stellarium-MacOSX/0.11.0/Stellarium-0.11.0-Intel-10.6.dmg/download">Mac OS X<span>10.6+; x86</span></a> 
-			</div> 
-			<div class="download macosx">
-				<a href="http://sourceforge.net/projects/stellarium/files/Stellarium-MacOSX/0.11.0/Stellarium-0.11.0-Universal.dmg/download">Mac OS X<span>10.5+; UB</span></a>
+				<a href="%s">Mac OS X<span>10.5+; UB</span></a>
 			</div>
 			<div class="download windows">
-				<a href="http://sourceforge.net/projects/stellarium/files/Stellarium-win32/0.11.0/stellarium-0.11.0-win32.exe/download">Windows<span>32 bit</span></a>
+				<a href="%s">Windows<span>32 bit</span></a>
 			</div>
 		</div>
 		<div id="additional" class="block">
 			<div class="download pdf">
-				<a href="http://downloads.sourceforge.net/stellarium/stellarium_user_guide-0.10.2-1.pdf/download">PDF<span>0.10.2-1</span></a>
+				<a href="%s">PDF<span>0.10.2-1</span></a>
 			</div>
 			<div class="download pdf">
-				<a href="http://www.stellarium.org/wiki/index.php/Stellarium_User_Guide">HTML<span>0.11.0</span></a>
+				<a href="http://www.stellarium.org/wiki/index.php/Stellarium_User_Guide">WIKI<span>%s</span></a>
 			</div>
 		</div>
 	</div>
 </div>',
-  q_("latest version"),
+  q_('latest version'),
   $version,
-  q_("source"));
+  $download_link_linux,
+  q_('source')),
+  $download_link_osx_u,
+  $download_link_win32,
+  $download_link_guide,
+  q_('current');
+
 printf('  
 <div id="home">
 	<div id="home-describe" class="block">
@@ -289,30 +307,33 @@ sprintf(q_("Real time chat about Stellarium can be had in the %s#stellarium%s IR
 		"<a href='irc://irc.freenode.org/stellarium'>", "</a>", "<a href='http://freenode.net'>", "</a>", "<a href='irc://irc.freenode.org/stellarium'>", "</a>", "<a href='http://webchat.freenode.net/?channels=stellarium&uio=MTE9MjQ255'>", "</a>")
 		);
 
-printf('
-	<h2>%s</h2>
-	<p>%s: <a href="http://f4bien.blogspot.com/">Fabien Chéreau</a><br>
-	%s: <a href="http://porpoisehead.net/">Matthew Gates</a><br>
-	%s: <a href="http://users.pandora.be/jomejom">Johan Meuris</a><br>
-	%s: Nigel Kerr<br>
-	%s: <a href="mailto:diego.marcos(at)gmail.com">Diego Marcos</a><br>
-	%s: <a href="http://badlyhonedbytes.wordpress.com/">Bogdan Marinov</a><br>
-	%s: <a href="mailto:treaves(at)silverfieldstech.com">Timothy Reaves</a><br>
-	%s: <a href="mailto:alex.v.wolf(at)gmail.com">Alexander Wolf</a><br>
-	%s: <a href="http://charlie137-2.blogspot.com/">Guillaume Chéreau</a><br>
-	%s: Barry Gerdes<br>%s</p>',
-q_("developers"),
-q_("Project coordinator"),
-q_("Doc author/developer"),
-q_("Graphic/other designer"),
-q_("OSX Developer"),
-q_("OSX Developer"),
-q_("Developer"),
-q_("Developer"),
-q_("Developer"),
-q_("Developer"),
-q_("Tester"),
-q_("and everyone else in the community"));
+printf('<h2>%s</h2><p>
+	%s %s<br />
+	%s %s<br />
+	%s %s<br />
+	%s %s<br />
+	%s %s<br />
+	%s %s<br />
+	%s %s<br />
+	%s %s<br />
+	%s %s<br />
+	%s %s<br />
+	%s %s<br />
+	%s<br />
+	</p>',
+	q_('developers'),
+	q_('Project coordinator:'),     '<a href="http://f4bien.blogspot.com/">Fabien Ch&eacute;reau</a>',
+	q_('Doc author/developer:'),    '<a href="http://porpoisehead.net/">Matthew Gates</a>',
+	q_('Developer:'),               '<a href="http://badlyhonedbytes.wordpress.com/">Bogdan Marinov</a>',
+	q_('Developer:'),               '<a href="http://astro.uni-altai.ru/~aw/">Alexander Wolf</a>',
+	q_('Developer:'),               '<a href="mailto:treaves%20(at)%20silverfieldstech.com">Timothy Reaves</a>',
+	q_('Developer:'),               '<a href="http://charlie137-2.blogspot.com/">Guillaume Ch&eacute;reau</a>',
+	q_('Developer:'),               '<a href="http://homepage.univie.ac.at/Georg.Zotti/">Georg Zotti</a>',
+	q_('OSX Developer:'),           'Nigel Kerr',
+	q_('OSX Developer:'),           '<a href="mailto:diego.marcos%20(at)%20gmail.com">Diego Marcos</a>',
+	q_('Tester:'),                  'Barry Gerdes',
+	q_('Tester:'),                  'Khalid AlAjaji',
+	q_('and everyone else in the community.') );
 
 printf('
 	<h2>%s</h2>
@@ -328,3 +349,4 @@ printf('
 q_("supporters and friends"),
 sprintf(q_("Stellarium is produced by the efforts of the developer team, with the help and support of the %sfollowing people and organisations%s"), "<a href='sponsors.php'>", "</a>"));
 ?>
+
