@@ -53,16 +53,16 @@ printf('<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0//EN" "http://www.w3.org/TR/R
 <meta name="Keywords" content="Stellarium, planetarium, astronomy, software, stars, planets, constellations, meteors, universe, open source, free software, astro, freeware, download, stars, planets, realistic, software, sky, program, scientific, educational, free, real, time, Windows, Linux, Apple, Mac, GPL, milky way, moon, mercury, venus, mars, earth, venus, jupiter, saturn, sun, real time, 3D, openGL, graphic, GL, chart, map, twinkle, photo-realistic, brightness, screenshot" />
 <title>Stellarium</title>
 <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
-<link rel="stylesheet" href="./css/all.css" type="text/css" media="screen" />
+<link rel="stylesheet" href="/css/all.css" type="text/css" media="screen" />
 <link rel="alternate" type="application/rss+xml" title="%s" href="https://sourceforge.net/export/rss2_projnews.php?group_id=48857&rss_fulltext=1" />
 <!--[if lt IE 8]>
-<link href="./css/oldie.css" rel="stylesheet" type="text/css" /> 
-<script defer type="text/javascript" src="./js/pngfix.js"></script>
+<link href="/css/oldie.css" rel="stylesheet" type="text/css" /> 
+<script defer type="text/javascript" src="/js/pngfix.js"></script>
 <![endif]-->
-<script type="text/javascript" src="./js/jq-ui-flplayer-sw-aggregated.js"></script>
+<script type="text/javascript" src="/js/jq-ui-flplayer-sw-aggregated.js"></script>
 	<script>
 	function changelang(val) {
- 		window.location = "./index.php?lang=" + val;
+ 		window.location = "/" + val + "/";
 	}
 	</script>
 </head>',
@@ -132,11 +132,11 @@ printf('
 	<div class="block">
 		<div id="home-media">
 			<div class="slide-item first"> 
-				<img  src="./img/slideshow/slide-1.jpg" class="photo" alt="%s" /> 
+				<img  src="/img/slideshow/slide-1.jpg" class="photo" alt="%s" /> 
 				<h2></h2>
 				<div class="slide-desc"> 
 					<p>%s.</p> 
-					<a href="./screenshots.html" class="read-more">%s &raquo;</a>
+					<a href="/screenshots.html" class="read-more">%s &raquo;</a>
 				</div> 
 			</div>',
   q_("A shooting star flashes past the Jupiter. You can select different intensities in the View window"),
@@ -144,11 +144,11 @@ printf('
   q_("view screenshots"));
 printf('  
 			<div class="slide-item"> 
-				<img  src="./img/slideshow/slide-2.jpg" class="photo" alt="%s"/> 
+				<img  src="/img/slideshow/slide-2.jpg" class="photo" alt="%s"/> 
 				<h2></h2>
 				<div class="slide-desc"> 
 					<p>%s.</p> 
-					<a href="./screenshots.html" class="read-more">%s &raquo;</a>
+					<a href="/screenshots.html" class="read-more">%s &raquo;</a>
 				</div> 
 			</div>',
   q_("The great nebula in Orion. Press N to bring up the nebula labels. Also shown are constellation lines, press C to show or hide them"),
@@ -156,11 +156,11 @@ printf('
   q_("view screenshots"));
 printf('  
 			<div class="slide-item"> 
-				<img  src="./img/slideshow/slide-3.jpg" class="photo" alt="%s"/> 
+				<img  src="/img/slideshow/slide-3.jpg" class="photo" alt="%s"/> 
 				<h2></h2>
 				<div class="slide-desc"> 
 					<p>%s.</p> 
-					<a href="./screenshots.html" class="read-more">%s &raquo;</a>
+					<a href="/screenshots.html" class="read-more">%s &raquo;</a>
 				</div> 
 			</div>',
   q_("The dance of the planets above ESO headquarters, near Munich"),
@@ -168,11 +168,11 @@ printf('
   q_("view screenshots"));
 printf('  
 			<div class="slide-item"> 
-				<img  src="./img/slideshow/slide-4.jpg" class="photo" alt="%s"/> 
+				<img  src="/img/slideshow/slide-4.jpg" class="photo" alt="%s"/> 
 				<h2></h2>
 				<div class="slide-desc"> 
 					<p>%s.</p> 
-					<a href="./screenshots.html" class="read-more">%s &raquo;</a>
+					<a href="/screenshots.html" class="read-more">%s &raquo;</a>
 				</div> 
 			</div>',
   q_("Full sky view of the constellations, their boundaries, the Milky Way"),
@@ -180,11 +180,11 @@ printf('
   q_("view screenshots"));
 printf('  
 			<div class="slide-item"> 
-				<img  src="./img/slideshow/slide-5.jpg" class="photo" alt="%s"/> 
+				<img  src="/img/slideshow/slide-5.jpg" class="photo" alt="%s"/> 
 				<h2></h2>
 				<div class="slide-desc"> 
 					<p>%s.</p> 
-					<a href="./screenshots.html" class="read-more">%s &raquo;</a>
+					<a href="/screenshots.html" class="read-more">%s &raquo;</a>
 				</div> 
 			</div>',
   q_("Constellation art turned on"),
@@ -194,11 +194,11 @@ printf('
 			<div id="thumbs"> 
 				<div id="description"><p>%s</p></div> 
 				<ul> 
-					<li><a href="./screenshots.html"><img src="./img/slideshow/thumbs/thumb-1.jpg" width="40" height="40" alt="Slide 1" title="Slide 1"/></a></li> 
-                  	<li><a href="./screenshots.html"><img src="./img/slideshow/thumbs/thumb-2.jpg" width="40" height="40" alt="Slide 2" title="Slide 2"/></a></li> 
-                  	<li><a href="./screenshots.html"><img src="./img/slideshow/thumbs/thumb-3.jpg" width="40" height="40" alt="Slide 3" title="Slide 3"/></a></li> 
-                  	<li><a href="./screenshots.html" ><img src="./img/slideshow/thumbs/thumb-4.jpg" width="40" height="40" alt="Slide 4" title="Slide 4"/></a></li> 
-                  	<li class="last"><a href="./screenshots.html"><img src="./img/slideshow/thumbs/thumb-5.jpg" width="40" height="40" alt="Slide 5" title="Slide 5"/></a></li> 
+					<li><a href="/screenshots.html"><img src="/img/slideshow/thumbs/thumb-1.jpg" width="40" height="40" alt="Slide 1" title="Slide 1"/></a></li> 
+					<li><a href="/screenshots.html"><img src="/img/slideshow/thumbs/thumb-2.jpg" width="40" height="40" alt="Slide 2" title="Slide 2"/></a></li> 
+					<li><a href="/screenshots.html"><img src="/img/slideshow/thumbs/thumb-3.jpg" width="40" height="40" alt="Slide 3" title="Slide 3"/></a></li> 
+					<li><a href="/screenshots.html"><img src="/img/slideshow/thumbs/thumb-4.jpg" width="40" height="40" alt="Slide 4" title="Slide 4"/></a></li> 
+					<li class="last"><a href="/screenshots.html"><img src="/img/slideshow/thumbs/thumb-5.jpg" width="40" height="40" alt="Slide 5" title="Slide 5"/></a></li> 
 				</ul>  
 			</div> 
 		</div>
@@ -265,14 +265,14 @@ printf('
 	<ul class="largelist">
 		<li><a href="http://launchpad.net/stellarium">%s</a></li>
 		<li><a href="http://sourceforge.net/forum/forum.php?forum_id=278769">%s</a></li>
-		<li><a href="./wiki/">%s</a></li>
-		<li><a href="./wiki/index.php/FAQ">%s</a></li>		
-		<li><a href="./wiki/index.php/Landscapes">%s</a></li>
-		<li><a href="./wiki/index.php/Scripts">%s</a></li>
-		<li><a href="./wiki/index.php/Plugins">%s</a></li>
-		<li><a href="./wiki/index.php/Category:User\'s_Guide">%s</a></li>
-		<li><a href="./doc/">%s</a></li>
-		<li><a href="./doc/head/scripting.html">%s</a></li>
+		<li><a href="/wiki/">%s</a></li>
+		<li><a href="/wiki/index.php/FAQ">%s</a></li>		
+		<li><a href="/wiki/index.php/Landscapes">%s</a></li>
+		<li><a href="/wiki/index.php/Scripts">%s</a></li>
+		<li><a href="/wiki/index.php/Plugins">%s</a></li>
+		<li><a href="/wiki/index.php/Category:User\'s_Guide">%s</a></li>
+		<li><a href="/doc/">%s</a></li>
+		<li><a href="/doc/head/scripting.html">%s</a></li>
 		<li><a href="https://answers.launchpad.net/stellarium">%s</a></li>
 		<li><a href="http://bugs.launchpad.net/stellarium">%s</a></li>
 		<li><a href="http://sourceforge.net/project/showfiles.php?group_id=48857">%s</a>
@@ -353,7 +353,7 @@ printf('
 	</div>
 </div>
 <div id="footer">
-    <a href="http://sourceforge.net/donate/index.php?group_id=48857"><img src="./img/nd/project.jpg" alt="Support This Project" width="88" height="32" border="0"></a> <a href="http://sourceforge.net/projects/stellarium"><img src="http://sourceforge.net/sflogo.php?group_id=48857&amp;type=5" alt="SourceForge.net Logo" width="108" height="32" border="0"></a>
+    <a href="http://sourceforge.net/donate/index.php?group_id=48857"><img src="/img/nd/project.jpg" alt="Support This Project" width="88" height="32" border="0"></a> <a href="http://sourceforge.net/projects/stellarium"><img src="http://sourceforge.net/sflogo.php?group_id=48857&amp;type=5" alt="SourceForge.net Logo" width="108" height="32" border="0"></a>
 </div>
 </div>
 </body>
