@@ -266,8 +266,11 @@ printf('
 		<li><a href="http://sourceforge.net/forum/forum.php?forum_id=278769">%s</a></li>
 		<li><a href="./wiki/">%s</a></li>
 		<li><a href="./wiki/index.php/FAQ">%s</a></li>		
-		<li><a href="./wiki/index.php/Category:User\'s_Guide">%s</a></li>
+		<li><a href="./wiki/index.php/Landscapes">%s</a></li>
+		<li><a href="./wiki/index.php/Scripts">%s</a></li>
+		<li><a href="./wiki/index.php/Plugins">%s</a></li>
 		<li><a href="./doc/">%s</a></li>
+		<li><a href="./wiki/index.php/Category:User\'s_Guide">%s</a></li>
 		<li><a href="https://answers.launchpad.net/stellarium">%s</a></li>
 		<li><a href="http://bugs.launchpad.net/stellarium">%s</a></li>
 		<li><a href="http://sourceforge.net/project/showfiles.php?group_id=48857">%s</a>
@@ -285,7 +288,10 @@ q_("forum"),
 q_("wiki"),
 q_("FAQ"),
 q_("user's guide"),
-q_("API"),
+q_("landscapes"),
+q_("scripts"),
+q_("plugins"),
+q_("developers documentation"),
 q_("get support"),
 q_("report bugs, request new features"),
 q_("older releases"),
