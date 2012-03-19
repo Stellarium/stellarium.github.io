@@ -104,7 +104,7 @@ printf('
 				<a href="%s">%s<span>0.10.2-1</span></a>
 			</div>
 			<div class="download pdf">
-				<a href="http://www.stellarium.org/wiki/index.php/Stellarium_User_Guide">WIKI<span>%s</span></a>
+				<a href="http://www.stellarium.org/wiki/index.php/Stellarium_User_Guide">%s<span>%s</span></a>
 			</div>
 		</div>
 	</div>
@@ -116,6 +116,7 @@ printf('
   $download_link_osx_u,
   $download_link_win32,
   $download_link_guide,
+  q_('User guide'),
   q_('User guide'),
   q_('current'));
 
