@@ -269,8 +269,8 @@ printf('
 		<li><a href="./wiki/index.php/Landscapes">%s</a></li>
 		<li><a href="./wiki/index.php/Scripts">%s</a></li>
 		<li><a href="./wiki/index.php/Plugins">%s</a></li>
-		<li><a href="./doc/">%s</a></li>
 		<li><a href="./wiki/index.php/Category:User\'s_Guide">%s</a></li>
+		<li><a href="./doc/">%s</a></li>
 		<li><a href="https://answers.launchpad.net/stellarium">%s</a></li>
 		<li><a href="http://bugs.launchpad.net/stellarium">%s</a></li>
 		<li><a href="http://sourceforge.net/project/showfiles.php?group_id=48857">%s</a>
