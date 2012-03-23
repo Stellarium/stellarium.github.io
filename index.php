@@ -103,7 +103,7 @@ printf('
 			<div class="download pdf">
 				<a href="%s">%s<span>0.10.2-1</span></a>
 			</div>
-			<div class="download pdf">
+			<div class="download nopdf">
 				<a href="http://www.stellarium.org/wiki/index.php/Stellarium_User_Guide">%s<span>%s</span></a>
 			</div>
 		</div>
