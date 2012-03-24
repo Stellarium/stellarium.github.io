@@ -109,16 +109,16 @@ printf('
 		</div>
 	</div>
 </div>',
-  q_('latest version'),
-  $version,
-  $download_link_linux,
-  q_('source'),
-  $download_link_osx_u,
-  $download_link_win32,
-  $download_link_guide,
-  q_('User guide'),
-  q_('User guide'),
-  q_('current'));
+q_('latest version'),
+$version,
+$download_link_linux,
+q_('source'),
+$download_link_osx_u,
+$download_link_win32,
+$download_link_guide,
+q_('User guide'),
+q_('User guide'),
+q_('current'));
 
 printf('  
 <div id="home">
@@ -126,8 +126,8 @@ printf('
 		<p>%s</p>
 		<p>%s</p>
 	</div>',
-  q_("Stellarium is a free open source planetarium for your computer. It shows a realistic sky in 3D, just like what you see with the naked eye, binoculars or a telescope."),
-  q_("It is being used in planetarium projectors. Just set your coordinates and go."));
+q_("Stellarium is a free open source planetarium for your computer. It shows a realistic sky in 3D, just like what you see with the naked eye, binoculars or a telescope."),
+q_("It is being used in planetarium projectors. Just set your coordinates and go."));
 printf('  
 	<div class="block">
 		<div id="home-media">
@@ -139,9 +139,9 @@ printf('
 					<a href="./screenshots.html" class="read-more">%s &raquo;</a>
 				</div> 
 			</div>',
-  q_("A shooting star flashes past the Jupiter. You can select different intensities in the View window"),
-  q_("A shooting star flashes past the Jupiter. You can select different intensities in the View window"),  
-  q_("view screenshots"));
+q_("A shooting star flashes past the Jupiter. You can select different intensities in the View window"),
+q_("A shooting star flashes past the Jupiter. You can select different intensities in the View window"),  
+q_("view screenshots"));
 printf('  
 			<div class="slide-item"> 
 				<img  src="./img/slideshow/slide-2.jpg" class="photo" alt="%s"/> 
@@ -151,9 +151,9 @@ printf('
 					<a href="./screenshots.html" class="read-more">%s &raquo;</a>
 				</div> 
 			</div>',
-  q_("The great nebula in Orion. Press N to bring up the nebula labels. Also shown are constellation lines, press C to show or hide them"),
-  q_("The great nebula in Orion. Press N to bring up the nebula labels"),
-  q_("view screenshots"));
+q_("The great nebula in Orion. Press N to bring up the nebula labels. Also shown are constellation lines, press C to show or hide them"),
+q_("The great nebula in Orion. Press N to bring up the nebula labels"),
+q_("view screenshots"));
 printf('  
 			<div class="slide-item"> 
 				<img  src="./img/slideshow/slide-3.jpg" class="photo" alt="%s"/> 
@@ -163,9 +163,9 @@ printf('
 					<a href="./screenshots.html" class="read-more">%s &raquo;</a>
 				</div> 
 			</div>',
-  q_("The dance of the planets above ESO headquarters, near Munich"),
-  q_("The dance of the planets above ESO headquarters, near Munich"),
-  q_("view screenshots"));
+q_("The dance of the planets above ESO headquarters, near Munich"),
+q_("The dance of the planets above ESO headquarters, near Munich"),
+q_("view screenshots"));
 printf('  
 			<div class="slide-item"> 
 				<img  src="./img/slideshow/slide-4.jpg" class="photo" alt="%s"/> 
@@ -175,9 +175,9 @@ printf('
 					<a href="./screenshots.html" class="read-more">%s &raquo;</a>
 				</div> 
 			</div>',
-  q_("Full sky view of the constellations, their boundaries, the Milky Way"),
-  q_("Full sky view of the constellations, their boundaries, the Milky Way"),
-  q_("view screenshots"));
+q_("Full sky view of the constellations, their boundaries, the Milky Way"),
+q_("Full sky view of the constellations, their boundaries, the Milky Way"),
+q_("view screenshots"));
 printf('  
 			<div class="slide-item"> 
 				<img  src="./img/slideshow/slide-5.jpg" class="photo" alt="%s"/> 
@@ -187,24 +187,24 @@ printf('
 					<a href="./screenshots.html" class="read-more">%s &raquo;</a>
 				</div> 
 			</div>',
-  q_("Constellation art turned on"),
-  q_("Constellation art turned on"),
-  q_("view screenshots"));
+q_("Constellation art turned on"),
+q_("Constellation art turned on"),
+q_("view screenshots"));
 printf('
 			<div id="thumbs"> 
 				<div id="description"><p>%s</p></div> 
 				<ul> 
 					<li><a href="./screenshots.html"><img src="./img/slideshow/thumbs/thumb-1.jpg" width="40" height="40" alt="Slide 1" title="Slide 1"/></a></li> 
-                  	<li><a href="./screenshots.html"><img src="./img/slideshow/thumbs/thumb-2.jpg" width="40" height="40" alt="Slide 2" title="Slide 2"/></a></li> 
-                  	<li><a href="./screenshots.html"><img src="./img/slideshow/thumbs/thumb-3.jpg" width="40" height="40" alt="Slide 3" title="Slide 3"/></a></li> 
-                  	<li><a href="./screenshots.html" ><img src="./img/slideshow/thumbs/thumb-4.jpg" width="40" height="40" alt="Slide 4" title="Slide 4"/></a></li> 
-                  	<li class="last"><a href="./screenshots.html"><img src="./img/slideshow/thumbs/thumb-5.jpg" width="40" height="40" alt="Slide 5" title="Slide 5"/></a></li> 
+					<li><a href="./screenshots.html"><img src="./img/slideshow/thumbs/thumb-2.jpg" width="40" height="40" alt="Slide 2" title="Slide 2"/></a></li> 
+					<li><a href="./screenshots.html"><img src="./img/slideshow/thumbs/thumb-3.jpg" width="40" height="40" alt="Slide 3" title="Slide 3"/></a></li> 
+					<li><a href="./screenshots.html" ><img src="./img/slideshow/thumbs/thumb-4.jpg" width="40" height="40" alt="Slide 4" title="Slide 4"/></a></li> 
+					<li class="last"><a href="./screenshots.html"><img src="./img/slideshow/thumbs/thumb-5.jpg" width="40" height="40" alt="Slide 5" title="Slide 5"/></a></li> 
 				</ul>  
 			</div> 
 		</div>
 	</div>
 </div>',
-  q_("Click on the picture to the left for details."));
+q_("Click on the picture to the left for details."));
 printf('
 <div id="content">
 	<div id="features" class="block">
