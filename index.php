@@ -18,7 +18,10 @@ function q_($msgid) {
 
 $language = array(
     'ar'=>'‫العربية‬', 
+    'eu'=>'euskara',
+    'be'=>'Беларуская',
     'bg'=>'български',
+    'bs'=>'bosanski',
     'ca'=>'Català',
     'cs'=>'česky',
     'de'=>'Deutsch',
@@ -28,7 +31,7 @@ $language = array(
     'fi'=>'Suomen',
     'fr'=>'français',
     'hr'=>'Hrvatski',
-    'hr'=>'Hunns-rikk',
+    'hrx'=>'Hunns-rikk',
     'it'=>'Italiano',
     'ja'=>'日本語',
     'nl'=>'Nederlands',
@@ -36,6 +39,8 @@ $language = array(
     'pt_BR'=>'Português (Brazil)',
     'pt'=>'Português',
     'ru'=>'русский',
+    'uk'=>'українська',
+    'zh_CN'=>'中文、汉语、漢語 (China)',
 );
 
 $version = '0.11.2';
