@@ -352,6 +352,12 @@ printf('<h2>%s</h2><p>
 	q_('Tester:'),                  'Khalid AlAjaji',
 	q_('and everyone else in the community.') );
 
+$langlinks = "";	
+foreach ($language as $langcode => $langname) {
+	$langlinks .= '"<a href="index.php?lang='.$langcode.'">'.$langname.'</a> ';
+};
+
+
 printf('
 	<h2>%s</h2>
 	<p>%s</p>
@@ -360,10 +366,14 @@ printf('
 <div id="footer">
     <a href="http://sourceforge.net/donate/index.php?group_id=48857"><img src="./img/nd/project.jpg" alt="Support This Project" width="88" height="32" border="0"></a> <a href="http://sourceforge.net/projects/stellarium"><img src="http://sourceforge.net/sflogo.php?group_id=48857&amp;type=5" alt="SourceForge.net Logo" width="108" height="32" border="0"></a>
 </div>
+<div id="langlist">
+%s
+</div>
 </div>
 </body>
 </html>',
 q_("supporters and friends"),
-sprintf(q_("Stellarium is produced by the efforts of the developer team, with the help and support of the %sfollowing people and organisations%s"), "<a href='sponsors.php'>", "</a>"));
+sprintf(q_("Stellarium is produced by the efforts of the developer team, with the help and support of the %sfollowing people and organisations%s"), "<a href='sponsors.php'>", "</a>"),
+$langlinks);
 ?>
 
