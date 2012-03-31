@@ -7,3 +7,7 @@ RewriteRule ^\.bzr\/ /error.html
 # Redirect to the MPC website for the Solar System editor search
 Redirect temp /mpc-mpeph http://scully.cfa.harvard.edu/cgi-bin/mpeph2.cgi
 
+# Localized versions of Stellarium website
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^([a-z_]{2,5}|[a-z_]{2,5}/) /index.php?lang=$1 [NC,QSA]
