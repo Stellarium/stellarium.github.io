@@ -43,6 +43,12 @@ $language = array(
     'zh_CN'=>'中文、汉语、漢語',
 );
 
+if ($locale == "ar") {
+    $langdir = "rtl";
+} else {
+    $langdir = "ltr";
+}
+
 $version = '0.11.2';
 $download_link_win32 = 'http://sourceforge.net/projects/stellarium/files/Stellarium-win32/0.11.2/stellarium-0.11.2-win32.exe/download';
 $download_link_osx_u = 'http://sourceforge.net/projects/stellarium/files/Stellarium-MacOSX/0.11.2/Stellarium-0.11.2-Universal.dmg/download';
@@ -50,7 +56,7 @@ $download_link_linux = 'http://sourceforge.net/projects/stellarium/files/Stellar
 $download_link_guide = 'http://sourceforge.net/projects/stellarium/files/Stellarium-user-guide/0.10.2-1/stellarium_user_guide-0.10.2-1.pdf/download';
 
 printf('<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0//EN" "http://www.w3.org/TR/REC-html40/strict.dtd">
-<html>
+<html dir="%s" lang="%s">
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <meta name="MSSmartTagsPreventParsing" content="TRUE" /> 
@@ -59,6 +65,7 @@ printf('<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0//EN" "http://www.w3.org/TR/R
 <title>Stellarium</title>
 <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
 <link rel="stylesheet" href="/css/all.css" type="text/css" media="screen" />
+<link rel="stylesheet" href="/css/%s.css" type="text/css" media="screen" />
 <link rel="alternate" type="application/rss+xml" title="%s" href="https://sourceforge.net/export/rss2_projnews.php?group_id=48857&rss_fulltext=1" />
 <!--[if lt IE 8]>
 <link href="/css/oldie.css" rel="stylesheet" type="text/css" /> 
@@ -71,7 +78,10 @@ printf('<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0//EN" "http://www.w3.org/TR/R
 	}
 	</script>
 </head>',
+$langdir,
+$locale,
 q_("Stellarium is a planetarium software that shows exactly what you see when you look up at the stars. It's easy to use, and free."),
+$langdir,
 q_("Stellarium: Project News"));
 
 printf('<body>
