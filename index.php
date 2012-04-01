@@ -53,7 +53,8 @@ $version = '0.11.2';
 $download_link_win32 = 'http://sourceforge.net/projects/stellarium/files/Stellarium-win32/0.11.2/stellarium-0.11.2-win32.exe/download';
 $download_link_osx_u = 'http://sourceforge.net/projects/stellarium/files/Stellarium-MacOSX/0.11.2/Stellarium-0.11.2-Universal.dmg/download';
 $download_link_linux = 'http://sourceforge.net/projects/stellarium/files/Stellarium-sources/0.11.2/stellarium-0.11.2.tar.gz/download';
-$download_link_guide = 'http://sourceforge.net/projects/stellarium/files/Stellarium-user-guide/0.10.2-1/stellarium_user_guide-0.10.2-1.pdf/download';
+$download_link_ubuntu_default = 'apt://stellarium';
+$download_link_ubuntu_ppa = 'https://launchpad.net/~stellarium/+archive/stellarium-releases';
 
 printf('<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0//EN" "http://www.w3.org/TR/REC-html40/strict.dtd">
 <html dir="%s" lang="%s">
@@ -113,13 +114,16 @@ printf('
 			<div class="download windows">
 				<a href="%s">Windows<span>32 bit</span></a>
 			</div>
+                        <div class="download ubuntu">
+                                <a href="%s">Ubuntu<span>%s</span></a>
+                        </div>
+                        <div class="download ubuntu">
+                                <a href="%s">Ubuntu<span>%s</span></a>
+                        </div>
 		</div>
 		<div id="additional" class="block">
-			<div class="download pdf">
-				<a href="%s">%s<span>0.10.2-1</span></a>
-			</div>
 			<div class="download nopdf">
-				<a href="http://www.stellarium.org/wiki/index.php/Stellarium_User_Guide">%s<span>%s</span></a>
+				<a href="http://www.stellarium.org/wiki/index.php/Stellarium_User_Guide">%s</a>
 			</div>
 		</div>
 	</div>
@@ -130,10 +134,11 @@ $download_link_linux,
 q_('source'),
 $download_link_osx_u,
 $download_link_win32,
-$download_link_guide,
-q_('User guide'),
-q_('User guide'),
-q_('current'));
+$download_link_ubuntu_default,
+q_('default Ubuntu version'),
+$download_link_ubuntu_ppa,
+q_('latest stable release'),
+q_('User guide'));
 
 printf('  
 <div id="home">
