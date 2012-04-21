@@ -34,6 +34,7 @@ $language = array(
     'hrx'=>'Hunns-rikk',
     'it'=>'Italiano',
     'ja'=>'日本語',
+    'nb'=>'Norsk bokmål',
     'nl'=>'Nederlands',
     'pl'=>'Polski',
     'pt_BR'=>'Português (Brazil)',
