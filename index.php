@@ -41,7 +41,8 @@ $language = array(
     'pt'=>'Português',
     'ru'=>'русский',
     'uk'=>'українська',
-    'zh_CN'=>'中文、汉语、漢語',
+    'zh'=>'中文、汉语、漢語',
+    'zh_CN'=>'中文、汉语、漢語 (Simplified)',
 );
 
 if ($locale == "ar") {
