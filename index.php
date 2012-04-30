@@ -389,7 +389,7 @@ printf('
 </body>
 </html>',
 q_("supporters and friends"),
-sprintf(q_("Stellarium is produced by the efforts of the developer team, with the help and support of the %sfollowing people and organisations%s"), "<a href='sponsors.php'>", "</a>"),
+sprintf(q_("Stellarium is produced by the efforts of the developer team, with the help and support of the %sfollowing people and organisations%s"), "<a href='/sponsors.php'>", "</a>"),
 $langlinks);
 ?>
 
