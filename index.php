@@ -322,7 +322,7 @@ foreach ($language as $langcode => $langname) {
 
 printf('
 	<h2>%s</h2>
-	<p>%s</p>
+	<p>%s.</p>
 	</div>
 </div>
 <div id="footer">
