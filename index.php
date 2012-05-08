@@ -102,60 +102,60 @@ printf('
 				<img src="/img/slideshow/slide-1.jpg" class="photo" alt="%s" /> 
 				<h2></h2>
 				<div class="slide-desc"> 
-					<p>%s.</p> 
+					<p>%s</p> 
 					<a href="./screenshots.php" class="read-more">%s &raquo;</a>
 				</div> 
 			</div>',
-q_("A shooting star flashes past the Jupiter. You can select different intensities in the View window"),
-q_("A shooting star flashes past the Jupiter. You can select different intensities in the View window"),  
+q_("A shooting star flashes past the Jupiter. You can select different intensities in the View window."),
+q_("A shooting star flashes past the Jupiter. You can select different intensities in the View window."),  
 q_("view screenshots"));
 printf('  
 			<div class="slide-item"> 
 				<img src="/img/slideshow/slide-2.jpg" class="photo" alt="%s"/> 
 				<h2></h2>
 				<div class="slide-desc"> 
-					<p>%s.</p> 
+					<p>%s</p> 
 					<a href="./screenshots.php" class="read-more">%s &raquo;</a>
 				</div> 
 			</div>',
-q_("The great nebula in Orion. Press N to bring up the nebula labels. Also shown are constellation lines, press C to show or hide them"),
-q_("The great nebula in Orion. Press N to bring up the nebula labels"),
+q_("The great nebula in Orion. Press N to bring up the nebula labels. Also shown are constellation lines, press C to show or hide them."),
+q_("The great nebula in Orion. Press N to bring up the nebula labels."),
 q_("view screenshots"));
 printf('  
 			<div class="slide-item"> 
 				<img src="/img/slideshow/slide-3.jpg" class="photo" alt="%s"/> 
 				<h2></h2>
 				<div class="slide-desc"> 
-					<p>%s.</p> 
+					<p>%s</p> 
 					<a href="./screenshots.php" class="read-more">%s &raquo;</a>
 				</div> 
 			</div>',
-q_("The dance of the planets above ESO headquarters, near Munich"),
-q_("The dance of the planets above ESO headquarters, near Munich"),
+q_("The dance of the planets above ESO headquarters, near Munich."),
+q_("The dance of the planets above ESO headquarters, near Munich."),
 q_("view screenshots"));
 printf('  
 			<div class="slide-item"> 
 				<img src="/img/slideshow/slide-4.jpg" class="photo" alt="%s"/> 
 				<h2></h2>
 				<div class="slide-desc"> 
-					<p>%s.</p> 
+					<p>%s</p> 
 					<a href="./screenshots.php" class="read-more">%s &raquo;</a>
 				</div> 
 			</div>',
-q_("Full sky view of the constellations, their boundaries, the Milky Way"),
-q_("Full sky view of the constellations, their boundaries, the Milky Way"),
+q_("Full sky view of the constellations, their boundaries, the Milky Way."),
+q_("Full sky view of the constellations, their boundaries, the Milky Way."),
 q_("view screenshots"));
 printf('  
 			<div class="slide-item"> 
 				<img src="/img/slideshow/slide-5.jpg" class="photo" alt="%s"/> 
 				<h2></h2>
 				<div class="slide-desc"> 
-					<p>%s.</p> 
+					<p>%s</p> 
 					<a href="./screenshots.php" class="read-more">%s &raquo;</a>
 				</div> 
 			</div>',
-q_("Constellation art turned on"),
-q_("Constellation art turned on"),
+q_("Constellation art turned on."),
+q_("Constellation art turned on."),
 q_("view screenshots"));
 printf('
 			<div id="thumbs"> 

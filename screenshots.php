@@ -122,10 +122,10 @@ printf('
 </div>
 <div id="content">
 	<div id="fullsize">
-	    <p id="caption">%s</p>
+	    <p id="caption">%s.</p>
 		<img src="/img/screenshots/placeholder.png" alt="%s" id="placeholder" /> 
 	</div>',
-q_("Stellarium screenshot gallery."),
+q_("Stellarium screenshot gallery"),
 q_("Please select an image."));
 
 $langlinks = "";	
