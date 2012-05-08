@@ -111,7 +111,7 @@ printf('
 <div id="community" class="block">
 	<h2>%s</h2>
 	<p>%s</p>
-	<ul><li>%s</li><li>%s</li><li>%s</li><li>%s</li><li>%s</li></ul>',
+	<ul><li>%s</li><li>%s</li><li>%s</li><li>%s</li><li>%s</li><li>%s</li></ul>',
 q_("community"),
 q_("Special thanks go out to all members of the Stellarium user community."),
 q_("Program translators"),
@@ -132,7 +132,7 @@ printf('
 		<li>Rob Spearman (%s)</li>		
 	</ul>',
 q_("past developers"),
-q_("Several people have made significant contributions but no longer active. Their work has made a big different to the project:"),
+q_("Several people have made significant contributions but no longer active. Their work has made a big different to the project"),
 q_("graphic designer"),
 q_("developer"),
 q_("developer"));
