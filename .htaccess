@@ -8,6 +8,13 @@ RewriteRule ^\.bzr\/ /error.html
 Redirect temp /mpc-mpeph http://scully.cfa.harvard.edu/cgi-bin/mpeph2.cgi
 
 # Localized versions of Stellarium website
+RewriteCond %{ENV:REDIRECT_FINISH} !^$
+RewriteRule ^ - [L]
+
 RewriteCond %{REQUEST_FILENAME} !-f
 RewriteCond %{REQUEST_FILENAME} !-d
-RewriteRule ^([a-z_]{2,5}|[a-z_]{2,5}/) /index.php?lang=$1 [NC,QSA]
+RewriteRule ^([a-z_]{2,5})/([a-z]+)\.php$	/$2.php?lang=$1		[NC,QSA]
+RewriteRule ^([a-z_]{2,5})([\/]{0,1})$  	/index.php?lang=$1	[E=FINISH:1,NC,QSA]
+
+
+

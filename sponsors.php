@@ -1,62 +1,171 @@
-<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0//EN" "http://www.w3.org/TR/REC-html40/strict.dtd">
-<html>
+<?php
+$locale = (isset($_GET['lang']))? $_GET['lang'] : 'en';
+
+include("init.php");
+
+printf('<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0//EN" "http://www.w3.org/TR/REC-html40/strict.dtd">
+<html dir="%s" lang="%s">
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<meta name="Description" content="Stellarium open source planetarium software" />
-<meta name="Keywords" content="Stellarium, planetarium, astronomy, stars, planets, constellations, meteors, universe, open source, free software, Fabien Chéreau, astro, freeware, download, stars, planets, realistic, software, sky, program, scientific, educational, free, real, time, Windows, Linux, Apple, Mac, GPL, alioth, milky way, moon, mercury, venus, mars, earth, venus, jupiter, saturn, sun, real time, 3D, openGL, graphic, GL, glut, glu, chart, map, twinkle, photo-realistic, brightness, source, screenshot, Orion, 2001, computer" />
-<title>Stellarium</title>
+<meta name="MSSmartTagsPreventParsing" content="TRUE" /> 
+<meta name="Description" content="%s" />
+<meta name="Keywords" content="Stellarium, planetarium, astronomy, software, stars, planets, constellations, meteors, universe, open source, free software, astro, freeware, download, stars, planets, realistic, software, sky, program, scientific, educational, free, real, time, Windows, Linux, Apple, Mac, GPL, milky way, moon, mercury, venus, mars, earth, venus, jupiter, saturn, sun, real time, 3D, openGL, graphic, GL, chart, map, twinkle, photo-realistic, brightness, screenshot" />
+<title>%s</title>
 <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
-<link rel="stylesheet" href="css/stellarium.css" type="text/css" media="screen" />
-<script type="text/javascript" src="showpic.js"></script>
-<!--[if lt IE 7.]>
-<script defer type="text/javascript" src="pngfix.js"></script>
+<link rel="stylesheet" href="/css/all.css" type="text/css" media="screen" />
+<link rel="stylesheet" href="/css/%s.css" type="text/css" media="screen" />
+<link rel="alternate" type="application/rss+xml" title="%s" href="https://sourceforge.net/export/rss2_projnews.php?group_id=48857&rss_fulltext=1" />
+<!--[if lt IE 8]>
+<link href="/css/oldie.css" rel="stylesheet" type="text/css" /> 
+<script defer type="text/javascript" src="/js/pngfix.js"></script>
 <![endif]-->
-</head>
-<body>
-<div id="wrap">
-  <div id="header">
-    <h1>Supporters and friends of Stellarium</h1>
-  </div>
-  <div id="stelsponsorsintro">Stellarium is produced by the efforts of the developer team, with the help and support of the following people and organisations:</div>
-  <div id="content"><div id="stelsponsorscontainer">
-    <h2>Sponsors</h2>
-    <ul id="stelsponsors">
-      <li>Sourceforge for hosting the project files, website and SVN repositories.  Sourceforge have pushed many terabytes of data for Stellarium during the life of the project.</li>
-      <li>Launchpad for hosting the project trackers and translation system.</li>
-      <li>The <a href="http://www.eso.org/public/">European Southern Observatory</a> for sponsoring and hosting the 2007 Stellarium developer meeting.</li>
-      <li><a href="http://www.andalux.com">Sergio Trujillo</a> for paying and transfering the stellarium.org domain to us.</li>
-    </ul>
-    <h2>Community</h2>
-    <p>Special thanks go out to all members of the Stellarium user community.
-    </p>
-    <ul id="stelsponsors">
-      <li>Program translators</li>
-      <li>User guide translators</li>
-      <li>Landscape authors</li>
-      <li>Wiki authors</li>
-      <li>Testers and bug reporters</li>
-      <li>Donators</li>
-    </ul>
-    <h2>Past Developers</h2>
-    <p>Several people have made significant contributions but no longer active. Their work has made a big different to the project:</p>
-    <ul id="stelsponsors">
-      <li>Johan Meuris</a> (graphic designer)</li>
-      <li>Johannes Gajdosik (developer)</li>
-      <li>Rob Spearman (developer)</li>
-    </ul>
+	<script>
+	function changelang(val) {
+ 		window.location = "/" + val + "/sponsors.php";
+	}
+	</script>
+</head>',
+$langdir,
+$locale,
+q_("Stellarium is a planetarium software that shows exactly what you see when you look up at the stars. It's easy to use, and free."),
+q_("Supporters and friends of Stellarium"),
+$langdir,
+q_("Stellarium: Project News"));
 
-<h2>Friends</h2>
-<ul id="stelsponsors">
-      <li><a href="http://www.hypnosekreis.de/">Praxis Beatrice Ohms</a></li>
-      <li><a href="http://obviouslycloe.com/">Portfolio of Cloe (working on new constellation art)</a></li>
-      <li><a href="http://www.chatocracy.com/">Chatocracy (a webcam chat website made by Fabien)</a></li>
-    </ul>
+printf('<body>
+<div id="wrapper">
+  <div id="langbar">%s ',
+  q_("Other languages:"));     
+print '<select id="language" onchange="changelang(this.value)">';
+foreach ($language as $langcode => $langname) {
+	if ($langcode==$locale) {
+		print '<option value="'.$langcode.'" selected="selected">'.$langname.' ('.$langcode.')</option>';
+	} else {
+		print '<option value="'.$langcode.'">'.$langname.' ('.$langcode.')</option>';
+	}
+};
+
+print '</select>  </div>';
+
+printf('
+<div id="header">
+	<div id="latestversion" class="block"><a href="/%s/">%s %s</a></div>
+	<div id="downloadbar" class="block">
+		<div id="release" class="block">
+			<div class="download linux">
+				<a href="%s">Linux<span>(%s)</span></a>
+			</div>
+			<div class="download macosx">
+				<a href="%s">Mac OS X<span>10.5+; UB</span></a>
+			</div>
+			<div class="download windows">
+				<a href="%s">Windows<span>32 bit</span></a>
+			</div>
+                        <div class="download ubuntu">
+                                <a href="%s">Ubuntu<span>%s</span></a>
+                        </div>
+                        <div class="download ubuntu">
+                                <a href="%s">Ubuntu<span>%s</span></a>
+                        </div>
+		</div>
+		<div id="additional" class="block">
+			<div class="download nopdf">
+				<a href="http://www.stellarium.org/wiki/index.php/Stellarium_User_Guide">%s</a>
+			</div>
+		</div>
+	</div>
+</div>',
+$locale,
+q_('latest version'),
+$version,
+$download_link_linux,
+q_('source'),
+$download_link_osx_u,
+$download_link_win32,
+$download_link_ubuntu_default,
+q_('default Ubuntu version'),
+$download_link_ubuntu_ppa,
+q_('latest stable release'),
+q_('User guide'));
+
+printf('  
+<div id="home">
+	<div id="sponsors-describe" class="block">
+		<p>%s</p>		
+	</div>',
+q_("Stellarium is produced by the efforts of the developer team, with the help and support of the following people and organisations:"));
+
+printf('
 </div>
-  </div>
-  <div id="languages">Other languages:
-    <?php include("languages.inc"); ?>
-  </div>
-  <div id="footer"> <a href="http://sourceforge.net/donate/index.php?group_id=48857"><img src="http://images.sourceforge.net/images/project-support.jpg" alt="Support This Project" width="88" height="32" border="0" /></a> <a href="http://sourceforge.net"><img src="http://sourceforge.net/sflogo.php?group_id=48857&amp;type=5" alt="SourceForge.net Logo" width="108" height="32" border="0" /></a> </div>
+<div id="content">
+	<div id="stelsponsors" class="block">
+		<h2>%s</h2>		
+			<ul><li>%s</li><li>%s</li><li>%s</li><li>%s</li></ul>',
+q_("sponsors"),
+q_("Sourceforge for hosting the project files, website and SVN repositories.  Sourceforge have pushed many terabytes of data for Stellarium during the life of the project."),
+q_("Launchpad for hosting the project trackers and translation system."),
+sprintf(q_("The %sEuropean Southern Observatory%s for sponsoring and hosting the 2007 Stellarium developer meeting."), "<a href='http://www.eso.org/public/'>", "</a>"),
+sprintf(q_("%sSergio Trujillo%s for paying and transfering the stellarium.org domain to us."), "<a href='http://www.andalux.com'>", "</a>"));
+printf('
+</div>
+<div id="community" class="block">
+	<h2>%s</h2>
+	<p>%s</p>
+	<ul><li>%s</li><li>%s</li><li>%s</li><li>%s</li><li>%s</li></ul>',
+q_("community"),
+q_("Special thanks go out to all members of the Stellarium user community."),
+q_("Program translators"),
+q_("User guide translators"),
+q_("Landscape authors"),
+q_("Wiki authors"),
+q_("Testers and bug reporters"),
+q_("Donators"));
+
+printf('
+</div>
+<div id="friends" class="block">
+	<h2>%s</h2>
+	<p>%s:</p>
+	<ul>
+		<li>Johan Meuris (%s)</li>
+		<li>Johannes Gajdosik (%s)</li>
+		<li>Rob Spearman (%s)</li>		
+	</ul>',
+q_("past developers"),
+q_("Several people have made significant contributions but no longer active. Their work has made a big different to the project:"),
+q_("graphic designer"),
+q_("developer"),
+q_("developer"));
+
+printf('
+	<h2>%s</h2>		
+		<ul>
+			<li><a href="http://www.hypnosekreis.de/">%s</a></li>
+			<li><a href="http://obviouslycloe.com/">%s</a></li>
+			<li><a href="http://www.chatocracy.com/">%s</a></li>
+		</ul>',
+q_("friends"),
+q_("Praxis Beatrice Ohms"),
+q_("Portfolio of Cloe (working on new constellation art)"),
+q_("Chatocracy (a webcam chat website made by Fabien)"));
+
+$langlinks = "";	
+foreach ($language as $langcode => $langname) {
+	$langlinks .= '<a href="/'.$langcode.'/sponsors.php">'.$langname.'</a> ';
+};
+
+
+printf('
+</div></div>
+<div id="footer">
+    <a href="http://sourceforge.net/donate/index.php?group_id=48857"><img src="/img/nd/project.jpg" alt="Support This Project" width="88" height="32" border="0"></a> <a href="http://sourceforge.net/projects/stellarium"><img src="http://sourceforge.net/sflogo.php?group_id=48857&amp;type=5" alt="SourceForge.net Logo" width="108" height="32" border="0"></a>
+</div>
+<div id="langlist">
+%s
+</div>
 </div>
 </body>
-</html>
+</html>',
+$langlinks);
+?>
+

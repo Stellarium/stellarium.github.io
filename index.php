@@ -1,62 +1,7 @@
 <?php
 $locale = (isset($_GET['lang']))? $_GET['lang'] : 'en';
 
-if ($locale!='en') {
-    require('streams.php');
-    require('gettext.php');
-    $streamer = new FileReader('./locale/' . $locale . '.mo');
-    $wohoo = new gettext_reader($streamer);
-}
-
-function q_($msgid) {
-    global $locale;
-    if ($locale=='en')
-        return $msgid;
-    global $wohoo;
-    return $wohoo ? htmlspecialchars($wohoo->translate($msgid)) : $msgid;
-}
-
-$language = array(
-    'ar'=>'‫العربية‬', 
-    'eu'=>'euskara',
-    'be'=>'Беларуская',
-    'bg'=>'български',
-    'bs'=>'bosanski',
-    'ca'=>'Català',
-    'cs'=>'česky',
-    'de'=>'Deutsch',
-    'el'=>'Ελληνικά',
-    'en'=>'English',
-    'es'=>'español',
-    'fi'=>'Suomen',
-    'fr'=>'français',
-    'hr'=>'Hrvatski',
-    'hrx'=>'Hunns-rikk',
-    'it'=>'Italiano',
-    'ja'=>'日本語',
-    'nb'=>'Norsk bokmål',
-    'nl'=>'Nederlands',
-    'pl'=>'Polski',
-    'pt_BR'=>'Português (Brazil)',
-    'pt'=>'Português',
-    'ru'=>'русский',
-    'uk'=>'українська',
-    'zh'=>'中文、汉语、漢語',
-    'zh_CN'=>'中文、汉语、漢語 (Simplified)',
-);
-
-if ($locale == "ar") {
-    $langdir = "rtl";
-} else {
-    $langdir = "ltr";
-}
-
-$version = '0.11.2';
-$download_link_win32 = 'http://sourceforge.net/projects/stellarium/files/Stellarium-win32/0.11.2/stellarium-0.11.2-win32.exe/download';
-$download_link_osx_u = 'http://sourceforge.net/projects/stellarium/files/Stellarium-MacOSX/0.11.2/Stellarium-0.11.2-Universal.dmg/download';
-$download_link_linux = 'http://sourceforge.net/projects/stellarium/files/Stellarium-sources/0.11.2/stellarium-0.11.2.tar.gz/download';
-$download_link_ubuntu_default = 'apt://stellarium';
-$download_link_ubuntu_ppa = 'https://launchpad.net/~stellarium/+archive/stellarium-releases';
+include("init.php");
 
 printf('<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0//EN" "http://www.w3.org/TR/REC-html40/strict.dtd">
 <html dir="%s" lang="%s">
@@ -158,7 +103,7 @@ printf('
 				<h2></h2>
 				<div class="slide-desc"> 
 					<p>%s.</p> 
-					<a href="/screenshots.html" class="read-more">%s &raquo;</a>
+					<a href="./screenshots.php" class="read-more">%s &raquo;</a>
 				</div> 
 			</div>',
 q_("A shooting star flashes past the Jupiter. You can select different intensities in the View window"),
@@ -170,7 +115,7 @@ printf('
 				<h2></h2>
 				<div class="slide-desc"> 
 					<p>%s.</p> 
-					<a href="/screenshots.html" class="read-more">%s &raquo;</a>
+					<a href="./screenshots.php" class="read-more">%s &raquo;</a>
 				</div> 
 			</div>',
 q_("The great nebula in Orion. Press N to bring up the nebula labels. Also shown are constellation lines, press C to show or hide them"),
@@ -182,7 +127,7 @@ printf('
 				<h2></h2>
 				<div class="slide-desc"> 
 					<p>%s.</p> 
-					<a href="/screenshots.html" class="read-more">%s &raquo;</a>
+					<a href="./screenshots.php" class="read-more">%s &raquo;</a>
 				</div> 
 			</div>',
 q_("The dance of the planets above ESO headquarters, near Munich"),
@@ -194,7 +139,7 @@ printf('
 				<h2></h2>
 				<div class="slide-desc"> 
 					<p>%s.</p> 
-					<a href="/screenshots.html" class="read-more">%s &raquo;</a>
+					<a href="./screenshots.php" class="read-more">%s &raquo;</a>
 				</div> 
 			</div>',
 q_("Full sky view of the constellations, their boundaries, the Milky Way"),
@@ -206,7 +151,7 @@ printf('
 				<h2></h2>
 				<div class="slide-desc"> 
 					<p>%s.</p> 
-					<a href="/screenshots.html" class="read-more">%s &raquo;</a>
+					<a href="./screenshots.php" class="read-more">%s &raquo;</a>
 				</div> 
 			</div>',
 q_("Constellation art turned on"),
@@ -216,11 +161,11 @@ printf('
 			<div id="thumbs"> 
 				<div id="description"><p>%s</p></div> 
 				<ul> 
-					<li><a href="/screenshots.html"><img src="/img/slideshow/thumbs/thumb-1.jpg" width="40" height="40" alt="Slide 1" title="Slide 1"/></a></li> 
-					<li><a href="/screenshots.html"><img src="/img/slideshow/thumbs/thumb-2.jpg" width="40" height="40" alt="Slide 2" title="Slide 2"/></a></li> 
-					<li><a href="/screenshots.html"><img src="/img/slideshow/thumbs/thumb-3.jpg" width="40" height="40" alt="Slide 3" title="Slide 3"/></a></li> 
-					<li><a href="/screenshots.html" ><img src="/img/slideshow/thumbs/thumb-4.jpg" width="40" height="40" alt="Slide 4" title="Slide 4"/></a></li> 
-					<li class="last"><a href="/screenshots.html"><img src="/img/slideshow/thumbs/thumb-5.jpg" width="40" height="40" alt="Slide 5" title="Slide 5"/></a></li> 
+					<li><a href="./screenshots.php"><img src="/img/slideshow/thumbs/thumb-1.jpg" width="40" height="40" alt="Slide 1" title="Slide 1"/></a></li> 
+					<li><a href="./screenshots.php"><img src="/img/slideshow/thumbs/thumb-2.jpg" width="40" height="40" alt="Slide 2" title="Slide 2"/></a></li> 
+					<li><a href="./screenshots.php"><img src="/img/slideshow/thumbs/thumb-3.jpg" width="40" height="40" alt="Slide 3" title="Slide 3"/></a></li> 
+					<li><a href="./screenshots.php" ><img src="/img/slideshow/thumbs/thumb-4.jpg" width="40" height="40" alt="Slide 4" title="Slide 4"/></a></li> 
+					<li class="last"><a href="./screenshots.php"><img src="/img/slideshow/thumbs/thumb-5.jpg" width="40" height="40" alt="Slide 5" title="Slide 5"/></a></li> 
 				</ul>  
 			</div> 
 		</div>
@@ -390,7 +335,7 @@ printf('
 </body>
 </html>',
 q_("supporters and friends"),
-sprintf(q_("Stellarium is produced by the efforts of the developer team, with the help and support of the %sfollowing people and organisations%s"), "<a href='/sponsors.php'>", "</a>"),
+sprintf(q_("Stellarium is produced by the efforts of the developer team, with the help and support of the %sfollowing people and organisations%s"), "<a href='./sponsors.php'>", "</a>"),
 $langlinks);
 ?>
 
