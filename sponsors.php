@@ -132,7 +132,7 @@ printf('
 		<li>Rob Spearman (%s)</li>		
 	</ul>',
 q_("past developers"),
-q_("Several people have made significant contributions but no longer active. Their work has made a big difference to the project"),
+q_("Several people have made significant contributions but are no longer active. Their work has made a big difference to the project"),
 q_("graphic designer"),
 q_("developer"),
 q_("developer"));
@@ -142,12 +142,10 @@ printf('
 		<ul>
 			<li><a href="http://www.hypnosekreis.de/">%s</a></li>
 			<li><a href="http://obviouslycloe.com/">%s</a></li>
-			<li><a href="http://www.chatocracy.com/">%s</a></li>
 		</ul>',
 q_("friends"),
 q_("Praxis Beatrice Ohms"),
-q_("Portfolio of Cloe (working on new constellation art)"),
-q_("Chatocracy (a webcam chat website made by Fabien)"));
+q_("Portfolio of Cloe (working on new constellation art)"));
 
 $langlinks = "";	
 foreach ($language as $langcode => $langname) {
