@@ -132,7 +132,7 @@ printf('
 		<li>Rob Spearman (%s)</li>		
 	</ul>',
 q_("past developers"),
-q_("Several people have made significant contributions but no longer active. Their work has made a big different to the project"),
+q_("Several people have made significant contributions but no longer active. Their work has made a big difference to the project"),
 q_("graphic designer"),
 q_("developer"),
 q_("developer"));
