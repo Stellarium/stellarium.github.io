@@ -56,7 +56,7 @@ printf('
 				<a href="%s">Linux<span>(%s)</span></a>
 			</div>
 			<div class="download macosx">
-				<a href="%s">Mac OS X<span>10.7+</span></a>
+				<a href="%s">Mac OS X<span>10.5+; UB</span></a>
 			</div>
 			<div class="download windows">
 				<a href="%s">Windows<span>32 bit</span></a>
