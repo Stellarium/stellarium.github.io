@@ -1,6 +1,6 @@
 #!/bin/bash
 
-for lang in ar be bs pt_BR bg ca zh zh_CN hr cs nb nl fi fr de el hrx it ja pl pt ru es eu uk
+for lang in ar be bs pt_BR bg ca zh zh_CN hr cs nb nl fi fr de el hrx it ja pl pt ru sk es eu uk
 do
 #    touch po/$lang.po
 #    msgmerge -U po/$lang.po stellarium-website.pot

@@ -39,6 +39,7 @@ $language = array(
     'pt_BR'=>'Português (Brazil)',
     'pt'=>'Português',
     'ru'=>'русский',
+    'sk'=>'slovenčina',
     'uk'=>'українська',
     'zh'=>'中文、汉语、漢語',
     'zh_CN'=>'中文、汉语、漢語 (Simplified)',
