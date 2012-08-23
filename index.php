@@ -231,7 +231,7 @@ printf('
 	<p>%s:</p>
 	<ul class="largelist">
 		<li><a href="http://launchpad.net/stellarium">%s</a></li>
-		<li><a href="http://sourceforge.net/forum/forum.php?forum_id=278769">%s</a></li>
+		<li><a href="http://sourceforge.net/projects/stellarium/forums/forum/278769">%s</a></li>
 		<li><a href="/wiki/">%s</a></li>
 		<li><a href="/wiki/index.php/FAQ">%s</a></li>		
 		<li><a href="/wiki/index.php/Landscapes">%s</a></li>
