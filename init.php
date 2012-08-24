@@ -51,10 +51,11 @@ if ($locale == "ar") {
     $langdir = "ltr";
 }
 
-$version = '0.11.3';
-$download_link_win32 = 'http://sourceforge.net/projects/stellarium/files/Stellarium-win32/0.11.3/stellarium-0.11.3-win32.exe/download';
-$download_link_osx_u = 'http://sourceforge.net/projects/stellarium/files/Stellarium-MacOSX/0.11.3/Stellarium-0.11.3.dmg/download';
-$download_link_linux = 'http://sourceforge.net/projects/stellarium/files/Stellarium-sources/0.11.3/stellarium-0.11.3.tar.gz/download';
+$version = '0.11.4';
+$download_link_win32 = "http://sourceforge.net/projects/stellarium/files/Stellarium-win32/".$version."/stellarium-".$version."-win32.exe/download";
+$download_link_win64 = "http://sourceforge.net/projects/stellarium/files/Stellarium-win32/".$version."/stellarium-".$version."-win64.exe/download";
+$download_link_osx_u = "http://sourceforge.net/projects/stellarium/files/Stellarium-MacOSX/".$version."/Stellarium-".$version.".dmg/download";
+$download_link_linux = "http://sourceforge.net/projects/stellarium/files/Stellarium-sources/".$version."/stellarium-".$version.".tar.gz/download";
 $download_link_ubuntu_default = 'apt://stellarium';
 $download_link_ubuntu_ppa = 'https://launchpad.net/~stellarium/+archive/stellarium-releases';
 

@@ -59,14 +59,17 @@ printf('
 				<a href="%s">Mac OS X<span>10.6+</span></a>
 			</div>
 			<div class="download windows">
-				<a href="%s">Windows<span>32 bit</span></a>
+				<a href="%s">Windows<span>%s</span></a>
 			</div>
-                        <div class="download ubuntu">
-                                <a href="%s">Ubuntu<span>%s</span></a>
-                        </div>
-                        <div class="download ubuntu">
-                                <a href="%s">Ubuntu<span>%s</span></a>
-                        </div>
+			<div class="download windows">
+				<a href="%s">Windows<span>%s</span></a>
+			</div>
+			<div class="download ubuntu">
+				<a href="%s">Ubuntu<span>%s</span></a>
+			</div>
+			<div class="download ubuntu">
+				<a href="%s">Ubuntu<span>%s</span></a>
+			</div>
 		</div>
 		<div id="additional" class="block">
 			<div class="download nopdf">
@@ -81,6 +84,9 @@ $download_link_linux,
 q_('source'),
 $download_link_osx_u,
 $download_link_win32,
+q_('32 bit'),
+$download_link_win64,
+q_('64 bit'),
 $download_link_ubuntu_default,
 q_('default Ubuntu version'),
 $download_link_ubuntu_ppa,
