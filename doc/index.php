@@ -38,7 +38,7 @@
 		print("<ul>\n");
 		for($index=0; $index < $indexCount; $index++) {
 			if (substr("$dirArray[$index]", 0, 1) != "." && "$dirArray[$index]" != "index.php"){ // don't list hidden files
-				print("<li><a href=\"$dirArray[$index]\">$dirArray[$index]</a></li>");
+				print("<li><a href=\"$dirArray[$index]/\">$dirArray[$index]</a></li>");
 			}
 		}
 		print("</ul>\n");
