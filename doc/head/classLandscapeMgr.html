@@ -9,7 +9,7 @@
 <tr>
 <td align="left" valign="top" width="32" rowspan="2"><a href="http://www.stellarium.org"><img src="stellarium-logo.png" align="left" border="0" /></a></td>
 <td width="1" rowspan="2">&nbsp;&nbsp;</td>
-<td style="font-size:120%;font-weight:bolder;">Stellarium 0.11.4</td>
+<td style="font-size:120%;font-weight:bolder;">Stellarium 0.12.0</td>
 <td align="right" valign="top" width="230" rowspan="2"></td></tr><tr>
 <td class="postheader" valign="center">
  <a href="index.html">Home</a>&nbsp;&middot;
@@ -19,6 +19,7 @@
  <a href="codingStyle.html">Coding Style</a>&nbsp;&middot;
  <a href="scripting.html">Scripting</a>&nbsp;&middot;
  <a href="plugins.html">Plugins</a>&nbsp;&middot;
+ <a href="renderer.html">Renderer</a>&nbsp;&middot;
  <a href="fileStructure.html">File Structure</a>
 </td>
 </tr>
@@ -77,9 +78,9 @@
 <tr><td class="memItemLeft" align="right" valign="top">void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classLandscapeMgr.html#af08f45f0ba7782e0a748b558ff58abeb">setColorCardinalPoints</a> (const <a class="el" href="classVector3.html">Vec3f</a> &amp;v)</td></tr>
 <tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Set Cardinals Points color.  <a href="#af08f45f0ba7782e0a748b558ff58abeb"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">bool&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classLandscapeMgr.html#acf274244bd26cfdecda9b21b2bf6271c">getFlagAtmosphere</a> () const </td></tr>
-<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Get flag for displaying <a class="el" href="classAtmosphere.html" title="Compute and display the daylight sky color using openGL.">Atmosphere</a>.  <a href="#acf274244bd26cfdecda9b21b2bf6271c"></a><br/></td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Get flag for displaying <a class="el" href="classAtmosphere.html" title="Compute and display the daylight sky color.">Atmosphere</a>.  <a href="#acf274244bd26cfdecda9b21b2bf6271c"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classLandscapeMgr.html#a9692b777a833b81d7fb4e9f4e59b03e2">setFlagAtmosphere</a> (const bool displayed)</td></tr>
-<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Set flag for displaying <a class="el" href="classAtmosphere.html" title="Compute and display the daylight sky color using openGL.">Atmosphere</a>.  <a href="#a9692b777a833b81d7fb4e9f4e59b03e2"></a><br/></td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Set flag for displaying <a class="el" href="classAtmosphere.html" title="Compute and display the daylight sky color.">Atmosphere</a>.  <a href="#a9692b777a833b81d7fb4e9f4e59b03e2"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">float&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classLandscapeMgr.html#a329e77e15824c4d9727c23a67ad1229b">getAtmosphereFadeDuration</a> () const </td></tr>
 <tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Get atmosphere fade duration in s.  <a href="#a329e77e15824c4d9727c23a67ad1229b"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classLandscapeMgr.html#a82bb7634981df761b8bbad69f14ed799">setAtmosphereFadeDuration</a> (float f)</td></tr>
@@ -93,7 +94,7 @@
 <tr><td class="memItemLeft" align="right" valign="top">QString&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classLandscapeMgr.html#a419d1bfafec57e2f8b715204b27106a5">installLandscapeFromArchive</a> (QString pathToSourceArchive, bool display=false, bool forAllUsers=false)</td></tr>
 <tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Install a landscape from a ZIP archive.  <a href="#a419d1bfafec57e2f8b715204b27106a5"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">bool&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classLandscapeMgr.html#acfbf2088eb66060a1127b0253159b619">removeLandscape</a> (QString landscapeID)</td></tr>
-<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Install a landscape from a directory.  <a href="#acfbf2088eb66060a1127b0253159b619"></a><br/></td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">This function removes a landscape from the user data directory.  <a href="#acfbf2088eb66060a1127b0253159b619"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">QString&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classLandscapeMgr.html#af04427c779a4c225a8f2865c513ba0c7">loadLandscapeName</a> (QString landscapeID)</td></tr>
 <tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">This function reads a landscape's name from its configuration file.  <a href="#af04427c779a4c225a8f2865c513ba0c7"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">quint64&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classLandscapeMgr.html#a1b50cc06d139219599d6d363ad82d34a">loadLandscapeSize</a> (QString landscapeID)</td></tr>
@@ -116,12 +117,12 @@ void&nbsp;</td><td class="memItemRight" valign="bottom"><b>landscapeDisplayedCha
 <tr><td class="memItemLeft" align="right" valign="top">void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classLandscapeMgr.html#a44b199c1ba6c3f49f2667e49d4839093">errorNotUnique</a> (QString nameOrID)</td></tr>
 <tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Emitted when <a class="el" href="classLandscapeMgr.html#a419d1bfafec57e2f8b715204b27106a5" title="Install a landscape from a ZIP archive.">installLandscapeFromArchive()</a> tries to install a landscape with the same name or identifier as an already installed one.  <a href="#a44b199c1ba6c3f49f2667e49d4839093"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classLandscapeMgr.html#a4e8f43bfe5d8506facb6c807c5ac8e25">errorRemoveManually</a> (QString path)</td></tr>
-<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Emitted when <a class="el" href="classLandscapeMgr.html#acfbf2088eb66060a1127b0253159b619" title="Install a landscape from a directory.">removeLandscape()</a> is unable to remove all the files of a landscape.  <a href="#a4e8f43bfe5d8506facb6c807c5ac8e25"></a><br/></td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Emitted when <a class="el" href="classLandscapeMgr.html#acfbf2088eb66060a1127b0253159b619" title="This function removes a landscape from the user data directory.">removeLandscape()</a> is unable to remove all the files of a landscape.  <a href="#a4e8f43bfe5d8506facb6c807c5ac8e25"></a><br/></td></tr>
 <tr><td colspan="2"><h2>Public Member Functions</h2></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classLandscapeMgr.html#ad430e45945906ddb9329e6eb4efafcbc">init</a> ()</td></tr>
 <tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Initialize the LandscapeManager class.  <a href="#ad430e45945906ddb9329e6eb4efafcbc"></a><br/></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">virtual void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classLandscapeMgr.html#afd4064c0b86618bf00525f5d74f96279">draw</a> (<a class="el" href="classStelCore.html">StelCore</a> *core)</td></tr>
-<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Draw the landscape graphics, cardinal points and atmosphere.  <a href="#afd4064c0b86618bf00525f5d74f96279"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">virtual void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classLandscapeMgr.html#a1f748d64a8fbc3d0d3ded48907d4eb66">draw</a> (<a class="el" href="classStelCore.html">StelCore</a> *core, class <a class="el" href="classStelRenderer.html">StelRenderer</a> *renderer)</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Draw the landscape graphics, cardinal points and atmosphere.  <a href="#a1f748d64a8fbc3d0d3ded48907d4eb66"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classLandscapeMgr.html#a337049aff151cd75834677e947376ffd">update</a> (double deltaTime)</td></tr>
 <tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Update time-dependent state.  <a href="#a337049aff151cd75834677e947376ffd"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual double&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classLandscapeMgr.html#aede7841be63d56f89c9512ed66ae41ab">getCallOrder</a> (<a class="el" href="classStelModule.html#a11b61d014b51cf6424cd89b1ccd3d768">StelModuleActionName</a> actionName) const </td></tr>
@@ -145,6 +146,8 @@ bool&nbsp;</td><td class="memItemRight" valign="bottom"><b>landscapeDisplayed</b
 <hr/><a name="_details"></a><h2>Detailed Description</h2>
 <p>Manages all the rendering at the level of the observer's surroundings. </p>
 <p>This includes landscape textures, fog, atmosphere and cardinal points. I decided to put all these elements together in a single class because they are inherently linked, especially when we start moving the observer in altitude. </p>
+
+<p>Definition at line <a class="el" href="LandscapeMgr_8hpp_source.html#l00041">41</a> of file <a class="el" href="LandscapeMgr_8hpp_source.html">LandscapeMgr.hpp</a>.</p>
 <hr/><h2>Member Function Documentation</h2>
 <a class="anchor" id="aeecc72b67d6005cd5cc3a6669d829780"></a><!-- doxytag: member="LandscapeMgr::createFromFile" ref="aeecc72b67d6005cd5cc3a6669d829780" args="(const QString &amp;landscapeFile, const QString &amp;landscapeId)" -->
 <div class="memitem">
@@ -184,7 +187,7 @@ bool&nbsp;</td><td class="memItemRight" valign="bottom"><b>landscapeDisplayed</b
 
 </div>
 </div>
-<a class="anchor" id="afd4064c0b86618bf00525f5d74f96279"></a><!-- doxytag: member="LandscapeMgr::draw" ref="afd4064c0b86618bf00525f5d74f96279" args="(StelCore *core)" -->
+<a class="anchor" id="a1f748d64a8fbc3d0d3ded48907d4eb66"></a><!-- doxytag: member="LandscapeMgr::draw" ref="a1f748d64a8fbc3d0d3ded48907d4eb66" args="(StelCore *core, class StelRenderer *renderer)" -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
@@ -192,9 +195,18 @@ bool&nbsp;</td><td class="memItemRight" valign="bottom"><b>landscapeDisplayed</b
           <td class="memname">virtual void LandscapeMgr::draw </td>
           <td>(</td>
           <td class="paramtype"><a class="el" href="classStelCore.html">StelCore</a> *&nbsp;</td>
-          <td class="paramname"> <em>core</em></td>
-          <td>&nbsp;)&nbsp;</td>
-          <td><code> [virtual]</code></td>
+          <td class="paramname"> <em>core</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">class <a class="el" href="classStelRenderer.html">StelRenderer</a> *&nbsp;</td>
+          <td class="paramname"> <em>renderer</em></td><td>&nbsp;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td><td><code> [virtual]</code></td>
         </tr>
       </table>
 </div>
@@ -202,7 +214,7 @@ bool&nbsp;</td><td class="memItemRight" valign="bottom"><b>landscapeDisplayed</b
 
 <p>Draw the landscape graphics, cardinal points and atmosphere. </p>
 
-<p>Reimplemented from <a class="el" href="classStelModule.html#a18fde2820af998395aea9e30bb1138b2">StelModule</a>.</p>
+<p>Reimplemented from <a class="el" href="classStelModule.html#ab352388800724842a5c1e55e250378a6">StelModule</a>.</p>
 
 </div>
 </div>
@@ -269,7 +281,7 @@ bool&nbsp;</td><td class="memItemRight" valign="bottom"><b>landscapeDisplayed</b
 </div>
 <div class="memdoc">
 
-<p>Emitted when <a class="el" href="classLandscapeMgr.html#acfbf2088eb66060a1127b0253159b619" title="Install a landscape from a directory.">removeLandscape()</a> is unable to remove all the files of a landscape. </p>
+<p>Emitted when <a class="el" href="classLandscapeMgr.html#acfbf2088eb66060a1127b0253159b619" title="This function removes a landscape from the user data directory.">removeLandscape()</a> is unable to remove all the files of a landscape. </p>
 <p>(A way of moving the need for translatable error messages to the GUI.) </p>
 <dl><dt><b>Parameters:</b></dt><dd>
   <table border="0" cellspacing="2" cellpadding="0">
@@ -462,6 +474,8 @@ bool&nbsp;</td><td class="memItemRight" valign="bottom"><b>landscapeDisplayed</b
 
 <p>Get the current landscape ID. </p>
 
+<p>Definition at line <a class="el" href="LandscapeMgr_8hpp_source.html#l00126">126</a> of file <a class="el" href="LandscapeMgr_8hpp_source.html">LandscapeMgr.hpp</a>.</p>
+
 </div>
 </div>
 <a class="anchor" id="a25c2ad62dd144a44637fa47654316c57"></a><!-- doxytag: member="LandscapeMgr::getCurrentLandscapeName" ref="a25c2ad62dd144a44637fa47654316c57" args="() const " -->
@@ -500,6 +514,8 @@ bool&nbsp;</td><td class="memItemRight" valign="bottom"><b>landscapeDisplayed</b
 
 <p>Get the default landscape ID. </p>
 
+<p>Definition at line <a class="el" href="LandscapeMgr_8hpp_source.html#l00139">139</a> of file <a class="el" href="LandscapeMgr_8hpp_source.html">LandscapeMgr.hpp</a>.</p>
+
 </div>
 </div>
 <a class="anchor" id="abda7f8795aaa1c7802f3c845893ac068"></a><!-- doxytag: member="LandscapeMgr::getDescription" ref="abda7f8795aaa1c7802f3c845893ac068" args="() const " -->
@@ -536,7 +552,7 @@ bool&nbsp;</td><td class="memItemRight" valign="bottom"><b>landscapeDisplayed</b
 </div>
 <div class="memdoc">
 
-<p>Get flag for displaying <a class="el" href="classAtmosphere.html" title="Compute and display the daylight sky color using openGL.">Atmosphere</a>. </p>
+<p>Get flag for displaying <a class="el" href="classAtmosphere.html" title="Compute and display the daylight sky color.">Atmosphere</a>. </p>
 
 </div>
 </div>
@@ -613,6 +629,8 @@ bool&nbsp;</td><td class="memItemRight" valign="bottom"><b>landscapeDisplayed</b
 <div class="memdoc">
 
 <p>Return the value of the flag determining if a change of landscape will update the observer location. </p>
+
+<p>Definition at line <a class="el" href="LandscapeMgr_8hpp_source.html#l00162">162</a> of file <a class="el" href="LandscapeMgr_8hpp_source.html">LandscapeMgr.hpp</a>.</p>
 
 </div>
 </div>
@@ -848,17 +866,8 @@ bool&nbsp;</td><td class="memItemRight" valign="bottom"><b>landscapeDisplayed</b
 </div>
 <div class="memdoc">
 
-<p>Install a landscape from a directory. </p>
-<p>Expected directory structure: the name of the directory that contains a landscape.ini file is assumed to be the landscape ID and should be unique. This directory and all files in it will be installed, but its subdirectories will be skipped along with any other files or directories in the archive. </p>
-<dl><dt><b>Parameters:</b></dt><dd>
-  <table border="0" cellspacing="2" cellpadding="0">
-    <tr><td valign="top"></td><td valign="top"><em>pathToSourceLandscapeIni</em>&nbsp;</td><td>path to a landscape.ini file. Its parent directory is assumed to be the landscape source directory. </td></tr>
-    <tr><td valign="top"></td><td valign="top"><em>display</em>&nbsp;</td><td>If true, the landscape will be set to be the current landscape after installation. </td></tr>
-    <tr><td valign="top"></td><td valign="top"><em>forAllUsers</em>&nbsp;</td><td>If true, this function will try to install the landscape in a way that meakes it is available to all users of this computer. May require running Stellarium as an administrator (root) on some Windows or *nix systems. (NOT IMPLEMENTED!) </td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="return"><dt><b>Returns:</b></dt><dd>the installed landscape's identifier (the folder name), or an empty string on failure. This function removes a landscape from the user data directory. It tries to recursively delete all files in the landscape directory and then remove it from the list of available landscapes. If the function encounters any file that can't be deleted it aborts the operation (previously deleted files are not restored). Landscapes that were packaged with Stellarium can't be removed, thanks to the packagedtLandscapeIDs list. </dd></dl>
+<p>This function removes a landscape from the user data directory. </p>
+<p>It tries to recursively delete all files in the landscape directory and then remove it from the list of available landscapes. If the function encounters any file that can't be deleted it aborts the operation (previously deleted files are not restored). Landscapes that were packaged with Stellarium can't be removed, thanks to the packagedLandscapeIDs list. </p>
 <dl><dt><b>Parameters:</b></dt><dd>
   <table border="0" cellspacing="2" cellpadding="0">
     <tr><td valign="top"></td><td valign="top"><em>landscapeID</em>&nbsp;</td><td>an installed landscape's identifier (the folder name) </td></tr>
@@ -1024,7 +1033,7 @@ bool&nbsp;</td><td class="memItemRight" valign="bottom"><b>landscapeDisplayed</b
 </div>
 <div class="memdoc">
 
-<p>Set flag for displaying <a class="el" href="classAtmosphere.html" title="Compute and display the daylight sky color using openGL.">Atmosphere</a>. </p>
+<p>Set flag for displaying <a class="el" href="classAtmosphere.html" title="Compute and display the daylight sky color.">Atmosphere</a>. </p>
 
 </div>
 </div>
@@ -1106,6 +1115,8 @@ bool&nbsp;</td><td class="memItemRight" valign="bottom"><b>landscapeDisplayed</b
 
 <p>Set the value of the flag determining if a change of landscape will update the observer location. </p>
 
+<p>Definition at line <a class="el" href="LandscapeMgr_8hpp_source.html#l00164">164</a> of file <a class="el" href="LandscapeMgr_8hpp_source.html">LandscapeMgr.hpp</a>.</p>
+
 </div>
 </div>
 <a class="anchor" id="afa0e3ee4c385bd6b25fed5d77650a890"></a><!-- doxytag: member="LandscapeMgr::setZRotation" ref="afa0e3ee4c385bd6b25fed5d77650a890" args="(float d)" -->
@@ -1163,8 +1174,11 @@ bool&nbsp;</td><td class="memItemRight" valign="bottom"><b>landscapeDisplayed</b
 
 </div>
 </div>
+<hr/>The documentation for this class was generated from the following file:<ul>
+<li>core/modules/<a class="el" href="LandscapeMgr_8hpp_source.html">LandscapeMgr.hpp</a></li>
+</ul>
 </div>
-<hr class="footer"/><address style="text-align: right;"><small>Generated on Sat Aug 25 22:13:31 2012 for Stellarium by&nbsp;
+<hr class="footer"/><address style="text-align: right;"><small>Generated on Fri Aug 31 18:07:53 2012 for Stellarium by&nbsp;
 <a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.6.3 </small></address>
 </body>

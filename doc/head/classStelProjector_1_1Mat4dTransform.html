@@ -9,7 +9,7 @@
 <tr>
 <td align="left" valign="top" width="32" rowspan="2"><a href="http://www.stellarium.org"><img src="stellarium-logo.png" align="left" border="0" /></a></td>
 <td width="1" rowspan="2">&nbsp;&nbsp;</td>
-<td style="font-size:120%;font-weight:bolder;">Stellarium 0.11.4</td>
+<td style="font-size:120%;font-weight:bolder;">Stellarium 0.12.0</td>
 <td align="right" valign="top" width="230" rowspan="2"></td></tr><tr>
 <td class="postheader" valign="center">
  <a href="index.html">Home</a>&nbsp;&middot;
@@ -19,6 +19,7 @@
  <a href="codingStyle.html">Coding Style</a>&nbsp;&middot;
  <a href="scripting.html">Scripting</a>&nbsp;&middot;
  <a href="plugins.html">Plugins</a>&nbsp;&middot;
+ <a href="renderer.html">Renderer</a>&nbsp;&middot;
  <a href="fileStructure.html">File Structure</a>
 </td>
 </tr>
@@ -47,9 +48,105 @@ void&nbsp;</td><td class="memItemRight" valign="bottom"><b>combine</b> (const <a
 <a class="el" href="classMatrix4.html">Mat4d</a>&nbsp;</td><td class="memItemRight" valign="bottom"><b>getApproximateLinearTransfo</b> () const </td></tr>
 <tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a1f2449912012875fe6c5926993b88e23"></a><!-- doxytag: member="StelProjector::Mat4dTransform::clone" ref="a1f2449912012875fe6c5926993b88e23" args="() const " -->
 <a class="el" href="classQSharedPointer.html">ModelViewTranformP</a>&nbsp;</td><td class="memItemRight" valign="bottom"><b>clone</b> () const </td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">virtual bool&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classStelProjector_1_1Mat4dTransform.html#a62afa117c94af21fb747caa21bee5bc0">setupGLSLTransform</a> (<a class="el" href="classStelGLSLShader.html">StelGLSLShader</a> *shader)</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Attaches (or enables, if attached already) the GLSL transform shader to specified shader.  <a href="#a62afa117c94af21fb747caa21bee5bc0"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">virtual void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classStelProjector_1_1Mat4dTransform.html#aba331e71798beda3ddd7d870533f1ac7">setGLSLUniforms</a> (<a class="el" href="classStelGLSLShader.html">StelGLSLShader</a> *shader)</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Set GLSL uniforms needed for the transform shader.  <a href="#aba331e71798beda3ddd7d870533f1ac7"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">virtual void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classStelProjector_1_1Mat4dTransform.html#abcbddf9961c2b75d1e3eb1d39a87f845">disableGLSLTransform</a> (<a class="el" href="classStelGLSLShader.html">StelGLSLShader</a> *shader)</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Disable the attached GLSL transform shader.  <a href="#abcbddf9961c2b75d1e3eb1d39a87f845"></a><br/></td></tr>
 </table>
+<hr/><a name="_details"></a><h2>Detailed Description</h2>
+
+<p>Definition at line <a class="el" href="StelProjector_8hpp_source.html#l00122">122</a> of file <a class="el" href="StelProjector_8hpp_source.html">StelProjector.hpp</a>.</p>
+<hr/><h2>Member Function Documentation</h2>
+<a class="anchor" id="abcbddf9961c2b75d1e3eb1d39a87f845"></a><!-- doxytag: member="StelProjector::Mat4dTransform::disableGLSLTransform" ref="abcbddf9961c2b75d1e3eb1d39a87f845" args="(StelGLSLShader *shader)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual void StelProjector::Mat4dTransform::disableGLSLTransform </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classStelGLSLShader.html">StelGLSLShader</a> *&nbsp;</td>
+          <td class="paramname"> <em>shader</em></td>
+          <td>&nbsp;)&nbsp;</td>
+          <td><code> [inline, virtual]</code></td>
+        </tr>
+      </table>
 </div>
-<hr class="footer"/><address style="text-align: right;"><small>Generated on Sat Aug 25 22:13:33 2012 for Stellarium by&nbsp;
+<div class="memdoc">
+
+<p>Disable the attached GLSL transform shader. </p>
+
+<p>Implements <a class="el" href="classStelProjector_1_1ModelViewTranform.html#a712afea448aeba02284ba74eb1292e77">StelProjector::ModelViewTranform</a>.</p>
+
+<p>Definition at line <a class="el" href="StelProjector_8hpp_source.html#l00162">162</a> of file <a class="el" href="StelProjector_8hpp_source.html">StelProjector.hpp</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="aba331e71798beda3ddd7d870533f1ac7"></a><!-- doxytag: member="StelProjector::Mat4dTransform::setGLSLUniforms" ref="aba331e71798beda3ddd7d870533f1ac7" args="(StelGLSLShader *shader)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual void StelProjector::Mat4dTransform::setGLSLUniforms </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classStelGLSLShader.html">StelGLSLShader</a> *&nbsp;</td>
+          <td class="paramname"> <em>shader</em></td>
+          <td>&nbsp;)&nbsp;</td>
+          <td><code> [inline, virtual]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Set GLSL uniforms needed for the transform shader. </p>
+<p>Called by the renderer backend before drawing, if the transform shader was attached successfully. </p>
+
+<p>Implements <a class="el" href="classStelProjector_1_1ModelViewTranform.html#a86e38a3c43d3e5b6b32d42ff4f1bd537">StelProjector::ModelViewTranform</a>.</p>
+
+<p>Definition at line <a class="el" href="StelProjector_8hpp_source.html#l00157">157</a> of file <a class="el" href="StelProjector_8hpp_source.html">StelProjector.hpp</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a62afa117c94af21fb747caa21bee5bc0"></a><!-- doxytag: member="StelProjector::Mat4dTransform::setupGLSLTransform" ref="a62afa117c94af21fb747caa21bee5bc0" args="(StelGLSLShader *shader)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual bool StelProjector::Mat4dTransform::setupGLSLTransform </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classStelGLSLShader.html">StelGLSLShader</a> *&nbsp;</td>
+          <td class="paramname"> <em>shader</em></td>
+          <td>&nbsp;)&nbsp;</td>
+          <td><code> [inline, virtual]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Attaches (or enables, if attached already) the GLSL transform shader to specified shader. </p>
+<p>The shader attached must implement one function:</p>
+<p>vec4(modelViewForward(in vec4 v));</p>
+<p>This function should implement the same logic as the forward() member function, except that it returns the result instead of modifying the parameter.</p>
+<dl><dt><b>Parameters:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"></td><td valign="top"><em>shader</em>&nbsp;</td><td>Shader to attach to.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="return"><dt><b>Returns:</b></dt><dd>true if the shader was succesfully attached, false otherwise. </dd></dl>
+
+<p>Implements <a class="el" href="classStelProjector_1_1ModelViewTranform.html#ad9026b9d22ad1635e8831b4ac628c35c">StelProjector::ModelViewTranform</a>.</p>
+
+<p>Definition at line <a class="el" href="StelProjector_8hpp_source.html#l00134">134</a> of file <a class="el" href="StelProjector_8hpp_source.html">StelProjector.hpp</a>.</p>
+
+</div>
+</div>
+<hr/>The documentation for this class was generated from the following file:<ul>
+<li>core/<a class="el" href="StelProjector_8hpp_source.html">StelProjector.hpp</a></li>
+</ul>
+</div>
+<hr class="footer"/><address style="text-align: right;"><small>Generated on Fri Aug 31 18:08:00 2012 for Stellarium by&nbsp;
 <a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.6.3 </small></address>
 </body>

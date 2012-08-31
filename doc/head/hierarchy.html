@@ -9,7 +9,7 @@
 <tr>
 <td align="left" valign="top" width="32" rowspan="2"><a href="http://www.stellarium.org"><img src="stellarium-logo.png" align="left" border="0" /></a></td>
 <td width="1" rowspan="2">&nbsp;&nbsp;</td>
-<td style="font-size:120%;font-weight:bolder;">Stellarium 0.11.4</td>
+<td style="font-size:120%;font-weight:bolder;">Stellarium 0.12.0</td>
 <td align="right" valign="top" width="230" rowspan="2"></td></tr><tr>
 <td class="postheader" valign="center">
  <a href="index.html">Home</a>&nbsp;&middot;
@@ -19,6 +19,7 @@
  <a href="codingStyle.html">Coding Style</a>&nbsp;&middot;
  <a href="scripting.html">Scripting</a>&nbsp;&middot;
  <a href="plugins.html">Plugins</a>&nbsp;&middot;
+ <a href="renderer.html">Renderer</a>&nbsp;&middot;
  <a href="fileStructure.html">File Structure</a>
 </td>
 </tr>
@@ -60,7 +61,6 @@
 <li><a class="el" href="classGeodesicSearchBorderIterator.html">GeodesicSearchBorderIterator</a></li>
 <li><a class="el" href="classGeodesicSearchInsideIterator.html">GeodesicSearchInsideIterator</a></li>
 <li><a class="el" href="classGeodesicSearchResult.html">GeodesicSearchResult</a></li>
-<li><a class="el" href="classImageLoader.html">ImageLoader</a></li>
 <li><a class="el" href="classInfoPanel.html">InfoPanel</a></li>
 <li><a class="el" href="classJsonListIterator.html">JsonListIterator</a></li>
 <li><a class="el" href="classLandscape.html">Landscape</a><ul>
@@ -83,6 +83,8 @@
 </ul>
 </li>
 <li><a class="el" href="classOrbitSampleProc.html">OrbitSampleProc</a></li>
+<li><a class="el" href="structPlanet_1_1SharedPlanetGraphics.html">Planet::SharedPlanetGraphics</a></li>
+<li><a class="el" href="structPlanet_1_1Vertex2D.html">Planet::Vertex2D</a></li>
 <li><a class="el" href="structpluto__argument.html">pluto_argument</a></li>
 <li><a class="el" href="structpluto__latitude.html">pluto_latitude</a></li>
 <li><a class="el" href="structpluto__longitude.html">pluto_longitude</a></li>
@@ -95,9 +97,11 @@
 </li>
 <li><a class="el" href="classResizeFrame.html">ResizeFrame</a></li>
 <li><a class="el" href="classRing.html">Ring</a></li>
+<li><a class="el" href="structRingParams.html">RingParams</a></li>
 <li><a class="el" href="classRotationElements.html">RotationElements</a></li>
 <li><a class="el" href="classScreenImage.html">ScreenImage</a></li>
 <li><a class="el" href="classServerCredits.html">ServerCredits</a></li>
+<li><a class="el" href="structShadowPlanetShaderInfo.html">ShadowPlanetShaderInfo</a></li>
 <li><a class="el" href="classSimbadLookupReply.html">SimbadLookupReply</a></li>
 <li><a class="el" href="classSimbadSearcher.html">SimbadSearcher</a></li>
 <li><a class="el" href="classSkybright.html">Skybright</a></li>
@@ -105,6 +109,7 @@
 <li><a class="el" href="classSkylight.html">Skylight</a></li>
 <li><a class="el" href="structskylightStruct.html">skylightStruct</a></li>
 <li><a class="el" href="structskylightStruct2.html">skylightStruct2</a></li>
+<li><a class="el" href="structSphereParams.html">SphereParams</a></li>
 <li><a class="el" href="classSphericalConvexPolygonSet.html">SphericalConvexPolygonSet</a></li>
 <li><a class="el" href="classSphericalPolygonBase.html">SphericalPolygonBase</a></li>
 <li><a class="el" href="classSphericalRegion.html">SphericalRegion</a><ul>
@@ -116,19 +121,23 @@
 </ul>
 </li>
 <li><a class="el" href="classSphericalPoint.html">SphericalPoint</a></li>
-<li><a class="el" href="classSphericalPolygon.html">SphericalPolygon</a><ul>
-<li><a class="el" href="classSphericalTexturedPolygon.html">SphericalTexturedPolygon</a></li>
+<li><a class="el" href="classSphericalPolygon.html">SphericalPolygon</a></li>
 </ul>
 </li>
-</ul>
-</li>
-<li><a class="el" href="structSphericalTexturedPolygon_1_1TextureVertex.html">SphericalTexturedPolygon::TextureVertex</a></li>
+<li><a class="el" href="structSphericalRegion_1_1DrawParams.html">SphericalRegion::DrawParams</a></li>
+<li><a class="el" href="structSphericalRegion_1_1PlainVertex.html">SphericalRegion::PlainVertex</a></li>
+<li><a class="el" href="structSphericalRegion_1_1TexturedVertex.html">SphericalRegion::TexturedVertex</a></li>
 <li><a class="el" href="classSphericMirrorCalculator.html">SphericMirrorCalculator</a></li>
+<li><a class="el" href="classStelAbstractVertexBuffer.html">StelAbstractVertexBuffer</a><ul>
+<li><a class="el" href="classStelVertexBuffer.html">StelVertexBuffer&lt; V &gt;</a></li>
+</ul>
+</li>
 <li><a class="el" href="classStelApp.html">StelApp</a></li>
 <li><a class="el" href="classStelAppGraphicsWidget.html">StelAppGraphicsWidget</a></li>
 <li><a class="el" href="classStelAudioMgr.html">StelAudioMgr</a></li>
 <li><a class="el" href="classStelBarsPath.html">StelBarsPath</a></li>
 <li><a class="el" href="classStelButton.html">StelButton</a></li>
+<li><a class="el" href="classStelCircleArcRenderer.html">StelCircleArcRenderer</a></li>
 <li><a class="el" href="classStelCore.html">StelCore</a></li>
 <li><a class="el" href="classStelDialog.html">StelDialog</a><ul>
 <li><a class="el" href="classAddRemoveLandscapesDialog.html">AddRemoveLandscapesDialog</a></li>
@@ -150,6 +159,13 @@
 </li>
 <li><a class="el" href="classStelFileMgr.html">StelFileMgr</a></li>
 <li><a class="el" href="classStelGeodesicGrid.html">StelGeodesicGrid</a></li>
+<li><a class="el" href="classStelGeometryBuilder.html">StelGeometryBuilder</a></li>
+<li><a class="el" href="classStelGeometryRing.html">StelGeometryRing</a></li>
+<li><a class="el" href="classStelGeometrySphere.html">StelGeometrySphere</a></li>
+<li><a class="el" href="classStelGLSLShader.html">StelGLSLShader</a><ul>
+<li><a class="el" href="classStelQGLGLSLShader.html">StelQGLGLSLShader</a></li>
+</ul>
+</li>
 <li><a class="el" href="classStelGuiBase.html">StelGuiBase</a><ul>
 <li><a class="el" href="classStelGui.html">StelGui</a></li>
 <li><a class="el" href="classStelNoGui.html">StelNoGui</a></li>
@@ -160,7 +176,12 @@
 <li><a class="el" href="classStelStandardGuiPluginInterface.html">StelStandardGuiPluginInterface</a></li>
 </ul>
 </li>
+<li><a class="el" href="classStelIndexBuffer.html">StelIndexBuffer</a><ul>
+<li><a class="el" href="classStelQGLIndexBuffer.html">StelQGLIndexBuffer</a></li>
+</ul>
+</li>
 <li><a class="el" href="classStelJsonParser.html">StelJsonParser</a></li>
+<li><a class="el" href="structStelLight.html">StelLight</a></li>
 <li><a class="el" href="classStelLoadingBar.html">StelLoadingBar</a></li>
 <li><a class="el" href="classStelLocaleMgr.html">StelLocaleMgr</a></li>
 <li><a class="el" href="classStelLocation.html">StelLocation</a></li>
@@ -196,9 +217,6 @@
 <li><a class="el" href="classSpaceShipObserver.html">SpaceShipObserver</a></li>
 </ul>
 </li>
-<li><a class="el" href="classStelPainter.html">StelPainter</a></li>
-<li><a class="el" href="classStelPainterLight.html">StelPainterLight</a></li>
-<li><a class="el" href="classStelPainterMaterial.html">StelPainterMaterial</a></li>
 <li><a class="el" href="structStelPluginInfo.html">StelPluginInfo</a></li>
 <li><a class="el" href="classStelPluginInterface.html">StelPluginInterface</a></li>
 <li><a class="el" href="classStelProgressBarMgr.html">StelProgressBarMgr</a></li>
@@ -214,12 +232,19 @@
 <li><a class="el" href="classStelProjectorStereographic.html">StelProjectorStereographic</a></li>
 </ul>
 </li>
+<li><a class="el" href="classStelProjector_1_1GLSLProjector.html">StelProjector::GLSLProjector</a></li>
 <li><a class="el" href="classStelProjector_1_1ModelViewTranform.html">StelProjector::ModelViewTranform</a><ul>
 <li><a class="el" href="classRefraction.html">Refraction</a></li>
 <li><a class="el" href="classStelProjector_1_1Mat4dTransform.html">StelProjector::Mat4dTransform</a></li>
 </ul>
 </li>
 <li><a class="el" href="structStelProjector_1_1StelProjectorParams.html">StelProjector::StelProjectorParams</a></li>
+<li><a class="el" href="structStelQGLArrayVertexBufferBackend_1_1AnyAttributeArray.html">StelQGLArrayVertexBufferBackend::AnyAttributeArray</a><ul>
+<li><a class="el" href="structStelQGLArrayVertexBufferBackend_1_1AttributeArray.html">StelQGLArrayVertexBufferBackend::AttributeArray&lt; A &gt;</a></li>
+</ul>
+</li>
+<li><a class="el" href="classStelQGLViewport.html">StelQGLViewport</a></li>
+<li><a class="el" href="classStelQGLWidget.html">StelQGLWidget</a></li>
 <li><a class="el" href="classStelRegionObject.html">StelRegionObject</a><ul>
 <li><a class="el" href="classStelObject.html">StelObject</a><ul>
 <li><a class="el" href="classBigStarCatalogExtension_1_1StarWrapperBase.html">BigStarCatalogExtension::StarWrapperBase</a><ul>
@@ -249,6 +274,15 @@
 </li>
 </ul>
 </li>
+<li><a class="el" href="classStelRenderClient.html">StelRenderClient</a></li>
+<li><a class="el" href="classStelRenderer.html">StelRenderer</a><ul>
+<li><a class="el" href="classStelQGLRenderer.html">StelQGLRenderer</a><ul>
+<li><a class="el" href="classStelQGL1Renderer.html">StelQGL1Renderer</a></li>
+<li><a class="el" href="classStelQGL2Renderer.html">StelQGL2Renderer</a></li>
+</ul>
+</li>
+</ul>
+</li>
 <li><a class="el" href="classStelScriptEngineAgent.html">StelScriptEngineAgent</a></li>
 <li><a class="el" href="classStelScriptMgr.html">StelScriptMgr</a></li>
 <li><a class="el" href="classStelScriptSyntaxHighlighter.html">StelScriptSyntaxHighlighter</a></li>
@@ -268,12 +302,28 @@
 </ul>
 </li>
 <li><a class="el" href="classStelStyle.html">StelStyle</a></li>
-<li><a class="el" href="classStelTexture.html">StelTexture</a></li>
-<li><a class="el" href="structStelTexture_1_1StelTextureParams.html">StelTexture::StelTextureParams</a></li>
-<li><a class="el" href="classStelTextureMgr.html">StelTextureMgr</a></li>
+<li><a class="el" href="classStelTextureBackend.html">StelTextureBackend</a><ul>
+<li><a class="el" href="classStelQGLTextureBackend.html">StelQGLTextureBackend</a></li>
+</ul>
+</li>
+<li><a class="el" href="classStelTextureCache.html">StelTextureCache&lt; TextureBackend &gt;</a></li>
+<li><a class="el" href="classStelTextureLoader.html">StelTextureLoader</a><ul>
+<li><a class="el" href="classStelFileTextureLoader.html">StelFileTextureLoader</a></li>
+<li><a class="el" href="classStelHTTPTextureLoader.html">StelHTTPTextureLoader</a></li>
+</ul>
+</li>
+<li><a class="el" href="classStelTextureNew.html">StelTextureNew</a></li>
 <li><a class="el" href="classStelToneReproducer.html">StelToneReproducer</a></li>
 <li><a class="el" href="classStelTranslator.html">StelTranslator</a></li>
-<li><a class="el" href="structStelVertexArray.html">StelVertexArray</a></li>
+<li><a class="el" href="structStelVertexAttribute.html">StelVertexAttribute</a></li>
+<li><a class="el" href="classStelVertexBufferBackend.html">StelVertexBufferBackend</a><ul>
+<li><a class="el" href="classStelQGLArrayVertexBufferBackend.html">StelQGLArrayVertexBufferBackend</a><ul>
+<li><a class="el" href="classStelQGL1ArrayVertexBufferBackend.html">StelQGL1ArrayVertexBufferBackend</a></li>
+<li><a class="el" href="classStelQGL2ArrayVertexBufferBackend.html">StelQGL2ArrayVertexBufferBackend</a></li>
+</ul>
+</li>
+</ul>
+</li>
 <li><a class="el" href="classStelVideoMgr.html">StelVideoMgr</a></li>
 <li><a class="el" href="classStelViewportEffect.html">StelViewportEffect</a><ul>
 <li><a class="el" href="classStelViewportDistorterFisheyeToSphericMirror.html">StelViewportDistorterFisheyeToSphericMirror</a></li>
@@ -286,16 +336,23 @@
 <li><a class="el" href="classTestStelJsonParser.html">TestStelJsonParser</a></li>
 <li><a class="el" href="classTestStelSphericalGeometry.html">TestStelSphericalGeometry</a></li>
 <li><a class="el" href="classTestStelSphericalIndex.html">TestStelSphericalIndex</a></li>
-<li><a class="el" href="classTestStelVertexArray.html">TestStelVertexArray</a></li>
+<li><a class="el" href="classTestStelVertexBuffer.html">TestStelVertexBuffer</a></li>
+<li><a class="el" href="structTextParams.html">TextParams</a></li>
+<li><a class="el" href="structTextureParams.html">TextureParams</a></li>
 <li><a class="el" href="classTrailGroup.html">TrailGroup</a></li>
 <li><a class="el" href="structTrailPoint.html">TrailPoint</a></li>
 <li><a class="el" href="classTranslations.html">Translations</a></li>
+<li><a class="el" href="classTriangleIterator.html">TriangleIterator&lt; V &gt;</a></li>
+<li><a class="el" href="structTriplet.html">Triplet&lt; T &gt;</a></li>
 <li><a class="el" href="classVector2.html">Vector2&lt; T &gt;</a></li>
 <li><a class="el" href="classVector3.html">Vector3&lt; T &gt;</a></li>
 <li><a class="el" href="classVector4.html">Vector4&lt; T &gt;</a></li>
+<li><a class="el" href="structVertexP2.html">VertexP2</a></li>
+<li><a class="el" href="structVertexP3T2.html">VertexP3T2</a></li>
+<li><a class="el" href="structVertexP3T2C4.html">VertexP3T2C4</a></li>
 </ul>
 </div>
-<hr class="footer"/><address style="text-align: right;"><small>Generated on Sat Aug 25 22:13:31 2012 for Stellarium by&nbsp;
+<hr class="footer"/><address style="text-align: right;"><small>Generated on Fri Aug 31 18:07:51 2012 for Stellarium by&nbsp;
 <a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.6.3 </small></address>
 </body>

@@ -9,7 +9,7 @@
 <tr>
 <td align="left" valign="top" width="32" rowspan="2"><a href="http://www.stellarium.org"><img src="stellarium-logo.png" align="left" border="0" /></a></td>
 <td width="1" rowspan="2">&nbsp;&nbsp;</td>
-<td style="font-size:120%;font-weight:bolder;">Stellarium 0.11.4</td>
+<td style="font-size:120%;font-weight:bolder;">Stellarium 0.12.0</td>
 <td align="right" valign="top" width="230" rowspan="2"></td></tr><tr>
 <td class="postheader" valign="center">
  <a href="index.html">Home</a>&nbsp;&middot;
@@ -19,6 +19,7 @@
  <a href="codingStyle.html">Coding Style</a>&nbsp;&middot;
  <a href="scripting.html">Scripting</a>&nbsp;&middot;
  <a href="plugins.html">Plugins</a>&nbsp;&middot;
+ <a href="renderer.html">Renderer</a>&nbsp;&middot;
  <a href="fileStructure.html">File Structure</a>
 </td>
 </tr>
@@ -34,7 +35,7 @@
   <tr class="memlist"><td><a class="el" href="classStelSkyImageTile.html#ab6b688320ee6db9443ed22b9e8271891">dataSetCredits</a></td><td><a class="el" href="classStelSkyImageTile.html">StelSkyImageTile</a></td><td><code> [protected]</code></td></tr>
   <tr class="memlist"><td><a class="el" href="classMultiLevelJsonBase.html#ae7cda2ee0629d7459606aa0bce361287">deleteUnusedSubTiles</a>()</td><td><a class="el" href="classMultiLevelJsonBase.html">MultiLevelJsonBase</a></td><td><code> [protected]</code></td></tr>
   <tr class="memlist"><td><a class="el" href="classMultiLevelJsonBase.html#afd1a52e1490e1f88af9cfda3991497a4">downloading</a></td><td><a class="el" href="classMultiLevelJsonBase.html">MultiLevelJsonBase</a></td><td><code> [protected]</code></td></tr>
-  <tr class="memlist"><td><a class="el" href="classStelSkyImageTile.html#a8e272a6552bf75de4865df20ebcca2f4">draw</a>(StelCore *core, StelPainter &amp;sPainter, float opacity=1.)</td><td><a class="el" href="classStelSkyImageTile.html">StelSkyImageTile</a></td><td><code> [virtual]</code></td></tr>
+  <tr class="memlist"><td><a class="el" href="classStelSkyImageTile.html#aa88df6fe0e8cb52c8ffff660db1f815a">draw</a>(StelCore *core, class StelRenderer *renderer, StelProjectorP projector, float opacity=1.)</td><td><a class="el" href="classStelSkyImageTile.html">StelSkyImageTile</a></td><td><code> [virtual]</code></td></tr>
   <tr class="memlist"><td><a class="el" href="classMultiLevelJsonBase.html#a006f248a8fb1b6feaef11798c99a3d44">errorOccured</a></td><td><a class="el" href="classMultiLevelJsonBase.html">MultiLevelJsonBase</a></td><td><code> [protected]</code></td></tr>
   <tr class="memlist"><td><a class="el" href="classStelSkyImageTile.html#af7f7ec4ad2f78ba81eeb8137e8a0be7f">getAbsoluteImageURI</a>() const </td><td><a class="el" href="classStelSkyImageTile.html">StelSkyImageTile</a></td><td><code> [inline]</code></td></tr>
   <tr class="memlist"><td><a class="el" href="classStelSkyImageTile.html#acc5a1626abaa7de85bae34b554d99a6f">getDataSetCredits</a>() const </td><td><a class="el" href="classStelSkyImageTile.html">StelSkyImageTile</a></td><td><code> [inline]</code></td></tr>
@@ -68,13 +69,13 @@
   <tr class="memlist"><td><a class="el" href="classStelSkyImageTile.html#a64b9e7ceadf30f35a18c8b6be88132ba">StelSkyImageTile</a>(const QVariantMap &amp;map, StelSkyImageTile *parent)</td><td><a class="el" href="classStelSkyImageTile.html">StelSkyImageTile</a></td><td></td></tr>
   <tr bgcolor="#f0f0f0"><td><b>StelSkyLayer</b>(QObject *parent=NULL) (defined in <a class="el" href="classStelSkyLayer.html">StelSkyLayer</a>)</td><td><a class="el" href="classStelSkyLayer.html">StelSkyLayer</a></td><td><code> [inline]</code></td></tr>
   <tr class="memlist"><td><a class="el" href="classMultiLevelJsonBase.html#a820e347a2c6660a5e3d2eb983645c6a7">subTiles</a></td><td><a class="el" href="classMultiLevelJsonBase.html">MultiLevelJsonBase</a></td><td><code> [protected]</code></td></tr>
-  <tr class="memlist"><td><a class="el" href="classStelSkyImageTile.html#a1bf6e252ee15545afefdd43347835e4f">tex</a></td><td><a class="el" href="classStelSkyImageTile.html">StelSkyImageTile</a></td><td><code> [protected]</code></td></tr>
+  <tr class="memlist"><td><a class="el" href="classStelSkyImageTile.html#a97d9941aae68a3a1f3914f90d8c80e88">tex</a></td><td><a class="el" href="classStelSkyImageTile.html">StelSkyImageTile</a></td><td><code> [protected]</code></td></tr>
   <tr class="memlist"><td><a class="el" href="classStelSkyImageTile.html#a331ba3d73fcd6e6ec2507170969e1879">toQVariantMap</a>() const </td><td><a class="el" href="classStelSkyImageTile.html">StelSkyImageTile</a></td><td></td></tr>
   <tr bgcolor="#f0f0f0"><td><b>updatePercent</b>(int tot, int numToBeLoaded) (defined in <a class="el" href="classMultiLevelJsonBase.html">MultiLevelJsonBase</a>)</td><td><a class="el" href="classMultiLevelJsonBase.html">MultiLevelJsonBase</a></td><td><code> [protected]</code></td></tr>
   <tr class="memlist"><td><a class="el" href="classMultiLevelJsonBase.html#a01c948e87b6825408293d12e73bafe03">~MultiLevelJsonBase</a>()</td><td><a class="el" href="classMultiLevelJsonBase.html">MultiLevelJsonBase</a></td><td></td></tr>
   <tr class="memlist"><td><a class="el" href="classStelSkyImageTile.html#a125f4dff33404690633a404f8933798d">~StelSkyImageTile</a>()</td><td><a class="el" href="classStelSkyImageTile.html">StelSkyImageTile</a></td><td></td></tr>
 </table></div>
-<hr class="footer"/><address style="text-align: right;"><small>Generated on Sat Aug 25 22:13:33 2012 for Stellarium by&nbsp;
+<hr class="footer"/><address style="text-align: right;"><small>Generated on Fri Aug 31 18:08:02 2012 for Stellarium by&nbsp;
 <a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.6.3 </small></address>
 </body>

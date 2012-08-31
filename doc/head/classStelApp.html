@@ -9,7 +9,7 @@
 <tr>
 <td align="left" valign="top" width="32" rowspan="2"><a href="http://www.stellarium.org"><img src="stellarium-logo.png" align="left" border="0" /></a></td>
 <td width="1" rowspan="2">&nbsp;&nbsp;</td>
-<td style="font-size:120%;font-weight:bolder;">Stellarium 0.11.4</td>
+<td style="font-size:120%;font-weight:bolder;">Stellarium 0.12.0</td>
 <td align="right" valign="top" width="230" rowspan="2"></td></tr><tr>
 <td class="postheader" valign="center">
  <a href="index.html">Home</a>&nbsp;&middot;
@@ -19,6 +19,7 @@
  <a href="codingStyle.html">Coding Style</a>&nbsp;&middot;
  <a href="scripting.html">Scripting</a>&nbsp;&middot;
  <a href="plugins.html">Plugins</a>&nbsp;&middot;
+ <a href="renderer.html">Renderer</a>&nbsp;&middot;
  <a href="fileStructure.html">File Structure</a>
 </td>
 </tr>
@@ -34,6 +35,8 @@
 <p><a href="classStelApp-members.html">List of all members.</a></p>
 <table border="0" cellpadding="0" cellspacing="0">
 <tr><td colspan="2"><h2>Public Slots</h2></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classStelApp.html#a0475576a49e555a9c0eddff47d4a8a2b">setRenderSolarShadows</a> (bool)</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Set flag for activating solar shadow rendering.  <a href="#a0475576a49e555a9c0eddff47d4a8a2b"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classStelApp.html#a9a5b77af2f154e27bda20825bd02105d">setVisionModeNight</a> (bool)</td></tr>
 <tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Set flag for activating night vision mode.  <a href="#a9a5b77af2f154e27bda20825bd02105d"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">bool&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classStelApp.html#a4792de3ee4c5a4f5ee1fe5e4396c3d7d">getVisionModeNight</a> () const </td></tr>
@@ -56,8 +59,8 @@ void&nbsp;</td><td class="memItemRight" valign="bottom"><b>skyCultureChanged</b>
 <tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Create and initialize the main Stellarium application.  <a href="#abd22a94a625994eafb2682718efea4b1"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classStelApp.html#a9bc3af0334306025b474902562c25402">~StelApp</a> ()</td></tr>
 <tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Deinitialize and destroy the main Stellarium application.  <a href="#a9bc3af0334306025b474902562c25402"></a><br/></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classStelApp.html#a9bf1b6b1d25123290b6d5e1db050fb61">init</a> (QSettings *conf)</td></tr>
-<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Initialize core and default modules.  <a href="#a9bf1b6b1d25123290b6d5e1db050fb61"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classStelApp.html#a79226ca6033471aa2037e0b62a13e79f">init</a> (QSettings *conf, class <a class="el" href="classStelRenderer.html">StelRenderer</a> *renderer)</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Initialize core and default modules.  <a href="#a79226ca6033471aa2037e0b62a13e79f"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classStelApp.html#a67ca2a111d005503c97d3584738d87ee">initPlugIns</a> ()</td></tr>
 <tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Load and initialize external modules (plugins).  <a href="#a67ca2a111d005503c97d3584738d87ee"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top"><a class="el" href="classStelModuleMgr.html">StelModuleMgr</a> &amp;&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classStelApp.html#aa6779e76260e5bf9b018b490c97e2803">getModuleMgr</a> ()</td></tr>
@@ -66,8 +69,6 @@ void&nbsp;</td><td class="memItemRight" valign="bottom"><b>skyCultureChanged</b>
 <tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Get the locale manager to use for i18n &amp; date/time localization.  <a href="#a9f4632b0a4faaf7721918b885dbc634c"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top"><a class="el" href="classStelSkyCultureMgr.html">StelSkyCultureMgr</a> &amp;&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classStelApp.html#a99d533e1471ec95d69f6085efbf29dfe">getSkyCultureMgr</a> ()</td></tr>
 <tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Get the sky cultures manager.  <a href="#a99d533e1471ec95d69f6085efbf29dfe"></a><br/></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top"><a class="el" href="classStelTextureMgr.html">StelTextureMgr</a> &amp;&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classStelApp.html#a287fec2dd999126da1bc4af994043bef">getTextureManager</a> ()</td></tr>
-<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Get the texture manager to use for loading textures.  <a href="#a287fec2dd999126da1bc4af994043bef"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top"><a class="el" href="classStelLocationMgr.html">StelLocationMgr</a> &amp;&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classStelApp.html#a0fb6f51087b1b0e527da8ba32a416809">getLocationMgr</a> ()</td></tr>
 <tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Get the Location manager to use for managing stored locations.  <a href="#a0fb6f51087b1b0e527da8ba32a416809"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top"><a class="el" href="classStelObjectMgr.html">StelObjectMgr</a> &amp;&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classStelApp.html#ad954ba75427e3f2e84fbe1432ce1a708">getStelObjectMgr</a> ()</td></tr>
@@ -92,18 +93,18 @@ void&nbsp;</td><td class="memItemRight" valign="bottom"><b>skyCultureChanged</b>
 <tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Return the currently used style.  <a href="#a8a9f66bc8e5d4094ca349bae530e5867"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classStelApp.html#ad26dd1b1657ca4b75d85916ba982b0cf">update</a> (double deltaTime)</td></tr>
 <tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Update all object according to the deltaTime in seconds.  <a href="#ad26dd1b1657ca4b75d85916ba982b0cf"></a><br/></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classStelApp.html#a457b344389ef41af2b06b411292301d5">draw</a> ()</td></tr>
-<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Draw all registered <a class="el" href="classStelModule.html" title="This is the common base class for all the main components of stellarium.">StelModule</a> in the order defined by the order lists.  <a href="#a457b344389ef41af2b06b411292301d5"></a><br/></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">bool&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classStelApp.html#a67e66018cb51d548b4a226f4a5df00e0">drawPartial</a> ()</td></tr>
-<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Iterate through the drawing sequence.  <a href="#a67e66018cb51d548b4a226f4a5df00e0"></a><br/></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classStelApp.html#ac3cddfe37cc627e253b25f84dd242d01">glWindowHasBeenResized</a> (float x, float y, float w, float h)</td></tr>
-<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Call this when the size of the GL window has changed.  <a href="#ac3cddfe37cc627e253b25f84dd242d01"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classStelApp.html#a1ba658ee332764d8830048f36e58b40d">draw</a> (class <a class="el" href="classStelRenderer.html">StelRenderer</a> *renderer)</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Draw all registered <a class="el" href="classStelModule.html" title="This is the common base class for all the main components of stellarium.">StelModule</a> in the order defined by the order lists.  <a href="#a1ba658ee332764d8830048f36e58b40d"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">bool&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classStelApp.html#ac2779dac72f3b0b61f3a5156d344787a">drawPartial</a> (class <a class="el" href="classStelRenderer.html">StelRenderer</a> *renderer)</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Iterate through the drawing sequence.  <a href="#ac2779dac72f3b0b61f3a5156d344787a"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classStelApp.html#a14bb493960b789206c4a4c7bc255ce1c">windowHasBeenResized</a> (float x, float y, float w, float h)</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Call this when the size of the window has changed.  <a href="#a14bb493960b789206c4a4c7bc255ce1c"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top"><a class="el" href="classStelGuiBase.html">StelGuiBase</a> *&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classStelApp.html#a3624fe964b3b77491d33528ca7247bc6">getGui</a> () const </td></tr>
 <tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Get the GUI instance implementing the abstract GUI interface.  <a href="#a3624fe964b3b77491d33528ca7247bc6"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classStelApp.html#af32e3273b432527f791dfb30c19a88e8">setGui</a> (<a class="el" href="classStelGuiBase.html">StelGuiBase</a> *b)</td></tr>
 <tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Tell the <a class="el" href="classStelApp.html" title="Singleton main Stellarium application class.">StelApp</a> instance which GUI si currently being used.  <a href="#af32e3273b432527f791dfb30c19a88e8"></a><br/></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">bool&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classStelApp.html#a28c2f579063445d3e57801a142c1818b">getUseGLShaders</a> () const </td></tr>
-<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Get flag for using opengl shaders.  <a href="#a28c2f579063445d3e57801a142c1818b"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">bool&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classStelApp.html#a5aa80ec478bc2349c8cb5567aef8b830">getRenderSolarShadows</a> () const </td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Get whether solar shadows should be rendered.  <a href="#a5aa80ec478bc2349c8cb5567aef8b830"></a><br/></td></tr>
 <tr><td colspan="2"><h2>Static Public Member Functions</h2></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">static <a class="el" href="classStelApp.html">StelApp</a> &amp;&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classStelApp.html#a1737cdc7266e4ecc8f2f259048e6f1b6">getInstance</a> ()</td></tr>
 <tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Get the <a class="el" href="classStelApp.html" title="Singleton main Stellarium application class.">StelApp</a> singleton instance.  <a href="#a1737cdc7266e4ecc8f2f259048e6f1b6"></a><br/></td></tr>
@@ -117,6 +118,8 @@ static void&nbsp;</td><td class="memItemRight" valign="bottom"><b>deinitStatic</
 <p>This is the central class of Stellarium. Only one singleton instance of this class is created and can be accessed from anywhere else. This class is the access point to several "Manager" class which provide application-wide services for managment of font, textures, localization, sky culture, and in theory all other services used by the other part of the program.</p>
 <p>The <a class="el" href="classStelApp.html" title="Singleton main Stellarium application class.">StelApp</a> class is also the one managing the <a class="el" href="classStelModule.html" title="This is the common base class for all the main components of stellarium.">StelModule</a> in a generic manner by calling their update, drawing and other methods when needed. </p>
 <dl class="author"><dt><b>Author:</b></dt><dd>Fabien Chereau </dd></dl>
+
+<p>Definition at line <a class="el" href="StelApp_8hpp_source.html#l00054">54</a> of file <a class="el" href="StelApp_8hpp_source.html">StelApp.hpp</a>.</p>
 <hr/><h2>Constructor &amp; Destructor Documentation</h2>
 <a class="anchor" id="abd22a94a625994eafb2682718efea4b1"></a><!-- doxytag: member="StelApp::StelApp" ref="abd22a94a625994eafb2682718efea4b1" args="(QObject *parent=NULL)" -->
 <div class="memitem">
@@ -164,14 +167,15 @@ static void&nbsp;</td><td class="memItemRight" valign="bottom"><b>deinitStatic</
 </div>
 </div>
 <hr/><h2>Member Function Documentation</h2>
-<a class="anchor" id="a457b344389ef41af2b06b411292301d5"></a><!-- doxytag: member="StelApp::draw" ref="a457b344389ef41af2b06b411292301d5" args="()" -->
+<a class="anchor" id="a1ba658ee332764d8830048f36e58b40d"></a><!-- doxytag: member="StelApp::draw" ref="a1ba658ee332764d8830048f36e58b40d" args="(class StelRenderer *renderer)" -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
           <td class="memname">void StelApp::draw </td>
           <td>(</td>
-          <td class="paramname"></td>
+          <td class="paramtype">class <a class="el" href="classStelRenderer.html">StelRenderer</a> *&nbsp;</td>
+          <td class="paramname"> <em>renderer</em></td>
           <td>&nbsp;)&nbsp;</td>
           <td></td>
         </tr>
@@ -184,14 +188,15 @@ static void&nbsp;</td><td class="memItemRight" valign="bottom"><b>deinitStatic</
 
 </div>
 </div>
-<a class="anchor" id="a67e66018cb51d548b4a226f4a5df00e0"></a><!-- doxytag: member="StelApp::drawPartial" ref="a67e66018cb51d548b4a226f4a5df00e0" args="()" -->
+<a class="anchor" id="ac2779dac72f3b0b61f3a5156d344787a"></a><!-- doxytag: member="StelApp::drawPartial" ref="ac2779dac72f3b0b61f3a5156d344787a" args="(class StelRenderer *renderer)" -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
           <td class="memname">bool StelApp::drawPartial </td>
           <td>(</td>
-          <td class="paramname"></td>
+          <td class="paramtype">class <a class="el" href="classStelRenderer.html">StelRenderer</a> *&nbsp;</td>
+          <td class="paramname"> <em>renderer</em></td>
           <td>&nbsp;)&nbsp;</td>
           <td></td>
         </tr>
@@ -224,6 +229,8 @@ static void&nbsp;</td><td class="memItemRight" valign="bottom"><b>deinitStatic</
 <p>It is the one which provide the projection, navigation and tone converter. </p>
 <dl class="return"><dt><b>Returns:</b></dt><dd>the <a class="el" href="classStelCore.html" title="Main class for Stellarium core processing.">StelCore</a> instance of the program </dd></dl>
 
+<p>Definition at line <a class="el" href="StelApp_8hpp_source.html#l00114">114</a> of file <a class="el" href="StelApp_8hpp_source.html">StelApp.hpp</a>.</p>
+
 </div>
 </div>
 <a class="anchor" id="a8a9f66bc8e5d4094ca349bae530e5867"></a><!-- doxytag: member="StelApp::getCurrentStelStyle" ref="a8a9f66bc8e5d4094ca349bae530e5867" args="()" -->
@@ -242,6 +249,8 @@ static void&nbsp;</td><td class="memItemRight" valign="bottom"><b>deinitStatic</
 <div class="memdoc">
 
 <p>Return the currently used style. </p>
+
+<p>Definition at line <a class="el" href="StelApp_8hpp_source.html#l00129">129</a> of file <a class="el" href="StelApp_8hpp_source.html">StelApp.hpp</a>.</p>
 
 </div>
 </div>
@@ -263,6 +272,8 @@ static void&nbsp;</td><td class="memItemRight" valign="bottom"><b>deinitStatic</
 <p>Get the current number of frame per second. </p>
 <dl class="return"><dt><b>Returns:</b></dt><dd>the FPS averaged on the last second </dd></dl>
 
+<p>Definition at line <a class="el" href="StelApp_8hpp_source.html#l00173">173</a> of file <a class="el" href="StelApp_8hpp_source.html">StelApp.hpp</a>.</p>
+
 </div>
 </div>
 <a class="anchor" id="a3624fe964b3b77491d33528ca7247bc6"></a><!-- doxytag: member="StelApp::getGui" ref="a3624fe964b3b77491d33528ca7247bc6" args="() const " -->
@@ -281,6 +292,8 @@ static void&nbsp;</td><td class="memItemRight" valign="bottom"><b>deinitStatic</
 <div class="memdoc">
 
 <p>Get the GUI instance implementing the abstract GUI interface. </p>
+
+<p>Definition at line <a class="el" href="StelApp_8hpp_source.html#l00148">148</a> of file <a class="el" href="StelApp_8hpp_source.html">StelApp.hpp</a>.</p>
 
 </div>
 </div>
@@ -302,6 +315,8 @@ static void&nbsp;</td><td class="memItemRight" valign="bottom"><b>deinitStatic</
 <p>Get the <a class="el" href="classStelApp.html" title="Singleton main Stellarium application class.">StelApp</a> singleton instance. </p>
 <dl class="return"><dt><b>Returns:</b></dt><dd>the <a class="el" href="classStelApp.html" title="Singleton main Stellarium application class.">StelApp</a> singleton instance </dd></dl>
 
+<p>Definition at line <a class="el" href="StelApp_8hpp_source.html#l00079">79</a> of file <a class="el" href="StelApp_8hpp_source.html">StelApp.hpp</a>.</p>
+
 </div>
 </div>
 <a class="anchor" id="a9f4632b0a4faaf7721918b885dbc634c"></a><!-- doxytag: member="StelApp::getLocaleMgr" ref="a9f4632b0a4faaf7721918b885dbc634c" args="()" -->
@@ -321,6 +336,8 @@ static void&nbsp;</td><td class="memItemRight" valign="bottom"><b>deinitStatic</
 
 <p>Get the locale manager to use for i18n &amp; date/time localization. </p>
 <dl class="return"><dt><b>Returns:</b></dt><dd>the font manager to use for loading fonts. </dd></dl>
+
+<p>Definition at line <a class="el" href="StelApp_8hpp_source.html#l00087">87</a> of file <a class="el" href="StelApp_8hpp_source.html">StelApp.hpp</a>.</p>
 
 </div>
 </div>
@@ -342,6 +359,8 @@ static void&nbsp;</td><td class="memItemRight" valign="bottom"><b>deinitStatic</
 <p>Get the Location manager to use for managing stored locations. </p>
 <dl class="return"><dt><b>Returns:</b></dt><dd>the Location manager to use for managing stored locations </dd></dl>
 
+<p>Definition at line <a class="el" href="StelApp_8hpp_source.html#l00095">95</a> of file <a class="el" href="StelApp_8hpp_source.html">StelApp.hpp</a>.</p>
+
 </div>
 </div>
 <a class="anchor" id="aa6779e76260e5bf9b018b490c97e2803"></a><!-- doxytag: member="StelApp::getModuleMgr" ref="aa6779e76260e5bf9b018b490c97e2803" args="()" -->
@@ -362,6 +381,8 @@ static void&nbsp;</td><td class="memItemRight" valign="bottom"><b>deinitStatic</
 <p>Get the module manager to use for accessing any module loaded in the application. </p>
 <dl class="return"><dt><b>Returns:</b></dt><dd>the module manager. </dd></dl>
 
+<p>Definition at line <a class="el" href="StelApp_8hpp_source.html#l00083">83</a> of file <a class="el" href="StelApp_8hpp_source.html">StelApp.hpp</a>.</p>
+
 </div>
 </div>
 <a class="anchor" id="ab2dfd74ede88a5b4902512e883f05965"></a><!-- doxytag: member="StelApp::getNetworkAccessManager" ref="ab2dfd74ede88a5b4902512e883f05965" args="()" -->
@@ -381,6 +402,27 @@ static void&nbsp;</td><td class="memItemRight" valign="bottom"><b>deinitStatic</
 
 <p>Get the common instance of QNetworkAccessManager used in stellarium. </p>
 
+<p>Definition at line <a class="el" href="StelApp_8hpp_source.html#l00117">117</a> of file <a class="el" href="StelApp_8hpp_source.html">StelApp.hpp</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a5aa80ec478bc2349c8cb5567aef8b830"></a><!-- doxytag: member="StelApp::getRenderSolarShadows" ref="a5aa80ec478bc2349c8cb5567aef8b830" args="() const " -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool StelApp::getRenderSolarShadows </td>
+          <td>(</td>
+          <td class="paramname"></td>
+          <td>&nbsp;)&nbsp;</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Get whether solar shadows should be rendered. </p>
+
 </div>
 </div>
 <a class="anchor" id="a5029ba71c77ad52fce02b7316424c27e"></a><!-- doxytag: member="StelApp::getSettings" ref="a5029ba71c77ad52fce02b7316424c27e" args="()" -->
@@ -399,6 +441,8 @@ static void&nbsp;</td><td class="memItemRight" valign="bottom"><b>deinitStatic</
 <div class="memdoc">
 
 <p>Return the main configuration options. </p>
+
+<p>Definition at line <a class="el" href="StelApp_8hpp_source.html#l00126">126</a> of file <a class="el" href="StelApp_8hpp_source.html">StelApp.hpp</a>.</p>
 
 </div>
 </div>
@@ -420,6 +464,8 @@ static void&nbsp;</td><td class="memItemRight" valign="bottom"><b>deinitStatic</
 <p>Get the sky cultures manager. </p>
 <dl class="return"><dt><b>Returns:</b></dt><dd>the sky cultures manager </dd></dl>
 
+<p>Definition at line <a class="el" href="StelApp_8hpp_source.html#l00091">91</a> of file <a class="el" href="StelApp_8hpp_source.html">StelApp.hpp</a>.</p>
+
 </div>
 </div>
 <a class="anchor" id="a766cb814bf4490e1a4223371c072c472"></a><!-- doxytag: member="StelApp::getSkyImageMgr" ref="a766cb814bf4490e1a4223371c072c472" args="()" -->
@@ -440,6 +486,8 @@ static void&nbsp;</td><td class="memItemRight" valign="bottom"><b>deinitStatic</
 <p>Get the <a class="el" href="classStelObject.html" title="The base abstract class for sky objects used in Stellarium like Stars, Planets, Constellations...">StelObject</a> manager to use for querying from all stellarium objects. </p>
 <dl class="return"><dt><b>Returns:</b></dt><dd>the <a class="el" href="classStelObject.html" title="The base abstract class for sky objects used in Stellarium like Stars, Planets, Constellations...">StelObject</a> manager to use for querying from all stellarium objects . </dd></dl>
 
+<p>Definition at line <a class="el" href="StelApp_8hpp_source.html#l00103">103</a> of file <a class="el" href="StelApp_8hpp_source.html">StelApp.hpp</a>.</p>
+
 </div>
 </div>
 <a class="anchor" id="a551cc68e5a17b1136de174e2fa98fbac"></a><!-- doxytag: member="StelApp::getStelAudioMgr" ref="a551cc68e5a17b1136de174e2fa98fbac" args="()" -->
@@ -458,6 +506,8 @@ static void&nbsp;</td><td class="memItemRight" valign="bottom"><b>deinitStatic</
 <div class="memdoc">
 
 <p>Get the audio manager. </p>
+
+<p>Definition at line <a class="el" href="StelApp_8hpp_source.html#l00106">106</a> of file <a class="el" href="StelApp_8hpp_source.html">StelApp.hpp</a>.</p>
 
 </div>
 </div>
@@ -479,6 +529,8 @@ static void&nbsp;</td><td class="memItemRight" valign="bottom"><b>deinitStatic</
 <p>Get the <a class="el" href="classStelObject.html" title="The base abstract class for sky objects used in Stellarium like Stars, Planets, Constellations...">StelObject</a> manager to use for querying from all stellarium objects. </p>
 <dl class="return"><dt><b>Returns:</b></dt><dd>the <a class="el" href="classStelObject.html" title="The base abstract class for sky objects used in Stellarium like Stars, Planets, Constellations...">StelObject</a> manager to use for querying from all stellarium objects . </dd></dl>
 
+<p>Definition at line <a class="el" href="StelApp_8hpp_source.html#l00099">99</a> of file <a class="el" href="StelApp_8hpp_source.html">StelApp.hpp</a>.</p>
+
 </div>
 </div>
 <a class="anchor" id="aabdee5e65034bb0f741285570713f14e"></a><!-- doxytag: member="StelApp::getStelVideoMgr" ref="aabdee5e65034bb0f741285570713f14e" args="()" -->
@@ -498,25 +550,7 @@ static void&nbsp;</td><td class="memItemRight" valign="bottom"><b>deinitStatic</
 
 <p>Get the video manager. </p>
 
-</div>
-</div>
-<a class="anchor" id="a287fec2dd999126da1bc4af994043bef"></a><!-- doxytag: member="StelApp::getTextureManager" ref="a287fec2dd999126da1bc4af994043bef" args="()" -->
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="classStelTextureMgr.html">StelTextureMgr</a>&amp; StelApp::getTextureManager </td>
-          <td>(</td>
-          <td class="paramname"></td>
-          <td>&nbsp;)&nbsp;</td>
-          <td><code> [inline]</code></td>
-        </tr>
-      </table>
-</div>
-<div class="memdoc">
-
-<p>Get the texture manager to use for loading textures. </p>
-<dl class="return"><dt><b>Returns:</b></dt><dd>the texture manager to use for loading textures. </dd></dl>
+<p>Definition at line <a class="el" href="StelApp_8hpp_source.html#l00109">109</a> of file <a class="el" href="StelApp_8hpp_source.html">StelApp.hpp</a>.</p>
 
 </div>
 </div>
@@ -539,25 +573,6 @@ static void&nbsp;</td><td class="memItemRight" valign="bottom"><b>deinitStatic</
 
 </div>
 </div>
-<a class="anchor" id="a28c2f579063445d3e57801a142c1818b"></a><!-- doxytag: member="StelApp::getUseGLShaders" ref="a28c2f579063445d3e57801a142c1818b" args="() const " -->
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">bool StelApp::getUseGLShaders </td>
-          <td>(</td>
-          <td class="paramname"></td>
-          <td>&nbsp;)&nbsp;</td>
-          <td> const<code> [inline]</code></td>
-        </tr>
-      </table>
-</div>
-<div class="memdoc">
-
-<p>Get flag for using opengl shaders. </p>
-
-</div>
-</div>
 <a class="anchor" id="a4792de3ee4c5a4f5ee1fe5e4396c3d7d"></a><!-- doxytag: member="StelApp::getVisionModeNight" ref="a4792de3ee4c5a4f5ee1fe5e4396c3d7d" args="() const " -->
 <div class="memitem">
 <div class="memproto">
@@ -575,50 +590,11 @@ static void&nbsp;</td><td class="memItemRight" valign="bottom"><b>deinitStatic</
 
 <p>Get flag for activating night vision mode. </p>
 
-</div>
-</div>
-<a class="anchor" id="ac3cddfe37cc627e253b25f84dd242d01"></a><!-- doxytag: member="StelApp::glWindowHasBeenResized" ref="ac3cddfe37cc627e253b25f84dd242d01" args="(float x, float y, float w, float h)" -->
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">void StelApp::glWindowHasBeenResized </td>
-          <td>(</td>
-          <td class="paramtype">float&nbsp;</td>
-          <td class="paramname"> <em>x</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">float&nbsp;</td>
-          <td class="paramname"> <em>y</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">float&nbsp;</td>
-          <td class="paramname"> <em>w</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">float&nbsp;</td>
-          <td class="paramname"> <em>h</em></td><td>&nbsp;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td><td></td>
-        </tr>
-      </table>
-</div>
-<div class="memdoc">
-
-<p>Call this when the size of the GL window has changed. </p>
+<p>Definition at line <a class="el" href="StelApp_8hpp_source.html#l00169">169</a> of file <a class="el" href="StelApp_8hpp_source.html">StelApp.hpp</a>.</p>
 
 </div>
 </div>
-<a class="anchor" id="a9bf1b6b1d25123290b6d5e1db050fb61"></a><!-- doxytag: member="StelApp::init" ref="a9bf1b6b1d25123290b6d5e1db050fb61" args="(QSettings *conf)" -->
+<a class="anchor" id="a79226ca6033471aa2037e0b62a13e79f"></a><!-- doxytag: member="StelApp::init" ref="a79226ca6033471aa2037e0b62a13e79f" args="(QSettings *conf, class StelRenderer *renderer)" -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
@@ -626,9 +602,18 @@ static void&nbsp;</td><td class="memItemRight" valign="bottom"><b>deinitStatic</
           <td class="memname">void StelApp::init </td>
           <td>(</td>
           <td class="paramtype">QSettings *&nbsp;</td>
-          <td class="paramname"> <em>conf</em></td>
-          <td>&nbsp;)&nbsp;</td>
+          <td class="paramname"> <em>conf</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
           <td></td>
+          <td class="paramtype">class <a class="el" href="classStelRenderer.html">StelRenderer</a> *&nbsp;</td>
+          <td class="paramname"> <em>renderer</em></td><td>&nbsp;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td><td></td>
         </tr>
       </table>
 </div>
@@ -696,6 +681,28 @@ static void&nbsp;</td><td class="memItemRight" valign="bottom"><b>deinitStatic</
 
 <p>Tell the <a class="el" href="classStelApp.html" title="Singleton main Stellarium application class.">StelApp</a> instance which GUI si currently being used. </p>
 <p>The caller is responsible for destroying the GUI. </p>
+
+<p>Definition at line <a class="el" href="StelApp_8hpp_source.html#l00151">151</a> of file <a class="el" href="StelApp_8hpp_source.html">StelApp.hpp</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a0475576a49e555a9c0eddff47d4a8a2b"></a><!-- doxytag: member="StelApp::setRenderSolarShadows" ref="a0475576a49e555a9c0eddff47d4a8a2b" args="(bool)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void StelApp::setRenderSolarShadows </td>
+          <td>(</td>
+          <td class="paramtype">bool&nbsp;</td>
+          <td class="paramname"></td>
+          <td>&nbsp;)&nbsp;</td>
+          <td><code> [slot]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Set flag for activating solar shadow rendering. </p>
 
 </div>
 </div>
@@ -777,8 +784,52 @@ static void&nbsp;</td><td class="memItemRight" valign="bottom"><b>deinitStatic</
 
 </div>
 </div>
+<a class="anchor" id="a14bb493960b789206c4a4c7bc255ce1c"></a><!-- doxytag: member="StelApp::windowHasBeenResized" ref="a14bb493960b789206c4a4c7bc255ce1c" args="(float x, float y, float w, float h)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void StelApp::windowHasBeenResized </td>
+          <td>(</td>
+          <td class="paramtype">float&nbsp;</td>
+          <td class="paramname"> <em>x</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float&nbsp;</td>
+          <td class="paramname"> <em>y</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float&nbsp;</td>
+          <td class="paramname"> <em>w</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float&nbsp;</td>
+          <td class="paramname"> <em>h</em></td><td>&nbsp;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td><td></td>
+        </tr>
+      </table>
 </div>
-<hr class="footer"/><address style="text-align: right;"><small>Generated on Sat Aug 25 22:13:32 2012 for Stellarium by&nbsp;
+<div class="memdoc">
+
+<p>Call this when the size of the window has changed. </p>
+
+</div>
+</div>
+<hr/>The documentation for this class was generated from the following file:<ul>
+<li>core/<a class="el" href="StelApp_8hpp_source.html">StelApp.hpp</a></li>
+</ul>
+</div>
+<hr class="footer"/><address style="text-align: right;"><small>Generated on Fri Aug 31 18:07:56 2012 for Stellarium by&nbsp;
 <a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.6.3 </small></address>
 </body>

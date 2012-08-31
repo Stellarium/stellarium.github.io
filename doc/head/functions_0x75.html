@@ -9,7 +9,7 @@
 <tr>
 <td align="left" valign="top" width="32" rowspan="2"><a href="http://www.stellarium.org"><img src="stellarium-logo.png" align="left" border="0" /></a></td>
 <td width="1" rowspan="2">&nbsp;&nbsp;</td>
-<td style="font-size:120%;font-weight:bolder;">Stellarium 0.11.4</td>
+<td style="font-size:120%;font-weight:bolder;">Stellarium 0.12.0</td>
 <td align="right" valign="top" width="230" rowspan="2"></td></tr><tr>
 <td class="postheader" valign="center">
  <a href="index.html">Home</a>&nbsp;&middot;
@@ -19,6 +19,7 @@
  <a href="codingStyle.html">Coding Style</a>&nbsp;&middot;
  <a href="scripting.html">Scripting</a>&nbsp;&middot;
  <a href="plugins.html">Plugins</a>&nbsp;&middot;
+ <a href="renderer.html">Renderer</a>&nbsp;&middot;
  <a href="fileStructure.html">File Structure</a>
 </td>
 </tr>
@@ -67,11 +68,53 @@
 Here is a list of all documented class members with links to the class documentation for each member:
 
 <h3><a class="anchor" id="index_u">- u -</a></h3><ul>
+<li>uniformCount
+: <a class="el" href="classStelQGLGLSLShader.html#a2bac518707a795035d1b8688d0afb202">StelQGLGLSLShader</a>
+</li>
+<li>uniformCountStack
+: <a class="el" href="classStelQGLGLSLShader.html#a22ba3cafd6c9b599e51440b8f4002c8c">StelQGLGLSLShader</a>
+</li>
+<li>uniformNames
+: <a class="el" href="classStelQGLGLSLShader.html#a0aa96f1a0f6ba78850f6384636d4694c">StelQGLGLSLShader</a>
+</li>
+<li>uniformStorage
+: <a class="el" href="classStelQGLGLSLShader.html#a79eeb4a45f06b424ef54ead6944b9a3d">StelQGLGLSLShader</a>
+</li>
+<li>uniformStoragePointer
+: <a class="el" href="classStelQGLGLSLShader.html#ab1ab3c342f5397f1355129fefbc49f2d">StelQGLGLSLShader</a>
+</li>
+<li>uniformStorageStackSize
+: <a class="el" href="classStelQGLGLSLShader.html#adb24900df95ca10bc0c4d2734472ed7f">StelQGLGLSLShader</a>
+</li>
+<li>uniformStorageUsed
+: <a class="el" href="classStelQGLGLSLShader.html#a47cd60ceb84124f9fad3c44979ec3c3f">StelQGLGLSLShader</a>
+</li>
+<li>uniformStorageUsedStack
+: <a class="el" href="classStelQGLGLSLShader.html#af52db252923a7ac39c645ba7122c03c0">StelQGLGLSLShader</a>
+</li>
+<li>uniformTypes
+: <a class="el" href="classStelQGLGLSLShader.html#a822d864c42e34d66a623ddef2b9b56c4">StelQGLGLSLShader</a>
+</li>
+<li>unlitSphere
+: <a class="el" href="classPlanet.html#a6eb6cbe1ba9eb4af8f225dd9bc7e7c56">Planet</a>
+</li>
 <li>unloadAllPlugins()
 : <a class="el" href="classStelModuleMgr.html#a383f8e28bebe1e43dc6125e7eba04599">StelModuleMgr</a>
 </li>
 <li>unloadModule()
 : <a class="el" href="classStelModuleMgr.html#aaeeb056edd5b861a9016b5d466b500d8">StelModuleMgr</a>
+</li>
+<li>unlock()
+: <a class="el" href="classStelQGLGLSLShader.html#a77cee9a54b10362701642fa443a9995a">StelQGLGLSLShader</a>
+, <a class="el" href="classStelVertexBuffer.html#abd0e9d5b7e8f83e3309c5810a024958b">StelVertexBuffer&lt; V &gt;</a>
+, <a class="el" href="classStelVertexBufferBackend.html#a26c5ca9f94d27abaf24555090d0a3033">StelVertexBufferBackend</a>
+, <a class="el" href="classStelGLSLShader.html#a725669d679573be1e6a9c8af2efbd708">StelGLSLShader</a>
+, <a class="el" href="classStelIndexBuffer.html#a821018ae2e4de1d505adfb0ee5cd3729">StelIndexBuffer</a>
+, <a class="el" href="classStelQGLArrayVertexBufferBackend.html#a96377cc75ea889ce44690d3e6fde9531">StelQGLArrayVertexBufferBackend</a>
+</li>
+<li>unlock_()
+: <a class="el" href="classStelIndexBuffer.html#a2e2eb869f5c9c08eb0f17af69b1c247e">StelIndexBuffer</a>
+, <a class="el" href="classStelQGLIndexBuffer.html#ae958b00a8afc91df6a0ba687afad8a5b">StelQGLIndexBuffer</a>
 </li>
 <li>unProject()
 : <a class="el" href="classStelProjector.html#a22c628365ef0daac4bf28ba6b284d9e8">StelProjector</a>
@@ -80,41 +123,46 @@ Here is a list of all documented class members with links to the class documenta
 : <a class="el" href="classStelObjectMgr.html#ac29c7fee6925c091dd32c46d6bcb570f">StelObjectMgr</a>
 </li>
 <li>update()
-: <a class="el" href="classLabelMgr.html#ad108170f986887d39d5a4dce37c4c010">LabelMgr</a>
+: <a class="el" href="classSolarSystem.html#a0680ac6cc833f0238a52a1cceb9542ab">SolarSystem</a>
+, <a class="el" href="classStarMgr.html#af1bea64aa5a611c3d94fa3e769e8c212">StarMgr</a>
 , <a class="el" href="classStelApp.html#ad26dd1b1657ca4b75d85916ba982b0cf">StelApp</a>
+, <a class="el" href="classScreenImage.html#a68673b0131e926fcd81fce49b0f0ccdd">ScreenImage</a>
 , <a class="el" href="classStelModule.html#a029f960090bf001e4e9eff0d95c4f706">StelModule</a>
-, <a class="el" href="classLandscapeMgr.html#a337049aff151cd75834677e947376ffd">LandscapeMgr</a>
 , <a class="el" href="classStelModuleMgr.html#a358f586c06506f5327b1ea6906bf5cd0">StelModuleMgr</a>
 , <a class="el" href="classStelMovementMgr.html#a4cf86bae342098b195f237123df4190f">StelMovementMgr</a>
-, <a class="el" href="classConstellationMgr.html#a3e93cbdebae629cfda8ea91a3c40619f">ConstellationMgr</a>
-, <a class="el" href="classScreenImageMgr.html#aabfdd24f31d3b2798ed30687ac86208a">ScreenImageMgr</a>
-, <a class="el" href="classScreenImage.html#a68673b0131e926fcd81fce49b0f0ccdd">ScreenImage</a>
-, <a class="el" href="classMeteor.html#a74237b0dceab250726b1d4470a7fa7ba">Meteor</a>
-, <a class="el" href="classStelSkyDrawer.html#adea12e5e86648983db53fe7d44866dc0">StelSkyDrawer</a>
-, <a class="el" href="classSpaceShipObserver.html#aa304a0b4ee13e0167e3b0e8c60ad18e4">SpaceShipObserver</a>
 , <a class="el" href="classStelObjectMgr.html#a806824d70ab756c9dc7a7c5aab31e04b">StelObjectMgr</a>
 , <a class="el" href="classStelObserver.html#a60707079034281ca914bc2ab575b66cf">StelObserver</a>
-, <a class="el" href="classMeteorMgr.html#a297ca9869ed6f5d88b92a0a2b9f278fc">MeteorMgr</a>
-, <a class="el" href="classStelGeodesicGridDrawer.html#a8804df6071576f513d72cbb62b720248">StelGeodesicGridDrawer</a>
-, <a class="el" href="classMilkyWay.html#a35a3018d703b5cd462997bd9c77a5d0f">MilkyWay</a>
+, <a class="el" href="classSpaceShipObserver.html#aa304a0b4ee13e0167e3b0e8c60ad18e4">SpaceShipObserver</a>
+, <a class="el" href="classStelSkyDrawer.html#adea12e5e86648983db53fe7d44866dc0">StelSkyDrawer</a>
 , <a class="el" href="classStelSkyLayerMgr.html#a5b6ac96da8959c81fccd52660cb73484">StelSkyLayerMgr</a>
-, <a class="el" href="classStarMgr.html#af1bea64aa5a611c3d94fa3e769e8c212">StarMgr</a>
-, <a class="el" href="classSolarSystem.html#a0680ac6cc833f0238a52a1cceb9542ab">SolarSystem</a>
+, <a class="el" href="classScreenImageMgr.html#aabfdd24f31d3b2798ed30687ac86208a">ScreenImageMgr</a>
+, <a class="el" href="classConstellationMgr.html#a3e93cbdebae629cfda8ea91a3c40619f">ConstellationMgr</a>
+, <a class="el" href="classStelGeodesicGridDrawer.html#a8804df6071576f513d72cbb62b720248">StelGeodesicGridDrawer</a>
 , <a class="el" href="classNebulaMgr.html#a9c7112c0dbb5947d17a79d71bd76318f">NebulaMgr</a>
 , <a class="el" href="classGridLinesMgr.html#aa587c55fb7afca8a71c8991bcb97f557">GridLinesMgr</a>
+, <a class="el" href="classLabelMgr.html#ad108170f986887d39d5a4dce37c4c010">LabelMgr</a>
+, <a class="el" href="classLandscapeMgr.html#a337049aff151cd75834677e947376ffd">LandscapeMgr</a>
+, <a class="el" href="classMeteor.html#a74237b0dceab250726b1d4470a7fa7ba">Meteor</a>
+, <a class="el" href="classMeteorMgr.html#a297ca9869ed6f5d88b92a0a2b9f278fc">MeteorMgr</a>
+, <a class="el" href="classMilkyWay.html#a35a3018d703b5cd462997bd9c77a5d0f">MilkyWay</a>
 </li>
 <li>updateBoundingCap()
 : <a class="el" href="classSphericalConvexPolygon.html#aed33ef6f5c3cd211eeb143b0b80f411e">SphericalConvexPolygon</a>
+</li>
+<li>updateFillVertexBuffer()
+: <a class="el" href="classSphericalRegion.html#a207525d3d37d5e629f041dfed5c65dbf">SphericalRegion</a>
+, <a class="el" href="classSphericalConvexPolygon.html#a7c2b65093aaa654752b8825ba9f6182d">SphericalConvexPolygon</a>
+, <a class="el" href="classSphericalTexturedConvexPolygon.html#a4861b6f6c1e65482f819269c7fbd2553">SphericalTexturedConvexPolygon</a>
 </li>
 <li>updateHipIndex()
 : <a class="el" href="classBigStarCatalogExtension_1_1HipZoneArray.html#aa66bbb2e047c358ca09288b32821020c">BigStarCatalogExtension::HipZoneArray</a>
 , <a class="el" href="classBigStarCatalogExtension_1_1ZoneArray.html#a05ebe4ae41b3d066337638f6f7b4622b">BigStarCatalogExtension::ZoneArray</a>
 </li>
 <li>updateI18n()
-: <a class="el" href="classSolarSystem.html#aedf4ed299c43167e8d2b3394157f2837">SolarSystem</a>
-, <a class="el" href="classStelNoGui.html#a5d8796081a5094403befe239e21b3ec1">StelNoGui</a>
-, <a class="el" href="classStelApp.html#a30c51e9a096bacea29c45de1a080163d">StelApp</a>
+: <a class="el" href="classStelNoGui.html#a5d8796081a5094403befe239e21b3ec1">StelNoGui</a>
+, <a class="el" href="classSolarSystem.html#aedf4ed299c43167e8d2b3394157f2837">SolarSystem</a>
 , <a class="el" href="classStelGuiBase.html#a8944f5e558e8b8ee167af35e7a554b6c">StelGuiBase</a>
+, <a class="el" href="classStelApp.html#a30c51e9a096bacea29c45de1a080163d">StelApp</a>
 </li>
 <li>updateMotion()
 : <a class="el" href="classStelMovementMgr.html#aacab8d5a932046b61d561f8084c717d9">StelMovementMgr</a>
@@ -125,9 +173,37 @@ Here is a list of all documented class members with links to the class documenta
 <li>updateSkyCulture()
 : <a class="el" href="classStelApp.html#a34b06ad4a51824cc677a3b67dcfd848b">StelApp</a>
 </li>
+<li>uploadUniforms()
+: <a class="el" href="classStelQGLGLSLShader.html#ad055f5447dde2b203e503e56ebcc4343">StelQGLGLSLShader</a>
+</li>
+<li>useFBO()
+: <a class="el" href="classStelQGLViewport.html#ad3dbcf9a7e1fb77fada5c12df7f8f4e2">StelQGLViewport</a>
+</li>
+<li>useGravity()
+: <a class="el" href="structTextParams.html#a644435583af051413084712ccac7b558">TextParams</a>
+</li>
+<li>useGravityLabels()
+: <a class="el" href="classStelProjector.html#a9bf8584264b5a42a1726e7d23fc455c7">StelProjector</a>
+</li>
+<li>useProjector
+: <a class="el" href="classSphericalRegion.html#a0baec9144a80c960eb91170f6e5cf596">SphericalRegion</a>
+</li>
+<li>useUnprojectedPosition()
+: <a class="el" href="classStelQGLGLSLShader.html#a0b1f7c271bde1be2a1c3b1476d7d5bd7">StelQGLGLSLShader</a>
+</li>
+<li>useUnprojectedPosition_
+: <a class="el" href="classStelQGLGLSLShader.html#aec2685db40921e6f2c3c947f845a077f">StelQGLGLSLShader</a>
+</li>
+<li>useUnprojectedPositionAttribute()
+: <a class="el" href="classStelGLSLShader.html#a687a8efacfc1e876a754fe14c66e80eb">StelGLSLShader</a>
+, <a class="el" href="classStelQGLGLSLShader.html#a2afb696e7f20bf5deb14e28aea141a10">StelQGLGLSLShader</a>
+</li>
+<li>usingProjectedPositions
+: <a class="el" href="classStelQGLArrayVertexBufferBackend.html#a6bce8202d2ecfc944d95ad09c45e0b3e">StelQGLArrayVertexBufferBackend</a>
+</li>
 </ul>
 </div>
-<hr class="footer"/><address style="text-align: right;"><small>Generated on Sat Aug 25 22:13:31 2012 for Stellarium by&nbsp;
+<hr class="footer"/><address style="text-align: right;"><small>Generated on Fri Aug 31 18:07:51 2012 for Stellarium by&nbsp;
 <a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.6.3 </small></address>
 </body>

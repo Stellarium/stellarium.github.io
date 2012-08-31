@@ -9,7 +9,7 @@
 <tr>
 <td align="left" valign="top" width="32" rowspan="2"><a href="http://www.stellarium.org"><img src="stellarium-logo.png" align="left" border="0" /></a></td>
 <td width="1" rowspan="2">&nbsp;&nbsp;</td>
-<td style="font-size:120%;font-weight:bolder;">Stellarium 0.11.4</td>
+<td style="font-size:120%;font-weight:bolder;">Stellarium 0.12.0</td>
 <td align="right" valign="top" width="230" rowspan="2"></td></tr><tr>
 <td class="postheader" valign="center">
  <a href="index.html">Home</a>&nbsp;&middot;
@@ -19,6 +19,7 @@
  <a href="codingStyle.html">Coding Style</a>&nbsp;&middot;
  <a href="scripting.html">Scripting</a>&nbsp;&middot;
  <a href="plugins.html">Plugins</a>&nbsp;&middot;
+ <a href="renderer.html">Renderer</a>&nbsp;&middot;
  <a href="fileStructure.html">File Structure</a>
 </td>
 </tr>
@@ -91,8 +92,8 @@
 <tr><td colspan="2"><h2>Public Member Functions</h2></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSolarSystem.html#a788e3ba11a71d3348e0ac26fa051244b">init</a> ()</td></tr>
 <tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Initialize the <a class="el" href="classSolarSystem.html" title="This StelObjectModule derivative is used to model SolarSystem bodies.">SolarSystem</a>.  <a href="#a788e3ba11a71d3348e0ac26fa051244b"></a><br/></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">virtual void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSolarSystem.html#a4df9f23f00663f9b960a712cd9b06cdb">draw</a> (<a class="el" href="classStelCore.html">StelCore</a> *core)</td></tr>
-<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Draw <a class="el" href="classSolarSystem.html" title="This StelObjectModule derivative is used to model SolarSystem bodies.">SolarSystem</a> objects (planets).  <a href="#a4df9f23f00663f9b960a712cd9b06cdb"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">virtual void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSolarSystem.html#af61be69770f4431dee374715980c7ce7">draw</a> (<a class="el" href="classStelCore.html">StelCore</a> *core, class <a class="el" href="classStelRenderer.html">StelRenderer</a> *renderer)</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Draw <a class="el" href="classSolarSystem.html" title="This StelObjectModule derivative is used to model SolarSystem bodies.">SolarSystem</a> objects (planets).  <a href="#af61be69770f4431dee374715980c7ce7"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSolarSystem.html#a0680ac6cc833f0238a52a1cceb9542ab">update</a> (double deltaTime)</td></tr>
 <tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Update time-varying components.  <a href="#a0680ac6cc833f0238a52a1cceb9542ab"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual double&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSolarSystem.html#a505b0f6708935ef22aae4c827dd2de94">getCallOrder</a> (<a class="el" href="classStelModule.html#a11b61d014b51cf6424cd89b1ccd3d768">StelModuleActionName</a> actionName) const </td></tr>
@@ -121,6 +122,8 @@
 <tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Get the list of all the planet localized names.  <a href="#a826aca80458a840a362d4e008576f739"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSolarSystem.html#a1be769b3861baf35a4e6a559438d5e7a">reloadPlanets</a> ()</td></tr>
 <tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Reload the planets.  <a href="#a1be769b3861baf35a4e6a559438d5e7a"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">double&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSolarSystem.html#a37e598ccb8f4739eb624f2ff63d16a92">getEclipseFactor</a> (const <a class="el" href="classStelCore.html">StelCore</a> *core) const </td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Determines relative amount of sun visible from the observer's position.  <a href="#a37e598ccb8f4739eb624f2ff63d16a92"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">QString&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSolarSystem.html#ab3635b90421a4bcec4a9368837c84a9d">getPlanetHashString</a> ()</td></tr>
 <tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Get a hash of locale and ssystem.ini names for use with the TUI.  <a href="#ab3635b90421a4bcec4a9368837c84a9d"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSolarSystem.html#a278845fca95a186932ee052ccd60ab4e">computePositions</a> (double date, const <a class="el" href="classVector3.html">Vec3d</a> &amp;observerPos=<a class="el" href="classVector3.html">Vec3d</a>(0.))</td></tr>
@@ -131,6 +134,8 @@
 <hr/><a name="_details"></a><h2>Detailed Description</h2>
 <p>This <a class="el" href="classStelObjectModule.html" title="Specialization of StelModule which manages a collection of StelObject.">StelObjectModule</a> derivative is used to model <a class="el" href="classSolarSystem.html" title="This StelObjectModule derivative is used to model SolarSystem bodies.">SolarSystem</a> bodies. </p>
 <p>This includes the Major Planets, Minor Planets and Comets. </p>
+
+<p>Definition at line <a class="el" href="SolarSystem_8hpp_source.html#l00044">44</a> of file <a class="el" href="SolarSystem_8hpp_source.html">SolarSystem.hpp</a>.</p>
 <hr/><h2>Member Function Documentation</h2>
 <a class="anchor" id="a278845fca95a186932ee052ccd60ab4e"></a><!-- doxytag: member="SolarSystem::computePositions" ref="a278845fca95a186932ee052ccd60ab4e" args="(double date, const Vec3d &amp;observerPos=Vec3d(0.))" -->
 <div class="memitem">
@@ -169,7 +174,7 @@
 
 </div>
 </div>
-<a class="anchor" id="a4df9f23f00663f9b960a712cd9b06cdb"></a><!-- doxytag: member="SolarSystem::draw" ref="a4df9f23f00663f9b960a712cd9b06cdb" args="(StelCore *core)" -->
+<a class="anchor" id="af61be69770f4431dee374715980c7ce7"></a><!-- doxytag: member="SolarSystem::draw" ref="af61be69770f4431dee374715980c7ce7" args="(StelCore *core, class StelRenderer *renderer)" -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
@@ -177,9 +182,18 @@
           <td class="memname">virtual void SolarSystem::draw </td>
           <td>(</td>
           <td class="paramtype"><a class="el" href="classStelCore.html">StelCore</a> *&nbsp;</td>
-          <td class="paramname"> <em>core</em></td>
-          <td>&nbsp;)&nbsp;</td>
-          <td><code> [virtual]</code></td>
+          <td class="paramname"> <em>core</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">class <a class="el" href="classStelRenderer.html">StelRenderer</a> *&nbsp;</td>
+          <td class="paramname"> <em>renderer</em></td><td>&nbsp;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td><td><code> [virtual]</code></td>
         </tr>
       </table>
 </div>
@@ -189,12 +203,13 @@
 <dl><dt><b>Parameters:</b></dt><dd>
   <table border="0" cellspacing="2" cellpadding="0">
     <tr><td valign="top"></td><td valign="top"><em>core</em>&nbsp;</td><td>The <a class="el" href="classStelCore.html" title="Main class for Stellarium core processing.">StelCore</a> object. </td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>renderer</em>&nbsp;</td><td>Renderer to use for drawing. </td></tr>
   </table>
   </dd>
 </dl>
 <dl class="return"><dt><b>Returns:</b></dt><dd>The maximum squared distance in pixels that any <a class="el" href="classSolarSystem.html" title="This StelObjectModule derivative is used to model SolarSystem bodies.">SolarSystem</a> object has travelled since the last update. </dd></dl>
 
-<p>Reimplemented from <a class="el" href="classStelModule.html#a18fde2820af998395aea9e30bb1138b2">StelModule</a>.</p>
+<p>Reimplemented from <a class="el" href="classStelModule.html#ab352388800724842a5c1e55e250378a6">StelModule</a>.</p>
 
 </div>
 </div>
@@ -254,6 +269,8 @@
 <p>Get the list of all the bodies of the solar system. </p>
 <dl class="deprecated"><dt><b><a class="el" href="deprecated.html#_deprecated000003">Deprecated:</a></b></dt><dd>Used in <a class="el" href="classLandscapeMgr.html#a337049aff151cd75834677e947376ffd" title="Update time-dependent state.">LandscapeMgr::update()</a>, but commented out. </dd></dl>
 
+<p>Definition at line <a class="el" href="SolarSystem_8hpp_source.html#l00234">234</a> of file <a class="el" href="SolarSystem_8hpp_source.html">SolarSystem.hpp</a>.</p>
+
 </div>
 </div>
 <a class="anchor" id="a505b0f6708935ef22aae4c827dd2de94"></a><!-- doxytag: member="SolarSystem::getCallOrder" ref="a505b0f6708935ef22aae4c827dd2de94" args="(StelModuleActionName actionName) const " -->
@@ -294,6 +311,28 @@
 <div class="memdoc">
 
 <p>Get the <a class="el" href="classPlanet.html">Planet</a> object pointer for the Earth. </p>
+
+<p>Definition at line <a class="el" href="SolarSystem_8hpp_source.html#l00197">197</a> of file <a class="el" href="SolarSystem_8hpp_source.html">SolarSystem.hpp</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a37e598ccb8f4739eb624f2ff63d16a92"></a><!-- doxytag: member="SolarSystem::getEclipseFactor" ref="a37e598ccb8f4739eb624f2ff63d16a92" args="(const StelCore *core) const " -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">double SolarSystem::getEclipseFactor </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classStelCore.html">StelCore</a> *&nbsp;</td>
+          <td class="paramname"> <em>core</em></td>
+          <td>&nbsp;)&nbsp;</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Determines relative amount of sun visible from the observer's position. </p>
 
 </div>
 </div>
@@ -353,6 +392,8 @@
 
 <p>Get the current value of the flag which determines if light travel time calculation is used or not. </p>
 
+<p>Definition at line <a class="el" href="SolarSystem_8hpp_source.html#l00146">146</a> of file <a class="el" href="SolarSystem_8hpp_source.html">SolarSystem.hpp</a>.</p>
+
 </div>
 </div>
 <a class="anchor" id="af28c1d019eddb9dc564b2892e4c33192"></a><!-- doxytag: member="SolarSystem::getFlagMoonScale" ref="af28c1d019eddb9dc564b2892e4c33192" args="(void) const " -->
@@ -373,6 +414,8 @@
 
 <p>Get the current value of the flag which determines if Earth's moon is scaled or not. </p>
 
+<p>Definition at line <a class="el" href="SolarSystem_8hpp_source.html#l00169">169</a> of file <a class="el" href="SolarSystem_8hpp_source.html">SolarSystem.hpp</a>.</p>
+
 </div>
 </div>
 <a class="anchor" id="a312acfa554ca72f05331ea18009ba59f"></a><!-- doxytag: member="SolarSystem::getFlagOrbits" ref="a312acfa554ca72f05331ea18009ba59f" args="() const " -->
@@ -392,6 +435,8 @@
 <div class="memdoc">
 
 <p>Get the current value of the flag which determines if planet orbits are drawn or hidden. </p>
+
+<p>Definition at line <a class="el" href="SolarSystem_8hpp_source.html#l00140">140</a> of file <a class="el" href="SolarSystem_8hpp_source.html">SolarSystem.hpp</a>.</p>
 
 </div>
 </div>
@@ -453,6 +498,8 @@
 <p>The real amount is also proportional with FOV. </p>
 <dl class="return"><dt><b>Returns:</b></dt><dd>the amount between 0 and 10. 0 is no labels, 10 is maximum of labels </dd></dl>
 
+<p>Definition at line <a class="el" href="SolarSystem_8hpp_source.html#l00135">135</a> of file <a class="el" href="SolarSystem_8hpp_source.html">SolarSystem.hpp</a>.</p>
+
 </div>
 </div>
 <a class="anchor" id="aaebdf00e1151827f1a9f91502a8d173e"></a><!-- doxytag: member="SolarSystem::getLabelsColor" ref="aaebdf00e1151827f1a9f91502a8d173e" args="(void) const " -->
@@ -492,6 +539,8 @@
 
 <p>Get the <a class="el" href="classPlanet.html">Planet</a> object pointer for Earth's moon. </p>
 
+<p>Definition at line <a class="el" href="SolarSystem_8hpp_source.html#l00200">200</a> of file <a class="el" href="SolarSystem_8hpp_source.html">SolarSystem.hpp</a>.</p>
+
 </div>
 </div>
 <a class="anchor" id="a1cd314c397564d728851a50e55ba2549"></a><!-- doxytag: member="SolarSystem::getMoonScale" ref="a1cd314c397564d728851a50e55ba2549" args="(void) const " -->
@@ -511,6 +560,8 @@
 <div class="memdoc">
 
 <p>Get the display scaling factor for Earth's oon. </p>
+
+<p>Definition at line <a class="el" href="SolarSystem_8hpp_source.html#l00174">174</a> of file <a class="el" href="SolarSystem_8hpp_source.html">SolarSystem.hpp</a>.</p>
 
 </div>
 </div>
@@ -609,6 +660,8 @@
 
 <p>Get the <a class="el" href="classPlanet.html">Planet</a> object pointer for the Sun. </p>
 
+<p>Definition at line <a class="el" href="SolarSystem_8hpp_source.html#l00194">194</a> of file <a class="el" href="SolarSystem_8hpp_source.html">SolarSystem.hpp</a>.</p>
+
 </div>
 </div>
 <a class="anchor" id="ae3e0ccb2a363203759601494184767f0"></a><!-- doxytag: member="SolarSystem::getTrailsColor" ref="ae3e0ccb2a363203759601494184767f0" args="() const " -->
@@ -627,6 +680,8 @@
 <div class="memdoc">
 
 <p>Get the current color used to draw planet trails lines. </p>
+
+<p>Definition at line <a class="el" href="SolarSystem_8hpp_source.html#l00164">164</a> of file <a class="el" href="SolarSystem_8hpp_source.html">SolarSystem.hpp</a>.</p>
 
 </div>
 </div>
@@ -1051,6 +1106,8 @@
   </dd>
 </dl>
 
+<p>Definition at line <a class="el" href="SolarSystem_8hpp_source.html#l00132">132</a> of file <a class="el" href="SolarSystem_8hpp_source.html">SolarSystem.hpp</a>.</p>
+
 </div>
 </div>
 <a class="anchor" id="a3618fdfbf253de1a398f22ce536e2526"></a><!-- doxytag: member="SolarSystem::setLabelsColor" ref="a3618fdfbf253de1a398f22ce536e2526" args="(const Vec3f &amp;c)" -->
@@ -1131,6 +1188,8 @@
 
 <p>Set the color used to draw planet trails lines. </p>
 
+<p>Definition at line <a class="el" href="SolarSystem_8hpp_source.html#l00162">162</a> of file <a class="el" href="SolarSystem_8hpp_source.html">SolarSystem.hpp</a>.</p>
+
 </div>
 </div>
 <a class="anchor" id="a0680ac6cc833f0238a52a1cceb9542ab"></a><!-- doxytag: member="SolarSystem::update" ref="a0680ac6cc833f0238a52a1cceb9542ab" args="(double deltaTime)" -->
@@ -1175,8 +1234,11 @@
 
 </div>
 </div>
+<hr/>The documentation for this class was generated from the following file:<ul>
+<li>core/modules/<a class="el" href="SolarSystem_8hpp_source.html">SolarSystem.hpp</a></li>
+</ul>
 </div>
-<hr class="footer"/><address style="text-align: right;"><small>Generated on Sat Aug 25 22:13:32 2012 for Stellarium by&nbsp;
+<hr class="footer"/><address style="text-align: right;"><small>Generated on Fri Aug 31 18:07:55 2012 for Stellarium by&nbsp;
 <a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.6.3 </small></address>
 </body>

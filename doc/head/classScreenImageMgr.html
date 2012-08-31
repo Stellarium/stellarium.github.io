@@ -9,7 +9,7 @@
 <tr>
 <td align="left" valign="top" width="32" rowspan="2"><a href="http://www.stellarium.org"><img src="stellarium-logo.png" align="left" border="0" /></a></td>
 <td width="1" rowspan="2">&nbsp;&nbsp;</td>
-<td style="font-size:120%;font-weight:bolder;">Stellarium 0.11.4</td>
+<td style="font-size:120%;font-weight:bolder;">Stellarium 0.12.0</td>
 <td align="right" valign="top" width="230" rowspan="2"></td></tr><tr>
 <td class="postheader" valign="center">
  <a href="index.html">Home</a>&nbsp;&middot;
@@ -19,6 +19,7 @@
  <a href="codingStyle.html">Coding Style</a>&nbsp;&middot;
  <a href="scripting.html">Scripting</a>&nbsp;&middot;
  <a href="plugins.html">Plugins</a>&nbsp;&middot;
+ <a href="renderer.html">Renderer</a>&nbsp;&middot;
  <a href="fileStructure.html">File Structure</a>
 </td>
 </tr>
@@ -59,8 +60,8 @@ void&nbsp;</td><td class="memItemRight" valign="bottom"><b>showImage</b> (const 
 <tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Construct a <a class="el" href="classLabelMgr.html" title="Allows for creation of custom labels on objects or coordinates.">LabelMgr</a> object.  <a href="#ada6c80cf7d17e9c6e489eece1eb76ff1"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classScreenImageMgr.html#aba46c67231f7ec189c78b8d8d8cb6fce">init</a> ()</td></tr>
 <tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Initialize itself.  <a href="#aba46c67231f7ec189c78b8d8d8cb6fce"></a><br/></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">virtual void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classScreenImageMgr.html#a5f38fbc8c8434feb7c3f05f62c5533d3">draw</a> (<a class="el" href="classStelCore.html">StelCore</a> *core)</td></tr>
-<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Execute all the drawing functions for this module.  <a href="#a5f38fbc8c8434feb7c3f05f62c5533d3"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">virtual void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classScreenImageMgr.html#a7cfc15afc740e746f2f7ed3bdf983758">draw</a> (<a class="el" href="classStelCore.html">StelCore</a> *core, class <a class="el" href="classStelRenderer.html">StelRenderer</a> *renderer)</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Execute all the drawing functions for this module.  <a href="#a7cfc15afc740e746f2f7ed3bdf983758"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classScreenImageMgr.html#aabfdd24f31d3b2798ed30687ac86208a">update</a> (double deltaTime)</td></tr>
 <tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Update time-dependent parts of the module.  <a href="#aabfdd24f31d3b2798ed30687ac86208a"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual double&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classScreenImageMgr.html#afc5d935f8533332d918e1dd72b4e077a">getCallOrder</a> (<a class="el" href="classStelModule.html#a11b61d014b51cf6424cd89b1ccd3d768">StelModuleActionName</a> actionName) const </td></tr>
@@ -69,6 +70,8 @@ void&nbsp;</td><td class="memItemRight" valign="bottom"><b>showImage</b> (const 
 <hr/><a name="_details"></a><h2>Detailed Description</h2>
 <p>Module for managing images for scripting. </p>
 <p>Images are identified by a string ID which is passed to <a class="el" href="classScreenImageMgr.html" title="Module for managing images for scripting.">ScreenImageMgr</a> members when it is necessary to specify an image to work with. Member functions in this class which modify the state of the class are all mediated through the signal/slot mechanism to ensure such operations happen in the main thread where images are drawn, and not in the script thread. </p>
+
+<p>Definition at line <a class="el" href="ScreenImageMgr_8hpp_source.html#l00103">103</a> of file <a class="el" href="ScreenImageMgr_8hpp_source.html">ScreenImageMgr.hpp</a>.</p>
 <hr/><h2>Constructor &amp; Destructor Documentation</h2>
 <a class="anchor" id="ada6c80cf7d17e9c6e489eece1eb76ff1"></a><!-- doxytag: member="ScreenImageMgr::ScreenImageMgr" ref="ada6c80cf7d17e9c6e489eece1eb76ff1" args="()" -->
 <div class="memitem">
@@ -158,6 +161,7 @@ void&nbsp;</td><td class="memItemRight" valign="bottom"><b>showImage</b> (const 
     <tr><td valign="top"></td><td valign="top"><em>filename</em>&nbsp;</td><td>the partial path of the file to load. This will be searched for using <a class="el" href="classStelFileMgr.html" title="Provides utilities for locating and handling files.">StelFileMgr</a>, with "scripts/" prefixed to the filename. </td></tr>
     <tr><td valign="top"></td><td valign="top"><em>x</em>&nbsp;</td><td>The x-coordinate for the image (0 = left of screen) </td></tr>
     <tr><td valign="top"></td><td valign="top"><em>y</em>&nbsp;</td><td>The y-coordinate for the image (0 = bottom of screen) </td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>scale</em>&nbsp;</td><td>Image scale multiplier. </td></tr>
     <tr><td valign="top"></td><td valign="top"><em>visible</em>&nbsp;</td><td>The initial visible state of the image </td></tr>
     <tr><td valign="top"></td><td valign="top"><em>alpha</em>&nbsp;</td><td>The initial alpha (transparancy) value for the image (range 0.0 to 1.0) </td></tr>
     <tr><td valign="top"></td><td valign="top"><em>fadeDuration</em>&nbsp;</td><td>the time it takes for screen images to fade in/out/change alpha in seconds. </td></tr>
@@ -213,7 +217,7 @@ void&nbsp;</td><td class="memItemRight" valign="bottom"><b>showImage</b> (const 
 
 </div>
 </div>
-<a class="anchor" id="a5f38fbc8c8434feb7c3f05f62c5533d3"></a><!-- doxytag: member="ScreenImageMgr::draw" ref="a5f38fbc8c8434feb7c3f05f62c5533d3" args="(StelCore *core)" -->
+<a class="anchor" id="a7cfc15afc740e746f2f7ed3bdf983758"></a><!-- doxytag: member="ScreenImageMgr::draw" ref="a7cfc15afc740e746f2f7ed3bdf983758" args="(StelCore *core, class StelRenderer *renderer)" -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
@@ -221,9 +225,18 @@ void&nbsp;</td><td class="memItemRight" valign="bottom"><b>showImage</b> (const 
           <td class="memname">virtual void ScreenImageMgr::draw </td>
           <td>(</td>
           <td class="paramtype"><a class="el" href="classStelCore.html">StelCore</a> *&nbsp;</td>
-          <td class="paramname"> <em>core</em></td>
-          <td>&nbsp;)&nbsp;</td>
-          <td><code> [virtual]</code></td>
+          <td class="paramname"> <em>core</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">class <a class="el" href="classStelRenderer.html">StelRenderer</a> *&nbsp;</td>
+          <td class="paramname"> <em>renderer</em></td><td>&nbsp;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td><td><code> [virtual]</code></td>
         </tr>
       </table>
 </div>
@@ -233,11 +246,12 @@ void&nbsp;</td><td class="memItemRight" valign="bottom"><b>showImage</b> (const 
 <dl><dt><b>Parameters:</b></dt><dd>
   <table border="0" cellspacing="2" cellpadding="0">
     <tr><td valign="top"></td><td valign="top"><em>core</em>&nbsp;</td><td>the core to use for the drawing </td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>renderer</em>&nbsp;</td><td>Renderer to draw with. </td></tr>
   </table>
   </dd>
 </dl>
 
-<p>Reimplemented from <a class="el" href="classStelModule.html#a18fde2820af998395aea9e30bb1138b2">StelModule</a>.</p>
+<p>Reimplemented from <a class="el" href="classStelModule.html#ab352388800724842a5c1e55e250378a6">StelModule</a>.</p>
 
 </div>
 </div>
@@ -303,7 +317,6 @@ void&nbsp;</td><td class="memItemRight" valign="bottom"><b>showImage</b> (const 
 <dl><dt><b>Parameters:</b></dt><dd>
   <table border="0" cellspacing="2" cellpadding="0">
     <tr><td valign="top"></td><td valign="top"><em>id</em>&nbsp;</td><td>the ID for the desired image. </td></tr>
-    <tr><td valign="top"></td><td valign="top"><em>show</em>&nbsp;</td><td>the new visible state to set. </td></tr>
   </table>
   </dd>
 </dl>
@@ -466,8 +479,11 @@ void&nbsp;</td><td class="memItemRight" valign="bottom"><b>showImage</b> (const 
 
 </div>
 </div>
+<hr/>The documentation for this class was generated from the following file:<ul>
+<li>scripting/<a class="el" href="ScreenImageMgr_8hpp_source.html">ScreenImageMgr.hpp</a></li>
+</ul>
 </div>
-<hr class="footer"/><address style="text-align: right;"><small>Generated on Sat Aug 25 22:13:32 2012 for Stellarium by&nbsp;
+<hr class="footer"/><address style="text-align: right;"><small>Generated on Fri Aug 31 18:07:54 2012 for Stellarium by&nbsp;
 <a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.6.3 </small></address>
 </body>

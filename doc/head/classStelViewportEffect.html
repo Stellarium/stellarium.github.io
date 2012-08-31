@@ -9,7 +9,7 @@
 <tr>
 <td align="left" valign="top" width="32" rowspan="2"><a href="http://www.stellarium.org"><img src="stellarium-logo.png" align="left" border="0" /></a></td>
 <td width="1" rowspan="2">&nbsp;&nbsp;</td>
-<td style="font-size:120%;font-weight:bolder;">Stellarium 0.11.4</td>
+<td style="font-size:120%;font-weight:bolder;">Stellarium 0.12.0</td>
 <td align="right" valign="top" width="230" rowspan="2"></td></tr><tr>
 <td class="postheader" valign="center">
  <a href="index.html">Home</a>&nbsp;&middot;
@@ -19,6 +19,7 @@
  <a href="codingStyle.html">Coding Style</a>&nbsp;&middot;
  <a href="scripting.html">Scripting</a>&nbsp;&middot;
  <a href="plugins.html">Plugins</a>&nbsp;&middot;
+ <a href="renderer.html">Renderer</a>&nbsp;&middot;
  <a href="fileStructure.html">File Structure</a>
 </td>
 </tr>
@@ -34,39 +35,18 @@
 <p><a href="classStelViewportEffect-members.html">List of all members.</a></p>
 <table border="0" cellpadding="0" cellspacing="0">
 <tr><td colspan="2"><h2>Public Member Functions</h2></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a9bb6cc1377de5869fe06d283ea1a972d"></a><!-- doxytag: member="StelViewportEffect::getName" ref="a9bb6cc1377de5869fe06d283ea1a972d" args="()" -->
-virtual QString&nbsp;</td><td class="memItemRight" valign="bottom"><b>getName</b> ()</td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">virtual void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classStelViewportEffect.html#a29321f41398841b18370180983c2334e">alterBuffer</a> (QGLFramebufferObject *) const </td></tr>
-<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Alter the GL frame buffer, this method must not display anything.  <a href="#a29321f41398841b18370180983c2334e"></a><br/></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">virtual void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classStelViewportEffect.html#a24069e22d9c8e88fd4bcc72b2cf2c942">paintViewportBuffer</a> (const QGLFramebufferObject *buf) const </td></tr>
-<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Draw the viewport on the screen.  <a href="#a24069e22d9c8e88fd4bcc72b2cf2c942"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a8d5372e2fcb8f88e4047e7d7d4866e59"></a><!-- doxytag: member="StelViewportEffect::getName" ref="a8d5372e2fcb8f88e4047e7d7d4866e59" args="()=0" -->
+virtual QString&nbsp;</td><td class="memItemRight" valign="bottom"><b>getName</b> ()=0</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">virtual void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classStelViewportEffect.html#a2d8440e388b216380355897f47324b6c">drawToViewport</a> (class <a class="el" href="classStelRenderer.html">StelRenderer</a> *renderer)=0</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Apply the effect and draw the viewport.  <a href="#a2d8440e388b216380355897f47324b6c"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classStelViewportEffect.html#a052bf18b3e7b6fa841ad8cac2f9a4448">distortXY</a> (float &amp;x, float &amp;y) const </td></tr>
 <tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Distort an x,y position according to the distortion.  <a href="#a052bf18b3e7b6fa841ad8cac2f9a4448"></a><br/></td></tr>
 </table>
 <hr/><a name="_details"></a><h2>Detailed Description</h2>
 <p>Allow to apply visual effects on the whole Stellarium viewport. </p>
+
+<p>Definition at line <a class="el" href="StelViewportEffect_8hpp_source.html#l00035">35</a> of file <a class="el" href="StelViewportEffect_8hpp_source.html">StelViewportEffect.hpp</a>.</p>
 <hr/><h2>Member Function Documentation</h2>
-<a class="anchor" id="a29321f41398841b18370180983c2334e"></a><!-- doxytag: member="StelViewportEffect::alterBuffer" ref="a29321f41398841b18370180983c2334e" args="(QGLFramebufferObject *) const " -->
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">virtual void StelViewportEffect::alterBuffer </td>
-          <td>(</td>
-          <td class="paramtype">QGLFramebufferObject *&nbsp;</td>
-          <td class="paramname"></td>
-          <td>&nbsp;)&nbsp;</td>
-          <td> const<code> [inline, virtual]</code></td>
-        </tr>
-      </table>
-</div>
-<div class="memdoc">
-
-<p>Alter the GL frame buffer, this method must not display anything. </p>
-<p>The default implementation does nothing. </p>
-
-</div>
-</div>
 <a class="anchor" id="a052bf18b3e7b6fa841ad8cac2f9a4448"></a><!-- doxytag: member="StelViewportEffect::distortXY" ref="a052bf18b3e7b6fa841ad8cac2f9a4448" args="(float &amp;x, float &amp;y) const " -->
 <div class="memitem">
 <div class="memproto">
@@ -97,38 +77,44 @@ virtual QString&nbsp;</td><td class="memItemRight" valign="bottom"><b>getName</b
 
 <p>Reimplemented in <a class="el" href="classStelViewportDistorterFisheyeToSphericMirror.html#aa12c9c6901e8a9327539950bc9a849fd">StelViewportDistorterFisheyeToSphericMirror</a>.</p>
 
+<p>Definition at line <a class="el" href="StelViewportEffect_8hpp_source.html#l00048">48</a> of file <a class="el" href="StelViewportEffect_8hpp_source.html">StelViewportEffect.hpp</a>.</p>
+
 </div>
 </div>
-<a class="anchor" id="a24069e22d9c8e88fd4bcc72b2cf2c942"></a><!-- doxytag: member="StelViewportEffect::paintViewportBuffer" ref="a24069e22d9c8e88fd4bcc72b2cf2c942" args="(const QGLFramebufferObject *buf) const " -->
+<a class="anchor" id="a2d8440e388b216380355897f47324b6c"></a><!-- doxytag: member="StelViewportEffect::drawToViewport" ref="a2d8440e388b216380355897f47324b6c" args="(class StelRenderer *renderer)=0" -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">virtual void StelViewportEffect::paintViewportBuffer </td>
+          <td class="memname">virtual void StelViewportEffect::drawToViewport </td>
           <td>(</td>
-          <td class="paramtype">const QGLFramebufferObject *&nbsp;</td>
-          <td class="paramname"> <em>buf</em></td>
+          <td class="paramtype">class <a class="el" href="classStelRenderer.html">StelRenderer</a> *&nbsp;</td>
+          <td class="paramname"> <em>renderer</em></td>
           <td>&nbsp;)&nbsp;</td>
-          <td> const<code> [virtual]</code></td>
+          <td><code> [pure virtual]</code></td>
         </tr>
       </table>
 </div>
 <div class="memdoc">
 
-<p>Draw the viewport on the screen. </p>
+<p>Apply the effect and draw the viewport. </p>
+<p>This actually puts the result of rendering onto the screen.</p>
 <dl><dt><b>Parameters:</b></dt><dd>
   <table border="0" cellspacing="2" cellpadding="0">
-    <tr><td valign="top"></td><td valign="top"><em>buf</em>&nbsp;</td><td>the GL frame buffer containing the Stellarium viewport alreay drawn. The default implementation paints the buffer on the fullscreen. </td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>renderer</em>&nbsp;</td><td>Renderer to draw with. </td></tr>
   </table>
   </dd>
 </dl>
 
-<p>Reimplemented in <a class="el" href="classStelViewportDistorterFisheyeToSphericMirror.html#aed618766ca5e54e1b14e0743cd0d75a9">StelViewportDistorterFisheyeToSphericMirror</a>.</p>
+<p>Implemented in <a class="el" href="classStelViewportDistorterFisheyeToSphericMirror.html#a82d1326b32a4d8fbd350b59995b4c61a">StelViewportDistorterFisheyeToSphericMirror</a>.</p>
 
 </div>
 </div>
+<hr/>The documentation for this class was generated from the following file:<ul>
+<li>core/<a class="el" href="StelViewportEffect_8hpp_source.html">StelViewportEffect.hpp</a></li>
+</ul>
 </div>
-<hr class="footer"/><address style="text-align: right;"><small>Generated on Sat Aug 25 22:13:34 2012 for Stellarium by&nbsp;
+<hr class="footer"/><address style="text-align: right;"><small>Generated on Fri Aug 31 18:08:03 2012 for Stellarium by&nbsp;
 <a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.6.3 </small></address>
 </body>

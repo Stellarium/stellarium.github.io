@@ -9,7 +9,7 @@
 <tr>
 <td align="left" valign="top" width="32" rowspan="2"><a href="http://www.stellarium.org"><img src="stellarium-logo.png" align="left" border="0" /></a></td>
 <td width="1" rowspan="2">&nbsp;&nbsp;</td>
-<td style="font-size:120%;font-weight:bolder;">Stellarium 0.11.4</td>
+<td style="font-size:120%;font-weight:bolder;">Stellarium 0.12.0</td>
 <td align="right" valign="top" width="230" rowspan="2"></td></tr><tr>
 <td class="postheader" valign="center">
  <a href="index.html">Home</a>&nbsp;&middot;
@@ -19,6 +19,7 @@
  <a href="codingStyle.html">Coding Style</a>&nbsp;&middot;
  <a href="scripting.html">Scripting</a>&nbsp;&middot;
  <a href="plugins.html">Plugins</a>&nbsp;&middot;
+ <a href="renderer.html">Renderer</a>&nbsp;&middot;
  <a href="fileStructure.html">File Structure</a>
 </td>
 </tr>
@@ -49,8 +50,8 @@
 <tr><td colspan="2"><h2>Public Member Functions</h2></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMilkyWay.html#acdadd0d9837679927f3cef0e1bb544bc">init</a> ()</td></tr>
 <tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Initialize the class.  <a href="#acdadd0d9837679927f3cef0e1bb544bc"></a><br/></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">virtual void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMilkyWay.html#abc7e3b382bb4473476d7be2ea31d8a28">draw</a> (<a class="el" href="classStelCore.html">StelCore</a> *core)</td></tr>
-<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Draw the Milky Way.  <a href="#abc7e3b382bb4473476d7be2ea31d8a28"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">virtual void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMilkyWay.html#a8ee3935f821cd884207bcc603905cc8b">draw</a> (<a class="el" href="classStelCore.html">StelCore</a> *core, class <a class="el" href="classStelRenderer.html">StelRenderer</a> *renderer)</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Draw the Milky Way.  <a href="#a8ee3935f821cd884207bcc603905cc8b"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMilkyWay.html#a35a3018d703b5cd462997bd9c77a5d0f">update</a> (double deltaTime)</td></tr>
 <tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Update and time-dependent state.  <a href="#a35a3018d703b5cd462997bd9c77a5d0f"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual double&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMilkyWay.html#ad2fe0a59bb05f6cd1985cc009e982b99">getCallOrder</a> (<a class="el" href="classStelModule.html#a11b61d014b51cf6424cd89b1ccd3d768">StelModuleActionName</a> actionName) const </td></tr>
@@ -58,8 +59,10 @@
 </table>
 <hr/><a name="_details"></a><h2>Detailed Description</h2>
 <p>Manages the displaying of the Milky Way. </p>
+
+<p>Definition at line <a class="el" href="MilkyWay_8hpp_source.html#l00031">31</a> of file <a class="el" href="MilkyWay_8hpp_source.html">MilkyWay.hpp</a>.</p>
 <hr/><h2>Member Function Documentation</h2>
-<a class="anchor" id="abc7e3b382bb4473476d7be2ea31d8a28"></a><!-- doxytag: member="MilkyWay::draw" ref="abc7e3b382bb4473476d7be2ea31d8a28" args="(StelCore *core)" -->
+<a class="anchor" id="a8ee3935f821cd884207bcc603905cc8b"></a><!-- doxytag: member="MilkyWay::draw" ref="a8ee3935f821cd884207bcc603905cc8b" args="(StelCore *core, class StelRenderer *renderer)" -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
@@ -67,17 +70,33 @@
           <td class="memname">virtual void MilkyWay::draw </td>
           <td>(</td>
           <td class="paramtype"><a class="el" href="classStelCore.html">StelCore</a> *&nbsp;</td>
-          <td class="paramname"> <em>core</em></td>
-          <td>&nbsp;)&nbsp;</td>
-          <td><code> [virtual]</code></td>
+          <td class="paramname"> <em>core</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">class <a class="el" href="classStelRenderer.html">StelRenderer</a> *&nbsp;</td>
+          <td class="paramname"> <em>renderer</em></td><td>&nbsp;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td><td><code> [virtual]</code></td>
         </tr>
       </table>
 </div>
 <div class="memdoc">
 
 <p>Draw the Milky Way. </p>
+<dl><dt><b>Parameters:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"></td><td valign="top"><em>core</em>&nbsp;</td><td>The <a class="el" href="classStelCore.html" title="Main class for Stellarium core processing.">StelCore</a> object. </td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>renderer</em>&nbsp;</td><td>Renderer to draw with. </td></tr>
+  </table>
+  </dd>
+</dl>
 
-<p>Reimplemented from <a class="el" href="classStelModule.html#a18fde2820af998395aea9e30bb1138b2">StelModule</a>.</p>
+<p>Reimplemented from <a class="el" href="classStelModule.html#ab352388800724842a5c1e55e250378a6">StelModule</a>.</p>
 
 </div>
 </div>
@@ -101,6 +120,8 @@
 
 <p>Reimplemented from <a class="el" href="classStelModule.html#a9e03c52f02fb41a0727360f7644fc3d6">StelModule</a>.</p>
 
+<p>Definition at line <a class="el" href="MilkyWay_8hpp_source.html#l00057">57</a> of file <a class="el" href="MilkyWay_8hpp_source.html">MilkyWay.hpp</a>.</p>
+
 </div>
 </div>
 <a class="anchor" id="a4b139fc52a64c9414603f2b0e2bc4bcb"></a><!-- doxytag: member="MilkyWay::getColor" ref="a4b139fc52a64c9414603f2b0e2bc4bcb" args="() const " -->
@@ -119,6 +140,8 @@
 <div class="memdoc">
 
 <p>Get the color used for rendering the milky way. </p>
+
+<p>Definition at line <a class="el" href="MilkyWay_8hpp_source.html#l00068">68</a> of file <a class="el" href="MilkyWay_8hpp_source.html">MilkyWay.hpp</a>.</p>
 
 </div>
 </div>
@@ -158,6 +181,8 @@
 <div class="memdoc">
 
 <p>Get Milky Way intensity. </p>
+
+<p>Definition at line <a class="el" href="MilkyWay_8hpp_source.html#l00063">63</a> of file <a class="el" href="MilkyWay_8hpp_source.html">MilkyWay.hpp</a>.</p>
 
 </div>
 </div>
@@ -201,6 +226,8 @@
 
 <p>Sets the color to use for rendering the milky way. </p>
 
+<p>Definition at line <a class="el" href="MilkyWay_8hpp_source.html#l00070">70</a> of file <a class="el" href="MilkyWay_8hpp_source.html">MilkyWay.hpp</a>.</p>
+
 </div>
 </div>
 <a class="anchor" id="ac365cf02f2019b6485337a6c48cec5cb"></a><!-- doxytag: member="MilkyWay::setFlagShow" ref="ac365cf02f2019b6485337a6c48cec5cb" args="(bool b)" -->
@@ -241,6 +268,8 @@
 
 <p>Set Milky Way intensity. </p>
 
+<p>Definition at line <a class="el" href="MilkyWay_8hpp_source.html#l00065">65</a> of file <a class="el" href="MilkyWay_8hpp_source.html">MilkyWay.hpp</a>.</p>
+
 </div>
 </div>
 <a class="anchor" id="a35a3018d703b5cd462997bd9c77a5d0f"></a><!-- doxytag: member="MilkyWay::update" ref="a35a3018d703b5cd462997bd9c77a5d0f" args="(double deltaTime)" -->
@@ -266,8 +295,11 @@
 
 </div>
 </div>
+<hr/>The documentation for this class was generated from the following file:<ul>
+<li>core/modules/<a class="el" href="MilkyWay_8hpp_source.html">MilkyWay.hpp</a></li>
+</ul>
 </div>
-<hr class="footer"/><address style="text-align: right;"><small>Generated on Sat Aug 25 22:13:31 2012 for Stellarium by&nbsp;
+<hr class="footer"/><address style="text-align: right;"><small>Generated on Fri Aug 31 18:07:53 2012 for Stellarium by&nbsp;
 <a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.6.3 </small></address>
 </body>

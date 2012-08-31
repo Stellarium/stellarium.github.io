@@ -9,7 +9,7 @@
 <tr>
 <td align="left" valign="top" width="32" rowspan="2"><a href="http://www.stellarium.org"><img src="stellarium-logo.png" align="left" border="0" /></a></td>
 <td width="1" rowspan="2">&nbsp;&nbsp;</td>
-<td style="font-size:120%;font-weight:bolder;">Stellarium 0.11.4</td>
+<td style="font-size:120%;font-weight:bolder;">Stellarium 0.12.0</td>
 <td align="right" valign="top" width="230" rowspan="2"></td></tr><tr>
 <td class="postheader" valign="center">
  <a href="index.html">Home</a>&nbsp;&middot;
@@ -19,6 +19,7 @@
  <a href="codingStyle.html">Coding Style</a>&nbsp;&middot;
  <a href="scripting.html">Scripting</a>&nbsp;&middot;
  <a href="plugins.html">Plugins</a>&nbsp;&middot;
+ <a href="renderer.html">Renderer</a>&nbsp;&middot;
  <a href="fileStructure.html">File Structure</a>
 </td>
 </tr>
@@ -41,8 +42,8 @@
 <tr><td colspan="2"><h2>Protected Member Functions</h2></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top"><a class="el" href="structBigStarCatalogExtension_1_1SpecialZoneData.html">SpecialZoneData</a>&lt; Star &gt; *&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classBigStarCatalogExtension_1_1SpecialZoneArray.html#a90ffc8bcd6c6edebb026ea1699163f5b">getZones</a> (void) const </td></tr>
 <tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Get an array of all <a class="el" href="structBigStarCatalogExtension_1_1SpecialZoneData.html" title="Wrapper struct around ZoneData.">SpecialZoneData</a> objects in this catalog.  <a href="#a90ffc8bcd6c6edebb026ea1699163f5b"></a><br/></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classBigStarCatalogExtension_1_1SpecialZoneArray.html#ae82fdf4673fce0fac974d43aad3f5ef5">draw</a> (<a class="el" href="classStelPainter.html">StelPainter</a> *sPainter, int index, bool is_inside, const float *rcmag_table, <a class="el" href="classStelCore.html">StelCore</a> *core, unsigned int maxMagStarName, float names_brightness) const </td></tr>
-<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Draw stars and their names onto the viewport.  <a href="#ae82fdf4673fce0fac974d43aad3f5ef5"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classBigStarCatalogExtension_1_1SpecialZoneArray.html#a774aa5b03a331ddc7c1a239f9c60a655">draw</a> (<a class="el" href="classQSharedPointer.html">StelProjectorP</a> projector, class <a class="el" href="classStelRenderer.html">StelRenderer</a> *renderer, int index, bool is_inside, const float *rcmag_table, <a class="el" href="classStelCore.html">StelCore</a> *core, unsigned int maxMagStarName, float names_brightness) const </td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Draw stars and their names onto the viewport.  <a href="#a774aa5b03a331ddc7c1a239f9c60a655"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a1147b5d7960b78941c0d5816bf128543"></a><!-- doxytag: member="BigStarCatalogExtension::SpecialZoneArray::scaleAxis" ref="a1147b5d7960b78941c0d5816bf128543" args="(void)" -->
 void&nbsp;</td><td class="memItemRight" valign="bottom"><b>scaleAxis</b> (void)</td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classBigStarCatalogExtension_1_1SpecialZoneArray.html#ab40ed51150c5e282f02d81a8f3e98938">searchAround</a> (const <a class="el" href="classStelCore.html">StelCore</a> *core, int index, const <a class="el" href="classVector3.html">Vec3d</a> &amp;v, double cosLimFov, QList&lt; <a class="el" href="classQSharedPointerNoDelete.html">StelObjectP</a> &gt; &amp;result)</td></tr>
@@ -63,6 +64,8 @@ Star *&nbsp;</td><td class="memItemRight" valign="bottom"><b>stars</b></td></tr>
   </table>
   </dd>
 </dl>
+
+<p>Definition at line <a class="el" href="ZoneArray_8hpp_source.html#l00155">155</a> of file <a class="el" href="ZoneArray_8hpp_source.html">ZoneArray.hpp</a>.</p>
 <hr/><h2>Constructor &amp; Destructor Documentation</h2>
 <a class="anchor" id="a19db1a3e470f48b7f80d913be9449f4a"></a><!-- doxytag: member="BigStarCatalogExtension::SpecialZoneArray::SpecialZoneArray" ref="a19db1a3e470f48b7f80d913be9449f4a" args="(QFile *file, bool byte_swap, bool use_mmap, int level, int mag_min, int mag_range, int mag_steps)" -->
 <div class="memitem">
@@ -138,7 +141,7 @@ template&lt;class Star&gt; </div>
 </div>
 </div>
 <hr/><h2>Member Function Documentation</h2>
-<a class="anchor" id="ae82fdf4673fce0fac974d43aad3f5ef5"></a><!-- doxytag: member="BigStarCatalogExtension::SpecialZoneArray::draw" ref="ae82fdf4673fce0fac974d43aad3f5ef5" args="(StelPainter *sPainter, int index, bool is_inside, const float *rcmag_table, StelCore *core, unsigned int maxMagStarName, float names_brightness) const " -->
+<a class="anchor" id="a774aa5b03a331ddc7c1a239f9c60a655"></a><!-- doxytag: member="BigStarCatalogExtension::SpecialZoneArray::draw" ref="a774aa5b03a331ddc7c1a239f9c60a655" args="(StelProjectorP projector, class StelRenderer *renderer, int index, bool is_inside, const float *rcmag_table, StelCore *core, unsigned int maxMagStarName, float names_brightness) const " -->
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
@@ -147,8 +150,14 @@ template&lt;class Star&gt; </div>
         <tr>
           <td class="memname">void <a class="el" href="classBigStarCatalogExtension_1_1SpecialZoneArray.html">BigStarCatalogExtension::SpecialZoneArray</a>&lt; Star &gt;::draw </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="classStelPainter.html">StelPainter</a> *&nbsp;</td>
-          <td class="paramname"> <em>sPainter</em>, </td>
+          <td class="paramtype"><a class="el" href="classQSharedPointer.html">StelProjectorP</a>&nbsp;</td>
+          <td class="paramname"> <em>projector</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">class <a class="el" href="classStelRenderer.html">StelRenderer</a> *&nbsp;</td>
+          <td class="paramname"> <em>renderer</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
@@ -198,7 +207,8 @@ template&lt;class Star&gt; </div>
 <p>Draw stars and their names onto the viewport. </p>
 <dl><dt><b>Parameters:</b></dt><dd>
   <table border="0" cellspacing="2" cellpadding="0">
-    <tr><td valign="top"></td><td valign="top"><em>sPainter</em>&nbsp;</td><td>the painter to use </td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>projector</em>&nbsp;</td><td>Projector to project 3D coords to the viewport. </td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>renderer</em>&nbsp;</td><td>Renderer to use for drawing. </td></tr>
     <tr><td valign="top"></td><td valign="top"><em>index</em>&nbsp;</td><td>zone index to draw </td></tr>
     <tr><td valign="top"></td><td valign="top"><em>is_inside</em>&nbsp;</td><td>whether the zone is inside the current viewport </td></tr>
     <tr><td valign="top"></td><td valign="top"><em>rcmag_table</em>&nbsp;</td><td>table of magnitudes </td></tr>
@@ -209,7 +219,7 @@ template&lt;class Star&gt; </div>
   </dd>
 </dl>
 
-<p>Implements <a class="el" href="classBigStarCatalogExtension_1_1ZoneArray.html#af770370f9ec9fd6bdb69d4219ff4ef1f">BigStarCatalogExtension::ZoneArray</a>.</p>
+<p>Implements <a class="el" href="classBigStarCatalogExtension_1_1ZoneArray.html#a46cb18214085e3053df4437d6c589243">BigStarCatalogExtension::ZoneArray</a>.</p>
 
 </div>
 </div>
@@ -232,6 +242,8 @@ template&lt;class Star&gt; </div>
 <div class="memdoc">
 
 <p>Get an array of all <a class="el" href="structBigStarCatalogExtension_1_1SpecialZoneData.html" title="Wrapper struct around ZoneData.">SpecialZoneData</a> objects in this catalog. </p>
+
+<p>Definition at line <a class="el" href="ZoneArray_8hpp_source.html#l00171">171</a> of file <a class="el" href="ZoneArray_8hpp_source.html">ZoneArray.hpp</a>.</p>
 
 </div>
 </div>
@@ -286,8 +298,11 @@ template&lt;class Star&gt; </div>
 
 </div>
 </div>
+<hr/>The documentation for this class was generated from the following file:<ul>
+<li>core/modules/<a class="el" href="ZoneArray_8hpp_source.html">ZoneArray.hpp</a></li>
+</ul>
 </div>
-<hr class="footer"/><address style="text-align: right;"><small>Generated on Sat Aug 25 22:13:34 2012 for Stellarium by&nbsp;
+<hr class="footer"/><address style="text-align: right;"><small>Generated on Fri Aug 31 18:08:04 2012 for Stellarium by&nbsp;
 <a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.6.3 </small></address>
 </body>

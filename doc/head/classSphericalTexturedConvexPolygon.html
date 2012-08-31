@@ -9,7 +9,7 @@
 <tr>
 <td align="left" valign="top" width="32" rowspan="2"><a href="http://www.stellarium.org"><img src="stellarium-logo.png" align="left" border="0" /></a></td>
 <td width="1" rowspan="2">&nbsp;&nbsp;</td>
-<td style="font-size:120%;font-weight:bolder;">Stellarium 0.11.4</td>
+<td style="font-size:120%;font-weight:bolder;">Stellarium 0.12.0</td>
 <td align="right" valign="top" width="230" rowspan="2"></td></tr><tr>
 <td class="postheader" valign="center">
  <a href="index.html">Home</a>&nbsp;&middot;
@@ -19,6 +19,7 @@
  <a href="codingStyle.html">Coding Style</a>&nbsp;&middot;
  <a href="scripting.html">Scripting</a>&nbsp;&middot;
  <a href="plugins.html">Plugins</a>&nbsp;&middot;
+ <a href="renderer.html">Renderer</a>&nbsp;&middot;
  <a href="fileStructure.html">File Structure</a>
 </td>
 </tr>
@@ -40,20 +41,28 @@
 <tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Constructor from one contour.  <a href="#a44b79f4022ade70bd62066c645812aae"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSphericalTexturedConvexPolygon.html#a8cd0b41d5c57075d13fb13fcade7e9b8">SphericalTexturedConvexPolygon</a> (const <a class="el" href="classVector3.html">Vec3d</a> &amp;e0, const <a class="el" href="classVector3.html">Vec3d</a> &amp;e1, const <a class="el" href="classVector3.html">Vec3d</a> &amp;e2, const <a class="el" href="classVector3.html">Vec3d</a> &amp;e3)</td></tr>
 <tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Special constructor for quads.  <a href="#a8cd0b41d5c57075d13fb13fcade7e9b8"></a><br/></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="structStelVertexArray.html">StelVertexArray</a>&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSphericalTexturedConvexPolygon.html#a5991684354597a8b13b02bf2029fed74">getFillVertexArray</a> () const </td></tr>
-<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Return an openGL compatible array to be displayed using vertex arrays.  <a href="#a5991684354597a8b13b02bf2029fed74"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSphericalTexturedConvexPolygon.html#a846bbe50cc73763518a2bbadc46ffc33">setContour</a> (const QVector&lt; <a class="el" href="classVector3.html">Vec3d</a> &gt; &amp;acontour, const QVector&lt; <a class="el" href="classVector2.html">Vec2f</a> &gt; &amp;texCoord)</td></tr>
 <tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Set a single contour defining the <a class="el" href="classSphericalPolygon.html">SphericalPolygon</a>.  <a href="#a846bbe50cc73763518a2bbadc46ffc33"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual QVariantList&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSphericalTexturedConvexPolygon.html#aa6b61d4b13300867a41777404a315c5d">toQVariant</a> () const </td></tr>
 <tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Serialize the region into a QVariant map matching the JSON format.  <a href="#aa6b61d4b13300867a41777404a315c5d"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSphericalTexturedConvexPolygon.html#a89b8e11713ad0c57e759c2c22f49aa44">serialize</a> (QDataStream &amp;out) const </td></tr>
 <tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Serialize the region. This method must allow as fast as possible serialization and work with <a class="el" href="classSphericalConvexPolygon.html#a81af266616c8f691d6154389f9c3983a" title="Deserialize the region. This method must allow as fast as possible deserialization...">deserialize()</a>.  <a href="#a89b8e11713ad0c57e759c2c22f49aa44"></a><br/></td></tr>
+<tr><td colspan="2"><h2>Protected Member Functions</h2></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">virtual void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSphericalTexturedConvexPolygon.html#a4861b6f6c1e65482f819269c7fbd2553">updateFillVertexBuffer</a> (class <a class="el" href="classStelRenderer.html">StelRenderer</a> *renderer, const <a class="el" href="structSphericalRegion_1_1DrawParams.html">DrawParams</a> &amp;params, bool handleDiscontinuity)</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Update the vertex buffer used by <a class="el" href="classSphericalRegion.html#a0df0a7d7091a361c0f9e90b322f08957" title="Draw the region as triangles (i.e.">drawFill()</a>.  <a href="#a4861b6f6c1e65482f819269c7fbd2553"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">virtual void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSphericalTexturedConvexPolygon.html#ac524d8c93c69f72c1fb6cc3be148fc49">drawFillVertexBuffer</a> (class <a class="el" href="classStelRenderer.html">StelRenderer</a> *renderer, class <a class="el" href="classStelProjector.html">StelProjector</a> *projector)</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Drawing part of <a class="el" href="classSphericalRegion.html#a0df0a7d7091a361c0f9e90b322f08957" title="Draw the region as triangles (i.e.">drawFill()</a> - assumes the buffer/s is/are generated.  <a href="#ac524d8c93c69f72c1fb6cc3be148fc49"></a><br/></td></tr>
 <tr><td colspan="2"><h2>Protected Attributes</h2></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">QVector&lt; <a class="el" href="classVector2.html">Vec2f</a> &gt;&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSphericalTexturedConvexPolygon.html#a3502415f33eabb5dcc35b140cd444cee">textureCoords</a></td></tr>
-<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">A list of uv textures coordinates corresponding to the triangle vertices.  <a href="#a3502415f33eabb5dcc35b140cd444cee"></a><br/></td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">A list of uv texture coordinates corresponding to the triangle vertices.  <a href="#a3502415f33eabb5dcc35b140cd444cee"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="el" href="classStelVertexBuffer.html">StelVertexBuffer</a><br class="typebreak"/>
+&lt; <a class="el" href="structSphericalRegion_1_1TexturedVertex.html">TexturedVertex</a> &gt; *&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSphericalTexturedConvexPolygon.html#a5ab815bc50bd84a8b4ba71bf7849a0c8">fillTexturedVertexBuffer</a></td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Vertex buffer used in our override of <a class="el" href="classSphericalRegion.html#a0df0a7d7091a361c0f9e90b322f08957" title="Draw the region as triangles (i.e.">drawFill()</a> (using vertices with texcoords).  <a href="#a5ab815bc50bd84a8b4ba71bf7849a0c8"></a><br/></td></tr>
 </table>
 <hr/><a name="_details"></a><h2>Detailed Description</h2>
 <p>Extension of <a class="el" href="classSphericalConvexPolygon.html" title="A special case of SphericalPolygon for which the polygon is convex.">SphericalConvexPolygon</a> for textured polygon. </p>
+
+<p>Definition at line <a class="el" href="StelSphereGeometry_8hpp_source.html#l01099">1099</a> of file <a class="el" href="StelSphereGeometry_8hpp_source.html">StelSphereGeometry.hpp</a>.</p>
 <hr/><h2>Constructor &amp; Destructor Documentation</h2>
 <a class="anchor" id="aa9bfa0c2376f6ca13c7d54f45a910819"></a><!-- doxytag: member="SphericalTexturedConvexPolygon::SphericalTexturedConvexPolygon" ref="aa9bfa0c2376f6ca13c7d54f45a910819" args="()" -->
 <div class="memitem">
@@ -71,6 +80,8 @@
 <div class="memdoc">
 
 <p>Default constructor. </p>
+
+<p>Definition at line <a class="el" href="StelSphereGeometry_8hpp_source.html#l01103">1103</a> of file <a class="el" href="StelSphereGeometry_8hpp_source.html">StelSphereGeometry.hpp</a>.</p>
 
 </div>
 </div>
@@ -100,6 +111,8 @@
 <div class="memdoc">
 
 <p>Constructor from one contour. </p>
+
+<p>Definition at line <a class="el" href="StelSphereGeometry_8hpp_source.html#l01109">1109</a> of file <a class="el" href="StelSphereGeometry_8hpp_source.html">StelSphereGeometry.hpp</a>.</p>
 
 </div>
 </div>
@@ -143,28 +156,46 @@
 <p>Special constructor for quads. </p>
 <p>Use the 4 textures corners for the 4 vertices. </p>
 
+<p>Definition at line <a class="el" href="StelSphereGeometry_8hpp_source.html#l01118">1118</a> of file <a class="el" href="StelSphereGeometry_8hpp_source.html">StelSphereGeometry.hpp</a>.</p>
+
 </div>
 </div>
 <hr/><h2>Member Function Documentation</h2>
-<a class="anchor" id="a5991684354597a8b13b02bf2029fed74"></a><!-- doxytag: member="SphericalTexturedConvexPolygon::getFillVertexArray" ref="a5991684354597a8b13b02bf2029fed74" args="() const " -->
+<a class="anchor" id="ac524d8c93c69f72c1fb6cc3be148fc49"></a><!-- doxytag: member="SphericalTexturedConvexPolygon::drawFillVertexBuffer" ref="ac524d8c93c69f72c1fb6cc3be148fc49" args="(class StelRenderer *renderer, class StelProjector *projector)" -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">virtual <a class="el" href="structStelVertexArray.html">StelVertexArray</a> SphericalTexturedConvexPolygon::getFillVertexArray </td>
+          <td class="memname">virtual void SphericalTexturedConvexPolygon::drawFillVertexBuffer </td>
           <td>(</td>
-          <td class="paramname"></td>
-          <td>&nbsp;)&nbsp;</td>
-          <td> const<code> [inline, virtual]</code></td>
+          <td class="paramtype">class <a class="el" href="classStelRenderer.html">StelRenderer</a> *&nbsp;</td>
+          <td class="paramname"> <em>renderer</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">class <a class="el" href="classStelProjector.html">StelProjector</a> *&nbsp;</td>
+          <td class="paramname"> <em>projector</em></td><td>&nbsp;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td><td><code> [protected, virtual]</code></td>
         </tr>
       </table>
 </div>
 <div class="memdoc">
 
-<p>Return an openGL compatible array to be displayed using vertex arrays. </p>
-<p>This method is not optimized for <a class="el" href="classSphericalConvexPolygon.html" title="A special case of SphericalPolygon for which the polygon is convex.">SphericalConvexPolygon</a> instances. </p>
+<p>Drawing part of <a class="el" href="classSphericalRegion.html#a0df0a7d7091a361c0f9e90b322f08957" title="Draw the region as triangles (i.e.">drawFill()</a> - assumes the buffer/s is/are generated. </p>
+<dl><dt><b>Parameters:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"></td><td valign="top"><em>renderer</em>&nbsp;</td><td>Renderer used for drawing. </td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>projector</em>&nbsp;</td><td>Projector to project the vertices (NULL if subdivision is enabled, as in that case the projection is done during buffer generation) </td></tr>
+  </table>
+  </dd>
+</dl>
 
-<p>Reimplemented from <a class="el" href="classSphericalConvexPolygon.html#a6929629aa21cf1ff1be77367c4fd884a">SphericalConvexPolygon</a>.</p>
+<p>Reimplemented from <a class="el" href="classSphericalConvexPolygon.html#a5cdedc8955e8c10551bf0d1e3ab18086">SphericalConvexPolygon</a>.</p>
 
 </div>
 </div>
@@ -187,6 +218,8 @@
 <p>Serialize the region. This method must allow as fast as possible serialization and work with <a class="el" href="classSphericalConvexPolygon.html#a81af266616c8f691d6154389f9c3983a" title="Deserialize the region. This method must allow as fast as possible deserialization...">deserialize()</a>. </p>
 
 <p>Reimplemented from <a class="el" href="classSphericalConvexPolygon.html#aeb511aba860c18d96952b626388e4fcf">SphericalConvexPolygon</a>.</p>
+
+<p>Definition at line <a class="el" href="StelSphereGeometry_8hpp_source.html#l01152">1152</a> of file <a class="el" href="StelSphereGeometry_8hpp_source.html">StelSphereGeometry.hpp</a>.</p>
 
 </div>
 </div>
@@ -224,6 +257,8 @@
   </dd>
 </dl>
 
+<p>Definition at line <a class="el" href="StelSphereGeometry_8hpp_source.html#l01137">1137</a> of file <a class="el" href="StelSphereGeometry_8hpp_source.html">StelSphereGeometry.hpp</a>.</p>
+
 </div>
 </div>
 <a class="anchor" id="aa6b61d4b13300867a41777404a315c5d"></a><!-- doxytag: member="SphericalTexturedConvexPolygon::toQVariant" ref="aa6b61d4b13300867a41777404a315c5d" args="() const " -->
@@ -250,7 +285,70 @@
 
 </div>
 </div>
+<a class="anchor" id="a4861b6f6c1e65482f819269c7fbd2553"></a><!-- doxytag: member="SphericalTexturedConvexPolygon::updateFillVertexBuffer" ref="a4861b6f6c1e65482f819269c7fbd2553" args="(class StelRenderer *renderer, const DrawParams &amp;params, bool handleDiscontinuity)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual void SphericalTexturedConvexPolygon::updateFillVertexBuffer </td>
+          <td>(</td>
+          <td class="paramtype">class <a class="el" href="classStelRenderer.html">StelRenderer</a> *&nbsp;</td>
+          <td class="paramname"> <em>renderer</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="structSphericalRegion_1_1DrawParams.html">DrawParams</a> &amp;&nbsp;</td>
+          <td class="paramname"> <em>params</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool&nbsp;</td>
+          <td class="paramname"> <em>handleDiscontinuity</em></td><td>&nbsp;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td><td><code> [protected, virtual]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Update the vertex buffer used by <a class="el" href="classSphericalRegion.html#a0df0a7d7091a361c0f9e90b322f08957" title="Draw the region as triangles (i.e.">drawFill()</a>. </p>
+<p>Called when drawing parameters have changed, or when we cannot cache vertices (e.g. when subdividing and this projecting outside Renderer).</p>
+<dl><dt><b>Parameters:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"></td><td valign="top"><em>renderer</em>&nbsp;</td><td>Renderer to create vertex buffer. </td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>params</em>&nbsp;</td><td>Parameters used for drawing (which also affect vertex generation). </td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>handleDiscontinuity</em>&nbsp;</td><td>Do we need to ensure that no triangles cross a projection discontinuity? </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p>Reimplemented from <a class="el" href="classSphericalConvexPolygon.html#a7c2b65093aaa654752b8825ba9f6182d">SphericalConvexPolygon</a>.</p>
+
+</div>
+</div>
 <hr/><h2>Member Data Documentation</h2>
+<a class="anchor" id="a5ab815bc50bd84a8b4ba71bf7849a0c8"></a><!-- doxytag: member="SphericalTexturedConvexPolygon::fillTexturedVertexBuffer" ref="a5ab815bc50bd84a8b4ba71bf7849a0c8" args="" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classStelVertexBuffer.html">StelVertexBuffer</a>&lt;<a class="el" href="structSphericalRegion_1_1TexturedVertex.html">TexturedVertex</a>&gt;* <a class="el" href="classSphericalTexturedConvexPolygon.html#a5ab815bc50bd84a8b4ba71bf7849a0c8">SphericalTexturedConvexPolygon::fillTexturedVertexBuffer</a><code> [protected]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Vertex buffer used in our override of <a class="el" href="classSphericalRegion.html#a0df0a7d7091a361c0f9e90b322f08957" title="Draw the region as triangles (i.e.">drawFill()</a> (using vertices with texcoords). </p>
+
+<p>Definition at line <a class="el" href="StelSphereGeometry_8hpp_source.html#l01160">1160</a> of file <a class="el" href="StelSphereGeometry_8hpp_source.html">StelSphereGeometry.hpp</a>.</p>
+
+</div>
+</div>
 <a class="anchor" id="a3502415f33eabb5dcc35b140cd444cee"></a><!-- doxytag: member="SphericalTexturedConvexPolygon::textureCoords" ref="a3502415f33eabb5dcc35b140cd444cee" args="" -->
 <div class="memitem">
 <div class="memproto">
@@ -262,13 +360,18 @@
 </div>
 <div class="memdoc">
 
-<p>A list of uv textures coordinates corresponding to the triangle vertices. </p>
+<p>A list of uv texture coordinates corresponding to the triangle vertices. </p>
 <p>There should be 1 uv position per vertex. </p>
+
+<p>Definition at line <a class="el" href="StelSphereGeometry_8hpp_source.html#l01157">1157</a> of file <a class="el" href="StelSphereGeometry_8hpp_source.html">StelSphereGeometry.hpp</a>.</p>
 
 </div>
 </div>
+<hr/>The documentation for this class was generated from the following file:<ul>
+<li>core/<a class="el" href="StelSphereGeometry_8hpp_source.html">StelSphereGeometry.hpp</a></li>
+</ul>
 </div>
-<hr class="footer"/><address style="text-align: right;"><small>Generated on Sat Aug 25 22:13:32 2012 for Stellarium by&nbsp;
+<hr class="footer"/><address style="text-align: right;"><small>Generated on Fri Aug 31 18:07:56 2012 for Stellarium by&nbsp;
 <a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.6.3 </small></address>
 </body>

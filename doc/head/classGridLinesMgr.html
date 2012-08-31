@@ -9,7 +9,7 @@
 <tr>
 <td align="left" valign="top" width="32" rowspan="2"><a href="http://www.stellarium.org"><img src="stellarium-logo.png" align="left" border="0" /></a></td>
 <td width="1" rowspan="2">&nbsp;&nbsp;</td>
-<td style="font-size:120%;font-weight:bolder;">Stellarium 0.11.4</td>
+<td style="font-size:120%;font-weight:bolder;">Stellarium 0.12.0</td>
 <td align="right" valign="top" width="230" rowspan="2"></td></tr><tr>
 <td class="postheader" valign="center">
  <a href="index.html">Home</a>&nbsp;&middot;
@@ -19,6 +19,7 @@
  <a href="codingStyle.html">Coding Style</a>&nbsp;&middot;
  <a href="scripting.html">Scripting</a>&nbsp;&middot;
  <a href="plugins.html">Plugins</a>&nbsp;&middot;
+ <a href="renderer.html">Renderer</a>&nbsp;&middot;
  <a href="fileStructure.html">File Structure</a>
 </td>
 </tr>
@@ -160,8 +161,8 @@ void&nbsp;</td><td class="memItemRight" valign="bottom"><b>galacticPlaneLineColo
 <tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Initialize the <a class="el" href="classGridLinesMgr.html" title="The GridLinesMgr controls the drawing of the Azimuthal and Equatorial Grids, as well...">GridLinesMgr</a>.  <a href="#a21d104ebcd97bebcc70a6370ca4cb703"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual QString&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classGridLinesMgr.html#aa9c57fae456b582c9e99c2800c8685d5">getModuleID</a> () const </td></tr>
 <tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Get the module ID, returns, "gridlines".  <a href="#aa9c57fae456b582c9e99c2800c8685d5"></a><br/></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">virtual void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classGridLinesMgr.html#a26371241b3067aaac5c4cc757c5a6a1f">draw</a> (<a class="el" href="classStelCore.html">StelCore</a> *core)</td></tr>
-<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Draw the grids and great circle lines.  <a href="#a26371241b3067aaac5c4cc757c5a6a1f"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">virtual void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classGridLinesMgr.html#aabfa10f326c9a5e282a3f4293b1eafc4">draw</a> (<a class="el" href="classStelCore.html">StelCore</a> *core, class <a class="el" href="classStelRenderer.html">StelRenderer</a> *renderer)</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Draw the grids and great circle lines.  <a href="#aabfa10f326c9a5e282a3f4293b1eafc4"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classGridLinesMgr.html#aa587c55fb7afca8a71c8991bcb97f557">update</a> (double deltaTime)</td></tr>
 <tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Update time-dependent features.  <a href="#aa587c55fb7afca8a71c8991bcb97f557"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual double&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classGridLinesMgr.html#a34b682bf64216791507597c581a9d982">getCallOrder</a> (<a class="el" href="classStelModule.html#a11b61d014b51cf6424cd89b1ccd3d768">StelModuleActionName</a> actionName) const </td></tr>
@@ -208,8 +209,10 @@ bool&nbsp;</td><td class="memItemRight" valign="bottom"><b>galacticPlaneLineDisp
 </table>
 <hr/><a name="_details"></a><h2>Detailed Description</h2>
 <p>The <a class="el" href="classGridLinesMgr.html" title="The GridLinesMgr controls the drawing of the Azimuthal and Equatorial Grids, as well...">GridLinesMgr</a> controls the drawing of the Azimuthal and Equatorial Grids, as well as the great circles: Meridian Line, Ecliptic Line and Equator Line. </p>
+
+<p>Definition at line <a class="el" href="GridLinesMgr_8hpp_source.html#l00032">32</a> of file <a class="el" href="GridLinesMgr_8hpp_source.html">GridLinesMgr.hpp</a>.</p>
 <hr/><h2>Member Function Documentation</h2>
-<a class="anchor" id="a26371241b3067aaac5c4cc757c5a6a1f"></a><!-- doxytag: member="GridLinesMgr::draw" ref="a26371241b3067aaac5c4cc757c5a6a1f" args="(StelCore *core)" -->
+<a class="anchor" id="aabfa10f326c9a5e282a3f4293b1eafc4"></a><!-- doxytag: member="GridLinesMgr::draw" ref="aabfa10f326c9a5e282a3f4293b1eafc4" args="(StelCore *core, class StelRenderer *renderer)" -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
@@ -217,9 +220,18 @@ bool&nbsp;</td><td class="memItemRight" valign="bottom"><b>galacticPlaneLineDisp
           <td class="memname">virtual void GridLinesMgr::draw </td>
           <td>(</td>
           <td class="paramtype"><a class="el" href="classStelCore.html">StelCore</a> *&nbsp;</td>
-          <td class="paramname"> <em>core</em></td>
-          <td>&nbsp;)&nbsp;</td>
-          <td><code> [virtual]</code></td>
+          <td class="paramname"> <em>core</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">class <a class="el" href="classStelRenderer.html">StelRenderer</a> *&nbsp;</td>
+          <td class="paramname"> <em>renderer</em></td><td>&nbsp;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td><td><code> [virtual]</code></td>
         </tr>
       </table>
 </div>
@@ -228,7 +240,7 @@ bool&nbsp;</td><td class="memItemRight" valign="bottom"><b>galacticPlaneLineDisp
 <p>Draw the grids and great circle lines. </p>
 <p>Draws the Equatorial Grid, Azimuthal Grid, Meridian Line, Equator Line and Ecliptic Line according to the various flags which control their visibility. </p>
 
-<p>Reimplemented from <a class="el" href="classStelModule.html#a18fde2820af998395aea9e30bb1138b2">StelModule</a>.</p>
+<p>Reimplemented from <a class="el" href="classStelModule.html#ab352388800724842a5c1e55e250378a6">StelModule</a>.</p>
 
 </div>
 </div>
@@ -670,6 +682,8 @@ bool&nbsp;</td><td class="memItemRight" valign="bottom"><b>galacticPlaneLineDisp
 <div class="memdoc">
 
 <p>Get the module ID, returns, "gridlines". </p>
+
+<p>Definition at line <a class="el" href="GridLinesMgr_8hpp_source.html#l00125">125</a> of file <a class="el" href="GridLinesMgr_8hpp_source.html">GridLinesMgr.hpp</a>.</p>
 
 </div>
 </div>
@@ -1118,8 +1132,11 @@ bool&nbsp;</td><td class="memItemRight" valign="bottom"><b>galacticPlaneLineDisp
 
 </div>
 </div>
+<hr/>The documentation for this class was generated from the following file:<ul>
+<li>core/modules/<a class="el" href="GridLinesMgr_8hpp_source.html">GridLinesMgr.hpp</a></li>
+</ul>
 </div>
-<hr class="footer"/><address style="text-align: right;"><small>Generated on Sat Aug 25 22:13:31 2012 for Stellarium by&nbsp;
+<hr class="footer"/><address style="text-align: right;"><small>Generated on Fri Aug 31 18:07:52 2012 for Stellarium by&nbsp;
 <a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.6.3 </small></address>
 </body>

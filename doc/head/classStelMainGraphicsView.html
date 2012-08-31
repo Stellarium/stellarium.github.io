@@ -9,7 +9,7 @@
 <tr>
 <td align="left" valign="top" width="32" rowspan="2"><a href="http://www.stellarium.org"><img src="stellarium-logo.png" align="left" border="0" /></a></td>
 <td width="1" rowspan="2">&nbsp;&nbsp;</td>
-<td style="font-size:120%;font-weight:bolder;">Stellarium 0.11.4</td>
+<td style="font-size:120%;font-weight:bolder;">Stellarium 0.12.0</td>
 <td align="right" valign="top" width="230" rowspan="2"></td></tr><tr>
 <td class="postheader" valign="center">
  <a href="index.html">Home</a>&nbsp;&middot;
@@ -19,6 +19,7 @@
  <a href="codingStyle.html">Coding Style</a>&nbsp;&middot;
  <a href="scripting.html">Scripting</a>&nbsp;&middot;
  <a href="plugins.html">Plugins</a>&nbsp;&middot;
+ <a href="renderer.html">Renderer</a>&nbsp;&middot;
  <a href="fileStructure.html">File Structure</a>
 </td>
 </tr>
@@ -66,8 +67,8 @@
 &nbsp;</td><td class="memItemRight" valign="bottom"><b>StelMainGraphicsView</b> (QWidget *parent)</td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classStelMainGraphicsView.html#a40ef9fb736320c52422697dbf8e57000">init</a> (class QSettings *conf)</td></tr>
 <tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Start the main initialization of Stellarium.  <a href="#a40ef9fb736320c52422697dbf8e57000"></a><br/></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classStelMainGraphicsView.html#a20c71ce936cd00b0ada6ff7889d3576c">deinitGL</a> ()</td></tr>
-<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Delete openGL textures (to call before the GLContext disappears).  <a href="#a20c71ce936cd00b0ada6ff7889d3576c"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classStelMainGraphicsView.html#a7061611f81b80cc70f7a6e9420105df6">deinit</a> ()</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Delete textures (to call before the renderer disappears).  <a href="#a7061611f81b80cc70f7a6e9420105df6"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">class <a class="el" href="classStelAppGraphicsWidget.html">StelAppGraphicsWidget</a> *&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classStelMainGraphicsView.html#a02ded647b25c653a7a5684b8a332b3c4">getStelAppGraphicsWidget</a> ()</td></tr>
 <tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Return the QGraphicsWidget encapsulating the Stellarium main sky view.  <a href="#a02ded647b25c653a7a5684b8a332b3c4"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">QGraphicsWidget *&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classStelMainGraphicsView.html#abbb48829e70b4f9e8d46b87e99edd1d6">getTopLevelGraphicsWidget</a> ()</td></tr>
@@ -99,14 +100,16 @@ virtual void&nbsp;</td><td class="memItemRight" valign="bottom"><b>wheelEvent</b
 </table>
 <hr/><a name="_details"></a><h2>Detailed Description</h2>
 <p>Reimplement a QGraphicsView for Stellarium. </p>
-<p>It is the class creating the singleton GL Widget, the main <a class="el" href="classStelApp.html" title="Singleton main Stellarium application class.">StelApp</a> instance as well as the main GUI. </p>
+<p>It is the class creating the main <a class="el" href="classStelApp.html" title="Singleton main Stellarium application class.">StelApp</a> instance as well as the main GUI. </p>
+
+<p>Definition at line <a class="el" href="StelMainGraphicsView_8hpp_source.html#l00037">37</a> of file <a class="el" href="StelMainGraphicsView_8hpp_source.html">StelMainGraphicsView.hpp</a>.</p>
 <hr/><h2>Member Function Documentation</h2>
-<a class="anchor" id="a20c71ce936cd00b0ada6ff7889d3576c"></a><!-- doxytag: member="StelMainGraphicsView::deinitGL" ref="a20c71ce936cd00b0ada6ff7889d3576c" args="()" -->
+<a class="anchor" id="a7061611f81b80cc70f7a6e9420105df6"></a><!-- doxytag: member="StelMainGraphicsView::deinit" ref="a7061611f81b80cc70f7a6e9420105df6" args="()" -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">void StelMainGraphicsView::deinitGL </td>
+          <td class="memname">void StelMainGraphicsView::deinit </td>
           <td>(</td>
           <td class="paramname"></td>
           <td>&nbsp;)&nbsp;</td>
@@ -116,7 +119,7 @@ virtual void&nbsp;</td><td class="memItemRight" valign="bottom"><b>wheelEvent</b
 </div>
 <div class="memdoc">
 
-<p>Delete openGL textures (to call before the GLContext disappears). </p>
+<p>Delete textures (to call before the renderer disappears). </p>
 
 </div>
 </div>
@@ -167,6 +170,8 @@ virtual void&nbsp;</td><td class="memItemRight" valign="bottom"><b>wheelEvent</b
 
 <p>Get the mouse cursor timeout in seconds. </p>
 
+<p>Definition at line <a class="el" href="StelMainGraphicsView_8hpp_source.html#l00088">88</a> of file <a class="el" href="StelMainGraphicsView_8hpp_source.html">StelMainGraphicsView.hpp</a>.</p>
+
 </div>
 </div>
 <a class="anchor" id="a8f5069c2fdc3b459b6207f7dcc0f61eb"></a><!-- doxytag: member="StelMainGraphicsView::getFlagCursorTimeout" ref="a8f5069c2fdc3b459b6207f7dcc0f61eb" args="()" -->
@@ -185,6 +190,8 @@ virtual void&nbsp;</td><td class="memItemRight" valign="bottom"><b>wheelEvent</b
 <div class="memdoc">
 
 <p>Get the state of the mouse cursor timeout flag. </p>
+
+<p>Definition at line <a class="el" href="StelMainGraphicsView_8hpp_source.html#l00086">86</a> of file <a class="el" href="StelMainGraphicsView_8hpp_source.html">StelMainGraphicsView.hpp</a>.</p>
 
 </div>
 </div>
@@ -205,6 +212,8 @@ virtual void&nbsp;</td><td class="memItemRight" valign="bottom"><b>wheelEvent</b
 
 <p>Get whether colors are inverted when saving screenshot. </p>
 
+<p>Definition at line <a class="el" href="StelMainGraphicsView_8hpp_source.html#l00081">81</a> of file <a class="el" href="StelMainGraphicsView_8hpp_source.html">StelMainGraphicsView.hpp</a>.</p>
+
 </div>
 </div>
 <a class="anchor" id="af3f357b1eb43f765474a639b41f9d005"></a><!-- doxytag: member="StelMainGraphicsView::getInstance" ref="af3f357b1eb43f765474a639b41f9d005" args="()" -->
@@ -223,6 +232,8 @@ virtual void&nbsp;</td><td class="memItemRight" valign="bottom"><b>wheelEvent</b
 <div class="memdoc">
 
 <p>Get the <a class="el" href="classStelMainGraphicsView.html" title="Reimplement a QGraphicsView for Stellarium.">StelMainGraphicsView</a> singleton instance. </p>
+
+<p>Definition at line <a class="el" href="StelMainGraphicsView_8hpp_source.html#l00048">48</a> of file <a class="el" href="StelMainGraphicsView_8hpp_source.html">StelMainGraphicsView.hpp</a>.</p>
 
 </div>
 </div>
@@ -243,6 +254,8 @@ virtual void&nbsp;</td><td class="memItemRight" valign="bottom"><b>wheelEvent</b
 
 <p>Get the script API proxy (for signal handling). </p>
 
+<p>Definition at line <a class="el" href="StelMainGraphicsView_8hpp_source.html#l00063">63</a> of file <a class="el" href="StelMainGraphicsView_8hpp_source.html">StelMainGraphicsView.hpp</a>.</p>
+
 </div>
 </div>
 <a class="anchor" id="ad0ec77fadc47780e47e790850c5e6770"></a><!-- doxytag: member="StelMainGraphicsView::getMaxFps" ref="ad0ec77fadc47780e47e790850c5e6770" args="()" -->
@@ -261,6 +274,8 @@ virtual void&nbsp;</td><td class="memItemRight" valign="bottom"><b>wheelEvent</b
 <div class="memdoc">
 
 <p>Get the current maximum frames per second. </p>
+
+<p>Definition at line <a class="el" href="StelMainGraphicsView_8hpp_source.html#l00105">105</a> of file <a class="el" href="StelMainGraphicsView_8hpp_source.html">StelMainGraphicsView.hpp</a>.</p>
 
 </div>
 </div>
@@ -281,6 +296,8 @@ virtual void&nbsp;</td><td class="memItemRight" valign="bottom"><b>wheelEvent</b
 
 <p>Get the current minimum frames per second. </p>
 
+<p>Definition at line <a class="el" href="StelMainGraphicsView_8hpp_source.html#l00100">100</a> of file <a class="el" href="StelMainGraphicsView_8hpp_source.html">StelMainGraphicsView.hpp</a>.</p>
+
 </div>
 </div>
 <a class="anchor" id="acbe753cafc91d00d256bd960590bb4a9"></a><!-- doxytag: member="StelMainGraphicsView::getScriptMgr" ref="acbe753cafc91d00d256bd960590bb4a9" args="()" -->
@@ -299,6 +316,8 @@ virtual void&nbsp;</td><td class="memItemRight" valign="bottom"><b>wheelEvent</b
 <div class="memdoc">
 
 <p>Get the script manager. </p>
+
+<p>Definition at line <a class="el" href="StelMainGraphicsView_8hpp_source.html#l00065">65</a> of file <a class="el" href="StelMainGraphicsView_8hpp_source.html">StelMainGraphicsView.hpp</a>.</p>
 
 </div>
 </div>
@@ -320,6 +339,8 @@ virtual void&nbsp;</td><td class="memItemRight" valign="bottom"><b>wheelEvent</b
 <p>Return the QGraphicsWidget encapsulating the Stellarium main sky view. </p>
 <p>Use its layout if you want to add widget on the top of the main sky view. </p>
 
+<p>Definition at line <a class="el" href="StelMainGraphicsView_8hpp_source.html#l00055">55</a> of file <a class="el" href="StelMainGraphicsView_8hpp_source.html">StelMainGraphicsView.hpp</a>.</p>
+
 </div>
 </div>
 <a class="anchor" id="abbb48829e70b4f9e8d46b87e99edd1d6"></a><!-- doxytag: member="StelMainGraphicsView::getTopLevelGraphicsWidget" ref="abbb48829e70b4f9e8d46b87e99edd1d6" args="()" -->
@@ -339,6 +360,8 @@ virtual void&nbsp;</td><td class="memItemRight" valign="bottom"><b>wheelEvent</b
 
 <p>Return the top level QGraphicsWidget which contains the layout containing the Stellarium main sky view. </p>
 <p>Use its layout if you want to add widget on the side of the main sky view. </p>
+
+<p>Definition at line <a class="el" href="StelMainGraphicsView_8hpp_source.html#l00059">59</a> of file <a class="el" href="StelMainGraphicsView_8hpp_source.html">StelMainGraphicsView.hpp</a>.</p>
 
 </div>
 </div>
@@ -435,6 +458,8 @@ virtual void&nbsp;</td><td class="memItemRight" valign="bottom"><b>wheelEvent</b
 
 <p>Set the mouse cursor timeout in seconds. </p>
 
+<p>Definition at line <a class="el" href="StelMainGraphicsView_8hpp_source.html#l00092">92</a> of file <a class="el" href="StelMainGraphicsView_8hpp_source.html">StelMainGraphicsView.hpp</a>.</p>
+
 </div>
 </div>
 <a class="anchor" id="a44a8ee5880a5d7139c59dcdf6d72338b"></a><!-- doxytag: member="StelMainGraphicsView::setFlagCursorTimeout" ref="a44a8ee5880a5d7139c59dcdf6d72338b" args="(bool b)" -->
@@ -455,6 +480,8 @@ virtual void&nbsp;</td><td class="memItemRight" valign="bottom"><b>wheelEvent</b
 
 <p>Get the state of the mouse cursor timeout flag. </p>
 
+<p>Definition at line <a class="el" href="StelMainGraphicsView_8hpp_source.html#l00090">90</a> of file <a class="el" href="StelMainGraphicsView_8hpp_source.html">StelMainGraphicsView.hpp</a>.</p>
+
 </div>
 </div>
 <a class="anchor" id="a24481c2ad7959ebd3d2ef53219501bf7"></a><!-- doxytag: member="StelMainGraphicsView::setFlagInvertScreenShotColors" ref="a24481c2ad7959ebd3d2ef53219501bf7" args="(bool b)" -->
@@ -474,6 +501,8 @@ virtual void&nbsp;</td><td class="memItemRight" valign="bottom"><b>wheelEvent</b
 <div class="memdoc">
 
 <p>Set whether colors should be inverted when saving screenshot. </p>
+
+<p>Definition at line <a class="el" href="StelMainGraphicsView_8hpp_source.html#l00083">83</a> of file <a class="el" href="StelMainGraphicsView_8hpp_source.html">StelMainGraphicsView.hpp</a>.</p>
 
 </div>
 </div>
@@ -500,6 +529,8 @@ virtual void&nbsp;</td><td class="memItemRight" valign="bottom"><b>wheelEvent</b
   </table>
   </dd>
 </dl>
+
+<p>Definition at line <a class="el" href="StelMainGraphicsView_8hpp_source.html#l00103">103</a> of file <a class="el" href="StelMainGraphicsView_8hpp_source.html">StelMainGraphicsView.hpp</a>.</p>
 
 </div>
 </div>
@@ -528,6 +559,8 @@ virtual void&nbsp;</td><td class="memItemRight" valign="bottom"><b>wheelEvent</b
   </dd>
 </dl>
 
+<p>Definition at line <a class="el" href="StelMainGraphicsView_8hpp_source.html#l00098">98</a> of file <a class="el" href="StelMainGraphicsView_8hpp_source.html">StelMainGraphicsView.hpp</a>.</p>
+
 </div>
 </div>
 <a class="anchor" id="a994cfdecf5a99aac9d4c686e60856d05"></a><!-- doxytag: member="StelMainGraphicsView::updateScene" ref="a994cfdecf5a99aac9d4c686e60856d05" args="()" -->
@@ -547,10 +580,15 @@ virtual void&nbsp;</td><td class="memItemRight" valign="bottom"><b>wheelEvent</b
 
 <p>Updates the scene and process all events. </p>
 
+<p>Definition at line <a class="el" href="StelMainGraphicsView_8hpp_source.html#l00108">108</a> of file <a class="el" href="StelMainGraphicsView_8hpp_source.html">StelMainGraphicsView.hpp</a>.</p>
+
 </div>
 </div>
+<hr/>The documentation for this class was generated from the following file:<ul>
+<li><a class="el" href="StelMainGraphicsView_8hpp_source.html">StelMainGraphicsView.hpp</a></li>
+</ul>
 </div>
-<hr class="footer"/><address style="text-align: right;"><small>Generated on Sat Aug 25 22:13:32 2012 for Stellarium by&nbsp;
+<hr class="footer"/><address style="text-align: right;"><small>Generated on Fri Aug 31 18:07:58 2012 for Stellarium by&nbsp;
 <a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.6.3 </small></address>
 </body>

@@ -9,7 +9,7 @@
 <tr>
 <td align="left" valign="top" width="32" rowspan="2"><a href="http://www.stellarium.org"><img src="stellarium-logo.png" align="left" border="0" /></a></td>
 <td width="1" rowspan="2">&nbsp;&nbsp;</td>
-<td style="font-size:120%;font-weight:bolder;">Stellarium 0.11.4</td>
+<td style="font-size:120%;font-weight:bolder;">Stellarium 0.12.0</td>
 <td align="right" valign="top" width="230" rowspan="2"></td></tr><tr>
 <td class="postheader" valign="center">
  <a href="index.html">Home</a>&nbsp;&middot;
@@ -19,6 +19,7 @@
  <a href="codingStyle.html">Coding Style</a>&nbsp;&middot;
  <a href="scripting.html">Scripting</a>&nbsp;&middot;
  <a href="plugins.html">Plugins</a>&nbsp;&middot;
+ <a href="renderer.html">Renderer</a>&nbsp;&middot;
  <a href="fileStructure.html">File Structure</a>
 </td>
 </tr>
@@ -29,9 +30,9 @@
 
 <h1><a class="anchor" id="scripting">Scripting Engine </a></h1><h2><a class="anchor" id="intro_scripts">
 Introduction</a></h2>
-<p>Since version 0.10.1, Stellarium includes a scripting feature based on the <a href="http://doc.trolltech.com/stable/qtscript.html">Qt Scripting Engine</a>. This makes it possible to write small programs within Stellarium to produce presentations, set up custom configurations, and to automate repetitive tasks. Prior to version 0.10.0, Stellarium used a different scripting engine called StratoScript.</p>
+<p>Since version 0.10.1, Stellarium includes a scripting feature based on the <a href="http://doc.trolltech.com/stable/qtscript.html">Qt Scripting Engine</a>. This makes it possible to write small programs within Stellarium to produce presentations, set up custom configurations, and to automate repetitive tasks. Prior to version 0.10.0, Stellarium used a different scripting engine called <a class="el" href="scripting.html#stratoscript">StratoScript</a>.</p>
 <p>The core scripting language is <a href="http://en.wikipedia.org/wiki/ECMAScript">ECMAScript</a>, giving users access to all basic ECMAScript language features such as flow control, variables string manipulation and so on. Interaction with Stellarium-specific features is done via a collection of objects which represent components of Stellarium itself. See <a class="el" href="scripting.html#scripting_api">Scripting API</a> for more details.</p>
-<h2><a class="anchor" id="scratoscript">
+<h2><a class="anchor" id="stratoscript">
 StratoScript</a></h2>
 <p>Prior to version 0.10.0, Stellarium had a simple scripting engine, known as <em>StratoScript</em>. Using <em>StratoScript</em> it was possible to record and play back sequences of Stellarium commands, load and display custom images, and play sounds. In this way it was possible to make planetarium presentations - a feature used quite widely in the small planetarium community.</p>
 <p>However <em>StratoScript</em> lacked many features of a real programming language - there were no variables, no flow control and no way to introspect the state of Stellarium.</p>
@@ -82,7 +83,7 @@ Using a StelModule</a></h3>
 core.wait(3);
 <a class="code" href="classLabelMgr.html" title="Allows for creation of custom labels on objects or coordinates.">LabelMgr</a>.deleteAllLabels();
 </pre></div> </div>
-<hr class="footer"/><address style="text-align: right;"><small>Generated on Sat Aug 25 22:13:31 2012 for Stellarium by&nbsp;
+<hr class="footer"/><address style="text-align: right;"><small>Generated on Fri Aug 31 18:07:50 2012 for Stellarium by&nbsp;
 <a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.6.3 </small></address>
 </body>

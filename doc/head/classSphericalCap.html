@@ -9,7 +9,7 @@
 <tr>
 <td align="left" valign="top" width="32" rowspan="2"><a href="http://www.stellarium.org"><img src="stellarium-logo.png" align="left" border="0" /></a></td>
 <td width="1" rowspan="2">&nbsp;&nbsp;</td>
-<td style="font-size:120%;font-weight:bolder;">Stellarium 0.11.4</td>
+<td style="font-size:120%;font-weight:bolder;">Stellarium 0.12.0</td>
 <td align="right" valign="top" width="230" rowspan="2"></td></tr><tr>
 <td class="postheader" valign="center">
  <a href="index.html">Home</a>&nbsp;&middot;
@@ -19,6 +19,7 @@
  <a href="codingStyle.html">Coding Style</a>&nbsp;&middot;
  <a href="scripting.html">Scripting</a>&nbsp;&middot;
  <a href="plugins.html">Plugins</a>&nbsp;&middot;
+ <a href="renderer.html">Renderer</a>&nbsp;&middot;
  <a href="fileStructure.html">File Structure</a>
 </td>
 </tr>
@@ -88,10 +89,10 @@ virtual bool&nbsp;</td><td class="memItemRight" valign="bottom"><b>intersects</b
 <tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Return the list of closed contours defining the polygon boundaries.  <a href="#a6f03c90666ed94a6980d2846c19deb55"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">bool&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSphericalCap.html#ab97ea5889e30f28d225b63ba1f6862b6">intersectsConvexContour</a> (const <a class="el" href="classVector3.html">Vec3d</a> *vertice, int nbVertice) const </td></tr>
 <tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Return whether the cap intersect with a convex contour defined by nbVertice.  <a href="#ab97ea5889e30f28d225b63ba1f6862b6"></a><br/></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">bool&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSphericalCap.html#ae4a0280b8967b7bbcb5d39ab87b26fe5">containsTriangle</a> (const <a class="el" href="classVector3.html">Vec3d</a> *vertice) const </td></tr>
-<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Return whether the cap contains the passed triangle.  <a href="#ae4a0280b8967b7bbcb5d39ab87b26fe5"></a><br/></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">bool&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSphericalCap.html#accf97f7b40d4b9f92099bb771d0b9eb7">intersectsTriangle</a> (const <a class="el" href="classVector3.html">Vec3d</a> *vertice) const </td></tr>
-<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Return whether the cap intersect with the passed triangle.  <a href="#accf97f7b40d4b9f92099bb771d0b9eb7"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">bool&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSphericalCap.html#acd200ec34551324b704b0fd66946dfb0">containsTriangle</a> (const <a class="el" href="structTriplet.html">Triplet</a>&lt; <a class="el" href="classVector3.html">Vec3d</a> &gt; triangle) const </td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Does the cap contain the passed triangle?  <a href="#acd200ec34551324b704b0fd66946dfb0"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">bool&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSphericalCap.html#abc05099e517bf9d019bf7180850ab425">intersectsTriangle</a> (const <a class="el" href="structTriplet.html">Triplet</a>&lt; <a class="el" href="classVector3.html">Vec3d</a> &gt; &amp;triangle) const </td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Does the cap intersect with the passed triangle?  <a href="#abc05099e517bf9d019bf7180850ab425"></a><br/></td></tr>
 <tr><td colspan="2"><h2>Static Public Member Functions</h2></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">static <a class="el" href="classSphericalRegionP.html">SphericalRegionP</a>&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSphericalCap.html#a5f666d26370205c8f69b15475dd95050">deserialize</a> (QDataStream &amp;in)</td></tr>
 <tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Deserialize the region. This method must allow as fast as possible deserialization.  <a href="#a5f666d26370205c8f69b15475dd95050"></a><br/></td></tr>
@@ -110,6 +111,8 @@ virtual bool&nbsp;</td><td class="memItemRight" valign="bottom"><b>intersects</b
 <hr/><a name="_details"></a><h2>Detailed Description</h2>
 <p>A <a class="el" href="classSphericalCap.html" title="A SphericalCap is defined by a direction and an aperture.">SphericalCap</a> is defined by a direction and an aperture. </p>
 <p>It forms a cone from the center of the Coordinate frame with a radius d. It is a disc on the sphere, a region above a circle on the unit sphere. </p>
+
+<p>Definition at line <a class="el" href="StelSphereGeometry_8hpp_source.html#l00500">500</a> of file <a class="el" href="StelSphereGeometry_8hpp_source.html">StelSphereGeometry.hpp</a>.</p>
 <hr/><h2>Constructor &amp; Destructor Documentation</h2>
 <a class="anchor" id="a17b071fd86e04692cac2228ac791bfc1"></a><!-- doxytag: member="SphericalCap::SphericalCap" ref="a17b071fd86e04692cac2228ac791bfc1" args="()" -->
 <div class="memitem">
@@ -127,6 +130,8 @@ virtual bool&nbsp;</td><td class="memItemRight" valign="bottom"><b>intersects</b
 <div class="memdoc">
 
 <p>Construct a <a class="el" href="classSphericalCap.html" title="A SphericalCap is defined by a direction and an aperture.">SphericalCap</a> with a 90 deg aperture and an undefined direction. </p>
+
+<p>Definition at line <a class="el" href="StelSphereGeometry_8hpp_source.html#l00504">504</a> of file <a class="el" href="StelSphereGeometry_8hpp_source.html">StelSphereGeometry.hpp</a>.</p>
 
 </div>
 </div>
@@ -162,6 +167,8 @@ virtual bool&nbsp;</td><td class="memItemRight" valign="bottom"><b>intersects</b
 <div class="memdoc">
 
 <p>Construct a <a class="el" href="classSphericalCap.html" title="A SphericalCap is defined by a direction and an aperture.">SphericalCap</a> from its direction and assumes a 90 deg aperture. </p>
+
+<p>Definition at line <a class="el" href="StelSphereGeometry_8hpp_source.html#l00507">507</a> of file <a class="el" href="StelSphereGeometry_8hpp_source.html">StelSphereGeometry.hpp</a>.</p>
 
 </div>
 </div>
@@ -199,6 +206,8 @@ virtual bool&nbsp;</td><td class="memItemRight" valign="bottom"><b>intersects</b
   </dd>
 </dl>
 
+<p>Definition at line <a class="el" href="StelSphereGeometry_8hpp_source.html#l00512">512</a> of file <a class="el" href="StelSphereGeometry_8hpp_source.html">StelSphereGeometry.hpp</a>.</p>
+
 </div>
 </div>
 <a class="anchor" id="a744dc22150dabee53b91f5aaf4a3204e"></a><!-- doxytag: member="SphericalCap::SphericalCap" ref="a744dc22150dabee53b91f5aaf4a3204e" args="(const SphericalCap &amp;other)" -->
@@ -218,6 +227,8 @@ virtual bool&nbsp;</td><td class="memItemRight" valign="bottom"><b>intersects</b
 <div class="memdoc">
 
 <p>Copy constructor. </p>
+
+<p>Definition at line <a class="el" href="StelSphereGeometry_8hpp_source.html#l00515">515</a> of file <a class="el" href="StelSphereGeometry_8hpp_source.html">StelSphereGeometry.hpp</a>.</p>
 
 </div>
 </div>
@@ -252,15 +263,15 @@ virtual bool&nbsp;</td><td class="memItemRight" valign="bottom"><b>intersects</b
 
 </div>
 </div>
-<a class="anchor" id="ae4a0280b8967b7bbcb5d39ab87b26fe5"></a><!-- doxytag: member="SphericalCap::containsTriangle" ref="ae4a0280b8967b7bbcb5d39ab87b26fe5" args="(const Vec3d *vertice) const " -->
+<a class="anchor" id="acd200ec34551324b704b0fd66946dfb0"></a><!-- doxytag: member="SphericalCap::containsTriangle" ref="acd200ec34551324b704b0fd66946dfb0" args="(const Triplet&lt; Vec3d &gt; triangle) const " -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
           <td class="memname">bool SphericalCap::containsTriangle </td>
           <td>(</td>
-          <td class="paramtype">const <a class="el" href="classVector3.html">Vec3d</a> *&nbsp;</td>
-          <td class="paramname"> <em>vertice</em></td>
+          <td class="paramtype">const <a class="el" href="structTriplet.html">Triplet</a>&lt; <a class="el" href="classVector3.html">Vec3d</a> &gt;&nbsp;</td>
+          <td class="paramname"> <em>triangle</em></td>
           <td>&nbsp;)&nbsp;</td>
           <td> const</td>
         </tr>
@@ -268,7 +279,7 @@ virtual bool&nbsp;</td><td class="memItemRight" valign="bottom"><b>intersects</b
 </div>
 <div class="memdoc">
 
-<p>Return whether the cap contains the passed triangle. </p>
+<p>Does the cap contain the passed triangle? </p>
 
 </div>
 </div>
@@ -311,6 +322,8 @@ virtual bool&nbsp;</td><td class="memItemRight" valign="bottom"><b>intersects</b
 
 <p>Reimplemented from <a class="el" href="classSphericalRegion.html#a97e908421aee887ffca7b3a3d9248c0a">SphericalRegion</a>.</p>
 
+<p>Definition at line <a class="el" href="StelSphereGeometry_8hpp_source.html#l00521">521</a> of file <a class="el" href="StelSphereGeometry_8hpp_source.html">StelSphereGeometry.hpp</a>.</p>
+
 </div>
 </div>
 <a class="anchor" id="abc33b0f7121c5fcdba10db07ee58d28c"></a><!-- doxytag: member="SphericalCap::getBoundingCap" ref="abc33b0f7121c5fcdba10db07ee58d28c" args="() const " -->
@@ -331,6 +344,8 @@ virtual bool&nbsp;</td><td class="memItemRight" valign="bottom"><b>intersects</b
 <p>Return itself. </p>
 
 <p>Reimplemented from <a class="el" href="classSphericalRegion.html#a86c361604deaa0187067770522249ef7">SphericalRegion</a>.</p>
+
+<p>Definition at line <a class="el" href="StelSphereGeometry_8hpp_source.html#l00530">530</a> of file <a class="el" href="StelSphereGeometry_8hpp_source.html">StelSphereGeometry.hpp</a>.</p>
 
 </div>
 </div>
@@ -394,6 +409,8 @@ virtual bool&nbsp;</td><td class="memItemRight" valign="bottom"><b>intersects</b
 
 <p>Reimplemented from <a class="el" href="classSphericalRegion.html#ada8685bc10fde6ea9dc8a8c6bf4a4f15">SphericalRegion</a>.</p>
 
+<p>Definition at line <a class="el" href="StelSphereGeometry_8hpp_source.html#l00527">527</a> of file <a class="el" href="StelSphereGeometry_8hpp_source.html">StelSphereGeometry.hpp</a>.</p>
+
 </div>
 </div>
 <a class="anchor" id="a8a72cd4829cb85e342a336cf6f3185c8"></a><!-- doxytag: member="SphericalCap::getRadius" ref="a8a72cd4829cb85e342a336cf6f3185c8" args="() const " -->
@@ -412,6 +429,8 @@ virtual bool&nbsp;</td><td class="memItemRight" valign="bottom"><b>intersects</b
 <div class="memdoc">
 
 <p>Return the radiusof the cap in radian. </p>
+
+<p>Definition at line <a class="el" href="StelSphereGeometry_8hpp_source.html#l00565">565</a> of file <a class="el" href="StelSphereGeometry_8hpp_source.html">StelSphereGeometry.hpp</a>.</p>
 
 </div>
 </div>
@@ -478,6 +497,8 @@ virtual bool&nbsp;</td><td class="memItemRight" valign="bottom"><b>intersects</b
 <dl class="see"><dt><b>See also:</b></dt><dd><a href="http://f4bien.blogspot.com/2009/05/spherical-geometry-optimisations.html">http://f4bien.blogspot.com/2009/05/spherical-geometry-optimisations.html</a> for detailed explanations. </dd></dl>
 
 <p>Reimplemented from <a class="el" href="classSphericalRegion.html">SphericalRegion</a>.</p>
+
+<p>Definition at line <a class="el" href="StelSphereGeometry_8hpp_source.html#l00547">547</a> of file <a class="el" href="StelSphereGeometry_8hpp_source.html">StelSphereGeometry.hpp</a>.</p>
 
 </div>
 </div>
@@ -551,17 +572,19 @@ virtual bool&nbsp;</td><td class="memItemRight" valign="bottom"><b>intersects</b
   </dd>
 </dl>
 
+<p>Definition at line <a class="el" href="StelSphereGeometry_8hpp_source.html#l00571">571</a> of file <a class="el" href="StelSphereGeometry_8hpp_source.html">StelSphereGeometry.hpp</a>.</p>
+
 </div>
 </div>
-<a class="anchor" id="accf97f7b40d4b9f92099bb771d0b9eb7"></a><!-- doxytag: member="SphericalCap::intersectsTriangle" ref="accf97f7b40d4b9f92099bb771d0b9eb7" args="(const Vec3d *vertice) const " -->
+<a class="anchor" id="abc05099e517bf9d019bf7180850ab425"></a><!-- doxytag: member="SphericalCap::intersectsTriangle" ref="abc05099e517bf9d019bf7180850ab425" args="(const Triplet&lt; Vec3d &gt; &amp;triangle) const " -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
           <td class="memname">bool SphericalCap::intersectsTriangle </td>
           <td>(</td>
-          <td class="paramtype">const <a class="el" href="classVector3.html">Vec3d</a> *&nbsp;</td>
-          <td class="paramname"> <em>vertice</em></td>
+          <td class="paramtype">const <a class="el" href="structTriplet.html">Triplet</a>&lt; <a class="el" href="classVector3.html">Vec3d</a> &gt; &amp;&nbsp;</td>
+          <td class="paramname"> <em>triangle</em></td>
           <td>&nbsp;)&nbsp;</td>
           <td> const</td>
         </tr>
@@ -569,7 +592,7 @@ virtual bool&nbsp;</td><td class="memItemRight" valign="bottom"><b>intersects</b
 </div>
 <div class="memdoc">
 
-<p>Return whether the cap intersect with the passed triangle. </p>
+<p>Does the cap intersect with the passed triangle? </p>
 
 </div>
 </div>
@@ -592,6 +615,8 @@ virtual bool&nbsp;</td><td class="memItemRight" valign="bottom"><b>intersects</b
 
 <p>Reimplemented from <a class="el" href="classSphericalRegion.html#ae93ecc2b8a71d58a3d23e80e7400c109">SphericalRegion</a>.</p>
 
+<p>Definition at line <a class="el" href="StelSphereGeometry_8hpp_source.html#l00524">524</a> of file <a class="el" href="StelSphereGeometry_8hpp_source.html">StelSphereGeometry.hpp</a>.</p>
+
 </div>
 </div>
 <a class="anchor" id="acaa7807b0b23709266b105bb4781b3f4"></a><!-- doxytag: member="SphericalCap::operator==" ref="acaa7807b0b23709266b105bb4781b3f4" args="(const SphericalCap &amp;other) const " -->
@@ -611,6 +636,8 @@ virtual bool&nbsp;</td><td class="memItemRight" valign="bottom"><b>intersects</b
 <div class="memdoc">
 
 <p>Comparison operator. </p>
+
+<p>Definition at line <a class="el" href="StelSphereGeometry_8hpp_source.html#l00582">582</a> of file <a class="el" href="StelSphereGeometry_8hpp_source.html">StelSphereGeometry.hpp</a>.</p>
 
 </div>
 </div>
@@ -692,6 +719,8 @@ virtual bool&nbsp;</td><td class="memItemRight" valign="bottom"><b>intersects</b
 
 <p>Implements <a class="el" href="classSphericalRegion.html#ac9cbe8c30210a7042a44512c630212f1">SphericalRegion</a>.</p>
 
+<p>Definition at line <a class="el" href="StelSphereGeometry_8hpp_source.html#l00559">559</a> of file <a class="el" href="StelSphereGeometry_8hpp_source.html">StelSphereGeometry.hpp</a>.</p>
+
 </div>
 </div>
 <a class="anchor" id="a43685b8ffdb2fee0efd471513680a146"></a><!-- doxytag: member="SphericalCap::toQVariant" ref="a43685b8ffdb2fee0efd471513680a146" args="() const " -->
@@ -730,6 +759,8 @@ virtual bool&nbsp;</td><td class="memItemRight" valign="bottom"><b>intersects</b
 
 <p>The cos of cone radius. </p>
 
+<p>Definition at line <a class="el" href="StelSphereGeometry_8hpp_source.html#l00614">614</a> of file <a class="el" href="StelSphereGeometry_8hpp_source.html">StelSphereGeometry.hpp</a>.</p>
+
 </div>
 </div>
 <a class="anchor" id="acc1e4d18a51b380f87cf427eb7f5686c"></a><!-- doxytag: member="SphericalCap::n" ref="acc1e4d18a51b380f87cf427eb7f5686c" args="" -->
@@ -745,10 +776,15 @@ virtual bool&nbsp;</td><td class="memItemRight" valign="bottom"><b>intersects</b
 
 <p>The direction unit vector. Only if d==0, this vector doesn't need to be unit. </p>
 
+<p>Definition at line <a class="el" href="StelSphereGeometry_8hpp_source.html#l00612">612</a> of file <a class="el" href="StelSphereGeometry_8hpp_source.html">StelSphereGeometry.hpp</a>.</p>
+
 </div>
 </div>
+<hr/>The documentation for this class was generated from the following file:<ul>
+<li>core/<a class="el" href="StelSphereGeometry_8hpp_source.html">StelSphereGeometry.hpp</a></li>
+</ul>
 </div>
-<hr class="footer"/><address style="text-align: right;"><small>Generated on Sat Aug 25 22:13:32 2012 for Stellarium by&nbsp;
+<hr class="footer"/><address style="text-align: right;"><small>Generated on Fri Aug 31 18:07:55 2012 for Stellarium by&nbsp;
 <a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.6.3 </small></address>
 </body>

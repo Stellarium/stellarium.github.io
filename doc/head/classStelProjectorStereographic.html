@@ -9,7 +9,7 @@
 <tr>
 <td align="left" valign="top" width="32" rowspan="2"><a href="http://www.stellarium.org"><img src="stellarium-logo.png" align="left" border="0" /></a></td>
 <td width="1" rowspan="2">&nbsp;&nbsp;</td>
-<td style="font-size:120%;font-weight:bolder;">Stellarium 0.11.4</td>
+<td style="font-size:120%;font-weight:bolder;">Stellarium 0.12.0</td>
 <td align="right" valign="top" width="230" rowspan="2"></td></tr><tr>
 <td class="postheader" valign="center">
  <a href="index.html">Home</a>&nbsp;&middot;
@@ -19,6 +19,7 @@
  <a href="codingStyle.html">Coding Style</a>&nbsp;&middot;
  <a href="scripting.html">Scripting</a>&nbsp;&middot;
  <a href="plugins.html">Plugins</a>&nbsp;&middot;
+ <a href="renderer.html">Renderer</a>&nbsp;&middot;
  <a href="fileStructure.html">File Structure</a>
 </td>
 </tr>
@@ -28,6 +29,9 @@
 <h1>StelProjectorStereographic Class Reference</h1><!-- doxytag: class="StelProjectorStereographic" --><!-- doxytag: inherits="StelProjector" -->
 <p><a href="classStelProjectorStereographic-members.html">List of all members.</a></p>
 <table border="0" cellpadding="0" cellspacing="0">
+<tr><td colspan="2"><h2>Classes</h2></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">class &nbsp;</td><td class="memItemRight" valign="bottom"><b>StereographicGLSLProjector</b></td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">GLSL projector code for <a class="el" href="classStelProjectorStereographic.html">StelProjectorStereographic</a>. <br/></td></tr>
 <tr><td colspan="2"><h2>Public Member Functions</h2></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a70334c178d8e63ca4299e99bc5108da3"></a><!-- doxytag: member="StelProjectorStereographic::StelProjectorStereographic" ref="a70334c178d8e63ca4299e99bc5108da3" args="(ModelViewTranformP func)" -->
 &nbsp;</td><td class="memItemRight" valign="bottom"><b>StelProjectorStereographic</b> (<a class="el" href="classQSharedPointer.html">ModelViewTranformP</a> func)</td></tr>
@@ -41,6 +45,8 @@
 <tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Apply the transformation in the forward direction in place.  <a href="#a10925f33de2662dac871777f1a3376d5"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a6ec0ebea5049495ce5cc9d200fd73fe2"></a><!-- doxytag: member="StelProjectorStereographic::project" ref="a6ec0ebea5049495ce5cc9d200fd73fe2" args="(int n, const Vec3d *in, Vec3f *out)" -->
 virtual void&nbsp;</td><td class="memItemRight" valign="bottom"><b>project</b> (int n, const <a class="el" href="classVector3.html">Vec3d</a> *in, <a class="el" href="classVector3.html">Vec3f</a> *out)</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="classStelProjector_1_1GLSLProjector.html">GLSLProjector</a> *&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classStelProjectorStereographic.html#a6bcd6ccef4a200bdf67bebcbde160438">getGLSLProjector</a> ()</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Return the GLSLProjector to provide GLSL projection functionality.  <a href="#a6bcd6ccef4a200bdf67bebcbde160438"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">bool&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classStelProjectorStereographic.html#a7f26a2ac9d852e3ed71ce7a5f4e29ef8">backward</a> (<a class="el" href="classVector3.html">Vec3d</a> &amp;v) const </td></tr>
 <tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Apply the transformation in the backward projection in place.  <a href="#a7f26a2ac9d852e3ed71ce7a5f4e29ef8"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">float&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classStelProjectorStereographic.html#ab7edb59e64769196ec7836b8e7edd9dd">fovToViewScalingFactor</a> (float fov) const </td></tr>
@@ -57,6 +63,9 @@ virtual void&nbsp;</td><td class="memItemRight" valign="bottom"><b>project</b> (
 <tr><td class="memItemLeft" align="right" valign="top">virtual bool&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classStelProjectorStereographic.html#a3ef1d2dfadf3d7d898313ed009d54e65">intersectViewportDiscontinuityInternal</a> (const <a class="el" href="classVector3.html">Vec3d</a> &amp;, double) const </td></tr>
 <tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Determine whether a cap intersects with a projection discontinuity.  <a href="#a3ef1d2dfadf3d7d898313ed009d54e65"></a><br/></td></tr>
 </table>
+<hr/><a name="_details"></a><h2>Detailed Description</h2>
+
+<p>Definition at line <a class="el" href="StelProjectorClasses_8hpp_source.html#l00091">91</a> of file <a class="el" href="StelProjectorClasses_8hpp_source.html">StelProjectorClasses.hpp</a>.</p>
 <hr/><h2>Member Function Documentation</h2>
 <a class="anchor" id="a7f26a2ac9d852e3ed71ce7a5f4e29ef8"></a><!-- doxytag: member="StelProjectorStereographic::backward" ref="a7f26a2ac9d852e3ed71ce7a5f4e29ef8" args="(Vec3d &amp;v) const " -->
 <div class="memitem">
@@ -123,6 +132,8 @@ virtual void&nbsp;</td><td class="memItemRight" valign="bottom"><b>project</b> (
 
 <p>Implements <a class="el" href="classStelProjector.html#abd6860a25765a570691ead7786e47a2a">StelProjector</a>.</p>
 
+<p>Definition at line <a class="el" href="StelProjectorClasses_8hpp_source.html#l00240">240</a> of file <a class="el" href="StelProjectorClasses_8hpp_source.html">StelProjectorClasses.hpp</a>.</p>
+
 </div>
 </div>
 <a class="anchor" id="ab7edb59e64769196ec7836b8e7edd9dd"></a><!-- doxytag: member="StelProjectorStereographic::fovToViewScalingFactor" ref="ab7edb59e64769196ec7836b8e7edd9dd" args="(float fov) const " -->
@@ -168,6 +179,30 @@ virtual void&nbsp;</td><td class="memItemRight" valign="bottom"><b>project</b> (
 
 </div>
 </div>
+<a class="anchor" id="a6bcd6ccef4a200bdf67bebcbde160438"></a><!-- doxytag: member="StelProjectorStereographic::getGLSLProjector" ref="a6bcd6ccef4a200bdf67bebcbde160438" args="()" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual <a class="el" href="classStelProjector_1_1GLSLProjector.html">GLSLProjector</a>* StelProjectorStereographic::getGLSLProjector </td>
+          <td>(</td>
+          <td class="paramname"></td>
+          <td>&nbsp;)&nbsp;</td>
+          <td><code> [inline, virtual]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Return the GLSLProjector to provide GLSL projection functionality. </p>
+<p>This can return NULL if the <a class="el" href="classStelProjector.html" title="Provide the main interface to all operations of projecting coordinates from sky to...">StelProjector</a> implementation does not support GLSL projection. </p>
+
+<p>Reimplemented from <a class="el" href="classStelProjector.html#ab7de38594cb23171a40b2a60aa5cc838">StelProjector</a>.</p>
+
+<p>Definition at line <a class="el" href="StelProjectorClasses_8hpp_source.html#l00272">272</a> of file <a class="el" href="StelProjectorClasses_8hpp_source.html">StelProjectorClasses.hpp</a>.</p>
+
+</div>
+</div>
 <a class="anchor" id="a7f65202ea01470ad7733f23c9c3eac89"></a><!-- doxytag: member="StelProjectorStereographic::getMaxFov" ref="a7f65202ea01470ad7733f23c9c3eac89" args="() const " -->
 <div class="memitem">
 <div class="memproto">
@@ -186,6 +221,8 @@ virtual void&nbsp;</td><td class="memItemRight" valign="bottom"><b>project</b> (
 <p>Get the maximum FOV apperture in degree. </p>
 
 <p>Implements <a class="el" href="classStelProjector.html#aef4aa6a98699023c1a7ebc998d71db73">StelProjector</a>.</p>
+
+<p>Definition at line <a class="el" href="StelProjectorClasses_8hpp_source.html#l00239">239</a> of file <a class="el" href="StelProjectorClasses_8hpp_source.html">StelProjectorClasses.hpp</a>.</p>
 
 </div>
 </div>
@@ -229,6 +266,8 @@ virtual void&nbsp;</td><td class="memItemRight" valign="bottom"><b>project</b> (
 
 <p>Implements <a class="el" href="classStelProjector.html#abeab06950711191b13ca7a09a79dff38">StelProjector</a>.</p>
 
+<p>Definition at line <a class="el" href="StelProjectorClasses_8hpp_source.html#l00282">282</a> of file <a class="el" href="StelProjectorClasses_8hpp_source.html">StelProjectorClasses.hpp</a>.</p>
+
 </div>
 </div>
 <a class="anchor" id="a3ef1d2dfadf3d7d898313ed009d54e65"></a><!-- doxytag: member="StelProjectorStereographic::intersectViewportDiscontinuityInternal" ref="a3ef1d2dfadf3d7d898313ed009d54e65" args="(const Vec3d &amp;, double) const " -->
@@ -259,6 +298,8 @@ virtual void&nbsp;</td><td class="memItemRight" valign="bottom"><b>project</b> (
 <p>Determine whether a cap intersects with a projection discontinuity. </p>
 
 <p>Implements <a class="el" href="classStelProjector.html#a10c65389c129c45999cd10c6fcb42288">StelProjector</a>.</p>
+
+<p>Definition at line <a class="el" href="StelProjectorClasses_8hpp_source.html#l00284">284</a> of file <a class="el" href="StelProjectorClasses_8hpp_source.html">StelProjectorClasses.hpp</a>.</p>
 
 </div>
 </div>
@@ -292,6 +333,8 @@ virtual void&nbsp;</td><td class="memItemRight" valign="bottom"><b>project</b> (
 
 <p>Implements <a class="el" href="classStelProjector.html#ab9189304c511f841f14a447248beb854">StelProjector</a>.</p>
 
+<p>Definition at line <a class="el" href="StelProjectorClasses_8hpp_source.html#l00283">283</a> of file <a class="el" href="StelProjectorClasses_8hpp_source.html">StelProjectorClasses.hpp</a>.</p>
+
 </div>
 </div>
 <a class="anchor" id="ae0b52c58fa774afe9fef4daf02e7462f"></a><!-- doxytag: member="StelProjectorStereographic::viewScalingFactorToFov" ref="ae0b52c58fa774afe9fef4daf02e7462f" args="(float vsf) const " -->
@@ -316,8 +359,11 @@ virtual void&nbsp;</td><td class="memItemRight" valign="bottom"><b>project</b> (
 
 </div>
 </div>
+<hr/>The documentation for this class was generated from the following file:<ul>
+<li>core/<a class="el" href="StelProjectorClasses_8hpp_source.html">StelProjectorClasses.hpp</a></li>
+</ul>
 </div>
-<hr class="footer"/><address style="text-align: right;"><small>Generated on Sat Aug 25 22:13:33 2012 for Stellarium by&nbsp;
+<hr class="footer"/><address style="text-align: right;"><small>Generated on Fri Aug 31 18:08:00 2012 for Stellarium by&nbsp;
 <a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.6.3 </small></address>
 </body>

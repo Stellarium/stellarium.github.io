@@ -9,7 +9,7 @@
 <tr>
 <td align="left" valign="top" width="32" rowspan="2"><a href="http://www.stellarium.org"><img src="stellarium-logo.png" align="left" border="0" /></a></td>
 <td width="1" rowspan="2">&nbsp;&nbsp;</td>
-<td style="font-size:120%;font-weight:bolder;">Stellarium 0.11.4</td>
+<td style="font-size:120%;font-weight:bolder;">Stellarium 0.12.0</td>
 <td align="right" valign="top" width="230" rowspan="2"></td></tr><tr>
 <td class="postheader" valign="center">
  <a href="index.html">Home</a>&nbsp;&middot;
@@ -19,6 +19,7 @@
  <a href="codingStyle.html">Coding Style</a>&nbsp;&middot;
  <a href="scripting.html">Scripting</a>&nbsp;&middot;
  <a href="plugins.html">Plugins</a>&nbsp;&middot;
+ <a href="renderer.html">Renderer</a>&nbsp;&middot;
  <a href="fileStructure.html">File Structure</a>
 </td>
 </tr>
@@ -53,8 +54,8 @@
 <tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Construct a <a class="el" href="classLabelMgr.html" title="Allows for creation of custom labels on objects or coordinates.">LabelMgr</a> object.  <a href="#a84d2232284a48b8f0ecd30a4345ff1c4"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classLabelMgr.html#a3b0c55d4bfd482abd2f24165b6124e54">init</a> ()</td></tr>
 <tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Initialize the <a class="el" href="classLabelMgr.html" title="Allows for creation of custom labels on objects or coordinates.">LabelMgr</a> object.  <a href="#a3b0c55d4bfd482abd2f24165b6124e54"></a><br/></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">virtual void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classLabelMgr.html#acacd2e2a0027092b718f5a89fc918444">draw</a> (<a class="el" href="classStelCore.html">StelCore</a> *core)</td></tr>
-<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Draw user labels.  <a href="#acacd2e2a0027092b718f5a89fc918444"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">virtual void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classLabelMgr.html#a80626147bbf094b1f09702a73220bec1">draw</a> (<a class="el" href="classStelCore.html">StelCore</a> *core, class <a class="el" href="classStelRenderer.html">StelRenderer</a> *renderer)</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Draw user labels.  <a href="#a80626147bbf094b1f09702a73220bec1"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classLabelMgr.html#ad108170f986887d39d5a4dce37c4c010">update</a> (double deltaTime)</td></tr>
 <tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Update time-dependent parts of the module.  <a href="#ad108170f986887d39d5a4dce37c4c010"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual double&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classLabelMgr.html#aa201998c7ce4dfba29c9a5aa7f737c3a">getCallOrder</a> (<a class="el" href="classStelModule.html#a11b61d014b51cf6424cd89b1ccd3d768">StelModuleActionName</a> actionName) const </td></tr>
@@ -63,6 +64,8 @@
 <hr/><a name="_details"></a><h2>Detailed Description</h2>
 <p>Allows for creation of custom labels on objects or coordinates. </p>
 <p>Because this class is intended for use in scripting (although other uses are also fine), all label types and so on are specified by QString descriptions. TODO: when QT4.5 is out, change implementation to use QGraphicsTextItem. (QT4.5 should allow for opacity changes for fades, but it is not currently implemented. </p>
+
+<p>Definition at line <a class="el" href="LabelMgr_8hpp_source.html#l00043">43</a> of file <a class="el" href="LabelMgr_8hpp_source.html">LabelMgr.hpp</a>.</p>
 <hr/><h2>Constructor &amp; Destructor Documentation</h2>
 <a class="anchor" id="a84d2232284a48b8f0ecd30a4345ff1c4"></a><!-- doxytag: member="LabelMgr::LabelMgr" ref="a84d2232284a48b8f0ecd30a4345ff1c4" args="()" -->
 <div class="memitem">
@@ -127,7 +130,7 @@
 
 </div>
 </div>
-<a class="anchor" id="acacd2e2a0027092b718f5a89fc918444"></a><!-- doxytag: member="LabelMgr::draw" ref="acacd2e2a0027092b718f5a89fc918444" args="(StelCore *core)" -->
+<a class="anchor" id="a80626147bbf094b1f09702a73220bec1"></a><!-- doxytag: member="LabelMgr::draw" ref="a80626147bbf094b1f09702a73220bec1" args="(StelCore *core, class StelRenderer *renderer)" -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
@@ -135,9 +138,18 @@
           <td class="memname">virtual void LabelMgr::draw </td>
           <td>(</td>
           <td class="paramtype"><a class="el" href="classStelCore.html">StelCore</a> *&nbsp;</td>
-          <td class="paramname"> <em>core</em></td>
-          <td>&nbsp;)&nbsp;</td>
-          <td><code> [virtual]</code></td>
+          <td class="paramname"> <em>core</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">class <a class="el" href="classStelRenderer.html">StelRenderer</a> *&nbsp;</td>
+          <td class="paramname"> <em>renderer</em></td><td>&nbsp;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td><td><code> [virtual]</code></td>
         </tr>
       </table>
 </div>
@@ -145,7 +157,7 @@
 
 <p>Draw user labels. </p>
 
-<p>Reimplemented from <a class="el" href="classStelModule.html#a18fde2820af998395aea9e30bb1138b2">StelModule</a>.</p>
+<p>Reimplemented from <a class="el" href="classStelModule.html#ab352388800724842a5c1e55e250378a6">StelModule</a>.</p>
 
 </div>
 </div>
@@ -290,6 +302,8 @@
 <li>"NE", "NW", "SE", "SW" work too. </li>
 </ul>
 </td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>labelDistance</em>&nbsp;</td><td>Distance of the label from the object </td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>style</em>&nbsp;</td><td>Label style </td></tr>
   </table>
   </dd>
 </dl>
@@ -441,8 +455,11 @@
 
 </div>
 </div>
+<hr/>The documentation for this class was generated from the following file:<ul>
+<li>core/modules/<a class="el" href="LabelMgr_8hpp_source.html">LabelMgr.hpp</a></li>
+</ul>
 </div>
-<hr class="footer"/><address style="text-align: right;"><small>Generated on Sat Aug 25 22:13:31 2012 for Stellarium by&nbsp;
+<hr class="footer"/><address style="text-align: right;"><small>Generated on Fri Aug 31 18:07:52 2012 for Stellarium by&nbsp;
 <a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.6.3 </small></address>
 </body>

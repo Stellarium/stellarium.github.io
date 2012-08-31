@@ -9,7 +9,7 @@
 <tr>
 <td align="left" valign="top" width="32" rowspan="2"><a href="http://www.stellarium.org"><img src="stellarium-logo.png" align="left" border="0" /></a></td>
 <td width="1" rowspan="2">&nbsp;&nbsp;</td>
-<td style="font-size:120%;font-weight:bolder;">Stellarium 0.11.4</td>
+<td style="font-size:120%;font-weight:bolder;">Stellarium 0.12.0</td>
 <td align="right" valign="top" width="230" rowspan="2"></td></tr><tr>
 <td class="postheader" valign="center">
  <a href="index.html">Home</a>&nbsp;&middot;
@@ -19,6 +19,7 @@
  <a href="codingStyle.html">Coding Style</a>&nbsp;&middot;
  <a href="scripting.html">Scripting</a>&nbsp;&middot;
  <a href="plugins.html">Plugins</a>&nbsp;&middot;
+ <a href="renderer.html">Renderer</a>&nbsp;&middot;
  <a href="fileStructure.html">File Structure</a>
 </td>
 </tr>
@@ -108,8 +109,8 @@ void&nbsp;</td><td class="memItemRight" valign="bottom"><b>namesDisplayedChanged
 <tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Destructor.  <a href="#af41425f062ffea2c0372527f057bb523"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classConstellationMgr.html#a4c4068212f8231708f5d26a8168006c6">init</a> ()</td></tr>
 <tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Initialize the <a class="el" href="classConstellationMgr.html" title="Display and manage the constellations.">ConstellationMgr</a>.  <a href="#a4c4068212f8231708f5d26a8168006c6"></a><br/></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">virtual void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classConstellationMgr.html#a1468f720ddca253c6408e2e58e8da03c">draw</a> (<a class="el" href="classStelCore.html">StelCore</a> *core)</td></tr>
-<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Draw constellation lines, art, names and boundaries.  <a href="#a1468f720ddca253c6408e2e58e8da03c"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">virtual void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classConstellationMgr.html#a51eabf07fb2554082353fdb52f5f7295">draw</a> (<a class="el" href="classStelCore.html">StelCore</a> *core, class <a class="el" href="classStelRenderer.html">StelRenderer</a> *renderer)</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Draw constellation lines, art, names and boundaries.  <a href="#a51eabf07fb2554082353fdb52f5f7295"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classConstellationMgr.html#a3e93cbdebae629cfda8ea91a3c40619f">update</a> (double deltaTime)</td></tr>
 <tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Updates time-varying state for each <a class="el" href="classConstellation.html" title="The Constellation class models a grouping of stars in a Sky Culture.">Constellation</a>.  <a href="#a3e93cbdebae629cfda8ea91a3c40619f"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual double&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classConstellationMgr.html#a2597e5fdd81ecc52712c2156e96ee08c">getCallOrder</a> (<a class="el" href="classStelModule.html#a11b61d014b51cf6424cd89b1ccd3d768">StelModuleActionName</a> actionName) const </td></tr>
@@ -149,6 +150,8 @@ bool&nbsp;</td><td class="memItemRight" valign="bottom"><b>namesDisplayed</b></t
 <hr/><a name="_details"></a><h2>Detailed Description</h2>
 <p>Display and manage the constellations. </p>
 <p>It can display constellations lines, names, art textures and boundaries. It also supports several different sky cultures. </p>
+
+<p>Definition at line <a class="el" href="ConstellationMgr_8hpp_source.html#l00042">42</a> of file <a class="el" href="ConstellationMgr_8hpp_source.html">ConstellationMgr.hpp</a>.</p>
 <hr/><h2>Constructor &amp; Destructor Documentation</h2>
 <a class="anchor" id="a94d5ceddc2bf045b1f07507ab8778ba1"></a><!-- doxytag: member="ConstellationMgr::ConstellationMgr" ref="a94d5ceddc2bf045b1f07507ab8778ba1" args="(StarMgr *stars)" -->
 <div class="memitem">
@@ -190,7 +193,7 @@ bool&nbsp;</td><td class="memItemRight" valign="bottom"><b>namesDisplayed</b></t
 </div>
 </div>
 <hr/><h2>Member Function Documentation</h2>
-<a class="anchor" id="a1468f720ddca253c6408e2e58e8da03c"></a><!-- doxytag: member="ConstellationMgr::draw" ref="a1468f720ddca253c6408e2e58e8da03c" args="(StelCore *core)" -->
+<a class="anchor" id="a51eabf07fb2554082353fdb52f5f7295"></a><!-- doxytag: member="ConstellationMgr::draw" ref="a51eabf07fb2554082353fdb52f5f7295" args="(StelCore *core, class StelRenderer *renderer)" -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
@@ -198,9 +201,18 @@ bool&nbsp;</td><td class="memItemRight" valign="bottom"><b>namesDisplayed</b></t
           <td class="memname">virtual void ConstellationMgr::draw </td>
           <td>(</td>
           <td class="paramtype"><a class="el" href="classStelCore.html">StelCore</a> *&nbsp;</td>
-          <td class="paramname"> <em>core</em></td>
-          <td>&nbsp;)&nbsp;</td>
-          <td><code> [virtual]</code></td>
+          <td class="paramname"> <em>core</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">class <a class="el" href="classStelRenderer.html">StelRenderer</a> *&nbsp;</td>
+          <td class="paramname"> <em>renderer</em></td><td>&nbsp;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td><td><code> [virtual]</code></td>
         </tr>
       </table>
 </div>
@@ -208,7 +220,7 @@ bool&nbsp;</td><td class="memItemRight" valign="bottom"><b>namesDisplayed</b></t
 
 <p>Draw constellation lines, art, names and boundaries. </p>
 
-<p>Reimplemented from <a class="el" href="classStelModule.html#a18fde2820af998395aea9e30bb1138b2">StelModule</a>.</p>
+<p>Reimplemented from <a class="el" href="classStelModule.html#ab352388800724842a5c1e55e250378a6">StelModule</a>.</p>
 
 </div>
 </div>
@@ -861,8 +873,11 @@ bool&nbsp;</td><td class="memItemRight" valign="bottom"><b>namesDisplayed</b></t
 
 </div>
 </div>
+<hr/>The documentation for this class was generated from the following file:<ul>
+<li>core/modules/<a class="el" href="ConstellationMgr_8hpp_source.html">ConstellationMgr.hpp</a></li>
+</ul>
 </div>
-<hr class="footer"/><address style="text-align: right;"><small>Generated on Sat Aug 25 22:13:31 2012 for Stellarium by&nbsp;
+<hr class="footer"/><address style="text-align: right;"><small>Generated on Fri Aug 31 18:07:52 2012 for Stellarium by&nbsp;
 <a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.6.3 </small></address>
 </body>

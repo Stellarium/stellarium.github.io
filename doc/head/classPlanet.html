@@ -9,7 +9,7 @@
 <tr>
 <td align="left" valign="top" width="32" rowspan="2"><a href="http://www.stellarium.org"><img src="stellarium-logo.png" align="left" border="0" /></a></td>
 <td width="1" rowspan="2">&nbsp;&nbsp;</td>
-<td style="font-size:120%;font-weight:bolder;">Stellarium 0.11.4</td>
+<td style="font-size:120%;font-weight:bolder;">Stellarium 0.12.0</td>
 <td align="right" valign="top" width="230" rowspan="2"></td></tr><tr>
 <td class="postheader" valign="center">
  <a href="index.html">Home</a>&nbsp;&middot;
@@ -19,6 +19,7 @@
  <a href="codingStyle.html">Coding Style</a>&nbsp;&middot;
  <a href="scripting.html">Scripting</a>&nbsp;&middot;
  <a href="plugins.html">Plugins</a>&nbsp;&middot;
+ <a href="renderer.html">Renderer</a>&nbsp;&middot;
  <a href="fileStructure.html">File Structure</a>
 </td>
 </tr>
@@ -28,6 +29,11 @@
 <h1>Planet Class Reference</h1><!-- doxytag: class="Planet" --><!-- doxytag: inherits="StelObject" -->
 <p><a href="classPlanet-members.html">List of all members.</a></p>
 <table border="0" cellpadding="0" cellspacing="0">
+<tr><td colspan="2"><h2>Classes</h2></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">struct &nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="structPlanet_1_1SharedPlanetGraphics.html">SharedPlanetGraphics</a></td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Stores graphics data that is shared between planets and must be initialized by a <a class="el" href="classStelRenderer.html" title="Main class of the Renderer subsystem.">StelRenderer</a>.  <a href="structPlanet_1_1SharedPlanetGraphics.html#_details">More...</a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">struct &nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="structPlanet_1_1Vertex2D.html">Vertex2D</a></td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">A simple 2D vertex with only a position.  <a href="structPlanet_1_1Vertex2D.html#_details">More...</a><br/></td></tr>
 <tr><td colspan="2"><h2>Public Member Functions</h2></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a5c1f517cb69ecd8b29b51e4e34a52a3a"></a><!-- doxytag: member="Planet::Planet" ref="a5c1f517cb69ecd8b29b51e4e34a52a3a" args="(const QString &amp;englishName, int flagLighting, double radius, double oblateness, Vec3f color, float albedo, const QString &amp;texMapName, posFuncType _coordFunc, void *userDataPtr, OsculatingFunctType *osculatingFunc, bool closeOrbit, bool hidden, bool hasAtmosphere)" -->
 &nbsp;</td><td class="memItemRight" valign="bottom"><b>Planet</b> (const QString &amp;englishName, int flagLighting, double radius, double oblateness, <a class="el" href="classVector3.html">Vec3f</a> color, float albedo, const QString &amp;texMapName, posFuncType _coordFunc, void *userDataPtr, OsculatingFunctType *osculatingFunc, bool closeOrbit, bool hidden, bool hasAtmosphere)</td></tr>
@@ -59,8 +65,8 @@ virtual double&nbsp;</td><td class="memItemRight" valign="bottom"><b>getParentSa
 virtual bool&nbsp;</td><td class="memItemRight" valign="bottom"><b>hasAtmosphere</b> (void)</td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPlanet.html#a817eeb9658e3bf5bab9328ce8539c1ec">translateName</a> (<a class="el" href="classStelTranslator.html">StelTranslator</a> &amp;trans)</td></tr>
 <tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Translate planet name using the passed translator.  <a href="#a817eeb9658e3bf5bab9328ce8539c1ec"></a><br/></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a517f9ad781c8fa59bf583df2e99a96c4"></a><!-- doxytag: member="Planet::draw" ref="a517f9ad781c8fa59bf583df2e99a96c4" args="(StelCore *core, float maxMagLabels, const QFont &amp;planetNameFont)" -->
-void&nbsp;</td><td class="memItemRight" valign="bottom"><b>draw</b> (<a class="el" href="classStelCore.html">StelCore</a> *core, float maxMagLabels, const QFont &amp;planetNameFont)</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPlanet.html#a7f144ff9eb55afc2be2197d3653703f0">draw</a> (<a class="el" href="classStelCore.html">StelCore</a> *core, class <a class="el" href="classStelRenderer.html">StelRenderer</a> *renderer, float maxMagLabels, const QFont &amp;planetNameFont, <a class="el" href="structPlanet_1_1SharedPlanetGraphics.html">SharedPlanetGraphics</a> &amp;planetGraphics)</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Draw the <a class="el" href="classPlanet.html">Planet</a>.  <a href="#a7f144ff9eb55afc2be2197d3653703f0"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">double&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPlanet.html#ab297f4794cd089c343f60688911ac350">getRadius</a> (void) const </td></tr>
 <tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Get the radius of the planet in AU.  <a href="#ab297f4794cd089c343f60688911ac350"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="abd4e301316118ffa43dac8ff354698f8"></a><!-- doxytag: member="Planet::getSiderealDay" ref="abd4e301316118ffa43dac8ff354698f8" args="(void) const " -->
@@ -81,6 +87,8 @@ void&nbsp;</td><td class="memItemRight" valign="bottom"><b>computePositionWithou
 void&nbsp;</td><td class="memItemRight" valign="bottom"><b>computePosition</b> (const double date)</td></tr>
 <tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a4f66295d896ada18388b882621c1bc14"></a><!-- doxytag: member="Planet::computeTransMatrix" ref="a4f66295d896ada18388b882621c1bc14" args="(double date)" -->
 void&nbsp;</td><td class="memItemRight" valign="bottom"><b>computeTransMatrix</b> (double date)</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ad73b6cd4bfad13341a4f44cba3c57ae0"></a><!-- doxytag: member="Planet::computeModelMatrix" ref="ad73b6cd4bfad13341a4f44cba3c57ae0" args="(Mat4d &amp;result) const " -->
+void&nbsp;</td><td class="memItemRight" valign="bottom"><b>computeModelMatrix</b> (<a class="el" href="classMatrix4.html">Mat4d</a> &amp;result) const </td></tr>
 <tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a2cd77b0384884691d53e7809fbd0a309"></a><!-- doxytag: member="Planet::getPhase" ref="a2cd77b0384884691d53e7809fbd0a309" args="(const Vec3d &amp;obsPos) const " -->
 double&nbsp;</td><td class="memItemRight" valign="bottom"><b>getPhase</b> (const <a class="el" href="classVector3.html">Vec3d</a> &amp;obsPos) const </td></tr>
 <tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="af86671977d920177e36e77aa1c2d83a5"></a><!-- doxytag: member="Planet::getElongation" ref="af86671977d920177e36e77aa1c2d83a5" args="(const Vec3d &amp;obsPos) const " -->
@@ -127,8 +135,8 @@ bool&nbsp;</td><td class="memItemRight" valign="bottom"><b>getFlagLabels</b> (vo
 void&nbsp;</td><td class="memItemRight" valign="bottom"><b>setFlagOrbits</b> (bool b)</td></tr>
 <tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a24ed50cbbe88017302f83569571b36c3"></a><!-- doxytag: member="Planet::getFlagOrbits" ref="a24ed50cbbe88017302f83569571b36c3" args="(void) const " -->
 bool&nbsp;</td><td class="memItemRight" valign="bottom"><b>getFlagOrbits</b> (void) const </td></tr>
-<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ada907f92f0a96dfc960fad9b1b12486f"></a><!-- doxytag: member="Planet::drawOrbit" ref="ada907f92f0a96dfc960fad9b1b12486f" args="(const StelCore *)" -->
-void&nbsp;</td><td class="memItemRight" valign="bottom"><b>drawOrbit</b> (const <a class="el" href="classStelCore.html">StelCore</a> *)</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="afba56c1aece5eb12dad7222b98f2b0e5"></a><!-- doxytag: member="Planet::drawOrbit" ref="afba56c1aece5eb12dad7222b98f2b0e5" args="(const StelCore *core, class StelRenderer *renderer)" -->
+void&nbsp;</td><td class="memItemRight" valign="bottom"><b>drawOrbit</b> (const <a class="el" href="classStelCore.html">StelCore</a> *core, class <a class="el" href="classStelRenderer.html">StelRenderer</a> *renderer)</td></tr>
 <tr><td colspan="2"><h2>Static Public Member Functions</h2></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aaa20a3931e54723875e3eab71b0fab10"></a><!-- doxytag: member="Planet::setLabelColor" ref="aaa20a3931e54723875e3eab71b0fab10" args="(const Vec3f &amp;lc)" -->
 static void&nbsp;</td><td class="memItemRight" valign="bottom"><b>setLabelColor</b> (const <a class="el" href="classVector3.html">Vec3f</a> &amp;lc)</td></tr>
@@ -139,6 +147,8 @@ static void&nbsp;</td><td class="memItemRight" valign="bottom"><b>setOrbitColor<
 <tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a29181435e34bc75cf1dd24c5829fe4de"></a><!-- doxytag: member="Planet::getOrbitColor" ref="a29181435e34bc75cf1dd24c5829fe4de" args="()" -->
 static const <a class="el" href="classVector3.html">Vec3f</a> &amp;&nbsp;</td><td class="memItemRight" valign="bottom"><b>getOrbitColor</b> ()</td></tr>
 <tr><td colspan="2"><h2>Public Attributes</h2></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="el" href="classStelVertexBuffer.html">StelVertexBuffer</a>&lt; <a class="el" href="structPlanet_1_1Vertex2D.html">Vertex2D</a> &gt; *&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPlanet.html#aa499b50e600053eacf6477216754fc96">orbitVertices</a></td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Vertex buffer used to draw the orbit.  <a href="#aa499b50e600053eacf6477216754fc96"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a7cf00535e0efc0767852bcd2f2113cb7"></a><!-- doxytag: member="Planet::orbitFader" ref="a7cf00535e0efc0767852bcd2f2113cb7" args="" -->
 <a class="el" href="classLinearFader.html">LinearFader</a>&nbsp;</td><td class="memItemRight" valign="bottom"><b>orbitFader</b></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a84e54ab8b4240b2eab45ee6f96c78d15"></a><!-- doxytag: member="Planet::orbit" ref="a84e54ab8b4240b2eab45ee6f96c78d15" args="[ORBIT_SEGMENTS+1]" -->
@@ -159,16 +169,18 @@ bool&nbsp;</td><td class="memItemRight" valign="bottom"><b>closeOrbit</b></td></
 <tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="af97ae7bdabab5f515e72cb38078f4c30"></a><!-- doxytag: member="Planet::orbitColor" ref="af97ae7bdabab5f515e72cb38078f4c30" args="" -->
 static <a class="el" href="classVector3.html">Vec3f</a>&nbsp;</td><td class="memItemRight" valign="bottom"><b>orbitColor</b></td></tr>
 <tr><td colspan="2"><h2>Protected Member Functions</h2></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ad3be4000ede227f144649889d8e704cb"></a><!-- doxytag: member="Planet::drawEarthShadow" ref="ad3be4000ede227f144649889d8e704cb" args="(StelCore *core, StelPainter *sPainter)" -->
-void&nbsp;</td><td class="memItemRight" valign="bottom"><b>drawEarthShadow</b> (<a class="el" href="classStelCore.html">StelCore</a> *core, <a class="el" href="classStelPainter.html">StelPainter</a> *sPainter)</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ac5c6dd422bb14f56069a13afa7653339"></a><!-- doxytag: member="Planet::drawEarthShadow" ref="ac5c6dd422bb14f56069a13afa7653339" args="(StelCore *core, class StelRenderer *renderer, SharedPlanetGraphics &amp;planetGraphics)" -->
+void&nbsp;</td><td class="memItemRight" valign="bottom"><b>drawEarthShadow</b> (<a class="el" href="classStelCore.html">StelCore</a> *core, class <a class="el" href="classStelRenderer.html">StelRenderer</a> *renderer, <a class="el" href="structPlanet_1_1SharedPlanetGraphics.html">SharedPlanetGraphics</a> &amp;planetGraphics)</td></tr>
 <tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a546b3e01beed161be482e7dfba7f26d1"></a><!-- doxytag: member="Planet::getSkyLabel" ref="a546b3e01beed161be482e7dfba7f26d1" args="(const StelCore *core) const " -->
 QString&nbsp;</td><td class="memItemRight" valign="bottom"><b>getSkyLabel</b> (const <a class="el" href="classStelCore.html">StelCore</a> *core) const </td></tr>
-<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a2064031aa228cdb1ad15ae02a2a580b8"></a><!-- doxytag: member="Planet::draw3dModel" ref="a2064031aa228cdb1ad15ae02a2a580b8" args="(StelCore *core, StelProjector::ModelViewTranformP transfo, float screenSz)" -->
-void&nbsp;</td><td class="memItemRight" valign="bottom"><b>draw3dModel</b> (<a class="el" href="classStelCore.html">StelCore</a> *core, <a class="el" href="classQSharedPointer.html">StelProjector::ModelViewTranformP</a> transfo, float screenSz)</td></tr>
-<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a04fc0b7a1b677b148dceed9f73adadac"></a><!-- doxytag: member="Planet::drawSphere" ref="a04fc0b7a1b677b148dceed9f73adadac" args="(StelPainter *painter, float screenSz)" -->
-void&nbsp;</td><td class="memItemRight" valign="bottom"><b>drawSphere</b> (<a class="el" href="classStelPainter.html">StelPainter</a> *painter, float screenSz)</td></tr>
-<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a626ab18f7ee956f68d0b80feba8069ef"></a><!-- doxytag: member="Planet::drawHints" ref="a626ab18f7ee956f68d0b80feba8069ef" args="(const StelCore *core, const QFont &amp;planetNameFont)" -->
-void&nbsp;</td><td class="memItemRight" valign="bottom"><b>drawHints</b> (const <a class="el" href="classStelCore.html">StelCore</a> *core, const QFont &amp;planetNameFont)</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPlanet.html#ab8b39eb5a4753dcac92701ff5329cc72">draw3dModel</a> (<a class="el" href="classStelCore.html">StelCore</a> *core, class <a class="el" href="classStelRenderer.html">StelRenderer</a> *renderer, <a class="el" href="structPlanet_1_1SharedPlanetGraphics.html">SharedPlanetGraphics</a> &amp;planetGraphics, <a class="el" href="classQSharedPointer.html">StelProjector::ModelViewTranformP</a> transfo, float screenSz)</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Draw the 3d model.  <a href="#ab8b39eb5a4753dcac92701ff5329cc72"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPlanet.html#ae394ebe3ffa0f8222bb9dd311cc02a72">drawUnlitSphere</a> (class <a class="el" href="classStelRenderer.html">StelRenderer</a> *renderer, <a class="el" href="classQSharedPointer.html">StelProjectorP</a> projector)</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Draw the unlit sphere model.  <a href="#ae394ebe3ffa0f8222bb9dd311cc02a72"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPlanet.html#ac400a859fb9b9543f3afdc34295cf5ff">drawSphere</a> (class <a class="el" href="classStelRenderer.html">StelRenderer</a> *renderer, <a class="el" href="classQSharedPointer.html">StelProjectorP</a> projector, const struct <a class="el" href="structStelLight.html">StelLight</a> *light, <a class="el" href="structPlanet_1_1SharedPlanetGraphics.html">SharedPlanetGraphics</a> &amp;planetGraphics, float screenSz)</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Draw the 3D sphere.  <a href="#ac400a859fb9b9543f3afdc34295cf5ff"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ace9ec9fbf2b9dd86df6a784212e4ea7c"></a><!-- doxytag: member="Planet::drawHints" ref="ace9ec9fbf2b9dd86df6a784212e4ea7c" args="(const StelCore *core, class StelRenderer *renderer, const QFont &amp;planetNameFont, SharedPlanetGraphics &amp;planetGraphics)" -->
+void&nbsp;</td><td class="memItemRight" valign="bottom"><b>drawHints</b> (const <a class="el" href="classStelCore.html">StelCore</a> *core, class <a class="el" href="classStelRenderer.html">StelRenderer</a> *renderer, const QFont &amp;planetNameFont, <a class="el" href="structPlanet_1_1SharedPlanetGraphics.html">SharedPlanetGraphics</a> &amp;planetGraphics)</td></tr>
 <tr><td colspan="2"><h2>Protected Attributes</h2></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aa527811d7e45d7abe69d5b9a4efb0c51"></a><!-- doxytag: member="Planet::englishName" ref="aa527811d7e45d7abe69d5b9a4efb0c51" args="" -->
 QString&nbsp;</td><td class="memItemRight" valign="bottom"><b>englishName</b></td></tr>
@@ -176,14 +188,14 @@ QString&nbsp;</td><td class="memItemRight" valign="bottom"><b>englishName</b></t
 QString&nbsp;</td><td class="memItemRight" valign="bottom"><b>nameI18</b></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a1df9e54db74d9597bc0f96de03c38cd4"></a><!-- doxytag: member="Planet::texMapName" ref="a1df9e54db74d9597bc0f96de03c38cd4" args="" -->
 QString&nbsp;</td><td class="memItemRight" valign="bottom"><b>texMapName</b></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a1051a815a0753f00897dc2f2b8f126c0"></a><!-- doxytag: member="Planet::flagLighting" ref="a1051a815a0753f00897dc2f2b8f126c0" args="" -->
-int&nbsp;</td><td class="memItemRight" valign="bottom"><b>flagLighting</b></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ab85d02f8510a69457f8ec65e43fcf8a4"></a><!-- doxytag: member="Planet::re" ref="ab85d02f8510a69457f8ec65e43fcf8a4" args="" -->
 <a class="el" href="classRotationElements.html">RotationElements</a>&nbsp;</td><td class="memItemRight" valign="bottom"><b>re</b></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a51ed15cdc715084c8a098e9d9586caa4"></a><!-- doxytag: member="Planet::radius" ref="a51ed15cdc715084c8a098e9d9586caa4" args="" -->
-double&nbsp;</td><td class="memItemRight" valign="bottom"><b>radius</b></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a47bda10f2607b504daf782d274a7991a"></a><!-- doxytag: member="Planet::oneMinusOblateness" ref="a47bda10f2607b504daf782d274a7991a" args="" -->
-double&nbsp;</td><td class="memItemRight" valign="bottom"><b>oneMinusOblateness</b></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a98a688d57ea537777d9de1362b26b42a"></a><!-- doxytag: member="Planet::flagLighting" ref="a98a688d57ea537777d9de1362b26b42a" args="" -->
+const int&nbsp;</td><td class="memItemRight" valign="bottom"><b>flagLighting</b></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ae8641e0e99f9a201a022b318d2772c95"></a><!-- doxytag: member="Planet::radius" ref="ae8641e0e99f9a201a022b318d2772c95" args="" -->
+const double&nbsp;</td><td class="memItemRight" valign="bottom"><b>radius</b></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a1a9681bfc17259a7c8d000b93db70807"></a><!-- doxytag: member="Planet::oneMinusOblateness" ref="a1a9681bfc17259a7c8d000b93db70807" args="" -->
+const double&nbsp;</td><td class="memItemRight" valign="bottom"><b>oneMinusOblateness</b></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ac1a63427741fb27741d6241aee9f5429"></a><!-- doxytag: member="Planet::eclipticPos" ref="ac1a63427741fb27741d6241aee9f5429" args="" -->
 <a class="el" href="classVector3.html">Vec3d</a>&nbsp;</td><td class="memItemRight" valign="bottom"><b>eclipticPos</b></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ae0f4b3852481b3d6c283f12e6800855d"></a><!-- doxytag: member="Planet::screenPos" ref="ae0f4b3852481b3d6c283f12e6800855d" args="" -->
@@ -198,8 +210,8 @@ float&nbsp;</td><td class="memItemRight" valign="bottom"><b>albedo</b></td></tr>
 <a class="el" href="classMatrix4.html">Mat4d</a>&nbsp;</td><td class="memItemRight" valign="bottom"><b>rotLocalToParent</b></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a52a11012213bd4f9080bf7461a7cef45"></a><!-- doxytag: member="Planet::axisRotation" ref="a52a11012213bd4f9080bf7461a7cef45" args="" -->
 float&nbsp;</td><td class="memItemRight" valign="bottom"><b>axisRotation</b></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a33809facec39eba9868900501cb6ae77"></a><!-- doxytag: member="Planet::texMap" ref="a33809facec39eba9868900501cb6ae77" args="" -->
-<a class="el" href="classQSharedPointer.html">StelTextureSP</a>&nbsp;</td><td class="memItemRight" valign="bottom"><b>texMap</b></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a4a15c72433fc6e95de56fc813464133e"></a><!-- doxytag: member="Planet::texture" ref="a4a15c72433fc6e95de56fc813464133e" args="" -->
+class <a class="el" href="classStelTextureNew.html">StelTextureNew</a> *&nbsp;</td><td class="memItemRight" valign="bottom"><b>texture</b></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a19df6723e8162e4645b44d58099e94a1"></a><!-- doxytag: member="Planet::rings" ref="a19df6723e8162e4645b44d58099e94a1" args="" -->
 <a class="el" href="classRing.html">Ring</a> *&nbsp;</td><td class="memItemRight" valign="bottom"><b>rings</b></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a7c2a772d9e689642ea2bc595742d6dcd"></a><!-- doxytag: member="Planet::distance" ref="a7c2a772d9e689642ea2bc595742d6dcd" args="" -->
@@ -228,15 +240,228 @@ bool&nbsp;</td><td class="memItemRight" valign="bottom"><b>flagLabels</b></td></
 bool&nbsp;</td><td class="memItemRight" valign="bottom"><b>hidden</b></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a8dc365ce4d4b4c3c48295bde2c2d8e50"></a><!-- doxytag: member="Planet::atmosphere" ref="a8dc365ce4d4b4c3c48295bde2c2d8e50" args="" -->
 bool&nbsp;</td><td class="memItemRight" valign="bottom"><b>atmosphere</b></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">class <a class="el" href="classStelGeometrySphere.html">StelGeometrySphere</a> *&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPlanet.html#a6eb6cbe1ba9eb4af8f225dd9bc7e7c56">unlitSphere</a></td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Sphere used to draw the planet when lighting is disabled or when it is done in shaders.  <a href="#a6eb6cbe1ba9eb4af8f225dd9bc7e7c56"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">class <a class="el" href="classStelGeometrySphere.html">StelGeometrySphere</a> *&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPlanet.html#ae5749cf62457af527085ee3bdb59594c">litSphere</a></td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Sphere used to draw the planet when lighting is enabled and shaders are not used.  <a href="#ae5749cf62457af527085ee3bdb59594c"></a><br/></td></tr>
 <tr><td colspan="2"><h2>Static Protected Attributes</h2></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a118ea6e276892111f20ee9d16f4f5b60"></a><!-- doxytag: member="Planet::texEarthShadow" ref="a118ea6e276892111f20ee9d16f4f5b60" args="" -->
-static <a class="el" href="classQSharedPointer.html">StelTextureSP</a>&nbsp;</td><td class="memItemRight" valign="bottom"><b>texEarthShadow</b></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a9185b9791549e4f1087e02df2472fbac"></a><!-- doxytag: member="Planet::labelColor" ref="a9185b9791549e4f1087e02df2472fbac" args="" -->
 static <a class="el" href="classVector3.html">Vec3f</a>&nbsp;</td><td class="memItemRight" valign="bottom"><b>labelColor</b></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a0a7c364eec41a7c49741d4b5430115e9"></a><!-- doxytag: member="Planet::hintCircleTex" ref="a0a7c364eec41a7c49741d4b5430115e9" args="" -->
-static <a class="el" href="classQSharedPointer.html">StelTextureSP</a>&nbsp;</td><td class="memItemRight" valign="bottom"><b>hintCircleTex</b></td></tr>
 </table>
+<hr/><a name="_details"></a><h2>Detailed Description</h2>
+
+<p>Definition at line <a class="el" href="Planet_8hpp_source.html#l00110">110</a> of file <a class="el" href="Planet_8hpp_source.html">Planet.hpp</a>.</p>
 <hr/><h2>Member Function Documentation</h2>
+<a class="anchor" id="a7f144ff9eb55afc2be2197d3653703f0"></a><!-- doxytag: member="Planet::draw" ref="a7f144ff9eb55afc2be2197d3653703f0" args="(StelCore *core, class StelRenderer *renderer, float maxMagLabels, const QFont &amp;planetNameFont, SharedPlanetGraphics &amp;planetGraphics)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Planet::draw </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classStelCore.html">StelCore</a> *&nbsp;</td>
+          <td class="paramname"> <em>core</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">class <a class="el" href="classStelRenderer.html">StelRenderer</a> *&nbsp;</td>
+          <td class="paramname"> <em>renderer</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float&nbsp;</td>
+          <td class="paramname"> <em>maxMagLabels</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const QFont &amp;&nbsp;</td>
+          <td class="paramname"> <em>planetNameFont</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="structPlanet_1_1SharedPlanetGraphics.html">SharedPlanetGraphics</a> &amp;&nbsp;</td>
+          <td class="paramname"> <em>planetGraphics</em></td><td>&nbsp;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td><td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Draw the <a class="el" href="classPlanet.html">Planet</a>. </p>
+<dl><dt><b>Parameters:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"></td><td valign="top"><em>core</em>&nbsp;</td><td>The <a class="el" href="classStelCore.html" title="Main class for Stellarium core processing.">StelCore</a> object. </td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>renderer</em>&nbsp;</td><td>Renderer used for drawing. </td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>maxMagLabels</em>&nbsp;</td><td>Maximum visual magnitude to draw the label at. </td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>planetNameFont</em>&nbsp;</td><td>Font used to draw the planet label. </td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>planetGraphics</em>&nbsp;</td><td>Graphics shared among planets. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a class="anchor" id="ab8b39eb5a4753dcac92701ff5329cc72"></a><!-- doxytag: member="Planet::draw3dModel" ref="ab8b39eb5a4753dcac92701ff5329cc72" args="(StelCore *core, class StelRenderer *renderer, SharedPlanetGraphics &amp;planetGraphics, StelProjector::ModelViewTranformP transfo, float screenSz)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Planet::draw3dModel </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classStelCore.html">StelCore</a> *&nbsp;</td>
+          <td class="paramname"> <em>core</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">class <a class="el" href="classStelRenderer.html">StelRenderer</a> *&nbsp;</td>
+          <td class="paramname"> <em>renderer</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="structPlanet_1_1SharedPlanetGraphics.html">SharedPlanetGraphics</a> &amp;&nbsp;</td>
+          <td class="paramname"> <em>planetGraphics</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="classQSharedPointer.html">StelProjector::ModelViewTranformP</a>&nbsp;</td>
+          <td class="paramname"> <em>transfo</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float&nbsp;</td>
+          <td class="paramname"> <em>screenSz</em></td><td>&nbsp;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td><td><code> [protected]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Draw the 3d model. </p>
+<p>Call the proper functions if there are rings etc. .</p>
+<dl><dt><b>Parameters:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"></td><td valign="top"><em>core</em>&nbsp;</td><td>The <a class="el" href="classStelCore.html" title="Main class for Stellarium core processing.">StelCore</a> object. </td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>renderer</em>&nbsp;</td><td>Renderer used for drawing. </td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>planetGraphics</em>&nbsp;</td><td>Graphics resources shared between planets, e.g. planet lighting shader. </td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>transfo</em>&nbsp;</td><td>Modelview transform. </td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>screenSz</em>&nbsp;</td><td>Screen size. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a class="anchor" id="ac400a859fb9b9543f3afdc34295cf5ff"></a><!-- doxytag: member="Planet::drawSphere" ref="ac400a859fb9b9543f3afdc34295cf5ff" args="(class StelRenderer *renderer, StelProjectorP projector, const struct StelLight *light, SharedPlanetGraphics &amp;planetGraphics, float screenSz)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Planet::drawSphere </td>
+          <td>(</td>
+          <td class="paramtype">class <a class="el" href="classStelRenderer.html">StelRenderer</a> *&nbsp;</td>
+          <td class="paramname"> <em>renderer</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="classQSharedPointer.html">StelProjectorP</a>&nbsp;</td>
+          <td class="paramname"> <em>projector</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const struct <a class="el" href="structStelLight.html">StelLight</a> *&nbsp;</td>
+          <td class="paramname"> <em>light</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="structPlanet_1_1SharedPlanetGraphics.html">SharedPlanetGraphics</a> &amp;&nbsp;</td>
+          <td class="paramname"> <em>planetGraphics</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float&nbsp;</td>
+          <td class="paramname"> <em>screenSz</em></td><td>&nbsp;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td><td><code> [protected]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Draw the 3D sphere. </p>
+<dl><dt><b>Parameters:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"></td><td valign="top"><em>renderer</em>&nbsp;</td><td>Renderer to draw with. </td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>projector</em>&nbsp;</td><td>Projector to project vertices. </td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>light</em>&nbsp;</td><td>If NULL, lighting is not used. Otherwise the sphere is either generated with lighting (no shaders), or lit in shaders (if GLSL is supported). </td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>planetGraphics</em>&nbsp;</td><td>To render the planet using a shader on the GPU if possible. </td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>screenSz</em>&nbsp;</td><td>Screen size. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a class="anchor" id="ae394ebe3ffa0f8222bb9dd311cc02a72"></a><!-- doxytag: member="Planet::drawUnlitSphere" ref="ae394ebe3ffa0f8222bb9dd311cc02a72" args="(class StelRenderer *renderer, StelProjectorP projector)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Planet::drawUnlitSphere </td>
+          <td>(</td>
+          <td class="paramtype">class <a class="el" href="classStelRenderer.html">StelRenderer</a> *&nbsp;</td>
+          <td class="paramname"> <em>renderer</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="classQSharedPointer.html">StelProjectorP</a>&nbsp;</td>
+          <td class="paramname"> <em>projector</em></td><td>&nbsp;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td><td><code> [protected]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Draw the unlit sphere model. </p>
+<p>Used either when lighting is disabled or when it is done in shaders.</p>
+<p>Called by drawSphere.</p>
+<dl><dt><b>Parameters:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"></td><td valign="top"><em>renderer</em>&nbsp;</td><td>Renderer to draw with. </td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>projector</em>&nbsp;</td><td>Projector to project the vertices. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
 <a class="anchor" id="a95728c97e3d44de8c3c13d58b10bf3fa"></a><!-- doxytag: member="Planet::getAngularSize" ref="a95728c97e3d44de8c3c13d58b10bf3fa" args="(const StelCore *core) const " -->
 <div class="memitem">
 <div class="memproto">
@@ -320,6 +545,8 @@ static <a class="el" href="classQSharedPointer.html">StelTextureSP</a>&nbsp;</td
 <p>Return object's name in english. </p>
 
 <p>Implements <a class="el" href="classStelObject.html#a2c31b0cc0daaa1998600b5a4c18eb032">StelObject</a>.</p>
+
+<p>Definition at line <a class="el" href="Planet_8hpp_source.html#l00188">188</a> of file <a class="el" href="Planet_8hpp_source.html">Planet.hpp</a>.</p>
 
 </div>
 </div>
@@ -440,6 +667,8 @@ static <a class="el" href="classQSharedPointer.html">StelTextureSP</a>&nbsp;</td
 
 <p>Implements <a class="el" href="classStelObject.html#ad10fa1bc85e91eb812f9451a07a1c862">StelObject</a>.</p>
 
+<p>Definition at line <a class="el" href="Planet_8hpp_source.html#l00189">189</a> of file <a class="el" href="Planet_8hpp_source.html">Planet.hpp</a>.</p>
+
 </div>
 </div>
 <a class="anchor" id="ab297f4794cd089c343f60688911ac350"></a><!-- doxytag: member="Planet::getRadius" ref="ab297f4794cd089c343f60688911ac350" args="(void) const " -->
@@ -460,6 +689,8 @@ static <a class="el" href="classQSharedPointer.html">StelTextureSP</a>&nbsp;</td
 
 <p>Get the radius of the planet in AU. </p>
 <dl class="return"><dt><b>Returns:</b></dt><dd>the radius of the planet in astronomical units. </dd></dl>
+
+<p>Definition at line <a class="el" href="Planet_8hpp_source.html#l00212">212</a> of file <a class="el" href="Planet_8hpp_source.html">Planet.hpp</a>.</p>
 
 </div>
 </div>
@@ -527,6 +758,8 @@ static <a class="el" href="classQSharedPointer.html">StelTextureSP</a>&nbsp;</td
 
 <p>Implements <a class="el" href="classStelObject.html#acf26bf2f7442e0317cc44597a984f54d">StelObject</a>.</p>
 
+<p>Definition at line <a class="el" href="Planet_8hpp_source.html#l00186">186</a> of file <a class="el" href="Planet_8hpp_source.html">Planet.hpp</a>.</p>
+
 </div>
 </div>
 <a class="anchor" id="a421b4c079baee4b8645d3aae2d4e33bb"></a><!-- doxytag: member="Planet::getVMagnitude" ref="a421b4c079baee4b8645d3aae2d4e33bb" args="(const StelCore *core, bool withExtinction=false) const " -->
@@ -584,8 +817,63 @@ static <a class="el" href="classQSharedPointer.html">StelTextureSP</a>&nbsp;</td
 
 </div>
 </div>
+<hr/><h2>Member Data Documentation</h2>
+<a class="anchor" id="ae5749cf62457af527085ee3bdb59594c"></a><!-- doxytag: member="Planet::litSphere" ref="ae5749cf62457af527085ee3bdb59594c" args="" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">class <a class="el" href="classStelGeometrySphere.html">StelGeometrySphere</a>* <a class="el" href="classPlanet.html#ae5749cf62457af527085ee3bdb59594c">Planet::litSphere</a><code> [protected]</code></td>
+        </tr>
+      </table>
 </div>
-<hr class="footer"/><address style="text-align: right;"><small>Generated on Sat Aug 25 22:13:32 2012 for Stellarium by&nbsp;
+<div class="memdoc">
+
+<p>Sphere used to draw the planet when lighting is enabled and shaders are not used. </p>
+
+<p>Definition at line <a class="el" href="Planet_8hpp_source.html#l00405">405</a> of file <a class="el" href="Planet_8hpp_source.html">Planet.hpp</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="aa499b50e600053eacf6477216754fc96"></a><!-- doxytag: member="Planet::orbitVertices" ref="aa499b50e600053eacf6477216754fc96" args="" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classStelVertexBuffer.html">StelVertexBuffer</a>&lt;<a class="el" href="structPlanet_1_1Vertex2D.html">Vertex2D</a>&gt;* <a class="el" href="classPlanet.html#aa499b50e600053eacf6477216754fc96">Planet::orbitVertices</a></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Vertex buffer used to draw the orbit. </p>
+
+<p>Definition at line <a class="el" href="Planet_8hpp_source.html#l00296">296</a> of file <a class="el" href="Planet_8hpp_source.html">Planet.hpp</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a6eb6cbe1ba9eb4af8f225dd9bc7e7c56"></a><!-- doxytag: member="Planet::unlitSphere" ref="a6eb6cbe1ba9eb4af8f225dd9bc7e7c56" args="" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">class <a class="el" href="classStelGeometrySphere.html">StelGeometrySphere</a>* <a class="el" href="classPlanet.html#a6eb6cbe1ba9eb4af8f225dd9bc7e7c56">Planet::unlitSphere</a><code> [protected]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Sphere used to draw the planet when lighting is disabled or when it is done in shaders. </p>
+
+<p>Definition at line <a class="el" href="Planet_8hpp_source.html#l00403">403</a> of file <a class="el" href="Planet_8hpp_source.html">Planet.hpp</a>.</p>
+
+</div>
+</div>
+<hr/>The documentation for this class was generated from the following file:<ul>
+<li>core/modules/<a class="el" href="Planet_8hpp_source.html">Planet.hpp</a></li>
+</ul>
+</div>
+<hr class="footer"/><address style="text-align: right;"><small>Generated on Fri Aug 31 18:07:54 2012 for Stellarium by&nbsp;
 <a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.6.3 </small></address>
 </body>

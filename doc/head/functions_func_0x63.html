@@ -9,7 +9,7 @@
 <tr>
 <td align="left" valign="top" width="32" rowspan="2"><a href="http://www.stellarium.org"><img src="stellarium-logo.png" align="left" border="0" /></a></td>
 <td width="1" rowspan="2">&nbsp;&nbsp;</td>
-<td style="font-size:120%;font-weight:bolder;">Stellarium 0.11.4</td>
+<td style="font-size:120%;font-weight:bolder;">Stellarium 0.12.0</td>
 <td align="right" valign="top" width="230" rowspan="2"></td></tr><tr>
 <td class="postheader" valign="center">
  <a href="index.html">Home</a>&nbsp;&middot;
@@ -19,6 +19,7 @@
  <a href="codingStyle.html">Coding Style</a>&nbsp;&middot;
  <a href="scripting.html">Scripting</a>&nbsp;&middot;
  <a href="plugins.html">Plugins</a>&nbsp;&middot;
+ <a href="renderer.html">Renderer</a>&nbsp;&middot;
  <a href="fileStructure.html">File Structure</a>
 </td>
 </tr>
@@ -67,9 +68,6 @@
 &nbsp;
 
 <h3><a class="anchor" id="index_c">- c -</a></h3><ul>
-<li>canBind()
-: <a class="el" href="classStelTexture.html#a28424110b8bcf77b6634b03cc2db7201">StelTexture</a>
-</li>
 <li>cancelDeletion()
 : <a class="el" href="classMultiLevelJsonBase.html#a613f54a25bb45afe4499bf0bf8ba04e5">MultiLevelJsonBase</a>
 </li>
@@ -92,12 +90,34 @@
 : <a class="el" href="classSphericalConvexPolygon.html#aa198942828286fed9013a111c3d5c3cf">SphericalConvexPolygon</a>
 </li>
 <li>clear()
-: <a class="el" href="classStelSphericalIndex.html#ad7fe9bd914305e8b82c8ff511f04f45c">StelSphericalIndex</a>
+: <a class="el" href="classStelIndexBuffer.html#ab039edef49e60a6f76bd2d845d876436">StelIndexBuffer</a>
+, <a class="el" href="classStelQGLArrayVertexBufferBackend.html#afd53424ecebbf6715a0e2224d5bae97a">StelQGLArrayVertexBufferBackend</a>
+, <a class="el" href="classStelVertexBuffer.html#a7647b1674aa08b548fbcebe799b1651a">StelVertexBuffer&lt; V &gt;</a>
+, <a class="el" href="classStelVertexBufferBackend.html#a1336ad6935c3cb39dad3133639fb5feb">StelVertexBufferBackend</a>
+, <a class="el" href="classStelSphericalIndex.html#ad7fe9bd914305e8b82c8ff511f04f45c">StelSphericalIndex</a>
 , <a class="el" href="classAngleSpinBox.html#ae07af96682ac0bb3fb59c0d3d0706897">AngleSpinBox</a>
 , <a class="el" href="classStelMainScriptAPI.html#ab21fe71f592e95476ccbec7925ec3912">StelMainScriptAPI</a>
 </li>
+<li>clear_()
+: <a class="el" href="classStelIndexBuffer.html#ad2bf1a198ec1dac95858af842c2f83d6">StelIndexBuffer</a>
+, <a class="el" href="classStelQGLIndexBuffer.html#ad9639121593a3d67e7231fcfb8cdcd2a">StelQGLIndexBuffer</a>
+</li>
+<li>clearDepthBuffer()
+: <a class="el" href="classStelQGLRenderer.html#a04ffa0277917c6c33f1550b5317b3181">StelQGLRenderer</a>
+, <a class="el" href="classStelRenderer.html#a19809c61e76bd27ff903bc4550111d47">StelRenderer</a>
+</li>
+<li>clearStencilBuffer()
+: <a class="el" href="classStelQGLRenderer.html#a6f403849ff423ebb377e14abc922d761">StelQGLRenderer</a>
+, <a class="el" href="classStelRenderer.html#a339f3610ec4d75a39953f06d36aefc91">StelRenderer</a>
+</li>
+<li>clearUniforms()
+: <a class="el" href="classStelQGLGLSLShader.html#a37004c3b1e983f0d3e0803c09f2c19fa">StelQGLGLSLShader</a>
+</li>
 <li>clipGreatCircle()
 : <a class="el" href="classSphericalCap.html#ac9e0e8aa424523b32333542942a6ecbb">SphericalCap</a>
+</li>
+<li>clippingCap()
+: <a class="el" href="structSphericalRegion_1_1DrawParams.html#a77f98392182337a6abd149a1586420f3">SphericalRegion::DrawParams</a>
 </li>
 <li>close()
 : <a class="el" href="classDateTimeDialog.html#ac7e56af6496e7d7ee1b91ee66c0f799a">DateTimeDialog</a>
@@ -110,8 +130,8 @@
 : <a class="el" href="classStelProjector.html#ac56800dfa53d617417ead65868617198">StelProjector</a>
 , <a class="el" href="classStelProjector2d.html#af1bf41ff819dbac4e2552af19952afdf">StelProjector2d</a>
 </li>
-<li>computeFanDisk()
-: <a class="el" href="classStelPainter.html#a0bc514db98de0b58bcee229b1b02f148">StelPainter</a>
+<li>computeColor()
+: <a class="el" href="classAtmosphere.html#a1d0e93f61bf940860f9aa52aa9a84cdf">Atmosphere</a>
 </li>
 <li>computePositions()
 : <a class="el" href="classSolarSystem.html#a278845fca95a186932ee052ccd60ab4e">SolarSystem</a>
@@ -119,20 +139,30 @@
 <li>computeRCMag()
 : <a class="el" href="classStelSkyDrawer.html#ac31ae11e158c742f8f1c82584be9cf20">StelSkyDrawer</a>
 </li>
-<li>computeSphereNoLight()
-: <a class="el" href="classStelPainter.html#a04fcb9d6bea3f623d9c1710a2b63310b">StelPainter</a>
-</li>
 <li>configureGui()
 : <a class="el" href="classStelModule.html#a361f28660ec3002520924cd5cee08ccd">StelModule</a>
 </li>
+<li>constData()
+: <a class="el" href="structStelQGLArrayVertexBufferBackend_1_1AnyAttributeArray.html#a55da85662f494c66b87392b27b3a445a">StelQGLArrayVertexBufferBackend::AnyAttributeArray</a>
+, <a class="el" href="structStelQGLArrayVertexBufferBackend_1_1AttributeArray.html#ad2469dfe3c850e07fc883a2e367ed1d2">StelQGLArrayVertexBufferBackend::AttributeArray&lt; A &gt;</a>
+</li>
 <li>ConstellationMgr()
 : <a class="el" href="classConstellationMgr.html#a94d5ceddc2bf045b1f07507ab8778ba1">ConstellationMgr</a>
+</li>
+<li>constructAsynchronous()
+: <a class="el" href="classStelQGLTextureBackend.html#a27a379eff1ce15519aeb364aca176f43">StelQGLTextureBackend</a>
+</li>
+<li>constructFromImage()
+: <a class="el" href="classStelQGLTextureBackend.html#aa41870cec806fa6a3062e3203a3f1d3f">StelQGLTextureBackend</a>
+</li>
+<li>constructFromPVR()
+: <a class="el" href="classStelQGLTextureBackend.html#a52c70a1c322432866d6ee9a1347c614a">StelQGLTextureBackend</a>
 </li>
 <li>contains()
 : <a class="el" href="classSphericalRegion.html#aea4b03f16f5f5f8ceb7386924d55ade9">SphericalRegion</a>
 </li>
 <li>containsTriangle()
-: <a class="el" href="classSphericalCap.html#ae4a0280b8967b7bbcb5d39ab87b26fe5">SphericalCap</a>
+: <a class="el" href="classSphericalCap.html#acd200ec34551324b704b0fd66946dfb0">SphericalCap</a>
 </li>
 <li>count()
 : <a class="el" href="classStelSphericalIndex.html#a049be85199b20e26bd0b9ce944926e52">StelSphericalIndex</a>
@@ -144,16 +174,16 @@
 : <a class="el" href="classBigStarCatalogExtension_1_1ZoneArray.html#aafdb99b99e7a58177dfd8702428a3da6">BigStarCatalogExtension::ZoneArray</a>
 </li>
 <li>createDialogContent()
-: <a class="el" href="classAddRemoveLandscapesDialog.html#a27b8ea26590b10b0ace40048b6fabf05">AddRemoveLandscapesDialog</a>
-, <a class="el" href="classLocationDialog.html#ac72343965437a6270e2a197f43933838">LocationDialog</a>
-, <a class="el" href="classConfigurationDialog.html#aeab854a43068cc9b38b248b4552a71da">ConfigurationDialog</a>
-, <a class="el" href="classSearchDialog.html#ac556dd51516f58d2792731f4f23aa6ea">SearchDialog</a>
-, <a class="el" href="classScriptConsole.html#abe79cf15dbdb40ba1589751fe611cccf">ScriptConsole</a>
-, <a class="el" href="classViewDialog.html#a678d1c83460d092ef0e84b679c86f852">ViewDialog</a>
-, <a class="el" href="classHelpDialog.html#aa89aa50797bb7c499b69c215105f61e4">HelpDialog</a>
-, <a class="el" href="classStelDialog.html#a0a6823b263934eb74b013ad0738235bd">StelDialog</a>
+: <a class="el" href="classViewDialog.html#a678d1c83460d092ef0e84b679c86f852">ViewDialog</a>
+, <a class="el" href="classAddRemoveLandscapesDialog.html#a27b8ea26590b10b0ace40048b6fabf05">AddRemoveLandscapesDialog</a>
 , <a class="el" href="classAtmosphereDialog.html#ac2c0953477776d54519eea20422c81d3">AtmosphereDialog</a>
+, <a class="el" href="classScriptConsole.html#abe79cf15dbdb40ba1589751fe611cccf">ScriptConsole</a>
 , <a class="el" href="classDateTimeDialog.html#a9c65842bfa4288ec599ae40f86cfe276">DateTimeDialog</a>
+, <a class="el" href="classStelDialog.html#a0a6823b263934eb74b013ad0738235bd">StelDialog</a>
+, <a class="el" href="classHelpDialog.html#aa89aa50797bb7c499b69c215105f61e4">HelpDialog</a>
+, <a class="el" href="classLocationDialog.html#ac72343965437a6270e2a197f43933838">LocationDialog</a>
+, <a class="el" href="classSearchDialog.html#ac556dd51516f58d2792731f4f23aa6ea">SearchDialog</a>
+, <a class="el" href="classConfigurationDialog.html#aeab854a43068cc9b38b248b4552a71da">ConfigurationDialog</a>
 </li>
 <li>createFromFile()
 : <a class="el" href="classLandscapeMgr.html#aeecc72b67d6005cd5cc3a6669d829780">LandscapeMgr</a>
@@ -161,18 +191,37 @@
 <li>createFromLine()
 : <a class="el" href="classStelLocation.html#a958821f3ab9b5d9548aa78118671d185">StelLocation</a>
 </li>
+<li>createGLSLShader()
+: <a class="el" href="classStelRenderer.html#a0b9f984032aa9dcc91ab8df6d9a5c648">StelRenderer</a>
+, <a class="el" href="classStelQGL2Renderer.html#a55e7bf44e0629b72c97e3bce44f264b8">StelQGL2Renderer</a>
+, <a class="el" href="classStelQGL1Renderer.html#ae803720db5a16b44444f49dba24d81e6">StelQGL1Renderer</a>
+</li>
+<li>createIndexBuffer()
+: <a class="el" href="classStelRenderer.html#a58f550570512df06eedf96f073510de6">StelRenderer</a>
+, <a class="el" href="classStelQGLRenderer.html#a6a3ceac34aed22590eb2ee353f650c06">StelQGLRenderer</a>
+</li>
 <li>createScreenImage()
 : <a class="el" href="classScreenImageMgr.html#a6e7f0db1a2476e909a090ab3517118df">ScreenImageMgr</a>
 </li>
 <li>createTexture()
-: <a class="el" href="classStelTextureMgr.html#ac0d2f813f31c87596a35481aeaaa9c17">StelTextureMgr</a>
+: <a class="el" href="classStelRenderer.html#af881fe1677e3b21ebe24e0e35baf5d1f">StelRenderer</a>
 </li>
-<li>createTextureThread()
-: <a class="el" href="classStelTextureMgr.html#ab2cf576636c79ddd313ce1bdb4bcba67">StelTextureMgr</a>
+<li>createTextureBackend()
+: <a class="el" href="classStelRenderer.html#af175f0223ee53472fe01784a00e5f0af">StelRenderer</a>
+, <a class="el" href="classStelQGLRenderer.html#a455d175e20a6130d92eef45c0ddc297d">StelQGLRenderer</a>
+, <a class="el" href="classStelRenderer.html#acc4f270649f47c9acd96f570d125d4b0">StelRenderer</a>
+</li>
+<li>createVertexBuffer()
+: <a class="el" href="classStelRenderer.html#ab20687284a2419e5db806e74dfe91b5b">StelRenderer</a>
+</li>
+<li>createVertexBufferBackend()
+: <a class="el" href="classStelQGL1Renderer.html#ac33b7e693f5f6c75b8e388c5992ce13d">StelQGL1Renderer</a>
+, <a class="el" href="classStelQGL2Renderer.html#a1fec1df533ad5b3e1d77cd17e701c882">StelQGL2Renderer</a>
+, <a class="el" href="classStelRenderer.html#aac066b60608fbc338e7449e309dbcc39">StelRenderer</a>
 </li>
 </ul>
 </div>
-<hr class="footer"/><address style="text-align: right;"><small>Generated on Sat Aug 25 22:13:31 2012 for Stellarium by&nbsp;
+<hr class="footer"/><address style="text-align: right;"><small>Generated on Fri Aug 31 18:07:51 2012 for Stellarium by&nbsp;
 <a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.6.3 </small></address>
 </body>

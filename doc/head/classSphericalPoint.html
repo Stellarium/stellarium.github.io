@@ -9,7 +9,7 @@
 <tr>
 <td align="left" valign="top" width="32" rowspan="2"><a href="http://www.stellarium.org"><img src="stellarium-logo.png" align="left" border="0" /></a></td>
 <td width="1" rowspan="2">&nbsp;&nbsp;</td>
-<td style="font-size:120%;font-weight:bolder;">Stellarium 0.11.4</td>
+<td style="font-size:120%;font-weight:bolder;">Stellarium 0.12.0</td>
 <td align="right" valign="top" width="230" rowspan="2"></td></tr><tr>
 <td class="postheader" valign="center">
  <a href="index.html">Home</a>&nbsp;&middot;
@@ -19,6 +19,7 @@
  <a href="codingStyle.html">Coding Style</a>&nbsp;&middot;
  <a href="scripting.html">Scripting</a>&nbsp;&middot;
  <a href="plugins.html">Plugins</a>&nbsp;&middot;
+ <a href="renderer.html">Renderer</a>&nbsp;&middot;
  <a href="fileStructure.html">File Structure</a>
 </td>
 </tr>
@@ -83,6 +84,8 @@ virtual bool&nbsp;</td><td class="memItemRight" valign="bottom"><b>intersects</b
 </table>
 <hr/><a name="_details"></a><h2>Detailed Description</h2>
 <p>Special <a class="el" href="classSphericalRegion.html" title="Abstract class defining a region of the sphere.">SphericalRegion</a> for a point on the sphere. </p>
+
+<p>Definition at line <a class="el" href="StelSphereGeometry_8hpp_source.html#l00646">646</a> of file <a class="el" href="StelSphereGeometry_8hpp_source.html">StelSphereGeometry.hpp</a>.</p>
 <hr/><h2>Member Function Documentation</h2>
 <a class="anchor" id="ac0951f1df12fa49ec6fd575849972b5b"></a><!-- doxytag: member="SphericalPoint::deserialize" ref="ac0951f1df12fa49ec6fd575849972b5b" args="(QDataStream &amp;in)" -->
 <div class="memitem">
@@ -123,6 +126,8 @@ virtual bool&nbsp;</td><td class="memItemRight" valign="bottom"><b>intersects</b
 
 <p>Reimplemented from <a class="el" href="classSphericalRegion.html#a97e908421aee887ffca7b3a3d9248c0a">SphericalRegion</a>.</p>
 
+<p>Definition at line <a class="el" href="StelSphereGeometry_8hpp_source.html#l00654">654</a> of file <a class="el" href="StelSphereGeometry_8hpp_source.html">StelSphereGeometry.hpp</a>.</p>
+
 </div>
 </div>
 <a class="anchor" id="aca9076a3b6451fbd725006212e6e3221"></a><!-- doxytag: member="SphericalPoint::getBoundingCap" ref="aca9076a3b6451fbd725006212e6e3221" args="() const " -->
@@ -144,6 +149,8 @@ virtual bool&nbsp;</td><td class="memItemRight" valign="bottom"><b>intersects</b
 <p>This method is heavily used and therefore needs to be very fast. The returned <a class="el" href="classSphericalCap.html" title="A SphericalCap is defined by a direction and an aperture.">SphericalCap</a> doesn't have to be the smallest one, but smaller is better. </p>
 
 <p>Reimplemented from <a class="el" href="classSphericalRegion.html#a86c361604deaa0187067770522249ef7">SphericalRegion</a>.</p>
+
+<p>Definition at line <a class="el" href="StelSphereGeometry_8hpp_source.html#l00657">657</a> of file <a class="el" href="StelSphereGeometry_8hpp_source.html">StelSphereGeometry.hpp</a>.</p>
 
 </div>
 </div>
@@ -188,6 +195,8 @@ virtual bool&nbsp;</td><td class="memItemRight" valign="bottom"><b>intersects</b
 
 <p>Reimplemented from <a class="el" href="classSphericalRegion.html#ada8685bc10fde6ea9dc8a8c6bf4a4f15">SphericalRegion</a>.</p>
 
+<p>Definition at line <a class="el" href="StelSphereGeometry_8hpp_source.html#l00656">656</a> of file <a class="el" href="StelSphereGeometry_8hpp_source.html">StelSphereGeometry.hpp</a>.</p>
+
 </div>
 </div>
 <a class="anchor" id="a3f3d523021a5a33664df1ce7762c825b"></a><!-- doxytag: member="SphericalPoint::isEmpty" ref="a3f3d523021a5a33664df1ce7762c825b" args="() const " -->
@@ -208,6 +217,8 @@ virtual bool&nbsp;</td><td class="memItemRight" valign="bottom"><b>intersects</b
 <p>Return true if the region is empty. </p>
 
 <p>Reimplemented from <a class="el" href="classSphericalRegion.html#ae93ecc2b8a71d58a3d23e80e7400c109">SphericalRegion</a>.</p>
+
+<p>Definition at line <a class="el" href="StelSphereGeometry_8hpp_source.html#l00655">655</a> of file <a class="el" href="StelSphereGeometry_8hpp_source.html">StelSphereGeometry.hpp</a>.</p>
 
 </div>
 </div>
@@ -230,6 +241,8 @@ virtual bool&nbsp;</td><td class="memItemRight" valign="bottom"><b>intersects</b
 <p>Serialize the region. This method must allow as fast as possible serialization and work with <a class="el" href="classSphericalPoint.html#ac0951f1df12fa49ec6fd575849972b5b" title="Deserialize the region. This method must allow as fast as possible deserialization...">deserialize()</a>. </p>
 
 <p>Implements <a class="el" href="classSphericalRegion.html#ac9cbe8c30210a7042a44512c630212f1">SphericalRegion</a>.</p>
+
+<p>Definition at line <a class="el" href="StelSphereGeometry_8hpp_source.html#l00661">661</a> of file <a class="el" href="StelSphereGeometry_8hpp_source.html">StelSphereGeometry.hpp</a>.</p>
 
 </div>
 </div>
@@ -269,10 +282,15 @@ virtual bool&nbsp;</td><td class="memItemRight" valign="bottom"><b>intersects</b
 
 <p>The unit vector of the point direction. </p>
 
+<p>Definition at line <a class="el" href="StelSphereGeometry_8hpp_source.html#l00680">680</a> of file <a class="el" href="StelSphereGeometry_8hpp_source.html">StelSphereGeometry.hpp</a>.</p>
+
 </div>
 </div>
+<hr/>The documentation for this class was generated from the following file:<ul>
+<li>core/<a class="el" href="StelSphereGeometry_8hpp_source.html">StelSphereGeometry.hpp</a></li>
+</ul>
 </div>
-<hr class="footer"/><address style="text-align: right;"><small>Generated on Sat Aug 25 22:13:32 2012 for Stellarium by&nbsp;
+<hr class="footer"/><address style="text-align: right;"><small>Generated on Fri Aug 31 18:07:55 2012 for Stellarium by&nbsp;
 <a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.6.3 </small></address>
 </body>
