@@ -31,6 +31,7 @@ $language = array(
     'fr'=>'français',
     'hr'=>'Hrvatski',
     'hrx'=>'Hunns-rikk',
+    'id'=>'Bahasa Indonesia',
     'it'=>'Italiano',
     'ja'=>'日本語',
     'nb'=>'Norsk bokmål',
