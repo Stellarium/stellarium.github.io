@@ -121,8 +121,14 @@ bool&nbsp;</td><td class="memItemRight" valign="bottom"><b>changeDateTimeForRoll
 <tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Compute exp(x) for small exponents x.  <a href="#a739cba50231f5d7d7c0465914b43b135"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top"><a class="el" href="classVector3.html">Vec3f</a>&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceStelUtils.html#a9394ac0917d0008c715d796361fac982">getNightColor</a> (const <a class="el" href="classVector3.html">Vec3f</a> &amp;dayColor)</td></tr>
 <tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Get a night mode version of a color.  <a href="#a9394ac0917d0008c715d796361fac982"></a><br/></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">double&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceStelUtils.html#a8481eb04d2136095433892729299ee6c">calculateOrbitalPeriod</a> (double SemiMajorAxis)</td></tr>
-<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Calculate and getting orbital period in days from semi-major axis (in AU).  <a href="#a8481eb04d2136095433892729299ee6c"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">double&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceStelUtils.html#ad7126d7f1ab568096af230b2e7b2aa21">calculateSiderealPeriod</a> (double SemiMajorAxis)</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Calculate and getting sidereal period in days from semi-major axis (in AU).  <a href="#ad7126d7f1ab568096af230b2e7b2aa21"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">double&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceStelUtils.html#a8f47e6422d0ea11326d335b331a821a4">calculateSolarDay</a> (double siderealPeriod, double siderealDay, bool forwardDirection)</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Calculate duration of mean solar day.  <a href="#a8f47e6422d0ea11326d335b331a821a4"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ab26fa62421c1e2504c20b887f8cf75d3"></a><!-- doxytag: member="StelUtils::hoursToHmsStr" ref="ab26fa62421c1e2504c20b887f8cf75d3" args="(double hours)" -->
+QString&nbsp;</td><td class="memItemRight" valign="bottom"><b>hoursToHmsStr</b> (double hours)</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">long double&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceStelUtils.html#abb0f71fd5a5d37e30415bdc6d8b6e014">secondsSinceStart</a> ()</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Get the number of seconds since program start.  <a href="#abb0f71fd5a5d37e30415bdc6d8b6e014"></a><br/></td></tr>
 </table>
 <hr/><a name="_details"></a><h2>Detailed Description</h2>
 <p>contains general purpose utility functions. </p>
@@ -147,12 +153,12 @@ bool&nbsp;</td><td class="memItemRight" valign="bottom"><b>changeDateTimeForRoll
 
 </div>
 </div>
-<a class="anchor" id="a8481eb04d2136095433892729299ee6c"></a><!-- doxytag: member="StelUtils::calculateOrbitalPeriod" ref="a8481eb04d2136095433892729299ee6c" args="(double SemiMajorAxis)" -->
+<a class="anchor" id="ad7126d7f1ab568096af230b2e7b2aa21"></a><!-- doxytag: member="StelUtils::calculateSiderealPeriod" ref="ad7126d7f1ab568096af230b2e7b2aa21" args="(double SemiMajorAxis)" -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">double StelUtils::calculateOrbitalPeriod </td>
+          <td class="memname">double StelUtils::calculateSiderealPeriod </td>
           <td>(</td>
           <td class="paramtype">double&nbsp;</td>
           <td class="paramname"> <em>SemiMajorAxis</em></td>
@@ -163,7 +169,42 @@ bool&nbsp;</td><td class="memItemRight" valign="bottom"><b>changeDateTimeForRoll
 </div>
 <div class="memdoc">
 
-<p>Calculate and getting orbital period in days from semi-major axis (in AU). </p>
+<p>Calculate and getting sidereal period in days from semi-major axis (in AU). </p>
+
+</div>
+</div>
+<a class="anchor" id="a8f47e6422d0ea11326d335b331a821a4"></a><!-- doxytag: member="StelUtils::calculateSolarDay" ref="a8f47e6422d0ea11326d335b331a821a4" args="(double siderealPeriod, double siderealDay, bool forwardDirection)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">double StelUtils::calculateSolarDay </td>
+          <td>(</td>
+          <td class="paramtype">double&nbsp;</td>
+          <td class="paramname"> <em>siderealPeriod</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double&nbsp;</td>
+          <td class="paramname"> <em>siderealDay</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool&nbsp;</td>
+          <td class="paramname"> <em>forwardDirection</em></td><td>&nbsp;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td><td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Calculate duration of mean solar day. </p>
 
 </div>
 </div>
@@ -1308,6 +1349,26 @@ bool&nbsp;</td><td class="memItemRight" valign="bottom"><b>changeDateTimeForRoll
 
 </div>
 </div>
+<a class="anchor" id="abb0f71fd5a5d37e30415bdc6d8b6e014"></a><!-- doxytag: member="StelUtils::secondsSinceStart" ref="abb0f71fd5a5d37e30415bdc6d8b6e014" args="()" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">long double StelUtils::secondsSinceStart </td>
+          <td>(</td>
+          <td class="paramname"></td>
+          <td>&nbsp;)&nbsp;</td>
+          <td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Get the number of seconds since program start. </p>
+<dl class="note"><dt><b>Note:</b></dt><dd>This is implemented in platform-specific ways to be as precise as possible, but there is a fallback for other platforms that might not be precise at all. This is currently used e.g. to measure FPS, but it should never be used for critical functionality. </dd></dl>
+
+</div>
+</div>
 <a class="anchor" id="a2a970edfb50c12368cec3f897f1e384b"></a><!-- doxytag: member="StelUtils::smallestPowerOfTwoGreaterOrEqualTo" ref="a2a970edfb50c12368cec3f897f1e384b" args="(int value)" -->
 <div class="memitem">
 <div class="memproto">
@@ -1490,7 +1551,7 @@ bool&nbsp;</td><td class="memItemRight" valign="bottom"><b>changeDateTimeForRoll
 </div>
 </div>
 </div>
-<hr class="footer"/><address style="text-align: right;"><small>Generated on Fri Aug 31 18:08:05 2012 for Stellarium by&nbsp;
+<hr class="footer"/><address style="text-align: right;"><small>Generated on Sat Sep 15 13:01:16 2012 for Stellarium by&nbsp;
 <a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.6.3 </small></address>
 </body>

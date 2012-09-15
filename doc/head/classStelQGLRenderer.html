@@ -35,6 +35,8 @@
 <p><a href="classStelQGLRenderer-members.html">List of all members.</a></p>
 <table border="0" cellpadding="0" cellspacing="0">
 <tr><td colspan="2"><h2>Classes</h2></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">struct &nbsp;</td><td class="memItemRight" valign="bottom"><b>FrameTimeQueue</b></td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Stores times (relative to start) of most recent frames in a queue (using a circular array). <br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">struct &nbsp;</td><td class="memItemRight" valign="bottom"><b>TexturedVertex</b></td></tr>
 <tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">2D vertex with a position and texture coordinates. <br/></td></tr>
 <tr><td colspan="2"><h2>Public Member Functions</h2></td></tr>
@@ -82,9 +84,8 @@
 <tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Draw a rectangle to the screen.  <a href="#a60584228d8840bc4ebba3d40cb727a08"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classStelQGLRenderer.html#a895d54cca409e3a24ca190b60fc09194">drawTexturedRect</a> (const float x, const float y, const float width, const float height, const float angle=0.0f)</td></tr>
 <tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Draw a textured rectangle to the screen.  <a href="#a895d54cca409e3a24ca190b60fc09194"></a><br/></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">virtual const QMap&lt; QString, <br class="typebreak"/>
-double &gt; &amp;&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classStelQGLRenderer.html#a092593688677b59781bad895ca13eb41">getStatistics</a> () const </td></tr>
-<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Get collected statistics data.  <a href="#a092593688677b59781bad895ca13eb41"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="classStelRendererStatistics.html">StelRendererStatistics</a> &amp;&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classStelQGLRenderer.html#a7af017729278c7724911d78c9ddb13e4">getStatistics</a> ()</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Access statistics data.  <a href="#a7af017729278c7724911d78c9ddb13e4"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classStelQGLRenderer.html#a5d0124006a046e7b106ce2a444afd530">makeGLContextCurrent</a> ()</td></tr>
 <tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Make Stellarium GL context the currently used GL context. Call this before GL calls.  <a href="#a5d0124006a046e7b106ce2a444afd530"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">QGLContext *&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classStelQGLRenderer.html#aee30f6eefc37e833e0f97670725668b6">getGLContext</a> ()</td></tr>
@@ -95,8 +96,6 @@ double &gt; &amp;&nbsp;</td><td class="memItemRight" valign="bottom"><a class="e
 <tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Get a pointer to the thread used for loading graphics data (e.g. textures).  <a href="#a12dd97f5b756dca928ccb75517928bda"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">const <a class="el" href="classVector4.html">Vec4f</a> &amp;&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classStelQGLRenderer.html#a2428f2d0bb053460d21e172b6fc8e46d">getGlobalColor</a> () const </td></tr>
 <tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Get global vertex color (used for drawing).  <a href="#a2428f2d0bb053460d21e172b6fc8e46d"></a><br/></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">QMap&lt; QString, double &gt; &amp;&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classStelQGLRenderer.html#ae9b4d164b9b41ccacaee474f898b866f">getStatisticsWritable</a> ()</td></tr>
-<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Get a non-const reference to statistics.  <a href="#ae9b4d164b9b41ccacaee474f898b866f"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual bool&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classStelQGLRenderer.html#ae9819a81f40e6ac85e865dceaa2f23cd">areNonPowerOfTwoTexturesSupported</a> () const =0</td></tr>
 <tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Returns true if non-power-of-two textures are supported, false otherwise.  <a href="#ae9819a81f40e6ac85e865dceaa2f23cd"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">QPaintEngine::Type&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classStelQGLRenderer.html#afd11b297d7fe9d40a55c727fcfc6c3d4">qtPaintEngineType</a> () const </td></tr>
@@ -118,11 +117,16 @@ double &gt; &amp;&nbsp;</td><td class="memItemRight" valign="bottom"><a class="e
 <tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Set up GL state common between the GL1 and GL2 backends before drawing.  <a href="#a855246352a275b9b79572cec9ae7186d"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classStelQGLRenderer.html#ab3998212b653ffe1db4a82af4ea8f5f8">restoreGLState</a> (<a class="el" href="classStelProjector.html">StelProjector</a> *projector)</td></tr>
 <tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Reset GL state after drawing.  <a href="#ab3998212b653ffe1db4a82af4ea8f5f8"></a><br/></td></tr>
+<tr><td class="memTemplParams" colspan="2">template&lt;class VBufferBackend &gt; </td></tr>
+<tr><td class="memTemplItemLeft" align="right" valign="top">void&nbsp;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classStelQGLRenderer.html#aee622a5d5e3e9826b43c996659ee3240">updateDrawStatistics</a> (VBufferBackend *vertexBuffer, <a class="el" href="classStelQGLIndexBuffer.html">StelQGLIndexBuffer</a> *indexBuffer)</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Update statistics in a <a class="el" href="classStelRenderer.html#a87bc521b5e19d618f4257c580a841a9e" title="Draw contents of a vertex buffer (backend).">drawVertexBufferBackend()</a> call.  <a href="#aee622a5d5e3e9826b43c996659ee3240"></a><br/></td></tr>
 <tr><td colspan="2"><h2>Protected Attributes</h2></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">QString&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classStelQGLRenderer.html#ab29d5286eb9f26e0e28ba24249dab4d2">glVendorString</a></td></tr>
 <tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">OpenGL vendor string (used to enable/disable features based on driver).  <a href="#ab29d5286eb9f26e0e28ba24249dab4d2"></a><br/></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">QMap&lt; QString, double &gt;&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classStelQGLRenderer.html#a28f87e537f871f35185916aa74d4bcfd">statistics</a></td></tr>
-<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Statistics collected during program run (such as estimated texture memory usage, etc.).  <a href="#a28f87e537f871f35185916aa74d4bcfd"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">QString&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classStelQGLRenderer.html#a582d324b938d50d82127e29436b95c69">glRendererString</a></td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">OpenGL renderer (usually GPU) string (can be used to enable/disable features based on GPU).  <a href="#a582d324b938d50d82127e29436b95c69"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="el" href="classStelRendererStatistics.html">StelRendererStatistics</a>&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classStelQGLRenderer.html#ab2c4bbb7257b23e1106d65877e260648">statistics</a></td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Statistics collected during program run (such as estimated texture memory usage, etc.).  <a href="#ab2c4bbb7257b23e1106d65877e260648"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">QGLFunctions&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classStelQGLRenderer.html#aeaef5ca9a2e5f0d7df8cc0a24268fcb0">gl</a></td></tr>
 <tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Wraps some GL functions for compatibility across GL and GLES.  <a href="#aeaef5ca9a2e5f0d7df8cc0a24268fcb0"></a><br/></td></tr>
 </table>
@@ -130,7 +134,7 @@ double &gt; &amp;&nbsp;</td><td class="memItemRight" valign="bottom"><a class="e
 <p>Base class for renderer based on OpenGL and at the same time Qt's QGL. </p>
 <dl class="note"><dt><b>Note:</b></dt><dd>This is an internal class of the Renderer subsystem and should not be used elsewhere. </dd></dl>
 
-<p>Definition at line <a class="el" href="StelQGLRenderer_8hpp_source.html#l00048">48</a> of file <a class="el" href="StelQGLRenderer_8hpp_source.html">StelQGLRenderer.hpp</a>.</p>
+<p>Definition at line <a class="el" href="StelQGLRenderer_8hpp_source.html#l00083">83</a> of file <a class="el" href="StelQGLRenderer_8hpp_source.html">StelQGLRenderer.hpp</a>.</p>
 <hr/><h2>Constructor &amp; Destructor Documentation</h2>
 <a class="anchor" id="a62d4946cc2a4bf6cebd72f2e339aa14d"></a><!-- doxytag: member="StelQGLRenderer::StelQGLRenderer" ref="a62d4946cc2a4bf6cebd72f2e339aa14d" args="(QGraphicsView *const parent, const bool pvrSupported)" -->
 <div class="memitem">
@@ -166,7 +170,7 @@ double &gt; &amp;&nbsp;</td><td class="memItemRight" valign="bottom"><a class="e
   </dd>
 </dl>
 
-<p>Definition at line <a class="el" href="StelQGLRenderer_8hpp_source.html#l00056">56</a> of file <a class="el" href="StelQGLRenderer_8hpp_source.html">StelQGLRenderer.hpp</a>.</p>
+<p>Definition at line <a class="el" href="StelQGLRenderer_8hpp_source.html#l00091">91</a> of file <a class="el" href="StelQGLRenderer_8hpp_source.html">StelQGLRenderer.hpp</a>.</p>
 
 </div>
 </div>
@@ -249,7 +253,7 @@ double &gt; &amp;&nbsp;</td><td class="memItemRight" valign="bottom"><a class="e
 
 <p>Implements <a class="el" href="classStelRenderer.html#a19809c61e76bd27ff903bc4550111d47">StelRenderer</a>.</p>
 
-<p>Definition at line <a class="el" href="StelQGLRenderer_8hpp_source.html#l00217">217</a> of file <a class="el" href="StelQGLRenderer_8hpp_source.html">StelQGLRenderer.hpp</a>.</p>
+<p>Definition at line <a class="el" href="StelQGLRenderer_8hpp_source.html#l00256">256</a> of file <a class="el" href="StelQGLRenderer_8hpp_source.html">StelQGLRenderer.hpp</a>.</p>
 
 </div>
 </div>
@@ -272,7 +276,7 @@ double &gt; &amp;&nbsp;</td><td class="memItemRight" valign="bottom"><a class="e
 
 <p>Implements <a class="el" href="classStelRenderer.html#a339f3610ec4d75a39953f06d36aefc91">StelRenderer</a>.</p>
 
-<p>Definition at line <a class="el" href="StelQGLRenderer_8hpp_source.html#l00234">234</a> of file <a class="el" href="StelQGLRenderer_8hpp_source.html">StelQGLRenderer.hpp</a>.</p>
+<p>Definition at line <a class="el" href="StelQGLRenderer_8hpp_source.html#l00273">273</a> of file <a class="el" href="StelQGLRenderer_8hpp_source.html">StelQGLRenderer.hpp</a>.</p>
 
 </div>
 </div>
@@ -296,7 +300,7 @@ double &gt; &amp;&nbsp;</td><td class="memItemRight" valign="bottom"><a class="e
 
 <p>Implements <a class="el" href="classStelRenderer.html#a58f550570512df06eedf96f073510de6">StelRenderer</a>.</p>
 
-<p>Definition at line <a class="el" href="StelQGLRenderer_8hpp_source.html#l00161">161</a> of file <a class="el" href="StelQGLRenderer_8hpp_source.html">StelQGLRenderer.hpp</a>.</p>
+<p>Definition at line <a class="el" href="StelQGLRenderer_8hpp_source.html#l00199">199</a> of file <a class="el" href="StelQGLRenderer_8hpp_source.html">StelQGLRenderer.hpp</a>.</p>
 
 </div>
 </div>
@@ -620,7 +624,7 @@ double &gt; &amp;&nbsp;</td><td class="memItemRight" valign="bottom"><a class="e
 <p>Must be called by texture backend destructor to ensure we don't keep any pointers to it. </p>
 <p>Not called by destroyTextureBackend as texture backends are sometimes constructed and destroyed internally (e.g. by drawText). </p>
 
-<p>Definition at line <a class="el" href="StelQGLRenderer_8hpp_source.html#l00182">182</a> of file <a class="el" href="StelQGLRenderer_8hpp_source.html">StelQGLRenderer.hpp</a>.</p>
+<p>Definition at line <a class="el" href="StelQGLRenderer_8hpp_source.html#l00221">221</a> of file <a class="el" href="StelQGLRenderer_8hpp_source.html">StelQGLRenderer.hpp</a>.</p>
 
 </div>
 </div>
@@ -642,7 +646,7 @@ double &gt; &amp;&nbsp;</td><td class="memItemRight" valign="bottom"><a class="e
 <p>Used to access the GL context. </p>
 <p>Safer than making glContext protected as derived classes can't overwrite it. </p>
 
-<p>Definition at line <a class="el" href="StelQGLRenderer_8hpp_source.html#l00276">276</a> of file <a class="el" href="StelQGLRenderer_8hpp_source.html">StelQGLRenderer.hpp</a>.</p>
+<p>Definition at line <a class="el" href="StelQGLRenderer_8hpp_source.html#l00315">315</a> of file <a class="el" href="StelQGLRenderer_8hpp_source.html">StelQGLRenderer.hpp</a>.</p>
 
 </div>
 </div>
@@ -663,7 +667,7 @@ double &gt; &amp;&nbsp;</td><td class="memItemRight" valign="bottom"><a class="e
 
 <p>Used for GL/GLES-compatible function wrappers and to determine which GL features are available. </p>
 
-<p>Definition at line <a class="el" href="StelQGLRenderer_8hpp_source.html#l00282">282</a> of file <a class="el" href="StelQGLRenderer_8hpp_source.html">StelQGLRenderer.hpp</a>.</p>
+<p>Definition at line <a class="el" href="StelQGLRenderer_8hpp_source.html#l00321">321</a> of file <a class="el" href="StelQGLRenderer_8hpp_source.html">StelQGLRenderer.hpp</a>.</p>
 
 </div>
 </div>
@@ -684,7 +688,7 @@ double &gt; &amp;&nbsp;</td><td class="memItemRight" valign="bottom"><a class="e
 
 <p>Get global vertex color (used for drawing). </p>
 
-<p>Definition at line <a class="el" href="StelQGLRenderer_8hpp_source.html#l00294">294</a> of file <a class="el" href="StelQGLRenderer_8hpp_source.html">StelQGLRenderer.hpp</a>.</p>
+<p>Definition at line <a class="el" href="StelQGLRenderer_8hpp_source.html#l00333">333</a> of file <a class="el" href="StelQGLRenderer_8hpp_source.html">StelQGLRenderer.hpp</a>.</p>
 
 </div>
 </div>
@@ -705,53 +709,32 @@ double &gt; &amp;&nbsp;</td><td class="memItemRight" valign="bottom"><a class="e
 
 <p>Get a pointer to the thread used for loading graphics data (e.g. textures). </p>
 
-<p>Definition at line <a class="el" href="StelQGLRenderer_8hpp_source.html#l00288">288</a> of file <a class="el" href="StelQGLRenderer_8hpp_source.html">StelQGLRenderer.hpp</a>.</p>
+<p>Definition at line <a class="el" href="StelQGLRenderer_8hpp_source.html#l00327">327</a> of file <a class="el" href="StelQGLRenderer_8hpp_source.html">StelQGLRenderer.hpp</a>.</p>
 
 </div>
 </div>
-<a class="anchor" id="a092593688677b59781bad895ca13eb41"></a><!-- doxytag: member="StelQGLRenderer::getStatistics" ref="a092593688677b59781bad895ca13eb41" args="() const " -->
+<a class="anchor" id="a7af017729278c7724911d78c9ddb13e4"></a><!-- doxytag: member="StelQGLRenderer::getStatistics" ref="a7af017729278c7724911d78c9ddb13e4" args="()" -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">virtual const QMap&lt;QString, double&gt;&amp; StelQGLRenderer::getStatistics </td>
+          <td class="memname">virtual <a class="el" href="classStelRendererStatistics.html">StelRendererStatistics</a>&amp; StelQGLRenderer::getStatistics </td>
           <td>(</td>
           <td class="paramname"></td>
           <td>&nbsp;)&nbsp;</td>
-          <td> const<code> [inline, virtual]</code></td>
+          <td><code> [inline, virtual]</code></td>
         </tr>
       </table>
 </div>
 <div class="memdoc">
 
-<p>Get collected statistics data. </p>
-<p>Contents are backend specific - might include thing like vertices per frame, estimated texture memory, etc. . </p>
+<p>Access statistics data. </p>
+<p>Contents are backend specific - might include thing like vertices per frame, estimated texture memory, etc. .</p>
+<p>User code might add its own statistics as well (e.g. <a class="el" href="classStelSkyDrawer.html" title="Provide a set of methods used to draw sky objects taking into account eyes adaptation...">StelSkyDrawer</a>). </p>
 
-<p>Implements <a class="el" href="classStelRenderer.html#a7bd178aaf7bdd6b4e7fbef8cb7eb492e">StelRenderer</a>.</p>
+<p>Implements <a class="el" href="classStelRenderer.html#ae2653097bc6da56c3507742ddf58424b">StelRenderer</a>.</p>
 
-<p>Definition at line <a class="el" href="StelQGLRenderer_8hpp_source.html#l00255">255</a> of file <a class="el" href="StelQGLRenderer_8hpp_source.html">StelQGLRenderer.hpp</a>.</p>
-
-</div>
-</div>
-<a class="anchor" id="ae9b4d164b9b41ccacaee474f898b866f"></a><!-- doxytag: member="StelQGLRenderer::getStatisticsWritable" ref="ae9b4d164b9b41ccacaee474f898b866f" args="()" -->
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">QMap&lt;QString, double&gt;&amp; StelQGLRenderer::getStatisticsWritable </td>
-          <td>(</td>
-          <td class="paramname"></td>
-          <td>&nbsp;)&nbsp;</td>
-          <td><code> [inline]</code></td>
-        </tr>
-      </table>
-</div>
-<div class="memdoc">
-
-<p>Get a non-const reference to statistics. </p>
-<p>Used e.g. by texture backend to collect statistics. </p>
-
-<p>Definition at line <a class="el" href="StelQGLRenderer_8hpp_source.html#l00302">302</a> of file <a class="el" href="StelQGLRenderer_8hpp_source.html">StelQGLRenderer.hpp</a>.</p>
+<p>Definition at line <a class="el" href="StelQGLRenderer_8hpp_source.html#l00294">294</a> of file <a class="el" href="StelQGLRenderer_8hpp_source.html">StelQGLRenderer.hpp</a>.</p>
 
 </div>
 </div>
@@ -795,7 +778,7 @@ double &gt; &amp;&nbsp;</td><td class="memItemRight" valign="bottom"><a class="e
 
 <p>Implements <a class="el" href="classStelRenderer.html#acbd5ae94bcf114bfd8f3b16cc72b7a6d">StelRenderer</a>.</p>
 
-<p>Definition at line <a class="el" href="StelQGLRenderer_8hpp_source.html#l00155">155</a> of file <a class="el" href="StelQGLRenderer_8hpp_source.html">StelQGLRenderer.hpp</a>.</p>
+<p>Definition at line <a class="el" href="StelQGLRenderer_8hpp_source.html#l00193">193</a> of file <a class="el" href="StelQGLRenderer_8hpp_source.html">StelQGLRenderer.hpp</a>.</p>
 
 </div>
 </div>
@@ -819,7 +802,7 @@ double &gt; &amp;&nbsp;</td><td class="memItemRight" valign="bottom"><a class="e
 
 <p>Implements <a class="el" href="classStelRenderer.html#acd5bd5854dff554adfe79603c429b189">StelRenderer</a>.</p>
 
-<p>Definition at line <a class="el" href="StelQGLRenderer_8hpp_source.html#l00333">333</a> of file <a class="el" href="StelQGLRenderer_8hpp_source.html">StelQGLRenderer.hpp</a>.</p>
+<p>Definition at line <a class="el" href="StelQGLRenderer_8hpp_source.html#l00367">367</a> of file <a class="el" href="StelQGLRenderer_8hpp_source.html">StelQGLRenderer.hpp</a>.</p>
 
 </div>
 </div>
@@ -846,7 +829,7 @@ double &gt; &amp;&nbsp;</td><td class="memItemRight" valign="bottom"><a class="e
 
 <p>Reimplemented in <a class="el" href="classStelQGL1Renderer.html#a08018450d3c3c648b3226fa468a1127e">StelQGL1Renderer</a>, and <a class="el" href="classStelQGL2Renderer.html#ace7f988e4a3ed17fce0a9cdd84681691">StelQGL2Renderer</a>.</p>
 
-<p>Definition at line <a class="el" href="StelQGLRenderer_8hpp_source.html#l00128">128</a> of file <a class="el" href="StelQGLRenderer_8hpp_source.html">StelQGLRenderer.hpp</a>.</p>
+<p>Definition at line <a class="el" href="StelQGLRenderer_8hpp_source.html#l00163">163</a> of file <a class="el" href="StelQGLRenderer_8hpp_source.html">StelQGLRenderer.hpp</a>.</p>
 
 </div>
 </div>
@@ -870,7 +853,7 @@ double &gt; &amp;&nbsp;</td><td class="memItemRight" valign="bottom"><a class="e
 
 <p>Reimplemented in <a class="el" href="classStelQGL1Renderer.html#af10cf0382fb24d11b757ef39ebeb0f69">StelQGL1Renderer</a>, and <a class="el" href="classStelQGL2Renderer.html#a7d4209d114f16ec1ffd57f82470ec067">StelQGL2Renderer</a>.</p>
 
-<p>Definition at line <a class="el" href="StelQGLRenderer_8hpp_source.html#l00346">346</a> of file <a class="el" href="StelQGLRenderer_8hpp_source.html">StelQGLRenderer.hpp</a>.</p>
+<p>Definition at line <a class="el" href="StelQGLRenderer_8hpp_source.html#l00380">380</a> of file <a class="el" href="StelQGLRenderer_8hpp_source.html">StelQGLRenderer.hpp</a>.</p>
 
 </div>
 </div>
@@ -891,7 +874,7 @@ double &gt; &amp;&nbsp;</td><td class="memItemRight" valign="bottom"><a class="e
 
 <p>Make Stellarium GL context the currently used GL context. Call this before GL calls. </p>
 
-<p>Definition at line <a class="el" href="StelQGLRenderer_8hpp_source.html#l00261">261</a> of file <a class="el" href="StelQGLRenderer_8hpp_source.html">StelQGLRenderer.hpp</a>.</p>
+<p>Definition at line <a class="el" href="StelQGLRenderer_8hpp_source.html#l00300">300</a> of file <a class="el" href="StelQGLRenderer_8hpp_source.html">StelQGLRenderer.hpp</a>.</p>
 
 </div>
 </div>
@@ -912,7 +895,7 @@ double &gt; &amp;&nbsp;</td><td class="memItemRight" valign="bottom"><a class="e
 
 <p>Get the paint engine type used for Qt drawing. </p>
 
-<p>Definition at line <a class="el" href="StelQGLRenderer_8hpp_source.html#l00311">311</a> of file <a class="el" href="StelQGLRenderer_8hpp_source.html">StelQGLRenderer.hpp</a>.</p>
+<p>Definition at line <a class="el" href="StelQGLRenderer_8hpp_source.html#l00342">342</a> of file <a class="el" href="StelQGLRenderer_8hpp_source.html">StelQGLRenderer.hpp</a>.</p>
 
 </div>
 </div>
@@ -964,7 +947,7 @@ double &gt; &amp;&nbsp;</td><td class="memItemRight" valign="bottom"><a class="e
 
 <p>Reset GL state after drawing. </p>
 
-<p>Definition at line <a class="el" href="StelQGLRenderer_8hpp_source.html#l00446">446</a> of file <a class="el" href="StelQGLRenderer_8hpp_source.html">StelQGLRenderer.hpp</a>.</p>
+<p>Definition at line <a class="el" href="StelQGLRenderer_8hpp_source.html#l00485">485</a> of file <a class="el" href="StelQGLRenderer_8hpp_source.html">StelQGLRenderer.hpp</a>.</p>
 
 </div>
 </div>
@@ -987,7 +970,7 @@ double &gt; &amp;&nbsp;</td><td class="memItemRight" valign="bottom"><a class="e
 
 <p>Implements <a class="el" href="classStelRenderer.html#adf0122cc27cffce6c9dddc17af5b4f6f">StelRenderer</a>.</p>
 
-<p>Definition at line <a class="el" href="StelQGLRenderer_8hpp_source.html#l00140">140</a> of file <a class="el" href="StelQGLRenderer_8hpp_source.html">StelQGLRenderer.hpp</a>.</p>
+<p>Definition at line <a class="el" href="StelQGLRenderer_8hpp_source.html#l00178">178</a> of file <a class="el" href="StelQGLRenderer_8hpp_source.html">StelQGLRenderer.hpp</a>.</p>
 
 </div>
 </div>
@@ -1013,7 +996,7 @@ double &gt; &amp;&nbsp;</td><td class="memItemRight" valign="bottom"><a class="e
 
 <p>Implements <a class="el" href="classStelRenderer.html#af96317f54d1fdf7eeb290319ff42a48f">StelRenderer</a>.</p>
 
-<p>Definition at line <a class="el" href="StelQGLRenderer_8hpp_source.html#l00207">207</a> of file <a class="el" href="StelQGLRenderer_8hpp_source.html">StelQGLRenderer.hpp</a>.</p>
+<p>Definition at line <a class="el" href="StelQGLRenderer_8hpp_source.html#l00246">246</a> of file <a class="el" href="StelQGLRenderer_8hpp_source.html">StelQGLRenderer.hpp</a>.</p>
 
 </div>
 </div>
@@ -1040,7 +1023,7 @@ double &gt; &amp;&nbsp;</td><td class="memItemRight" valign="bottom"><a class="e
 
 <p>Implements <a class="el" href="classStelRenderer.html#ae8e882ad75fab3b0bddb24cb5bc3ef90">StelRenderer</a>.</p>
 
-<p>Definition at line <a class="el" href="StelQGLRenderer_8hpp_source.html#l00202">202</a> of file <a class="el" href="StelQGLRenderer_8hpp_source.html">StelQGLRenderer.hpp</a>.</p>
+<p>Definition at line <a class="el" href="StelQGLRenderer_8hpp_source.html#l00241">241</a> of file <a class="el" href="StelQGLRenderer_8hpp_source.html">StelQGLRenderer.hpp</a>.</p>
 
 </div>
 </div>
@@ -1065,7 +1048,7 @@ double &gt; &amp;&nbsp;</td><td class="memItemRight" valign="bottom"><a class="e
 
 <p>Implements <a class="el" href="classStelRenderer.html#ab5e882f5c441d744300627361634dc0c">StelRenderer</a>.</p>
 
-<p>Definition at line <a class="el" href="StelQGLRenderer_8hpp_source.html#l00212">212</a> of file <a class="el" href="StelQGLRenderer_8hpp_source.html">StelQGLRenderer.hpp</a>.</p>
+<p>Definition at line <a class="el" href="StelQGLRenderer_8hpp_source.html#l00251">251</a> of file <a class="el" href="StelQGLRenderer_8hpp_source.html">StelQGLRenderer.hpp</a>.</p>
 
 </div>
 </div>
@@ -1089,7 +1072,7 @@ double &gt; &amp;&nbsp;</td><td class="memItemRight" valign="bottom"><a class="e
 
 <p>Implements <a class="el" href="classStelRenderer.html#a0058e9561eb0e08e67f559d2606576a6">StelRenderer</a>.</p>
 
-<p>Definition at line <a class="el" href="StelQGLRenderer_8hpp_source.html#l00168">168</a> of file <a class="el" href="StelQGLRenderer_8hpp_source.html">StelQGLRenderer.hpp</a>.</p>
+<p>Definition at line <a class="el" href="StelQGLRenderer_8hpp_source.html#l00207">207</a> of file <a class="el" href="StelQGLRenderer_8hpp_source.html">StelQGLRenderer.hpp</a>.</p>
 
 </div>
 </div>
@@ -1117,7 +1100,7 @@ double &gt; &amp;&nbsp;</td><td class="memItemRight" valign="bottom"><a class="e
 
 <p>Implements <a class="el" href="classStelRenderer.html#a89005c9f1e22bbd5cf58839026168e27">StelRenderer</a>.</p>
 
-<p>Definition at line <a class="el" href="StelQGLRenderer_8hpp_source.html#l00197">197</a> of file <a class="el" href="StelQGLRenderer_8hpp_source.html">StelQGLRenderer.hpp</a>.</p>
+<p>Definition at line <a class="el" href="StelQGLRenderer_8hpp_source.html#l00236">236</a> of file <a class="el" href="StelQGLRenderer_8hpp_source.html">StelQGLRenderer.hpp</a>.</p>
 
 </div>
 </div>
@@ -1142,7 +1125,7 @@ double &gt; &amp;&nbsp;</td><td class="memItemRight" valign="bottom"><a class="e
 
 <p>Implements <a class="el" href="classStelRenderer.html#a14c566946971937c4be5e97cf336c9f3">StelRenderer</a>.</p>
 
-<p>Definition at line <a class="el" href="StelQGLRenderer_8hpp_source.html#l00229">229</a> of file <a class="el" href="StelQGLRenderer_8hpp_source.html">StelQGLRenderer.hpp</a>.</p>
+<p>Definition at line <a class="el" href="StelQGLRenderer_8hpp_source.html#l00268">268</a> of file <a class="el" href="StelQGLRenderer_8hpp_source.html">StelQGLRenderer.hpp</a>.</p>
 
 </div>
 </div>
@@ -1164,7 +1147,7 @@ double &gt; &amp;&nbsp;</td><td class="memItemRight" valign="bottom"><a class="e
 
 <p>Set up GL state common between the GL1 and GL2 backends before drawing. </p>
 
-<p>Definition at line <a class="el" href="StelQGLRenderer_8hpp_source.html#l00358">358</a> of file <a class="el" href="StelQGLRenderer_8hpp_source.html">StelQGLRenderer.hpp</a>.</p>
+<p>Definition at line <a class="el" href="StelQGLRenderer_8hpp_source.html#l00392">392</a> of file <a class="el" href="StelQGLRenderer_8hpp_source.html">StelQGLRenderer.hpp</a>.</p>
 
 </div>
 </div>
@@ -1188,7 +1171,47 @@ double &gt; &amp;&nbsp;</td><td class="memItemRight" valign="bottom"><a class="e
 
 <p>Implements <a class="el" href="classStelRenderer.html#afea8473fd7b4877d40fb6a79e387822b">StelRenderer</a>.</p>
 
-<p>Definition at line <a class="el" href="StelQGLRenderer_8hpp_source.html#l00240">240</a> of file <a class="el" href="StelQGLRenderer_8hpp_source.html">StelQGLRenderer.hpp</a>.</p>
+<p>Definition at line <a class="el" href="StelQGLRenderer_8hpp_source.html#l00279">279</a> of file <a class="el" href="StelQGLRenderer_8hpp_source.html">StelQGLRenderer.hpp</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="aee622a5d5e3e9826b43c996659ee3240"></a><!-- doxytag: member="StelQGLRenderer::updateDrawStatistics" ref="aee622a5d5e3e9826b43c996659ee3240" args="(VBufferBackend *vertexBuffer, StelQGLIndexBuffer *indexBuffer)" -->
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class VBufferBackend &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">void StelQGLRenderer::updateDrawStatistics </td>
+          <td>(</td>
+          <td class="paramtype">VBufferBackend *&nbsp;</td>
+          <td class="paramname"> <em>vertexBuffer</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="classStelQGLIndexBuffer.html">StelQGLIndexBuffer</a> *&nbsp;</td>
+          <td class="paramname"> <em>indexBuffer</em></td><td>&nbsp;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td><td><code> [inline, protected]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Update statistics in a <a class="el" href="classStelRenderer.html#a87bc521b5e19d618f4257c580a841a9e" title="Draw contents of a vertex buffer (backend).">drawVertexBufferBackend()</a> call. </p>
+<dl><dt><b>Parameters:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"></td><td valign="top"><em>vertexBuffer</em>&nbsp;</td><td>Vertex buffer drawn. </td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>indexBuffer</em>&nbsp;</td><td>Index buffer (if any), specifying which vertices to draw. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p>Definition at line <a class="el" href="StelQGLRenderer_8hpp_source.html#l00506">506</a> of file <a class="el" href="StelQGLRenderer_8hpp_source.html">StelQGLRenderer.hpp</a>.</p>
 
 </div>
 </div>
@@ -1212,7 +1235,7 @@ double &gt; &amp;&nbsp;</td><td class="memItemRight" valign="bottom"><a class="e
 
 <p>Implements <a class="el" href="classStelRenderer.html#ae9c21db50f37e99ea5cf851e23f996f8">StelRenderer</a>.</p>
 
-<p>Definition at line <a class="el" href="StelQGLRenderer_8hpp_source.html#l00148">148</a> of file <a class="el" href="StelQGLRenderer_8hpp_source.html">StelQGLRenderer.hpp</a>.</p>
+<p>Definition at line <a class="el" href="StelQGLRenderer_8hpp_source.html#l00186">186</a> of file <a class="el" href="StelQGLRenderer_8hpp_source.html">StelQGLRenderer.hpp</a>.</p>
 
 </div>
 </div>
@@ -1230,7 +1253,24 @@ double &gt; &amp;&nbsp;</td><td class="memItemRight" valign="bottom"><a class="e
 
 <p>Wraps some GL functions for compatibility across GL and GLES. </p>
 
-<p>Definition at line <a class="el" href="StelQGLRenderer_8hpp_source.html#l00612">612</a> of file <a class="el" href="StelQGLRenderer_8hpp_source.html">StelQGLRenderer.hpp</a>.</p>
+<p>Definition at line <a class="el" href="StelQGLRenderer_8hpp_source.html#l00791">791</a> of file <a class="el" href="StelQGLRenderer_8hpp_source.html">StelQGLRenderer.hpp</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a582d324b938d50d82127e29436b95c69"></a><!-- doxytag: member="StelQGLRenderer::glRendererString" ref="a582d324b938d50d82127e29436b95c69" args="" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">QString <a class="el" href="classStelQGLRenderer.html#a582d324b938d50d82127e29436b95c69">StelQGLRenderer::glRendererString</a><code> [protected]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>OpenGL renderer (usually GPU) string (can be used to enable/disable features based on GPU). </p>
+
+<p>Definition at line <a class="el" href="StelQGLRenderer_8hpp_source.html#l00352">352</a> of file <a class="el" href="StelQGLRenderer_8hpp_source.html">StelQGLRenderer.hpp</a>.</p>
 
 </div>
 </div>
@@ -1247,16 +1287,16 @@ double &gt; &amp;&nbsp;</td><td class="memItemRight" valign="bottom"><a class="e
 
 <p>OpenGL vendor string (used to enable/disable features based on driver). </p>
 
-<p>Definition at line <a class="el" href="StelQGLRenderer_8hpp_source.html#l00318">318</a> of file <a class="el" href="StelQGLRenderer_8hpp_source.html">StelQGLRenderer.hpp</a>.</p>
+<p>Definition at line <a class="el" href="StelQGLRenderer_8hpp_source.html#l00349">349</a> of file <a class="el" href="StelQGLRenderer_8hpp_source.html">StelQGLRenderer.hpp</a>.</p>
 
 </div>
 </div>
-<a class="anchor" id="a28f87e537f871f35185916aa74d4bcfd"></a><!-- doxytag: member="StelQGLRenderer::statistics" ref="a28f87e537f871f35185916aa74d4bcfd" args="" -->
+<a class="anchor" id="ab2c4bbb7257b23e1106d65877e260648"></a><!-- doxytag: member="StelQGLRenderer::statistics" ref="ab2c4bbb7257b23e1106d65877e260648" args="" -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">QMap&lt;QString, double&gt; <a class="el" href="classStelQGLRenderer.html#a28f87e537f871f35185916aa74d4bcfd">StelQGLRenderer::statistics</a><code> [protected]</code></td>
+          <td class="memname"><a class="el" href="classStelRendererStatistics.html">StelRendererStatistics</a> <a class="el" href="classStelQGLRenderer.html#ab2c4bbb7257b23e1106d65877e260648">StelQGLRenderer::statistics</a><code> [protected]</code></td>
         </tr>
       </table>
 </div>
@@ -1264,7 +1304,7 @@ double &gt; &amp;&nbsp;</td><td class="memItemRight" valign="bottom"><a class="e
 
 <p>Statistics collected during program run (such as estimated texture memory usage, etc.). </p>
 
-<p>Definition at line <a class="el" href="StelQGLRenderer_8hpp_source.html#l00321">321</a> of file <a class="el" href="StelQGLRenderer_8hpp_source.html">StelQGLRenderer.hpp</a>.</p>
+<p>Definition at line <a class="el" href="StelQGLRenderer_8hpp_source.html#l00355">355</a> of file <a class="el" href="StelQGLRenderer_8hpp_source.html">StelQGLRenderer.hpp</a>.</p>
 
 </div>
 </div>
@@ -1272,7 +1312,7 @@ double &gt; &amp;&nbsp;</td><td class="memItemRight" valign="bottom"><a class="e
 <li>core/renderer/<a class="el" href="StelQGLRenderer_8hpp_source.html">StelQGLRenderer.hpp</a></li>
 </ul>
 </div>
-<hr class="footer"/><address style="text-align: right;"><small>Generated on Fri Aug 31 18:08:01 2012 for Stellarium by&nbsp;
+<hr class="footer"/><address style="text-align: right;"><small>Generated on Sat Sep 15 13:01:15 2012 for Stellarium by&nbsp;
 <a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.6.3 </small></address>
 </body>

@@ -28,8 +28,8 @@
 <div class="contents">
 <h1>StelSkyDrawer Member List</h1>This is the complete list of members for <a class="el" href="classStelSkyDrawer.html">StelSkyDrawer</a>, including all inherited members.<table>
   <tr class="memlist"><td><a class="el" href="classStelSkyDrawer.html#ac31ae11e158c742f8f1c82584be9cf20">computeRCMag</a>(float mag, float rcMag[2]) const </td><td><a class="el" href="classStelSkyDrawer.html">StelSkyDrawer</a></td><td></td></tr>
-  <tr class="memlist"><td><a class="el" href="classStelSkyDrawer.html#af54aaa06bc68a14cf569698b5924beef">drawPointSource</a>(StelProjectorP projector, const Vec3d &amp;v, const float rcMag[2], unsigned int bV, bool checkInScreen=false)</td><td><a class="el" href="classStelSkyDrawer.html">StelSkyDrawer</a></td><td><code> [inline]</code></td></tr>
-  <tr bgcolor="#f0f0f0"><td><b>drawPointSource</b>(StelProjectorP projector, const Vec3d &amp;v, const float rcMag[2], const Vec3f &amp;bcolor, bool checkInScreen=false) (defined in <a class="el" href="classStelSkyDrawer.html">StelSkyDrawer</a>)</td><td><a class="el" href="classStelSkyDrawer.html">StelSkyDrawer</a></td><td></td></tr>
+  <tr class="memlist"><td><a class="el" href="classStelSkyDrawer.html#a5cd8a5fa219fca44ab57c41abd24fc20">drawPointSource</a>(const Vec3f &amp;win, const float rcMag[2], unsigned int bV)</td><td><a class="el" href="classStelSkyDrawer.html">StelSkyDrawer</a></td><td><code> [inline]</code></td></tr>
+  <tr bgcolor="#f0f0f0"><td><b>drawPointSource</b>(const Vec3f &amp;win, const float rcMag[2], const Vec3f &amp;bcolor) (defined in <a class="el" href="classStelSkyDrawer.html">StelSkyDrawer</a>)</td><td><a class="el" href="classStelSkyDrawer.html">StelSkyDrawer</a></td><td></td></tr>
   <tr class="memlist"><td><a class="el" href="classStelSkyDrawer.html#ae10860484e77420acd7b7c167e8deca1">drawSunCorona</a>(StelProjectorP projector, const Vec3d &amp;v, float radius, float alpha)</td><td><a class="el" href="classStelSkyDrawer.html">StelSkyDrawer</a></td><td></td></tr>
   <tr class="memlist"><td><a class="el" href="classStelSkyDrawer.html#a939668f3d308e0015663730e08ce6b85">getAbsoluteStarScale</a>() const </td><td><a class="el" href="classStelSkyDrawer.html">StelSkyDrawer</a></td><td><code> [inline, slot]</code></td></tr>
   <tr class="memlist"><td><a class="el" href="classStelSkyDrawer.html#ad6111d358d5281d93c9614bb42ba9c44">getAtmospherePressure</a>() const </td><td><a class="el" href="classStelSkyDrawer.html">StelSkyDrawer</a></td><td><code> [inline, slot]</code></td></tr>
@@ -51,6 +51,7 @@
   <tr class="memlist"><td><a class="el" href="classStelSkyDrawer.html#ae28197fb724a01ab5e4934f339b94a83">indexToColor</a>(unsigned char bV)</td><td><a class="el" href="classStelSkyDrawer.html">StelSkyDrawer</a></td><td><code> [inline, static]</code></td></tr>
   <tr class="memlist"><td><a class="el" href="classStelSkyDrawer.html#aeb453f2175bc160c2ae478eb6d06a819">init</a>()</td><td><a class="el" href="classStelSkyDrawer.html">StelSkyDrawer</a></td><td></td></tr>
   <tr class="memlist"><td><a class="el" href="classStelSkyDrawer.html#a1c520413fe28e4d91744f1f34d0e4649">luminanceToSurfacebrightness</a>(float lum)</td><td><a class="el" href="classStelSkyDrawer.html">StelSkyDrawer</a></td><td><code> [static]</code></td></tr>
+  <tr class="memlist"><td><a class="el" href="classStelSkyDrawer.html#aaf1ee9d19e3218827d2da06fc4d63e6b">pointSourceVisible</a>(StelProjector *projector, const Vec3f &amp;v, const float rcMag[2], bool checkInScreen, Vec3f &amp;outWindowCoordinates)</td><td><a class="el" href="classStelSkyDrawer.html">StelSkyDrawer</a></td><td><code> [inline]</code></td></tr>
   <tr class="memlist"><td><a class="el" href="classStelSkyDrawer.html#a74fe3779fbe3871005dd4d648e6d9a00">postDrawPointSource</a>(StelProjectorP projector)</td><td><a class="el" href="classStelSkyDrawer.html">StelSkyDrawer</a></td><td></td></tr>
   <tr class="memlist"><td><a class="el" href="classStelSkyDrawer.html#acafe888446241c8b75cad5400bd25b00">postDrawSky3dModel</a>(StelProjectorP projector, const Vec3d &amp;v, float illuminatedArea, float mag, const Vec3f &amp;color=Vec3f(1.f, 1.f, 1.f))</td><td><a class="el" href="classStelSkyDrawer.html">StelSkyDrawer</a></td><td></td></tr>
   <tr class="memlist"><td><a class="el" href="classStelSkyDrawer.html#a9969f44b091de6c5aa6114e2551312c0">preDraw</a>()</td><td><a class="el" href="classStelSkyDrawer.html">StelSkyDrawer</a></td><td></td></tr>
@@ -73,7 +74,7 @@
   <tr class="memlist"><td><a class="el" href="classStelSkyDrawer.html#adea12e5e86648983db53fe7d44866dc0">update</a>(double deltaTime)</td><td><a class="el" href="classStelSkyDrawer.html">StelSkyDrawer</a></td><td></td></tr>
   <tr class="memlist"><td><a class="el" href="classStelSkyDrawer.html#ada7b788eeb6b8858b86527135dc85824">~StelSkyDrawer</a>()</td><td><a class="el" href="classStelSkyDrawer.html">StelSkyDrawer</a></td><td></td></tr>
 </table></div>
-<hr class="footer"/><address style="text-align: right;"><small>Generated on Fri Aug 31 18:08:02 2012 for Stellarium by&nbsp;
+<hr class="footer"/><address style="text-align: right;"><small>Generated on Sat Sep 15 13:01:15 2012 for Stellarium by&nbsp;
 <a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.6.3 </small></address>
 </body>

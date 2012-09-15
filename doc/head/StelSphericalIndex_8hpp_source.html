@@ -96,7 +96,7 @@
 <a name="l00075"></a>00075     <span class="keyword">struct </span>CountFunc
 <a name="l00076"></a>00076     {
 <a name="l00077"></a>00077         CountFunc() : nb(0) {;}
-<a name="l00078"></a>00078         <span class="keywordtype">void</span> operator()(<span class="keyword">const</span> <a class="code" href="classQSharedPointer.html">StelRegionObjectP</a>&amp;)
+<a name="l00078"></a>00078         <span class="keywordtype">void</span> operator()(<span class="keyword">const</span> <a class="code" href="classStelRegionObject.html" title="Simple abstract class defining basic methods implemented by all objects that need...">StelRegionObject</a>*)
 <a name="l00079"></a>00079         {
 <a name="l00080"></a>00080             ++nb;
 <a name="l00081"></a>00081         }
@@ -123,16 +123,16 @@
 <a name="l00107"></a>00107             Q_ASSERT(children.empty());
 <a name="l00108"></a>00108             Q_ASSERT(triangle.getConvexContour().size() == 3);
 <a name="l00109"></a>00109 
-<a name="l00110"></a>00110             <span class="keyword">const</span> <a class="code" href="classVector3.html" title="A templatized 3d vector.">Vec3d</a>&amp; c0 = triangle.getConvexContour().at(0);
-<a name="l00111"></a>00111             <span class="keyword">const</span> <a class="code" href="classVector3.html" title="A templatized 3d vector.">Vec3d</a>&amp; c1 = triangle.getConvexContour().at(1);
-<a name="l00112"></a>00112             <span class="keyword">const</span> <a class="code" href="classVector3.html" title="A templatized 3d vector.">Vec3d</a>&amp; c2 = triangle.getConvexContour().at(2);
+<a name="l00110"></a>00110             <span class="keyword">const</span> <a class="code" href="classVector3.html">Vec3d</a>&amp; c0 = triangle.getConvexContour().at(0);
+<a name="l00111"></a>00111             <span class="keyword">const</span> <a class="code" href="classVector3.html">Vec3d</a>&amp; c1 = triangle.getConvexContour().at(1);
+<a name="l00112"></a>00112             <span class="keyword">const</span> <a class="code" href="classVector3.html">Vec3d</a>&amp; c2 = triangle.getConvexContour().at(2);
 <a name="l00113"></a>00113 
 <a name="l00114"></a>00114             Q_ASSERT((c1^c0)*c2 &gt;= 0.0);
-<a name="l00115"></a>00115             <a class="code" href="classVector3.html" title="A templatized 3d vector.">Vec3d</a> e0(c1[0]+c2[0], c1[1]+c2[1], c1[2]+c2[2]);
+<a name="l00115"></a>00115             <a class="code" href="classVector3.html">Vec3d</a> e0(c1[0]+c2[0], c1[1]+c2[1], c1[2]+c2[2]);
 <a name="l00116"></a>00116             e0.normalize();
-<a name="l00117"></a>00117             <a class="code" href="classVector3.html" title="A templatized 3d vector.">Vec3d</a> e1(c2[0]+c0[0], c2[1]+c0[1], c2[2]+c0[2]);
+<a name="l00117"></a>00117             <a class="code" href="classVector3.html">Vec3d</a> e1(c2[0]+c0[0], c2[1]+c0[1], c2[2]+c0[2]);
 <a name="l00118"></a>00118             e1.normalize();
-<a name="l00119"></a>00119             <a class="code" href="classVector3.html" title="A templatized 3d vector.">Vec3d</a> e2(c0[0]+c1[0], c0[1]+c1[1], c0[2]+c1[2]);
+<a name="l00119"></a>00119             <a class="code" href="classVector3.html">Vec3d</a> e2(c0[0]+c1[0], c0[1]+c1[1], c0[2]+c1[2]);
 <a name="l00120"></a>00120             e2.normalize();
 <a name="l00121"></a>00121 
 <a name="l00122"></a>00122             children.resize(4);
@@ -162,9 +162,9 @@
 <a name="l00149"></a>00149 
 <a name="l00151"></a>00151             <span class="keyword">virtual</span> <span class="keywordtype">void</span> split()
 <a name="l00152"></a>00152             {
-<a name="l00153"></a>00153                 <span class="keyword">static</span> <span class="keyword">const</span> <a class="code" href="classVector3.html" title="A templatized 3d vector.">Vec3d</a> vertice[6] =
+<a name="l00153"></a>00153                 <span class="keyword">static</span> <span class="keyword">const</span> <a class="code" href="classVector3.html">Vec3d</a> vertice[6] =
 <a name="l00154"></a>00154                 {
-<a name="l00155"></a>00155                     <a class="code" href="classVector3.html" title="A templatized 3d vector.">Vec3d</a>(0,0,1), <a class="code" href="classVector3.html" title="A templatized 3d vector.">Vec3d</a>(1,0,0), <a class="code" href="classVector3.html" title="A templatized 3d vector.">Vec3d</a>(0,1,0), <a class="code" href="classVector3.html" title="A templatized 3d vector.">Vec3d</a>(-1,0,0), <a class="code" href="classVector3.html" title="A templatized 3d vector.">Vec3d</a>(0,-1,0), <a class="code" href="classVector3.html" title="A templatized 3d vector.">Vec3d</a>(0,0,-1)
+<a name="l00155"></a>00155                     <a class="code" href="classVector3.html">Vec3d</a>(0,0,1), <a class="code" href="classVector3.html">Vec3d</a>(1,0,0), <a class="code" href="classVector3.html">Vec3d</a>(0,1,0), <a class="code" href="classVector3.html">Vec3d</a>(-1,0,0), <a class="code" href="classVector3.html">Vec3d</a>(0,-1,0), <a class="code" href="classVector3.html">Vec3d</a>(0,0,-1)
 <a name="l00156"></a>00156                 };
 <a name="l00157"></a>00157 
 <a name="l00158"></a>00158                 <span class="keyword">static</span> <span class="keyword">const</span> <span class="keywordtype">int</span> verticeIndice[8][3] =
@@ -245,72 +245,84 @@
 <a name="l00239"></a>00239 <span class="keyword">            </span>{
 <a name="l00240"></a>00240                 <span class="keywordflow">foreach</span> (<span class="keyword">const</span> NodeElem&amp; el, node.elements)
 <a name="l00241"></a>00241                 {
-<a name="l00242"></a>00242                     <span class="keywordflow">if</span> (region-&gt;intersects(el.obj-&gt;getRegion().data()))
-<a name="l00243"></a>00243                         func(el.obj);
-<a name="l00244"></a>00244                 }
-<a name="l00245"></a>00245                 <span class="keywordflow">foreach</span> (<span class="keyword">const</span> Node&amp; child, node.children)
-<a name="l00246"></a>00246                 {
-<a name="l00247"></a>00247                     <span class="keywordflow">if</span> (region-&gt;contains(child.triangle))
-<a name="l00248"></a>00248                         <a class="code" href="classStelSphericalIndex.html#a5f5e585671eac20634f3f1f2bc63f3b9" title="Process all the objects intersecting the given region using the passed function object...">processAll</a>(child, func);
-<a name="l00249"></a>00249                     <span class="keywordflow">else</span> <span class="keywordflow">if</span> (region-&gt;intersects(child.triangle))
-<a name="l00250"></a>00250                         <a class="code" href="classStelSphericalIndex.html#a70d8c4e7dc2db02373be2a712a66f898" title="Process all the objects intersecting the given region using the passed function object...">processIntersectingRegions</a>(child, region, func);
-<a name="l00251"></a>00251                 }
-<a name="l00252"></a>00252             }
-<a name="l00253"></a>00253             
-<a name="l00254"></a>00254             <span class="keyword">template</span>&lt;<span class="keyword">class</span> FuncObject&gt; <span class="keywordtype">void</span> <a class="code" href="classStelSphericalIndex.html#ac7a8b4f40dd785d309b89661b6ce4d9e" title="Process all the objects intersecting the given region using the passed function object...">processBoundingCapIntersectingRegions</a>(<span class="keyword">const</span> Node&amp; node, <span class="keyword">const</span> <a class="code" href="classSphericalCap.html" title="A SphericalCap is defined by a direction and an aperture.">SphericalCap</a>&amp; cap, FuncObject&amp; func)<span class="keyword"> const</span>
-<a name="l00255"></a>00255 <span class="keyword">            </span>{
-<a name="l00256"></a>00256                 <span class="keywordflow">foreach</span> (<span class="keyword">const</span> NodeElem&amp; el, node.elements)
-<a name="l00257"></a>00257                 {
-<a name="l00258"></a>00258                     <span class="keywordflow">if</span> (cap.intersects(el.cap))
-<a name="l00259"></a>00259                         func(el.obj);
-<a name="l00260"></a>00260                 }
-<a name="l00261"></a>00261                 <span class="keywordflow">foreach</span> (<span class="keyword">const</span> Node&amp; child, node.children)
-<a name="l00262"></a>00262                 {
-<a name="l00263"></a>00263                     <span class="keywordflow">if</span> (cap.contains(child.triangle))
-<a name="l00264"></a>00264                         <a class="code" href="classStelSphericalIndex.html#a5f5e585671eac20634f3f1f2bc63f3b9" title="Process all the objects intersecting the given region using the passed function object...">processAll</a>(child, func);
-<a name="l00265"></a>00265                     <span class="keywordflow">else</span> <span class="keywordflow">if</span> (cap.intersects(child.triangle))
-<a name="l00266"></a>00266                         <a class="code" href="classStelSphericalIndex.html#ac7a8b4f40dd785d309b89661b6ce4d9e" title="Process all the objects intersecting the given region using the passed function object...">processBoundingCapIntersectingRegions</a>(child, cap, func);
-<a name="l00267"></a>00267                 }
-<a name="l00268"></a>00268             }
-<a name="l00269"></a>00269 
-<a name="l00271"></a>00271             <span class="keyword">template</span>&lt;<span class="keyword">class</span> FuncObject&gt; <span class="keywordtype">void</span> <a class="code" href="classStelSphericalIndex.html#a3d22cd29651106072661b208a209a8fb" title="Process all the objects contained in the given region using the passed function object...">processContainedRegions</a>(<span class="keyword">const</span> Node&amp; node, <span class="keyword">const</span> <a class="code" href="classSphericalRegionP.html" title="A shared pointer on a SphericalRegion.">SphericalRegionP</a>&amp; region, FuncObject&amp; func)<span class="keyword"> const</span>
-<a name="l00272"></a>00272 <span class="keyword">            </span>{
-<a name="l00273"></a>00273                 <span class="keywordflow">foreach</span> (<span class="keyword">const</span> NodeElem&amp; el, node.elements)
-<a name="l00274"></a>00274                 {
-<a name="l00275"></a>00275                     <span class="keywordflow">if</span> (region-&gt;contains(el.obj-&gt;getRegion().data()))
-<a name="l00276"></a>00276                         func(el.obj);
-<a name="l00277"></a>00277                 }
-<a name="l00278"></a>00278                 <span class="keywordflow">foreach</span> (<span class="keyword">const</span> Node&amp; child, node.children)
-<a name="l00279"></a>00279                 {
-<a name="l00280"></a>00280                     <span class="keywordflow">if</span> (region-&gt;contains(child.triangle))
-<a name="l00281"></a>00281                         <a class="code" href="classStelSphericalIndex.html#a5f5e585671eac20634f3f1f2bc63f3b9" title="Process all the objects intersecting the given region using the passed function object...">processAll</a>(child, func);
-<a name="l00282"></a>00282                     <span class="keywordflow">else</span> <span class="keywordflow">if</span> (region-&gt;intersects(child.triangle))
-<a name="l00283"></a>00283                         <a class="code" href="classStelSphericalIndex.html#a3d22cd29651106072661b208a209a8fb" title="Process all the objects contained in the given region using the passed function object...">processContainedRegions</a>(child, region, func);
-<a name="l00284"></a>00284                 }
-<a name="l00285"></a>00285             }
-<a name="l00286"></a>00286 
-<a name="l00288"></a>00288             <span class="keyword">template</span>&lt;<span class="keyword">class</span> FuncObject&gt; <span class="keywordtype">void</span> <a class="code" href="classStelSphericalIndex.html#a5f5e585671eac20634f3f1f2bc63f3b9" title="Process all the objects intersecting the given region using the passed function object...">processAll</a>(<span class="keyword">const</span> Node&amp; node, FuncObject&amp; func)<span class="keyword"> const</span>
-<a name="l00289"></a>00289 <span class="keyword">            </span>{
-<a name="l00290"></a>00290                 <span class="keywordflow">foreach</span> (<span class="keyword">const</span> NodeElem&amp; el, node.elements)
-<a name="l00291"></a>00291                     func(el.obj);
-<a name="l00292"></a>00292                 <span class="keywordflow">foreach</span> (<span class="keyword">const</span> Node&amp; child, node.children)
-<a name="l00293"></a>00293                     <a class="code" href="classStelSphericalIndex.html#a5f5e585671eac20634f3f1f2bc63f3b9" title="Process all the objects intersecting the given region using the passed function object...">processAll</a>(child, func);
+<a name="l00242"></a>00242                     <span class="comment">// Optimization: We pass a plain pointer here, not smart pointer.</span>
+<a name="l00243"></a>00243                     <span class="comment">// As long as the FuncObject does not need to store the pointer,</span>
+<a name="l00244"></a>00244                     <span class="comment">// this isn&#39;t a problem.</span>
+<a name="l00245"></a>00245                     <span class="keywordflow">if</span> (region-&gt;intersects(el.obj-&gt;getRegion().data()))
+<a name="l00246"></a>00246                         func(&amp;(*el.obj));
+<a name="l00247"></a>00247                 }
+<a name="l00248"></a>00248                 <span class="keywordflow">foreach</span> (<span class="keyword">const</span> Node&amp; child, node.children)
+<a name="l00249"></a>00249                 {
+<a name="l00250"></a>00250                     <span class="keywordflow">if</span> (region-&gt;contains(child.triangle))
+<a name="l00251"></a>00251                         <a class="code" href="classStelSphericalIndex.html#a5f5e585671eac20634f3f1f2bc63f3b9" title="Process all the objects intersecting the given region using the passed function object...">processAll</a>(child, func);
+<a name="l00252"></a>00252                     <span class="keywordflow">else</span> <span class="keywordflow">if</span> (region-&gt;intersects(child.triangle))
+<a name="l00253"></a>00253                         <a class="code" href="classStelSphericalIndex.html#a70d8c4e7dc2db02373be2a712a66f898" title="Process all the objects intersecting the given region using the passed function object...">processIntersectingRegions</a>(child, region, func);
+<a name="l00254"></a>00254                 }
+<a name="l00255"></a>00255             }
+<a name="l00256"></a>00256             
+<a name="l00257"></a>00257             <span class="keyword">template</span>&lt;<span class="keyword">class</span> FuncObject&gt; <span class="keywordtype">void</span> <a class="code" href="classStelSphericalIndex.html#ac7a8b4f40dd785d309b89661b6ce4d9e" title="Process all the objects intersecting the given region using the passed function object...">processBoundingCapIntersectingRegions</a>(<span class="keyword">const</span> Node&amp; node, <span class="keyword">const</span> <a class="code" href="classSphericalCap.html" title="A SphericalCap is defined by a direction and an aperture.">SphericalCap</a>&amp; cap, FuncObject&amp; func)<span class="keyword"> const</span>
+<a name="l00258"></a>00258 <span class="keyword">            </span>{
+<a name="l00259"></a>00259                 <span class="keywordflow">foreach</span> (<span class="keyword">const</span> NodeElem&amp; el, node.elements)
+<a name="l00260"></a>00260                 {
+<a name="l00261"></a>00261                     <span class="comment">// Optimization: We pass a plain pointer here, not smart pointer.</span>
+<a name="l00262"></a>00262                     <span class="comment">// As long as the FuncObject does not need to store the pointer,</span>
+<a name="l00263"></a>00263                     <span class="comment">// this isn&#39;t a problem.</span>
+<a name="l00264"></a>00264                     <span class="keywordflow">if</span> (cap.intersects(el.cap))
+<a name="l00265"></a>00265                         func(&amp;(*el.obj));
+<a name="l00266"></a>00266                 }
+<a name="l00267"></a>00267                 <span class="keywordflow">foreach</span> (<span class="keyword">const</span> Node&amp; child, node.children)
+<a name="l00268"></a>00268                 {
+<a name="l00269"></a>00269                     <span class="keywordflow">if</span> (cap.contains(child.triangle))
+<a name="l00270"></a>00270                         <a class="code" href="classStelSphericalIndex.html#a5f5e585671eac20634f3f1f2bc63f3b9" title="Process all the objects intersecting the given region using the passed function object...">processAll</a>(child, func);
+<a name="l00271"></a>00271                     <span class="keywordflow">else</span> <span class="keywordflow">if</span> (cap.intersects(child.triangle))
+<a name="l00272"></a>00272                         <a class="code" href="classStelSphericalIndex.html#ac7a8b4f40dd785d309b89661b6ce4d9e" title="Process all the objects intersecting the given region using the passed function object...">processBoundingCapIntersectingRegions</a>(child, cap, func);
+<a name="l00273"></a>00273                 }
+<a name="l00274"></a>00274             }
+<a name="l00275"></a>00275 
+<a name="l00277"></a>00277             <span class="keyword">template</span>&lt;<span class="keyword">class</span> FuncObject&gt; <span class="keywordtype">void</span> <a class="code" href="classStelSphericalIndex.html#a3d22cd29651106072661b208a209a8fb" title="Process all the objects contained in the given region using the passed function object...">processContainedRegions</a>(<span class="keyword">const</span> Node&amp; node, <span class="keyword">const</span> <a class="code" href="classSphericalRegionP.html" title="A shared pointer on a SphericalRegion.">SphericalRegionP</a>&amp; region, FuncObject&amp; func)<span class="keyword"> const</span>
+<a name="l00278"></a>00278 <span class="keyword">            </span>{
+<a name="l00279"></a>00279                 <span class="keywordflow">foreach</span> (<span class="keyword">const</span> NodeElem&amp; el, node.elements)
+<a name="l00280"></a>00280                 {
+<a name="l00281"></a>00281                     <span class="comment">// Optimization: We pass a plain pointer here, not smart pointer.</span>
+<a name="l00282"></a>00282                     <span class="comment">// As long as the FuncObject does not need to store the pointer,</span>
+<a name="l00283"></a>00283                     <span class="comment">// this isn&#39;t a problem.</span>
+<a name="l00284"></a>00284                     <span class="keywordflow">if</span> (region-&gt;contains(el.obj-&gt;getRegion().data()))
+<a name="l00285"></a>00285                         func(&amp;(*el.obj));
+<a name="l00286"></a>00286                 }
+<a name="l00287"></a>00287                 <span class="keywordflow">foreach</span> (<span class="keyword">const</span> Node&amp; child, node.children)
+<a name="l00288"></a>00288                 {
+<a name="l00289"></a>00289                     <span class="keywordflow">if</span> (region-&gt;contains(child.triangle))
+<a name="l00290"></a>00290                         <a class="code" href="classStelSphericalIndex.html#a5f5e585671eac20634f3f1f2bc63f3b9" title="Process all the objects intersecting the given region using the passed function object...">processAll</a>(child, func);
+<a name="l00291"></a>00291                     <span class="keywordflow">else</span> <span class="keywordflow">if</span> (region-&gt;intersects(child.triangle))
+<a name="l00292"></a>00292                         <a class="code" href="classStelSphericalIndex.html#a3d22cd29651106072661b208a209a8fb" title="Process all the objects contained in the given region using the passed function object...">processContainedRegions</a>(child, region, func);
+<a name="l00293"></a>00293                 }
 <a name="l00294"></a>00294             }
 <a name="l00295"></a>00295 
-<a name="l00297"></a>00297             <span class="keywordtype">int</span> maxObjectsPerNode;
-<a name="l00299"></a>00299             <span class="keywordtype">int</span> maxLevel;
-<a name="l00300"></a>00300     };
-<a name="l00301"></a>00301 
-<a name="l00303"></a>00303     <span class="keywordtype">int</span> maxObjectsPerNode;
-<a name="l00304"></a>00304 
-<a name="l00305"></a>00305     RootNode* rootNode;
-<a name="l00306"></a>00306 };
+<a name="l00297"></a>00297             <span class="keyword">template</span>&lt;<span class="keyword">class</span> FuncObject&gt; <span class="keywordtype">void</span> <a class="code" href="classStelSphericalIndex.html#a5f5e585671eac20634f3f1f2bc63f3b9" title="Process all the objects intersecting the given region using the passed function object...">processAll</a>(<span class="keyword">const</span> Node&amp; node, FuncObject&amp; func)<span class="keyword"> const</span>
+<a name="l00298"></a>00298 <span class="keyword">            </span>{
+<a name="l00299"></a>00299                 <span class="comment">// Optimization: We pass a plain pointer here, not smart pointer.</span>
+<a name="l00300"></a>00300                 <span class="comment">// As long as the FuncObject does not need to store the pointer,</span>
+<a name="l00301"></a>00301                 <span class="comment">// this isn&#39;t a problem.</span>
+<a name="l00302"></a>00302                 <span class="keywordflow">foreach</span> (<span class="keyword">const</span> NodeElem&amp; el, node.elements)
+<a name="l00303"></a>00303                     func(&amp;(*el.obj));
+<a name="l00304"></a>00304                 <span class="keywordflow">foreach</span> (<span class="keyword">const</span> Node&amp; child, node.children)
+<a name="l00305"></a>00305                     <a class="code" href="classStelSphericalIndex.html#a5f5e585671eac20634f3f1f2bc63f3b9" title="Process all the objects intersecting the given region using the passed function object...">processAll</a>(child, func);
+<a name="l00306"></a>00306             }
 <a name="l00307"></a>00307 
-<a name="l00308"></a>00308 <span class="preprocessor">#endif // _STELSPHERICALINDEX_HPP_</span>
-<a name="l00309"></a>00309 <span class="preprocessor"></span>
-<a name="l00310"></a>00310 
+<a name="l00309"></a>00309             <span class="keywordtype">int</span> maxObjectsPerNode;
+<a name="l00311"></a>00311             <span class="keywordtype">int</span> maxLevel;
+<a name="l00312"></a>00312     };
+<a name="l00313"></a>00313 
+<a name="l00315"></a>00315     <span class="keywordtype">int</span> maxObjectsPerNode;
+<a name="l00316"></a>00316 
+<a name="l00317"></a>00317     RootNode* rootNode;
+<a name="l00318"></a>00318 };
+<a name="l00319"></a>00319 
+<a name="l00320"></a>00320 <span class="preprocessor">#endif // _STELSPHERICALINDEX_HPP_</span>
+<a name="l00321"></a>00321 <span class="preprocessor"></span>
+<a name="l00322"></a>00322 
 </pre></div></div>
-<hr class="footer"/><address style="text-align: right;"><small>Generated on Fri Aug 31 18:07:48 2012 for Stellarium by&nbsp;
+<hr class="footer"/><address style="text-align: right;"><small>Generated on Sat Sep 15 13:01:11 2012 for Stellarium by&nbsp;
 <a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.6.3 </small></address>
 </body>

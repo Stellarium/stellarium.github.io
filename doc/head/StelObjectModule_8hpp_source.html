@@ -70,11 +70,15 @@
 <a name="l00056"></a>00056     <span class="keyword">virtual</span> <a class="code" href="classQSharedPointerNoDelete.html">StelObjectP</a> <a class="code" href="classStelObjectModule.html#a2ec565ff99fef8cafc1772269e23b655" title="Return the matching StelObject if exists or the empty StelObject if not found.">searchByName</a>(<span class="keyword">const</span> QString&amp; name) <span class="keyword">const</span> = 0;
 <a name="l00057"></a>00057     
 <a name="l00062"></a>00062     <span class="keyword">virtual</span> QStringList <a class="code" href="classStelObjectModule.html#adde8611718b590fb8f3b9075095a0eee" title="Find and return the list of at most maxNbItem objects auto-completing passed object...">listMatchingObjectsI18n</a>(<span class="keyword">const</span> QString&amp; objPrefix, <span class="keywordtype">int</span> maxNbItem=5) <span class="keyword">const</span> = 0;
-<a name="l00063"></a>00063 };
-<a name="l00064"></a>00064 
-<a name="l00065"></a>00065 <span class="preprocessor">#endif // _STELOBJECTMODULE_HPP_</span>
+<a name="l00063"></a>00063 
+<a name="l00064"></a>00064     <span class="keyword">virtual</span> QStringList listAllObjects(<span class="keywordtype">bool</span> inEnglish) <span class="keyword">const</span> = 0;
+<a name="l00065"></a>00065 
+<a name="l00066"></a>00066     <span class="keyword">virtual</span> QString getName() <span class="keyword">const</span> = 0;
+<a name="l00067"></a>00067 };
+<a name="l00068"></a>00068 
+<a name="l00069"></a>00069 <span class="preprocessor">#endif // _STELOBJECTMODULE_HPP_</span>
 </pre></div></div>
-<hr class="footer"/><address style="text-align: right;"><small>Generated on Fri Aug 31 18:07:46 2012 for Stellarium by&nbsp;
+<hr class="footer"/><address style="text-align: right;"><small>Generated on Sat Sep 15 13:01:10 2012 for Stellarium by&nbsp;
 <a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.6.3 </small></address>
 </body>

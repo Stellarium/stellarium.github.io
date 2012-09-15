@@ -43,6 +43,8 @@
 <tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Gets the licensing terms for the script.  <a href="#ab6f4c29b9143939d2cb8e43a1d3180be"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">const QString&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classStelScriptMgr.html#af8fb58798e1d91800f9093834529310d">getDescription</a> (const QString &amp;s)</td></tr>
 <tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Gets a description of the script.  <a href="#af8fb58798e1d91800f9093834529310d"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">bool&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classStelScriptMgr.html#a00854d294c1d06c0027f3db7cc1bad62">runPreprocessedScript</a> (const QString &amp;preprocessedScript)</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Run the prprocessed script.  <a href="#a00854d294c1d06c0027f3db7cc1bad62"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">bool&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classStelScriptMgr.html#a4ae16f6682d202218f3ae778d14bdbb4">runScript</a> (const QString &amp;fileName, const QString &amp;includePath=&quot;&quot;)</td></tr>
 <tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Run the script located at the given location.  <a href="#a4ae16f6682d202218f3ae778d14bdbb4"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classStelScriptMgr.html#a42b01fcc7175a1aa52c506f38e42e309">stopScript</a> ()</td></tr>
@@ -73,6 +75,10 @@ QStringList&nbsp;</td><td class="memItemRight" valign="bottom"><b>getScriptList<
 <tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Find out if a script is running.  <a href="#ad90cb7cd7921ecdde81f2212c6f0d0c9"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">QString&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classStelScriptMgr.html#a93c388aec98eab1e3008f830c4c47dc0">runningScriptId</a> ()</td></tr>
 <tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Get the ID (filename) of the currently running script.  <a href="#a93c388aec98eab1e3008f830c4c47dc0"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a41ae8cd74b65a66fc877773fc6aa3511"></a><!-- doxytag: member="StelScriptMgr::preprocessScript" ref="a41ae8cd74b65a66fc877773fc6aa3511" args="(const QString &amp;input, QString &amp;output, const QString &amp;scriptDir)" -->
+bool&nbsp;</td><td class="memItemRight" valign="bottom"><b>preprocessScript</b> (const QString &amp;input, QString &amp;output, const QString &amp;scriptDir)</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a298b3f5478691624bd7563bc5f360575"></a><!-- doxytag: member="StelScriptMgr::preprocessScript" ref="a298b3f5478691624bd7563bc5f360575" args="(QFile &amp;input, QString &amp;output, const QString &amp;scriptDir)" -->
+bool&nbsp;</td><td class="memItemRight" valign="bottom"><b>preprocessScript</b> (QFile &amp;input, QString &amp;output, const QString &amp;scriptDir)</td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classStelScriptMgr.html#ab30dc1d75263f6343a13b6ec823fac3b">addModules</a> ()</td></tr>
 <tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Add all the StelModules into the script engine.  <a href="#ab30dc1d75263f6343a13b6ec823fac3b"></a><br/></td></tr>
 </table>
@@ -306,6 +312,33 @@ QStringList&nbsp;</td><td class="memItemRight" valign="bottom"><b>getScriptList<
 
 </div>
 </div>
+<a class="anchor" id="a00854d294c1d06c0027f3db7cc1bad62"></a><!-- doxytag: member="StelScriptMgr::runPreprocessedScript" ref="a00854d294c1d06c0027f3db7cc1bad62" args="(const QString &amp;preprocessedScript)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool StelScriptMgr::runPreprocessedScript </td>
+          <td>(</td>
+          <td class="paramtype">const QString &amp;&nbsp;</td>
+          <td class="paramname"> <em>preprocessedScript</em></td>
+          <td>&nbsp;)&nbsp;</td>
+          <td><code> [slot]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Run the prprocessed script. </p>
+<dl><dt><b>Parameters:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"></td><td valign="top"><em>preprocessedScript</em>&nbsp;</td><td>the string containing the preprocessed script. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="return"><dt><b>Returns:</b></dt><dd>false if the given script could not be run, true otherwise </dd></dl>
+
+</div>
+</div>
 <a class="anchor" id="a4ae16f6682d202218f3ae778d14bdbb4"></a><!-- doxytag: member="StelScriptMgr::runScript" ref="a4ae16f6682d202218f3ae778d14bdbb4" args="(const QString &amp;fileName, const QString &amp;includePath=&quot;&quot;)" -->
 <div class="memitem">
 <div class="memproto">
@@ -472,7 +505,7 @@ QStringList&nbsp;</td><td class="memItemRight" valign="bottom"><b>getScriptList<
 <li>scripting/<a class="el" href="StelScriptMgr_8hpp_source.html">StelScriptMgr.hpp</a></li>
 </ul>
 </div>
-<hr class="footer"/><address style="text-align: right;"><small>Generated on Fri Aug 31 18:08:02 2012 for Stellarium by&nbsp;
+<hr class="footer"/><address style="text-align: right;"><small>Generated on Sat Sep 15 13:01:15 2012 for Stellarium by&nbsp;
 <a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.6.3 </small></address>
 </body>

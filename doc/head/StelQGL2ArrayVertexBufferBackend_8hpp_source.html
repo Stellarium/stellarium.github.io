@@ -54,23 +54,23 @@
 <a name="l00024"></a>00024 <span class="preprocessor">#include &quot;StelQGLArrayVertexBufferBackend.hpp&quot;</span>
 <a name="l00025"></a>00025 
 <a name="l00026"></a>00026 
-<a name="l00034"></a><a class="code" href="classStelQGL2ArrayVertexBufferBackend.html">00034</a> <span class="keyword">class </span><a class="code" href="classStelQGL2ArrayVertexBufferBackend.html" title="OpenGL 2 vertex array style VertexBuffer backend, used for testing and transition...">StelQGL2ArrayVertexBufferBackend</a> : <span class="keyword">public</span> <a class="code" href="classStelQGLArrayVertexBufferBackend.html" title="Base class for QGL-using vertex array based vertex buffer backends.">StelQGLArrayVertexBufferBackend</a>
-<a name="l00035"></a>00035 {
-<a name="l00037"></a><a class="code" href="classStelQGL2ArrayVertexBufferBackend.html#ad25c98c8c69dba4ee764705c75a49e67">00037</a> <span class="keyword">friend</span> <span class="keyword">class </span><a class="code" href="classStelQGL2Renderer.html" title="Renderer backend using OpenGL 2.1 or GLSL 2.0 with Qt.">StelQGL2Renderer</a>;
-<a name="l00038"></a>00038 <span class="keyword">friend</span> <span class="keyword">class </span><a class="code" href="classTestStelVertexBuffer.html" title="Unittests for StelVertexBuffer implementations.">TestStelVertexBuffer</a>;
-<a name="l00039"></a>00039 <span class="keyword">public</span>:
-<a name="l00051"></a>00051     <span class="keywordtype">void</span> <a class="code" href="classStelQGL2ArrayVertexBufferBackend.html#aa544199d55ace2f8894c8e2a7a208bf6" title="Draw the vertex buffer, optionally with index buffer specifying which indices to...">draw</a>(<span class="keyword">class</span> <a class="code" href="classStelQGL2Renderer.html" title="Renderer backend using OpenGL 2.1 or GLSL 2.0 with Qt.">StelQGL2Renderer</a>&amp; renderer, <span class="keyword">const</span> <a class="code" href="classMatrix4.html">Mat4f</a>&amp; projectionMatrix,
-<a name="l00052"></a>00052               <span class="keyword">class</span> <a class="code" href="classStelQGLIndexBuffer.html" title="Qt-OpenGL index buffer implementation.">StelQGLIndexBuffer</a>* indexBuffer, <a class="code" href="classStelQGLGLSLShader.html" title="QGL based StelGLSLShader implementation, used by the QGL2 renderer backend.">StelQGLGLSLShader</a>* shader);
-<a name="l00053"></a>00053 
-<a name="l00054"></a>00054 <span class="keyword">private</span>:
-<a name="l00059"></a>00059     <a class="code" href="classStelQGL2ArrayVertexBufferBackend.html" title="OpenGL 2 vertex array style VertexBuffer backend, used for testing and transition...">StelQGL2ArrayVertexBufferBackend</a>(<span class="keyword">const</span> PrimitiveType type,
-<a name="l00060"></a>00060                                     <span class="keyword">const</span> QVector&lt;StelVertexAttribute&gt;&amp; <a class="code" href="classStelVertexBufferBackend.html#abee995ce6450a8827b2cda2bf4cb725f" title="Specifies layout of vertex attributes in the vertex type.">attributes</a>);
-<a name="l00061"></a>00061 };
-<a name="l00062"></a>00062 
-<a name="l00063"></a>00063 <span class="preprocessor">#endif // _STELQGL2ARRAYVERTEXBUFFERBACKEND_</span>
-<a name="l00064"></a>00064 <span class="preprocessor"></span>
+<a name="l00032"></a><a class="code" href="classStelQGL2ArrayVertexBufferBackend.html">00032</a> <span class="keyword">class </span><a class="code" href="classStelQGL2ArrayVertexBufferBackend.html" title="OpenGL 2 vertex array style VertexBuffer backend, used for testing and transition...">StelQGL2ArrayVertexBufferBackend</a> : <span class="keyword">public</span> <a class="code" href="classStelQGLArrayVertexBufferBackend.html" title="Base class for QGL-using vertex buffer backends based on separate attribute arrays...">StelQGLArrayVertexBufferBackend</a>
+<a name="l00033"></a>00033 {
+<a name="l00035"></a><a class="code" href="classStelQGL2ArrayVertexBufferBackend.html#ad25c98c8c69dba4ee764705c75a49e67">00035</a> <span class="keyword">friend</span> <span class="keyword">class </span><a class="code" href="classStelQGL2Renderer.html" title="Renderer backend using OpenGL 2.1 or GLSL 2.0 with Qt.">StelQGL2Renderer</a>;
+<a name="l00036"></a>00036 <span class="keyword">friend</span> <span class="keyword">class </span><a class="code" href="classTestStelVertexBuffer.html" title="Unittests for StelVertexBuffer implementations.">TestStelVertexBuffer</a>;
+<a name="l00037"></a>00037 <span class="keyword">public</span>:
+<a name="l00049"></a>00049     <span class="keywordtype">void</span> <a class="code" href="classStelQGL2ArrayVertexBufferBackend.html#a9b3f4557209d09553ae3810c49a25081" title="Draw the vertex buffer, optionally with index buffer specifying which indices to...">draw</a>(<span class="keyword">class</span> <a class="code" href="classStelQGL2Renderer.html" title="Renderer backend using OpenGL 2.1 or GLSL 2.0 with Qt.">StelQGL2Renderer</a>&amp; renderer, <span class="keyword">const</span> <a class="code" href="classMatrix4.html">Mat4f</a>&amp; projectionMatrix,
+<a name="l00050"></a>00050               <span class="keyword">class</span> <a class="code" href="classStelQGLIndexBuffer.html" title="Qt-OpenGL index buffer implementation.">StelQGLIndexBuffer</a>* indexBuffer, <span class="keyword">class</span> <a class="code" href="classStelQGLGLSLShader.html" title="QGL based StelGLSLShader implementation, used by the QGL2 renderer backend.">StelQGLGLSLShader</a>* shader);
+<a name="l00051"></a>00051 
+<a name="l00052"></a>00052 <span class="keyword">private</span>:
+<a name="l00057"></a>00057     <a class="code" href="classStelQGL2ArrayVertexBufferBackend.html" title="OpenGL 2 vertex array style VertexBuffer backend, used for testing and transition...">StelQGL2ArrayVertexBufferBackend</a>(<span class="keyword">const</span> PrimitiveType type,
+<a name="l00058"></a>00058                                      <span class="keyword">const</span> QVector&lt;StelVertexAttribute&gt;&amp; <a class="code" href="classStelVertexBufferBackend.html#abee995ce6450a8827b2cda2bf4cb725f" title="Specifies layout of vertex attributes in the vertex type.">attributes</a>);
+<a name="l00059"></a>00059 };
+<a name="l00060"></a>00060 
+<a name="l00061"></a>00061 <span class="preprocessor">#endif // _STELQGL2ARRAYVERTEXBUFFERBACKEND_</span>
+<a name="l00062"></a>00062 <span class="preprocessor"></span>
 </pre></div></div>
-<hr class="footer"/><address style="text-align: right;"><small>Generated on Fri Aug 31 18:07:44 2012 for Stellarium by&nbsp;
+<hr class="footer"/><address style="text-align: right;"><small>Generated on Sat Sep 15 13:01:10 2012 for Stellarium by&nbsp;
 <a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.6.3 </small></address>
 </body>

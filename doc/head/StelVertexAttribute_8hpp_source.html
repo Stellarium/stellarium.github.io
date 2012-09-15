@@ -75,146 +75,147 @@
 <a name="l00066"></a>00066 <span class="keyword">inline</span> <span class="keywordtype">int</span> attributeSize(<span class="keyword">const</span> AttributeType type)
 <a name="l00067"></a>00067 {
 <a name="l00068"></a>00068     <span class="keyword">static</span> <span class="keyword">const</span> <span class="keywordtype">int</span> attributeSizeArray [AttributeType_Max] = 
-<a name="l00069"></a>00069         {<span class="keyword">sizeof</span>(<a class="code" href="classVector4.html">Vec4f</a>), <span class="keyword">sizeof</span>(<a class="code" href="classVector3.html">Vec3f</a>), <span class="keyword">sizeof</span>(<a class="code" href="classVector2.html">Vec2f</a>)};
+<a name="l00069"></a>00069         {<span class="keyword">sizeof</span>(<a class="code" href="classVector4.html" title="A templatized 4d vector.">Vec4f</a>), <span class="keyword">sizeof</span>(<a class="code" href="classVector3.html" title="A templatized 3d vector.">Vec3f</a>), <span class="keyword">sizeof</span>(<a class="code" href="classVector2.html" title="A templatized 2d vector.">Vec2f</a>)};
 <a name="l00070"></a>00070     <span class="keywordflow">return</span> attributeSizeArray[type];
 <a name="l00071"></a>00071 }
 <a name="l00072"></a>00072 
 <a name="l00077"></a>00077 <span class="keyword">enum</span> AttributeInterpretation
 <a name="l00078"></a>00078 {
-<a name="l00080"></a>00080     AttributeInterpretation_Position,
-<a name="l00082"></a>00082     AttributeInterpretation_Color,
-<a name="l00084"></a>00084     AttributeInterpretation_Normal,
-<a name="l00086"></a>00086     AttributeInterpretation_TexCoord
-<a name="l00087"></a>00087 };
-<a name="l00088"></a>00088 
-<a name="l00092"></a><a class="code" href="structStelVertexAttribute.html">00092</a> <span class="keyword">struct </span><a class="code" href="structStelVertexAttribute.html" title="Describes a single vertex attribute (e.g.">StelVertexAttribute</a>
-<a name="l00093"></a>00093 {
-<a name="l00095"></a><a class="code" href="structStelVertexAttribute.html#a8f4bac11bc5f5371f967a3e939bab66b">00095</a>     AttributeType type;
-<a name="l00097"></a><a class="code" href="structStelVertexAttribute.html#ab3dcd3e93ef6eb1989f9e7a9521eaf28">00097</a>     AttributeInterpretation <a class="code" href="structStelVertexAttribute.html#ab3dcd3e93ef6eb1989f9e7a9521eaf28" title="Specifies how Renderer should interpret this attribute.">interpretation</a>;
-<a name="l00098"></a>00098     
-<a name="l00100"></a><a class="code" href="structStelVertexAttribute.html#af2d018cbfbea3313288121b897b4cae5">00100</a>     <a class="code" href="structStelVertexAttribute.html#af2d018cbfbea3313288121b897b4cae5" title="Default constructor so vectors can reallocate.">StelVertexAttribute</a>(){}
-<a name="l00101"></a>00101     
-<a name="l00108"></a><a class="code" href="structStelVertexAttribute.html#afee41047a03dab48c5a7e8814e74b2a8">00108</a>     <a class="code" href="structStelVertexAttribute.html#af2d018cbfbea3313288121b897b4cae5" title="Default constructor so vectors can reallocate.">StelVertexAttribute</a>(<span class="keyword">const</span> QString&amp; attributeString)
-<a name="l00109"></a>00109     {
-<a name="l00110"></a>00110         <span class="keyword">const</span> QString typeStr = 
-<a name="l00111"></a>00111             attributeString.section(<span class="charliteral">&#39; &#39;</span>, 0, 0, QString::SectionSkipEmpty);
-<a name="l00112"></a>00112         <span class="keyword">const</span> QString interpretationStr = 
-<a name="l00113"></a>00113             attributeString.section(<span class="charliteral">&#39; &#39;</span>, 1, 1, QString::SectionSkipEmpty);
-<a name="l00114"></a>00114 
-<a name="l00115"></a>00115         <span class="keywordflow">if</span>(typeStr == <span class="stringliteral">&quot;Vec2f&quot;</span>)      {type = AttributeType_Vec2f;}
-<a name="l00116"></a>00116         <span class="keywordflow">else</span> <span class="keywordflow">if</span>(typeStr == <span class="stringliteral">&quot;Vec3f&quot;</span>) {type = AttributeType_Vec3f;}
-<a name="l00117"></a>00117         <span class="keywordflow">else</span> <span class="keywordflow">if</span>(typeStr == <span class="stringliteral">&quot;Vec4f&quot;</span>) {type = AttributeType_Vec4f;}
-<a name="l00118"></a>00118         <span class="keywordflow">else</span> 
-<a name="l00119"></a>00119         {
-<a name="l00120"></a>00120             qDebug() &lt;&lt; <span class="stringliteral">&quot;Unknown vertex attribute type: \&quot;&quot;</span> &lt;&lt; typeStr 
-<a name="l00121"></a>00121                      &lt;&lt; <span class="stringliteral">&quot;\&quot; in attribute \&quot;&quot;</span> &lt;&lt; attributeString &lt;&lt; <span class="stringliteral">&quot;\&quot;&quot;</span>;
-<a name="l00122"></a>00122             Q_ASSERT_X(<span class="keyword">false</span>, Q_FUNC_INFO, <span class="stringliteral">&quot;Unknown vertex attribute type&quot;</span>);
-<a name="l00123"></a>00123         }
-<a name="l00124"></a>00124 
-<a name="l00125"></a>00125         <span class="keywordflow">if</span>(interpretationStr == <span class="stringliteral">&quot;Position&quot;</span>)      
-<a name="l00126"></a>00126         {
-<a name="l00127"></a>00127             <a class="code" href="structStelVertexAttribute.html#ab3dcd3e93ef6eb1989f9e7a9521eaf28" title="Specifies how Renderer should interpret this attribute.">interpretation</a> = AttributeInterpretation_Position;
-<a name="l00128"></a>00128         }
-<a name="l00129"></a>00129         <span class="keywordflow">else</span> <span class="keywordflow">if</span>(interpretationStr == <span class="stringliteral">&quot;Color&quot;</span>) 
-<a name="l00130"></a>00130         {
-<a name="l00131"></a>00131             <a class="code" href="structStelVertexAttribute.html#ab3dcd3e93ef6eb1989f9e7a9521eaf28" title="Specifies how Renderer should interpret this attribute.">interpretation</a> = AttributeInterpretation_Color;
-<a name="l00132"></a>00132         }
-<a name="l00133"></a>00133         <span class="keywordflow">else</span> <span class="keywordflow">if</span>(interpretationStr == <span class="stringliteral">&quot;Normal&quot;</span>) 
-<a name="l00134"></a>00134         {
-<a name="l00135"></a>00135             <a class="code" href="structStelVertexAttribute.html#ab3dcd3e93ef6eb1989f9e7a9521eaf28" title="Specifies how Renderer should interpret this attribute.">interpretation</a> = AttributeInterpretation_Normal;
-<a name="l00136"></a>00136         }
-<a name="l00137"></a>00137         <span class="keywordflow">else</span> <span class="keywordflow">if</span>(interpretationStr == <span class="stringliteral">&quot;TexCoord&quot;</span>) 
-<a name="l00138"></a>00138         {
-<a name="l00139"></a>00139             <a class="code" href="structStelVertexAttribute.html#ab3dcd3e93ef6eb1989f9e7a9521eaf28" title="Specifies how Renderer should interpret this attribute.">interpretation</a> = AttributeInterpretation_TexCoord;
-<a name="l00140"></a>00140         }
-<a name="l00141"></a>00141         <span class="keywordflow">else</span> 
-<a name="l00142"></a>00142         {
-<a name="l00143"></a>00143             qDebug() &lt;&lt; <span class="stringliteral">&quot;Unknown vertex attribute interpretation: \&quot;&quot;</span> &lt;&lt; interpretationStr 
-<a name="l00144"></a>00144                      &lt;&lt; <span class="stringliteral">&quot;\&quot; in attribute \&quot;&quot;</span> &lt;&lt; attributeString &lt;&lt; <span class="stringliteral">&quot;\&quot;&quot;</span>;
-<a name="l00145"></a>00145             Q_ASSERT_X(<span class="keyword">false</span>, Q_FUNC_INFO, <span class="stringliteral">&quot;Unknown vertex attribute interpretation&quot;</span>);
-<a name="l00146"></a>00146         }
-<a name="l00147"></a>00147     }
-<a name="l00148"></a>00148 
-<a name="l00150"></a><a class="code" href="structStelVertexAttribute.html#ae875c531781b67a82d373eaa6956041f">00150</a>     <span class="keyword">static</span> QVector&lt;StelVertexAttribute&gt; <a class="code" href="structStelVertexAttribute.html#ae875c531781b67a82d373eaa6956041f" title="Parse a string of comma separated vertex attributes to a vector of StelVertexAttribute...">parseAttributes</a>(<span class="keyword">const</span> <span class="keywordtype">char</span>* <span class="keyword">const</span> attribsCString)
-<a name="l00151"></a>00151     {
-<a name="l00152"></a>00152         QString attributes(attribsCString);
-<a name="l00153"></a>00153         QVector&lt;StelVertexAttribute&gt; result;
-<a name="l00154"></a>00154         <span class="keyword">const</span> QStringList parts = attributes.split(<span class="stringliteral">&quot;,&quot;</span>);
-<a name="l00155"></a>00155         <span class="keywordflow">for</span>(<span class="keywordtype">int</span> part = 0; part &lt; parts.size(); ++part)
-<a name="l00156"></a>00156         {
-<a name="l00157"></a>00157             result &lt;&lt; <a class="code" href="structStelVertexAttribute.html#af2d018cbfbea3313288121b897b4cae5" title="Default constructor so vectors can reallocate.">StelVertexAttribute</a>(parts.at(part));
-<a name="l00158"></a>00158         }
-<a name="l00159"></a>00159 
-<a name="l00160"></a>00160 <span class="preprocessor">#ifndef NDEBUG</span>
-<a name="l00161"></a>00161 <span class="preprocessor"></span>        validateAttributes(result);
-<a name="l00162"></a>00162 <span class="preprocessor">#endif</span>
-<a name="l00163"></a>00163 <span class="preprocessor"></span>        <span class="keywordflow">return</span> result;
-<a name="l00164"></a>00164     }
-<a name="l00165"></a>00165 
-<a name="l00166"></a>00166 <span class="keyword">private</span>:
-<a name="l00167"></a>00167 <span class="preprocessor">#ifndef NDEBUG</span>
-<a name="l00168"></a>00168 <span class="preprocessor"></span>
-<a name="l00169"></a>00169 
-<a name="l00170"></a>00170 
+<a name="l00080"></a>00080     AttributeInterpretation_Position = 0,
+<a name="l00082"></a>00082     AttributeInterpretation_Color    = 1,
+<a name="l00084"></a>00084     AttributeInterpretation_Normal   = 2,
+<a name="l00086"></a>00086     AttributeInterpretation_TexCoord = 3,
+<a name="l00088"></a>00088     AttributeInterpretation_MAX
+<a name="l00089"></a>00089 };
+<a name="l00090"></a>00090 
+<a name="l00094"></a><a class="code" href="structStelVertexAttribute.html">00094</a> <span class="keyword">struct </span><a class="code" href="structStelVertexAttribute.html" title="Describes a single vertex attribute (e.g.">StelVertexAttribute</a>
+<a name="l00095"></a>00095 {
+<a name="l00097"></a><a class="code" href="structStelVertexAttribute.html#a8f4bac11bc5f5371f967a3e939bab66b">00097</a>     AttributeType type;
+<a name="l00099"></a><a class="code" href="structStelVertexAttribute.html#ab3dcd3e93ef6eb1989f9e7a9521eaf28">00099</a>     AttributeInterpretation <a class="code" href="structStelVertexAttribute.html#ab3dcd3e93ef6eb1989f9e7a9521eaf28" title="Specifies how Renderer should interpret this attribute.">interpretation</a>;
+<a name="l00100"></a>00100     
+<a name="l00102"></a><a class="code" href="structStelVertexAttribute.html#af2d018cbfbea3313288121b897b4cae5">00102</a>     <a class="code" href="structStelVertexAttribute.html#af2d018cbfbea3313288121b897b4cae5" title="Default constructor so vectors can reallocate.">StelVertexAttribute</a>(){}
+<a name="l00103"></a>00103     
+<a name="l00110"></a><a class="code" href="structStelVertexAttribute.html#afee41047a03dab48c5a7e8814e74b2a8">00110</a>     <a class="code" href="structStelVertexAttribute.html#af2d018cbfbea3313288121b897b4cae5" title="Default constructor so vectors can reallocate.">StelVertexAttribute</a>(<span class="keyword">const</span> QString&amp; attributeString)
+<a name="l00111"></a>00111     {
+<a name="l00112"></a>00112         <span class="keyword">const</span> QString typeStr = 
+<a name="l00113"></a>00113             attributeString.section(<span class="charliteral">&#39; &#39;</span>, 0, 0, QString::SectionSkipEmpty);
+<a name="l00114"></a>00114         <span class="keyword">const</span> QString interpretationStr = 
+<a name="l00115"></a>00115             attributeString.section(<span class="charliteral">&#39; &#39;</span>, 1, 1, QString::SectionSkipEmpty);
+<a name="l00116"></a>00116 
+<a name="l00117"></a>00117         <span class="keywordflow">if</span>(typeStr == <span class="stringliteral">&quot;Vec2f&quot;</span>)      {type = AttributeType_Vec2f;}
+<a name="l00118"></a>00118         <span class="keywordflow">else</span> <span class="keywordflow">if</span>(typeStr == <span class="stringliteral">&quot;Vec3f&quot;</span>) {type = AttributeType_Vec3f;}
+<a name="l00119"></a>00119         <span class="keywordflow">else</span> <span class="keywordflow">if</span>(typeStr == <span class="stringliteral">&quot;Vec4f&quot;</span>) {type = AttributeType_Vec4f;}
+<a name="l00120"></a>00120         <span class="keywordflow">else</span> 
+<a name="l00121"></a>00121         {
+<a name="l00122"></a>00122             qDebug() &lt;&lt; <span class="stringliteral">&quot;Unknown vertex attribute type: \&quot;&quot;</span> &lt;&lt; typeStr 
+<a name="l00123"></a>00123                      &lt;&lt; <span class="stringliteral">&quot;\&quot; in attribute \&quot;&quot;</span> &lt;&lt; attributeString &lt;&lt; <span class="stringliteral">&quot;\&quot;&quot;</span>;
+<a name="l00124"></a>00124             Q_ASSERT_X(<span class="keyword">false</span>, Q_FUNC_INFO, <span class="stringliteral">&quot;Unknown vertex attribute type&quot;</span>);
+<a name="l00125"></a>00125         }
+<a name="l00126"></a>00126 
+<a name="l00127"></a>00127         <span class="keywordflow">if</span>(interpretationStr == <span class="stringliteral">&quot;Position&quot;</span>)      
+<a name="l00128"></a>00128         {
+<a name="l00129"></a>00129             <a class="code" href="structStelVertexAttribute.html#ab3dcd3e93ef6eb1989f9e7a9521eaf28" title="Specifies how Renderer should interpret this attribute.">interpretation</a> = AttributeInterpretation_Position;
+<a name="l00130"></a>00130         }
+<a name="l00131"></a>00131         <span class="keywordflow">else</span> <span class="keywordflow">if</span>(interpretationStr == <span class="stringliteral">&quot;Color&quot;</span>) 
+<a name="l00132"></a>00132         {
+<a name="l00133"></a>00133             <a class="code" href="structStelVertexAttribute.html#ab3dcd3e93ef6eb1989f9e7a9521eaf28" title="Specifies how Renderer should interpret this attribute.">interpretation</a> = AttributeInterpretation_Color;
+<a name="l00134"></a>00134         }
+<a name="l00135"></a>00135         <span class="keywordflow">else</span> <span class="keywordflow">if</span>(interpretationStr == <span class="stringliteral">&quot;Normal&quot;</span>) 
+<a name="l00136"></a>00136         {
+<a name="l00137"></a>00137             <a class="code" href="structStelVertexAttribute.html#ab3dcd3e93ef6eb1989f9e7a9521eaf28" title="Specifies how Renderer should interpret this attribute.">interpretation</a> = AttributeInterpretation_Normal;
+<a name="l00138"></a>00138         }
+<a name="l00139"></a>00139         <span class="keywordflow">else</span> <span class="keywordflow">if</span>(interpretationStr == <span class="stringliteral">&quot;TexCoord&quot;</span>) 
+<a name="l00140"></a>00140         {
+<a name="l00141"></a>00141             <a class="code" href="structStelVertexAttribute.html#ab3dcd3e93ef6eb1989f9e7a9521eaf28" title="Specifies how Renderer should interpret this attribute.">interpretation</a> = AttributeInterpretation_TexCoord;
+<a name="l00142"></a>00142         }
+<a name="l00143"></a>00143         <span class="keywordflow">else</span> 
+<a name="l00144"></a>00144         {
+<a name="l00145"></a>00145             qDebug() &lt;&lt; <span class="stringliteral">&quot;Unknown vertex attribute interpretation: \&quot;&quot;</span> &lt;&lt; interpretationStr 
+<a name="l00146"></a>00146                      &lt;&lt; <span class="stringliteral">&quot;\&quot; in attribute \&quot;&quot;</span> &lt;&lt; attributeString &lt;&lt; <span class="stringliteral">&quot;\&quot;&quot;</span>;
+<a name="l00147"></a>00147             Q_ASSERT_X(<span class="keyword">false</span>, Q_FUNC_INFO, <span class="stringliteral">&quot;Unknown vertex attribute interpretation&quot;</span>);
+<a name="l00148"></a>00148         }
+<a name="l00149"></a>00149     }
+<a name="l00150"></a>00150 
+<a name="l00152"></a><a class="code" href="structStelVertexAttribute.html#ae875c531781b67a82d373eaa6956041f">00152</a>     <span class="keyword">static</span> QVector&lt;StelVertexAttribute&gt; <a class="code" href="structStelVertexAttribute.html#ae875c531781b67a82d373eaa6956041f" title="Parse a string of comma separated vertex attributes to a vector of StelVertexAttribute...">parseAttributes</a>(<span class="keyword">const</span> <span class="keywordtype">char</span>* <span class="keyword">const</span> attribsCString)
+<a name="l00153"></a>00153     {
+<a name="l00154"></a>00154         QString attributes(attribsCString);
+<a name="l00155"></a>00155         QVector&lt;StelVertexAttribute&gt; result;
+<a name="l00156"></a>00156         <span class="keyword">const</span> QStringList parts = attributes.split(<span class="stringliteral">&quot;,&quot;</span>);
+<a name="l00157"></a>00157         <span class="keywordflow">for</span>(<span class="keywordtype">int</span> part = 0; part &lt; parts.size(); ++part)
+<a name="l00158"></a>00158         {
+<a name="l00159"></a>00159             result &lt;&lt; <a class="code" href="structStelVertexAttribute.html#af2d018cbfbea3313288121b897b4cae5" title="Default constructor so vectors can reallocate.">StelVertexAttribute</a>(parts.at(part));
+<a name="l00160"></a>00160         }
+<a name="l00161"></a>00161 
+<a name="l00162"></a>00162 <span class="preprocessor">#ifndef NDEBUG</span>
+<a name="l00163"></a>00163 <span class="preprocessor"></span>        validateAttributes(result);
+<a name="l00164"></a>00164 <span class="preprocessor">#endif</span>
+<a name="l00165"></a>00165 <span class="preprocessor"></span>        <span class="keywordflow">return</span> result;
+<a name="l00166"></a>00166     }
+<a name="l00167"></a>00167 
+<a name="l00168"></a>00168 <span class="keyword">private</span>:
+<a name="l00169"></a>00169 <span class="preprocessor">#ifndef NDEBUG</span>
+<a name="l00170"></a>00170 <span class="preprocessor"></span>
 <a name="l00171"></a>00171 
-<a name="l00172"></a>00172     <span class="keyword">static</span> <span class="keywordtype">void</span> validateAttributes(<span class="keyword">const</span> QVector&lt;StelVertexAttribute&gt;&amp; attributes)
-<a name="l00173"></a>00173     {
-<a name="l00174"></a>00174         <span class="keywordtype">bool</span> vertex, texCoord, normal, color;
-<a name="l00175"></a>00175         vertex = texCoord = normal = color = <span class="keyword">false</span>;
-<a name="l00176"></a>00176         
-<a name="l00177"></a>00177         <span class="comment">// Ensure that every kind of vertex attribute is present at most once.</span>
-<a name="l00178"></a>00178         <span class="keywordflow">foreach</span>(<span class="keyword">const</span> <a class="code" href="structStelVertexAttribute.html" title="Describes a single vertex attribute (e.g.">StelVertexAttribute</a>&amp; attribute, attributes)
-<a name="l00179"></a>00179         {
-<a name="l00180"></a>00180             <span class="keywordflow">switch</span>(attribute.<a class="code" href="structStelVertexAttribute.html#ab3dcd3e93ef6eb1989f9e7a9521eaf28" title="Specifies how Renderer should interpret this attribute.">interpretation</a>)
-<a name="l00181"></a>00181             {
-<a name="l00182"></a>00182                 <span class="keywordflow">case</span> AttributeInterpretation_Position:
-<a name="l00183"></a>00183                     Q_ASSERT_X(!vertex, Q_FUNC_INFO,
-<a name="l00184"></a>00184                                <span class="stringliteral">&quot;Vertex type has more than one vertex position attribute&quot;</span>);
-<a name="l00185"></a>00185                     vertex = <span class="keyword">true</span>;
-<a name="l00186"></a>00186                     <span class="keywordflow">break</span>;
-<a name="l00187"></a>00187                 <span class="keywordflow">case</span> AttributeInterpretation_TexCoord:
-<a name="l00188"></a>00188                     Q_ASSERT_X(attributeDimensions(attribute.<a class="code" href="structStelVertexAttribute.html#a8f4bac11bc5f5371f967a3e939bab66b" title="Data type of the attribute.">type</a>) == 2, Q_FUNC_INFO,
-<a name="l00189"></a>00189                                <span class="stringliteral">&quot;Only 2D texture coordinates are supported at the moment&quot;</span>);
-<a name="l00190"></a>00190                     Q_ASSERT_X(!texCoord, 
-<a name="l00191"></a>00191                                Q_FUNC_INFO,
-<a name="l00192"></a>00192                                <span class="stringliteral">&quot;Vertex type has more than one texture coordinate attribute&quot;</span>);
-<a name="l00193"></a>00193                     texCoord = <span class="keyword">true</span>;
-<a name="l00194"></a>00194                     <span class="keywordflow">break</span>;
-<a name="l00195"></a>00195                 <span class="keywordflow">case</span> AttributeInterpretation_Normal:
-<a name="l00196"></a>00196                     Q_ASSERT_X(attributeDimensions(attribute.<a class="code" href="structStelVertexAttribute.html#a8f4bac11bc5f5371f967a3e939bab66b" title="Data type of the attribute.">type</a>) == 3, Q_FUNC_INFO,
-<a name="l00197"></a>00197                                <span class="stringliteral">&quot;Only 3D vertex normals are supported&quot;</span>);
-<a name="l00198"></a>00198                     Q_ASSERT_X(!normal, Q_FUNC_INFO,
-<a name="l00199"></a>00199                                <span class="stringliteral">&quot;Vertex type has more than one normal attribute&quot;</span>);
-<a name="l00200"></a>00200                     normal = <span class="keyword">true</span>;
-<a name="l00201"></a>00201                     <span class="keywordflow">break</span>;
-<a name="l00202"></a>00202                 <span class="keywordflow">case</span> AttributeInterpretation_Color:
-<a name="l00203"></a>00203                     Q_ASSERT_X(!color, Q_FUNC_INFO,
-<a name="l00204"></a>00204                                <span class="stringliteral">&quot;Vertex type has more than one color attribute&quot;</span>);
-<a name="l00205"></a>00205                     color = <span class="keyword">true</span>;
-<a name="l00206"></a>00206                     <span class="keywordflow">break</span>;
-<a name="l00207"></a>00207                 <span class="keywordflow">default</span>:
-<a name="l00208"></a>00208                     Q_ASSERT_X(<span class="keyword">false</span>, Q_FUNC_INFO,
-<a name="l00209"></a>00209                                <span class="stringliteral">&quot;Unknown vertex attribute interpretation&quot;</span>);
-<a name="l00210"></a>00210             }
-<a name="l00211"></a>00211         }
-<a name="l00212"></a>00212 
-<a name="l00213"></a>00213         Q_ASSERT_X(vertex, Q_FUNC_INFO, 
-<a name="l00214"></a>00214                    <span class="stringliteral">&quot;Vertex formats without a position attribute are not supported&quot;</span>);
-<a name="l00215"></a>00215     }
-<a name="l00216"></a>00216 <span class="preprocessor">#endif</span>
-<a name="l00217"></a>00217 <span class="preprocessor"></span>};
-<a name="l00218"></a>00218 
-<a name="l00237"></a>00237 <span class="preprocessor">#define VERTEX_ATTRIBUTES(...)\</span>
-<a name="l00238"></a>00238 <span class="preprocessor">    static const QVector&lt;StelVertexAttribute&gt;&amp; attributes()\</span>
-<a name="l00239"></a>00239 <span class="preprocessor">    {\</span>
-<a name="l00240"></a>00240 <span class="preprocessor">        static QVector&lt;StelVertexAttribute&gt; attribs =\</span>
-<a name="l00241"></a>00241 <span class="preprocessor">            StelVertexAttribute::parseAttributes(#__VA_ARGS__);\</span>
-<a name="l00242"></a>00242 <span class="preprocessor">        return attribs;\</span>
-<a name="l00243"></a>00243 <span class="preprocessor">    }</span>
-<a name="l00244"></a>00244 <span class="preprocessor"></span>
-<a name="l00245"></a>00245 <span class="preprocessor">#endif // _STELVERTEXATTRIBUTE_HPP_</span>
+<a name="l00172"></a>00172 
+<a name="l00173"></a>00173 
+<a name="l00174"></a>00174     <span class="keyword">static</span> <span class="keywordtype">void</span> validateAttributes(<span class="keyword">const</span> QVector&lt;StelVertexAttribute&gt;&amp; attributes)
+<a name="l00175"></a>00175     {
+<a name="l00176"></a>00176         <span class="keywordtype">bool</span> vertex, texCoord, normal, color;
+<a name="l00177"></a>00177         vertex = texCoord = normal = color = <span class="keyword">false</span>;
+<a name="l00178"></a>00178         
+<a name="l00179"></a>00179         <span class="comment">// Ensure that every kind of vertex attribute is present at most once.</span>
+<a name="l00180"></a>00180         <span class="keywordflow">foreach</span>(<span class="keyword">const</span> <a class="code" href="structStelVertexAttribute.html" title="Describes a single vertex attribute (e.g.">StelVertexAttribute</a>&amp; attribute, attributes)
+<a name="l00181"></a>00181         {
+<a name="l00182"></a>00182             <span class="keywordflow">switch</span>(attribute.<a class="code" href="structStelVertexAttribute.html#ab3dcd3e93ef6eb1989f9e7a9521eaf28" title="Specifies how Renderer should interpret this attribute.">interpretation</a>)
+<a name="l00183"></a>00183             {
+<a name="l00184"></a>00184                 <span class="keywordflow">case</span> AttributeInterpretation_Position:
+<a name="l00185"></a>00185                     Q_ASSERT_X(!vertex, Q_FUNC_INFO,
+<a name="l00186"></a>00186                                <span class="stringliteral">&quot;Vertex type has more than one vertex position attribute&quot;</span>);
+<a name="l00187"></a>00187                     vertex = <span class="keyword">true</span>;
+<a name="l00188"></a>00188                     <span class="keywordflow">break</span>;
+<a name="l00189"></a>00189                 <span class="keywordflow">case</span> AttributeInterpretation_TexCoord:
+<a name="l00190"></a>00190                     Q_ASSERT_X(attributeDimensions(attribute.<a class="code" href="structStelVertexAttribute.html#a8f4bac11bc5f5371f967a3e939bab66b" title="Data type of the attribute.">type</a>) == 2, Q_FUNC_INFO,
+<a name="l00191"></a>00191                                <span class="stringliteral">&quot;Only 2D texture coordinates are supported at the moment&quot;</span>);
+<a name="l00192"></a>00192                     Q_ASSERT_X(!texCoord, 
+<a name="l00193"></a>00193                                Q_FUNC_INFO,
+<a name="l00194"></a>00194                                <span class="stringliteral">&quot;Vertex type has more than one texture coordinate attribute&quot;</span>);
+<a name="l00195"></a>00195                     texCoord = <span class="keyword">true</span>;
+<a name="l00196"></a>00196                     <span class="keywordflow">break</span>;
+<a name="l00197"></a>00197                 <span class="keywordflow">case</span> AttributeInterpretation_Normal:
+<a name="l00198"></a>00198                     Q_ASSERT_X(attributeDimensions(attribute.<a class="code" href="structStelVertexAttribute.html#a8f4bac11bc5f5371f967a3e939bab66b" title="Data type of the attribute.">type</a>) == 3, Q_FUNC_INFO,
+<a name="l00199"></a>00199                                <span class="stringliteral">&quot;Only 3D vertex normals are supported&quot;</span>);
+<a name="l00200"></a>00200                     Q_ASSERT_X(!normal, Q_FUNC_INFO,
+<a name="l00201"></a>00201                                <span class="stringliteral">&quot;Vertex type has more than one normal attribute&quot;</span>);
+<a name="l00202"></a>00202                     normal = <span class="keyword">true</span>;
+<a name="l00203"></a>00203                     <span class="keywordflow">break</span>;
+<a name="l00204"></a>00204                 <span class="keywordflow">case</span> AttributeInterpretation_Color:
+<a name="l00205"></a>00205                     Q_ASSERT_X(!color, Q_FUNC_INFO,
+<a name="l00206"></a>00206                                <span class="stringliteral">&quot;Vertex type has more than one color attribute&quot;</span>);
+<a name="l00207"></a>00207                     color = <span class="keyword">true</span>;
+<a name="l00208"></a>00208                     <span class="keywordflow">break</span>;
+<a name="l00209"></a>00209                 <span class="keywordflow">default</span>:
+<a name="l00210"></a>00210                     Q_ASSERT_X(<span class="keyword">false</span>, Q_FUNC_INFO,
+<a name="l00211"></a>00211                                <span class="stringliteral">&quot;Unknown vertex attribute interpretation&quot;</span>);
+<a name="l00212"></a>00212             }
+<a name="l00213"></a>00213         }
+<a name="l00214"></a>00214 
+<a name="l00215"></a>00215         Q_ASSERT_X(vertex, Q_FUNC_INFO, 
+<a name="l00216"></a>00216                    <span class="stringliteral">&quot;Vertex formats without a position attribute are not supported&quot;</span>);
+<a name="l00217"></a>00217     }
+<a name="l00218"></a>00218 <span class="preprocessor">#endif</span>
+<a name="l00219"></a>00219 <span class="preprocessor"></span>};
+<a name="l00220"></a>00220 
+<a name="l00239"></a>00239 <span class="preprocessor">#define VERTEX_ATTRIBUTES(...)\</span>
+<a name="l00240"></a>00240 <span class="preprocessor">    static const QVector&lt;StelVertexAttribute&gt;&amp; attributes()\</span>
+<a name="l00241"></a>00241 <span class="preprocessor">    {\</span>
+<a name="l00242"></a>00242 <span class="preprocessor">        static QVector&lt;StelVertexAttribute&gt; attribs =\</span>
+<a name="l00243"></a>00243 <span class="preprocessor">            StelVertexAttribute::parseAttributes(#__VA_ARGS__);\</span>
+<a name="l00244"></a>00244 <span class="preprocessor">        return attribs;\</span>
+<a name="l00245"></a>00245 <span class="preprocessor">    }</span>
+<a name="l00246"></a>00246 <span class="preprocessor"></span>
+<a name="l00247"></a>00247 <span class="preprocessor">#endif // _STELVERTEXATTRIBUTE_HPP_</span>
 </pre></div></div>
-<hr class="footer"/><address style="text-align: right;"><small>Generated on Fri Aug 31 18:07:45 2012 for Stellarium by&nbsp;
+<hr class="footer"/><address style="text-align: right;"><small>Generated on Sat Sep 15 13:01:10 2012 for Stellarium by&nbsp;
 <a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.6.3 </small></address>
 </body>

@@ -85,81 +85,84 @@
 <a name="l00069"></a>00069     <span class="keyword">virtual</span> <span class="keywordtype">double</span> <a class="code" href="classNebulaMgr.html#af73e0a1fb0848bfc399b821196a7dd1a" title="Determines the order in which the various modules are drawn.">getCallOrder</a>(<a class="code" href="classStelModule.html#a11b61d014b51cf6424cd89b1ccd3d768" title="Define the possible action for which an order is defined.">StelModuleActionName</a> actionName) <span class="keyword">const</span>;
 <a name="l00070"></a>00070 
 <a name="l00072"></a>00072     <span class="comment">// Methods defined in StelObjectManager class</span>
-<a name="l00078"></a>00078 <span class="comment"></span>    <span class="keyword">virtual</span> QList&lt;StelObjectP&gt; <a class="code" href="classNebulaMgr.html#a292292bdc818533b7238f7ce95d93817" title="Used to get a vector of objects which are near to some position.">searchAround</a>(<span class="keyword">const</span> <a class="code" href="classVector3.html" title="A templatized 3d vector.">Vec3d</a>&amp; v, <span class="keywordtype">double</span> limitFov, <span class="keyword">const</span> <a class="code" href="classStelCore.html" title="Main class for Stellarium core processing.">StelCore</a>* core) <span class="keyword">const</span>;
+<a name="l00078"></a>00078 <span class="comment"></span>    <span class="keyword">virtual</span> QList&lt;StelObjectP&gt; <a class="code" href="classNebulaMgr.html#a292292bdc818533b7238f7ce95d93817" title="Used to get a vector of objects which are near to some position.">searchAround</a>(<span class="keyword">const</span> <a class="code" href="classVector3.html">Vec3d</a>&amp; v, <span class="keywordtype">double</span> limitFov, <span class="keyword">const</span> <a class="code" href="classStelCore.html" title="Main class for Stellarium core processing.">StelCore</a>* core) <span class="keyword">const</span>;
 <a name="l00079"></a>00079 
 <a name="l00083"></a>00083     <span class="keyword">virtual</span> <a class="code" href="classQSharedPointerNoDelete.html">StelObjectP</a> <a class="code" href="classNebulaMgr.html#a4d396cd856415df078eb9fa1ff5e879c" title="Return the matching nebula object&amp;#39;s pointer if exists or NULL.">searchByNameI18n</a>(<span class="keyword">const</span> QString&amp; nameI18n) <span class="keyword">const</span>;
 <a name="l00084"></a>00084 
 <a name="l00087"></a>00087     <span class="keyword">virtual</span> <a class="code" href="classQSharedPointerNoDelete.html">StelObjectP</a> <a class="code" href="classNebulaMgr.html#a8789f1ad1a8f2b266a7887373998812d" title="Return the matching nebula if exists or NULL.">searchByName</a>(<span class="keyword">const</span> QString&amp; name) <span class="keyword">const</span>;
 <a name="l00088"></a>00088 
 <a name="l00093"></a>00093     <span class="keyword">virtual</span> QStringList <a class="code" href="classNebulaMgr.html#af9a4088c808bb3e1fb1b90783b7fc4a4" title="Find and return the list of at most maxNbItem objects auto-completing the passed...">listMatchingObjectsI18n</a>(<span class="keyword">const</span> QString&amp; objPrefix, <span class="keywordtype">int</span> maxNbItem=5) <span class="keyword">const</span>;
-<a name="l00094"></a>00094 
-<a name="l00096"></a>00096     <span class="comment">// Properties setters and getters</span>
-<a name="l00097"></a>00097 <span class="keyword">public</span> slots:
-<a name="l00099"></a>00099     <span class="keywordtype">void</span> <a class="code" href="classNebulaMgr.html#a9ee6ef5051c1644496b766fbc90344a9" title="Set the color used to draw the nebula circles.">setCirclesColor</a>(<span class="keyword">const</span> <a class="code" href="classVector3.html">Vec3f</a>&amp; c);
-<a name="l00101"></a>00101     <span class="keyword">const</span> <a class="code" href="classVector3.html">Vec3f</a>&amp; <a class="code" href="classNebulaMgr.html#a546223d1076148bea8d9c67ff9599fe0" title="Get current value of the nebula circle color.">getCirclesColor</a>(<span class="keywordtype">void</span>) <span class="keyword">const</span>;
-<a name="l00102"></a>00102 
-<a name="l00104"></a>00104     <span class="keywordtype">void</span> <a class="code" href="classNebulaMgr.html#ac7e416ea168281ce19945243363f1902" title="Set Nebulae Hints circle scale.">setCircleScale</a>(<span class="keywordtype">float</span> scale);
-<a name="l00106"></a>00106     <span class="keywordtype">float</span> <a class="code" href="classNebulaMgr.html#a88a1bc414125b5fcc8b7dab4e04cb5b4" title="Get Nebulae Hints circle scale.">getCircleScale</a>(<span class="keywordtype">void</span>) <span class="keyword">const</span>;
-<a name="l00107"></a>00107 
-<a name="l00109"></a><a class="code" href="classNebulaMgr.html#a47842d0e1fefa3a38cbd37a871e7ea9b">00109</a>     <span class="keywordtype">void</span> <a class="code" href="classNebulaMgr.html#a47842d0e1fefa3a38cbd37a871e7ea9b" title="Set how long it takes for nebula hints to fade in and out when turned on and off...">setHintsFadeDuration</a>(<span class="keywordtype">float</span> duration) {hintsFader.setDuration((<span class="keywordtype">int</span>) (duration * 1000.f));}
+<a name="l00094"></a>00094     <span class="comment">// empty for now</span>
+<a name="l00095"></a>00095     <span class="keyword">virtual</span> QStringList listAllObjects(<span class="keywordtype">bool</span> inEnglish)<span class="keyword"> const </span>{ Q_UNUSED(inEnglish) return QStringList(); }
+<a name="l00096"></a>00096     virtual QString getName()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> <span class="stringliteral">&quot;Nebulae&quot;</span>; }
+<a name="l00097"></a>00097 
+<a name="l00099"></a>00099     <span class="comment">// Properties setters and getters</span>
+<a name="l00100"></a>00100 <span class="keyword">public</span> slots:
+<a name="l00102"></a>00102     <span class="keywordtype">void</span> <a class="code" href="classNebulaMgr.html#a9ee6ef5051c1644496b766fbc90344a9" title="Set the color used to draw the nebula circles.">setCirclesColor</a>(<span class="keyword">const</span> <a class="code" href="classVector3.html" title="A templatized 3d vector.">Vec3f</a>&amp; c);
+<a name="l00104"></a>00104     <span class="keyword">const</span> <a class="code" href="classVector3.html" title="A templatized 3d vector.">Vec3f</a>&amp; <a class="code" href="classNebulaMgr.html#a546223d1076148bea8d9c67ff9599fe0" title="Get current value of the nebula circle color.">getCirclesColor</a>(<span class="keywordtype">void</span>) <span class="keyword">const</span>;
+<a name="l00105"></a>00105 
+<a name="l00107"></a>00107     <span class="keywordtype">void</span> <a class="code" href="classNebulaMgr.html#ac7e416ea168281ce19945243363f1902" title="Set Nebulae Hints circle scale.">setCircleScale</a>(<span class="keywordtype">float</span> scale);
+<a name="l00109"></a>00109     <span class="keywordtype">float</span> <a class="code" href="classNebulaMgr.html#a88a1bc414125b5fcc8b7dab4e04cb5b4" title="Get Nebulae Hints circle scale.">getCircleScale</a>(<span class="keywordtype">void</span>) <span class="keyword">const</span>;
 <a name="l00110"></a>00110 
-<a name="l00112"></a><a class="code" href="classNebulaMgr.html#a1a30f248405985d7172f7cc2c3d5aae2">00112</a>     <span class="keywordtype">void</span> <a class="code" href="classNebulaMgr.html#a1a30f248405985d7172f7cc2c3d5aae2" title="Set flag for displaying Nebulae Hints.">setFlagHints</a>(<span class="keywordtype">bool</span> b) {hintsFader=b;}
-<a name="l00114"></a><a class="code" href="classNebulaMgr.html#aba244051e2af769e654e9402db183086">00114</a>     <span class="keywordtype">bool</span> <a class="code" href="classNebulaMgr.html#aba244051e2af769e654e9402db183086" title="Get flag for displaying Nebulae Hints.">getFlagHints</a>(<span class="keywordtype">void</span>)<span class="keyword"> const </span>{<span class="keywordflow">return</span> hintsFader;}
-<a name="l00115"></a>00115 
-<a name="l00117"></a><a class="code" href="classNebulaMgr.html#a2380ab036a151c9de5108747c2b29b9c">00117</a>     <span class="keywordtype">void</span> <a class="code" href="classNebulaMgr.html#a2380ab036a151c9de5108747c2b29b9c" title="Set flag used to turn on and off Nebula rendering.">setFlagShow</a>(<span class="keywordtype">bool</span> b) { flagShow = b; }
-<a name="l00119"></a><a class="code" href="classNebulaMgr.html#aea7b858df03f1a88df52a5e7eaee610f">00119</a>     <span class="keywordtype">bool</span> <a class="code" href="classNebulaMgr.html#aea7b858df03f1a88df52a5e7eaee610f" title="Get value of flag used to turn on and off Nebula rendering.">getFlagShow</a>(<span class="keywordtype">void</span>)<span class="keyword"> const </span>{ <span class="keywordflow">return</span> flagShow; }
-<a name="l00120"></a>00120 
-<a name="l00122"></a>00122     <span class="keywordtype">void</span> <a class="code" href="classNebulaMgr.html#a22b36bf15c90bdb31a25070aa0fb9541" title="Set the color used to draw nebula labels.">setLabelsColor</a>(<span class="keyword">const</span> <a class="code" href="classVector3.html">Vec3f</a>&amp; c);
-<a name="l00124"></a>00124     <span class="keyword">const</span> <a class="code" href="classVector3.html">Vec3f</a>&amp; <a class="code" href="classNebulaMgr.html#ac58e7a5f07da30dfe70740b0a4c8861a" title="Get current value of the nebula label color.">getLabelsColor</a>(<span class="keywordtype">void</span>) <span class="keyword">const</span>;
-<a name="l00125"></a>00125 
-<a name="l00129"></a><a class="code" href="classNebulaMgr.html#a6e91cd41a70f0bc4987fc60aada59f10">00129</a>     <span class="keywordtype">void</span> <a class="code" href="classNebulaMgr.html#a6e91cd41a70f0bc4987fc60aada59f10" title="Set the amount of nebulae labels.">setLabelsAmount</a>(<span class="keywordtype">float</span> a) {labelsAmount=a;}
-<a name="l00132"></a><a class="code" href="classNebulaMgr.html#a62770c3afe0011677ae33b4eac510a2f">00132</a>     <span class="keywordtype">float</span> <a class="code" href="classNebulaMgr.html#a62770c3afe0011677ae33b4eac510a2f" title="Get the amount of nebulae labels.">getLabelsAmount</a>(<span class="keywordtype">void</span>)<span class="keyword"> const </span>{<span class="keywordflow">return</span> labelsAmount;}
-<a name="l00133"></a>00133 
-<a name="l00137"></a><a class="code" href="classNebulaMgr.html#ab8807ae95e64a9bacab3ddbd0be0f5c6">00137</a>     <span class="keywordtype">void</span> <a class="code" href="classNebulaMgr.html#ab8807ae95e64a9bacab3ddbd0be0f5c6" title="Set the amount of nebulae hints.">setHintsAmount</a>(<span class="keywordtype">float</span> f) {hintsAmount = f;}
-<a name="l00140"></a><a class="code" href="classNebulaMgr.html#ababfa02fa52926d453ec3a8b3cfd55bd">00140</a>     <span class="keywordtype">float</span> <a class="code" href="classNebulaMgr.html#ababfa02fa52926d453ec3a8b3cfd55bd" title="Get the amount of nebulae labels.">getHintsAmount</a>(<span class="keywordtype">void</span>)<span class="keyword"> const </span>{<span class="keywordflow">return</span> hintsAmount;}
-<a name="l00141"></a>00141 
-<a name="l00142"></a>00142 <span class="keyword">private</span> slots:
-<a name="l00145"></a>00145     <span class="keywordtype">void</span> setStelStyle(<span class="keyword">const</span> QString&amp; section);
-<a name="l00146"></a>00146 
-<a name="l00150"></a>00150     <span class="keywordtype">void</span> updateI18n();
-<a name="l00151"></a>00151     
-<a name="l00152"></a>00152 
-<a name="l00153"></a>00153 <span class="keyword">private</span>:
-<a name="l00155"></a>00155     <a class="code" href="classQSharedPointer.html">NebulaP</a> search(<span class="keyword">const</span> QString&amp; name);
-<a name="l00156"></a>00156 
-<a name="l00158"></a>00158     <a class="code" href="classQSharedPointer.html">NebulaP</a> search(<span class="keyword">const</span> <a class="code" href="classVector3.html" title="A templatized 3d vector.">Vec3d</a>&amp; pos);
+<a name="l00112"></a><a class="code" href="classNebulaMgr.html#a47842d0e1fefa3a38cbd37a871e7ea9b">00112</a>     <span class="keywordtype">void</span> <a class="code" href="classNebulaMgr.html#a47842d0e1fefa3a38cbd37a871e7ea9b" title="Set how long it takes for nebula hints to fade in and out when turned on and off...">setHintsFadeDuration</a>(<span class="keywordtype">float</span> duration) {hintsFader.setDuration((<span class="keywordtype">int</span>) (duration * 1000.f));}
+<a name="l00113"></a>00113 
+<a name="l00115"></a><a class="code" href="classNebulaMgr.html#a1a30f248405985d7172f7cc2c3d5aae2">00115</a>     <span class="keywordtype">void</span> <a class="code" href="classNebulaMgr.html#a1a30f248405985d7172f7cc2c3d5aae2" title="Set flag for displaying Nebulae Hints.">setFlagHints</a>(<span class="keywordtype">bool</span> b) {hintsFader=b;}
+<a name="l00117"></a><a class="code" href="classNebulaMgr.html#aba244051e2af769e654e9402db183086">00117</a>     <span class="keywordtype">bool</span> <a class="code" href="classNebulaMgr.html#aba244051e2af769e654e9402db183086" title="Get flag for displaying Nebulae Hints.">getFlagHints</a>(<span class="keywordtype">void</span>)<span class="keyword"> const </span>{<span class="keywordflow">return</span> hintsFader;}
+<a name="l00118"></a>00118 
+<a name="l00120"></a><a class="code" href="classNebulaMgr.html#a2380ab036a151c9de5108747c2b29b9c">00120</a>     <span class="keywordtype">void</span> <a class="code" href="classNebulaMgr.html#a2380ab036a151c9de5108747c2b29b9c" title="Set flag used to turn on and off Nebula rendering.">setFlagShow</a>(<span class="keywordtype">bool</span> b) { flagShow = b; }
+<a name="l00122"></a><a class="code" href="classNebulaMgr.html#aea7b858df03f1a88df52a5e7eaee610f">00122</a>     <span class="keywordtype">bool</span> <a class="code" href="classNebulaMgr.html#aea7b858df03f1a88df52a5e7eaee610f" title="Get value of flag used to turn on and off Nebula rendering.">getFlagShow</a>(<span class="keywordtype">void</span>)<span class="keyword"> const </span>{ <span class="keywordflow">return</span> flagShow; }
+<a name="l00123"></a>00123 
+<a name="l00125"></a>00125     <span class="keywordtype">void</span> <a class="code" href="classNebulaMgr.html#a22b36bf15c90bdb31a25070aa0fb9541" title="Set the color used to draw nebula labels.">setLabelsColor</a>(<span class="keyword">const</span> <a class="code" href="classVector3.html" title="A templatized 3d vector.">Vec3f</a>&amp; c);
+<a name="l00127"></a>00127     <span class="keyword">const</span> <a class="code" href="classVector3.html" title="A templatized 3d vector.">Vec3f</a>&amp; <a class="code" href="classNebulaMgr.html#ac58e7a5f07da30dfe70740b0a4c8861a" title="Get current value of the nebula label color.">getLabelsColor</a>(<span class="keywordtype">void</span>) <span class="keyword">const</span>;
+<a name="l00128"></a>00128 
+<a name="l00132"></a><a class="code" href="classNebulaMgr.html#a6e91cd41a70f0bc4987fc60aada59f10">00132</a>     <span class="keywordtype">void</span> <a class="code" href="classNebulaMgr.html#a6e91cd41a70f0bc4987fc60aada59f10" title="Set the amount of nebulae labels.">setLabelsAmount</a>(<span class="keywordtype">float</span> a) {labelsAmount=a;}
+<a name="l00135"></a><a class="code" href="classNebulaMgr.html#a62770c3afe0011677ae33b4eac510a2f">00135</a>     <span class="keywordtype">float</span> <a class="code" href="classNebulaMgr.html#a62770c3afe0011677ae33b4eac510a2f" title="Get the amount of nebulae labels.">getLabelsAmount</a>(<span class="keywordtype">void</span>)<span class="keyword"> const </span>{<span class="keywordflow">return</span> labelsAmount;}
+<a name="l00136"></a>00136 
+<a name="l00140"></a><a class="code" href="classNebulaMgr.html#ab8807ae95e64a9bacab3ddbd0be0f5c6">00140</a>     <span class="keywordtype">void</span> <a class="code" href="classNebulaMgr.html#ab8807ae95e64a9bacab3ddbd0be0f5c6" title="Set the amount of nebulae hints.">setHintsAmount</a>(<span class="keywordtype">float</span> f) {hintsAmount = f;}
+<a name="l00143"></a><a class="code" href="classNebulaMgr.html#ababfa02fa52926d453ec3a8b3cfd55bd">00143</a>     <span class="keywordtype">float</span> <a class="code" href="classNebulaMgr.html#ababfa02fa52926d453ec3a8b3cfd55bd" title="Get the amount of nebulae labels.">getHintsAmount</a>(<span class="keywordtype">void</span>)<span class="keyword"> const </span>{<span class="keywordflow">return</span> hintsAmount;}
+<a name="l00144"></a>00144 
+<a name="l00145"></a>00145 <span class="keyword">private</span> slots:
+<a name="l00148"></a>00148     <span class="keywordtype">void</span> setStelStyle(<span class="keyword">const</span> QString&amp; section);
+<a name="l00149"></a>00149 
+<a name="l00153"></a>00153     <span class="keywordtype">void</span> updateI18n();
+<a name="l00154"></a>00154     
+<a name="l00155"></a>00155 
+<a name="l00156"></a>00156 <span class="keyword">private</span>:
+<a name="l00158"></a>00158     <a class="code" href="classQSharedPointer.html">NebulaP</a> search(<span class="keyword">const</span> QString&amp; name);
 <a name="l00159"></a>00159 
-<a name="l00166"></a>00166     <span class="keywordtype">void</span> loadNebulaSet(<span class="keyword">const</span> QString&amp; setName);
-<a name="l00167"></a>00167 
-<a name="l00169"></a>00169     <span class="keywordtype">void</span> drawPointer(<span class="keyword">const</span> <a class="code" href="classStelCore.html" title="Main class for Stellarium core processing.">StelCore</a>* core, <span class="keyword">class</span> <a class="code" href="classStelRenderer.html" title="Main class of the Renderer subsystem.">StelRenderer</a>* renderer);
+<a name="l00161"></a>00161     <a class="code" href="classQSharedPointer.html">NebulaP</a> search(<span class="keyword">const</span> <a class="code" href="classVector3.html">Vec3d</a>&amp; pos);
+<a name="l00162"></a>00162 
+<a name="l00169"></a>00169     <span class="keywordtype">void</span> loadNebulaSet(<span class="keyword">const</span> QString&amp; setName);
 <a name="l00170"></a>00170 
-<a name="l00171"></a>00171     <a class="code" href="classQSharedPointer.html">NebulaP</a> searchM(<span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> M);
-<a name="l00172"></a>00172     <a class="code" href="classQSharedPointer.html">NebulaP</a> searchNGC(<span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> NGC);
-<a name="l00173"></a>00173     <a class="code" href="classQSharedPointer.html">NebulaP</a> searchIC(<span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> IC);
-<a name="l00174"></a>00174     <span class="keywordtype">bool</span> loadNGC(<span class="keyword">const</span> QString&amp; fileName);
-<a name="l00175"></a>00175     <span class="keywordtype">bool</span> loadNGCOld(<span class="keyword">const</span> QString&amp; catNGC);
-<a name="l00176"></a>00176     <span class="keywordtype">bool</span> loadNGCNames(<span class="keyword">const</span> QString&amp; fileName);
-<a name="l00177"></a>00177 
-<a name="l00178"></a>00178     QVector&lt;NebulaP&gt; nebArray;      <span class="comment">// The nebulas list</span>
-<a name="l00179"></a>00179     QHash&lt;unsigned int, NebulaP&gt; ngcIndex;
-<a name="l00180"></a>00180     <a class="code" href="classLinearFader.html" title="Implementation of StelFader which implements a linear transition.">LinearFader</a> hintsFader;
-<a name="l00181"></a>00181     <a class="code" href="classLinearFader.html" title="Implementation of StelFader which implements a linear transition.">LinearFader</a> flagShow;
-<a name="l00182"></a>00182 
-<a name="l00184"></a>00184     <a class="code" href="classStelSphericalIndex.html" title="Container allowing to store and query SphericalRegion.">StelSphericalIndex</a> nebGrid;
+<a name="l00172"></a>00172     <span class="keywordtype">void</span> drawPointer(<span class="keyword">const</span> <a class="code" href="classStelCore.html" title="Main class for Stellarium core processing.">StelCore</a>* core, <span class="keyword">class</span> <a class="code" href="classStelRenderer.html" title="Main class of the Renderer subsystem.">StelRenderer</a>* renderer);
+<a name="l00173"></a>00173 
+<a name="l00174"></a>00174     <a class="code" href="classQSharedPointer.html">NebulaP</a> searchM(<span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> M);
+<a name="l00175"></a>00175     <a class="code" href="classQSharedPointer.html">NebulaP</a> searchNGC(<span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> NGC);
+<a name="l00176"></a>00176     <a class="code" href="classQSharedPointer.html">NebulaP</a> searchIC(<span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> IC);
+<a name="l00177"></a>00177     <span class="keywordtype">bool</span> loadNGC(<span class="keyword">const</span> QString&amp; fileName);
+<a name="l00178"></a>00178     <span class="keywordtype">bool</span> loadNGCOld(<span class="keyword">const</span> QString&amp; catNGC);
+<a name="l00179"></a>00179     <span class="keywordtype">bool</span> loadNGCNames(<span class="keyword">const</span> QString&amp; fileName);
+<a name="l00180"></a>00180 
+<a name="l00181"></a>00181     QVector&lt;NebulaP&gt; nebArray;      <span class="comment">// The nebulas list</span>
+<a name="l00182"></a>00182     QHash&lt;unsigned int, NebulaP&gt; ngcIndex;
+<a name="l00183"></a>00183     <a class="code" href="classLinearFader.html" title="Implementation of StelFader which implements a linear transition.">LinearFader</a> hintsFader;
+<a name="l00184"></a>00184     <a class="code" href="classLinearFader.html" title="Implementation of StelFader which implements a linear transition.">LinearFader</a> flagShow;
 <a name="l00185"></a>00185 
-<a name="l00187"></a>00187     <span class="keywordtype">float</span> hintsAmount;
-<a name="l00189"></a>00189     <span class="keywordtype">float</span> labelsAmount;
-<a name="l00190"></a>00190 
-<a name="l00192"></a>00192     <a class="code" href="classStelTextureNew.html" title="Texture interface.">StelTextureNew</a>* texPointer;
-<a name="l00193"></a>00193     
-<a name="l00194"></a>00194     QFont nebulaFont;      <span class="comment">// Font used for names printing</span>
-<a name="l00195"></a>00195 
-<a name="l00197"></a>00197     Nebula::NebulaHintTextures nebulaHintTextures;
-<a name="l00198"></a>00198 };
-<a name="l00199"></a>00199 
-<a name="l00200"></a>00200 <span class="preprocessor">#endif // _NEBULAMGR_HPP_</span>
+<a name="l00187"></a>00187     <a class="code" href="classStelSphericalIndex.html" title="Container allowing to store and query SphericalRegion.">StelSphericalIndex</a> nebGrid;
+<a name="l00188"></a>00188 
+<a name="l00190"></a>00190     <span class="keywordtype">float</span> hintsAmount;
+<a name="l00192"></a>00192     <span class="keywordtype">float</span> labelsAmount;
+<a name="l00193"></a>00193 
+<a name="l00195"></a>00195     <a class="code" href="classStelTextureNew.html" title="Texture interface.">StelTextureNew</a>* texPointer;
+<a name="l00196"></a>00196     
+<a name="l00197"></a>00197     QFont nebulaFont;      <span class="comment">// Font used for names printing</span>
+<a name="l00198"></a>00198 
+<a name="l00200"></a>00200     Nebula::NebulaHintTextures nebulaHintTextures;
+<a name="l00201"></a>00201 };
+<a name="l00202"></a>00202 
+<a name="l00203"></a>00203 <span class="preprocessor">#endif // _NEBULAMGR_HPP_</span>
 </pre></div></div>
-<hr class="footer"/><address style="text-align: right;"><small>Generated on Fri Aug 31 18:07:42 2012 for Stellarium by&nbsp;
+<hr class="footer"/><address style="text-align: right;"><small>Generated on Sat Sep 15 13:01:09 2012 for Stellarium by&nbsp;
 <a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.6.3 </small></address>
 </body>

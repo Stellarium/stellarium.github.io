@@ -49,90 +49,109 @@
 <a name="l00019"></a>00019 <span class="preprocessor">#ifndef _STELTONEREPRODUCER_HPP_</span>
 <a name="l00020"></a>00020 <span class="preprocessor"></span><span class="preprocessor">#define _STELTONEREPRODUCER_HPP_</span>
 <a name="l00021"></a>00021 <span class="preprocessor"></span>
-<a name="l00049"></a><a class="code" href="classStelToneReproducer.html">00049</a> <span class="keyword">class </span><a class="code" href="classStelToneReproducer.html" title="Converts tones in function of the eye adaptation to luminance.">StelToneReproducer</a>
-<a name="l00050"></a>00050 {
-<a name="l00051"></a>00051 <span class="keyword">public</span>:
-<a name="l00053"></a>00053     <a class="code" href="classStelToneReproducer.html#a4284d342f6d068b8f20ad8d009fbde9c" title="Constructor.">StelToneReproducer</a>();
-<a name="l00054"></a>00054     
-<a name="l00056"></a>00056     <span class="keyword">virtual</span> <a class="code" href="classStelToneReproducer.html#ab0e737c074be0a5a4bf2412a2c570fe9" title="Desctructor.">~StelToneReproducer</a>();
-<a name="l00057"></a>00057 
-<a name="l00061"></a>00061     <span class="keywordtype">void</span> <a class="code" href="classStelToneReproducer.html#a32c58746752bd8c58863e2fb1ca35225" title="Set the eye adaptation luminance for the display (and precompute what can be) Usual...">setDisplayAdaptationLuminance</a>(<span class="keywordtype">float</span> displayAdaptationLuminance);
-<a name="l00062"></a>00062 
-<a name="l00069"></a>00069     <span class="keywordtype">void</span> <a class="code" href="classStelToneReproducer.html#a23a221fd0c7c4ee6fa45dd00718d4233" title="Set the eye adaptation luminance for the world (and precompute what can be).">setWorldAdaptationLuminance</a>(<span class="keywordtype">float</span> worldAdaptationLuminance);
-<a name="l00071"></a><a class="code" href="classStelToneReproducer.html#aebd35c644f18944bad2a274d13656114">00071</a>     <span class="keywordtype">float</span> <a class="code" href="classStelToneReproducer.html#aebd35c644f18944bad2a274d13656114" title="Get the eye adaptation luminance for the world.">getWorldAdaptationLuminance</a>()<span class="keyword"> const </span>{<span class="keywordflow">return</span> Lwa;}
-<a name="l00072"></a>00072     
-<a name="l00076"></a>00076     <span class="keywordtype">void</span> <a class="code" href="classStelToneReproducer.html#a50950b8a2625efe47354c07e4a323216" title="Set the global scale applied to input lumiances, i.e before the adaptation It is...">setInputScale</a>(<span class="keywordtype">float</span> scale=1.f);
-<a name="l00078"></a><a class="code" href="classStelToneReproducer.html#ae5675212a32faf0b74702c8011505abe">00078</a>     <span class="keywordtype">float</span> <a class="code" href="classStelToneReproducer.html#ae5675212a32faf0b74702c8011505abe" title="Get the global scale applied to input lumiances, i.e before the adaptation.">getInputScale</a>()<span class="keyword"> const </span>{<span class="keywordflow">return</span> inputScale;}
-<a name="l00079"></a>00079     
-<a name="l00083"></a><a class="code" href="classStelToneReproducer.html#a0af5a385275dfde92ac40767a70dbc17">00083</a>     <span class="keywordtype">void</span> <a class="code" href="classStelToneReproducer.html#a0af5a385275dfde92ac40767a70dbc17" title="Set the maximum luminance of the display (CRT, screen etc.">setMaxDisplayLuminance</a>(<span class="keywordtype">float</span> maxdL)
-<a name="l00084"></a>00084     {oneOverMaxdL = 1.f/maxdL; lnOneOverMaxdL=std::log(oneOverMaxdL); term2TimesOneOverMaxdLpOneOverGamma = std::pow(term2*oneOverMaxdL, oneOverGamma);}
-<a name="l00085"></a>00085 
-<a name="l00088"></a><a class="code" href="classStelToneReproducer.html#a1ef8ac52a2b1cabed4bd478185fb2b31">00088</a>     <span class="keywordtype">float</span> <a class="code" href="classStelToneReproducer.html#a1ef8ac52a2b1cabed4bd478185fb2b31" title="Get the display gamma.">getDisplayGamma</a>()<span class="keyword"> const </span>{<span class="keywordflow">return</span> 1.f/oneOverGamma;}
-<a name="l00089"></a>00089     
-<a name="l00092"></a><a class="code" href="classStelToneReproducer.html#ac067b5e8ed3a357390ba7125d93dc2d3">00092</a>     <span class="keywordtype">void</span> <a class="code" href="classStelToneReproducer.html#ac067b5e8ed3a357390ba7125d93dc2d3" title="Set the display gamma.">setDisplayGamma</a>(<span class="keywordtype">float</span> gamma)
-<a name="l00093"></a>00093     {oneOverGamma = 1.f/gamma; term2TimesOneOverMaxdLpOneOverGamma = std::pow(term2*oneOverMaxdL, oneOverGamma);}
-<a name="l00094"></a>00094 
-<a name="l00098"></a><a class="code" href="classStelToneReproducer.html#ad420f8c4bc8c964466df024b5d61440b">00098</a>     <span class="keywordtype">float</span> <a class="code" href="classStelToneReproducer.html#ad420f8c4bc8c964466df024b5d61440b" title="Return adapted luminance from world to display.">adaptLuminance</a>(<span class="keywordtype">float</span> worldLuminance)<span class="keyword"> const</span>
-<a name="l00099"></a>00099 <span class="keyword">    </span>{
-<a name="l00100"></a>00100         <span class="keywordflow">return</span> std::pow((<span class="keywordtype">float</span>)(inputScale*worldLuminance*M_PI*0.0001f),alphaWaOverAlphaDa) * term2;
-<a name="l00101"></a>00101     }
-<a name="l00102"></a>00102 
-<a name="l00106"></a><a class="code" href="classStelToneReproducer.html#a5ab72db69637ce29f3eadc881f11ef38">00106</a>     <span class="keywordtype">float</span> <a class="code" href="classStelToneReproducer.html#a5ab72db69637ce29f3eadc881f11ef38" title="Return adapted luminance from display to world.">reverseAdaptLuminance</a>(<span class="keywordtype">float</span> displayLuminance)<span class="keyword"> const</span>
-<a name="l00107"></a>00107 <span class="keyword">    </span>{
-<a name="l00108"></a>00108         <span class="keywordflow">return</span> std::pow((<span class="keywordtype">float</span>)(displayLuminance/term2),1.f/alphaWaOverAlphaDa)/(inputScale*M_PI*0.0001f);
-<a name="l00109"></a>00109     }
-<a name="l00110"></a>00110     
-<a name="l00114"></a><a class="code" href="classStelToneReproducer.html#a8de616add022b3ff6189997eb56ce954">00114</a>     <span class="keywordtype">float</span> <a class="code" href="classStelToneReproducer.html#a8de616add022b3ff6189997eb56ce954" title="Return adapted luminance from world to display with 1 corresponding to full display...">adaptLuminanceScaled</a>(<span class="keywordtype">float</span> worldLuminance)<span class="keyword"> const</span>
-<a name="l00115"></a>00115 <span class="keyword">    </span>{
-<a name="l00116"></a>00116         <span class="keywordflow">return</span> <a class="code" href="classStelToneReproducer.html#ad420f8c4bc8c964466df024b5d61440b" title="Return adapted luminance from world to display.">adaptLuminance</a>(worldLuminance)*oneOverMaxdL;
-<a name="l00117"></a>00117     }
-<a name="l00118"></a>00118     
-<a name="l00122"></a><a class="code" href="classStelToneReproducer.html#a70052dfea09c992c2732cc2cf7cc0aa2">00122</a>     <span class="keywordtype">float</span> <a class="code" href="classStelToneReproducer.html#a70052dfea09c992c2732cc2cf7cc0aa2" title="Return adapted luminance from display to world with 1 corresponding to full display...">reverseAdaptLuminanceScaled</a>(<span class="keywordtype">float</span> displayLuminance)<span class="keyword"> const</span>
-<a name="l00123"></a>00123 <span class="keyword">    </span>{
-<a name="l00124"></a>00124         <span class="keywordflow">return</span> <a class="code" href="classStelToneReproducer.html#a5ab72db69637ce29f3eadc881f11ef38" title="Return adapted luminance from display to world.">reverseAdaptLuminance</a>(displayLuminance/oneOverMaxdL);
-<a name="l00125"></a>00125     }
-<a name="l00126"></a>00126     
-<a name="l00131"></a><a class="code" href="classStelToneReproducer.html#adb259919db4bbc75bf7965899e1a39ef">00131</a>     <span class="keywordtype">float</span> <a class="code" href="classStelToneReproducer.html#adb259919db4bbc75bf7965899e1a39ef" title="Return adapted ln(luminance) from world to display with 1 corresponding to full display...">adaptLuminanceScaledLn</a>(<span class="keywordtype">float</span> lnWorldLuminance, <span class="keywordtype">float</span> pFact=0.5f)<span class="keyword"> const</span>
-<a name="l00132"></a>00132 <span class="keyword">    </span>{
-<a name="l00133"></a>00133         <span class="keyword">const</span> <span class="keywordtype">float</span> lnPix0p0001 = -8.0656104861f;
-<a name="l00134"></a>00134         <span class="keywordflow">return</span> std::exp(((lnInputScale+lnWorldLuminance+lnPix0p0001)*alphaWaOverAlphaDa+lnTerm2+lnOneOverMaxdL)*pFact);
-<a name="l00135"></a>00135     }
-<a name="l00136"></a>00136     
-<a name="l00140"></a>00140     <span class="keywordtype">void</span> <a class="code" href="classStelToneReproducer.html#aa8efb718a80181d0d9d7e6fab64a0422" title="Convert from xyY color system to RGB.">xyYToRGB</a>(<span class="keywordtype">float</span>* xyY) <span class="keyword">const</span>;
-<a name="l00141"></a>00141     
-<a name="l00142"></a>00142     <span class="keywordtype">void</span> getShadersParams(<span class="keywordtype">float</span>&amp; a, <span class="keywordtype">float</span>&amp; b, <span class="keywordtype">float</span> &amp; c)<span class="keyword"> const</span>
-<a name="l00143"></a>00143 <span class="keyword">    </span>{
-<a name="l00144"></a>00144         a=alphaWaOverAlphaDa;
-<a name="l00145"></a>00145         b=oneOverGamma;
-<a name="l00146"></a>00146         c=term2TimesOneOverMaxdLpOneOverGamma;
-<a name="l00147"></a>00147     }
-<a name="l00148"></a>00148 <span class="keyword">private</span>:
-<a name="l00149"></a>00149     <span class="comment">// The global luminance scaling</span>
-<a name="l00150"></a>00150     <span class="keywordtype">float</span> inputScale;
-<a name="l00151"></a>00151     <span class="keywordtype">float</span> lnInputScale;     <span class="comment">// std::log(inputScale)</span>
-<a name="l00152"></a>00152     
-<a name="l00153"></a>00153     <span class="keywordtype">float</span> Lda;      <span class="comment">// Display luminance adaptation (in cd/m^2)</span>
-<a name="l00154"></a>00154     <span class="keywordtype">float</span> Lwa;      <span class="comment">// World   luminance adaptation (in cd/m^2)</span>
-<a name="l00155"></a>00155     <span class="keywordtype">float</span> oneOverMaxdL; <span class="comment">// 1 / Display maximum luminance (in cd/m^2)</span>
-<a name="l00156"></a>00156     <span class="keywordtype">float</span> lnOneOverMaxdL; <span class="comment">// log(oneOverMaxdL)</span>
-<a name="l00157"></a>00157     <span class="keywordtype">float</span> oneOverGamma; <span class="comment">// 1 / Screen gamma value</span>
-<a name="l00158"></a>00158 
-<a name="l00159"></a>00159     <span class="comment">// Precomputed variables</span>
-<a name="l00160"></a>00160     <span class="keywordtype">float</span> alphaDa;
-<a name="l00161"></a>00161     <span class="keywordtype">float</span> betaDa;
-<a name="l00162"></a>00162     <span class="keywordtype">float</span> alphaWa;
-<a name="l00163"></a>00163     <span class="keywordtype">float</span> betaWa;
-<a name="l00164"></a>00164     <span class="keywordtype">float</span> alphaWaOverAlphaDa;
-<a name="l00165"></a>00165     <span class="keywordtype">float</span> term2;
-<a name="l00166"></a>00166     <span class="keywordtype">float</span> lnTerm2;  <span class="comment">// log(term2)</span>
-<a name="l00167"></a>00167     
-<a name="l00168"></a>00168     <span class="keywordtype">float</span> term2TimesOneOverMaxdLpOneOverGamma;
-<a name="l00169"></a>00169 };
-<a name="l00170"></a>00170 
-<a name="l00171"></a>00171 <span class="preprocessor">#endif // _STELTONEREPRODUCER_HPP_</span>
-<a name="l00172"></a>00172 <span class="preprocessor"></span>
+<a name="l00022"></a>00022 <span class="preprocessor">#include &lt;QDebug&gt;</span>
+<a name="l00023"></a>00023 
+<a name="l00024"></a>00024 
+<a name="l00052"></a><a class="code" href="classStelToneReproducer.html">00052</a> <span class="keyword">class </span><a class="code" href="classStelToneReproducer.html" title="Converts tones in function of the eye adaptation to luminance.">StelToneReproducer</a>
+<a name="l00053"></a>00053 {
+<a name="l00054"></a>00054 <span class="keyword">public</span>:
+<a name="l00056"></a>00056     <a class="code" href="classStelToneReproducer.html#a4284d342f6d068b8f20ad8d009fbde9c" title="Constructor.">StelToneReproducer</a>();
+<a name="l00057"></a>00057     
+<a name="l00059"></a>00059     <span class="keyword">virtual</span> <a class="code" href="classStelToneReproducer.html#ab0e737c074be0a5a4bf2412a2c570fe9" title="Desctructor.">~StelToneReproducer</a>();
+<a name="l00060"></a>00060 
+<a name="l00064"></a>00064     <span class="keywordtype">void</span> <a class="code" href="classStelToneReproducer.html#a32c58746752bd8c58863e2fb1ca35225" title="Set the eye adaptation luminance for the display (and precompute what can be) Usual...">setDisplayAdaptationLuminance</a>(<span class="keywordtype">float</span> displayAdaptationLuminance);
+<a name="l00065"></a>00065 
+<a name="l00072"></a>00072     <span class="keywordtype">void</span> <a class="code" href="classStelToneReproducer.html#a23a221fd0c7c4ee6fa45dd00718d4233" title="Set the eye adaptation luminance for the world (and precompute what can be).">setWorldAdaptationLuminance</a>(<span class="keywordtype">float</span> worldAdaptationLuminance);
+<a name="l00074"></a><a class="code" href="classStelToneReproducer.html#aebd35c644f18944bad2a274d13656114">00074</a>     <span class="keywordtype">float</span> <a class="code" href="classStelToneReproducer.html#aebd35c644f18944bad2a274d13656114" title="Get the eye adaptation luminance for the world.">getWorldAdaptationLuminance</a>()<span class="keyword"> const </span>{<span class="keywordflow">return</span> Lwa;}
+<a name="l00075"></a>00075     
+<a name="l00079"></a>00079     <span class="keywordtype">void</span> <a class="code" href="classStelToneReproducer.html#a50950b8a2625efe47354c07e4a323216" title="Set the global scale applied to input lumiances, i.e before the adaptation It is...">setInputScale</a>(<span class="keywordtype">float</span> scale=1.f);
+<a name="l00081"></a><a class="code" href="classStelToneReproducer.html#ae5675212a32faf0b74702c8011505abe">00081</a>     <span class="keywordtype">float</span> <a class="code" href="classStelToneReproducer.html#ae5675212a32faf0b74702c8011505abe" title="Get the global scale applied to input lumiances, i.e before the adaptation.">getInputScale</a>()<span class="keyword"> const </span>{<span class="keywordflow">return</span> inputScale;}
+<a name="l00082"></a>00082     
+<a name="l00086"></a><a class="code" href="classStelToneReproducer.html#a0af5a385275dfde92ac40767a70dbc17">00086</a>     <span class="keywordtype">void</span> <a class="code" href="classStelToneReproducer.html#a0af5a385275dfde92ac40767a70dbc17" title="Set the maximum luminance of the display (CRT, screen etc.">setMaxDisplayLuminance</a>(<span class="keywordtype">float</span> maxdL)
+<a name="l00087"></a>00087     {oneOverMaxdL = 1.f/maxdL; lnOneOverMaxdL=std::log(oneOverMaxdL); term2TimesOneOverMaxdLpOneOverGamma = std::pow(term2*oneOverMaxdL, oneOverGamma);}
+<a name="l00088"></a>00088 
+<a name="l00091"></a><a class="code" href="classStelToneReproducer.html#a1ef8ac52a2b1cabed4bd478185fb2b31">00091</a>     <span class="keywordtype">float</span> <a class="code" href="classStelToneReproducer.html#a1ef8ac52a2b1cabed4bd478185fb2b31" title="Get the display gamma.">getDisplayGamma</a>()<span class="keyword"> const </span>{<span class="keywordflow">return</span> 1.f/oneOverGamma;}
+<a name="l00092"></a>00092     
+<a name="l00095"></a><a class="code" href="classStelToneReproducer.html#ac067b5e8ed3a357390ba7125d93dc2d3">00095</a>     <span class="keywordtype">void</span> <a class="code" href="classStelToneReproducer.html#ac067b5e8ed3a357390ba7125d93dc2d3" title="Set the display gamma.">setDisplayGamma</a>(<span class="keywordtype">float</span> gamma)
+<a name="l00096"></a>00096     {oneOverGamma = 1.f/gamma; term2TimesOneOverMaxdLpOneOverGamma = std::pow(term2*oneOverMaxdL, oneOverGamma);}
+<a name="l00097"></a>00097 
+<a name="l00101"></a><a class="code" href="classStelToneReproducer.html#ad420f8c4bc8c964466df024b5d61440b">00101</a>     <span class="keywordtype">float</span> <a class="code" href="classStelToneReproducer.html#ad420f8c4bc8c964466df024b5d61440b" title="Return adapted luminance from world to display.">adaptLuminance</a>(<span class="keywordtype">float</span> worldLuminance)<span class="keyword"> const</span>
+<a name="l00102"></a>00102 <span class="keyword">    </span>{
+<a name="l00103"></a>00103         <span class="keywordflow">return</span> std::pow((<span class="keywordtype">float</span>)(inputScale*worldLuminance*M_PI*0.0001f),alphaWaOverAlphaDa) * term2;
+<a name="l00104"></a>00104     }
+<a name="l00105"></a>00105 
+<a name="l00109"></a><a class="code" href="classStelToneReproducer.html#a5ab72db69637ce29f3eadc881f11ef38">00109</a>     <span class="keywordtype">float</span> <a class="code" href="classStelToneReproducer.html#a5ab72db69637ce29f3eadc881f11ef38" title="Return adapted luminance from display to world.">reverseAdaptLuminance</a>(<span class="keywordtype">float</span> displayLuminance)<span class="keyword"> const</span>
+<a name="l00110"></a>00110 <span class="keyword">    </span>{
+<a name="l00111"></a>00111         <span class="keywordflow">return</span> std::pow((<span class="keywordtype">float</span>)(displayLuminance/term2),1.f/alphaWaOverAlphaDa)/(inputScale*M_PI*0.0001f);
+<a name="l00112"></a>00112     }
+<a name="l00113"></a>00113     
+<a name="l00117"></a><a class="code" href="classStelToneReproducer.html#a8de616add022b3ff6189997eb56ce954">00117</a>     <span class="keywordtype">float</span> <a class="code" href="classStelToneReproducer.html#a8de616add022b3ff6189997eb56ce954" title="Return adapted luminance from world to display with 1 corresponding to full display...">adaptLuminanceScaled</a>(<span class="keywordtype">float</span> worldLuminance)<span class="keyword"> const</span>
+<a name="l00118"></a>00118 <span class="keyword">    </span>{
+<a name="l00119"></a>00119         <span class="keywordflow">return</span> <a class="code" href="classStelToneReproducer.html#ad420f8c4bc8c964466df024b5d61440b" title="Return adapted luminance from world to display.">adaptLuminance</a>(worldLuminance)*oneOverMaxdL;
+<a name="l00120"></a>00120     }
+<a name="l00121"></a>00121     
+<a name="l00125"></a><a class="code" href="classStelToneReproducer.html#a70052dfea09c992c2732cc2cf7cc0aa2">00125</a>     <span class="keywordtype">float</span> <a class="code" href="classStelToneReproducer.html#a70052dfea09c992c2732cc2cf7cc0aa2" title="Return adapted luminance from display to world with 1 corresponding to full display...">reverseAdaptLuminanceScaled</a>(<span class="keywordtype">float</span> displayLuminance)<span class="keyword"> const</span>
+<a name="l00126"></a>00126 <span class="keyword">    </span>{
+<a name="l00127"></a>00127         <span class="keywordflow">return</span> <a class="code" href="classStelToneReproducer.html#a5ab72db69637ce29f3eadc881f11ef38" title="Return adapted luminance from display to world.">reverseAdaptLuminance</a>(displayLuminance/oneOverMaxdL);
+<a name="l00128"></a>00128     }
+<a name="l00129"></a>00129     
+<a name="l00134"></a><a class="code" href="classStelToneReproducer.html#adb259919db4bbc75bf7965899e1a39ef">00134</a>     <span class="keywordtype">float</span> <a class="code" href="classStelToneReproducer.html#adb259919db4bbc75bf7965899e1a39ef" title="Return adapted ln(luminance) from world to display with 1 corresponding to full display...">adaptLuminanceScaledLn</a>(<span class="keywordtype">float</span> lnWorldLuminance, <span class="keywordtype">float</span> pFact=0.5f)<span class="keyword"> const</span>
+<a name="l00135"></a>00135 <span class="keyword">    </span>{
+<a name="l00136"></a>00136         <span class="keyword">const</span> <span class="keywordtype">float</span> lnPix0p0001 = -8.0656104861f;
+<a name="l00137"></a>00137         <span class="comment">//Needs better name</span>
+<a name="l00138"></a>00138         <span class="keyword">const</span> <span class="keywordtype">float</span> temp        = ((lnInputScale + lnWorldLuminance + lnPix0p0001) * 
+<a name="l00139"></a>00139                                     alphaWaOverAlphaDa+lnTerm2 + lnOneOverMaxdL) * pFact;
+<a name="l00140"></a>00140 
+<a name="l00141"></a>00141         <span class="comment">// Optimization:</span>
+<a name="l00142"></a>00142         <span class="comment">// Always using exp here takes 6-9% of runtime in release mode.</span>
+<a name="l00143"></a>00143         <span class="comment">// This code is used to determine point source radius.</span>
+<a name="l00144"></a>00144         <span class="comment">//</span>
+<a name="l00145"></a>00145         <span class="comment">// If this value is &lt; 5 (and &lt; 4, for that matter), the star won&#39;t </span>
+<a name="l00146"></a>00146         <span class="comment">// even be displayed as it&#39;s radius is too low. We also get rid </span>
+<a name="l00147"></a>00147         <span class="comment">// of ~90% of exp calls.</span>
+<a name="l00148"></a>00148         <span class="keywordflow">if</span>(temp &lt; -5.0f)
+<a name="l00149"></a>00149         {
+<a name="l00150"></a>00150             <span class="keywordflow">return</span> 0.0f;
+<a name="l00151"></a>00151         }
+<a name="l00152"></a>00152 
+<a name="l00153"></a>00153         <span class="keywordflow">return</span> std::exp(temp);
+<a name="l00154"></a>00154     }
+<a name="l00155"></a>00155     
+<a name="l00159"></a>00159     <span class="keywordtype">void</span> <a class="code" href="classStelToneReproducer.html#aa8efb718a80181d0d9d7e6fab64a0422" title="Convert from xyY color system to RGB.">xyYToRGB</a>(<span class="keywordtype">float</span>* xyY) <span class="keyword">const</span>;
+<a name="l00160"></a>00160     
+<a name="l00161"></a>00161     <span class="keywordtype">void</span> getShadersParams(<span class="keywordtype">float</span>&amp; a, <span class="keywordtype">float</span>&amp; b, <span class="keywordtype">float</span> &amp; c)<span class="keyword"> const</span>
+<a name="l00162"></a>00162 <span class="keyword">    </span>{
+<a name="l00163"></a>00163         a=alphaWaOverAlphaDa;
+<a name="l00164"></a>00164         b=oneOverGamma;
+<a name="l00165"></a>00165         c=term2TimesOneOverMaxdLpOneOverGamma;
+<a name="l00166"></a>00166     }
+<a name="l00167"></a>00167 <span class="keyword">private</span>:
+<a name="l00168"></a>00168     <span class="comment">// The global luminance scaling</span>
+<a name="l00169"></a>00169     <span class="keywordtype">float</span> inputScale;
+<a name="l00170"></a>00170     <span class="keywordtype">float</span> lnInputScale;     <span class="comment">// std::log(inputScale)</span>
+<a name="l00171"></a>00171     
+<a name="l00172"></a>00172     <span class="keywordtype">float</span> Lda;      <span class="comment">// Display luminance adaptation (in cd/m^2)</span>
+<a name="l00173"></a>00173     <span class="keywordtype">float</span> Lwa;      <span class="comment">// World   luminance adaptation (in cd/m^2)</span>
+<a name="l00174"></a>00174     <span class="keywordtype">float</span> oneOverMaxdL; <span class="comment">// 1 / Display maximum luminance (in cd/m^2)</span>
+<a name="l00175"></a>00175     <span class="keywordtype">float</span> lnOneOverMaxdL; <span class="comment">// log(oneOverMaxdL)</span>
+<a name="l00176"></a>00176     <span class="keywordtype">float</span> oneOverGamma; <span class="comment">// 1 / Screen gamma value</span>
+<a name="l00177"></a>00177 
+<a name="l00178"></a>00178     <span class="comment">// Precomputed variables</span>
+<a name="l00179"></a>00179     <span class="keywordtype">float</span> alphaDa;
+<a name="l00180"></a>00180     <span class="keywordtype">float</span> betaDa;
+<a name="l00181"></a>00181     <span class="keywordtype">float</span> alphaWa;
+<a name="l00182"></a>00182     <span class="keywordtype">float</span> betaWa;
+<a name="l00183"></a>00183     <span class="keywordtype">float</span> alphaWaOverAlphaDa;
+<a name="l00184"></a>00184     <span class="keywordtype">float</span> term2;
+<a name="l00185"></a>00185     <span class="keywordtype">float</span> lnTerm2;  <span class="comment">// log(term2)</span>
+<a name="l00186"></a>00186     
+<a name="l00187"></a>00187     <span class="keywordtype">float</span> term2TimesOneOverMaxdLpOneOverGamma;
+<a name="l00188"></a>00188 };
+<a name="l00189"></a>00189 
+<a name="l00190"></a>00190 <span class="preprocessor">#endif // _STELTONEREPRODUCER_HPP_</span>
+<a name="l00191"></a>00191 <span class="preprocessor"></span>
 </pre></div></div>
-<hr class="footer"/><address style="text-align: right;"><small>Generated on Fri Aug 31 18:07:48 2012 for Stellarium by&nbsp;
+<hr class="footer"/><address style="text-align: right;"><small>Generated on Sat Sep 15 13:01:11 2012 for Stellarium by&nbsp;
 <a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.6.3 </small></address>
 </body>

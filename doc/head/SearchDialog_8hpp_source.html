@@ -85,61 +85,75 @@
 <a name="l00058"></a>00058     QStringList values;
 <a name="l00059"></a>00059 };
 <a name="l00060"></a>00060 
-<a name="l00063"></a><a class="code" href="classSearchDialog.html">00063</a> <span class="keyword">class </span><a class="code" href="classSearchDialog.html" title="The sky object search dialog.">SearchDialog</a> : <span class="keyword">public</span> <a class="code" href="classStelDialog.html" title="Base class for all the GUI windows in Stellarium.">StelDialog</a>
-<a name="l00064"></a>00064 {
-<a name="l00065"></a>00065     Q_OBJECT
-<a name="l00066"></a>00066 
-<a name="l00067"></a>00067 <span class="keyword">public</span>:
-<a name="l00068"></a>00068     <a class="code" href="classSearchDialog.html" title="The sky object search dialog.">SearchDialog</a>();
-<a name="l00069"></a>00069     <span class="keyword">virtual</span> ~<a class="code" href="classSearchDialog.html" title="The sky object search dialog.">SearchDialog</a>();
-<a name="l00071"></a>00071     <span class="keywordtype">void</span> <a class="code" href="classSearchDialog.html#a1a18dea78a5bdaaa4717cbfe3c2cfa94" title="Notify that the application style changed.">styleChanged</a>();
-<a name="l00072"></a>00072     <span class="keywordtype">bool</span> eventFilter(QObject *<span class="keywordtype">object</span>, QEvent *event);
-<a name="l00073"></a>00073     
-<a name="l00074"></a>00074 <span class="keyword">public</span> slots:
-<a name="l00075"></a>00075     <span class="keywordtype">void</span> <a class="code" href="classSearchDialog.html#a04d9ea25cf372bc6e9cbee20e770e2d3" title="Retranslate the content of the dialog.">retranslate</a>();
-<a name="l00077"></a>00077     <span class="keywordtype">void</span> <a class="code" href="classSearchDialog.html#abbbe95f11e42133bfcade6ef8fd28806" title="Add auto focus of the edit line.">setVisible</a>(<span class="keywordtype">bool</span>);
-<a name="l00079"></a>00079     <span class="keywordtype">void</span> <a class="code" href="classSearchDialog.html#a2ab55d2d41813aa6b89f73caf760c742" title="This style only displays the text search field and the search button.">setSimpleStyle</a>();
-<a name="l00080"></a>00080 
-<a name="l00081"></a>00081 <span class="keyword">protected</span>:
-<a name="l00082"></a>00082     Ui_searchDialogForm* ui;
-<a name="l00084"></a>00084     <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classSearchDialog.html#ac556dd51516f58d2792731f4f23aa6ea" title="Initialize the dialog widgets and connect the signals/slots.">createDialogContent</a>();
-<a name="l00085"></a>00085 
-<a name="l00086"></a>00086 <span class="keyword">private</span> slots:
-<a name="l00087"></a>00087     <span class="keywordtype">void</span> greekLetterClicked();
-<a name="l00089"></a>00089     <span class="keywordtype">void</span> onSimbadStatusChanged();
-<a name="l00091"></a>00091     <span class="keywordtype">void</span> onSearchTextChanged(<span class="keyword">const</span> QString&amp; text);
-<a name="l00092"></a>00092     
-<a name="l00093"></a>00093     <span class="keywordtype">void</span> gotoObject();
+<a name="l00061"></a><a class="code" href="classSearchDialog.html">00061</a> QT_FORWARD_DECLARE_CLASS(QListWidgetItem)
+<a name="l00062"></a>00062 
+<a name="l00063"></a>00063 
+<a name="l00064"></a>00064 
+<a name="l00065"></a>00065 class <a class="code" href="classSearchDialog.html" title="The sky object search dialog.">SearchDialog</a> : public <a class="code" href="classStelDialog.html" title="Base class for all the GUI windows in Stellarium.">StelDialog</a>
+<a name="l00066"></a>00066 {
+<a name="l00067"></a>00067     Q_OBJECT
+<a name="l00068"></a>00068 
+<a name="l00069"></a>00069 <span class="keyword">public</span>:
+<a name="l00070"></a>00070     <a class="code" href="classSearchDialog.html" title="The sky object search dialog.">SearchDialog</a>();
+<a name="l00071"></a>00071     <span class="keyword">virtual</span> ~<a class="code" href="classSearchDialog.html" title="The sky object search dialog.">SearchDialog</a>();
+<a name="l00073"></a>00073     <span class="keywordtype">void</span> styleChanged();
+<a name="l00074"></a>00074     <span class="keywordtype">bool</span> eventFilter(QObject *<span class="keywordtype">object</span>, QEvent *event);
+<a name="l00075"></a>00075     
+<a name="l00076"></a>00076 <span class="keyword">public</span> slots:
+<a name="l00077"></a>00077     <span class="keywordtype">void</span> retranslate();
+<a name="l00079"></a>00079     <span class="keywordtype">void</span> setVisible(<span class="keywordtype">bool</span>);
+<a name="l00081"></a>00081     <span class="keywordtype">void</span> setSimpleStyle();
+<a name="l00082"></a>00082 
+<a name="l00083"></a>00083 <span class="keyword">protected</span>:
+<a name="l00084"></a>00084     Ui_searchDialogForm* ui;
+<a name="l00086"></a>00086     <span class="keyword">virtual</span> <span class="keywordtype">void</span> createDialogContent();
+<a name="l00087"></a>00087 
+<a name="l00088"></a>00088 <span class="keyword">private</span> slots:
+<a name="l00089"></a>00089     <span class="keywordtype">void</span> greekLetterClicked();
+<a name="l00091"></a>00091     <span class="keywordtype">void</span> onSimbadStatusChanged();
+<a name="l00093"></a>00093     <span class="keywordtype">void</span> onSearchTextChanged(<span class="keyword">const</span> QString&amp; text);
 <a name="l00094"></a>00094     
-<a name="l00096"></a>00096     <span class="keywordtype">void</span> manualPositionChanged();
-<a name="l00097"></a>00097 
-<a name="l00099"></a>00099     <span class="keywordtype">void</span> enableSimbadSearch(<span class="keywordtype">bool</span> enable);
-<a name="l00100"></a>00100 
-<a name="l00102"></a>00102     <span class="keywordtype">void</span> setHasSelectedFlag();
-<a name="l00103"></a>00103 
-<a name="l00105"></a>00105     <span class="keywordtype">void</span> selectSimbadServer(<span class="keywordtype">int</span> index);
-<a name="l00106"></a>00106 
-<a name="l00107"></a>00107 <span class="keyword">private</span>:
-<a name="l00108"></a>00108     <span class="keyword">class </span><a class="code" href="classSimbadSearcher.html" title="Provides lookup features into the online Simbad service from CDS.">SimbadSearcher</a>* simbadSearcher;
-<a name="l00109"></a>00109     <span class="keyword">class </span><a class="code" href="classSimbadLookupReply.html" title="Contains all the information about a current simbad lookup query.">SimbadLookupReply</a>* simbadReply;
-<a name="l00110"></a>00110     QMap&lt;QString, Vec3d&gt; simbadResults;
-<a name="l00111"></a>00111     <span class="keyword">class </span><a class="code" href="classStelObjectMgr.html" title="Manage the selection and queries on one or more StelObjects.">StelObjectMgr</a>* objectMgr;
-<a name="l00112"></a>00112     
-<a name="l00113"></a>00113     QString substituteGreek(<span class="keyword">const</span> QString&amp; keyString);
-<a name="l00114"></a>00114     QString getGreekLetterByName(<span class="keyword">const</span> QString&amp; potentialGreekLetterName);
-<a name="l00115"></a>00115     QHash&lt;QString, QString&gt; greekLetters;
-<a name="l00117"></a>00117     <span class="keywordtype">bool</span> flagHasSelectedText;
-<a name="l00118"></a>00118     
-<a name="l00119"></a>00119     <span class="keywordtype">bool</span> useSimbad;
-<a name="l00121"></a>00121     QString simbadServerUrl;
-<a name="l00122"></a>00122     <span class="keywordtype">void</span> populateSimbadServerList();
-<a name="l00124"></a>00124     <span class="keyword">static</span> <span class="keyword">const</span> <span class="keywordtype">char</span>* DEF_SIMBAD_URL;
-<a name="l00125"></a>00125 };
-<a name="l00126"></a>00126 
-<a name="l00127"></a>00127 <span class="preprocessor">#endif // _SEARCHDIALOG_HPP_</span>
-<a name="l00128"></a>00128 <span class="preprocessor"></span>
+<a name="l00095"></a>00095     <span class="keywordtype">void</span> gotoObject();
+<a name="l00096"></a>00096     <span class="keywordtype">void</span> gotoObject(<span class="keyword">const</span> QString&amp; nameI18n);
+<a name="l00097"></a>00097     <span class="comment">// for going from list views</span>
+<a name="l00098"></a>00098     <span class="keywordtype">void</span> gotoObject(QListWidgetItem* item);
+<a name="l00099"></a>00099 
+<a name="l00100"></a>00100     <span class="keywordtype">void</span> searchListChanged(<span class="keyword">const</span> QString&amp; newText);
+<a name="l00101"></a>00101     
+<a name="l00103"></a>00103     <span class="keywordtype">void</span> manualPositionChanged();
+<a name="l00104"></a>00104 
+<a name="l00106"></a>00106     <span class="keywordtype">void</span> enableSimbadSearch(<span class="keywordtype">bool</span> enable);
+<a name="l00107"></a>00107 
+<a name="l00109"></a>00109     <span class="keywordtype">void</span> setHasSelectedFlag();
+<a name="l00110"></a>00110 
+<a name="l00112"></a>00112     <span class="keywordtype">void</span> selectSimbadServer(<span class="keywordtype">int</span> index);
+<a name="l00113"></a>00113 
+<a name="l00115"></a>00115     <span class="keywordtype">void</span> updateListWidget(<span class="keywordtype">int</span> index);
+<a name="l00116"></a>00116 
+<a name="l00117"></a>00117     <span class="comment">// retranslate/recreate tab</span>
+<a name="l00118"></a>00118     <span class="keywordtype">void</span> updateListTab();
+<a name="l00119"></a>00119 
+<a name="l00120"></a>00120 <span class="keyword">private</span>:
+<a name="l00121"></a>00121     <span class="keyword">class </span><a class="code" href="classSimbadSearcher.html" title="Provides lookup features into the online Simbad service from CDS.">SimbadSearcher</a>* simbadSearcher;
+<a name="l00122"></a>00122     <span class="keyword">class </span><a class="code" href="classSimbadLookupReply.html" title="Contains all the information about a current simbad lookup query.">SimbadLookupReply</a>* simbadReply;
+<a name="l00123"></a>00123     QMap&lt;QString, Vec3d&gt; simbadResults;
+<a name="l00124"></a>00124     <span class="keyword">class </span><a class="code" href="classStelObjectMgr.html" title="Manage the selection and queries on one or more StelObjects.">StelObjectMgr</a>* objectMgr;
+<a name="l00125"></a>00125     
+<a name="l00126"></a>00126     QString substituteGreek(<span class="keyword">const</span> QString&amp; keyString);
+<a name="l00127"></a>00127     QString getGreekLetterByName(<span class="keyword">const</span> QString&amp; potentialGreekLetterName);
+<a name="l00128"></a>00128     QHash&lt;QString, QString&gt; greekLetters;
+<a name="l00130"></a>00130     <span class="keywordtype">bool</span> flagHasSelectedText;
+<a name="l00131"></a>00131     
+<a name="l00132"></a>00132     <span class="keywordtype">bool</span> useSimbad;
+<a name="l00134"></a>00134     QString simbadServerUrl;
+<a name="l00135"></a>00135     <span class="keywordtype">void</span> populateSimbadServerList();
+<a name="l00137"></a>00137     <span class="keyword">static</span> <span class="keyword">const</span> <span class="keywordtype">char</span>* DEF_SIMBAD_URL;
+<a name="l00138"></a>00138 };
+<a name="l00139"></a>00139 
+<a name="l00140"></a>00140 <span class="preprocessor">#endif // _SEARCHDIALOG_HPP_</span>
+<a name="l00141"></a>00141 <span class="preprocessor"></span>
 </pre></div></div>
-<hr class="footer"/><address style="text-align: right;"><small>Generated on Fri Aug 31 18:07:49 2012 for Stellarium by&nbsp;
+<hr class="footer"/><address style="text-align: right;"><small>Generated on Sat Sep 15 13:01:11 2012 for Stellarium by&nbsp;
 <a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.6.3 </small></address>
 </body>

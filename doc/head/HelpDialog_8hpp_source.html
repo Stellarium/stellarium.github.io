@@ -68,47 +68,38 @@
 <a name="l00038"></a>00038     <a class="code" href="classHelpDialog.html">HelpDialog</a>();
 <a name="l00039"></a>00039     ~<a class="code" href="classHelpDialog.html">HelpDialog</a>();
 <a name="l00040"></a>00040 
-<a name="l00052"></a>00052     <span class="keywordtype">void</span> <a class="code" href="classHelpDialog.html#a9eb0cc29f4525e90c3f82fa9b5d95981" title="Set a key and description.">setKey</a>(QString group, QString oldKey, QString newKey, QString description);
+<a name="l00042"></a>00042     <span class="keywordtype">void</span> <a class="code" href="classHelpDialog.html#ab70075f0e00940f04e4f6721d66b725e" title="Notify that the application style changed.">styleChanged</a>();
+<a name="l00043"></a>00043 
+<a name="l00044"></a>00044 <span class="keyword">public</span> slots:
+<a name="l00045"></a>00045     <span class="keywordtype">void</span> <a class="code" href="classHelpDialog.html#a25163539da6078d3e85e1c52155b1f32" title="Retranslate the content of the dialog.">retranslate</a>();
+<a name="l00046"></a>00046     <span class="keywordtype">void</span> updateIconsColor();
+<a name="l00047"></a>00047 
+<a name="l00048"></a>00048 <span class="keyword">protected</span>:
+<a name="l00050"></a>00050     <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classHelpDialog.html#aa89aa50797bb7c499b69c215105f61e4" title="Initialize the dialog widgets and connect the signals/slots.">createDialogContent</a>();
+<a name="l00051"></a>00051 
+<a name="l00052"></a>00052     Ui_helpDialogForm* ui;
 <a name="l00053"></a>00053 
-<a name="l00054"></a>00054 
-<a name="l00056"></a>00056     <span class="keywordtype">void</span> <a class="code" href="classHelpDialog.html#ab70075f0e00940f04e4f6721d66b725e" title="Notify that the application style changed.">styleChanged</a>();
-<a name="l00057"></a>00057 
-<a name="l00058"></a>00058 <span class="keyword">public</span> slots:
-<a name="l00059"></a>00059     <span class="keywordtype">void</span> <a class="code" href="classHelpDialog.html#a25163539da6078d3e85e1c52155b1f32" title="Retranslate the content of the dialog.">retranslate</a>();
-<a name="l00060"></a>00060     <span class="keywordtype">void</span> updateIconsColor();
+<a name="l00054"></a>00054 <span class="keyword">private</span> slots:
+<a name="l00057"></a>00057     <span class="keywordtype">void</span> updateLog(<span class="keywordtype">int</span>);
+<a name="l00058"></a>00058 
+<a name="l00060"></a>00060     <span class="keywordtype">void</span> refreshLog();
 <a name="l00061"></a>00061 
-<a name="l00062"></a>00062 <span class="keyword">protected</span>:
-<a name="l00064"></a>00064     <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classHelpDialog.html#aa89aa50797bb7c499b69c215105f61e4" title="Initialize the dialog widgets and connect the signals/slots.">createDialogContent</a>();
-<a name="l00065"></a>00065 
-<a name="l00066"></a>00066     Ui_helpDialogForm* ui;
+<a name="l00062"></a>00062     <span class="keywordtype">void</span> changePage(QListWidgetItem *current, QListWidgetItem *previous);
+<a name="l00063"></a>00063 
+<a name="l00064"></a>00064 <span class="keyword">private</span>:
+<a name="l00066"></a>00066     QString getHelpText(<span class="keywordtype">void</span>);
 <a name="l00067"></a>00067 
-<a name="l00068"></a>00068 <span class="keyword">private</span> slots:
-<a name="l00071"></a>00071     <span class="keywordtype">void</span> updateLog(<span class="keywordtype">int</span>);
-<a name="l00072"></a>00072 
-<a name="l00074"></a>00074     <span class="keywordtype">void</span> refreshLog();
-<a name="l00075"></a>00075 
-<a name="l00076"></a>00076     <span class="keywordtype">void</span> changePage(QListWidgetItem *current, QListWidgetItem *previous);
-<a name="l00077"></a>00077 
-<a name="l00078"></a>00078 <span class="keyword">private</span>:
-<a name="l00080"></a>00080     QString getHeaderText(<span class="keywordtype">void</span>);
-<a name="l00081"></a>00081 
-<a name="l00083"></a>00083     QString getFooterText(<span class="keywordtype">void</span>);
-<a name="l00084"></a>00084 
-<a name="l00087"></a>00087     <span class="keywordtype">void</span> updateText(<span class="keywordtype">void</span>);
-<a name="l00088"></a>00088 
-<a name="l00092"></a>00092     QMultiMap&lt;QString, QPair&lt;QString, QString&gt; &gt; keyData;
-<a name="l00093"></a>00093 
-<a name="l00095"></a>00095     QHash&lt;QString, QString&gt; specialKeys;
-<a name="l00096"></a>00096 
-<a name="l00100"></a>00100     <span class="keyword">static</span> <span class="keywordtype">bool</span> helpItemSort(<span class="keyword">const</span> QPair&lt;QString, QString&gt;&amp; p1, <span class="keyword">const</span> QPair&lt;QString, QString&gt;&amp; p2);
-<a name="l00101"></a>00101 
-<a name="l00103"></a>00103     <span class="keyword">static</span> <span class="keywordtype">bool</span> helpGroupSort(<span class="keyword">const</span> QString&amp; s1, <span class="keyword">const</span> QString&amp; s2);
-<a name="l00104"></a>00104 };
-<a name="l00105"></a>00105 
-<a name="l00106"></a>00106 <span class="preprocessor">#endif </span><span class="comment">/*_HELPDIALOG_HPP_*/</span>
-<a name="l00107"></a>00107 
+<a name="l00070"></a>00070     <span class="keywordtype">void</span> updateText(<span class="keywordtype">void</span>);
+<a name="l00071"></a>00071 
+<a name="l00075"></a>00075     <span class="keyword">static</span> <span class="keywordtype">bool</span> helpItemSort(<span class="keyword">const</span> QPair&lt;QString, QString&gt;&amp; p1, <span class="keyword">const</span> QPair&lt;QString, QString&gt;&amp; p2);
+<a name="l00076"></a>00076 
+<a name="l00078"></a>00078     <span class="keyword">static</span> <span class="keywordtype">bool</span> helpGroupSort(<span class="keyword">const</span> QString&amp; s1, <span class="keyword">const</span> QString&amp; s2);
+<a name="l00079"></a>00079 };
+<a name="l00080"></a>00080 
+<a name="l00081"></a>00081 <span class="preprocessor">#endif </span><span class="comment">/*_HELPDIALOG_HPP_*/</span>
+<a name="l00082"></a>00082 
 </pre></div></div>
-<hr class="footer"/><address style="text-align: right;"><small>Generated on Fri Aug 31 18:07:49 2012 for Stellarium by&nbsp;
+<hr class="footer"/><address style="text-align: right;"><small>Generated on Sat Sep 15 13:01:11 2012 for Stellarium by&nbsp;
 <a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.6.3 </small></address>
 </body>

@@ -100,9 +100,8 @@
 <tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Set stencil test mode.  <a href="#a14c566946971937c4be5e97cf336c9f3"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classStelRenderer.html#afea8473fd7b4877d40fb6a79e387822b">swapBuffers</a> ()=0</td></tr>
 <tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Swap front and back buffers.  <a href="#afea8473fd7b4877d40fb6a79e387822b"></a><br/></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">virtual const QMap&lt; QString, <br class="typebreak"/>
-double &gt; &amp;&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classStelRenderer.html#a7bd178aaf7bdd6b4e7fbef8cb7eb492e">getStatistics</a> () const =0</td></tr>
-<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Get collected statistics data.  <a href="#a7bd178aaf7bdd6b4e7fbef8cb7eb492e"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="classStelRendererStatistics.html">StelRendererStatistics</a> &amp;&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classStelRenderer.html#ae2653097bc6da56c3507742ddf58424b">getStatistics</a> ()=0</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Access statistics data.  <a href="#ae2653097bc6da56c3507742ddf58424b"></a><br/></td></tr>
 <tr><td colspan="2"><h2>Protected Member Functions</h2></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="classStelVertexBufferBackend.html">StelVertexBufferBackend</a> *&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classStelRenderer.html#aac066b60608fbc338e7449e309dbcc39">createVertexBufferBackend</a> (const PrimitiveType primitiveType, const QVector&lt; <a class="el" href="structStelVertexAttribute.html">StelVertexAttribute</a> &gt; &amp;attributes)=0</td></tr>
 <tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Create a vertex buffer backend.  <a href="#aac066b60608fbc338e7449e309dbcc39"></a><br/></td></tr>
@@ -126,7 +125,7 @@ double &gt; &amp;&nbsp;</td><td class="memItemRight" valign="bottom"><a class="e
 <p>Handles all drawing functionality.</p>
 <dl class="note"><dt><b>Note:</b></dt><dd>This is an interface. It should have only functions, no data members, as it might be used in multiple inheritance. </dd></dl>
 
-<p>Definition at line <a class="el" href="StelRenderer_8hpp_source.html#l00247">247</a> of file <a class="el" href="StelRenderer_8hpp_source.html">StelRenderer.hpp</a>.</p>
+<p>Definition at line <a class="el" href="StelRenderer_8hpp_source.html#l00248">248</a> of file <a class="el" href="StelRenderer_8hpp_source.html">StelRenderer.hpp</a>.</p>
 <hr/><h2>Constructor &amp; Destructor Documentation</h2>
 <a class="anchor" id="a7e93fc36845699a0533e17b3d6d3888d"></a><!-- doxytag: member="StelRenderer::~StelRenderer" ref="a7e93fc36845699a0533e17b3d6d3888d" args="()" -->
 <div class="memitem">
@@ -145,7 +144,7 @@ double &gt; &amp;&nbsp;</td><td class="memItemRight" valign="bottom"><a class="e
 
 <p>Destructor. </p>
 
-<p>Definition at line <a class="el" href="StelRenderer_8hpp_source.html#l00253">253</a> of file <a class="el" href="StelRenderer_8hpp_source.html">StelRenderer.hpp</a>.</p>
+<p>Definition at line <a class="el" href="StelRenderer_8hpp_source.html#l00254">254</a> of file <a class="el" href="StelRenderer_8hpp_source.html">StelRenderer.hpp</a>.</p>
 
 </div>
 </div>
@@ -272,7 +271,7 @@ double &gt; &amp;&nbsp;</td><td class="memItemRight" valign="bottom"><a class="e
 
 <p>Reimplemented in <a class="el" href="classStelQGL1Renderer.html#ae803720db5a16b44444f49dba24d81e6">StelQGL1Renderer</a>, and <a class="el" href="classStelQGL2Renderer.html#a55e7bf44e0629b72c97e3bce44f264b8">StelQGL2Renderer</a>.</p>
 
-<p>Definition at line <a class="el" href="StelRenderer_8hpp_source.html#l00570">570</a> of file <a class="el" href="StelRenderer_8hpp_source.html">StelRenderer.hpp</a>.</p>
+<p>Definition at line <a class="el" href="StelRenderer_8hpp_source.html#l00571">571</a> of file <a class="el" href="StelRenderer_8hpp_source.html">StelRenderer.hpp</a>.</p>
 
 </div>
 </div>
@@ -353,7 +352,7 @@ double &gt; &amp;&nbsp;</td><td class="memItemRight" valign="bottom"><a class="e
 <dl class="return"><dt><b>Returns:</b></dt><dd>New texture.</dd></dl>
 <dl class="note"><dt><b>Note:</b></dt><dd>Some renderer backends only support textures with power of two dimensions (e.g. 512x512 or 2048x256). On these backends, loading a texture with non-power-of-two dimensions will fail and result in a <a class="el" href="classStelTextureNew.html" title="Texture interface.">StelTextureNew</a> with status of TextureStatus_Error. </dd></dl>
 
-<p>Definition at line <a class="el" href="StelRenderer_8hpp_source.html#l00536">536</a> of file <a class="el" href="StelRenderer_8hpp_source.html">StelRenderer.hpp</a>.</p>
+<p>Definition at line <a class="el" href="StelRenderer_8hpp_source.html#l00537">537</a> of file <a class="el" href="StelRenderer_8hpp_source.html">StelRenderer.hpp</a>.</p>
 
 </div>
 </div>
@@ -396,7 +395,7 @@ double &gt; &amp;&nbsp;</td><td class="memItemRight" valign="bottom"><a class="e
 <dl class="return"><dt><b>Returns:</b></dt><dd>New texture.</dd></dl>
 <dl class="note"><dt><b>Note:</b></dt><dd>Some renderer backends only support textures with power of two dimensions (e.g. 512x512 or 2048x256). On these backends, loading a texture with non-power-of-two dimensions will fail and result in a <a class="el" href="classStelTextureNew.html" title="Texture interface.">StelTextureNew</a> with status of TextureStatus_Error. </dd></dl>
 
-<p>Definition at line <a class="el" href="StelRenderer_8hpp_source.html#l00499">499</a> of file <a class="el" href="StelRenderer_8hpp_source.html">StelRenderer.hpp</a>.</p>
+<p>Definition at line <a class="el" href="StelRenderer_8hpp_source.html#l00500">500</a> of file <a class="el" href="StelRenderer_8hpp_source.html">StelRenderer.hpp</a>.</p>
 
 </div>
 </div>
@@ -445,7 +444,7 @@ double &gt; &amp;&nbsp;</td><td class="memItemRight" valign="bottom"><a class="e
 <dl class="return"><dt><b>Returns:</b></dt><dd>New texture.</dd></dl>
 <dl class="note"><dt><b>Note:</b></dt><dd>Some renderer backends only support textures with power of two dimensions (e.g. 512x512 or 2048x256). On these backends, loading a texture with non-power-of-two dimensions will fail and result in a <a class="el" href="classStelTextureNew.html" title="Texture interface.">StelTextureNew</a> with status of TextureStatus_Error. </dd></dl>
 
-<p>Definition at line <a class="el" href="StelRenderer_8hpp_source.html#l00460">460</a> of file <a class="el" href="StelRenderer_8hpp_source.html">StelRenderer.hpp</a>.</p>
+<p>Definition at line <a class="el" href="StelRenderer_8hpp_source.html#l00461">461</a> of file <a class="el" href="StelRenderer_8hpp_source.html">StelRenderer.hpp</a>.</p>
 
 </div>
 </div>
@@ -600,7 +599,7 @@ template&lt;class V &gt; </div>
 </dl>
 <dl class="return"><dt><b>Returns:</b></dt><dd>New vertex buffer storing vertices of type V. </dd></dl>
 
-<p>Definition at line <a class="el" href="StelRenderer_8hpp_source.html#l00282">282</a> of file <a class="el" href="StelRenderer_8hpp_source.html">StelRenderer.hpp</a>.</p>
+<p>Definition at line <a class="el" href="StelRenderer_8hpp_source.html#l00283">283</a> of file <a class="el" href="StelRenderer_8hpp_source.html">StelRenderer.hpp</a>.</p>
 
 </div>
 </div>
@@ -931,7 +930,7 @@ template&lt;class V &gt; </div>
 </dl>
 <dl class="note"><dt><b>Note:</b></dt><dd>When drawing with a custom <a class="el" href="classStelProjector.html" title="Provide the main interface to all operations of projecting coordinates from sky to...">StelProjector</a> only 3D vertex positions are supported. </dd></dl>
 
-<p>Definition at line <a class="el" href="StelRenderer_8hpp_source.html#l00343">343</a> of file <a class="el" href="StelRenderer_8hpp_source.html">StelRenderer.hpp</a>.</p>
+<p>Definition at line <a class="el" href="StelRenderer_8hpp_source.html#l00344">344</a> of file <a class="el" href="StelRenderer_8hpp_source.html">StelRenderer.hpp</a>.</p>
 
 </div>
 </div>
@@ -986,7 +985,7 @@ template&lt;class V &gt; </div>
 </dl>
 <dl class="note"><dt><b>Note:</b></dt><dd>When drawing with a custom <a class="el" href="classStelProjector.html" title="Provide the main interface to all operations of projecting coordinates from sky to...">StelProjector</a> only 3D vertex positions are supported. </dd></dl>
 
-<p>Definition at line <a class="el" href="StelRenderer_8hpp_source.html#l00310">310</a> of file <a class="el" href="StelRenderer_8hpp_source.html">StelRenderer.hpp</a>.</p>
+<p>Definition at line <a class="el" href="StelRenderer_8hpp_source.html#l00311">311</a> of file <a class="el" href="StelRenderer_8hpp_source.html">StelRenderer.hpp</a>.</p>
 
 </div>
 </div>
@@ -1035,25 +1034,26 @@ template&lt;class V &gt; </div>
 
 </div>
 </div>
-<a class="anchor" id="a7bd178aaf7bdd6b4e7fbef8cb7eb492e"></a><!-- doxytag: member="StelRenderer::getStatistics" ref="a7bd178aaf7bdd6b4e7fbef8cb7eb492e" args="() const =0" -->
+<a class="anchor" id="ae2653097bc6da56c3507742ddf58424b"></a><!-- doxytag: member="StelRenderer::getStatistics" ref="ae2653097bc6da56c3507742ddf58424b" args="()=0" -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">virtual const QMap&lt;QString, double&gt;&amp; StelRenderer::getStatistics </td>
+          <td class="memname">virtual <a class="el" href="classStelRendererStatistics.html">StelRendererStatistics</a>&amp; StelRenderer::getStatistics </td>
           <td>(</td>
           <td class="paramname"></td>
           <td>&nbsp;)&nbsp;</td>
-          <td> const<code> [pure virtual]</code></td>
+          <td><code> [pure virtual]</code></td>
         </tr>
       </table>
 </div>
 <div class="memdoc">
 
-<p>Get collected statistics data. </p>
-<p>Contents are backend specific - might include thing like vertices per frame, estimated texture memory, etc. . </p>
+<p>Access statistics data. </p>
+<p>Contents are backend specific - might include thing like vertices per frame, estimated texture memory, etc. .</p>
+<p>User code might add its own statistics as well (e.g. <a class="el" href="classStelSkyDrawer.html" title="Provide a set of methods used to draw sky objects taking into account eyes adaptation...">StelSkyDrawer</a>). </p>
 
-<p>Implemented in <a class="el" href="classStelQGLRenderer.html#a092593688677b59781bad895ca13eb41">StelQGLRenderer</a>.</p>
+<p>Implemented in <a class="el" href="classStelQGLRenderer.html#a7af017729278c7724911d78c9ddb13e4">StelQGLRenderer</a>.</p>
 
 </div>
 </div>
@@ -1097,7 +1097,7 @@ template&lt;class V &gt; </div>
 <dl class="note"><dt><b>Note:</b></dt><dd>Since some backends only support textures with power of two dimensions, the returned texture might be larger than the viewport in which case only the part of the texture matching viewport size (returned by getViewportSize) will be taken up by the viewport.</dd></dl>
 <dl class="return"><dt><b>Returns:</b></dt><dd>Viewport texture. </dd></dl>
 
-<p>Definition at line <a class="el" href="StelRenderer_8hpp_source.html#l00560">560</a> of file <a class="el" href="StelRenderer_8hpp_source.html">StelRenderer.hpp</a>.</p>
+<p>Definition at line <a class="el" href="StelRenderer_8hpp_source.html#l00561">561</a> of file <a class="el" href="StelRenderer_8hpp_source.html">StelRenderer.hpp</a>.</p>
 
 </div>
 </div>
@@ -1352,7 +1352,7 @@ template&lt;class V &gt; </div>
 <p>setGlobalColor overload specifying color channels directly instead of through Vec4f. </p>
 <dl class="see"><dt><b>See also:</b></dt><dd><a class="el" href="classStelRenderer.html#a89005c9f1e22bbd5cf58839026168e27" title="Set the global vertex color.">setGlobalColor</a> </dd></dl>
 
-<p>Definition at line <a class="el" href="StelRenderer_8hpp_source.html#l00601">601</a> of file <a class="el" href="StelRenderer_8hpp_source.html">StelRenderer.hpp</a>.</p>
+<p>Definition at line <a class="el" href="StelRenderer_8hpp_source.html#l00602">602</a> of file <a class="el" href="StelRenderer_8hpp_source.html">StelRenderer.hpp</a>.</p>
 
 </div>
 </div>
@@ -1453,7 +1453,7 @@ template&lt;class V &gt; </div>
 <li>core/renderer/<a class="el" href="StelRenderer_8hpp_source.html">StelRenderer.hpp</a></li>
 </ul>
 </div>
-<hr class="footer"/><address style="text-align: right;"><small>Generated on Fri Aug 31 18:08:02 2012 for Stellarium by&nbsp;
+<hr class="footer"/><address style="text-align: right;"><small>Generated on Sat Sep 15 13:01:15 2012 for Stellarium by&nbsp;
 <a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.6.3 </small></address>
 </body>

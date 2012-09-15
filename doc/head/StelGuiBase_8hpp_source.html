@@ -72,36 +72,32 @@
 <a name="l00046"></a>00046 
 <a name="l00050"></a>00050     <span class="keyword">virtual</span> <span class="keyword">class </span>QProgressBar* <a class="code" href="classStelGuiBase.html#a6d01c1e640a1363d2b43159d6cae605f" title="Add a new progress bar in the lower right corner of the screen.">addProgressBar</a>() =0;
 <a name="l00051"></a>00051 
-<a name="l00060"></a>00060     <span class="keyword">virtual</span> QAction* <a class="code" href="classStelGuiBase.html#a61f5d9c4c5dc757583bc6b8b03b1373e" title="Add a new action managed by the GUI.">addGuiActions</a>(<span class="keyword">const</span> QString&amp; actionName, <span class="keyword">const</span> QString&amp; text, <span class="keyword">const</span> QString&amp; shortCut, <span class="keyword">const</span> QString&amp; helpGroup, <span class="keywordtype">bool</span> checkable=<span class="keyword">true</span>, <span class="keywordtype">bool</span> autoRepeat=<span class="keyword">false</span>, <span class="keywordtype">bool</span> global=<span class="keyword">false</span>);
-<a name="l00061"></a>00061 
-<a name="l00065"></a>00065     <span class="keyword">virtual</span> QAction* <a class="code" href="classStelGuiBase.html#ad87d3277f1468a24cfcc504d6bb34438" title="Get a pointer on an action managed by the GUI.">getGuiActions</a>(<span class="keyword">const</span> QString&amp; actionName);
-<a name="l00066"></a>00066 
-<a name="l00067"></a>00067     <span class="keyword">virtual</span> <span class="keywordtype">void</span> forceRefreshGui() {;}
-<a name="l00068"></a>00068 
-<a name="l00071"></a>00071     <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classStelGuiBase.html#af50426c2659c573d573e40309ad35663" title="Show whether the GUI is visible.">setVisible</a>(<span class="keywordtype">bool</span> b) =0;
-<a name="l00073"></a>00073     <span class="keyword">virtual</span> <span class="keywordtype">bool</span> <a class="code" href="classStelGuiBase.html#ab11366695f6d3c5a0c9e19e9b42716e8" title="Get the current visible status of the GUI.">getVisible</a>() <span class="keyword">const</span> =0;
-<a name="l00076"></a>00076     <span class="keyword">virtual</span> <span class="keywordtype">bool</span> <a class="code" href="classStelGuiBase.html#a16fb16099f155e8d7d1b86ebe3b8d391" title="Show wether the Gui is currently used.">isCurrentlyUsed</a>() <span class="keyword">const</span> =0;
-<a name="l00077"></a>00077 
+<a name="l00052"></a>00052     <span class="keyword">virtual</span> <span class="keywordtype">void</span> forceRefreshGui() {;}
+<a name="l00053"></a>00053 
+<a name="l00056"></a>00056     <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classStelGuiBase.html#af50426c2659c573d573e40309ad35663" title="Show whether the GUI is visible.">setVisible</a>(<span class="keywordtype">bool</span> b) =0;
+<a name="l00058"></a>00058     <span class="keyword">virtual</span> <span class="keywordtype">bool</span> <a class="code" href="classStelGuiBase.html#ab11366695f6d3c5a0c9e19e9b42716e8" title="Get the current visible status of the GUI.">getVisible</a>() <span class="keyword">const</span> =0;
+<a name="l00061"></a>00061     <span class="keyword">virtual</span> <span class="keywordtype">bool</span> <a class="code" href="classStelGuiBase.html#a16fb16099f155e8d7d1b86ebe3b8d391" title="Show wether the Gui is currently used.">isCurrentlyUsed</a>() <span class="keyword">const</span> =0;
+<a name="l00062"></a>00062 
+<a name="l00063"></a>00063 
+<a name="l00064"></a>00064 <span class="keyword">protected</span>:
+<a name="l00065"></a>00065     <span class="keyword">class </span><a class="code" href="classStelAppGraphicsWidget.html" title="A QGraphicsWidget encapsulating all the Stellarium main sky view and the embedded...">StelAppGraphicsWidget</a>* stelAppGraphicsWidget;
+<a name="l00067"></a>00067     <span class="keywordtype">void</span> <a class="code" href="classStelGuiBase.html#a8944f5e558e8b8ee167af35e7a554b6c" title="Translate all texts to the new Locale.">updateI18n</a>();
+<a name="l00068"></a>00068     
+<a name="l00069"></a>00069 };
+<a name="l00070"></a>00070 
+<a name="l00074"></a><a class="code" href="classStelGuiPluginInterface.html">00074</a> <span class="keyword">class </span><a class="code" href="classStelGuiPluginInterface.html" title="Define the interface to implement when creating a GUI plugin.">StelGuiPluginInterface</a>
+<a name="l00075"></a>00075 {
+<a name="l00076"></a>00076 <span class="keyword">public</span>:
+<a name="l00077"></a>00077     <span class="keyword">virtual</span> ~<a class="code" href="classStelGuiPluginInterface.html" title="Define the interface to implement when creating a GUI plugin.">StelGuiPluginInterface</a>() {}
 <a name="l00078"></a>00078 
-<a name="l00079"></a>00079 <span class="keyword">protected</span>:
-<a name="l00080"></a>00080     <span class="keyword">class </span><a class="code" href="classStelAppGraphicsWidget.html" title="A QGraphicsWidget encapsulating all the Stellarium main sky view and the embedded...">StelAppGraphicsWidget</a>* stelAppGraphicsWidget;
-<a name="l00082"></a>00082     <span class="keywordtype">void</span> <a class="code" href="classStelGuiBase.html#a8944f5e558e8b8ee167af35e7a554b6c" title="Translate all texts to the new Locale.">updateI18n</a>();
-<a name="l00083"></a>00083     
-<a name="l00084"></a>00084 };
-<a name="l00085"></a>00085 
-<a name="l00089"></a><a class="code" href="classStelGuiPluginInterface.html">00089</a> <span class="keyword">class </span><a class="code" href="classStelGuiPluginInterface.html" title="Define the interface to implement when creating a GUI plugin.">StelGuiPluginInterface</a>
-<a name="l00090"></a>00090 {
-<a name="l00091"></a>00091 <span class="keyword">public</span>:
-<a name="l00092"></a>00092     <span class="keyword">virtual</span> ~<a class="code" href="classStelGuiPluginInterface.html" title="Define the interface to implement when creating a GUI plugin.">StelGuiPluginInterface</a>() {}
-<a name="l00093"></a>00093 
-<a name="l00095"></a>00095     <span class="keyword">virtual</span> <span class="keyword">class </span><a class="code" href="classStelGuiBase.html" title="Abstract class defining the base interface for all GUIs.">StelGuiBase</a>* <a class="code" href="classStelGuiPluginInterface.html#ab5f3d81ae3fe55de677944a7b73d98bd" title="Get the instance of StelGuiBase implmenting the GUI.">getStelGuiBase</a>() <span class="keyword">const</span> = 0;
-<a name="l00096"></a>00096 };
-<a name="l00097"></a>00097 Q_DECLARE_INTERFACE(<a class="code" href="classStelGuiPluginInterface.html" title="Define the interface to implement when creating a GUI plugin.">StelGuiPluginInterface</a>, <span class="stringliteral">&quot;stellarium.StelGuiPluginInterface/1.0&quot;</span>);
-<a name="l00098"></a>00098 
-<a name="l00099"></a>00099 
-<a name="l00100"></a>00100 <span class="preprocessor">#endif // _STELGUIBASE_HPP_</span>
+<a name="l00080"></a>00080     <span class="keyword">virtual</span> <span class="keyword">class </span><a class="code" href="classStelGuiBase.html" title="Abstract class defining the base interface for all GUIs.">StelGuiBase</a>* <a class="code" href="classStelGuiPluginInterface.html#ab5f3d81ae3fe55de677944a7b73d98bd" title="Get the instance of StelGuiBase implmenting the GUI.">getStelGuiBase</a>() <span class="keyword">const</span> = 0;
+<a name="l00081"></a>00081 };
+<a name="l00082"></a>00082 Q_DECLARE_INTERFACE(<a class="code" href="classStelGuiPluginInterface.html" title="Define the interface to implement when creating a GUI plugin.">StelGuiPluginInterface</a>, <span class="stringliteral">&quot;stellarium.StelGuiPluginInterface/1.0&quot;</span>)
+<a name="l00083"></a>00083 
+<a name="l00084"></a>00084 
+<a name="l00085"></a>00085 <span class="preprocessor">#endif // _STELGUIBASE_HPP_</span>
 </pre></div></div>
-<hr class="footer"/><address style="text-align: right;"><small>Generated on Fri Aug 31 18:07:46 2012 for Stellarium by&nbsp;
+<hr class="footer"/><address style="text-align: right;"><small>Generated on Sat Sep 15 13:01:10 2012 for Stellarium by&nbsp;
 <a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.6.3 </small></address>
 </body>

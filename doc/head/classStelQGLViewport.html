@@ -39,8 +39,8 @@
 <tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Construct a <a class="el" href="classStelQGLViewport.html" title="Manages OpenGL viewport.">StelQGLViewport</a> using specified widget.  <a href="#abb6ccb6c7d8df3583d0b4dcebdf39d65"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classStelQGLViewport.html#a3d91ccbf804c05c07d766a9544a415a7">~StelQGLViewport</a> ()</td></tr>
 <tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Destroy the <a class="el" href="classStelQGLViewport.html" title="Manages OpenGL viewport.">StelQGLViewport</a>.  <a href="#a3d91ccbf804c05c07d766a9544a415a7"></a><br/></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classStelQGLViewport.html#a9e8ab4adca4b56802a860844f72858bc">init</a> (const bool npot)</td></tr>
-<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Initialize the viewport.  <a href="#a9e8ab4adca4b56802a860844f72858bc"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classStelQGLViewport.html#ae70fd7c02134d1efdbda8893d18b0b56">init</a> (const bool npot, const QString &amp;glVendor, const QString &amp;glRenderer)</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Initialize the viewport.  <a href="#ae70fd7c02134d1efdbda8893d18b0b56"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">QPaintEngine::Type&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classStelQGLViewport.html#aa31f418123d9f1913a336c8bcfa55fdb">qtPaintEngineType</a> () const </td></tr>
 <tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Get paint engine type used for Qt drawing.  <a href="#aa31f418123d9f1913a336c8bcfa55fdb"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classStelQGLViewport.html#aa2b21163ef7bc689026c7591e39a52c9">viewportHasBeenResized</a> (const QSize newSize)</td></tr>
@@ -155,7 +155,7 @@
 
 <p>Disable Qt painting. </p>
 
-<p>Definition at line <a class="el" href="StelQGLViewport_8hpp_source.html#l00300">300</a> of file <a class="el" href="StelQGLViewport_8hpp_source.html">StelQGLViewport.hpp</a>.</p>
+<p>Definition at line <a class="el" href="StelQGLViewport_8hpp_source.html#l00332">332</a> of file <a class="el" href="StelQGLViewport_8hpp_source.html">StelQGLViewport.hpp</a>.</p>
 
 </div>
 </div>
@@ -176,7 +176,7 @@
 
 <p>Enable Qt painting (with the current default painter, or constructing a fallback if no default). </p>
 
-<p>Definition at line <a class="el" href="StelQGLViewport_8hpp_source.html#l00314">314</a> of file <a class="el" href="StelQGLViewport_8hpp_source.html">StelQGLViewport.hpp</a>.</p>
+<p>Definition at line <a class="el" href="StelQGLViewport_8hpp_source.html#l00346">346</a> of file <a class="el" href="StelQGLViewport_8hpp_source.html">StelQGLViewport.hpp</a>.</p>
 
 </div>
 </div>
@@ -198,7 +198,7 @@
 
 <p>Finish using draw calls. </p>
 
-<p>Definition at line <a class="el" href="StelQGLViewport_8hpp_source.html#l00267">267</a> of file <a class="el" href="StelQGLViewport_8hpp_source.html">StelQGLViewport.hpp</a>.</p>
+<p>Definition at line <a class="el" href="StelQGLViewport_8hpp_source.html#l00299">299</a> of file <a class="el" href="StelQGLViewport_8hpp_source.html">StelQGLViewport.hpp</a>.</p>
 
 </div>
 </div>
@@ -219,7 +219,7 @@
 
 <p>Return the painter currently used to paint, if any. </p>
 
-<p>Definition at line <a class="el" href="StelQGLViewport_8hpp_source.html#l00322">322</a> of file <a class="el" href="StelQGLViewport_8hpp_source.html">StelQGLViewport.hpp</a>.</p>
+<p>Definition at line <a class="el" href="StelQGLViewport_8hpp_source.html#l00354">354</a> of file <a class="el" href="StelQGLViewport_8hpp_source.html">StelQGLViewport.hpp</a>.</p>
 
 </div>
 </div>
@@ -240,7 +240,7 @@
 
 <p>Return current viewport size in pixels. </p>
 
-<p>Definition at line <a class="el" href="StelQGLViewport_8hpp_source.html#l00210">210</a> of file <a class="el" href="StelQGLViewport_8hpp_source.html">StelQGLViewport.hpp</a>.</p>
+<p>Definition at line <a class="el" href="StelQGLViewport_8hpp_source.html#l00242">242</a> of file <a class="el" href="StelQGLViewport_8hpp_source.html">StelQGLViewport.hpp</a>.</p>
 
 </div>
 </div>
@@ -264,7 +264,7 @@
 
 </div>
 </div>
-<a class="anchor" id="a9e8ab4adca4b56802a860844f72858bc"></a><!-- doxytag: member="StelQGLViewport::init" ref="a9e8ab4adca4b56802a860844f72858bc" args="(const bool npot)" -->
+<a class="anchor" id="ae70fd7c02134d1efdbda8893d18b0b56"></a><!-- doxytag: member="StelQGLViewport::init" ref="ae70fd7c02134d1efdbda8893d18b0b56" args="(const bool npot, const QString &amp;glVendor, const QString &amp;glRenderer)" -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
@@ -272,9 +272,24 @@
           <td class="memname">void StelQGLViewport::init </td>
           <td>(</td>
           <td class="paramtype">const bool&nbsp;</td>
-          <td class="paramname"> <em>npot</em></td>
-          <td>&nbsp;)&nbsp;</td>
-          <td><code> [inline]</code></td>
+          <td class="paramname"> <em>npot</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const QString &amp;&nbsp;</td>
+          <td class="paramname"> <em>glVendor</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const QString &amp;&nbsp;</td>
+          <td class="paramname"> <em>glRenderer</em></td><td>&nbsp;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td><td><code> [inline]</code></td>
         </tr>
       </table>
 </div>
@@ -284,11 +299,13 @@
 <dl><dt><b>Parameters:</b></dt><dd>
   <table border="0" cellspacing="2" cellpadding="0">
     <tr><td valign="top"></td><td valign="top"><em>npot</em>&nbsp;</td><td>Are non-power-of-two textures supported? </td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>glVendor</em>&nbsp;</td><td>The GL_VENDOR string (usually specifies the GPU driver). </td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>glRenderer</em>&nbsp;</td><td>The GL_RENDERER string (usually specifies the GPU). </td></tr>
   </table>
   </dd>
 </dl>
 
-<p>Definition at line <a class="el" href="StelQGLViewport_8hpp_source.html#l00141">141</a> of file <a class="el" href="StelQGLViewport_8hpp_source.html">StelQGLViewport.hpp</a>.</p>
+<p>Definition at line <a class="el" href="StelQGLViewport_8hpp_source.html#l00143">143</a> of file <a class="el" href="StelQGLViewport_8hpp_source.html">StelQGLViewport.hpp</a>.</p>
 
 </div>
 </div>
@@ -309,7 +326,7 @@
 
 <p>Code that must run before drawing the final result of the rendering to the viewport. </p>
 
-<p>Definition at line <a class="el" href="StelQGLViewport_8hpp_source.html#l00288">288</a> of file <a class="el" href="StelQGLViewport_8hpp_source.html">StelQGLViewport.hpp</a>.</p>
+<p>Definition at line <a class="el" href="StelQGLViewport_8hpp_source.html#l00320">320</a> of file <a class="el" href="StelQGLViewport_8hpp_source.html">StelQGLViewport.hpp</a>.</p>
 
 </div>
 </div>
@@ -330,7 +347,7 @@
 
 <p>Get paint engine type used for Qt drawing. </p>
 
-<p>Definition at line <a class="el" href="StelQGLViewport_8hpp_source.html#l00152">152</a> of file <a class="el" href="StelQGLViewport_8hpp_source.html">StelQGLViewport.hpp</a>.</p>
+<p>Definition at line <a class="el" href="StelQGLViewport_8hpp_source.html#l00184">184</a> of file <a class="el" href="StelQGLViewport_8hpp_source.html">StelQGLViewport.hpp</a>.</p>
 
 </div>
 </div>
@@ -351,7 +368,7 @@
 
 <p>Grab a screenshot. </p>
 
-<p>Definition at line <a class="el" href="StelQGLViewport_8hpp_source.html#l00203">203</a> of file <a class="el" href="StelQGLViewport_8hpp_source.html">StelQGLViewport.hpp</a>.</p>
+<p>Definition at line <a class="el" href="StelQGLViewport_8hpp_source.html#l00235">235</a> of file <a class="el" href="StelQGLViewport_8hpp_source.html">StelQGLViewport.hpp</a>.</p>
 
 </div>
 </div>
@@ -390,7 +407,7 @@
   </dd>
 </dl>
 
-<p>Definition at line <a class="el" href="StelQGLViewport_8hpp_source.html#l00177">177</a> of file <a class="el" href="StelQGLViewport_8hpp_source.html">StelQGLViewport.hpp</a>.</p>
+<p>Definition at line <a class="el" href="StelQGLViewport_8hpp_source.html#l00209">209</a> of file <a class="el" href="StelQGLViewport_8hpp_source.html">StelQGLViewport.hpp</a>.</p>
 
 </div>
 </div>
@@ -413,7 +430,7 @@
 <p>Set font to use for drawing text. </p>
 <p>Can be only called when Qt painting is enabled. </p>
 
-<p>Definition at line <a class="el" href="StelQGLViewport_8hpp_source.html#l00229">229</a> of file <a class="el" href="StelQGLViewport_8hpp_source.html">StelQGLViewport.hpp</a>.</p>
+<p>Definition at line <a class="el" href="StelQGLViewport_8hpp_source.html#l00261">261</a> of file <a class="el" href="StelQGLViewport_8hpp_source.html">StelQGLViewport.hpp</a>.</p>
 
 </div>
 </div>
@@ -434,7 +451,7 @@
 
 <p>Start using drawing calls. </p>
 
-<p>Definition at line <a class="el" href="StelQGLViewport_8hpp_source.html#l00237">237</a> of file <a class="el" href="StelQGLViewport_8hpp_source.html">StelQGLViewport.hpp</a>.</p>
+<p>Definition at line <a class="el" href="StelQGLViewport_8hpp_source.html#l00269">269</a> of file <a class="el" href="StelQGLViewport_8hpp_source.html">StelQGLViewport.hpp</a>.</p>
 
 </div>
 </div>
@@ -456,7 +473,7 @@
 <p>Suspend drawing, not showing the result on the screen. </p>
 <p>Finishes using draw calls for this frame. Drawing can continue later. Only usable with FBOs. </p>
 
-<p>Definition at line <a class="el" href="StelQGLViewport_8hpp_source.html#l00260">260</a> of file <a class="el" href="StelQGLViewport_8hpp_source.html">StelQGLViewport.hpp</a>.</p>
+<p>Definition at line <a class="el" href="StelQGLViewport_8hpp_source.html#l00292">292</a> of file <a class="el" href="StelQGLViewport_8hpp_source.html">StelQGLViewport.hpp</a>.</p>
 
 </div>
 </div>
@@ -477,7 +494,7 @@
 
 <p>Are we using framebuffer objects? </p>
 
-<p>Definition at line <a class="el" href="StelQGLViewport_8hpp_source.html#l00220">220</a> of file <a class="el" href="StelQGLViewport_8hpp_source.html">StelQGLViewport.hpp</a>.</p>
+<p>Definition at line <a class="el" href="StelQGLViewport_8hpp_source.html#l00252">252</a> of file <a class="el" href="StelQGLViewport_8hpp_source.html">StelQGLViewport.hpp</a>.</p>
 
 </div>
 </div>
@@ -499,7 +516,7 @@
 
 <p>Called when viewport size changes so we can replace the FBOs. </p>
 
-<p>Definition at line <a class="el" href="StelQGLViewport_8hpp_source.html#l00158">158</a> of file <a class="el" href="StelQGLViewport_8hpp_source.html">StelQGLViewport.hpp</a>.</p>
+<p>Definition at line <a class="el" href="StelQGLViewport_8hpp_source.html#l00190">190</a> of file <a class="el" href="StelQGLViewport_8hpp_source.html">StelQGLViewport.hpp</a>.</p>
 
 </div>
 </div>
@@ -507,7 +524,7 @@
 <li>core/renderer/<a class="el" href="StelQGLViewport_8hpp_source.html">StelQGLViewport.hpp</a></li>
 </ul>
 </div>
-<hr class="footer"/><address style="text-align: right;"><small>Generated on Fri Aug 31 18:08:02 2012 for Stellarium by&nbsp;
+<hr class="footer"/><address style="text-align: right;"><small>Generated on Sat Sep 15 13:01:15 2012 for Stellarium by&nbsp;
 <a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.6.3 </small></address>
 </body>

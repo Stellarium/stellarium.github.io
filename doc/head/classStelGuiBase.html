@@ -46,10 +46,6 @@ virtual const <br class="typebreak"/>
 StelObject::InfoStringGroup &amp;&nbsp;</td><td class="memItemRight" valign="bottom"><b>getInfoTextFilters</b> () const =0</td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual class QProgressBar *&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classStelGuiBase.html#a6d01c1e640a1363d2b43159d6cae605f">addProgressBar</a> ()=0</td></tr>
 <tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Add a new progress bar in the lower right corner of the screen.  <a href="#a6d01c1e640a1363d2b43159d6cae605f"></a><br/></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">virtual QAction *&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classStelGuiBase.html#a61f5d9c4c5dc757583bc6b8b03b1373e">addGuiActions</a> (const QString &amp;actionName, const QString &amp;text, const QString &amp;shortCut, const QString &amp;helpGroup, bool checkable=true, bool autoRepeat=false, bool global=false)</td></tr>
-<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Add a new action managed by the GUI.  <a href="#a61f5d9c4c5dc757583bc6b8b03b1373e"></a><br/></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">virtual QAction *&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classStelGuiBase.html#ad87d3277f1468a24cfcc504d6bb34438">getGuiActions</a> (const QString &amp;actionName)</td></tr>
-<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Get a pointer on an action managed by the GUI.  <a href="#ad87d3277f1468a24cfcc504d6bb34438"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a27c1bad463fdb0400089c438afd4d613"></a><!-- doxytag: member="StelGuiBase::forceRefreshGui" ref="a27c1bad463fdb0400089c438afd4d613" args="()" -->
 virtual void&nbsp;</td><td class="memItemRight" valign="bottom"><b>forceRefreshGui</b> ()</td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classStelGuiBase.html#af50426c2659c573d573e40309ad35663">setVisible</a> (bool b)=0</td></tr>
@@ -70,80 +66,6 @@ class <a class="el" href="classStelAppGraphicsWidget.html">StelAppGraphicsWidget
 
 <p>Definition at line <a class="el" href="StelGuiBase_8hpp_source.html#l00032">32</a> of file <a class="el" href="StelGuiBase_8hpp_source.html">StelGuiBase.hpp</a>.</p>
 <hr/><h2>Member Function Documentation</h2>
-<a class="anchor" id="a61f5d9c4c5dc757583bc6b8b03b1373e"></a><!-- doxytag: member="StelGuiBase::addGuiActions" ref="a61f5d9c4c5dc757583bc6b8b03b1373e" args="(const QString &amp;actionName, const QString &amp;text, const QString &amp;shortCut, const QString &amp;helpGroup, bool checkable=true, bool autoRepeat=false, bool global=false)" -->
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">virtual QAction* StelGuiBase::addGuiActions </td>
-          <td>(</td>
-          <td class="paramtype">const QString &amp;&nbsp;</td>
-          <td class="paramname"> <em>actionName</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">const QString &amp;&nbsp;</td>
-          <td class="paramname"> <em>text</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">const QString &amp;&nbsp;</td>
-          <td class="paramname"> <em>shortCut</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">const QString &amp;&nbsp;</td>
-          <td class="paramname"> <em>helpGroup</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">bool&nbsp;</td>
-          <td class="paramname"> <em>checkable</em> = <code>true</code>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">bool&nbsp;</td>
-          <td class="paramname"> <em>autoRepeat</em> = <code>false</code>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">bool&nbsp;</td>
-          <td class="paramname"> <em>global</em> = <code>false</code></td><td>&nbsp;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td><td><code> [virtual]</code></td>
-        </tr>
-      </table>
-</div>
-<div class="memdoc">
-
-<p>Add a new action managed by the GUI. </p>
-<p>This method should be used to add new shortcuts to the program </p>
-<dl><dt><b>Parameters:</b></dt><dd>
-  <table border="0" cellspacing="2" cellpadding="0">
-    <tr><td valign="top"></td><td valign="top"><em>actionName</em>&nbsp;</td><td>qt object name. Used as a reference for later uses </td></tr>
-    <tr><td valign="top"></td><td valign="top"><em>text</em>&nbsp;</td><td>the text to display when hovering, or in the help window </td></tr>
-    <tr><td valign="top"></td><td valign="top"><em>shortCut</em>&nbsp;</td><td>the qt shortcut to use </td></tr>
-    <tr><td valign="top"></td><td valign="top"><em>helpGroup</em>&nbsp;</td><td>hint on how to group the text in the help window </td></tr>
-    <tr><td valign="top"></td><td valign="top"><em>checkable</em>&nbsp;</td><td>whether the action should be checkable </td></tr>
-    <tr><td valign="top"></td><td valign="top"><em>autoRepeat</em>&nbsp;</td><td>whether the action should be autorepeated </td></tr>
-    <tr><td valign="top"></td><td valign="top"><em>global</em>&nbsp;</td><td>whether the action should be global (affect in dialogs) </td></tr>
-  </table>
-  </dd>
-</dl>
-
-<p>Reimplemented in <a class="el" href="classStelGui.html#a8ff5ce84ee5aacbf74860169d1dfc7ba">StelGui</a>.</p>
-
-</div>
-</div>
 <a class="anchor" id="a6d01c1e640a1363d2b43159d6cae605f"></a><!-- doxytag: member="StelGuiBase::addProgressBar" ref="a6d01c1e640a1363d2b43159d6cae605f" args="()=0" -->
 <div class="memitem">
 <div class="memproto">
@@ -164,35 +86,6 @@ class <a class="el" href="classStelAppGraphicsWidget.html">StelAppGraphicsWidget
 <dl class="return"><dt><b>Returns:</b></dt><dd>a pointer to the progress bar. </dd></dl>
 
 <p>Implemented in <a class="el" href="classStelGui.html#a531d50d43534b1ff9eb6c9c4b4517ab3">StelGui</a>, and <a class="el" href="classStelNoGui.html#a83e5b0fe262f41d9444dbc107ff7d814">StelNoGui</a>.</p>
-
-</div>
-</div>
-<a class="anchor" id="ad87d3277f1468a24cfcc504d6bb34438"></a><!-- doxytag: member="StelGuiBase::getGuiActions" ref="ad87d3277f1468a24cfcc504d6bb34438" args="(const QString &amp;actionName)" -->
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">virtual QAction* StelGuiBase::getGuiActions </td>
-          <td>(</td>
-          <td class="paramtype">const QString &amp;&nbsp;</td>
-          <td class="paramname"> <em>actionName</em></td>
-          <td>&nbsp;)&nbsp;</td>
-          <td><code> [virtual]</code></td>
-        </tr>
-      </table>
-</div>
-<div class="memdoc">
-
-<p>Get a pointer on an action managed by the GUI. </p>
-<dl><dt><b>Parameters:</b></dt><dd>
-  <table border="0" cellspacing="2" cellpadding="0">
-    <tr><td valign="top"></td><td valign="top"><em>actionName</em>&nbsp;</td><td>qt object name for this action </td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="return"><dt><b>Returns:</b></dt><dd>a pointer on the QAction object or NULL if don't exist </dd></dl>
-
-<p>Reimplemented in <a class="el" href="classStelNoGui.html#adac57a37841b09524cdd4365bad96453">StelNoGui</a>.</p>
 
 </div>
 </div>
@@ -336,7 +229,7 @@ class <a class="el" href="classStelAppGraphicsWidget.html">StelAppGraphicsWidget
 <li>core/<a class="el" href="StelGuiBase_8hpp_source.html">StelGuiBase.hpp</a></li>
 </ul>
 </div>
-<hr class="footer"/><address style="text-align: right;"><small>Generated on Fri Aug 31 18:07:58 2012 for Stellarium by&nbsp;
+<hr class="footer"/><address style="text-align: right;"><small>Generated on Sat Sep 15 13:01:13 2012 for Stellarium by&nbsp;
 <a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.6.3 </small></address>
 </body>
