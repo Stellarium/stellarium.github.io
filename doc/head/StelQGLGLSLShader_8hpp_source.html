@@ -106,7 +106,7 @@
 <a name="l00121"></a>00121         <span class="keywordflow">foreach</span>(QGLShader* shader, <a class="code" href="classStelQGLGLSLShader.html#a9f2dd55d587dbd5443c1d41329318c87" title="Vertex shaders that are always linked in (added by the nameless addVertexShader()...">defaultVertexShaders</a>)  {<span class="keyword">delete</span> shader;}
 <a name="l00122"></a>00122         <span class="keywordflow">foreach</span>(OptionalShader shader, <a class="code" href="classStelQGLGLSLShader.html#a565391e4284b3badb980a09291885084" title="Optional vertex shaders that may be enabled or disabled.">namedVertexShaders</a>){<span class="keyword">delete</span> shader.shader;}
 <a name="l00123"></a>00123         <span class="keywordflow">foreach</span>(QGLShader* shader, <a class="code" href="classStelQGLGLSLShader.html#a2a38374f92387679f023bb1d202a0540" title="Fragment shaders that are always linked in (added by the nameless addFragmentShader()...">defaultFragmentShaders</a>){<span class="keyword">delete</span> shader;}
-<a name="l00124"></a>00124         <span class="keywordflow">foreach</span>(QGLShaderProgram* <a class="code" href="classStelQGLGLSLShader.html#abc2d5ce5297e4937215c82242c59481f" title="Currently used shader program (linked from default and currently enabled shaders)...">program</a>, <a class="code" href="classStelQGLGLSLShader.html#aa22281dc84e87dd2fe8d80921c4caf5b" title="All shader programs linked so far.">programCache</a>)  {<span class="keyword">delete</span> program;}
+<a name="l00124"></a>00124         <span class="keywordflow">foreach</span>(QGLShaderProgram* <a class="code" href="classStelQGLGLSLShader.html#abc2d5ce5297e4937215c82242c59481f" title="Currently used shader program (linked from default and currently enabled shaders)...">program</a>, <a class="code" href="classStelQGLGLSLShader.html#aa78bede88d3b5459ca03b9f3559eeabf" title="All shader programs linked so far.">programCache</a>)  {<span class="keyword">delete</span> program;}
 <a name="l00125"></a>00125     }
 <a name="l00126"></a>00126 
 <a name="l00127"></a>00127     <span class="keyword">virtual</span> <span class="keywordtype">bool</span> <a class="code" href="classStelQGLGLSLShader.html#a3622e52fdd0dbd362cb4e334b6cae82c" title="Add a vertex shader from source, compiling it in the process.">addVertexShader</a>(<span class="keyword">const</span> QString&amp; source);
@@ -288,7 +288,7 @@
 <a name="l00339"></a>00339     <span class="comment">// There are no namedFragmentShaders, but they can be added if/when needed.</span>
 <a name="l00341"></a><a class="code" href="classStelQGLGLSLShader.html#a2a38374f92387679f023bb1d202a0540">00341</a> <span class="comment"></span>    QVector&lt;QGLShader*&gt; <a class="code" href="classStelQGLGLSLShader.html#a2a38374f92387679f023bb1d202a0540" title="Fragment shaders that are always linked in (added by the nameless addFragmentShader()...">defaultFragmentShaders</a>;
 <a name="l00342"></a>00342 
-<a name="l00363"></a><a class="code" href="classStelQGLGLSLShader.html#aa22281dc84e87dd2fe8d80921c4caf5b">00363</a>     QMap&lt;ulong, QGLShaderProgram*&gt; <a class="code" href="classStelQGLGLSLShader.html#aa22281dc84e87dd2fe8d80921c4caf5b" title="All shader programs linked so far.">programCache</a>;
+<a name="l00363"></a><a class="code" href="classStelQGLGLSLShader.html#aa78bede88d3b5459ca03b9f3559eeabf">00363</a>     QMap&lt;uintptr_t, QGLShaderProgram*&gt; <a class="code" href="classStelQGLGLSLShader.html#aa78bede88d3b5459ca03b9f3559eeabf" title="All shader programs linked so far.">programCache</a>;
 <a name="l00364"></a>00364 
 <a name="l00366"></a><a class="code" href="classStelQGLGLSLShader.html#abc2d5ce5297e4937215c82242c59481f">00366</a>     QGLShaderProgram* <a class="code" href="classStelQGLGLSLShader.html#abc2d5ce5297e4937215c82242c59481f" title="Currently used shader program (linked from default and currently enabled shaders)...">program</a>;
 <a name="l00367"></a>00367 
@@ -432,7 +432,7 @@
 <a name="l00551"></a>00551 
 <a name="l00552"></a>00552 <span class="preprocessor">#endif // _STELQGLGLSLSHADER_HPP_</span>
 </pre></div></div>
-<hr class="footer"/><address style="text-align: right;"><small>Generated on Sat Sep 15 13:01:10 2012 for Stellarium by&nbsp;
+<hr class="footer"/><address style="text-align: right;"><small>Generated on Wed Sep 26 20:39:27 2012 for Stellarium by&nbsp;
 <a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.6.3 </small></address>
 </body>

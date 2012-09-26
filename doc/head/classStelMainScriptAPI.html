@@ -55,6 +55,8 @@
 <tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Select an object by name.  <a href="#aa587b96719cd7c342e1b2fbf9f37bc03"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">QVariantMap&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classStelMainScriptAPI.html#a048f53b68edbfd6e07a99f6c07605d67">getObjectPosition</a> (const QString &amp;name)</td></tr>
 <tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Fetch a map with data about an object's position, magnitude and so on.  <a href="#a048f53b68edbfd6e07a99f6c07605d67"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">QVariantMap&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classStelMainScriptAPI.html#ad831d70086a1ad8f64d8377672fd143c">getObjectInfo</a> (const QString &amp;name)</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Fetch a map with data about an object's position, magnitude and so on.  <a href="#ad831d70086a1ad8f64d8377672fd143c"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classStelMainScriptAPI.html#ab21fe71f592e95476ccbec7925ec3912">clear</a> (const QString &amp;state=&quot;natural&quot;)</td></tr>
 <tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Clear the display options, setting a "standard" view.  <a href="#ab21fe71f592e95476ccbec7925ec3912"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">double&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classStelMainScriptAPI.html#a76397efb3d652e712f0738f18ed84ddd">getViewAltitudeAngle</a> ()</td></tr>
@@ -597,6 +599,49 @@ double&nbsp;</td><td class="memItemRight" valign="bottom"><b>timeSpeed</b></td><
 
 </div>
 </div>
+<a class="anchor" id="ad831d70086a1ad8f64d8377672fd143c"></a><!-- doxytag: member="StelMainScriptAPI::getObjectInfo" ref="ad831d70086a1ad8f64d8377672fd143c" args="(const QString &amp;name)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">QVariantMap StelMainScriptAPI::getObjectInfo </td>
+          <td>(</td>
+          <td class="paramtype">const QString &amp;&nbsp;</td>
+          <td class="paramname"> <em>name</em></td>
+          <td>&nbsp;)&nbsp;</td>
+          <td><code> [slot]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Fetch a map with data about an object's position, magnitude and so on. </p>
+<dl><dt><b>Parameters:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"></td><td valign="top"><em>name</em>&nbsp;</td><td>is the English name of the object for which data will be returned. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="return"><dt><b>Returns:</b></dt><dd>a map of object data. Keys:<ul>
+<li>altitude : apparent altitude angle in decimal degrees</li>
+<li>azimuth : apparent azimuth angle in decimal degrees</li>
+<li>altitude-geometric : geometric altitude angle in decimal degrees</li>
+<li>azimuth-geometric : geometric azimuth angle in decimal degrees</li>
+<li>ra : right ascension angle (current date frame) in decimal degrees</li>
+<li>dec : declenation angle in (current date frame) decimal degrees</li>
+<li>raJ2000 : right ascension angle (J2000 frame) in decimal degrees</li>
+<li>decJ2000 : declenation angle in (J2000 frame) decimal degrees</li>
+<li>glongJ2000 : galactic longitude (J2000 frame) in decimal degrees</li>
+<li>glatJ2000 : galactic latitude in (J2000 frame) decimal degrees</li>
+<li>vmag : visual magnitude</li>
+<li>vmage : visual magnitude (extincted)</li>
+<li>size : angular size in decimal degrees</li>
+<li>localized-name : localized name </li>
+</ul>
+</dd></dl>
+
+</div>
+</div>
 <a class="anchor" id="a048f53b68edbfd6e07a99f6c07605d67"></a><!-- doxytag: member="StelMainScriptAPI::getObjectPosition" ref="a048f53b68edbfd6e07a99f6c07605d67" args="(const QString &amp;name)" -->
 <div class="memitem">
 <div class="memproto">
@@ -631,6 +676,7 @@ double&nbsp;</td><td class="memItemRight" valign="bottom"><b>timeSpeed</b></td><
 <li>decJ2000 : declenation angle in (J2000 frame) decimal degrees </li>
 </ul>
 </dd></dl>
+<dl class="deprecated"><dt><b><a class="el" href="deprecated.html#_deprecated000005">Deprecated:</a></b></dt><dd>Use <a class="el" href="classStelMainScriptAPI.html#ad831d70086a1ad8f64d8377672fd143c" title="Fetch a map with data about an object&#39;s position, magnitude and so on.">getObjectInfo()</a> </dd></dl>
 
 </div>
 </div>
@@ -2869,7 +2915,7 @@ double&nbsp;</td><td class="memItemRight" valign="bottom"><b>timeSpeed</b></td><
 <li>scripting/<a class="el" href="StelMainScriptAPI_8hpp_source.html">StelMainScriptAPI.hpp</a></li>
 </ul>
 </div>
-<hr class="footer"/><address style="text-align: right;"><small>Generated on Sat Sep 15 13:01:14 2012 for Stellarium by&nbsp;
+<hr class="footer"/><address style="text-align: right;"><small>Generated on Wed Sep 26 20:39:32 2012 for Stellarium by&nbsp;
 <a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.6.3 </small></address>
 </body>

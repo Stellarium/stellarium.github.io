@@ -100,8 +100,9 @@
 <tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Optional vertex shaders that may be enabled or disabled.  <a href="#a565391e4284b3badb980a09291885084"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">QVector&lt; QGLShader * &gt;&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classStelQGLGLSLShader.html#a2a38374f92387679f023bb1d202a0540">defaultFragmentShaders</a></td></tr>
 <tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Fragment shaders that are always linked in (added by the nameless <a class="el" href="classStelQGLGLSLShader.html#ae256bbd5a3bd9c0be0017919ba95f2cb" title="Add a fragment shader from source, compiling it in the process.">addFragmentShader()</a> overload).  <a href="#a2a38374f92387679f023bb1d202a0540"></a><br/></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">QMap&lt; ulong, QGLShaderProgram * &gt;&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classStelQGLGLSLShader.html#aa22281dc84e87dd2fe8d80921c4caf5b">programCache</a></td></tr>
-<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">All shader programs linked so far.  <a href="#aa22281dc84e87dd2fe8d80921c4caf5b"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">QMap&lt; uintptr_t, <br class="typebreak"/>
+QGLShaderProgram * &gt;&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classStelQGLGLSLShader.html#aa78bede88d3b5459ca03b9f3559eeabf">programCache</a></td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">All shader programs linked so far.  <a href="#aa78bede88d3b5459ca03b9f3559eeabf"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">QGLShaderProgram *&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classStelQGLGLSLShader.html#abc2d5ce5297e4937215c82242c59481f">program</a></td></tr>
 <tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Currently used shader program (linked from default and currently enabled shaders).  <a href="#abc2d5ce5297e4937215c82242c59481f"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">QString&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classStelQGLGLSLShader.html#a9fd83d7ef2e2c5ac29cc97e10e3a0996">aggregatedLog</a></td></tr>
@@ -996,12 +997,12 @@
 
 </div>
 </div>
-<a class="anchor" id="aa22281dc84e87dd2fe8d80921c4caf5b"></a><!-- doxytag: member="StelQGLGLSLShader::programCache" ref="aa22281dc84e87dd2fe8d80921c4caf5b" args="" -->
+<a class="anchor" id="aa78bede88d3b5459ca03b9f3559eeabf"></a><!-- doxytag: member="StelQGLGLSLShader::programCache" ref="aa78bede88d3b5459ca03b9f3559eeabf" args="" -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">QMap&lt;ulong, QGLShaderProgram*&gt; <a class="el" href="classStelQGLGLSLShader.html#aa22281dc84e87dd2fe8d80921c4caf5b">StelQGLGLSLShader::programCache</a><code> [protected]</code></td>
+          <td class="memname">QMap&lt;uintptr_t, QGLShaderProgram*&gt; <a class="el" href="classStelQGLGLSLShader.html#aa78bede88d3b5459ca03b9f3559eeabf">StelQGLGLSLShader::programCache</a><code> [protected]</code></td>
         </tr>
       </table>
 </div>
@@ -1231,7 +1232,7 @@
 <li>core/renderer/<a class="el" href="StelQGLGLSLShader_8hpp_source.html">StelQGLGLSLShader.hpp</a></li>
 </ul>
 </div>
-<hr class="footer"/><address style="text-align: right;"><small>Generated on Sat Sep 15 13:01:15 2012 for Stellarium by&nbsp;
+<hr class="footer"/><address style="text-align: right;"><small>Generated on Wed Sep 26 20:39:33 2012 for Stellarium by&nbsp;
 <a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.6.3 </small></address>
 </body>

@@ -193,47 +193,49 @@
 <a name="l00280"></a>00280 
 <a name="l00283"></a>00283     QVector&lt;Mat4d&gt; shadowModelMatricesBuffer;
 <a name="l00284"></a>00284 
-<a name="l00285"></a>00285     <a class="code" href="classQSharedPointer.html">PlanetP</a> sun;
-<a name="l00286"></a>00286     <a class="code" href="classQSharedPointer.html">PlanetP</a> moon;
-<a name="l00287"></a>00287     <a class="code" href="classQSharedPointer.html">PlanetP</a> earth;
-<a name="l00288"></a>00288 
-<a name="l00291"></a>00291     <span class="keywordtype">void</span> setSelected(<span class="keyword">const</span> QString&amp; englishName);
-<a name="l00293"></a>00293     <span class="keywordtype">void</span> setSelected(<a class="code" href="classQSharedPointer.html">PlanetP</a> obj);
-<a name="l00295"></a>00295     <a class="code" href="classQSharedPointer.html">PlanetP</a> getSelected(<span class="keywordtype">void</span>)<span class="keyword"> const </span>{<span class="keywordflow">return</span> selected;}
-<a name="l00297"></a>00297     <a class="code" href="classQSharedPointer.html">PlanetP</a> selected;
-<a name="l00298"></a>00298 
-<a name="l00299"></a>00299     <span class="comment">// Moon scale value</span>
-<a name="l00300"></a>00300     <span class="keywordtype">bool</span> flagMoonScale;
-<a name="l00301"></a>00301     <span class="keywordtype">float</span> moonScale;
-<a name="l00302"></a>00302 
-<a name="l00303"></a>00303     QFont planetNameFont;
-<a name="l00304"></a>00304 
-<a name="l00306"></a>00306     <span class="keywordtype">float</span> labelsAmount;
+<a name="l00286"></a>00286     <span class="keywordtype">int</span> shadowPlanetCount;
+<a name="l00287"></a>00287 
+<a name="l00288"></a>00288     <a class="code" href="classQSharedPointer.html">PlanetP</a> sun;
+<a name="l00289"></a>00289     <a class="code" href="classQSharedPointer.html">PlanetP</a> moon;
+<a name="l00290"></a>00290     <a class="code" href="classQSharedPointer.html">PlanetP</a> earth;
+<a name="l00291"></a>00291 
+<a name="l00294"></a>00294     <span class="keywordtype">void</span> setSelected(<span class="keyword">const</span> QString&amp; englishName);
+<a name="l00296"></a>00296     <span class="keywordtype">void</span> setSelected(<a class="code" href="classQSharedPointer.html">PlanetP</a> obj);
+<a name="l00298"></a>00298     <a class="code" href="classQSharedPointer.html">PlanetP</a> getSelected(<span class="keywordtype">void</span>)<span class="keyword"> const </span>{<span class="keywordflow">return</span> selected;}
+<a name="l00300"></a>00300     <a class="code" href="classQSharedPointer.html">PlanetP</a> selected;
+<a name="l00301"></a>00301 
+<a name="l00302"></a>00302     <span class="comment">// Moon scale value</span>
+<a name="l00303"></a>00303     <span class="keywordtype">bool</span> flagMoonScale;
+<a name="l00304"></a>00304     <span class="keywordtype">float</span> moonScale;
+<a name="l00305"></a>00305 
+<a name="l00306"></a>00306     QFont planetNameFont;
 <a name="l00307"></a>00307 
-<a name="l00309"></a>00309     QList&lt;PlanetP&gt; systemPlanets;
+<a name="l00309"></a>00309     <span class="keywordtype">float</span> labelsAmount;
 <a name="l00310"></a>00310 
-<a name="l00311"></a>00311     <span class="comment">// Master settings</span>
-<a name="l00312"></a>00312     <span class="keywordtype">bool</span> flagOrbits;
-<a name="l00313"></a>00313     <span class="keywordtype">bool</span> flagLightTravelTime;
-<a name="l00314"></a>00314 
-<a name="l00316"></a>00316     <span class="keyword">class </span><a class="code" href="classStelTextureNew.html" title="Texture interface.">StelTextureNew</a>* texPointer;
+<a name="l00312"></a>00312     QList&lt;PlanetP&gt; systemPlanets;
+<a name="l00313"></a>00313 
+<a name="l00314"></a>00314     <span class="comment">// Master settings</span>
+<a name="l00315"></a>00315     <span class="keywordtype">bool</span> flagOrbits;
+<a name="l00316"></a>00316     <span class="keywordtype">bool</span> flagLightTravelTime;
 <a name="l00317"></a>00317 
-<a name="l00318"></a>00318     <span class="keywordtype">bool</span> flagShow;
-<a name="l00319"></a>00319 
-<a name="l00320"></a>00320     <span class="keyword">class </span><a class="code" href="classTrailGroup.html">TrailGroup</a>* allTrails;
-<a name="l00321"></a>00321     <a class="code" href="classLinearFader.html" title="Implementation of StelFader which implements a linear transition.">LinearFader</a> trailFader;
-<a name="l00322"></a>00322     <a class="code" href="classVector3.html" title="A templatized 3d vector.">Vec3f</a> trailColor;
-<a name="l00323"></a>00323 
-<a name="l00324"></a>00324     <a class="code" href="structPlanet_1_1SharedPlanetGraphics.html" title="Stores graphics data that is shared between planets and must be initialized by a...">Planet::SharedPlanetGraphics</a> sharedPlanetGraphics;
-<a name="l00325"></a>00325 
-<a name="l00327"></a>00327     <span class="comment">// DEPRECATED</span>
-<a name="l00329"></a>00329 <span class="comment"></span>    QList&lt;Orbit*&gt; orbits;           <span class="comment">// Pointers on created elliptical orbits</span>
-<a name="l00330"></a>00330 };
-<a name="l00331"></a>00331 
-<a name="l00332"></a>00332 
-<a name="l00333"></a>00333 <span class="preprocessor">#endif // _SOLARSYSTEM_HPP_</span>
+<a name="l00319"></a>00319     <span class="keyword">class </span><a class="code" href="classStelTextureNew.html" title="Texture interface.">StelTextureNew</a>* texPointer;
+<a name="l00320"></a>00320 
+<a name="l00321"></a>00321     <span class="keywordtype">bool</span> flagShow;
+<a name="l00322"></a>00322 
+<a name="l00323"></a>00323     <span class="keyword">class </span><a class="code" href="classTrailGroup.html">TrailGroup</a>* allTrails;
+<a name="l00324"></a>00324     <a class="code" href="classLinearFader.html" title="Implementation of StelFader which implements a linear transition.">LinearFader</a> trailFader;
+<a name="l00325"></a>00325     <a class="code" href="classVector3.html" title="A templatized 3d vector.">Vec3f</a> trailColor;
+<a name="l00326"></a>00326 
+<a name="l00327"></a>00327     <a class="code" href="structPlanet_1_1SharedPlanetGraphics.html" title="Stores graphics data that is shared between planets and must be initialized by a...">Planet::SharedPlanetGraphics</a> sharedPlanetGraphics;
+<a name="l00328"></a>00328 
+<a name="l00330"></a>00330     <span class="comment">// DEPRECATED</span>
+<a name="l00332"></a>00332 <span class="comment"></span>    QList&lt;Orbit*&gt; orbits;           <span class="comment">// Pointers on created elliptical orbits</span>
+<a name="l00333"></a>00333 };
+<a name="l00334"></a>00334 
+<a name="l00335"></a>00335 
+<a name="l00336"></a>00336 <span class="preprocessor">#endif // _SOLARSYSTEM_HPP_</span>
 </pre></div></div>
-<hr class="footer"/><address style="text-align: right;"><small>Generated on Sat Sep 15 13:01:09 2012 for Stellarium by&nbsp;
+<hr class="footer"/><address style="text-align: right;"><small>Generated on Wed Sep 26 20:39:26 2012 for Stellarium by&nbsp;
 <a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.6.3 </small></address>
 </body>
