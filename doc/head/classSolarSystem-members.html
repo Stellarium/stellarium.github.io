@@ -44,8 +44,10 @@
   <tr class="memlist"><td><a class="el" href="classStelModule.html#a784c0ccdda13c89295da28a6d60e05dd">getAuthorEmail</a>() const </td><td><a class="el" href="classStelModule.html">StelModule</a></td><td><code> [inline, virtual]</code></td></tr>
   <tr class="memlist"><td><a class="el" href="classStelModule.html#a1bcff8e2d689b03578ad07fe4fe79632">getAuthorName</a>() const </td><td><a class="el" href="classStelModule.html">StelModule</a></td><td><code> [inline, virtual]</code></td></tr>
   <tr class="memlist"><td><a class="el" href="classSolarSystem.html#a505b0f6708935ef22aae4c827dd2de94">getCallOrder</a>(StelModuleActionName actionName) const </td><td><a class="el" href="classSolarSystem.html">SolarSystem</a></td><td><code> [virtual]</code></td></tr>
+  <tr class="memlist"><td><a class="el" href="classSolarSystem.html#af70836c83532a6094102f468cf00abda">getDistanceToPlanet</a>(QString planetName) const </td><td><a class="el" href="classSolarSystem.html">SolarSystem</a></td><td><code> [slot]</code></td></tr>
   <tr class="memlist"><td><a class="el" href="classSolarSystem.html#a9d5bbde466a35b9233e7de4d7f7b28b1">getEarth</a>() const </td><td><a class="el" href="classSolarSystem.html">SolarSystem</a></td><td><code> [inline]</code></td></tr>
   <tr class="memlist"><td><a class="el" href="classSolarSystem.html#a37e598ccb8f4739eb624f2ff63d16a92">getEclipseFactor</a>(const StelCore *core) const </td><td><a class="el" href="classSolarSystem.html">SolarSystem</a></td><td></td></tr>
+  <tr class="memlist"><td><a class="el" href="classSolarSystem.html#a1284c16fecbac6902ac65f18f02b4e48">getElongationForPlanet</a>(QString planetName) const </td><td><a class="el" href="classSolarSystem.html">SolarSystem</a></td><td><code> [slot]</code></td></tr>
   <tr class="memlist"><td><a class="el" href="classSolarSystem.html#afe9e235e340ac7c8e5af44d655b62aaa">getFlagHints</a>() const </td><td><a class="el" href="classSolarSystem.html">SolarSystem</a></td><td><code> [slot]</code></td></tr>
   <tr class="memlist"><td><a class="el" href="classSolarSystem.html#a70d66d150ce6839c4280719cffee1404">getFlagLabels</a>() const </td><td><a class="el" href="classSolarSystem.html">SolarSystem</a></td><td><code> [slot]</code></td></tr>
   <tr class="memlist"><td><a class="el" href="classSolarSystem.html#a916576916a404933a1ef90c6949e9196">getFlagLightTravelTime</a>(void) const </td><td><a class="el" href="classSolarSystem.html">SolarSystem</a></td><td><code> [inline, slot]</code></td></tr>
@@ -60,6 +62,8 @@
   <tr class="memlist"><td><a class="el" href="classSolarSystem.html#a1cd314c397564d728851a50e55ba2549">getMoonScale</a>(void) const </td><td><a class="el" href="classSolarSystem.html">SolarSystem</a></td><td><code> [inline, slot]</code></td></tr>
   <tr bgcolor="#f0f0f0"><td><b>getName</b>() const  (defined in <a class="el" href="classSolarSystem.html">SolarSystem</a>)</td><td><a class="el" href="classSolarSystem.html">SolarSystem</a></td><td><code> [inline, virtual]</code></td></tr>
   <tr class="memlist"><td><a class="el" href="classSolarSystem.html#a4d0933f3ed314a781df63e4a7ffaf7a7">getOrbitsColor</a>(void) const </td><td><a class="el" href="classSolarSystem.html">SolarSystem</a></td><td><code> [slot]</code></td></tr>
+  <tr class="memlist"><td><a class="el" href="classSolarSystem.html#a0821bc0e525fa1edd4acb18de5b38e54">getPhaseAngleForPlanet</a>(QString planetName) const </td><td><a class="el" href="classSolarSystem.html">SolarSystem</a></td><td><code> [slot]</code></td></tr>
+  <tr class="memlist"><td><a class="el" href="classSolarSystem.html#ad7da0bb16f599f861b80810261b19cd8">getPhaseForPlanet</a>(QString planetName) const </td><td><a class="el" href="classSolarSystem.html">SolarSystem</a></td><td><code> [slot]</code></td></tr>
   <tr class="memlist"><td><a class="el" href="classSolarSystem.html#ab3635b90421a4bcec4a9368837c84a9d">getPlanetHashString</a>()</td><td><a class="el" href="classSolarSystem.html">SolarSystem</a></td><td></td></tr>
   <tr class="memlist"><td><a class="el" href="classSolarSystem.html#a4af98b138c9cd4e6b3c33730736f4628">getPlanetVMagnitude</a>(QString planetName, bool withExtinction=false) const </td><td><a class="el" href="classSolarSystem.html">SolarSystem</a></td><td><code> [slot]</code></td></tr>
   <tr class="memlist"><td><a class="el" href="classSolarSystem.html#ada79b8fd368062c3d2d917a1bba7949c">getSun</a>() const </td><td><a class="el" href="classSolarSystem.html">SolarSystem</a></td><td><code> [inline]</code></td></tr>
@@ -103,7 +107,7 @@
   <tr bgcolor="#f0f0f0"><td><b>~StelModule</b>() (defined in <a class="el" href="classStelModule.html">StelModule</a>)</td><td><a class="el" href="classStelModule.html">StelModule</a></td><td><code> [inline, virtual]</code></td></tr>
   <tr bgcolor="#f0f0f0"><td><b>~StelObjectModule</b>() (defined in <a class="el" href="classStelObjectModule.html">StelObjectModule</a>)</td><td><a class="el" href="classStelObjectModule.html">StelObjectModule</a></td><td></td></tr>
 </table></div>
-<hr class="footer"/><address style="text-align: right;"><small>Generated on Wed Sep 26 20:39:31 2012 for Stellarium by&nbsp;
+<hr class="footer"/><address style="text-align: right;"><small>Generated on Mon Oct 1 21:14:00 2012 for Stellarium by&nbsp;
 <a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.6.3 </small></address>
 </body>

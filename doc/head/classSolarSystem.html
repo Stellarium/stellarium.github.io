@@ -89,6 +89,14 @@
 <tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Translate names. (public so that SolarSystemEditor can call it).  <a href="#aedf4ed299c43167e8d2b3394157f2837"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">float&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSolarSystem.html#a4af98b138c9cd4e6b3c33730736f4628">getPlanetVMagnitude</a> (QString planetName, bool withExtinction=false) const </td></tr>
 <tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Get the V magnitude for Solar system bodies from scripts.  <a href="#a4af98b138c9cd4e6b3c33730736f4628"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">double&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSolarSystem.html#af70836c83532a6094102f468cf00abda">getDistanceToPlanet</a> (QString planetName) const </td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Get distance to Solar system bodies from scripts.  <a href="#af70836c83532a6094102f468cf00abda"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">double&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSolarSystem.html#a1284c16fecbac6902ac65f18f02b4e48">getElongationForPlanet</a> (QString planetName) const </td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Get elongation for Solar system bodies from scripts.  <a href="#a1284c16fecbac6902ac65f18f02b4e48"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">double&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSolarSystem.html#a0821bc0e525fa1edd4acb18de5b38e54">getPhaseAngleForPlanet</a> (QString planetName) const </td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Get phase angle for Solar system bodies from scripts.  <a href="#a0821bc0e525fa1edd4acb18de5b38e54"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">float&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSolarSystem.html#ad7da0bb16f599f861b80810261b19cd8">getPhaseForPlanet</a> (QString planetName) const </td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Get phase for Solar system bodies from scripts.  <a href="#ad7da0bb16f599f861b80810261b19cd8"></a><br/></td></tr>
 <tr><td colspan="2"><h2>Public Member Functions</h2></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSolarSystem.html#a788e3ba11a71d3348e0ac26fa051244b">init</a> ()</td></tr>
 <tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Initialize the <a class="el" href="classSolarSystem.html" title="This StelObjectModule derivative is used to model SolarSystem bodies.">SolarSystem</a>.  <a href="#a788e3ba11a71d3348e0ac26fa051244b"></a><br/></td></tr>
@@ -273,7 +281,7 @@ virtual QString&nbsp;</td><td class="memItemRight" valign="bottom"><b>getName</b
 <p>Get the list of all the bodies of the solar system. </p>
 <dl class="deprecated"><dt><b><a class="el" href="deprecated.html#_deprecated000003">Deprecated:</a></b></dt><dd>Used in <a class="el" href="classLandscapeMgr.html#a337049aff151cd75834677e947376ffd" title="Update time-dependent state.">LandscapeMgr::update()</a>, but commented out. </dd></dl>
 
-<p>Definition at line <a class="el" href="SolarSystem_8hpp_source.html#l00236">236</a> of file <a class="el" href="SolarSystem_8hpp_source.html">SolarSystem.hpp</a>.</p>
+<p>Definition at line <a class="el" href="SolarSystem_8hpp_source.html#l00256">256</a> of file <a class="el" href="SolarSystem_8hpp_source.html">SolarSystem.hpp</a>.</p>
 
 </div>
 </div>
@@ -299,6 +307,33 @@ virtual QString&nbsp;</td><td class="memItemRight" valign="bottom"><b>getName</b
 
 </div>
 </div>
+<a class="anchor" id="af70836c83532a6094102f468cf00abda"></a><!-- doxytag: member="SolarSystem::getDistanceToPlanet" ref="af70836c83532a6094102f468cf00abda" args="(QString planetName) const " -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">double SolarSystem::getDistanceToPlanet </td>
+          <td>(</td>
+          <td class="paramtype">QString&nbsp;</td>
+          <td class="paramname"> <em>planetName</em></td>
+          <td>&nbsp;)&nbsp;</td>
+          <td> const<code> [slot]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Get distance to Solar system bodies from scripts. </p>
+<dl><dt><b>Parameters:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"></td><td valign="top"><em>planetName</em>&nbsp;</td><td>the case in-sensistive English planet name. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="return"><dt><b>Returns:</b></dt><dd>a distance (in AU) </dd></dl>
+
+</div>
+</div>
 <a class="anchor" id="a9d5bbde466a35b9233e7de4d7f7b28b1"></a><!-- doxytag: member="SolarSystem::getEarth" ref="a9d5bbde466a35b9233e7de4d7f7b28b1" args="() const " -->
 <div class="memitem">
 <div class="memproto">
@@ -316,7 +351,7 @@ virtual QString&nbsp;</td><td class="memItemRight" valign="bottom"><b>getName</b
 
 <p>Get the <a class="el" href="classPlanet.html">Planet</a> object pointer for the Earth. </p>
 
-<p>Definition at line <a class="el" href="SolarSystem_8hpp_source.html#l00199">199</a> of file <a class="el" href="SolarSystem_8hpp_source.html">SolarSystem.hpp</a>.</p>
+<p>Definition at line <a class="el" href="SolarSystem_8hpp_source.html#l00219">219</a> of file <a class="el" href="SolarSystem_8hpp_source.html">SolarSystem.hpp</a>.</p>
 
 </div>
 </div>
@@ -337,6 +372,33 @@ virtual QString&nbsp;</td><td class="memItemRight" valign="bottom"><b>getName</b
 <div class="memdoc">
 
 <p>Determines relative amount of sun visible from the observer's position. </p>
+
+</div>
+</div>
+<a class="anchor" id="a1284c16fecbac6902ac65f18f02b4e48"></a><!-- doxytag: member="SolarSystem::getElongationForPlanet" ref="a1284c16fecbac6902ac65f18f02b4e48" args="(QString planetName) const " -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">double SolarSystem::getElongationForPlanet </td>
+          <td>(</td>
+          <td class="paramtype">QString&nbsp;</td>
+          <td class="paramname"> <em>planetName</em></td>
+          <td>&nbsp;)&nbsp;</td>
+          <td> const<code> [slot]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Get elongation for Solar system bodies from scripts. </p>
+<dl><dt><b>Parameters:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"></td><td valign="top"><em>planetName</em>&nbsp;</td><td>the case in-sensistive English planet name. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="return"><dt><b>Returns:</b></dt><dd>a elongation (in radians) </dd></dl>
 
 </div>
 </div>
@@ -543,7 +605,7 @@ virtual QString&nbsp;</td><td class="memItemRight" valign="bottom"><b>getName</b
 
 <p>Get the <a class="el" href="classPlanet.html">Planet</a> object pointer for Earth's moon. </p>
 
-<p>Definition at line <a class="el" href="SolarSystem_8hpp_source.html#l00202">202</a> of file <a class="el" href="SolarSystem_8hpp_source.html">SolarSystem.hpp</a>.</p>
+<p>Definition at line <a class="el" href="SolarSystem_8hpp_source.html#l00222">222</a> of file <a class="el" href="SolarSystem_8hpp_source.html">SolarSystem.hpp</a>.</p>
 
 </div>
 </div>
@@ -586,6 +648,60 @@ virtual QString&nbsp;</td><td class="memItemRight" valign="bottom"><b>getName</b
 <div class="memdoc">
 
 <p>Get the current color used to draw planet orbit lines. </p>
+
+</div>
+</div>
+<a class="anchor" id="a0821bc0e525fa1edd4acb18de5b38e54"></a><!-- doxytag: member="SolarSystem::getPhaseAngleForPlanet" ref="a0821bc0e525fa1edd4acb18de5b38e54" args="(QString planetName) const " -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">double SolarSystem::getPhaseAngleForPlanet </td>
+          <td>(</td>
+          <td class="paramtype">QString&nbsp;</td>
+          <td class="paramname"> <em>planetName</em></td>
+          <td>&nbsp;)&nbsp;</td>
+          <td> const<code> [slot]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Get phase angle for Solar system bodies from scripts. </p>
+<dl><dt><b>Parameters:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"></td><td valign="top"><em>planetName</em>&nbsp;</td><td>the case in-sensistive English planet name. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="return"><dt><b>Returns:</b></dt><dd>a phase angle (in radians) </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="ad7da0bb16f599f861b80810261b19cd8"></a><!-- doxytag: member="SolarSystem::getPhaseForPlanet" ref="ad7da0bb16f599f861b80810261b19cd8" args="(QString planetName) const " -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">float SolarSystem::getPhaseForPlanet </td>
+          <td>(</td>
+          <td class="paramtype">QString&nbsp;</td>
+          <td class="paramname"> <em>planetName</em></td>
+          <td>&nbsp;)&nbsp;</td>
+          <td> const<code> [slot]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Get phase for Solar system bodies from scripts. </p>
+<dl><dt><b>Parameters:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"></td><td valign="top"><em>planetName</em>&nbsp;</td><td>the case in-sensistive English planet name. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="return"><dt><b>Returns:</b></dt><dd>a phase </dd></dl>
 
 </div>
 </div>
@@ -664,7 +780,7 @@ virtual QString&nbsp;</td><td class="memItemRight" valign="bottom"><b>getName</b
 
 <p>Get the <a class="el" href="classPlanet.html">Planet</a> object pointer for the Sun. </p>
 
-<p>Definition at line <a class="el" href="SolarSystem_8hpp_source.html#l00196">196</a> of file <a class="el" href="SolarSystem_8hpp_source.html">SolarSystem.hpp</a>.</p>
+<p>Definition at line <a class="el" href="SolarSystem_8hpp_source.html#l00216">216</a> of file <a class="el" href="SolarSystem_8hpp_source.html">SolarSystem.hpp</a>.</p>
 
 </div>
 </div>
@@ -1242,7 +1358,7 @@ virtual QString&nbsp;</td><td class="memItemRight" valign="bottom"><b>getName</b
 <li>core/modules/<a class="el" href="SolarSystem_8hpp_source.html">SolarSystem.hpp</a></li>
 </ul>
 </div>
-<hr class="footer"/><address style="text-align: right;"><small>Generated on Wed Sep 26 20:39:31 2012 for Stellarium by&nbsp;
+<hr class="footer"/><address style="text-align: right;"><small>Generated on Mon Oct 1 21:14:00 2012 for Stellarium by&nbsp;
 <a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.6.3 </small></address>
 </body>
