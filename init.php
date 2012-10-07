@@ -53,7 +53,7 @@ $language = array(
     'zh_CN'=>'中文、汉语、漢語 (Simplified)',
 );
 
-if ($locale == "ar") or ($locale == "fa") {
+if (($locale == "ar") or ($locale == "fa")) {
     $langdir = "rtl";
 } else {
     $langdir = "ltr";
