@@ -28,6 +28,7 @@ $language = array(
     'el'=>'Ελληνικά',
     'en'=>'English',
     'es'=>'español',
+    'fa'=>'فارسی',
     'fi'=>'Suomen',
     'fr'=>'français',
     'ka'=>'ქართული ენა',
@@ -52,7 +53,7 @@ $language = array(
     'zh_CN'=>'中文、汉语、漢語 (Simplified)',
 );
 
-if ($locale == "ar") {
+if ($locale == "ar") or ($locale == "fa") {
     $langdir = "rtl";
 } else {
     $langdir = "ltr";
