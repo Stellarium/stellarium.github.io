@@ -237,9 +237,10 @@ printf('
 	<p>%s:</p>
 	<ul class="largelist">
 		<li><a href="http://launchpad.net/stellarium">%s</a></li>
-		<li><a href="http://sourceforge.net/projects/stellarium/forums/forum/278769">%s</a></li>
+		<li><a href="https://sourceforge.net/p/stellarium/discussion/278769">%s</a></li>
+		<li><a href="https://lists.sourceforge.net/lists/listinfo/stellarium-pubdevel">%s</a></li>
 		<li><a href="/wiki/">%s</a></li>
-		<li><a href="/wiki/index.php/FAQ">%s</a></li>		
+		<li><a href="/wiki/index.php/FAQ">%s</a></li>
 		<li><a href="/wiki/index.php/Landscapes">%s</a></li>
 		<li><a href="/wiki/index.php/Scripts">%s</a></li>
 		<li><a href="/wiki/index.php/Plugins">%s</a></li>
@@ -260,6 +261,7 @@ q_("collaborate"),
 q_("You can learn more about Stellarium, get support and help the project from these links"),
 q_("summary"),
 q_("forum"),
+q_("mailing list"),
 q_("wiki"),
 q_("FAQ"),
 q_("landscapes"),
