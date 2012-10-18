@@ -27,6 +27,7 @@ $language = array(
     'de'=>'Deutsch',
     'el'=>'Ελληνικά',
     'en'=>'English',
+    'en_GB'=>'English (United Kingdom)',
     'es'=>'español',
     'fa'=>'فارسی',
     'fi'=>'Suomen',
