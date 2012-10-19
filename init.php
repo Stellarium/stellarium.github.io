@@ -69,5 +69,38 @@ $download_link_source	= "http://sourceforge.net/projects/stellarium/files/Stella
 $download_link_linux	= "http://sourceforge.net/projects/stellarium/files/Stellarium-linux/".$version."/";
 $download_link_ppa	= "https://launchpad.net/~stellarium/+archive/stellarium-releases";
 
+
+function displayDownloadBar() {
+    $downloadbar  = '<div id="downloadbar" class="block">\n';
+    $downloadbar .= '	<div id="release" class="block">\n';
+    $downloadbar .= '		<div class="download linux">\n';
+    $downloadbar .= '			<a href="'.$download_link_source.'">Linux<span>('.q_('source').')</span></a>\n';
+    $downloadbar .= '		</div>\n';
+    $downloadbar .= '		<div class="download linux">\n';
+    $downloadbar .= '			<a href="'.$download_link_linux.'">Linux<span>('.q_('binaries').')</span></a>\n';
+    $downloadbar .= '		</div>\n';
+    $downloadbar .= '		<div class="download macosx">\n';
+    $downloadbar .= '			<a href="'.$download_link_osx_u.'">Mac OS X<span>10.6+</span></a>\n';
+    $downloadbar .= '		</div>\n';
+    $downloadbar .= '		<div class="download windows">\n';
+    $downloadbar .= '			<a href="'.$download_link_win32.'">Windows<span>'.q_('32 bit').'</span></a>\n';
+    $downloadbar .= '		</div>\n';
+    $downloadbar .= '		<div class="download windows">\n';
+    $downloadbar .= '			<a href="'.$download_link_win64.'">Windows<span>'.q_('64 bit').'</span></a>\n';
+    $downloadbar .= '		</div>\n';
+    $downloadbar .= '		<div class="download ubuntu">\n';
+    $downloadbar .= '			<a href="'.$download_link_ppa.'">Ubuntu<span>'.q_('latest stable release').'</span></a>\n';
+    $downloadbar .= '		</div>\n';
+    $downloadbar .= '	</div>\n';
+    $downloadbar .= '	<div id="additional" class="block">\n';
+    $downloadbar .= '		<div class="download nopdf">\n';
+    $downloadbar .= '			<a href="http://www.stellarium.org/wiki/index.php/Stellarium_User_Guide">'.q_('User guide').'</a>\n';
+    $downloadbar .= '		</div>\n';
+    $downloadbar .= '	</div>\n';
+    $downloadbar .= '</div>\n';
+    
+    return $downloadbar;
+}
+
 ?>
 
