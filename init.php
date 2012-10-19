@@ -102,21 +102,5 @@ function displayDownloadBar() {
     return $downloadbar;
 }
 
-function displayLanguageBar() {
-    $languagebar  = '<div id="langbar">'.q_('Other languages:').' ';
-    $languagebar .= '	<select id="language" onchange="changelang(this.value)">';
-    foreach ($language as $langcode => $langname) {
-    	if ($langcode==$locale) {
-	    $languagebar .= '		<option value="'.$langcode.'" selected="selected">'.$langname.' ('.$langcode.')</option>';
-	} else {
-	    $languagebar .= '		<option value="'.$langcode.'">'.$langname.' ('.$langcode.')</option>';
-	}
-    };
-    $languagebar .= '	</select>';
-    $languagebar .= '</div>';
-
-    return $languagebar;
-}
-
 ?>
 
