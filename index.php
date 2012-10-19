@@ -49,12 +49,10 @@ print '</select>  </div>';
 
 printf('
 <div id="header">
-	<div id="latestversion" class="block"><a href="/">%s %s</a></div>
-	%s
-</div>',
+	<div id="latestversion" class="block"><a href="/">%s %s</a></div>',
 q_('latest version'),
-$version,
-displayDownloadBar());
+$version);
+print displayDownloadBar()."</div>";
 
 printf('  
 <div id="home">
