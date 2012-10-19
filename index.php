@@ -34,18 +34,8 @@ q_("Stellarium: Project News"));
 
 printf('<body>
 <div id="wrapper">
-  <div id="langbar">%s ',
-  q_("Other languages:"));     
-print '<select id="language" onchange="changelang(this.value)">';
-foreach ($language as $langcode => $langname) {
-	if ($langcode==$locale) {
-		print '<option value="'.$langcode.'" selected="selected">'.$langname.' ('.$langcode.')</option>';
-	} else {
-		print '<option value="'.$langcode.'">'.$langname.' ('.$langcode.')</option>';
-	}
-};
-
-print '</select>  </div>';
+  %s',
+  displayLanguageBar());     
 
 printf('
 <div id="header">
