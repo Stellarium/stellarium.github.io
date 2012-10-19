@@ -4,6 +4,10 @@ RewriteRule ^features_in_0.10.0.php /articles/features_in_0.10.0/index.php
 RewriteRule ^top_new_features.php /articles/features_in_0.10.0/index.php
 RewriteRule ^\.bzr\/ /error.html
 
+# redirect old pages to new pages
+RewriteRule ^screenshots\.html$	screenshots.php [R=permanent]
+RewriteRule ^sponsors\.html$	sponsors.php [R=permanent]
+
 # Redirect to the MPC website for the Solar System editor search
 Redirect temp /mpc-mpeph http://scully.cfa.harvard.edu/cgi-bin/mpeph2.cgi
 
