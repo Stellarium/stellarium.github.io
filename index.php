@@ -14,7 +14,7 @@ printf('<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0//EN" "http://www.w3.org/TR/R
 <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
 <link rel="stylesheet" href="/css/all.css" type="text/css" media="screen" />
 <link rel="stylesheet" href="/css/%s.css" type="text/css" media="screen" />
-<link rel="alternate" type="application/rss+xml" title="%s" href="https://sourceforge.net/export/rss2_projnews.php?group_id=48857&rss_fulltext=1" />
+<link rel="alternate" type="application/rss+xml" title="%s" href="https://sourceforge.net/p/stellarium/news/feed" />
 <!--[if lt IE 8]>
 <link href="/css/oldie.css" rel="stylesheet" type="text/css" /> 
 <script defer type="text/javascript" src="/js/pngfix.js"></script>
@@ -226,18 +226,11 @@ q_("ability to add new solar system objects from online resources..."),
 q_("add your own deep sky objects, landscapes, constellation images, scripts..."));
 printf('
 <div id="news" class="block">
-	<h2>%s</h2>',
-q_("news"));
-
-include("rss2html/rss2html.php"); 
-
-printf('
-</div>
-<div id="development" class="block">
 	<h2>%s</h2>
 	<p>%s:</p>
 	<ul class="largelist">
 		<li><a href="http://launchpad.net/stellarium">%s</a></li>
+		<li><a href="https://sourceforge.net/p/stellarium/news/">%s</a><li>
 		<li><a href="https://sourceforge.net/p/stellarium/discussion/278769">%s</a></li>
 		<li><a href="https://lists.sourceforge.net/lists/listinfo/stellarium-pubdevel">%s</a></li>
 		<li><a href="/wiki/">%s</a></li>
@@ -261,6 +254,7 @@ printf('
 q_("collaborate"),
 q_("You can learn more about Stellarium, get support and help the project from these links"),
 q_("summary"),
+q_("news"),
 q_("forum"),
 q_("mailing list"),
 q_("wiki"),
@@ -277,7 +271,8 @@ q_("older releases"),
 q_("for Linux (source)"),
 q_("for Mac OS X"),
 q_("for Windows"));
-printf('
+printf('</div>
+	<div id="development" class="block">
 	<h2>%s</h2>
 		<p>%s</p>
 		<ul class="largelist">

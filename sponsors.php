@@ -14,7 +14,7 @@ printf('<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0//EN" "http://www.w3.org/TR/R
 <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
 <link rel="stylesheet" href="/css/all.css" type="text/css" media="screen" />
 <link rel="stylesheet" href="/css/%s.css" type="text/css" media="screen" />
-<link rel="alternate" type="application/rss+xml" title="%s" href="https://sourceforge.net/export/rss2_projnews.php?group_id=48857&rss_fulltext=1" />
+<link rel="alternate" type="application/rss+xml" title="%s" href="https://sourceforge.net/p/stellarium/news/feed" />
 <!--[if lt IE 8]>
 <link href="/css/oldie.css" rel="stylesheet" type="text/css" /> 
 <script defer type="text/javascript" src="/js/pngfix.js"></script>
