@@ -225,12 +225,12 @@ q_("plugin system adding artifical satellites, ocular simulation, telescope conf
 q_("ability to add new solar system objects from online resources..."),
 q_("add your own deep sky objects, landscapes, constellation images, scripts..."));
 printf('
-<div id="news" class="block">
+<div id="collaborate" class="block">
 	<h2>%s</h2>
 	<p>%s:</p>
 	<ul class="largelist">
 		<li><a href="http://launchpad.net/stellarium">%s</a></li>
-		<li><a href="https://sourceforge.net/p/stellarium/news/">%s</a><li>
+		<li><a href="https://sourceforge.net/p/stellarium/news/">%s</a></li>
 		<li><a href="https://sourceforge.net/p/stellarium/discussion/278769">%s</a></li>
 		<li><a href="https://lists.sourceforge.net/lists/listinfo/stellarium-pubdevel">%s</a></li>
 		<li><a href="/wiki/">%s</a></li>
