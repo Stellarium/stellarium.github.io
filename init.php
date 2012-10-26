@@ -35,6 +35,7 @@ $language = array(
     'fr'=>'français',
     'ka'=>'ქართული ენა',
     'ko'=>'한국어/조선말',
+    'la'=>'Latin',
     'lv'=>'latviešu valoda',
     'hu'=>'magyar nyelv',
     'hr'=>'Hrvatski',
