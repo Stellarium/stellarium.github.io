@@ -18,7 +18,7 @@ Redirect temp /mpc-mpeph http://scully.cfa.harvard.edu/cgi-bin/mpeph2.cgi
 RewriteCond %{REQUEST_FILENAME} !-f
 RewriteCond %{REQUEST_FILENAME} !-d
 RewriteCond %{REQUEST_URI} !^/doc*
-RewriteRule ^([a-z]{2})_([a-z]{2})/([a-z]+)\.php$	/$2.php?lang=$1_$2	[NC,QSA]
+RewriteRule ^([a-z]{2})_([a-z]{2})/([a-z]+)\.php$	/$3.php?lang=$1_$2	[NC,QSA]
 RewriteRule ^([a-z]{2})_([a-z]{2})([\/]{0,1})$		/index.php?lang=$1_$2	[NC,QSA]
 RewriteRule ^([a-z]{2,3})/([a-z]+)\.php$		/$2.php?lang=$1		[NC,QSA]
 RewriteRule ^([a-z]{2,3})([\/]{0,1})$			/index.php?lang=$1	[NC,QSA]
