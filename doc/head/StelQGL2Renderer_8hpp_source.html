@@ -485,13 +485,13 @@
 <a name="l00486"></a>00486         <a class="code" href="classStelQGLRenderer.html#a855246352a275b9b79572cec9ae7186d" title="Set up GL state common between the GL1 and GL2 backends before drawing.">setupGLState</a>(projector);
 <a name="l00487"></a>00487 
 <a name="l00488"></a>00488         <span class="comment">// Need to transpose the matrix for QGL.</span>
-<a name="l00489"></a>00489         <span class="keyword">const</span> <a class="code" href="classMatrix4.html" title="A templatized column-major 4x4 matrix.">Mat4f</a>&amp; projectionMatrix = projector-&gt;getProjectionMatrix();
+<a name="l00489"></a>00489         <span class="keyword">const</span> <a class="code" href="classMatrix4.html">Mat4f</a>&amp; projectionMatrix = projector-&gt;getProjectionMatrix();
 <a name="l00490"></a>00490 
 <a name="l00491"></a>00491         <span class="comment">// We might relink the shaders here, so we can only upload uniforms after the relinking.</span>
 <a name="l00492"></a>00492         shader-&gt;<a class="code" href="classStelQGLGLSLShader.html#ad055f5447dde2b203e503e56ebcc4343" title="Upload the stored uniform variables.">uploadUniforms</a>();
 <a name="l00493"></a>00493 
 <a name="l00494"></a>00494         <span class="comment">// Set up viewport for the projector.</span>
-<a name="l00495"></a>00495         <span class="keyword">const</span> <a class="code" href="classVector4.html">Vec4i</a> viewXywh = projector-&gt;getViewportXywh();
+<a name="l00495"></a>00495         <span class="keyword">const</span> <a class="code" href="classVector4.html" title="A templatized 4d vector.">Vec4i</a> viewXywh = projector-&gt;getViewportXywh();
 <a name="l00496"></a>00496         glViewport(viewXywh[0], viewXywh[1], viewXywh[2], viewXywh[3]);
 <a name="l00497"></a>00497 
 <a name="l00498"></a>00498         <a class="code" href="classStelQGLRenderer.html#aee622a5d5e3e9826b43c996659ee3240" title="Update statistics in a drawVertexBufferBackend() call.">updateDrawStatistics</a>(backend, glIndexBuffer);
@@ -595,7 +595,7 @@
 <a name="l00615"></a>00615 
 <a name="l00616"></a>00616 <span class="preprocessor">#endif // _STELQGL2RENDERER_HPP_</span>
 </pre></div></div>
-<hr class="footer"/><address style="text-align: right;"><small>Generated on Mon Oct 1 21:13:52 2012 for Stellarium by&nbsp;
+<hr class="footer"/><address style="text-align: right;"><small>Generated on Sat Nov 3 23:18:37 2012 for Stellarium by&nbsp;
 <a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.6.3 </small></address>
 </body>

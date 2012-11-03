@@ -122,11 +122,11 @@
 <a name="l00149"></a>00149 
 <a name="l00151"></a>00151     <span class="keywordtype">void</span> <a class="code" href="classSolarSystem.html#ac2cfce101d5cff705ccf6fd121792278" title="Set planet names font size.">setFontSize</a>(<span class="keywordtype">float</span> newFontSize);
 <a name="l00152"></a>00152 
-<a name="l00154"></a>00154     <span class="keywordtype">void</span> <a class="code" href="classSolarSystem.html#a3618fdfbf253de1a398f22ce536e2526" title="Set the color used to draw planet labels.">setLabelsColor</a>(<span class="keyword">const</span> <a class="code" href="classVector3.html" title="A templatized 3d vector.">Vec3f</a>&amp; c);
-<a name="l00156"></a>00156     <span class="keyword">const</span> <a class="code" href="classVector3.html" title="A templatized 3d vector.">Vec3f</a>&amp; <a class="code" href="classSolarSystem.html#aaebdf00e1151827f1a9f91502a8d173e" title="Get the current color used to draw planet labels.">getLabelsColor</a>(<span class="keywordtype">void</span>) <span class="keyword">const</span>;
+<a name="l00154"></a>00154     <span class="keywordtype">void</span> <a class="code" href="classSolarSystem.html#a3618fdfbf253de1a398f22ce536e2526" title="Set the color used to draw planet labels.">setLabelsColor</a>(<span class="keyword">const</span> <a class="code" href="classVector3.html">Vec3f</a>&amp; c);
+<a name="l00156"></a>00156     <span class="keyword">const</span> <a class="code" href="classVector3.html">Vec3f</a>&amp; <a class="code" href="classSolarSystem.html#aaebdf00e1151827f1a9f91502a8d173e" title="Get the current color used to draw planet labels.">getLabelsColor</a>(<span class="keywordtype">void</span>) <span class="keyword">const</span>;
 <a name="l00157"></a>00157 
-<a name="l00159"></a>00159     <span class="keywordtype">void</span> <a class="code" href="classSolarSystem.html#ad410b2741a6d1373f137e7bc69740fb6" title="Set the color used to draw planet orbit lines.">setOrbitsColor</a>(<span class="keyword">const</span> <a class="code" href="classVector3.html" title="A templatized 3d vector.">Vec3f</a>&amp; c);
-<a name="l00161"></a>00161     <a class="code" href="classVector3.html" title="A templatized 3d vector.">Vec3f</a> <a class="code" href="classSolarSystem.html#a4d0933f3ed314a781df63e4a7ffaf7a7" title="Get the current color used to draw planet orbit lines.">getOrbitsColor</a>(<span class="keywordtype">void</span>) <span class="keyword">const</span>;
+<a name="l00159"></a>00159     <span class="keywordtype">void</span> <a class="code" href="classSolarSystem.html#ad410b2741a6d1373f137e7bc69740fb6" title="Set the color used to draw planet orbit lines.">setOrbitsColor</a>(<span class="keyword">const</span> <a class="code" href="classVector3.html">Vec3f</a>&amp; c);
+<a name="l00161"></a>00161     <a class="code" href="classVector3.html">Vec3f</a> <a class="code" href="classSolarSystem.html#a4d0933f3ed314a781df63e4a7ffaf7a7" title="Get the current color used to draw planet orbit lines.">getOrbitsColor</a>(<span class="keywordtype">void</span>) <span class="keyword">const</span>;
 <a name="l00162"></a>00162 
 <a name="l00164"></a><a class="code" href="classSolarSystem.html#a1ac6ae621b2d02cb86ed4ca5ac402daa">00164</a>     <span class="keywordtype">void</span> <a class="code" href="classSolarSystem.html#a1ac6ae621b2d02cb86ed4ca5ac402daa" title="Set the color used to draw planet trails lines.">setTrailsColor</a>(<span class="keyword">const</span> <a class="code" href="classVector3.html">Vec3f</a>&amp; c) {trailColor=c;}
 <a name="l00166"></a><a class="code" href="classSolarSystem.html#ae3e0ccb2a363203759601494184767f0">00166</a>     <a class="code" href="classVector3.html">Vec3f</a> <a class="code" href="classSolarSystem.html#ae3e0ccb2a363203759601494184767f0" title="Get the current color used to draw planet trails lines.">getTrailsColor</a>()<span class="keyword"> const </span>{<span class="keywordflow">return</span> trailColor;}
@@ -172,7 +172,7 @@
 <a name="l00240"></a>00240     <span class="comment">// DEPRECATED</span>
 <a name="l00246"></a>00246 <span class="comment"></span>    QString <a class="code" href="classSolarSystem.html#ab3635b90421a4bcec4a9368837c84a9d" title="Get a hash of locale and ssystem.ini names for use with the TUI.">getPlanetHashString</a>();
 <a name="l00247"></a>00247 
-<a name="l00252"></a>00252     <span class="keywordtype">void</span> <a class="code" href="classSolarSystem.html#a278845fca95a186932ee052ccd60ab4e" title="Compute the position and transform matrix for every element of the solar system.">computePositions</a>(<span class="keywordtype">double</span> date, <span class="keyword">const</span> <a class="code" href="classVector3.html">Vec3d</a>&amp; observerPos = <a class="code" href="classVector3.html">Vec3d</a>(0.));
+<a name="l00252"></a>00252     <span class="keywordtype">void</span> <a class="code" href="classSolarSystem.html#a278845fca95a186932ee052ccd60ab4e" title="Compute the position and transform matrix for every element of the solar system.">computePositions</a>(<span class="keywordtype">double</span> date, <span class="keyword">const</span> <a class="code" href="classVector3.html" title="A templatized 3d vector.">Vec3d</a>&amp; observerPos = <a class="code" href="classVector3.html" title="A templatized 3d vector.">Vec3d</a>(0.));
 <a name="l00253"></a>00253 
 <a name="l00256"></a><a class="code" href="classSolarSystem.html#a8a39b95aa7d8205bd69d6e8fb5281d68">00256</a>     <span class="keyword">const</span> QList&lt;PlanetP&gt;&amp; <a class="code" href="classSolarSystem.html#a8a39b95aa7d8205bd69d6e8fb5281d68" title="Get the list of all the bodies of the solar system.">getAllPlanets</a>()<span class="keyword"> const </span>{<span class="keywordflow">return</span> systemPlanets;} 
 <a name="l00257"></a>00257 
@@ -183,9 +183,9 @@
 <a name="l00264"></a>00264 
 <a name="l00265"></a>00265 
 <a name="l00266"></a>00266 <span class="keyword">private</span>:
-<a name="l00272"></a>00272     <a class="code" href="classQSharedPointerNoDelete.html">StelObjectP</a> search(<a class="code" href="classVector3.html">Vec3d</a> v, <span class="keyword">const</span> <a class="code" href="classStelCore.html" title="Main class for Stellarium core processing.">StelCore</a>* core) <span class="keyword">const</span>;
+<a name="l00272"></a>00272     <a class="code" href="classQSharedPointerNoDelete.html">StelObjectP</a> search(<a class="code" href="classVector3.html" title="A templatized 3d vector.">Vec3d</a> v, <span class="keyword">const</span> <a class="code" href="classStelCore.html" title="Main class for Stellarium core processing.">StelCore</a>* core) <span class="keyword">const</span>;
 <a name="l00273"></a>00273 
-<a name="l00276"></a>00276     <span class="keywordtype">void</span> computeTransMatrices(<span class="keywordtype">double</span> date, <span class="keyword">const</span> <a class="code" href="classVector3.html">Vec3d</a>&amp; observerPos = <a class="code" href="classVector3.html">Vec3d</a>(0.));
+<a name="l00276"></a>00276     <span class="keywordtype">void</span> computeTransMatrices(<span class="keywordtype">double</span> date, <span class="keyword">const</span> <a class="code" href="classVector3.html" title="A templatized 3d vector.">Vec3d</a>&amp; observerPos = <a class="code" href="classVector3.html" title="A templatized 3d vector.">Vec3d</a>(0.));
 <a name="l00277"></a>00277 
 <a name="l00282"></a>00282     <span class="keywordtype">void</span> drawPointer(<span class="keyword">const</span> <a class="code" href="classStelCore.html" title="Main class for Stellarium core processing.">StelCore</a>* core, <span class="keyword">class</span> <a class="code" href="classStelRenderer.html" title="Main class of the Renderer subsystem.">StelRenderer</a>* renderer);
 <a name="l00283"></a>00283 
@@ -232,7 +232,7 @@
 <a name="l00342"></a>00342 
 <a name="l00343"></a>00343     <span class="keyword">class </span><a class="code" href="classTrailGroup.html">TrailGroup</a>* allTrails;
 <a name="l00344"></a>00344     <a class="code" href="classLinearFader.html" title="Implementation of StelFader which implements a linear transition.">LinearFader</a> trailFader;
-<a name="l00345"></a>00345     <a class="code" href="classVector3.html" title="A templatized 3d vector.">Vec3f</a> trailColor;
+<a name="l00345"></a>00345     <a class="code" href="classVector3.html">Vec3f</a> trailColor;
 <a name="l00346"></a>00346 
 <a name="l00347"></a>00347     <a class="code" href="structPlanet_1_1SharedPlanetGraphics.html" title="Stores graphics data that is shared between planets and must be initialized by a...">Planet::SharedPlanetGraphics</a> sharedPlanetGraphics;
 <a name="l00348"></a>00348 
@@ -243,7 +243,7 @@
 <a name="l00355"></a>00355 
 <a name="l00356"></a>00356 <span class="preprocessor">#endif // _SOLARSYSTEM_HPP_</span>
 </pre></div></div>
-<hr class="footer"/><address style="text-align: right;"><small>Generated on Mon Oct 1 21:13:51 2012 for Stellarium by&nbsp;
+<hr class="footer"/><address style="text-align: right;"><small>Generated on Sat Nov 3 23:18:37 2012 for Stellarium by&nbsp;
 <a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.6.3 </small></address>
 </body>

@@ -93,11 +93,11 @@
 <a name="l00105"></a>00105         <span class="keywordflow">return</span> <a class="code" href="classStelSkyDrawer.html#a5cd8a5fa219fca44ab57c41abd24fc20" title="Draw a point source halo.">drawPointSource</a>(win, rcMag, colorTable[bV]);
 <a name="l00106"></a>00106     }
 <a name="l00107"></a>00107 
-<a name="l00108"></a>00108     <span class="keywordtype">void</span> <a class="code" href="classStelSkyDrawer.html#a5cd8a5fa219fca44ab57c41abd24fc20" title="Draw a point source halo.">drawPointSource</a>(<span class="keyword">const</span> <a class="code" href="classVector3.html" title="A templatized 3d vector.">Vec3f</a>&amp; win, <span class="keyword">const</span> <span class="keywordtype">float</span> rcMag[2], <span class="keyword">const</span> <a class="code" href="classVector3.html" title="A templatized 3d vector.">Vec3f</a>&amp; bcolor);
+<a name="l00108"></a>00108     <span class="keywordtype">void</span> <a class="code" href="classStelSkyDrawer.html#a5cd8a5fa219fca44ab57c41abd24fc20" title="Draw a point source halo.">drawPointSource</a>(<span class="keyword">const</span> <a class="code" href="classVector3.html">Vec3f</a>&amp; win, <span class="keyword">const</span> <span class="keywordtype">float</span> rcMag[2], <span class="keyword">const</span> <a class="code" href="classVector3.html">Vec3f</a>&amp; bcolor);
 <a name="l00109"></a>00109 
-<a name="l00111"></a>00111     <span class="keywordtype">void</span> <a class="code" href="classStelSkyDrawer.html#ae10860484e77420acd7b7c167e8deca1" title="Draw&amp;#39;s the sun&amp;#39;s corona during a solar eclipse on earth.">drawSunCorona</a>(<a class="code" href="classQSharedPointer.html">StelProjectorP</a> projector, <span class="keyword">const</span> <a class="code" href="classVector3.html">Vec3d</a>&amp; v, <span class="keywordtype">float</span> radius, <span class="keywordtype">float</span> alpha);
+<a name="l00111"></a>00111     <span class="keywordtype">void</span> <a class="code" href="classStelSkyDrawer.html#ae10860484e77420acd7b7c167e8deca1" title="Draw&amp;#39;s the sun&amp;#39;s corona during a solar eclipse on earth.">drawSunCorona</a>(<a class="code" href="classQSharedPointer.html">StelProjectorP</a> projector, <span class="keyword">const</span> <a class="code" href="classVector3.html" title="A templatized 3d vector.">Vec3d</a>&amp; v, <span class="keywordtype">float</span> radius, <span class="keywordtype">float</span> alpha);
 <a name="l00112"></a>00112 
-<a name="l00119"></a>00119     <span class="keywordtype">void</span> <a class="code" href="classStelSkyDrawer.html#acafe888446241c8b75cad5400bd25b00" title="Terminate drawing of a 3D model, draw the halo.">postDrawSky3dModel</a>(<a class="code" href="classQSharedPointer.html">StelProjectorP</a> projector, <span class="keyword">const</span> <a class="code" href="classVector3.html">Vec3d</a>&amp; v, <span class="keywordtype">float</span> illuminatedArea, <span class="keywordtype">float</span> mag, <span class="keyword">const</span> <a class="code" href="classVector3.html" title="A templatized 3d vector.">Vec3f</a>&amp; color = <a class="code" href="classVector3.html" title="A templatized 3d vector.">Vec3f</a>(1.f,1.f,1.f));
+<a name="l00119"></a>00119     <span class="keywordtype">void</span> <a class="code" href="classStelSkyDrawer.html#acafe888446241c8b75cad5400bd25b00" title="Terminate drawing of a 3D model, draw the halo.">postDrawSky3dModel</a>(<a class="code" href="classQSharedPointer.html">StelProjectorP</a> projector, <span class="keyword">const</span> <a class="code" href="classVector3.html" title="A templatized 3d vector.">Vec3d</a>&amp; v, <span class="keywordtype">float</span> illuminatedArea, <span class="keywordtype">float</span> mag, <span class="keyword">const</span> <a class="code" href="classVector3.html">Vec3f</a>&amp; color = <a class="code" href="classVector3.html">Vec3f</a>(1.f,1.f,1.f));
 <a name="l00120"></a>00120 
 <a name="l00125"></a>00125     <span class="keywordtype">bool</span> <a class="code" href="classStelSkyDrawer.html#ac31ae11e158c742f8f1c82584be9cf20" title="Compute RMag and CMag from magnitude.">computeRCMag</a>(<span class="keywordtype">float</span> mag, <span class="keywordtype">float</span> rcMag[2]) <span class="keyword">const</span>;
 <a name="l00126"></a>00126 
@@ -214,7 +214,7 @@
 <a name="l00317"></a>00317 
 <a name="l00319"></a>00319     <span class="keywordtype">void</span> initColorTableFromConfigFile(<span class="keyword">class</span> QSettings* conf);
 <a name="l00320"></a>00320 
-<a name="l00322"></a>00322     <span class="keyword">static</span> <a class="code" href="classVector3.html" title="A templatized 3d vector.">Vec3f</a> colorTable[128];
+<a name="l00322"></a>00322     <span class="keyword">static</span> <a class="code" href="classVector3.html">Vec3f</a> colorTable[128];
 <a name="l00323"></a>00323 
 <a name="l00325"></a>00325     <span class="keywordtype">int</span> bortleScaleIndex;
 <a name="l00326"></a>00326 
@@ -222,22 +222,22 @@
 <a name="l00329"></a>00329 
 <a name="l00331"></a>00331     <span class="keyword">struct </span>ColoredVertex
 <a name="l00332"></a>00332     {
-<a name="l00333"></a>00333         <a class="code" href="classVector2.html" title="A templatized 2d vector.">Vec2f</a> position;
-<a name="l00334"></a>00334         <a class="code" href="classVector3.html" title="A templatized 3d vector.">Vec3f</a> color;
-<a name="l00335"></a>00335         ColoredVertex(<a class="code" href="classVector2.html" title="A templatized 2d vector.">Vec2f</a> position, <a class="code" href="classVector3.html" title="A templatized 3d vector.">Vec3f</a> color):position(position), color(color){}
+<a name="l00333"></a>00333         <a class="code" href="classVector2.html">Vec2f</a> position;
+<a name="l00334"></a>00334         <a class="code" href="classVector3.html">Vec3f</a> color;
+<a name="l00335"></a>00335         ColoredVertex(<a class="code" href="classVector2.html">Vec2f</a> position, <a class="code" href="classVector3.html">Vec3f</a> color):position(position), color(color){}
 <a name="l00336"></a>00336 
-<a name="l00337"></a>00337         VERTEX_ATTRIBUTES(<a class="code" href="classVector2.html" title="A templatized 2d vector.">Vec2f</a> Position, <a class="code" href="classVector3.html" title="A templatized 3d vector.">Vec3f</a> Color);
+<a name="l00337"></a>00337         VERTEX_ATTRIBUTES(<a class="code" href="classVector2.html">Vec2f</a> Position, <a class="code" href="classVector3.html">Vec3f</a> Color);
 <a name="l00338"></a>00338     };
 <a name="l00339"></a>00339 
 <a name="l00341"></a>00341     <span class="keyword">struct </span>ColoredTexturedVertex
 <a name="l00342"></a>00342     {
-<a name="l00343"></a>00343         <a class="code" href="classVector2.html" title="A templatized 2d vector.">Vec2f</a> position;
-<a name="l00344"></a>00344         <a class="code" href="classVector3.html" title="A templatized 3d vector.">Vec3f</a> color;
-<a name="l00345"></a>00345         <a class="code" href="classVector2.html" title="A templatized 2d vector.">Vec2f</a> texCoord;
-<a name="l00346"></a>00346         ColoredTexturedVertex(<a class="code" href="classVector2.html" title="A templatized 2d vector.">Vec2f</a> position, <a class="code" href="classVector3.html" title="A templatized 3d vector.">Vec3f</a> color, <a class="code" href="classVector2.html" title="A templatized 2d vector.">Vec2f</a> texCoord)
+<a name="l00343"></a>00343         <a class="code" href="classVector2.html">Vec2f</a> position;
+<a name="l00344"></a>00344         <a class="code" href="classVector3.html">Vec3f</a> color;
+<a name="l00345"></a>00345         <a class="code" href="classVector2.html">Vec2f</a> texCoord;
+<a name="l00346"></a>00346         ColoredTexturedVertex(<a class="code" href="classVector2.html">Vec2f</a> position, <a class="code" href="classVector3.html">Vec3f</a> color, <a class="code" href="classVector2.html">Vec2f</a> texCoord)
 <a name="l00347"></a>00347             :position(position), color(color), texCoord(texCoord){}
 <a name="l00348"></a>00348 
-<a name="l00349"></a>00349         VERTEX_ATTRIBUTES(<a class="code" href="classVector2.html" title="A templatized 2d vector.">Vec2f</a> Position, <a class="code" href="classVector3.html" title="A templatized 3d vector.">Vec3f</a> Color, <a class="code" href="classVector2.html" title="A templatized 2d vector.">Vec2f</a> TexCoord);
+<a name="l00349"></a>00349         VERTEX_ATTRIBUTES(<a class="code" href="classVector2.html">Vec2f</a> Position, <a class="code" href="classVector3.html">Vec3f</a> Color, <a class="code" href="classVector2.html">Vec2f</a> TexCoord);
 <a name="l00350"></a>00350     };
 <a name="l00351"></a>00351 
 <a name="l00353"></a>00353     <a class="code" href="classStelVertexBuffer.html">StelVertexBuffer&lt;ColoredVertex&gt;</a>* starPointBuffer;
@@ -273,7 +273,7 @@
 <a name="l00395"></a>00395 
 <a name="l00396"></a>00396 <span class="preprocessor">#endif // _STELSKYDRAWER_HPP_</span>
 </pre></div></div>
-<hr class="footer"/><address style="text-align: right;"><small>Generated on Mon Oct 1 21:13:54 2012 for Stellarium by&nbsp;
+<hr class="footer"/><address style="text-align: right;"><small>Generated on Sat Nov 3 23:18:38 2012 for Stellarium by&nbsp;
 <a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.6.3 </small></address>
 </body>

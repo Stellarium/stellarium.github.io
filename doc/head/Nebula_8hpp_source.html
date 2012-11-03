@@ -71,15 +71,15 @@
 <a name="l00054"></a>00054     <span class="keyword">virtual</span> <span class="keywordtype">double</span> <a class="code" href="classNebula.html#abe15fa6f556ab663eec3c1918641421b" title="Return the best FOV in degree to use for a close view of the object.">getCloseViewFov</a>(<span class="keyword">const</span> <a class="code" href="classStelCore.html" title="Main class for Stellarium core processing.">StelCore</a>* core = NULL) <span class="keyword">const</span>;
 <a name="l00055"></a>00055     <span class="keyword">virtual</span> <span class="keywordtype">float</span> <a class="code" href="classNebula.html#a78670f2590a7534f57d536c050d314a2" title="Return object&amp;#39;s apparent V magnitude as seen from observer.">getVMagnitude</a>(<span class="keyword">const</span> <a class="code" href="classStelCore.html" title="Main class for Stellarium core processing.">StelCore</a>* core, <span class="keywordtype">bool</span> withExtinction=<span class="keyword">false</span>) <span class="keyword">const</span>;
 <a name="l00056"></a>00056     <span class="keyword">virtual</span> <span class="keywordtype">float</span> <a class="code" href="classNebula.html#a75f7a182434e3340cdcd0f0b624e5e20" title="Return a priority value which is used to discriminate objects by priority As for...">getSelectPriority</a>(<span class="keyword">const</span> <a class="code" href="classStelCore.html" title="Main class for Stellarium core processing.">StelCore</a>* core) <span class="keyword">const</span>;
-<a name="l00057"></a>00057     <span class="keyword">virtual</span> <a class="code" href="classVector3.html" title="A templatized 3d vector.">Vec3f</a> <a class="code" href="classNebula.html#a0201e9fda26a47b41933924bee060c9d" title="Get a color used to display info about the object.">getInfoColor</a>() <span class="keyword">const</span>;
+<a name="l00057"></a>00057     <span class="keyword">virtual</span> <a class="code" href="classVector3.html">Vec3f</a> <a class="code" href="classNebula.html#a0201e9fda26a47b41933924bee060c9d" title="Get a color used to display info about the object.">getInfoColor</a>() <span class="keyword">const</span>;
 <a name="l00058"></a><a class="code" href="classNebula.html#a867f6e685a178a75bc8a650ca93bec8b">00058</a>     <span class="keyword">virtual</span> QString <a class="code" href="classNebula.html#a867f6e685a178a75bc8a650ca93bec8b" title="Return translated object&amp;#39;s name.">getNameI18n</a>()<span class="keyword"> const </span>{<span class="keywordflow">return</span> nameI18;}
 <a name="l00059"></a><a class="code" href="classNebula.html#af6e081b109bb82d381514392f40365e5">00059</a>     <span class="keyword">virtual</span> QString <a class="code" href="classNebula.html#af6e081b109bb82d381514392f40365e5" title="Return object&amp;#39;s name in english.">getEnglishName</a>()<span class="keyword"> const </span>{<span class="keywordflow">return</span> englishName;}
 <a name="l00060"></a><a class="code" href="classNebula.html#add1dca26fc1da44d632006e2e3c1458d">00060</a>     <span class="keyword">virtual</span> <span class="keywordtype">double</span> <a class="code" href="classNebula.html#add1dca26fc1da44d632006e2e3c1458d" title="Return the angular radius of a circle containing the object as seen from the observer...">getAngularSize</a>(<span class="keyword">const</span> <a class="code" href="classStelCore.html" title="Main class for Stellarium core processing.">StelCore</a>*)<span class="keyword"> const </span>{<span class="keywordflow">return</span> angularSize*0.5;}
 <a name="l00061"></a><a class="code" href="classNebula.html#a37dde6d2d3109e10ffa21662d3a2381c">00061</a>     <span class="keyword">virtual</span> <a class="code" href="classSphericalRegionP.html" title="A shared pointer on a SphericalRegion.">SphericalRegionP</a> <a class="code" href="classNebula.html#a37dde6d2d3109e10ffa21662d3a2381c" title="Default implementation of the getRegion method.">getRegion</a>()<span class="keyword"> const </span>{<span class="keywordflow">return</span> pointRegion;}
 <a name="l00062"></a>00062 
 <a name="l00063"></a>00063     <span class="comment">// Methods specific to Nebula</span>
-<a name="l00064"></a>00064     <span class="keywordtype">void</span> setLabelColor(<span class="keyword">const</span> <a class="code" href="classVector3.html" title="A templatized 3d vector.">Vec3f</a>&amp; v) {labelColor = v;}
-<a name="l00065"></a>00065     <span class="keywordtype">void</span> setCircleColor(<span class="keyword">const</span> <a class="code" href="classVector3.html" title="A templatized 3d vector.">Vec3f</a>&amp; v) {circleColor = v;}
+<a name="l00064"></a>00064     <span class="keywordtype">void</span> setLabelColor(<span class="keyword">const</span> <a class="code" href="classVector3.html">Vec3f</a>&amp; v) {labelColor = v;}
+<a name="l00065"></a>00065     <span class="keywordtype">void</span> setCircleColor(<span class="keyword">const</span> <a class="code" href="classVector3.html">Vec3f</a>&amp; v) {circleColor = v;}
 <a name="l00066"></a>00066 
 <a name="l00069"></a>00069     QString <a class="code" href="classNebula.html#a076dedd5d1bbda44593e294e7d0077d7" title="Get the printable nebula Type.">getTypeString</a>() <span class="keyword">const</span>;
 <a name="l00070"></a>00070 
@@ -127,22 +127,22 @@
 <a name="l00123"></a>00123     QString nameI18;                <span class="comment">// Nebula name</span>
 <a name="l00124"></a>00124     <span class="keywordtype">float</span> mag;                      <span class="comment">// Apparent magnitude</span>
 <a name="l00125"></a>00125     <span class="keywordtype">float</span> angularSize;              <span class="comment">// Angular size in degree</span>
-<a name="l00126"></a>00126     <a class="code" href="classVector3.html">Vec3d</a> XYZ;                      <span class="comment">// Cartesian equatorial position</span>
-<a name="l00127"></a>00127     <a class="code" href="classVector3.html">Vec3d</a> XY;                       <span class="comment">// Store temporary 2D position</span>
+<a name="l00126"></a>00126     <a class="code" href="classVector3.html" title="A templatized 3d vector.">Vec3d</a> XYZ;                      <span class="comment">// Cartesian equatorial position</span>
+<a name="l00127"></a>00127     <a class="code" href="classVector3.html" title="A templatized 3d vector.">Vec3d</a> XY;                       <span class="comment">// Store temporary 2D position</span>
 <a name="l00128"></a>00128     NebulaType nType;
 <a name="l00129"></a>00129 
 <a name="l00130"></a>00130     <a class="code" href="classSphericalRegionP.html" title="A shared pointer on a SphericalRegion.">SphericalRegionP</a> pointRegion;
 <a name="l00131"></a>00131 
 <a name="l00132"></a>00132     <span class="keyword">static</span> <span class="keywordtype">float</span> hintsBrightness;
 <a name="l00133"></a>00133 
-<a name="l00134"></a>00134     <span class="keyword">static</span> <a class="code" href="classVector3.html" title="A templatized 3d vector.">Vec3f</a> labelColor, circleColor;
+<a name="l00134"></a>00134     <span class="keyword">static</span> <a class="code" href="classVector3.html">Vec3f</a> labelColor, circleColor;
 <a name="l00135"></a>00135     <span class="keyword">static</span> <span class="keywordtype">float</span> circleScale;       <span class="comment">// Define the scaling of the hints circle</span>
 <a name="l00136"></a>00136 };
 <a name="l00137"></a>00137 
 <a name="l00138"></a>00138 <span class="preprocessor">#endif // _NEBULA_HPP_</span>
 <a name="l00139"></a>00139 <span class="preprocessor"></span>
 </pre></div></div>
-<hr class="footer"/><address style="text-align: right;"><small>Generated on Mon Oct 1 21:13:51 2012 for Stellarium by&nbsp;
+<hr class="footer"/><address style="text-align: right;"><small>Generated on Sat Nov 3 23:18:37 2012 for Stellarium by&nbsp;
 <a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.6.3 </small></address>
 </body>

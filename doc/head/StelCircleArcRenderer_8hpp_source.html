@@ -81,13 +81,13 @@
 <a name="l00080"></a>00080     }
 <a name="l00081"></a>00081 
 <a name="l00099"></a>00099     <span class="keywordtype">void</span> <a class="code" href="classStelCircleArcRenderer.html#a8f64a1916df678ff4248a9c7a0116d45" title="Draw a great circle arc between points start and stop.">drawGreatCircleArc</a>
-<a name="l00100"></a>00100         (<span class="keyword">const</span> <a class="code" href="classVector3.html">Vec3d</a>&amp; start, <span class="keyword">const</span> <a class="code" href="classVector3.html">Vec3d</a>&amp; stop, <span class="keyword">const</span> <a class="code" href="classSphericalCap.html" title="A SphericalCap is defined by a direction and an aperture.">SphericalCap</a>* clippingCap = NULL,
+<a name="l00100"></a>00100         (<span class="keyword">const</span> <a class="code" href="classVector3.html" title="A templatized 3d vector.">Vec3d</a>&amp; start, <span class="keyword">const</span> <a class="code" href="classVector3.html" title="A templatized 3d vector.">Vec3d</a>&amp; stop, <span class="keyword">const</span> <a class="code" href="classSphericalCap.html" title="A SphericalCap is defined by a direction and an aperture.">SphericalCap</a>* clippingCap = NULL,
 <a name="l00101"></a>00101          <span class="keywordtype">void</span> (*viewportEdgeIntersectCallback)
-<a name="l00102"></a>00102               (<span class="keyword">const</span> <a class="code" href="classVector3.html">Vec3d</a>&amp; screenPos, <span class="keyword">const</span> <a class="code" href="classVector3.html">Vec3d</a>&amp; direction, <span class="keywordtype">void</span>* userData) = NULL, 
+<a name="l00102"></a>00102               (<span class="keyword">const</span> <a class="code" href="classVector3.html" title="A templatized 3d vector.">Vec3d</a>&amp; screenPos, <span class="keyword">const</span> <a class="code" href="classVector3.html" title="A templatized 3d vector.">Vec3d</a>&amp; direction, <span class="keywordtype">void</span>* userData) = NULL, 
 <a name="l00103"></a>00103          <span class="keywordtype">void</span>* userData = NULL)
 <a name="l00104"></a>00104     {
-<a name="l00105"></a>00105         <a class="code" href="classVector3.html">Vec3d</a> pt1, pt2;
-<a name="l00106"></a>00106         rotCenter = <a class="code" href="classVector3.html">Vec3d</a>(0);
+<a name="l00105"></a>00105         <a class="code" href="classVector3.html" title="A templatized 3d vector.">Vec3d</a> pt1, pt2;
+<a name="l00106"></a>00106         rotCenter = <a class="code" href="classVector3.html" title="A templatized 3d vector.">Vec3d</a>(0);
 <a name="l00107"></a>00107         <span class="keywordflow">if</span> (NULL != clippingCap)
 <a name="l00108"></a>00108         {
 <a name="l00109"></a>00109             pt1 = start;
@@ -133,15 +133,15 @@
 <a name="l00170"></a>00170         }
 <a name="l00171"></a>00171     }
 <a name="l00172"></a>00172 
-<a name="l00174"></a>00174     <span class="keywordtype">void</span> <a class="code" href="classStelCircleArcRenderer.html#a2e450fb3a582b731c942a156727bbcbd" title="Set rotation point to draw a small circle around.">setRotCenter</a>(<span class="keyword">const</span> <a class="code" href="classVector3.html">Vec3d</a> center)
+<a name="l00174"></a>00174     <span class="keywordtype">void</span> <a class="code" href="classStelCircleArcRenderer.html#a2e450fb3a582b731c942a156727bbcbd" title="Set rotation point to draw a small circle around.">setRotCenter</a>(<span class="keyword">const</span> <a class="code" href="classVector3.html" title="A templatized 3d vector.">Vec3d</a> center)
 <a name="l00175"></a>00175     {
 <a name="l00176"></a><a class="code" href="classStelCircleArcRenderer.html#a4ee0f5b5de1371052d90a761cb646c84">00176</a>         rotCenter = center;
 <a name="l00177"></a>00177     }
 <a name="l00178"></a>00178 
 <a name="l00198"></a>00198     <span class="keywordtype">void</span> <a class="code" href="classStelCircleArcRenderer.html#a4ee0f5b5de1371052d90a761cb646c84" title="Draw a small circle arc between points start and stop.">drawSmallCircleArc</a>
-<a name="l00199"></a>00199         (<span class="keyword">const</span> <a class="code" href="classVector3.html">Vec3d</a>&amp; start, <span class="keyword">const</span> <a class="code" href="classVector3.html">Vec3d</a>&amp; stop,
+<a name="l00199"></a>00199         (<span class="keyword">const</span> <a class="code" href="classVector3.html" title="A templatized 3d vector.">Vec3d</a>&amp; start, <span class="keyword">const</span> <a class="code" href="classVector3.html" title="A templatized 3d vector.">Vec3d</a>&amp; stop,
 <a name="l00200"></a>00200          <span class="keywordtype">void</span> (*viewportEdgeIntersectCallback)
-<a name="l00201"></a>00201               (<span class="keyword">const</span> <a class="code" href="classVector3.html">Vec3d</a>&amp; screenPos, <span class="keyword">const</span> <a class="code" href="classVector3.html">Vec3d</a>&amp; direction, <span class="keywordtype">void</span>* userData), 
+<a name="l00201"></a>00201               (<span class="keyword">const</span> <a class="code" href="classVector3.html" title="A templatized 3d vector.">Vec3d</a>&amp; screenPos, <span class="keyword">const</span> <a class="code" href="classVector3.html" title="A templatized 3d vector.">Vec3d</a>&amp; direction, <span class="keywordtype">void</span>* userData), 
 <a name="l00202"></a>00202          <span class="keywordtype">void</span>* userData)
 <a name="l00203"></a>00203     {
 <a name="l00204"></a>00204         Q_ASSERT_X(smallCircleVertexBuffer-&gt;<a class="code" href="classStelVertexBuffer.html#a099305f64ca1066494e6bce062ba9253" title="Returns the number of vertices in the buffer.">length</a>() == 0, Q_FUNC_INFO,
@@ -150,7 +150,7 @@
 <a name="l00207"></a>00207         smallCircleVertexBuffer-&gt;<a class="code" href="classStelVertexBuffer.html#abd0e9d5b7e8f83e3309c5810a024958b" title="Unlock the buffer. This is needed to modify the buffer after drawing.">unlock</a>();
 <a name="l00208"></a>00208 
 <a name="l00209"></a>00209         vertexList.clear(); 
-<a name="l00210"></a>00210         <a class="code" href="classVector3.html">Vec3d</a> win1, win2;
+<a name="l00210"></a>00210         <a class="code" href="classVector3.html" title="A templatized 3d vector.">Vec3d</a> win1, win2;
 <a name="l00211"></a>00211         win1[2] = projector-&gt;<a class="code" href="classStelProjector.html#af7cbcb16087629ef2875a98ec6e24fa5" title="Project the vector v from the current frame into the viewport.">project</a>(start, win1) ? 1.0 : -1.1;
 <a name="l00212"></a>00212         win2[2] = projector-&gt;<a class="code" href="classStelProjector.html#af7cbcb16087629ef2875a98ec6e24fa5" title="Project the vector v from the current frame into the viewport.">project</a>(stop, win2)  ? 1.0 : -1.0;
 <a name="l00213"></a>00213         vertexList.append(win1);
@@ -164,7 +164,7 @@
 <a name="l00221"></a>00221         }
 <a name="l00222"></a>00222         <span class="keywordflow">else</span>
 <a name="l00223"></a>00223         {
-<a name="l00224"></a>00224             <span class="keyword">const</span> <a class="code" href="classVector3.html">Vec3d</a> tmp = (rotCenter ^ start) / rotCenter.length();
+<a name="l00224"></a>00224             <span class="keyword">const</span> <a class="code" href="classVector3.html" title="A templatized 3d vector.">Vec3d</a> tmp = (rotCenter ^ start) / rotCenter.length();
 <a name="l00225"></a>00225             <span class="keyword">const</span> <span class="keywordtype">double</span> radius = fabs(tmp.length());
 <a name="l00226"></a>00226             <span class="comment">// Tesselate the arc in small segments in a way so that the lines look smooth</span>
 <a name="l00227"></a>00227             fIter(start - rotCenter, stop - rotCenter, win1, win2, 
@@ -175,8 +175,8 @@
 <a name="l00232"></a>00232         QLinkedList&lt;Vec3d&gt;::ConstIterator i = vertexList.constBegin();
 <a name="l00233"></a>00233         <span class="keywordflow">while</span> (i + 1 != vertexList.constEnd())
 <a name="l00234"></a>00234         {
-<a name="l00235"></a>00235             <span class="keyword">const</span> <a class="code" href="classVector3.html">Vec3d</a>&amp; p1 = *i;
-<a name="l00236"></a>00236             <span class="keyword">const</span> <a class="code" href="classVector3.html">Vec3d</a>&amp; p2 = *(++i);
+<a name="l00235"></a>00235             <span class="keyword">const</span> <a class="code" href="classVector3.html" title="A templatized 3d vector.">Vec3d</a>&amp; p1 = *i;
+<a name="l00236"></a>00236             <span class="keyword">const</span> <a class="code" href="classVector3.html" title="A templatized 3d vector.">Vec3d</a>&amp; p2 = *(++i);
 <a name="l00237"></a>00237             <span class="keyword">const</span> <span class="keywordtype">bool</span> p1InViewport = projector-&gt;<a class="code" href="classStelProjector.html#aa2b615c1df69f1774a3a4f8a26bffa6e" title="Check to see if a 2d position is inside the viewport.">checkInViewport</a>(p1);
 <a name="l00238"></a>00238             <span class="keyword">const</span> <span class="keywordtype">bool</span> p2InViewport = projector-&gt;<a class="code" href="classStelProjector.html#aa2b615c1df69f1774a3a4f8a26bffa6e" title="Check to see if a 2d position is inside the viewport.">checkInViewport</a>(p2);
 <a name="l00239"></a>00239             
@@ -192,9 +192,9 @@
 <a name="l00249"></a>00249                 <span class="keywordflow">if</span> (NULL != viewportEdgeIntersectCallback &amp;&amp; p1InViewport != p2InViewport)
 <a name="l00250"></a>00250                 {
 <a name="l00251"></a>00251                     <span class="comment">// if !p1InViewport, then p2InViewport</span>
-<a name="l00252"></a>00252                     <span class="keyword">const</span> <a class="code" href="classVector3.html">Vec3d</a>&amp; a = p1InViewport ? p1 : p2;
-<a name="l00253"></a>00253                     <span class="keyword">const</span> <a class="code" href="classVector3.html">Vec3d</a>&amp; b = p1InViewport ? p2 : p1;
-<a name="l00254"></a>00254                     <a class="code" href="classVector3.html">Vec3d</a> dir = b - a;
+<a name="l00252"></a>00252                     <span class="keyword">const</span> <a class="code" href="classVector3.html" title="A templatized 3d vector.">Vec3d</a>&amp; a = p1InViewport ? p1 : p2;
+<a name="l00253"></a>00253                     <span class="keyword">const</span> <a class="code" href="classVector3.html" title="A templatized 3d vector.">Vec3d</a>&amp; b = p1InViewport ? p2 : p1;
+<a name="l00254"></a>00254                     <a class="code" href="classVector3.html" title="A templatized 3d vector.">Vec3d</a> dir = b - a;
 <a name="l00255"></a>00255                     dir.normalize();
 <a name="l00256"></a>00256                     viewportEdgeIntersectCallback(projector-&gt;<a class="code" href="classStelProjector.html#a18fc6eb0dba3ab3501890916b010b407" title="Return the position where the 2 2D point p1 and p2 cross the viewport edge P1 must...">viewPortIntersect</a>(a, b),
 <a name="l00257"></a>00257                                                   dir, userData);
@@ -224,9 +224,9 @@
 <a name="l00284"></a>00284 
 <a name="l00286"></a>00286     QLinkedList&lt;Vec3d&gt; vertexList;  
 <a name="l00287"></a>00287 
-<a name="l00289"></a>00289     <a class="code" href="classVector3.html">Vec3d</a> rotCenter;
+<a name="l00289"></a>00289     <a class="code" href="classVector3.html" title="A templatized 3d vector.">Vec3d</a> rotCenter;
 <a name="l00290"></a>00290 
-<a name="l00292"></a>00292     <span class="keywordtype">void</span> fIter(<span class="keyword">const</span> <a class="code" href="classVector3.html">Vec3d</a>&amp; p1, <span class="keyword">const</span> <a class="code" href="classVector3.html">Vec3d</a>&amp; p2, <a class="code" href="classVector3.html">Vec3d</a>&amp; win1, <a class="code" href="classVector3.html">Vec3d</a>&amp; win2, 
+<a name="l00292"></a>00292     <span class="keywordtype">void</span> fIter(<span class="keyword">const</span> <a class="code" href="classVector3.html" title="A templatized 3d vector.">Vec3d</a>&amp; p1, <span class="keyword">const</span> <a class="code" href="classVector3.html" title="A templatized 3d vector.">Vec3d</a>&amp; p2, <a class="code" href="classVector3.html" title="A templatized 3d vector.">Vec3d</a>&amp; win1, <a class="code" href="classVector3.html" title="A templatized 3d vector.">Vec3d</a>&amp; win2, 
 <a name="l00293"></a>00293                <span class="keyword">const</span> QLinkedList&lt;Vec3d&gt;::iterator&amp; iter, <span class="keywordtype">double</span> radius, 
 <a name="l00294"></a>00294                <span class="keywordtype">int</span> nbI = 0, <span class="keywordtype">bool</span> checkCrossDiscontinuity = <span class="keyword">true</span>)
 <a name="l00295"></a>00295     {
@@ -244,10 +244,10 @@
 <a name="l00307"></a>00307         }
 <a name="l00308"></a>00308 
 <a name="l00309"></a>00309         <span class="comment">// Point splitting the tesselated line in two</span>
-<a name="l00310"></a>00310         <a class="code" href="classVector3.html">Vec3d</a> newVertex(p1 + p2); 
+<a name="l00310"></a>00310         <a class="code" href="classVector3.html" title="A templatized 3d vector.">Vec3d</a> newVertex(p1 + p2); 
 <a name="l00311"></a>00311         newVertex.normalize();
 <a name="l00312"></a>00312         newVertex *= radius;
-<a name="l00313"></a>00313         <a class="code" href="classVector3.html">Vec3d</a> win3(newVertex + rotCenter);
+<a name="l00313"></a>00313         <a class="code" href="classVector3.html" title="A templatized 3d vector.">Vec3d</a> win3(newVertex + rotCenter);
 <a name="l00314"></a>00314         <span class="keyword">const</span> <span class="keywordtype">bool</span> isValidVertex = projector-&gt;<a class="code" href="classStelProjector.html#a767ff36be1c3e69f98ddbaa61f6f98ae" title="Project the vector v from the current frame into the viewport.">projectInPlace</a>(win3);
 <a name="l00315"></a>00315 
 <a name="l00316"></a>00316         <span class="keyword">const</span> <span class="keywordtype">float</span> v10 = win1[0] - win3[0];
@@ -279,7 +279,7 @@
 <a name="l00343"></a>00343 
 <a name="l00344"></a>00344 <span class="preprocessor">#endif // _STELCIRCLEARCRENDERER_HPP_</span>
 </pre></div></div>
-<hr class="footer"/><address style="text-align: right;"><small>Generated on Mon Oct 1 21:13:51 2012 for Stellarium by&nbsp;
+<hr class="footer"/><address style="text-align: right;"><small>Generated on Sat Nov 3 23:18:37 2012 for Stellarium by&nbsp;
 <a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.6.3 </small></address>
 </body>

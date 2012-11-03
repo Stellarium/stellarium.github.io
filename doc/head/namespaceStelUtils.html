@@ -94,7 +94,7 @@
 <tr><td class="memItemLeft" align="right" valign="top">QString&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceStelUtils.html#a7a15facd52c06af5a22c8015f3912072">localeDateString</a> (int year, int month, int day, int dayOfWeek, QString fmt)</td></tr>
 <tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Format the date and day-of-week per the format in fmt (see QDateTime::toString()).  <a href="#a7a15facd52c06af5a22c8015f3912072"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">QString&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceStelUtils.html#af6482bd4f13a2fdeeeb434915dc783c3">localeDateString</a> (int year, int month, int day, int dayOfWeek)</td></tr>
-<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Format the date and day-of-week per the default locale's QLocale::ShortFormat.  <a href="#af6482bd4f13a2fdeeeb434915dc783c3"></a><br/></td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Format the date and day-of-week per the <b>system</b> locale's QLocale::ShortFormat.  <a href="#af6482bd4f13a2fdeeeb434915dc783c3"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">double&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceStelUtils.html#ae67dd18d39369ca636d91522b11130b0">getJDFromSystem</a> ()</td></tr>
 <tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Get the current Julian Date from system time.  <a href="#ae67dd18d39369ca636d91522b11130b0"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">double&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceStelUtils.html#abdb1e9c64fd3705edc7bd1e786b172bc">qTimeToJDFraction</a> (const QTime &amp;time)</td></tr>
@@ -378,7 +378,7 @@ QString&nbsp;</td><td class="memItemRight" valign="bottom"><b>hoursToHmsStr</b> 
 
 <p>Compute acos(x) The taylor serie is not accurate around x=1 and x=-1. </p>
 
-<p>Definition at line <a class="el" href="StelUtils_8hpp_source.html#l00251">251</a> of file <a class="el" href="StelUtils_8hpp_source.html">StelUtils.hpp</a>.</p>
+<p>Definition at line <a class="el" href="StelUtils_8hpp_source.html#l00254">254</a> of file <a class="el" href="StelUtils_8hpp_source.html">StelUtils.hpp</a>.</p>
 
 </div>
 </div>
@@ -400,7 +400,7 @@ QString&nbsp;</td><td class="memItemRight" valign="bottom"><b>hoursToHmsStr</b> 
 
 <p>Compute exp(x) for small exponents x. </p>
 
-<p>Definition at line <a class="el" href="StelUtils_8hpp_source.html#l00257">257</a> of file <a class="el" href="StelUtils_8hpp_source.html">StelUtils.hpp</a>.</p>
+<p>Definition at line <a class="el" href="StelUtils_8hpp_source.html#l00260">260</a> of file <a class="el" href="StelUtils_8hpp_source.html">StelUtils.hpp</a>.</p>
 
 </div>
 </div>
@@ -672,7 +672,7 @@ QString&nbsp;</td><td class="memItemRight" valign="bottom"><b>hoursToHmsStr</b> 
 <p>Get a night mode version of a color. </p>
 <p>That is find the brightness of a color and set that in the red channel only </p>
 
-<p>Definition at line <a class="el" href="StelUtils_8hpp_source.html#l00266">266</a> of file <a class="el" href="StelUtils_8hpp_source.html">StelUtils.hpp</a>.</p>
+<p>Definition at line <a class="el" href="StelUtils_8hpp_source.html#l00269">269</a> of file <a class="el" href="StelUtils_8hpp_source.html">StelUtils.hpp</a>.</p>
 
 </div>
 </div>
@@ -912,7 +912,7 @@ QString&nbsp;</td><td class="memItemRight" valign="bottom"><b>hoursToHmsStr</b> 
 </div>
 <div class="memdoc">
 
-<p>Format the date and day-of-week per the default locale's QLocale::ShortFormat. </p>
+<p>Format the date and day-of-week per the <b>system</b> locale's QLocale::ShortFormat. </p>
 <dl class="return"><dt><b>Returns:</b></dt><dd>QString representing the formatted date </dd></dl>
 
 </div>
@@ -961,6 +961,7 @@ QString&nbsp;</td><td class="memItemRight" valign="bottom"><b>hoursToHmsStr</b> 
 <div class="memdoc">
 
 <p>Format the date and day-of-week per the format in fmt (see QDateTime::toString()). </p>
+<p>Uses the <b>system</b> locale, not the one set in Stellarium. </p>
 <dl class="return"><dt><b>Returns:</b></dt><dd>QString representing the formatted date </dd></dl>
 
 </div>
@@ -1551,7 +1552,7 @@ QString&nbsp;</td><td class="memItemRight" valign="bottom"><b>hoursToHmsStr</b> 
 </div>
 </div>
 </div>
-<hr class="footer"/><address style="text-align: right;"><small>Generated on Mon Oct 1 21:14:07 2012 for Stellarium by&nbsp;
+<hr class="footer"/><address style="text-align: right;"><small>Generated on Sat Nov 3 23:18:44 2012 for Stellarium by&nbsp;
 <a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.6.3 </small></address>
 </body>

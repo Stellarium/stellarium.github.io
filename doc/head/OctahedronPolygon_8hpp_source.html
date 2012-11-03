@@ -158,7 +158,7 @@
 <a name="l00145"></a>00145         WindingAbsGeqTwo=1  
 <a name="l00146"></a>00146     };
 <a name="l00147"></a>00147 
-<a name="l00148"></a>00148     <span class="keywordtype">bool</span> sideContains2D(<span class="keyword">const</span> <a class="code" href="classVector3.html">Vec3d</a>&amp; p, <span class="keywordtype">int</span> sideNb) <span class="keyword">const</span>;
+<a name="l00148"></a>00148     <span class="keywordtype">bool</span> sideContains2D(<span class="keyword">const</span> <a class="code" href="classVector3.html" title="A templatized 3d vector.">Vec3d</a>&amp; p, <span class="keywordtype">int</span> sideNb) <span class="keyword">const</span>;
 <a name="l00149"></a>00149 
 <a name="l00151"></a>00151     <span class="keywordtype">void</span> tesselate(TessWindingRule rule);
 <a name="l00152"></a>00152 
@@ -172,13 +172,13 @@
 <a name="l00163"></a>00163     QVector&lt;Vec3d&gt; outlineCachedVertexArray;
 <a name="l00164"></a>00164 
 <a name="l00165"></a>00165     <span class="keywordtype">void</span> computeBoundingCap();
-<a name="l00166"></a>00166     <a class="code" href="classVector3.html">Vec3d</a> capN;
+<a name="l00166"></a>00166     <a class="code" href="classVector3.html" title="A templatized 3d vector.">Vec3d</a> capN;
 <a name="l00167"></a>00167     <span class="keywordtype">double</span> capD;
 <a name="l00168"></a>00168 
-<a name="l00169"></a>00169     <span class="keyword">static</span> <span class="keyword">const</span> <a class="code" href="classVector3.html">Vec3d</a> sideDirections[];
-<a name="l00170"></a>00170     <span class="keyword">static</span> <span class="keywordtype">int</span> getSideNumber(<span class="keyword">const</span> <a class="code" href="classVector3.html">Vec3d</a>&amp; v) {<span class="keywordflow">return</span> v[0]&gt;=0. ?  (v[1]&gt;=0. ? (v[2]&gt;=0.?0:1) : (v[2]&gt;=0.?4:5))   :   (v[1]&gt;=0. ? (v[2]&gt;=0.?2:3) : (v[2]&gt;=0.?6:7));}
-<a name="l00171"></a>00171     <span class="keyword">static</span> <span class="keywordtype">bool</span> isTriangleConvexPositive2D(<span class="keyword">const</span> <a class="code" href="classVector3.html">Vec3d</a>&amp; a, <span class="keyword">const</span> <a class="code" href="classVector3.html">Vec3d</a>&amp; b, <span class="keyword">const</span> <a class="code" href="classVector3.html">Vec3d</a>&amp; c);
-<a name="l00172"></a>00172     <span class="keyword">static</span> <span class="keywordtype">bool</span> triangleContains2D(<span class="keyword">const</span> <a class="code" href="classVector3.html">Vec3d</a>&amp; a, <span class="keyword">const</span> <a class="code" href="classVector3.html">Vec3d</a>&amp; b, <span class="keyword">const</span> <a class="code" href="classVector3.html">Vec3d</a>&amp; c, <span class="keyword">const</span> <a class="code" href="classVector3.html">Vec3d</a>&amp; p);
+<a name="l00169"></a>00169     <span class="keyword">static</span> <span class="keyword">const</span> <a class="code" href="classVector3.html" title="A templatized 3d vector.">Vec3d</a> sideDirections[];
+<a name="l00170"></a>00170     <span class="keyword">static</span> <span class="keywordtype">int</span> getSideNumber(<span class="keyword">const</span> <a class="code" href="classVector3.html" title="A templatized 3d vector.">Vec3d</a>&amp; v) {<span class="keywordflow">return</span> v[0]&gt;=0. ?  (v[1]&gt;=0. ? (v[2]&gt;=0.?0:1) : (v[2]&gt;=0.?4:5))   :   (v[1]&gt;=0. ? (v[2]&gt;=0.?2:3) : (v[2]&gt;=0.?6:7));}
+<a name="l00171"></a>00171     <span class="keyword">static</span> <span class="keywordtype">bool</span> isTriangleConvexPositive2D(<span class="keyword">const</span> <a class="code" href="classVector3.html" title="A templatized 3d vector.">Vec3d</a>&amp; a, <span class="keyword">const</span> <a class="code" href="classVector3.html" title="A templatized 3d vector.">Vec3d</a>&amp; b, <span class="keyword">const</span> <a class="code" href="classVector3.html" title="A templatized 3d vector.">Vec3d</a>&amp; c);
+<a name="l00172"></a>00172     <span class="keyword">static</span> <span class="keywordtype">bool</span> triangleContains2D(<span class="keyword">const</span> <a class="code" href="classVector3.html" title="A templatized 3d vector.">Vec3d</a>&amp; a, <span class="keyword">const</span> <a class="code" href="classVector3.html" title="A templatized 3d vector.">Vec3d</a>&amp; b, <span class="keyword">const</span> <a class="code" href="classVector3.html" title="A templatized 3d vector.">Vec3d</a>&amp; c, <span class="keyword">const</span> <a class="code" href="classVector3.html" title="A templatized 3d vector.">Vec3d</a>&amp; p);
 <a name="l00173"></a>00173 
 <a name="l00174"></a>00174     <span class="keyword">static</span> <span class="keywordtype">void</span> projectOnOctahedron(QVarLengthArray&lt;QVector&lt;SubContour&gt;,8 &gt;&amp; inSides);
 <a name="l00175"></a>00175     <span class="keyword">static</span> <span class="keywordtype">void</span> splitContourByPlan(<span class="keywordtype">int</span> onLine, <span class="keyword">const</span> <a class="code" href="classSubContour.html">SubContour</a>&amp; contour, QVector&lt;SubContour&gt; result[2]);
@@ -191,7 +191,7 @@
 <a name="l00182"></a>00182 <span class="preprocessor">#endif // _OCTAHEDRON_REGION_HPP_</span>
 <a name="l00183"></a>00183 <span class="preprocessor"></span>
 </pre></div></div>
-<hr class="footer"/><address style="text-align: right;"><small>Generated on Mon Oct 1 21:13:51 2012 for Stellarium by&nbsp;
+<hr class="footer"/><address style="text-align: right;"><small>Generated on Sat Nov 3 23:18:37 2012 for Stellarium by&nbsp;
 <a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.6.3 </small></address>
 </body>

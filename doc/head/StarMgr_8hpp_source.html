@@ -86,7 +86,7 @@
 <a name="l00091"></a>00091     <span class="keyword">virtual</span> <span class="keywordtype">double</span> <a class="code" href="classStarMgr.html#ac32c65fd3b40b724ced210807c70f3b3" title="Used to determine the order in which the various StelModules are drawn.">getCallOrder</a>(<a class="code" href="classStelModule.html#a11b61d014b51cf6424cd89b1ccd3d768" title="Define the possible action for which an order is defined.">StelModuleActionName</a> actionName) <span class="keyword">const</span>;
 <a name="l00092"></a>00092 
 <a name="l00094"></a>00094     <span class="comment">// Methods defined in StelObjectManager class</span>
-<a name="l00096"></a>00096 <span class="comment"></span>    <span class="keyword">virtual</span> QList&lt;StelObjectP &gt; <a class="code" href="classStarMgr.html#aaf576d9237707237c36edf3a9304bd7a" title="Return a list containing the stars located inside the limFov circle around position...">searchAround</a>(<span class="keyword">const</span> <a class="code" href="classVector3.html">Vec3d</a>&amp; v, <span class="keywordtype">double</span> limitFov, <span class="keyword">const</span> <a class="code" href="classStelCore.html" title="Main class for Stellarium core processing.">StelCore</a>* core) <span class="keyword">const</span>;
+<a name="l00096"></a>00096 <span class="comment"></span>    <span class="keyword">virtual</span> QList&lt;StelObjectP &gt; <a class="code" href="classStarMgr.html#aaf576d9237707237c36edf3a9304bd7a" title="Return a list containing the stars located inside the limFov circle around position...">searchAround</a>(<span class="keyword">const</span> <a class="code" href="classVector3.html" title="A templatized 3d vector.">Vec3d</a>&amp; v, <span class="keywordtype">double</span> limitFov, <span class="keyword">const</span> <a class="code" href="classStelCore.html" title="Main class for Stellarium core processing.">StelCore</a>* core) <span class="keyword">const</span>;
 <a name="l00097"></a>00097 
 <a name="l00101"></a>00101     <span class="keyword">virtual</span> <a class="code" href="classQSharedPointerNoDelete.html">StelObjectP</a> <a class="code" href="classStarMgr.html#a504eb059e5180aff585d7b14d08726bc" title="Return the matching Stars object&amp;#39;s pointer if exists or NULL.">searchByNameI18n</a>(<span class="keyword">const</span> QString&amp; nameI18n) <span class="keyword">const</span>;
 <a name="l00102"></a>00102 
@@ -166,18 +166,18 @@
 <a name="l00221"></a>00221     <span class="keyword">typedef</span> QHash&lt;int,BigStarCatalogExtension::ZoneArray*&gt; ZoneArrayMap;
 <a name="l00222"></a>00222     ZoneArrayMap zoneArrays; <span class="comment">// index is the grid level</span>
 <a name="l00223"></a>00223     <span class="keyword">static</span> <span class="keywordtype">void</span> initTriangleFunc(<span class="keywordtype">int</span> lev, <span class="keywordtype">int</span> index,
-<a name="l00224"></a>00224                                  <span class="keyword">const</span> <a class="code" href="classVector3.html" title="A templatized 3d vector.">Vec3f</a> &amp;c0,
-<a name="l00225"></a>00225                                  <span class="keyword">const</span> <a class="code" href="classVector3.html" title="A templatized 3d vector.">Vec3f</a> &amp;c1,
-<a name="l00226"></a>00226                                  <span class="keyword">const</span> <a class="code" href="classVector3.html" title="A templatized 3d vector.">Vec3f</a> &amp;c2,
+<a name="l00224"></a>00224                                  <span class="keyword">const</span> <a class="code" href="classVector3.html">Vec3f</a> &amp;c0,
+<a name="l00225"></a>00225                                  <span class="keyword">const</span> <a class="code" href="classVector3.html">Vec3f</a> &amp;c1,
+<a name="l00226"></a>00226                                  <span class="keyword">const</span> <a class="code" href="classVector3.html">Vec3f</a> &amp;c2,
 <a name="l00227"></a>00227                                  <span class="keywordtype">void</span> *context)
 <a name="l00228"></a>00228     {
 <a name="l00229"></a>00229         <span class="keyword">reinterpret_cast&lt;</span><a class="code" href="classStarMgr.html" title="Stores the star catalogue data.">StarMgr</a>*<span class="keyword">&gt;</span>(context)-&gt;initTriangle(lev, index, c0, c1, c2);
 <a name="l00230"></a>00230     }
 <a name="l00231"></a>00231 
 <a name="l00232"></a>00232     <span class="keywordtype">void</span> initTriangle(<span class="keywordtype">int</span> lev, <span class="keywordtype">int</span> index,
-<a name="l00233"></a>00233                       <span class="keyword">const</span> <a class="code" href="classVector3.html" title="A templatized 3d vector.">Vec3f</a> &amp;c0,
-<a name="l00234"></a>00234                       <span class="keyword">const</span> <a class="code" href="classVector3.html" title="A templatized 3d vector.">Vec3f</a> &amp;c1,
-<a name="l00235"></a>00235                       <span class="keyword">const</span> <a class="code" href="classVector3.html" title="A templatized 3d vector.">Vec3f</a> &amp;c2);
+<a name="l00233"></a>00233                       <span class="keyword">const</span> <a class="code" href="classVector3.html">Vec3f</a> &amp;c0,
+<a name="l00234"></a>00234                       <span class="keyword">const</span> <a class="code" href="classVector3.html">Vec3f</a> &amp;c1,
+<a name="l00235"></a>00235                       <span class="keyword">const</span> <a class="code" href="classVector3.html">Vec3f</a> &amp;c2);
 <a name="l00236"></a>00236 
 <a name="l00237"></a>00237     <a class="code" href="structBigStarCatalogExtension_1_1HipIndexStruct.html" title="Container for Hipparcos information.">BigStarCatalogExtension::HipIndexStruct</a> *hipIndex; <span class="comment">// array of hiparcos stars</span>
 <a name="l00238"></a>00238 
@@ -190,7 +190,7 @@
 <a name="l00245"></a>00245 
 <a name="l00246"></a>00246     QFont starFont;
 <a name="l00247"></a>00247     <span class="keyword">static</span> <span class="keywordtype">bool</span> flagSciNames;
-<a name="l00248"></a>00248     <a class="code" href="classVector3.html" title="A templatized 3d vector.">Vec3f</a> labelColor;
+<a name="l00248"></a>00248     <a class="code" href="classVector3.html">Vec3f</a> labelColor;
 <a name="l00249"></a>00249 
 <a name="l00250"></a>00250     <span class="keyword">class </span><a class="code" href="classStelTextureNew.html" title="Texture interface.">StelTextureNew</a>* texPointer;       <span class="comment">// The selection pointer texture</span>
 <a name="l00251"></a>00251 
@@ -205,7 +205,7 @@
 <a name="l00260"></a>00260 <span class="preprocessor">#endif // _STARMGR_HPP_</span>
 <a name="l00261"></a>00261 <span class="preprocessor"></span>
 </pre></div></div>
-<hr class="footer"/><address style="text-align: right;"><small>Generated on Mon Oct 1 21:13:51 2012 for Stellarium by&nbsp;
+<hr class="footer"/><address style="text-align: right;"><small>Generated on Sat Nov 3 23:18:37 2012 for Stellarium by&nbsp;
 <a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.6.3 </small></address>
 </body>
