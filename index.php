@@ -49,7 +49,7 @@ print '</select>  </div>';
 
 printf('
 <div id="header">
-    <div id="latestversion" class="block"><a href="/">%s %s</a></div>
+    <div id="latestversion" class="block"><a href="/%s/">%s %s</a></div>
 	<div id="downloadbar" class="block">
 	    <div id="release" class="block">
 		<div class="download linux">
@@ -78,6 +78,7 @@ printf('
 	    </div>
 	</div>
     </div>',
+$locale,
 q_('latest version'),
 $version,
 $download_link_source,
