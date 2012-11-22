@@ -30,7 +30,7 @@
 <p>Specialised GUI control for entering keyboard shortcut combinations.  
 <a href="#_details">More...</a></p>
 
-<p><code>#include &lt;<a class="el" href="ShortcutsDialog_8hpp_source.html">ShortcutsDialog.hpp</a>&gt;</code></p>
+<p><code>#include &lt;<a class="el" href="ShortcutLineEdit_8hpp_source.html">ShortcutLineEdit.hpp</a>&gt;</code></p>
 
 <p><a href="classShortcutLineEdit-members.html">List of all members.</a></p>
 <table border="0" cellpadding="0" cellspacing="0">
@@ -39,16 +39,16 @@
 <tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Clear contents and stored keys.  <a href="#a5d0f85f42ad95e4e4b9240db325c83e2"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classShortcutLineEdit.html#a3bb8caf00dabf1715476c954c0104a0b">backspace</a> ()</td></tr>
 <tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Remove the last key from the key sequence.  <a href="#a3bb8caf00dabf1715476c954c0104a0b"></a><br/></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="abffceaa5682faf97f42225a0a32bf553"></a><!-- doxytag: member="ShortcutLineEdit::setContents" ref="abffceaa5682faf97f42225a0a32bf553" args="(QKeySequence ks)" -->
-void&nbsp;</td><td class="memItemRight" valign="bottom"><b>setContents</b> (QKeySequence ks)</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classShortcutLineEdit.html#abffceaa5682faf97f42225a0a32bf553">setContents</a> (QKeySequence ks)</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Emits contentsChanged() if the new sequence is not the same.  <a href="#abffceaa5682faf97f42225a0a32bf553"></a><br/></td></tr>
 <tr><td colspan="2"><h2>Signals</h2></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classShortcutLineEdit.html#ac49d2c1e4db2577cf9d73379e6ec42cb">focusChanged</a> (bool focus)</td></tr>
 <tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Needed for enabling/disabling buttons in <a class="el" href="classShortcutsDialog.html">ShortcutsDialog</a>.  <a href="#ac49d2c1e4db2577cf9d73379e6ec42cb"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ad858b7b536116378e4c642d6e80449c4"></a><!-- doxytag: member="ShortcutLineEdit::contentsChanged" ref="ad858b7b536116378e4c642d6e80449c4" args="()" -->
 void&nbsp;</td><td class="memItemRight" valign="bottom"><b>contentsChanged</b> ()</td></tr>
 <tr><td colspan="2"><h2>Public Member Functions</h2></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a6db30e0dcae69f23574463b3683d4f5e"></a><!-- doxytag: member="ShortcutLineEdit::ShortcutLineEdit" ref="a6db30e0dcae69f23574463b3683d4f5e" args="(QWidget *parent)" -->
-&nbsp;</td><td class="memItemRight" valign="bottom"><b>ShortcutLineEdit</b> (QWidget *parent)</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a7b1a231e5007138cf2112b869832d930"></a><!-- doxytag: member="ShortcutLineEdit::ShortcutLineEdit" ref="a7b1a231e5007138cf2112b869832d930" args="(QWidget *parent=0)" -->
+&nbsp;</td><td class="memItemRight" valign="bottom"><b>ShortcutLineEdit</b> (QWidget *parent=0)</td></tr>
 <tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a7b7a6840e922eb1b42b877e7985e0147"></a><!-- doxytag: member="ShortcutLineEdit::getKeySequence" ref="a7b7a6840e922eb1b42b877e7985e0147" args="()" -->
 QKeySequence&nbsp;</td><td class="memItemRight" valign="bottom"><b>getKeySequence</b> ()</td></tr>
 <tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a70e4a3e1a591e5d1cc463705c00faabb"></a><!-- doxytag: member="ShortcutLineEdit::isEmpty" ref="a70e4a3e1a591e5d1cc463705c00faabb" args="() const " -->
@@ -63,9 +63,10 @@ void&nbsp;</td><td class="memItemRight" valign="bottom"><b>focusOutEvent</b> (QF
 </table>
 <hr/><a name="_details"></a><h2>Detailed Description</h2>
 <p>Specialised GUI control for entering keyboard shortcut combinations. </p>
-<p>Allows Emacs-style key sequences (for example "Ctrl+E, Ctrl+2", see the documentation of QKeySequence for details.) </p>
+<p>Allows Emacs-style key sequences (for example "Ctrl+E, Ctrl+2") no longer than four combinations. See the documentation of QKeySequence for details.</p>
+<p>When <a class="el" href="classShortcutLineEdit.html" title="Specialised GUI control for entering keyboard shortcut combinations.">ShortcutLineEdit</a> receives the focus, its whole contents get selected. On a key press, if any of the contents are selected, the new key replaces <em>all</em> the previous contents. Otherwise, it's appended to the sequence. </p>
 
-<p>Definition at line <a class="el" href="ShortcutsDialog_8hpp_source.html#l00031">31</a> of file <a class="el" href="ShortcutsDialog_8hpp_source.html">ShortcutsDialog.hpp</a>.</p>
+<p>Definition at line <a class="el" href="ShortcutLineEdit_8hpp_source.html#l00035">35</a> of file <a class="el" href="ShortcutLineEdit_8hpp_source.html">ShortcutLineEdit.hpp</a>.</p>
 <hr/><h2>Member Function Documentation</h2>
 <a class="anchor" id="a3bb8caf00dabf1715476c954c0104a0b"></a><!-- doxytag: member="ShortcutLineEdit::backspace" ref="a3bb8caf00dabf1715476c954c0104a0b" args="()" -->
 <div class="memitem">
@@ -122,14 +123,40 @@ void&nbsp;</td><td class="memItemRight" valign="bottom"><b>focusOutEvent</b> (QF
 <div class="memdoc">
 
 <p>Needed for enabling/disabling buttons in <a class="el" href="classShortcutsDialog.html">ShortcutsDialog</a>. </p>
+<dl><dt><b>Parameters:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"><tt>[out]</tt>&nbsp;</td><td valign="top"><em>focus</em>&nbsp;</td><td><b>false</b> if the widget has the focus, true otherwise. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a class="anchor" id="abffceaa5682faf97f42225a0a32bf553"></a><!-- doxytag: member="ShortcutLineEdit::setContents" ref="abffceaa5682faf97f42225a0a32bf553" args="(QKeySequence ks)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void ShortcutLineEdit::setContents </td>
+          <td>(</td>
+          <td class="paramtype">QKeySequence&nbsp;</td>
+          <td class="paramname"> <em>ks</em></td>
+          <td>&nbsp;)&nbsp;</td>
+          <td><code> [slot]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Emits contentsChanged() if the new sequence is not the same. </p>
 
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following file:<ul>
-<li>gui/<a class="el" href="ShortcutsDialog_8hpp_source.html">ShortcutsDialog.hpp</a></li>
+<li>gui/<a class="el" href="ShortcutLineEdit_8hpp_source.html">ShortcutLineEdit.hpp</a></li>
 </ul>
 </div>
-<hr class="footer"/><address style="text-align: right;"><small>Generated on Sat Nov 3 23:18:41 2012 for Stellarium by&nbsp;
+<hr class="footer"/><address style="text-align: right;"><small>Generated on Thu Nov 22 16:11:53 2012 for Stellarium by&nbsp;
 <a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.6.3 </small></address>
 </body>

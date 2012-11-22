@@ -45,8 +45,8 @@ void&nbsp;</td><td class="memItemRight" valign="bottom"><b>shortcutChanged</b> (
 <tr><td colspan="2"><h2>Public Member Functions</h2></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a04f3ef2c1830a6fda099500bdada3b9c"></a><!-- doxytag: member="StelShortcutMgr::init" ref="a04f3ef2c1830a6fda099500bdada3b9c" args="()" -->
 void&nbsp;</td><td class="memItemRight" valign="bottom"><b>init</b> ()</td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">bool&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classStelShortcutMgr.html#a809974b08e26fcc2c053764658805422">loadShortcuts</a> (const QString &amp;filePath)</td></tr>
-<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Load shortcuts from existing file.  <a href="#a809974b08e26fcc2c053764658805422"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">bool&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classStelShortcutMgr.html#a60f843579bb057ed7bb4ea25379114b2">loadShortcuts</a> (const QString &amp;filePath, bool overload=false)</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Load shortcuts from an existing file.  <a href="#a60f843579bb057ed7bb4ea25379114b2"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classStelShortcutMgr.html#aaa5aeb617d70e0e905e01c7ad129fbc7">loadShortcuts</a> ()</td></tr>
 <tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Search for file with shortcuts, load shortcuts from it.  <a href="#aaa5aeb617d70e0e905e01c7ad129fbc7"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classStelShortcutMgr.html#a651b0d61c7a7e7cb54acf31628a5bb44">saveShortcuts</a> ()</td></tr>
@@ -253,7 +253,7 @@ void&nbsp;</td><td class="memItemRight" valign="bottom"><b>setShortcutText</b> (
 
 </div>
 </div>
-<a class="anchor" id="a809974b08e26fcc2c053764658805422"></a><!-- doxytag: member="StelShortcutMgr::loadShortcuts" ref="a809974b08e26fcc2c053764658805422" args="(const QString &amp;filePath)" -->
+<a class="anchor" id="a60f843579bb057ed7bb4ea25379114b2"></a><!-- doxytag: member="StelShortcutMgr::loadShortcuts" ref="a60f843579bb057ed7bb4ea25379114b2" args="(const QString &amp;filePath, bool overload=false)" -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
@@ -261,15 +261,31 @@ void&nbsp;</td><td class="memItemRight" valign="bottom"><b>setShortcutText</b> (
           <td class="memname">bool StelShortcutMgr::loadShortcuts </td>
           <td>(</td>
           <td class="paramtype">const QString &amp;&nbsp;</td>
-          <td class="paramname"> <em>filePath</em></td>
-          <td>&nbsp;)&nbsp;</td>
+          <td class="paramname"> <em>filePath</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
           <td></td>
+          <td class="paramtype">bool&nbsp;</td>
+          <td class="paramname"> <em>overload</em> = <code>false</code></td><td>&nbsp;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td><td></td>
         </tr>
       </table>
 </div>
 <div class="memdoc">
 
-<p>Load shortcuts from existing file. </p>
+<p>Load shortcuts from an existing file. </p>
+<dl><dt><b>Parameters:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"></td><td valign="top"><em>filePath</em>&nbsp;</td><td>full path to the file. </td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>overload</em>&nbsp;</td><td>if true, if a shortcut in the file already exists, replace its keys with the ones in the file. </td></tr>
+  </table>
+  </dd>
+</dl>
 
 </div>
 </div>
@@ -336,7 +352,7 @@ void&nbsp;</td><td class="memItemRight" valign="bottom"><b>setShortcutText</b> (
 <li>core/<a class="el" href="StelShortcutMgr_8hpp_source.html">StelShortcutMgr.hpp</a></li>
 </ul>
 </div>
-<hr class="footer"/><address style="text-align: right;"><small>Generated on Sat Nov 3 23:18:43 2012 for Stellarium by&nbsp;
+<hr class="footer"/><address style="text-align: right;"><small>Generated on Thu Nov 22 16:12:00 2012 for Stellarium by&nbsp;
 <a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.6.3 </small></address>
 </body>

@@ -50,105 +50,87 @@
 <a name="l00020"></a>00020 <span class="preprocessor">#ifndef SHORTCUTSDIALOG_HPP</span>
 <a name="l00021"></a>00021 <span class="preprocessor"></span><span class="preprocessor">#define SHORTCUTSDIALOG_HPP</span>
 <a name="l00022"></a>00022 <span class="preprocessor"></span>
-<a name="l00023"></a>00023 <span class="preprocessor">#include &quot;StelDialog.hpp&quot;</span>
-<a name="l00024"></a>00024 
-<a name="l00025"></a>00025 <span class="preprocessor">#include &lt;QLineEdit&gt;</span>
-<a name="l00026"></a>00026 <span class="preprocessor">#include &lt;QModelIndex&gt;</span>
-<a name="l00027"></a>00027 
-<a name="l00031"></a><a class="code" href="classShortcutLineEdit.html">00031</a> <span class="keyword">class </span><a class="code" href="classShortcutLineEdit.html" title="Specialised GUI control for entering keyboard shortcut combinations.">ShortcutLineEdit</a> : <span class="keyword">public</span> QLineEdit
-<a name="l00032"></a>00032 {
-<a name="l00033"></a>00033     Q_OBJECT
-<a name="l00034"></a>00034 
-<a name="l00035"></a>00035 <span class="keyword">public</span>:
-<a name="l00036"></a>00036     <a class="code" href="classShortcutLineEdit.html" title="Specialised GUI control for entering keyboard shortcut combinations.">ShortcutLineEdit</a>(QWidget* parent);
-<a name="l00037"></a>00037 
-<a name="l00038"></a>00038     QKeySequence getKeySequence();
-<a name="l00039"></a>00039     <span class="keywordtype">bool</span> isEmpty()<span class="keyword"> const</span>
-<a name="l00040"></a>00040 <span class="keyword">    </span>{
-<a name="l00041"></a>00041         <span class="keywordflow">return</span> (m_keyNum &lt;= 0);
-<a name="l00042"></a>00042     }
-<a name="l00043"></a>00043 
-<a name="l00044"></a>00044 <span class="keyword">public</span> slots:
-<a name="l00046"></a>00046     <span class="keywordtype">void</span> <a class="code" href="classShortcutLineEdit.html#a5d0f85f42ad95e4e4b9240db325c83e2" title="Clear contents and stored keys.">clear</a>();
-<a name="l00048"></a>00048     <span class="keywordtype">void</span> <a class="code" href="classShortcutLineEdit.html#a3bb8caf00dabf1715476c954c0104a0b" title="Remove the last key from the key sequence.">backspace</a>();
-<a name="l00049"></a>00049     <span class="keywordtype">void</span> setContents(QKeySequence ks);
-<a name="l00050"></a>00050 
-<a name="l00051"></a>00051 signals:
-<a name="l00053"></a>00053     <span class="keywordtype">void</span> <a class="code" href="classShortcutLineEdit.html#ac49d2c1e4db2577cf9d73379e6ec42cb" title="Needed for enabling/disabling buttons in ShortcutsDialog.">focusChanged</a>(<span class="keywordtype">bool</span> focus);
-<a name="l00054"></a>00054     <span class="keywordtype">void</span> contentsChanged();
+<a name="l00023"></a>00023 <span class="preprocessor">#include &lt;QKeySequence&gt;</span>
+<a name="l00024"></a>00024 <span class="preprocessor">#include &lt;QModelIndex&gt;</span>
+<a name="l00025"></a>00025 <span class="preprocessor">#include &lt;QSortFilterProxyModel&gt;</span>
+<a name="l00026"></a>00026 
+<a name="l00027"></a>00027 <span class="preprocessor">#include &quot;StelDialog.hpp&quot;</span>
+<a name="l00028"></a>00028 
+<a name="l00029"></a>00029 
+<a name="l00030"></a>00030 <span class="keyword">class </span>Ui_shortcutsDialogForm;
+<a name="l00031"></a>00031 <span class="keyword">class </span><a class="code" href="classShortcutLineEdit.html" title="Specialised GUI control for entering keyboard shortcut combinations.">ShortcutLineEdit</a>;
+<a name="l00032"></a>00032 <span class="keyword">class </span>StelShortcut;
+<a name="l00033"></a>00033 <span class="keyword">class </span><a class="code" href="classStelShortcutGroup.html">StelShortcutGroup</a>;
+<a name="l00034"></a>00034 <span class="keyword">class </span><a class="code" href="classStelShortcutMgr.html" title="Manager of the keyboard shortcuts tied to different features.">StelShortcutMgr</a>;
+<a name="l00035"></a>00035 
+<a name="l00036"></a>00036 <span class="keyword">class </span>QStandardItemModel;
+<a name="l00037"></a>00037 <span class="keyword">class </span>QStandardItem;
+<a name="l00038"></a>00038 
+<a name="l00039"></a>00039 
+<a name="l00043"></a><a class="code" href="classShortcutsFilterModel.html">00043</a> <span class="keyword">class </span><a class="code" href="classShortcutsFilterModel.html" title="Custom filter class for filtering tree sub-items.">ShortcutsFilterModel</a> : <span class="keyword">public</span> QSortFilterProxyModel
+<a name="l00044"></a>00044 {
+<a name="l00045"></a>00045     Q_OBJECT
+<a name="l00046"></a>00046     
+<a name="l00047"></a>00047 <span class="keyword">public</span>:
+<a name="l00048"></a>00048     <a class="code" href="classShortcutsFilterModel.html" title="Custom filter class for filtering tree sub-items.">ShortcutsFilterModel</a>(QObject* parent = 0);
+<a name="l00049"></a>00049     
+<a name="l00050"></a>00050 <span class="keyword">protected</span>:
+<a name="l00051"></a>00051     <span class="keywordtype">bool</span> filterAcceptsRow(<span class="keywordtype">int</span> source_row,
+<a name="l00052"></a>00052                           <span class="keyword">const</span> QModelIndex &amp;source_parent) <span class="keyword">const</span>;
+<a name="l00053"></a>00053 };
+<a name="l00054"></a>00054 
 <a name="l00055"></a>00055 
-<a name="l00056"></a>00056 <span class="keyword">protected</span>:
-<a name="l00057"></a>00057     <span class="keywordtype">void</span> keyPressEvent(QKeyEvent *e);
-<a name="l00058"></a>00058     <span class="keywordtype">void</span> focusInEvent(QFocusEvent *e);
-<a name="l00059"></a>00059     <span class="keywordtype">void</span> focusOutEvent(QFocusEvent *e);
-<a name="l00060"></a>00060 
-<a name="l00061"></a>00061 <span class="keyword">private</span>:
-<a name="l00063"></a>00063     <span class="keyword">static</span> <span class="keywordtype">int</span> getModifiers(Qt::KeyboardModifiers state, <span class="keyword">const</span> QString &amp;text);
-<a name="l00064"></a>00064 
-<a name="l00066"></a>00066     <span class="keywordtype">int</span> m_keyNum;
-<a name="l00067"></a>00067     <span class="keywordtype">int</span> m_keys[4]; <span class="comment">// QKeySequence allows only 4 keys in single shortcut</span>
-<a name="l00068"></a>00068 };
-<a name="l00069"></a>00069 
-<a name="l00070"></a>00070 <span class="keyword">class </span>Ui_shortcutsDialogForm;
-<a name="l00071"></a>00071 <span class="keyword">class </span>StelShortcut;
-<a name="l00072"></a>00072 <span class="keyword">class </span><a class="code" href="classStelShortcutGroup.html">StelShortcutGroup</a>;
-<a name="l00073"></a>00073 <span class="keyword">class </span><a class="code" href="classStelShortcutMgr.html" title="Manager of the keyboard shortcuts tied to different features.">StelShortcutMgr</a>;
-<a name="l00074"></a>00074 
-<a name="l00075"></a>00075 <span class="keyword">class </span>QSortFilterProxyModel;
-<a name="l00076"></a>00076 <span class="keyword">class </span>QStandardItemModel;
-<a name="l00077"></a>00077 <span class="keyword">class </span>QStandardItem;
-<a name="l00078"></a>00078 
-<a name="l00079"></a><a class="code" href="classShortcutsDialog.html">00079</a> <span class="keyword">class </span><a class="code" href="classShortcutsDialog.html">ShortcutsDialog</a> : <span class="keyword">public</span> <a class="code" href="classStelDialog.html" title="Base class for all the GUI windows in Stellarium.">StelDialog</a>
-<a name="l00080"></a>00080 {
-<a name="l00081"></a>00081     Q_OBJECT
-<a name="l00082"></a>00082 
-<a name="l00083"></a>00083 <span class="keyword">public</span>:
-<a name="l00084"></a>00084     <a class="code" href="classShortcutsDialog.html">ShortcutsDialog</a>();
-<a name="l00085"></a>00085     ~<a class="code" href="classShortcutsDialog.html">ShortcutsDialog</a>();
-<a name="l00086"></a>00086 
-<a name="l00089"></a>00089     <span class="keywordtype">void</span> <a class="code" href="classShortcutsDialog.html#ad599338fe371919b641ede51bf221942" title="higlight items that have collisions with current lineEdits&amp;#39; state according to...">drawCollisions</a>();
+<a name="l00056"></a><a class="code" href="classShortcutsDialog.html">00056</a> <span class="keyword">class </span><a class="code" href="classShortcutsDialog.html">ShortcutsDialog</a> : <span class="keyword">public</span> <a class="code" href="classStelDialog.html" title="Base class for all the GUI windows in Stellarium.">StelDialog</a>
+<a name="l00057"></a>00057 {
+<a name="l00058"></a>00058     Q_OBJECT
+<a name="l00059"></a>00059 
+<a name="l00060"></a>00060 <span class="keyword">public</span>:
+<a name="l00061"></a>00061     <a class="code" href="classShortcutsDialog.html">ShortcutsDialog</a>();
+<a name="l00062"></a>00062     ~<a class="code" href="classShortcutsDialog.html">ShortcutsDialog</a>();
+<a name="l00063"></a>00063 
+<a name="l00066"></a>00066     <span class="keywordtype">void</span> <a class="code" href="classShortcutsDialog.html#ad599338fe371919b641ede51bf221942" title="higlight items that have collisions with current lineEdits&amp;#39; state according to...">drawCollisions</a>();
+<a name="l00067"></a>00067 
+<a name="l00068"></a>00068 <span class="keyword">public</span> slots:
+<a name="l00070"></a>00070     <span class="keywordtype">void</span> <a class="code" href="classShortcutsDialog.html#a486783eb543de757068ad65e6c2bf3ba" title="restore colors of all items it TreeWidget to defaults.">resetCollisions</a>();
+<a name="l00071"></a>00071     <span class="keywordtype">void</span> <a class="code" href="classShortcutsDialog.html#a7e52ce1d9cba6f374c97a331ef790058" title="Retranslate the content of the dialog.">retranslate</a>();
+<a name="l00073"></a>00073     <span class="keywordtype">void</span> <a class="code" href="classShortcutsDialog.html#ae09c0de5c27e90525b54c4e0fbaaedc8" title="ititialize editors state when current item changed.">initEditors</a>();
+<a name="l00075"></a>00075     <span class="keywordtype">bool</span> <a class="code" href="classShortcutsDialog.html#ac46de452f12557a01b5668e1c44c36ec" title="checks whether one QKeySequence is prefix of another.">prefixMatchKeySequence</a>(<span class="keyword">const</span> QKeySequence &amp;ks1, <span class="keyword">const</span> QKeySequence &amp;ks2);
+<a name="l00077"></a>00077     QList&lt;QStandardItem*&gt; <a class="code" href="classShortcutsDialog.html#abc98c89bcc7b476b1742af917cfe90d6" title="Compile a list of items that share a prefix with this sequence.">findCollidingItems</a>(QKeySequence ks);
+<a name="l00078"></a>00078     <span class="keywordtype">void</span> handleCollisions(<a class="code" href="classShortcutLineEdit.html" title="Specialised GUI control for entering keyboard shortcut combinations.">ShortcutLineEdit</a>* currentEdit);
+<a name="l00080"></a>00080     <span class="keywordtype">void</span> <a class="code" href="classShortcutsDialog.html#a50d954dbea6ce339986c45cd787e0a9f" title="called when editors&amp;#39; state changed.">handleChanges</a>();
+<a name="l00082"></a>00082     <span class="keywordtype">void</span> <a class="code" href="classShortcutsDialog.html#a1778f7ce67d11cf193079477accc0c74" title="called when apply button clicked.">applyChanges</a>() <span class="keyword">const</span>;
+<a name="l00084"></a>00084     <span class="keywordtype">void</span> <a class="code" href="classShortcutsDialog.html#acde3e61926bc314150be783bf07eaa0b" title="called by doubleclick; if click is on editable item, switch to editors">switchToEditors</a>(<span class="keyword">const</span> QModelIndex&amp; index);
+<a name="l00087"></a>00087     <span class="keywordtype">void</span> <a class="code" href="classShortcutsDialog.html#aae56fc0ca3a18001c6e3ceb05e706b9d" title="update shortcut representation in tree correspondingly to its actual contents.">updateShortcutsItem</a>(StelShortcut* shortcut, QStandardItem* shortcutItem = NULL);
+<a name="l00088"></a>00088     <span class="keywordtype">void</span> restoreDefaultShortcuts();
+<a name="l00089"></a>00089     <span class="keywordtype">void</span> updateTreeData();
 <a name="l00090"></a>00090 
-<a name="l00091"></a>00091 <span class="keyword">public</span> slots:
-<a name="l00093"></a>00093     <span class="keywordtype">void</span> <a class="code" href="classShortcutsDialog.html#a486783eb543de757068ad65e6c2bf3ba" title="restore colors of all items it TreeWidget to defaults.">resetCollisions</a>();
-<a name="l00094"></a>00094     <span class="keywordtype">void</span> <a class="code" href="classShortcutsDialog.html#a7e52ce1d9cba6f374c97a331ef790058" title="Retranslate the content of the dialog.">retranslate</a>();
-<a name="l00096"></a>00096     <span class="keywordtype">void</span> <a class="code" href="classShortcutsDialog.html#ae09c0de5c27e90525b54c4e0fbaaedc8" title="ititialize editors state when current item changed.">initEditors</a>();
-<a name="l00098"></a>00098     <span class="keywordtype">bool</span> <a class="code" href="classShortcutsDialog.html#ac46de452f12557a01b5668e1c44c36ec" title="checks whether one QKeySequence is prefix of another.">prefixMatchKeySequence</a>(<span class="keyword">const</span> QKeySequence &amp;ks1, <span class="keyword">const</span> QKeySequence &amp;ks2);
-<a name="l00100"></a>00100     QList&lt;QStandardItem*&gt; <a class="code" href="classShortcutsDialog.html#abc98c89bcc7b476b1742af917cfe90d6" title="Compile a list of items that share a prefix with this sequence.">findCollidingItems</a>(QKeySequence ks);
-<a name="l00101"></a>00101     <span class="keywordtype">void</span> handleCollisions(<a class="code" href="classShortcutLineEdit.html" title="Specialised GUI control for entering keyboard shortcut combinations.">ShortcutLineEdit</a>* currentEdit);
-<a name="l00103"></a>00103     <span class="keywordtype">void</span> <a class="code" href="classShortcutsDialog.html#a50d954dbea6ce339986c45cd787e0a9f" title="called when editors&amp;#39; state changed.">handleChanges</a>();
-<a name="l00105"></a>00105     <span class="keywordtype">void</span> <a class="code" href="classShortcutsDialog.html#a1778f7ce67d11cf193079477accc0c74" title="called when apply button clicked.">applyChanges</a>() <span class="keyword">const</span>;
-<a name="l00107"></a>00107     <span class="keywordtype">void</span> <a class="code" href="classShortcutsDialog.html#acde3e61926bc314150be783bf07eaa0b" title="called by doubleclick; if click is on editable item, switch to editors">switchToEditors</a>(<span class="keyword">const</span> QModelIndex&amp; index);
-<a name="l00110"></a>00110     <span class="keywordtype">void</span> <a class="code" href="classShortcutsDialog.html#aae56fc0ca3a18001c6e3ceb05e706b9d" title="update shortcut representation in tree correspondingly to its actual contents.">updateShortcutsItem</a>(StelShortcut* shortcut, QStandardItem* shortcutItem = NULL);
-<a name="l00111"></a>00111     <span class="keywordtype">void</span> restoreDefaultShortcuts();
-<a name="l00112"></a>00112     <span class="keywordtype">void</span> updateTreeData();
-<a name="l00113"></a>00113 
-<a name="l00114"></a>00114 <span class="keyword">protected</span>:
-<a name="l00116"></a>00116     <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classShortcutsDialog.html#a8ae51ec65a63ef6f120ebab9896edb81" title="Initialize the dialog widgets and connect the signals/slots.">createDialogContent</a>();
+<a name="l00091"></a>00091 <span class="keyword">protected</span>:
+<a name="l00093"></a>00093     <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classShortcutsDialog.html#a8ae51ec65a63ef6f120ebab9896edb81" title="Initialize the dialog widgets and connect the signals/slots.">createDialogContent</a>();
+<a name="l00094"></a>00094 
+<a name="l00095"></a>00095 <span class="keyword">private</span>:
+<a name="l00097"></a>00097     <span class="keyword">static</span> <span class="keywordtype">bool</span> itemIsEditable(QStandardItem *item);
+<a name="l00101"></a>00101     <span class="keywordtype">void</span> updateText();
+<a name="l00102"></a>00102 
+<a name="l00105"></a>00105     <span class="keywordtype">void</span> polish();
+<a name="l00106"></a>00106 
+<a name="l00107"></a>00107     QStandardItem* updateGroup(<a class="code" href="classStelShortcutGroup.html">StelShortcutGroup</a>* group);
+<a name="l00108"></a>00108 
+<a name="l00110"></a>00110     QStandardItem* findItemByData(QVariant value, <span class="keywordtype">int</span> role, <span class="keywordtype">int</span> column = 0);
+<a name="l00111"></a>00111 
+<a name="l00113"></a>00113     <a class="code" href="classStelShortcutMgr.html" title="Manager of the keyboard shortcuts tied to different features.">StelShortcutMgr</a>* shortcutMgr;
+<a name="l00114"></a>00114 
+<a name="l00116"></a>00116     QList&lt;QStandardItem*&gt; collisionItems;
 <a name="l00117"></a>00117 
-<a name="l00118"></a>00118 <span class="keyword">private</span>:
-<a name="l00120"></a>00120     <span class="keyword">static</span> <span class="keywordtype">bool</span> itemIsEditable(QStandardItem *item);
-<a name="l00124"></a>00124     <span class="keywordtype">void</span> updateText();
-<a name="l00125"></a>00125 
-<a name="l00128"></a>00128     <span class="keywordtype">void</span> polish();
-<a name="l00129"></a>00129 
-<a name="l00130"></a>00130     QStandardItem* updateGroup(<a class="code" href="classStelShortcutGroup.html">StelShortcutGroup</a>* group);
-<a name="l00131"></a>00131 
-<a name="l00133"></a>00133     QStandardItem* findItemByData(QVariant value, <span class="keywordtype">int</span> role, <span class="keywordtype">int</span> column = 0);
-<a name="l00134"></a>00134 
-<a name="l00136"></a>00136     <a class="code" href="classStelShortcutMgr.html" title="Manager of the keyboard shortcuts tied to different features.">StelShortcutMgr</a>* shortcutMgr;
-<a name="l00137"></a>00137 
-<a name="l00139"></a>00139     QList&lt;QStandardItem*&gt; collisionItems;
-<a name="l00140"></a>00140 
-<a name="l00141"></a>00141     Ui_shortcutsDialogForm *ui;
-<a name="l00142"></a>00142     QSortFilterProxyModel* filterModel;
-<a name="l00143"></a>00143     QStandardItemModel* mainModel;
-<a name="l00145"></a>00145     <span class="keywordtype">void</span> resetModel();
-<a name="l00147"></a>00147     <span class="keywordtype">void</span> setModelHeader();
-<a name="l00148"></a>00148 };
-<a name="l00149"></a>00149 
-<a name="l00150"></a>00150 <span class="preprocessor">#endif // SHORTCUTSDIALOG_HPP</span>
+<a name="l00118"></a>00118     Ui_shortcutsDialogForm *ui;
+<a name="l00119"></a>00119     <a class="code" href="classShortcutsFilterModel.html" title="Custom filter class for filtering tree sub-items.">ShortcutsFilterModel</a>* filterModel;
+<a name="l00120"></a>00120     QStandardItemModel* mainModel;
+<a name="l00122"></a>00122     <span class="keywordtype">void</span> resetModel();
+<a name="l00124"></a>00124     <span class="keywordtype">void</span> setModelHeader();
+<a name="l00125"></a>00125 };
+<a name="l00126"></a>00126 
+<a name="l00127"></a>00127 <span class="preprocessor">#endif // SHORTCUTSDIALOG_HPP</span>
 </pre></div></div>
-<hr class="footer"/><address style="text-align: right;"><small>Generated on Sat Nov 3 23:18:39 2012 for Stellarium by&nbsp;
+<hr class="footer"/><address style="text-align: right;"><small>Generated on Thu Nov 22 16:11:48 2012 for Stellarium by&nbsp;
 <a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.6.3 </small></address>
 </body>
