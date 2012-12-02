@@ -53,6 +53,7 @@ $language = array(
     'sv'=>'svenska',
     'sq'=>'gjuha shqipe',
     'uk'=>'українська',
+    'vi'=>'Tiếng Việt',
     'zh'=>'中文、汉语、漢語',
     'zh_CN'=>'中文、汉语、漢語 (Simplified)',
 );
