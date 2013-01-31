@@ -64,12 +64,12 @@ if (($locale == "ar") or ($locale == "fa")) {
     $langdir = "ltr";
 }
 
-$version = "0.11.4";
+$version = "0.12.0";
 $osx_version = "10.6+";
 $download_link_win32	= "http://sourceforge.net/projects/stellarium/files/Stellarium-win32/".$version."/stellarium-".$version."-win32.exe/download";
 $download_link_win64	= "http://sourceforge.net/projects/stellarium/files/Stellarium-win32/".$version."/stellarium-".$version."-win64.exe/download";
 $download_link_osx_u	= "http://sourceforge.net/projects/stellarium/files/Stellarium-MacOSX/".$version."/Stellarium-".$version.".dmg/download";
-$download_link_source	= "http://sourceforge.net/projects/stellarium/files/Stellarium-sources/".$version."/stellarium-".$version."a.tar.gz/download";
+$download_link_source	= "http://sourceforge.net/projects/stellarium/files/Stellarium-sources/".$version."/stellarium-".$version.".tar.gz/download";
 $download_link_linux	= "http://sourceforge.net/projects/stellarium/files/Stellarium-linux/".$version."/";
 $download_link_ppa	= "https://launchpad.net/~stellarium/+archive/stellarium-releases";
 

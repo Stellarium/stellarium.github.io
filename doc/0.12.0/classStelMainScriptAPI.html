@@ -43,6 +43,8 @@
 <tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">set the date in ISO format, e.g.  <a href="#a8a059c2a5f9985d3da68b666ac2b40d9"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">QString&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classStelMainScriptAPI.html#a7b22d81a727b4d014c91bda78ec21bff">getDate</a> (const QString &amp;spec=&quot;utc&quot;)</td></tr>
 <tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">get the simulation date and time as a string in ISO format, e.g.  <a href="#a7b22d81a727b4d014c91bda78ec21bff"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">QString&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classStelMainScriptAPI.html#ab5e71a21caeeefb1d17f4d28469246f6">getDeltaT</a> () const </td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">get the DeltaT for the simulation date and time as a string in HMS format, e.g.  <a href="#ab5e71a21caeeefb1d17f4d28469246f6"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classStelMainScriptAPI.html#a90d8761b42dcd45d2cdfcc93796338db">setTimeRate</a> (double ts)</td></tr>
 <tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Set time speed in JDay/sec.  <a href="#a90d8761b42dcd45d2cdfcc93796338db"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">double&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classStelMainScriptAPI.html#a4eabf63ddeadc9608f47fb0f09baffdb">getTimeRate</a> () const </td></tr>
@@ -195,6 +197,12 @@
 <tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Set the current sky language.  <a href="#a36ffad6286cf69ed74deea42adbfa01e"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classStelMainScriptAPI.html#a80215e94f540d15400314f2dc60172d2">goHome</a> ()</td></tr>
 <tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Go to defaults position and direction of view.  <a href="#a80215e94f540d15400314f2dc60172d2"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classStelMainScriptAPI.html#aba2ca98a13b1086e8f273f73f700dcad">setMilkyWayVisible</a> (bool b)</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Show or hide the Milky Way.  <a href="#aba2ca98a13b1086e8f273f73f700dcad"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classStelMainScriptAPI.html#a227f7c919b63725f81279167ba8813d1">setMilkyWayIntensity</a> (float i)</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Set Milky Way intensity.  <a href="#a227f7c919b63725f81279167ba8813d1"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">float&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classStelMainScriptAPI.html#a4595bd5c19c9861d5c297fdd5b3e3b47">getMilkyWayIntensity</a> ()</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Get Milky Way intensity.  <a href="#a4595bd5c19c9861d5c297fdd5b3e3b47"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">double&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classStelMainScriptAPI.html#add1e3435884d3d5aa777ae3c5377b148">jdFromDateString</a> (const QString &amp;dt, const QString &amp;spec)</td></tr>
 <tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">For use in setDate and waitFor For parameter descriptions see <a class="el" href="classStelMainScriptAPI.html#a8a059c2a5f9985d3da68b666ac2b40d9" title="set the date in ISO format, e.g.">setDate()</a>.  <a href="#add1e3435884d3d5aa777ae3c5377b148"></a><br/></td></tr>
 <tr><td colspan="2"><h2>Signals</h2></td></tr>
@@ -459,6 +467,27 @@ double&nbsp;</td><td class="memItemRight" valign="bottom"><b>timeSpeed</b></td><
 
 </div>
 </div>
+<a class="anchor" id="ab5e71a21caeeefb1d17f4d28469246f6"></a><!-- doxytag: member="StelMainScriptAPI::getDeltaT" ref="ab5e71a21caeeefb1d17f4d28469246f6" args="() const " -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">QString StelMainScriptAPI::getDeltaT </td>
+          <td>(</td>
+          <td class="paramname"></td>
+          <td>&nbsp;)&nbsp;</td>
+          <td> const<code> [slot]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>get the DeltaT for the simulation date and time as a string in HMS format, e.g. </p>
+<p>"0h1m68.2s" </p>
+<dl class="return"><dt><b>Returns:</b></dt><dd>the DeltaT for current simulation time. </dd></dl>
+
+</div>
+</div>
 <a class="anchor" id="a7a7c4be89d0bcef7c18a9549b61b1d8d"></a><!-- doxytag: member="StelMainScriptAPI::getDiskViewport" ref="a7a7c4be89d0bcef7c18a9549b61b1d8d" args="()" -->
 <div class="memitem">
 <div class="memproto">
@@ -536,6 +565,26 @@ double&nbsp;</td><td class="memItemRight" valign="bottom"><b>timeSpeed</b></td><
 
 <p>Get the current maximum frames per second. </p>
 <dl class="return"><dt><b>Returns:</b></dt><dd>The current maximum frames per secon setting. </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a4595bd5c19c9861d5c297fdd5b3e3b47"></a><!-- doxytag: member="StelMainScriptAPI::getMilkyWayIntensity" ref="a4595bd5c19c9861d5c297fdd5b3e3b47" args="()" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">float StelMainScriptAPI::getMilkyWayIntensity </td>
+          <td>(</td>
+          <td class="paramname"></td>
+          <td>&nbsp;)&nbsp;</td>
+          <td><code> [slot]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Get Milky Way intensity. </p>
+<dl class="return"><dt><b>Returns:</b></dt><dd>value of Milky Way intensity, e.g. "1.2" </dd></dl>
 
 </div>
 </div>
@@ -2380,6 +2429,58 @@ double&nbsp;</td><td class="memItemRight" valign="bottom"><b>timeSpeed</b></td><
 
 </div>
 </div>
+<a class="anchor" id="a227f7c919b63725f81279167ba8813d1"></a><!-- doxytag: member="StelMainScriptAPI::setMilkyWayIntensity" ref="a227f7c919b63725f81279167ba8813d1" args="(float i)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void StelMainScriptAPI::setMilkyWayIntensity </td>
+          <td>(</td>
+          <td class="paramtype">float&nbsp;</td>
+          <td class="paramname"> <em>i</em></td>
+          <td>&nbsp;)&nbsp;</td>
+          <td><code> [slot]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Set Milky Way intensity. </p>
+<dl><dt><b>Parameters:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"></td><td valign="top"><em>i</em>&nbsp;</td><td>value of intensity for the Milky Way </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a class="anchor" id="aba2ca98a13b1086e8f273f73f700dcad"></a><!-- doxytag: member="StelMainScriptAPI::setMilkyWayVisible" ref="aba2ca98a13b1086e8f273f73f700dcad" args="(bool b)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void StelMainScriptAPI::setMilkyWayVisible </td>
+          <td>(</td>
+          <td class="paramtype">bool&nbsp;</td>
+          <td class="paramname"> <em>b</em></td>
+          <td>&nbsp;)&nbsp;</td>
+          <td><code> [slot]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Show or hide the Milky Way. </p>
+<dl><dt><b>Parameters:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"></td><td valign="top"><em>b</em>&nbsp;</td><td>if true, show the Milky Way, if false, hide the Milky Way. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
 <a class="anchor" id="a46ac0a0e04513fd126c7d8881907ffbc"></a><!-- doxytag: member="StelMainScriptAPI::setMinFps" ref="a46ac0a0e04513fd126c7d8881907ffbc" args="(float m)" -->
 <div class="memitem">
 <div class="memproto">
@@ -2918,7 +3019,7 @@ double&nbsp;</td><td class="memItemRight" valign="bottom"><b>timeSpeed</b></td><
 <li>scripting/<a class="el" href="StelMainScriptAPI_8hpp_source.html">StelMainScriptAPI.hpp</a></li>
 </ul>
 </div>
-<hr class="footer"/><address style="text-align: right;"><small>Generated on Fri Jan 18 16:15:51 2013 for Stellarium by&nbsp;
+<hr class="footer"/><address style="text-align: right;"><small>Generated on Thu Jan 31 14:05:45 2013 for Stellarium by&nbsp;
 <a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.6.3 </small></address>
 </body>
