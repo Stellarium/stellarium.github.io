@@ -9,7 +9,7 @@
 <tr>
 <td align="left" valign="top" width="32" rowspan="2"><a href="http://www.stellarium.org"><img src="stellarium-logo.png" align="left" border="0" /></a></td>
 <td width="1" rowspan="2">&nbsp;&nbsp;</td>
-<td style="font-size:120%;font-weight:bolder;">Stellarium 0.12.0</td>
+<td style="font-size:120%;font-weight:bolder;">Stellarium 0.12.1</td>
 <td align="right" valign="top" width="230" rowspan="2"></td></tr><tr>
 <td class="postheader" valign="center">
  <a href="index.html">Home</a>&nbsp;&middot;
@@ -196,35 +196,40 @@
 <a name="l00305"></a>00305 
 <a name="l00307"></a>00307     <span class="keywordtype">void</span> updateI18n();  
 <a name="l00308"></a>00308 
-<a name="l00309"></a>00309 <span class="keyword">private</span>:
-<a name="l00311"></a>00311     <span class="keywordtype">float</span> getAtmosphereLightPollutionLuminance() <span class="keyword">const</span>;
-<a name="l00313"></a>00313     <span class="keywordtype">void</span> setAtmosphereLightPollutionLuminance(<span class="keywordtype">float</span> f);
-<a name="l00314"></a>00314 
-<a name="l00318"></a>00318     QString nameToID(<span class="keyword">const</span> QString&amp; name);
+<a name="l00310"></a>00310     <span class="keywordtype">float</span> getInitialLandscapeBrightness()<span class="keyword"> const </span>{<span class="keywordflow">return</span> initialLandscapeBrightness;}
+<a name="l00312"></a>00312     <span class="keywordtype">void</span> setInitialLandscapeBrightness(<span class="keywordtype">float</span> b) {initialLandscapeBrightness=b;}
+<a name="l00313"></a>00313 
+<a name="l00314"></a>00314 <span class="keyword">private</span>:
+<a name="l00316"></a>00316     <span class="keywordtype">float</span> getAtmosphereLightPollutionLuminance() <span class="keyword">const</span>;
+<a name="l00318"></a>00318     <span class="keywordtype">void</span> setAtmosphereLightPollutionLuminance(<span class="keywordtype">float</span> f);
 <a name="l00319"></a>00319 
-<a name="l00321"></a>00321     QMap&lt;QString,QString&gt; getNameToDirMap() <span class="keyword">const</span>;
-<a name="l00322"></a>00322 
-<a name="l00327"></a>00327     QString getLandscapePath(QString landscapeID);
-<a name="l00328"></a>00328 
-<a name="l00329"></a>00329     <a class="code" href="classAtmosphere.html" title="Compute and display the daylight sky color.">Atmosphere</a>* atmosphere;         <span class="comment">// Atmosphere</span>
-<a name="l00330"></a>00330     Cardinals* cardinalsPoints;     <span class="comment">// Cardinals points</span>
-<a name="l00331"></a>00331     <a class="code" href="classLandscape.html" title="Store and manages the displaying of the Landscape.">Landscape</a>* landscape;           <span class="comment">// The landscape i.e. the fog, the ground and &quot;decor&quot;</span>
-<a name="l00332"></a>00332 
-<a name="l00333"></a>00333     <span class="comment">// Define whether the observer location is to be updated when the landscape is updated.</span>
-<a name="l00334"></a>00334     <span class="keywordtype">bool</span> flagLandscapeSetsLocation;
-<a name="l00335"></a>00335 
-<a name="l00336"></a>00336     <span class="comment">// The ID of the currently loaded landscape</span>
-<a name="l00337"></a>00337     QString currentLandscapeID;
-<a name="l00338"></a>00338 
-<a name="l00339"></a>00339     <span class="comment">// The ID of the default landscape</span>
-<a name="l00340"></a>00340     QString defaultLandscapeID;
-<a name="l00341"></a>00341 
-<a name="l00347"></a>00347     QStringList packagedLandscapeIDs;
-<a name="l00348"></a>00348 };
-<a name="l00349"></a>00349 
-<a name="l00350"></a>00350 <span class="preprocessor">#endif // _LANDSCAPEMGR_HPP_</span>
+<a name="l00323"></a>00323     QString nameToID(<span class="keyword">const</span> QString&amp; name);
+<a name="l00324"></a>00324 
+<a name="l00326"></a>00326     QMap&lt;QString,QString&gt; getNameToDirMap() <span class="keyword">const</span>;
+<a name="l00327"></a>00327 
+<a name="l00332"></a>00332     QString getLandscapePath(QString landscapeID);
+<a name="l00333"></a>00333 
+<a name="l00334"></a>00334     <a class="code" href="classAtmosphere.html" title="Compute and display the daylight sky color.">Atmosphere</a>* atmosphere;         <span class="comment">// Atmosphere</span>
+<a name="l00335"></a>00335     Cardinals* cardinalsPoints;     <span class="comment">// Cardinals points</span>
+<a name="l00336"></a>00336     <a class="code" href="classLandscape.html" title="Store and manages the displaying of the Landscape.">Landscape</a>* landscape;           <span class="comment">// The landscape i.e. the fog, the ground and &quot;decor&quot;</span>
+<a name="l00337"></a>00337 
+<a name="l00338"></a>00338     <span class="comment">// Define whether the observer location is to be updated when the landscape is updated.</span>
+<a name="l00339"></a>00339     <span class="keywordtype">bool</span> flagLandscapeSetsLocation;
+<a name="l00340"></a>00340 
+<a name="l00341"></a>00341     <span class="comment">// The ID of the currently loaded landscape</span>
+<a name="l00342"></a>00342     QString currentLandscapeID;
+<a name="l00343"></a>00343 
+<a name="l00344"></a>00344     <span class="comment">// The ID of the default landscape</span>
+<a name="l00345"></a>00345     QString defaultLandscapeID;
+<a name="l00346"></a>00346 
+<a name="l00352"></a>00352     QStringList packagedLandscapeIDs;
+<a name="l00353"></a>00353 
+<a name="l00354"></a>00354     <span class="keywordtype">float</span> initialLandscapeBrightness;
+<a name="l00355"></a>00355 };
+<a name="l00356"></a>00356 
+<a name="l00357"></a>00357 <span class="preprocessor">#endif // _LANDSCAPEMGR_HPP_</span>
 </pre></div></div>
-<hr class="footer"/><address style="text-align: right;"><small>Generated on Thu Jan 31 14:05:38 2013 for Stellarium by&nbsp;
+<hr class="footer"/><address style="text-align: right;"><small>Generated on Wed Feb 6 11:26:11 2013 for Stellarium by&nbsp;
 <a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.6.3 </small></address>
 </body>
