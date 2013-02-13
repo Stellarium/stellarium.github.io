@@ -303,6 +303,7 @@ printf('<h2>%s</h2><p>
 	%s %s<br />
 	%s %s<br />
 	%s %s<br />
+	%s %s<br />
 	%s<br />
 	</p>',
 	q_('developers'),
@@ -315,6 +316,7 @@ printf('<h2>%s</h2><p>
 	q_('Developer:'),               '<a href="http://homepage.univie.ac.at/Georg.Zotti/">Georg Zotti</a>',
 	q_('OSX Developer:'),           'Nigel Kerr',
 	q_('OSX Developer:'),           '<a href="mailto:diego.marcos%20(at)%20gmail.com">Diego Marcos</a>',
+	q_('Continuous Integration:'),  '<a href="http://lambermont.dyndns.org/">Hans Lambermont</a>',
 	q_('Tester:'),                  'Barry Gerdes',
 	q_('Tester:'),                  'Khalid AlAjaji',
 	q_('and everyone else in the community.') );
