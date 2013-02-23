@@ -81,27 +81,27 @@
 <div class="line"><a name="l00032"></a><span class="lineno"><a class="code" href="classSimbadLookupReply.html">   32</a></span>&#160;<span class="keyword">class </span><a class="code" href="classSimbadLookupReply.html" title="Contains all the information about a current simbad lookup query.">SimbadLookupReply</a> : <span class="keyword">public</span> QObject</div>
 <div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;{</div>
 <div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;    Q_OBJECT</div>
-<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;    Q_ENUMS(<a class="code" href="classSimbadLookupReply.html#a10dcaaf795c7f5be51941c3d3c8cf95d" title="Possible status for a simbad query.">SimbadLookupStatus</a>);</div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;    Q_ENUMS(SimbadLookupStatus)</div>
 <div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;</div>
 <div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;<span class="keyword">public</span>:</div>
 <div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;    <span class="keyword">friend</span> <span class="keyword">class </span><a class="code" href="classSimbadSearcher.html" title="Provides lookup features into the online Simbad service from CDS.">SimbadSearcher</a>;</div>
 <div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;</div>
-<div class="line"><a name="l00041"></a><span class="lineno"><a class="code" href="classSimbadLookupReply.html#a10dcaaf795c7f5be51941c3d3c8cf95d">   41</a></span>&#160;    <span class="keyword">enum</span> <a class="code" href="classSimbadLookupReply.html#a10dcaaf795c7f5be51941c3d3c8cf95d" title="Possible status for a simbad query.">SimbadLookupStatus</a></div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;    <span class="keyword">enum</span> SimbadLookupStatus</div>
 <div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;    {</div>
-<div class="line"><a name="l00043"></a><span class="lineno"><a class="code" href="classSimbadLookupReply.html#a10dcaaf795c7f5be51941c3d3c8cf95da78cf7729a195758cd6e3c300ce08f3cf">   43</a></span>&#160;        <a class="code" href="classSimbadLookupReply.html#a10dcaaf795c7f5be51941c3d3c8cf95da78cf7729a195758cd6e3c300ce08f3cf" title="Simbad is still being queried.">SimbadLookupQuerying</a>,       </div>
-<div class="line"><a name="l00044"></a><span class="lineno"><a class="code" href="classSimbadLookupReply.html#a10dcaaf795c7f5be51941c3d3c8cf95da0db97d98254422ef8fbd82674ab2e187">   44</a></span>&#160;        <a class="code" href="classSimbadLookupReply.html#a10dcaaf795c7f5be51941c3d3c8cf95da0db97d98254422ef8fbd82674ab2e187" title="An error occured while looking up Simbad. Call getErrorString() for a description of the error...">SimbadLookupErrorOccured</a>,   </div>
-<div class="line"><a name="l00045"></a><span class="lineno"><a class="code" href="classSimbadLookupReply.html#a10dcaaf795c7f5be51941c3d3c8cf95daf8c5871017a2440200b27763227113da">   45</a></span>&#160;        <a class="code" href="classSimbadLookupReply.html#a10dcaaf795c7f5be51941c3d3c8cf95daf8c5871017a2440200b27763227113da" title="The query is over. The reply can be deleted.">SimbadLookupFinished</a>        </div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;        SimbadLookupQuerying,       </div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;        SimbadLookupErrorOccured,   </div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;        SimbadLookupFinished        </div>
 <div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;    };</div>
 <div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;</div>
 <div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;    ~<a class="code" href="classSimbadLookupReply.html" title="Contains all the information about a current simbad lookup query.">SimbadLookupReply</a>();</div>
 <div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;</div>
-<div class="line"><a name="l00051"></a><span class="lineno"><a class="code" href="classSimbadLookupReply.html#a91e9a835c974052b5059347cfa4c0f11">   51</a></span>&#160;    QMap&lt;QString, Vec3d&gt; <a class="code" href="classSimbadLookupReply.html#a91e9a835c974052b5059347cfa4c0f11" title="Get the result list of matching objectName/position.">getResults</a>()<span class="keyword"> const </span>{<span class="keywordflow">return</span> resultPositions;}</div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;    QMap&lt;QString, Vec3d&gt; getResults()<span class="keyword"> const </span>{<span class="keywordflow">return</span> resultPositions;}</div>
 <div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;</div>
-<div class="line"><a name="l00054"></a><span class="lineno"><a class="code" href="classSimbadLookupReply.html#ad1123432424cf3ad42016a0f33298e04">   54</a></span>&#160;    <a class="code" href="classSimbadLookupReply.html#a10dcaaf795c7f5be51941c3d3c8cf95d" title="Possible status for a simbad query.">SimbadLookupStatus</a> <a class="code" href="classSimbadLookupReply.html#ad1123432424cf3ad42016a0f33298e04" title="Get the current status.">getCurrentStatus</a>()<span class="keyword"> const </span>{<span class="keywordflow">return</span> currentStatus;}</div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;    SimbadLookupStatus getCurrentStatus()<span class="keyword"> const </span>{<span class="keywordflow">return</span> currentStatus;}</div>
 <div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;</div>
-<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;    QString <a class="code" href="classSimbadLookupReply.html#ab7b3fd2d0e3d6614112faece395c1bd7" title="Get a I18n string describing the current status. It can be used e.g for reporting in widgets...">getCurrentStatusString</a>() <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;    QString getCurrentStatusString() <span class="keyword">const</span>;</div>
 <div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;</div>
-<div class="line"><a name="l00060"></a><span class="lineno"><a class="code" href="classSimbadLookupReply.html#ad800abaae7eded4b53cf5448c19246c1">   60</a></span>&#160;    QString <a class="code" href="classSimbadLookupReply.html#ad800abaae7eded4b53cf5448c19246c1" title="Get the error descrition string. Return empty string if no error occured.">getErrorString</a>()<span class="keyword"> const </span>{<span class="keywordflow">return</span> errorString;}</div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;    QString getErrorString()<span class="keyword"> const </span>{<span class="keywordflow">return</span> errorString;}</div>
 <div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;</div>
 <div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;signals:</div>
 <div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classSimbadLookupReply.html#a8ad43ac32879e6a8d6f5cd6caa15dcc0" title="Triggered when the lookup status change.">statusChanged</a>();</div>
@@ -120,7 +120,7 @@
 <div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;</div>
 <div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;    QMap&lt;QString, Vec3d&gt; resultPositions;</div>
 <div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;</div>
-<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;    <a class="code" href="classSimbadLookupReply.html#a10dcaaf795c7f5be51941c3d3c8cf95d" title="Possible status for a simbad query.">SimbadLookupStatus</a> currentStatus;</div>
+<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;    SimbadLookupStatus currentStatus;</div>
 <div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;</div>
 <div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;    QString errorString;</div>
 <div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;};</div>
@@ -143,7 +143,7 @@
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Thu Feb 7 2013 14:06:15 for Stellarium by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Sat Feb 23 2013 17:21:21 for Stellarium by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.3.1
 </small></address>

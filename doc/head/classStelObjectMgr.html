@@ -93,6 +93,9 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:aa2e7618615738fce654f2344b9c31a92"><td class="memItemLeft" align="right" valign="top">QStringList&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classStelObjectMgr.html#aa2e7618615738fce654f2344b9c31a92">listMatchingObjectsI18n</a> (const QString &amp;objPrefix, unsigned int maxNbItem=5) const </td></tr>
 <tr class="memdesc:aa2e7618615738fce654f2344b9c31a92"><td class="mdescLeft">&#160;</td><td class="mdescRight">Find and return the list of at most maxNbItem objects auto-completing the passed object I18n name.  <a href="#aa2e7618615738fce654f2344b9c31a92">More...</a><br/></td></tr>
 <tr class="separator:aa2e7618615738fce654f2344b9c31a92"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5167d65ad5885494ecc2355bf6dec7b1"><td class="memItemLeft" align="right" valign="top">QStringList&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classStelObjectMgr.html#a5167d65ad5885494ecc2355bf6dec7b1">listMatchingObjects</a> (const QString &amp;objPrefix, unsigned int maxNbItem=5) const </td></tr>
+<tr class="memdesc:a5167d65ad5885494ecc2355bf6dec7b1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Find and return the list of at most maxNbItem objects auto-completing the passed object English name.  <a href="#a5167d65ad5885494ecc2355bf6dec7b1">More...</a><br/></td></tr>
+<tr class="separator:a5167d65ad5885494ecc2355bf6dec7b1"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a3e7aa847a4c8f724cb78d14db44ed388"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a3e7aa847a4c8f724cb78d14db44ed388"></a>
 QStringList&#160;</td><td class="memItemRight" valign="bottom"><b>listAllModuleObjects</b> (const QString &amp;moduleId, bool inEnglish) const </td></tr>
 <tr class="separator:a3e7aa847a4c8f724cb78d14db44ed388"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -433,7 +436,7 @@ Additional Inherited Members</h2></td></tr>
 
 <p>Get whether a pointer is to be drawn over selected object. </p>
 
-<p>Definition at line <a class="el" href="StelObjectMgr_8hpp_source.html#l00117">117</a> of file <a class="el" href="StelObjectMgr_8hpp_source.html">StelObjectMgr.hpp</a>.</p>
+<p>Definition at line <a class="el" href="StelObjectMgr_8hpp_source.html#l00123">123</a> of file <a class="el" href="StelObjectMgr_8hpp_source.html">StelObjectMgr.hpp</a>.</p>
 
 </div>
 </div>
@@ -460,7 +463,7 @@ Additional Inherited Members</h2></td></tr>
 
 <p>Get the list objects which was recently selected by the user. </p>
 
-<p>Definition at line <a class="el" href="StelObjectMgr_8hpp_source.html#l00108">108</a> of file <a class="el" href="StelObjectMgr_8hpp_source.html">StelObjectMgr.hpp</a>.</p>
+<p>Definition at line <a class="el" href="StelObjectMgr_8hpp_source.html#l00114">114</a> of file <a class="el" href="StelObjectMgr_8hpp_source.html">StelObjectMgr.hpp</a>.</p>
 
 </div>
 </div>
@@ -512,7 +515,7 @@ Additional Inherited Members</h2></td></tr>
 
 <p>Return whether an object was selected during last selection related event. </p>
 
-<p>Definition at line <a class="el" href="StelObjectMgr_8hpp_source.html#l00090">90</a> of file <a class="el" href="StelObjectMgr_8hpp_source.html">StelObjectMgr.hpp</a>.</p>
+<p>Definition at line <a class="el" href="StelObjectMgr_8hpp_source.html#l00096">96</a> of file <a class="el" href="StelObjectMgr_8hpp_source.html">StelObjectMgr.hpp</a>.</p>
 
 </div>
 </div>
@@ -543,6 +546,42 @@ Additional Inherited Members</h2></td></tr>
 <p>Implements <a class="el" href="classStelModule.html#a32818e53cc8d640f15f84c38c454eab9">StelModule</a>.</p>
 
 <p>Definition at line <a class="el" href="StelObjectMgr_8hpp_source.html#l00044">44</a> of file <a class="el" href="StelObjectMgr_8hpp_source.html">StelObjectMgr.hpp</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a5167d65ad5885494ecc2355bf6dec7b1"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">QStringList StelObjectMgr::listMatchingObjects </td>
+          <td>(</td>
+          <td class="paramtype">const QString &amp;&#160;</td>
+          <td class="paramname"><em>objPrefix</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">unsigned int&#160;</td>
+          <td class="paramname"><em>maxNbItem</em> = <code>5</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Find and return the list of at most maxNbItem objects auto-completing the passed object English name. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">objPrefix</td><td>the case insensitive first letters of the searched object </td></tr>
+    <tr><td class="paramname">maxNbItem</td><td>the maximum number of returned object names. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>a list of matching object names by order of relevance, or an empty list if nothing match </dd></dl>
 
 </div>
 </div>
@@ -694,7 +733,7 @@ Additional Inherited Members</h2></td></tr>
 <p>Set the weight of the distance factor when choosing the best object to select. </p>
 <p>Default to 1. </p>
 
-<p>Definition at line <a class="el" href="StelObjectMgr_8hpp_source.html#l00130">130</a> of file <a class="el" href="StelObjectMgr_8hpp_source.html">StelObjectMgr.hpp</a>.</p>
+<p>Definition at line <a class="el" href="StelObjectMgr_8hpp_source.html#l00136">136</a> of file <a class="el" href="StelObjectMgr_8hpp_source.html">StelObjectMgr.hpp</a>.</p>
 
 </div>
 </div>
@@ -722,7 +761,7 @@ Additional Inherited Members</h2></td></tr>
 
 <p>Set whether a pointer is to be drawn over selected object. </p>
 
-<p>Definition at line <a class="el" href="StelObjectMgr_8hpp_source.html#l00115">115</a> of file <a class="el" href="StelObjectMgr_8hpp_source.html">StelObjectMgr.hpp</a>.</p>
+<p>Definition at line <a class="el" href="StelObjectMgr_8hpp_source.html#l00121">121</a> of file <a class="el" href="StelObjectMgr_8hpp_source.html">StelObjectMgr.hpp</a>.</p>
 
 </div>
 </div>
@@ -750,7 +789,7 @@ Additional Inherited Members</h2></td></tr>
 
 <p>Set the radius in pixel in which objects will be searched when clicking on a point in sky. </p>
 
-<p>Definition at line <a class="el" href="StelObjectMgr_8hpp_source.html#l00126">126</a> of file <a class="el" href="StelObjectMgr_8hpp_source.html">StelObjectMgr.hpp</a>.</p>
+<p>Definition at line <a class="el" href="StelObjectMgr_8hpp_source.html#l00132">132</a> of file <a class="el" href="StelObjectMgr_8hpp_source.html">StelObjectMgr.hpp</a>.</p>
 
 </div>
 </div>
@@ -886,7 +925,7 @@ Additional Inherited Members</h2></td></tr>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Thu Feb 7 2013 14:06:16 for Stellarium by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Sat Feb 23 2013 17:21:22 for Stellarium by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.3.1
 </small></address>

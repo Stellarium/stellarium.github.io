@@ -71,6 +71,9 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:adde8611718b590fb8f3b9075095a0eee"><td class="memItemLeft" align="right" valign="top">virtual QStringList&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classStelObjectModule.html#adde8611718b590fb8f3b9075095a0eee">listMatchingObjectsI18n</a> (const QString &amp;objPrefix, int maxNbItem=5) const =0</td></tr>
 <tr class="memdesc:adde8611718b590fb8f3b9075095a0eee"><td class="mdescLeft">&#160;</td><td class="mdescRight">Find and return the list of at most maxNbItem objects auto-completing passed object I18 name.  <a href="#adde8611718b590fb8f3b9075095a0eee">More...</a><br/></td></tr>
 <tr class="separator:adde8611718b590fb8f3b9075095a0eee"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad58b44aa86e41f4ce7532e1026478b99"><td class="memItemLeft" align="right" valign="top">virtual QStringList&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classStelObjectModule.html#ad58b44aa86e41f4ce7532e1026478b99">listMatchingObjects</a> (const QString &amp;objPrefix, int maxNbItem=5) const =0</td></tr>
+<tr class="memdesc:ad58b44aa86e41f4ce7532e1026478b99"><td class="mdescLeft">&#160;</td><td class="mdescRight">Find and return the list of at most maxNbItem objects auto-completing passed object English name.  <a href="#ad58b44aa86e41f4ce7532e1026478b99">More...</a><br/></td></tr>
+<tr class="separator:ad58b44aa86e41f4ce7532e1026478b99"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a91e6d1950686f1c4f7290f22de085b89"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a91e6d1950686f1c4f7290f22de085b89"></a>
 virtual QStringList&#160;</td><td class="memItemRight" valign="bottom"><b>listAllObjects</b> (bool inEnglish) const =0</td></tr>
 <tr class="separator:a91e6d1950686f1c4f7290f22de085b89"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -148,6 +151,52 @@ Additional Inherited Members</h2></td></tr>
 
 <p>Definition at line <a class="el" href="StelObjectModule_8hpp_source.html#l00034">34</a> of file <a class="el" href="StelObjectModule_8hpp_source.html">StelObjectModule.hpp</a>.</p>
 </div><h2 class="groupheader">Member Function Documentation</h2>
+<a class="anchor" id="ad58b44aa86e41f4ce7532e1026478b99"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual QStringList StelObjectModule::listMatchingObjects </td>
+          <td>(</td>
+          <td class="paramtype">const QString &amp;&#160;</td>
+          <td class="paramname"><em>objPrefix</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>maxNbItem</em> = <code>5</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Find and return the list of at most maxNbItem objects auto-completing passed object English name. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">objPrefix</td><td>the first letters of the searched object </td></tr>
+    <tr><td class="paramname">maxNbItem</td><td>the maximum number of returned object names </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>a list of matching object name by order of relevance, or an empty list if nothing matches </dd></dl>
+
+<p>Implemented in <a class="el" href="classConstellationMgr.html#a74a2b64d9e3bf6daddca0751afacb0cf">ConstellationMgr</a>, <a class="el" href="classStarMgr.html#a10c1f7808db54ad0fbf32dc9db92ae9d">StarMgr</a>, <a class="el" href="classSolarSystem.html#a48ed3d221b5284ce0d925a4f6496b7de">SolarSystem</a>, and <a class="el" href="classNebulaMgr.html#a94a41ca71c5038f388e03e6532f91a4f">NebulaMgr</a>.</p>
+
+</div>
+</div>
 <a class="anchor" id="adde8611718b590fb8f3b9075095a0eee"></a>
 <div class="memitem">
 <div class="memproto">
@@ -323,7 +372,7 @@ Additional Inherited Members</h2></td></tr>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Thu Feb 7 2013 14:06:16 for Stellarium by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Sat Feb 23 2013 17:21:22 for Stellarium by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.3.1
 </small></address>
