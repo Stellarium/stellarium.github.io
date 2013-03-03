@@ -55,9 +55,6 @@ printf('
 		<div class="download linux">
 		    <a href="%s">Linux<span>(%s)</span></a>
 		</div>
-		<div class="download linux">
-		    <a href="%s">Linux<span>(%s)</span></a>
-		</div>
 		<div class="download macosx">
 		    <a href="%s">Mac OS X<span>%s</span></a>
 		</div>
@@ -69,6 +66,9 @@ printf('
 		</div>
 		<div class="download ubuntu">
 		    <a href="%s">Ubuntu<span>%s</span></a>
+		</div>
+		<div class="download beta">
+		    <a href="%s">%s <span>(%s)</span></a>
 		</div>
 	    </div>
 	    <div id="additional" class="block">
@@ -83,8 +83,6 @@ q_('latest version'),
 $version,
 $download_link_source,
 q_('source'),
-$download_link_linux,
-q_('binary'),
 $download_link_osx_u,
 $osx_version,
 $download_link_win32,
@@ -93,6 +91,9 @@ $download_link_win64,
 q_('64 bit'),
 $download_link_ppa,
 q_('latest stable release'),
+$download_link_beta,
+q_('Beta'),
+q_('next version'),
 q_('User guide'));
 
 printf('  

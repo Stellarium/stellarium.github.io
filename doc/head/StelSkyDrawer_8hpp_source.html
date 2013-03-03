@@ -85,7 +85,7 @@
 <div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;<span class="keyword">class </span><a class="code" href="classStelToneReproducer.html" title="Converts tones in function of the eye adaptation to luminance.">StelToneReproducer</a>;</div>
 <div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;<span class="keyword">class </span><a class="code" href="classStelCore.html" title="Main class for Stellarium core processing.">StelCore</a>;</div>
 <div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;</div>
-<div class="line"><a name="l00039"></a><span class="lineno"><a class="code" href="classStelSkyDrawer.html">   39</a></span>&#160;<span class="keyword">class </span><a class="code" href="classStelSkyDrawer.html" title="Provide a set of methods used to draw sky objects taking into account eyes adaptation, zoom level and instrument model.">StelSkyDrawer</a> : <span class="keyword">public</span> QObject</div>
+<div class="line"><a name="l00039"></a><span class="lineno"><a class="code" href="classStelSkyDrawer.html">   39</a></span>&#160;<span class="keyword">class </span><a class="code" href="classStelSkyDrawer.html" title="Provide a set of methods used to draw sky objects taking into account eyes adaptation, zoom level, instrument model and artificially set magnitude limits.">StelSkyDrawer</a> : <span class="keyword">public</span> QObject</div>
 <div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;{</div>
 <div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;    Q_OBJECT</div>
 <div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;<span class="keyword">public</span>:</div>
@@ -161,143 +161,158 @@
 <div class="line"><a name="l00190"></a><span class="lineno">  190</span>&#160;</div>
 <div class="line"><a name="l00194"></a><span class="lineno"><a class="code" href="classStelSkyDrawer.html#a2284438e1d9bd13cdabf649c0deab53b">  194</a></span>&#160;    <span class="keywordtype">float</span> <a class="code" href="classStelSkyDrawer.html#a2284438e1d9bd13cdabf649c0deab53b" title="Get the magnitude of the currently faintest visible point source It depends on the zoom level...">getLimitMagnitude</a>()<span class="keyword"> const </span>{<span class="keywordflow">return</span> limitMagnitude;}</div>
 <div class="line"><a name="l00195"></a><span class="lineno">  195</span>&#160;</div>
-<div class="line"><a name="l00199"></a><span class="lineno"><a class="code" href="classStelSkyDrawer.html#a49729d2aa5bde3c9d2e6a3db287e312c">  199</a></span>&#160;    <span class="keywordtype">float</span> <a class="code" href="classStelSkyDrawer.html#a49729d2aa5bde3c9d2e6a3db287e312c" title="Get the luminance of the faintest visible object (e.g.">getLimitLuminance</a>()<span class="keyword"> const </span>{<span class="keywordflow">return</span> limitLuminance;}</div>
-<div class="line"><a name="l00200"></a><span class="lineno">  200</span>&#160;</div>
-<div class="line"><a name="l00202"></a><span class="lineno"><a class="code" href="classStelSkyDrawer.html#a554feda067690827046916ac701d4271">  202</a></span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classStelSkyDrawer.html#a554feda067690827046916ac701d4271" title="Set the value of the eye adaptation flag.">setFlagLuminanceAdaptation</a>(<span class="keywordtype">bool</span> b) {flagLuminanceAdaptation=b;}</div>
-<div class="line"><a name="l00204"></a><span class="lineno"><a class="code" href="classStelSkyDrawer.html#a1b6ba85822ad5d99996490b5fbb01a5b">  204</a></span>&#160;    <span class="keywordtype">bool</span> <a class="code" href="classStelSkyDrawer.html#a1b6ba85822ad5d99996490b5fbb01a5b" title="Get the current value of eye adaptation flag.">getFlagLuminanceAdaptation</a>()<span class="keyword"> const </span>{<span class="keywordflow">return</span> flagLuminanceAdaptation;}</div>
-<div class="line"><a name="l00205"></a><span class="lineno">  205</span>&#160;</div>
-<div class="line"><a name="l00208"></a><span class="lineno"><a class="code" href="classStelSkyDrawer.html#a67ff14cd3e352688d47efa93ab3aa9a9">  208</a></span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classStelSkyDrawer.html#a67ff14cd3e352688d47efa93ab3aa9a9" title="Informing the drawer whether atmosphere is displayed.">setFlagHasAtmosphere</a>(<span class="keywordtype">bool</span> b) {flagHasAtmosphere=b;}</div>
-<div class="line"><a name="l00210"></a><span class="lineno"><a class="code" href="classStelSkyDrawer.html#a7ff29cb60d730a351cbbebbcbce9539d">  210</a></span>&#160;    <span class="keywordtype">bool</span> <a class="code" href="classStelSkyDrawer.html#a7ff29cb60d730a351cbbebbcbce9539d" title="This is used to decide whether to apply refraction/extinction before rendering point sources et al...">getFlagHasAtmosphere</a>()<span class="keyword"> const </span>{<span class="keywordflow">return</span> flagHasAtmosphere;}</div>
-<div class="line"><a name="l00211"></a><span class="lineno">  211</span>&#160;</div>
-<div class="line"><a name="l00213"></a><span class="lineno"><a class="code" href="classStelSkyDrawer.html#a9d8df2d7e47dac9abcf8fda5797c0da3">  213</a></span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classStelSkyDrawer.html#a9d8df2d7e47dac9abcf8fda5797c0da3" title="Set extinction coefficient, mag/airmass (for extinction).">setExtinctionCoefficient</a>(<span class="keywordtype">double</span> extCoeff) {extinction.<a class="code" href="classExtinction.html#aab02cdb54d198c16d312dc365454e3d1" title="Set visual extinction coefficient (mag/airmass), influences extinction computation.">setExtinctionCoefficient</a>(extCoeff);}</div>
-<div class="line"><a name="l00215"></a><span class="lineno"><a class="code" href="classStelSkyDrawer.html#a86fe2c1fc809f308c0d9d988ad66ee5c">  215</a></span>&#160;    <span class="keywordtype">double</span> <a class="code" href="classStelSkyDrawer.html#a86fe2c1fc809f308c0d9d988ad66ee5c" title="Get extinction coefficient, mag/airmass (for extinction).">getExtinctionCoefficient</a>()<span class="keyword"> const </span>{<span class="keywordflow">return</span> extinction.getExtinctionCoefficient();}</div>
-<div class="line"><a name="l00217"></a><span class="lineno"><a class="code" href="classStelSkyDrawer.html#a4370d20898a75a7710a2eab0bd7dd74c">  217</a></span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classStelSkyDrawer.html#a4370d20898a75a7710a2eab0bd7dd74c" title="Set atmospheric (ground) temperature in deg celsius (for refraction).">setAtmosphereTemperature</a>(<span class="keywordtype">double</span> celsius) {refraction.<a class="code" href="classRefraction.html#ac27101a864fa761bfe4ce25634ff0e58" title="Set surface air temperature (degrees Celsius), influences refraction computation.">setTemperature</a>(celsius);}</div>
-<div class="line"><a name="l00219"></a><span class="lineno"><a class="code" href="classStelSkyDrawer.html#a6c888e999dca7d690870bfaac61ed90b">  219</a></span>&#160;    <span class="keywordtype">double</span> <a class="code" href="classStelSkyDrawer.html#a6c888e999dca7d690870bfaac61ed90b" title="Get atmospheric (ground) temperature in deg celsius (for refraction).">getAtmosphereTemperature</a>()<span class="keyword"> const </span>{<span class="keywordflow">return</span> refraction.getTemperature();}</div>
-<div class="line"><a name="l00221"></a><span class="lineno"><a class="code" href="classStelSkyDrawer.html#a11d2a9399591a1716f79b0b93387182b">  221</a></span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classStelSkyDrawer.html#a11d2a9399591a1716f79b0b93387182b" title="Set atmospheric (ground) pressure in mbar (for refraction).">setAtmospherePressure</a>(<span class="keywordtype">double</span> mbar) {refraction.<a class="code" href="classRefraction.html#a4b1c67b2f568d10a3be9603cf8327d29" title="Set surface air pressure (mbars), influences refraction computation.">setPressure</a>(mbar);}</div>
-<div class="line"><a name="l00223"></a><span class="lineno"><a class="code" href="classStelSkyDrawer.html#ad6111d358d5281d93c9614bb42ba9c44">  223</a></span>&#160;    <span class="keywordtype">double</span> <a class="code" href="classStelSkyDrawer.html#ad6111d358d5281d93c9614bb42ba9c44" title="Get atmospheric (ground) pressure in mbar (for refraction).">getAtmospherePressure</a>()<span class="keyword"> const </span>{<span class="keywordflow">return</span> refraction.getPressure();}</div>
-<div class="line"><a name="l00224"></a><span class="lineno">  224</span>&#160;</div>
-<div class="line"><a name="l00226"></a><span class="lineno"><a class="code" href="classStelSkyDrawer.html#a4aaafa71327faad7512880ccc9307dcc">  226</a></span>&#160;    <span class="keyword">const</span> <a class="code" href="classExtinction.html" title="This class performs extinction computations, following literature from atmospheric optics and astrono...">Extinction</a>&amp; <a class="code" href="classStelSkyDrawer.html#a4aaafa71327faad7512880ccc9307dcc" title="Get the current valid extinction computation class.">getExtinction</a>()<span class="keyword"> const </span>{<span class="keywordflow">return</span> extinction;}</div>
-<div class="line"><a name="l00228"></a><span class="lineno"><a class="code" href="classStelSkyDrawer.html#ac0edf4aad9dab637c531fa6a60639c7a">  228</a></span>&#160;    <span class="keyword">const</span> <a class="code" href="classRefraction.html" title="This class performs refraction computations, following literature from atmospheric optics and astrono...">Refraction</a>&amp; <a class="code" href="classStelSkyDrawer.html#ac0edf4aad9dab637c531fa6a60639c7a" title="Get the current valid fefraction computation class.">getRefraction</a>()<span class="keyword"> const </span>{<span class="keywordflow">return</span> refraction;}</div>
+<div class="line"><a name="l00197"></a><span class="lineno"><a class="code" href="classStelSkyDrawer.html#a0fc408582f917ef160fdc8ee4520f70b">  197</a></span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classStelSkyDrawer.html#a0fc408582f917ef160fdc8ee4520f70b" title="set true to draw stars only downto clampStellarMagnitude">setFlagClampStellarMagnitude</a>(<span class="keywordtype">bool</span> flagClamp) {flagClampStellarMagnitude = flagClamp;}</div>
+<div class="line"><a name="l00199"></a><span class="lineno"><a class="code" href="classStelSkyDrawer.html#a1e10a35e4b92d861c71afa3a22fa5663">  199</a></span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classStelSkyDrawer.html#a1e10a35e4b92d861c71afa3a22fa5663" title="set true to draw deep-sky objects only downto clampDSOMagnitude">setFlagClampDSOMagnitude</a>(<span class="keywordtype">bool</span> flagClamp)     {flagClampDSOMagnitude = flagClamp;}</div>
+<div class="line"><a name="l00201"></a><span class="lineno"><a class="code" href="classStelSkyDrawer.html#acd434b59344909528c65fe26b0d0cde3">  201</a></span>&#160;    <span class="keywordtype">bool</span> <a class="code" href="classStelSkyDrawer.html#acd434b59344909528c65fe26b0d0cde3">getFlagClampStellarMagnitude</a>()<span class="keyword"> const </span>{<span class="keywordflow">return</span> flagClampStellarMagnitude;}</div>
+<div class="line"><a name="l00203"></a><span class="lineno"><a class="code" href="classStelSkyDrawer.html#af2a6099917539b6c46d1729a5d9d402b">  203</a></span>&#160;    <span class="keywordtype">bool</span> <a class="code" href="classStelSkyDrawer.html#af2a6099917539b6c46d1729a5d9d402b">getFlagClampDSOMagnitude</a>()<span class="keyword">     const </span>{<span class="keywordflow">return</span> flagClampDSOMagnitude;}</div>
+<div class="line"><a name="l00204"></a><span class="lineno">  204</span>&#160;</div>
+<div class="line"><a name="l00206"></a><span class="lineno"><a class="code" href="classStelSkyDrawer.html#a338e92207562614bad11abcd42e1c248">  206</a></span>&#160;    <span class="keywordtype">float</span> <a class="code" href="classStelSkyDrawer.html#a338e92207562614bad11abcd42e1c248" title="Get the artificially set limit for point sources, to limit drawing e.g. for naked-eye display...">getClampStellarMagnitude</a>()<span class="keyword"> const </span>{<span class="keywordflow">return</span> clampStellarMagnitude;}</div>
+<div class="line"><a name="l00208"></a><span class="lineno"><a class="code" href="classStelSkyDrawer.html#ab2efda1424889561e767e872643b59b4">  208</a></span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classStelSkyDrawer.html#ab2efda1424889561e767e872643b59b4" title="Set the artificially set limit for point sources, to limit drawing e.g. for naked-eye display...">setClampStellarMagnitude</a>(<span class="keywordtype">double</span> clampMag) {clampStellarMagnitude=clampMag;}</div>
+<div class="line"><a name="l00210"></a><span class="lineno"><a class="code" href="classStelSkyDrawer.html#a7a5442bc51df518c93efe3058768c8b4">  210</a></span>&#160;    <span class="keywordtype">float</span> <a class="code" href="classStelSkyDrawer.html#a7a5442bc51df518c93efe3058768c8b4" title="Get the artificially set limit for deep-sky sources, to limit drawing e.g. for naked-eye display...">getClampDSOMagnitude</a>()<span class="keyword"> const </span>{<span class="keywordflow">return</span> clampDSOMagnitude;}</div>
+<div class="line"><a name="l00212"></a><span class="lineno"><a class="code" href="classStelSkyDrawer.html#a923a04cb93b70da7d0d2ee0f6d72eb72">  212</a></span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classStelSkyDrawer.html#a923a04cb93b70da7d0d2ee0f6d72eb72" title="Set the artificially set limit for deep-sky sources, to limit drawing e.g. for naked-eye display...">setClampDSOMagnitude</a>(<span class="keywordtype">double</span> clampMag) {clampDSOMagnitude=clampMag;}</div>
+<div class="line"><a name="l00213"></a><span class="lineno">  213</span>&#160;</div>
+<div class="line"><a name="l00217"></a><span class="lineno"><a class="code" href="classStelSkyDrawer.html#a49729d2aa5bde3c9d2e6a3db287e312c">  217</a></span>&#160;    <span class="keywordtype">float</span> <a class="code" href="classStelSkyDrawer.html#a49729d2aa5bde3c9d2e6a3db287e312c" title="Get the luminance of the faintest visible object (e.g.">getLimitLuminance</a>()<span class="keyword"> const </span>{<span class="keywordflow">return</span> limitLuminance;}</div>
+<div class="line"><a name="l00218"></a><span class="lineno">  218</span>&#160;</div>
+<div class="line"><a name="l00220"></a><span class="lineno"><a class="code" href="classStelSkyDrawer.html#a554feda067690827046916ac701d4271">  220</a></span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classStelSkyDrawer.html#a554feda067690827046916ac701d4271" title="Set the value of the eye adaptation flag.">setFlagLuminanceAdaptation</a>(<span class="keywordtype">bool</span> b) {flagLuminanceAdaptation=b;}</div>
+<div class="line"><a name="l00222"></a><span class="lineno"><a class="code" href="classStelSkyDrawer.html#a1b6ba85822ad5d99996490b5fbb01a5b">  222</a></span>&#160;    <span class="keywordtype">bool</span> <a class="code" href="classStelSkyDrawer.html#a1b6ba85822ad5d99996490b5fbb01a5b" title="Get the current value of eye adaptation flag.">getFlagLuminanceAdaptation</a>()<span class="keyword"> const </span>{<span class="keywordflow">return</span> flagLuminanceAdaptation;}</div>
+<div class="line"><a name="l00223"></a><span class="lineno">  223</span>&#160;</div>
+<div class="line"><a name="l00226"></a><span class="lineno"><a class="code" href="classStelSkyDrawer.html#a67ff14cd3e352688d47efa93ab3aa9a9">  226</a></span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classStelSkyDrawer.html#a67ff14cd3e352688d47efa93ab3aa9a9" title="Informing the drawer whether atmosphere is displayed.">setFlagHasAtmosphere</a>(<span class="keywordtype">bool</span> b) {flagHasAtmosphere=b;}</div>
+<div class="line"><a name="l00228"></a><span class="lineno"><a class="code" href="classStelSkyDrawer.html#a7ff29cb60d730a351cbbebbcbce9539d">  228</a></span>&#160;    <span class="keywordtype">bool</span> <a class="code" href="classStelSkyDrawer.html#a7ff29cb60d730a351cbbebbcbce9539d" title="This is used to decide whether to apply refraction/extinction before rendering point sources et al...">getFlagHasAtmosphere</a>()<span class="keyword"> const </span>{<span class="keywordflow">return</span> flagHasAtmosphere;}</div>
 <div class="line"><a name="l00229"></a><span class="lineno">  229</span>&#160;</div>
-<div class="line"><a name="l00231"></a><span class="lineno"><a class="code" href="classStelSkyDrawer.html#a77bca523a7c0f549f73b0fb111b551f3">  231</a></span>&#160;    <span class="keywordtype">float</span> <a class="code" href="classStelSkyDrawer.html#a77bca523a7c0f549f73b0fb111b551f3" title="Get the radius of the big halo texture used when a 3d model is very bright.">getBig3dModelHaloRadius</a>()<span class="keyword"> const </span>{<span class="keywordflow">return</span> big3dModelHaloRadius;}</div>
-<div class="line"><a name="l00233"></a><span class="lineno"><a class="code" href="classStelSkyDrawer.html#a653d05c428f98bc02affd05e041cf743">  233</a></span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classStelSkyDrawer.html#a653d05c428f98bc02affd05e041cf743" title="Set the radius of the big halo texture used when a 3d model is very bright.">setBig3dModelHaloRadius</a>(<span class="keywordtype">float</span> r) {big3dModelHaloRadius=r;}</div>
-<div class="line"><a name="l00234"></a><span class="lineno">  234</span>&#160;    </div>
-<div class="line"><a name="l00235"></a><span class="lineno">  235</span>&#160;<span class="keyword">private</span>:</div>
-<div class="line"><a name="l00236"></a><span class="lineno">  236</span>&#160;    <span class="comment">// Debug</span></div>
-<div class="line"><a name="l00237"></a><span class="lineno">  237</span>&#160;    <span class="keywordtype">float</span> reverseComputeRCMag(<span class="keywordtype">float</span> rmag) <span class="keyword">const</span>;</div>
-<div class="line"><a name="l00238"></a><span class="lineno">  238</span>&#160;</div>
-<div class="line"><a name="l00240"></a><span class="lineno">  240</span>&#160;    <span class="keywordtype">float</span> computeLimitMagnitude() <span class="keyword">const</span>;</div>
-<div class="line"><a name="l00241"></a><span class="lineno">  241</span>&#160;</div>
-<div class="line"><a name="l00243"></a><span class="lineno">  243</span>&#160;    <span class="keywordtype">float</span> computeLimitLuminance() <span class="keyword">const</span>;</div>
-<div class="line"><a name="l00244"></a><span class="lineno">  244</span>&#160;</div>
-<div class="line"><a name="l00246"></a><span class="lineno">  246</span>&#160;    <span class="keywordtype">float</span> getMaxAdaptFov(<span class="keywordtype">void</span>)<span class="keyword"> const </span>{<span class="keywordflow">return</span> maxAdaptFov;}</div>
-<div class="line"><a name="l00251"></a><span class="lineno">  251</span>&#160;    <span class="keywordtype">void</span> setMaxAdaptFov(<span class="keywordtype">float</span> fov) {maxAdaptFov = (fov &lt; 60.f) ? 60.f : fov;}</div>
-<div class="line"><a name="l00252"></a><span class="lineno">  252</span>&#160;</div>
-<div class="line"><a name="l00254"></a><span class="lineno">  254</span>&#160;    <span class="keywordtype">float</span> getMinAdaptFov(<span class="keywordtype">void</span>)<span class="keyword"> const </span>{<span class="keywordflow">return</span> minAdaptFov;}</div>
-<div class="line"><a name="l00259"></a><span class="lineno">  259</span>&#160;    <span class="keywordtype">void</span> setMinAdaptFov(<span class="keywordtype">float</span> fov) {minAdaptFov = (fov &gt; 60.f) ? 60.f : fov;}</div>
-<div class="line"><a name="l00260"></a><span class="lineno">  260</span>&#160;</div>
-<div class="line"><a name="l00262"></a><span class="lineno">  262</span>&#160;    <span class="keywordtype">void</span> setInputScale(<span class="keywordtype">float</span> in) {inScale = in;}</div>
-<div class="line"><a name="l00264"></a><span class="lineno">  264</span>&#160;    <span class="keywordtype">float</span> getInputScale()<span class="keyword"> const </span>{<span class="keywordflow">return</span> inScale;}</div>
-<div class="line"><a name="l00265"></a><span class="lineno">  265</span>&#160;</div>
-<div class="line"><a name="l00269"></a><span class="lineno">  269</span>&#160;    <span class="keyword">inline</span> <span class="keywordtype">float</span> pointSourceMagToLuminance(<span class="keywordtype">float</span> mag)<span class="keyword"> const </span>{<span class="keywordflow">return</span> std::exp(pointSourceMagToLnLuminance(mag));}</div>
+<div class="line"><a name="l00231"></a><span class="lineno"><a class="code" href="classStelSkyDrawer.html#a9d8df2d7e47dac9abcf8fda5797c0da3">  231</a></span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classStelSkyDrawer.html#a9d8df2d7e47dac9abcf8fda5797c0da3" title="Set extinction coefficient, mag/airmass (for extinction).">setExtinctionCoefficient</a>(<span class="keywordtype">double</span> extCoeff) {extinction.<a class="code" href="classExtinction.html#aab02cdb54d198c16d312dc365454e3d1" title="Set visual extinction coefficient (mag/airmass), influences extinction computation.">setExtinctionCoefficient</a>(extCoeff);}</div>
+<div class="line"><a name="l00233"></a><span class="lineno"><a class="code" href="classStelSkyDrawer.html#a86fe2c1fc809f308c0d9d988ad66ee5c">  233</a></span>&#160;    <span class="keywordtype">double</span> <a class="code" href="classStelSkyDrawer.html#a86fe2c1fc809f308c0d9d988ad66ee5c" title="Get extinction coefficient, mag/airmass (for extinction).">getExtinctionCoefficient</a>()<span class="keyword"> const </span>{<span class="keywordflow">return</span> extinction.getExtinctionCoefficient();}</div>
+<div class="line"><a name="l00235"></a><span class="lineno"><a class="code" href="classStelSkyDrawer.html#a4370d20898a75a7710a2eab0bd7dd74c">  235</a></span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classStelSkyDrawer.html#a4370d20898a75a7710a2eab0bd7dd74c" title="Set atmospheric (ground) temperature in deg celsius (for refraction).">setAtmosphereTemperature</a>(<span class="keywordtype">double</span> celsius) {refraction.<a class="code" href="classRefraction.html#ac27101a864fa761bfe4ce25634ff0e58" title="Set surface air temperature (degrees Celsius), influences refraction computation.">setTemperature</a>(celsius);}</div>
+<div class="line"><a name="l00237"></a><span class="lineno"><a class="code" href="classStelSkyDrawer.html#a6c888e999dca7d690870bfaac61ed90b">  237</a></span>&#160;    <span class="keywordtype">double</span> <a class="code" href="classStelSkyDrawer.html#a6c888e999dca7d690870bfaac61ed90b" title="Get atmospheric (ground) temperature in deg celsius (for refraction).">getAtmosphereTemperature</a>()<span class="keyword"> const </span>{<span class="keywordflow">return</span> refraction.getTemperature();}</div>
+<div class="line"><a name="l00239"></a><span class="lineno"><a class="code" href="classStelSkyDrawer.html#a11d2a9399591a1716f79b0b93387182b">  239</a></span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classStelSkyDrawer.html#a11d2a9399591a1716f79b0b93387182b" title="Set atmospheric (ground) pressure in mbar (for refraction).">setAtmospherePressure</a>(<span class="keywordtype">double</span> mbar) {refraction.<a class="code" href="classRefraction.html#a4b1c67b2f568d10a3be9603cf8327d29" title="Set surface air pressure (mbars), influences refraction computation.">setPressure</a>(mbar);}</div>
+<div class="line"><a name="l00241"></a><span class="lineno"><a class="code" href="classStelSkyDrawer.html#ad6111d358d5281d93c9614bb42ba9c44">  241</a></span>&#160;    <span class="keywordtype">double</span> <a class="code" href="classStelSkyDrawer.html#ad6111d358d5281d93c9614bb42ba9c44" title="Get atmospheric (ground) pressure in mbar (for refraction).">getAtmospherePressure</a>()<span class="keyword"> const </span>{<span class="keywordflow">return</span> refraction.getPressure();}</div>
+<div class="line"><a name="l00242"></a><span class="lineno">  242</span>&#160;</div>
+<div class="line"><a name="l00244"></a><span class="lineno"><a class="code" href="classStelSkyDrawer.html#a4aaafa71327faad7512880ccc9307dcc">  244</a></span>&#160;    <span class="keyword">const</span> <a class="code" href="classExtinction.html" title="This class performs extinction computations, following literature from atmospheric optics and astrono...">Extinction</a>&amp; <a class="code" href="classStelSkyDrawer.html#a4aaafa71327faad7512880ccc9307dcc" title="Get the current valid extinction computation class.">getExtinction</a>()<span class="keyword"> const </span>{<span class="keywordflow">return</span> extinction;}</div>
+<div class="line"><a name="l00246"></a><span class="lineno"><a class="code" href="classStelSkyDrawer.html#ac0edf4aad9dab637c531fa6a60639c7a">  246</a></span>&#160;    <span class="keyword">const</span> <a class="code" href="classRefraction.html" title="This class performs refraction computations, following literature from atmospheric optics and astrono...">Refraction</a>&amp; <a class="code" href="classStelSkyDrawer.html#ac0edf4aad9dab637c531fa6a60639c7a" title="Get the current valid fefraction computation class.">getRefraction</a>()<span class="keyword"> const </span>{<span class="keywordflow">return</span> refraction;}</div>
+<div class="line"><a name="l00247"></a><span class="lineno">  247</span>&#160;</div>
+<div class="line"><a name="l00249"></a><span class="lineno"><a class="code" href="classStelSkyDrawer.html#a77bca523a7c0f549f73b0fb111b551f3">  249</a></span>&#160;    <span class="keywordtype">float</span> <a class="code" href="classStelSkyDrawer.html#a77bca523a7c0f549f73b0fb111b551f3" title="Get the radius of the big halo texture used when a 3d model is very bright.">getBig3dModelHaloRadius</a>()<span class="keyword"> const </span>{<span class="keywordflow">return</span> big3dModelHaloRadius;}</div>
+<div class="line"><a name="l00251"></a><span class="lineno"><a class="code" href="classStelSkyDrawer.html#a653d05c428f98bc02affd05e041cf743">  251</a></span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classStelSkyDrawer.html#a653d05c428f98bc02affd05e041cf743" title="Set the radius of the big halo texture used when a 3d model is very bright.">setBig3dModelHaloRadius</a>(<span class="keywordtype">float</span> r) {big3dModelHaloRadius=r;}</div>
+<div class="line"><a name="l00252"></a><span class="lineno">  252</span>&#160;    </div>
+<div class="line"><a name="l00253"></a><span class="lineno">  253</span>&#160;<span class="keyword">private</span>:</div>
+<div class="line"><a name="l00254"></a><span class="lineno">  254</span>&#160;    <span class="comment">// Debug</span></div>
+<div class="line"><a name="l00255"></a><span class="lineno">  255</span>&#160;    <span class="keywordtype">float</span> reverseComputeRCMag(<span class="keywordtype">float</span> rmag) <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00256"></a><span class="lineno">  256</span>&#160;</div>
+<div class="line"><a name="l00258"></a><span class="lineno">  258</span>&#160;    <span class="keywordtype">float</span> computeLimitMagnitude() <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00259"></a><span class="lineno">  259</span>&#160;</div>
+<div class="line"><a name="l00261"></a><span class="lineno">  261</span>&#160;    <span class="keywordtype">float</span> computeLimitLuminance() <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00262"></a><span class="lineno">  262</span>&#160;</div>
+<div class="line"><a name="l00264"></a><span class="lineno">  264</span>&#160;    <span class="keywordtype">float</span> getMaxAdaptFov(<span class="keywordtype">void</span>)<span class="keyword"> const </span>{<span class="keywordflow">return</span> maxAdaptFov;}</div>
+<div class="line"><a name="l00269"></a><span class="lineno">  269</span>&#160;    <span class="keywordtype">void</span> setMaxAdaptFov(<span class="keywordtype">float</span> fov) {maxAdaptFov = (fov &lt; 60.f) ? 60.f : fov;}</div>
 <div class="line"><a name="l00270"></a><span class="lineno">  270</span>&#160;</div>
-<div class="line"><a name="l00274"></a><span class="lineno">  274</span>&#160;    <span class="keywordtype">float</span> pointSourceLuminanceToMag(<span class="keywordtype">float</span> lum);</div>
-<div class="line"><a name="l00275"></a><span class="lineno">  275</span>&#160;</div>
-<div class="line"><a name="l00279"></a><span class="lineno">  279</span>&#160;    <span class="keywordtype">float</span> pointSourceMagToLnLuminance(<span class="keywordtype">float</span> mag) <span class="keyword">const</span>;</div>
-<div class="line"><a name="l00280"></a><span class="lineno">  280</span>&#160;</div>
-<div class="line"><a name="l00283"></a><span class="lineno">  283</span>&#160;    <span class="keywordtype">float</span> findWorldLumForMag(<span class="keywordtype">float</span> mag, <span class="keywordtype">float</span> targetRadius);</div>
-<div class="line"><a name="l00284"></a><span class="lineno">  284</span>&#160;</div>
-<div class="line"><a name="l00285"></a><span class="lineno">  285</span>&#160;    <a class="code" href="classStelCore.html" title="Main class for Stellarium core processing.">StelCore</a>* core;</div>
-<div class="line"><a name="l00286"></a><span class="lineno">  286</span>&#160;</div>
-<div class="line"><a name="l00288"></a><span class="lineno">  288</span>&#160;    <span class="keyword">class </span><a class="code" href="classStelRenderer.html" title="Main class of the Renderer subsystem.">StelRenderer</a>* renderer;</div>
-<div class="line"><a name="l00289"></a><span class="lineno">  289</span>&#160;    <a class="code" href="classStelToneReproducer.html" title="Converts tones in function of the eye adaptation to luminance.">StelToneReproducer</a>* eye;</div>
-<div class="line"><a name="l00290"></a><span class="lineno">  290</span>&#160;</div>
-<div class="line"><a name="l00291"></a><span class="lineno">  291</span>&#160;    <a class="code" href="classExtinction.html" title="This class performs extinction computations, following literature from atmospheric optics and astrono...">Extinction</a> extinction;</div>
-<div class="line"><a name="l00292"></a><span class="lineno">  292</span>&#160;    <a class="code" href="classRefraction.html" title="This class performs refraction computations, following literature from atmospheric optics and astrono...">Refraction</a> refraction;</div>
+<div class="line"><a name="l00272"></a><span class="lineno">  272</span>&#160;    <span class="keywordtype">float</span> getMinAdaptFov(<span class="keywordtype">void</span>)<span class="keyword"> const </span>{<span class="keywordflow">return</span> minAdaptFov;}</div>
+<div class="line"><a name="l00277"></a><span class="lineno">  277</span>&#160;    <span class="keywordtype">void</span> setMinAdaptFov(<span class="keywordtype">float</span> fov) {minAdaptFov = (fov &gt; 60.f) ? 60.f : fov;}</div>
+<div class="line"><a name="l00278"></a><span class="lineno">  278</span>&#160;</div>
+<div class="line"><a name="l00280"></a><span class="lineno">  280</span>&#160;    <span class="keywordtype">void</span> setInputScale(<span class="keywordtype">float</span> in) {inScale = in;}</div>
+<div class="line"><a name="l00282"></a><span class="lineno">  282</span>&#160;    <span class="keywordtype">float</span> getInputScale()<span class="keyword"> const </span>{<span class="keywordflow">return</span> inScale;}</div>
+<div class="line"><a name="l00283"></a><span class="lineno">  283</span>&#160;</div>
+<div class="line"><a name="l00287"></a><span class="lineno">  287</span>&#160;    <span class="keyword">inline</span> <span class="keywordtype">float</span> pointSourceMagToLuminance(<span class="keywordtype">float</span> mag)<span class="keyword"> const </span>{<span class="keywordflow">return</span> std::exp(pointSourceMagToLnLuminance(mag));}</div>
+<div class="line"><a name="l00288"></a><span class="lineno">  288</span>&#160;</div>
+<div class="line"><a name="l00292"></a><span class="lineno">  292</span>&#160;    <span class="keywordtype">float</span> pointSourceLuminanceToMag(<span class="keywordtype">float</span> lum);</div>
 <div class="line"><a name="l00293"></a><span class="lineno">  293</span>&#160;</div>
-<div class="line"><a name="l00294"></a><span class="lineno">  294</span>&#160;    <span class="keywordtype">float</span> maxAdaptFov, minAdaptFov, lnfovFactor;</div>
-<div class="line"><a name="l00295"></a><span class="lineno">  295</span>&#160;    <span class="keywordtype">bool</span> drawStarsAsPoints;</div>
-<div class="line"><a name="l00296"></a><span class="lineno">  296</span>&#160;    <span class="keywordtype">bool</span> flagStarTwinkle;</div>
-<div class="line"><a name="l00297"></a><span class="lineno">  297</span>&#160;    <span class="keywordtype">float</span> twinkleAmount;</div>
+<div class="line"><a name="l00297"></a><span class="lineno">  297</span>&#160;    <span class="keywordtype">float</span> pointSourceMagToLnLuminance(<span class="keywordtype">float</span> mag) <span class="keyword">const</span>;</div>
 <div class="line"><a name="l00298"></a><span class="lineno">  298</span>&#160;</div>
-<div class="line"><a name="l00301"></a><span class="lineno">  301</span>&#160;    <span class="keywordtype">bool</span> flagHasAtmosphere;</div>
+<div class="line"><a name="l00301"></a><span class="lineno">  301</span>&#160;    <span class="keywordtype">float</span> findWorldLumForMag(<span class="keywordtype">float</span> mag, <span class="keywordtype">float</span> targetRadius);</div>
 <div class="line"><a name="l00302"></a><span class="lineno">  302</span>&#160;</div>
-<div class="line"><a name="l00303"></a><span class="lineno">  303</span>&#160;</div>
-<div class="line"><a name="l00304"></a><span class="lineno">  304</span>&#160;    <span class="keywordtype">float</span> starRelativeScale;</div>
-<div class="line"><a name="l00305"></a><span class="lineno">  305</span>&#160;    <span class="keywordtype">float</span> starAbsoluteScaleF;</div>
-<div class="line"><a name="l00306"></a><span class="lineno">  306</span>&#160;</div>
-<div class="line"><a name="l00307"></a><span class="lineno">  307</span>&#160;    <span class="keywordtype">float</span> starLinearScale;  <span class="comment">// optimization variable</span></div>
+<div class="line"><a name="l00303"></a><span class="lineno">  303</span>&#160;    <a class="code" href="classStelCore.html" title="Main class for Stellarium core processing.">StelCore</a>* core;</div>
+<div class="line"><a name="l00304"></a><span class="lineno">  304</span>&#160;</div>
+<div class="line"><a name="l00306"></a><span class="lineno">  306</span>&#160;    <span class="keyword">class </span><a class="code" href="classStelRenderer.html" title="Main class of the Renderer subsystem.">StelRenderer</a>* renderer;</div>
+<div class="line"><a name="l00307"></a><span class="lineno">  307</span>&#160;    <a class="code" href="classStelToneReproducer.html" title="Converts tones in function of the eye adaptation to luminance.">StelToneReproducer</a>* eye;</div>
 <div class="line"><a name="l00308"></a><span class="lineno">  308</span>&#160;</div>
-<div class="line"><a name="l00310"></a><span class="lineno">  310</span>&#160;    <span class="keywordtype">float</span> limitMagnitude;</div>
+<div class="line"><a name="l00309"></a><span class="lineno">  309</span>&#160;    <a class="code" href="classExtinction.html" title="This class performs extinction computations, following literature from atmospheric optics and astrono...">Extinction</a> extinction;</div>
+<div class="line"><a name="l00310"></a><span class="lineno">  310</span>&#160;    <a class="code" href="classRefraction.html" title="This class performs refraction computations, following literature from atmospheric optics and astrono...">Refraction</a> refraction;</div>
 <div class="line"><a name="l00311"></a><span class="lineno">  311</span>&#160;</div>
-<div class="line"><a name="l00313"></a><span class="lineno">  313</span>&#160;    <span class="keywordtype">float</span> limitLuminance;</div>
-<div class="line"><a name="l00314"></a><span class="lineno">  314</span>&#160;</div>
-<div class="line"><a name="l00316"></a><span class="lineno">  316</span>&#160;    <span class="keyword">class </span><a class="code" href="classStelTextureNew.html" title="Texture interface.">StelTextureNew</a>* texHalo;</div>
-<div class="line"><a name="l00317"></a><span class="lineno">  317</span>&#160;</div>
-<div class="line"><a name="l00319"></a><span class="lineno">  319</span>&#160;    <span class="keywordtype">void</span> initColorTableFromConfigFile(<span class="keyword">class</span> QSettings* conf);</div>
+<div class="line"><a name="l00312"></a><span class="lineno">  312</span>&#160;    <span class="keywordtype">float</span> maxAdaptFov, minAdaptFov, lnfovFactor;</div>
+<div class="line"><a name="l00313"></a><span class="lineno">  313</span>&#160;    <span class="keywordtype">bool</span> drawStarsAsPoints;</div>
+<div class="line"><a name="l00314"></a><span class="lineno">  314</span>&#160;    <span class="keywordtype">bool</span> flagStarTwinkle;</div>
+<div class="line"><a name="l00315"></a><span class="lineno">  315</span>&#160;    <span class="keywordtype">float</span> twinkleAmount;</div>
+<div class="line"><a name="l00316"></a><span class="lineno">  316</span>&#160;</div>
+<div class="line"><a name="l00319"></a><span class="lineno">  319</span>&#160;    <span class="keywordtype">bool</span> flagHasAtmosphere;</div>
 <div class="line"><a name="l00320"></a><span class="lineno">  320</span>&#160;</div>
-<div class="line"><a name="l00322"></a><span class="lineno">  322</span>&#160;    <span class="keyword">static</span> <a class="code" href="classVector3.html" title="A templatized 3d vector.">Vec3f</a> colorTable[128];</div>
-<div class="line"><a name="l00323"></a><span class="lineno">  323</span>&#160;</div>
-<div class="line"><a name="l00325"></a><span class="lineno">  325</span>&#160;    <span class="keywordtype">int</span> bortleScaleIndex;</div>
-<div class="line"><a name="l00326"></a><span class="lineno">  326</span>&#160;</div>
-<div class="line"><a name="l00328"></a><span class="lineno">  328</span>&#160;    <span class="keywordtype">float</span> inScale;</div>
-<div class="line"><a name="l00329"></a><span class="lineno">  329</span>&#160;</div>
-<div class="line"><a name="l00331"></a><span class="lineno">  331</span>&#160;    <span class="keyword">struct </span>ColoredVertex</div>
-<div class="line"><a name="l00332"></a><span class="lineno">  332</span>&#160;    {</div>
-<div class="line"><a name="l00333"></a><span class="lineno">  333</span>&#160;        <a class="code" href="classVector2.html">Vec2f</a> position;</div>
-<div class="line"><a name="l00334"></a><span class="lineno">  334</span>&#160;        <a class="code" href="classVector3.html" title="A templatized 3d vector.">Vec3f</a> color;</div>
-<div class="line"><a name="l00335"></a><span class="lineno">  335</span>&#160;        ColoredVertex(<a class="code" href="classVector2.html">Vec2f</a> position, <a class="code" href="classVector3.html" title="A templatized 3d vector.">Vec3f</a> color):position(position), color(color){}</div>
+<div class="line"><a name="l00322"></a><span class="lineno">  322</span>&#160;    <span class="keywordtype">bool</span> flagClampStellarMagnitude;</div>
+<div class="line"><a name="l00324"></a><span class="lineno">  324</span>&#160;    <span class="keywordtype">bool</span> flagClampDSOMagnitude;</div>
+<div class="line"><a name="l00325"></a><span class="lineno">  325</span>&#160;</div>
+<div class="line"><a name="l00326"></a><span class="lineno">  326</span>&#160;    <span class="keywordtype">float</span> starRelativeScale;</div>
+<div class="line"><a name="l00327"></a><span class="lineno">  327</span>&#160;    <span class="keywordtype">float</span> starAbsoluteScaleF;</div>
+<div class="line"><a name="l00328"></a><span class="lineno">  328</span>&#160;</div>
+<div class="line"><a name="l00329"></a><span class="lineno">  329</span>&#160;    <span class="keywordtype">float</span> starLinearScale;  <span class="comment">// optimization variable</span></div>
+<div class="line"><a name="l00330"></a><span class="lineno">  330</span>&#160;</div>
+<div class="line"><a name="l00332"></a><span class="lineno">  332</span>&#160;    <span class="keywordtype">float</span> limitMagnitude;</div>
+<div class="line"><a name="l00333"></a><span class="lineno">  333</span>&#160;</div>
+<div class="line"><a name="l00335"></a><span class="lineno">  335</span>&#160;    <span class="keywordtype">float</span> limitLuminance;</div>
 <div class="line"><a name="l00336"></a><span class="lineno">  336</span>&#160;</div>
-<div class="line"><a name="l00337"></a><span class="lineno">  337</span>&#160;        VERTEX_ATTRIBUTES(<a class="code" href="classVector2.html">Vec2f</a> Position, <a class="code" href="classVector3.html" title="A templatized 3d vector.">Vec3f</a> Color);</div>
-<div class="line"><a name="l00338"></a><span class="lineno">  338</span>&#160;    };</div>
-<div class="line"><a name="l00339"></a><span class="lineno">  339</span>&#160;</div>
-<div class="line"><a name="l00341"></a><span class="lineno">  341</span>&#160;    <span class="keyword">struct </span>ColoredTexturedVertex</div>
-<div class="line"><a name="l00342"></a><span class="lineno">  342</span>&#160;    {</div>
-<div class="line"><a name="l00343"></a><span class="lineno">  343</span>&#160;        <a class="code" href="classVector2.html">Vec2f</a> position;</div>
-<div class="line"><a name="l00344"></a><span class="lineno">  344</span>&#160;        <a class="code" href="classVector3.html" title="A templatized 3d vector.">Vec3f</a> color;</div>
-<div class="line"><a name="l00345"></a><span class="lineno">  345</span>&#160;        <a class="code" href="classVector2.html">Vec2f</a> texCoord;</div>
-<div class="line"><a name="l00346"></a><span class="lineno">  346</span>&#160;        ColoredTexturedVertex(<a class="code" href="classVector2.html">Vec2f</a> position, <a class="code" href="classVector3.html" title="A templatized 3d vector.">Vec3f</a> color, <a class="code" href="classVector2.html">Vec2f</a> texCoord)</div>
-<div class="line"><a name="l00347"></a><span class="lineno">  347</span>&#160;            :position(position), color(color), texCoord(texCoord){}</div>
-<div class="line"><a name="l00348"></a><span class="lineno">  348</span>&#160;</div>
-<div class="line"><a name="l00349"></a><span class="lineno">  349</span>&#160;        VERTEX_ATTRIBUTES(<a class="code" href="classVector2.html">Vec2f</a> Position, <a class="code" href="classVector3.html" title="A templatized 3d vector.">Vec3f</a> Color, <a class="code" href="classVector2.html">Vec2f</a> TexCoord);</div>
-<div class="line"><a name="l00350"></a><span class="lineno">  350</span>&#160;    };</div>
-<div class="line"><a name="l00351"></a><span class="lineno">  351</span>&#160;</div>
-<div class="line"><a name="l00353"></a><span class="lineno">  353</span>&#160;    <a class="code" href="classStelVertexBuffer.html">StelVertexBuffer&lt;ColoredVertex&gt;</a>* starPointBuffer;</div>
-<div class="line"><a name="l00354"></a><span class="lineno">  354</span>&#160;</div>
-<div class="line"><a name="l00356"></a><span class="lineno">  356</span>&#160;    <a class="code" href="classStelVertexBuffer.html">StelVertexBuffer&lt;ColoredTexturedVertex&gt;</a>* starSpriteBuffer;</div>
-<div class="line"><a name="l00357"></a><span class="lineno">  357</span>&#160;</div>
-<div class="line"><a name="l00359"></a><span class="lineno">  359</span>&#160;    <a class="code" href="classStelVertexBuffer.html">StelVertexBuffer&lt;ColoredTexturedVertex&gt;</a>* bigHaloBuffer;</div>
-<div class="line"><a name="l00360"></a><span class="lineno">  360</span>&#160;</div>
-<div class="line"><a name="l00362"></a><span class="lineno">  362</span>&#160;    <a class="code" href="classStelVertexBuffer.html">StelVertexBuffer&lt;ColoredTexturedVertex&gt;</a>* sunHaloBuffer;</div>
+<div class="line"><a name="l00338"></a><span class="lineno">  338</span>&#160;    <span class="keywordtype">float</span> clampStellarMagnitude;</div>
+<div class="line"><a name="l00340"></a><span class="lineno">  340</span>&#160;    <span class="keywordtype">float</span> clampDSOMagnitude;</div>
+<div class="line"><a name="l00341"></a><span class="lineno">  341</span>&#160;</div>
+<div class="line"><a name="l00343"></a><span class="lineno">  343</span>&#160;    <span class="keyword">class </span><a class="code" href="classStelTextureNew.html" title="Texture interface.">StelTextureNew</a>* texHalo;</div>
+<div class="line"><a name="l00344"></a><span class="lineno">  344</span>&#160;</div>
+<div class="line"><a name="l00346"></a><span class="lineno">  346</span>&#160;    <span class="keywordtype">void</span> initColorTableFromConfigFile(<span class="keyword">class</span> QSettings* conf);</div>
+<div class="line"><a name="l00347"></a><span class="lineno">  347</span>&#160;</div>
+<div class="line"><a name="l00349"></a><span class="lineno">  349</span>&#160;    <span class="keyword">static</span> <a class="code" href="classVector3.html" title="A templatized 3d vector.">Vec3f</a> colorTable[128];</div>
+<div class="line"><a name="l00350"></a><span class="lineno">  350</span>&#160;</div>
+<div class="line"><a name="l00352"></a><span class="lineno">  352</span>&#160;    <span class="keywordtype">int</span> bortleScaleIndex;</div>
+<div class="line"><a name="l00353"></a><span class="lineno">  353</span>&#160;</div>
+<div class="line"><a name="l00355"></a><span class="lineno">  355</span>&#160;    <span class="keywordtype">float</span> inScale;</div>
+<div class="line"><a name="l00356"></a><span class="lineno">  356</span>&#160;</div>
+<div class="line"><a name="l00358"></a><span class="lineno">  358</span>&#160;    <span class="keyword">struct </span>ColoredVertex</div>
+<div class="line"><a name="l00359"></a><span class="lineno">  359</span>&#160;    {</div>
+<div class="line"><a name="l00360"></a><span class="lineno">  360</span>&#160;        <a class="code" href="classVector2.html">Vec2f</a> position;</div>
+<div class="line"><a name="l00361"></a><span class="lineno">  361</span>&#160;        <a class="code" href="classVector3.html" title="A templatized 3d vector.">Vec3f</a> color;</div>
+<div class="line"><a name="l00362"></a><span class="lineno">  362</span>&#160;        ColoredVertex(<a class="code" href="classVector2.html">Vec2f</a> position, <a class="code" href="classVector3.html" title="A templatized 3d vector.">Vec3f</a> color):position(position), color(color){}</div>
 <div class="line"><a name="l00363"></a><span class="lineno">  363</span>&#160;</div>
-<div class="line"><a name="l00365"></a><span class="lineno">  365</span>&#160;    <a class="code" href="classStelVertexBuffer.html">StelVertexBuffer&lt;ColoredTexturedVertex&gt;</a>* coronaBuffer;</div>
+<div class="line"><a name="l00364"></a><span class="lineno">  364</span>&#160;        VERTEX_ATTRIBUTES(<a class="code" href="classVector2.html">Vec2f</a> Position, <a class="code" href="classVector3.html" title="A templatized 3d vector.">Vec3f</a> Color);</div>
+<div class="line"><a name="l00365"></a><span class="lineno">  365</span>&#160;    };</div>
 <div class="line"><a name="l00366"></a><span class="lineno">  366</span>&#160;</div>
-<div class="line"><a name="l00368"></a><span class="lineno">  368</span>&#160;    <span class="keywordtype">bool</span> drawing;</div>
-<div class="line"><a name="l00369"></a><span class="lineno">  369</span>&#160;</div>
-<div class="line"><a name="l00371"></a><span class="lineno">  371</span>&#160;    <span class="keywordtype">float</span> maxLum;</div>
-<div class="line"><a name="l00373"></a><span class="lineno">  373</span>&#160;    <span class="keywordtype">float</span> oldLum;</div>
-<div class="line"><a name="l00374"></a><span class="lineno">  374</span>&#160;</div>
-<div class="line"><a name="l00376"></a><span class="lineno">  376</span>&#160;    <span class="keyword">class </span><a class="code" href="classStelTextureNew.html" title="Texture interface.">StelTextureNew</a>* texBigHalo;</div>
-<div class="line"><a name="l00377"></a><span class="lineno">  377</span>&#160;    <span class="keyword">class </span><a class="code" href="classStelTextureNew.html" title="Texture interface.">StelTextureNew</a>* texSunHalo;</div>
-<div class="line"><a name="l00378"></a><span class="lineno">  378</span>&#160;    <span class="keyword">class </span><a class="code" href="classStelTextureNew.html" title="Texture interface.">StelTextureNew</a>* texCorona;</div>
-<div class="line"><a name="l00379"></a><span class="lineno">  379</span>&#160;</div>
-<div class="line"><a name="l00380"></a><span class="lineno">  380</span>&#160;    <span class="keywordtype">bool</span> flagLuminanceAdaptation;</div>
+<div class="line"><a name="l00368"></a><span class="lineno">  368</span>&#160;    <span class="keyword">struct </span>ColoredTexturedVertex</div>
+<div class="line"><a name="l00369"></a><span class="lineno">  369</span>&#160;    {</div>
+<div class="line"><a name="l00370"></a><span class="lineno">  370</span>&#160;        <a class="code" href="classVector2.html">Vec2f</a> position;</div>
+<div class="line"><a name="l00371"></a><span class="lineno">  371</span>&#160;        <a class="code" href="classVector3.html" title="A templatized 3d vector.">Vec3f</a> color;</div>
+<div class="line"><a name="l00372"></a><span class="lineno">  372</span>&#160;        <a class="code" href="classVector2.html">Vec2f</a> texCoord;</div>
+<div class="line"><a name="l00373"></a><span class="lineno">  373</span>&#160;        ColoredTexturedVertex(<a class="code" href="classVector2.html">Vec2f</a> position, <a class="code" href="classVector3.html" title="A templatized 3d vector.">Vec3f</a> color, <a class="code" href="classVector2.html">Vec2f</a> texCoord)</div>
+<div class="line"><a name="l00374"></a><span class="lineno">  374</span>&#160;            :position(position), color(color), texCoord(texCoord){}</div>
+<div class="line"><a name="l00375"></a><span class="lineno">  375</span>&#160;</div>
+<div class="line"><a name="l00376"></a><span class="lineno">  376</span>&#160;        VERTEX_ATTRIBUTES(<a class="code" href="classVector2.html">Vec2f</a> Position, <a class="code" href="classVector3.html" title="A templatized 3d vector.">Vec3f</a> Color, <a class="code" href="classVector2.html">Vec2f</a> TexCoord);</div>
+<div class="line"><a name="l00377"></a><span class="lineno">  377</span>&#160;    };</div>
+<div class="line"><a name="l00378"></a><span class="lineno">  378</span>&#160;</div>
+<div class="line"><a name="l00380"></a><span class="lineno">  380</span>&#160;    <a class="code" href="classStelVertexBuffer.html">StelVertexBuffer&lt;ColoredVertex&gt;</a>* starPointBuffer;</div>
 <div class="line"><a name="l00381"></a><span class="lineno">  381</span>&#160;</div>
-<div class="line"><a name="l00382"></a><span class="lineno">  382</span>&#160;    <span class="keywordtype">float</span> big3dModelHaloRadius;</div>
-<div class="line"><a name="l00383"></a><span class="lineno">  383</span>&#160;</div>
+<div class="line"><a name="l00383"></a><span class="lineno">  383</span>&#160;    <a class="code" href="classStelVertexBuffer.html">StelVertexBuffer&lt;ColoredTexturedVertex&gt;</a>* starSpriteBuffer;</div>
 <div class="line"><a name="l00384"></a><span class="lineno">  384</span>&#160;</div>
-<div class="line"><a name="l00386"></a><span class="lineno">  386</span>&#160;    <span class="keywordtype">bool</span> statisticsInitialized;</div>
+<div class="line"><a name="l00386"></a><span class="lineno">  386</span>&#160;    <a class="code" href="classStelVertexBuffer.html">StelVertexBuffer&lt;ColoredTexturedVertex&gt;</a>* bigHaloBuffer;</div>
 <div class="line"><a name="l00387"></a><span class="lineno">  387</span>&#160;</div>
-<div class="line"><a name="l00389"></a><span class="lineno">  389</span>&#160;    <span class="keywordtype">int</span> bigHaloStatID;</div>
-<div class="line"><a name="l00391"></a><span class="lineno">  391</span>&#160;    <span class="keywordtype">int</span> sunHaloStatID;</div>
-<div class="line"><a name="l00393"></a><span class="lineno">  393</span>&#160;    <span class="keywordtype">int</span> starStatID;</div>
-<div class="line"><a name="l00394"></a><span class="lineno">  394</span>&#160;};</div>
-<div class="line"><a name="l00395"></a><span class="lineno">  395</span>&#160;</div>
-<div class="line"><a name="l00396"></a><span class="lineno">  396</span>&#160;<span class="preprocessor">#endif // _STELSKYDRAWER_HPP_</span></div>
+<div class="line"><a name="l00389"></a><span class="lineno">  389</span>&#160;    <a class="code" href="classStelVertexBuffer.html">StelVertexBuffer&lt;ColoredTexturedVertex&gt;</a>* sunHaloBuffer;</div>
+<div class="line"><a name="l00390"></a><span class="lineno">  390</span>&#160;</div>
+<div class="line"><a name="l00392"></a><span class="lineno">  392</span>&#160;    <a class="code" href="classStelVertexBuffer.html">StelVertexBuffer&lt;ColoredTexturedVertex&gt;</a>* coronaBuffer;</div>
+<div class="line"><a name="l00393"></a><span class="lineno">  393</span>&#160;</div>
+<div class="line"><a name="l00395"></a><span class="lineno">  395</span>&#160;    <span class="keywordtype">bool</span> drawing;</div>
+<div class="line"><a name="l00396"></a><span class="lineno">  396</span>&#160;</div>
+<div class="line"><a name="l00398"></a><span class="lineno">  398</span>&#160;    <span class="keywordtype">float</span> maxLum;</div>
+<div class="line"><a name="l00400"></a><span class="lineno">  400</span>&#160;    <span class="keywordtype">float</span> oldLum;</div>
+<div class="line"><a name="l00401"></a><span class="lineno">  401</span>&#160;</div>
+<div class="line"><a name="l00403"></a><span class="lineno">  403</span>&#160;    <span class="keyword">class </span><a class="code" href="classStelTextureNew.html" title="Texture interface.">StelTextureNew</a>* texBigHalo;</div>
+<div class="line"><a name="l00404"></a><span class="lineno">  404</span>&#160;    <span class="keyword">class </span><a class="code" href="classStelTextureNew.html" title="Texture interface.">StelTextureNew</a>* texSunHalo;</div>
+<div class="line"><a name="l00405"></a><span class="lineno">  405</span>&#160;    <span class="keyword">class </span><a class="code" href="classStelTextureNew.html" title="Texture interface.">StelTextureNew</a>* texCorona;</div>
+<div class="line"><a name="l00406"></a><span class="lineno">  406</span>&#160;</div>
+<div class="line"><a name="l00407"></a><span class="lineno">  407</span>&#160;    <span class="keywordtype">bool</span> flagLuminanceAdaptation;</div>
+<div class="line"><a name="l00408"></a><span class="lineno">  408</span>&#160;</div>
+<div class="line"><a name="l00409"></a><span class="lineno">  409</span>&#160;    <span class="keywordtype">float</span> big3dModelHaloRadius;</div>
+<div class="line"><a name="l00410"></a><span class="lineno">  410</span>&#160;</div>
+<div class="line"><a name="l00411"></a><span class="lineno">  411</span>&#160;</div>
+<div class="line"><a name="l00413"></a><span class="lineno">  413</span>&#160;    <span class="keywordtype">bool</span> statisticsInitialized;</div>
+<div class="line"><a name="l00414"></a><span class="lineno">  414</span>&#160;</div>
+<div class="line"><a name="l00416"></a><span class="lineno">  416</span>&#160;    <span class="keywordtype">int</span> bigHaloStatID;</div>
+<div class="line"><a name="l00418"></a><span class="lineno">  418</span>&#160;    <span class="keywordtype">int</span> sunHaloStatID;</div>
+<div class="line"><a name="l00420"></a><span class="lineno">  420</span>&#160;    <span class="keywordtype">int</span> starStatID;</div>
+<div class="line"><a name="l00421"></a><span class="lineno">  421</span>&#160;};</div>
+<div class="line"><a name="l00422"></a><span class="lineno">  422</span>&#160;</div>
+<div class="line"><a name="l00423"></a><span class="lineno">  423</span>&#160;<span class="preprocessor">#endif // _STELSKYDRAWER_HPP_</span></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Sat Feb 23 2013 17:21:21 for Stellarium by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Sun Mar 3 2013 17:02:55 for Stellarium by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.3.1
 </small></address>
