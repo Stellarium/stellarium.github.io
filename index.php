@@ -186,7 +186,7 @@ printf('
 	<div id="features" class="block">
 		<h2>%s</h2>
 		<h3>%s</h3>
-			<ul><li>%s</li><li>%s</li><li>%s</li><li>%s</li><li>%s</li><li>%s</li><li>%s</li><li>%s</li></ul>',
+			<ul class="smalllist"><li>%s</li><li>%s</li><li>%s</li><li>%s</li><li>%s</li><li>%s</li><li>%s</li><li>%s</li></ul>',
 q_("features"),
 q_("sky"),
 q_("default catalogue of over 600,000 stars"),
@@ -199,7 +199,7 @@ q_("very realistic atmosphere, sunrise and sunset"),
 q_("the planets and their satellites"));
 printf('
 		<h3>%s</h3>
-			<ul><li>%s</li><li>%s</li><li>%s</li><li>%s</li><li>%s</li><li>%s</li><li>%s</li></ul>',
+			<ul class="smalllist"><li>%s</li><li>%s</li><li>%s</li><li>%s</li><li>%s</li><li>%s</li><li>%s</li></ul>',
 q_("interface"),
 q_("a powerful zoom"),
 q_("time control"),
@@ -210,7 +210,7 @@ q_("all new graphical interface and extensive keyboard control"),
 q_("telescope control"));
 printf('
 		<h3>%s</h3>
-			<ul><li>%s</li><li>%s</li><li>%s</li><li>%s</li><li>%s</li><li>%s</li></ul>',
+			<ul class="smalllist"><li>%s</li><li>%s</li><li>%s</li><li>%s</li><li>%s</li><li>%s</li></ul>',
 q_("visualisation"),
 q_("equatorial and azimuthal grids"),
 q_("star twinkling"),
@@ -220,7 +220,7 @@ q_("supernovae simulation"),
 q_("skinnable landscapes, now with spheric panorama projection"));
 printf('
 		<h3>%s</h3>
-			<ul><li>%s</li><li>%s</li><li>%s</li></ul>
+			<ul class="smalllist"><li>%s</li><li>%s</li><li>%s</li></ul>
 	</div>',
 q_("customizability"),
 q_("plugin system adding artifical satellites, ocular simulation, telescope configuration and more"),
@@ -230,10 +230,9 @@ printf('
 <div id="requirements" class="block">
 	<h2>%s</h2>
 	<h3>%s</h3>
-	<ul><li>%s</li><li>%s</li><li>%s</li><li>%s</li></ul>
+		<ul class="smalllist"><li>%s</li><li>%s</li><li>%s</li><li>%s</li></ul>
 	<h3>%s</h3>
-	<ul><li>%s</li><li>%s</li><li>%s</li><li>%s</li></ul>
-</div>',
+		<ul class="smalllist"><li>%s</li><li>%s</li><li>%s</li><li>%s</li></ul>',
 q_("System requirements"),
 q_("Minimal"),
 q_("Linux/Unix; Windows XP/Vista/7/8; MacOS X 10.6.8 or greater"),
@@ -246,7 +245,6 @@ q_("3D graphics card which supports OpenGL 2.1 or greater"),
 q_("1 GiB RAM or more"),
 q_("1.5 GiB HDD"));
 printf('
-<div id="collaborate">
 	<h2>%s</h2>
 	<p>%s:</p>
 	<ul class="largelist">
