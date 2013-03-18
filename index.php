@@ -233,13 +233,13 @@ printf('
 		<ul class="smalllist"><li>%s</li><li>%s</li><li>%s</li><li>%s</li></ul>
 	<h3>%s</h3>
 		<ul class="smalllist"><li>%s</li><li>%s</li><li>%s</li><li>%s</li></ul>',
-q_("System requirements"),
-q_("Minimal"),
+q_("system requirements"),
+q_("minimal"),
 q_("Linux/Unix; Windows XP/Vista/7/8; MacOS X 10.6.8 or greater"),
 q_("3D graphics card which supports OpenGL 1.2"),
 q_("256 MiB RAM"),
 q_("120 MiB HDD"),
-q_("Recommended"),
+q_("recommended"),
 q_("Linux/Unix; Windows XP/Vista/7/8; MacOS X 10.7.0 or greater"),
 q_("3D graphics card which supports OpenGL 2.1 or greater"),
 q_("1 GiB RAM or more"),
