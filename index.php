@@ -227,7 +227,24 @@ q_("plugin system adding artifical satellites, ocular simulation, telescope conf
 q_("ability to add new solar system objects from online resources..."),
 q_("add your own deep sky objects, landscapes, constellation images, scripts..."));
 printf('
-<div id="collaborate" class="block">
+<div id="requirements" class="block">
+	<h2>%s</h2>
+	<h3>%s</h3>
+	<ul><li>%s</li><li>%s</li><li>%s</li></li>%s</li></ul>
+	<h3>%s</h3>
+	<ul><li>%s</li><li>%s</li><li>%s</li></li>%s</li></ul>',
+q_("System requirements"),
+q_("Minimal"),
+q_("Linux/Unix; Windows XP/Vista/7/8; MacOS X 10.6.8 or greater"),
+q_("3D graphics card which supports OpenGL 1.2"),
+q_("256 MiB RAM"),
+q_("120 MiB HDD"),
+q_("Recommended"),
+q_("Linux/Unix; Windows XP/Vista/7/8; MacOS X 10.7.0 or greater"),
+q_("3D graphics card which supports OpenGL 2.1 or greater"),
+q_("1 GiB RAM or more"),
+q_("1.5 GiB HDD"));
+printf('
 	<h2>%s</h2>
 	<p>%s:</p>
 	<ul class="largelist">
