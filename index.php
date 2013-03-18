@@ -230,9 +230,9 @@ printf('
 <div id="requirements" class="block">
 	<h2>%s</h2>
 	<h3>%s</h3>
-	<ul><li>%s</li><li>%s</li><li>%s</li></li>%s</li></ul>
+	<ul><li>%s</li><li>%s</li><li>%s</li><li>%s</li></ul>
 	<h3>%s</h3>
-	<ul><li>%s</li><li>%s</li><li>%s</li></li>%s</li></ul>',
+	<ul><li>%s</li><li>%s</li><li>%s</li><li>%s</li></ul>',
 q_("System requirements"),
 q_("Minimal"),
 q_("Linux/Unix; Windows XP/Vista/7/8; MacOS X 10.6.8 or greater"),
