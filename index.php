@@ -192,7 +192,7 @@ q_("sky"),
 q_("default catalogue of over 600,000 stars"),
 q_("extra catalogues with more than 210 million stars"),
 q_("asterisms and illustrations of the constellations"),
-q_("constellations for twelve different cultures"),
+q_("constellations for 15 different cultures"),
 q_("images of nebulae (full Messier catalogue)"),
 q_("realistic Milky Way"),
 q_("very realistic atmosphere, sunrise and sunset"),
@@ -262,6 +262,7 @@ printf('
 		<li><a href="/doc/head/scripting.html">%s</a></li>
 		<li><a href="https://answers.launchpad.net/stellarium">%s</a></li>
 		<li><a href="http://bugs.launchpad.net/stellarium">%s</a></li>
+		<li><a href="http://www.ohloh.net/p/stellarium">%s</a></li>
 		<li><a href="https://sourceforge.net/projects/stellarium/files/">%s</a>
 		<ul class="sublist">
 			<li><a href="https://sourceforge.net/projects/stellarium/files/Stellarium-sources/">%s</a></li>
@@ -286,6 +287,7 @@ q_("developers documentation"),
 q_("scripting"),
 q_("get support"),
 q_("report bugs, request new features"),
+q_("development timeline"),
 q_("older releases"),
 q_("for Linux (source)"),
 q_("for Mac OS X"),
