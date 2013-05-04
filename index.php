@@ -227,7 +227,7 @@ q_("plugin system adding artifical satellites, ocular simulation, telescope conf
 q_("ability to add new solar system objects from online resources..."),
 q_("add your own deep sky objects, landscapes, constellation images, scripts..."));
 printf('<div id="requirements" class="block">
-	<h2>%s</h2><ul>',
+	<h2>%s</h2><ul class="smalllist">',
 q_("news"));
 
 include("rss2html/rss2html.php"); 
@@ -249,7 +249,8 @@ q_("Linux/Unix; Windows XP/Vista/7/8; 64-bit Mac OS X 10.7.0 or greater"),
 q_("3D graphics card which supports OpenGL 2.1 or greater"),
 q_("1 GiB RAM or more"),
 q_("1.5 GiB on disk"));
-printf('
+printf('</div>
+	<div id="development" class="block">
 	<h2>%s</h2>
 	<p>%s:</p>
 	<ul class="largelist">
@@ -297,8 +298,7 @@ q_("older releases"),
 q_("for Linux (source)"),
 q_("for Mac OS X"),
 q_("for Windows"));
-printf('</div>
-	<div id="development" class="block">
+printf('
 	<h2>%s</h2>
 		<p>%s</p>
 		<ul class="largelist">
