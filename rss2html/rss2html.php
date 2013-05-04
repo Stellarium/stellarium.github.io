@@ -32,7 +32,7 @@ $XMLfilename = "http://sourceforge.net/export/rss2_projnews.php?group_id=48857&r
 // If TEMPLATE is passed as part of the URL. TEMPLATE=, then it will be used
 // otherwise the the file below is used.
 //$TEMPLATEfilename = "http://examlple.com/sample-template.html";
-$TEMPLATEfilename = "rss2html/template.html";
+$TEMPLATEfilename = "rss2html/basic-template.html";
 
 //
 // Since some feeds may have titles or descriptins in the feed or items that

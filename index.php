@@ -226,8 +226,13 @@ q_("customizability"),
 q_("plugin system adding artifical satellites, ocular simulation, telescope configuration and more"),
 q_("ability to add new solar system objects from online resources..."),
 q_("add your own deep sky objects, landscapes, constellation images, scripts..."));
-printf('
-<div id="requirements" class="block">
+printf('<div id="requirements" class="block">
+	<h2>%s</h2><ul>',
+q_("news"));
+
+include("rss2html/rss2html.php"); 
+
+printf('</ul>
 	<h2>%s</h2>
 	<h3>%s</h3>
 		<ul class="smalllist"><li>%s</li><li>%s</li><li>%s</li><li>%s</li></ul>
