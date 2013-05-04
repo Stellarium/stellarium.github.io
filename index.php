@@ -228,7 +228,7 @@ q_("ability to add new solar system objects from online resources..."),
 q_("add your own deep sky objects, landscapes, constellation images, scripts..."));
 printf('<div id="requirements" class="block">
 	<h2>%s</h2><ul class="smalllist">',
-q_("news"));
+q_("latest news"));
 
 include("rss2html/rss2html.php"); 
 
@@ -249,6 +249,37 @@ q_("Linux/Unix; Windows XP/Vista/7/8; 64-bit Mac OS X 10.7.0 or greater"),
 q_("3D graphics card which supports OpenGL 2.1 or greater"),
 q_("1 GiB RAM or more"),
 q_("1.5 GiB on disk"));
+
+printf('<h2>%s</h2><p>
+	%s %s<br />
+	%s %s<br />
+	%s %s<br />
+	%s %s<br />
+	%s %s<br />
+	%s %s<br />
+	%s %s<br />
+	%s %s<br />
+	%s %s<br />
+	%s %s<br />
+	%s %s<br />
+	%s %s<br />
+	%s<br />
+	</p>',
+	q_('developers'),
+	q_('Project coordinator:'),     '<a href="http://f4bien.blogspot.com/">Fabien Ch&eacute;reau</a>',
+	q_('Doc author/developer:'),    '<a href="http://porpoisehead.net/">Matthew Gates</a>',
+	q_('Developer:'),               '<a href="http://badlyhonedbytes.wordpress.com/">Bogdan Marinov</a>',
+	q_('Developer:'),               '<a href="http://astro.uni-altai.ru/~aw/">Alexander Wolf</a>',
+	q_('Developer:'),               '<a href="mailto:treaves%20(at)%20silverfieldstech.com">Timothy Reaves</a>',
+	q_('Developer:'),               '<a href="http://charlie137-2.blogspot.com/">Guillaume Ch&eacute;reau</a>',
+	q_('Developer:'),               '<a href="http://homepage.univie.ac.at/Georg.Zotti/">Georg Zotti</a>',
+	q_('OSX Developer:'),           'Nigel Kerr',
+	q_('OSX Developer:'),           '<a href="mailto:diego.marcos%20(at)%20gmail.com">Diego Marcos</a>',
+	q_('Continuous Integration:'),  '<a href="http://lambermont.dyndns.org/">Hans Lambermont</a>',
+	q_('Tester:'),                  'Barry Gerdes',
+	q_('Tester:'),                  'Khalid AlAjaji',
+	q_('and everyone else in the community.') );
+
 printf('</div>
 	<div id="development" class="block">
 	<h2>%s</h2>
@@ -316,35 +347,6 @@ sprintf(q_("Real time chat about Stellarium can be had in the %s#stellarium%s IR
 		"<a href='irc://irc.freenode.org/stellarium'>", "</a>", "<a href='http://freenode.net'>", "</a>", "<a href='irc://irc.freenode.org/stellarium'>", "</a>", "<a href='http://webchat.freenode.net/?channels=stellarium&uio=MTE9MjQ255'>", "</a>")
 		);
 
-printf('<h2>%s</h2><p>
-	%s %s<br />
-	%s %s<br />
-	%s %s<br />
-	%s %s<br />
-	%s %s<br />
-	%s %s<br />
-	%s %s<br />
-	%s %s<br />
-	%s %s<br />
-	%s %s<br />
-	%s %s<br />
-	%s %s<br />
-	%s<br />
-	</p>',
-	q_('developers'),
-	q_('Project coordinator:'),     '<a href="http://f4bien.blogspot.com/">Fabien Ch&eacute;reau</a>',
-	q_('Doc author/developer:'),    '<a href="http://porpoisehead.net/">Matthew Gates</a>',
-	q_('Developer:'),               '<a href="http://badlyhonedbytes.wordpress.com/">Bogdan Marinov</a>',
-	q_('Developer:'),               '<a href="http://astro.uni-altai.ru/~aw/">Alexander Wolf</a>',
-	q_('Developer:'),               '<a href="mailto:treaves%20(at)%20silverfieldstech.com">Timothy Reaves</a>',
-	q_('Developer:'),               '<a href="http://charlie137-2.blogspot.com/">Guillaume Ch&eacute;reau</a>',
-	q_('Developer:'),               '<a href="http://homepage.univie.ac.at/Georg.Zotti/">Georg Zotti</a>',
-	q_('OSX Developer:'),           'Nigel Kerr',
-	q_('OSX Developer:'),           '<a href="mailto:diego.marcos%20(at)%20gmail.com">Diego Marcos</a>',
-	q_('Continuous Integration:'),  '<a href="http://lambermont.dyndns.org/">Hans Lambermont</a>',
-	q_('Tester:'),                  'Barry Gerdes',
-	q_('Tester:'),                  'Khalid AlAjaji',
-	q_('and everyone else in the community.') );
 
 $langlinks = "";	
 foreach ($language as $langcode => $langname) {
