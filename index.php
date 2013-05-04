@@ -228,7 +228,7 @@ q_("ability to add new solar system objects from online resources..."),
 q_("add your own deep sky objects, landscapes, constellation images, scripts..."));
 printf('<div id="requirements" class="block">
 	<h2>%s</h2><ul class="smalllist">',
-q_("latest news"));
+q_("news"));
 
 include("rss2html/rss2html.php"); 
 
@@ -286,7 +286,6 @@ printf('</div>
 	<p>%s:</p>
 	<ul class="largelist">
 		<li><a href="http://launchpad.net/stellarium">%s</a></li>
-		<li><a href="https://sourceforge.net/p/stellarium/news/">%s</a></li>
 		<li><a href="https://sourceforge.net/p/stellarium/discussion/278769">%s</a></li>
 		<li><a href="https://lists.sourceforge.net/lists/listinfo/stellarium-pubdevel">%s</a></li>
 		<li><a href="/wiki/">%s</a></li>
@@ -311,7 +310,6 @@ printf('</div>
 q_("collaborate"),
 q_("You can learn more about Stellarium, get support and help the project from these links"),
 q_("summary"),
-q_("news"),
 q_("forum"),
 q_("mailing list"),
 q_("wiki"),
