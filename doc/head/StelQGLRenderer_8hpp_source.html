@@ -15,7 +15,7 @@
  <tr style="height: 56px;">
   <td id="projectlogo"><img alt="Logo" src="stellarium-logo.png"/></td>
   <td style="padding-left: 0.5em;">
-   <div id="projectname">Stellarium 0.12.1</div>
+   <div id="projectname">Stellarium 0.12.2</div>
   </td>
  </tr>
  </tbody>
@@ -698,39 +698,43 @@
 <div class="line"><a name="l00747"></a><span class="lineno">  747</span>&#160;    <span class="keywordtype">void</span> drawTextGravityHelper</div>
 <div class="line"><a name="l00748"></a><span class="lineno">  748</span>&#160;        (<span class="keyword">const</span> <a class="code" href="structTextParams.html" title="Parameters specifying how to draw text.">TextParams</a>&amp; params, QPainter&amp; painter, <span class="keyword">const</span> <span class="keywordtype">int</span> baseX, <span class="keyword">const</span> <span class="keywordtype">int</span> baseY, <a class="code" href="StelProjectorType_8hpp.html#a286221a2d4640bbeec2090cfbfadb0ff" title="Shared pointer on a StelProjector instance (implement reference counting)">StelProjectorP</a> projector);</div>
 <div class="line"><a name="l00749"></a><span class="lineno">  749</span>&#160;</div>
-<div class="line"><a name="l00751"></a><span class="lineno">  751</span>&#160;    <a class="code" href="classStelQGLTextureBackend.html" title="Texture backend based on QGL, usable with both GL1 and GL2.">StelQGLTextureBackend</a>* getPlaceholderTexture()</div>
+<div class="line"><a name="l00751"></a><span class="lineno">  751</span>&#160;    <a class="code" href="classStelQGLTextureBackend.html" title="Texture backend based on QGL, usable with both GL1 and GL2.">StelQGLTextureBackend</a>* getPlaceholderTexture(<span class="keywordtype">bool</span> debug=<span class="keyword">false</span>)</div>
 <div class="line"><a name="l00752"></a><span class="lineno">  752</span>&#160;    {</div>
 <div class="line"><a name="l00753"></a><span class="lineno">  753</span>&#160;        <span class="keywordflow">if</span>(NULL != placeholderTexture) {<span class="keywordflow">return</span> placeholderTexture;}</div>
 <div class="line"><a name="l00754"></a><span class="lineno">  754</span>&#160;</div>
-<div class="line"><a name="l00755"></a><span class="lineno">  755</span>&#160;        <span class="keyword">const</span> <span class="keywordtype">int</span> placeholderSize = 512;</div>
-<div class="line"><a name="l00756"></a><span class="lineno">  756</span>&#160;        <span class="keyword">const</span> <span class="keywordtype">int</span> cellSize = 16;</div>
-<div class="line"><a name="l00757"></a><span class="lineno">  757</span>&#160;        QImage image(placeholderSize, placeholderSize, QImage::Format_RGB888);</div>
-<div class="line"><a name="l00758"></a><span class="lineno">  758</span>&#160;        <span class="keywordflow">for</span>(<span class="keywordtype">int</span> y = 0; y &lt; placeholderSize; ++y)</div>
-<div class="line"><a name="l00759"></a><span class="lineno">  759</span>&#160;        {</div>
-<div class="line"><a name="l00760"></a><span class="lineno">  760</span>&#160;            <span class="keywordflow">for</span> (<span class="keywordtype">int</span> x = 0; x &lt; placeholderSize; x++) </div>
-<div class="line"><a name="l00761"></a><span class="lineno">  761</span>&#160;            {</div>
-<div class="line"><a name="l00762"></a><span class="lineno">  762</span>&#160;                image.setPixel(x, y, (x / cellSize) % 2 == (y / cellSize) % 2 ? 0 : 0x00FFFF00);</div>
-<div class="line"><a name="l00763"></a><span class="lineno">  763</span>&#160;            }</div>
-<div class="line"><a name="l00764"></a><span class="lineno">  764</span>&#160;        }</div>
-<div class="line"><a name="l00765"></a><span class="lineno">  765</span>&#160;        placeholderTexture = </div>
-<div class="line"><a name="l00766"></a><span class="lineno">  766</span>&#160;            <a class="code" href="classStelQGLTextureBackend.html#aa41870cec806fa6a3062e3203a3f1d3f" title="Construct a StelQGLTextureBackend from an image.">StelQGLTextureBackend::constructFromImage</a>(<span class="keyword">this</span>, QString(), <a class="code" href="structTextureParams.html" title="Parameters specifying how to construct a texture.">TextureParams</a>(), image);</div>
-<div class="line"><a name="l00767"></a><span class="lineno">  767</span>&#160;</div>
-<div class="line"><a name="l00768"></a><span class="lineno">  768</span>&#160;        <span class="keywordflow">return</span> placeholderTexture;</div>
-<div class="line"><a name="l00769"></a><span class="lineno">  769</span>&#160;    }</div>
-<div class="line"><a name="l00770"></a><span class="lineno">  770</span>&#160;</div>
-<div class="line"><a name="l00785"></a><span class="lineno">  785</span>&#160;    <span class="keywordtype">void</span> drawRectInternal(<span class="keyword">const</span> <span class="keywordtype">bool</span> textured, <span class="keyword">const</span> <span class="keywordtype">float</span> x, <span class="keyword">const</span> <span class="keywordtype">float</span> y, </div>
-<div class="line"><a name="l00786"></a><span class="lineno">  786</span>&#160;                          <span class="keyword">const</span> <span class="keywordtype">float</span> width, <span class="keyword">const</span> <span class="keywordtype">float</span> height, <span class="keyword">const</span> <span class="keywordtype">float</span> angle);</div>
-<div class="line"><a name="l00787"></a><span class="lineno">  787</span>&#160;</div>
-<div class="line"><a name="l00788"></a><span class="lineno">  788</span>&#160;    <span class="comment">// Must be down due to initializer list order.</span></div>
-<div class="line"><a name="l00789"></a><span class="lineno">  789</span>&#160;<span class="keyword">protected</span>:</div>
-<div class="line"><a name="l00791"></a><span class="lineno"><a class="code" href="classStelQGLRenderer.html#aeaef5ca9a2e5f0d7df8cc0a24268fcb0">  791</a></span>&#160;    QGLFunctions <a class="code" href="classStelQGLRenderer.html#aeaef5ca9a2e5f0d7df8cc0a24268fcb0" title="Wraps some GL functions for compatibility across GL and GLES.">gl</a>;</div>
-<div class="line"><a name="l00792"></a><span class="lineno">  792</span>&#160;};</div>
-<div class="line"><a name="l00793"></a><span class="lineno">  793</span>&#160;</div>
-<div class="line"><a name="l00794"></a><span class="lineno">  794</span>&#160;<span class="preprocessor">#endif // _STELQGLRENDERER_HPP_</span></div>
+<div class="line"><a name="l00755"></a><span class="lineno">  755</span>&#160;        <span class="keywordtype">int</span> color = 0;</div>
+<div class="line"><a name="l00756"></a><span class="lineno">  756</span>&#160;        <span class="keywordflow">if</span> (debug)</div>
+<div class="line"><a name="l00757"></a><span class="lineno">  757</span>&#160;            color = 0x00FFFF00;</div>
+<div class="line"><a name="l00758"></a><span class="lineno">  758</span>&#160;</div>
+<div class="line"><a name="l00759"></a><span class="lineno">  759</span>&#160;        <span class="keyword">const</span> <span class="keywordtype">int</span> placeholderSize = 512;</div>
+<div class="line"><a name="l00760"></a><span class="lineno">  760</span>&#160;        <span class="keyword">const</span> <span class="keywordtype">int</span> cellSize = 16;</div>
+<div class="line"><a name="l00761"></a><span class="lineno">  761</span>&#160;        QImage image(placeholderSize, placeholderSize, QImage::Format_RGB888);</div>
+<div class="line"><a name="l00762"></a><span class="lineno">  762</span>&#160;        <span class="keywordflow">for</span>(<span class="keywordtype">int</span> y = 0; y &lt; placeholderSize; ++y)</div>
+<div class="line"><a name="l00763"></a><span class="lineno">  763</span>&#160;        {</div>
+<div class="line"><a name="l00764"></a><span class="lineno">  764</span>&#160;            <span class="keywordflow">for</span> (<span class="keywordtype">int</span> x = 0; x &lt; placeholderSize; x++) </div>
+<div class="line"><a name="l00765"></a><span class="lineno">  765</span>&#160;            {</div>
+<div class="line"><a name="l00766"></a><span class="lineno">  766</span>&#160;                image.setPixel(x, y, (x / cellSize) % 2 == (y / cellSize) % 2 ? 0 : color);</div>
+<div class="line"><a name="l00767"></a><span class="lineno">  767</span>&#160;            }</div>
+<div class="line"><a name="l00768"></a><span class="lineno">  768</span>&#160;        }</div>
+<div class="line"><a name="l00769"></a><span class="lineno">  769</span>&#160;        placeholderTexture = </div>
+<div class="line"><a name="l00770"></a><span class="lineno">  770</span>&#160;            <a class="code" href="classStelQGLTextureBackend.html#aa41870cec806fa6a3062e3203a3f1d3f" title="Construct a StelQGLTextureBackend from an image.">StelQGLTextureBackend::constructFromImage</a>(<span class="keyword">this</span>, QString(), <a class="code" href="structTextureParams.html" title="Parameters specifying how to construct a texture.">TextureParams</a>(), image);</div>
+<div class="line"><a name="l00771"></a><span class="lineno">  771</span>&#160;</div>
+<div class="line"><a name="l00772"></a><span class="lineno">  772</span>&#160;        <span class="keywordflow">return</span> placeholderTexture;</div>
+<div class="line"><a name="l00773"></a><span class="lineno">  773</span>&#160;    }</div>
+<div class="line"><a name="l00774"></a><span class="lineno">  774</span>&#160;</div>
+<div class="line"><a name="l00789"></a><span class="lineno">  789</span>&#160;    <span class="keywordtype">void</span> drawRectInternal(<span class="keyword">const</span> <span class="keywordtype">bool</span> textured, <span class="keyword">const</span> <span class="keywordtype">float</span> x, <span class="keyword">const</span> <span class="keywordtype">float</span> y, </div>
+<div class="line"><a name="l00790"></a><span class="lineno">  790</span>&#160;                          <span class="keyword">const</span> <span class="keywordtype">float</span> width, <span class="keyword">const</span> <span class="keywordtype">float</span> height, <span class="keyword">const</span> <span class="keywordtype">float</span> angle);</div>
+<div class="line"><a name="l00791"></a><span class="lineno">  791</span>&#160;</div>
+<div class="line"><a name="l00792"></a><span class="lineno">  792</span>&#160;    <span class="comment">// Must be down due to initializer list order.</span></div>
+<div class="line"><a name="l00793"></a><span class="lineno">  793</span>&#160;<span class="keyword">protected</span>:</div>
+<div class="line"><a name="l00795"></a><span class="lineno"><a class="code" href="classStelQGLRenderer.html#aeaef5ca9a2e5f0d7df8cc0a24268fcb0">  795</a></span>&#160;    QGLFunctions <a class="code" href="classStelQGLRenderer.html#aeaef5ca9a2e5f0d7df8cc0a24268fcb0" title="Wraps some GL functions for compatibility across GL and GLES.">gl</a>;</div>
+<div class="line"><a name="l00796"></a><span class="lineno">  796</span>&#160;};</div>
+<div class="line"><a name="l00797"></a><span class="lineno">  797</span>&#160;</div>
+<div class="line"><a name="l00798"></a><span class="lineno">  798</span>&#160;<span class="preprocessor">#endif // _STELQGLRENDERER_HPP_</span></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Sat Apr 20 2013 18:05:56 for Stellarium by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Mon May 6 2013 11:24:56 for Stellarium by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.3.1
 </small></address>
