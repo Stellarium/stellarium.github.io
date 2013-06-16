@@ -288,6 +288,7 @@ printf('</div>
 		<li><a href="http://launchpad.net/stellarium">%s</a></li>
 		<li><a href="https://sourceforge.net/p/stellarium/discussion/278769">%s</a></li>
 		<li><a href="https://lists.sourceforge.net/lists/listinfo/stellarium-pubdevel">%s</a></li>
+		<li><a href="https://sourceforge.net/p/stellarium/news/">%s</a></li>
 		<li><a href="/wiki/">%s</a></li>
 		<li><a href="/wiki/index.php/FAQ">%s</a></li>
 		<li><a href="/wiki/index.php/Landscapes">%s</a></li>
@@ -312,6 +313,7 @@ q_("You can learn more about Stellarium, get support and help the project from t
 q_("summary"),
 q_("forum"),
 q_("mailing list"),
+q_("news"),
 q_("wiki"),
 q_("FAQ"),
 q_("landscapes"),
