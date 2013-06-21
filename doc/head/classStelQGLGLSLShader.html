@@ -130,6 +130,9 @@ Public Member Functions</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-methods"></a>
 Protected Member Functions</h2></td></tr>
+<tr class="memitem:a8a824d8f25cb273c3ea3e5a4560539ab"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a8a824d8f25cb273c3ea3e5a4560539ab"></a>
+void *&#160;</td><td class="memItemRight" valign="bottom"><b>setUniformValue_helper</b> (const char *const name, const enum UniformType kind)</td></tr>
+<tr class="separator:a8a824d8f25cb273c3ea3e5a4560539ab"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a6777673cd29406dd71a763ae4006e90f"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classStelQGLGLSLShader.html#a6777673cd29406dd71a763ae4006e90f">setUniformValue_</a> (const char *const name, const float value)</td></tr>
 <tr class="memdesc:a6777673cd29406dd71a763ae4006e90f"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="classStelGLSLShader.html#a9bc28e48dec14620b194f613b9794bcb" title="Set value of a uniform shader variable.">setUniformValue()</a> implementation for type float.  <a href="#a6777673cd29406dd71a763ae4006e90f">More...</a><br/></td></tr>
 <tr class="separator:a6777673cd29406dd71a763ae4006e90f"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -193,12 +196,9 @@ QGLShaderProgram * &gt;&#160;</td><td class="memItemRight" valign="bottom"><a cl
 <tr class="memitem:afae0785547c259be63c0d1a84cb061a2"><td class="memItemLeft" align="right" valign="top">const bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classStelQGLGLSLShader.html#afae0785547c259be63c0d1a84cb061a2">internal</a></td></tr>
 <tr class="memdesc:afae0785547c259be63c0d1a84cb061a2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Is this an internal shader used by the renderer backend?  <a href="#afae0785547c259be63c0d1a84cb061a2">More...</a><br/></td></tr>
 <tr class="separator:afae0785547c259be63c0d1a84cb061a2"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a79eeb4a45f06b424ef54ead6944b9a3d"><td class="memItemLeft" align="right" valign="top">unsigned char&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classStelQGLGLSLShader.html#a79eeb4a45f06b424ef54ead6944b9a3d">uniformStorage</a> [UNIFORM_STORAGE]</td></tr>
-<tr class="memdesc:a79eeb4a45f06b424ef54ead6944b9a3d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Storage used for uniform data.  <a href="#a79eeb4a45f06b424ef54ead6944b9a3d">More...</a><br/></td></tr>
-<tr class="separator:a79eeb4a45f06b424ef54ead6944b9a3d"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab1ab3c342f5397f1355129fefbc49f2d"><td class="memItemLeft" align="right" valign="top">void *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classStelQGLGLSLShader.html#ab1ab3c342f5397f1355129fefbc49f2d">uniformStoragePointer</a></td></tr>
-<tr class="memdesc:ab1ab3c342f5397f1355129fefbc49f2d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Pointer to uniformStorage[uniformStorageUsed]. Avoids breaking strict aliasing.  <a href="#ab1ab3c342f5397f1355129fefbc49f2d">More...</a><br/></td></tr>
-<tr class="separator:ab1ab3c342f5397f1355129fefbc49f2d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a717cb3587fc7c9134e991dab4d4d054f"><td class="memItemLeft" align="right" valign="top">void *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classStelQGLGLSLShader.html#a717cb3587fc7c9134e991dab4d4d054f">uniformStorage</a> [UNIFORM_STORAGE/sizeof(void *)]</td></tr>
+<tr class="memdesc:a717cb3587fc7c9134e991dab4d4d054f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Storage used for uniform data.  <a href="#a717cb3587fc7c9134e991dab4d4d054f">More...</a><br/></td></tr>
+<tr class="separator:a717cb3587fc7c9134e991dab4d4d054f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a822d864c42e34d66a623ddef2b9b56c4"><td class="memItemLeft" align="right" valign="top">unsigned char&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classStelQGLGLSLShader.html#a822d864c42e34d66a623ddef2b9b56c4">uniformTypes</a> [MAX_UNIFORMS]</td></tr>
 <tr class="memdesc:a822d864c42e34d66a623ddef2b9b56c4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Types of consecutive uniforms in uniformStorage.  <a href="#a822d864c42e34d66a623ddef2b9b56c4">More...</a><br/></td></tr>
 <tr class="separator:a822d864c42e34d66a623ddef2b9b56c4"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -206,7 +206,7 @@ QGLShaderProgram * &gt;&#160;</td><td class="memItemRight" valign="bottom"><a cl
 <tr class="memdesc:a0aa96f1a0f6ba78850f6384636d4694c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Names of consecutive uniforms in uniformStorage.  <a href="#a0aa96f1a0f6ba78850f6384636d4694c">More...</a><br/></td></tr>
 <tr class="separator:a0aa96f1a0f6ba78850f6384636d4694c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a47cd60ceb84124f9fad3c44979ec3c3f"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classStelQGLGLSLShader.html#a47cd60ceb84124f9fad3c44979ec3c3f">uniformStorageUsed</a></td></tr>
-<tr class="memdesc:a47cd60ceb84124f9fad3c44979ec3c3f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Bytes in uniformStorage used up at this moment.  <a href="#a47cd60ceb84124f9fad3c44979ec3c3f">More...</a><br/></td></tr>
+<tr class="memdesc:a47cd60ceb84124f9fad3c44979ec3c3f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Elements in uniformStorage used up at this moment.  <a href="#a47cd60ceb84124f9fad3c44979ec3c3f">More...</a><br/></td></tr>
 <tr class="separator:a47cd60ceb84124f9fad3c44979ec3c3f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a2bac518707a795035d1b8688d0afb202"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classStelQGLGLSLShader.html#a2bac518707a795035d1b8688d0afb202">uniformCount</a></td></tr>
 <tr class="memdesc:a2bac518707a795035d1b8688d0afb202"><td class="mdescLeft">&#160;</td><td class="mdescRight">Number of uniforms in uniformStorage at this moment.  <a href="#a2bac518707a795035d1b8688d0afb202">More...</a><br/></td></tr>
@@ -468,7 +468,7 @@ QGLShaderProgram * &gt;&#160;</td><td class="memItemRight" valign="bottom"><a cl
 <p>Clear all stored uniforms, freeing uniform storage. </p>
 <p>Called by <a class="el" href="classStelQGLGLSLShader.html#af6092a51ab7d0ae0f6640c9bf14530d5" title="Release a bound shader after use.">release()</a>. </p>
 
-<p>Definition at line <a class="el" href="StelQGLGLSLShader_8hpp_source.html#l00320">320</a> of file <a class="el" href="StelQGLGLSLShader_8hpp_source.html">StelQGLGLSLShader.hpp</a>.</p>
+<p>Definition at line <a class="el" href="StelQGLGLSLShader_8hpp_source.html#l00319">319</a> of file <a class="el" href="StelQGLGLSLShader_8hpp_source.html">StelQGLGLSLShader.hpp</a>.</p>
 
 </div>
 </div>
@@ -758,7 +758,7 @@ QGLShaderProgram * &gt;&#160;</td><td class="memItemRight" valign="bottom"><a cl
 
 <p>Implements <a class="el" href="classStelGLSLShader.html#ac1d01a179e3708399b25e0bc039eb321">StelGLSLShader</a>.</p>
 
-<p>Definition at line <a class="el" href="StelQGLGLSLShader_8hpp_source.html#l00432">432</a> of file <a class="el" href="StelQGLGLSLShader_8hpp_source.html">StelQGLGLSLShader.hpp</a>.</p>
+<p>Definition at line <a class="el" href="StelQGLGLSLShader_8hpp_source.html#l00441">441</a> of file <a class="el" href="StelQGLGLSLShader_8hpp_source.html">StelQGLGLSLShader.hpp</a>.</p>
 
 </div>
 </div>
@@ -838,7 +838,7 @@ QGLShaderProgram * &gt;&#160;</td><td class="memItemRight" valign="bottom"><a cl
 
 <p>Implements <a class="el" href="classStelGLSLShader.html#a8bee668c13ea947c5df973fa54e05d23">StelGLSLShader</a>.</p>
 
-<p>Definition at line <a class="el" href="StelQGLGLSLShader_8hpp_source.html#l00461">461</a> of file <a class="el" href="StelQGLGLSLShader_8hpp_source.html">StelQGLGLSLShader.hpp</a>.</p>
+<p>Definition at line <a class="el" href="StelQGLGLSLShader_8hpp_source.html#l00451">451</a> of file <a class="el" href="StelQGLGLSLShader_8hpp_source.html">StelQGLGLSLShader.hpp</a>.</p>
 
 </div>
 </div>
@@ -878,7 +878,7 @@ QGLShaderProgram * &gt;&#160;</td><td class="memItemRight" valign="bottom"><a cl
 
 <p>Implements <a class="el" href="classStelGLSLShader.html#af78d1988cf91914e098d1985309a314c">StelGLSLShader</a>.</p>
 
-<p>Definition at line <a class="el" href="StelQGLGLSLShader_8hpp_source.html#l00476">476</a> of file <a class="el" href="StelQGLGLSLShader_8hpp_source.html">StelQGLGLSLShader.hpp</a>.</p>
+<p>Definition at line <a class="el" href="StelQGLGLSLShader_8hpp_source.html#l00456">456</a> of file <a class="el" href="StelQGLGLSLShader_8hpp_source.html">StelQGLGLSLShader.hpp</a>.</p>
 
 </div>
 </div>
@@ -918,7 +918,7 @@ QGLShaderProgram * &gt;&#160;</td><td class="memItemRight" valign="bottom"><a cl
 
 <p>Implements <a class="el" href="classStelGLSLShader.html#a8d3aa6519199afd04a9a35739d1f1224">StelGLSLShader</a>.</p>
 
-<p>Definition at line <a class="el" href="StelQGLGLSLShader_8hpp_source.html#l00491">491</a> of file <a class="el" href="StelQGLGLSLShader_8hpp_source.html">StelQGLGLSLShader.hpp</a>.</p>
+<p>Definition at line <a class="el" href="StelQGLGLSLShader_8hpp_source.html#l00461">461</a> of file <a class="el" href="StelQGLGLSLShader_8hpp_source.html">StelQGLGLSLShader.hpp</a>.</p>
 
 </div>
 </div>
@@ -958,7 +958,7 @@ QGLShaderProgram * &gt;&#160;</td><td class="memItemRight" valign="bottom"><a cl
 
 <p>Implements <a class="el" href="classStelGLSLShader.html#a214c10ea3ff04c5589e047e5aaf78467">StelGLSLShader</a>.</p>
 
-<p>Definition at line <a class="el" href="StelQGLGLSLShader_8hpp_source.html#l00506">506</a> of file <a class="el" href="StelQGLGLSLShader_8hpp_source.html">StelQGLGLSLShader.hpp</a>.</p>
+<p>Definition at line <a class="el" href="StelQGLGLSLShader_8hpp_source.html#l00466">466</a> of file <a class="el" href="StelQGLGLSLShader_8hpp_source.html">StelQGLGLSLShader.hpp</a>.</p>
 
 </div>
 </div>
@@ -998,7 +998,7 @@ QGLShaderProgram * &gt;&#160;</td><td class="memItemRight" valign="bottom"><a cl
 
 <p>Implements <a class="el" href="classStelGLSLShader.html#ae75cfbb3292457627d12f43e4bf315a5">StelGLSLShader</a>.</p>
 
-<p>Definition at line <a class="el" href="StelQGLGLSLShader_8hpp_source.html#l00521">521</a> of file <a class="el" href="StelQGLGLSLShader_8hpp_source.html">StelQGLGLSLShader.hpp</a>.</p>
+<p>Definition at line <a class="el" href="StelQGLGLSLShader_8hpp_source.html#l00471">471</a> of file <a class="el" href="StelQGLGLSLShader_8hpp_source.html">StelQGLGLSLShader.hpp</a>.</p>
 
 </div>
 </div>
@@ -1141,7 +1141,7 @@ QGLShaderProgram * &gt;&#160;</td><td class="memItemRight" valign="bottom"><a cl
 <p>Log aggregated during all addXXXShader() and <a class="el" href="classStelQGLGLSLShader.html#afce8499cfc8a6a35c57a315f02bff25f" title="Build the shader program.">build()</a> calls. </p>
 <p>May be aggregated from multiple vertex programs if built multiple times with different shaders enabled. </p>
 
-<p>Definition at line <a class="el" href="StelQGLGLSLShader_8hpp_source.html#l00372">372</a> of file <a class="el" href="StelQGLGLSLShader_8hpp_source.html">StelQGLGLSLShader.hpp</a>.</p>
+<p>Definition at line <a class="el" href="StelQGLGLSLShader_8hpp_source.html#l00370">370</a> of file <a class="el" href="StelQGLGLSLShader_8hpp_source.html">StelQGLGLSLShader.hpp</a>.</p>
 
 </div>
 </div>
@@ -1165,7 +1165,7 @@ QGLShaderProgram * &gt;&#160;</td><td class="memItemRight" valign="bottom"><a cl
 
 <p>Is the shader bound for drawing? </p>
 
-<p>Definition at line <a class="el" href="StelQGLGLSLShader_8hpp_source.html#l00378">378</a> of file <a class="el" href="StelQGLGLSLShader_8hpp_source.html">StelQGLGLSLShader.hpp</a>.</p>
+<p>Definition at line <a class="el" href="StelQGLGLSLShader_8hpp_source.html#l00376">376</a> of file <a class="el" href="StelQGLGLSLShader_8hpp_source.html">StelQGLGLSLShader.hpp</a>.</p>
 
 </div>
 </div>
@@ -1189,7 +1189,7 @@ QGLShaderProgram * &gt;&#160;</td><td class="memItemRight" valign="bottom"><a cl
 
 <p>Fragment shaders that are always linked in (added by the nameless <a class="el" href="classStelQGLGLSLShader.html#ae256bbd5a3bd9c0be0017919ba95f2cb" title="Add a fragment shader from source, compiling it in the process.">addFragmentShader()</a> overload). </p>
 
-<p>Definition at line <a class="el" href="StelQGLGLSLShader_8hpp_source.html#l00341">341</a> of file <a class="el" href="StelQGLGLSLShader_8hpp_source.html">StelQGLGLSLShader.hpp</a>.</p>
+<p>Definition at line <a class="el" href="StelQGLGLSLShader_8hpp_source.html#l00339">339</a> of file <a class="el" href="StelQGLGLSLShader_8hpp_source.html">StelQGLGLSLShader.hpp</a>.</p>
 
 </div>
 </div>
@@ -1213,7 +1213,7 @@ QGLShaderProgram * &gt;&#160;</td><td class="memItemRight" valign="bottom"><a cl
 
 <p>Vertex shaders that are always linked in (added by the nameless <a class="el" href="classStelQGLGLSLShader.html#a3622e52fdd0dbd362cb4e334b6cae82c" title="Add a vertex shader from source, compiling it in the process.">addVertexShader()</a> overload). </p>
 
-<p>Definition at line <a class="el" href="StelQGLGLSLShader_8hpp_source.html#l00334">334</a> of file <a class="el" href="StelQGLGLSLShader_8hpp_source.html">StelQGLGLSLShader.hpp</a>.</p>
+<p>Definition at line <a class="el" href="StelQGLGLSLShader_8hpp_source.html#l00332">332</a> of file <a class="el" href="StelQGLGLSLShader_8hpp_source.html">StelQGLGLSLShader.hpp</a>.</p>
 
 </div>
 </div>
@@ -1238,7 +1238,7 @@ QGLShaderProgram * &gt;&#160;</td><td class="memItemRight" valign="bottom"><a cl
 <p>Is this an internal shader used by the renderer backend? </p>
 <p>Needed to avoing bind/release from calling renderer backend custom shader bind/release. </p>
 
-<p>Definition at line <a class="el" href="StelQGLGLSLShader_8hpp_source.html#l00387">387</a> of file <a class="el" href="StelQGLGLSLShader_8hpp_source.html">StelQGLGLSLShader.hpp</a>.</p>
+<p>Definition at line <a class="el" href="StelQGLGLSLShader_8hpp_source.html#l00385">385</a> of file <a class="el" href="StelQGLGLSLShader_8hpp_source.html">StelQGLGLSLShader.hpp</a>.</p>
 
 </div>
 </div>
@@ -1262,7 +1262,7 @@ QGLShaderProgram * &gt;&#160;</td><td class="memItemRight" valign="bottom"><a cl
 
 <p>Optional vertex shaders that may be enabled or disabled. </p>
 
-<p>Definition at line <a class="el" href="StelQGLGLSLShader_8hpp_source.html#l00337">337</a> of file <a class="el" href="StelQGLGLSLShader_8hpp_source.html">StelQGLGLSLShader.hpp</a>.</p>
+<p>Definition at line <a class="el" href="StelQGLGLSLShader_8hpp_source.html#l00335">335</a> of file <a class="el" href="StelQGLGLSLShader_8hpp_source.html">StelQGLGLSLShader.hpp</a>.</p>
 
 </div>
 </div>
@@ -1286,7 +1286,7 @@ QGLShaderProgram * &gt;&#160;</td><td class="memItemRight" valign="bottom"><a cl
 
 <p>Currently used shader program (linked from default and currently enabled shaders). </p>
 
-<p>Definition at line <a class="el" href="StelQGLGLSLShader_8hpp_source.html#l00366">366</a> of file <a class="el" href="StelQGLGLSLShader_8hpp_source.html">StelQGLGLSLShader.hpp</a>.</p>
+<p>Definition at line <a class="el" href="StelQGLGLSLShader_8hpp_source.html#l00364">364</a> of file <a class="el" href="StelQGLGLSLShader_8hpp_source.html">StelQGLGLSLShader.hpp</a>.</p>
 
 </div>
 </div>
@@ -1314,7 +1314,7 @@ QGLShaderProgram * &gt;&#160;</td><td class="memItemRight" valign="bottom"><a cl
 <p>It is not impossible for false positives to happen, but it's very unlikely. 64bit is not going to overflow any soon (you need a 16EiB address space for that), and as shaders are never deleted or moved in memory, two shaders can never have identical pointers. Then only risk is that two sets of pointers will accidentally add up to the same number, but this is very unlikely as well.</p>
 <p>In case this happens, some very simple hash algorithm (still on pointers) might be used instead. </p>
 
-<p>Definition at line <a class="el" href="StelQGLGLSLShader_8hpp_source.html#l00363">363</a> of file <a class="el" href="StelQGLGLSLShader_8hpp_source.html">StelQGLGLSLShader.hpp</a>.</p>
+<p>Definition at line <a class="el" href="StelQGLGLSLShader_8hpp_source.html#l00361">361</a> of file <a class="el" href="StelQGLGLSLShader_8hpp_source.html">StelQGLGLSLShader.hpp</a>.</p>
 
 </div>
 </div>
@@ -1338,7 +1338,7 @@ QGLShaderProgram * &gt;&#160;</td><td class="memItemRight" valign="bottom"><a cl
 
 <p>Renderer that created this shader. </p>
 
-<p>Definition at line <a class="el" href="StelQGLGLSLShader_8hpp_source.html#l00331">331</a> of file <a class="el" href="StelQGLGLSLShader_8hpp_source.html">StelQGLGLSLShader.hpp</a>.</p>
+<p>Definition at line <a class="el" href="StelQGLGLSLShader_8hpp_source.html#l00329">329</a> of file <a class="el" href="StelQGLGLSLShader_8hpp_source.html">StelQGLGLSLShader.hpp</a>.</p>
 
 </div>
 </div>
@@ -1362,7 +1362,7 @@ QGLShaderProgram * &gt;&#160;</td><td class="memItemRight" valign="bottom"><a cl
 
 <p>Current state of the shader. </p>
 
-<p>Definition at line <a class="el" href="StelQGLGLSLShader_8hpp_source.html#l00375">375</a> of file <a class="el" href="StelQGLGLSLShader_8hpp_source.html">StelQGLGLSLShader.hpp</a>.</p>
+<p>Definition at line <a class="el" href="StelQGLGLSLShader_8hpp_source.html#l00373">373</a> of file <a class="el" href="StelQGLGLSLShader_8hpp_source.html">StelQGLGLSLShader.hpp</a>.</p>
 
 </div>
 </div>
@@ -1386,7 +1386,7 @@ QGLShaderProgram * &gt;&#160;</td><td class="memItemRight" valign="bottom"><a cl
 
 <p>Number of uniforms in uniformStorage at this moment. </p>
 
-<p>Definition at line <a class="el" href="StelQGLGLSLShader_8hpp_source.html#l00417">417</a> of file <a class="el" href="StelQGLGLSLShader_8hpp_source.html">StelQGLGLSLShader.hpp</a>.</p>
+<p>Definition at line <a class="el" href="StelQGLGLSLShader_8hpp_source.html#l00412">412</a> of file <a class="el" href="StelQGLGLSLShader_8hpp_source.html">StelQGLGLSLShader.hpp</a>.</p>
 
 </div>
 </div>
@@ -1411,7 +1411,7 @@ QGLShaderProgram * &gt;&#160;</td><td class="memItemRight" valign="bottom"><a cl
 <p>Stack of uniformCount values used with pushUniformStorage/popUniformStorage. </p>
 <dl class="section see"><dt>See Also</dt><dd><a class="el" href="classStelQGLGLSLShader.html#a341bdd163ed3e8cecd279e15e5f8d16c" title="Push uniform storage state.">pushUniformStorage</a>, <a class="el" href="classStelQGLGLSLShader.html#ab9e1c9cc088ae08d414e4fdd0fea948a" title="Restores pushed uniform storage stage.">popUniformStorage</a> </dd></dl>
 
-<p>Definition at line <a class="el" href="StelQGLGLSLShader_8hpp_source.html#l00427">427</a> of file <a class="el" href="StelQGLGLSLShader_8hpp_source.html">StelQGLGLSLShader.hpp</a>.</p>
+<p>Definition at line <a class="el" href="StelQGLGLSLShader_8hpp_source.html#l00422">422</a> of file <a class="el" href="StelQGLGLSLShader_8hpp_source.html">StelQGLGLSLShader.hpp</a>.</p>
 
 </div>
 </div>
@@ -1436,11 +1436,11 @@ QGLShaderProgram * &gt;&#160;</td><td class="memItemRight" valign="bottom"><a cl
 <p>Names of consecutive uniforms in uniformStorage. </p>
 <p>We don't own these strings, we just have pointers to them. This means the user code needs to preserve the string until <a class="el" href="classStelQGLGLSLShader.html#af6092a51ab7d0ae0f6640c9bf14530d5" title="Release a bound shader after use.">release()</a> is called. </p>
 
-<p>Definition at line <a class="el" href="StelQGLGLSLShader_8hpp_source.html#l00411">411</a> of file <a class="el" href="StelQGLGLSLShader_8hpp_source.html">StelQGLGLSLShader.hpp</a>.</p>
+<p>Definition at line <a class="el" href="StelQGLGLSLShader_8hpp_source.html#l00406">406</a> of file <a class="el" href="StelQGLGLSLShader_8hpp_source.html">StelQGLGLSLShader.hpp</a>.</p>
 
 </div>
 </div>
-<a class="anchor" id="a79eeb4a45f06b424ef54ead6944b9a3d"></a>
+<a class="anchor" id="a717cb3587fc7c9134e991dab4d4d054f"></a>
 <div class="memitem">
 <div class="memproto">
 <table class="mlabels">
@@ -1448,7 +1448,7 @@ QGLShaderProgram * &gt;&#160;</td><td class="memItemRight" valign="bottom"><a cl
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">unsigned char StelQGLGLSLShader::uniformStorage[UNIFORM_STORAGE]</td>
+          <td class="memname">void* StelQGLGLSLShader::uniformStorage[UNIFORM_STORAGE/sizeof(void *)]</td>
         </tr>
       </table>
   </td>
@@ -1462,31 +1462,7 @@ QGLShaderProgram * &gt;&#160;</td><td class="memItemRight" valign="bottom"><a cl
 <p>As we're linking shaders dynamically and the final shader program is only bound directly before drawing, we need to delay uniform upload until that point. Therefore, setUniformValue_ functions just add data to this storage. The data is then uploaded by <a class="el" href="classStelQGLGLSLShader.html#ad055f5447dde2b203e503e56ebcc4343" title="Upload the stored uniform variables.">uploadUniforms()</a>.</p>
 <dl class="section see"><dt>See Also</dt><dd><a class="el" href="classStelQGLGLSLShader.html#ad055f5447dde2b203e503e56ebcc4343" title="Upload the stored uniform variables.">uploadUniforms</a>, <a class="el" href="classStelQGLGLSLShader.html#a37004c3b1e983f0d3e0803c09f2c19fa" title="Clear all stored uniforms, freeing uniform storage.">clearUniforms</a>, <a class="el" href="classStelQGLGLSLShader.html#a341bdd163ed3e8cecd279e15e5f8d16c" title="Push uniform storage state.">pushUniformStorage</a> </dd></dl>
 
-<p>Definition at line <a class="el" href="StelQGLGLSLShader_8hpp_source.html#l00397">397</a> of file <a class="el" href="StelQGLGLSLShader_8hpp_source.html">StelQGLGLSLShader.hpp</a>.</p>
-
-</div>
-</div>
-<a class="anchor" id="ab1ab3c342f5397f1355129fefbc49f2d"></a>
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">void* StelQGLGLSLShader::uniformStoragePointer</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Pointer to uniformStorage[uniformStorageUsed]. Avoids breaking strict aliasing. </p>
-
-<p>Definition at line <a class="el" href="StelQGLGLSLShader_8hpp_source.html#l00400">400</a> of file <a class="el" href="StelQGLGLSLShader_8hpp_source.html">StelQGLGLSLShader.hpp</a>.</p>
+<p>Definition at line <a class="el" href="StelQGLGLSLShader_8hpp_source.html#l00395">395</a> of file <a class="el" href="StelQGLGLSLShader_8hpp_source.html">StelQGLGLSLShader.hpp</a>.</p>
 
 </div>
 </div>
@@ -1510,7 +1486,7 @@ QGLShaderProgram * &gt;&#160;</td><td class="memItemRight" valign="bottom"><a cl
 
 <p>Number of items in uniformStorageUsedStack and uniformCountStack. </p>
 
-<p>Definition at line <a class="el" href="StelQGLGLSLShader_8hpp_source.html#l00430">430</a> of file <a class="el" href="StelQGLGLSLShader_8hpp_source.html">StelQGLGLSLShader.hpp</a>.</p>
+<p>Definition at line <a class="el" href="StelQGLGLSLShader_8hpp_source.html#l00425">425</a> of file <a class="el" href="StelQGLGLSLShader_8hpp_source.html">StelQGLGLSLShader.hpp</a>.</p>
 
 </div>
 </div>
@@ -1532,9 +1508,9 @@ QGLShaderProgram * &gt;&#160;</td><td class="memItemRight" valign="bottom"><a cl
 </table>
 </div><div class="memdoc">
 
-<p>Bytes in uniformStorage used up at this moment. </p>
+<p>Elements in uniformStorage used up at this moment. </p>
 
-<p>Definition at line <a class="el" href="StelQGLGLSLShader_8hpp_source.html#l00414">414</a> of file <a class="el" href="StelQGLGLSLShader_8hpp_source.html">StelQGLGLSLShader.hpp</a>.</p>
+<p>Definition at line <a class="el" href="StelQGLGLSLShader_8hpp_source.html#l00409">409</a> of file <a class="el" href="StelQGLGLSLShader_8hpp_source.html">StelQGLGLSLShader.hpp</a>.</p>
 
 </div>
 </div>
@@ -1559,7 +1535,7 @@ QGLShaderProgram * &gt;&#160;</td><td class="memItemRight" valign="bottom"><a cl
 <p>Stack of uniformStorageUsed values used with pushUniformStorage/popUniformStorage. </p>
 <dl class="section see"><dt>See Also</dt><dd><a class="el" href="classStelQGLGLSLShader.html#a341bdd163ed3e8cecd279e15e5f8d16c" title="Push uniform storage state.">pushUniformStorage</a>, <a class="el" href="classStelQGLGLSLShader.html#ab9e1c9cc088ae08d414e4fdd0fea948a" title="Restores pushed uniform storage stage.">popUniformStorage</a> </dd></dl>
 
-<p>Definition at line <a class="el" href="StelQGLGLSLShader_8hpp_source.html#l00422">422</a> of file <a class="el" href="StelQGLGLSLShader_8hpp_source.html">StelQGLGLSLShader.hpp</a>.</p>
+<p>Definition at line <a class="el" href="StelQGLGLSLShader_8hpp_source.html#l00417">417</a> of file <a class="el" href="StelQGLGLSLShader_8hpp_source.html">StelQGLGLSLShader.hpp</a>.</p>
 
 </div>
 </div>
@@ -1584,7 +1560,7 @@ QGLShaderProgram * &gt;&#160;</td><td class="memItemRight" valign="bottom"><a cl
 <p>Types of consecutive uniforms in uniformStorage. </p>
 <p>Needed to interpret uniformStorage data when uploading. </p>
 
-<p>Definition at line <a class="el" href="StelQGLGLSLShader_8hpp_source.html#l00405">405</a> of file <a class="el" href="StelQGLGLSLShader_8hpp_source.html">StelQGLGLSLShader.hpp</a>.</p>
+<p>Definition at line <a class="el" href="StelQGLGLSLShader_8hpp_source.html#l00400">400</a> of file <a class="el" href="StelQGLGLSLShader_8hpp_source.html">StelQGLGLSLShader.hpp</a>.</p>
 
 </div>
 </div>
@@ -1608,7 +1584,7 @@ QGLShaderProgram * &gt;&#160;</td><td class="memItemRight" valign="bottom"><a cl
 
 <p>Does this shader need the <em>unprojectedVertex</em> attribute (position before <a class="el" href="classStelProjector.html" title="Provide the main interface to all operations of projecting coordinates from sky to screen...">StelProjector</a> projection) ? </p>
 
-<p>Definition at line <a class="el" href="StelQGLGLSLShader_8hpp_source.html#l00382">382</a> of file <a class="el" href="StelQGLGLSLShader_8hpp_source.html">StelQGLGLSLShader.hpp</a>.</p>
+<p>Definition at line <a class="el" href="StelQGLGLSLShader_8hpp_source.html#l00380">380</a> of file <a class="el" href="StelQGLGLSLShader_8hpp_source.html">StelQGLGLSLShader.hpp</a>.</p>
 
 </div>
 </div>
@@ -1618,7 +1594,7 @@ QGLShaderProgram * &gt;&#160;</td><td class="memItemRight" valign="bottom"><a cl
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Sun May 12 2013 22:32:59 for Stellarium by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Fri Jun 21 2013 19:17:18 for Stellarium by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.3.1
 </small></address>

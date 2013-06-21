@@ -276,6 +276,9 @@ QString&#160;</td><td class="memItemRight" valign="bottom"><b>hoursToHmsStr</b> 
 <tr class="memitem:ad7bc421101a3f98283d91eff3779fdb3"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceStelUtils.html#ad7bc421101a3f98283d91eff3779fdb3">getDeltaTByReingoldDershowitz</a> (const double jDay)</td></tr>
 <tr class="memdesc:ad7bc421101a3f98283d91eff3779fdb3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get Delta-T estimation for a given date.  <a href="#ad7bc421101a3f98283d91eff3779fdb3">More...</a><br/></td></tr>
 <tr class="separator:ad7bc421101a3f98283d91eff3779fdb3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3b4842deaa698f54e38d34880719a085"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceStelUtils.html#a3b4842deaa698f54e38d34880719a085">getDeltaTByBanjevic</a> (const double jDay)</td></tr>
+<tr class="memdesc:a3b4842deaa698f54e38d34880719a085"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get Delta-T estimation for a given date.  <a href="#a3b4842deaa698f54e38d34880719a085">More...</a><br/></td></tr>
+<tr class="separator:a3b4842deaa698f54e38d34880719a085"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aea671814ea3b6fa1402e5ff0d69b529e"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceStelUtils.html#aea671814ea3b6fa1402e5ff0d69b529e">getMoonSecularAcceleration</a> (const double jDay, const double ndot)</td></tr>
 <tr class="memdesc:aea671814ea3b6fa1402e5ff0d69b529e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get Secular Acceleration estimation for a given year.  <a href="#aea671814ea3b6fa1402e5ff0d69b529e">More...</a><br/></td></tr>
 <tr class="separator:aea671814ea3b6fa1402e5ff0d69b529e"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -711,6 +714,32 @@ QString&#160;</td><td class="memItemRight" valign="bottom"><b>hoursToHmsStr</b> 
 
 <p>Get Delta-T estimation for a given date. </p>
 <p>Implementation of algorithm by Astronomical Ephemeris (1960) for DeltaT computation. Sources: Spencer Jones, H., "The Rotation of the Earth, and the Secular Accelerations of the Sun, Moon and Planets", Monthly Notices of the Royal Astronomical Society, 99 (1939), 541-558 <a href="http://adsabs.harvard.edu/abs/1939MNRAS..99..541S">http://adsabs.harvard.edu/abs/1939MNRAS..99..541S</a> or Explanatory Supplement to the Astr. Ephemeris, 1961, p.87. Also used by Mucke&amp;Meeus, Canon of Solar Eclipses, Vienna 1983. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">jDay</td><td>the date and time expressed as a julian day </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>Delta-T in seconds </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a3b4842deaa698f54e38d34880719a085"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">double StelUtils::getDeltaTByBanjevic </td>
+          <td>(</td>
+          <td class="paramtype">const double&#160;</td>
+          <td class="paramname"><em>jDay</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Get Delta-T estimation for a given date. </p>
+<p>Implementation of algorithm by Banjevic (2006) for DeltaT computation. Source: Ancient eclipses and dating the fall of Babylon Banjevic, B. Publications of the Astronomical Observatory of Belgrade, Vol. 80, p. 251-257 (2006) 2006POBeo..80..251B [<a href="http://adsabs.harvard.edu/abs/2006POBeo..80..251B">http://adsabs.harvard.edu/abs/2006POBeo..80..251B</a>] </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">jDay</td><td>the date and time expressed as a julian day </td></tr>
@@ -2455,7 +2484,7 @@ QString&#160;</td><td class="memItemRight" valign="bottom"><b>hoursToHmsStr</b> 
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Sun May 12 2013 22:33:00 for Stellarium by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Fri Jun 21 2013 19:17:18 for Stellarium by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.3.1
 </small></address>
