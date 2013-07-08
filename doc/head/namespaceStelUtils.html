@@ -279,6 +279,9 @@ QString&#160;</td><td class="memItemRight" valign="bottom"><b>hoursToHmsStr</b> 
 <tr class="memitem:a3b4842deaa698f54e38d34880719a085"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceStelUtils.html#a3b4842deaa698f54e38d34880719a085">getDeltaTByBanjevic</a> (const double jDay)</td></tr>
 <tr class="memdesc:a3b4842deaa698f54e38d34880719a085"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get Delta-T estimation for a given date.  <a href="#a3b4842deaa698f54e38d34880719a085">More...</a><br/></td></tr>
 <tr class="separator:a3b4842deaa698f54e38d34880719a085"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a72444c2d458aab9b0c7b68a334b6f1f6"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceStelUtils.html#a72444c2d458aab9b0c7b68a334b6f1f6">getDeltaTByIslamSadiqQureshi</a> (const double jDay)</td></tr>
+<tr class="memdesc:a72444c2d458aab9b0c7b68a334b6f1f6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get Delta-T estimation for a given date.  <a href="#a72444c2d458aab9b0c7b68a334b6f1f6">More...</a><br/></td></tr>
+<tr class="separator:a72444c2d458aab9b0c7b68a334b6f1f6"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aea671814ea3b6fa1402e5ff0d69b529e"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceStelUtils.html#aea671814ea3b6fa1402e5ff0d69b529e">getMoonSecularAcceleration</a> (const double jDay, const double ndot)</td></tr>
 <tr class="memdesc:aea671814ea3b6fa1402e5ff0d69b529e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get Secular Acceleration estimation for a given year.  <a href="#aea671814ea3b6fa1402e5ff0d69b529e">More...</a><br/></td></tr>
 <tr class="separator:aea671814ea3b6fa1402e5ff0d69b529e"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -922,6 +925,32 @@ QString&#160;</td><td class="memItemRight" valign="bottom"><b>hoursToHmsStr</b> 
 
 <p>Get Delta-T estimation for a given date. </p>
 <p>Implementation of algorithm by IAU (1952) for DeltaT computation, outdated but may be useful for science-historical purposes. Source: Spencer Jones, H., "The Rotation of the Earth, and the Secular Accelerations of the Sun, Moon and Planets", Monthly Notices of the Royal Astronomical Society, 99 (1939), 541-558 <a href="http://adsabs.harvard.edu/abs/1939MNRAS..99..541S">http://adsabs.harvard.edu/abs/1939MNRAS..99..541S</a> </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">jDay</td><td>the date and time expressed as a julian day </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>Delta-T in seconds </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a72444c2d458aab9b0c7b68a334b6f1f6"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">double StelUtils::getDeltaTByIslamSadiqQureshi </td>
+          <td>(</td>
+          <td class="paramtype">const double&#160;</td>
+          <td class="paramname"><em>jDay</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Get Delta-T estimation for a given date. </p>
+<p>Implementation of algorithm by Islam, Sadiq &amp; Qureshi (2008 + revisited 2013) for DeltaT computation. Source: Error Minimization of Polynomial Approximation of DeltaT Islam, S. &amp; Sadiq, M. &amp; Qureshi, M. S. Journal of Astrophysics &amp; Astronomy, Vol. 29, p. 363–366 (2008) <a href="http://www.ias.ac.in/jaa/dec2008/JAA610.pdf">http://www.ias.ac.in/jaa/dec2008/JAA610.pdf</a> Note: These polynomials are based on the uncorrected deltaT table from the Astronomical Almanac, thus ndot = -26.0 arcsec/cy^2. Meeus &amp; Simons (2000) corrected the deltaT table for years before 1955.5 using ndot = -25.7376 arcsec/cy^2. Therefore the accuracies stated by Meeus &amp; Simons are correct and cannot be compared with accuracies from Islam &amp; Sadiq &amp; Qureshi. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">jDay</td><td>the date and time expressed as a julian day </td></tr>
@@ -2484,7 +2513,7 @@ QString&#160;</td><td class="memItemRight" valign="bottom"><b>hoursToHmsStr</b> 
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Sat Jun 29 2013 22:44:08 for Stellarium by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Mon Jul 8 2013 12:12:08 for Stellarium by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.3.1
 </small></address>
