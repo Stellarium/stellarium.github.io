@@ -83,6 +83,12 @@ Public Slots</h2></td></tr>
 <tr class="memitem:ab5e71a21caeeefb1d17f4d28469246f6"><td class="memItemLeft" align="right" valign="top">QString&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classStelMainScriptAPI.html#ab5e71a21caeeefb1d17f4d28469246f6">getDeltaT</a> () const </td></tr>
 <tr class="memdesc:ab5e71a21caeeefb1d17f4d28469246f6"><td class="mdescLeft">&#160;</td><td class="mdescRight">get the DeltaT for the simulation date and time as a string in HMS format, e.g.  <a href="#ab5e71a21caeeefb1d17f4d28469246f6">More...</a><br/></td></tr>
 <tr class="separator:ab5e71a21caeeefb1d17f4d28469246f6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a595e326c0c32b51d69716ee888f1c042"><td class="memItemLeft" align="right" valign="top">QString&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classStelMainScriptAPI.html#a595e326c0c32b51d69716ee888f1c042">getDeltaTAlgorithm</a> () const </td></tr>
+<tr class="memdesc:a595e326c0c32b51d69716ee888f1c042"><td class="mdescLeft">&#160;</td><td class="mdescRight">get the DeltaT equation name for the simulation date and time as a string  <a href="#a595e326c0c32b51d69716ee888f1c042">More...</a><br/></td></tr>
+<tr class="separator:a595e326c0c32b51d69716ee888f1c042"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1acce71bb5eab912d41d4f1c5106c2fc"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classStelMainScriptAPI.html#a1acce71bb5eab912d41d4f1c5106c2fc">setDeltaTAlgorithm</a> (QString algorithmName)</td></tr>
+<tr class="memdesc:a1acce71bb5eab912d41d4f1c5106c2fc"><td class="mdescLeft">&#160;</td><td class="mdescRight">set equation of the DeltaT for the simulation date and time  <a href="#a1acce71bb5eab912d41d4f1c5106c2fc">More...</a><br/></td></tr>
+<tr class="separator:a1acce71bb5eab912d41d4f1c5106c2fc"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a90d8761b42dcd45d2cdfcc93796338db"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classStelMainScriptAPI.html#a90d8761b42dcd45d2cdfcc93796338db">setTimeRate</a> (double ts)</td></tr>
 <tr class="memdesc:a90d8761b42dcd45d2cdfcc93796338db"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set time speed in JDay/sec.  <a href="#a90d8761b42dcd45d2cdfcc93796338db">More...</a><br/></td></tr>
 <tr class="separator:a90d8761b42dcd45d2cdfcc93796338db"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -696,6 +702,32 @@ double&#160;</td><td class="memItemRight" valign="bottom"><b>timeSpeed</b></td><
 <p>get the DeltaT for the simulation date and time as a string in HMS format, e.g. </p>
 <p>"0h1m68.2s" </p>
 <dl class="section return"><dt>Returns</dt><dd>the DeltaT for current simulation time. </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a595e326c0c32b51d69716ee888f1c042"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">QString StelMainScriptAPI::getDeltaTAlgorithm </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">slot</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>get the DeltaT equation name for the simulation date and time as a string </p>
+<dl class="section return"><dt>Returns</dt><dd>name of the DeltaT equation </dd></dl>
 
 </div>
 </div>
@@ -2914,11 +2946,45 @@ double&#160;</td><td class="memItemRight" valign="bottom"><b>timeSpeed</b></td><
 <li>relative, e.g. "+ 4 days", "-2 weeks". can use these units: seconds, minutes, hours, days, weeks, months, years. You may also append " sidereal" to use sidereal days and so on. You can also use "now" at the start. For example: "now + 3 hours sidereal" Note: you must use the plural all the time, even when the number of the unit is 1. i.e. use "+ 1 days" not "+1 day". Note: when sidereal time is used, the length of time for each unit is dependent on the current planet. By contrast when sidereal timeis not specified (i.e. solar time is used) the value is conventional - i.e. 1 day means 1 Earth Solar day. </li>
 </ul>
 </td></tr>
-    <tr><td class="paramname">spec</td><td>"local" or "utc" - only has an effect when the ISO date type is used. </td></tr>
-    <tr><td class="paramname">enableDeltaT</td><td>true or false - enable Delta-T correction or not </td></tr>
+    <tr><td class="paramname">spec</td><td>"local" or "utc" - only has an effect when the ISO date type is used (default value is "utc"). </td></tr>
+    <tr><td class="paramname">enableDeltaT</td><td>true or false - enable Delta-T correction or not (default value is "false"). </td></tr>
   </table>
   </dd>
 </dl>
+<dl class="section note"><dt>Note</dt><dd>for fully compatibles behavior of this function with the version 0.11.4 or earlier, you should call core.setDeltaTAlgorithm("WithoutCorrection"); before running core.setDate(); for disabling DeltaT correction. </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a1acce71bb5eab912d41d4f1c5106c2fc"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void StelMainScriptAPI::setDeltaTAlgorithm </td>
+          <td>(</td>
+          <td class="paramtype">QString&#160;</td>
+          <td class="paramname"><em>algorithmName</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">slot</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>set equation of the DeltaT for the simulation date and time </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">name</td><td>of equation (e.g. "WithoutCorrection" or "EspenakMeeus") </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section note"><dt>Note</dt><dd>list of possible names of equation: WithoutCorrection, Schoch, Clemence, IAU, AstronomicalEphemeris, TuckermanGoldstine, MullerStephenson, Stephenson1978, SchmadelZech1979, MorrisonStephenson1982, StephensonMorrison1984, StephensonHoulden, Espenak, Borkowski, SchmadelZech1988, ChaprontTouze, StephensonMorrison1995, Stephenson1997, ChaprontMeeus, JPLHorizons, MeeusSimons, MontenbruckPfleger, ReingoldDershowitz, MorrisonStephenson2004, EspenakMeeus, Reijs, Banjevic, IslamSadiqQureshi, Custom. </dd></dl>
 
 </div>
 </div>
@@ -3825,7 +3891,7 @@ double&#160;</td><td class="memItemRight" valign="bottom"><b>timeSpeed</b></td><
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Mon Jul 8 2013 12:12:08 for Stellarium by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Thu Jul 18 2013 23:10:06 for Stellarium by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.3.1
 </small></address>
