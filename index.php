@@ -56,7 +56,7 @@ printf('
 		    <a href="%s">Linux<span>(%s)</span></a>
 		</div>
 		<div class="download macosx">
-		    <a href="%s">OS X<span>%s</span></a>
+		    <a href="%s">Mac OS X<span>%s</span></a>
 		</div>
 		<div class="download windows">
 		    <a href="%s">Windows<span>%s</span></a>
@@ -315,7 +315,7 @@ q_("report bugs, request new features"),
 q_("development progress"),
 q_("older releases"),
 q_("for Linux (source)"),
-q_("for OS X"),
+q_("for Mac OS X"),
 q_("for Windows"));
 printf('
 	<h2>%s</h2>
