@@ -56,7 +56,7 @@ printf('
 		    <a href="%s">Linux<span>(%s)</span></a>
 		</div>
 		<div class="download macosx">
-		    <a href="%s">Mac OS X<span>%s</span></a>
+		    <a href="%s">OS X<span>%s</span></a>
 		</div>
 		<div class="download windows">
 		    <a href="%s">Windows<span>%s</span></a>
@@ -245,7 +245,7 @@ q_("3D graphics card which supports OpenGL 1.2"),
 q_("256 MiB RAM"),
 q_("120 MiB on disk"),
 q_("recommended"),
-q_("Linux/Unix; Windows XP/Vista/7/8; 64-bit Mac OS X 10.7.0 or greater"),
+q_("Linux/Unix; Windows XP/Vista/7/8; 64-bit OS X 10.7.0 or greater"),
 q_("3D graphics card which supports OpenGL 2.1 or greater"),
 q_("1 GiB RAM or more"),
 q_("1.5 GiB on disk"));
@@ -315,7 +315,7 @@ q_("report bugs, request new features"),
 q_("development progress"),
 q_("older releases"),
 q_("for Linux (source)"),
-q_("for Mac OS X"),
+q_("for OS X"),
 q_("for Windows"));
 printf('
 	<h2>%s</h2>
