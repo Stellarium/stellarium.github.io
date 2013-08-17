@@ -71,7 +71,7 @@ printf('
 		    <a href="%s">%s <span>%s</span></a>
 		</div>
 		<div class="download pdf">
-		    <a href="%s">%s <span>%s; PDF</span></a>
+		    <a href="%s">%s <span>%s</span></a>
 		</div>
 		<div class="download nopdf">
 		    <a href="http://www.stellarium.org/wiki/index.php/Stellarium_User_Guide">%s <span>%s</span></a>
