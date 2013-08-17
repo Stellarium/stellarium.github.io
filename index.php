@@ -97,9 +97,9 @@ $download_link_beta,
 q_('Beta'),
 $next_version,
 $download_link_pdf,
-q_('User Guide'),
+q_('User guide'),
 $guide_version,
-q_('User Guide'),
+q_('User guide'),
 q_('wiki'));
 
 printf('  
