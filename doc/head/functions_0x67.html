@@ -15,7 +15,7 @@
  <tr style="height: 56px;">
   <td id="projectlogo"><img alt="Logo" src="stellarium-logo.png"/></td>
   <td style="padding-left: 0.5em;">
-   <div id="projectname">Stellarium 0.12.3</div>
+   <div id="projectname">Stellarium 0.13.0</div>
   </td>
  </tr>
  </tbody>
@@ -30,7 +30,6 @@
       <li><a href="codingStyle.html"><span>Coding&#160;Style</span></a></li>
       <li><a href="scripting.html"><span>Scripting</span></a></li>
       <li><a href="plugins.html"><span>Plugins</span></a></li>
-      <li><a href="renderer.html"><span>Renderer</span></a></li>
       <li><a href="fileStructure.html"><span>File&#160;Structure</span></a></li>
     </ul>
   </div>
@@ -89,11 +88,8 @@
 <li>GalCoordJ2000
 : <a class="el" href="classStelObject.html#acf243e7987796a3a44e409140ecea8c6a24b7b6dfea9df7fae340c733af14af03">StelObject</a>
 </li>
-<li>generateMipmaps()
-: <a class="el" href="structTextureParams.html#a8142480f245fa50806ebac7baf69e86a">TextureParams</a>
-</li>
-<li>get()
-: <a class="el" href="classStelTextureCache.html#a770f2a436617c6f700410c7679bc6df5">StelTextureCache&lt; TextureBackend &gt;</a>
+<li>generateMipmaps
+: <a class="el" href="structStelTexture_1_1StelTextureParams.html#a2b808fcdde8bad4bfe0f75ef1e73af1a">StelTexture::StelTextureParams</a>
 </li>
 <li>getAbsoluteImageURI()
 : <a class="el" href="classStelSkyImageTile.html#af7f7ec4ad2f78ba81eeb8137e8a0be7f">StelSkyImageTile</a>
@@ -163,15 +159,15 @@
 , <a class="el" href="classStelMainScriptAPI.html#a0bc13e7136707eaa2cde7875b2bc0c84">StelMainScriptAPI</a>
 </li>
 <li>getAppStelTranslator()
-: <a class="el" href="classStelLocaleMgr.html#a2e757ba44b26b61ef84b16aa6cd1137a">StelLocaleMgr</a>
+: <a class="el" href="classStelLocaleMgr.html#a7d30c9feee56d94014fbb3567e8689cd">StelLocaleMgr</a>
 </li>
 <li>getArea()
-: <a class="el" href="classSphericalPoint.html#a19947f00dcf804b181b2b297e7f3ed90">SphericalPoint</a>
-, <a class="el" href="classAllSkySphericalRegion.html#a569158c51aec3967830ca9354b0e4f3c">AllSkySphericalRegion</a>
+: <a class="el" href="classAllSkySphericalRegion.html#a569158c51aec3967830ca9354b0e4f3c">AllSkySphericalRegion</a>
 , <a class="el" href="classEmptySphericalRegion.html#adfc4da958020a33e638e14f17ac0dd10">EmptySphericalRegion</a>
 , <a class="el" href="classSphericalConvexPolygon.html#a2753b883d5421e283ab24b8f0a8e8bd6">SphericalConvexPolygon</a>
 , <a class="el" href="classSphericalRegion.html#a97e908421aee887ffca7b3a3d9248c0a">SphericalRegion</a>
 , <a class="el" href="classSphericalCap.html#ae0cb63210695514bb2fc9d5b9276b6db">SphericalCap</a>
+, <a class="el" href="classSphericalPoint.html#a19947f00dcf804b181b2b297e7f3ed90">SphericalPoint</a>
 </li>
 <li>getArtFadeDuration()
 : <a class="el" href="classConstellationMgr.html#ac51c282a6f3dd834ba4dc290f699898d">ConstellationMgr</a>
@@ -287,6 +283,7 @@
 </li>
 <li>getColor()
 : <a class="el" href="classMilkyWay.html#a4b139fc52a64c9414603f2b0e2bc4bcb">MilkyWay</a>
+, <a class="el" href="classStelPainter.html#aec37e115474effd66d49a85f425f4657">StelPainter</a>
 </li>
 <li>getColorAzimuthalGrid()
 : <a class="el" href="classGridLinesMgr.html#a4997421d72bd12537ce47e97684b7658">GridLinesMgr</a>
@@ -370,13 +367,7 @@
 : <a class="el" href="classStelApp.html#a8a9f66bc8e5d4094ca349bae530e5867">StelApp</a>
 </li>
 <li>getCursorTimeout()
-: <a class="el" href="classStelMainGraphicsView.html#a9442b8d74c81e678313073e7a06927c9">StelMainGraphicsView</a>
-</li>
-<li>getCustomEquationCoefficients()
-: <a class="el" href="classStelCore.html#ab73aebc4b78575b1c47fa6b13f466300">StelCore</a>
-</li>
-<li>getCustomNDot()
-: <a class="el" href="classStelCore.html#a2258892c48949b788dee429a44abffa7">StelCore</a>
+: <a class="el" href="classStelMainView.html#a0d816079eb2f69c270e902c21eb0dfd8">StelMainView</a>
 </li>
 <li>getCustomNebulaMagnitudeLimit()
 : <a class="el" href="classStelSkyDrawer.html#ae6a8531a857b24c9ee3c3cf5456684a4">StelSkyDrawer</a>
@@ -387,9 +378,6 @@
 <li>getCustomTzName()
 : <a class="el" href="classStelLocaleMgr.html#a28d1b83f5b07c776c743b29dbb6920b4">StelLocaleMgr</a>
 </li>
-<li>getCustomYear()
-: <a class="el" href="classStelCore.html#a99025d78a647c52204192ada22acea5c">StelCore</a>
-</li>
 <li>getDataSetCredits()
 : <a class="el" href="classStelSkyImageTile.html#acc5a1626abaa7de85bae34b554d99a6f">StelSkyImageTile</a>
 , <a class="el" href="classStelSkyPolygon.html#a262f944461ede0a91629d064933d8e47">StelSkyPolygon</a>
@@ -399,9 +387,6 @@
 </li>
 <li>getDateFormatStr()
 : <a class="el" href="classStelLocaleMgr.html#abb5ae0342ed016b177edc1f76cf41fa8">StelLocaleMgr</a>
-</li>
-<li>getDefaultAngleForGravityText()
-: <a class="el" href="classStelProjector.html#a2d76620cc5f9811f7f86fb8bc4c129a5">StelProjector</a>
 </li>
 <li>getDefaultAtmosphericExtinction()
 : <a class="el" href="classLandscape.html#acc060f935b44deeaafd0a62d0741c21a">Landscape</a>
@@ -433,6 +418,15 @@
 <li>getDeltaTAlgorithm()
 : <a class="el" href="classStelMainScriptAPI.html#a595e326c0c32b51d69716ee888f1c042">StelMainScriptAPI</a>
 </li>
+<li>getDeltaTCustomEquationCoefficients()
+: <a class="el" href="classStelCore.html#aab67449ae293798e149781bb4ea4505b">StelCore</a>
+</li>
+<li>getDeltaTCustomNDot()
+: <a class="el" href="classStelCore.html#aa1d63795db676c3755dba65f349abff1">StelCore</a>
+</li>
+<li>getDeltaTCustomYear()
+: <a class="el" href="classStelCore.html#a14a590b814494d88d27b51bd5871dfd2">StelCore</a>
+</li>
 <li>getDescription()
 : <a class="el" href="classLandscape.html#a029c2287966b508c04d4d3592b0e2f90">Landscape</a>
 , <a class="el" href="classLandscapeMgr.html#abda7f8795aaa1c7802f3c845893ac068">LandscapeMgr</a>
@@ -454,8 +448,7 @@
 : <a class="el" href="classStelFileMgr.html#a73c8fbee5e0b7a03a3e4f0fc9a8293cf">StelFileMgr</a>
 </li>
 <li>getDimensions()
-: <a class="el" href="classStelTextureBackend.html#a20b4c4fdbdf216e9e8e8c4b9dd439b63">StelTextureBackend</a>
-, <a class="el" href="classStelTextureNew.html#a589739af9e741849371ba27a6851f303">StelTextureNew</a>
+: <a class="el" href="classStelTexture.html#a7c9495b583a5d7f37cbb1b69f2bc7f93">StelTexture</a>
 </li>
 <li>getDiskViewport()
 : <a class="el" href="classStelMainScriptAPI.html#a7a7c4be89d0bcef7c18a9549b61b1d8d">StelMainScriptAPI</a>
@@ -469,14 +462,8 @@
 <li>getDistanceToPlanet()
 : <a class="el" href="classSolarSystem.html#af70836c83532a6094102f468cf00abda">SolarSystem</a>
 </li>
-<li>getDrawStarsAsPoints()
-: <a class="el" href="classStelSkyDrawer.html#a459fc525249b3553d28a16e90382daad">StelSkyDrawer</a>
-</li>
 <li>getEarth()
 : <a class="el" href="classSolarSystem.html#a9d5bbde466a35b9233e7de4d7f7b28b1">SolarSystem</a>
-</li>
-<li>getEclipseFactor()
-: <a class="el" href="classSolarSystem.html#a37e598ccb8f4739eb624f2ff63d16a92">SolarSystem</a>
 </li>
 <li>getEclipticPos()
 : <a class="el" href="classPlanet.html#a4f738e354018c9829293512c009c7427">Planet</a>
@@ -499,8 +486,7 @@
 : <a class="el" href="classStelObject.html#ad39823329dc29bb49247e23d158d8a02">StelObject</a>
 </li>
 <li>getErrorMessage()
-: <a class="el" href="classStelTextureBackend.html#a8ab4f68d163460d5ceafd44e1ab0d966">StelTextureBackend</a>
-, <a class="el" href="classStelTextureNew.html#ae48d9b0c0bc45f7187ea40ebb357a192">StelTextureNew</a>
+: <a class="el" href="classStelTexture.html#aefebdf15ae3d9fa0ced76b44f08e9228">StelTexture</a>
 </li>
 <li>getExtinction()
 : <a class="el" href="classStelSkyDrawer.html#a4aaafa71327faad7512880ccc9307dcc">StelSkyDrawer</a>
@@ -511,13 +497,12 @@
 <li>getFadeDuration()
 : <a class="el" href="classAtmosphere.html#a862cdcbca885785d40dff49e12aeae40">Atmosphere</a>
 </li>
-<li>getFillPrimitiveType()
-: <a class="el" href="classSphericalRegion.html#a238cf717c4ddce2ea6066c030a86e02a">SphericalRegion</a>
-, <a class="el" href="classSphericalConvexPolygon.html#af8b8276073b1695ae4482000be8e6aff">SphericalConvexPolygon</a>
-</li>
-<li>getFillVertexPositions()
-: <a class="el" href="classSphericalRegion.html#a2ed81646133b3d07ee1c43ca15b0c867">SphericalRegion</a>
-, <a class="el" href="classSphericalConvexPolygon.html#a4e25ccfde8fd9961057bbb81602014ab">SphericalConvexPolygon</a>
+<li>getFillVertexArray()
+: <a class="el" href="classOctahedronPolygon.html#adc9a973ce22a995672f416f262de7d51">OctahedronPolygon</a>
+, <a class="el" href="classSphericalRegion.html#acb324208a5aa3e1190e01842166adb84">SphericalRegion</a>
+, <a class="el" href="classSphericalConvexPolygon.html#a6929629aa21cf1ff1be77367c4fd884a">SphericalConvexPolygon</a>
+, <a class="el" href="classSphericalTexturedPolygon.html#a15e573abab64907e27b2315db3da8c91">SphericalTexturedPolygon</a>
+, <a class="el" href="classSphericalTexturedConvexPolygon.html#a5991684354597a8b13b02bf2029fed74">SphericalTexturedConvexPolygon</a>
 </li>
 <li>getFlagArt()
 : <a class="el" href="classConstellationMgr.html#a766122c735b92fa2b59327d0bfb9c632">ConstellationMgr</a>
@@ -538,7 +523,7 @@
 : <a class="el" href="classLandscapeMgr.html#af72ce87579275690e3c73c9c697ae696">LandscapeMgr</a>
 </li>
 <li>getFlagCursorTimeout()
-: <a class="el" href="classStelMainGraphicsView.html#a8f5069c2fdc3b459b6207f7dcc0f61eb">StelMainGraphicsView</a>
+: <a class="el" href="classStelMainView.html#affa3a5a203f70775d70a187200a0e991">StelMainView</a>
 </li>
 <li>getFlagEclipticJ2000Grid()
 : <a class="el" href="classGridLinesMgr.html#aa185130bbd2f74f6456c914fb55b61b7">GridLinesMgr</a>
@@ -591,7 +576,7 @@
 : <a class="el" href="classGridLinesMgr.html#a17f6bbcfabc8c20322ad630a998cdbaa">GridLinesMgr</a>
 </li>
 <li>getFlagInvertScreenShotColors()
-: <a class="el" href="classStelMainGraphicsView.html#aec907f4fa4bbc9a97685f2fdb9bea78a">StelMainGraphicsView</a>
+: <a class="el" href="classStelMainView.html#adc9000437e702c1c5e3064f014b62e3d">StelMainView</a>
 </li>
 <li>getFlagIsolateSelected()
 : <a class="el" href="classConstellationMgr.html#a3d6728c647713cb891735902676025c1">ConstellationMgr</a>
@@ -640,6 +625,9 @@
 <li>getFlagPlanets()
 : <a class="el" href="classSolarSystem.html#acc42f4784b6c666079c38c01b5ff2817">SolarSystem</a>
 </li>
+<li>getFlagPointStar()
+: <a class="el" href="classStelSkyDrawer.html#a2fd3735dd27ba89d5927c3303bac697a">StelSkyDrawer</a>
+</li>
 <li>getFlagSelectedObjectPointer()
 : <a class="el" href="classStelObjectMgr.html#abaeb7becf21798c7b4b30192023adf51">StelObjectMgr</a>
 </li>
@@ -682,6 +670,9 @@
 <li>getFlipVert()
 : <a class="el" href="classStelCore.html#ae2d3d3624bf88ef60c08271a27d4a2b5">StelCore</a>
 </li>
+<li>getFontMetrics()
+: <a class="el" href="classStelPainter.html#a8656ede6c2203d773dfd3eed0a2035cb">StelPainter</a>
+</li>
 <li>getFontSize()
 : <a class="el" href="classConstellationMgr.html#a839cb04972c36e4916ffd121e6b3da91">ConstellationMgr</a>
 </li>
@@ -694,8 +685,8 @@
 <li>getFrameType()
 : <a class="el" href="classStelSkyLayer.html#abf7240ebb7e3ec71c2b5439bde96dbbb">StelSkyLayer</a>
 </li>
-<li>getFullScreen()
-: <a class="el" href="classStelMainWindow.html#ad95299fe0dc76cc042240863129ce8f4">StelMainWindow</a>
+<li>getFullPath()
+: <a class="el" href="classStelTexture.html#ac288fffa75234d6c7c43c5d030757e5a">StelTexture</a>
 </li>
 <li>getGcvsEpoch()
 : <a class="el" href="classStarMgr.html#a28c601fd166a16abd6ef039f1aa67cad">StarMgr</a>
@@ -724,19 +715,6 @@
 <li>getGcvsVariabilityType()
 : <a class="el" href="classStarMgr.html#a6a0f3bb0ea94f3a9a41b93ccbcdadc86">StarMgr</a>
 </li>
-<li>getGLContext()
-: <a class="el" href="classStelQGLRenderer.html#aee30f6eefc37e833e0f97670725668b6">StelQGLRenderer</a>
-</li>
-<li>getGLFunctions()
-: <a class="el" href="classStelQGLRenderer.html#a5c737e46005a252a9e3db95c39537a6e">StelQGLRenderer</a>
-</li>
-<li>getGlobalColor()
-: <a class="el" href="classStelQGLRenderer.html#a2428f2d0bb053460d21e172b6fc8e46d">StelQGLRenderer</a>
-</li>
-<li>getGLSLProjector()
-: <a class="el" href="classStelProjector.html#ab7de38594cb23171a40b2a60aa5cc838">StelProjector</a>
-, <a class="el" href="classStelProjectorStereographic.html#a6bcd6ccef4a200bdf67bebcbde160438">StelProjectorStereographic</a>
-</li>
 <li>getGMTShift()
 : <a class="el" href="classStelLocaleMgr.html#aac49ee2fd497a75c8e5b634a7a8a40fc">StelLocaleMgr</a>
 </li>
@@ -761,13 +739,6 @@
 <li>getImageWidth()
 : <a class="el" href="classScreenImageMgr.html#a6502c6b7665c2f9973d47f2d9dfad4ba">ScreenImageMgr</a>
 </li>
-<li>getIndex()
-: <a class="el" href="classStelIndexBuffer.html#a1478fd97dfa333e7c164e9bce15df43a">StelIndexBuffer</a>
-</li>
-<li>getIndex_()
-: <a class="el" href="classStelIndexBuffer.html#ae6075961de9197c8243674a6af35a274">StelIndexBuffer</a>
-, <a class="el" href="classStelQGLIndexBuffer.html#a8f134425dd18dd53f91e3619f5c289a7">StelQGLIndexBuffer</a>
-</li>
 <li>getInfoColor()
 : <a class="el" href="classNebula.html#a0201e9fda26a47b41933924bee060c9d">Nebula</a>
 , <a class="el" href="classPlanet.html#abc84a3cd305ceed6fef2163d2082346b">Planet</a>
@@ -775,13 +746,13 @@
 , <a class="el" href="classStelObject.html#a1a86802fb75967e085f2c6b025743e08">StelObject</a>
 </li>
 <li>getInfoString()
-: <a class="el" href="classComet.html#a27c97603a0d7d27f229906eaee87d3f5">Comet</a>
+: <a class="el" href="classStelObject.html#aba01f4a7783fb557cb28bd8d1319a6b8">StelObject</a>
+, <a class="el" href="classComet.html#a27c97603a0d7d27f229906eaee87d3f5">Comet</a>
 , <a class="el" href="classMinorPlanet.html#a6ba2fb1ca790edbbe36f718ebf3444b8">MinorPlanet</a>
 , <a class="el" href="classNebula.html#ae905ee3f6c8a7097336ebd2cf4cca3ad">Nebula</a>
 , <a class="el" href="classPlanet.html#ad1b79eabc38f21d1972242455875bcc0">Planet</a>
 , <a class="el" href="classBigStarCatalogExtension_1_1StarWrapperBase.html#afe2979c912fe9e3eda64e5b281b276c8">BigStarCatalogExtension::StarWrapperBase</a>
 , <a class="el" href="classBigStarCatalogExtension_1_1StarWrapper1.html#af04d571e7140f73044b3c4a12066b12a">BigStarCatalogExtension::StarWrapper1</a>
-, <a class="el" href="classStelObject.html#aba01f4a7783fb557cb28bd8d1319a6b8">StelObject</a>
 </li>
 <li>getInitFov()
 : <a class="el" href="classStelMovementMgr.html#ab02c7826d6de57dc5ed84a77c39b4e96">StelMovementMgr</a>
@@ -800,8 +771,7 @@
 </li>
 <li>getInstance()
 : <a class="el" href="classStelApp.html#a1737cdc7266e4ecc8f2f259048e6f1b6">StelApp</a>
-, <a class="el" href="classStelMainGraphicsView.html#af3f357b1eb43f765474a639b41f9d005">StelMainGraphicsView</a>
-, <a class="el" href="classStelMainWindow.html#a025ded6d7bb53278d58adc214190c181">StelMainWindow</a>
+, <a class="el" href="classStelMainView.html#ad66302bd97f1b3bee7a5207907212350">StelMainView</a>
 </li>
 <li>getIntensity()
 : <a class="el" href="classMilkyWay.html#a5ae25086f8c1da4caa159292f0d5385f">MilkyWay</a>
@@ -817,9 +787,9 @@
 </li>
 <li>getJ2000EquatorialPos()
 : <a class="el" href="classPlanet.html#ae65ddf7e5855d54fb03d5fa335c225e7">Planet</a>
-, <a class="el" href="classNebula.html#a3ba01b6c6aa1f0732e1c7a274ec017e1">Nebula</a>
 , <a class="el" href="classBigStarCatalogExtension_1_1StarWrapper.html#abe0ec5edfba5291d88d89212fa946730">BigStarCatalogExtension::StarWrapper&lt; Star &gt;</a>
 , <a class="el" href="classStelObject.html#a50ac8b2a9be97d2cf58987c58af6b740">StelObject</a>
+, <a class="el" href="classNebula.html#a3ba01b6c6aa1f0732e1c7a274ec017e1">Nebula</a>
 </li>
 <li>getJ2000GalacticPos()
 : <a class="el" href="classStelObject.html#a1ee534f525fd35fca73a520347eecd8b">StelObject</a>
@@ -866,6 +836,9 @@
 <li>getLicense()
 : <a class="el" href="classStelScriptMgr.html#ab6f4c29b9143939d2cb8e43a1d3180be">StelScriptMgr</a>
 </li>
+<li>getLight()
+: <a class="el" href="classStelPainter.html#a68a05626a7cb510d8023c56b9a90a755">StelPainter</a>
+</li>
 <li>getLightPollutionLuminance()
 : <a class="el" href="classAtmosphere.html#ab17cf17b2332cf5069fc04a429b56693">Atmosphere</a>
 </li>
@@ -877,9 +850,6 @@
 </li>
 <li>getLinesColor()
 : <a class="el" href="classConstellationMgr.html#acc607afa70e80de657c23f834b24b0ff">ConstellationMgr</a>
-</li>
-<li>getLoaderThread()
-: <a class="el" href="classStelQGLRenderer.html#a12dd97f5b756dca928ccb75517928bda">StelQGLRenderer</a>
 </li>
 <li>getLocaleDir()
 : <a class="el" href="classStelFileMgr.html#af7b68868fc5ccaea46c18df8bfd89788">StelFileMgr</a>
@@ -897,31 +867,31 @@
 : <a class="el" href="classStelLogger.html#a04e11e219ca434857f35612d1921cb4d">StelLogger</a>
 </li>
 <li>getLuminance()
-: <a class="el" href="classSkybright.html#a6837a7d3f2fa13e236e0d3b7ebf171e6">Skybright</a>
-, <a class="el" href="classLandscapeMgr.html#ae805f14bf51fc63bc9fc8c30096fe3bd">LandscapeMgr</a>
+: <a class="el" href="classLandscapeMgr.html#ae805f14bf51fc63bc9fc8c30096fe3bd">LandscapeMgr</a>
+, <a class="el" href="classSkybright.html#a6837a7d3f2fa13e236e0d3b7ebf171e6">Skybright</a>
 </li>
 <li>getMainScriptAPIProxy()
-: <a class="el" href="classStelMainGraphicsView.html#a51c32f28f3f79ba8820fb721c4def1ad">StelMainGraphicsView</a>
+: <a class="el" href="classStelApp.html#a4253c388363ed41cadbd0ad443f808bf">StelApp</a>
 </li>
 <li>getMaskType()
 : <a class="el" href="classStelProjector.html#a5e7e14d3765d30313eaadf0a25cf7511">StelProjector</a>
 </li>
 <li>getMaxFov()
-: <a class="el" href="classStelProjector.html#aef4aa6a98699023c1a7ebc998d71db73">StelProjector</a>
+: <a class="el" href="classStelMovementMgr.html#a3d84cb3fd7490076ea5ce26447ea9277">StelMovementMgr</a>
+, <a class="el" href="classStelProjector.html#aef4aa6a98699023c1a7ebc998d71db73">StelProjector</a>
 , <a class="el" href="classStelProjectorPerspective.html#af4df18148df7b09f39539ffd006242b0">StelProjectorPerspective</a>
 , <a class="el" href="classStelProjectorEqualArea.html#a4a59719f5dc8854029dd1f0b439563f9">StelProjectorEqualArea</a>
+, <a class="el" href="classStelProjectorStereographic.html#a7f65202ea01470ad7733f23c9c3eac89">StelProjectorStereographic</a>
 , <a class="el" href="classStelProjectorFisheye.html#a71cda372dac57e190bf05c6bf67200e6">StelProjectorFisheye</a>
 , <a class="el" href="classStelProjectorHammer.html#aeee07d039673f395d5cc327bde8f9ec3">StelProjectorHammer</a>
-, <a class="el" href="classStelProjectorCylinder.html#a8d424aae3da4c6e5b39f8cbd13077833">StelProjectorCylinder</a>
 , <a class="el" href="classStelProjectorMercator.html#ab5dfcf4967a4e2fec203cf3609583d91">StelProjectorMercator</a>
 , <a class="el" href="classStelProjectorOrthographic.html#ae02ff8ecc9b5981a3ecc444069c9ebde">StelProjectorOrthographic</a>
 , <a class="el" href="classStelProjector2d.html#a5a9b64f6ce22311df593dcc6798f8278">StelProjector2d</a>
-, <a class="el" href="classStelProjectorStereographic.html#a7f65202ea01470ad7733f23c9c3eac89">StelProjectorStereographic</a>
-, <a class="el" href="classStelMovementMgr.html#a3d84cb3fd7490076ea5ce26447ea9277">StelMovementMgr</a>
+, <a class="el" href="classStelProjectorCylinder.html#a8d424aae3da4c6e5b39f8cbd13077833">StelProjectorCylinder</a>
 </li>
 <li>getMaxFps()
-: <a class="el" href="classStelMainScriptAPI.html#a22bff84128d95375070fcd5ab97aec80">StelMainScriptAPI</a>
-, <a class="el" href="classStelMainGraphicsView.html#ad0ec77fadc47780e47e790850c5e6770">StelMainGraphicsView</a>
+: <a class="el" href="classStelMainView.html#a76cafa379753fddc95f03ae39108050a">StelMainView</a>
+, <a class="el" href="classStelMainScriptAPI.html#a22bff84128d95375070fcd5ab97aec80">StelMainScriptAPI</a>
 </li>
 <li>getMeanSolarDay()
 : <a class="el" href="classPlanet.html#a6ed6070f5351d101898d970d47fb3091">Planet</a>
@@ -930,8 +900,8 @@
 : <a class="el" href="classStelMainScriptAPI.html#a570b7146cd0786b09451da79b90bc39b">StelMainScriptAPI</a>
 </li>
 <li>getMinFps()
-: <a class="el" href="classStelMainScriptAPI.html#a7f5dc139d225e4326bf50993f533d6f5">StelMainScriptAPI</a>
-, <a class="el" href="classStelMainGraphicsView.html#a0b243586944e4d88b7f78c411acbd0c6">StelMainGraphicsView</a>
+: <a class="el" href="classStelMainView.html#a93f5301d3debb5afb45ce93befbba337">StelMainView</a>
+, <a class="el" href="classStelMainScriptAPI.html#a7f5dc139d225e4326bf50993f533d6f5">StelMainScriptAPI</a>
 </li>
 <li>getMJDay()
 : <a class="el" href="classStelCore.html#a5470e4d6de0c1f469931d9d07bd2b600">StelCore</a>
@@ -962,42 +932,38 @@
 : <a class="el" href="classSolarSystem.html#a1cd314c397564d728851a50e55ba2549">SolarSystem</a>
 </li>
 <li>getMountMode()
-: <a class="el" href="classStelMovementMgr.html#a740b1d42b228123f56cd7c8263658a0a">StelMovementMgr</a>
-, <a class="el" href="classStelMainScriptAPI.html#a666d63da1e08ecacb60528654d375c0a">StelMainScriptAPI</a>
+: <a class="el" href="classStelMainScriptAPI.html#a666d63da1e08ecacb60528654d375c0a">StelMainScriptAPI</a>
+, <a class="el" href="classStelMovementMgr.html#a740b1d42b228123f56cd7c8263658a0a">StelMovementMgr</a>
 </li>
 <li>getName()
 : <a class="el" href="classLandscape.html#a9f7d146a94f9bfb6c4145a2b2ad4afd4">Landscape</a>
-, <a class="el" href="classStelTextureBackend.html#ae0126c523a20d6d9ae7e8f4fb711ee03">StelTextureBackend</a>
 , <a class="el" href="classStelScriptMgr.html#a11e4190d39e133bc58b4de157238fbe7">StelScriptMgr</a>
 </li>
 <li>getNameI18()
-: <a class="el" href="classStelProjectorPerspective.html#ad026077963dc70295adc7fde37f10d52">StelProjectorPerspective</a>
+: <a class="el" href="classStelProjectorMercator.html#a9bc7293d0b3995519d6ebe1513ae4887">StelProjectorMercator</a>
+, <a class="el" href="classStelProjectorFisheye.html#ad4fb4d738ae4dff77bb2a58e05e97860">StelProjectorFisheye</a>
+, <a class="el" href="classStelProjector.html#ad14bc5f424a0e88e8b52c555d229b430">StelProjector</a>
+, <a class="el" href="classStelProjectorCylinder.html#a1a131459ceb18ba997af9c12e4c15680">StelProjectorCylinder</a>
+, <a class="el" href="classStelProjectorPerspective.html#ad026077963dc70295adc7fde37f10d52">StelProjectorPerspective</a>
 , <a class="el" href="classStelProjectorEqualArea.html#a2cc375ce90302acc598b7043defdef32">StelProjectorEqualArea</a>
 , <a class="el" href="classStelProjectorStereographic.html#ae78583b6503aaf496a4bff4f3595704a">StelProjectorStereographic</a>
 , <a class="el" href="classStelProjectorHammer.html#a6eeff517687719b299d8c96b73b178c8">StelProjectorHammer</a>
-, <a class="el" href="classStelProjectorCylinder.html#a1a131459ceb18ba997af9c12e4c15680">StelProjectorCylinder</a>
-, <a class="el" href="classStelProjectorMercator.html#a9bc7293d0b3995519d6ebe1513ae4887">StelProjectorMercator</a>
-, <a class="el" href="classStelProjectorOrthographic.html#ae62d7f86ccc04ce754c0f089f34fe1ef">StelProjectorOrthographic</a>
 , <a class="el" href="classStelProjector2d.html#a78ac06f178892cb9586495fb8837f8e8">StelProjector2d</a>
-, <a class="el" href="classStelProjectorFisheye.html#ad4fb4d738ae4dff77bb2a58e05e97860">StelProjectorFisheye</a>
-, <a class="el" href="classStelProjector.html#ad14bc5f424a0e88e8b52c555d229b430">StelProjector</a>
+, <a class="el" href="classStelProjectorOrthographic.html#ae62d7f86ccc04ce754c0f089f34fe1ef">StelProjectorOrthographic</a>
 </li>
 <li>getNameI18n()
-: <a class="el" href="classNebula.html#a867f6e685a178a75bc8a650ca93bec8b">Nebula</a>
-, <a class="el" href="classPlanet.html#a5d4a12ac26bb3f8870cc8a0bf62b8583">Planet</a>
+: <a class="el" href="classStelObject.html#ad10fa1bc85e91eb812f9451a07a1c862">StelObject</a>
+, <a class="el" href="classNebula.html#a867f6e685a178a75bc8a650ca93bec8b">Nebula</a>
 , <a class="el" href="classBigStarCatalogExtension_1_1StarWrapper.html#a1af41b90409ef16370ef657943b954ef">BigStarCatalogExtension::StarWrapper&lt; Star &gt;</a>
-, <a class="el" href="classStelObject.html#ad10fa1bc85e91eb812f9451a07a1c862">StelObject</a>
+, <a class="el" href="classPlanet.html#a5d4a12ac26bb3f8870cc8a0bf62b8583">Planet</a>
 , <a class="el" href="classBigStarCatalogExtension_1_1StarWrapperBase.html#a88592e7e0acf5dbc21e29db6e012abc5">BigStarCatalogExtension::StarWrapperBase</a>
 </li>
 <li>getNetworkAccessManager()
 : <a class="el" href="classStelApp.html#ab2dfd74ede88a5b4902512e883f05965">StelApp</a>
 </li>
-<li>getNext()
-: <a class="el" href="classStelRendererStatistics.html#a4c7f8b47f97bf7fc2f6c834bf95ae146">StelRendererStatistics</a>
-</li>
 <li>getNextObserver()
-: <a class="el" href="classStelObserver.html#ad46a5d519765e2938f2b20db07af6ac4">StelObserver</a>
-, <a class="el" href="classSpaceShipObserver.html#abaa59b95f4e76e61265fa4a32a6cc353">SpaceShipObserver</a>
+: <a class="el" href="classSpaceShipObserver.html#abaa59b95f4e76e61265fa4a32a6cc353">SpaceShipObserver</a>
+, <a class="el" href="classStelObserver.html#ad46a5d519765e2938f2b20db07af6ac4">StelObserver</a>
 </li>
 <li>getNightMode()
 : <a class="el" href="classStelMainScriptAPI.html#a0ae090f385500eb4744f8dbaecc92da9">StelMainScriptAPI</a>
@@ -1019,31 +985,20 @@
 : <a class="el" href="classStelMainScriptAPI.html#a1107f0b9fbf67b80d4d266e122fe5eef">StelMainScriptAPI</a>
 </li>
 <li>getOctahedronPolygon()
-: <a class="el" href="classSphericalCap.html#a46b4774f348e0d0bb3ca4d271459b3f4">SphericalCap</a>
-, <a class="el" href="classEmptySphericalRegion.html#aeea4632c114769fd42afd193944472cf">EmptySphericalRegion</a>
-, <a class="el" href="classSphericalRegion.html#ad06172d2d701a722a889a6cb21c8617a">SphericalRegion</a>
-, <a class="el" href="classAllSkySphericalRegion.html#afd91b03480d0cbe8b9e24fac627b6e5f">AllSkySphericalRegion</a>
-, <a class="el" href="classSphericalPolygon.html#a74b5c4612bc14910b6c1a6403d2b83a9">SphericalPolygon</a>
+: <a class="el" href="classSphericalPolygon.html#a74b5c4612bc14910b6c1a6403d2b83a9">SphericalPolygon</a>
+, <a class="el" href="classSphericalCap.html#a46b4774f348e0d0bb3ca4d271459b3f4">SphericalCap</a>
 , <a class="el" href="classSphericalPoint.html#a4ca0a369d797832de406f6caaa8ecdde">SphericalPoint</a>
+, <a class="el" href="classSphericalRegion.html#ad06172d2d701a722a889a6cb21c8617a">SphericalRegion</a>
+, <a class="el" href="classEmptySphericalRegion.html#aeea4632c114769fd42afd193944472cf">EmptySphericalRegion</a>
+, <a class="el" href="classAllSkySphericalRegion.html#afd91b03480d0cbe8b9e24fac627b6e5f">AllSkySphericalRegion</a>
 , <a class="el" href="classSphericalConvexPolygon.html#a76b1fc7b0aefcd7c5f5b2fca2fee4900">SphericalConvexPolygon</a>
 </li>
 <li>getOrbitsColor()
 : <a class="el" href="classSolarSystem.html#a4d0933f3ed314a781df63e4a7ffaf7a7">SolarSystem</a>
 </li>
-<li>getOutlinePrimitiveType()
-: <a class="el" href="classSphericalRegion.html#a6ae0211e968dcd622f02d80595093f77">SphericalRegion</a>
-, <a class="el" href="classSphericalConvexPolygon.html#a10eeeab2fb08aaa1c3c83f962d02db57">SphericalConvexPolygon</a>
-</li>
-<li>getOutlineVertexPositions()
-: <a class="el" href="classSphericalConvexPolygon.html#a3b5fe5b0b1896460a0e28b83a87aa628">SphericalConvexPolygon</a>
-, <a class="el" href="classSphericalRegion.html#ac455c127225da9667aad9b621d7ecbfe">SphericalRegion</a>
-</li>
-<li>getPaintEngineType()
-: <a class="el" href="classStelQGLWidget.html#a16b283594235a3aeac0b706a9953a975">StelQGLWidget</a>
-</li>
-<li>getPainter()
-: <a class="el" href="classStelRenderClient.html#a8b2dd07b2e23d95f8891aac8194a4256">StelRenderClient</a>
-, <a class="el" href="classStelQGLViewport.html#ae848d646928878546f4f50f0b72a5851">StelQGLViewport</a>
+<li>getOutlineVertexArray()
+: <a class="el" href="classSphericalRegion.html#abc662874e4f1ae2744c4ac0abcdaf659">SphericalRegion</a>
+, <a class="el" href="classSphericalConvexPolygon.html#a6163cd7eeafc1c904d92dedfeec3acf1">SphericalConvexPolygon</a>
 </li>
 <li>getPartnerTriangle()
 : <a class="el" href="classStelGeodesicGrid.html#a25ccf8d6e4cfb290f26ca1956ffd25ca">StelGeodesicGrid</a>
@@ -1061,7 +1016,7 @@
 : <a class="el" href="classSolarSystem.html#ab3635b90421a4bcec4a9368837c84a9d">SolarSystem</a>
 </li>
 <li>getPlanetVMagnitude()
-: <a class="el" href="classSolarSystem.html#a4af98b138c9cd4e6b3c33730736f4628">SolarSystem</a>
+: <a class="el" href="classSolarSystem.html#a2194ab0d6984532153763cf09cf6a367">SolarSystem</a>
 </li>
 <li>getPluginInfo()
 : <a class="el" href="classStelPluginInterface.html#a1708440c0e5754bfaecbd1b2bbde8afa">StelPluginInterface</a>
@@ -1070,12 +1025,12 @@
 : <a class="el" href="classStelModuleMgr.html#aa5031a821f0b81ee3f991e19d660900c">StelModuleMgr</a>
 </li>
 <li>getPointInside()
-: <a class="el" href="classSphericalCap.html#a44fb7a59326f76e3df214efc856ca172">SphericalCap</a>
-, <a class="el" href="classSphericalRegion.html#ada8685bc10fde6ea9dc8a8c6bf4a4f15">SphericalRegion</a>
-, <a class="el" href="classEmptySphericalRegion.html#a8da8f32f485a5e7a1003d5d1505d4bad">EmptySphericalRegion</a>
+: <a class="el" href="classEmptySphericalRegion.html#a8da8f32f485a5e7a1003d5d1505d4bad">EmptySphericalRegion</a>
 , <a class="el" href="classSphericalConvexPolygon.html#a7799c94e208084f3047115b874e1cf9d">SphericalConvexPolygon</a>
-, <a class="el" href="classSphericalPoint.html#ae9880ac26766632b3166746a70d1a538">SphericalPoint</a>
 , <a class="el" href="classAllSkySphericalRegion.html#ab56382a9fe17baeac3901444b98f5928">AllSkySphericalRegion</a>
+, <a class="el" href="classSphericalRegion.html#ada8685bc10fde6ea9dc8a8c6bf4a4f15">SphericalRegion</a>
+, <a class="el" href="classSphericalPoint.html#ae9880ac26766632b3166746a70d1a538">SphericalPoint</a>
+, <a class="el" href="classSphericalCap.html#a44fb7a59326f76e3df214efc856ca172">SphericalCap</a>
 </li>
 <li>getPositionInfoString()
 : <a class="el" href="classStelObject.html#a6a933b2209cbf40611e1d2954f445bd0">StelObject</a>
@@ -1083,18 +1038,11 @@
 <li>getPresetSkyTime()
 : <a class="el" href="classStelCore.html#abf5a38afea64ba98be9e8edaf6e0fc54">StelCore</a>
 </li>
-<li>getPrimitiveType()
-: <a class="el" href="classStelQGLInterleavedArrayVertexBufferBackend.html#a85b2826c266236c5fe9dda0a8cee069a">StelQGLInterleavedArrayVertexBufferBackend</a>
-, <a class="el" href="classStelQGLArrayVertexBufferBackend.html#a6959bf99da9850faf1e07d41bb557cb3">StelQGLArrayVertexBufferBackend</a>
-</li>
 <li>getPrintableDateLocal()
 : <a class="el" href="classStelLocaleMgr.html#af6555f4214ecd02e79ddd657bf616af2">StelLocaleMgr</a>
 </li>
 <li>getPrintableTimeLocal()
 : <a class="el" href="classStelLocaleMgr.html#a56fa87381d7cb71956ab5e707b5df431">StelLocaleMgr</a>
-</li>
-<li>getProgram()
-: <a class="el" href="classStelQGLGLSLShader.html#a932c0f77d67e910b5b59df7183883fa0">StelQGLGLSLShader</a>
 </li>
 <li>getProjectionMatrix()
 : <a class="el" href="classStelProjector.html#ac5ed8c1dee639ea636af5fbf3572a7ac">StelProjector</a>
@@ -1102,9 +1050,12 @@
 <li>getProjectionMode()
 : <a class="el" href="classStelMainScriptAPI.html#aac21fcde3b4ad5af5542f21be8e00c08">StelMainScriptAPI</a>
 </li>
+<li>getProjector()
+: <a class="el" href="classStelPainter.html#ad286c7f6a3bc2d91ab3d09396e21eca7">StelPainter</a>
+</li>
 <li>getRadius()
-: <a class="el" href="classPlanet.html#ab297f4794cd089c343f60688911ac350">Planet</a>
-, <a class="el" href="classSphericalCap.html#a8a72cd4829cb85e342a336cf6f3185c8">SphericalCap</a>
+: <a class="el" href="classSphericalCap.html#a8a72cd4829cb85e342a336cf6f3185c8">SphericalCap</a>
+, <a class="el" href="classPlanet.html#ab297f4794cd089c343f60688911ac350">Planet</a>
 </li>
 <li>getRealDisplayIntensityFactor()
 : <a class="el" href="classAtmosphere.html#a9423873b685a4f74ad294f062143ff9b">Atmosphere</a>
@@ -1122,9 +1073,6 @@
 </li>
 <li>getRelativeStarScale()
 : <a class="el" href="classStelSkyDrawer.html#ad0a78f4f20febb601c92528734d9f18b">StelSkyDrawer</a>
-</li>
-<li>getRenderSolarShadows()
-: <a class="el" href="classStelApp.html#a5aa80ec478bc2349c8cb5567aef8b830">StelApp</a>
 </li>
 <li>getSatellitesFov()
 : <a class="el" href="classPlanet.html#a2df5e6c9fe0ff09c004f46498d06734c">Planet</a>
@@ -1146,7 +1094,7 @@
 : <a class="el" href="classStelMainScriptAPI.html#a7999c0bc8eaf976575751e310d85625d">StelMainScriptAPI</a>
 </li>
 <li>getScriptMgr()
-: <a class="el" href="classStelMainGraphicsView.html#acbe753cafc91d00d256bd960590bb4a9">StelMainGraphicsView</a>
+: <a class="el" href="classStelApp.html#abd2dd9d5a13790de767c3d9e2a956d7d">StelApp</a>
 </li>
 <li>getScriptRate()
 : <a class="el" href="classStelMainScriptAPI.html#ad563c4e43a814fac7e816f7928fc2c0e">StelMainScriptAPI</a>
@@ -1156,30 +1104,27 @@
 : <a class="el" href="classStelFileMgr.html#a3deb0d7cea992284b1b68f25f5ae9015">StelFileMgr</a>
 </li>
 <li>getSelectedObject()
-: <a class="el" href="classStelObjectMgr.html#a498ebf4f26aa50fb822287c6ae9aa6e2">StelObjectMgr</a>
+: <a class="el" href="classStelObjectMgr.html#aa4fb66c731ba2d674bb4875138d991c3">StelObjectMgr</a>
 </li>
 <li>getSelectedObjectInfo()
 : <a class="el" href="classStelMainScriptAPI.html#a2dc0768e3a57abf27cddaebe0b52dc97">StelMainScriptAPI</a>
 </li>
 <li>getSelectPriority()
 : <a class="el" href="classStelObject.html#a26ba0e74dced566a323e620122850d40">StelObject</a>
+, <a class="el" href="classBigStarCatalogExtension_1_1StarWrapper.html#a59f265cde11f80433cd43c8cd3d53267">BigStarCatalogExtension::StarWrapper&lt; Star &gt;</a>
 , <a class="el" href="classPlanet.html#aa13ac10f68ed97950beac7abf2fc9bcf">Planet</a>
 , <a class="el" href="classNebula.html#a75f7a182434e3340cdcd0f0b624e5e20">Nebula</a>
-, <a class="el" href="classBigStarCatalogExtension_1_1StarWrapper.html#a59f265cde11f80433cd43c8cd3d53267">BigStarCatalogExtension::StarWrapper&lt; Star &gt;</a>
 </li>
 <li>getServerCredits()
-: <a class="el" href="classStelSkyPolygon.html#a57dceecbaaaffcc29ca5903f5b9e1099">StelSkyPolygon</a>
-, <a class="el" href="classStelSkyImageTile.html#a5ba7226b8e811289aebf2857e482c244">StelSkyImageTile</a>
+: <a class="el" href="classStelSkyImageTile.html#a5ba7226b8e811289aebf2857e482c244">StelSkyImageTile</a>
+, <a class="el" href="classStelSkyPolygon.html#a57dceecbaaaffcc29ca5903f5b9e1099">StelSkyPolygon</a>
 </li>
 <li>getSettings()
 : <a class="el" href="classStelApp.html#a5029ba71c77ad52fce02b7316424c27e">StelApp</a>
 </li>
-<li>getShader()
-: <a class="el" href="classStelQGL2Renderer.html#a2a113f8ec6ddfe895235e4cc59f4f4ef">StelQGL2Renderer</a>
-</li>
 <li>getShortName()
-: <a class="el" href="classStelSkyLayer.html#a5d4b235a438dc4ba779c5efb933ddef3">StelSkyLayer</a>
-, <a class="el" href="classMultiLevelJsonBase.html#adcc21a0c31042897b655c4700f3e7ac4">MultiLevelJsonBase</a>
+: <a class="el" href="classMultiLevelJsonBase.html#adcc21a0c31042897b655c4700f3e7ac4">MultiLevelJsonBase</a>
+, <a class="el" href="classStelSkyLayer.html#a5d4b235a438dc4ba779c5efb933ddef3">StelSkyLayer</a>
 </li>
 <li>getShortServerCredits()
 : <a class="el" href="classStelSkyLayer.html#a79ead737f0c282d968cf1112f5b16c9b">StelSkyLayer</a>
@@ -1200,16 +1145,16 @@
 : <a class="el" href="classPlanet.html#abd4e301316118ffa43dac8ff354698f8">Planet</a>
 </li>
 <li>getSiderealPeriod()
-: <a class="el" href="classComet.html#a68976eaf88a9861ffb24dfde3a8c3199">Comet</a>
-, <a class="el" href="classPlanet.html#aff25916b53fc80cb05bc2add6e6eb417">Planet</a>
+: <a class="el" href="classPlanet.html#aff25916b53fc80cb05bc2add6e6eb417">Planet</a>
 , <a class="el" href="classMinorPlanet.html#a2c47b7f3b7d3615b5966e6d93cf00a0c">MinorPlanet</a>
+, <a class="el" href="classComet.html#a68976eaf88a9861ffb24dfde3a8c3199">Comet</a>
 </li>
 <li>getSimplifiedContours()
 : <a class="el" href="classSphericalRegion.html#a82d9a17afcba45eb41edddaee34dabf1">SphericalRegion</a>
 </li>
 <li>getSkyCulture()
-: <a class="el" href="classStelSkyCultureMgr.html#a1fc12fe58fd431057a5a089c6241e1eb">StelSkyCultureMgr</a>
-, <a class="el" href="classStelMainScriptAPI.html#a58ceaf39637a31a02914dc1267a033b0">StelMainScriptAPI</a>
+: <a class="el" href="classStelMainScriptAPI.html#a58ceaf39637a31a02914dc1267a033b0">StelMainScriptAPI</a>
+, <a class="el" href="classStelSkyCultureMgr.html#a1fc12fe58fd431057a5a089c6241e1eb">StelSkyCultureMgr</a>
 </li>
 <li>getSkyCultureListEnglish()
 : <a class="el" href="classStelSkyCultureMgr.html#ae3fffe8d134f1f06ad886b94f32fd04d">StelSkyCultureMgr</a>
@@ -1237,29 +1182,16 @@
 , <a class="el" href="classStelLocaleMgr.html#a0bd910274bef37bfd941d3539b8ba4fb">StelLocaleMgr</a>
 </li>
 <li>getSkyTranslator()
-: <a class="el" href="classStelLocaleMgr.html#aa934cf76b9a2902d9d34518107d7a297">StelLocaleMgr</a>
+: <a class="el" href="classStelLocaleMgr.html#a94ed4dba8583ed26087b696aeb6e6fed">StelLocaleMgr</a>
 </li>
 <li>getStars()
 : <a class="el" href="structBigStarCatalogExtension_1_1SpecialZoneData.html#a190ae20c9dc5d13f710e458c35a0a38a">BigStarCatalogExtension::SpecialZoneData&lt; Star &gt;</a>
-</li>
-<li>getStatistics()
-: <a class="el" href="classStelRenderer.html#ae2653097bc6da56c3507742ddf58424b">StelRenderer</a>
-, <a class="el" href="classStelQGLRenderer.html#a7af017729278c7724911d78c9ddb13e4">StelQGLRenderer</a>
-</li>
-<li>getStatus()
-: <a class="el" href="classStelTextureBackend.html#ac9f78b2ec1003105f6af228f7a728d6b">StelTextureBackend</a>
-, <a class="el" href="classStelTextureNew.html#a97215ba06522e42d6f7b711105345ac9">StelTextureNew</a>
-</li>
-<li>getStelAppGraphicsWidget()
-: <a class="el" href="classStelMainGraphicsView.html#a02ded647b25c653a7a5684b8a332b3c4">StelMainGraphicsView</a>
 </li>
 <li>getStelAudioMgr()
 : <a class="el" href="classStelApp.html#a551cc68e5a17b1136de174e2fa98fbac">StelApp</a>
 </li>
 <li>getStelGuiBase()
-: <a class="el" href="classStelNoGuiPluginInterface.html#a89aeacf386cf6b9ff0d7483f9647b684">StelNoGuiPluginInterface</a>
-, <a class="el" href="classStelGuiPluginInterface.html#ab5f3d81ae3fe55de677944a7b73d98bd">StelGuiPluginInterface</a>
-, <a class="el" href="classStelStandardGuiPluginInterface.html#a7045dec72c74a50f98295e736b87874b">StelStandardGuiPluginInterface</a>
+: <a class="el" href="classStelGuiPluginInterface.html#ab5f3d81ae3fe55de677944a7b73d98bd">StelGuiPluginInterface</a>
 </li>
 <li>getStelModule()
 : <a class="el" href="classStelPluginInterface.html#afa2dc49ee2c01039a28e1764f334330c">StelPluginInterface</a>
@@ -1279,13 +1211,11 @@
 <li>getSun()
 : <a class="el" href="classSolarSystem.html#ada79b8fd368062c3d2d917a1bba7949c">SolarSystem</a>
 </li>
+<li>getTextureManager()
+: <a class="el" href="classStelApp.html#a287fec2dd999126da1bc4af994043bef">StelApp</a>
+</li>
 <li>getTexturePath()
 : <a class="el" href="classLandscape.html#acec928cd65a361949bf687c0adef1a19">Landscape</a>
-</li>
-<li>getTextureUnitCountBackend()
-: <a class="el" href="classStelQGLRenderer.html#a24b2e9b54b086a3dd23c227117de246e">StelQGLRenderer</a>
-, <a class="el" href="classStelQGL2Renderer.html#ad94be61a67a6ee7a6362157619b1d5a8">StelQGL2Renderer</a>
-, <a class="el" href="classStelQGL1Renderer.html#a1b6505e29ec3b903f261f34d540eaa05">StelQGL1Renderer</a>
 </li>
 <li>getTimeFormatStr()
 : <a class="el" href="classStelLocaleMgr.html#aa4a5f4045727aad150bd9513fb58b076">StelLocaleMgr</a>
@@ -1293,9 +1223,6 @@
 <li>getTimeRate()
 : <a class="el" href="classStelMainScriptAPI.html#a4eabf63ddeadc9608f47fb0f09baffdb">StelMainScriptAPI</a>
 , <a class="el" href="classStelCore.html#a0efce41ccb19e8383cf43a5cbe333136">StelCore</a>
-</li>
-<li>getTopLevelGraphicsWidget()
-: <a class="el" href="classStelMainGraphicsView.html#abbb48829e70b4f9e8d46b87e99edd1d6">StelMainGraphicsView</a>
 </li>
 <li>getTotalRunTime()
 : <a class="el" href="classStelApp.html#ab8a4e3c56ca766f04623f804d73c3b84">StelApp</a>
@@ -1307,7 +1234,7 @@
 : <a class="el" href="classStelGeodesicGrid.html#a0823e64f5d954e34d4c5d577c11f1cfe">StelGeodesicGrid</a>
 </li>
 <li>getTrueLocaleName()
-: <a class="el" href="classStelTranslator.html#ac5207a020e262845d10d38e715f1b249">StelTranslator</a>
+: <a class="el" href="classStelTranslator.html#a676b48b1e8c176e881a3832e7c29c311">StelTranslator</a>
 </li>
 <li>getTwinkleAmount()
 : <a class="el" href="classStelSkyDrawer.html#a0bc15cd0a63d79af0acd62f6abcb5993">StelSkyDrawer</a>
@@ -1333,12 +1260,6 @@
 <li>getUserLandscapeIDs()
 : <a class="el" href="classLandscapeMgr.html#ae12ff09b4e9e3dbe24b5fb9dec0c05ad">LandscapeMgr</a>
 </li>
-<li>getVertex()
-: <a class="el" href="classStelVertexBuffer.html#ae96e23197fe9db7a7ef18705b2a51f6e">StelVertexBuffer&lt; V &gt;</a>
-, <a class="el" href="classStelQGLArrayVertexBufferBackend.html#a4a7eb372c47049c1af182a2e269f0e12">StelQGLArrayVertexBufferBackend</a>
-, <a class="el" href="classStelQGLInterleavedArrayVertexBufferBackend.html#a10189ee845db399db8b3ced3e12e2f4f">StelQGLInterleavedArrayVertexBufferBackend</a>
-, <a class="el" href="classStelVertexBufferBackend.html#a07c1daf12a473f07034491596fff2b1b">StelVertexBufferBackend</a>
-</li>
 <li>getViewAltitudeAngle()
 : <a class="el" href="classStelMainScriptAPI.html#a76397efb3d652e712f0738f18ed84ddd">StelMainScriptAPI</a>
 </li>
@@ -1360,18 +1281,8 @@
 <li>getViewportCenter()
 : <a class="el" href="classStelProjector.html#a22834577accb9032d4d3c258145c407d">StelProjector</a>
 </li>
-<li>getViewportCenterAbsolute()
-: <a class="el" href="classStelProjector.html#a4d0356ff986515159302fee568517ff8">StelProjector</a>
-</li>
 <li>getViewportConvexPolygon()
 : <a class="el" href="classStelProjector.html#acc07a99b7821ef3a6f3e5c2cafefed1c">StelProjector</a>
-</li>
-<li>getViewportEffect()
-: <a class="el" href="classStelRenderClient.html#a1b2653277737203da09d1ef7a7ee0af6">StelRenderClient</a>
-, <a class="el" href="classStelAppGraphicsWidget.html#a8231bb3e8defc6a240ff130db43b3bbc">StelAppGraphicsWidget</a>
-</li>
-<li>getViewportFovDiameter()
-: <a class="el" href="classStelProjector.html#a8a58359ae1f133a0189db1646fea2807">StelProjector</a>
 </li>
 <li>getViewportHeight()
 : <a class="el" href="classStelProjector.html#a3f3e8fb7deade80ccc90422daa37fa89">StelProjector</a>
@@ -1382,24 +1293,8 @@
 <li>getViewportPosY()
 : <a class="el" href="classStelProjector.html#a9eb1d70e459eb7ce0577f19ace0a76f0">StelProjector</a>
 </li>
-<li>getViewportSize()
-: <a class="el" href="classStelQGLRenderer.html#ad302cec1f31deb1c3f75fd5b63f647c3">StelQGLRenderer</a>
-, <a class="el" href="classStelQGLViewport.html#a0796a9ac262a9c86d12a8e3360e0754e">StelQGLViewport</a>
-, <a class="el" href="classStelRenderer.html#acbd5ae94bcf114bfd8f3b16cc72b7a6d">StelRenderer</a>
-</li>
-<li>getViewportTexture()
-: <a class="el" href="classStelRenderer.html#a71f36b14d90531b697532f4b875617d9">StelRenderer</a>
-</li>
-<li>getViewportTextureBackend()
-: <a class="el" href="classStelRenderer.html#acd5bd5854dff554adfe79603c429b189">StelRenderer</a>
-, <a class="el" href="classStelQGLRenderer.html#a8250a04b4365870c09633df1b8e4b2a7">StelQGLRenderer</a>
-, <a class="el" href="classStelQGLViewport.html#a44b5d6d23c77670a33c4596b2263690c">StelQGLViewport</a>
-</li>
 <li>getViewportWidth()
 : <a class="el" href="classStelProjector.html#a777f526fb2620f427b4cdf611e186dec">StelProjector</a>
-</li>
-<li>getViewportXywh()
-: <a class="el" href="classStelProjector.html#ab3f772184aeba018b43d4c602b6a8de0">StelProjector</a>
 </li>
 <li>getViewRaAngle()
 : <a class="el" href="classStelMainScriptAPI.html#a1f92add6142679607f5011c2ced383be">StelMainScriptAPI</a>
@@ -1411,20 +1306,23 @@
 : <a class="el" href="classStelMovementMgr.html#a4d4e1e32672e7b6d6655453379821369">StelMovementMgr</a>
 </li>
 <li>getVisible()
-: <a class="el" href="classStelGuiBase.html#ab11366695f6d3c5a0c9e19e9b42716e8">StelGuiBase</a>
+: <a class="el" href="classStelNoGui.html#af399b3a4b4889b41480bb2d3aadcbf7e">StelNoGui</a>
+, <a class="el" href="classStelGuiBase.html#ab11366695f6d3c5a0c9e19e9b42716e8">StelGuiBase</a>
 , <a class="el" href="classStelGui.html#aaafc981babe6db10e9b6d66ebd856b54">StelGui</a>
-, <a class="el" href="classStelNoGui.html#af399b3a4b4889b41480bb2d3aadcbf7e">StelNoGui</a>
 </li>
 <li>getVisionModeNight()
 : <a class="el" href="classStelApp.html#a4792de3ee4c5a4f5ee1fe5e4396c3d7d">StelApp</a>
 </li>
 <li>getVMagnitude()
-: <a class="el" href="classPlanet.html#a421b4c079baee4b8645d3aae2d4e33bb">Planet</a>
-, <a class="el" href="classNebula.html#a78670f2590a7534f57d536c050d314a2">Nebula</a>
-, <a class="el" href="classComet.html#acb38f0bef3819babc423e802286b0ef1">Comet</a>
-, <a class="el" href="classBigStarCatalogExtension_1_1StarWrapper.html#a0df1a69154bfb1446cb5d4c3463b9630">BigStarCatalogExtension::StarWrapper&lt; Star &gt;</a>
-, <a class="el" href="classMinorPlanet.html#acdf6805557fb284dd81ec2a9b4ea187d">MinorPlanet</a>
-, <a class="el" href="classStelObject.html#af45da326dd70efe50e875d63d429890b">StelObject</a>
+: <a class="el" href="classNebula.html#aea9dab68cacead39b5e91b6c1e46304d">Nebula</a>
+, <a class="el" href="classComet.html#a3a2ec0ce16a42615828ae1b5548a9627">Comet</a>
+, <a class="el" href="classMinorPlanet.html#a1ebcfcbc05954f8145b07fa241462f29">MinorPlanet</a>
+, <a class="el" href="classPlanet.html#afb3d99bed9522c8a8bfc08665d8a0009">Planet</a>
+, <a class="el" href="classBigStarCatalogExtension_1_1StarWrapper.html#a5dae9ce358f26f7c5d37ff27b4d7d5f6">BigStarCatalogExtension::StarWrapper&lt; Star &gt;</a>
+, <a class="el" href="classStelObject.html#a8d840d637851e72a8d337bcce30311a2">StelObject</a>
+</li>
+<li>getVMagnitudeWithExtinction()
+: <a class="el" href="classStelObject.html#a9207438e21954ed8331a798d631292e4">StelObject</a>
 </li>
 <li>getWasSelected()
 : <a class="el" href="classStelObjectMgr.html#ae6d65e3111bbee62ed2032fbeec91708">StelObjectMgr</a>
@@ -1447,17 +1345,14 @@
 <li>getZoomSpeed()
 : <a class="el" href="classStelMovementMgr.html#ac634ccb5839abaaca032bda83558d3a6">StelMovementMgr</a>
 </li>
-<li>gl
-: <a class="el" href="classStelQGLRenderer.html#aeaef5ca9a2e5f0d7df8cc0a24268fcb0">StelQGLRenderer</a>
+<li>glLoad()
+: <a class="el" href="classStelTexture.html#a3b1e3c2e3e82bff0ad29ecc3295531da">StelTexture</a>
 </li>
 <li>globalTranslator
-: <a class="el" href="classStelTranslator.html#ac72b918923cbfb1f2dbb3e646b50db3c">StelTranslator</a>
+: <a class="el" href="classStelTranslator.html#a84915637004733ed9f8ca142ec3f63f9">StelTranslator</a>
 </li>
-<li>glRendererString
-: <a class="el" href="classStelQGLRenderer.html#a582d324b938d50d82127e29436b95c69">StelQGLRenderer</a>
-</li>
-<li>glVendorString
-: <a class="el" href="classStelQGLRenderer.html#ab29d5286eb9f26e0e28ba24249dab4d2">StelQGLRenderer</a>
+<li>glWindowHasBeenResized()
+: <a class="el" href="classStelApp.html#ac3cddfe37cc627e253b25f84dd242d01">StelApp</a>
 </li>
 <li>goHome()
 : <a class="el" href="classStelMainScriptAPI.html#a80215e94f540d15400314f2dc60172d2">StelMainScriptAPI</a>
@@ -1469,7 +1364,7 @@
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Sun Sep 22 2013 18:49:47 for Stellarium by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Wed Sep 25 2013 20:55:00 for Stellarium by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.3.1
 </small></address>

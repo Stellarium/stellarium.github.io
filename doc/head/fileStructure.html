@@ -15,7 +15,7 @@
  <tr style="height: 56px;">
   <td id="projectlogo"><img alt="Logo" src="stellarium-logo.png"/></td>
   <td style="padding-left: 0.5em;">
-   <div id="projectname">Stellarium 0.12.3</div>
+   <div id="projectname">Stellarium 0.13.0</div>
   </td>
  </tr>
  </tbody>
@@ -30,7 +30,6 @@
       <li><a href="codingStyle.html"><span>Coding&#160;Style</span></a></li>
       <li><a href="scripting.html"><span>Scripting</span></a></li>
       <li><a href="plugins.html"><span>Plugins</span></a></li>
-      <li><a href="renderer.html"><span>Renderer</span></a></li>
       <li><a href="fileStructure.html"><span>File&#160;Structure</span></a></li>
     </ul>
   </div>
@@ -111,7 +110,7 @@ Users who mess up a customisation attempt need only remove the <em>User Data Dir
 </ul>
 <h1><a class="anchor" id="findingFile"></a>
 Finding files with the StelFileMgr class</h1>
-<p>Whenever a file is needed in Stellarium, it should be located using the <a class="el" href="classStelFileMgr.html" title="Provides utilities for locating and handling files.">StelFileMgr</a> class. This class will find the file in the first location in the search path. An instance of this class is maintained by the <a class="el" href="classStelApp.html" title="Singleton main Stellarium application class.">StelApp</a> singleton. <a class="el" href="classStelFileMgr.html#a21f72cc27d5fc6a3603c093bd0b28d94" title="Search for a path within the search paths, for example &quot;textures/fog.png&quot;.">StelFileMgr::findFile()</a> will throw exceptions when a problem is encountered, so it is important to always use <code>try ... catch ...</code> exception handling when using it.</p>
+<p>Whenever a file is needed in Stellarium, it should be located using the <a class="el" href="classStelFileMgr.html" title="Provides utilities for locating and handling files.">StelFileMgr</a> class. This class will find the file in the first location in the search path. An instance of this class is maintained by the <a class="el" href="classStelApp.html" title="Singleton main Stellarium application class.">StelApp</a> singleton. <a class="el" href="classStelFileMgr.html#ad3e9e9f0300a1d961235ad400579358f" title="Search for a path within the search paths, for example &quot;textures/fog.png&quot;.">StelFileMgr::findFile()</a> will throw exceptions when a problem is encountered, so it is important to always use <code>try ... catch ...</code> exception handling when using it.</p>
 <p>For example. You are writing a class called <a class="el" href="classComet.html">Comet</a>, and wish to search for a data file called <code>comets.dat</code> located in the <code>data</code> directory, you would go about it like this:</p>
 <div class="fragment"><div class="line">QString path;</div>
 <div class="line"><span class="keywordflow">try</span></div>
@@ -147,7 +146,7 @@ stars/default/stars_3_1v0_1.cat
 </div></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Sun Sep 22 2013 18:49:45 for Stellarium by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Wed Sep 25 2013 20:54:59 for Stellarium by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.3.1
 </small></address>

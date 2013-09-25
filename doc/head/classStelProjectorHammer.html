@@ -15,7 +15,7 @@
  <tr style="height: 56px;">
   <td id="projectlogo"><img alt="Logo" src="stellarium-logo.png"/></td>
   <td style="padding-left: 0.5em;">
-   <div id="projectname">Stellarium 0.12.3</div>
+   <div id="projectname">Stellarium 0.13.0</div>
   </td>
  </tr>
  </tbody>
@@ -30,7 +30,6 @@
       <li><a href="codingStyle.html"><span>Coding&#160;Style</span></a></li>
       <li><a href="scripting.html"><span>Scripting</span></a></li>
       <li><a href="plugins.html"><span>Plugins</span></a></li>
-      <li><a href="renderer.html"><span>Renderer</span></a></li>
       <li><a href="fileStructure.html"><span>File&#160;Structure</span></a></li>
     </ul>
   </div>
@@ -131,9 +130,9 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><b>intersectViewportDisc
 <tr class="memitem:a2b5166ac0de6ec48763c51c5f639aecf inherit pub_methods_classStelProjector"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classStelProjector.html#a2b5166ac0de6ec48763c51c5f639aecf">getFov</a> () const </td></tr>
 <tr class="memdesc:a2b5166ac0de6ec48763c51c5f639aecf inherit pub_methods_classStelProjector"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the current FOV diameter in degrees.  <a href="#a2b5166ac0de6ec48763c51c5f639aecf">More...</a><br/></td></tr>
 <tr class="separator:a2b5166ac0de6ec48763c51c5f639aecf inherit pub_methods_classStelProjector"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a200b47efbe9b2d6e5770cd3493e36ffb inherit pub_methods_classStelProjector"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classStelProjector.html#a200b47efbe9b2d6e5770cd3493e36ffb">flipFrontBackFace</a> () const </td></tr>
-<tr class="memdesc:a200b47efbe9b2d6e5770cd3493e36ffb inherit pub_methods_classStelProjector"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get whether front faces need to be oriented in the clockwise direction.  <a href="#a200b47efbe9b2d6e5770cd3493e36ffb">More...</a><br/></td></tr>
-<tr class="separator:a200b47efbe9b2d6e5770cd3493e36ffb inherit pub_methods_classStelProjector"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a385fd39eb86651f7d683c9b59d4b6dec inherit pub_methods_classStelProjector"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classStelProjector.html#a385fd39eb86651f7d683c9b59d4b6dec">needGlFrontFaceCW</a> () const </td></tr>
+<tr class="memdesc:a385fd39eb86651f7d683c9b59d4b6dec inherit pub_methods_classStelProjector"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get whether front faces need to be oriented in the clockwise direction.  <a href="#a385fd39eb86651f7d683c9b59d4b6dec">More...</a><br/></td></tr>
+<tr class="separator:a385fd39eb86651f7d683c9b59d4b6dec inherit pub_methods_classStelProjector"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa2b615c1df69f1774a3a4f8a26bffa6e inherit pub_methods_classStelProjector"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classStelProjector.html#aa2b615c1df69f1774a3a4f8a26bffa6e">checkInViewport</a> (const <a class="el" href="classVector3.html">Vec3d</a> &amp;pos) const </td></tr>
 <tr class="memdesc:aa2b615c1df69f1774a3a4f8a26bffa6e inherit pub_methods_classStelProjector"><td class="mdescLeft">&#160;</td><td class="mdescRight">Check to see if a 2d position is inside the viewport.  <a href="#aa2b615c1df69f1774a3a4f8a26bffa6e">More...</a><br/></td></tr>
 <tr class="separator:aa2b615c1df69f1774a3a4f8a26bffa6e inherit pub_methods_classStelProjector"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -152,9 +151,6 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><b>intersectViewportDisc
 <tr class="memitem:a0310cc4f5750dcaf290b6c44682a6c0f inherit pub_methods_classStelProjector"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a0310cc4f5750dcaf290b6c44682a6c0f"></a>
 virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>project</b> (int n, const <a class="el" href="classVector3.html">Vec3f</a> *in, <a class="el" href="classVector3.html">Vec3f</a> *out)</td></tr>
 <tr class="separator:a0310cc4f5750dcaf290b6c44682a6c0f inherit pub_methods_classStelProjector"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab7de38594cb23171a40b2a60aa5cc838 inherit pub_methods_classStelProjector"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="classStelProjector_1_1GLSLProjector.html">GLSLProjector</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classStelProjector.html#ab7de38594cb23171a40b2a60aa5cc838">getGLSLProjector</a> ()</td></tr>
-<tr class="memdesc:ab7de38594cb23171a40b2a60aa5cc838 inherit pub_methods_classStelProjector"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return the <a class="el" href="classStelProjector_1_1GLSLProjector.html" title="Base class for classes implementing vertex projection in GLSL.">GLSLProjector</a> to provide GLSL projection functionality.  <a href="#ab7de38594cb23171a40b2a60aa5cc838">More...</a><br/></td></tr>
-<tr class="separator:ab7de38594cb23171a40b2a60aa5cc838 inherit pub_methods_classStelProjector"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a767ff36be1c3e69f98ddbaa61f6f98ae inherit pub_methods_classStelProjector"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classStelProjector.html#a767ff36be1c3e69f98ddbaa61f6f98ae">projectInPlace</a> (<a class="el" href="classVector3.html">Vec3d</a> &amp;vd) const </td></tr>
 <tr class="memdesc:a767ff36be1c3e69f98ddbaa61f6f98ae inherit pub_methods_classStelProjector"><td class="mdescLeft">&#160;</td><td class="mdescRight">Project the vector v from the current frame into the viewport.  <a href="#a767ff36be1c3e69f98ddbaa61f6f98ae">More...</a><br/></td></tr>
 <tr class="separator:a767ff36be1c3e69f98ddbaa61f6f98ae inherit pub_methods_classStelProjector"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -185,21 +181,6 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><b>unProject</b> (double
 <tr class="memitem:a5e7e14d3765d30313eaadf0a25cf7511 inherit pub_methods_classStelProjector"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classStelProjector.html#ae82f23918403ef56da42dfa93588aefe">StelProjectorMaskType</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classStelProjector.html#a5e7e14d3765d30313eaadf0a25cf7511">getMaskType</a> (void) const </td></tr>
 <tr class="memdesc:a5e7e14d3765d30313eaadf0a25cf7511 inherit pub_methods_classStelProjector"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the current type of the mask if any.  <a href="#a5e7e14d3765d30313eaadf0a25cf7511">More...</a><br/></td></tr>
 <tr class="separator:a5e7e14d3765d30313eaadf0a25cf7511 inherit pub_methods_classStelProjector"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab3f772184aeba018b43d4c602b6a8de0 inherit pub_methods_classStelProjector"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classVector4.html">Vec4i</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classStelProjector.html#ab3f772184aeba018b43d4c602b6a8de0">getViewportXywh</a> () const </td></tr>
-<tr class="memdesc:ab3f772184aeba018b43d4c602b6a8de0 inherit pub_methods_classStelProjector"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get viewport extents.  <a href="#ab3f772184aeba018b43d4c602b6a8de0">More...</a><br/></td></tr>
-<tr class="separator:ab3f772184aeba018b43d4c602b6a8de0 inherit pub_methods_classStelProjector"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a9bf8584264b5a42a1726e7d23fc455c7 inherit pub_methods_classStelProjector"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classStelProjector.html#a9bf8584264b5a42a1726e7d23fc455c7">useGravityLabels</a> () const </td></tr>
-<tr class="memdesc:a9bf8584264b5a42a1726e7d23fc455c7 inherit pub_methods_classStelProjector"><td class="mdescLeft">&#160;</td><td class="mdescRight">Should label text align with the horizon?  <a href="#a9bf8584264b5a42a1726e7d23fc455c7">More...</a><br/></td></tr>
-<tr class="separator:a9bf8584264b5a42a1726e7d23fc455c7 inherit pub_methods_classStelProjector"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a2d76620cc5f9811f7f86fb8bc4c129a5 inherit pub_methods_classStelProjector"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classStelProjector.html#a2d76620cc5f9811f7f86fb8bc4c129a5">getDefaultAngleForGravityText</a> () const </td></tr>
-<tr class="memdesc:a2d76620cc5f9811f7f86fb8bc4c129a5 inherit pub_methods_classStelProjector"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return the rotation angle to apply to gravity text (only if gravityLabels is false) .  <a href="#a2d76620cc5f9811f7f86fb8bc4c129a5">More...</a><br/></td></tr>
-<tr class="separator:a2d76620cc5f9811f7f86fb8bc4c129a5 inherit pub_methods_classStelProjector"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a4d0356ff986515159302fee568517ff8 inherit pub_methods_classStelProjector"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classVector2.html">Vec2f</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classStelProjector.html#a4d0356ff986515159302fee568517ff8">getViewportCenterAbsolute</a> () const </td></tr>
-<tr class="memdesc:a4d0356ff986515159302fee568517ff8 inherit pub_methods_classStelProjector"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get center of the viewport on the screen in pixels.  <a href="#a4d0356ff986515159302fee568517ff8">More...</a><br/></td></tr>
-<tr class="separator:a4d0356ff986515159302fee568517ff8 inherit pub_methods_classStelProjector"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a8a58359ae1f133a0189db1646fea2807 inherit pub_methods_classStelProjector"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classStelProjector.html#a8a58359ae1f133a0189db1646fea2807">getViewportFovDiameter</a> ()</td></tr>
-<tr class="memdesc:a8a58359ae1f133a0189db1646fea2807 inherit pub_methods_classStelProjector"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get diameter of the FOV disk in pixels.  <a href="#a8a58359ae1f133a0189db1646fea2807">More...</a><br/></td></tr>
-<tr class="separator:a8a58359ae1f133a0189db1646fea2807 inherit pub_methods_classStelProjector"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-methods"></a>
 Protected Member Functions</h2></td></tr>
@@ -279,14 +260,8 @@ float&#160;</td><td class="memItemRight" valign="bottom"><b>defautAngleForGravit
 <tr class="memitem:a73b8203107617bd7c7141ad9944507c1 inherit pro_attribs_classStelProjector"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a73b8203107617bd7c7141ad9944507c1"></a>
 <a class="el" href="classSphericalCap.html">SphericalCap</a>&#160;</td><td class="memItemRight" valign="bottom"><b>boundingCap</b></td></tr>
 <tr class="separator:a73b8203107617bd7c7141ad9944507c1 inherit pro_attribs_classStelProjector"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a6780d3aede2731237c9ced1b4276c18b inherit pro_attribs_classStelProjector"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classStelProjector.html#a6780d3aede2731237c9ced1b4276c18b">disableShaderProjection</a></td></tr>
-<tr class="memdesc:a6780d3aede2731237c9ced1b4276c18b inherit pro_attribs_classStelProjector"><td class="mdescLeft">&#160;</td><td class="mdescRight">If true, shader projection is disabled.  <a href="#a6780d3aede2731237c9ced1b4276c18b">More...</a><br/></td></tr>
-<tr class="separator:a6780d3aede2731237c9ced1b4276c18b inherit pro_attribs_classStelProjector"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
-<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock">
-<p>Definition at line <a class="el" href="StelProjectorClasses_8hpp_source.html#l00330">330</a> of file <a class="el" href="StelProjectorClasses_8hpp_source.html">StelProjectorClasses.hpp</a>.</p>
-</div><h2 class="groupheader">Member Function Documentation</h2>
+<h2 class="groupheader">Member Function Documentation</h2>
 <a class="anchor" id="a2a0f5bb2a90a4d0b43edf6fd14285508"></a>
 <div class="memitem">
 <div class="memproto">
@@ -370,8 +345,6 @@ float&#160;</td><td class="memItemRight" valign="bottom"><b>defautAngleForGravit
 
 <p>Implements <a class="el" href="classStelProjector.html#abd6860a25765a570691ead7786e47a2a">StelProjector</a>.</p>
 
-<p>Definition at line <a class="el" href="StelProjectorClasses_8hpp_source.html#l00351">351</a> of file <a class="el" href="StelProjectorClasses_8hpp_source.html">StelProjectorClasses.hpp</a>.</p>
-
 </div>
 </div>
 <a class="anchor" id="add3a34911ccca9975f662ae41b46db2a"></a>
@@ -454,8 +427,6 @@ float&#160;</td><td class="memItemRight" valign="bottom"><b>defautAngleForGravit
 
 <p>Implements <a class="el" href="classStelProjector.html#aef4aa6a98699023c1a7ebc998d71db73">StelProjector</a>.</p>
 
-<p>Definition at line <a class="el" href="StelProjectorClasses_8hpp_source.html#l00336">336</a> of file <a class="el" href="StelProjectorClasses_8hpp_source.html">StelProjectorClasses.hpp</a>.</p>
-
 </div>
 </div>
 <a class="anchor" id="a6eeff517687719b299d8c96b73b178c8"></a>
@@ -510,8 +481,6 @@ float&#160;</td><td class="memItemRight" valign="bottom"><b>defautAngleForGravit
 
 <p>Implements <a class="el" href="classStelProjector.html#abeab06950711191b13ca7a09a79dff38">StelProjector</a>.</p>
 
-<p>Definition at line <a class="el" href="StelProjectorClasses_8hpp_source.html#l00368">368</a> of file <a class="el" href="StelProjectorClasses_8hpp_source.html">StelProjectorClasses.hpp</a>.</p>
-
 </div>
 </div>
 <a class="anchor" id="a6aa02ae6249794ee02a3a30838fb5bd0"></a>
@@ -551,8 +520,6 @@ float&#160;</td><td class="memItemRight" valign="bottom"><b>defautAngleForGravit
 
 <p>Implements <a class="el" href="classStelProjector.html#ab9189304c511f841f14a447248beb854">StelProjector</a>.</p>
 
-<p>Definition at line <a class="el" href="StelProjectorClasses_8hpp_source.html#l00369">369</a> of file <a class="el" href="StelProjectorClasses_8hpp_source.html">StelProjectorClasses.hpp</a>.</p>
-
 </div>
 </div>
 <a class="anchor" id="add8c98f39f86e6943e09cc02ec7fa246"></a>
@@ -591,8 +558,6 @@ float&#160;</td><td class="memItemRight" valign="bottom"><b>defautAngleForGravit
 
 <p>Implements <a class="el" href="classStelProjector.html#a10c65389c129c45999cd10c6fcb42288">StelProjector</a>.</p>
 
-<p>Definition at line <a class="el" href="StelProjectorClasses_8hpp_source.html#l00370">370</a> of file <a class="el" href="StelProjectorClasses_8hpp_source.html">StelProjectorClasses.hpp</a>.</p>
-
 </div>
 </div>
 <a class="anchor" id="abbb91c80d759350bef5d1c892c32326f"></a>
@@ -623,13 +588,10 @@ float&#160;</td><td class="memItemRight" valign="bottom"><b>defautAngleForGravit
 
 </div>
 </div>
-<hr/>The documentation for this class was generated from the following file:<ul>
-<li>core/<a class="el" href="StelProjectorClasses_8hpp_source.html">StelProjectorClasses.hpp</a></li>
-</ul>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Sun Sep 22 2013 18:49:46 for Stellarium by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Wed Sep 25 2013 20:55:00 for Stellarium by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.3.1
 </small></address>

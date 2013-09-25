@@ -15,7 +15,7 @@
  <tr style="height: 56px;">
   <td id="projectlogo"><img alt="Logo" src="stellarium-logo.png"/></td>
   <td style="padding-left: 0.5em;">
-   <div id="projectname">Stellarium 0.12.3</div>
+   <div id="projectname">Stellarium 0.13.0</div>
   </td>
  </tr>
  </tbody>
@@ -30,7 +30,6 @@
       <li><a href="codingStyle.html"><span>Coding&#160;Style</span></a></li>
       <li><a href="scripting.html"><span>Scripting</span></a></li>
       <li><a href="plugins.html"><span>Plugins</span></a></li>
-      <li><a href="renderer.html"><span>Renderer</span></a></li>
       <li><a href="fileStructure.html"><span>File&#160;Structure</span></a></li>
     </ul>
   </div>
@@ -123,12 +122,9 @@ Functions</h2></td></tr>
 <tr class="memitem:a9e3143529cf3d2b03780f2219fe7b948"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceStelUtils.html#a9e3143529cf3d2b03780f2219fe7b948">isPowerOfTwo</a> (const int value)</td></tr>
 <tr class="memdesc:a9e3143529cf3d2b03780f2219fe7b948"><td class="mdescLeft">&#160;</td><td class="mdescRight">Check if a number is a power of 2.  <a href="#a9e3143529cf3d2b03780f2219fe7b948">More...</a><br/></td></tr>
 <tr class="separator:a9e3143529cf3d2b03780f2219fe7b948"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a3f512a633951c372fe2edf3f0595e017"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceStelUtils.html#a3f512a633951c372fe2edf3f0595e017">smallestPowerOfTwoGreaterOrEqualTo</a> (const int value)</td></tr>
-<tr class="memdesc:a3f512a633951c372fe2edf3f0595e017"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return the first power of two greater or equal to the given value.  <a href="#a3f512a633951c372fe2edf3f0595e017">More...</a><br/></td></tr>
-<tr class="separator:a3f512a633951c372fe2edf3f0595e017"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a4a97142e3f025cdb34637bab4f29acd1"><td class="memItemLeft" align="right" valign="top">QSize&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceStelUtils.html#a4a97142e3f025cdb34637bab4f29acd1">smallestPowerOfTwoSizeGreaterOrEqualTo</a> (const QSize base)</td></tr>
-<tr class="memdesc:a4a97142e3f025cdb34637bab4f29acd1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return the smallest size with power-of two dimensions at least as large as given size.  <a href="#a4a97142e3f025cdb34637bab4f29acd1">More...</a><br/></td></tr>
-<tr class="separator:a4a97142e3f025cdb34637bab4f29acd1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad118f6823cb5b253e51c923ba79caa1a"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceStelUtils.html#ad118f6823cb5b253e51c923ba79caa1a">getBiggerPowerOfTwo</a> (int value)</td></tr>
+<tr class="memdesc:ad118f6823cb5b253e51c923ba79caa1a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return the first power of two bigger than the given value.  <a href="#ad118f6823cb5b253e51c923ba79caa1a">More...</a><br/></td></tr>
+<tr class="separator:ad118f6823cb5b253e51c923ba79caa1a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af4ba68e06322751dffc4db51f64d9308"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceStelUtils.html#af4ba68e06322751dffc4db51f64d9308">asinh</a> (const double z)</td></tr>
 <tr class="memdesc:af4ba68e06322751dffc4db51f64d9308"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return the inverse sinus hyperbolic of z.  <a href="#af4ba68e06322751dffc4db51f64d9308">More...</a><br/></td></tr>
 <tr class="separator:af4ba68e06322751dffc4db51f64d9308"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -425,7 +421,7 @@ QString&#160;</td><td class="memItemRight" valign="bottom"><b>hoursToHmsStr</b> 
 <p>Convert a dms formatted string to an angle in radian. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">s</td><td>The input string </td></tr>
+    <tr><td class="paramname">dsm</td><td>The input string </td></tr>
   </table>
   </dd>
 </dl>
@@ -499,8 +495,6 @@ QString&#160;</td><td class="memItemRight" valign="bottom"><b>hoursToHmsStr</b> 
 
 <p>Compute acos(x) The taylor serie is not accurate around x=1 and x=-1. </p>
 
-<p>Definition at line <a class="el" href="StelUtils_8hpp_source.html#l00265">265</a> of file <a class="el" href="StelUtils_8hpp_source.html">StelUtils.hpp</a>.</p>
-
 </div>
 </div>
 <a class="anchor" id="a75c3e10ff59b266aa4b040624b0f37d0"></a>
@@ -526,8 +520,6 @@ QString&#160;</td><td class="memItemRight" valign="bottom"><b>hoursToHmsStr</b> 
 </div><div class="memdoc">
 
 <p>Compute exp(x) for small exponents x. </p>
-
-<p>Definition at line <a class="el" href="StelUtils_8hpp_source.html#l00271">271</a> of file <a class="el" href="StelUtils_8hpp_source.html">StelUtils.hpp</a>.</p>
 
 </div>
 </div>
@@ -562,6 +554,24 @@ QString&#160;</td><td class="memItemRight" valign="bottom"><b>hoursToHmsStr</b> 
 </div><div class="memdoc">
 
 <p>Return the version of stellarium, i.e. "0.9.0". </p>
+
+</div>
+</div>
+<a class="anchor" id="ad118f6823cb5b253e51c923ba79caa1a"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int StelUtils::getBiggerPowerOfTwo </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>value</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Return the first power of two bigger than the given value. </p>
 
 </div>
 </div>
@@ -1628,8 +1638,6 @@ QString&#160;</td><td class="memItemRight" valign="bottom"><b>hoursToHmsStr</b> 
 <p>Get a night mode version of a color. </p>
 <p>That is find the brightness of a color and set that in the red channel only </p>
 
-<p>Definition at line <a class="el" href="StelUtils_8hpp_source.html#l00280">280</a> of file <a class="el" href="StelUtils_8hpp_source.html">StelUtils.hpp</a>.</p>
-
 </div>
 </div>
 <a class="anchor" id="ac355719512dbcef59aae7c8141d17611"></a>
@@ -2339,42 +2347,6 @@ QString&#160;</td><td class="memItemRight" valign="bottom"><b>hoursToHmsStr</b> 
 
 </div>
 </div>
-<a class="anchor" id="a3f512a633951c372fe2edf3f0595e017"></a>
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">int StelUtils::smallestPowerOfTwoGreaterOrEqualTo </td>
-          <td>(</td>
-          <td class="paramtype">const int&#160;</td>
-          <td class="paramname"><em>value</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Return the first power of two greater or equal to the given value. </p>
-
-</div>
-</div>
-<a class="anchor" id="a4a97142e3f025cdb34637bab4f29acd1"></a>
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">QSize StelUtils::smallestPowerOfTwoSizeGreaterOrEqualTo </td>
-          <td>(</td>
-          <td class="paramtype">const QSize&#160;</td>
-          <td class="paramname"><em>base</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Return the smallest size with power-of two dimensions at least as large as given size. </p>
-
-</div>
-</div>
 <a class="anchor" id="a9f49592c90ef36fea1a7bf11033b2382"></a>
 <div class="memitem">
 <div class="memproto">
@@ -2513,7 +2485,7 @@ QString&#160;</td><td class="memItemRight" valign="bottom"><b>hoursToHmsStr</b> 
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Sun Sep 22 2013 18:49:47 for Stellarium by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Wed Sep 25 2013 20:55:00 for Stellarium by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.3.1
 </small></address>

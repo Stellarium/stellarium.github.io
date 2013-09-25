@@ -15,7 +15,7 @@
  <tr style="height: 56px;">
   <td id="projectlogo"><img alt="Logo" src="stellarium-logo.png"/></td>
   <td style="padding-left: 0.5em;">
-   <div id="projectname">Stellarium 0.12.3</div>
+   <div id="projectname">Stellarium 0.13.0</div>
   </td>
  </tr>
  </tbody>
@@ -30,7 +30,6 @@
       <li><a href="codingStyle.html"><span>Coding&#160;Style</span></a></li>
       <li><a href="scripting.html"><span>Scripting</span></a></li>
       <li><a href="plugins.html"><span>Plugins</span></a></li>
-      <li><a href="renderer.html"><span>Renderer</span></a></li>
       <li><a href="fileStructure.html"><span>File&#160;Structure</span></a></li>
     </ul>
   </div>
@@ -91,9 +90,12 @@ virtual <a class="el" href="classSphericalRegion.html#af8072451526f088ffb334fe4f
 <tr class="memitem:abc33b0f7121c5fcdba10db07ee58d28c"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="classSphericalCap.html">SphericalCap</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSphericalCap.html#abc33b0f7121c5fcdba10db07ee58d28c">getBoundingCap</a> () const </td></tr>
 <tr class="memdesc:abc33b0f7121c5fcdba10db07ee58d28c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return itself.  <a href="#abc33b0f7121c5fcdba10db07ee58d28c">More...</a><br/></td></tr>
 <tr class="separator:abc33b0f7121c5fcdba10db07ee58d28c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ae56c83bc927436acce8f91726a274619"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ae56c83bc927436acce8f91726a274619"></a>
-bool&#160;</td><td class="memItemRight" valign="bottom"><b>contains</b> (const <a class="el" href="classVector3.html">Vec3d</a> &amp;v) const </td></tr>
-<tr class="separator:ae56c83bc927436acce8f91726a274619"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8c0d0484ac1d353a49834d5854d0d053"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a8c0d0484ac1d353a49834d5854d0d053"></a>
+virtual bool&#160;</td><td class="memItemRight" valign="bottom"><b>contains</b> (const <a class="el" href="classVector3.html">Vec3d</a> &amp;v) const </td></tr>
+<tr class="separator:a8c0d0484ac1d353a49834d5854d0d053"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab0bba79bf57fe5574452f86efa34646f"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ab0bba79bf57fe5574452f86efa34646f"></a>
+virtual bool&#160;</td><td class="memItemRight" valign="bottom"><b>contains</b> (const <a class="el" href="classVector3.html">Vec3f</a> &amp;v) const </td></tr>
+<tr class="separator:ab0bba79bf57fe5574452f86efa34646f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a3b928f6fb5558f58aae3667dcd54d19a"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a3b928f6fb5558f58aae3667dcd54d19a"></a>
 virtual bool&#160;</td><td class="memItemRight" valign="bottom"><b>contains</b> (const <a class="el" href="classSphericalConvexPolygon.html">SphericalConvexPolygon</a> &amp;r) const </td></tr>
 <tr class="separator:a3b928f6fb5558f58aae3667dcd54d19a"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -139,37 +141,25 @@ virtual bool&#160;</td><td class="memItemRight" valign="bottom"><b>intersects</b
 <tr class="memitem:ab97ea5889e30f28d225b63ba1f6862b6"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSphericalCap.html#ab97ea5889e30f28d225b63ba1f6862b6">intersectsConvexContour</a> (const <a class="el" href="classVector3.html">Vec3d</a> *vertice, int nbVertice) const </td></tr>
 <tr class="memdesc:ab97ea5889e30f28d225b63ba1f6862b6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return whether the cap intersect with a convex contour defined by nbVertice.  <a href="#ab97ea5889e30f28d225b63ba1f6862b6">More...</a><br/></td></tr>
 <tr class="separator:ab97ea5889e30f28d225b63ba1f6862b6"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:acd200ec34551324b704b0fd66946dfb0"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSphericalCap.html#acd200ec34551324b704b0fd66946dfb0">containsTriangle</a> (const <a class="el" href="structTriplet.html">Triplet</a>&lt; <a class="el" href="classVector3.html">Vec3d</a> &gt; triangle) const </td></tr>
-<tr class="memdesc:acd200ec34551324b704b0fd66946dfb0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Does the cap contain the passed triangle?  <a href="#acd200ec34551324b704b0fd66946dfb0">More...</a><br/></td></tr>
-<tr class="separator:acd200ec34551324b704b0fd66946dfb0"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:abc05099e517bf9d019bf7180850ab425"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSphericalCap.html#abc05099e517bf9d019bf7180850ab425">intersectsTriangle</a> (const <a class="el" href="structTriplet.html">Triplet</a>&lt; <a class="el" href="classVector3.html">Vec3d</a> &gt; &amp;triangle) const </td></tr>
-<tr class="memdesc:abc05099e517bf9d019bf7180850ab425"><td class="mdescLeft">&#160;</td><td class="mdescRight">Does the cap intersect with the passed triangle?  <a href="#abc05099e517bf9d019bf7180850ab425">More...</a><br/></td></tr>
-<tr class="separator:abc05099e517bf9d019bf7180850ab425"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae4a0280b8967b7bbcb5d39ab87b26fe5"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSphericalCap.html#ae4a0280b8967b7bbcb5d39ab87b26fe5">containsTriangle</a> (const <a class="el" href="classVector3.html">Vec3d</a> *vertice) const </td></tr>
+<tr class="memdesc:ae4a0280b8967b7bbcb5d39ab87b26fe5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return whether the cap contains the passed triangle.  <a href="#ae4a0280b8967b7bbcb5d39ab87b26fe5">More...</a><br/></td></tr>
+<tr class="separator:ae4a0280b8967b7bbcb5d39ab87b26fe5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:accf97f7b40d4b9f92099bb771d0b9eb7"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSphericalCap.html#accf97f7b40d4b9f92099bb771d0b9eb7">intersectsTriangle</a> (const <a class="el" href="classVector3.html">Vec3d</a> *vertice) const </td></tr>
+<tr class="memdesc:accf97f7b40d4b9f92099bb771d0b9eb7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return whether the cap intersect with the passed triangle.  <a href="#accf97f7b40d4b9f92099bb771d0b9eb7">More...</a><br/></td></tr>
+<tr class="separator:accf97f7b40d4b9f92099bb771d0b9eb7"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pub_methods_classSphericalRegion"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_classSphericalRegion')"><img src="closed.png" alt="-"/>&#160;Public Member Functions inherited from <a class="el" href="classSphericalRegion.html">SphericalRegion</a></td></tr>
-<tr class="memitem:a7fa0f04f9a0832453a41810c562ca5bf inherit pub_methods_classSphericalRegion"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSphericalRegion.html#a7fa0f04f9a0832453a41810c562ca5bf">SphericalRegion</a> ()</td></tr>
-<tr class="memdesc:a7fa0f04f9a0832453a41810c562ca5bf inherit pub_methods_classSphericalRegion"><td class="mdescLeft">&#160;</td><td class="mdescRight">Default constructor. Inializes with no vertex buffers.  <a href="#a7fa0f04f9a0832453a41810c562ca5bf">More...</a><br/></td></tr>
-<tr class="separator:a7fa0f04f9a0832453a41810c562ca5bf inherit pub_methods_classSphericalRegion"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a1cf8d53dd31bd7470842264c9492effe inherit pub_methods_classSphericalRegion"><td class="memItemLeft" align="right" valign="top">virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSphericalRegion.html#a1cf8d53dd31bd7470842264c9492effe">~SphericalRegion</a> ()</td></tr>
-<tr class="memdesc:a1cf8d53dd31bd7470842264c9492effe inherit pub_methods_classSphericalRegion"><td class="mdescLeft">&#160;</td><td class="mdescRight">Destructor. Cleans up vertex buffers, if any.  <a href="#a1cf8d53dd31bd7470842264c9492effe">More...</a><br/></td></tr>
-<tr class="separator:a1cf8d53dd31bd7470842264c9492effe inherit pub_methods_classSphericalRegion"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a6a85208e98c2f3fbb79773b874c0b70c inherit pub_methods_classSphericalRegion"><td class="memItemLeft" align="right" valign="top">virtual QVector&lt; <a class="el" href="classSphericalCap.html">SphericalCap</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSphericalRegion.html#a6a85208e98c2f3fbb79773b874c0b70c">getBoundingSphericalCaps</a> () const </td></tr>
 <tr class="memdesc:a6a85208e98c2f3fbb79773b874c0b70c inherit pub_methods_classSphericalRegion"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return the list of <a class="el" href="classSphericalCap.html" title="A SphericalCap is defined by a direction and an aperture.">SphericalCap</a> bounding the ConvexPolygon.  <a href="#a6a85208e98c2f3fbb79773b874c0b70c">More...</a><br/></td></tr>
 <tr class="separator:a6a85208e98c2f3fbb79773b874c0b70c inherit pub_methods_classSphericalRegion"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad21e6074c87a5145f4237d057122c4ce inherit pub_methods_classSphericalRegion"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="classSphericalRegionP.html">SphericalRegionP</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSphericalRegion.html#ad21e6074c87a5145f4237d057122c4ce">getEnlarged</a> (double margin) const </td></tr>
 <tr class="memdesc:ad21e6074c87a5145f4237d057122c4ce inherit pub_methods_classSphericalRegion"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return an enlarged version of this <a class="el" href="classSphericalRegion.html" title="Abstract class defining a region of the sphere.">SphericalRegion</a> so that any point distant of more than the given margin now lays within the region.  <a href="#ad21e6074c87a5145f4237d057122c4ce">More...</a><br/></td></tr>
 <tr class="separator:ad21e6074c87a5145f4237d057122c4ce inherit pub_methods_classSphericalRegion"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a2ed81646133b3d07ee1c43ca15b0c867 inherit pub_methods_classSphericalRegion"><td class="memItemLeft" align="right" valign="top">virtual const QVector&lt; <a class="el" href="classVector3.html">Vec3d</a> &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSphericalRegion.html#a2ed81646133b3d07ee1c43ca15b0c867">getFillVertexPositions</a> () const </td></tr>
-<tr class="memdesc:a2ed81646133b3d07ee1c43ca15b0c867 inherit pub_methods_classSphericalRegion"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get a vector of vertex positions forming the region.  <a href="#a2ed81646133b3d07ee1c43ca15b0c867">More...</a><br/></td></tr>
-<tr class="separator:a2ed81646133b3d07ee1c43ca15b0c867 inherit pub_methods_classSphericalRegion"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a238cf717c4ddce2ea6066c030a86e02a inherit pub_methods_classSphericalRegion"><td class="memItemLeft" align="right" valign="top">virtual PrimitiveType&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSphericalRegion.html#a238cf717c4ddce2ea6066c030a86e02a">getFillPrimitiveType</a> () const </td></tr>
-<tr class="memdesc:a238cf717c4ddce2ea6066c030a86e02a inherit pub_methods_classSphericalRegion"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get primitive type determining how vertices in vector returned by <a class="el" href="classSphericalRegion.html#a2ed81646133b3d07ee1c43ca15b0c867" title="Get a vector of vertex positions forming the region.">getFillVertexPositions()</a> form triangles.  <a href="#a238cf717c4ddce2ea6066c030a86e02a">More...</a><br/></td></tr>
-<tr class="separator:a238cf717c4ddce2ea6066c030a86e02a inherit pub_methods_classSphericalRegion"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac455c127225da9667aad9b621d7ecbfe inherit pub_methods_classSphericalRegion"><td class="memItemLeft" align="right" valign="top">virtual const QVector&lt; <a class="el" href="classVector3.html">Vec3d</a> &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSphericalRegion.html#ac455c127225da9667aad9b621d7ecbfe">getOutlineVertexPositions</a> () const </td></tr>
-<tr class="memdesc:ac455c127225da9667aad9b621d7ecbfe inherit pub_methods_classSphericalRegion"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the outline of the contours defining the <a class="el" href="classSphericalPolygon.html">SphericalPolygon</a>.  <a href="#ac455c127225da9667aad9b621d7ecbfe">More...</a><br/></td></tr>
-<tr class="separator:ac455c127225da9667aad9b621d7ecbfe inherit pub_methods_classSphericalRegion"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a6ae0211e968dcd622f02d80595093f77 inherit pub_methods_classSphericalRegion"><td class="memItemLeft" align="right" valign="top">virtual PrimitiveType&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSphericalRegion.html#a6ae0211e968dcd622f02d80595093f77">getOutlinePrimitiveType</a> () const </td></tr>
-<tr class="memdesc:a6ae0211e968dcd622f02d80595093f77 inherit pub_methods_classSphericalRegion"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get primitive type determining how vertices in vector returned by <a class="el" href="classSphericalRegion.html#a6ae0211e968dcd622f02d80595093f77" title="Get primitive type determining how vertices in vector returned by getOutlinePrimitiveType() form line...">getOutlinePrimitiveType()</a> form lines.  <a href="#a6ae0211e968dcd622f02d80595093f77">More...</a><br/></td></tr>
-<tr class="separator:a6ae0211e968dcd622f02d80595093f77 inherit pub_methods_classSphericalRegion"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acb324208a5aa3e1190e01842166adb84 inherit pub_methods_classSphericalRegion"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="structStelVertexArray.html">StelVertexArray</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSphericalRegion.html#acb324208a5aa3e1190e01842166adb84">getFillVertexArray</a> () const </td></tr>
+<tr class="memdesc:acb324208a5aa3e1190e01842166adb84 inherit pub_methods_classSphericalRegion"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return an openGL compatible array to be displayed using vertex arrays.  <a href="#acb324208a5aa3e1190e01842166adb84">More...</a><br/></td></tr>
+<tr class="separator:acb324208a5aa3e1190e01842166adb84 inherit pub_methods_classSphericalRegion"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abc662874e4f1ae2744c4ac0abcdaf659 inherit pub_methods_classSphericalRegion"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="structStelVertexArray.html">StelVertexArray</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSphericalRegion.html#abc662874e4f1ae2744c4ac0abcdaf659">getOutlineVertexArray</a> () const </td></tr>
+<tr class="memdesc:abc662874e4f1ae2744c4ac0abcdaf659 inherit pub_methods_classSphericalRegion"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the outline of the contours defining the <a class="el" href="classSphericalPolygon.html">SphericalPolygon</a>.  <a href="#abc662874e4f1ae2744c4ac0abcdaf659">More...</a><br/></td></tr>
+<tr class="separator:abc662874e4f1ae2744c4ac0abcdaf659 inherit pub_methods_classSphericalRegion"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a82d9a17afcba45eb41edddaee34dabf1 inherit pub_methods_classSphericalRegion"><td class="memItemLeft" align="right" valign="top">virtual QVector&lt; QVector&lt; <a class="el" href="classVector3.html">Vec3d</a> &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSphericalRegion.html#a82d9a17afcba45eb41edddaee34dabf1">getSimplifiedContours</a> () const </td></tr>
 <tr class="memdesc:a82d9a17afcba45eb41edddaee34dabf1 inherit pub_methods_classSphericalRegion"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the contours defining the <a class="el" href="classSphericalPolygon.html">SphericalPolygon</a> when combined using a positive winding rule.  <a href="#a82d9a17afcba45eb41edddaee34dabf1">More...</a><br/></td></tr>
 <tr class="separator:a82d9a17afcba45eb41edddaee34dabf1 inherit pub_methods_classSphericalRegion"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -278,12 +268,6 @@ virtual <a class="el" href="classSphericalRegionP.html">SphericalRegionP</a>&#16
 <tr class="memitem:a9f54bac7574bca917ce78b9c86211af1 inherit pub_methods_classSphericalRegion"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a9f54bac7574bca917ce78b9c86211af1"></a>
 virtual <a class="el" href="classSphericalRegionP.html">SphericalRegionP</a>&#160;</td><td class="memItemRight" valign="bottom"><b>getSubtraction</b> (const <a class="el" href="classEmptySphericalRegion.html">EmptySphericalRegion</a> &amp;r) const </td></tr>
 <tr class="separator:a9f54bac7574bca917ce78b9c86211af1 inherit pub_methods_classSphericalRegion"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a0df0a7d7091a361c0f9e90b322f08957 inherit pub_methods_classSphericalRegion"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSphericalRegion.html#a0df0a7d7091a361c0f9e90b322f08957">drawFill</a> (class <a class="el" href="classStelRenderer.html">StelRenderer</a> *renderer, const <a class="el" href="structSphericalRegion_1_1DrawParams.html">DrawParams</a> &amp;params)</td></tr>
-<tr class="memdesc:a0df0a7d7091a361c0f9e90b322f08957 inherit pub_methods_classSphericalRegion"><td class="mdescLeft">&#160;</td><td class="mdescRight">Draw the region as triangles (i.e.  <a href="#a0df0a7d7091a361c0f9e90b322f08957">More...</a><br/></td></tr>
-<tr class="separator:a0df0a7d7091a361c0f9e90b322f08957 inherit pub_methods_classSphericalRegion"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:acb27605e1d6f8783cccd559b3a041c80 inherit pub_methods_classSphericalRegion"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSphericalRegion.html#acb27605e1d6f8783cccd559b3a041c80">drawOutline</a> (class <a class="el" href="classStelRenderer.html">StelRenderer</a> *renderer, const <a class="el" href="structSphericalRegion_1_1DrawParams.html">DrawParams</a> &amp;params)</td></tr>
-<tr class="memdesc:acb27605e1d6f8783cccd559b3a041c80 inherit pub_methods_classSphericalRegion"><td class="mdescLeft">&#160;</td><td class="mdescRight">Draw the outline of the region.  <a href="#acb27605e1d6f8783cccd559b3a041c80">More...</a><br/></td></tr>
-<tr class="separator:acb27605e1d6f8783cccd559b3a041c80 inherit pub_methods_classSphericalRegion"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-static-methods"></a>
 Static Public Member Functions</h2></td></tr>
@@ -325,32 +309,10 @@ Additional Inherited Members</h2></td></tr>
  }</td></tr>
 <tr class="memdesc:af8072451526f088ffb334fe4f9aee29d"><td class="mdescLeft">&#160;</td><td class="mdescRight">define types for all supported regions.  <a href="classSphericalRegion.html#af8072451526f088ffb334fe4f9aee29d">More...</a><br/></td></tr>
 <tr class="separator:af8072451526f088ffb334fe4f9aee29d inherit pub_types_classSphericalRegion"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="inherit_header pro_methods_classSphericalRegion"><td colspan="2" onclick="javascript:toggleInherit('pro_methods_classSphericalRegion')"><img src="closed.png" alt="-"/>&#160;Protected Member Functions inherited from <a class="el" href="classSphericalRegion.html">SphericalRegion</a></td></tr>
-<tr class="memitem:a207525d3d37d5e629f041dfed5c65dbf inherit pro_methods_classSphericalRegion"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSphericalRegion.html#a207525d3d37d5e629f041dfed5c65dbf">updateFillVertexBuffer</a> (class <a class="el" href="classStelRenderer.html">StelRenderer</a> *renderer, const <a class="el" href="structSphericalRegion_1_1DrawParams.html">DrawParams</a> &amp;params, bool handleDiscontinuity)</td></tr>
-<tr class="memdesc:a207525d3d37d5e629f041dfed5c65dbf inherit pro_methods_classSphericalRegion"><td class="mdescLeft">&#160;</td><td class="mdescRight">Update the vertex buffer used by <a class="el" href="classSphericalRegion.html#a0df0a7d7091a361c0f9e90b322f08957" title="Draw the region as triangles (i.e.">drawFill()</a>.  <a href="#a207525d3d37d5e629f041dfed5c65dbf">More...</a><br/></td></tr>
-<tr class="separator:a207525d3d37d5e629f041dfed5c65dbf inherit pro_methods_classSphericalRegion"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aeb72b726c1232af019961c5b43b833b7 inherit pro_methods_classSphericalRegion"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSphericalRegion.html#aeb72b726c1232af019961c5b43b833b7">drawFillVertexBuffer</a> (class <a class="el" href="classStelRenderer.html">StelRenderer</a> *renderer, class <a class="el" href="classStelProjector.html">StelProjector</a> *projector)</td></tr>
-<tr class="memdesc:aeb72b726c1232af019961c5b43b833b7 inherit pro_methods_classSphericalRegion"><td class="mdescLeft">&#160;</td><td class="mdescRight">Drawing part of <a class="el" href="classSphericalRegion.html#a0df0a7d7091a361c0f9e90b322f08957" title="Draw the region as triangles (i.e.">drawFill()</a> - assumes the buffer/s is/are generated.  <a href="#aeb72b726c1232af019961c5b43b833b7">More...</a><br/></td></tr>
-<tr class="separator:aeb72b726c1232af019961c5b43b833b7 inherit pro_methods_classSphericalRegion"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a3385dd2c79f75e545ad561f41f263412 inherit pro_methods_classSphericalRegion"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSphericalRegion.html#a3385dd2c79f75e545ad561f41f263412">needToUpdateFillVertexBuffers</a> () const </td></tr>
-<tr class="memdesc:a3385dd2c79f75e545ad561f41f263412 inherit pro_methods_classSphericalRegion"><td class="mdescLeft">&#160;</td><td class="mdescRight">Do we need to update vertex buffer/s used by <a class="el" href="classSphericalRegion.html#a0df0a7d7091a361c0f9e90b322f08957" title="Draw the region as triangles (i.e.">drawFill()</a>?  <a href="#a3385dd2c79f75e545ad561f41f263412">More...</a><br/></td></tr>
-<tr class="separator:a3385dd2c79f75e545ad561f41f263412 inherit pro_methods_classSphericalRegion"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a1c12f5f0b2a21318bc428ec87d0e0408 inherit pro_methods_classSphericalRegion"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSphericalRegion.html#a1c12f5f0b2a21318bc428ec87d0e0408">fillVertexBuffersUpdated</a> ()</td></tr>
-<tr class="memdesc:a1c12f5f0b2a21318bc428ec87d0e0408 inherit pro_methods_classSphericalRegion"><td class="mdescLeft">&#160;</td><td class="mdescRight">Called after updating vertex buffer/s used by <a class="el" href="classSphericalRegion.html#a0df0a7d7091a361c0f9e90b322f08957" title="Draw the region as triangles (i.e.">drawFill()</a>.  <a href="#a1c12f5f0b2a21318bc428ec87d0e0408">More...</a><br/></td></tr>
-<tr class="separator:a1c12f5f0b2a21318bc428ec87d0e0408 inherit pro_methods_classSphericalRegion"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="inherit_header pro_attribs_classSphericalRegion"><td colspan="2" onclick="javascript:toggleInherit('pro_attribs_classSphericalRegion')"><img src="closed.png" alt="-"/>&#160;Protected Attributes inherited from <a class="el" href="classSphericalRegion.html">SphericalRegion</a></td></tr>
-<tr class="memitem:a9ada6e39086d99112641f83ab52a101d inherit pro_attribs_classSphericalRegion"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classStelVertexBuffer.html">StelVertexBuffer</a>&lt; <a class="el" href="structSphericalRegion_1_1PlainVertex.html">PlainVertex</a> &gt; *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSphericalRegion.html#a9ada6e39086d99112641f83ab52a101d">fillPlainVertexBuffer</a></td></tr>
-<tr class="memdesc:a9ada6e39086d99112641f83ab52a101d inherit pro_attribs_classSphericalRegion"><td class="mdescLeft">&#160;</td><td class="mdescRight">Cached plain vertex buffer for drawing.  <a href="#a9ada6e39086d99112641f83ab52a101d">More...</a><br/></td></tr>
-<tr class="separator:a9ada6e39086d99112641f83ab52a101d inherit pro_attribs_classSphericalRegion"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a0baec9144a80c960eb91170f6e5cf596 inherit pro_attribs_classSphericalRegion"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSphericalRegion.html#a0baec9144a80c960eb91170f6e5cf596">useProjector</a></td></tr>
-<tr class="memdesc:a0baec9144a80c960eb91170f6e5cf596 inherit pro_attribs_classSphericalRegion"><td class="mdescLeft">&#160;</td><td class="mdescRight">Should Renderer draw calls specify a projector?  <a href="#a0baec9144a80c960eb91170f6e5cf596">More...</a><br/></td></tr>
-<tr class="separator:a0baec9144a80c960eb91170f6e5cf596 inherit pro_attribs_classSphericalRegion"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>A <a class="el" href="classSphericalCap.html" title="A SphericalCap is defined by a direction and an aperture.">SphericalCap</a> is defined by a direction and an aperture. </p>
 <p>It forms a cone from the center of the Coordinate frame with a radius d. It is a disc on the sphere, a region above a circle on the unit sphere. </p>
-
-<p>Definition at line <a class="el" href="StelSphereGeometry_8hpp_source.html#l00504">504</a> of file <a class="el" href="StelSphereGeometry_8hpp_source.html">StelSphereGeometry.hpp</a>.</p>
 </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a class="anchor" id="a17b071fd86e04692cac2228ac791bfc1"></a>
 <div class="memitem">
@@ -374,8 +336,6 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Construct a <a class="el" href="classSphericalCap.html" title="A SphericalCap is defined by a direction and an aperture.">SphericalCap</a> with a 90 deg aperture and an undefined direction. </p>
-
-<p>Definition at line <a class="el" href="StelSphereGeometry_8hpp_source.html#l00508">508</a> of file <a class="el" href="StelSphereGeometry_8hpp_source.html">StelSphereGeometry.hpp</a>.</p>
 
 </div>
 </div>
@@ -418,8 +378,6 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Construct a <a class="el" href="classSphericalCap.html" title="A SphericalCap is defined by a direction and an aperture.">SphericalCap</a> from its direction and assumes a 90 deg aperture. </p>
-
-<p>Definition at line <a class="el" href="StelSphereGeometry_8hpp_source.html#l00511">511</a> of file <a class="el" href="StelSphereGeometry_8hpp_source.html">StelSphereGeometry.hpp</a>.</p>
 
 </div>
 </div>
@@ -464,8 +422,6 @@ Additional Inherited Members</h2></td></tr>
   </dd>
 </dl>
 
-<p>Definition at line <a class="el" href="StelSphereGeometry_8hpp_source.html#l00516">516</a> of file <a class="el" href="StelSphereGeometry_8hpp_source.html">StelSphereGeometry.hpp</a>.</p>
-
 </div>
 </div>
 <a class="anchor" id="a744dc22150dabee53b91f5aaf4a3204e"></a>
@@ -491,8 +447,6 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Copy constructor. </p>
-
-<p>Definition at line <a class="el" href="StelSphereGeometry_8hpp_source.html#l00529">529</a> of file <a class="el" href="StelSphereGeometry_8hpp_source.html">StelSphereGeometry.hpp</a>.</p>
 
 </div>
 </div>
@@ -526,21 +480,21 @@ Additional Inherited Members</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="acd200ec34551324b704b0fd66946dfb0"></a>
+<a class="anchor" id="ae4a0280b8967b7bbcb5d39ab87b26fe5"></a>
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
           <td class="memname">bool SphericalCap::containsTriangle </td>
           <td>(</td>
-          <td class="paramtype">const <a class="el" href="structTriplet.html">Triplet</a>&lt; <a class="el" href="classVector3.html">Vec3d</a> &gt;&#160;</td>
-          <td class="paramname"><em>triangle</em></td><td>)</td>
+          <td class="paramtype">const <a class="el" href="classVector3.html">Vec3d</a> *&#160;</td>
+          <td class="paramname"><em>vertice</em></td><td>)</td>
           <td> const</td>
         </tr>
       </table>
 </div><div class="memdoc">
 
-<p>Does the cap contain the passed triangle? </p>
+<p>Return whether the cap contains the passed triangle. </p>
 
 </div>
 </div>
@@ -595,8 +549,6 @@ Additional Inherited Members</h2></td></tr>
 
 <p>Reimplemented from <a class="el" href="classSphericalRegion.html#a97e908421aee887ffca7b3a3d9248c0a">SphericalRegion</a>.</p>
 
-<p>Definition at line <a class="el" href="StelSphereGeometry_8hpp_source.html#l00535">535</a> of file <a class="el" href="StelSphereGeometry_8hpp_source.html">StelSphereGeometry.hpp</a>.</p>
-
 </div>
 </div>
 <a class="anchor" id="abc33b0f7121c5fcdba10db07ee58d28c"></a>
@@ -623,8 +575,6 @@ Additional Inherited Members</h2></td></tr>
 <p>Return itself. </p>
 
 <p>Reimplemented from <a class="el" href="classSphericalRegion.html#a86c361604deaa0187067770522249ef7">SphericalRegion</a>.</p>
-
-<p>Definition at line <a class="el" href="StelSphereGeometry_8hpp_source.html#l00544">544</a> of file <a class="el" href="StelSphereGeometry_8hpp_source.html">StelSphereGeometry.hpp</a>.</p>
 
 </div>
 </div>
@@ -698,8 +648,6 @@ Additional Inherited Members</h2></td></tr>
 
 <p>Reimplemented from <a class="el" href="classSphericalRegion.html#ada8685bc10fde6ea9dc8a8c6bf4a4f15">SphericalRegion</a>.</p>
 
-<p>Definition at line <a class="el" href="StelSphereGeometry_8hpp_source.html#l00541">541</a> of file <a class="el" href="StelSphereGeometry_8hpp_source.html">StelSphereGeometry.hpp</a>.</p>
-
 </div>
 </div>
 <a class="anchor" id="a8a72cd4829cb85e342a336cf6f3185c8"></a>
@@ -724,8 +672,6 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Return the radiusof the cap in radian. </p>
-
-<p>Definition at line <a class="el" href="StelSphereGeometry_8hpp_source.html#l00582">582</a> of file <a class="el" href="StelSphereGeometry_8hpp_source.html">StelSphereGeometry.hpp</a>.</p>
 
 </div>
 </div>
@@ -806,8 +752,6 @@ Additional Inherited Members</h2></td></tr>
 
 <p>Reimplemented from <a class="el" href="classSphericalRegion.html">SphericalRegion</a>.</p>
 
-<p>Definition at line <a class="el" href="StelSphereGeometry_8hpp_source.html#l00564">564</a> of file <a class="el" href="StelSphereGeometry_8hpp_source.html">StelSphereGeometry.hpp</a>.</p>
-
 </div>
 </div>
 <a class="anchor" id="ab97ea5889e30f28d225b63ba1f6862b6"></a>
@@ -886,25 +830,23 @@ Additional Inherited Members</h2></td></tr>
   </dd>
 </dl>
 
-<p>Definition at line <a class="el" href="StelSphereGeometry_8hpp_source.html#l00588">588</a> of file <a class="el" href="StelSphereGeometry_8hpp_source.html">StelSphereGeometry.hpp</a>.</p>
-
 </div>
 </div>
-<a class="anchor" id="abc05099e517bf9d019bf7180850ab425"></a>
+<a class="anchor" id="accf97f7b40d4b9f92099bb771d0b9eb7"></a>
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
           <td class="memname">bool SphericalCap::intersectsTriangle </td>
           <td>(</td>
-          <td class="paramtype">const <a class="el" href="structTriplet.html">Triplet</a>&lt; <a class="el" href="classVector3.html">Vec3d</a> &gt; &amp;&#160;</td>
-          <td class="paramname"><em>triangle</em></td><td>)</td>
+          <td class="paramtype">const <a class="el" href="classVector3.html">Vec3d</a> *&#160;</td>
+          <td class="paramname"><em>vertice</em></td><td>)</td>
           <td> const</td>
         </tr>
       </table>
 </div><div class="memdoc">
 
-<p>Does the cap intersect with the passed triangle? </p>
+<p>Return whether the cap intersect with the passed triangle. </p>
 
 </div>
 </div>
@@ -933,8 +875,6 @@ Additional Inherited Members</h2></td></tr>
 
 <p>Reimplemented from <a class="el" href="classSphericalRegion.html#ae93ecc2b8a71d58a3d23e80e7400c109">SphericalRegion</a>.</p>
 
-<p>Definition at line <a class="el" href="StelSphereGeometry_8hpp_source.html#l00538">538</a> of file <a class="el" href="StelSphereGeometry_8hpp_source.html">StelSphereGeometry.hpp</a>.</p>
-
 </div>
 </div>
 <a class="anchor" id="acaa7807b0b23709266b105bb4781b3f4"></a>
@@ -960,8 +900,6 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Comparison operator. </p>
-
-<p>Definition at line <a class="el" href="StelSphereGeometry_8hpp_source.html#l00599">599</a> of file <a class="el" href="StelSphereGeometry_8hpp_source.html">StelSphereGeometry.hpp</a>.</p>
 
 </div>
 </div>
@@ -1063,8 +1001,6 @@ Additional Inherited Members</h2></td></tr>
 
 <p>Implements <a class="el" href="classSphericalRegion.html#ac9cbe8c30210a7042a44512c630212f1">SphericalRegion</a>.</p>
 
-<p>Definition at line <a class="el" href="StelSphereGeometry_8hpp_source.html#l00576">576</a> of file <a class="el" href="StelSphereGeometry_8hpp_source.html">StelSphereGeometry.hpp</a>.</p>
-
 </div>
 </div>
 <a class="anchor" id="a43685b8ffdb2fee0efd471513680a146"></a>
@@ -1108,8 +1044,6 @@ Additional Inherited Members</h2></td></tr>
 
 <p>The cos of cone radius. </p>
 
-<p>Definition at line <a class="el" href="StelSphereGeometry_8hpp_source.html#l00631">631</a> of file <a class="el" href="StelSphereGeometry_8hpp_source.html">StelSphereGeometry.hpp</a>.</p>
-
 </div>
 </div>
 <a class="anchor" id="acc1e4d18a51b380f87cf427eb7f5686c"></a>
@@ -1124,17 +1058,12 @@ Additional Inherited Members</h2></td></tr>
 
 <p>The direction unit vector. Only if d==0, this vector doesn't need to be unit. </p>
 
-<p>Definition at line <a class="el" href="StelSphereGeometry_8hpp_source.html#l00629">629</a> of file <a class="el" href="StelSphereGeometry_8hpp_source.html">StelSphereGeometry.hpp</a>.</p>
-
 </div>
 </div>
-<hr/>The documentation for this class was generated from the following file:<ul>
-<li>core/<a class="el" href="StelSphereGeometry_8hpp_source.html">StelSphereGeometry.hpp</a></li>
-</ul>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Sun Sep 22 2013 18:49:46 for Stellarium by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Wed Sep 25 2013 20:54:59 for Stellarium by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.3.1
 </small></address>

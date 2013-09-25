@@ -15,7 +15,7 @@
  <tr style="height: 56px;">
   <td id="projectlogo"><img alt="Logo" src="stellarium-logo.png"/></td>
   <td style="padding-left: 0.5em;">
-   <div id="projectname">Stellarium 0.12.3</div>
+   <div id="projectname">Stellarium 0.13.0</div>
   </td>
  </tr>
  </tbody>
@@ -30,7 +30,6 @@
       <li><a href="codingStyle.html"><span>Coding&#160;Style</span></a></li>
       <li><a href="scripting.html"><span>Scripting</span></a></li>
       <li><a href="plugins.html"><span>Plugins</span></a></li>
-      <li><a href="renderer.html"><span>Renderer</span></a></li>
       <li><a href="fileStructure.html"><span>File&#160;Structure</span></a></li>
     </ul>
   </div>
@@ -161,7 +160,7 @@
 <div class="line"><a name="l00124"></a><span class="lineno">  124</span>&#160;    <a class="code" href="classStelCore.html" title="Main class for Stellarium core processing.">StelCore</a>();</div>
 <div class="line"><a name="l00125"></a><span class="lineno">  125</span>&#160;    <span class="keyword">virtual</span> ~<a class="code" href="classStelCore.html" title="Main class for Stellarium core processing.">StelCore</a>();</div>
 <div class="line"><a name="l00126"></a><span class="lineno">  126</span>&#160;</div>
-<div class="line"><a name="l00128"></a><span class="lineno">  128</span>&#160;    <span class="keywordtype">void</span> init(<span class="keyword">class</span> <a class="code" href="classStelRenderer.html" title="Main class of the Renderer subsystem.">StelRenderer</a>* renderer);</div>
+<div class="line"><a name="l00128"></a><span class="lineno">  128</span>&#160;    <span class="keywordtype">void</span> init();</div>
 <div class="line"><a name="l00129"></a><span class="lineno">  129</span>&#160;</div>
 <div class="line"><a name="l00132"></a><span class="lineno">  132</span>&#160;    <span class="keywordtype">void</span> update(<span class="keywordtype">double</span> deltaTime);</div>
 <div class="line"><a name="l00133"></a><span class="lineno">  133</span>&#160;</div>
@@ -169,7 +168,7 @@
 <div class="line"><a name="l00136"></a><span class="lineno">  136</span>&#160;</div>
 <div class="line"><a name="l00138"></a><span class="lineno">  138</span>&#160;    <span class="keywordtype">void</span> preDraw();</div>
 <div class="line"><a name="l00139"></a><span class="lineno">  139</span>&#160;</div>
-<div class="line"><a name="l00141"></a><span class="lineno">  141</span>&#160;    <span class="keywordtype">void</span> postDraw(<a class="code" href="classStelRenderer.html" title="Main class of the Renderer subsystem.">StelRenderer</a>* renderer);</div>
+<div class="line"><a name="l00141"></a><span class="lineno">  141</span>&#160;    <span class="keywordtype">void</span> postDraw();</div>
 <div class="line"><a name="l00142"></a><span class="lineno">  142</span>&#160;</div>
 <div class="line"><a name="l00145"></a><span class="lineno">  145</span>&#160;    <a class="code" href="StelProjectorType_8hpp.html#a286221a2d4640bbeec2090cfbfadb0ff" title="Shared pointer on a StelProjector instance (implement reference counting)">StelProjectorP</a> getProjection2d() <span class="keyword">const</span>;</div>
 <div class="line"><a name="l00146"></a><span class="lineno">  146</span>&#160;</div>
@@ -364,13 +363,13 @@
 <div class="line"><a name="l00485"></a><span class="lineno">  485</span>&#160;</div>
 <div class="line"><a name="l00488"></a><span class="lineno">  488</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classStelCore.html#a3ee29fd6194f779bdc2100fd0188c4bc" title="Move the observer to the selected object.">moveObserverToSelected</a>();</div>
 <div class="line"><a name="l00489"></a><span class="lineno">  489</span>&#160;</div>
-<div class="line"><a name="l00492"></a><span class="lineno"><a class="code" href="classStelCore.html#aab845afde2a410cd24098545b6d10a27">  492</a></span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classStelCore.html#aab845afde2a410cd24098545b6d10a27" title="Set year for custom equation for calculation of Delta-T.">setCustomYear</a>(<span class="keywordtype">float</span> y) { customYear=y; }</div>
-<div class="line"><a name="l00495"></a><span class="lineno"><a class="code" href="classStelCore.html#a13323a546756f7032fd7f1d10b85e3f1">  495</a></span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classStelCore.html#a13323a546756f7032fd7f1d10b85e3f1" title="Set n-dot for custom equation for calculation of Delta-T.">setCustomNDot</a>(<span class="keywordtype">float</span> v) { customNDot=v; }</div>
-<div class="line"><a name="l00498"></a><span class="lineno"><a class="code" href="classStelCore.html#ac1d1b32015fb83245b9883889ef673a6">  498</a></span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classStelCore.html#ac1d1b32015fb83245b9883889ef673a6" title="Set coefficients for custom equation for calculation of Delta-T.">setCustomEquationCoefficients</a>(<a class="code" href="classVector3.html">Vec3f</a> c) { customEquationCoeff=c; }</div>
+<div class="line"><a name="l00492"></a><span class="lineno"><a class="code" href="classStelCore.html#a3f3651835c4095911f14116f64535926">  492</a></span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classStelCore.html#a3f3651835c4095911f14116f64535926" title="Set year for custom equation for calculation of Delta-T.">setDeltaTCustomYear</a>(<span class="keywordtype">float</span> y) { deltaTCustomYear=y; }</div>
+<div class="line"><a name="l00495"></a><span class="lineno"><a class="code" href="classStelCore.html#a707a7d7f8f50f4da81dadadf179b9c94">  495</a></span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classStelCore.html#a707a7d7f8f50f4da81dadadf179b9c94" title="Set n-dot for custom equation for calculation of Delta-T.">setDeltaTCustomNDot</a>(<span class="keywordtype">float</span> v) { deltaTCustomNDot=v; }</div>
+<div class="line"><a name="l00498"></a><span class="lineno"><a class="code" href="classStelCore.html#a224e9c17695e28f01f695a2f8d5c6640">  498</a></span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classStelCore.html#a224e9c17695e28f01f695a2f8d5c6640" title="Set coefficients for custom equation for calculation of Delta-T.">setDeltaTCustomEquationCoefficients</a>(<a class="code" href="classVector3.html">Vec3f</a> c) { deltaTCustomEquationCoeff=c; }</div>
 <div class="line"><a name="l00499"></a><span class="lineno">  499</span>&#160;</div>
-<div class="line"><a name="l00501"></a><span class="lineno"><a class="code" href="classStelCore.html#a99025d78a647c52204192ada22acea5c">  501</a></span>&#160;    <span class="keywordtype">float</span> <a class="code" href="classStelCore.html#a99025d78a647c52204192ada22acea5c" title="Get year for custom equation for calculation of Delta-T.">getCustomYear</a>()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> customYear; }</div>
-<div class="line"><a name="l00503"></a><span class="lineno"><a class="code" href="classStelCore.html#a2258892c48949b788dee429a44abffa7">  503</a></span>&#160;    <span class="keywordtype">float</span> <a class="code" href="classStelCore.html#a2258892c48949b788dee429a44abffa7" title="Get n-dot for custom equation for calculation of Delta-T.">getCustomNDot</a>()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> customNDot; }</div>
-<div class="line"><a name="l00505"></a><span class="lineno"><a class="code" href="classStelCore.html#ab73aebc4b78575b1c47fa6b13f466300">  505</a></span>&#160;    <a class="code" href="classVector3.html">Vec3f</a> <a class="code" href="classStelCore.html#ab73aebc4b78575b1c47fa6b13f466300" title="Get coefficients for custom equation for calculation of Delta-T.">getCustomEquationCoefficients</a>()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> customEquationCoeff; }</div>
+<div class="line"><a name="l00501"></a><span class="lineno"><a class="code" href="classStelCore.html#a14a590b814494d88d27b51bd5871dfd2">  501</a></span>&#160;    <span class="keywordtype">float</span> <a class="code" href="classStelCore.html#a14a590b814494d88d27b51bd5871dfd2" title="Get year for custom equation for calculation of Delta-T.">getDeltaTCustomYear</a>()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> deltaTCustomYear; }</div>
+<div class="line"><a name="l00503"></a><span class="lineno"><a class="code" href="classStelCore.html#aa1d63795db676c3755dba65f349abff1">  503</a></span>&#160;    <span class="keywordtype">float</span> <a class="code" href="classStelCore.html#aa1d63795db676c3755dba65f349abff1" title="Get n-dot for custom equation for calculation of Delta-T.">getDeltaTCustomNDot</a>()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> deltaTCustomNDot; }</div>
+<div class="line"><a name="l00505"></a><span class="lineno"><a class="code" href="classStelCore.html#aab67449ae293798e149781bb4ea4505b">  505</a></span>&#160;    <a class="code" href="classVector3.html">Vec3f</a> <a class="code" href="classStelCore.html#aab67449ae293798e149781bb4ea4505b" title="Get coefficients for custom equation for calculation of Delta-T.">getDeltaTCustomEquationCoefficients</a>()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> deltaTCustomEquationCoeff; }</div>
 <div class="line"><a name="l00506"></a><span class="lineno">  506</span>&#160;</div>
 <div class="line"><a name="l00507"></a><span class="lineno">  507</span>&#160;signals:</div>
 <div class="line"><a name="l00509"></a><span class="lineno">  509</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classStelCore.html#a949de4859203bcb79d6256c006a4072d" title="This signal is emitted when the observer location has changed.">locationChanged</a>(<a class="code" href="classStelLocation.html" title="Store the informations for a location on a planet.">StelLocation</a>);</div>
@@ -397,17 +396,17 @@
 <div class="line"><a name="l00531"></a><span class="lineno">  531</span>&#160;    <span class="keywordtype">void</span> updateTime(<span class="keywordtype">double</span> deltaTime);</div>
 <div class="line"><a name="l00532"></a><span class="lineno">  532</span>&#160;</div>
 <div class="line"><a name="l00533"></a><span class="lineno">  533</span>&#160;    <span class="comment">// Matrices used for every coordinate transfo</span></div>
-<div class="line"><a name="l00534"></a><span class="lineno">  534</span>&#160;    <a class="code" href="classMatrix4.html" title="A templatized column-major 4x4 matrix.">Mat4d</a> matHeliocentricEclipticToAltAz;      <span class="comment">// Transform from heliocentric ecliptic (Vsop87) to observer-centric altazimuthal coordinate</span></div>
-<div class="line"><a name="l00535"></a><span class="lineno">  535</span>&#160;    <a class="code" href="classMatrix4.html" title="A templatized column-major 4x4 matrix.">Mat4d</a> matAltAzToHeliocentricEcliptic;      <span class="comment">// Transform from observer-centric altazimuthal coordinate to heliocentric ecliptic (Vsop87)</span></div>
-<div class="line"><a name="l00536"></a><span class="lineno">  536</span>&#160;    <a class="code" href="classMatrix4.html" title="A templatized column-major 4x4 matrix.">Mat4d</a> matAltAzToEquinoxEqu;                <span class="comment">// Transform from observer-centric altazimuthal coordinate to Earth Equatorial</span></div>
-<div class="line"><a name="l00537"></a><span class="lineno">  537</span>&#160;    <a class="code" href="classMatrix4.html" title="A templatized column-major 4x4 matrix.">Mat4d</a> matEquinoxEquToAltAz;                <span class="comment">// Transform from observer-centric altazimuthal coordinate to Earth Equatorial</span></div>
-<div class="line"><a name="l00538"></a><span class="lineno">  538</span>&#160;    <a class="code" href="classMatrix4.html" title="A templatized column-major 4x4 matrix.">Mat4d</a> matHeliocentricEclipticToEquinoxEqu; <span class="comment">// Transform from heliocentric ecliptic (Vsop87) to earth equatorial coordinate</span></div>
-<div class="line"><a name="l00539"></a><span class="lineno">  539</span>&#160;    <a class="code" href="classMatrix4.html" title="A templatized column-major 4x4 matrix.">Mat4d</a> matEquinoxEquToJ2000;</div>
-<div class="line"><a name="l00540"></a><span class="lineno">  540</span>&#160;    <a class="code" href="classMatrix4.html" title="A templatized column-major 4x4 matrix.">Mat4d</a> matJ2000ToEquinoxEqu;</div>
-<div class="line"><a name="l00541"></a><span class="lineno">  541</span>&#160;    <a class="code" href="classMatrix4.html" title="A templatized column-major 4x4 matrix.">Mat4d</a> matJ2000ToAltAz;</div>
+<div class="line"><a name="l00534"></a><span class="lineno">  534</span>&#160;    <a class="code" href="classMatrix4.html" title="A templatized column-major 4x4 matrix compatible with openGL.">Mat4d</a> matHeliocentricEclipticToAltAz;      <span class="comment">// Transform from heliocentric ecliptic (Vsop87) to observer-centric altazimuthal coordinate</span></div>
+<div class="line"><a name="l00535"></a><span class="lineno">  535</span>&#160;    <a class="code" href="classMatrix4.html" title="A templatized column-major 4x4 matrix compatible with openGL.">Mat4d</a> matAltAzToHeliocentricEcliptic;      <span class="comment">// Transform from observer-centric altazimuthal coordinate to heliocentric ecliptic (Vsop87)</span></div>
+<div class="line"><a name="l00536"></a><span class="lineno">  536</span>&#160;    <a class="code" href="classMatrix4.html" title="A templatized column-major 4x4 matrix compatible with openGL.">Mat4d</a> matAltAzToEquinoxEqu;                <span class="comment">// Transform from observer-centric altazimuthal coordinate to Earth Equatorial</span></div>
+<div class="line"><a name="l00537"></a><span class="lineno">  537</span>&#160;    <a class="code" href="classMatrix4.html" title="A templatized column-major 4x4 matrix compatible with openGL.">Mat4d</a> matEquinoxEquToAltAz;                <span class="comment">// Transform from observer-centric altazimuthal coordinate to Earth Equatorial</span></div>
+<div class="line"><a name="l00538"></a><span class="lineno">  538</span>&#160;    <a class="code" href="classMatrix4.html" title="A templatized column-major 4x4 matrix compatible with openGL.">Mat4d</a> matHeliocentricEclipticToEquinoxEqu; <span class="comment">// Transform from heliocentric ecliptic (Vsop87) to earth equatorial coordinate</span></div>
+<div class="line"><a name="l00539"></a><span class="lineno">  539</span>&#160;    <a class="code" href="classMatrix4.html" title="A templatized column-major 4x4 matrix compatible with openGL.">Mat4d</a> matEquinoxEquToJ2000;</div>
+<div class="line"><a name="l00540"></a><span class="lineno">  540</span>&#160;    <a class="code" href="classMatrix4.html" title="A templatized column-major 4x4 matrix compatible with openGL.">Mat4d</a> matJ2000ToEquinoxEqu;</div>
+<div class="line"><a name="l00541"></a><span class="lineno">  541</span>&#160;    <a class="code" href="classMatrix4.html" title="A templatized column-major 4x4 matrix compatible with openGL.">Mat4d</a> matJ2000ToAltAz;</div>
 <div class="line"><a name="l00542"></a><span class="lineno">  542</span>&#160;</div>
-<div class="line"><a name="l00543"></a><span class="lineno">  543</span>&#160;    <a class="code" href="classMatrix4.html" title="A templatized column-major 4x4 matrix.">Mat4d</a> matAltAzModelView;           <span class="comment">// Modelview matrix for observer-centric altazimuthal drawing</span></div>
-<div class="line"><a name="l00544"></a><span class="lineno">  544</span>&#160;    <a class="code" href="classMatrix4.html" title="A templatized column-major 4x4 matrix.">Mat4d</a> invertMatAltAzModelView;     <span class="comment">// Inverted modelview matrix for observer-centric altazimuthal drawing</span></div>
+<div class="line"><a name="l00543"></a><span class="lineno">  543</span>&#160;    <a class="code" href="classMatrix4.html" title="A templatized column-major 4x4 matrix compatible with openGL.">Mat4d</a> matAltAzModelView;           <span class="comment">// Modelview matrix for observer-centric altazimuthal drawing</span></div>
+<div class="line"><a name="l00544"></a><span class="lineno">  544</span>&#160;    <a class="code" href="classMatrix4.html" title="A templatized column-major 4x4 matrix compatible with openGL.">Mat4d</a> invertMatAltAzModelView;     <span class="comment">// Inverted modelview matrix for observer-centric altazimuthal drawing</span></div>
 <div class="line"><a name="l00545"></a><span class="lineno">  545</span>&#160;</div>
 <div class="line"><a name="l00546"></a><span class="lineno">  546</span>&#160;    <span class="comment">// Position variables</span></div>
 <div class="line"><a name="l00547"></a><span class="lineno">  547</span>&#160;    <a class="code" href="classStelObserver.html" title="Should be renamed as PlanetBasedObserver and derive from a more generical StelObserver class...">StelObserver</a>* position;</div>
@@ -422,9 +421,9 @@
 <div class="line"><a name="l00556"></a><span class="lineno">  556</span>&#160;    QString startupTimeMode;</div>
 <div class="line"><a name="l00557"></a><span class="lineno">  557</span>&#160;</div>
 <div class="line"><a name="l00558"></a><span class="lineno">  558</span>&#160;    <span class="comment">// Variables for custom equation of Delta-T</span></div>
-<div class="line"><a name="l00559"></a><span class="lineno">  559</span>&#160;    <a class="code" href="classVector3.html" title="A templatized 3d vector.">Vec3f</a> customEquationCoeff;</div>
-<div class="line"><a name="l00560"></a><span class="lineno">  560</span>&#160;    <span class="keywordtype">float</span> customNDot;</div>
-<div class="line"><a name="l00561"></a><span class="lineno">  561</span>&#160;    <span class="keywordtype">float</span> customYear;</div>
+<div class="line"><a name="l00559"></a><span class="lineno">  559</span>&#160;    <a class="code" href="classVector3.html" title="A templatized 3d vector compatible with openGL.">Vec3f</a> deltaTCustomEquationCoeff;</div>
+<div class="line"><a name="l00560"></a><span class="lineno">  560</span>&#160;    <span class="keywordtype">float</span> deltaTCustomNDot;</div>
+<div class="line"><a name="l00561"></a><span class="lineno">  561</span>&#160;    <span class="keywordtype">float</span> deltaTCustomYear;</div>
 <div class="line"><a name="l00562"></a><span class="lineno">  562</span>&#160;</div>
 <div class="line"><a name="l00563"></a><span class="lineno">  563</span>&#160;};</div>
 <div class="line"><a name="l00564"></a><span class="lineno">  564</span>&#160;</div>
@@ -432,7 +431,7 @@
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Sun Sep 22 2013 18:49:45 for Stellarium by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Wed Sep 25 2013 20:54:59 for Stellarium by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.3.1
 </small></address>

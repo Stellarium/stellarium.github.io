@@ -15,7 +15,7 @@
  <tr style="height: 56px;">
   <td id="projectlogo"><img alt="Logo" src="stellarium-logo.png"/></td>
   <td style="padding-left: 0.5em;">
-   <div id="projectname">Stellarium 0.12.3</div>
+   <div id="projectname">Stellarium 0.13.0</div>
   </td>
  </tr>
  </tbody>
@@ -30,7 +30,6 @@
       <li><a href="codingStyle.html"><span>Coding&#160;Style</span></a></li>
       <li><a href="scripting.html"><span>Scripting</span></a></li>
       <li><a href="plugins.html"><span>Plugins</span></a></li>
-      <li><a href="renderer.html"><span>Renderer</span></a></li>
       <li><a href="fileStructure.html"><span>File&#160;Structure</span></a></li>
     </ul>
   </div>
@@ -57,88 +56,17 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a44743e0a57d0f5d08ee2391f4be05675"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a44743e0a57d0f5d08ee2391f4be05675"></a>
 &#160;</td><td class="memItemRight" valign="bottom"><b>Ring</b> (double radiusMin, double radiusMax, const QString &amp;texname)</td></tr>
 <tr class="separator:a44743e0a57d0f5d08ee2391f4be05675"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:addadced193d699548e550967b43874ff"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRing.html#addadced193d699548e550967b43874ff">draw</a> (<a class="el" href="StelProjectorType_8hpp.html#a286221a2d4640bbeec2090cfbfadb0ff">StelProjectorP</a> projector, class <a class="el" href="classStelRenderer.html">StelRenderer</a> *renderer, <a class="el" href="classStelProjector.html#ae6b42a6973558f855691b91701edf0dc">StelProjector::ModelViewTranformP</a> transform, class <a class="el" href="classStelGLSLShader.html">StelGLSLShader</a> *shader, double screenSz, <a class="el" href="structShadowPlanetShaderInfo.html">ShadowPlanetShaderInfo</a> *info)</td></tr>
-<tr class="memdesc:addadced193d699548e550967b43874ff"><td class="mdescLeft">&#160;</td><td class="mdescRight">Draw the ring.  <a href="#addadced193d699548e550967b43874ff">More...</a><br/></td></tr>
-<tr class="separator:addadced193d699548e550967b43874ff"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a10415c9d4dbfe53d3d01298f6c589738"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a10415c9d4dbfe53d3d01298f6c589738"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>draw</b> (<a class="el" href="classStelPainter.html">StelPainter</a> *painter, <a class="el" href="classStelProjector.html#ae6b42a6973558f855691b91701edf0dc">StelProjector::ModelViewTranformP</a> transfo, double screenSz)</td></tr>
+<tr class="separator:a10415c9d4dbfe53d3d01298f6c589738"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac2d72415cb82d8c5cf87fc8721db8179"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ac2d72415cb82d8c5cf87fc8721db8179"></a>
 double&#160;</td><td class="memItemRight" valign="bottom"><b>getSize</b> (void) const </td></tr>
 <tr class="separator:ac2d72415cb82d8c5cf87fc8721db8179"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
-<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock">
-<p>Definition at line <a class="el" href="Planet_8hpp_source.html#l00077">77</a> of file <a class="el" href="Planet_8hpp_source.html">Planet.hpp</a>.</p>
-</div><h2 class="groupheader">Member Function Documentation</h2>
-<a class="anchor" id="addadced193d699548e550967b43874ff"></a>
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">void Ring::draw </td>
-          <td>(</td>
-          <td class="paramtype"><a class="el" href="StelProjectorType_8hpp.html#a286221a2d4640bbeec2090cfbfadb0ff">StelProjectorP</a>&#160;</td>
-          <td class="paramname"><em>projector</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">class <a class="el" href="classStelRenderer.html">StelRenderer</a> *&#160;</td>
-          <td class="paramname"><em>renderer</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype"><a class="el" href="classStelProjector.html#ae6b42a6973558f855691b91701edf0dc">StelProjector::ModelViewTranformP</a>&#160;</td>
-          <td class="paramname"><em>transform</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">class <a class="el" href="classStelGLSLShader.html">StelGLSLShader</a> *&#160;</td>
-          <td class="paramname"><em>shader</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">double&#160;</td>
-          <td class="paramname"><em>screenSz</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype"><a class="el" href="structShadowPlanetShaderInfo.html">ShadowPlanetShaderInfo</a> *&#160;</td>
-          <td class="paramname"><em>info</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Draw the ring. </p>
-<p>Note that ring drawing doesn't use light (it didn't use it before the refactor either, but there was code to do lighting on the CPU in StelPainter::sRing)</p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">projector</td><td>Projector to project the vertices. </td></tr>
-    <tr><td class="paramname">renderer</td><td>Renderer to draw with. </td></tr>
-    <tr><td class="paramname">transform</td><td>Used to determine whether we're above or below the ring. </td></tr>
-    <tr><td class="paramname">shader</td><td>Shader to use for drawing. </td></tr>
-    <tr><td class="paramname">screenSz</td><td>Screen size. </td></tr>
-    <tr><td class="paramname">info</td><td>Shader information. </td></tr>
-  </table>
-  </dd>
-</dl>
-
-</div>
-</div>
-<hr/>The documentation for this class was generated from the following file:<ul>
-<li>core/modules/<a class="el" href="Planet_8hpp_source.html">Planet.hpp</a></li>
-</ul>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Sun Sep 22 2013 18:49:46 for Stellarium by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Wed Sep 25 2013 20:54:59 for Stellarium by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.3.1
 </small></address>

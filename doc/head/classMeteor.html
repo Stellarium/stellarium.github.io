@@ -15,7 +15,7 @@
  <tr style="height: 56px;">
   <td id="projectlogo"><img alt="Logo" src="stellarium-logo.png"/></td>
   <td style="padding-left: 0.5em;">
-   <div id="projectname">Stellarium 0.12.3</div>
+   <div id="projectname">Stellarium 0.13.0</div>
   </td>
  </tr>
  </tbody>
@@ -30,7 +30,6 @@
       <li><a href="codingStyle.html"><span>Coding&#160;Style</span></a></li>
       <li><a href="scripting.html"><span>Scripting</span></a></li>
       <li><a href="plugins.html"><span>Plugins</span></a></li>
-      <li><a href="renderer.html"><span>Renderer</span></a></li>
       <li><a href="fileStructure.html"><span>File&#160;Structure</span></a></li>
     </ul>
   </div>
@@ -46,7 +45,6 @@
 <div class="header">
   <div class="summary">
 <a href="classMeteor-members.html">List of all members</a> &#124;
-<a href="#nested-classes">Classes</a> &#124;
 <a href="#pub-methods">Public Member Functions</a>  </div>
   <div class="headertitle">
 <div class="title">Meteor Class Reference</div>  </div>
@@ -66,9 +64,9 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a74237b0dceab250726b1d4470a7fa7ba"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMeteor.html#a74237b0dceab250726b1d4470a7fa7ba">update</a> (double deltaTime)</td></tr>
 <tr class="memdesc:a74237b0dceab250726b1d4470a7fa7ba"><td class="mdescLeft">&#160;</td><td class="mdescRight">Updates the position of the meteor, and expires it if necessary.  <a href="#a74237b0dceab250726b1d4470a7fa7ba">More...</a><br/></td></tr>
 <tr class="separator:a74237b0dceab250726b1d4470a7fa7ba"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad9d449d96667d694d6e8709635f5dade"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMeteor.html#ad9d449d96667d694d6e8709635f5dade">draw</a> (const <a class="el" href="classStelCore.html">StelCore</a> *core, <a class="el" href="StelProjectorType_8hpp.html#a286221a2d4640bbeec2090cfbfadb0ff">StelProjectorP</a> projector, class <a class="el" href="classStelRenderer.html">StelRenderer</a> *renderer)</td></tr>
-<tr class="memdesc:ad9d449d96667d694d6e8709635f5dade"><td class="mdescLeft">&#160;</td><td class="mdescRight">Draws the meteor.  <a href="#ad9d449d96667d694d6e8709635f5dade">More...</a><br/></td></tr>
-<tr class="separator:ad9d449d96667d694d6e8709635f5dade"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2bc2caa326e628f994fe3bb4f8b33ed7"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMeteor.html#a2bc2caa326e628f994fe3bb4f8b33ed7">draw</a> (const <a class="el" href="classStelCore.html">StelCore</a> *core, <a class="el" href="classStelPainter.html">StelPainter</a> &amp;sPainter)</td></tr>
+<tr class="memdesc:a2bc2caa326e628f994fe3bb4f8b33ed7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Draws the meteor.  <a href="#a2bc2caa326e628f994fe3bb4f8b33ed7">More...</a><br/></td></tr>
+<tr class="separator:a2bc2caa326e628f994fe3bb4f8b33ed7"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a7f708b9ab145cd321379fe3bf3d3225a"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMeteor.html#a7f708b9ab145cd321379fe3bf3d3225a">isAlive</a> (void)</td></tr>
 <tr class="memdesc:a7f708b9ab145cd321379fe3bf3d3225a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Determine if a meteor is alive or has burned out.  <a href="#a7f708b9ab145cd321379fe3bf3d3225a">More...</a><br/></td></tr>
 <tr class="separator:a7f708b9ab145cd321379fe3bf3d3225a"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -76,8 +74,6 @@ Public Member Functions</h2></td></tr>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Models a single meteor. </p>
 <p>Control of the meteor rate is performed in the <a class="el" href="classMeteorMgr.html" title="Simulates a meteor shower.">MeteorMgr</a> class. Once created, a meteor object only lasts for some amount of time, and then "dies", after which, the <a class="el" href="classMeteor.html#a74237b0dceab250726b1d4470a7fa7ba" title="Updates the position of the meteor, and expires it if necessary.">update()</a> member returns false. The live/dead status of a meteor may also be determined using the isAlive member. </p>
-
-<p>Definition at line <a class="el" href="Meteor_8hpp_source.html#l00041">41</a> of file <a class="el" href="Meteor_8hpp_source.html">Meteor.hpp</a>.</p>
 </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a class="anchor" id="adbbbb7224f6b52d4814fd9159faf1fae"></a>
 <div class="memitem">
@@ -114,7 +110,7 @@ Public Member Functions</h2></td></tr>
 </div>
 </div>
 <h2 class="groupheader">Member Function Documentation</h2>
-<a class="anchor" id="ad9d449d96667d694d6e8709635f5dade"></a>
+<a class="anchor" id="a2bc2caa326e628f994fe3bb4f8b33ed7"></a>
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
@@ -127,14 +123,8 @@ Public Member Functions</h2></td></tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype"><a class="el" href="StelProjectorType_8hpp.html#a286221a2d4640bbeec2090cfbfadb0ff">StelProjectorP</a>&#160;</td>
-          <td class="paramname"><em>projector</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">class <a class="el" href="classStelRenderer.html">StelRenderer</a> *&#160;</td>
-          <td class="paramname"><em>renderer</em>&#160;</td>
+          <td class="paramtype"><a class="el" href="classStelPainter.html">StelPainter</a> &amp;&#160;</td>
+          <td class="paramname"><em>sPainter</em>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -186,13 +176,10 @@ Public Member Functions</h2></td></tr>
 
 </div>
 </div>
-<hr/>The documentation for this class was generated from the following file:<ul>
-<li>core/modules/<a class="el" href="Meteor_8hpp_source.html">Meteor.hpp</a></li>
-</ul>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Sun Sep 22 2013 18:49:46 for Stellarium by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Wed Sep 25 2013 20:54:59 for Stellarium by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.3.1
 </small></address>

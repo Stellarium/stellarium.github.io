@@ -15,7 +15,7 @@
  <tr style="height: 56px;">
   <td id="projectlogo"><img alt="Logo" src="stellarium-logo.png"/></td>
   <td style="padding-left: 0.5em;">
-   <div id="projectname">Stellarium 0.12.3</div>
+   <div id="projectname">Stellarium 0.13.0</div>
   </td>
  </tr>
  </tbody>
@@ -30,7 +30,6 @@
       <li><a href="codingStyle.html"><span>Coding&#160;Style</span></a></li>
       <li><a href="scripting.html"><span>Scripting</span></a></li>
       <li><a href="plugins.html"><span>Plugins</span></a></li>
-      <li><a href="renderer.html"><span>Renderer</span></a></li>
       <li><a href="fileStructure.html"><span>File&#160;Structure</span></a></li>
     </ul>
   </div>
@@ -46,6 +45,7 @@
 <div class="header">
   <div class="summary">
 <a href="classExtinction-members.html">List of all members</a> &#124;
+<a href="#pub-types">Public Types</a> &#124;
 <a href="#pub-methods">Public Member Functions</a>  </div>
   <div class="headertitle">
 <div class="title">Extinction Class Reference</div>  </div>
@@ -57,6 +57,15 @@
 
 <p><code>#include &lt;<a class="el" href="RefractionExtinction_8hpp_source.html">RefractionExtinction.hpp</a>&gt;</code></p>
 <table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-types"></a>
+Public Types</h2></td></tr>
+<tr class="memitem:a3cc18c4d77126fba1b15c0caeeb778df"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classExtinction.html#a3cc18c4d77126fba1b15c0caeeb778df">UndergroundExtinctionMode</a> { <a class="el" href="classExtinction.html#a3cc18c4d77126fba1b15c0caeeb778dfa2cd70ed0b3f00f8038e998d7c73cad2d">UndergroundExtinctionZero</a> = 0, 
+<a class="el" href="classExtinction.html#a3cc18c4d77126fba1b15c0caeeb778dfa38615890947d496eaacd52001f3b31b6">UndergroundExtinctionMax</a> = 1, 
+<a class="el" href="classExtinction.html#a3cc18c4d77126fba1b15c0caeeb778dfac52c422751798ffbe9a141822ab41bf0">UndergroundExtinctionMirror</a> = 2
+ }</td></tr>
+<tr class="memdesc:a3cc18c4d77126fba1b15c0caeeb778df"><td class="mdescLeft">&#160;</td><td class="mdescRight">Define the extinction strategy for rendering underground objects (usefull when ground is not rendered)  <a href="classExtinction.html#a3cc18c4d77126fba1b15c0caeeb778df">More...</a><br/></td></tr>
+<tr class="separator:a3cc18c4d77126fba1b15c0caeeb778df"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
 <tr class="memitem:a3100a06956a61a49775abb22e3f02959"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classExtinction.html#a3100a06956a61a49775abb22e3f02959">forward</a> (const <a class="el" href="classVector3.html">Vec3d</a> *altAzPos, float *mag, const int num=1) const </td></tr>
@@ -65,43 +74,55 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:ad8464ca56be984bc9d168888584d8905"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ad8464ca56be984bc9d168888584d8905"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><b>forward</b> (const <a class="el" href="classVector3.html">Vec3f</a> *altAzPos, float *mag, const int num=1) const </td></tr>
 <tr class="separator:ad8464ca56be984bc9d168888584d8905"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad9e310379a2b99208fbec10bbbc5455d"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ad9e310379a2b99208fbec10bbbc5455d"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>forward</b> (const double *sinAlt, float *mag, const int num) const </td></tr>
-<tr class="separator:ad9e310379a2b99208fbec10bbbc5455d"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a4ea3af06218fc8c617874138e514a386"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a4ea3af06218fc8c617874138e514a386"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>forward</b> (const float *sinAlt, float *mag, const int num) const </td></tr>
-<tr class="separator:a4ea3af06218fc8c617874138e514a386"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a807d69a833a5ba36e81fb9822ad4b4c7"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a807d69a833a5ba36e81fb9822ad4b4c7"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>forward</b> (const double *sinAlt, float *mag) const </td></tr>
-<tr class="separator:a807d69a833a5ba36e81fb9822ad4b4c7"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a537e68b1a723b17cfd4ce26d37ea443f"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a537e68b1a723b17cfd4ce26d37ea443f"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>forward</b> (const float *sinAlt, float *mag) const </td></tr>
-<tr class="separator:a537e68b1a723b17cfd4ce26d37ea443f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad3d6873cfc539b7e5ed70a4b7440eb99"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classExtinction.html#ad3d6873cfc539b7e5ed70a4b7440eb99">backward</a> (const <a class="el" href="classVector3.html">Vec3d</a> *altAzPos, float *mag, const int num=1) const </td></tr>
 <tr class="memdesc:ad3d6873cfc539b7e5ed70a4b7440eb99"><td class="mdescLeft">&#160;</td><td class="mdescRight">Compute inverse extinction effect for arrays of size.  <a href="#ad3d6873cfc539b7e5ed70a4b7440eb99">More...</a><br/></td></tr>
 <tr class="separator:ad3d6873cfc539b7e5ed70a4b7440eb99"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac9418808c3d70252d4a6f10df981653a"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ac9418808c3d70252d4a6f10df981653a"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><b>backward</b> (const <a class="el" href="classVector3.html">Vec3f</a> *altAzPos, float *mag, const int num=1) const </td></tr>
 <tr class="separator:ac9418808c3d70252d4a6f10df981653a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a83f2ec8e2bb6cba08c5da0f5e236c186"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a83f2ec8e2bb6cba08c5da0f5e236c186"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>backward</b> (const double *sinAlt, float *mag, const int num=1) const </td></tr>
-<tr class="separator:a83f2ec8e2bb6cba08c5da0f5e236c186"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a1eefa42694d6f28d41134dec291841f4"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a1eefa42694d6f28d41134dec291841f4"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>backward</b> (const float *sinAlt, float *mag, const int num=1) const </td></tr>
-<tr class="separator:a1eefa42694d6f28d41134dec291841f4"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aab02cdb54d198c16d312dc365454e3d1"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classExtinction.html#aab02cdb54d198c16d312dc365454e3d1">setExtinctionCoefficient</a> (float k)</td></tr>
 <tr class="memdesc:aab02cdb54d198c16d312dc365454e3d1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set visual extinction coefficient (mag/airmass), influences extinction computation.  <a href="#aab02cdb54d198c16d312dc365454e3d1">More...</a><br/></td></tr>
 <tr class="separator:aab02cdb54d198c16d312dc365454e3d1"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aea210ac612d959a21dbc4bf937c0fe1c"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aea210ac612d959a21dbc4bf937c0fe1c"></a>
 float&#160;</td><td class="memItemRight" valign="bottom"><b>getExtinctionCoefficient</b> () const </td></tr>
 <tr class="separator:aea210ac612d959a21dbc4bf937c0fe1c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a882aaab58ac70123164c3b9abb99b55a"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a882aaab58ac70123164c3b9abb99b55a"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>setUndergroundExtinctionMode</b> (<a class="el" href="classExtinction.html#a3cc18c4d77126fba1b15c0caeeb778df">UndergroundExtinctionMode</a> mode)</td></tr>
+<tr class="separator:a882aaab58ac70123164c3b9abb99b55a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a169529f6702dd2583b052221ae6be35d"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a169529f6702dd2583b052221ae6be35d"></a>
+<a class="el" href="classExtinction.html#a3cc18c4d77126fba1b15c0caeeb778df">UndergroundExtinctionMode</a>&#160;</td><td class="memItemRight" valign="bottom"><b>getUndergroundExtinctionMode</b> () const </td></tr>
+<tr class="separator:a169529f6702dd2583b052221ae6be35d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>This class performs extinction computations, following literature from atmospheric optics and astronomy. </p>
 <p>Airmass computations are limited to meaningful altitudes. The solution provided here will [hopefully!] result in a visible "zone of avoidance" near the horizon down to altitude -2, and may show stars in their full brightness below -2 degrees. Typical horizons do not go down below -1, so all natural sites should be covered. Note that forward/backward are no absolute reverse operations! All the computations should be in effect (1) only if atmosphere effects are true (2) only for terrestrial locations, not on Moon/Mars/Saturn etc config.ini:astro/flag_extinction_below_horizon=true|false controls if extinction kills objects below -2 degrees altitude by setting airmass to 42. </p>
+</div><h2 class="groupheader">Member Enumeration Documentation</h2>
+<a class="anchor" id="a3cc18c4d77126fba1b15c0caeeb778df"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">enum <a class="el" href="classExtinction.html#a3cc18c4d77126fba1b15c0caeeb778df">Extinction::UndergroundExtinctionMode</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="RefractionExtinction_8hpp_source.html#l00045">45</a> of file <a class="el" href="RefractionExtinction_8hpp_source.html">RefractionExtinction.hpp</a>.</p>
-</div><h2 class="groupheader">Member Function Documentation</h2>
+<p>Define the extinction strategy for rendering underground objects (usefull when ground is not rendered) </p>
+<table class="fieldtable">
+<tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><em><a class="anchor" id="a3cc18c4d77126fba1b15c0caeeb778dfa2cd70ed0b3f00f8038e998d7c73cad2d"></a>UndergroundExtinctionZero</em>&nbsp;</td><td class="fielddoc">
+<p>Zero extinction: stars visible in full brightness. </p>
+</td></tr>
+<tr><td class="fieldname"><em><a class="anchor" id="a3cc18c4d77126fba1b15c0caeeb778dfa38615890947d496eaacd52001f3b31b6"></a>UndergroundExtinctionMax</em>&nbsp;</td><td class="fielddoc">
+<p>Maximum extinction: coef 42, i.e practically invisible. </p>
+</td></tr>
+<tr><td class="fieldname"><em><a class="anchor" id="a3cc18c4d77126fba1b15c0caeeb778dfac52c422751798ffbe9a141822ab41bf0"></a>UndergroundExtinctionMirror</em>&nbsp;</td><td class="fielddoc">
+<p>Mirror the extinction for the same altutide above the ground. </p>
+</td></tr>
+</table>
+
+</div>
+</div>
+<h2 class="groupheader">Member Function Documentation</h2>
 <a class="anchor" id="ad3d6873cfc539b7e5ed70a4b7440eb99"></a>
 <div class="memitem">
 <div class="memproto">
@@ -136,8 +157,7 @@ float&#160;</td><td class="memItemRight" valign="bottom"><b>getExtinctionCoeffic
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">num</td><td>position vectors and magnitudes. </td></tr>
-    <tr><td class="paramname">altAzPos</td><td>are the NORMALIZED (!!) (apparent) star position vectors, and their z components sin(apparent_altitude). </td></tr>
-    <tr><td class="paramname">mag</td><td>the magnitudes Note that forward/backward are no absolute reverse operations! </td></tr>
+    <tr><td class="paramname">altAzPos</td><td>are the NORMALIZED (!!) (apparent) star position vectors, and their z components sin(apparent_altitude). Note that forward/backward are no absolute reverse operations! </td></tr>
   </table>
   </dd>
 </dl>
@@ -178,8 +198,7 @@ float&#160;</td><td class="memItemRight" valign="bottom"><b>getExtinctionCoeffic
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">num</td><td>position vectors and magnitudes. </td></tr>
-    <tr><td class="paramname">altAzPos</td><td>are the NORMALIZED (!!) (apparent) star position vectors, and their z components sin(apparent_altitude). </td></tr>
-    <tr><td class="paramname">mag</td><td>the magnitudes This call must therefore be done after application of <a class="el" href="classRefraction.html" title="This class performs refraction computations, following literature from atmospheric optics and astrono...">Refraction</a>, and only if atmospheric effects are on. Note that forward/backward are no absolute reverse operations! </td></tr>
+    <tr><td class="paramname">altAzPos</td><td>are the NORMALIZED (!!) (apparent) star position vectors, and their z components sin(apparent_altitude). This call must therefore be done after application of <a class="el" href="classRefraction.html" title="This class performs refraction computations, following literature from atmospheric optics and astrono...">Refraction</a>, and only if atmospheric effects are on. Note that forward/backward are no absolute reverse operations! </td></tr>
   </table>
   </dd>
 </dl>
@@ -216,17 +235,12 @@ float&#160;</td><td class="memItemRight" valign="bottom"><b>getExtinctionCoeffic
   </dd>
 </dl>
 
-<p>Definition at line <a class="el" href="RefractionExtinction_8hpp_source.html#l00072">72</a> of file <a class="el" href="RefractionExtinction_8hpp_source.html">RefractionExtinction.hpp</a>.</p>
-
 </div>
 </div>
-<hr/>The documentation for this class was generated from the following file:<ul>
-<li>core/<a class="el" href="RefractionExtinction_8hpp_source.html">RefractionExtinction.hpp</a></li>
-</ul>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Sun Sep 22 2013 18:49:46 for Stellarium by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Wed Sep 25 2013 20:54:59 for Stellarium by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.3.1
 </small></address>

@@ -15,7 +15,7 @@
  <tr style="height: 56px;">
   <td id="projectlogo"><img alt="Logo" src="stellarium-logo.png"/></td>
   <td style="padding-left: 0.5em;">
-   <div id="projectname">Stellarium 0.12.3</div>
+   <div id="projectname">Stellarium 0.13.0</div>
   </td>
  </tr>
  </tbody>
@@ -30,7 +30,6 @@
       <li><a href="codingStyle.html"><span>Coding&#160;Style</span></a></li>
       <li><a href="scripting.html"><span>Scripting</span></a></li>
       <li><a href="plugins.html"><span>Plugins</span></a></li>
-      <li><a href="renderer.html"><span>Renderer</span></a></li>
       <li><a href="fileStructure.html"><span>File&#160;Structure</span></a></li>
     </ul>
   </div>
@@ -73,9 +72,9 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a8a453b63c41a52ad79a9954810313779"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a8a453b63c41a52ad79a9954810313779"></a>
 virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>load</b> (const QSettings &amp;landscapeIni, const QString &amp;landscapeId)=0</td></tr>
 <tr class="separator:a8a453b63c41a52ad79a9954810313779"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a628485dbd05a6fb5748d165ffa14154a"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classLandscape.html#a628485dbd05a6fb5748d165ffa14154a">draw</a> (<a class="el" href="classStelCore.html">StelCore</a> *core, class <a class="el" href="classStelRenderer.html">StelRenderer</a> *renderer)=0</td></tr>
-<tr class="memdesc:a628485dbd05a6fb5748d165ffa14154a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Draw the landscape.  <a href="#a628485dbd05a6fb5748d165ffa14154a">More...</a><br/></td></tr>
-<tr class="separator:a628485dbd05a6fb5748d165ffa14154a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a66bb644883d4a2842c7d7b41ba8de9c9"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a66bb644883d4a2842c7d7b41ba8de9c9"></a>
+virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>draw</b> (<a class="el" href="classStelCore.html">StelCore</a> *core)=0</td></tr>
+<tr class="separator:a66bb644883d4a2842c7d7b41ba8de9c9"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a5744619f50358e92ac0fee8298995621"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a5744619f50358e92ac0fee8298995621"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><b>update</b> (double deltaTime)</td></tr>
 <tr class="separator:a5744619f50358e92ac0fee8298995621"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -139,9 +138,9 @@ Protected Member Functions</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-attribs"></a>
 Protected Attributes</h2></td></tr>
-<tr class="memitem:a1032609665a51fe8461d17a4e232cbd3"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a1032609665a51fe8461d17a4e232cbd3"></a>
-const float&#160;</td><td class="memItemRight" valign="bottom"><b>radius</b></td></tr>
-<tr class="separator:a1032609665a51fe8461d17a4e232cbd3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab52af5330cf09ad84dad5c4a1528af2d"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ab52af5330cf09ad84dad5c4a1528af2d"></a>
+float&#160;</td><td class="memItemRight" valign="bottom"><b>radius</b></td></tr>
+<tr class="separator:ab52af5330cf09ad84dad5c4a1528af2d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a5c370ac06ac51ce8b06a54e61785e36c"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a5c370ac06ac51ce8b06a54e61785e36c"></a>
 QString&#160;</td><td class="memItemRight" valign="bottom"><b>name</b></td></tr>
 <tr class="separator:a5c370ac06ac51ce8b06a54e61785e36c"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -203,54 +202,7 @@ float&#160;</td><td class="memItemRight" valign="bottom"><b>angleRotateZOffset</
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Store and manages the displaying of the <a class="el" href="classLandscape.html" title="Store and manages the displaying of the Landscape.">Landscape</a>. </p>
 <p>Don't use this class direcly, use the <a class="el" href="classLandscapeMgr.html" title="Manages all the rendering at the level of the observer&#39;s surroundings.">LandscapeMgr</a>. </p>
-
-<p>Definition at line <a class="el" href="Landscape_8hpp_source.html#l00042">42</a> of file <a class="el" href="Landscape_8hpp_source.html">Landscape.hpp</a>.</p>
 </div><h2 class="groupheader">Member Function Documentation</h2>
-<a class="anchor" id="a628485dbd05a6fb5748d165ffa14154a"></a>
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">virtual void Landscape::draw </td>
-          <td>(</td>
-          <td class="paramtype"><a class="el" href="classStelCore.html">StelCore</a> *&#160;</td>
-          <td class="paramname"><em>core</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">class <a class="el" href="classStelRenderer.html">StelRenderer</a> *&#160;</td>
-          <td class="paramname"><em>renderer</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Draw the landscape. </p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">core</td><td>The <a class="el" href="classStelCore.html" title="Main class for Stellarium core processing.">StelCore</a> object. </td></tr>
-    <tr><td class="paramname">renderer</td><td>The renderer to draw with. </td></tr>
-  </table>
-  </dd>
-</dl>
-
-<p>Implemented in <a class="el" href="classLandscapeSpherical.html#ab23959a2e05035d10b223a3716d512bc">LandscapeSpherical</a>, <a class="el" href="classLandscapeFisheye.html#a8477a392adb39f9a0d9a2d12af97ba60">LandscapeFisheye</a>, and <a class="el" href="classLandscapeOldStyle.html#adcdb847a6df5800179482c5488fcea49">LandscapeOldStyle</a>.</p>
-
-</div>
-</div>
 <a class="anchor" id="a3e4c3a74f20cc0f9ffbd502dff5e1572"></a>
 <div class="memitem">
 <div class="memproto">
@@ -273,8 +225,6 @@ float&#160;</td><td class="memItemRight" valign="bottom"><b>angleRotateZOffset</
 </div><div class="memdoc">
 
 <p>Get landscape author name. </p>
-
-<p>Definition at line <a class="el" href="Landscape_8hpp_source.html#l00075">75</a> of file <a class="el" href="Landscape_8hpp_source.html">Landscape.hpp</a>.</p>
 
 </div>
 </div>
@@ -300,8 +250,6 @@ float&#160;</td><td class="memItemRight" valign="bottom"><b>angleRotateZOffset</
 </div><div class="memdoc">
 
 <p>Return default atmosperic extinction, mag/airmass, or -1 (no change) </p>
-
-<p>Definition at line <a class="el" href="Landscape_8hpp_source.html#l00086">86</a> of file <a class="el" href="Landscape_8hpp_source.html">Landscape.hpp</a>.</p>
 
 </div>
 </div>
@@ -329,8 +277,6 @@ float&#160;</td><td class="memItemRight" valign="bottom"><b>angleRotateZOffset</
 <p>Return default atmospheric temperature, for refraction computation. </p>
 <p>returns -1 to signal "standard conditions", or -2 for "unknown/invalid/no change" </p>
 
-<p>Definition at line <a class="el" href="Landscape_8hpp_source.html#l00091">91</a> of file <a class="el" href="Landscape_8hpp_source.html">Landscape.hpp</a>.</p>
-
 </div>
 </div>
 <a class="anchor" id="af09e090a9855ca48fdc9d5ca19205cdd"></a>
@@ -355,8 +301,6 @@ float&#160;</td><td class="memItemRight" valign="bottom"><b>angleRotateZOffset</
 </div><div class="memdoc">
 
 <p>Return default atmospheric temperature, for refraction computation, or -1000 for "unknown/no change". </p>
-
-<p>Definition at line <a class="el" href="Landscape_8hpp_source.html#l00088">88</a> of file <a class="el" href="Landscape_8hpp_source.html">Landscape.hpp</a>.</p>
 
 </div>
 </div>
@@ -383,8 +327,6 @@ float&#160;</td><td class="memItemRight" valign="bottom"><b>angleRotateZOffset</
 
 <p>Return default Bortle index (light pollution value) or -1 (unknown/no change) </p>
 
-<p>Definition at line <a class="el" href="Landscape_8hpp_source.html#l00082">82</a> of file <a class="el" href="Landscape_8hpp_source.html">Landscape.hpp</a>.</p>
-
 </div>
 </div>
 <a class="anchor" id="afe6896b1c0f1e6a4cf6b43202dc1ae74"></a>
@@ -409,8 +351,6 @@ float&#160;</td><td class="memItemRight" valign="bottom"><b>angleRotateZOffset</
 </div><div class="memdoc">
 
 <p>Return default fog setting (0/1) or -1 (no change) </p>
-
-<p>Definition at line <a class="el" href="Landscape_8hpp_source.html#l00084">84</a> of file <a class="el" href="Landscape_8hpp_source.html">Landscape.hpp</a>.</p>
 
 </div>
 </div>
@@ -437,8 +377,6 @@ float&#160;</td><td class="memItemRight" valign="bottom"><b>angleRotateZOffset</
 
 <p>Get landscape description. </p>
 
-<p>Definition at line <a class="el" href="Landscape_8hpp_source.html#l00077">77</a> of file <a class="el" href="Landscape_8hpp_source.html">Landscape.hpp</a>.</p>
-
 </div>
 </div>
 <a class="anchor" id="a7f7c6c1b90dadf63edca7ef9bf28e52d"></a>
@@ -463,8 +401,6 @@ float&#160;</td><td class="memItemRight" valign="bottom"><b>angleRotateZOffset</
 </div><div class="memdoc">
 
 <p>Get whether landscape is displayed (does not concern fog) </p>
-
-<p>Definition at line <a class="el" href="Landscape_8hpp_source.html#l00067">67</a> of file <a class="el" href="Landscape_8hpp_source.html">Landscape.hpp</a>.</p>
 
 </div>
 </div>
@@ -491,8 +427,6 @@ float&#160;</td><td class="memItemRight" valign="bottom"><b>angleRotateZOffset</
 
 <p>Get whether fog is displayed. </p>
 
-<p>Definition at line <a class="el" href="Landscape_8hpp_source.html#l00071">71</a> of file <a class="el" href="Landscape_8hpp_source.html">Landscape.hpp</a>.</p>
-
 </div>
 </div>
 <a class="anchor" id="a799af543563c5f751dd66b8c65a9306f"></a>
@@ -517,8 +451,6 @@ float&#160;</td><td class="memItemRight" valign="bottom"><b>angleRotateZOffset</
 </div><div class="memdoc">
 
 <p>Return default brightness for landscape returns -1 to signal "standard conditions" (use default value from config.ini) </p>
-
-<p>Definition at line <a class="el" href="Landscape_8hpp_source.html#l00094">94</a> of file <a class="el" href="Landscape_8hpp_source.html">Landscape.hpp</a>.</p>
 
 </div>
 </div>
@@ -545,8 +477,6 @@ float&#160;</td><td class="memItemRight" valign="bottom"><b>angleRotateZOffset</
 
 <p>Return the associated location or NULL. </p>
 
-<p>Definition at line <a class="el" href="Landscape_8hpp_source.html#l00080">80</a> of file <a class="el" href="Landscape_8hpp_source.html">Landscape.hpp</a>.</p>
-
 </div>
 </div>
 <a class="anchor" id="a9f7d146a94f9bfb6c4145a2b2ad4afd4"></a>
@@ -571,8 +501,6 @@ float&#160;</td><td class="memItemRight" valign="bottom"><b>angleRotateZOffset</
 </div><div class="memdoc">
 
 <p>Get landscape name. </p>
-
-<p>Definition at line <a class="el" href="Landscape_8hpp_source.html#l00073">73</a> of file <a class="el" href="Landscape_8hpp_source.html">Landscape.hpp</a>.</p>
 
 </div>
 </div>
@@ -692,8 +620,6 @@ float&#160;</td><td class="memItemRight" valign="bottom"><b>angleRotateZOffset</
 
 <p>Set the brightness of the landscape. </p>
 
-<p>Definition at line <a class="el" href="Landscape_8hpp_source.html#l00062">62</a> of file <a class="el" href="Landscape_8hpp_source.html">Landscape.hpp</a>.</p>
-
 </div>
 </div>
 <a class="anchor" id="a252bbf723bec1fec1c1f950019bf6d2c"></a>
@@ -719,8 +645,6 @@ float&#160;</td><td class="memItemRight" valign="bottom"><b>angleRotateZOffset</
 </div><div class="memdoc">
 
 <p>Set whether landscape is displayed (does not concern fog) </p>
-
-<p>Definition at line <a class="el" href="Landscape_8hpp_source.html#l00065">65</a> of file <a class="el" href="Landscape_8hpp_source.html">Landscape.hpp</a>.</p>
 
 </div>
 </div>
@@ -748,8 +672,6 @@ float&#160;</td><td class="memItemRight" valign="bottom"><b>angleRotateZOffset</
 
 <p>Set whether fog is displayed. </p>
 
-<p>Definition at line <a class="el" href="Landscape_8hpp_source.html#l00069">69</a> of file <a class="el" href="Landscape_8hpp_source.html">Landscape.hpp</a>.</p>
-
 </div>
 </div>
 <a class="anchor" id="aeb79e210ed7ed0f432c05c92de486f1e"></a>
@@ -776,17 +698,12 @@ float&#160;</td><td class="memItemRight" valign="bottom"><b>angleRotateZOffset</
 
 <p>Set the z-axis rotation (offset from original value when rotated. </p>
 
-<p>Definition at line <a class="el" href="Landscape_8hpp_source.html#l00097">97</a> of file <a class="el" href="Landscape_8hpp_source.html">Landscape.hpp</a>.</p>
-
 </div>
 </div>
-<hr/>The documentation for this class was generated from the following file:<ul>
-<li>core/modules/<a class="el" href="Landscape_8hpp_source.html">Landscape.hpp</a></li>
-</ul>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Sun Sep 22 2013 18:49:46 for Stellarium by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Wed Sep 25 2013 20:54:59 for Stellarium by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.3.1
 </small></address>

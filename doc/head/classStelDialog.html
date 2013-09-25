@@ -15,7 +15,7 @@
  <tr style="height: 56px;">
   <td id="projectlogo"><img alt="Logo" src="stellarium-logo.png"/></td>
   <td style="padding-left: 0.5em;">
-   <div id="projectname">Stellarium 0.12.3</div>
+   <div id="projectname">Stellarium 0.13.0</div>
   </td>
  </tr>
  </tbody>
@@ -30,7 +30,6 @@
       <li><a href="codingStyle.html"><span>Coding&#160;Style</span></a></li>
       <li><a href="scripting.html"><span>Scripting</span></a></li>
       <li><a href="plugins.html"><span>Plugins</span></a></li>
-      <li><a href="renderer.html"><span>Renderer</span></a></li>
       <li><a href="fileStructure.html"><span>File&#160;Structure</span></a></li>
     </ul>
   </div>
@@ -105,12 +104,10 @@ class CustomProxy *&#160;</td><td class="memItemRight" valign="bottom"><b>proxy<
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Base class for all the GUI windows in Stellarium. </p>
-<p>Windows in Stellarium are actually basic QWidgets that have to be wrapped in a QGraphicsProxyWidget (CustomProxy) to be displayed by <a class="el" href="classStelMainGraphicsView.html" title="Reimplement a QGraphicsView for Stellarium.">StelMainGraphicsView</a> (which is derived from QGraphicsView). See the Qt documentation for details.</p>
+<p>Windows in Stellarium are actually basic QWidgets that have to be wrapped in a QGraphicsProxyWidget (CustomProxy) to be displayed by <a class="el" href="classStelMainView.html" title="Reimplement a QGraphicsView for Stellarium.">StelMainView</a> (which is derived from QGraphicsView). See the Qt documentation for details.</p>
 <p>The base widget needs to be populated with controls in the implementation of the <a class="el" href="classStelDialog.html#a0a6823b263934eb74b013ad0738235bd" title="Initialize the dialog widgets and connect the signals/slots.">createDialogContent()</a> function. This can be done either manually, or by using a .ui file. See the Qt documentation on using Qt Designer .ui files for details.</p>
 <p>The <a class="el" href="classStelDialog.html#a0a6823b263934eb74b013ad0738235bd" title="Initialize the dialog widgets and connect the signals/slots.">createDialogContent()</a> function itself is called automatically the first time <a class="el" href="classStelDialog.html#a287e46924c5da75d0f72f5bacfa220e3" title="On the first call with &quot;true&quot; populates the window contents.">setVisible()</a> is called with "true".</p>
 <p>Moving a window is done by dragging its title bar, defined in the <a class="el" href="classBarFrame.html" title="A title bar control used in windows derived from StelDialog.">BarFrame</a> class. Every derived window class needs a <a class="el" href="classBarFrame.html" title="A title bar control used in windows derived from StelDialog.">BarFrame</a> object - it has to be either included in a .ui file, or manually instantiated in <a class="el" href="classStelDialog.html#a0a6823b263934eb74b013ad0738235bd" title="Initialize the dialog widgets and connect the signals/slots.">createDialogContent()</a>. </p>
-
-<p>Definition at line <a class="el" href="StelDialog_8hpp_source.html#l00044">44</a> of file <a class="el" href="StelDialog_8hpp_source.html">StelDialog.hpp</a>.</p>
 </div><h2 class="groupheader">Member Function Documentation</h2>
 <a class="anchor" id="a1e94b05a3f7a37ae19825ade63707ba2"></a>
 <div class="memitem">
@@ -239,17 +236,12 @@ class CustomProxy *&#160;</td><td class="memItemRight" valign="bottom"><b>proxy<
 
 <p>The main dialog. </p>
 
-<p>Definition at line <a class="el" href="StelDialog_8hpp_source.html#l00077">77</a> of file <a class="el" href="StelDialog_8hpp_source.html">StelDialog.hpp</a>.</p>
-
 </div>
 </div>
-<hr/>The documentation for this class was generated from the following file:<ul>
-<li>gui/<a class="el" href="StelDialog_8hpp_source.html">StelDialog.hpp</a></li>
-</ul>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Sun Sep 22 2013 18:49:46 for Stellarium by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Wed Sep 25 2013 20:54:59 for Stellarium by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.3.1
 </small></address>

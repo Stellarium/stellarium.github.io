@@ -15,7 +15,7 @@
  <tr style="height: 56px;">
   <td id="projectlogo"><img alt="Logo" src="stellarium-logo.png"/></td>
   <td style="padding-left: 0.5em;">
-   <div id="projectname">Stellarium 0.12.3</div>
+   <div id="projectname">Stellarium 0.13.0</div>
   </td>
  </tr>
  </tbody>
@@ -30,7 +30,6 @@
       <li><a href="codingStyle.html"><span>Coding&#160;Style</span></a></li>
       <li><a href="scripting.html"><span>Scripting</span></a></li>
       <li><a href="plugins.html"><span>Plugins</span></a></li>
-      <li><a href="renderer.html"><span>Renderer</span></a></li>
       <li><a href="fileStructure.html"><span>File&#160;Structure</span></a></li>
     </ul>
   </div>
@@ -83,17 +82,17 @@
 <div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classStelLocaleMgr.html#a987c7b42047d20c75a6898ba84621a1e" title="Initialize object.">init</a>();</div>
 <div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;    </div>
 <div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;    <span class="comment">// MESSAGES TRANSLATIONS</span></div>
-<div class="line"><a name="l00046"></a><span class="lineno"><a class="code" href="classStelLocaleMgr.html#a2d90ea6b2605bdf95e223ed7b3b2c8a7">   46</a></span>&#160;<span class="comment"></span>    QString <a class="code" href="classStelLocaleMgr.html#a2d90ea6b2605bdf95e223ed7b3b2c8a7" title="Get the application language currently used for GUI etc.">getAppLanguage</a>()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> <a class="code" href="classStelTranslator.html#ac72b918923cbfb1f2dbb3e646b50db3c" title="Used as a global translator by the whole app.">StelTranslator::globalTranslator</a>.<a class="code" href="classStelTranslator.html#ac5207a020e262845d10d38e715f1b249" title="Get true translator locale name.">getTrueLocaleName</a>(); }</div>
+<div class="line"><a name="l00046"></a><span class="lineno"><a class="code" href="classStelLocaleMgr.html#a2d90ea6b2605bdf95e223ed7b3b2c8a7">   46</a></span>&#160;<span class="comment"></span>    QString <a class="code" href="classStelLocaleMgr.html#a2d90ea6b2605bdf95e223ed7b3b2c8a7" title="Get the application language currently used for GUI etc.">getAppLanguage</a>()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> <a class="code" href="classStelTranslator.html#a84915637004733ed9f8ca142ec3f63f9" title="Used as a global translator by the whole app.">StelTranslator::globalTranslator</a>-&gt;<a class="code" href="classStelTranslator.html#a676b48b1e8c176e881a3832e7c29c311" title="Get true translator locale name.">getTrueLocaleName</a>(); }</div>
 <div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;    </div>
-<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classStelLocaleMgr.html#a38f9f0b00852db9b0f626b6f1fc5f219" title="Set the application language.">setAppLanguage</a>(<span class="keyword">const</span> QString&amp; newAppLangName);</div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classStelLocaleMgr.html#a948c2232f6685e350e4daff23500d0e8" title="Set the application language.">setAppLanguage</a>(<span class="keyword">const</span> QString&amp; newAppLangName, <span class="keywordtype">bool</span> refreshAll=<span class="keyword">true</span>);</div>
 <div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;    </div>
-<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;    <a class="code" href="classStelTranslator.html" title="Class used to translate strings to any language.">StelTranslator</a>&amp; <a class="code" href="classStelLocaleMgr.html#a2e757ba44b26b61ef84b16aa6cd1137a" title="Get the StelTranslator object currently used for global application.">getAppStelTranslator</a>() <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;    <span class="keyword">const</span> <a class="code" href="classStelTranslator.html" title="Class used to translate strings to any language.">StelTranslator</a>&amp; <a class="code" href="classStelLocaleMgr.html#a7d30c9feee56d94014fbb3567e8689cd" title="Get the StelTranslator object currently used for global application.">getAppStelTranslator</a>() <span class="keyword">const</span>;</div>
 <div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;    </div>
 <div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;    QString <a class="code" href="classStelLocaleMgr.html#a0bd910274bef37bfd941d3539b8ba4fb" title="Get the language currently used for sky objects.">getSkyLanguage</a>() <span class="keyword">const</span>;</div>
 <div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;    </div>
-<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classStelLocaleMgr.html#ad0bf5973813b4db20447fab89b9369f1" title="Set the sky language and reload the sky object names with the new translation.">setSkyLanguage</a>(<span class="keyword">const</span> QString&amp; newSkyLangName);</div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classStelLocaleMgr.html#a0a0cb414fd441f479463bb1fe0d4175d" title="Set the sky language and reload the sky object names with the new translation.">setSkyLanguage</a>(<span class="keyword">const</span> QString&amp; newSkyLangName, <span class="keywordtype">bool</span> refreshAll=<span class="keyword">true</span>);</div>
 <div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;    </div>
-<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;    <a class="code" href="classStelTranslator.html" title="Class used to translate strings to any language.">StelTranslator</a>&amp; <a class="code" href="classStelLocaleMgr.html#aa934cf76b9a2902d9d34518107d7a297" title="Get a reference to the StelTranslator object currently used for sky objects.">getSkyTranslator</a>();</div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;    <span class="keyword">const</span> <a class="code" href="classStelTranslator.html" title="Class used to translate strings to any language.">StelTranslator</a> &amp;<a class="code" href="classStelLocaleMgr.html#a94ed4dba8583ed26087b696aeb6e6fed" title="Get a reference to the StelTranslator object currently used for sky objects.">getSkyTranslator</a>() <span class="keyword">const</span>;</div>
 <div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;    </div>
 <div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;    <span class="comment">// DATE &amp; TIME LOCALIZATION</span></div>
 <div class="line"><a name="l00080"></a><span class="lineno"><a class="code" href="classStelLocaleMgr.html#aa4a5f4045727aad150bd9513fb58b076">   80</a></span>&#160;<span class="comment"></span>    QString <a class="code" href="classStelLocaleMgr.html#aa4a5f4045727aad150bd9513fb58b076" title="Get the format string which describes the current time format.">getTimeFormatStr</a>(<span class="keywordtype">void</span>)<span class="keyword"> const </span>{<span class="keywordflow">return</span> sTimeFormatToString(timeFormat);}</div>
@@ -152,7 +151,7 @@
 <div class="line"><a name="l00167"></a><span class="lineno">  167</span>&#160;    </div>
 <div class="line"><a name="l00168"></a><span class="lineno">  168</span>&#160;<span class="keyword">private</span>:</div>
 <div class="line"><a name="l00169"></a><span class="lineno">  169</span>&#160;    <span class="comment">// The translator used for astronomical object naming</span></div>
-<div class="line"><a name="l00170"></a><span class="lineno">  170</span>&#160;    <a class="code" href="classStelTranslator.html" title="Class used to translate strings to any language.">StelTranslator</a> skyTranslator;</div>
+<div class="line"><a name="l00170"></a><span class="lineno">  170</span>&#160;    <a class="code" href="classStelTranslator.html" title="Class used to translate strings to any language.">StelTranslator</a>* skyTranslator;</div>
 <div class="line"><a name="l00171"></a><span class="lineno">  171</span>&#160;    </div>
 <div class="line"><a name="l00172"></a><span class="lineno">  172</span>&#160;    <span class="comment">// Date and time variables</span></div>
 <div class="line"><a name="l00173"></a><span class="lineno">  173</span>&#160;    <a class="code" href="classStelLocaleMgr.html#a94b6a5fa08b839abd9d4cffccaf9d8c9" title="The time display format.">STimeFormat</a> timeFormat;</div>
@@ -179,7 +178,7 @@
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Sun Sep 22 2013 18:49:45 for Stellarium by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Wed Sep 25 2013 20:54:59 for Stellarium by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.3.1
 </small></address>

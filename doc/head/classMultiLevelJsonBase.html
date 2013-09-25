@@ -15,7 +15,7 @@
  <tr style="height: 56px;">
   <td id="projectlogo"><img alt="Logo" src="stellarium-logo.png"/></td>
   <td style="padding-left: 0.5em;">
-   <div id="projectname">Stellarium 0.12.3</div>
+   <div id="projectname">Stellarium 0.13.0</div>
   </td>
  </tr>
  </tbody>
@@ -30,7 +30,6 @@
       <li><a href="codingStyle.html"><span>Coding&#160;Style</span></a></li>
       <li><a href="scripting.html"><span>Scripting</span></a></li>
       <li><a href="plugins.html"><span>Plugins</span></a></li>
-      <li><a href="renderer.html"><span>Renderer</span></a></li>
       <li><a href="fileStructure.html"><span>File&#160;Structure</span></a></li>
     </ul>
   </div>
@@ -93,9 +92,9 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:ab704477a77c80ebc52969580e025fa29 inherit pub_methods_classStelSkyLayer"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ab704477a77c80ebc52969580e025fa29"></a>
 &#160;</td><td class="memItemRight" valign="bottom"><b>StelSkyLayer</b> (QObject *parent=NULL)</td></tr>
 <tr class="separator:ab704477a77c80ebc52969580e025fa29 inherit pub_methods_classStelSkyLayer"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad15f25a6d8c0b1e895575834cbb43e9d inherit pub_methods_classStelSkyLayer"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classStelSkyLayer.html#ad15f25a6d8c0b1e895575834cbb43e9d">draw</a> (<a class="el" href="classStelCore.html">StelCore</a> *core, class <a class="el" href="classStelRenderer.html">StelRenderer</a> *renderer, <a class="el" href="StelProjectorType_8hpp.html#a286221a2d4640bbeec2090cfbfadb0ff">StelProjectorP</a> projector, float opacity=1.)=0</td></tr>
-<tr class="memdesc:ad15f25a6d8c0b1e895575834cbb43e9d inherit pub_methods_classStelSkyLayer"><td class="mdescLeft">&#160;</td><td class="mdescRight">Draws the content of the layer.  <a href="#ad15f25a6d8c0b1e895575834cbb43e9d">More...</a><br/></td></tr>
-<tr class="separator:ad15f25a6d8c0b1e895575834cbb43e9d inherit pub_methods_classStelSkyLayer"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a66532ab4ba74b819cdfe08f6e4d33c78 inherit pub_methods_classStelSkyLayer"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classStelSkyLayer.html#a66532ab4ba74b819cdfe08f6e4d33c78">draw</a> (<a class="el" href="classStelCore.html">StelCore</a> *core, <a class="el" href="classStelPainter.html">StelPainter</a> &amp;sPainter, float opacity=1.)=0</td></tr>
+<tr class="memdesc:a66532ab4ba74b819cdfe08f6e4d33c78 inherit pub_methods_classStelSkyLayer"><td class="mdescLeft">&#160;</td><td class="mdescRight">Draws the content of the layer.  <a href="#a66532ab4ba74b819cdfe08f6e4d33c78">More...</a><br/></td></tr>
+<tr class="separator:a66532ab4ba74b819cdfe08f6e4d33c78 inherit pub_methods_classStelSkyLayer"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a79ead737f0c282d968cf1112f5b16c9b inherit pub_methods_classStelSkyLayer"><td class="memItemLeft" align="right" valign="top">virtual QString&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classStelSkyLayer.html#a79ead737f0c282d968cf1112f5b16c9b">getShortServerCredits</a> () const </td></tr>
 <tr class="memdesc:a79ead737f0c282d968cf1112f5b16c9b inherit pub_methods_classStelSkyLayer"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return the short server name to display in the loading bar.  <a href="#a79ead737f0c282d968cf1112f5b16c9b">More...</a><br/></td></tr>
 <tr class="separator:a79ead737f0c282d968cf1112f5b16c9b inherit pub_methods_classStelSkyLayer"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -170,8 +169,6 @@ Additional Inherited Members</h2></td></tr>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Abstract base class for managing multi-level tree objects stored in JSON format. </p>
 <p>The JSON files can be stored on disk or remotely and are loaded into threads. </p>
-
-<p>Definition at line <a class="el" href="MultiLevelJsonBase_8hpp_source.html#l00034">34</a> of file <a class="el" href="MultiLevelJsonBase_8hpp_source.html">MultiLevelJsonBase.hpp</a>.</p>
 </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a class="anchor" id="aacd96d9a2d033c90af5d50e2427e632b"></a>
 <div class="memitem">
@@ -282,8 +279,6 @@ Additional Inherited Members</h2></td></tr>
 
 <p>Get the depth level in the tree. </p>
 
-<p>Definition at line <a class="el" href="MultiLevelJsonBase_8hpp_source.html#l00062">62</a> of file <a class="el" href="MultiLevelJsonBase_8hpp_source.html">MultiLevelJsonBase.hpp</a>.</p>
-
 </div>
 </div>
 <a class="anchor" id="adcc21a0c31042897b655c4700f3e7ac4"></a>
@@ -311,8 +306,6 @@ Additional Inherited Members</h2></td></tr>
 
 <p>Implements <a class="el" href="classStelSkyLayer.html#a5d4b235a438dc4ba779c5efb933ddef3">StelSkyLayer</a>.</p>
 
-<p>Definition at line <a class="el" href="MultiLevelJsonBase_8hpp_source.html#l00056">56</a> of file <a class="el" href="MultiLevelJsonBase_8hpp_source.html">MultiLevelJsonBase.hpp</a>.</p>
-
 </div>
 </div>
 <a class="anchor" id="ac1cd8720faec71e06827f02d49cf24c3"></a>
@@ -337,8 +330,6 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Return true if an error occured while loading the data. </p>
-
-<p>Definition at line <a class="el" href="MultiLevelJsonBase_8hpp_source.html#l00059">59</a> of file <a class="el" href="MultiLevelJsonBase_8hpp_source.html">MultiLevelJsonBase.hpp</a>.</p>
 
 </div>
 </div>
@@ -402,8 +393,6 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Return true if a deletion is currently scheduled. </p>
-
-<p>Definition at line <a class="el" href="MultiLevelJsonBase_8hpp_source.html#l00084">84</a> of file <a class="el" href="MultiLevelJsonBase_8hpp_source.html">MultiLevelJsonBase.hpp</a>.</p>
 
 </div>
 </div>
@@ -535,8 +524,6 @@ Additional Inherited Members</h2></td></tr>
 
 <p>Base URL to prefix to relative URL. </p>
 
-<p>Definition at line <a class="el" href="MultiLevelJsonBase_8hpp_source.html#l00090">90</a> of file <a class="el" href="MultiLevelJsonBase_8hpp_source.html">MultiLevelJsonBase.hpp</a>.</p>
-
 </div>
 </div>
 <a class="anchor" id="a60ede4fac8004430a90b699e8e99053c"></a>
@@ -558,8 +545,6 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p>The relative URL passed to the constructor. </p>
-
-<p>Definition at line <a class="el" href="MultiLevelJsonBase_8hpp_source.html#l00093">93</a> of file <a class="el" href="MultiLevelJsonBase_8hpp_source.html">MultiLevelJsonBase.hpp</a>.</p>
 
 </div>
 </div>
@@ -583,8 +568,6 @@ Additional Inherited Members</h2></td></tr>
 
 <p>true if the JSON descriptor file is currently downloading </p>
 
-<p>Definition at line <a class="el" href="MultiLevelJsonBase_8hpp_source.html#l00107">107</a> of file <a class="el" href="MultiLevelJsonBase_8hpp_source.html">MultiLevelJsonBase.hpp</a>.</p>
-
 </div>
 </div>
 <a class="anchor" id="a006f248a8fb1b6feaef11798c99a3d44"></a>
@@ -606,8 +589,6 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Set to true if an error occured with this tile and it should not be displayed. </p>
-
-<p>Definition at line <a class="el" href="MultiLevelJsonBase_8hpp_source.html#l00099">99</a> of file <a class="el" href="MultiLevelJsonBase_8hpp_source.html">MultiLevelJsonBase.hpp</a>.</p>
 
 </div>
 </div>
@@ -631,8 +612,6 @@ Additional Inherited Members</h2></td></tr>
 
 <p>The very short name for this image set to be used in loading bar. </p>
 
-<p>Definition at line <a class="el" href="MultiLevelJsonBase_8hpp_source.html#l00087">87</a> of file <a class="el" href="MultiLevelJsonBase_8hpp_source.html">MultiLevelJsonBase.hpp</a>.</p>
-
 </div>
 </div>
 <a class="anchor" id="a820e347a2c6660a5e3d2eb983645c6a7"></a>
@@ -655,17 +634,12 @@ Additional Inherited Members</h2></td></tr>
 
 <p>The list of all the created subtiles for this tile. </p>
 
-<p>Definition at line <a class="el" href="MultiLevelJsonBase_8hpp_source.html#l00096">96</a> of file <a class="el" href="MultiLevelJsonBase_8hpp_source.html">MultiLevelJsonBase.hpp</a>.</p>
-
 </div>
 </div>
-<hr/>The documentation for this class was generated from the following file:<ul>
-<li>core/<a class="el" href="MultiLevelJsonBase_8hpp_source.html">MultiLevelJsonBase.hpp</a></li>
-</ul>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Sun Sep 22 2013 18:49:46 for Stellarium by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Wed Sep 25 2013 20:54:59 for Stellarium by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.3.1
 </small></address>

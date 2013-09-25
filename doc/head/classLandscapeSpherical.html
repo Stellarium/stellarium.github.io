@@ -15,7 +15,7 @@
  <tr style="height: 56px;">
   <td id="projectlogo"><img alt="Logo" src="stellarium-logo.png"/></td>
   <td style="padding-left: 0.5em;">
-   <div id="projectname">Stellarium 0.12.3</div>
+   <div id="projectname">Stellarium 0.13.0</div>
   </td>
  </tr>
  </tbody>
@@ -30,7 +30,6 @@
       <li><a href="codingStyle.html"><span>Coding&#160;Style</span></a></li>
       <li><a href="scripting.html"><span>Scripting</span></a></li>
       <li><a href="plugins.html"><span>Plugins</span></a></li>
-      <li><a href="renderer.html"><span>Renderer</span></a></li>
       <li><a href="fileStructure.html"><span>File&#160;Structure</span></a></li>
     </ul>
   </div>
@@ -60,9 +59,9 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:aea0a8b67c73f2a115f2edf8ac85bb7f2"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aea0a8b67c73f2a115f2edf8ac85bb7f2"></a>
 virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>load</b> (const QSettings &amp;landscapeIni, const QString &amp;landscapeId)</td></tr>
 <tr class="separator:aea0a8b67c73f2a115f2edf8ac85bb7f2"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab23959a2e05035d10b223a3716d512bc"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classLandscapeSpherical.html#ab23959a2e05035d10b223a3716d512bc">draw</a> (<a class="el" href="classStelCore.html">StelCore</a> *core, class <a class="el" href="classStelRenderer.html">StelRenderer</a> *renderer)</td></tr>
-<tr class="memdesc:ab23959a2e05035d10b223a3716d512bc"><td class="mdescLeft">&#160;</td><td class="mdescRight">Draw the landscape.  <a href="#ab23959a2e05035d10b223a3716d512bc">More...</a><br/></td></tr>
-<tr class="separator:ab23959a2e05035d10b223a3716d512bc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a71ca78c1e28697c8e7c162576145445a"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a71ca78c1e28697c8e7c162576145445a"></a>
+virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>draw</b> (<a class="el" href="classStelCore.html">StelCore</a> *core)</td></tr>
+<tr class="separator:a71ca78c1e28697c8e7c162576145445a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a8dc96bfc54abf48a5314ffa848d8d3da"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a8dc96bfc54abf48a5314ffa848d8d3da"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><b>create</b> (const QString name, const QString &amp;maptex, float angleRotateZ)</td></tr>
 <tr class="separator:a8dc96bfc54abf48a5314ffa848d8d3da"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -132,9 +131,9 @@ Additional Inherited Members</h2></td></tr>
 <tr class="memdesc:acec928cd65a361949bf687c0adef1a19 inherit pro_methods_classLandscape"><td class="mdescLeft">&#160;</td><td class="mdescRight">search for a texture in landscape directory, else global textures directory  <a href="#acec928cd65a361949bf687c0adef1a19">More...</a><br/></td></tr>
 <tr class="separator:acec928cd65a361949bf687c0adef1a19 inherit pro_methods_classLandscape"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pro_attribs_classLandscape"><td colspan="2" onclick="javascript:toggleInherit('pro_attribs_classLandscape')"><img src="closed.png" alt="-"/>&#160;Protected Attributes inherited from <a class="el" href="classLandscape.html">Landscape</a></td></tr>
-<tr class="memitem:a1032609665a51fe8461d17a4e232cbd3 inherit pro_attribs_classLandscape"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a1032609665a51fe8461d17a4e232cbd3"></a>
-const float&#160;</td><td class="memItemRight" valign="bottom"><b>radius</b></td></tr>
-<tr class="separator:a1032609665a51fe8461d17a4e232cbd3 inherit pro_attribs_classLandscape"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab52af5330cf09ad84dad5c4a1528af2d inherit pro_attribs_classLandscape"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ab52af5330cf09ad84dad5c4a1528af2d"></a>
+float&#160;</td><td class="memItemRight" valign="bottom"><b>radius</b></td></tr>
+<tr class="separator:ab52af5330cf09ad84dad5c4a1528af2d inherit pro_attribs_classLandscape"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a5c370ac06ac51ce8b06a54e61785e36c inherit pro_attribs_classLandscape"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a5c370ac06ac51ce8b06a54e61785e36c"></a>
 QString&#160;</td><td class="memItemRight" valign="bottom"><b>name</b></td></tr>
 <tr class="separator:a5c370ac06ac51ce8b06a54e61785e36c inherit pro_attribs_classLandscape"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -193,62 +192,10 @@ float&#160;</td><td class="memItemRight" valign="bottom"><b>angleRotateZ</b></td
 float&#160;</td><td class="memItemRight" valign="bottom"><b>angleRotateZOffset</b></td></tr>
 <tr class="separator:ab294162e7f4e92f6ba129bcfa3ccfe54 inherit pro_attribs_classLandscape"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
-<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock">
-<p>Definition at line <a class="el" href="Landscape_8hpp_source.html#l00273">273</a> of file <a class="el" href="Landscape_8hpp_source.html">Landscape.hpp</a>.</p>
-</div><h2 class="groupheader">Member Function Documentation</h2>
-<a class="anchor" id="ab23959a2e05035d10b223a3716d512bc"></a>
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">virtual void LandscapeSpherical::draw </td>
-          <td>(</td>
-          <td class="paramtype"><a class="el" href="classStelCore.html">StelCore</a> *&#160;</td>
-          <td class="paramname"><em>core</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">class <a class="el" href="classStelRenderer.html">StelRenderer</a> *&#160;</td>
-          <td class="paramname"><em>renderer</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">virtual</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Draw the landscape. </p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">core</td><td>The <a class="el" href="classStelCore.html" title="Main class for Stellarium core processing.">StelCore</a> object. </td></tr>
-    <tr><td class="paramname">renderer</td><td>The renderer to draw with. </td></tr>
-  </table>
-  </dd>
-</dl>
-
-<p>Implements <a class="el" href="classLandscape.html#a628485dbd05a6fb5748d165ffa14154a">Landscape</a>.</p>
-
-</div>
-</div>
-<hr/>The documentation for this class was generated from the following file:<ul>
-<li>core/modules/<a class="el" href="Landscape_8hpp_source.html">Landscape.hpp</a></li>
-</ul>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Sun Sep 22 2013 18:49:46 for Stellarium by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Wed Sep 25 2013 20:54:59 for Stellarium by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.3.1
 </small></address>

@@ -15,7 +15,7 @@
  <tr style="height: 56px;">
   <td id="projectlogo"><img alt="Logo" src="stellarium-logo.png"/></td>
   <td style="padding-left: 0.5em;">
-   <div id="projectname">Stellarium 0.12.3</div>
+   <div id="projectname">Stellarium 0.13.0</div>
   </td>
  </tr>
  </tbody>
@@ -30,7 +30,6 @@
       <li><a href="codingStyle.html"><span>Coding&#160;Style</span></a></li>
       <li><a href="scripting.html"><span>Scripting</span></a></li>
       <li><a href="plugins.html"><span>Plugins</span></a></li>
-      <li><a href="renderer.html"><span>Renderer</span></a></li>
       <li><a href="fileStructure.html"><span>File&#160;Structure</span></a></li>
     </ul>
   </div>
@@ -72,9 +71,9 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:ab704477a77c80ebc52969580e025fa29"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ab704477a77c80ebc52969580e025fa29"></a>
 &#160;</td><td class="memItemRight" valign="bottom"><b>StelSkyLayer</b> (QObject *parent=NULL)</td></tr>
 <tr class="separator:ab704477a77c80ebc52969580e025fa29"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad15f25a6d8c0b1e895575834cbb43e9d"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classStelSkyLayer.html#ad15f25a6d8c0b1e895575834cbb43e9d">draw</a> (<a class="el" href="classStelCore.html">StelCore</a> *core, class <a class="el" href="classStelRenderer.html">StelRenderer</a> *renderer, <a class="el" href="StelProjectorType_8hpp.html#a286221a2d4640bbeec2090cfbfadb0ff">StelProjectorP</a> projector, float opacity=1.)=0</td></tr>
-<tr class="memdesc:ad15f25a6d8c0b1e895575834cbb43e9d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Draws the content of the layer.  <a href="#ad15f25a6d8c0b1e895575834cbb43e9d">More...</a><br/></td></tr>
-<tr class="separator:ad15f25a6d8c0b1e895575834cbb43e9d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a66532ab4ba74b819cdfe08f6e4d33c78"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classStelSkyLayer.html#a66532ab4ba74b819cdfe08f6e4d33c78">draw</a> (<a class="el" href="classStelCore.html">StelCore</a> *core, <a class="el" href="classStelPainter.html">StelPainter</a> &amp;sPainter, float opacity=1.)=0</td></tr>
+<tr class="memdesc:a66532ab4ba74b819cdfe08f6e4d33c78"><td class="mdescLeft">&#160;</td><td class="mdescRight">Draws the content of the layer.  <a href="#a66532ab4ba74b819cdfe08f6e4d33c78">More...</a><br/></td></tr>
+<tr class="separator:a66532ab4ba74b819cdfe08f6e4d33c78"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a5d4b235a438dc4ba779c5efb933ddef3"><td class="memItemLeft" align="right" valign="top">virtual QString&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classStelSkyLayer.html#a5d4b235a438dc4ba779c5efb933ddef3">getShortName</a> () const =0</td></tr>
 <tr class="memdesc:a5d4b235a438dc4ba779c5efb933ddef3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return the short name to display in the loading bar.  <a href="#a5d4b235a438dc4ba779c5efb933ddef3">More...</a><br/></td></tr>
 <tr class="separator:a5d4b235a438dc4ba779c5efb933ddef3"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -96,11 +95,9 @@ Public Member Functions</h2></td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Abstract class defining the API to implement for all sky layer. </p>
-<p>A sky layer is a graphical layer containing image or polygons displayed in the sky. The <a class="el" href="classStelSkyLayerMgr.html" title="Manage the sky background images, including DSS and deep sky objects images.">StelSkyLayerMgr</a> allows to set the display order for layers, as well as opacity. </p>
-
-<p>Definition at line <a class="el" href="StelSkyLayer_8hpp_source.html#l00034">34</a> of file <a class="el" href="StelSkyLayer_8hpp_source.html">StelSkyLayer.hpp</a>.</p>
+<p>A sky layer is a graphical layer containing image or polygons displayed in the sky. The StelSkyImageMgr allows to set the display order for layers, as well as opacity. </p>
 </div><h2 class="groupheader">Member Function Documentation</h2>
-<a class="anchor" id="ad15f25a6d8c0b1e895575834cbb43e9d"></a>
+<a class="anchor" id="a66532ab4ba74b819cdfe08f6e4d33c78"></a>
 <div class="memitem">
 <div class="memproto">
 <table class="mlabels">
@@ -116,14 +113,8 @@ Public Member Functions</h2></td></tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">class <a class="el" href="classStelRenderer.html">StelRenderer</a> *&#160;</td>
-          <td class="paramname"><em>renderer</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype"><a class="el" href="StelProjectorType_8hpp.html#a286221a2d4640bbeec2090cfbfadb0ff">StelProjectorP</a>&#160;</td>
-          <td class="paramname"><em>projector</em>, </td>
+          <td class="paramtype"><a class="el" href="classStelPainter.html">StelPainter</a> &amp;&#160;</td>
+          <td class="paramname"><em>sPainter</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
@@ -146,7 +137,7 @@ Public Member Functions</h2></td></tr>
 
 <p>Draws the content of the layer. </p>
 
-<p>Implemented in <a class="el" href="classStelSkyImageTile.html#aa88df6fe0e8cb52c8ffff660db1f815a">StelSkyImageTile</a>, and <a class="el" href="classStelSkyPolygon.html#a6dbef5572f87bf5fc44c3ef2330de400">StelSkyPolygon</a>.</p>
+<p>Implemented in <a class="el" href="classStelSkyImageTile.html#a8e272a6552bf75de4865df20ebcca2f4">StelSkyImageTile</a>, and <a class="el" href="classStelSkyPolygon.html#afb9d05df36b707cf7aef0694d06d4e4b">StelSkyPolygon</a>.</p>
 
 </div>
 </div>
@@ -173,8 +164,6 @@ Public Member Functions</h2></td></tr>
 
 <p>Get the reference frame type. </p>
 
-<p>Definition at line <a class="el" href="StelSkyLayer_8hpp_source.html#l00061">61</a> of file <a class="el" href="StelSkyLayer_8hpp_source.html">StelSkyLayer.hpp</a>.</p>
-
 </div>
 </div>
 <a class="anchor" id="a297c1f8c410cb3e7e5c8f4283552d7e5"></a>
@@ -200,8 +189,6 @@ Public Member Functions</h2></td></tr>
 
 <p>Return a hint on which key to use for referencing this layer. </p>
 <p>Note that the key effectively used may be different. </p>
-
-<p>Definition at line <a class="el" href="StelSkyLayer_8hpp_source.html#l00051">51</a> of file <a class="el" href="StelSkyLayer_8hpp_source.html">StelSkyLayer.hpp</a>.</p>
 
 </div>
 </div>
@@ -230,8 +217,6 @@ Public Member Functions</h2></td></tr>
 <p>links and copyrights. </p>
 
 <p>Reimplemented in <a class="el" href="classStelSkyImageTile.html#ae068330bf4c81075a6c92fda1567b0b2">StelSkyImageTile</a>.</p>
-
-<p>Definition at line <a class="el" href="StelSkyLayer_8hpp_source.html#l00055">55</a> of file <a class="el" href="StelSkyLayer_8hpp_source.html">StelSkyLayer.hpp</a>.</p>
 
 </div>
 </div>
@@ -284,8 +269,6 @@ Public Member Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Return the short server name to display in the loading bar. </p>
-
-<p>Definition at line <a class="el" href="StelSkyLayer_8hpp_source.html#l00047">47</a> of file <a class="el" href="StelSkyLayer_8hpp_source.html">StelSkyLayer.hpp</a>.</p>
 
 </div>
 </div>
@@ -377,17 +360,12 @@ Public Member Functions</h2></td></tr>
 
 <p>Set the reference frame type. </p>
 
-<p>Definition at line <a class="el" href="StelSkyLayer_8hpp_source.html#l00058">58</a> of file <a class="el" href="StelSkyLayer_8hpp_source.html">StelSkyLayer.hpp</a>.</p>
-
 </div>
 </div>
-<hr/>The documentation for this class was generated from the following file:<ul>
-<li>core/<a class="el" href="StelSkyLayer_8hpp_source.html">StelSkyLayer.hpp</a></li>
-</ul>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Sun Sep 22 2013 18:49:46 for Stellarium by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Wed Sep 25 2013 20:55:00 for Stellarium by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.3.1
 </small></address>

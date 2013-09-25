@@ -15,7 +15,7 @@
  <tr style="height: 56px;">
   <td id="projectlogo"><img alt="Logo" src="stellarium-logo.png"/></td>
   <td style="padding-left: 0.5em;">
-   <div id="projectname">Stellarium 0.12.3</div>
+   <div id="projectname">Stellarium 0.13.0</div>
   </td>
  </tr>
  </tbody>
@@ -30,7 +30,6 @@
       <li><a href="codingStyle.html"><span>Coding&#160;Style</span></a></li>
       <li><a href="scripting.html"><span>Scripting</span></a></li>
       <li><a href="plugins.html"><span>Plugins</span></a></li>
-      <li><a href="renderer.html"><span>Renderer</span></a></li>
       <li><a href="fileStructure.html"><span>File&#160;Structure</span></a></li>
     </ul>
   </div>
@@ -73,9 +72,9 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a704e94092739d2c1fcb9cb28088b950a"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classStelSkyPolygon.html#a704e94092739d2c1fcb9cb28088b950a">~StelSkyPolygon</a> ()</td></tr>
 <tr class="memdesc:a704e94092739d2c1fcb9cb28088b950a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Destructor.  <a href="#a704e94092739d2c1fcb9cb28088b950a">More...</a><br/></td></tr>
 <tr class="separator:a704e94092739d2c1fcb9cb28088b950a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a6dbef5572f87bf5fc44c3ef2330de400"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classStelSkyPolygon.html#a6dbef5572f87bf5fc44c3ef2330de400">draw</a> (<a class="el" href="classStelCore.html">StelCore</a> *core, class <a class="el" href="classStelRenderer.html">StelRenderer</a> *renderer, <a class="el" href="StelProjectorType_8hpp.html#a286221a2d4640bbeec2090cfbfadb0ff">StelProjectorP</a> projector, float opacity=1.)</td></tr>
-<tr class="memdesc:a6dbef5572f87bf5fc44c3ef2330de400"><td class="mdescLeft">&#160;</td><td class="mdescRight">Draw the image on the screen.  <a href="#a6dbef5572f87bf5fc44c3ef2330de400">More...</a><br/></td></tr>
-<tr class="separator:a6dbef5572f87bf5fc44c3ef2330de400"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afb9d05df36b707cf7aef0694d06d4e4b"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classStelSkyPolygon.html#afb9d05df36b707cf7aef0694d06d4e4b">draw</a> (<a class="el" href="classStelCore.html">StelCore</a> *core, <a class="el" href="classStelPainter.html">StelPainter</a> &amp;sPainter, float opacity=1.)</td></tr>
+<tr class="memdesc:afb9d05df36b707cf7aef0694d06d4e4b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Draw the image on the screen.  <a href="#afb9d05df36b707cf7aef0694d06d4e4b">More...</a><br/></td></tr>
+<tr class="separator:afb9d05df36b707cf7aef0694d06d4e4b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a262f944461ede0a91629d064933d8e47"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classDataSetCredits.html">DataSetCredits</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classStelSkyPolygon.html#a262f944461ede0a91629d064933d8e47">getDataSetCredits</a> () const </td></tr>
 <tr class="memdesc:a262f944461ede0a91629d064933d8e47"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return the dataset credits to use in the progress bar.  <a href="#a262f944461ede0a91629d064933d8e47">More...</a><br/></td></tr>
 <tr class="separator:a262f944461ede0a91629d064933d8e47"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -202,8 +201,6 @@ Additional Inherited Members</h2></td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Base class for any polygon with a fixed position in the sky. </p>
-
-<p>Definition at line <a class="el" href="StelSkyPolygon_8hpp_source.html#l00031">31</a> of file <a class="el" href="StelSkyPolygon_8hpp_source.html">StelSkyPolygon.hpp</a>.</p>
 </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a class="anchor" id="a8905d6a1e1f044dc342ace8686b962f4"></a>
 <div class="memitem">
@@ -227,8 +224,6 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Default constructor. </p>
-
-<p>Definition at line <a class="el" href="StelSkyPolygon_8hpp_source.html#l00037">37</a> of file <a class="el" href="StelSkyPolygon_8hpp_source.html">StelSkyPolygon.hpp</a>.</p>
 
 </div>
 </div>
@@ -306,7 +301,7 @@ Additional Inherited Members</h2></td></tr>
 </div>
 </div>
 <h2 class="groupheader">Member Function Documentation</h2>
-<a class="anchor" id="a6dbef5572f87bf5fc44c3ef2330de400"></a>
+<a class="anchor" id="afb9d05df36b707cf7aef0694d06d4e4b"></a>
 <div class="memitem">
 <div class="memproto">
 <table class="mlabels">
@@ -322,14 +317,8 @@ Additional Inherited Members</h2></td></tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">class <a class="el" href="classStelRenderer.html">StelRenderer</a> *&#160;</td>
-          <td class="paramname"><em>renderer</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype"><a class="el" href="StelProjectorType_8hpp.html#a286221a2d4640bbeec2090cfbfadb0ff">StelProjectorP</a>&#160;</td>
-          <td class="paramname"><em>projector</em>, </td>
+          <td class="paramtype"><a class="el" href="classStelPainter.html">StelPainter</a> &amp;&#160;</td>
+          <td class="paramname"><em>sPainter</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
@@ -352,7 +341,7 @@ Additional Inherited Members</h2></td></tr>
 
 <p>Draw the image on the screen. </p>
 
-<p>Implements <a class="el" href="classStelSkyLayer.html#ad15f25a6d8c0b1e895575834cbb43e9d">StelSkyLayer</a>.</p>
+<p>Implements <a class="el" href="classStelSkyLayer.html#a66532ab4ba74b819cdfe08f6e4d33c78">StelSkyLayer</a>.</p>
 
 </div>
 </div>
@@ -379,8 +368,6 @@ Additional Inherited Members</h2></td></tr>
 
 <p>Return the dataset credits to use in the progress bar. </p>
 
-<p>Definition at line <a class="el" href="StelSkyPolygon_8hpp_source.html#l00051">51</a> of file <a class="el" href="StelSkyPolygon_8hpp_source.html">StelSkyPolygon.hpp</a>.</p>
-
 </div>
 </div>
 <a class="anchor" id="a57dceecbaaaffcc29ca5903f5b9e1099"></a>
@@ -405,8 +392,6 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Return the server credits to use in the progress bar. </p>
-
-<p>Definition at line <a class="el" href="StelSkyPolygon_8hpp_source.html#l00054">54</a> of file <a class="el" href="StelSkyPolygon_8hpp_source.html">StelSkyPolygon.hpp</a>.</p>
 
 </div>
 </div>
@@ -477,8 +462,6 @@ Additional Inherited Members</h2></td></tr>
 
 <p>The credits for the data set. </p>
 
-<p>Definition at line <a class="el" href="StelSkyPolygon_8hpp_source.html#l00068">68</a> of file <a class="el" href="StelSkyPolygon_8hpp_source.html">StelSkyPolygon.hpp</a>.</p>
-
 </div>
 </div>
 <a class="anchor" id="ae35405d347e16d0592b14f17b39931eb"></a>
@@ -500,8 +483,6 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Minimum resolution at which the next level needs to be loaded in degree/pixel. </p>
-
-<p>Definition at line <a class="el" href="StelSkyPolygon_8hpp_source.html#l00062">62</a> of file <a class="el" href="StelSkyPolygon_8hpp_source.html">StelSkyPolygon.hpp</a>.</p>
 
 </div>
 </div>
@@ -525,8 +506,6 @@ Additional Inherited Members</h2></td></tr>
 
 <p>The credits of the server where this data come from. </p>
 
-<p>Definition at line <a class="el" href="StelSkyPolygon_8hpp_source.html#l00065">65</a> of file <a class="el" href="StelSkyPolygon_8hpp_source.html">StelSkyPolygon.hpp</a>.</p>
-
 </div>
 </div>
 <a class="anchor" id="ad31e441b373072d76a42088d482e6680"></a>
@@ -549,17 +528,12 @@ Additional Inherited Members</h2></td></tr>
 
 <p>Direction of the vertices of the convex hull in ICRS frame. </p>
 
-<p>Definition at line <a class="el" href="StelSkyPolygon_8hpp_source.html#l00071">71</a> of file <a class="el" href="StelSkyPolygon_8hpp_source.html">StelSkyPolygon.hpp</a>.</p>
-
 </div>
 </div>
-<hr/>The documentation for this class was generated from the following file:<ul>
-<li>core/<a class="el" href="StelSkyPolygon_8hpp_source.html">StelSkyPolygon.hpp</a></li>
-</ul>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Sun Sep 22 2013 18:49:46 for Stellarium by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Wed Sep 25 2013 20:55:00 for Stellarium by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.3.1
 </small></address>

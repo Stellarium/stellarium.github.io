@@ -15,7 +15,7 @@
  <tr style="height: 56px;">
   <td id="projectlogo"><img alt="Logo" src="stellarium-logo.png"/></td>
   <td style="padding-left: 0.5em;">
-   <div id="projectname">Stellarium 0.12.3</div>
+   <div id="projectname">Stellarium 0.13.0</div>
   </td>
  </tr>
  </tbody>
@@ -30,7 +30,6 @@
       <li><a href="codingStyle.html"><span>Coding&#160;Style</span></a></li>
       <li><a href="scripting.html"><span>Scripting</span></a></li>
       <li><a href="plugins.html"><span>Plugins</span></a></li>
-      <li><a href="renderer.html"><span>Renderer</span></a></li>
       <li><a href="fileStructure.html"><span>File&#160;Structure</span></a></li>
     </ul>
   </div>
@@ -72,39 +71,40 @@
 <div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;<span class="preprocessor">#ifndef _STELLOADINGBAR_HPP_</span></div>
 <div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;<span class="preprocessor"></span><span class="preprocessor">#define _STELLOADINGBAR_HPP_</span></div>
 <div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;<span class="preprocessor"></span></div>
-<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="StelProjectorType_8hpp.html" title="Define the StelProjectorP type.">StelProjectorType.hpp</a>&quot;</span></div>
-<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;<span class="preprocessor">#include &quot;VecMath.hpp&quot;</span></div>
-<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;</div>
-<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;<span class="preprocessor">#include &lt;QString&gt;</span></div>
-<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;<span class="preprocessor">#include &lt;QFont&gt;</span></div>
-<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;</div>
-<div class="line"><a name="l00039"></a><span class="lineno"><a class="code" href="classStelLoadingBar.html">   39</a></span>&#160;<span class="keyword">class </span><a class="code" href="classStelLoadingBar.html" title="This class is used to display loading bar.">StelLoadingBar</a></div>
-<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;{</div>
-<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;<span class="keyword">public</span>:</div>
-<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;    <a class="code" href="classStelLoadingBar.html#a0f5e56b4af84ed0e2d7522c6e3b9a977" title="Create and initialise the StelLoadingBar.">StelLoadingBar</a>(<span class="keyword">const</span> QString&amp;  splashTex, <span class="keyword">const</span> QString&amp; extraTextString=<span class="stringliteral">&quot;&quot;</span>,</div>
-<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;               <span class="keywordtype">float</span> extraTextSize = 30.f, <span class="keywordtype">float</span> extraTextPosx = 0.f, <span class="keywordtype">float</span> extraTextPosy = 0.f,</div>
-<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;               <span class="keywordtype">int</span> width=512, <span class="keywordtype">int</span> height=512);</div>
-<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;</div>
-<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;    <span class="keyword">virtual</span> ~<a class="code" href="classStelLoadingBar.html" title="This class is used to display loading bar.">StelLoadingBar</a>();</div>
-<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;    </div>
-<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classStelLoadingBar.html#a2247d3e767907181bd0b7edc0949569d" title="Draw the splashscreen.">draw</a>(<span class="keyword">class</span> <a class="code" href="classStelRenderer.html" title="Main class of the Renderer subsystem.">StelRenderer</a>* renderer);</div>
-<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;</div>
-<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;<span class="keyword">private</span>:</div>
-<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;    QString message;</div>
-<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;    <span class="keywordtype">int</span> splashx, splashy, width, height;</div>
-<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;    QFont extraTextFont;</div>
-<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;    <span class="keyword">class </span><a class="code" href="classStelTextureNew.html" title="Texture interface.">StelTextureNew</a>* splash;</div>
-<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;    QString extraText;</div>
-<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;    QString splashName;</div>
-<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;    <a class="code" href="classVector4.html">Vec4i</a> viewportXywh;</div>
-<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;    <a class="code" href="classVector2.html">Vec2f</a> extraTextPos;</div>
-<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;};</div>
-<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;</div>
-<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;<span class="preprocessor">#endif // _STELLOADINGBAR_HPP_</span></div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="StelTextureTypes_8hpp.html" title="Define the StelTextureSP type.">StelTextureTypes.hpp</a>&quot;</span></div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="StelProjectorType_8hpp.html" title="Define the StelProjectorP type.">StelProjectorType.hpp</a>&quot;</span></div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;<span class="preprocessor">#include &quot;VecMath.hpp&quot;</span></div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;</div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;<span class="preprocessor">#include &lt;QString&gt;</span></div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;<span class="preprocessor">#include &lt;QFont&gt;</span></div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;</div>
+<div class="line"><a name="l00040"></a><span class="lineno"><a class="code" href="classStelLoadingBar.html">   40</a></span>&#160;<span class="keyword">class </span><a class="code" href="classStelLoadingBar.html" title="This class is used to display loading bar.">StelLoadingBar</a></div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;{</div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;<span class="keyword">public</span>:</div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;    <a class="code" href="classStelLoadingBar.html#a0f5e56b4af84ed0e2d7522c6e3b9a977" title="Create and initialise the StelLoadingBar.">StelLoadingBar</a>(<span class="keyword">const</span> QString&amp;  splashTex, <span class="keyword">const</span> QString&amp; extraTextString=<span class="stringliteral">&quot;&quot;</span>,</div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;               <span class="keywordtype">float</span> extraTextSize = 30.f, <span class="keywordtype">float</span> extraTextPosx = 0.f, <span class="keywordtype">float</span> extraTextPosy = 0.f,</div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;               <span class="keywordtype">int</span> width=512, <span class="keywordtype">int</span> height=512);</div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;</div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;    <span class="keyword">virtual</span> ~<a class="code" href="classStelLoadingBar.html" title="This class is used to display loading bar.">StelLoadingBar</a>();</div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;    </div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classStelLoadingBar.html#a0791159df028cda7bb421ce886ecb594" title="Draw the splashscreen.">draw</a>();</div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;</div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;<span class="keyword">private</span>:</div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;    QString message;</div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;    <span class="keywordtype">int</span> splashx, splashy, width, height;</div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;    QFont extraTextFont;</div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;    <a class="code" href="StelTextureTypes_8hpp.html#a085a86bd020a5f6d1240e02d596eb4bb" title="Use shared pointer to simplify memory managment.">StelTextureSP</a> splash;</div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;    QString extraText;</div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;    <a class="code" href="classVector2.html">Vec2f</a> extraTextPos;</div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;</div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;    <span class="keyword">class </span><a class="code" href="classStelPainter.html" title="Provides functions for performing openGL drawing operations.">StelPainter</a>* sPainter;</div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;};</div>
+<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;</div>
+<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;<span class="preprocessor">#endif // _STELLOADINGBAR_HPP_</span></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Sun Sep 22 2013 18:49:45 for Stellarium by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Wed Sep 25 2013 20:54:59 for Stellarium by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.3.1
 </small></address>
