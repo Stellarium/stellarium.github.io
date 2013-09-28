@@ -70,7 +70,7 @@ if (($locale == "ar") or ($locale == "fa")) {
     $langdir = "ltr";
 }
 
-$version	= "0.12.3";
+$version	= "0.12.4";
 $next_version	= "0.13.0";
 $osx_version 	= "10.6+";
 $download_link_win32	= "http://sourceforge.net/projects/stellarium/files/Stellarium-win32/".$version."/stellarium-".$version."-win32.exe/download";
