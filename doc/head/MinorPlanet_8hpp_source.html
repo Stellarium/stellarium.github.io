@@ -77,58 +77,59 @@
 <div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;{</div>
 <div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;<span class="keyword">public</span>:</div>
 <div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;    <a class="code" href="classMinorPlanet.html">MinorPlanet</a>(<span class="keyword">const</span> QString&amp; englishName,</div>
-<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;        <span class="keywordtype">int</span> flagLighting,</div>
-<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;        <span class="keywordtype">double</span> radius,</div>
-<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;        <span class="keywordtype">double</span> oblateness,</div>
-<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;        <a class="code" href="classVector3.html">Vec3f</a> color,</div>
-<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;        <span class="keywordtype">float</span> albedo,</div>
-<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;        <span class="keyword">const</span> QString&amp; texMapName,</div>
-<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;        posFuncType _coordFunc,</div>
-<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;        <span class="keywordtype">void</span>* userDataPtr,</div>
-<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;        OsculatingFunctType *osculatingFunc,</div>
-<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;        <span class="keywordtype">bool</span> closeOrbit,</div>
-<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;        <span class="keywordtype">bool</span> hidden);</div>
-<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;</div>
-<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;    ~<a class="code" href="classMinorPlanet.html">MinorPlanet</a>();</div>
-<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;</div>
-<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;    <span class="comment">//Inherited from StelObject via Planet</span></div>
-<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;<span class="comment"></span>    <span class="keyword">virtual</span> QString <a class="code" href="classMinorPlanet.html#a6ba2fb1ca790edbbe36f718ebf3444b8" title="Get a string with data about the MinorPlanet.">getInfoString</a>(<span class="keyword">const</span> <a class="code" href="classStelCore.html" title="Main class for Stellarium core processing.">StelCore</a> *core, <span class="keyword">const</span> InfoStringGroup &amp;flags) <span class="keyword">const</span>;</div>
-<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;    <span class="comment">//The Comet class inherits the &quot;Planet&quot; type because the SolarSystem class</span></div>
-<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;    <span class="comment">//was not designed to handle different types of objects.</span></div>
-<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;    <span class="comment">// \todo Decide if this is going to be &quot;MinorPlanet&quot; or &quot;Asteroid&quot;</span></div>
-<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;    <span class="comment">//virtual QString getType() const {return &quot;MinorPlanet&quot;;}</span></div>
-<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;    <span class="keyword">virtual</span> <span class="keywordtype">float</span> <a class="code" href="classMinorPlanet.html#a1ebcfcbc05954f8145b07fa241462f29" title="Return object&#39;s apparent V magnitude as seen from observer, without including extinction.">getVMagnitude</a>(<span class="keyword">const</span> <a class="code" href="classStelCore.html" title="Main class for Stellarium core processing.">StelCore</a>* core) <span class="keyword">const</span>;</div>
-<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;    <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classMinorPlanet.html#a90a043f56891686636d1383ff5ebdcba" title="sets the nameI18 property with the appropriate translation.">translateName</a>(<span class="keyword">const</span> <a class="code" href="classStelTranslator.html" title="Class used to translate strings to any language.">StelTranslator</a>&amp; trans);</div>
-<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;</div>
-<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classMinorPlanet.html#a0d90bba3c9ad13e5b87826a2c4b9ba07" title="set the minor planet&#39;s number, if any.">setMinorPlanetNumber</a>(<span class="keywordtype">int</span> number);</div>
-<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;</div>
-<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classMinorPlanet.html#a1ba51f2ed5d3f44ac5e0fcdd816a29b9" title="sets a provisional designation.">setProvisionalDesignation</a>(QString designation);</div>
-<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;</div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;            <span class="keywordtype">int</span> flagLighting,</div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;            <span class="keywordtype">double</span> radius,</div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;            <span class="keywordtype">double</span> oblateness,</div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;            <a class="code" href="classVector3.html">Vec3f</a> color,</div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;            <span class="keywordtype">float</span> albedo,</div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;            <span class="keyword">const</span> QString&amp; texMapName,</div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;            posFuncType _coordFunc,</div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;            <span class="keywordtype">void</span>* userDataPtr,</div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;            OsculatingFunctType *osculatingFunc,</div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;            <span class="keywordtype">bool</span> closeOrbit,</div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;            <span class="keywordtype">bool</span> hidden,</div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;            <span class="keyword">const</span> QString &amp;pType);</div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;</div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;    ~<a class="code" href="classMinorPlanet.html">MinorPlanet</a>();</div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;</div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;    <span class="comment">//Inherited from StelObject via Planet</span></div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;<span class="comment"></span>    <span class="keyword">virtual</span> QString <a class="code" href="classMinorPlanet.html#a6ba2fb1ca790edbbe36f718ebf3444b8" title="Get a string with data about the MinorPlanet.">getInfoString</a>(<span class="keyword">const</span> <a class="code" href="classStelCore.html" title="Main class for Stellarium core processing.">StelCore</a> *core, <span class="keyword">const</span> InfoStringGroup &amp;flags) <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;    <span class="comment">//The Comet class inherits the &quot;Planet&quot; type because the SolarSystem class</span></div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;    <span class="comment">//was not designed to handle different types of objects.</span></div>
+<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;    <span class="comment">// \todo Decide if this is going to be &quot;MinorPlanet&quot; or &quot;Asteroid&quot;</span></div>
+<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;    <span class="comment">//virtual QString getType() const {return &quot;MinorPlanet&quot;;}</span></div>
+<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;    <span class="keyword">virtual</span> <span class="keywordtype">float</span> <a class="code" href="classMinorPlanet.html#a1ebcfcbc05954f8145b07fa241462f29" title="Return object&#39;s apparent V magnitude as seen from observer, without including extinction.">getVMagnitude</a>(<span class="keyword">const</span> <a class="code" href="classStelCore.html" title="Main class for Stellarium core processing.">StelCore</a>* core) <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;    <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classMinorPlanet.html#a90a043f56891686636d1383ff5ebdcba" title="sets the nameI18 property with the appropriate translation.">translateName</a>(<span class="keyword">const</span> <a class="code" href="classStelTranslator.html" title="Class used to translate strings to any language.">StelTranslator</a>&amp; trans);</div>
+<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;</div>
+<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classMinorPlanet.html#a0d90bba3c9ad13e5b87826a2c4b9ba07" title="set the minor planet&#39;s number, if any.">setMinorPlanetNumber</a>(<span class="keywordtype">int</span> number);</div>
+<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;</div>
+<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classMinorPlanet.html#a1ba51f2ed5d3f44ac5e0fcdd816a29b9" title="sets a provisional designation.">setProvisionalDesignation</a>(QString designation);</div>
 <div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;</div>
-<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classMinorPlanet.html#ad3314ffb0161ccad9fde21c3ea05ee99" title="sets absolute magnitude (H) and slope parameter (G).">setAbsoluteMagnitudeAndSlope</a>(<span class="keywordtype">double</span> magnitude, <span class="keywordtype">double</span> slope);</div>
-<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;</div>
-<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;    <span class="keyword">static</span> QString <a class="code" href="classMinorPlanet.html#a6135ae5213b6cee6ea392ee9b6b76a74" title="renders the subscript in a minor planet provisional designation with HTML.">renderProvisionalDesignationinHtml</a>(QString plainText);</div>
-<div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;</div>
-<div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classMinorPlanet.html#a9202a61c34003e56931db5908b500bd5" title="set value for semi-major axis in AU">setSemiMajorAxis</a>(<span class="keywordtype">double</span> value);</div>
-<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;</div>
-<div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;    <span class="keywordtype">double</span> <a class="code" href="classMinorPlanet.html#a2c47b7f3b7d3615b5966e6d93cf00a0c" title="get sidereal period for minor planet">getSiderealPeriod</a>() <span class="keyword">const</span>;</div>
-<div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;</div>
-<div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160;<span class="keyword">private</span>:</div>
-<div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160;    <span class="keywordtype">int</span> minorPlanetNumber;</div>
-<div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160;    <span class="keywordtype">double</span> absoluteMagnitude;</div>
-<div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160;    <span class="keywordtype">double</span> slopeParameter;</div>
-<div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160;    <span class="keywordtype">double</span> semiMajorAxis;</div>
-<div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160;</div>
-<div class="line"><a name="l00116"></a><span class="lineno">  116</span>&#160;    <span class="keywordtype">bool</span> nameIsProvisionalDesignation;</div>
-<div class="line"><a name="l00117"></a><span class="lineno">  117</span>&#160;    QString provisionalDesignationHtml;</div>
-<div class="line"><a name="l00118"></a><span class="lineno">  118</span>&#160;    QString properName;</div>
-<div class="line"><a name="l00119"></a><span class="lineno">  119</span>&#160;};</div>
-<div class="line"><a name="l00120"></a><span class="lineno">  120</span>&#160;</div>
-<div class="line"><a name="l00121"></a><span class="lineno">  121</span>&#160;<span class="preprocessor">#endif //_MINOR_PLANET_HPP_</span></div>
+<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;</div>
+<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classMinorPlanet.html#ad3314ffb0161ccad9fde21c3ea05ee99" title="sets absolute magnitude (H) and slope parameter (G).">setAbsoluteMagnitudeAndSlope</a>(<span class="keywordtype">double</span> magnitude, <span class="keywordtype">double</span> slope);</div>
+<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;</div>
+<div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;    <span class="keyword">static</span> QString <a class="code" href="classMinorPlanet.html#a6135ae5213b6cee6ea392ee9b6b76a74" title="renders the subscript in a minor planet provisional designation with HTML.">renderProvisionalDesignationinHtml</a>(QString plainText);</div>
+<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;</div>
+<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classMinorPlanet.html#a9202a61c34003e56931db5908b500bd5" title="set value for semi-major axis in AU">setSemiMajorAxis</a>(<span class="keywordtype">double</span> value);</div>
+<div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;</div>
+<div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;    <span class="keywordtype">double</span> <a class="code" href="classMinorPlanet.html#a2c47b7f3b7d3615b5966e6d93cf00a0c" title="get sidereal period for minor planet">getSiderealPeriod</a>() <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160;</div>
+<div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160;<span class="keyword">private</span>:</div>
+<div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160;    <span class="keywordtype">int</span> minorPlanetNumber;</div>
+<div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160;    <span class="keywordtype">double</span> absoluteMagnitude;</div>
+<div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160;    <span class="keywordtype">double</span> slopeParameter;</div>
+<div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160;    <span class="keywordtype">double</span> semiMajorAxis;</div>
+<div class="line"><a name="l00116"></a><span class="lineno">  116</span>&#160;</div>
+<div class="line"><a name="l00117"></a><span class="lineno">  117</span>&#160;    <span class="keywordtype">bool</span> nameIsProvisionalDesignation;</div>
+<div class="line"><a name="l00118"></a><span class="lineno">  118</span>&#160;    QString provisionalDesignationHtml;</div>
+<div class="line"><a name="l00119"></a><span class="lineno">  119</span>&#160;    QString properName;</div>
+<div class="line"><a name="l00120"></a><span class="lineno">  120</span>&#160;};</div>
+<div class="line"><a name="l00121"></a><span class="lineno">  121</span>&#160;</div>
+<div class="line"><a name="l00122"></a><span class="lineno">  122</span>&#160;<span class="preprocessor">#endif //_MINOR_PLANET_HPP_</span></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Wed Sep 25 2013 20:54:59 for Stellarium by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Fri Oct 11 2013 13:57:41 for Stellarium by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.3.1
 </small></address>

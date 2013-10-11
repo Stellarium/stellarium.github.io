@@ -75,15 +75,15 @@
 <div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;<span class="preprocessor">#include &lt;QString&gt;</span></div>
 <div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;<span class="preprocessor">#include &lt;QStringList&gt;</span></div>
 <div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;<span class="preprocessor">#include &lt;QTest&gt;</span></div>
-<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;</div>
-<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;<span class="keyword">class </span><a class="code" href="classStelFileMgr.html" title="Provides utilities for locating and handling files.">StelFileMgr</a>;</div>
-<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;</div>
-<div class="line"><a name="l00030"></a><span class="lineno"><a class="code" href="classTestStelFileMgr.html">   30</a></span>&#160;<span class="keyword">class </span><a class="code" href="classTestStelFileMgr.html">TestStelFileMgr</a> : <span class="keyword">public</span> QObject</div>
-<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;{</div>
-<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;Q_OBJECT</div>
-<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;<span class="keyword">private</span> slots:</div>
-<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;    <span class="keywordtype">void</span> initTestCase();</div>
-<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;    <span class="keywordtype">void</span> cleanupTestCase();</div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;<span class="preprocessor">#include &lt;QTemporaryDir&gt;</span></div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;</div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;<span class="keyword">class </span><a class="code" href="classStelFileMgr.html" title="Provides utilities for locating and handling files.">StelFileMgr</a>;</div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;</div>
+<div class="line"><a name="l00031"></a><span class="lineno"><a class="code" href="classTestStelFileMgr.html">   31</a></span>&#160;<span class="keyword">class </span><a class="code" href="classTestStelFileMgr.html">TestStelFileMgr</a> : <span class="keyword">public</span> QObject</div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;{</div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;Q_OBJECT</div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;<span class="keyword">private</span> slots:</div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;    <span class="keywordtype">void</span> initTestCase();</div>
 <div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;</div>
 <div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;    <span class="keywordtype">void</span> testFindFileVanilla();</div>
 <div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;    <span class="keywordtype">void</span> testFindFileVanillaAbs();</div>
@@ -101,19 +101,20 @@
 <div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;    <span class="keywordtype">void</span> testListContentsDirAbs();</div>
 <div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;</div>
 <div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;<span class="keyword">private</span>:</div>
-<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;    QString workingDir;</div>
-<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;    QString partialPath1;</div>
-<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;    QString partialPath2;</div>
-<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;    QStringList testDirs;</div>
-<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;    QStringList testFiles;</div>
-<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;};</div>
-<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;</div>
-<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;<span class="preprocessor">#endif // _TESTSTELFILEMGR_HPP_</span></div>
-<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;<span class="preprocessor"></span></div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;    QTemporaryDir tempDir;</div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;    QString workingDir;</div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;    QString partialPath1;</div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;    QString partialPath2;</div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;    QStringList testDirs;</div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;    QStringList testFiles;</div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;};</div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;</div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;<span class="preprocessor">#endif // _TESTSTELFILEMGR_HPP_</span></div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;<span class="preprocessor"></span></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Wed Sep 25 2013 20:54:59 for Stellarium by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Fri Oct 11 2013 13:57:41 for Stellarium by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.3.1
 </small></address>

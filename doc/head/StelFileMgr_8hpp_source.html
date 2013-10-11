@@ -102,69 +102,71 @@
 <div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;</div>
 <div class="line"><a name="l00096"></a><span class="lineno"><a class="code" href="classStelFileMgr.html#a3deb0d7cea992284b1b68f25f5ae9015">   96</a></span>&#160;    <span class="keyword">static</span> <span class="keyword">const</span> QStringList&amp; <a class="code" href="classStelFileMgr.html#a3deb0d7cea992284b1b68f25f5ae9015" title="Get a vector of strings which describes the current search paths.">getSearchPaths</a>(<span class="keywordtype">void</span>) {<span class="keywordflow">return</span> fileLocations;}</div>
 <div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;</div>
-<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;    <span class="keyword">static</span> <span class="keywordtype">void</span> <a class="code" href="classStelFileMgr.html#a940669228c4f2d0c1e8250ca2f596635" title="Make sure the passed directory path exist and is writable.">makeSureDirExistsAndIsWritable</a>(<span class="keyword">const</span> QString&amp; dirFullPath);</div>
+<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;    <span class="keyword">static</span> <span class="keywordtype">void</span> <a class="code" href="classStelFileMgr.html#a8713c4330e43094ccab0661c1c6305c9" title="Set the search paths.">setSearchPaths</a>(<span class="keyword">const</span> QStringList&amp; paths);</div>
 <div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;</div>
-<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;    <span class="keyword">static</span> <span class="keywordtype">bool</span> <a class="code" href="classStelFileMgr.html#abe762872c7fec155b9c012e70fe892b7" title="Check if a path exists.">exists</a>(<span class="keyword">const</span> QString&amp; path);</div>
+<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;    <span class="keyword">static</span> <span class="keywordtype">void</span> <a class="code" href="classStelFileMgr.html#a940669228c4f2d0c1e8250ca2f596635" title="Make sure the passed directory path exist and is writable.">makeSureDirExistsAndIsWritable</a>(<span class="keyword">const</span> QString&amp; dirFullPath);</div>
 <div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;</div>
-<div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;    <span class="keyword">static</span> <span class="keywordtype">bool</span> <a class="code" href="classStelFileMgr.html#ad0477ea6bc9635883181f455a48742ea" title="Check if a path is absolute.">isAbsolute</a>(<span class="keyword">const</span> QString&amp; path);</div>
+<div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;    <span class="keyword">static</span> <span class="keywordtype">bool</span> <a class="code" href="classStelFileMgr.html#abe762872c7fec155b9c012e70fe892b7" title="Check if a path exists.">exists</a>(<span class="keyword">const</span> QString&amp; path);</div>
 <div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;</div>
-<div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160;    <span class="keyword">static</span> <span class="keywordtype">bool</span> <a class="code" href="classStelFileMgr.html#aace7e87ebaaab9ee7b731f33d40a6d33" title="Check if a path is readable.">isReadable</a>(<span class="keyword">const</span> QString&amp; path);</div>
-<div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160;</div>
-<div class="line"><a name="l00122"></a><span class="lineno">  122</span>&#160;    <span class="keyword">static</span> <span class="keywordtype">bool</span> <a class="code" href="classStelFileMgr.html#a8fc98ce669624e8772a24635c51d8540" title="Check if a path is writable For files, true is returned if the file exists and is writable or if the ...">isWritable</a>(<span class="keyword">const</span> QString&amp; path);</div>
-<div class="line"><a name="l00123"></a><span class="lineno">  123</span>&#160;</div>
-<div class="line"><a name="l00126"></a><span class="lineno">  126</span>&#160;    <span class="keyword">static</span> <span class="keywordtype">bool</span> <a class="code" href="classStelFileMgr.html#afc5a395be5d85bafb0cc60e74bd19dd2" title="Check if a path exists and is a directory.">isDirectory</a>(<span class="keyword">const</span> QString&amp; path);</div>
+<div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160;    <span class="keyword">static</span> <span class="keywordtype">bool</span> <a class="code" href="classStelFileMgr.html#ad0477ea6bc9635883181f455a48742ea" title="Check if a path is absolute.">isAbsolute</a>(<span class="keyword">const</span> QString&amp; path);</div>
+<div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160;</div>
+<div class="line"><a name="l00117"></a><span class="lineno">  117</span>&#160;    <span class="keyword">static</span> <span class="keywordtype">bool</span> <a class="code" href="classStelFileMgr.html#aace7e87ebaaab9ee7b731f33d40a6d33" title="Check if a path is readable.">isReadable</a>(<span class="keyword">const</span> QString&amp; path);</div>
+<div class="line"><a name="l00118"></a><span class="lineno">  118</span>&#160;</div>
+<div class="line"><a name="l00126"></a><span class="lineno">  126</span>&#160;    <span class="keyword">static</span> <span class="keywordtype">bool</span> <a class="code" href="classStelFileMgr.html#a8fc98ce669624e8772a24635c51d8540" title="Check if a path is writable For files, true is returned if the file exists and is writable or if the ...">isWritable</a>(<span class="keyword">const</span> QString&amp; path);</div>
 <div class="line"><a name="l00127"></a><span class="lineno">  127</span>&#160;</div>
-<div class="line"><a name="l00130"></a><span class="lineno">  130</span>&#160;    <span class="keyword">static</span> qint64 <a class="code" href="classStelFileMgr.html#a6fb1e0c67a550b5a5dc6e07218da1bbe" title="Return the size of the file at the path.">size</a>(<span class="keyword">const</span> QString&amp; path);</div>
+<div class="line"><a name="l00130"></a><span class="lineno">  130</span>&#160;    <span class="keyword">static</span> <span class="keywordtype">bool</span> <a class="code" href="classStelFileMgr.html#afc5a395be5d85bafb0cc60e74bd19dd2" title="Check if a path exists and is a directory.">isDirectory</a>(<span class="keyword">const</span> QString&amp; path);</div>
 <div class="line"><a name="l00131"></a><span class="lineno">  131</span>&#160;</div>
-<div class="line"><a name="l00135"></a><span class="lineno">  135</span>&#160;    <span class="keyword">static</span> <span class="keywordtype">bool</span> <a class="code" href="classStelFileMgr.html#acb1577a635f0162b07487e688f8ce470" title="Make a directory.">mkDir</a>(<span class="keyword">const</span> QString&amp; path);</div>
-<div class="line"><a name="l00136"></a><span class="lineno">  136</span>&#160;</div>
-<div class="line"><a name="l00140"></a><span class="lineno">  140</span>&#160;    <span class="keyword">static</span> QString <a class="code" href="classStelFileMgr.html#a93d1478144728e717893454461bd0c01" title="Convenience function to find the parent directory of a given path May return relative paths if the pa...">dirName</a>(<span class="keyword">const</span> QString&amp; path);</div>
-<div class="line"><a name="l00141"></a><span class="lineno">  141</span>&#160;</div>
-<div class="line"><a name="l00145"></a><span class="lineno">  145</span>&#160;    <span class="keyword">static</span> QString <a class="code" href="classStelFileMgr.html#a121fc8ceefa8bd1a9eb2f3be0d248dcd" title="Convenience function to find the basename of a given path May return relative paths if the parameter ...">baseName</a>(<span class="keyword">const</span> QString&amp; path);</div>
-<div class="line"><a name="l00146"></a><span class="lineno">  146</span>&#160;</div>
-<div class="line"><a name="l00151"></a><span class="lineno">  151</span>&#160;    <span class="keyword">static</span> QString <a class="code" href="classStelFileMgr.html#a73c8fbee5e0b7a03a3e4f0fc9a8293cf" title="Get the user&#39;s Desktop directory.">getDesktopDir</a>();</div>
-<div class="line"><a name="l00152"></a><span class="lineno">  152</span>&#160;</div>
-<div class="line"><a name="l00159"></a><span class="lineno">  159</span>&#160;    <span class="keyword">static</span> QString <a class="code" href="classStelFileMgr.html#a15980eb232ef85b2bf2b81cf328a2ba8" title="Returns the path to the user directory.">getUserDir</a>();</div>
-<div class="line"><a name="l00160"></a><span class="lineno">  160</span>&#160;</div>
-<div class="line"><a name="l00165"></a><span class="lineno">  165</span>&#160;    <span class="keyword">static</span> QString <a class="code" href="classStelFileMgr.html#a89b357cbc562e5ecd2029cd2c9858300" title="Returns the path to the installation directory.">getInstallationDir</a>();</div>
-<div class="line"><a name="l00166"></a><span class="lineno">  166</span>&#160;</div>
-<div class="line"><a name="l00168"></a><span class="lineno">  168</span>&#160;    <span class="keyword">static</span> QString <a class="code" href="classStelFileMgr.html#aa1e4041dc4ec1b742192db46b413ddb6" title="Returns the path to the cache directory. Note that subdirectories may need to be created for specific...">getCacheDir</a>();</div>
-<div class="line"><a name="l00169"></a><span class="lineno">  169</span>&#160;</div>
-<div class="line"><a name="l00173"></a><span class="lineno">  173</span>&#160;    <span class="keyword">static</span> <span class="keywordtype">void</span> <a class="code" href="classStelFileMgr.html#aacb0aa62dda46aa18c5789abbd36431c" title="Sets the user directory.">setUserDir</a>(<span class="keyword">const</span> QString&amp; newDir);</div>
-<div class="line"><a name="l00174"></a><span class="lineno">  174</span>&#160;</div>
-<div class="line"><a name="l00180"></a><span class="lineno">  180</span>&#160;    <span class="keyword">static</span> QString <a class="code" href="classStelFileMgr.html#a4db41fbfc7af0253a718c3f9e250a9f4" title="This is the directory into which screenshots will be saved.">getScreenshotDir</a>();</div>
-<div class="line"><a name="l00181"></a><span class="lineno">  181</span>&#160;</div>
-<div class="line"><a name="l00187"></a><span class="lineno">  187</span>&#160;    <span class="keyword">static</span> <span class="keywordtype">void</span> <a class="code" href="classStelFileMgr.html#aca7f01657c1b484851574aa0a90e7967" title="Sets the screenshot directory.">setScreenshotDir</a>(<span class="keyword">const</span> QString&amp; newDir);</div>
-<div class="line"><a name="l00188"></a><span class="lineno">  188</span>&#160;</div>
-<div class="line"><a name="l00191"></a><span class="lineno">  191</span>&#160;    <span class="keyword">static</span> QString <a class="code" href="classStelFileMgr.html#af7b68868fc5ccaea46c18df8bfd89788" title="get the directory for locate files (i18n)">getLocaleDir</a>();</div>
+<div class="line"><a name="l00134"></a><span class="lineno">  134</span>&#160;    <span class="keyword">static</span> qint64 <a class="code" href="classStelFileMgr.html#a6fb1e0c67a550b5a5dc6e07218da1bbe" title="Return the size of the file at the path.">size</a>(<span class="keyword">const</span> QString&amp; path);</div>
+<div class="line"><a name="l00135"></a><span class="lineno">  135</span>&#160;</div>
+<div class="line"><a name="l00139"></a><span class="lineno">  139</span>&#160;    <span class="keyword">static</span> <span class="keywordtype">bool</span> <a class="code" href="classStelFileMgr.html#acb1577a635f0162b07487e688f8ce470" title="Make a directory.">mkDir</a>(<span class="keyword">const</span> QString&amp; path);</div>
+<div class="line"><a name="l00140"></a><span class="lineno">  140</span>&#160;</div>
+<div class="line"><a name="l00144"></a><span class="lineno">  144</span>&#160;    <span class="keyword">static</span> QString <a class="code" href="classStelFileMgr.html#a93d1478144728e717893454461bd0c01" title="Convenience function to find the parent directory of a given path May return relative paths if the pa...">dirName</a>(<span class="keyword">const</span> QString&amp; path);</div>
+<div class="line"><a name="l00145"></a><span class="lineno">  145</span>&#160;</div>
+<div class="line"><a name="l00149"></a><span class="lineno">  149</span>&#160;    <span class="keyword">static</span> QString <a class="code" href="classStelFileMgr.html#a121fc8ceefa8bd1a9eb2f3be0d248dcd" title="Convenience function to find the basename of a given path May return relative paths if the parameter ...">baseName</a>(<span class="keyword">const</span> QString&amp; path);</div>
+<div class="line"><a name="l00150"></a><span class="lineno">  150</span>&#160;</div>
+<div class="line"><a name="l00155"></a><span class="lineno">  155</span>&#160;    <span class="keyword">static</span> QString <a class="code" href="classStelFileMgr.html#a73c8fbee5e0b7a03a3e4f0fc9a8293cf" title="Get the user&#39;s Desktop directory.">getDesktopDir</a>();</div>
+<div class="line"><a name="l00156"></a><span class="lineno">  156</span>&#160;</div>
+<div class="line"><a name="l00163"></a><span class="lineno">  163</span>&#160;    <span class="keyword">static</span> QString <a class="code" href="classStelFileMgr.html#a15980eb232ef85b2bf2b81cf328a2ba8" title="Returns the path to the user directory.">getUserDir</a>();</div>
+<div class="line"><a name="l00164"></a><span class="lineno">  164</span>&#160;</div>
+<div class="line"><a name="l00169"></a><span class="lineno">  169</span>&#160;    <span class="keyword">static</span> QString <a class="code" href="classStelFileMgr.html#a89b357cbc562e5ecd2029cd2c9858300" title="Returns the path to the installation directory.">getInstallationDir</a>();</div>
+<div class="line"><a name="l00170"></a><span class="lineno">  170</span>&#160;</div>
+<div class="line"><a name="l00172"></a><span class="lineno">  172</span>&#160;    <span class="keyword">static</span> QString <a class="code" href="classStelFileMgr.html#aa1e4041dc4ec1b742192db46b413ddb6" title="Returns the path to the cache directory. Note that subdirectories may need to be created for specific...">getCacheDir</a>();</div>
+<div class="line"><a name="l00173"></a><span class="lineno">  173</span>&#160;</div>
+<div class="line"><a name="l00177"></a><span class="lineno">  177</span>&#160;    <span class="keyword">static</span> <span class="keywordtype">void</span> <a class="code" href="classStelFileMgr.html#aacb0aa62dda46aa18c5789abbd36431c" title="Sets the user directory.">setUserDir</a>(<span class="keyword">const</span> QString&amp; newDir);</div>
+<div class="line"><a name="l00178"></a><span class="lineno">  178</span>&#160;</div>
+<div class="line"><a name="l00184"></a><span class="lineno">  184</span>&#160;    <span class="keyword">static</span> QString <a class="code" href="classStelFileMgr.html#a4db41fbfc7af0253a718c3f9e250a9f4" title="This is the directory into which screenshots will be saved.">getScreenshotDir</a>();</div>
+<div class="line"><a name="l00185"></a><span class="lineno">  185</span>&#160;</div>
+<div class="line"><a name="l00191"></a><span class="lineno">  191</span>&#160;    <span class="keyword">static</span> <span class="keywordtype">void</span> <a class="code" href="classStelFileMgr.html#aca7f01657c1b484851574aa0a90e7967" title="Sets the screenshot directory.">setScreenshotDir</a>(<span class="keyword">const</span> QString&amp; newDir);</div>
 <div class="line"><a name="l00192"></a><span class="lineno">  192</span>&#160;</div>
-<div class="line"><a name="l00193"></a><span class="lineno">  193</span>&#160;<span class="keyword">private</span>:</div>
-<div class="line"><a name="l00194"></a><span class="lineno">  194</span>&#160;</div>
-<div class="line"><a name="l00196"></a><span class="lineno">  196</span>&#160;    <a class="code" href="classStelFileMgr.html" title="Provides utilities for locating and handling files.">StelFileMgr</a>() {;}</div>
-<div class="line"><a name="l00197"></a><span class="lineno">  197</span>&#160;</div>
-<div class="line"><a name="l00203"></a><span class="lineno">  203</span>&#160;    <span class="keyword">static</span> <span class="keywordtype">bool</span> fileFlagsCheck(<span class="keyword">const</span> QFileInfo&amp; thePath, <span class="keyword">const</span> <a class="code" href="classStelFileMgr.html#a94983016a182b2b665e56ab491b9e4dd" title="used as named bitfield flags as specifiers to filter results of StelFileMgr methods.">Flags</a>&amp; flags=(<a class="code" href="classStelFileMgr.html#a94983016a182b2b665e56ab491b9e4dd" title="used as named bitfield flags as specifiers to filter results of StelFileMgr methods.">Flags</a>)0);</div>
-<div class="line"><a name="l00204"></a><span class="lineno">  204</span>&#160;</div>
-<div class="line"><a name="l00205"></a><span class="lineno">  205</span>&#160;    <span class="keyword">static</span> QStringList fileLocations;</div>
-<div class="line"><a name="l00206"></a><span class="lineno">  206</span>&#160;</div>
-<div class="line"><a name="l00208"></a><span class="lineno">  208</span>&#160;    <span class="keyword">static</span> QString userDir;</div>
-<div class="line"><a name="l00209"></a><span class="lineno">  209</span>&#160;</div>
-<div class="line"><a name="l00211"></a><span class="lineno">  211</span>&#160;    <span class="keyword">static</span> QString screenshotDir;</div>
-<div class="line"><a name="l00212"></a><span class="lineno">  212</span>&#160;</div>
-<div class="line"><a name="l00214"></a><span class="lineno">  214</span>&#160;    <span class="keyword">static</span> QString installDir;</div>
-<div class="line"><a name="l00215"></a><span class="lineno">  215</span>&#160;    </div>
-<div class="line"><a name="l00216"></a><span class="lineno">  216</span>&#160;<span class="preprocessor">#ifdef Q_OS_WIN</span></div>
-<div class="line"><a name="l00217"></a><span class="lineno">  217</span>&#160;<span class="preprocessor"></span></div>
-<div class="line"><a name="l00218"></a><span class="lineno">  218</span>&#160;</div>
-<div class="line"><a name="l00219"></a><span class="lineno">  219</span>&#160;    <span class="keyword">static</span> QString getWin32SpecialDirPath(<span class="keywordtype">int</span> csidlId);</div>
-<div class="line"><a name="l00220"></a><span class="lineno">  220</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="line"><a name="l00195"></a><span class="lineno">  195</span>&#160;    <span class="keyword">static</span> QString <a class="code" href="classStelFileMgr.html#af7b68868fc5ccaea46c18df8bfd89788" title="get the directory for locate files (i18n)">getLocaleDir</a>();</div>
+<div class="line"><a name="l00196"></a><span class="lineno">  196</span>&#160;</div>
+<div class="line"><a name="l00197"></a><span class="lineno">  197</span>&#160;<span class="keyword">private</span>:</div>
+<div class="line"><a name="l00198"></a><span class="lineno">  198</span>&#160;</div>
+<div class="line"><a name="l00200"></a><span class="lineno">  200</span>&#160;    <a class="code" href="classStelFileMgr.html" title="Provides utilities for locating and handling files.">StelFileMgr</a>() {;}</div>
+<div class="line"><a name="l00201"></a><span class="lineno">  201</span>&#160;</div>
+<div class="line"><a name="l00207"></a><span class="lineno">  207</span>&#160;    <span class="keyword">static</span> <span class="keywordtype">bool</span> fileFlagsCheck(<span class="keyword">const</span> QFileInfo&amp; thePath, <span class="keyword">const</span> <a class="code" href="classStelFileMgr.html#a94983016a182b2b665e56ab491b9e4dd" title="used as named bitfield flags as specifiers to filter results of StelFileMgr methods.">Flags</a>&amp; flags=(<a class="code" href="classStelFileMgr.html#a94983016a182b2b665e56ab491b9e4dd" title="used as named bitfield flags as specifiers to filter results of StelFileMgr methods.">Flags</a>)0);</div>
+<div class="line"><a name="l00208"></a><span class="lineno">  208</span>&#160;</div>
+<div class="line"><a name="l00209"></a><span class="lineno">  209</span>&#160;    <span class="keyword">static</span> QStringList fileLocations;</div>
+<div class="line"><a name="l00210"></a><span class="lineno">  210</span>&#160;</div>
+<div class="line"><a name="l00212"></a><span class="lineno">  212</span>&#160;    <span class="keyword">static</span> QString userDir;</div>
+<div class="line"><a name="l00213"></a><span class="lineno">  213</span>&#160;</div>
+<div class="line"><a name="l00215"></a><span class="lineno">  215</span>&#160;    <span class="keyword">static</span> QString screenshotDir;</div>
+<div class="line"><a name="l00216"></a><span class="lineno">  216</span>&#160;</div>
+<div class="line"><a name="l00218"></a><span class="lineno">  218</span>&#160;    <span class="keyword">static</span> QString installDir;</div>
+<div class="line"><a name="l00219"></a><span class="lineno">  219</span>&#160;    </div>
+<div class="line"><a name="l00220"></a><span class="lineno">  220</span>&#160;<span class="preprocessor">#ifdef Q_OS_WIN</span></div>
 <div class="line"><a name="l00221"></a><span class="lineno">  221</span>&#160;<span class="preprocessor"></span></div>
-<div class="line"><a name="l00222"></a><span class="lineno">  222</span>&#160;};</div>
-<div class="line"><a name="l00223"></a><span class="lineno">  223</span>&#160;</div>
-<div class="line"><a name="l00224"></a><span class="lineno">  224</span>&#160;<span class="preprocessor">#endif // _STELFILEMGR_HPP_</span></div>
+<div class="line"><a name="l00222"></a><span class="lineno">  222</span>&#160;</div>
+<div class="line"><a name="l00223"></a><span class="lineno">  223</span>&#160;    <span class="keyword">static</span> QString getWin32SpecialDirPath(<span class="keywordtype">int</span> csidlId);</div>
+<div class="line"><a name="l00224"></a><span class="lineno">  224</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="line"><a name="l00225"></a><span class="lineno">  225</span>&#160;<span class="preprocessor"></span></div>
+<div class="line"><a name="l00226"></a><span class="lineno">  226</span>&#160;};</div>
+<div class="line"><a name="l00227"></a><span class="lineno">  227</span>&#160;</div>
+<div class="line"><a name="l00228"></a><span class="lineno">  228</span>&#160;<span class="preprocessor">#endif // _STELFILEMGR_HPP_</span></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Wed Sep 25 2013 20:54:59 for Stellarium by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Fri Oct 11 2013 13:57:41 for Stellarium by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.3.1
 </small></address>

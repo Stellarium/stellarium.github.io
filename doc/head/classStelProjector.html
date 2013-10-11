@@ -142,6 +142,9 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><b>intersectViewportDisc
 <tr class="memitem:a3f3e8fb7deade80ccc90422daa37fa89"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classStelProjector.html#a3f3e8fb7deade80ccc90422daa37fa89">getViewportHeight</a> () const </td></tr>
 <tr class="memdesc:a3f3e8fb7deade80ccc90422daa37fa89"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the viewport height in pixels.  <a href="#a3f3e8fb7deade80ccc90422daa37fa89">More...</a><br/></td></tr>
 <tr class="separator:a3f3e8fb7deade80ccc90422daa37fa89"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a61d96dcee679f6c34df690fbe49803d8"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classStelProjector.html#a61d96dcee679f6c34df690fbe49803d8">getDevicePixelsPerPixel</a> () const </td></tr>
+<tr class="memdesc:a61d96dcee679f6c34df690fbe49803d8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the number of device pixels per "Device Independent Pixels" (value is usually 1, but 2 for mac retina screens).  <a href="#a61d96dcee679f6c34df690fbe49803d8">More...</a><br/></td></tr>
+<tr class="separator:a61d96dcee679f6c34df690fbe49803d8"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:acc07a99b7821ef3a6f3e5c2cafefed1c"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classSphericalRegionP.html">SphericalRegionP</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classStelProjector.html#acc07a99b7821ef3a6f3e5c2cafefed1c">getViewportConvexPolygon</a> (float marginX=0., float marginY=0.) const </td></tr>
 <tr class="memdesc:acc07a99b7821ef3a6f3e5c2cafefed1c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return a convex polygon on the sphere which includes the viewport in the current frame.  <a href="#acc07a99b7821ef3a6f3e5c2cafefed1c">More...</a><br/></td></tr>
 <tr class="separator:acc07a99b7821ef3a6f3e5c2cafefed1c"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -277,10 +280,13 @@ float&#160;</td><td class="memItemRight" valign="bottom"><b>defautAngleForGravit
 <tr class="memitem:a73b8203107617bd7c7141ad9944507c1"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a73b8203107617bd7c7141ad9944507c1"></a>
 <a class="el" href="classSphericalCap.html">SphericalCap</a>&#160;</td><td class="memItemRight" valign="bottom"><b>boundingCap</b></td></tr>
 <tr class="separator:a73b8203107617bd7c7141ad9944507c1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a01acecdb0fae81c50e15250c4998b0cb"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a01acecdb0fae81c50e15250c4998b0cb"></a>
+float&#160;</td><td class="memItemRight" valign="bottom"><b>devicePixelsPerPixel</b></td></tr>
+<tr class="separator:a01acecdb0fae81c50e15250c4998b0cb"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Provide the main interface to all operations of projecting coordinates from sky to screen. </p>
-<p>The <a class="el" href="classStelProjector.html" title="Provide the main interface to all operations of projecting coordinates from sky to screen...">StelProjector</a> also defines the viewport size and position. All methods from this class are threadsafe. The usual usage is to create local instances of StelProjectorP using the getProjection() method from <a class="el" href="classStelCore.html" title="Main class for Stellarium core processing.">StelCore</a> where needed. For performing drawing using a particular projection, refer to the <a class="el" href="classStelPainter.html" title="Provides functions for performing openGL drawing operations.">StelPainter</a> class. </p>
+<p>The <a class="el" href="classStelProjector.html" title="Provide the main interface to all operations of projecting coordinates from sky to screen...">StelProjector</a> also defines the viewport size and position. All positions in pixels are in real device pixels, which is not the same as device independent pixels. On a mac with retina screen, there are 2 device pixels per pixels. All methods from this class are threadsafe. The usual usage is to create local instances of StelProjectorP using the getProjection() method from <a class="el" href="classStelCore.html" title="Main class for Stellarium core processing.">StelCore</a> where needed. For performing drawing using a particular projection, refer to the <a class="el" href="classStelPainter.html" title="Provides functions for performing openGL drawing operations.">StelPainter</a> class. </p>
 <dl class="section see"><dt>See Also</dt><dd><a class="el" href="StelProjectorType_8hpp.html#a286221a2d4640bbeec2090cfbfadb0ff" title="Shared pointer on a StelProjector instance (implement reference counting)">StelProjectorP</a> </dd></dl>
 </div><h2 class="groupheader">Member Typedef Documentation</h2>
 <a class="anchor" id="ae6b42a6973558f855691b91701edf0dc"></a>
@@ -592,6 +598,31 @@ float&#160;</td><td class="memItemRight" valign="bottom"><b>defautAngleForGravit
 <p>Get a human-readable short description for this projection type. </p>
 
 <p>Reimplemented in <a class="el" href="classStelProjector2d.html#a03b9a73b2806129e6e90398d68353164">StelProjector2d</a>, <a class="el" href="classStelProjectorOrthographic.html#ac0ad02c9a83151c87e0f0f5c4db2d973">StelProjectorOrthographic</a>, <a class="el" href="classStelProjectorMercator.html#a1589f4245be7b20a6a001ff00e1cdc1f">StelProjectorMercator</a>, <a class="el" href="classStelProjectorCylinder.html#a3e0b546192786ea778768a30a3a7cc17">StelProjectorCylinder</a>, <a class="el" href="classStelProjectorHammer.html#a85f602b827f7e23f9a34be1a55db7ebd">StelProjectorHammer</a>, <a class="el" href="classStelProjectorFisheye.html#ae4c2776af578e1d9e9c725de8b5aaf55">StelProjectorFisheye</a>, <a class="el" href="classStelProjectorStereographic.html#a083f5752abfe0b01917f95cafaaa7649">StelProjectorStereographic</a>, <a class="el" href="classStelProjectorEqualArea.html#ad96a28372f312e711ce4412947fdc9ee">StelProjectorEqualArea</a>, and <a class="el" href="classStelProjectorPerspective.html#a25d29538e37f3998917283d5dbd3f5f2">StelProjectorPerspective</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a61d96dcee679f6c34df690fbe49803d8"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">float StelProjector::getDevicePixelsPerPixel </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Get the number of device pixels per "Device Independent Pixels" (value is usually 1, but 2 for mac retina screens). </p>
 
 </div>
 </div>
@@ -1448,7 +1479,7 @@ float&#160;</td><td class="memItemRight" valign="bottom"><b>defautAngleForGravit
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Wed Sep 25 2013 20:55:00 for Stellarium by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Fri Oct 11 2013 13:57:42 for Stellarium by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.3.1
 </small></address>

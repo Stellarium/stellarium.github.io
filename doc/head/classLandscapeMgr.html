@@ -100,6 +100,9 @@ Public Slots</h2></td></tr>
 <tr class="memitem:ae149c6c7778a41096f9328e57a783c56"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classLandscapeMgr.html#ae149c6c7778a41096f9328e57a783c56">setFlagLandscape</a> (const bool displayed)</td></tr>
 <tr class="memdesc:ae149c6c7778a41096f9328e57a783c56"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set flag for displaying <a class="el" href="classLandscape.html" title="Store and manages the displaying of the Landscape.">Landscape</a>.  <a href="#ae149c6c7778a41096f9328e57a783c56">More...</a><br/></td></tr>
 <tr class="separator:ae149c6c7778a41096f9328e57a783c56"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af44590fb1ec7407a27fe564729411ecd"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classLandscapeMgr.html#af44590fb1ec7407a27fe564729411ecd">getIsLandscapeFullyVisible</a> () const </td></tr>
+<tr class="memdesc:af44590fb1ec7407a27fe564729411ecd"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get whether the landscape is currently visible. If true, object below landscape must be rendered.  <a href="#af44590fb1ec7407a27fe564729411ecd">More...</a><br/></td></tr>
+<tr class="separator:af44590fb1ec7407a27fe564729411ecd"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a55807863547c25d652d2b18cb23137da"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classLandscapeMgr.html#a55807863547c25d652d2b18cb23137da">getFlagFog</a> () const </td></tr>
 <tr class="memdesc:a55807863547c25d652d2b18cb23137da"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get flag for displaying Fog.  <a href="#a55807863547c25d652d2b18cb23137da">More...</a><br/></td></tr>
 <tr class="separator:a55807863547c25d652d2b18cb23137da"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -290,6 +293,13 @@ Additional Inherited Members</h2></td></tr>
  }</td></tr>
 <tr class="memdesc:a11b61d014b51cf6424cd89b1ccd3d768"><td class="mdescLeft">&#160;</td><td class="mdescRight">Define the possible action for which an order is defined.  <a href="classStelModule.html#a11b61d014b51cf6424cd89b1ccd3d768">More...</a><br/></td></tr>
 <tr class="separator:a11b61d014b51cf6424cd89b1ccd3d768 inherit pub_types_classStelModule"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="inherit_header pro_methods_classStelModule"><td colspan="2" onclick="javascript:toggleInherit('pro_methods_classStelModule')"><img src="closed.png" alt="-"/>&#160;Protected Member Functions inherited from <a class="el" href="classStelModule.html">StelModule</a></td></tr>
+<tr class="memitem:a02dbe3363599c3fe3bb8ff1659d55d85 inherit pro_methods_classStelModule"><td class="memItemLeft" align="right" valign="top">class <a class="el" href="classStelAction.html">StelAction</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classStelModule.html#a02dbe3363599c3fe3bb8ff1659d55d85">addAction</a> (const QString &amp;id, const QString &amp;groupId, const QString &amp;text, QObject *target, const char *slot, const QString &amp;shortcut=&quot;&quot;, const QString &amp;altShortcut=&quot;&quot;)</td></tr>
+<tr class="memdesc:a02dbe3363599c3fe3bb8ff1659d55d85 inherit pro_methods_classStelModule"><td class="mdescLeft">&#160;</td><td class="mdescRight">convenience methods to add an action to the <a class="el" href="classStelActionMgr.html">StelActionMgr</a> object.  <a href="#a02dbe3363599c3fe3bb8ff1659d55d85">More...</a><br/></td></tr>
+<tr class="separator:a02dbe3363599c3fe3bb8ff1659d55d85 inherit pro_methods_classStelModule"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acc51b40ad88636ba5e48e6f29a49505b inherit pro_methods_classStelModule"><td class="memItemLeft" align="right" valign="top">class <a class="el" href="classStelAction.html">StelAction</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classStelModule.html#acc51b40ad88636ba5e48e6f29a49505b">addAction</a> (const QString &amp;id, const QString &amp;groupId, const QString &amp;text, const char *slot, const QString &amp;shortcut=&quot;&quot;, const QString &amp;altShortcut=&quot;&quot;)</td></tr>
+<tr class="memdesc:acc51b40ad88636ba5e48e6f29a49505b inherit pro_methods_classStelModule"><td class="mdescLeft">&#160;</td><td class="mdescRight">convenience methods to add an action to the <a class="el" href="classStelActionMgr.html">StelActionMgr</a> object.  <a href="#acc51b40ad88636ba5e48e6f29a49505b">More...</a><br/></td></tr>
+<tr class="separator:acc51b40ad88636ba5e48e6f29a49505b inherit pro_methods_classStelModule"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Manages all the rendering at the level of the observer's surroundings. </p>
@@ -937,6 +947,31 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Return the value of the flag determining if a change of landscape will update the observer location. </p>
+
+</div>
+</div>
+<a class="anchor" id="af44590fb1ec7407a27fe564729411ecd"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool LandscapeMgr::getIsLandscapeFullyVisible </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">slot</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Get whether the landscape is currently visible. If true, object below landscape must be rendered. </p>
 
 </div>
 </div>
@@ -1659,7 +1694,7 @@ Additional Inherited Members</h2></td></tr>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Wed Sep 25 2013 20:54:59 for Stellarium by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Fri Oct 11 2013 13:57:41 for Stellarium by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.3.1
 </small></address>

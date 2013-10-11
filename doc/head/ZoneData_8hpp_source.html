@@ -79,43 +79,38 @@
 <div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;</div>
 <div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;<span class="keyword">class </span><a class="code" href="classStelObject.html" title="The base abstract class for sky objects used in Stellarium like Stars, Planets, Constellations etc...">StelObject</a>;</div>
 <div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;</div>
-<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;<span class="keyword">namespace </span>BigStarCatalogExtension</div>
-<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;{</div>
-<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;</div>
-<div class="line"><a name="l00040"></a><span class="lineno"><a class="code" href="structBigStarCatalogExtension_1_1ZoneData.html">   40</a></span>&#160;<span class="keyword">struct </span><a class="code" href="structBigStarCatalogExtension_1_1ZoneData.html" title="A single triangle.">ZoneData</a></div>
-<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;{</div>
-<div class="line"><a name="l00043"></a><span class="lineno"><a class="code" href="structBigStarCatalogExtension_1_1ZoneData.html#a17d57d8b87f99e648e2d89005df0412c">   43</a></span>&#160;    <span class="keywordtype">int</span> <a class="code" href="structBigStarCatalogExtension_1_1ZoneData.html#a17d57d8b87f99e648e2d89005df0412c" title="Get number of stars in this triangle.">getNrOfStars</a>(<span class="keywordtype">void</span>)<span class="keyword"> const</span></div>
-<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;<span class="keyword">    </span>{</div>
-<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;        <span class="keywordflow">return</span> size;</div>
-<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;    }</div>
-<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;    <a class="code" href="classVector3.html">Vec3f</a> center;</div>
-<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;    <a class="code" href="classVector3.html">Vec3f</a> axis0;</div>
-<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;    <a class="code" href="classVector3.html">Vec3f</a> axis1;</div>
-<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;    <span class="keywordtype">int</span> size;</div>
-<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;    <span class="keywordtype">void</span> *stars;</div>
-<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;};</div>
-<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;</div>
-<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;<span class="keyword">template</span> &lt;<span class="keyword">class</span> Star&gt;</div>
-<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;<span class="keyword">struct </span>SpecialZoneData : <span class="keyword">public</span> ZoneData</div>
-<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;{</div>
-<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;    <a class="code" href="classQSharedPointerNoDelete.html">StelObjectP</a> createStelObject(<span class="keyword">const</span> Star *s)<span class="keyword"> const</span></div>
-<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;<span class="keyword">    </span>{</div>
-<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;        <span class="keywordflow">return</span> s-&gt;createStelObject(*<span class="keyword">this</span>);</div>
-<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;    }</div>
-<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;</div>
-<div class="line"><a name="l00067"></a><span class="lineno"><a class="code" href="structBigStarCatalogExtension_1_1SpecialZoneData.html#a190ae20c9dc5d13f710e458c35a0a38a">   67</a></span>&#160;    Star *<a class="code" href="structBigStarCatalogExtension_1_1SpecialZoneData.html#a190ae20c9dc5d13f710e458c35a0a38a" title="Get array of stars in this zone.">getStars</a>(<span class="keywordtype">void</span>)<span class="keyword"> const</span></div>
-<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;<span class="keyword">    </span>{</div>
-<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;        <span class="keywordflow">return</span> <span class="keyword">reinterpret_cast&lt;</span>Star*<span class="keyword">&gt;</span>(stars);</div>
-<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;    }</div>
-<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;};</div>
-<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;</div>
-<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;} <span class="comment">// namespace BigStarCatalogExtension</span></div>
-<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;</div>
-<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;<span class="preprocessor">#endif // _ZONEDATA_HPP_</span></div>
+<div class="line"><a name="l00037"></a><span class="lineno"><a class="code" href="structZoneData.html">   37</a></span>&#160;<span class="keyword">struct </span><a class="code" href="structZoneData.html" title="A single triangle.">ZoneData</a></div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;{</div>
+<div class="line"><a name="l00040"></a><span class="lineno"><a class="code" href="structZoneData.html#ad4498ec976fc18d8295c9fd129766219">   40</a></span>&#160;    <span class="keywordtype">int</span> <a class="code" href="structZoneData.html#ad4498ec976fc18d8295c9fd129766219" title="Get number of stars in this triangle.">getNrOfStars</a>()<span class="keyword"> const</span></div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;<span class="keyword">    </span>{</div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;        <span class="keywordflow">return</span> size;</div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;    }</div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;    <a class="code" href="classVector3.html" title="A templatized 3d vector compatible with openGL.">Vec3f</a> center;   <span class="comment">// Normalized center of the triangle</span></div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;    <a class="code" href="classVector3.html" title="A templatized 3d vector compatible with openGL.">Vec3f</a> axis0;    <span class="comment">// Normalized direction vector of axis 0 (use for storing stars position in 2D relative to this axis)</span></div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;    <a class="code" href="classVector3.html" title="A templatized 3d vector compatible with openGL.">Vec3f</a> axis1;    <span class="comment">// Normalized direction vector of axis 0 (use for storing stars position in 2D relative to this axis)</span></div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;    <span class="keywordtype">int</span> size;       <span class="comment">// Number of stars in the stars array</span></div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;    <span class="keywordtype">void</span> *stars;</div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;};</div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;</div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;<span class="keyword">template</span> &lt;<span class="keyword">class</span> Star&gt;</div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;<span class="keyword">struct </span><a class="code" href="structSpecialZoneData.html" title="Wrapper struct around ZoneData.">SpecialZoneData</a> : <span class="keyword">public</span> <a class="code" href="structZoneData.html" title="A single triangle.">ZoneData</a></div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;{</div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;    <a class="code" href="classQSharedPointerNoDelete.html">StelObjectP</a> createStelObject(<span class="keyword">const</span> Star *s)<span class="keyword"> const</span></div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;<span class="keyword">    </span>{</div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;        <span class="keywordflow">return</span> s-&gt;createStelObject(*<span class="keyword">this</span>);</div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;    }</div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;</div>
+<div class="line"><a name="l00064"></a><span class="lineno"><a class="code" href="structSpecialZoneData.html#a5029fd746368cc4ed5235e8de3b53348">   64</a></span>&#160;    Star *<a class="code" href="structSpecialZoneData.html#a5029fd746368cc4ed5235e8de3b53348" title="Get array of stars in this zone.">getStars</a>(<span class="keywordtype">void</span>)<span class="keyword"> const</span></div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;<span class="keyword">    </span>{</div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;        <span class="keywordflow">return</span> <span class="keyword">reinterpret_cast&lt;</span>Star*<span class="keyword">&gt;</span>(stars);</div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;    }</div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;};</div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;</div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;<span class="preprocessor">#endif // _ZONEDATA_HPP_</span></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Wed Sep 25 2013 20:54:59 for Stellarium by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Fri Oct 11 2013 13:57:41 for Stellarium by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.3.1
 </small></address>
