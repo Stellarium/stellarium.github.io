@@ -70,40 +70,41 @@
 <div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;<span class="preprocessor">#ifndef _SKYBRIGHT_HPP_</span></div>
 <div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;<span class="preprocessor"></span><span class="preprocessor">#define _SKYBRIGHT_HPP_</span></div>
 <div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;<span class="preprocessor"></span></div>
-<div class="line"><a name="l00025"></a><span class="lineno"><a class="code" href="classSkybright.html">   25</a></span>&#160;<span class="keyword">class </span><a class="code" href="classSkybright.html" title="Compute the luminance of the sky according to some parameters like sun moon position or time or altit...">Skybright</a></div>
-<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;{</div>
-<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;<span class="keyword">public</span>:</div>
-<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;    <a class="code" href="classSkybright.html#ace7bfec7af7667d97e883138a7bbb643" title="Constructor.">Skybright</a>();</div>
-<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;</div>
-<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classSkybright.html#ab03fd10135e710e8fef77e406b7a6798" title="Set the sky date to use for atmosphere computation.">setDate</a>(<span class="keywordtype">int</span> year, <span class="keywordtype">int</span> month, <span class="keywordtype">float</span> moonPhase);</div>
-<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;</div>
-<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classSkybright.html#afa47100ac0cfc3bc2da6d8dbb874f575" title="Set the position parameters to use for atmosphere computation.">setLocation</a>(<span class="keywordtype">float</span> latitude, <span class="keywordtype">float</span> altitude, <span class="keywordtype">float</span> temperature=15.f, <span class="keywordtype">float</span> relativeHumidity=40.f);</div>
-<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;</div>
-<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classSkybright.html#a128a03042d95b59c82bdc50fc3ba7842" title="Set the moon and sun zenith angular distance (cosin given) and precompute what can be This function h...">setSunMoon</a>(<span class="keywordtype">float</span> cosDistMoonZenith, <span class="keywordtype">float</span> cosDistSunZenith);</div>
-<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;</div>
-<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;    <span class="keywordtype">float</span> <a class="code" href="classSkybright.html#a6837a7d3f2fa13e236e0d3b7ebf171e6" title="Compute the luminance at the given position.">getLuminance</a>(<span class="keywordtype">float</span> cosDistMoon, <span class="keywordtype">float</span> cosDistSun, <span class="keywordtype">float</span> cosDistZenith) <span class="keyword">const</span>;</div>
-<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;</div>
-<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;<span class="keyword">private</span>:</div>
-<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;    <span class="keywordtype">float</span> airMassMoon;  <span class="comment">// Air mass for the Moon</span></div>
-<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;    <span class="keywordtype">float</span> airMassSun;   <span class="comment">// Air mass for the Sun</span></div>
-<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;    <span class="keywordtype">float</span> magMoon;      <span class="comment">// Moon magnitude</span></div>
-<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;    <span class="keywordtype">float</span> RA;           <span class="comment">// Something related with date</span></div>
-<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;    <span class="keywordtype">float</span> K;            <span class="comment">// Useful coef...</span></div>
-<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;    <span class="keywordtype">float</span> C3;           <span class="comment">// Term for moon brightness computation</span></div>
-<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;    <span class="keywordtype">float</span> C4;           <span class="comment">// Term for sky brightness computation</span></div>
-<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;    <span class="keywordtype">float</span> SN;           <span class="comment">// Snellen Ratio (20/20=1.0, good 20/10=2.0)</span></div>
-<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;</div>
-<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;    <span class="comment">// Optimisation variables</span></div>
-<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;    <span class="keywordtype">float</span> bNightTerm;</div>
-<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;    <span class="keywordtype">float</span> bMoonTerm1;</div>
-<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;    <span class="keywordtype">float</span> bTwilightTerm;</div>
-<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;};</div>
-<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;</div>
-<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;<span class="preprocessor">#endif // _SKYBRIGHT_HPP_</span></div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;<span class="comment">// GZ: tentative additions to the documentation.</span></div>
+<div class="line"><a name="l00039"></a><span class="lineno"><a class="code" href="classSkybright.html">   39</a></span>&#160;<span class="comment"></span><span class="keyword">class </span><a class="code" href="classSkybright.html" title="This class makes use of the 1998 sky brightness model by Bradley Schaefer.">Skybright</a></div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;{</div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;<span class="keyword">public</span>:</div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;    <a class="code" href="classSkybright.html#ace7bfec7af7667d97e883138a7bbb643" title="Constructor.">Skybright</a>();</div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;</div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classSkybright.html#ab03fd10135e710e8fef77e406b7a6798" title="Set the sky date to use for atmosphere computation.">setDate</a>(<span class="keywordtype">int</span> year, <span class="keywordtype">int</span> month, <span class="keywordtype">float</span> moonPhase);</div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;</div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classSkybright.html#afa47100ac0cfc3bc2da6d8dbb874f575" title="Set the position parameters to use for atmosphere computation.">setLocation</a>(<span class="keywordtype">float</span> latitude, <span class="keywordtype">float</span> altitude, <span class="keywordtype">float</span> temperature=15.f, <span class="keywordtype">float</span> relativeHumidity=40.f);</div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;</div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classSkybright.html#a128a03042d95b59c82bdc50fc3ba7842" title="Set the moon and sun zenith angular distance (cosin given) and precompute what can be This function h...">setSunMoon</a>(<span class="keywordtype">float</span> cosDistMoonZenith, <span class="keywordtype">float</span> cosDistSunZenith);</div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;</div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;    <span class="keywordtype">float</span> <a class="code" href="classSkybright.html#a6837a7d3f2fa13e236e0d3b7ebf171e6" title="Compute the luminance at the given position.">getLuminance</a>(<span class="keywordtype">float</span> cosDistMoon, <span class="keywordtype">float</span> cosDistSun, <span class="keywordtype">float</span> cosDistZenith) <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;</div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;<span class="keyword">private</span>:</div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;    <span class="keywordtype">float</span> airMassMoon;  <span class="comment">// Air mass for the Moon</span></div>
+<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;    <span class="keywordtype">float</span> airMassSun;   <span class="comment">// Air mass for the Sun</span></div>
+<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;    <span class="keywordtype">float</span> magMoon;      <span class="comment">// Moon magnitude</span></div>
+<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;    <span class="keywordtype">float</span> RA;           <span class="comment">// Extremely crude estimate of Right Ascension of the Sun!</span></div>
+<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;    <span class="keywordtype">float</span> K;            <span class="comment">// Summary extinction coefficient</span></div>
+<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;    <span class="keywordtype">float</span> C3;           <span class="comment">// Term for moon brightness computation</span></div>
+<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;    <span class="keywordtype">float</span> C4;           <span class="comment">// Term for sky brightness computation</span></div>
+<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;    <span class="keywordtype">float</span> SN;           <span class="comment">// Snellen Ratio (20/20=1.0, good 20/10=2.0)</span></div>
+<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;</div>
+<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;    <span class="comment">// Optimisation variables</span></div>
+<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;    <span class="keywordtype">float</span> bNightTerm;</div>
+<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;    <span class="keywordtype">float</span> bMoonTerm1;</div>
+<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;    <span class="keywordtype">float</span> bTwilightTerm;</div>
+<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;};</div>
+<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;</div>
+<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;<span class="preprocessor">#endif // _SKYBRIGHT_HPP_</span></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Fri Oct 11 2013 13:57:41 for Stellarium by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Sat Dec 21 2013 02:06:31 for Stellarium by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.3.1
 </small></address>

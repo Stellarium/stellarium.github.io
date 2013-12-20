@@ -80,6 +80,9 @@ Public Slots</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="signals"></a>
 Signals</h2></td></tr>
+<tr class="memitem:ac99cac65ddc7e33993079cddb0482e10"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ac99cac65ddc7e33993079cddb0482e10"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>visionNightModeChanged</b> (bool)</td></tr>
+<tr class="separator:ac99cac65ddc7e33993079cddb0482e10"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a7106d77d0873929f45a45221f24fc370"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a7106d77d0873929f45a45221f24fc370"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><b>colorSchemeChanged</b> (const QString &amp;)</td></tr>
 <tr class="separator:a7106d77d0873929f45a45221f24fc370"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -179,6 +182,12 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a3d5038ed2379d80664614e98fd7c41e2"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a3d5038ed2379d80664614e98fd7c41e2"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><b>setDevicePixelsPerPixel</b> (float dppp)</td></tr>
 <tr class="separator:a3d5038ed2379d80664614e98fd7c41e2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aec230ecb8fb54f41eb8a31f182335397"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classStelApp.html#aec230ecb8fb54f41eb8a31f182335397">getGlobalScalingRatio</a> () const </td></tr>
+<tr class="memdesc:aec230ecb8fb54f41eb8a31f182335397"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the scaling ratio to apply on all display elements, like GUI, text etc.  <a href="#aec230ecb8fb54f41eb8a31f182335397">More...</a><br/></td></tr>
+<tr class="separator:aec230ecb8fb54f41eb8a31f182335397"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afcc8afcc6bc63f6960a37cbbad4228e3"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="afcc8afcc6bc63f6960a37cbbad4228e3"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>setGlobalScalingRatio</b> (float r)</td></tr>
+<tr class="separator:afcc8afcc6bc63f6960a37cbbad4228e3"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a3624fe964b3b77491d33528ca7247bc6"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classStelGuiBase.html">StelGuiBase</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classStelApp.html#a3624fe964b3b77491d33528ca7247bc6">getGui</a> () const </td></tr>
 <tr class="memdesc:a3624fe964b3b77491d33528ca7247bc6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the GUI instance implementing the abstract GUI interface.  <a href="#a3624fe964b3b77491d33528ca7247bc6">More...</a><br/></td></tr>
 <tr class="separator:a3624fe964b3b77491d33528ca7247bc6"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -445,6 +454,32 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><b>nightMode</b></td></t
 
 <p>Get the current number of frame per second. </p>
 <dl class="section return"><dt>Returns</dt><dd>the FPS averaged on the last second </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="aec230ecb8fb54f41eb8a31f182335397"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">float StelApp::getGlobalScalingRatio </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Get the scaling ratio to apply on all display elements, like GUI, text etc. </p>
+<p>When this ratio is 1, all pixel sizes used in Stellarium will look OK on a regular computer screen with 96 pixel per inch (reference for tuning sizes). </p>
 
 </div>
 </div>
@@ -1142,7 +1177,7 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><b>nightMode</b></td></t
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Fri Oct 11 2013 13:57:42 for Stellarium by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Sat Dec 21 2013 02:06:31 for Stellarium by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.3.1
 </small></address>

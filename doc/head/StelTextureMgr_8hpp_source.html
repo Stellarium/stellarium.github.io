@@ -81,28 +81,23 @@
 <div class="line"><a name="l00033"></a><span class="lineno"><a class="code" href="classStelTextureMgr.html">   33</a></span>&#160;<span class="keyword">class </span><a class="code" href="classStelTextureMgr.html" title="Manage textures loading.">StelTextureMgr</a> : QObject</div>
 <div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;{</div>
 <div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;<span class="keyword">public</span>:</div>
-<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;    <a class="code" href="classStelTextureMgr.html" title="Manage textures loading.">StelTextureMgr</a>();</div>
-<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;    <span class="keyword">virtual</span> ~<a class="code" href="classStelTextureMgr.html" title="Manage textures loading.">StelTextureMgr</a>();</div>
-<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;</div>
-<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classStelTextureMgr.html#a59c7a788fd6dd3ce3064c267c4ff2510" title="Initialize some variable from the openGL contex.">init</a>();</div>
-<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;</div>
-<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;    <a class="code" href="StelTextureTypes_8hpp.html#a085a86bd020a5f6d1240e02d596eb4bb" title="Use shared pointer to simplify memory managment.">StelTextureSP</a> <a class="code" href="classStelTextureMgr.html#ac0d2f813f31c87596a35481aeaaa9c17" title="Load an image from a file and create a new texture from it.">createTexture</a>(<span class="keyword">const</span> QString&amp; filename, <span class="keyword">const</span> <a class="code" href="structStelTexture_1_1StelTextureParams.html" title="Contains the parameters defining how a texture is created.">StelTexture::StelTextureParams</a>&amp; params=<a class="code" href="structStelTexture_1_1StelTextureParams.html" title="Contains the parameters defining how a texture is created.">StelTexture::StelTextureParams</a>());</div>
-<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;</div>
-<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;    <a class="code" href="StelTextureTypes_8hpp.html#a085a86bd020a5f6d1240e02d596eb4bb" title="Use shared pointer to simplify memory managment.">StelTextureSP</a> <a class="code" href="classStelTextureMgr.html#ab2cf576636c79ddd313ce1bdb4bcba67" title="Load an image from a file and create a new texture from it in a new thread.">createTextureThread</a>(<span class="keyword">const</span> QString&amp; url, <span class="keyword">const</span> <a class="code" href="structStelTexture_1_1StelTextureParams.html" title="Contains the parameters defining how a texture is created.">StelTexture::StelTextureParams</a>&amp; params=<a class="code" href="structStelTexture_1_1StelTextureParams.html" title="Contains the parameters defining how a texture is created.">StelTexture::StelTextureParams</a>(), <span class="keyword">const</span> QString&amp; fileExtension=QString(), <span class="keywordtype">bool</span> lazyLoading=<span class="keyword">true</span>);</div>
-<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;</div>
-<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;<span class="keyword">private</span>:</div>
-<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;    <span class="keyword">friend</span> <span class="keyword">class </span><a class="code" href="classStelTexture.html" title="Base texture class.">StelTexture</a>;</div>
-<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;    <span class="keyword">friend</span> <span class="keyword">class </span><a class="code" href="classImageLoader.html">ImageLoader</a>;</div>
-<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;</div>
-<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;    QThread* loaderThread;</div>
-<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;};</div>
-<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;</div>
-<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;</div>
-<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;<span class="preprocessor">#endif // _STELTEXTUREMGR_HPP_</span></div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classStelTextureMgr.html#a59c7a788fd6dd3ce3064c267c4ff2510" title="Initialize some variable from the openGL contex.">init</a>();</div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;</div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;    <a class="code" href="StelTextureTypes_8hpp.html#a085a86bd020a5f6d1240e02d596eb4bb" title="Use shared pointer to simplify memory managment.">StelTextureSP</a> <a class="code" href="classStelTextureMgr.html#ac0d2f813f31c87596a35481aeaaa9c17" title="Load an image from a file and create a new texture from it.">createTexture</a>(<span class="keyword">const</span> QString&amp; filename, <span class="keyword">const</span> <a class="code" href="structStelTexture_1_1StelTextureParams.html" title="Contains the parameters defining how a texture is created.">StelTexture::StelTextureParams</a>&amp; params=<a class="code" href="structStelTexture_1_1StelTextureParams.html" title="Contains the parameters defining how a texture is created.">StelTexture::StelTextureParams</a>());</div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;</div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;    <a class="code" href="StelTextureTypes_8hpp.html#a085a86bd020a5f6d1240e02d596eb4bb" title="Use shared pointer to simplify memory managment.">StelTextureSP</a> <a class="code" href="classStelTextureMgr.html#a16f992541de2b7641a24c6b666d0a31f" title="Load an image from a file and create a new texture from it in a new thread.">createTextureThread</a>(<span class="keyword">const</span> QString&amp; url, <span class="keyword">const</span> <a class="code" href="structStelTexture_1_1StelTextureParams.html" title="Contains the parameters defining how a texture is created.">StelTexture::StelTextureParams</a>&amp; params=<a class="code" href="structStelTexture_1_1StelTextureParams.html" title="Contains the parameters defining how a texture is created.">StelTexture::StelTextureParams</a>(), <span class="keywordtype">bool</span> lazyLoading=<span class="keyword">true</span>);</div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;</div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;<span class="keyword">private</span>:</div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;    <span class="keyword">friend</span> <span class="keyword">class </span><a class="code" href="classStelTexture.html" title="Base texture class.">StelTexture</a>;</div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;    <span class="keyword">friend</span> <span class="keyword">class </span>ImageLoader;</div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;};</div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;</div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;</div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;<span class="preprocessor">#endif // _STELTEXTUREMGR_HPP_</span></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Fri Oct 11 2013 13:57:41 for Stellarium by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Sat Dec 21 2013 02:06:31 for Stellarium by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.3.1
 </small></address>

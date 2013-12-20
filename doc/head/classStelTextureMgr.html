@@ -64,9 +64,9 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:ac0d2f813f31c87596a35481aeaaa9c17"><td class="memItemLeft" align="right" valign="top"><a class="el" href="StelTextureTypes_8hpp.html#a085a86bd020a5f6d1240e02d596eb4bb">StelTextureSP</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classStelTextureMgr.html#ac0d2f813f31c87596a35481aeaaa9c17">createTexture</a> (const QString &amp;filename, const <a class="el" href="structStelTexture_1_1StelTextureParams.html">StelTexture::StelTextureParams</a> &amp;params=<a class="el" href="structStelTexture_1_1StelTextureParams.html">StelTexture::StelTextureParams</a>())</td></tr>
 <tr class="memdesc:ac0d2f813f31c87596a35481aeaaa9c17"><td class="mdescLeft">&#160;</td><td class="mdescRight">Load an image from a file and create a new texture from it.  <a href="#ac0d2f813f31c87596a35481aeaaa9c17">More...</a><br/></td></tr>
 <tr class="separator:ac0d2f813f31c87596a35481aeaaa9c17"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab2cf576636c79ddd313ce1bdb4bcba67"><td class="memItemLeft" align="right" valign="top"><a class="el" href="StelTextureTypes_8hpp.html#a085a86bd020a5f6d1240e02d596eb4bb">StelTextureSP</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classStelTextureMgr.html#ab2cf576636c79ddd313ce1bdb4bcba67">createTextureThread</a> (const QString &amp;url, const <a class="el" href="structStelTexture_1_1StelTextureParams.html">StelTexture::StelTextureParams</a> &amp;params=<a class="el" href="structStelTexture_1_1StelTextureParams.html">StelTexture::StelTextureParams</a>(), const QString &amp;fileExtension=QString(), bool lazyLoading=true)</td></tr>
-<tr class="memdesc:ab2cf576636c79ddd313ce1bdb4bcba67"><td class="mdescLeft">&#160;</td><td class="mdescRight">Load an image from a file and create a new texture from it in a new thread.  <a href="#ab2cf576636c79ddd313ce1bdb4bcba67">More...</a><br/></td></tr>
-<tr class="separator:ab2cf576636c79ddd313ce1bdb4bcba67"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a16f992541de2b7641a24c6b666d0a31f"><td class="memItemLeft" align="right" valign="top"><a class="el" href="StelTextureTypes_8hpp.html#a085a86bd020a5f6d1240e02d596eb4bb">StelTextureSP</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classStelTextureMgr.html#a16f992541de2b7641a24c6b666d0a31f">createTextureThread</a> (const QString &amp;url, const <a class="el" href="structStelTexture_1_1StelTextureParams.html">StelTexture::StelTextureParams</a> &amp;params=<a class="el" href="structStelTexture_1_1StelTextureParams.html">StelTexture::StelTextureParams</a>(), bool lazyLoading=true)</td></tr>
+<tr class="memdesc:a16f992541de2b7641a24c6b666d0a31f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Load an image from a file and create a new texture from it in a new thread.  <a href="#a16f992541de2b7641a24c6b666d0a31f">More...</a><br/></td></tr>
+<tr class="separator:a16f992541de2b7641a24c6b666d0a31f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Manage textures loading. </p>
@@ -107,7 +107,7 @@ Public Member Functions</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="ab2cf576636c79ddd313ce1bdb4bcba67"></a>
+<a class="anchor" id="a16f992541de2b7641a24c6b666d0a31f"></a>
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
@@ -122,12 +122,6 @@ Public Member Functions</h2></td></tr>
           <td></td>
           <td class="paramtype">const <a class="el" href="structStelTexture_1_1StelTextureParams.html">StelTexture::StelTextureParams</a> &amp;&#160;</td>
           <td class="paramname"><em>params</em> = <code><a class="el" href="structStelTexture_1_1StelTextureParams.html">StelTexture::StelTextureParams</a>()</code>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">const QString &amp;&#160;</td>
-          <td class="paramname"><em>fileExtension</em> = <code>QString()</code>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
@@ -148,7 +142,6 @@ Public Member Functions</h2></td></tr>
   <table class="params">
     <tr><td class="paramname">url</td><td>the texture file name or URL, can be absolute path if starts with '/' otherwise the file will be looked in stellarium standard textures directories. </td></tr>
     <tr><td class="paramname">params</td><td>the texture creation parameters. </td></tr>
-    <tr><td class="paramname">fileExtension</td><td>the file extension to assume. If not set the extension is determined from url </td></tr>
     <tr><td class="paramname">lazyLoading</td><td>define whether the texture should be actually loaded only when needed, i.e. when bind() is called the first time. </td></tr>
   </table>
   </dd>
@@ -177,7 +170,7 @@ Public Member Functions</h2></td></tr>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Fri Oct 11 2013 13:57:42 for Stellarium by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Sat Dec 21 2013 02:06:32 for Stellarium by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.3.1
 </small></address>

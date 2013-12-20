@@ -175,7 +175,7 @@
 <div class="line"><a name="l00258"></a><span class="lineno">  258</span>&#160;</div>
 <div class="line"><a name="l00261"></a><span class="lineno"><a class="code" href="namespaceStelUtils.html#a5c1cbbda5fce9312cc650f221b499ca5">  261</a></span>&#160;    <span class="keyword">inline</span> <span class="keywordtype">float</span> <a class="code" href="namespaceStelUtils.html#a5c1cbbda5fce9312cc650f221b499ca5" title="Compute acos(x) The taylor serie is not accurate around x=1 and x=-1.">fastAcos</a>(<span class="keyword">const</span> <span class="keywordtype">float</span> x)</div>
 <div class="line"><a name="l00262"></a><span class="lineno">  262</span>&#160;    {</div>
-<div class="line"><a name="l00263"></a><span class="lineno">  263</span>&#160;        <span class="keywordflow">return</span> M_PI_2 - (x + x*x*x * (1.f/6.f + x*x * (3.f/40.f + 5.f/112.f * x*x)) );</div>
+<div class="line"><a name="l00263"></a><span class="lineno">  263</span>&#160;        <span class="keywordflow">return</span> <span class="keyword">static_cast&lt;</span><span class="keywordtype">float</span><span class="keyword">&gt;</span>(M_PI_2) - (x + x*x*x * (1.f/6.f + x*x * (3.f/40.f + 5.f/112.f * x*x)) );</div>
 <div class="line"><a name="l00264"></a><span class="lineno">  264</span>&#160;    }</div>
 <div class="line"><a name="l00265"></a><span class="lineno">  265</span>&#160;</div>
 <div class="line"><a name="l00267"></a><span class="lineno"><a class="code" href="namespaceStelUtils.html#a75c3e10ff59b266aa4b040624b0f37d0">  267</a></span>&#160;    <span class="keyword">inline</span> <span class="keywordtype">float</span> <a class="code" href="namespaceStelUtils.html#a75c3e10ff59b266aa4b040624b0f37d0" title="Compute exp(x) for small exponents x.">fastExp</a>(<span class="keyword">const</span> <span class="keywordtype">float</span> x)</div>
@@ -266,7 +266,7 @@
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Fri Oct 11 2013 13:57:41 for Stellarium by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Sat Dec 21 2013 02:06:31 for Stellarium by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.3.1
 </small></address>

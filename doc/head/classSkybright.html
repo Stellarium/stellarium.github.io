@@ -51,7 +51,7 @@
 </div><!--header-->
 <div class="contents">
 
-<p>Compute the luminance of the sky according to some parameters like sun moon position or time or altitude etc...  
+<p>This class makes use of the 1998 sky brightness model by Bradley Schaefer.  
  <a href="classSkybright.html#details">More...</a></p>
 
 <p><code>#include &lt;<a class="el" href="Skybright_8hpp_source.html">Skybright.hpp</a>&gt;</code></p>
@@ -75,7 +75,14 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:a6837a7d3f2fa13e236e0d3b7ebf171e6"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><p>Compute the luminance of the sky according to some parameters like sun moon position or time or altitude etc... </p>
+<div class="textblock"><p>This class makes use of the 1998 sky brightness model by Bradley Schaefer. </p>
+<p>Compute the luminance of the sky according to some parameters like sun moon position or time or altitude etc...</p>
+<p>Further reading: B. Schaefer: Sky&amp;Telescope 4/1987 B. Schaefer: Astronomy and the Limits of Vision. Vistas in Astronomy 36, 311-361, 1993. B. Schaefer: To the Visual Limits. Sky&amp;Telescope 5/1998 57-60. B. Schaefer: Archaeoastronomy XV, 2000. TASKS TO IMPROVE: Some components of the Schaefer model are strongly simplified. E.g.,</p>
+<ul>
+<li>setDate should be taken always in the Gregorian Calendar, or circumvented altogether:</li>
+<li>RA takes the right ascension of the sun. &ndash;&gt; Could be replaced with the proper value!</li>
+<li>bNightTerm includes an 11.0-year solar cycle, and will be erratic a few cycles from 1992. &ndash;&gt; At least find a more accurate average period. <a class="el" href="classExtinction.html" title="This class performs extinction computations, following literature from atmospheric optics and astrono...">Extinction</a> could make use of the K computed in SetLocation. But first re-verify that the code here really follows the Schaefer model (with obvious amendments).</li>
+</ul>
 </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a class="anchor" id="ace7bfec7af7667d97e883138a7bbb643"></a>
 <div class="memitem">
@@ -266,7 +273,7 @@ Public Member Functions</h2></td></tr>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Fri Oct 11 2013 13:57:42 for Stellarium by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Sat Dec 21 2013 02:06:31 for Stellarium by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.3.1
 </small></address>
