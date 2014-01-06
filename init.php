@@ -52,6 +52,7 @@ $language = array(
     'pl'=>'Polski',
     'pt_BR'=>'Português (Brazil)',
     'pt'=>'Português',
+    'ro'=>'Romanian',
     'ru'=>'русский',
     'sk'=>'slovenčina',
     'sv'=>'svenska',
