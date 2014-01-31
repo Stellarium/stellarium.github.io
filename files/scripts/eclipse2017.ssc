@@ -1,0 +1,29 @@
+//
+// Name: 2017 solar eclipse
+// Description: Shows the solar eclipse in 2017 as seen from Nashville, Tennessee.
+//
+txt1 = LabelMgr.labelScreen("Place: Nashville, Tennessee", 30, 80, false, 20, "#0080FF");
+txt2 = LabelMgr.labelScreen("Date: 2017-08-21.", 30, 55, false, 20, "#0080FF");
+txt3 = LabelMgr.labelScreen("A solar eclipse...", 30, 30, false, 20, "#0080FF");
+LabelMgr.setLabelShow(txt1, true);
+LabelMgr.setLabelShow(txt2, true);
+LabelMgr.setLabelShow(txt3, true);
+core.selectObjectByName("Moon", false);
+StelMovementMgr.setFlagTracking(true);
+StelMovementMgr.zoomTo(60, 1);
+core.setTimeRate(70);
+core.clear("natural");
+core.setDate("2017:08:21T18:05:00");
+core.setObserverLocation(-86.77, 36.17, 133, 1, "Nashville, Tennessee", "");
+core.wait(10);
+LabelMgr.deleteAllLabels();
+core.wait(8);
+core.setTimeRate(8);
+StelMovementMgr.zoomTo(4, 5);
+core.waitFor("2017:08:21T18:31:00");
+StelMovementMgr.zoomTo(60, 2);
+core.selectObjectByName("");
+core.clear("natural");
+core.setTimeRate(1);
+core.setDate("now");
+StelMovementMgr.autoZoomOut(2, true);
