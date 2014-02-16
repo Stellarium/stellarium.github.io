@@ -73,12 +73,13 @@ Public Types</h2></td></tr>
 <a class="el" href="classStelObject.html#acf243e7987796a3a44e409140ecea8c6a865d3094d10bd62b0032930abb2fe48d">Size</a> = 0x00000080, 
 <br/>
 &#160;&#160;<a class="el" href="classStelObject.html#acf243e7987796a3a44e409140ecea8c6ae65e8c0135e59a4fa6f1eeb42aa74a97">Extra</a> = 0x00000100, 
-<a class="el" href="classStelObject.html#acf243e7987796a3a44e409140ecea8c6aa651fd9d370fc652c77c663cd41a18ce">PlainText</a> = 0x00000200, 
-<a class="el" href="classStelObject.html#acf243e7987796a3a44e409140ecea8c6af23ea4040195fe66b4d564b555d32eb8">HourAngle</a> = 0x00000400, 
-<a class="el" href="classStelObject.html#acf243e7987796a3a44e409140ecea8c6a19948f98c49dd3f1327c440358194688">AbsoluteMagnitude</a> = 0x00000800, 
+<a class="el" href="classStelObject.html#acf243e7987796a3a44e409140ecea8c6af23ea4040195fe66b4d564b555d32eb8">HourAngle</a> = 0x00000200, 
+<a class="el" href="classStelObject.html#acf243e7987796a3a44e409140ecea8c6a19948f98c49dd3f1327c440358194688">AbsoluteMagnitude</a> = 0x00000400, 
+<a class="el" href="classStelObject.html#acf243e7987796a3a44e409140ecea8c6a24d50180f90932013c35bfb51a4726c8">GalacticCoord</a> = 0x00000800, 
 <br/>
-&#160;&#160;<a class="el" href="classStelObject.html#acf243e7987796a3a44e409140ecea8c6a24d50180f90932013c35bfb51a4726c8">GalacticCoord</a> = 0x00001000, 
-<a class="el" href="classStelObject.html#acf243e7987796a3a44e409140ecea8c6a43ee2cd680cb2b821801b67439959a64">Type</a> = 0x00002000
+&#160;&#160;<a class="el" href="classStelObject.html#acf243e7987796a3a44e409140ecea8c6a06c3c53f2370753e8b1b088dd31909a9">ObjectType</a> = 0x00001000, 
+<a class="el" href="classStelObject.html#acf243e7987796a3a44e409140ecea8c6ac3670b19e5ec9c3dc93eb47c53c6d316">EclTopocentricCoord</a> = 0x00002000, 
+<a class="el" href="classStelObject.html#acf243e7987796a3a44e409140ecea8c6aa651fd9d370fc652c77c663cd41a18ce">PlainText</a> = 0x00004000
 <br/>
  }</td></tr>
 <tr class="separator:acf243e7987796a3a44e409140ecea8c6"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -119,12 +120,12 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:af339b923975999e4c795054d2d82e5b3"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classVector3.html">Vec3d</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classStelObject.html#af339b923975999e4c795054d2d82e5b3">getGalacticPos</a> (const <a class="el" href="classStelCore.html">StelCore</a> *core) const </td></tr>
 <tr class="memdesc:af339b923975999e4c795054d2d82e5b3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get observer-centered galactic coordinates.  <a href="#af339b923975999e4c795054d2d82e5b3">More...</a><br/></td></tr>
 <tr class="separator:af339b923975999e4c795054d2d82e5b3"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:afbe1b040698b3b34432e13fa2308f1de"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classVector3.html">Vec3d</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classStelObject.html#afbe1b040698b3b34432e13fa2308f1de">getSideralPosGeometric</a> (const <a class="el" href="classStelCore.html">StelCore</a> *core) const </td></tr>
-<tr class="memdesc:afbe1b040698b3b34432e13fa2308f1de"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get observer-centered hour angle + declination (at current equinox) It is the geometric position, i.e.  <a href="#afbe1b040698b3b34432e13fa2308f1de">More...</a><br/></td></tr>
-<tr class="separator:afbe1b040698b3b34432e13fa2308f1de"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a2fe1c40dba92378975b116b160262a73"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classVector3.html">Vec3d</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classStelObject.html#a2fe1c40dba92378975b116b160262a73">getSideralPosApparent</a> (const <a class="el" href="classStelCore.html">StelCore</a> *core) const </td></tr>
-<tr class="memdesc:a2fe1c40dba92378975b116b160262a73"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get observer-centered hour angle + declination (at current equinox) It is the apparent position, i.e.  <a href="#a2fe1c40dba92378975b116b160262a73">More...</a><br/></td></tr>
-<tr class="separator:a2fe1c40dba92378975b116b160262a73"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab39baba839a4785300cc446f321b35ac"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classVector3.html">Vec3d</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classStelObject.html#ab39baba839a4785300cc446f321b35ac">getSiderealPosGeometric</a> (const <a class="el" href="classStelCore.html">StelCore</a> *core) const </td></tr>
+<tr class="memdesc:ab39baba839a4785300cc446f321b35ac"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get observer-centered hour angle + declination (at current equinox) It is the geometric position, i.e.  <a href="#ab39baba839a4785300cc446f321b35ac">More...</a><br/></td></tr>
+<tr class="separator:ab39baba839a4785300cc446f321b35ac"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a61f2909ab15c775e5c5b2a650b8ddd84"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classVector3.html">Vec3d</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classStelObject.html#a61f2909ab15c775e5c5b2a650b8ddd84">getSiderealPosApparent</a> (const <a class="el" href="classStelCore.html">StelCore</a> *core) const </td></tr>
+<tr class="memdesc:a61f2909ab15c775e5c5b2a650b8ddd84"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get observer-centered hour angle + declination (at current equinox) It is the apparent position, i.e.  <a href="#a61f2909ab15c775e5c5b2a650b8ddd84">More...</a><br/></td></tr>
+<tr class="separator:a61f2909ab15c775e5c5b2a650b8ddd84"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af864fad2ce37ba8cf6abd35e99bbf297"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classVector3.html">Vec3d</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classStelObject.html#af864fad2ce37ba8cf6abd35e99bbf297">getAltAzPosGeometric</a> (const <a class="el" href="classStelCore.html">StelCore</a> *core) const </td></tr>
 <tr class="memdesc:af864fad2ce37ba8cf6abd35e99bbf297"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get observer-centered alt/az position It is the geometric position, i.e.  <a href="#af864fad2ce37ba8cf6abd35e99bbf297">More...</a><br/></td></tr>
 <tr class="separator:af864fad2ce37ba8cf6abd35e99bbf297"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -216,9 +217,6 @@ Protected Member Functions</h2></td></tr>
 <tr><td class="fieldname"><em><a class="anchor" id="acf243e7987796a3a44e409140ecea8c6ae65e8c0135e59a4fa6f1eeb42aa74a97"></a>Extra</em>&nbsp;</td><td class="fielddoc">
 <p>Derived class-specific extra fields. </p>
 </td></tr>
-<tr><td class="fieldname"><em><a class="anchor" id="acf243e7987796a3a44e409140ecea8c6aa651fd9d370fc652c77c663cd41a18ce"></a>PlainText</em>&nbsp;</td><td class="fielddoc">
-<p>Strip HTML tags from output. </p>
-</td></tr>
 <tr><td class="fieldname"><em><a class="anchor" id="acf243e7987796a3a44e409140ecea8c6af23ea4040195fe66b4d564b555d32eb8"></a>HourAngle</em>&nbsp;</td><td class="fielddoc">
 <p>The hour angle + DE (of date) </p>
 </td></tr>
@@ -228,8 +226,14 @@ Protected Member Functions</h2></td></tr>
 <tr><td class="fieldname"><em><a class="anchor" id="acf243e7987796a3a44e409140ecea8c6a24d50180f90932013c35bfb51a4726c8"></a>GalacticCoord</em>&nbsp;</td><td class="fielddoc">
 <p>The galactic position. </p>
 </td></tr>
-<tr><td class="fieldname"><em><a class="anchor" id="acf243e7987796a3a44e409140ecea8c6a43ee2cd680cb2b821801b67439959a64"></a>Type</em>&nbsp;</td><td class="fielddoc">
+<tr><td class="fieldname"><em><a class="anchor" id="acf243e7987796a3a44e409140ecea8c6a06c3c53f2370753e8b1b088dd31909a9"></a>ObjectType</em>&nbsp;</td><td class="fielddoc">
 <p>The type of the object (star, planet, etc.) </p>
+</td></tr>
+<tr><td class="fieldname"><em><a class="anchor" id="acf243e7987796a3a44e409140ecea8c6ac3670b19e5ec9c3dc93eb47c53c6d316"></a>EclTopocentricCoord</em>&nbsp;</td><td class="fielddoc">
+<p>The ecliptic topocentric position. </p>
+</td></tr>
+<tr><td class="fieldname"><em><a class="anchor" id="acf243e7987796a3a44e409140ecea8c6aa651fd9d370fc652c77c663cd41a18ce"></a>PlainText</em>&nbsp;</td><td class="fielddoc">
+<p>Strip HTML tags from output. </p>
 </td></tr>
 </table>
 
@@ -483,7 +487,7 @@ Protected Member Functions</h2></td></tr>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>an HTML string containing information about the <a class="el" href="classStelObject.html" title="The base abstract class for sky objects used in Stellarium like Stars, Planets, Constellations etc...">StelObject</a>. </dd></dl>
 
-<p>Implemented in <a class="el" href="classStarWrapper1.html#a9af41f3ada829f50bee39dac9683ce91">StarWrapper1</a>, <a class="el" href="classPlanet.html#ad1b79eabc38f21d1972242455875bcc0">Planet</a>, <a class="el" href="classMinorPlanet.html#a6ba2fb1ca790edbbe36f718ebf3444b8">MinorPlanet</a>, <a class="el" href="classComet.html#a27c97603a0d7d27f229906eaee87d3f5">Comet</a>, <a class="el" href="classStarWrapperBase.html#a6c8a16017cd31cc8449c32b621e58d79">StarWrapperBase</a>, and <a class="el" href="classNebula.html#ae905ee3f6c8a7097336ebd2cf4cca3ad">Nebula</a>.</p>
+<p>Implemented in <a class="el" href="classPlanet.html#ad1b79eabc38f21d1972242455875bcc0">Planet</a>, <a class="el" href="classStarWrapper1.html#a9af41f3ada829f50bee39dac9683ce91">StarWrapper1</a>, <a class="el" href="classComet.html#a27c97603a0d7d27f229906eaee87d3f5">Comet</a>, <a class="el" href="classMinorPlanet.html#a6ba2fb1ca790edbbe36f718ebf3444b8">MinorPlanet</a>, <a class="el" href="classStarWrapperBase.html#a6c8a16017cd31cc8449c32b621e58d79">StarWrapperBase</a>, and <a class="el" href="classNebula.html#ae905ee3f6c8a7097336ebd2cf4cca3ad">Nebula</a>.</p>
 
 </div>
 </div>
@@ -692,12 +696,12 @@ Protected Member Functions</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="a2fe1c40dba92378975b116b160262a73"></a>
+<a class="anchor" id="a61f2909ab15c775e5c5b2a650b8ddd84"></a>
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="classVector3.html">Vec3d</a> StelObject::getSideralPosApparent </td>
+          <td class="memname"><a class="el" href="classVector3.html">Vec3d</a> StelObject::getSiderealPosApparent </td>
           <td>(</td>
           <td class="paramtype">const <a class="el" href="classStelCore.html">StelCore</a> *&#160;</td>
           <td class="paramname"><em>core</em></td><td>)</td>
@@ -711,12 +715,12 @@ Protected Member Functions</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="afbe1b040698b3b34432e13fa2308f1de"></a>
+<a class="anchor" id="ab39baba839a4785300cc446f321b35ac"></a>
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="classVector3.html">Vec3d</a> StelObject::getSideralPosGeometric </td>
+          <td class="memname"><a class="el" href="classVector3.html">Vec3d</a> StelObject::getSiderealPosGeometric </td>
           <td>(</td>
           <td class="paramtype">const <a class="el" href="classStelCore.html">StelCore</a> *&#160;</td>
           <td class="paramname"><em>core</em></td><td>)</td>
@@ -781,7 +785,7 @@ Protected Member Functions</h2></td></tr>
 
 <p>Return object's apparent V magnitude as seen from observer, without including extinction. </p>
 
-<p>Reimplemented in <a class="el" href="classPlanet.html#afb3d99bed9522c8a8bfc08665d8a0009">Planet</a>, <a class="el" href="classStarWrapper.html#a6d97127b55eba1a226a111cee952c437">StarWrapper&lt; Star &gt;</a>, <a class="el" href="classStarWrapper.html#a6d97127b55eba1a226a111cee952c437">StarWrapper&lt; Star2 &gt;</a>, <a class="el" href="classStarWrapper.html#a6d97127b55eba1a226a111cee952c437">StarWrapper&lt; Star3 &gt;</a>, <a class="el" href="classStarWrapper.html#a6d97127b55eba1a226a111cee952c437">StarWrapper&lt; Star1 &gt;</a>, <a class="el" href="classMinorPlanet.html#a1ebcfcbc05954f8145b07fa241462f29">MinorPlanet</a>, <a class="el" href="classComet.html#a3a2ec0ce16a42615828ae1b5548a9627">Comet</a>, and <a class="el" href="classNebula.html#aea9dab68cacead39b5e91b6c1e46304d">Nebula</a>.</p>
+<p>Reimplemented in <a class="el" href="classPlanet.html#afb3d99bed9522c8a8bfc08665d8a0009">Planet</a>, <a class="el" href="classStarWrapper.html#a6d97127b55eba1a226a111cee952c437">StarWrapper&lt; Star &gt;</a>, <a class="el" href="classStarWrapper.html#a6d97127b55eba1a226a111cee952c437">StarWrapper&lt; Star2 &gt;</a>, <a class="el" href="classStarWrapper.html#a6d97127b55eba1a226a111cee952c437">StarWrapper&lt; Star3 &gt;</a>, <a class="el" href="classStarWrapper.html#a6d97127b55eba1a226a111cee952c437">StarWrapper&lt; Star1 &gt;</a>, <a class="el" href="classComet.html#a3a2ec0ce16a42615828ae1b5548a9627">Comet</a>, <a class="el" href="classMinorPlanet.html#a1ebcfcbc05954f8145b07fa241462f29">MinorPlanet</a>, and <a class="el" href="classNebula.html#aea9dab68cacead39b5e91b6c1e46304d">Nebula</a>.</p>
 
 </div>
 </div>
@@ -800,6 +804,7 @@ Protected Member Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Return object's apparent V magnitude as seen from observer including extinction. </p>
+<p>GZ 2014-01-02: <a class="el" href="classExtinction.html" title="This class performs extinction computations, following literature from atmospheric optics and astrono...">Extinction</a> obviously only if atmosphere=on. </p>
 
 </div>
 </div>
@@ -883,7 +888,7 @@ Protected Member Functions</h2></td></tr>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Sat Dec 21 2013 02:06:32 for Stellarium by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Sun Feb 16 2014 20:43:26 for Stellarium by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.3.1
 </small></address>

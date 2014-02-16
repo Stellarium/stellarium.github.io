@@ -73,53 +73,82 @@
 <div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;<span class="preprocessor"></span></div>
 <div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;<span class="preprocessor">#include &quot;Planet.hpp&quot;</span></div>
 <div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;</div>
-<div class="line"><a name="l00032"></a><span class="lineno"><a class="code" href="classComet.html">   32</a></span>&#160;<span class="keyword">class </span><a class="code" href="classComet.html">Comet</a> : <span class="keyword">public</span> <a class="code" href="classPlanet.html">Planet</a></div>
-<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;{</div>
-<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;<span class="keyword">public</span>:</div>
-<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;    <a class="code" href="classComet.html">Comet</a>(<span class="keyword">const</span> QString&amp; englishName,</div>
-<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;           <span class="keywordtype">int</span> flagLighting,</div>
-<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;           <span class="keywordtype">double</span> radius,</div>
-<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;           <span class="keywordtype">double</span> oblateness,</div>
-<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;           <a class="code" href="classVector3.html">Vec3f</a> color,</div>
-<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;           <span class="keywordtype">float</span> albedo,</div>
-<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;           <span class="keyword">const</span> QString&amp; texMapName,</div>
-<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;           posFuncType _coordFunc,</div>
-<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;           <span class="keywordtype">void</span>* userDataPtr,</div>
-<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;           OsculatingFunctType *osculatingFunc,</div>
-<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;           <span class="keywordtype">bool</span> closeOrbit,</div>
-<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;           <span class="keywordtype">bool</span> hidden,</div>
-<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;           <span class="keyword">const</span> QString &amp;pType);</div>
-<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;</div>
-<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;    ~<a class="code" href="classComet.html">Comet</a>();</div>
-<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;</div>
-<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;    <span class="comment">//Inherited from StelObject via Planet</span></div>
-<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;<span class="comment"></span>    <span class="comment">//  - Size &lt;- Size of what?</span></div>
-<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;<span class="comment"></span>    <span class="keyword">virtual</span> QString <a class="code" href="classComet.html#a27c97603a0d7d27f229906eaee87d3f5" title="Get a string with data about the Comet.">getInfoString</a>(<span class="keyword">const</span> <a class="code" href="classStelCore.html" title="Main class for Stellarium core processing.">StelCore</a> *core, <span class="keyword">const</span> InfoStringGroup &amp;flags) <span class="keyword">const</span>;</div>
-<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;    <span class="comment">//The Comet class inherits the &quot;Planet&quot; type because the SolarSystem class</span></div>
-<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;    <span class="comment">//was not designed to handle different types of objects.</span></div>
-<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;    <span class="comment">//virtual QString getType() const {return &quot;Comet&quot;;}</span></div>
-<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;<span class="comment"></span>    <span class="keyword">virtual</span> <span class="keywordtype">float</span> <a class="code" href="classComet.html#a3a2ec0ce16a42615828ae1b5548a9627">getVMagnitude</a>(<span class="keyword">const</span> <a class="code" href="classStelCore.html" title="Main class for Stellarium core processing.">StelCore</a>* core) <span class="keyword">const</span>;</div>
-<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;</div>
-<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classComet.html#a0fdb9c960ee65926d75e0cbf4465f04a" title="sets absolute magnitude and slope parameter.">setAbsoluteMagnitudeAndSlope</a>(<span class="keywordtype">double</span> magnitude, <span class="keywordtype">double</span> slope);</div>
-<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;</div>
-<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classComet.html#a0f876b30994e5fe7ce846235a28e6d5c" title="set value for semi-major axis in AU">setSemiMajorAxis</a>(<span class="keywordtype">double</span> value);</div>
-<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;</div>
-<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;    <span class="keywordtype">double</span> <a class="code" href="classComet.html#a68976eaf88a9861ffb24dfde3a8c3199" title="get sidereal period for minor planet">getSiderealPeriod</a>() <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00034"></a><span class="lineno"><a class="code" href="classComet.html">   34</a></span>&#160;<span class="keyword">class </span><a class="code" href="classComet.html">Comet</a> : <span class="keyword">public</span> <a class="code" href="classPlanet.html">Planet</a></div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;{</div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;<span class="keyword">public</span>:</div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;    <a class="code" href="classComet.html">Comet</a>(<span class="keyword">const</span> QString&amp; englishName,</div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;           <span class="keywordtype">int</span> flagLighting,</div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;           <span class="keywordtype">double</span> radius,</div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;           <span class="keywordtype">double</span> oblateness,</div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;           <a class="code" href="classVector3.html">Vec3f</a> color,</div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;           <span class="keywordtype">float</span> albedo,</div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;           <span class="keyword">const</span> QString&amp; texMapName,</div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;           posFuncType _coordFunc,</div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;           <span class="keywordtype">void</span>* userDataPtr,</div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;           OsculatingFunctType *osculatingFunc,</div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;           <span class="keywordtype">bool</span> closeOrbit,</div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;           <span class="keywordtype">bool</span> hidden,</div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;           <span class="keyword">const</span> QString &amp;pType,</div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;           <span class="keywordtype">float</span> dustTailWidthFact=1.5f,</div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;           <span class="keywordtype">float</span> dustTailLengthFact=0.4f,</div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;           <span class="keywordtype">float</span> dustTailBrightnessFact=1.5f</div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;          );</div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;</div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;    <span class="keyword">virtual</span> ~<a class="code" href="classComet.html">Comet</a>();</div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;</div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;    <span class="comment">//Inherited from StelObject via Planet</span></div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;<span class="comment"></span>    <span class="comment">//  - Size &lt;- Size of what?</span></div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;<span class="comment"></span>    <span class="keyword">virtual</span> QString <a class="code" href="classComet.html#a27c97603a0d7d27f229906eaee87d3f5" title="Get a string with data about the Comet.">getInfoString</a>(<span class="keyword">const</span> <a class="code" href="classStelCore.html" title="Main class for Stellarium core processing.">StelCore</a> *core, <span class="keyword">const</span> InfoStringGroup &amp;flags) <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;    <span class="comment">//The Comet class inherits the &quot;Planet&quot; type because the SolarSystem class</span></div>
+<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;    <span class="comment">//was not designed to handle different types of objects.</span></div>
+<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;    <span class="comment">//virtual QString getType() const {return &quot;Comet&quot;;}</span></div>
+<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;<span class="comment"></span>    <span class="keyword">virtual</span> <span class="keywordtype">float</span> <a class="code" href="classComet.html#a3a2ec0ce16a42615828ae1b5548a9627">getVMagnitude</a>(<span class="keyword">const</span> <a class="code" href="classStelCore.html" title="Main class for Stellarium core processing.">StelCore</a>* core) <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;</div>
+<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classComet.html#a61f05be6658165b0563cbfb29220a46c" title="sets absolute magnitude and slope parameter.">setAbsoluteMagnitudeAndSlope</a>(<span class="keyword">const</span> <span class="keywordtype">double</span> magnitude, <span class="keyword">const</span> <span class="keywordtype">double</span> slope);</div>
 <div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;</div>
-<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;<span class="keyword">private</span>:</div>
-<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;    <span class="keywordtype">double</span> absoluteMagnitude;</div>
-<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;    <span class="keywordtype">double</span> slopeParameter;</div>
-<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;    <span class="keywordtype">double</span> semiMajorAxis;</div>
-<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;</div>
-<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;    <span class="keywordtype">bool</span> isCometFragment;</div>
-<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;    <span class="keywordtype">bool</span> nameIsProvisionalDesignation;</div>
-<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;};</div>
+<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classComet.html#a0cd3e25e7912dea6a80b7fccde347901" title="set value for semi-major axis in AU">setSemiMajorAxis</a>(<span class="keyword">const</span> <span class="keywordtype">double</span> value);</div>
+<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;</div>
+<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;    <span class="keyword">virtual</span> <span class="keywordtype">double</span> <a class="code" href="classComet.html#ada70e102610ff54c1740cfe21c2b71d4" title="get sidereal period for comet, days, or returns 0 if not possible (paraboloid, hyperboloid orbit)...">getSiderealPeriod</a>() <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;</div>
+<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;    <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classComet.html#a0b418e31d254dd595e166f75421dab47" title="re-implementation of Planet&#39;s draw()">draw</a>(<a class="code" href="classStelCore.html" title="Main class for Stellarium core processing.">StelCore</a>* core, <span class="keywordtype">float</span> maxMagLabels, <span class="keyword">const</span> QFont&amp; planetNameFont);</div>
 <div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;</div>
-<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;<span class="preprocessor">#endif //_COMET_HPP_</span></div>
+<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;<span class="keyword">private</span>:</div>
+<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;    <a class="code" href="classVector2.html">Vec2f</a> getComaDiameterAndTailLengthAU() <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;    <span class="keywordtype">void</span> drawTail(<a class="code" href="classStelCore.html" title="Main class for Stellarium core processing.">StelCore</a>* core, <a class="code" href="classStelProjector.html#ae6b42a6973558f855691b91701edf0dc" title="Shared pointer on a ModelViewTranform instance (implement reference counting)">StelProjector::ModelViewTranformP</a> transfo, <span class="keywordtype">bool</span> gas);</div>
+<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;    <span class="keywordtype">void</span> drawComa(<a class="code" href="classStelCore.html" title="Main class for Stellarium core processing.">StelCore</a>* core, <a class="code" href="classStelProjector.html#ae6b42a6973558f855691b91701edf0dc" title="Shared pointer on a ModelViewTranform instance (implement reference counting)">StelProjector::ModelViewTranformP</a> transfo);</div>
+<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;</div>
+<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;    <span class="keywordtype">void</span> computeComa(<span class="keyword">const</span> <span class="keywordtype">float</span> diameter);</div>
+<div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;</div>
+<div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160;    <span class="keywordtype">void</span> computeParabola(<span class="keyword">const</span> <span class="keywordtype">float</span> parameter, <span class="keyword">const</span> <span class="keywordtype">float</span> topradius, <span class="keyword">const</span> <span class="keywordtype">float</span> zshift, QVector&lt;double&gt;&amp; vertexArr, QVector&lt;float&gt;&amp; texCoordArr, QVector&lt;unsigned short&gt;&amp; indices, <span class="keyword">const</span> <span class="keywordtype">float</span> xOffset=0.0f);</div>
+<div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160;</div>
+<div class="line"><a name="l00116"></a><span class="lineno">  116</span>&#160;    <span class="keywordtype">double</span> absoluteMagnitude;</div>
+<div class="line"><a name="l00117"></a><span class="lineno">  117</span>&#160;    <span class="keywordtype">double</span> slopeParameter;</div>
+<div class="line"><a name="l00118"></a><span class="lineno">  118</span>&#160;    <span class="keywordtype">double</span> semiMajorAxis;</div>
+<div class="line"><a name="l00119"></a><span class="lineno">  119</span>&#160;    <span class="keywordtype">bool</span> isCometFragment;</div>
+<div class="line"><a name="l00120"></a><span class="lineno">  120</span>&#160;    <span class="keywordtype">bool</span> nameIsProvisionalDesignation;</div>
+<div class="line"><a name="l00121"></a><span class="lineno">  121</span>&#160;</div>
+<div class="line"><a name="l00122"></a><span class="lineno">  122</span>&#160;    <span class="comment">//GZ Tail additions</span></div>
+<div class="line"><a name="l00123"></a><span class="lineno">  123</span>&#160;    <span class="keywordtype">float</span> dustTailWidthFactor;      </div>
+<div class="line"><a name="l00124"></a><span class="lineno">  124</span>&#160;    <span class="keywordtype">float</span> dustTailLengthFactor;     </div>
+<div class="line"><a name="l00125"></a><span class="lineno">  125</span>&#160;    <span class="keywordtype">float</span> dustTailBrightnessFactor; </div>
+<div class="line"><a name="l00126"></a><span class="lineno">  126</span>&#160;    QVector&lt;double&gt; gastailVertexArr;  <span class="comment">// computed frequently, describes parabolic shape (along z axis) of gas tail.</span></div>
+<div class="line"><a name="l00127"></a><span class="lineno">  127</span>&#160;    QVector&lt;double&gt; dusttailVertexArr; <span class="comment">// computed frequently, describes parabolic shape (along z axis) of dust tail.</span></div>
+<div class="line"><a name="l00128"></a><span class="lineno">  128</span>&#160;    QVector&lt;float&gt; gastailTexCoordArr; <span class="comment">// computed only once per comet!</span></div>
+<div class="line"><a name="l00129"></a><span class="lineno">  129</span>&#160;    <span class="comment">//QVector&lt;float&gt; dusttailTexCoordArr; // currently identical to gastailVertexArr, has been taken out.</span></div>
+<div class="line"><a name="l00130"></a><span class="lineno">  130</span>&#160;    QVector&lt;unsigned short&gt; gastailIndices; <span class="comment">// computed only once per comet!</span></div>
+<div class="line"><a name="l00131"></a><span class="lineno">  131</span>&#160;    <span class="comment">//QVector&lt;unsigned short&gt; dusttailIndices; // actually no longer required. Re-use gas tail indices.</span></div>
+<div class="line"><a name="l00132"></a><span class="lineno">  132</span>&#160;    QVector&lt;double&gt; comaVertexArr;</div>
+<div class="line"><a name="l00133"></a><span class="lineno">  133</span>&#160;    QVector&lt;float&gt; comaTexCoordArr;</div>
+<div class="line"><a name="l00134"></a><span class="lineno">  134</span>&#160;    <a class="code" href="StelTextureTypes_8hpp.html#a085a86bd020a5f6d1240e02d596eb4bb" title="Use shared pointer to simplify memory managment.">StelTextureSP</a> comaTexture;</div>
+<div class="line"><a name="l00135"></a><span class="lineno">  135</span>&#160;    <a class="code" href="StelTextureTypes_8hpp.html#a085a86bd020a5f6d1240e02d596eb4bb" title="Use shared pointer to simplify memory managment.">StelTextureSP</a> gasTailTexture;</div>
+<div class="line"><a name="l00136"></a><span class="lineno">  136</span>&#160;    <span class="comment">//StelTextureSP dusttailTexture;  // it seems not really necessary to have different textures.</span></div>
+<div class="line"><a name="l00137"></a><span class="lineno">  137</span>&#160;};</div>
+<div class="line"><a name="l00138"></a><span class="lineno">  138</span>&#160;</div>
+<div class="line"><a name="l00139"></a><span class="lineno">  139</span>&#160;<span class="preprocessor">#endif //_COMET_HPP_</span></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Sat Dec 21 2013 02:06:31 for Stellarium by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Sun Feb 16 2014 20:43:25 for Stellarium by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.3.1
 </small></address>

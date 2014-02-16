@@ -235,7 +235,7 @@
 <div class="line"><a name="l00279"></a><span class="lineno">  279</span>&#160;</div>
 <div class="line"><a name="l00283"></a><span class="lineno"><a class="code" href="classSphericalCap.html#aa17272a27ca3e524bce7ebd9c5d17dac">  283</a></span>&#160;    <a class="code" href="classSphericalCap.html#aa17272a27ca3e524bce7ebd9c5d17dac" title="Construct a SphericalCap from its direction and aperture.">SphericalCap</a>(<span class="keyword">const</span> <a class="code" href="classVector3.html">Vec3d</a>&amp; an, <span class="keywordtype">double</span> ar) : <a class="code" href="classSphericalCap.html#acc1e4d18a51b380f87cf427eb7f5686c" title="The direction unit vector. Only if d==0, this vector doesn&#39;t need to be unit.">n</a>(an), <a class="code" href="classSphericalCap.html#acf5d0a04709bf521b18d2a9c2879fbe3" title="The cos of cone radius.">d</a>(ar) {<span class="comment">//n.normalize();</span></div>
 <div class="line"><a name="l00284"></a><span class="lineno">  284</span>&#160;                                                             Q_ASSERT(<a class="code" href="classSphericalCap.html#acf5d0a04709bf521b18d2a9c2879fbe3" title="The cos of cone radius.">d</a>==0 || std::fabs(<a class="code" href="classSphericalCap.html#acc1e4d18a51b380f87cf427eb7f5686c" title="The direction unit vector. Only if d==0, this vector doesn&#39;t need to be unit.">n</a>.lengthSquared()-1.)&lt;0.0000001);}</div>
-<div class="line"><a name="l00285"></a><span class="lineno">  285</span>&#160;    <span class="comment">// TODO:FIXME! GZ reports 2013-03-02: apparently the Q_ASSERT is here because n should be normalized at this point, but</span></div>
+<div class="line"><a name="l00285"></a><span class="lineno">  285</span>&#160;    <span class="comment">// FIXME: GZ reports 2013-03-02: apparently the Q_ASSERT is here because n should be normalized at this point, but</span></div>
 <div class="line"><a name="l00286"></a><span class="lineno">  286</span>&#160;    <span class="comment">// for efficiency n.normalize() should not be called at this point.</span></div>
 <div class="line"><a name="l00287"></a><span class="lineno">  287</span>&#160;    <span class="comment">// However, when zooming in a bit in Hammer-Aitoff and Mercator projections, this Assertion fires.</span></div>
 <div class="line"><a name="l00288"></a><span class="lineno">  288</span>&#160;    <span class="comment">// Atmosphere must be active</span></div>
@@ -710,7 +710,7 @@
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Sat Dec 21 2013 02:06:31 for Stellarium by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Sun Feb 16 2014 20:43:26 for Stellarium by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.3.1
 </small></address>

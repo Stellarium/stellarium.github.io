@@ -53,17 +53,56 @@
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:a62483663e1d0b2b3420cef392e38e71b"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a62483663e1d0b2b3420cef392e38e71b"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><b>CometOrbit</b> (double pericenterDistance, double eccentricity, double inclination, double ascendingNode, double argOfPerhelion, double timeAtPerihelion, double meanMotion, double parentRotObliquity, double parentRotAscendingnode, double parentRotJ2000Longitude)</td></tr>
-<tr class="separator:a62483663e1d0b2b3420cef392e38e71b"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a8617f8e92668b57ffff43b093b0102a7"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a8617f8e92668b57ffff43b093b0102a7"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>positionAtTimevInVSOP87Coordinates</b> (double JD, double *v) const </td></tr>
-<tr class="separator:a8617f8e92668b57ffff43b093b0102a7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4d7b951dd13cc409557dbdbe08069e32"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a4d7b951dd13cc409557dbdbe08069e32"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><b>CometOrbit</b> (double pericenterDistance, double eccentricity, double inclination, double ascendingNode, double argOfPerhelion, double timeAtPerihelion, double orbitGoodDays, double meanMotion, double parentRotObliquity, double parentRotAscendingnode, double parentRotJ2000Longitude)</td></tr>
+<tr class="separator:a4d7b951dd13cc409557dbdbe08069e32"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3cf8bddf9efb44be762cf07cb9462d96"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a3cf8bddf9efb44be762cf07cb9462d96"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>positionAtTimevInVSOP87Coordinates</b> (double JD, double *v, bool updateVelocityVector=true)</td></tr>
+<tr class="separator:a3cf8bddf9efb44be762cf07cb9462d96"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab5363e9d903117c298b77fc5425bcc81"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ab5363e9d903117c298b77fc5425bcc81"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><b>getUpdateTails</b> () const </td></tr>
+<tr class="separator:ab5363e9d903117c298b77fc5425bcc81"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af6f3ede00384d9f4e56664fcc154065d"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="af6f3ede00384d9f4e56664fcc154065d"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>setUpdateTails</b> (const bool update)</td></tr>
+<tr class="separator:af6f3ede00384d9f4e56664fcc154065d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab082a0ac83f96ea2260df217a201cb3e"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ab082a0ac83f96ea2260df217a201cb3e"></a>
+<a class="el" href="classVector3.html">Vec3d</a>&#160;</td><td class="memItemRight" valign="bottom"><b>getVelocity</b> () const </td></tr>
+<tr class="separator:ab082a0ac83f96ea2260df217a201cb3e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aff8f5bdba444562b7e5879c1575ab6eb"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classCometOrbit.html#aff8f5bdba444562b7e5879c1575ab6eb">objectDateValid</a> (const double JD) const </td></tr>
+<tr class="memdesc:aff8f5bdba444562b7e5879c1575ab6eb"><td class="mdescLeft">&#160;</td><td class="mdescRight">return speed value [AU/d] last computed by positionAtTimevInVSOP87Coordinates(JD, v, true)  <a href="#aff8f5bdba444562b7e5879c1575ab6eb">More...</a><br/></td></tr>
+<tr class="separator:aff8f5bdba444562b7e5879c1575ab6eb"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
+<h2 class="groupheader">Member Function Documentation</h2>
+<a class="anchor" id="aff8f5bdba444562b7e5879c1575ab6eb"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool CometOrbit::objectDateValid </td>
+          <td>(</td>
+          <td class="paramtype">const double&#160;</td>
+          <td class="paramname"><em>JD</em></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>return speed value [AU/d] last computed by positionAtTimevInVSOP87Coordinates(JD, v, true) </p>
+
+</div>
+</div>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Sat Dec 21 2013 02:06:31 for Stellarium by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Sun Feb 16 2014 20:43:26 for Stellarium by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.3.1
 </small></address>
