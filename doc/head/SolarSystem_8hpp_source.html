@@ -31,6 +31,7 @@
       <li><a href="scripting.html"><span>Scripting</span></a></li>
       <li><a href="plugins.html"><span>Plugins</span></a></li>
       <li><a href="fileStructure.html"><span>File&#160;Structure</span></a></li>
+      <li><a href="examples.html"><span>Examples</span></a></li>
     </ul>
   </div>
   <div id="navrow2" class="tabs2">
@@ -157,130 +158,130 @@
 <div class="line"><a name="l00172"></a><span class="lineno">  172</span>&#160;</div>
 <div class="line"><a name="l00174"></a><span class="lineno">  174</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classSolarSystem.html#ac2cfce101d5cff705ccf6fd121792278" title="Set planet names font size.">setFontSize</a>(<span class="keywordtype">float</span> newFontSize);</div>
 <div class="line"><a name="l00175"></a><span class="lineno">  175</span>&#160;</div>
-<div class="line"><a name="l00177"></a><span class="lineno">  177</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classSolarSystem.html#a3618fdfbf253de1a398f22ce536e2526" title="Set the color used to draw planet labels.">setLabelsColor</a>(<span class="keyword">const</span> <a class="code" href="classVector3.html" title="A templatized 3d vector compatible with openGL.">Vec3f</a>&amp; c);</div>
-<div class="line"><a name="l00179"></a><span class="lineno">  179</span>&#160;    <span class="keyword">const</span> <a class="code" href="classVector3.html" title="A templatized 3d vector compatible with openGL.">Vec3f</a>&amp; <a class="code" href="classSolarSystem.html#aaebdf00e1151827f1a9f91502a8d173e" title="Get the current color used to draw planet labels.">getLabelsColor</a>(<span class="keywordtype">void</span>) <span class="keyword">const</span>;</div>
-<div class="line"><a name="l00180"></a><span class="lineno">  180</span>&#160;</div>
-<div class="line"><a name="l00182"></a><span class="lineno">  182</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classSolarSystem.html#ad410b2741a6d1373f137e7bc69740fb6" title="Set the color used to draw planet orbit lines.">setOrbitsColor</a>(<span class="keyword">const</span> <a class="code" href="classVector3.html" title="A templatized 3d vector compatible with openGL.">Vec3f</a>&amp; c);</div>
-<div class="line"><a name="l00184"></a><span class="lineno">  184</span>&#160;    <a class="code" href="classVector3.html" title="A templatized 3d vector compatible with openGL.">Vec3f</a> <a class="code" href="classSolarSystem.html#a4d0933f3ed314a781df63e4a7ffaf7a7" title="Get the current color used to draw planet orbit lines.">getOrbitsColor</a>(<span class="keywordtype">void</span>) <span class="keyword">const</span>;</div>
-<div class="line"><a name="l00185"></a><span class="lineno">  185</span>&#160;</div>
-<div class="line"><a name="l00187"></a><span class="lineno"><a class="code" href="classSolarSystem.html#a1ac6ae621b2d02cb86ed4ca5ac402daa">  187</a></span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classSolarSystem.html#a1ac6ae621b2d02cb86ed4ca5ac402daa" title="Set the color used to draw planet trails lines.">setTrailsColor</a>(<span class="keyword">const</span> <a class="code" href="classVector3.html">Vec3f</a>&amp; c) {trailColor=c;}</div>
-<div class="line"><a name="l00189"></a><span class="lineno"><a class="code" href="classSolarSystem.html#ae3e0ccb2a363203759601494184767f0">  189</a></span>&#160;    <a class="code" href="classVector3.html">Vec3f</a> <a class="code" href="classSolarSystem.html#ae3e0ccb2a363203759601494184767f0" title="Get the current color used to draw planet trails lines.">getTrailsColor</a>()<span class="keyword"> const </span>{<span class="keywordflow">return</span> trailColor;}</div>
-<div class="line"><a name="l00190"></a><span class="lineno">  190</span>&#160;</div>
-<div class="line"><a name="l00192"></a><span class="lineno"><a class="code" href="classSolarSystem.html#a0b77e09daab146ebc8e9f0e50c620e04">  192</a></span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classSolarSystem.html#a0b77e09daab146ebc8e9f0e50c620e04" title="Set the color used to draw planet pointers.">setPointersColor</a>(<span class="keyword">const</span> <a class="code" href="classVector3.html">Vec3f</a>&amp; c) {pointerColor=c;}</div>
-<div class="line"><a name="l00194"></a><span class="lineno"><a class="code" href="classSolarSystem.html#ad4d877cf3deab4ea5cbf53d88396f059">  194</a></span>&#160;    <a class="code" href="classVector3.html">Vec3f</a> <a class="code" href="classSolarSystem.html#ad4d877cf3deab4ea5cbf53d88396f059" title="Get the current color used to draw planet pointers.">getPointersColor</a>()<span class="keyword"> const </span>{<span class="keywordflow">return</span> pointerColor;}</div>
-<div class="line"><a name="l00195"></a><span class="lineno">  195</span>&#160;</div>
-<div class="line"><a name="l00197"></a><span class="lineno">  197</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classSolarSystem.html#ac910773d85b5e49444515828cd23d57f" title="Set flag which determines if Earth&#39;s moon is scaled or not.">setFlagMoonScale</a>(<span class="keywordtype">bool</span> b);</div>
-<div class="line"><a name="l00199"></a><span class="lineno"><a class="code" href="classSolarSystem.html#af28c1d019eddb9dc564b2892e4c33192">  199</a></span>&#160;    <span class="keywordtype">bool</span> <a class="code" href="classSolarSystem.html#af28c1d019eddb9dc564b2892e4c33192" title="Get the current value of the flag which determines if Earth&#39;s moon is scaled or not.">getFlagMoonScale</a>(<span class="keywordtype">void</span>)<span class="keyword"> const </span>{<span class="keywordflow">return</span> flagMoonScale;}</div>
-<div class="line"><a name="l00200"></a><span class="lineno">  200</span>&#160;</div>
-<div class="line"><a name="l00202"></a><span class="lineno">  202</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classSolarSystem.html#a315d3a89f916cb41ff8e67e1f579345a" title="Set the display scaling factor for Earth&#39;s moon.">setMoonScale</a>(<span class="keywordtype">double</span> f);</div>
-<div class="line"><a name="l00204"></a><span class="lineno"><a class="code" href="classSolarSystem.html#a1cd314c397564d728851a50e55ba2549">  204</a></span>&#160;    <span class="keywordtype">float</span> <a class="code" href="classSolarSystem.html#a1cd314c397564d728851a50e55ba2549" title="Get the display scaling factor for Earth&#39;s oon.">getMoonScale</a>(<span class="keywordtype">void</span>)<span class="keyword"> const </span>{<span class="keywordflow">return</span> moonScale;}</div>
-<div class="line"><a name="l00205"></a><span class="lineno">  205</span>&#160;</div>
-<div class="line"><a name="l00207"></a><span class="lineno">  207</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classSolarSystem.html#aedf4ed299c43167e8d2b3394157f2837" title="Translate names. (public so that SolarSystemEditor can call it).">updateI18n</a>();</div>
+<div class="line"><a name="l00179"></a><span class="lineno">  179</span>&#160;    <span class="keywordtype">void</span> setLabelsColor(<span class="keyword">const</span> <a class="code" href="classVector3.html" title="A templatized 3d vector compatible with openGL.">Vec3f</a>&amp; c);</div>
+<div class="line"><a name="l00181"></a><span class="lineno">  181</span>&#160;    <span class="keyword">const</span> <a class="code" href="classVector3.html" title="A templatized 3d vector compatible with openGL.">Vec3f</a>&amp; <a class="code" href="classSolarSystem.html#aaebdf00e1151827f1a9f91502a8d173e" title="Get the current color used to draw planet labels.">getLabelsColor</a>(<span class="keywordtype">void</span>) <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00182"></a><span class="lineno">  182</span>&#160;</div>
+<div class="line"><a name="l00186"></a><span class="lineno">  186</span>&#160;    <span class="keywordtype">void</span> setOrbitsColor(<span class="keyword">const</span> <a class="code" href="classVector3.html" title="A templatized 3d vector compatible with openGL.">Vec3f</a>&amp; c);</div>
+<div class="line"><a name="l00188"></a><span class="lineno">  188</span>&#160;    <a class="code" href="classVector3.html" title="A templatized 3d vector compatible with openGL.">Vec3f</a> <a class="code" href="classSolarSystem.html#a4d0933f3ed314a781df63e4a7ffaf7a7" title="Get the current color used to draw planet orbit lines.">getOrbitsColor</a>(<span class="keywordtype">void</span>) <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00189"></a><span class="lineno">  189</span>&#160;</div>
+<div class="line"><a name="l00193"></a><span class="lineno">  193</span>&#160;    <span class="keywordtype">void</span> setTrailsColor(<span class="keyword">const</span> <a class="code" href="classVector3.html" title="A templatized 3d vector compatible with openGL.">Vec3f</a>&amp; c) {trailColor=c;}</div>
+<div class="line"><a name="l00195"></a><span class="lineno"><a class="code" href="classSolarSystem.html#ae3e0ccb2a363203759601494184767f0">  195</a></span>&#160;    <a class="code" href="classVector3.html">Vec3f</a> <a class="code" href="classSolarSystem.html#ae3e0ccb2a363203759601494184767f0" title="Get the current color used to draw planet trails lines.">getTrailsColor</a>()<span class="keyword"> const </span>{<span class="keywordflow">return</span> trailColor;}</div>
+<div class="line"><a name="l00196"></a><span class="lineno">  196</span>&#160;</div>
+<div class="line"><a name="l00200"></a><span class="lineno">  200</span>&#160;    <span class="keywordtype">void</span> setPointersColor(<span class="keyword">const</span> <a class="code" href="classVector3.html" title="A templatized 3d vector compatible with openGL.">Vec3f</a>&amp; c) {pointerColor=c;}</div>
+<div class="line"><a name="l00202"></a><span class="lineno"><a class="code" href="classSolarSystem.html#ad4d877cf3deab4ea5cbf53d88396f059">  202</a></span>&#160;    <a class="code" href="classVector3.html">Vec3f</a> <a class="code" href="classSolarSystem.html#ad4d877cf3deab4ea5cbf53d88396f059" title="Get the current color used to draw planet pointers.">getPointersColor</a>()<span class="keyword"> const </span>{<span class="keywordflow">return</span> pointerColor;}</div>
+<div class="line"><a name="l00203"></a><span class="lineno">  203</span>&#160;</div>
+<div class="line"><a name="l00205"></a><span class="lineno">  205</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classSolarSystem.html#ac910773d85b5e49444515828cd23d57f" title="Set flag which determines if Earth&#39;s moon is scaled or not.">setFlagMoonScale</a>(<span class="keywordtype">bool</span> b);</div>
+<div class="line"><a name="l00207"></a><span class="lineno"><a class="code" href="classSolarSystem.html#af28c1d019eddb9dc564b2892e4c33192">  207</a></span>&#160;    <span class="keywordtype">bool</span> <a class="code" href="classSolarSystem.html#af28c1d019eddb9dc564b2892e4c33192" title="Get the current value of the flag which determines if Earth&#39;s moon is scaled or not.">getFlagMoonScale</a>(<span class="keywordtype">void</span>)<span class="keyword"> const </span>{<span class="keywordflow">return</span> flagMoonScale;}</div>
 <div class="line"><a name="l00208"></a><span class="lineno">  208</span>&#160;</div>
-<div class="line"><a name="l00213"></a><span class="lineno">  213</span>&#160;    <span class="keywordtype">float</span> <a class="code" href="classSolarSystem.html#a2194ab0d6984532153763cf09cf6a367" title="Get the V magnitude for Solar system bodies from scripts.">getPlanetVMagnitude</a>(QString planetName) <span class="keyword">const</span>;</div>
-<div class="line"><a name="l00214"></a><span class="lineno">  214</span>&#160;</div>
-<div class="line"><a name="l00218"></a><span class="lineno">  218</span>&#160;    <span class="keywordtype">double</span> <a class="code" href="classSolarSystem.html#af70836c83532a6094102f468cf00abda" title="Get distance to Solar system bodies from scripts.">getDistanceToPlanet</a>(QString planetName) <span class="keyword">const</span>;</div>
-<div class="line"><a name="l00219"></a><span class="lineno">  219</span>&#160;</div>
-<div class="line"><a name="l00223"></a><span class="lineno">  223</span>&#160;    <span class="keywordtype">double</span> <a class="code" href="classSolarSystem.html#a1284c16fecbac6902ac65f18f02b4e48" title="Get elongation for Solar system bodies from scripts.">getElongationForPlanet</a>(QString planetName) <span class="keyword">const</span>;</div>
-<div class="line"><a name="l00224"></a><span class="lineno">  224</span>&#160;</div>
-<div class="line"><a name="l00228"></a><span class="lineno">  228</span>&#160;    <span class="keywordtype">double</span> <a class="code" href="classSolarSystem.html#a0821bc0e525fa1edd4acb18de5b38e54" title="Get phase angle for Solar system bodies from scripts.">getPhaseAngleForPlanet</a>(QString planetName) <span class="keyword">const</span>;</div>
-<div class="line"><a name="l00229"></a><span class="lineno">  229</span>&#160;</div>
-<div class="line"><a name="l00233"></a><span class="lineno">  233</span>&#160;    <span class="keywordtype">float</span> <a class="code" href="classSolarSystem.html#ad7da0bb16f599f861b80810261b19cd8" title="Get phase for Solar system bodies from scripts.">getPhaseForPlanet</a>(QString planetName) <span class="keyword">const</span>;</div>
-<div class="line"><a name="l00234"></a><span class="lineno">  234</span>&#160;</div>
-<div class="line"><a name="l00235"></a><span class="lineno">  235</span>&#160;<span class="keyword">public</span>:</div>
-<div class="line"><a name="l00237"></a><span class="lineno">  237</span>&#160;    <span class="comment">// Other public methods</span></div>
-<div class="line"><a name="l00241"></a><span class="lineno">  241</span>&#160;<span class="comment"></span>    PlanetP <a class="code" href="classSolarSystem.html#ac9c526055bfa81f1d921a7a10c4c1c4d" title="Get a pointer to a Planet object.">searchByEnglishName</a>(QString planetEnglishName) <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00210"></a><span class="lineno">  210</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classSolarSystem.html#a315d3a89f916cb41ff8e67e1f579345a" title="Set the display scaling factor for Earth&#39;s moon.">setMoonScale</a>(<span class="keywordtype">double</span> f);</div>
+<div class="line"><a name="l00212"></a><span class="lineno"><a class="code" href="classSolarSystem.html#a1cd314c397564d728851a50e55ba2549">  212</a></span>&#160;    <span class="keywordtype">float</span> <a class="code" href="classSolarSystem.html#a1cd314c397564d728851a50e55ba2549" title="Get the display scaling factor for Earth&#39;s oon.">getMoonScale</a>(<span class="keywordtype">void</span>)<span class="keyword"> const </span>{<span class="keywordflow">return</span> moonScale;}</div>
+<div class="line"><a name="l00213"></a><span class="lineno">  213</span>&#160;</div>
+<div class="line"><a name="l00215"></a><span class="lineno">  215</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classSolarSystem.html#aedf4ed299c43167e8d2b3394157f2837" title="Translate names. (public so that SolarSystemEditor can call it).">updateI18n</a>();</div>
+<div class="line"><a name="l00216"></a><span class="lineno">  216</span>&#160;</div>
+<div class="line"><a name="l00221"></a><span class="lineno">  221</span>&#160;    <span class="keywordtype">float</span> <a class="code" href="classSolarSystem.html#a2194ab0d6984532153763cf09cf6a367" title="Get the V magnitude for Solar system bodies from scripts.">getPlanetVMagnitude</a>(QString planetName) <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00222"></a><span class="lineno">  222</span>&#160;</div>
+<div class="line"><a name="l00226"></a><span class="lineno">  226</span>&#160;    <span class="keywordtype">double</span> <a class="code" href="classSolarSystem.html#af70836c83532a6094102f468cf00abda" title="Get distance to Solar system bodies from scripts.">getDistanceToPlanet</a>(QString planetName) <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00227"></a><span class="lineno">  227</span>&#160;</div>
+<div class="line"><a name="l00231"></a><span class="lineno">  231</span>&#160;    <span class="keywordtype">double</span> <a class="code" href="classSolarSystem.html#a1284c16fecbac6902ac65f18f02b4e48" title="Get elongation for Solar system bodies from scripts.">getElongationForPlanet</a>(QString planetName) <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00232"></a><span class="lineno">  232</span>&#160;</div>
+<div class="line"><a name="l00236"></a><span class="lineno">  236</span>&#160;    <span class="keywordtype">double</span> <a class="code" href="classSolarSystem.html#a0821bc0e525fa1edd4acb18de5b38e54" title="Get phase angle for Solar system bodies from scripts.">getPhaseAngleForPlanet</a>(QString planetName) <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00237"></a><span class="lineno">  237</span>&#160;</div>
+<div class="line"><a name="l00241"></a><span class="lineno">  241</span>&#160;    <span class="keywordtype">float</span> <a class="code" href="classSolarSystem.html#ad7da0bb16f599f861b80810261b19cd8" title="Get phase for Solar system bodies from scripts.">getPhaseForPlanet</a>(QString planetName) <span class="keyword">const</span>;</div>
 <div class="line"><a name="l00242"></a><span class="lineno">  242</span>&#160;</div>
-<div class="line"><a name="l00244"></a><span class="lineno"><a class="code" href="classSolarSystem.html#ada79b8fd368062c3d2d917a1bba7949c">  244</a></span>&#160;    PlanetP <a class="code" href="classSolarSystem.html#ada79b8fd368062c3d2d917a1bba7949c" title="Get the Planet object pointer for the Sun.">getSun</a>()<span class="keyword"> const </span>{<span class="keywordflow">return</span> sun;}</div>
-<div class="line"><a name="l00245"></a><span class="lineno">  245</span>&#160;</div>
-<div class="line"><a name="l00247"></a><span class="lineno"><a class="code" href="classSolarSystem.html#a9d5bbde466a35b9233e7de4d7f7b28b1">  247</a></span>&#160;    PlanetP <a class="code" href="classSolarSystem.html#a9d5bbde466a35b9233e7de4d7f7b28b1" title="Get the Planet object pointer for the Earth.">getEarth</a>()<span class="keyword"> const </span>{<span class="keywordflow">return</span> earth;}</div>
-<div class="line"><a name="l00248"></a><span class="lineno">  248</span>&#160;</div>
-<div class="line"><a name="l00250"></a><span class="lineno"><a class="code" href="classSolarSystem.html#acc6e06752856b3e235365dfa40e14740">  250</a></span>&#160;    PlanetP <a class="code" href="classSolarSystem.html#acc6e06752856b3e235365dfa40e14740" title="Get the Planet object pointer for Earth&#39;s moon.">getMoon</a>()<span class="keyword"> const </span>{<span class="keywordflow">return</span> moon;}</div>
-<div class="line"><a name="l00251"></a><span class="lineno">  251</span>&#160;</div>
-<div class="line"><a name="l00253"></a><span class="lineno">  253</span>&#160;    <span class="keywordtype">bool</span> <a class="code" href="classSolarSystem.html#a6d6480f5e7d855ea1b32e9853ba6d38b" title="Determine if a lunar eclipse is close at hand?">nearLunarEclipse</a>();</div>
-<div class="line"><a name="l00254"></a><span class="lineno">  254</span>&#160;</div>
-<div class="line"><a name="l00256"></a><span class="lineno">  256</span>&#160;    QStringList <a class="code" href="classSolarSystem.html#a4a1c62a7d9da7c4ec88021dfaf190641" title="Get the list of all the planet english names.">getAllPlanetEnglishNames</a>() <span class="keyword">const</span>;</div>
-<div class="line"><a name="l00257"></a><span class="lineno">  257</span>&#160;</div>
-<div class="line"><a name="l00259"></a><span class="lineno">  259</span>&#160;    QStringList <a class="code" href="classSolarSystem.html#a826aca80458a840a362d4e008576f739" title="Get the list of all the planet localized names.">getAllPlanetLocalizedNames</a>() <span class="keyword">const</span>;</div>
-<div class="line"><a name="l00260"></a><span class="lineno">  260</span>&#160;</div>
-<div class="line"><a name="l00262"></a><span class="lineno">  262</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classSolarSystem.html#a1be769b3861baf35a4e6a559438d5e7a" title="Reload the planets.">reloadPlanets</a>();</div>
-<div class="line"><a name="l00263"></a><span class="lineno">  263</span>&#160;</div>
-<div class="line"><a name="l00265"></a><span class="lineno">  265</span>&#160;    <span class="comment">// DEPRECATED</span></div>
-<div class="line"><a name="l00271"></a><span class="lineno">  271</span>&#160;<span class="comment"></span>    QString <a class="code" href="classSolarSystem.html#ab3635b90421a4bcec4a9368837c84a9d" title="Get a hash of locale and ssystem.ini names for use with the TUI.">getPlanetHashString</a>();</div>
-<div class="line"><a name="l00272"></a><span class="lineno">  272</span>&#160;</div>
-<div class="line"><a name="l00277"></a><span class="lineno">  277</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classSolarSystem.html#a278845fca95a186932ee052ccd60ab4e" title="Compute the position and transform matrix for every element of the solar system.">computePositions</a>(<span class="keywordtype">double</span> date, <span class="keyword">const</span> <a class="code" href="classVector3.html">Vec3d</a>&amp; observerPos = <a class="code" href="classVector3.html">Vec3d</a>(0.));</div>
-<div class="line"><a name="l00278"></a><span class="lineno">  278</span>&#160;</div>
-<div class="line"><a name="l00281"></a><span class="lineno"><a class="code" href="classSolarSystem.html#a8a39b95aa7d8205bd69d6e8fb5281d68">  281</a></span>&#160;    <span class="keyword">const</span> QList&lt;PlanetP&gt;&amp; <a class="code" href="classSolarSystem.html#a8a39b95aa7d8205bd69d6e8fb5281d68" title="Get the list of all the bodies of the solar system.">getAllPlanets</a>()<span class="keyword"> const </span>{<span class="keywordflow">return</span> systemPlanets;} </div>
-<div class="line"><a name="l00282"></a><span class="lineno">  282</span>&#160;</div>
-<div class="line"><a name="l00283"></a><span class="lineno">  283</span>&#160;<span class="keyword">private</span> slots:</div>
-<div class="line"><a name="l00285"></a><span class="lineno">  285</span>&#160;    <span class="keywordtype">void</span> selectedObjectChange(<a class="code" href="classStelModule.html#a03668e7d4ec822bbf5555d43806607ce" title="Enum used when selecting objects to define whether to add to, replace, or remove from the existing se...">StelModule::StelModuleSelectAction</a> action);</div>
+<div class="line"><a name="l00243"></a><span class="lineno">  243</span>&#160;<span class="keyword">public</span>:</div>
+<div class="line"><a name="l00245"></a><span class="lineno">  245</span>&#160;    <span class="comment">// Other public methods</span></div>
+<div class="line"><a name="l00249"></a><span class="lineno">  249</span>&#160;<span class="comment"></span>    PlanetP <a class="code" href="classSolarSystem.html#ac9c526055bfa81f1d921a7a10c4c1c4d" title="Get a pointer to a Planet object.">searchByEnglishName</a>(QString planetEnglishName) <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00250"></a><span class="lineno">  250</span>&#160;</div>
+<div class="line"><a name="l00252"></a><span class="lineno"><a class="code" href="classSolarSystem.html#ada79b8fd368062c3d2d917a1bba7949c">  252</a></span>&#160;    PlanetP <a class="code" href="classSolarSystem.html#ada79b8fd368062c3d2d917a1bba7949c" title="Get the Planet object pointer for the Sun.">getSun</a>()<span class="keyword"> const </span>{<span class="keywordflow">return</span> sun;}</div>
+<div class="line"><a name="l00253"></a><span class="lineno">  253</span>&#160;</div>
+<div class="line"><a name="l00255"></a><span class="lineno"><a class="code" href="classSolarSystem.html#a9d5bbde466a35b9233e7de4d7f7b28b1">  255</a></span>&#160;    PlanetP <a class="code" href="classSolarSystem.html#a9d5bbde466a35b9233e7de4d7f7b28b1" title="Get the Planet object pointer for the Earth.">getEarth</a>()<span class="keyword"> const </span>{<span class="keywordflow">return</span> earth;}</div>
+<div class="line"><a name="l00256"></a><span class="lineno">  256</span>&#160;</div>
+<div class="line"><a name="l00258"></a><span class="lineno"><a class="code" href="classSolarSystem.html#acc6e06752856b3e235365dfa40e14740">  258</a></span>&#160;    PlanetP <a class="code" href="classSolarSystem.html#acc6e06752856b3e235365dfa40e14740" title="Get the Planet object pointer for Earth&#39;s moon.">getMoon</a>()<span class="keyword"> const </span>{<span class="keywordflow">return</span> moon;}</div>
+<div class="line"><a name="l00259"></a><span class="lineno">  259</span>&#160;</div>
+<div class="line"><a name="l00261"></a><span class="lineno">  261</span>&#160;    <span class="keywordtype">bool</span> <a class="code" href="classSolarSystem.html#a6d6480f5e7d855ea1b32e9853ba6d38b" title="Determine if a lunar eclipse is close at hand?">nearLunarEclipse</a>();</div>
+<div class="line"><a name="l00262"></a><span class="lineno">  262</span>&#160;</div>
+<div class="line"><a name="l00264"></a><span class="lineno">  264</span>&#160;    QStringList <a class="code" href="classSolarSystem.html#a4a1c62a7d9da7c4ec88021dfaf190641" title="Get the list of all the planet english names.">getAllPlanetEnglishNames</a>() <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00265"></a><span class="lineno">  265</span>&#160;</div>
+<div class="line"><a name="l00267"></a><span class="lineno">  267</span>&#160;    QStringList <a class="code" href="classSolarSystem.html#a826aca80458a840a362d4e008576f739" title="Get the list of all the planet localized names.">getAllPlanetLocalizedNames</a>() <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00268"></a><span class="lineno">  268</span>&#160;</div>
+<div class="line"><a name="l00270"></a><span class="lineno">  270</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classSolarSystem.html#a1be769b3861baf35a4e6a559438d5e7a" title="Reload the planets.">reloadPlanets</a>();</div>
+<div class="line"><a name="l00271"></a><span class="lineno">  271</span>&#160;</div>
+<div class="line"><a name="l00273"></a><span class="lineno">  273</span>&#160;    <span class="comment">// DEPRECATED</span></div>
+<div class="line"><a name="l00279"></a><span class="lineno">  279</span>&#160;<span class="comment"></span>    QString <a class="code" href="classSolarSystem.html#ab3635b90421a4bcec4a9368837c84a9d" title="Get a hash of locale and ssystem.ini names for use with the TUI.">getPlanetHashString</a>();</div>
+<div class="line"><a name="l00280"></a><span class="lineno">  280</span>&#160;</div>
+<div class="line"><a name="l00285"></a><span class="lineno">  285</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classSolarSystem.html#a278845fca95a186932ee052ccd60ab4e" title="Compute the position and transform matrix for every element of the solar system.">computePositions</a>(<span class="keywordtype">double</span> date, <span class="keyword">const</span> <a class="code" href="classVector3.html">Vec3d</a>&amp; observerPos = <a class="code" href="classVector3.html">Vec3d</a>(0.));</div>
 <div class="line"><a name="l00286"></a><span class="lineno">  286</span>&#160;</div>
-<div class="line"><a name="l00288"></a><span class="lineno">  288</span>&#160;    <span class="keywordtype">void</span> setStelStyle(<span class="keyword">const</span> QString&amp; section);</div>
-<div class="line"><a name="l00289"></a><span class="lineno">  289</span>&#160;</div>
+<div class="line"><a name="l00289"></a><span class="lineno"><a class="code" href="classSolarSystem.html#a8a39b95aa7d8205bd69d6e8fb5281d68">  289</a></span>&#160;    <span class="keyword">const</span> QList&lt;PlanetP&gt;&amp; <a class="code" href="classSolarSystem.html#a8a39b95aa7d8205bd69d6e8fb5281d68" title="Get the list of all the bodies of the solar system.">getAllPlanets</a>()<span class="keyword"> const </span>{<span class="keywordflow">return</span> systemPlanets;} </div>
 <div class="line"><a name="l00290"></a><span class="lineno">  290</span>&#160;</div>
-<div class="line"><a name="l00291"></a><span class="lineno">  291</span>&#160;<span class="keyword">private</span>:</div>
-<div class="line"><a name="l00297"></a><span class="lineno">  297</span>&#160;    <a class="code" href="classQSharedPointerNoDelete.html">StelObjectP</a> search(<a class="code" href="classVector3.html">Vec3d</a> v, <span class="keyword">const</span> <a class="code" href="classStelCore.html" title="Main class for Stellarium core processing.">StelCore</a>* core) <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00291"></a><span class="lineno">  291</span>&#160;<span class="keyword">private</span> slots:</div>
+<div class="line"><a name="l00293"></a><span class="lineno">  293</span>&#160;    <span class="keywordtype">void</span> selectedObjectChange(<a class="code" href="classStelModule.html#a03668e7d4ec822bbf5555d43806607ce" title="Enum used when selecting objects to define whether to add to, replace, or remove from the existing se...">StelModule::StelModuleSelectAction</a> action);</div>
+<div class="line"><a name="l00294"></a><span class="lineno">  294</span>&#160;</div>
+<div class="line"><a name="l00296"></a><span class="lineno">  296</span>&#160;    <span class="keywordtype">void</span> setStelStyle(<span class="keyword">const</span> QString&amp; section);</div>
+<div class="line"><a name="l00297"></a><span class="lineno">  297</span>&#160;</div>
 <div class="line"><a name="l00298"></a><span class="lineno">  298</span>&#160;</div>
-<div class="line"><a name="l00301"></a><span class="lineno">  301</span>&#160;    <span class="keywordtype">void</span> computeTransMatrices(<span class="keywordtype">double</span> date, <span class="keyword">const</span> <a class="code" href="classVector3.html">Vec3d</a>&amp; observerPos = <a class="code" href="classVector3.html">Vec3d</a>(0.));</div>
-<div class="line"><a name="l00302"></a><span class="lineno">  302</span>&#160;</div>
-<div class="line"><a name="l00304"></a><span class="lineno">  304</span>&#160;    <span class="keywordtype">void</span> drawPointer(<span class="keyword">const</span> <a class="code" href="classStelCore.html" title="Main class for Stellarium core processing.">StelCore</a>* core);</div>
-<div class="line"><a name="l00305"></a><span class="lineno">  305</span>&#160;</div>
-<div class="line"><a name="l00310"></a><span class="lineno">  310</span>&#160;    <span class="keywordtype">void</span> loadPlanets();</div>
-<div class="line"><a name="l00311"></a><span class="lineno">  311</span>&#160;</div>
-<div class="line"><a name="l00313"></a><span class="lineno">  313</span>&#160;    <span class="keywordtype">bool</span> loadPlanets(<span class="keyword">const</span> QString&amp; filePath);</div>
-<div class="line"><a name="l00314"></a><span class="lineno">  314</span>&#160;</div>
-<div class="line"><a name="l00315"></a><span class="lineno">  315</span>&#160;    <span class="keywordtype">void</span> recreateTrails();</div>
-<div class="line"><a name="l00316"></a><span class="lineno">  316</span>&#160;</div>
-<div class="line"><a name="l00318"></a><span class="lineno">  318</span>&#160;    <span class="keywordtype">void</span> computeShadowInfo();</div>
+<div class="line"><a name="l00299"></a><span class="lineno">  299</span>&#160;<span class="keyword">private</span>:</div>
+<div class="line"><a name="l00305"></a><span class="lineno">  305</span>&#160;    <a class="code" href="classQSharedPointerNoDelete.html">StelObjectP</a> search(<a class="code" href="classVector3.html">Vec3d</a> v, <span class="keyword">const</span> <a class="code" href="classStelCore.html" title="Main class for Stellarium core processing.">StelCore</a>* core) <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00306"></a><span class="lineno">  306</span>&#160;</div>
+<div class="line"><a name="l00309"></a><span class="lineno">  309</span>&#160;    <span class="keywordtype">void</span> computeTransMatrices(<span class="keywordtype">double</span> date, <span class="keyword">const</span> <a class="code" href="classVector3.html">Vec3d</a>&amp; observerPos = <a class="code" href="classVector3.html">Vec3d</a>(0.));</div>
+<div class="line"><a name="l00310"></a><span class="lineno">  310</span>&#160;</div>
+<div class="line"><a name="l00312"></a><span class="lineno">  312</span>&#160;    <span class="keywordtype">void</span> drawPointer(<span class="keyword">const</span> <a class="code" href="classStelCore.html" title="Main class for Stellarium core processing.">StelCore</a>* core);</div>
+<div class="line"><a name="l00313"></a><span class="lineno">  313</span>&#160;</div>
+<div class="line"><a name="l00318"></a><span class="lineno">  318</span>&#160;    <span class="keywordtype">void</span> loadPlanets();</div>
 <div class="line"><a name="l00319"></a><span class="lineno">  319</span>&#160;</div>
-<div class="line"><a name="l00321"></a><span class="lineno">  321</span>&#160;    QVector&lt;Vec4f&gt; shadowInfoBuffer;</div>
+<div class="line"><a name="l00321"></a><span class="lineno">  321</span>&#160;    <span class="keywordtype">bool</span> loadPlanets(<span class="keyword">const</span> QString&amp; filePath);</div>
 <div class="line"><a name="l00322"></a><span class="lineno">  322</span>&#160;</div>
-<div class="line"><a name="l00325"></a><span class="lineno">  325</span>&#160;    QVector&lt;Mat4d&gt; shadowModelMatricesBuffer;</div>
-<div class="line"><a name="l00326"></a><span class="lineno">  326</span>&#160;</div>
-<div class="line"><a name="l00328"></a><span class="lineno">  328</span>&#160;    <span class="keywordtype">int</span> shadowPlanetCount;</div>
-<div class="line"><a name="l00329"></a><span class="lineno">  329</span>&#160;    PlanetP sun;</div>
-<div class="line"><a name="l00330"></a><span class="lineno">  330</span>&#160;    PlanetP moon;</div>
-<div class="line"><a name="l00331"></a><span class="lineno">  331</span>&#160;    PlanetP earth;</div>
-<div class="line"><a name="l00332"></a><span class="lineno">  332</span>&#160;</div>
-<div class="line"><a name="l00335"></a><span class="lineno">  335</span>&#160;    <span class="keywordtype">void</span> setSelected(<span class="keyword">const</span> QString&amp; englishName);</div>
-<div class="line"><a name="l00337"></a><span class="lineno">  337</span>&#160;    <span class="keywordtype">void</span> setSelected(PlanetP obj);</div>
-<div class="line"><a name="l00339"></a><span class="lineno">  339</span>&#160;    PlanetP getSelected(<span class="keywordtype">void</span>)<span class="keyword"> const </span>{<span class="keywordflow">return</span> selected;}</div>
-<div class="line"><a name="l00341"></a><span class="lineno">  341</span>&#160;    PlanetP selected;</div>
-<div class="line"><a name="l00342"></a><span class="lineno">  342</span>&#160;</div>
-<div class="line"><a name="l00343"></a><span class="lineno">  343</span>&#160;    <span class="comment">// Moon scale value</span></div>
-<div class="line"><a name="l00344"></a><span class="lineno">  344</span>&#160;    <span class="keywordtype">bool</span> flagMoonScale;</div>
-<div class="line"><a name="l00345"></a><span class="lineno">  345</span>&#160;    <span class="keywordtype">float</span> moonScale;</div>
-<div class="line"><a name="l00346"></a><span class="lineno">  346</span>&#160;</div>
-<div class="line"><a name="l00347"></a><span class="lineno">  347</span>&#160;    QFont planetNameFont;</div>
-<div class="line"><a name="l00348"></a><span class="lineno">  348</span>&#160;</div>
-<div class="line"><a name="l00350"></a><span class="lineno">  350</span>&#160;    <span class="keywordtype">float</span> labelsAmount;</div>
-<div class="line"><a name="l00351"></a><span class="lineno">  351</span>&#160;</div>
-<div class="line"><a name="l00353"></a><span class="lineno">  353</span>&#160;    QList&lt;PlanetP&gt; systemPlanets;</div>
+<div class="line"><a name="l00323"></a><span class="lineno">  323</span>&#160;    <span class="keywordtype">void</span> recreateTrails();</div>
+<div class="line"><a name="l00324"></a><span class="lineno">  324</span>&#160;</div>
+<div class="line"><a name="l00326"></a><span class="lineno">  326</span>&#160;    <span class="keywordtype">void</span> computeShadowInfo();</div>
+<div class="line"><a name="l00327"></a><span class="lineno">  327</span>&#160;</div>
+<div class="line"><a name="l00329"></a><span class="lineno">  329</span>&#160;    QVector&lt;Vec4f&gt; shadowInfoBuffer;</div>
+<div class="line"><a name="l00330"></a><span class="lineno">  330</span>&#160;</div>
+<div class="line"><a name="l00333"></a><span class="lineno">  333</span>&#160;    QVector&lt;Mat4d&gt; shadowModelMatricesBuffer;</div>
+<div class="line"><a name="l00334"></a><span class="lineno">  334</span>&#160;</div>
+<div class="line"><a name="l00336"></a><span class="lineno">  336</span>&#160;    <span class="keywordtype">int</span> shadowPlanetCount;</div>
+<div class="line"><a name="l00337"></a><span class="lineno">  337</span>&#160;    PlanetP sun;</div>
+<div class="line"><a name="l00338"></a><span class="lineno">  338</span>&#160;    PlanetP moon;</div>
+<div class="line"><a name="l00339"></a><span class="lineno">  339</span>&#160;    PlanetP earth;</div>
+<div class="line"><a name="l00340"></a><span class="lineno">  340</span>&#160;</div>
+<div class="line"><a name="l00343"></a><span class="lineno">  343</span>&#160;    <span class="keywordtype">void</span> setSelected(<span class="keyword">const</span> QString&amp; englishName);</div>
+<div class="line"><a name="l00345"></a><span class="lineno">  345</span>&#160;    <span class="keywordtype">void</span> setSelected(PlanetP obj);</div>
+<div class="line"><a name="l00347"></a><span class="lineno">  347</span>&#160;    PlanetP getSelected(<span class="keywordtype">void</span>)<span class="keyword"> const </span>{<span class="keywordflow">return</span> selected;}</div>
+<div class="line"><a name="l00349"></a><span class="lineno">  349</span>&#160;    PlanetP selected;</div>
+<div class="line"><a name="l00350"></a><span class="lineno">  350</span>&#160;</div>
+<div class="line"><a name="l00351"></a><span class="lineno">  351</span>&#160;    <span class="comment">// Moon scale value</span></div>
+<div class="line"><a name="l00352"></a><span class="lineno">  352</span>&#160;    <span class="keywordtype">bool</span> flagMoonScale;</div>
+<div class="line"><a name="l00353"></a><span class="lineno">  353</span>&#160;    <span class="keywordtype">float</span> moonScale;</div>
 <div class="line"><a name="l00354"></a><span class="lineno">  354</span>&#160;</div>
-<div class="line"><a name="l00355"></a><span class="lineno">  355</span>&#160;    <span class="comment">// Master settings</span></div>
-<div class="line"><a name="l00356"></a><span class="lineno">  356</span>&#160;    <span class="keywordtype">bool</span> flagOrbits;</div>
-<div class="line"><a name="l00357"></a><span class="lineno">  357</span>&#160;    <span class="keywordtype">bool</span> flagLightTravelTime;</div>
-<div class="line"><a name="l00358"></a><span class="lineno">  358</span>&#160;</div>
-<div class="line"><a name="l00360"></a><span class="lineno">  360</span>&#160;    <a class="code" href="StelTextureTypes_8hpp.html#a085a86bd020a5f6d1240e02d596eb4bb" title="Use shared pointer to simplify memory managment.">StelTextureSP</a> texPointer;</div>
-<div class="line"><a name="l00361"></a><span class="lineno">  361</span>&#160;</div>
-<div class="line"><a name="l00362"></a><span class="lineno">  362</span>&#160;    <span class="keywordtype">bool</span> flagShow;</div>
-<div class="line"><a name="l00363"></a><span class="lineno">  363</span>&#160;    <span class="keywordtype">bool</span> flagMarker;</div>
-<div class="line"><a name="l00364"></a><span class="lineno">  364</span>&#160;</div>
-<div class="line"><a name="l00365"></a><span class="lineno">  365</span>&#160;    <span class="keyword">class </span><a class="code" href="classTrailGroup.html">TrailGroup</a>* allTrails;</div>
-<div class="line"><a name="l00366"></a><span class="lineno">  366</span>&#160;    <a class="code" href="classLinearFader.html" title="Implementation of StelFader which implements a linear transition.">LinearFader</a> trailFader;</div>
-<div class="line"><a name="l00367"></a><span class="lineno">  367</span>&#160;    <a class="code" href="classVector3.html" title="A templatized 3d vector compatible with openGL.">Vec3f</a> trailColor;</div>
-<div class="line"><a name="l00368"></a><span class="lineno">  368</span>&#160;    <a class="code" href="classVector3.html" title="A templatized 3d vector compatible with openGL.">Vec3f</a> pointerColor;</div>
+<div class="line"><a name="l00355"></a><span class="lineno">  355</span>&#160;    QFont planetNameFont;</div>
+<div class="line"><a name="l00356"></a><span class="lineno">  356</span>&#160;</div>
+<div class="line"><a name="l00358"></a><span class="lineno">  358</span>&#160;    <span class="keywordtype">float</span> labelsAmount;</div>
+<div class="line"><a name="l00359"></a><span class="lineno">  359</span>&#160;</div>
+<div class="line"><a name="l00361"></a><span class="lineno">  361</span>&#160;    QList&lt;PlanetP&gt; systemPlanets;</div>
+<div class="line"><a name="l00362"></a><span class="lineno">  362</span>&#160;</div>
+<div class="line"><a name="l00363"></a><span class="lineno">  363</span>&#160;    <span class="comment">// Master settings</span></div>
+<div class="line"><a name="l00364"></a><span class="lineno">  364</span>&#160;    <span class="keywordtype">bool</span> flagOrbits;</div>
+<div class="line"><a name="l00365"></a><span class="lineno">  365</span>&#160;    <span class="keywordtype">bool</span> flagLightTravelTime;</div>
+<div class="line"><a name="l00366"></a><span class="lineno">  366</span>&#160;</div>
+<div class="line"><a name="l00368"></a><span class="lineno">  368</span>&#160;    <a class="code" href="StelTextureTypes_8hpp.html#a085a86bd020a5f6d1240e02d596eb4bb" title="Use shared pointer to simplify memory managment.">StelTextureSP</a> texPointer;</div>
 <div class="line"><a name="l00369"></a><span class="lineno">  369</span>&#160;</div>
-<div class="line"><a name="l00371"></a><span class="lineno">  371</span>&#160;    <span class="comment">// DEPRECATED</span></div>
-<div class="line"><a name="l00373"></a><span class="lineno">  373</span>&#160;<span class="comment"></span>    QList&lt;Orbit*&gt; orbits;           <span class="comment">// Pointers on created elliptical orbits</span></div>
-<div class="line"><a name="l00374"></a><span class="lineno">  374</span>&#160;};</div>
-<div class="line"><a name="l00375"></a><span class="lineno">  375</span>&#160;</div>
-<div class="line"><a name="l00376"></a><span class="lineno">  376</span>&#160;</div>
-<div class="line"><a name="l00377"></a><span class="lineno">  377</span>&#160;<span class="preprocessor">#endif // _SOLARSYSTEM_HPP_</span></div>
+<div class="line"><a name="l00370"></a><span class="lineno">  370</span>&#160;    <span class="keywordtype">bool</span> flagShow;</div>
+<div class="line"><a name="l00371"></a><span class="lineno">  371</span>&#160;    <span class="keywordtype">bool</span> flagMarker;</div>
+<div class="line"><a name="l00372"></a><span class="lineno">  372</span>&#160;</div>
+<div class="line"><a name="l00373"></a><span class="lineno">  373</span>&#160;    <span class="keyword">class </span><a class="code" href="classTrailGroup.html">TrailGroup</a>* allTrails;</div>
+<div class="line"><a name="l00374"></a><span class="lineno">  374</span>&#160;    <a class="code" href="classLinearFader.html" title="Implementation of StelFader which implements a linear transition.">LinearFader</a> trailFader;</div>
+<div class="line"><a name="l00375"></a><span class="lineno">  375</span>&#160;    <a class="code" href="classVector3.html" title="A templatized 3d vector compatible with openGL.">Vec3f</a> trailColor;</div>
+<div class="line"><a name="l00376"></a><span class="lineno">  376</span>&#160;    <a class="code" href="classVector3.html" title="A templatized 3d vector compatible with openGL.">Vec3f</a> pointerColor;</div>
+<div class="line"><a name="l00377"></a><span class="lineno">  377</span>&#160;</div>
+<div class="line"><a name="l00379"></a><span class="lineno">  379</span>&#160;    <span class="comment">// DEPRECATED</span></div>
+<div class="line"><a name="l00381"></a><span class="lineno">  381</span>&#160;<span class="comment"></span>    QList&lt;Orbit*&gt; orbits;           <span class="comment">// Pointers on created elliptical orbits</span></div>
+<div class="line"><a name="l00382"></a><span class="lineno">  382</span>&#160;};</div>
+<div class="line"><a name="l00383"></a><span class="lineno">  383</span>&#160;</div>
+<div class="line"><a name="l00384"></a><span class="lineno">  384</span>&#160;</div>
+<div class="line"><a name="l00385"></a><span class="lineno">  385</span>&#160;<span class="preprocessor">#endif // _SOLARSYSTEM_HPP_</span></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Sun Feb 16 2014 20:43:26 for Stellarium by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Sun Feb 16 2014 23:29:43 for Stellarium by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.3.1
 </small></address>
