@@ -62,7 +62,8 @@ $language = array(
     'uk'=>'українська',
     'vi'=>'Tiếng Việt',
     'zh'=>'中文、汉语、漢語',
-    'zh_CN'=>'中文、汉语、漢語 (Simplified)',
+    'zh_CN'=>'简体中文',
+    'zh_HK'=>'香港繁體中文',
 );
 
 if (($locale == "ar") or ($locale == "fa")) {
