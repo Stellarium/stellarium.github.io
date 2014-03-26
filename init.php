@@ -29,6 +29,7 @@ $language = array(
     'de'=>'Deutsch',
     'el'=>'Ελληνικά',
     'en'=>'English',
+    'en_CA'=>'English (Canada)',
     'en_GB'=>'English (United Kingdom)',
     'es'=>'español',
     'fa'=>'فارسی',
@@ -64,6 +65,7 @@ $language = array(
     'zh'=>'中文、汉语、漢語',
     'zh_CN'=>'简体中文',
     'zh_HK'=>'香港繁體中文',
+    'zh_TW'=>'臺灣正體中文',
 );
 
 if (($locale == "ar") or ($locale == "fa")) {
