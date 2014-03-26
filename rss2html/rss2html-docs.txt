@@ -1,27 +1,38 @@
-RSS2HTML PHP Script Documentation v2.1
+RSS2HTML PHP Script Documentation v3.x
 
 Contents
   Introduction
   Uses
+  Quick Start
   Templates
   Running from FeedForAll's server
   Running on local server
   Example websites
-	Advanced Notes
+  Advanced Notes
+  Restricting Access
   Caching
 
-Introduction
+Introduction:
+-------------
 
 FeedForAll has made available a free PHP program called rss2html.php, which can be used by webmasters to automatically display RSS feeds on their website.  The resulting webpage will always show the RSS feed's most current data.  The advantage of using the rss2html.php script is that the resulting webpage's contents will always be up to date, and can be easily spidered by search engines.
 
 
-Uses
+Uses:
+-----
 
 - Create a webpage with an RSS feed's information
 - Insert an RSS feed's information into a location in an existing webpage
 
 
-Templates
+Quick Start:
+------------
+
+rss2html.php has a built in utility to help get started quickly.  This is done by calling rss2html.php with the parameter "buildURL", for example http://scripts.rss2html.com/public/rss2html.php?buildURL .  After filling in the infomation about your feed and template you will be shown the exact code to include the output of rss2html.php into a webpage.
+
+
+Templates:
+----------
 
 FeedForAll's rss2html.php script uses templates to generate its output.  The templates allow you to easily control what the resulting webpage will look like.  A template can be used to generate a complete webpage, or a portion of a webpage like a table (which can then be included inside an existing webpage). The template's syntax is exactly the same as the syntax used in FeedForAll's export functions.
 
@@ -32,10 +43,10 @@ Templates are simply standard HTML documents, with special variables inserted wh
 ~~~FeedContentEncoded~~~ (the feed's description from optional ContentEncoded field)
 ~~~FeedLink~~~  (the feed's link)
 ~~~FeedPubDate~~~  (the feed's pub date/time in RSS format)
-~~~FeedPubLongDate~~~  (the feed's date in your Windows long date format)
-~~~FeedPubShortDate~~~ (the feed's date in your Windows short date format)
-~~~FeedPubLongTime~~~  (the feed's time in your Windows long time format)
-~~~FeedPubShortTime~~~  (the feed's time in your Windows short time format)
+~~~FeedPubLongDate~~~  (the feed's date in a long date format)
+~~~FeedPubShortDate~~~ (the feed's date in a short date format)
+~~~FeedPubLongTime~~~  (the feed's time in a long time format)
+~~~FeedPubShortTime~~~  (the feed's time in a short time format)
 ~~~FeedCreativeCommons~~~ (the feed's Creative Commons(R) License URL if one exists)
 ~~~FeedImageUrl~~~  (the URL to the feed's image)
 ~~~FeedImageTitle~~~  (the title for the feed's image)
@@ -54,21 +65,31 @@ Templates are simply standard HTML documents, with special variables inserted wh
 ~~~ItemContentEncoded~~~ (the item's description from optional ContentEncoded field)
 ~~~ItemLink~~~  (the item's link)
 ~~~ItemPubDate~~~  (the item's pub date/time in RSS format)
-~~~ItemPubLongDate~~~  (the items's date in your Windows long date format)
-~~~ItemPubShortDate~~~   (the item's date in your Windows short date format)
-~~~ItemPubLongTime~~~  (the item's time in your Windows long time format)
-~~~ItemPubShortTime~~~  (the item's time in your Windows short time format)
+~~~ItemPubLongDate~~~  (the items's date in a long date format)
+~~~ItemPubShortDate~~~   (the item's date in a short date format)
+~~~ItemPubLongTime~~~  (the item's time in a long time format)
+~~~ItemPubShortTime~~~  (the item's time in a short time format)
 ~~~ItemEnclosureUrl~~~  (the item's enclosure URL)
 ~~~ItemEnclosureType~~~  (the item's enclosure MIME type)
 ~~~ItemEnclosureLength~~~  (the item's enclosure Length)
 ~~~ItemEnclosureLengthFormatted~~~  (the item's enclosure Length formatted into Kilo, Mega or Giga Bytes)
 ~~~ItemGuid~~~ (the item's GUID field value)
+~~~ItemAuthor~~~ (the item's author field value)
+~~~ItemComments~~~ (the item's comments field value)
+~~~ItemSource~~~ (the item's source field value)
+~~~ItemSourceUrl~~~ (the item's source url attribute value)
+~~~ItemCategory~~~ (the first item's category field value)
+~~~ItemCategoryDomain~~~ (the item's first category domain attribute value)
 ~~~ItemCreativeCommons~~~  (The Creative Commons(R) License URL of the item, or feed if there isn't one on the item but there is on the feed)
 
 When the rss2html.php script runs, it will substitute information from the RSS feed into the location wherever a variable is found.  For example, every time ~~~FeedTitle~~~ is found in the template's text, the Title from the RSS feed will be substituted.
 
 Special variables: 
+The ~~~FeedXMLFilename~~~ variable is the URL of the feed being processed.
+
 The ~~~FeedMaxItems=X~~~ variable can be used to limit the number of items that will be inserted into the webpage.  Replace the 'X' with a number of feed items you would like displayed (no spaces).
+
+The ~~~NumberOfFeedItems~~~ variable is the acutally number of items that were found and will be displayed, before any advanced processing.
 
 The ~~~BeginItemsRecord~~~ is used to mark the beginning of the section in the template, that should be repeated for each item in the RSS feed.  A corresponding ~~~EndItemsRecord~~~ should be used to mark the end of the repeating section.  Everything invbetween these two variables will be repeated for every item in the feed.  You would typically place all your ~~~Item...~~~ variables in between the ~~~BeginItemsRecord~~~ and ~~~EndItemsRecord~~~ variables.  
 
@@ -129,9 +150,14 @@ Example - template used to generate an HTML table, for including inside existing
 *Server-side includes, imbedded PHP code, and other inclusion methods are outside the scope of this document.
 
 
-Running rss2html.php from FeedForAll's public server
+Running rss2html.php from FeedForAll's public server:
+-----------------------------------------------------
 
 If your webserver doesn't support PHP, then you can run the rss2html.php script on FeedForAll's public server instead.  All you need to do is setup a link on your website to access the script and resulting webpage.
+
+rss2html.php has a builtin utility to help create the URLs and trouble shoot problems.  It is available by adding ?buildURL,
+
+http://scripts.rss2html.com/public/rss2html.php?buildURL
 
 Syntax: 
 
@@ -152,7 +178,8 @@ http://scripts.rss2html.com/public/rss2html.php?XMLFILE=http://www.feedforall.co
 The above URL should all be on one line, with no spaces.
 
 
-Running rss2html.php from your own webserver
+Running rss2html.php from your own webserver:
+---------------------------------------------
 
 Probably the best way to use rss2html.php is to upload it to your own webserver.  This gives you two ways to access the script.  First, you can setup a link on your webpage to access the script and resulting webpage.
 
@@ -215,6 +242,7 @@ http://www.create-rss.com (the main page is actually the rss2html.php script bei
 
 
 Advanced Notes:
+---------------
 
 Version 2.0 and later of this script use the PHP curl function to open feeds and templates.  Earlier versions used fopen.  If you need to use fopen for any reason, there is a setting at the beginning of the script that can be changed, to force that behavior.
 
@@ -236,10 +264,35 @@ Should look like this in a call to rss2html.php:
 http://www.rss2html.com/public/rss2html.php?XMLFILE=http://www.mynewssource.com/opensearch.php%3fquery%3dpike%2bfishing%26search%3dSearch%26type%3dsearch
 
 
+Restricting Access:
+-------------------
+
+The rss2html.php script now offers the ability to control if the feed and template are local or remote.  Local files can be limited to specific file extensions.  File access is controlled by the variable $fileAccessLevel, the default value is 1.
+
+
+File access level:
+ -1 = Remote files are NOT allowed, only local files allowed for template
+      and feed which have filenames ending in extensions in the
+      $allowedTemplateExtensions and $allowedFeedExtensions lists below
+  0 = Remote files and any local files allowed for template and feed
+  1 = Remote files and only local files allowed for template and feed
+      which have filenames ending in extensions in the
+      $allowedTemplateExtensions and $allowedFeedExtensions lists below
+  2 = No local files allowed, remote files only.
+
+Allowed file extensions is a list of the allowable extensions for local for the template and the feed.  Below are the default values of both of the arrays:
+
+$allowedTemplateExtensions = Array(".html", ".htm", ".shtml");
+$allowedFeedExtensions = Array(".xml", ".rss");
+
+
 Caching:
+--------
 
 There is now a caching module available for use with rss2html.  It caches the source RSS feed on your local server (if your are running rss2html.php on your local server).  This can noticably speed up page displays, and reduce bandwith usage.  The caching module is available to all registered users of FeedForAll or FeedForAll Mac.  It can be downloaded from here: 
 http://www.feedforall.com/rss-cache.htm
 
 
-Copyright 2005-2006 NotePage, Inc. All rights reserved
+Copyright 2005-2007 NotePage, Inc. All rights reserved
+
+$Id: rss2html-docs.txt,v 3.2 2007/07/16 13:06:37 housley Exp $
