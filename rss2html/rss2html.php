@@ -18,6 +18,14 @@
 // Configuration options
 // ==========================================================================
 //
+// Options from Stellarium
+// =======================
+// @mcardinot
+// Forbids repeat the same thread (using only the most recent)
+$forbidsRepeatThread = true;
+
+// Options from RSS2HTML
+// =====================
 // Set the following variable useFopenURL to one if you want/need to use
 // fopen() instead of CURL or FeedForAll_fopen()
 $useFopenURL = 0;
@@ -959,9 +967,22 @@ if (!isset($_REQUEST["buildURL"])) {
             }
             if ($FeedMaxItems < 0) {
               for ($x = count($rss_parser->Items)-1; $x >= count($rss_parser->Items) + $FeedMaxItems; $x--) {
+                // FORBIDS REPEAT THREAD
+                if ($forbidsRepeatThread) {
+                   if (strpos($allitems, $rss_parser->Items[$x]->link)) {
+                      continue 1;
+                   }
+                }
+
                 $allitems .= FeedForALL_rss2html_replaceInItem($block1, $rss_parser->Items[$x]);
                 $x--;
                 if ($x >= count($rss_parser->Items) + $FeedMaxItems) {
+                  // FORBIDS REPEAT THREAD
+                  if ($forbidsRepeatThread) {
+                     if (strpos($allitems, $rss_parser->Items[$x]->link)) {
+                        continue 1;
+                     }
+                  }
                   //
                   // This is at least one more item so use the Alternate definition
                   //
@@ -970,6 +991,13 @@ if (!isset($_REQUEST["buildURL"])) {
               }
             } else {
               for ($x = 0; $x < $loop_limit; $x++) {
+                // FORBIDS REPEAT THREAD
+                if ($forbidsRepeatThread) {
+                   if (strpos($allitems, $rss_parser->Items[$x]->link)) {
+                      continue 1;
+                   }
+                }
+
                 if (isset($debugLevel) && ($debugLevel >= 2)) {
                   echo "DIAG: Doing item fillin, \$x = $x; \$loop_limit = $loop_limit<br>\n";
                 }
@@ -977,6 +1005,12 @@ if (!isset($_REQUEST["buildURL"])) {
                 $allitems .= FeedForALL_rss2html_replaceInItem($block1, $rss_parser->Items[$x]);
                 $x++;
                 if ($x < $loop_limit) {
+                  // FORBIDS REPEAT THREAD
+                  if ($forbidsRepeatThread) {
+                     if (strpos($allitems, $rss_parser->Items[$x]->link)) {
+                        continue 1;
+                     }
+                  }
                   //
                   // This is at least one more item so use the Alternate definition
                   //
@@ -1273,5 +1307,4 @@ if (!isset($_REQUEST["buildURL"])) {
     }
   }
 }
-
 ?>
