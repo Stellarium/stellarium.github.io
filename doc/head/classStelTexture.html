@@ -30,7 +30,7 @@
       <li><a href="codingStyle.html"><span>Coding&#160;Style</span></a></li>
       <li><a href="scripting.html"><span>Scripting</span></a></li>
       <li><a href="plugins.html"><span>Plugins</span></a></li>
-      <li><a href="@ref fileStructure"><span>File&#160;Structure</span></a></li>
+      <li><a href="fileStructure.html"><span>File&#160;Structure</span></a></li>
     </ul>
   </div>
   <div id="navrow2" class="tabs2">
@@ -78,9 +78,6 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:ad88a928865ae9b4d50c81c734157fe3e"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classStelTexture.html#ad88a928865ae9b4d50c81c734157fe3e">bind</a> (int slot=0)</td></tr>
 <tr class="memdesc:ad88a928865ae9b4d50c81c734157fe3e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Bind the texture so that it can be used for openGL drawing (calls glBindTexture).  <a href="#ad88a928865ae9b4d50c81c734157fe3e">More...</a><br/></td></tr>
 <tr class="separator:ad88a928865ae9b4d50c81c734157fe3e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a8adca3cf7b20c3c27a5d5433f5bf934a"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classStelTexture.html#a8adca3cf7b20c3c27a5d5433f5bf934a">loadFromMemory</a> (const char *data, int width, int height, GLint format, GLint type, GLint internalFormat=0)</td></tr>
-<tr class="memdesc:a8adca3cf7b20c3c27a5d5433f5bf934a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Load image data from in memory data.  <a href="#a8adca3cf7b20c3c27a5d5433f5bf934a">More...</a><br/></td></tr>
-<tr class="separator:a8adca3cf7b20c3c27a5d5433f5bf934a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a28424110b8bcf77b6634b03cc2db7201"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classStelTexture.html#a28424110b8bcf77b6634b03cc2db7201">canBind</a> () const </td></tr>
 <tr class="memdesc:a28424110b8bcf77b6634b03cc2db7201"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return whether the texture can be binded, i.e. it is fully loaded.  <a href="#a28424110b8bcf77b6634b03cc2db7201">More...</a><br/></td></tr>
 <tr class="separator:a28424110b8bcf77b6634b03cc2db7201"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -101,6 +98,8 @@ Public Member Functions</h2></td></tr>
 <div class="textblock"><p>Base texture class. </p>
 <p>For creating an instance, use <a class="el" href="classStelTextureMgr.html#ac0d2f813f31c87596a35481aeaaa9c17" title="Load an image from a file and create a new texture from it. ">StelTextureMgr::createTexture()</a> and <a class="el" href="classStelTextureMgr.html#a16f992541de2b7641a24c6b666d0a31f" title="Load an image from a file and create a new texture from it in a new thread. ">StelTextureMgr::createTextureThread()</a> </p>
 <dl class="section see"><dt>See Also</dt><dd><a class="el" href="StelTextureTypes_8hpp.html#a085a86bd020a5f6d1240e02d596eb4bb" title="Use shared pointer to simplify memory managment. ">StelTextureSP</a> </dd></dl>
+
+<p>Definition at line <a class="el" href="StelTexture_8hpp_source.html#l00041">41</a> of file <a class="el" href="StelTexture_8hpp_source.html">StelTexture.hpp</a>.</p>
 </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a class="anchor" id="adb17b2c1df6f4ba999d4d293a3bdd685"></a>
 <div class="memitem">
@@ -171,6 +170,8 @@ Public Member Functions</h2></td></tr>
 
 <p>Return whether the texture can be binded, i.e. it is fully loaded. </p>
 
+<p>Definition at line <a class="el" href="StelTexture_8hpp_source.html#l00071">71</a> of file <a class="el" href="StelTexture_8hpp_source.html">StelTexture.hpp</a>.</p>
+
 </div>
 </div>
 <a class="anchor" id="a7c9495b583a5d7f37cbb1b69f2bc7f93"></a>
@@ -225,6 +226,8 @@ Public Member Functions</h2></td></tr>
 <p>Get the error message which caused the texture loading to fail. </p>
 <dl class="section return"><dt>Returns</dt><dd>the human friendly error message or empty string if no errors occured </dd></dl>
 
+<p>Definition at line <a class="el" href="StelTexture_8hpp_source.html#l00078">78</a> of file <a class="el" href="StelTexture_8hpp_source.html">StelTexture.hpp</a>.</p>
+
 </div>
 </div>
 <a class="anchor" id="ac288fffa75234d6c7c43c5d030757e5a"></a>
@@ -251,6 +254,8 @@ Public Member Functions</h2></td></tr>
 <p>Return the full path to the image file. </p>
 <p>If the texture was downloaded from a remote location, this function return the full URL. </p>
 
+<p>Definition at line <a class="el" href="StelTexture_8hpp_source.html#l00082">82</a> of file <a class="el" href="StelTexture_8hpp_source.html">StelTexture.hpp</a>.</p>
+
 </div>
 </div>
 <a class="anchor" id="a8c341c3e7fb74b1ff2daff37ea569749"></a>
@@ -276,57 +281,7 @@ Public Member Functions</h2></td></tr>
 
 <p>Return whether the image is currently being loaded. </p>
 
-</div>
-</div>
-<a class="anchor" id="a8adca3cf7b20c3c27a5d5433f5bf934a"></a>
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">bool StelTexture::loadFromMemory </td>
-          <td>(</td>
-          <td class="paramtype">const char *&#160;</td>
-          <td class="paramname"><em>data</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">int&#160;</td>
-          <td class="paramname"><em>width</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">int&#160;</td>
-          <td class="paramname"><em>height</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">GLint&#160;</td>
-          <td class="paramname"><em>format</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">GLint&#160;</td>
-          <td class="paramname"><em>type</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">GLint&#160;</td>
-          <td class="paramname"><em>internalFormat</em> = <code>0</code>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Load image data from in memory data. </p>
+<p>Definition at line <a class="el" href="StelTexture_8hpp_source.html#l00085">85</a> of file <a class="el" href="StelTexture_8hpp_source.html">StelTexture.hpp</a>.</p>
 
 </div>
 </div>
@@ -363,10 +318,13 @@ Public Member Functions</h2></td></tr>
 
 </div>
 </div>
+<hr/>The documentation for this class was generated from the following file:<ul>
+<li>/home/aw/devel/stellarium/trunk/src/core/<a class="el" href="StelTexture_8hpp_source.html">StelTexture.hpp</a></li>
+</ul>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Sun Mar 23 2014 16:33:17 for Stellarium by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Sun Jun 22 2014 21:09:10 for Stellarium by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.6
 </small></address>

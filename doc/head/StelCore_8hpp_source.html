@@ -3,7 +3,7 @@
 <head>
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
-<title>Stellarium: core/StelCore.hpp Source File</title>
+<title>Stellarium: /home/aw/devel/stellarium/trunk/src/core/StelCore.hpp Source File</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <link href="doxygen.css" rel="stylesheet" type="text/css" />
 </head>
@@ -30,7 +30,7 @@
       <li><a href="codingStyle.html"><span>Coding&#160;Style</span></a></li>
       <li><a href="scripting.html"><span>Scripting</span></a></li>
       <li><a href="plugins.html"><span>Plugins</span></a></li>
-      <li><a href="@ref fileStructure"><span>File&#160;Structure</span></a></li>
+      <li><a href="fileStructure.html"><span>File&#160;Structure</span></a></li>
     </ul>
   </div>
   <div id="navrow2" class="tabs2">
@@ -41,7 +41,7 @@
   </div>
 <div id="nav-path" class="navpath">
   <ul>
-<li class="navelem"><a class="el" href="dir_aebb8dcc11953d78e620bbef0b9e2183.html">core</a></li>  </ul>
+<li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="dir_aebb8dcc11953d78e620bbef0b9e2183.html">core</a></li>  </ul>
 </div>
 </div><!-- top -->
 <div class="header">
@@ -105,338 +105,338 @@
 <div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;        FrameGalactic           </div>
 <div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;    };</div>
 <div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;</div>
-<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;    <span class="keyword">enum</span> ProjectionType</div>
-<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;    {</div>
-<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;        ProjectionPerspective,      </div>
-<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;        ProjectionEqualArea,        </div>
-<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;        ProjectionStereographic,    </div>
-<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;        ProjectionFisheye,      </div>
-<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;        ProjectionHammer,       </div>
-<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;        ProjectionCylinder,     </div>
-<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;        ProjectionMercator,     </div>
-<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;        ProjectionOrthographic      </div>
-<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;    };</div>
-<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;</div>
-<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;    <span class="keyword">enum</span> RefractionMode</div>
-<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;    {</div>
-<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;        RefractionAuto,         </div>
-<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;        RefractionOn,           </div>
-<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;        RefractionOff           </div>
-<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;    };</div>
-<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;</div>
-<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;    <span class="keyword">enum</span> DeltaTAlgorithm</div>
-<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;    {</div>
-<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;        WithoutCorrection,              </div>
-<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;        Schoch,                         </div>
-<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;        Clemence,                       </div>
-<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;        IAU,                            </div>
-<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;        AstronomicalEphemeris,          </div>
-<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;        TuckermanGoldstine,             </div>
-<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;        MullerStephenson,               </div>
-<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;        Stephenson1978,                 </div>
-<div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;        SchmadelZech1979,               </div>
-<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;        MorrisonStephenson1982,         </div>
-<div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;        StephensonMorrison1984,         </div>
-<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;        StephensonHoulden,              </div>
-<div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;        Espenak,                        </div>
-<div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;        Borkowski,                      </div>
-<div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;        SchmadelZech1988,               </div>
-<div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160;        ChaprontTouze,                  </div>
-<div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160;        StephensonMorrison1995,         </div>
-<div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160;        Stephenson1997,                 </div>
-<div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160;        ChaprontMeeus,                  </div>
-<div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160;        JPLHorizons,                    </div>
-<div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160;        MeeusSimons,                    </div>
-<div class="line"><a name="l00116"></a><span class="lineno">  116</span>&#160;        MontenbruckPfleger,             </div>
-<div class="line"><a name="l00117"></a><span class="lineno">  117</span>&#160;        ReingoldDershowitz,             </div>
-<div class="line"><a name="l00118"></a><span class="lineno">  118</span>&#160;        MorrisonStephenson2004,         </div>
-<div class="line"><a name="l00119"></a><span class="lineno">  119</span>&#160;        Reijs,                          </div>
-<div class="line"><a name="l00120"></a><span class="lineno">  120</span>&#160;        EspenakMeeus,                   </div>
-<div class="line"><a name="l00121"></a><span class="lineno">  121</span>&#160;        Banjevic,           </div>
-<div class="line"><a name="l00122"></a><span class="lineno">  122</span>&#160;        IslamSadiqQureshi,      </div>
-<div class="line"><a name="l00123"></a><span class="lineno">  123</span>&#160;        Custom                          </div>
-<div class="line"><a name="l00124"></a><span class="lineno">  124</span>&#160;    };</div>
-<div class="line"><a name="l00125"></a><span class="lineno">  125</span>&#160;</div>
-<div class="line"><a name="l00126"></a><span class="lineno">  126</span>&#160;    <a class="code" href="classStelCore.html">StelCore</a>();</div>
-<div class="line"><a name="l00127"></a><span class="lineno">  127</span>&#160;    <span class="keyword">virtual</span> ~<a class="code" href="classStelCore.html">StelCore</a>();</div>
-<div class="line"><a name="l00128"></a><span class="lineno">  128</span>&#160;</div>
-<div class="line"><a name="l00130"></a><span class="lineno">  130</span>&#160;    <span class="keywordtype">void</span> init();</div>
-<div class="line"><a name="l00131"></a><span class="lineno">  131</span>&#160;</div>
-<div class="line"><a name="l00134"></a><span class="lineno">  134</span>&#160;    <span class="keywordtype">void</span> update(<span class="keywordtype">double</span> deltaTime);</div>
-<div class="line"><a name="l00135"></a><span class="lineno">  135</span>&#160;</div>
-<div class="line"><a name="l00137"></a><span class="lineno">  137</span>&#160;    <span class="keywordtype">void</span> windowHasBeenResized(<span class="keywordtype">float</span> x, <span class="keywordtype">float</span> y, <span class="keywordtype">float</span> width, <span class="keywordtype">float</span> height);</div>
-<div class="line"><a name="l00138"></a><span class="lineno">  138</span>&#160;</div>
-<div class="line"><a name="l00140"></a><span class="lineno">  140</span>&#160;    <span class="keywordtype">void</span> preDraw();</div>
-<div class="line"><a name="l00141"></a><span class="lineno">  141</span>&#160;</div>
-<div class="line"><a name="l00143"></a><span class="lineno">  143</span>&#160;    <span class="keywordtype">void</span> postDraw();</div>
-<div class="line"><a name="l00144"></a><span class="lineno">  144</span>&#160;</div>
-<div class="line"><a name="l00147"></a><span class="lineno">  147</span>&#160;    <a class="code" href="StelProjectorType_8hpp.html#a286221a2d4640bbeec2090cfbfadb0ff">StelProjectorP</a> getProjection2d() <span class="keyword">const</span>;</div>
-<div class="line"><a name="l00148"></a><span class="lineno">  148</span>&#160;</div>
-<div class="line"><a name="l00151"></a><span class="lineno">  151</span>&#160;    <a class="code" href="StelProjectorType_8hpp.html#a286221a2d4640bbeec2090cfbfadb0ff">StelProjectorP</a> getProjection(FrameType frameType, RefractionMode refractionMode=RefractionAuto) <span class="keyword">const</span>;</div>
-<div class="line"><a name="l00152"></a><span class="lineno">  152</span>&#160;</div>
-<div class="line"><a name="l00155"></a><span class="lineno">  155</span>&#160;    <a class="code" href="StelProjectorType_8hpp.html#a286221a2d4640bbeec2090cfbfadb0ff">StelProjectorP</a> getProjection(<a class="code" href="classStelProjector.html#ae6b42a6973558f855691b91701edf0dc">StelProjector::ModelViewTranformP</a> modelViewTransform, ProjectionType projType=(ProjectionType)1000) <span class="keyword">const</span>;</div>
-<div class="line"><a name="l00156"></a><span class="lineno">  156</span>&#160;</div>
-<div class="line"><a name="l00158"></a><span class="lineno">  158</span>&#160;    <a class="code" href="classStelToneReproducer.html">StelToneReproducer</a>* getToneReproducer();</div>
-<div class="line"><a name="l00160"></a><span class="lineno">  160</span>&#160;    <span class="keyword">const</span> <a class="code" href="classStelToneReproducer.html">StelToneReproducer</a>* getToneReproducer() <span class="keyword">const</span>;</div>
-<div class="line"><a name="l00161"></a><span class="lineno">  161</span>&#160;</div>
-<div class="line"><a name="l00163"></a><span class="lineno">  163</span>&#160;    <a class="code" href="classStelSkyDrawer.html">StelSkyDrawer</a>* getSkyDrawer();</div>
-<div class="line"><a name="l00165"></a><span class="lineno">  165</span>&#160;    <span class="keyword">const</span> <a class="code" href="classStelSkyDrawer.html">StelSkyDrawer</a>* getSkyDrawer() <span class="keyword">const</span>;</div>
-<div class="line"><a name="l00166"></a><span class="lineno">  166</span>&#160;</div>
-<div class="line"><a name="l00168"></a><span class="lineno">  168</span>&#160;    <span class="keyword">const</span> <a class="code" href="classStelGeodesicGrid.html">StelGeodesicGrid</a>* getGeodesicGrid(<span class="keywordtype">int</span> maxLevel) <span class="keyword">const</span>;</div>
-<div class="line"><a name="l00169"></a><span class="lineno">  169</span>&#160;</div>
-<div class="line"><a name="l00171"></a><span class="lineno">  171</span>&#160;    <a class="code" href="classStelMovementMgr.html">StelMovementMgr</a>* getMovementMgr();</div>
-<div class="line"><a name="l00173"></a><span class="lineno">  173</span>&#160;    <span class="keyword">const</span> <a class="code" href="classStelMovementMgr.html">StelMovementMgr</a>* getMovementMgr() <span class="keyword">const</span>;</div>
-<div class="line"><a name="l00174"></a><span class="lineno">  174</span>&#160;</div>
-<div class="line"><a name="l00176"></a><span class="lineno">  176</span>&#160;    <span class="keywordtype">void</span> setClippingPlanes(<span class="keywordtype">double</span> znear, <span class="keywordtype">double</span> zfar);</div>
-<div class="line"><a name="l00178"></a><span class="lineno">  178</span>&#160;    <span class="keywordtype">void</span> getClippingPlanes(<span class="keywordtype">double</span>* zn, <span class="keywordtype">double</span>* zf) <span class="keyword">const</span>;</div>
-<div class="line"><a name="l00179"></a><span class="lineno">  179</span>&#160;</div>
-<div class="line"><a name="l00181"></a><span class="lineno">  181</span>&#160;    QString projectionTypeKeyToNameI18n(<span class="keyword">const</span> QString&amp; key) <span class="keyword">const</span>;</div>
-<div class="line"><a name="l00182"></a><span class="lineno">  182</span>&#160;</div>
-<div class="line"><a name="l00184"></a><span class="lineno">  184</span>&#160;    QString projectionNameI18nToTypeKey(<span class="keyword">const</span> QString&amp; nameI18n) <span class="keyword">const</span>;</div>
-<div class="line"><a name="l00185"></a><span class="lineno">  185</span>&#160;</div>
-<div class="line"><a name="l00187"></a><span class="lineno">  187</span>&#160;    <a class="code" href="structStelProjector_1_1StelProjectorParams.html">StelProjector::StelProjectorParams</a> getCurrentStelProjectorParams() <span class="keyword">const</span>;</div>
-<div class="line"><a name="l00189"></a><span class="lineno">  189</span>&#160;    <span class="keywordtype">void</span> setCurrentStelProjectorParams(<span class="keyword">const</span> <a class="code" href="structStelProjector_1_1StelProjectorParams.html">StelProjector::StelProjectorParams</a>&amp; newParams);</div>
-<div class="line"><a name="l00190"></a><span class="lineno">  190</span>&#160;</div>
-<div class="line"><a name="l00192"></a><span class="lineno">  192</span>&#160;    <span class="keywordtype">void</span> lookAtJ2000(<span class="keyword">const</span> <a class="code" href="classVector3.html">Vec3d</a>&amp; pos, <span class="keyword">const</span> <a class="code" href="classVector3.html">Vec3d</a>&amp; up);</div>
-<div class="line"><a name="l00193"></a><span class="lineno">  193</span>&#160;</div>
-<div class="line"><a name="l00194"></a><span class="lineno">  194</span>&#160;    <a class="code" href="classVector3.html">Vec3d</a> altAzToEquinoxEqu(<span class="keyword">const</span> <a class="code" href="classVector3.html">Vec3d</a>&amp; v, RefractionMode refMode=RefractionAuto) <span class="keyword">const</span>;</div>
-<div class="line"><a name="l00195"></a><span class="lineno">  195</span>&#160;    <a class="code" href="classVector3.html">Vec3d</a> equinoxEquToAltAz(<span class="keyword">const</span> <a class="code" href="classVector3.html">Vec3d</a>&amp; v, RefractionMode refMode=RefractionAuto) <span class="keyword">const</span>;</div>
-<div class="line"><a name="l00196"></a><span class="lineno">  196</span>&#160;    <a class="code" href="classVector3.html">Vec3d</a> altAzToJ2000(<span class="keyword">const</span> <a class="code" href="classVector3.html">Vec3d</a>&amp; v, RefractionMode refMode=RefractionAuto) <span class="keyword">const</span>;</div>
-<div class="line"><a name="l00197"></a><span class="lineno">  197</span>&#160;    <a class="code" href="classVector3.html">Vec3d</a> j2000ToAltAz(<span class="keyword">const</span> <a class="code" href="classVector3.html">Vec3d</a>&amp; v, RefractionMode refMode=RefractionAuto) <span class="keyword">const</span>;</div>
-<div class="line"><a name="l00198"></a><span class="lineno">  198</span>&#160;    <span class="keywordtype">void</span> j2000ToAltAzInPlaceNoRefraction(<a class="code" href="classVector3.html">Vec3f</a>* v)<span class="keyword"> const </span>{v-&gt;transfo4d(matJ2000ToAltAz);}</div>
-<div class="line"><a name="l00199"></a><span class="lineno">  199</span>&#160;    <a class="code" href="classVector3.html">Vec3d</a> galacticToJ2000(<span class="keyword">const</span> <a class="code" href="classVector3.html">Vec3d</a>&amp; v) <span class="keyword">const</span>;</div>
-<div class="line"><a name="l00200"></a><span class="lineno">  200</span>&#160;    <a class="code" href="classVector3.html">Vec3d</a> equinoxEquToJ2000(<span class="keyword">const</span> <a class="code" href="classVector3.html">Vec3d</a>&amp; v) <span class="keyword">const</span>;</div>
-<div class="line"><a name="l00201"></a><span class="lineno">  201</span>&#160;    <a class="code" href="classVector3.html">Vec3d</a> j2000ToEquinoxEqu(<span class="keyword">const</span> <a class="code" href="classVector3.html">Vec3d</a>&amp; v) <span class="keyword">const</span>;</div>
-<div class="line"><a name="l00202"></a><span class="lineno">  202</span>&#160;    <a class="code" href="classVector3.html">Vec3d</a> j2000ToGalactic(<span class="keyword">const</span> <a class="code" href="classVector3.html">Vec3d</a>&amp; v) <span class="keyword">const</span>;</div>
-<div class="line"><a name="l00203"></a><span class="lineno">  203</span>&#160;</div>
-<div class="line"><a name="l00205"></a><span class="lineno">  205</span>&#160;    <a class="code" href="classVector3.html">Vec3d</a> heliocentricEclipticToAltAz(<span class="keyword">const</span> <a class="code" href="classVector3.html">Vec3d</a>&amp; v, RefractionMode refMode=RefractionAuto) <span class="keyword">const</span>;</div>
-<div class="line"><a name="l00206"></a><span class="lineno">  206</span>&#160;</div>
-<div class="line"><a name="l00208"></a><span class="lineno">  208</span>&#160;    <a class="code" href="classVector3.html">Vec3d</a> heliocentricEclipticToEquinoxEqu(<span class="keyword">const</span> <a class="code" href="classVector3.html">Vec3d</a>&amp; v) <span class="keyword">const</span>;</div>
-<div class="line"><a name="l00211"></a><span class="lineno">  211</span>&#160;    <a class="code" href="classVector3.html">Vec3d</a> heliocentricEclipticToEarthPosEquinoxEqu(<span class="keyword">const</span> <a class="code" href="classVector3.html">Vec3d</a>&amp; v) <span class="keyword">const</span>;</div>
-<div class="line"><a name="l00212"></a><span class="lineno">  212</span>&#160;</div>
-<div class="line"><a name="l00214"></a><span class="lineno">  214</span>&#160;    <a class="code" href="classStelProjector.html#ae6b42a6973558f855691b91701edf0dc">StelProjector::ModelViewTranformP</a> getHeliocentricEclipticModelViewTransform(RefractionMode refMode=RefractionAuto) <span class="keyword">const</span>;</div>
-<div class="line"><a name="l00215"></a><span class="lineno">  215</span>&#160;</div>
-<div class="line"><a name="l00217"></a><span class="lineno">  217</span>&#160;    <a class="code" href="classStelProjector.html#ae6b42a6973558f855691b91701edf0dc">StelProjector::ModelViewTranformP</a> getObservercentricEclipticModelViewTransform(RefractionMode refMode=RefractionAuto) <span class="keyword">const</span>;</div>
-<div class="line"><a name="l00218"></a><span class="lineno">  218</span>&#160;</div>
-<div class="line"><a name="l00220"></a><span class="lineno">  220</span>&#160;    <a class="code" href="classStelProjector.html#ae6b42a6973558f855691b91701edf0dc">StelProjector::ModelViewTranformP</a> getEquinoxEquModelViewTransform(RefractionMode refMode=RefractionAuto) <span class="keyword">const</span>;</div>
-<div class="line"><a name="l00221"></a><span class="lineno">  221</span>&#160;</div>
-<div class="line"><a name="l00223"></a><span class="lineno">  223</span>&#160;    <a class="code" href="classStelProjector.html#ae6b42a6973558f855691b91701edf0dc">StelProjector::ModelViewTranformP</a> getAltAzModelViewTransform(RefractionMode refMode=RefractionAuto) <span class="keyword">const</span>;</div>
-<div class="line"><a name="l00224"></a><span class="lineno">  224</span>&#160;</div>
-<div class="line"><a name="l00226"></a><span class="lineno">  226</span>&#160;    <a class="code" href="classStelProjector.html#ae6b42a6973558f855691b91701edf0dc">StelProjector::ModelViewTranformP</a> getJ2000ModelViewTransform(RefractionMode refMode=RefractionAuto) <span class="keyword">const</span>;</div>
-<div class="line"><a name="l00227"></a><span class="lineno">  227</span>&#160;</div>
-<div class="line"><a name="l00229"></a><span class="lineno">  229</span>&#160;    <a class="code" href="classStelProjector.html#ae6b42a6973558f855691b91701edf0dc">StelProjector::ModelViewTranformP</a> getGalacticModelViewTransform(RefractionMode refMode=RefractionAuto) <span class="keyword">const</span>;</div>
-<div class="line"><a name="l00230"></a><span class="lineno">  230</span>&#160;</div>
-<div class="line"><a name="l00232"></a><span class="lineno">  232</span>&#160;    <span class="keyword">static</span> <span class="keyword">const</span> <a class="code" href="classMatrix4.html">Mat4d</a> matJ2000ToVsop87;</div>
-<div class="line"><a name="l00234"></a><span class="lineno">  234</span>&#160;    <span class="keyword">static</span> <span class="keyword">const</span> <a class="code" href="classMatrix4.html">Mat4d</a> matVsop87ToJ2000;</div>
-<div class="line"><a name="l00236"></a><span class="lineno">  236</span>&#160;    <span class="keyword">static</span> <span class="keyword">const</span> <a class="code" href="classMatrix4.html">Mat4d</a> matJ2000ToGalactic;</div>
-<div class="line"><a name="l00238"></a><span class="lineno">  238</span>&#160;    <span class="keyword">static</span> <span class="keyword">const</span> <a class="code" href="classMatrix4.html">Mat4d</a> matGalacticToJ2000;</div>
-<div class="line"><a name="l00239"></a><span class="lineno">  239</span>&#160;</div>
-<div class="line"><a name="l00241"></a><span class="lineno">  241</span>&#160;    <a class="code" href="classVector3.html">Vec3d</a> getObserverHeliocentricEclipticPos() <span class="keyword">const</span>;</div>
-<div class="line"><a name="l00242"></a><span class="lineno">  242</span>&#160;</div>
-<div class="line"><a name="l00244"></a><span class="lineno">  244</span>&#160;    <span class="keyword">const</span> <a class="code" href="classStelLocation.html">StelLocation</a>&amp; getCurrentLocation() <span class="keyword">const</span>;</div>
-<div class="line"><a name="l00245"></a><span class="lineno">  245</span>&#160;</div>
-<div class="line"><a name="l00246"></a><span class="lineno">  246</span>&#160;    <span class="keyword">const</span> QSharedPointer&lt;class Planet&gt; getCurrentPlanet() <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;    <span class="keyword">enum</span> ProjectionType</div>
+<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;    {</div>
+<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;        ProjectionPerspective,      </div>
+<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;        ProjectionEqualArea,        </div>
+<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;        ProjectionStereographic,    </div>
+<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;        ProjectionFisheye,      </div>
+<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;        ProjectionHammer,       </div>
+<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;        ProjectionCylinder,     </div>
+<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;        ProjectionMercator,     </div>
+<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;        ProjectionOrthographic      </div>
+<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;    };</div>
+<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;</div>
+<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;    <span class="keyword">enum</span> RefractionMode</div>
+<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;    {</div>
+<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;        RefractionAuto,         </div>
+<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;        RefractionOn,           </div>
+<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;        RefractionOff           </div>
+<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;    };</div>
+<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;</div>
+<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;    <span class="keyword">enum</span> DeltaTAlgorithm</div>
+<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;    {</div>
+<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;        WithoutCorrection,              </div>
+<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;        Schoch,                         </div>
+<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;        Clemence,                       </div>
+<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;        IAU,                            </div>
+<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;        AstronomicalEphemeris,          </div>
+<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;        TuckermanGoldstine,             </div>
+<div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;        MullerStephenson,               </div>
+<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;        Stephenson1978,                 </div>
+<div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;        SchmadelZech1979,               </div>
+<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;        MorrisonStephenson1982,         </div>
+<div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;        StephensonMorrison1984,         </div>
+<div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;        StephensonHoulden,              </div>
+<div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;        Espenak,                        </div>
+<div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160;        Borkowski,                      </div>
+<div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160;        SchmadelZech1988,               </div>
+<div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160;        ChaprontTouze,                  </div>
+<div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160;        StephensonMorrison1995,         </div>
+<div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160;        Stephenson1997,                 </div>
+<div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160;        ChaprontMeeus,                  </div>
+<div class="line"><a name="l00116"></a><span class="lineno">  116</span>&#160;        JPLHorizons,                    </div>
+<div class="line"><a name="l00117"></a><span class="lineno">  117</span>&#160;        MeeusSimons,                    </div>
+<div class="line"><a name="l00118"></a><span class="lineno">  118</span>&#160;        MontenbruckPfleger,             </div>
+<div class="line"><a name="l00119"></a><span class="lineno">  119</span>&#160;        ReingoldDershowitz,             </div>
+<div class="line"><a name="l00120"></a><span class="lineno">  120</span>&#160;        MorrisonStephenson2004,         </div>
+<div class="line"><a name="l00121"></a><span class="lineno">  121</span>&#160;        Reijs,                          </div>
+<div class="line"><a name="l00122"></a><span class="lineno">  122</span>&#160;        EspenakMeeus,                   </div>
+<div class="line"><a name="l00123"></a><span class="lineno">  123</span>&#160;        Banjevic,           </div>
+<div class="line"><a name="l00124"></a><span class="lineno">  124</span>&#160;        IslamSadiqQureshi,      </div>
+<div class="line"><a name="l00125"></a><span class="lineno">  125</span>&#160;        Custom                          </div>
+<div class="line"><a name="l00126"></a><span class="lineno">  126</span>&#160;    };</div>
+<div class="line"><a name="l00127"></a><span class="lineno">  127</span>&#160;</div>
+<div class="line"><a name="l00128"></a><span class="lineno">  128</span>&#160;    <a class="code" href="classStelCore.html">StelCore</a>();</div>
+<div class="line"><a name="l00129"></a><span class="lineno">  129</span>&#160;    <span class="keyword">virtual</span> ~<a class="code" href="classStelCore.html">StelCore</a>();</div>
+<div class="line"><a name="l00130"></a><span class="lineno">  130</span>&#160;</div>
+<div class="line"><a name="l00132"></a><span class="lineno">  132</span>&#160;    <span class="keywordtype">void</span> init();</div>
+<div class="line"><a name="l00133"></a><span class="lineno">  133</span>&#160;</div>
+<div class="line"><a name="l00136"></a><span class="lineno">  136</span>&#160;    <span class="keywordtype">void</span> update(<span class="keywordtype">double</span> deltaTime);</div>
+<div class="line"><a name="l00137"></a><span class="lineno">  137</span>&#160;</div>
+<div class="line"><a name="l00139"></a><span class="lineno">  139</span>&#160;    <span class="keywordtype">void</span> windowHasBeenResized(<span class="keywordtype">float</span> x, <span class="keywordtype">float</span> y, <span class="keywordtype">float</span> width, <span class="keywordtype">float</span> height);</div>
+<div class="line"><a name="l00140"></a><span class="lineno">  140</span>&#160;</div>
+<div class="line"><a name="l00142"></a><span class="lineno">  142</span>&#160;    <span class="keywordtype">void</span> preDraw();</div>
+<div class="line"><a name="l00143"></a><span class="lineno">  143</span>&#160;</div>
+<div class="line"><a name="l00145"></a><span class="lineno">  145</span>&#160;    <span class="keywordtype">void</span> postDraw();</div>
+<div class="line"><a name="l00146"></a><span class="lineno">  146</span>&#160;</div>
+<div class="line"><a name="l00149"></a><span class="lineno">  149</span>&#160;    <a class="code" href="StelProjectorType_8hpp.html#a286221a2d4640bbeec2090cfbfadb0ff">StelProjectorP</a> getProjection2d() <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00150"></a><span class="lineno">  150</span>&#160;</div>
+<div class="line"><a name="l00153"></a><span class="lineno">  153</span>&#160;    <a class="code" href="StelProjectorType_8hpp.html#a286221a2d4640bbeec2090cfbfadb0ff">StelProjectorP</a> getProjection(FrameType frameType, RefractionMode refractionMode=RefractionAuto) <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00154"></a><span class="lineno">  154</span>&#160;</div>
+<div class="line"><a name="l00157"></a><span class="lineno">  157</span>&#160;    <a class="code" href="StelProjectorType_8hpp.html#a286221a2d4640bbeec2090cfbfadb0ff">StelProjectorP</a> getProjection(<a class="code" href="classStelProjector.html#ae6b42a6973558f855691b91701edf0dc">StelProjector::ModelViewTranformP</a> modelViewTransform, ProjectionType projType=(ProjectionType)1000) <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00158"></a><span class="lineno">  158</span>&#160;</div>
+<div class="line"><a name="l00160"></a><span class="lineno">  160</span>&#160;    <a class="code" href="classStelToneReproducer.html">StelToneReproducer</a>* getToneReproducer();</div>
+<div class="line"><a name="l00162"></a><span class="lineno">  162</span>&#160;    <span class="keyword">const</span> <a class="code" href="classStelToneReproducer.html">StelToneReproducer</a>* getToneReproducer() <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00163"></a><span class="lineno">  163</span>&#160;</div>
+<div class="line"><a name="l00165"></a><span class="lineno">  165</span>&#160;    <a class="code" href="classStelSkyDrawer.html">StelSkyDrawer</a>* getSkyDrawer();</div>
+<div class="line"><a name="l00167"></a><span class="lineno">  167</span>&#160;    <span class="keyword">const</span> <a class="code" href="classStelSkyDrawer.html">StelSkyDrawer</a>* getSkyDrawer() <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00168"></a><span class="lineno">  168</span>&#160;</div>
+<div class="line"><a name="l00170"></a><span class="lineno">  170</span>&#160;    <span class="keyword">const</span> <a class="code" href="classStelGeodesicGrid.html">StelGeodesicGrid</a>* getGeodesicGrid(<span class="keywordtype">int</span> maxLevel) <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00171"></a><span class="lineno">  171</span>&#160;</div>
+<div class="line"><a name="l00173"></a><span class="lineno">  173</span>&#160;    <a class="code" href="classStelMovementMgr.html">StelMovementMgr</a>* getMovementMgr();</div>
+<div class="line"><a name="l00175"></a><span class="lineno">  175</span>&#160;    <span class="keyword">const</span> <a class="code" href="classStelMovementMgr.html">StelMovementMgr</a>* getMovementMgr() <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00176"></a><span class="lineno">  176</span>&#160;</div>
+<div class="line"><a name="l00178"></a><span class="lineno">  178</span>&#160;    <span class="keywordtype">void</span> setClippingPlanes(<span class="keywordtype">double</span> znear, <span class="keywordtype">double</span> zfar);</div>
+<div class="line"><a name="l00180"></a><span class="lineno">  180</span>&#160;    <span class="keywordtype">void</span> getClippingPlanes(<span class="keywordtype">double</span>* zn, <span class="keywordtype">double</span>* zf) <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00181"></a><span class="lineno">  181</span>&#160;</div>
+<div class="line"><a name="l00183"></a><span class="lineno">  183</span>&#160;    QString projectionTypeKeyToNameI18n(<span class="keyword">const</span> QString&amp; key) <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00184"></a><span class="lineno">  184</span>&#160;</div>
+<div class="line"><a name="l00186"></a><span class="lineno">  186</span>&#160;    QString projectionNameI18nToTypeKey(<span class="keyword">const</span> QString&amp; nameI18n) <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00187"></a><span class="lineno">  187</span>&#160;</div>
+<div class="line"><a name="l00189"></a><span class="lineno">  189</span>&#160;    <a class="code" href="structStelProjector_1_1StelProjectorParams.html">StelProjector::StelProjectorParams</a> getCurrentStelProjectorParams() <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00191"></a><span class="lineno">  191</span>&#160;    <span class="keywordtype">void</span> setCurrentStelProjectorParams(<span class="keyword">const</span> <a class="code" href="structStelProjector_1_1StelProjectorParams.html">StelProjector::StelProjectorParams</a>&amp; newParams);</div>
+<div class="line"><a name="l00192"></a><span class="lineno">  192</span>&#160;</div>
+<div class="line"><a name="l00194"></a><span class="lineno">  194</span>&#160;    <span class="keywordtype">void</span> lookAtJ2000(<span class="keyword">const</span> <a class="code" href="classVector3.html">Vec3d</a>&amp; pos, <span class="keyword">const</span> <a class="code" href="classVector3.html">Vec3d</a>&amp; up);</div>
+<div class="line"><a name="l00195"></a><span class="lineno">  195</span>&#160;</div>
+<div class="line"><a name="l00196"></a><span class="lineno">  196</span>&#160;    <a class="code" href="classVector3.html">Vec3d</a> altAzToEquinoxEqu(<span class="keyword">const</span> <a class="code" href="classVector3.html">Vec3d</a>&amp; v, RefractionMode refMode=RefractionAuto) <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00197"></a><span class="lineno">  197</span>&#160;    <a class="code" href="classVector3.html">Vec3d</a> equinoxEquToAltAz(<span class="keyword">const</span> <a class="code" href="classVector3.html">Vec3d</a>&amp; v, RefractionMode refMode=RefractionAuto) <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00198"></a><span class="lineno">  198</span>&#160;    <a class="code" href="classVector3.html">Vec3d</a> altAzToJ2000(<span class="keyword">const</span> <a class="code" href="classVector3.html">Vec3d</a>&amp; v, RefractionMode refMode=RefractionAuto) <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00199"></a><span class="lineno">  199</span>&#160;    <a class="code" href="classVector3.html">Vec3d</a> j2000ToAltAz(<span class="keyword">const</span> <a class="code" href="classVector3.html">Vec3d</a>&amp; v, RefractionMode refMode=RefractionAuto) <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00200"></a><span class="lineno">  200</span>&#160;    <span class="keywordtype">void</span> j2000ToAltAzInPlaceNoRefraction(<a class="code" href="classVector3.html">Vec3f</a>* v)<span class="keyword"> const </span>{v-&gt;transfo4d(matJ2000ToAltAz);}</div>
+<div class="line"><a name="l00201"></a><span class="lineno">  201</span>&#160;    <a class="code" href="classVector3.html">Vec3d</a> galacticToJ2000(<span class="keyword">const</span> <a class="code" href="classVector3.html">Vec3d</a>&amp; v) <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00202"></a><span class="lineno">  202</span>&#160;    <a class="code" href="classVector3.html">Vec3d</a> equinoxEquToJ2000(<span class="keyword">const</span> <a class="code" href="classVector3.html">Vec3d</a>&amp; v) <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00203"></a><span class="lineno">  203</span>&#160;    <a class="code" href="classVector3.html">Vec3d</a> j2000ToEquinoxEqu(<span class="keyword">const</span> <a class="code" href="classVector3.html">Vec3d</a>&amp; v) <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00204"></a><span class="lineno">  204</span>&#160;    <a class="code" href="classVector3.html">Vec3d</a> j2000ToGalactic(<span class="keyword">const</span> <a class="code" href="classVector3.html">Vec3d</a>&amp; v) <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00205"></a><span class="lineno">  205</span>&#160;</div>
+<div class="line"><a name="l00207"></a><span class="lineno">  207</span>&#160;    <a class="code" href="classVector3.html">Vec3d</a> heliocentricEclipticToAltAz(<span class="keyword">const</span> <a class="code" href="classVector3.html">Vec3d</a>&amp; v, RefractionMode refMode=RefractionAuto) <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00208"></a><span class="lineno">  208</span>&#160;</div>
+<div class="line"><a name="l00210"></a><span class="lineno">  210</span>&#160;    <a class="code" href="classVector3.html">Vec3d</a> heliocentricEclipticToEquinoxEqu(<span class="keyword">const</span> <a class="code" href="classVector3.html">Vec3d</a>&amp; v) <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00213"></a><span class="lineno">  213</span>&#160;    <a class="code" href="classVector3.html">Vec3d</a> heliocentricEclipticToEarthPosEquinoxEqu(<span class="keyword">const</span> <a class="code" href="classVector3.html">Vec3d</a>&amp; v) <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00214"></a><span class="lineno">  214</span>&#160;</div>
+<div class="line"><a name="l00216"></a><span class="lineno">  216</span>&#160;    <a class="code" href="classStelProjector.html#ae6b42a6973558f855691b91701edf0dc">StelProjector::ModelViewTranformP</a> getHeliocentricEclipticModelViewTransform(RefractionMode refMode=RefractionAuto) <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00217"></a><span class="lineno">  217</span>&#160;</div>
+<div class="line"><a name="l00219"></a><span class="lineno">  219</span>&#160;    <a class="code" href="classStelProjector.html#ae6b42a6973558f855691b91701edf0dc">StelProjector::ModelViewTranformP</a> getObservercentricEclipticModelViewTransform(RefractionMode refMode=RefractionAuto) <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00220"></a><span class="lineno">  220</span>&#160;</div>
+<div class="line"><a name="l00222"></a><span class="lineno">  222</span>&#160;    <a class="code" href="classStelProjector.html#ae6b42a6973558f855691b91701edf0dc">StelProjector::ModelViewTranformP</a> getEquinoxEquModelViewTransform(RefractionMode refMode=RefractionAuto) <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00223"></a><span class="lineno">  223</span>&#160;</div>
+<div class="line"><a name="l00225"></a><span class="lineno">  225</span>&#160;    <a class="code" href="classStelProjector.html#ae6b42a6973558f855691b91701edf0dc">StelProjector::ModelViewTranformP</a> getAltAzModelViewTransform(RefractionMode refMode=RefractionAuto) <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00226"></a><span class="lineno">  226</span>&#160;</div>
+<div class="line"><a name="l00228"></a><span class="lineno">  228</span>&#160;    <a class="code" href="classStelProjector.html#ae6b42a6973558f855691b91701edf0dc">StelProjector::ModelViewTranformP</a> getJ2000ModelViewTransform(RefractionMode refMode=RefractionAuto) <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00229"></a><span class="lineno">  229</span>&#160;</div>
+<div class="line"><a name="l00231"></a><span class="lineno">  231</span>&#160;    <a class="code" href="classStelProjector.html#ae6b42a6973558f855691b91701edf0dc">StelProjector::ModelViewTranformP</a> getGalacticModelViewTransform(RefractionMode refMode=RefractionAuto) <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00232"></a><span class="lineno">  232</span>&#160;</div>
+<div class="line"><a name="l00234"></a><span class="lineno">  234</span>&#160;    <span class="keyword">static</span> <span class="keyword">const</span> <a class="code" href="classMatrix4.html">Mat4d</a> matJ2000ToVsop87;</div>
+<div class="line"><a name="l00236"></a><span class="lineno">  236</span>&#160;    <span class="keyword">static</span> <span class="keyword">const</span> <a class="code" href="classMatrix4.html">Mat4d</a> matVsop87ToJ2000;</div>
+<div class="line"><a name="l00238"></a><span class="lineno">  238</span>&#160;    <span class="keyword">static</span> <span class="keyword">const</span> <a class="code" href="classMatrix4.html">Mat4d</a> matJ2000ToGalactic;</div>
+<div class="line"><a name="l00240"></a><span class="lineno">  240</span>&#160;    <span class="keyword">static</span> <span class="keyword">const</span> <a class="code" href="classMatrix4.html">Mat4d</a> matGalacticToJ2000;</div>
+<div class="line"><a name="l00241"></a><span class="lineno">  241</span>&#160;</div>
+<div class="line"><a name="l00243"></a><span class="lineno">  243</span>&#160;    <a class="code" href="classVector3.html">Vec3d</a> getObserverHeliocentricEclipticPos() <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00244"></a><span class="lineno">  244</span>&#160;</div>
+<div class="line"><a name="l00246"></a><span class="lineno">  246</span>&#160;    <span class="keyword">const</span> <a class="code" href="classStelLocation.html">StelLocation</a>&amp; getCurrentLocation() <span class="keyword">const</span>;</div>
 <div class="line"><a name="l00247"></a><span class="lineno">  247</span>&#160;</div>
-<div class="line"><a name="l00248"></a><span class="lineno">  248</span>&#160;    <a class="code" href="classSphericalCap.html">SphericalCap</a> getVisibleSkyArea() <span class="keyword">const</span>;</div>
-<div class="line"><a name="l00249"></a><span class="lineno">  249</span>&#160;    </div>
-<div class="line"><a name="l00255"></a><span class="lineno">  255</span>&#160;    <span class="keywordtype">void</span> moveObserverTo(<span class="keyword">const</span> <a class="code" href="classStelLocation.html">StelLocation</a>&amp; target, <span class="keywordtype">double</span> duration=1., <span class="keywordtype">double</span> durationIfPlanetChange=1.);</div>
-<div class="line"><a name="l00256"></a><span class="lineno">  256</span>&#160;</div>
-<div class="line"><a name="l00257"></a><span class="lineno">  257</span>&#160;    <span class="comment">// Conversion in standar Julian time format</span></div>
-<div class="line"><a name="l00258"></a><span class="lineno">  258</span>&#160;    <span class="keyword">static</span> <span class="keyword">const</span> <span class="keywordtype">double</span> JD_SECOND;</div>
-<div class="line"><a name="l00259"></a><span class="lineno">  259</span>&#160;    <span class="keyword">static</span> <span class="keyword">const</span> <span class="keywordtype">double</span> JD_MINUTE;</div>
-<div class="line"><a name="l00260"></a><span class="lineno">  260</span>&#160;    <span class="keyword">static</span> <span class="keyword">const</span> <span class="keywordtype">double</span> JD_HOUR;</div>
-<div class="line"><a name="l00261"></a><span class="lineno">  261</span>&#160;    <span class="keyword">static</span> <span class="keyword">const</span> <span class="keywordtype">double</span> JD_DAY;</div>
-<div class="line"><a name="l00262"></a><span class="lineno">  262</span>&#160;    <span class="keyword">static</span> <span class="keyword">const</span> <span class="keywordtype">double</span> ONE_OVER_JD_SECOND;</div>
-<div class="line"><a name="l00263"></a><span class="lineno">  263</span>&#160;</div>
-<div class="line"><a name="l00266"></a><span class="lineno">  266</span>&#160;    <span class="keywordtype">double</span> getLocalSiderealTime() <span class="keyword">const</span>;</div>
-<div class="line"><a name="l00267"></a><span class="lineno">  267</span>&#160;</div>
-<div class="line"><a name="l00269"></a><span class="lineno">  269</span>&#160;    <span class="keywordtype">double</span> getLocalSiderealDayLength() <span class="keyword">const</span>;</div>
-<div class="line"><a name="l00270"></a><span class="lineno">  270</span>&#160;</div>
-<div class="line"><a name="l00272"></a><span class="lineno">  272</span>&#160;    <span class="keywordtype">double</span> getLocalSiderealYearLength() <span class="keyword">const</span>;</div>
-<div class="line"><a name="l00273"></a><span class="lineno">  273</span>&#160;</div>
-<div class="line"><a name="l00275"></a><span class="lineno">  275</span>&#160;    QString getStartupTimeMode();</div>
-<div class="line"><a name="l00276"></a><span class="lineno">  276</span>&#160;    <span class="keywordtype">void</span> setStartupTimeMode(<span class="keyword">const</span> QString&amp; s);</div>
-<div class="line"><a name="l00277"></a><span class="lineno">  277</span>&#160;</div>
-<div class="line"><a name="l00282"></a><span class="lineno">  282</span>&#160;    <span class="keywordtype">double</span> getDeltaT(<span class="keywordtype">double</span> jDay) <span class="keyword">const</span>;</div>
-<div class="line"><a name="l00283"></a><span class="lineno">  283</span>&#160;</div>
-<div class="line"><a name="l00288"></a><span class="lineno">  288</span>&#160;    QString getCurrentDeltaTAlgorithmValidRange(<span class="keywordtype">double</span> jDay, QString* marker) <span class="keyword">const</span>;</div>
-<div class="line"><a name="l00289"></a><span class="lineno">  289</span>&#160;</div>
-<div class="line"><a name="l00290"></a><span class="lineno">  290</span>&#160;<span class="keyword">public</span> slots:</div>
-<div class="line"><a name="l00292"></a><span class="lineno">  292</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classStelCore.html#ad0e9377f5937b74c1ec0b9805863b4cf">setCurrentProjectionType</a>(ProjectionType type);</div>
-<div class="line"><a name="l00293"></a><span class="lineno">  293</span>&#160;    ProjectionType getCurrentProjectionType() <span class="keyword">const</span>;</div>
-<div class="line"><a name="l00294"></a><span class="lineno">  294</span>&#160;</div>
-<div class="line"><a name="l00296"></a><span class="lineno">  296</span>&#160;    QString <a class="code" href="classStelCore.html#a8333a8dceb625e3bab1ff91c6dcb3a93">getCurrentProjectionTypeKey</a>(<span class="keywordtype">void</span>) <span class="keyword">const</span>;</div>
-<div class="line"><a name="l00298"></a><span class="lineno">  298</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classStelCore.html#a45660b3a83f48241e891bb17fd7b4ac5">setCurrentProjectionTypeKey</a>(QString type);</div>
-<div class="line"><a name="l00299"></a><span class="lineno">  299</span>&#160;</div>
-<div class="line"><a name="l00301"></a><span class="lineno">  301</span>&#160;    QStringList <a class="code" href="classStelCore.html#a6a7a2adbc0d4a483fa2f610533d93c07">getAllProjectionTypeKeys</a>() <span class="keyword">const</span>;</div>
-<div class="line"><a name="l00302"></a><span class="lineno">  302</span>&#160;</div>
-<div class="line"><a name="l00304"></a><span class="lineno"><a class="line" href="classStelCore.html#ae4ec950ae0da48dcd7745512152ca0ca">  304</a></span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classStelCore.html#ae4ec950ae0da48dcd7745512152ca0ca">setCurrentDeltaTAlgorithm</a>(DeltaTAlgorithm algorithm) { currentDeltaTAlgorithm=algorithm; }</div>
-<div class="line"><a name="l00306"></a><span class="lineno"><a class="line" href="classStelCore.html#ae81826e080e8f89bc7107c69d9c5a1c8">  306</a></span>&#160;    DeltaTAlgorithm <a class="code" href="classStelCore.html#ae81826e080e8f89bc7107c69d9c5a1c8">getCurrentDeltaTAlgorithm</a>()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> currentDeltaTAlgorithm; }</div>
-<div class="line"><a name="l00308"></a><span class="lineno">  308</span>&#160;    QString <a class="code" href="classStelCore.html#af1d2b0fc3230e34ac320c5ffbcb5aafd">getCurrentDeltaTAlgorithmDescription</a>(<span class="keywordtype">void</span>) <span class="keyword">const</span>;</div>
-<div class="line"><a name="l00310"></a><span class="lineno">  310</span>&#160;    QString <a class="code" href="classStelCore.html#af0e9b58d850170b5bc3143da3ed24b54">getCurrentDeltaTAlgorithmKey</a>(<span class="keywordtype">void</span>) <span class="keyword">const</span>;</div>
-<div class="line"><a name="l00312"></a><span class="lineno">  312</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classStelCore.html#a92649a1531f766bbe0d4b6efeb84b4ec">setCurrentDeltaTAlgorithmKey</a>(QString type);</div>
-<div class="line"><a name="l00313"></a><span class="lineno">  313</span>&#160;</div>
-<div class="line"><a name="l00315"></a><span class="lineno">  315</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classStelCore.html#a2b3bbb620f659742e35729790bcf2221">setMaskType</a>(<a class="code" href="classStelProjector.html#ae82f23918403ef56da42dfa93588aefe">StelProjector::StelProjectorMaskType</a> m);</div>
-<div class="line"><a name="l00316"></a><span class="lineno">  316</span>&#160;</div>
-<div class="line"><a name="l00319"></a><span class="lineno">  319</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classStelCore.html#ab7864c96fd1303bacd44483a291f0be8">setFlagGravityLabels</a>(<span class="keywordtype">bool</span> gravity);</div>
-<div class="line"><a name="l00321"></a><span class="lineno">  321</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classStelCore.html#ad6c8d09f6b4d85347ea04f258afbb687">setDefautAngleForGravityText</a>(<span class="keywordtype">float</span> a);</div>
-<div class="line"><a name="l00324"></a><span class="lineno">  324</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classStelCore.html#a3974e303c8ca31bcea2de13ba3664301">setFlipHorz</a>(<span class="keywordtype">bool</span> flip);</div>
-<div class="line"><a name="l00327"></a><span class="lineno">  327</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classStelCore.html#ab68ccb450741969bf794c1d0298fa39a">setFlipVert</a>(<span class="keywordtype">bool</span> flip);</div>
-<div class="line"><a name="l00330"></a><span class="lineno">  330</span>&#160;    <span class="keywordtype">bool</span> <a class="code" href="classStelCore.html#a750459568c3f3f08c272e816db1431f2">getFlipHorz</a>(<span class="keywordtype">void</span>) <span class="keyword">const</span>;</div>
-<div class="line"><a name="l00333"></a><span class="lineno">  333</span>&#160;    <span class="keywordtype">bool</span> <a class="code" href="classStelCore.html#ae2d3d3624bf88ef60c08271a27d4a2b5">getFlipVert</a>(<span class="keywordtype">void</span>) <span class="keyword">const</span>;</div>
-<div class="line"><a name="l00334"></a><span class="lineno">  334</span>&#160;</div>
-<div class="line"><a name="l00336"></a><span class="lineno">  336</span>&#160;    QString <a class="code" href="classStelCore.html#a9d6938bd0f96d6f914f88c400f797d17">getDefaultLocationID</a>() <span class="keyword">const</span>;</div>
-<div class="line"><a name="l00338"></a><span class="lineno">  338</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classStelCore.html#a2fe85c87a2fb23f39ce42b70bd739460">setDefaultLocationID</a>(<span class="keyword">const</span> QString&amp; <span class="keywordtype">id</span>);</div>
-<div class="line"><a name="l00340"></a><span class="lineno">  340</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classStelCore.html#aeb634342cc19121136a2a814d6bcce08">returnToDefaultLocation</a>();</div>
-<div class="line"><a name="l00342"></a><span class="lineno">  342</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classStelCore.html#ab885395e4fc02328b8354d7462915f5a">returnToHome</a>();</div>
-<div class="line"><a name="l00343"></a><span class="lineno">  343</span>&#160;</div>
-<div class="line"><a name="l00345"></a><span class="lineno">  345</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classStelCore.html#a2ba19093a9021b19e7f09b1ddd28dc65">setJDay</a>(<span class="keywordtype">double</span> JD);</div>
-<div class="line"><a name="l00347"></a><span class="lineno">  347</span>&#160;    <span class="keywordtype">double</span> <a class="code" href="classStelCore.html#a135d3197f95b9fbc3c696703df1952f2">getJDay</a>() <span class="keyword">const</span>;</div>
-<div class="line"><a name="l00348"></a><span class="lineno">  348</span>&#160;</div>
-<div class="line"><a name="l00350"></a><span class="lineno">  350</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classStelCore.html#aa5972efc56b34907cd38eca8c82df3ee">setMJDay</a>(<span class="keywordtype">double</span> MJD);</div>
-<div class="line"><a name="l00352"></a><span class="lineno">  352</span>&#160;    <span class="keywordtype">double</span> <a class="code" href="classStelCore.html#a5470e4d6de0c1f469931d9d07bd2b600">getMJDay</a>() <span class="keyword">const</span>;</div>
-<div class="line"><a name="l00353"></a><span class="lineno">  353</span>&#160;</div>
-<div class="line"><a name="l00355"></a><span class="lineno">  355</span>&#160;    <span class="keywordtype">double</span> <a class="code" href="classStelCore.html#abf5a38afea64ba98be9e8edaf6e0fc54">getPresetSkyTime</a>() <span class="keyword">const</span>;</div>
-<div class="line"><a name="l00357"></a><span class="lineno">  357</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classStelCore.html#a02a5be3219ff823176a01a2512ba01f0">setPresetSkyTime</a>(<span class="keywordtype">double</span> d);</div>
-<div class="line"><a name="l00358"></a><span class="lineno">  358</span>&#160;</div>
-<div class="line"><a name="l00360"></a><span class="lineno">  360</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classStelCore.html#a2c1e13e2417cce9b840b78a40e00fc33">setTimeRate</a>(<span class="keywordtype">double</span> ts);</div>
-<div class="line"><a name="l00362"></a><span class="lineno">  362</span>&#160;    <span class="keywordtype">double</span> <a class="code" href="classStelCore.html#a0efce41ccb19e8383cf43a5cbe333136">getTimeRate</a>() <span class="keyword">const</span>;</div>
-<div class="line"><a name="l00363"></a><span class="lineno">  363</span>&#160;</div>
-<div class="line"><a name="l00365"></a><span class="lineno">  365</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classStelCore.html#a66d83912bf421083c6940cfacd3ce2da">increaseTimeSpeed</a>();</div>
-<div class="line"><a name="l00367"></a><span class="lineno">  367</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classStelCore.html#a9f35e12f299dd5a9af557437692a2f6d">decreaseTimeSpeed</a>();</div>
-<div class="line"><a name="l00369"></a><span class="lineno">  369</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classStelCore.html#a2aa2c82614d4450f02f49a9b29643bf2">increaseTimeSpeedLess</a>();</div>
-<div class="line"><a name="l00371"></a><span class="lineno">  371</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classStelCore.html#a729a77edb1e6c87fcb011b9228057d9c">decreaseTimeSpeedLess</a>();</div>
-<div class="line"><a name="l00372"></a><span class="lineno">  372</span>&#160;</div>
-<div class="line"><a name="l00374"></a><span class="lineno">  374</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classStelCore.html#a88664467eaf8a639f95ec966c1e1133c">setZeroTimeSpeed</a>();</div>
-<div class="line"><a name="l00376"></a><span class="lineno">  376</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classStelCore.html#ab0985bc6ca6ef84cd20fd18983796beb">setRealTimeSpeed</a>();</div>
-<div class="line"><a name="l00378"></a><span class="lineno">  378</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classStelCore.html#a23877dc97c0c8ab04487b4d15ad8850c">toggleRealTimeSpeed</a>();</div>
-<div class="line"><a name="l00380"></a><span class="lineno">  380</span>&#160;    <span class="keywordtype">bool</span> <a class="code" href="classStelCore.html#a99306a4aafac9cba391a4c2fd978d4ae">getRealTimeSpeed</a>() <span class="keyword">const</span>;</div>
-<div class="line"><a name="l00381"></a><span class="lineno">  381</span>&#160;</div>
-<div class="line"><a name="l00383"></a><span class="lineno">  383</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classStelCore.html#a2d44e5c042e5fd4934ede8a154c76148">setTimeNow</a>();</div>
-<div class="line"><a name="l00385"></a><span class="lineno">  385</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classStelCore.html#a5e6f0103634632073045f4609d40198b">setTodayTime</a>(<span class="keyword">const</span> QTime&amp; target);</div>
-<div class="line"><a name="l00387"></a><span class="lineno">  387</span>&#160;    <span class="keywordtype">bool</span> <a class="code" href="classStelCore.html#a68878013a1dd54cf78a1770d4598f721">getIsTimeNow</a>() <span class="keyword">const</span>;</div>
-<div class="line"><a name="l00388"></a><span class="lineno">  388</span>&#160;</div>
-<div class="line"><a name="l00390"></a><span class="lineno">  390</span>&#160;    QTime <a class="code" href="classStelCore.html#a9a45fab32ede2d7d8081705c53d89fd8">getInitTodayTime</a>(<span class="keywordtype">void</span>);</div>
-<div class="line"><a name="l00392"></a><span class="lineno">  392</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classStelCore.html#ac06c05e410e619870b305ce6f1912095">setInitTodayTime</a>(<span class="keyword">const</span> QTime&amp; t);</div>
-<div class="line"><a name="l00394"></a><span class="lineno">  394</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classStelCore.html#a02a5be3219ff823176a01a2512ba01f0">setPresetSkyTime</a>(QDateTime dt);</div>
-<div class="line"><a name="l00395"></a><span class="lineno">  395</span>&#160;</div>
-<div class="line"><a name="l00397"></a><span class="lineno">  397</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classStelCore.html#a75bfd0e14a6f88ba29243c9dfa061e3a">addHour</a>();</div>
-<div class="line"><a name="l00399"></a><span class="lineno">  399</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classStelCore.html#afa5c1b420d7aec6ff358648b098adeaf">addDay</a>();</div>
-<div class="line"><a name="l00401"></a><span class="lineno">  401</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classStelCore.html#a1ad33ff2124b5f376849fcdfe4dd2e38">addWeek</a>();</div>
-<div class="line"><a name="l00402"></a><span class="lineno">  402</span>&#160;</div>
-<div class="line"><a name="l00405"></a><span class="lineno">  405</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classStelCore.html#aea3fe77fdee3f14f084a94dec61f033e">addSiderealDay</a>();</div>
-<div class="line"><a name="l00408"></a><span class="lineno">  408</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classStelCore.html#a70b112159fe8eebe5122f147167a92c2">addSiderealWeek</a>();</div>
-<div class="line"><a name="l00412"></a><span class="lineno">  412</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classStelCore.html#a72e4022f7d49172fd016d564d5b3e153">addSiderealMonth</a>();</div>
-<div class="line"><a name="l00416"></a><span class="lineno">  416</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classStelCore.html#a9976e191660aa75da5a017be40e2e50d">addSiderealYear</a>();</div>
-<div class="line"><a name="l00420"></a><span class="lineno">  420</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classStelCore.html#ae1ef6a0aa77e0a1cef7684707b9c5f7b">addSiderealCentury</a>();</div>
-<div class="line"><a name="l00421"></a><span class="lineno">  421</span>&#160;</div>
-<div class="line"><a name="l00423"></a><span class="lineno">  423</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classStelCore.html#a02f8f9733c8811816ee177ec00b562c9">subtractHour</a>();</div>
-<div class="line"><a name="l00425"></a><span class="lineno">  425</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classStelCore.html#ae30c13d0189c22adb9f3e7aed229ab95">subtractDay</a>();</div>
-<div class="line"><a name="l00427"></a><span class="lineno">  427</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classStelCore.html#a627d73e5792f933eaaa2916afb07826c">subtractWeek</a>();</div>
-<div class="line"><a name="l00428"></a><span class="lineno">  428</span>&#160;</div>
-<div class="line"><a name="l00431"></a><span class="lineno">  431</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classStelCore.html#aa76f1faccc6689368898bf3f9fff6110">subtractSiderealDay</a>();</div>
-<div class="line"><a name="l00434"></a><span class="lineno">  434</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classStelCore.html#a1b6c3fb5d89f27c9ee508edcbe664c06">subtractSiderealWeek</a>();</div>
-<div class="line"><a name="l00438"></a><span class="lineno">  438</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classStelCore.html#a3ae40856984c4edb7cd042d94f0563b2">subtractSiderealMonth</a>();</div>
-<div class="line"><a name="l00442"></a><span class="lineno">  442</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classStelCore.html#aba3c3b5b77caf902c6d3ced83e67eeda">subtractSiderealYear</a>();</div>
-<div class="line"><a name="l00446"></a><span class="lineno">  446</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classStelCore.html#a8cd6b845dae8ab9ffbe29d7c66ef66e8">subtractSiderealCentury</a>();</div>
-<div class="line"><a name="l00447"></a><span class="lineno">  447</span>&#160;</div>
-<div class="line"><a name="l00449"></a><span class="lineno">  449</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classStelCore.html#a28711d6aef2b07262af97ade2e03e0ed">addSynodicMonth</a>();</div>
-<div class="line"><a name="l00450"></a><span class="lineno">  450</span>&#160;</div>
-<div class="line"><a name="l00452"></a><span class="lineno">  452</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classStelCore.html#a049792f36d2a7e97603a039387757661">addDraconicYear</a>();</div>
-<div class="line"><a name="l00454"></a><span class="lineno">  454</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classStelCore.html#aa2c61ac690953e56a109e26002eef8f8">addDraconicMonth</a>();</div>
-<div class="line"><a name="l00455"></a><span class="lineno">  455</span>&#160;</div>
-<div class="line"><a name="l00457"></a><span class="lineno">  457</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classStelCore.html#a9be652601e7cbb95b44f479c2103decd">addAnomalisticMonth</a>();</div>
-<div class="line"><a name="l00458"></a><span class="lineno">  458</span>&#160;</div>
-<div class="line"><a name="l00460"></a><span class="lineno">  460</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classStelCore.html#a6e9db9f01e3d68cac39af48e740509f2">addTropicalMonth</a>();</div>
-<div class="line"><a name="l00462"></a><span class="lineno">  462</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classStelCore.html#a9b1a70639aba72739fe331c46935adfe">addTropicalYear</a>();</div>
-<div class="line"><a name="l00464"></a><span class="lineno">  464</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classStelCore.html#ae6e9a51e4edda2fa28e616777dd3cca5">addTropicalCentury</a>();</div>
-<div class="line"><a name="l00465"></a><span class="lineno">  465</span>&#160;</div>
-<div class="line"><a name="l00467"></a><span class="lineno">  467</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classStelCore.html#a46191614b006d7439a02a6f7852e7e09">subtractSynodicMonth</a>();</div>
-<div class="line"><a name="l00468"></a><span class="lineno">  468</span>&#160;</div>
-<div class="line"><a name="l00470"></a><span class="lineno">  470</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classStelCore.html#a39c97714f5701b1d5a692c890d01f482">subtractDraconicYear</a>();</div>
-<div class="line"><a name="l00472"></a><span class="lineno">  472</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classStelCore.html#a55999b54a6d94db981ff0b65a541c784">subtractDraconicMonth</a>();</div>
-<div class="line"><a name="l00473"></a><span class="lineno">  473</span>&#160;</div>
-<div class="line"><a name="l00475"></a><span class="lineno">  475</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classStelCore.html#aea0c66dd466599f42bf7a70057d0d7e6">subtractAnomalisticMonth</a>();</div>
-<div class="line"><a name="l00476"></a><span class="lineno">  476</span>&#160;</div>
-<div class="line"><a name="l00478"></a><span class="lineno">  478</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classStelCore.html#addb521149eff601f309148ed43e2f00d">subtractTropicalMonth</a>();</div>
-<div class="line"><a name="l00480"></a><span class="lineno">  480</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classStelCore.html#a4287715a71ab0f7fba4f7d5922cc2f41">subtractTropicalYear</a>();</div>
-<div class="line"><a name="l00482"></a><span class="lineno">  482</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classStelCore.html#a87c45d57e76d59812012da2c5575c2e4">subtractTropicalCentury</a>();</div>
-<div class="line"><a name="l00483"></a><span class="lineno">  483</span>&#160;</div>
-<div class="line"><a name="l00486"></a><span class="lineno">  486</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classStelCore.html#a0a9d159c293e003adc161435fc11af20">addSolarDays</a>(<span class="keywordtype">double</span> d);</div>
-<div class="line"><a name="l00490"></a><span class="lineno">  490</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classStelCore.html#af39d4a94fb5eea7d1bdbf9438459f801">addSiderealDays</a>(<span class="keywordtype">double</span> d);</div>
-<div class="line"><a name="l00491"></a><span class="lineno">  491</span>&#160;</div>
-<div class="line"><a name="l00494"></a><span class="lineno">  494</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classStelCore.html#a3ee29fd6194f779bdc2100fd0188c4bc">moveObserverToSelected</a>();</div>
-<div class="line"><a name="l00495"></a><span class="lineno">  495</span>&#160;</div>
-<div class="line"><a name="l00498"></a><span class="lineno"><a class="line" href="classStelCore.html#a3f3651835c4095911f14116f64535926">  498</a></span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classStelCore.html#a3f3651835c4095911f14116f64535926">setDeltaTCustomYear</a>(<span class="keywordtype">float</span> y) { deltaTCustomYear=y; }</div>
-<div class="line"><a name="l00501"></a><span class="lineno"><a class="line" href="classStelCore.html#a707a7d7f8f50f4da81dadadf179b9c94">  501</a></span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classStelCore.html#a707a7d7f8f50f4da81dadadf179b9c94">setDeltaTCustomNDot</a>(<span class="keywordtype">float</span> v) { deltaTCustomNDot=v; }</div>
-<div class="line"><a name="l00504"></a><span class="lineno"><a class="line" href="classStelCore.html#a224e9c17695e28f01f695a2f8d5c6640">  504</a></span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classStelCore.html#a224e9c17695e28f01f695a2f8d5c6640">setDeltaTCustomEquationCoefficients</a>(<a class="code" href="classVector3.html">Vec3f</a> c) { deltaTCustomEquationCoeff=c; }</div>
-<div class="line"><a name="l00505"></a><span class="lineno">  505</span>&#160;</div>
-<div class="line"><a name="l00507"></a><span class="lineno"><a class="line" href="classStelCore.html#a14a590b814494d88d27b51bd5871dfd2">  507</a></span>&#160;    <span class="keywordtype">float</span> <a class="code" href="classStelCore.html#a14a590b814494d88d27b51bd5871dfd2">getDeltaTCustomYear</a>()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> deltaTCustomYear; }</div>
-<div class="line"><a name="l00509"></a><span class="lineno"><a class="line" href="classStelCore.html#aa1d63795db676c3755dba65f349abff1">  509</a></span>&#160;    <span class="keywordtype">float</span> <a class="code" href="classStelCore.html#aa1d63795db676c3755dba65f349abff1">getDeltaTCustomNDot</a>()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> deltaTCustomNDot; }</div>
-<div class="line"><a name="l00511"></a><span class="lineno"><a class="line" href="classStelCore.html#aab67449ae293798e149781bb4ea4505b">  511</a></span>&#160;    <a class="code" href="classVector3.html">Vec3f</a> <a class="code" href="classStelCore.html#aab67449ae293798e149781bb4ea4505b">getDeltaTCustomEquationCoefficients</a>()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> deltaTCustomEquationCoeff; }</div>
-<div class="line"><a name="l00512"></a><span class="lineno">  512</span>&#160;</div>
-<div class="line"><a name="l00513"></a><span class="lineno">  513</span>&#160;signals:</div>
-<div class="line"><a name="l00515"></a><span class="lineno">  515</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classStelCore.html#a949de4859203bcb79d6256c006a4072d">locationChanged</a>(<a class="code" href="classStelLocation.html">StelLocation</a>);</div>
-<div class="line"><a name="l00517"></a><span class="lineno">  517</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classStelCore.html#a819a8213233be96f43a2a612a0ab3485">timeRateChanged</a>(<span class="keywordtype">double</span> rate);</div>
-<div class="line"><a name="l00518"></a><span class="lineno">  518</span>&#160;</div>
-<div class="line"><a name="l00519"></a><span class="lineno">  519</span>&#160;<span class="keyword">private</span>:</div>
-<div class="line"><a name="l00520"></a><span class="lineno">  520</span>&#160;    <a class="code" href="classStelToneReproducer.html">StelToneReproducer</a>* toneConverter;      <span class="comment">// Tones conversion between stellarium world and display device</span></div>
-<div class="line"><a name="l00521"></a><span class="lineno">  521</span>&#160;    <a class="code" href="classStelSkyDrawer.html">StelSkyDrawer</a>* skyDrawer;</div>
-<div class="line"><a name="l00522"></a><span class="lineno">  522</span>&#160;    <a class="code" href="classStelMovementMgr.html">StelMovementMgr</a>* movementMgr;       <span class="comment">// Manage vision movements</span></div>
-<div class="line"><a name="l00523"></a><span class="lineno">  523</span>&#160;</div>
-<div class="line"><a name="l00524"></a><span class="lineno">  524</span>&#160;    <span class="comment">// Manage geodesic grid</span></div>
-<div class="line"><a name="l00525"></a><span class="lineno">  525</span>&#160;    <span class="keyword">mutable</span> <a class="code" href="classStelGeodesicGrid.html">StelGeodesicGrid</a>* geodesicGrid;</div>
-<div class="line"><a name="l00526"></a><span class="lineno">  526</span>&#160;</div>
-<div class="line"><a name="l00527"></a><span class="lineno">  527</span>&#160;    <span class="comment">// The currently used projection type</span></div>
-<div class="line"><a name="l00528"></a><span class="lineno">  528</span>&#160;    ProjectionType currentProjectionType;</div>
-<div class="line"><a name="l00529"></a><span class="lineno">  529</span>&#160;</div>
-<div class="line"><a name="l00530"></a><span class="lineno">  530</span>&#160;    <span class="comment">// The currentrly used time correction (DeltaT)</span></div>
-<div class="line"><a name="l00531"></a><span class="lineno">  531</span>&#160;    DeltaTAlgorithm currentDeltaTAlgorithm;</div>
-<div class="line"><a name="l00532"></a><span class="lineno">  532</span>&#160;</div>
-<div class="line"><a name="l00533"></a><span class="lineno">  533</span>&#160;    <span class="comment">// Parameters to use when creating new instances of StelProjector</span></div>
-<div class="line"><a name="l00534"></a><span class="lineno">  534</span>&#160;    <a class="code" href="structStelProjector_1_1StelProjectorParams.html">StelProjector::StelProjectorParams</a> currentProjectorParams;</div>
-<div class="line"><a name="l00535"></a><span class="lineno">  535</span>&#160;</div>
-<div class="line"><a name="l00536"></a><span class="lineno">  536</span>&#160;    <span class="keywordtype">void</span> updateTransformMatrices();</div>
-<div class="line"><a name="l00537"></a><span class="lineno">  537</span>&#160;    <span class="keywordtype">void</span> updateTime(<span class="keywordtype">double</span> deltaTime);</div>
-<div class="line"><a name="l00538"></a><span class="lineno">  538</span>&#160;    <span class="keywordtype">void</span> resetSync();</div>
-<div class="line"><a name="l00539"></a><span class="lineno">  539</span>&#160;</div>
-<div class="line"><a name="l00540"></a><span class="lineno">  540</span>&#160;    <span class="comment">// Matrices used for every coordinate transfo</span></div>
-<div class="line"><a name="l00541"></a><span class="lineno">  541</span>&#160;    <a class="code" href="classMatrix4.html">Mat4d</a> matHeliocentricEclipticToAltAz;      <span class="comment">// Transform from heliocentric ecliptic (Vsop87) to observer-centric altazimuthal coordinate</span></div>
-<div class="line"><a name="l00542"></a><span class="lineno">  542</span>&#160;    <a class="code" href="classMatrix4.html">Mat4d</a> matAltAzToHeliocentricEcliptic;      <span class="comment">// Transform from observer-centric altazimuthal coordinate to heliocentric ecliptic (Vsop87)</span></div>
-<div class="line"><a name="l00543"></a><span class="lineno">  543</span>&#160;    <a class="code" href="classMatrix4.html">Mat4d</a> matAltAzToEquinoxEqu;                <span class="comment">// Transform from observer-centric altazimuthal coordinate to Earth Equatorial</span></div>
-<div class="line"><a name="l00544"></a><span class="lineno">  544</span>&#160;    <a class="code" href="classMatrix4.html">Mat4d</a> matEquinoxEquToAltAz;                <span class="comment">// Transform from observer-centric altazimuthal coordinate to Earth Equatorial</span></div>
-<div class="line"><a name="l00545"></a><span class="lineno">  545</span>&#160;    <a class="code" href="classMatrix4.html">Mat4d</a> matHeliocentricEclipticToEquinoxEqu; <span class="comment">// Transform from heliocentric ecliptic (Vsop87) to earth equatorial coordinate</span></div>
-<div class="line"><a name="l00546"></a><span class="lineno">  546</span>&#160;    <a class="code" href="classMatrix4.html">Mat4d</a> matEquinoxEquToJ2000;</div>
-<div class="line"><a name="l00547"></a><span class="lineno">  547</span>&#160;    <a class="code" href="classMatrix4.html">Mat4d</a> matJ2000ToEquinoxEqu;</div>
-<div class="line"><a name="l00548"></a><span class="lineno">  548</span>&#160;    <a class="code" href="classMatrix4.html">Mat4d</a> matJ2000ToAltAz;</div>
-<div class="line"><a name="l00549"></a><span class="lineno">  549</span>&#160;</div>
-<div class="line"><a name="l00550"></a><span class="lineno">  550</span>&#160;    <a class="code" href="classMatrix4.html">Mat4d</a> matAltAzModelView;           <span class="comment">// Modelview matrix for observer-centric altazimuthal drawing</span></div>
-<div class="line"><a name="l00551"></a><span class="lineno">  551</span>&#160;    <a class="code" href="classMatrix4.html">Mat4d</a> invertMatAltAzModelView;     <span class="comment">// Inverted modelview matrix for observer-centric altazimuthal drawing</span></div>
-<div class="line"><a name="l00552"></a><span class="lineno">  552</span>&#160;</div>
-<div class="line"><a name="l00553"></a><span class="lineno">  553</span>&#160;    <span class="comment">// Position variables</span></div>
-<div class="line"><a name="l00554"></a><span class="lineno">  554</span>&#160;    <a class="code" href="classStelObserver.html">StelObserver</a>* position;</div>
-<div class="line"><a name="l00555"></a><span class="lineno">  555</span>&#160;    <span class="comment">// The ID of the default startup location</span></div>
-<div class="line"><a name="l00556"></a><span class="lineno">  556</span>&#160;    QString defaultLocationID;</div>
-<div class="line"><a name="l00557"></a><span class="lineno">  557</span>&#160;</div>
-<div class="line"><a name="l00558"></a><span class="lineno">  558</span>&#160;    <span class="comment">// Time variables</span></div>
-<div class="line"><a name="l00559"></a><span class="lineno">  559</span>&#160;    <span class="keywordtype">double</span> timeSpeed;                  <span class="comment">// Positive : forward, Negative : Backward, 1 = 1sec/sec</span></div>
-<div class="line"><a name="l00560"></a><span class="lineno">  560</span>&#160;    <span class="keywordtype">double</span> JDay;                       <span class="comment">// Curent time in Julian day</span></div>
-<div class="line"><a name="l00561"></a><span class="lineno">  561</span>&#160;    <span class="keywordtype">double</span> presetSkyTime;</div>
-<div class="line"><a name="l00562"></a><span class="lineno">  562</span>&#160;    QTime initTodayTime;</div>
-<div class="line"><a name="l00563"></a><span class="lineno">  563</span>&#160;    QString startupTimeMode;</div>
-<div class="line"><a name="l00564"></a><span class="lineno">  564</span>&#160;    <span class="keywordtype">double</span> secondsOfLastJDayUpdate;         <span class="comment">// Time in seconds when the time rate or time last changed</span></div>
-<div class="line"><a name="l00565"></a><span class="lineno">  565</span>&#160;    <span class="keywordtype">double</span> JDayOfLastJDayUpdate;         <span class="comment">// JDay when the time rate or time last changed</span></div>
-<div class="line"><a name="l00566"></a><span class="lineno">  566</span>&#160;</div>
-<div class="line"><a name="l00567"></a><span class="lineno">  567</span>&#160;    <span class="comment">// Variables for custom equation of Delta-T</span></div>
-<div class="line"><a name="l00568"></a><span class="lineno">  568</span>&#160;    <a class="code" href="classVector3.html">Vec3f</a> deltaTCustomEquationCoeff;</div>
-<div class="line"><a name="l00569"></a><span class="lineno">  569</span>&#160;    <span class="keywordtype">float</span> deltaTCustomNDot;</div>
-<div class="line"><a name="l00570"></a><span class="lineno">  570</span>&#160;    <span class="keywordtype">float</span> deltaTCustomYear;</div>
-<div class="line"><a name="l00571"></a><span class="lineno">  571</span>&#160;</div>
-<div class="line"><a name="l00572"></a><span class="lineno">  572</span>&#160;};</div>
+<div class="line"><a name="l00248"></a><span class="lineno">  248</span>&#160;    <span class="keyword">const</span> QSharedPointer&lt;class Planet&gt; getCurrentPlanet() <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00249"></a><span class="lineno">  249</span>&#160;</div>
+<div class="line"><a name="l00250"></a><span class="lineno">  250</span>&#160;    <a class="code" href="classSphericalCap.html">SphericalCap</a> getVisibleSkyArea() <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00251"></a><span class="lineno">  251</span>&#160;    </div>
+<div class="line"><a name="l00257"></a><span class="lineno">  257</span>&#160;    <span class="keywordtype">void</span> moveObserverTo(<span class="keyword">const</span> <a class="code" href="classStelLocation.html">StelLocation</a>&amp; target, <span class="keywordtype">double</span> duration=1., <span class="keywordtype">double</span> durationIfPlanetChange=1.);</div>
+<div class="line"><a name="l00258"></a><span class="lineno">  258</span>&#160;</div>
+<div class="line"><a name="l00259"></a><span class="lineno">  259</span>&#160;    <span class="comment">// Conversion in standar Julian time format</span></div>
+<div class="line"><a name="l00260"></a><span class="lineno">  260</span>&#160;    <span class="keyword">static</span> <span class="keyword">const</span> <span class="keywordtype">double</span> JD_SECOND;</div>
+<div class="line"><a name="l00261"></a><span class="lineno">  261</span>&#160;    <span class="keyword">static</span> <span class="keyword">const</span> <span class="keywordtype">double</span> JD_MINUTE;</div>
+<div class="line"><a name="l00262"></a><span class="lineno">  262</span>&#160;    <span class="keyword">static</span> <span class="keyword">const</span> <span class="keywordtype">double</span> JD_HOUR;</div>
+<div class="line"><a name="l00263"></a><span class="lineno">  263</span>&#160;    <span class="keyword">static</span> <span class="keyword">const</span> <span class="keywordtype">double</span> JD_DAY;</div>
+<div class="line"><a name="l00264"></a><span class="lineno">  264</span>&#160;    <span class="keyword">static</span> <span class="keyword">const</span> <span class="keywordtype">double</span> ONE_OVER_JD_SECOND;</div>
+<div class="line"><a name="l00265"></a><span class="lineno">  265</span>&#160;</div>
+<div class="line"><a name="l00268"></a><span class="lineno">  268</span>&#160;    <span class="keywordtype">double</span> getLocalSiderealTime() <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00269"></a><span class="lineno">  269</span>&#160;</div>
+<div class="line"><a name="l00271"></a><span class="lineno">  271</span>&#160;    <span class="keywordtype">double</span> getLocalSiderealDayLength() <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00272"></a><span class="lineno">  272</span>&#160;</div>
+<div class="line"><a name="l00274"></a><span class="lineno">  274</span>&#160;    <span class="keywordtype">double</span> getLocalSiderealYearLength() <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00275"></a><span class="lineno">  275</span>&#160;</div>
+<div class="line"><a name="l00277"></a><span class="lineno">  277</span>&#160;    QString getStartupTimeMode();</div>
+<div class="line"><a name="l00278"></a><span class="lineno">  278</span>&#160;    <span class="keywordtype">void</span> setStartupTimeMode(<span class="keyword">const</span> QString&amp; s);</div>
+<div class="line"><a name="l00279"></a><span class="lineno">  279</span>&#160;</div>
+<div class="line"><a name="l00284"></a><span class="lineno">  284</span>&#160;    <span class="keywordtype">double</span> getDeltaT(<span class="keywordtype">double</span> jDay) <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00285"></a><span class="lineno">  285</span>&#160;</div>
+<div class="line"><a name="l00290"></a><span class="lineno">  290</span>&#160;    QString getCurrentDeltaTAlgorithmValidRange(<span class="keywordtype">double</span> jDay, QString* marker) <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00291"></a><span class="lineno">  291</span>&#160;</div>
+<div class="line"><a name="l00292"></a><span class="lineno">  292</span>&#160;<span class="keyword">public</span> slots:</div>
+<div class="line"><a name="l00294"></a><span class="lineno">  294</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classStelCore.html#ad0e9377f5937b74c1ec0b9805863b4cf">setCurrentProjectionType</a>(ProjectionType type);</div>
+<div class="line"><a name="l00295"></a><span class="lineno">  295</span>&#160;    ProjectionType getCurrentProjectionType() <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00296"></a><span class="lineno">  296</span>&#160;</div>
+<div class="line"><a name="l00298"></a><span class="lineno">  298</span>&#160;    QString <a class="code" href="classStelCore.html#a8333a8dceb625e3bab1ff91c6dcb3a93">getCurrentProjectionTypeKey</a>(<span class="keywordtype">void</span>) <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00300"></a><span class="lineno">  300</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classStelCore.html#a45660b3a83f48241e891bb17fd7b4ac5">setCurrentProjectionTypeKey</a>(QString type);</div>
+<div class="line"><a name="l00301"></a><span class="lineno">  301</span>&#160;</div>
+<div class="line"><a name="l00303"></a><span class="lineno">  303</span>&#160;    QStringList <a class="code" href="classStelCore.html#a6a7a2adbc0d4a483fa2f610533d93c07">getAllProjectionTypeKeys</a>() <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00304"></a><span class="lineno">  304</span>&#160;</div>
+<div class="line"><a name="l00306"></a><span class="lineno"><a class="line" href="classStelCore.html#ae4ec950ae0da48dcd7745512152ca0ca">  306</a></span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classStelCore.html#ae4ec950ae0da48dcd7745512152ca0ca">setCurrentDeltaTAlgorithm</a>(DeltaTAlgorithm algorithm) { currentDeltaTAlgorithm=algorithm; }</div>
+<div class="line"><a name="l00308"></a><span class="lineno"><a class="line" href="classStelCore.html#ae81826e080e8f89bc7107c69d9c5a1c8">  308</a></span>&#160;    DeltaTAlgorithm <a class="code" href="classStelCore.html#ae81826e080e8f89bc7107c69d9c5a1c8">getCurrentDeltaTAlgorithm</a>()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> currentDeltaTAlgorithm; }</div>
+<div class="line"><a name="l00310"></a><span class="lineno">  310</span>&#160;    QString <a class="code" href="classStelCore.html#af1d2b0fc3230e34ac320c5ffbcb5aafd">getCurrentDeltaTAlgorithmDescription</a>(<span class="keywordtype">void</span>) <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00312"></a><span class="lineno">  312</span>&#160;    QString <a class="code" href="classStelCore.html#af0e9b58d850170b5bc3143da3ed24b54">getCurrentDeltaTAlgorithmKey</a>(<span class="keywordtype">void</span>) <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00314"></a><span class="lineno">  314</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classStelCore.html#a92649a1531f766bbe0d4b6efeb84b4ec">setCurrentDeltaTAlgorithmKey</a>(QString type);</div>
+<div class="line"><a name="l00315"></a><span class="lineno">  315</span>&#160;</div>
+<div class="line"><a name="l00317"></a><span class="lineno">  317</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classStelCore.html#a2b3bbb620f659742e35729790bcf2221">setMaskType</a>(<a class="code" href="classStelProjector.html#ae82f23918403ef56da42dfa93588aefe">StelProjector::StelProjectorMaskType</a> m);</div>
+<div class="line"><a name="l00318"></a><span class="lineno">  318</span>&#160;</div>
+<div class="line"><a name="l00321"></a><span class="lineno">  321</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classStelCore.html#ab7864c96fd1303bacd44483a291f0be8">setFlagGravityLabels</a>(<span class="keywordtype">bool</span> gravity);</div>
+<div class="line"><a name="l00323"></a><span class="lineno">  323</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classStelCore.html#ad6c8d09f6b4d85347ea04f258afbb687">setDefautAngleForGravityText</a>(<span class="keywordtype">float</span> a);</div>
+<div class="line"><a name="l00326"></a><span class="lineno">  326</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classStelCore.html#a3974e303c8ca31bcea2de13ba3664301">setFlipHorz</a>(<span class="keywordtype">bool</span> flip);</div>
+<div class="line"><a name="l00329"></a><span class="lineno">  329</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classStelCore.html#ab68ccb450741969bf794c1d0298fa39a">setFlipVert</a>(<span class="keywordtype">bool</span> flip);</div>
+<div class="line"><a name="l00332"></a><span class="lineno">  332</span>&#160;    <span class="keywordtype">bool</span> <a class="code" href="classStelCore.html#a750459568c3f3f08c272e816db1431f2">getFlipHorz</a>(<span class="keywordtype">void</span>) <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00335"></a><span class="lineno">  335</span>&#160;    <span class="keywordtype">bool</span> <a class="code" href="classStelCore.html#ae2d3d3624bf88ef60c08271a27d4a2b5">getFlipVert</a>(<span class="keywordtype">void</span>) <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00336"></a><span class="lineno">  336</span>&#160;</div>
+<div class="line"><a name="l00338"></a><span class="lineno">  338</span>&#160;    QString <a class="code" href="classStelCore.html#a9d6938bd0f96d6f914f88c400f797d17">getDefaultLocationID</a>() <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00340"></a><span class="lineno">  340</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classStelCore.html#a2fe85c87a2fb23f39ce42b70bd739460">setDefaultLocationID</a>(<span class="keyword">const</span> QString&amp; <span class="keywordtype">id</span>);</div>
+<div class="line"><a name="l00342"></a><span class="lineno">  342</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classStelCore.html#aeb634342cc19121136a2a814d6bcce08">returnToDefaultLocation</a>();</div>
+<div class="line"><a name="l00344"></a><span class="lineno">  344</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classStelCore.html#ab885395e4fc02328b8354d7462915f5a">returnToHome</a>();</div>
+<div class="line"><a name="l00345"></a><span class="lineno">  345</span>&#160;</div>
+<div class="line"><a name="l00347"></a><span class="lineno">  347</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classStelCore.html#a2ba19093a9021b19e7f09b1ddd28dc65">setJDay</a>(<span class="keywordtype">double</span> JD);</div>
+<div class="line"><a name="l00349"></a><span class="lineno">  349</span>&#160;    <span class="keywordtype">double</span> <a class="code" href="classStelCore.html#a135d3197f95b9fbc3c696703df1952f2">getJDay</a>() <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00350"></a><span class="lineno">  350</span>&#160;</div>
+<div class="line"><a name="l00352"></a><span class="lineno">  352</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classStelCore.html#aa5972efc56b34907cd38eca8c82df3ee">setMJDay</a>(<span class="keywordtype">double</span> MJD);</div>
+<div class="line"><a name="l00354"></a><span class="lineno">  354</span>&#160;    <span class="keywordtype">double</span> <a class="code" href="classStelCore.html#a5470e4d6de0c1f469931d9d07bd2b600">getMJDay</a>() <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00355"></a><span class="lineno">  355</span>&#160;</div>
+<div class="line"><a name="l00357"></a><span class="lineno">  357</span>&#160;    <span class="keywordtype">double</span> <a class="code" href="classStelCore.html#abf5a38afea64ba98be9e8edaf6e0fc54">getPresetSkyTime</a>() <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00359"></a><span class="lineno">  359</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classStelCore.html#a02a5be3219ff823176a01a2512ba01f0">setPresetSkyTime</a>(<span class="keywordtype">double</span> d);</div>
+<div class="line"><a name="l00360"></a><span class="lineno">  360</span>&#160;</div>
+<div class="line"><a name="l00362"></a><span class="lineno">  362</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classStelCore.html#a2c1e13e2417cce9b840b78a40e00fc33">setTimeRate</a>(<span class="keywordtype">double</span> ts);</div>
+<div class="line"><a name="l00364"></a><span class="lineno">  364</span>&#160;    <span class="keywordtype">double</span> <a class="code" href="classStelCore.html#a0efce41ccb19e8383cf43a5cbe333136">getTimeRate</a>() <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00365"></a><span class="lineno">  365</span>&#160;</div>
+<div class="line"><a name="l00367"></a><span class="lineno">  367</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classStelCore.html#a66d83912bf421083c6940cfacd3ce2da">increaseTimeSpeed</a>();</div>
+<div class="line"><a name="l00369"></a><span class="lineno">  369</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classStelCore.html#a9f35e12f299dd5a9af557437692a2f6d">decreaseTimeSpeed</a>();</div>
+<div class="line"><a name="l00371"></a><span class="lineno">  371</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classStelCore.html#a2aa2c82614d4450f02f49a9b29643bf2">increaseTimeSpeedLess</a>();</div>
+<div class="line"><a name="l00373"></a><span class="lineno">  373</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classStelCore.html#a729a77edb1e6c87fcb011b9228057d9c">decreaseTimeSpeedLess</a>();</div>
+<div class="line"><a name="l00374"></a><span class="lineno">  374</span>&#160;</div>
+<div class="line"><a name="l00376"></a><span class="lineno">  376</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classStelCore.html#a88664467eaf8a639f95ec966c1e1133c">setZeroTimeSpeed</a>();</div>
+<div class="line"><a name="l00378"></a><span class="lineno">  378</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classStelCore.html#ab0985bc6ca6ef84cd20fd18983796beb">setRealTimeSpeed</a>();</div>
+<div class="line"><a name="l00380"></a><span class="lineno">  380</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classStelCore.html#a23877dc97c0c8ab04487b4d15ad8850c">toggleRealTimeSpeed</a>();</div>
+<div class="line"><a name="l00382"></a><span class="lineno">  382</span>&#160;    <span class="keywordtype">bool</span> <a class="code" href="classStelCore.html#a99306a4aafac9cba391a4c2fd978d4ae">getRealTimeSpeed</a>() <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00383"></a><span class="lineno">  383</span>&#160;</div>
+<div class="line"><a name="l00385"></a><span class="lineno">  385</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classStelCore.html#a2d44e5c042e5fd4934ede8a154c76148">setTimeNow</a>();</div>
+<div class="line"><a name="l00387"></a><span class="lineno">  387</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classStelCore.html#a5e6f0103634632073045f4609d40198b">setTodayTime</a>(<span class="keyword">const</span> QTime&amp; target);</div>
+<div class="line"><a name="l00389"></a><span class="lineno">  389</span>&#160;    <span class="keywordtype">bool</span> <a class="code" href="classStelCore.html#a68878013a1dd54cf78a1770d4598f721">getIsTimeNow</a>() <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00390"></a><span class="lineno">  390</span>&#160;</div>
+<div class="line"><a name="l00392"></a><span class="lineno">  392</span>&#160;    QTime <a class="code" href="classStelCore.html#a9a45fab32ede2d7d8081705c53d89fd8">getInitTodayTime</a>(<span class="keywordtype">void</span>);</div>
+<div class="line"><a name="l00394"></a><span class="lineno">  394</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classStelCore.html#ac06c05e410e619870b305ce6f1912095">setInitTodayTime</a>(<span class="keyword">const</span> QTime&amp; t);</div>
+<div class="line"><a name="l00396"></a><span class="lineno">  396</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classStelCore.html#a02a5be3219ff823176a01a2512ba01f0">setPresetSkyTime</a>(QDateTime dt);</div>
+<div class="line"><a name="l00397"></a><span class="lineno">  397</span>&#160;</div>
+<div class="line"><a name="l00399"></a><span class="lineno">  399</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classStelCore.html#a75bfd0e14a6f88ba29243c9dfa061e3a">addHour</a>();</div>
+<div class="line"><a name="l00401"></a><span class="lineno">  401</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classStelCore.html#afa5c1b420d7aec6ff358648b098adeaf">addDay</a>();</div>
+<div class="line"><a name="l00403"></a><span class="lineno">  403</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classStelCore.html#a1ad33ff2124b5f376849fcdfe4dd2e38">addWeek</a>();</div>
+<div class="line"><a name="l00404"></a><span class="lineno">  404</span>&#160;</div>
+<div class="line"><a name="l00407"></a><span class="lineno">  407</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classStelCore.html#aea3fe77fdee3f14f084a94dec61f033e">addSiderealDay</a>();</div>
+<div class="line"><a name="l00410"></a><span class="lineno">  410</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classStelCore.html#a70b112159fe8eebe5122f147167a92c2">addSiderealWeek</a>();</div>
+<div class="line"><a name="l00414"></a><span class="lineno">  414</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classStelCore.html#a72e4022f7d49172fd016d564d5b3e153">addSiderealMonth</a>();</div>
+<div class="line"><a name="l00418"></a><span class="lineno">  418</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classStelCore.html#a9976e191660aa75da5a017be40e2e50d">addSiderealYear</a>();</div>
+<div class="line"><a name="l00422"></a><span class="lineno">  422</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classStelCore.html#ae1ef6a0aa77e0a1cef7684707b9c5f7b">addSiderealCentury</a>();</div>
+<div class="line"><a name="l00423"></a><span class="lineno">  423</span>&#160;</div>
+<div class="line"><a name="l00425"></a><span class="lineno">  425</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classStelCore.html#a02f8f9733c8811816ee177ec00b562c9">subtractHour</a>();</div>
+<div class="line"><a name="l00427"></a><span class="lineno">  427</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classStelCore.html#ae30c13d0189c22adb9f3e7aed229ab95">subtractDay</a>();</div>
+<div class="line"><a name="l00429"></a><span class="lineno">  429</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classStelCore.html#a627d73e5792f933eaaa2916afb07826c">subtractWeek</a>();</div>
+<div class="line"><a name="l00430"></a><span class="lineno">  430</span>&#160;</div>
+<div class="line"><a name="l00433"></a><span class="lineno">  433</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classStelCore.html#aa76f1faccc6689368898bf3f9fff6110">subtractSiderealDay</a>();</div>
+<div class="line"><a name="l00436"></a><span class="lineno">  436</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classStelCore.html#a1b6c3fb5d89f27c9ee508edcbe664c06">subtractSiderealWeek</a>();</div>
+<div class="line"><a name="l00440"></a><span class="lineno">  440</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classStelCore.html#a3ae40856984c4edb7cd042d94f0563b2">subtractSiderealMonth</a>();</div>
+<div class="line"><a name="l00444"></a><span class="lineno">  444</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classStelCore.html#aba3c3b5b77caf902c6d3ced83e67eeda">subtractSiderealYear</a>();</div>
+<div class="line"><a name="l00448"></a><span class="lineno">  448</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classStelCore.html#a8cd6b845dae8ab9ffbe29d7c66ef66e8">subtractSiderealCentury</a>();</div>
+<div class="line"><a name="l00449"></a><span class="lineno">  449</span>&#160;</div>
+<div class="line"><a name="l00451"></a><span class="lineno">  451</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classStelCore.html#a28711d6aef2b07262af97ade2e03e0ed">addSynodicMonth</a>();</div>
+<div class="line"><a name="l00452"></a><span class="lineno">  452</span>&#160;</div>
+<div class="line"><a name="l00454"></a><span class="lineno">  454</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classStelCore.html#a049792f36d2a7e97603a039387757661">addDraconicYear</a>();</div>
+<div class="line"><a name="l00456"></a><span class="lineno">  456</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classStelCore.html#aa2c61ac690953e56a109e26002eef8f8">addDraconicMonth</a>();</div>
+<div class="line"><a name="l00457"></a><span class="lineno">  457</span>&#160;</div>
+<div class="line"><a name="l00459"></a><span class="lineno">  459</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classStelCore.html#a9be652601e7cbb95b44f479c2103decd">addAnomalisticMonth</a>();</div>
+<div class="line"><a name="l00460"></a><span class="lineno">  460</span>&#160;</div>
+<div class="line"><a name="l00462"></a><span class="lineno">  462</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classStelCore.html#a6e9db9f01e3d68cac39af48e740509f2">addTropicalMonth</a>();</div>
+<div class="line"><a name="l00464"></a><span class="lineno">  464</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classStelCore.html#a9b1a70639aba72739fe331c46935adfe">addTropicalYear</a>();</div>
+<div class="line"><a name="l00466"></a><span class="lineno">  466</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classStelCore.html#ae6e9a51e4edda2fa28e616777dd3cca5">addTropicalCentury</a>();</div>
+<div class="line"><a name="l00467"></a><span class="lineno">  467</span>&#160;</div>
+<div class="line"><a name="l00469"></a><span class="lineno">  469</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classStelCore.html#a46191614b006d7439a02a6f7852e7e09">subtractSynodicMonth</a>();</div>
+<div class="line"><a name="l00470"></a><span class="lineno">  470</span>&#160;</div>
+<div class="line"><a name="l00472"></a><span class="lineno">  472</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classStelCore.html#a39c97714f5701b1d5a692c890d01f482">subtractDraconicYear</a>();</div>
+<div class="line"><a name="l00474"></a><span class="lineno">  474</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classStelCore.html#a55999b54a6d94db981ff0b65a541c784">subtractDraconicMonth</a>();</div>
+<div class="line"><a name="l00475"></a><span class="lineno">  475</span>&#160;</div>
+<div class="line"><a name="l00477"></a><span class="lineno">  477</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classStelCore.html#aea0c66dd466599f42bf7a70057d0d7e6">subtractAnomalisticMonth</a>();</div>
+<div class="line"><a name="l00478"></a><span class="lineno">  478</span>&#160;</div>
+<div class="line"><a name="l00480"></a><span class="lineno">  480</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classStelCore.html#addb521149eff601f309148ed43e2f00d">subtractTropicalMonth</a>();</div>
+<div class="line"><a name="l00482"></a><span class="lineno">  482</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classStelCore.html#a4287715a71ab0f7fba4f7d5922cc2f41">subtractTropicalYear</a>();</div>
+<div class="line"><a name="l00484"></a><span class="lineno">  484</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classStelCore.html#a87c45d57e76d59812012da2c5575c2e4">subtractTropicalCentury</a>();</div>
+<div class="line"><a name="l00485"></a><span class="lineno">  485</span>&#160;</div>
+<div class="line"><a name="l00488"></a><span class="lineno">  488</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classStelCore.html#a0a9d159c293e003adc161435fc11af20">addSolarDays</a>(<span class="keywordtype">double</span> d);</div>
+<div class="line"><a name="l00492"></a><span class="lineno">  492</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classStelCore.html#af39d4a94fb5eea7d1bdbf9438459f801">addSiderealDays</a>(<span class="keywordtype">double</span> d);</div>
+<div class="line"><a name="l00493"></a><span class="lineno">  493</span>&#160;</div>
+<div class="line"><a name="l00496"></a><span class="lineno">  496</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classStelCore.html#a3ee29fd6194f779bdc2100fd0188c4bc">moveObserverToSelected</a>();</div>
+<div class="line"><a name="l00497"></a><span class="lineno">  497</span>&#160;</div>
+<div class="line"><a name="l00500"></a><span class="lineno"><a class="line" href="classStelCore.html#a3f3651835c4095911f14116f64535926">  500</a></span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classStelCore.html#a3f3651835c4095911f14116f64535926">setDeltaTCustomYear</a>(<span class="keywordtype">float</span> y) { deltaTCustomYear=y; }</div>
+<div class="line"><a name="l00503"></a><span class="lineno"><a class="line" href="classStelCore.html#a707a7d7f8f50f4da81dadadf179b9c94">  503</a></span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classStelCore.html#a707a7d7f8f50f4da81dadadf179b9c94">setDeltaTCustomNDot</a>(<span class="keywordtype">float</span> v) { deltaTCustomNDot=v; }</div>
+<div class="line"><a name="l00506"></a><span class="lineno"><a class="line" href="classStelCore.html#a224e9c17695e28f01f695a2f8d5c6640">  506</a></span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classStelCore.html#a224e9c17695e28f01f695a2f8d5c6640">setDeltaTCustomEquationCoefficients</a>(<a class="code" href="classVector3.html">Vec3f</a> c) { deltaTCustomEquationCoeff=c; }</div>
+<div class="line"><a name="l00507"></a><span class="lineno">  507</span>&#160;</div>
+<div class="line"><a name="l00509"></a><span class="lineno"><a class="line" href="classStelCore.html#a14a590b814494d88d27b51bd5871dfd2">  509</a></span>&#160;    <span class="keywordtype">float</span> <a class="code" href="classStelCore.html#a14a590b814494d88d27b51bd5871dfd2">getDeltaTCustomYear</a>()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> deltaTCustomYear; }</div>
+<div class="line"><a name="l00511"></a><span class="lineno"><a class="line" href="classStelCore.html#aa1d63795db676c3755dba65f349abff1">  511</a></span>&#160;    <span class="keywordtype">float</span> <a class="code" href="classStelCore.html#aa1d63795db676c3755dba65f349abff1">getDeltaTCustomNDot</a>()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> deltaTCustomNDot; }</div>
+<div class="line"><a name="l00513"></a><span class="lineno"><a class="line" href="classStelCore.html#aab67449ae293798e149781bb4ea4505b">  513</a></span>&#160;    <a class="code" href="classVector3.html">Vec3f</a> <a class="code" href="classStelCore.html#aab67449ae293798e149781bb4ea4505b">getDeltaTCustomEquationCoefficients</a>()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> deltaTCustomEquationCoeff; }</div>
+<div class="line"><a name="l00514"></a><span class="lineno">  514</span>&#160;</div>
+<div class="line"><a name="l00515"></a><span class="lineno">  515</span>&#160;signals:</div>
+<div class="line"><a name="l00517"></a><span class="lineno">  517</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classStelCore.html#a949de4859203bcb79d6256c006a4072d">locationChanged</a>(<a class="code" href="classStelLocation.html">StelLocation</a>);</div>
+<div class="line"><a name="l00519"></a><span class="lineno">  519</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classStelCore.html#a819a8213233be96f43a2a612a0ab3485">timeRateChanged</a>(<span class="keywordtype">double</span> rate);</div>
+<div class="line"><a name="l00520"></a><span class="lineno">  520</span>&#160;</div>
+<div class="line"><a name="l00521"></a><span class="lineno">  521</span>&#160;<span class="keyword">private</span>:</div>
+<div class="line"><a name="l00522"></a><span class="lineno">  522</span>&#160;    <a class="code" href="classStelToneReproducer.html">StelToneReproducer</a>* toneConverter;      <span class="comment">// Tones conversion between stellarium world and display device</span></div>
+<div class="line"><a name="l00523"></a><span class="lineno">  523</span>&#160;    <a class="code" href="classStelSkyDrawer.html">StelSkyDrawer</a>* skyDrawer;</div>
+<div class="line"><a name="l00524"></a><span class="lineno">  524</span>&#160;    <a class="code" href="classStelMovementMgr.html">StelMovementMgr</a>* movementMgr;       <span class="comment">// Manage vision movements</span></div>
+<div class="line"><a name="l00525"></a><span class="lineno">  525</span>&#160;</div>
+<div class="line"><a name="l00526"></a><span class="lineno">  526</span>&#160;    <span class="comment">// Manage geodesic grid</span></div>
+<div class="line"><a name="l00527"></a><span class="lineno">  527</span>&#160;    <span class="keyword">mutable</span> <a class="code" href="classStelGeodesicGrid.html">StelGeodesicGrid</a>* geodesicGrid;</div>
+<div class="line"><a name="l00528"></a><span class="lineno">  528</span>&#160;</div>
+<div class="line"><a name="l00529"></a><span class="lineno">  529</span>&#160;    <span class="comment">// The currently used projection type</span></div>
+<div class="line"><a name="l00530"></a><span class="lineno">  530</span>&#160;    ProjectionType currentProjectionType;</div>
+<div class="line"><a name="l00531"></a><span class="lineno">  531</span>&#160;</div>
+<div class="line"><a name="l00532"></a><span class="lineno">  532</span>&#160;    <span class="comment">// The currentrly used time correction (DeltaT)</span></div>
+<div class="line"><a name="l00533"></a><span class="lineno">  533</span>&#160;    DeltaTAlgorithm currentDeltaTAlgorithm;</div>
+<div class="line"><a name="l00534"></a><span class="lineno">  534</span>&#160;</div>
+<div class="line"><a name="l00535"></a><span class="lineno">  535</span>&#160;    <span class="comment">// Parameters to use when creating new instances of StelProjector</span></div>
+<div class="line"><a name="l00536"></a><span class="lineno">  536</span>&#160;    <a class="code" href="structStelProjector_1_1StelProjectorParams.html">StelProjector::StelProjectorParams</a> currentProjectorParams;</div>
+<div class="line"><a name="l00537"></a><span class="lineno">  537</span>&#160;</div>
+<div class="line"><a name="l00538"></a><span class="lineno">  538</span>&#160;    <span class="keywordtype">void</span> updateTransformMatrices();</div>
+<div class="line"><a name="l00539"></a><span class="lineno">  539</span>&#160;    <span class="keywordtype">void</span> updateTime(<span class="keywordtype">double</span> deltaTime);</div>
+<div class="line"><a name="l00540"></a><span class="lineno">  540</span>&#160;    <span class="keywordtype">void</span> resetSync();</div>
+<div class="line"><a name="l00541"></a><span class="lineno">  541</span>&#160;</div>
+<div class="line"><a name="l00542"></a><span class="lineno">  542</span>&#160;    <span class="comment">// Matrices used for every coordinate transfo</span></div>
+<div class="line"><a name="l00543"></a><span class="lineno">  543</span>&#160;    <a class="code" href="classMatrix4.html">Mat4d</a> matHeliocentricEclipticToAltAz;      <span class="comment">// Transform from heliocentric ecliptic (Vsop87) to observer-centric altazimuthal coordinate</span></div>
+<div class="line"><a name="l00544"></a><span class="lineno">  544</span>&#160;    <a class="code" href="classMatrix4.html">Mat4d</a> matAltAzToHeliocentricEcliptic;      <span class="comment">// Transform from observer-centric altazimuthal coordinate to heliocentric ecliptic (Vsop87)</span></div>
+<div class="line"><a name="l00545"></a><span class="lineno">  545</span>&#160;    <a class="code" href="classMatrix4.html">Mat4d</a> matAltAzToEquinoxEqu;                <span class="comment">// Transform from observer-centric altazimuthal coordinate to Earth Equatorial</span></div>
+<div class="line"><a name="l00546"></a><span class="lineno">  546</span>&#160;    <a class="code" href="classMatrix4.html">Mat4d</a> matEquinoxEquToAltAz;                <span class="comment">// Transform from observer-centric altazimuthal coordinate to Earth Equatorial</span></div>
+<div class="line"><a name="l00547"></a><span class="lineno">  547</span>&#160;    <a class="code" href="classMatrix4.html">Mat4d</a> matHeliocentricEclipticToEquinoxEqu; <span class="comment">// Transform from heliocentric ecliptic (Vsop87) to earth equatorial coordinate</span></div>
+<div class="line"><a name="l00548"></a><span class="lineno">  548</span>&#160;    <a class="code" href="classMatrix4.html">Mat4d</a> matEquinoxEquToJ2000;</div>
+<div class="line"><a name="l00549"></a><span class="lineno">  549</span>&#160;    <a class="code" href="classMatrix4.html">Mat4d</a> matJ2000ToEquinoxEqu;</div>
+<div class="line"><a name="l00550"></a><span class="lineno">  550</span>&#160;    <a class="code" href="classMatrix4.html">Mat4d</a> matJ2000ToAltAz;</div>
+<div class="line"><a name="l00551"></a><span class="lineno">  551</span>&#160;</div>
+<div class="line"><a name="l00552"></a><span class="lineno">  552</span>&#160;    <a class="code" href="classMatrix4.html">Mat4d</a> matAltAzModelView;           <span class="comment">// Modelview matrix for observer-centric altazimuthal drawing</span></div>
+<div class="line"><a name="l00553"></a><span class="lineno">  553</span>&#160;    <a class="code" href="classMatrix4.html">Mat4d</a> invertMatAltAzModelView;     <span class="comment">// Inverted modelview matrix for observer-centric altazimuthal drawing</span></div>
+<div class="line"><a name="l00554"></a><span class="lineno">  554</span>&#160;</div>
+<div class="line"><a name="l00555"></a><span class="lineno">  555</span>&#160;    <span class="comment">// Position variables</span></div>
+<div class="line"><a name="l00556"></a><span class="lineno">  556</span>&#160;    <a class="code" href="classStelObserver.html">StelObserver</a>* position;</div>
+<div class="line"><a name="l00557"></a><span class="lineno">  557</span>&#160;    <span class="comment">// The ID of the default startup location</span></div>
+<div class="line"><a name="l00558"></a><span class="lineno">  558</span>&#160;    QString defaultLocationID;</div>
+<div class="line"><a name="l00559"></a><span class="lineno">  559</span>&#160;</div>
+<div class="line"><a name="l00560"></a><span class="lineno">  560</span>&#160;    <span class="comment">// Time variables</span></div>
+<div class="line"><a name="l00561"></a><span class="lineno">  561</span>&#160;    <span class="keywordtype">double</span> timeSpeed;                  <span class="comment">// Positive : forward, Negative : Backward, 1 = 1sec/sec</span></div>
+<div class="line"><a name="l00562"></a><span class="lineno">  562</span>&#160;    <span class="keywordtype">double</span> JDay;                       <span class="comment">// Curent time in Julian day</span></div>
+<div class="line"><a name="l00563"></a><span class="lineno">  563</span>&#160;    <span class="keywordtype">double</span> presetSkyTime;</div>
+<div class="line"><a name="l00564"></a><span class="lineno">  564</span>&#160;    QTime initTodayTime;</div>
+<div class="line"><a name="l00565"></a><span class="lineno">  565</span>&#160;    QString startupTimeMode;</div>
+<div class="line"><a name="l00566"></a><span class="lineno">  566</span>&#160;    <span class="keywordtype">double</span> secondsOfLastJDayUpdate;         <span class="comment">// Time in seconds when the time rate or time last changed</span></div>
+<div class="line"><a name="l00567"></a><span class="lineno">  567</span>&#160;    <span class="keywordtype">double</span> JDayOfLastJDayUpdate;         <span class="comment">// JDay when the time rate or time last changed</span></div>
+<div class="line"><a name="l00568"></a><span class="lineno">  568</span>&#160;</div>
+<div class="line"><a name="l00569"></a><span class="lineno">  569</span>&#160;    <span class="comment">// Variables for custom equation of Delta-T</span></div>
+<div class="line"><a name="l00570"></a><span class="lineno">  570</span>&#160;    <a class="code" href="classVector3.html">Vec3f</a> deltaTCustomEquationCoeff;</div>
+<div class="line"><a name="l00571"></a><span class="lineno">  571</span>&#160;    <span class="keywordtype">float</span> deltaTCustomNDot;</div>
+<div class="line"><a name="l00572"></a><span class="lineno">  572</span>&#160;    <span class="keywordtype">float</span> deltaTCustomYear;</div>
 <div class="line"><a name="l00573"></a><span class="lineno">  573</span>&#160;</div>
-<div class="line"><a name="l00574"></a><span class="lineno">  574</span>&#160;<span class="preprocessor">#endif // _STELCORE_HPP_</span></div>
+<div class="line"><a name="l00574"></a><span class="lineno">  574</span>&#160;};</div>
+<div class="line"><a name="l00575"></a><span class="lineno">  575</span>&#160;</div>
+<div class="line"><a name="l00576"></a><span class="lineno">  576</span>&#160;<span class="preprocessor">#endif // _STELCORE_HPP_</span></div>
 <div class="ttc" id="classStelCore_html_a2c1e13e2417cce9b840b78a40e00fc33"><div class="ttname"><a href="classStelCore.html#a2c1e13e2417cce9b840b78a40e00fc33">StelCore::setTimeRate</a></div><div class="ttdeci">void setTimeRate(double ts)</div><div class="ttdoc">Set time speed in JDay/sec. </div></div>
-<div class="ttc" id="classStelLocation_html"><div class="ttname"><a href="classStelLocation.html">StelLocation</a></div><div class="ttdoc">Store the informations for a location on a planet. </div><div class="ttdef"><b>Definition:</b> StelLocation.hpp:28</div></div>
+<div class="ttc" id="classStelLocation_html"><div class="ttname"><a href="classStelLocation.html">StelLocation</a></div><div class="ttdoc">Store the informations for a location on a planet. </div><div class="ttdef"><b>Definition:</b> <a href="StelLocation_8hpp_source.html#l00028">StelLocation.hpp:28</a></div></div>
 <div class="ttc" id="classStelCore_html_a02a5be3219ff823176a01a2512ba01f0"><div class="ttname"><a href="classStelCore.html#a02a5be3219ff823176a01a2512ba01f0">StelCore::setPresetSkyTime</a></div><div class="ttdeci">void setPresetSkyTime(double d)</div><div class="ttdoc">Set the preset sky time from a JD. </div></div>
 <div class="ttc" id="classStelCore_html_aba3c3b5b77caf902c6d3ced83e67eeda"><div class="ttname"><a href="classStelCore.html#aba3c3b5b77caf902c6d3ced83e67eeda">StelCore::subtractSiderealYear</a></div><div class="ttdeci">void subtractSiderealYear()</div><div class="ttdoc">Subtract one sidereal year to the simulation time. </div></div>
 <div class="ttc" id="classStelCore_html_ad0e9377f5937b74c1ec0b9805863b4cf"><div class="ttname"><a href="classStelCore.html#ad0e9377f5937b74c1ec0b9805863b4cf">StelCore::setCurrentProjectionType</a></div><div class="ttdeci">void setCurrentProjectionType(ProjectionType type)</div><div class="ttdoc">Set the current ProjectionType to use. </div></div>
@@ -444,15 +444,15 @@
 <div class="ttc" id="classStelCore_html_a4287715a71ab0f7fba4f7d5922cc2f41"><div class="ttname"><a href="classStelCore.html#a4287715a71ab0f7fba4f7d5922cc2f41">StelCore::subtractTropicalYear</a></div><div class="ttdeci">void subtractTropicalYear()</div><div class="ttdoc">Subtract one mean tropical year to the simulation time. </div></div>
 <div class="ttc" id="classStelCore_html_a819a8213233be96f43a2a612a0ab3485"><div class="ttname"><a href="classStelCore.html#a819a8213233be96f43a2a612a0ab3485">StelCore::timeRateChanged</a></div><div class="ttdeci">void timeRateChanged(double rate)</div><div class="ttdoc">This signal is emitted when the time rate has changed. </div></div>
 <div class="ttc" id="classStelCore_html_a1ad33ff2124b5f376849fcdfe4dd2e38"><div class="ttname"><a href="classStelCore.html#a1ad33ff2124b5f376849fcdfe4dd2e38">StelCore::addWeek</a></div><div class="ttdeci">void addWeek()</div><div class="ttdoc">Add one [Earth, solar] week to the current simulation time. </div></div>
-<div class="ttc" id="classStelCore_html_ae81826e080e8f89bc7107c69d9c5a1c8"><div class="ttname"><a href="classStelCore.html#ae81826e080e8f89bc7107c69d9c5a1c8">StelCore::getCurrentDeltaTAlgorithm</a></div><div class="ttdeci">DeltaTAlgorithm getCurrentDeltaTAlgorithm() const </div><div class="ttdoc">Get the current algorithm for time correction (DeltaT) </div><div class="ttdef"><b>Definition:</b> StelCore.hpp:306</div></div>
-<div class="ttc" id="classStelSkyDrawer_html"><div class="ttname"><a href="classStelSkyDrawer.html">StelSkyDrawer</a></div><div class="ttdoc">Provide a set of methods used to draw sky objects taking into account eyes adaptation, zoom level, instrument model and artificially set magnitude limits. </div><div class="ttdef"><b>Definition:</b> StelSkyDrawer.hpp:45</div></div>
+<div class="ttc" id="classStelCore_html_ae81826e080e8f89bc7107c69d9c5a1c8"><div class="ttname"><a href="classStelCore.html#ae81826e080e8f89bc7107c69d9c5a1c8">StelCore::getCurrentDeltaTAlgorithm</a></div><div class="ttdeci">DeltaTAlgorithm getCurrentDeltaTAlgorithm() const </div><div class="ttdoc">Get the current algorithm for time correction (DeltaT) </div><div class="ttdef"><b>Definition:</b> <a href="StelCore_8hpp_source.html#l00308">StelCore.hpp:308</a></div></div>
+<div class="ttc" id="classStelSkyDrawer_html"><div class="ttname"><a href="classStelSkyDrawer.html">StelSkyDrawer</a></div><div class="ttdoc">Provide a set of methods used to draw sky objects taking into account eyes adaptation, zoom level, instrument model and artificially set magnitude limits. </div><div class="ttdef"><b>Definition:</b> <a href="StelSkyDrawer_8hpp_source.html#l00045">StelSkyDrawer.hpp:45</a></div></div>
 <div class="ttc" id="classStelCore_html_aea3fe77fdee3f14f084a94dec61f033e"><div class="ttname"><a href="classStelCore.html#aea3fe77fdee3f14f084a94dec61f033e">StelCore::addSiderealDay</a></div><div class="ttdeci">void addSiderealDay()</div><div class="ttdoc">Add one sidereal day to the simulation time. </div></div>
 <div class="ttc" id="classStelCore_html_a6a7a2adbc0d4a483fa2f610533d93c07"><div class="ttname"><a href="classStelCore.html#a6a7a2adbc0d4a483fa2f610533d93c07">StelCore::getAllProjectionTypeKeys</a></div><div class="ttdeci">QStringList getAllProjectionTypeKeys() const </div><div class="ttdoc">Get the list of all the available projections. </div></div>
 <div class="ttc" id="classStelCore_html_aeb634342cc19121136a2a814d6bcce08"><div class="ttname"><a href="classStelCore.html#aeb634342cc19121136a2a814d6bcce08">StelCore::returnToDefaultLocation</a></div><div class="ttdeci">void returnToDefaultLocation()</div><div class="ttdoc">Return to the default location. </div></div>
-<div class="ttc" id="classStelProjector_html_ae82f23918403ef56da42dfa93588aefe"><div class="ttname"><a href="classStelProjector.html#ae82f23918403ef56da42dfa93588aefe">StelProjector::StelProjectorMaskType</a></div><div class="ttdeci">StelProjectorMaskType</div><div class="ttdoc">Define viewport mask types. </div><div class="ttdef"><b>Definition:</b> StelProjector.hpp:86</div></div>
+<div class="ttc" id="classStelProjector_html_ae82f23918403ef56da42dfa93588aefe"><div class="ttname"><a href="classStelProjector.html#ae82f23918403ef56da42dfa93588aefe">StelProjector::StelProjectorMaskType</a></div><div class="ttdeci">StelProjectorMaskType</div><div class="ttdoc">Define viewport mask types. </div><div class="ttdef"><b>Definition:</b> <a href="StelProjector_8hpp_source.html#l00086">StelProjector.hpp:86</a></div></div>
 <div class="ttc" id="classStelCore_html_ac06c05e410e619870b305ce6f1912095"><div class="ttname"><a href="classStelCore.html#ac06c05e410e619870b305ce6f1912095">StelCore::setInitTodayTime</a></div><div class="ttdeci">void setInitTodayTime(const QTime &amp;t)</div><div class="ttdoc">set the initial &quot;today time&quot; from the config file </div></div>
 <div class="ttc" id="classStelCore_html_a750459568c3f3f08c272e816db1431f2"><div class="ttname"><a href="classStelCore.html#a750459568c3f3f08c272e816db1431f2">StelCore::getFlipHorz</a></div><div class="ttdeci">bool getFlipHorz(void) const </div><div class="ttdoc">Get the state of the horizontal flip. </div></div>
-<div class="ttc" id="classStelCore_html_aab67449ae293798e149781bb4ea4505b"><div class="ttname"><a href="classStelCore.html#aab67449ae293798e149781bb4ea4505b">StelCore::getDeltaTCustomEquationCoefficients</a></div><div class="ttdeci">Vec3f getDeltaTCustomEquationCoefficients() const </div><div class="ttdoc">Get coefficients for custom equation for calculation of Delta-T. </div><div class="ttdef"><b>Definition:</b> StelCore.hpp:511</div></div>
+<div class="ttc" id="classStelCore_html_aab67449ae293798e149781bb4ea4505b"><div class="ttname"><a href="classStelCore.html#aab67449ae293798e149781bb4ea4505b">StelCore::getDeltaTCustomEquationCoefficients</a></div><div class="ttdeci">Vec3f getDeltaTCustomEquationCoefficients() const </div><div class="ttdoc">Get coefficients for custom equation for calculation of Delta-T. </div><div class="ttdef"><b>Definition:</b> <a href="StelCore_8hpp_source.html#l00513">StelCore.hpp:513</a></div></div>
 <div class="ttc" id="classStelCore_html_a9f35e12f299dd5a9af557437692a2f6d"><div class="ttname"><a href="classStelCore.html#a9f35e12f299dd5a9af557437692a2f6d">StelCore::decreaseTimeSpeed</a></div><div class="ttdeci">void decreaseTimeSpeed()</div><div class="ttdoc">Decrease the time speed. </div></div>
 <div class="ttc" id="classStelCore_html_a70b112159fe8eebe5122f147167a92c2"><div class="ttname"><a href="classStelCore.html#a70b112159fe8eebe5122f147167a92c2">StelCore::addSiderealWeek</a></div><div class="ttdeci">void addSiderealWeek()</div><div class="ttdoc">Add one sidereal week (7 sidereal days) to the simulation time. </div></div>
 <div class="ttc" id="classStelCore_html_a55999b54a6d94db981ff0b65a541c784"><div class="ttname"><a href="classStelCore.html#a55999b54a6d94db981ff0b65a541c784">StelCore::subtractDraconicMonth</a></div><div class="ttdeci">void subtractDraconicMonth()</div><div class="ttdoc">Subtract one draconic month to the simulation time. </div></div>
@@ -460,35 +460,35 @@
 <div class="ttc" id="classStelCore_html_a5470e4d6de0c1f469931d9d07bd2b600"><div class="ttname"><a href="classStelCore.html#a5470e4d6de0c1f469931d9d07bd2b600">StelCore::getMJDay</a></div><div class="ttdeci">double getMJDay() const </div><div class="ttdoc">Get the current date in Modified Julian Day. </div></div>
 <div class="ttc" id="classStelCore_html_ab68ccb450741969bf794c1d0298fa39a"><div class="ttname"><a href="classStelCore.html#ab68ccb450741969bf794c1d0298fa39a">StelCore::setFlipVert</a></div><div class="ttdeci">void setFlipVert(bool flip)</div><div class="ttdoc">Set the vertical flip status. </div></div>
 <div class="ttc" id="classStelCore_html_a87c45d57e76d59812012da2c5575c2e4"><div class="ttname"><a href="classStelCore.html#a87c45d57e76d59812012da2c5575c2e4">StelCore::subtractTropicalCentury</a></div><div class="ttdeci">void subtractTropicalCentury()</div><div class="ttdoc">Subtract one mean tropical century to the simulation time. </div></div>
-<div class="ttc" id="classSphericalCap_html"><div class="ttname"><a href="classSphericalCap.html">SphericalCap</a></div><div class="ttdoc">A SphericalCap is defined by a direction and an aperture. </div><div class="ttdef"><b>Definition:</b> StelSphereGeometry.hpp:273</div></div>
+<div class="ttc" id="classSphericalCap_html"><div class="ttname"><a href="classSphericalCap.html">SphericalCap</a></div><div class="ttdoc">A SphericalCap is defined by a direction and an aperture. </div><div class="ttdef"><b>Definition:</b> <a href="StelSphereGeometry_8hpp_source.html#l00273">StelSphereGeometry.hpp:273</a></div></div>
 <div class="ttc" id="classStelCore_html_a3ae40856984c4edb7cd042d94f0563b2"><div class="ttname"><a href="classStelCore.html#a3ae40856984c4edb7cd042d94f0563b2">StelCore::subtractSiderealMonth</a></div><div class="ttdeci">void subtractSiderealMonth()</div><div class="ttdoc">Subtract one sidereal month (1/12 of sidereal year) to the simulation time. </div></div>
 <div class="ttc" id="classStelCore_html_af1d2b0fc3230e34ac320c5ffbcb5aafd"><div class="ttname"><a href="classStelCore.html#af1d2b0fc3230e34ac320c5ffbcb5aafd">StelCore::getCurrentDeltaTAlgorithmDescription</a></div><div class="ttdeci">QString getCurrentDeltaTAlgorithmDescription(void) const </div><div class="ttdoc">Get description of the current algorithm for time correction. </div></div>
 <div class="ttc" id="classStelCore_html_afa5c1b420d7aec6ff358648b098adeaf"><div class="ttname"><a href="classStelCore.html#afa5c1b420d7aec6ff358648b098adeaf">StelCore::addDay</a></div><div class="ttdeci">void addDay()</div><div class="ttdoc">Add one [Earth, solar] day to the current simulation time. </div></div>
 <div class="ttc" id="classStelCore_html_a92649a1531f766bbe0d4b6efeb84b4ec"><div class="ttname"><a href="classStelCore.html#a92649a1531f766bbe0d4b6efeb84b4ec">StelCore::setCurrentDeltaTAlgorithmKey</a></div><div class="ttdeci">void setCurrentDeltaTAlgorithmKey(QString type)</div><div class="ttdoc">Set the current algorithm to use from its key. </div></div>
 <div class="ttc" id="classStelCore_html_ae6e9a51e4edda2fa28e616777dd3cca5"><div class="ttname"><a href="classStelCore.html#ae6e9a51e4edda2fa28e616777dd3cca5">StelCore::addTropicalCentury</a></div><div class="ttdeci">void addTropicalCentury()</div><div class="ttdoc">Add one mean tropical century to the simulation time. </div></div>
-<div class="ttc" id="classStelCore_html_ae4ec950ae0da48dcd7745512152ca0ca"><div class="ttname"><a href="classStelCore.html#ae4ec950ae0da48dcd7745512152ca0ca">StelCore::setCurrentDeltaTAlgorithm</a></div><div class="ttdeci">void setCurrentDeltaTAlgorithm(DeltaTAlgorithm algorithm)</div><div class="ttdoc">Set the current algorithm for time correction (DeltaT) </div><div class="ttdef"><b>Definition:</b> StelCore.hpp:304</div></div>
+<div class="ttc" id="classStelCore_html_ae4ec950ae0da48dcd7745512152ca0ca"><div class="ttname"><a href="classStelCore.html#ae4ec950ae0da48dcd7745512152ca0ca">StelCore::setCurrentDeltaTAlgorithm</a></div><div class="ttdeci">void setCurrentDeltaTAlgorithm(DeltaTAlgorithm algorithm)</div><div class="ttdoc">Set the current algorithm for time correction (DeltaT) </div><div class="ttdef"><b>Definition:</b> <a href="StelCore_8hpp_source.html#l00306">StelCore.hpp:306</a></div></div>
 <div class="ttc" id="classStelCore_html_ab0985bc6ca6ef84cd20fd18983796beb"><div class="ttname"><a href="classStelCore.html#ab0985bc6ca6ef84cd20fd18983796beb">StelCore::setRealTimeSpeed</a></div><div class="ttdeci">void setRealTimeSpeed()</div><div class="ttdoc">Set real time speed, i.e. 1 sec/sec. </div></div>
-<div class="ttc" id="classStelCore_html"><div class="ttname"><a href="classStelCore.html">StelCore</a></div><div class="ttdoc">Main class for Stellarium core processing. </div><div class="ttdef"><b>Definition:</b> StelCore.hpp:46</div></div>
+<div class="ttc" id="classStelCore_html"><div class="ttname"><a href="classStelCore.html">StelCore</a></div><div class="ttdoc">Main class for Stellarium core processing. </div><div class="ttdef"><b>Definition:</b> <a href="StelCore_8hpp_source.html#l00046">StelCore.hpp:46</a></div></div>
 <div class="ttc" id="classStelCore_html_ad6c8d09f6b4d85347ea04f258afbb687"><div class="ttname"><a href="classStelCore.html#ad6c8d09f6b4d85347ea04f258afbb687">StelCore::setDefautAngleForGravityText</a></div><div class="ttdeci">void setDefautAngleForGravityText(float a)</div><div class="ttdoc">Set the offset rotation angle in degree to apply to gravity text (only if gravityLabels is set to fal...</div></div>
 <div class="ttc" id="classStelCore_html_a28711d6aef2b07262af97ade2e03e0ed"><div class="ttname"><a href="classStelCore.html#a28711d6aef2b07262af97ade2e03e0ed">StelCore::addSynodicMonth</a></div><div class="ttdeci">void addSynodicMonth()</div><div class="ttdoc">Add one synodic month to the simulation time. </div></div>
-<div class="ttc" id="classStelGeodesicGrid_html"><div class="ttname"><a href="classStelGeodesicGrid.html">StelGeodesicGrid</a></div><div class="ttdoc">Grid of triangles (zones) on the sphere with radius 1, generated by subdividing the icosahedron...</div><div class="ttdef"><b>Definition:</b> StelGeodesicGrid.hpp:47</div></div>
+<div class="ttc" id="classStelGeodesicGrid_html"><div class="ttname"><a href="classStelGeodesicGrid.html">StelGeodesicGrid</a></div><div class="ttdoc">Grid of triangles (zones) on the sphere with radius 1, generated by subdividing the icosahedron...</div><div class="ttdef"><b>Definition:</b> <a href="StelGeodesicGrid_8hpp_source.html#l00047">StelGeodesicGrid.hpp:47</a></div></div>
 <div class="ttc" id="classStelCore_html_a75bfd0e14a6f88ba29243c9dfa061e3a"><div class="ttname"><a href="classStelCore.html#a75bfd0e14a6f88ba29243c9dfa061e3a">StelCore::addHour</a></div><div class="ttdeci">void addHour()</div><div class="ttdoc">Add one [Earth, solar] hour to the current simulation time. </div></div>
-<div class="ttc" id="classStelCore_html_aa1d63795db676c3755dba65f349abff1"><div class="ttname"><a href="classStelCore.html#aa1d63795db676c3755dba65f349abff1">StelCore::getDeltaTCustomNDot</a></div><div class="ttdeci">float getDeltaTCustomNDot() const </div><div class="ttdoc">Get n-dot for custom equation for calculation of Delta-T. </div><div class="ttdef"><b>Definition:</b> StelCore.hpp:509</div></div>
+<div class="ttc" id="classStelCore_html_aa1d63795db676c3755dba65f349abff1"><div class="ttname"><a href="classStelCore.html#aa1d63795db676c3755dba65f349abff1">StelCore::getDeltaTCustomNDot</a></div><div class="ttdeci">float getDeltaTCustomNDot() const </div><div class="ttdoc">Get n-dot for custom equation for calculation of Delta-T. </div><div class="ttdef"><b>Definition:</b> <a href="StelCore_8hpp_source.html#l00511">StelCore.hpp:511</a></div></div>
 <div class="ttc" id="classStelCore_html_a9b1a70639aba72739fe331c46935adfe"><div class="ttname"><a href="classStelCore.html#a9b1a70639aba72739fe331c46935adfe">StelCore::addTropicalYear</a></div><div class="ttdeci">void addTropicalYear()</div><div class="ttdoc">Add one mean tropical year to the simulation time. </div></div>
 <div class="ttc" id="classMatrix4_html"><div class="ttname"><a href="classMatrix4.html">Matrix4&lt; double &gt;</a></div></div>
-<div class="ttc" id="StelProjectorType_8hpp_html_a286221a2d4640bbeec2090cfbfadb0ff"><div class="ttname"><a href="StelProjectorType_8hpp.html#a286221a2d4640bbeec2090cfbfadb0ff">StelProjectorP</a></div><div class="ttdeci">QSharedPointer&lt; StelProjector &gt; StelProjectorP</div><div class="ttdoc">Shared pointer on a StelProjector instance (implement reference counting) </div><div class="ttdef"><b>Definition:</b> StelProjectorType.hpp:34</div></div>
+<div class="ttc" id="StelProjectorType_8hpp_html_a286221a2d4640bbeec2090cfbfadb0ff"><div class="ttname"><a href="StelProjectorType_8hpp.html#a286221a2d4640bbeec2090cfbfadb0ff">StelProjectorP</a></div><div class="ttdeci">QSharedPointer&lt; StelProjector &gt; StelProjectorP</div><div class="ttdoc">Shared pointer on a StelProjector instance (implement reference counting) </div><div class="ttdef"><b>Definition:</b> <a href="StelProjectorType_8hpp_source.html#l00034">StelProjectorType.hpp:34</a></div></div>
 <div class="ttc" id="classStelCore_html_ab7864c96fd1303bacd44483a291f0be8"><div class="ttname"><a href="classStelCore.html#ab7864c96fd1303bacd44483a291f0be8">StelCore::setFlagGravityLabels</a></div><div class="ttdeci">void setFlagGravityLabels(bool gravity)</div><div class="ttdoc">Set the flag with decides whether to arrage labels so that they are aligned with the bottom of a 2d s...</div></div>
 <div class="ttc" id="classStelCore_html_a46191614b006d7439a02a6f7852e7e09"><div class="ttname"><a href="classStelCore.html#a46191614b006d7439a02a6f7852e7e09">StelCore::subtractSynodicMonth</a></div><div class="ttdeci">void subtractSynodicMonth()</div><div class="ttdoc">Subtract one synodic month to the simulation time. </div></div>
 <div class="ttc" id="classStelCore_html_af0e9b58d850170b5bc3143da3ed24b54"><div class="ttname"><a href="classStelCore.html#af0e9b58d850170b5bc3143da3ed24b54">StelCore::getCurrentDeltaTAlgorithmKey</a></div><div class="ttdeci">QString getCurrentDeltaTAlgorithmKey(void) const </div><div class="ttdoc">Get the current algorithm used by the DeltaT. </div></div>
-<div class="ttc" id="classStelMovementMgr_html"><div class="ttname"><a href="classStelMovementMgr.html">StelMovementMgr</a></div><div class="ttdoc">Manages the head movements and zoom operations. </div><div class="ttdef"><b>Definition:</b> StelMovementMgr.hpp:29</div></div>
-<div class="ttc" id="classStelToneReproducer_html"><div class="ttname"><a href="classStelToneReproducer.html">StelToneReproducer</a></div><div class="ttdoc">Converts tones in function of the eye adaptation to luminance. </div><div class="ttdef"><b>Definition:</b> StelToneReproducer.hpp:53</div></div>
+<div class="ttc" id="classStelMovementMgr_html"><div class="ttname"><a href="classStelMovementMgr.html">StelMovementMgr</a></div><div class="ttdoc">Manages the head movements and zoom operations. </div><div class="ttdef"><b>Definition:</b> <a href="StelMovementMgr_8hpp_source.html#l00029">StelMovementMgr.hpp:29</a></div></div>
+<div class="ttc" id="classStelToneReproducer_html"><div class="ttname"><a href="classStelToneReproducer.html">StelToneReproducer</a></div><div class="ttdoc">Converts tones in function of the eye adaptation to luminance. </div><div class="ttdef"><b>Definition:</b> <a href="StelToneReproducer_8hpp_source.html#l00053">StelToneReproducer.hpp:53</a></div></div>
 <div class="ttc" id="classStelCore_html_a9976e191660aa75da5a017be40e2e50d"><div class="ttname"><a href="classStelCore.html#a9976e191660aa75da5a017be40e2e50d">StelCore::addSiderealYear</a></div><div class="ttdeci">void addSiderealYear()</div><div class="ttdoc">Add one sidereal year to the simulation time. </div></div>
 <div class="ttc" id="classStelCore_html_a729a77edb1e6c87fcb011b9228057d9c"><div class="ttname"><a href="classStelCore.html#a729a77edb1e6c87fcb011b9228057d9c">StelCore::decreaseTimeSpeedLess</a></div><div class="ttdeci">void decreaseTimeSpeedLess()</div><div class="ttdoc">Decrease the time speed but not as much as with decreaseTimeSpeed() </div></div>
-<div class="ttc" id="classStelCore_html_a14a590b814494d88d27b51bd5871dfd2"><div class="ttname"><a href="classStelCore.html#a14a590b814494d88d27b51bd5871dfd2">StelCore::getDeltaTCustomYear</a></div><div class="ttdeci">float getDeltaTCustomYear() const </div><div class="ttdoc">Get year for custom equation for calculation of Delta-T. </div><div class="ttdef"><b>Definition:</b> StelCore.hpp:507</div></div>
+<div class="ttc" id="classStelCore_html_a14a590b814494d88d27b51bd5871dfd2"><div class="ttname"><a href="classStelCore.html#a14a590b814494d88d27b51bd5871dfd2">StelCore::getDeltaTCustomYear</a></div><div class="ttdeci">float getDeltaTCustomYear() const </div><div class="ttdoc">Get year for custom equation for calculation of Delta-T. </div><div class="ttdef"><b>Definition:</b> <a href="StelCore_8hpp_source.html#l00509">StelCore.hpp:509</a></div></div>
 <div class="ttc" id="classStelCore_html_a049792f36d2a7e97603a039387757661"><div class="ttname"><a href="classStelCore.html#a049792f36d2a7e97603a039387757661">StelCore::addDraconicYear</a></div><div class="ttdeci">void addDraconicYear()</div><div class="ttdoc">Add one draconic year to the simulation time. </div></div>
 <div class="ttc" id="classStelCore_html_a23877dc97c0c8ab04487b4d15ad8850c"><div class="ttname"><a href="classStelCore.html#a23877dc97c0c8ab04487b4d15ad8850c">StelCore::toggleRealTimeSpeed</a></div><div class="ttdeci">void toggleRealTimeSpeed()</div><div class="ttdoc">Set real time speed or pause simulation if we are already in realtime speed. </div></div>
 <div class="ttc" id="classStelCore_html_a5e6f0103634632073045f4609d40198b"><div class="ttname"><a href="classStelCore.html#a5e6f0103634632073045f4609d40198b">StelCore::setTodayTime</a></div><div class="ttdeci">void setTodayTime(const QTime &amp;target)</div><div class="ttdoc">Set the time to some value, leaving the day the same. </div></div>
-<div class="ttc" id="classStelObserver_html"><div class="ttname"><a href="classStelObserver.html">StelObserver</a></div><div class="ttdoc">Should be renamed as PlanetBasedObserver and derive from a more generical StelObserver class...</div><div class="ttdef"><b>Definition:</b> StelObserver.hpp:37</div></div>
+<div class="ttc" id="classStelObserver_html"><div class="ttname"><a href="classStelObserver.html">StelObserver</a></div><div class="ttdoc">Should be renamed as PlanetBasedObserver and derive from a more generical StelObserver class...</div><div class="ttdef"><b>Definition:</b> <a href="StelObserver_8hpp_source.html#l00037">StelObserver.hpp:37</a></div></div>
 <div class="ttc" id="classStelCore_html_ae2d3d3624bf88ef60c08271a27d4a2b5"><div class="ttname"><a href="classStelCore.html#ae2d3d3624bf88ef60c08271a27d4a2b5">StelCore::getFlipVert</a></div><div class="ttdeci">bool getFlipVert(void) const </div><div class="ttdoc">Get the state of the vertical flip. </div></div>
 <div class="ttc" id="classStelCore_html_ab885395e4fc02328b8354d7462915f5a"><div class="ttname"><a href="classStelCore.html#ab885395e4fc02328b8354d7462915f5a">StelCore::returnToHome</a></div><div class="ttdeci">void returnToHome()</div><div class="ttdoc">Return to the default location and set default landscape with atmosphere and fog effects. </div></div>
 <div class="ttc" id="classStelCore_html_a627d73e5792f933eaaa2916afb07826c"><div class="ttname"><a href="classStelCore.html#a627d73e5792f933eaaa2916afb07826c">StelCore::subtractWeek</a></div><div class="ttdeci">void subtractWeek()</div><div class="ttdoc">Subtract one [Earth, solar] week to the current simulation time. </div></div>
@@ -505,19 +505,19 @@
 <div class="ttc" id="classStelCore_html_a1b6c3fb5d89f27c9ee508edcbe664c06"><div class="ttname"><a href="classStelCore.html#a1b6c3fb5d89f27c9ee508edcbe664c06">StelCore::subtractSiderealWeek</a></div><div class="ttdeci">void subtractSiderealWeek()</div><div class="ttdoc">Subtract one sidereal week (7 sidereal days) to the simulation time. </div></div>
 <div class="ttc" id="classStelCore_html_a6e9db9f01e3d68cac39af48e740509f2"><div class="ttname"><a href="classStelCore.html#a6e9db9f01e3d68cac39af48e740509f2">StelCore::addTropicalMonth</a></div><div class="ttdeci">void addTropicalMonth()</div><div class="ttdoc">Add one mean tropical month to the simulation time. </div></div>
 <div class="ttc" id="classStelCore_html_aea0c66dd466599f42bf7a70057d0d7e6"><div class="ttname"><a href="classStelCore.html#aea0c66dd466599f42bf7a70057d0d7e6">StelCore::subtractAnomalisticMonth</a></div><div class="ttdeci">void subtractAnomalisticMonth()</div><div class="ttdoc">Subtract one anomalistic month to the simulation time. </div></div>
-<div class="ttc" id="classStelCore_html_a224e9c17695e28f01f695a2f8d5c6640"><div class="ttname"><a href="classStelCore.html#a224e9c17695e28f01f695a2f8d5c6640">StelCore::setDeltaTCustomEquationCoefficients</a></div><div class="ttdeci">void setDeltaTCustomEquationCoefficients(Vec3f c)</div><div class="ttdoc">Set coefficients for custom equation for calculation of Delta-T. </div><div class="ttdef"><b>Definition:</b> StelCore.hpp:504</div></div>
-<div class="ttc" id="classStelProjector_html_ae6b42a6973558f855691b91701edf0dc"><div class="ttname"><a href="classStelProjector.html#ae6b42a6973558f855691b91701edf0dc">StelProjector::ModelViewTranformP</a></div><div class="ttdeci">QSharedPointer&lt; ModelViewTranform &gt; ModelViewTranformP</div><div class="ttdoc">Shared pointer on a ModelViewTranform instance (implement reference counting) </div><div class="ttdef"><b>Definition:</b> StelProjector.hpp:46</div></div>
+<div class="ttc" id="classStelCore_html_a224e9c17695e28f01f695a2f8d5c6640"><div class="ttname"><a href="classStelCore.html#a224e9c17695e28f01f695a2f8d5c6640">StelCore::setDeltaTCustomEquationCoefficients</a></div><div class="ttdeci">void setDeltaTCustomEquationCoefficients(Vec3f c)</div><div class="ttdoc">Set coefficients for custom equation for calculation of Delta-T. </div><div class="ttdef"><b>Definition:</b> <a href="StelCore_8hpp_source.html#l00506">StelCore.hpp:506</a></div></div>
+<div class="ttc" id="classStelProjector_html_ae6b42a6973558f855691b91701edf0dc"><div class="ttname"><a href="classStelProjector.html#ae6b42a6973558f855691b91701edf0dc">StelProjector::ModelViewTranformP</a></div><div class="ttdeci">QSharedPointer&lt; ModelViewTranform &gt; ModelViewTranformP</div><div class="ttdoc">Shared pointer on a ModelViewTranform instance (implement reference counting) </div><div class="ttdef"><b>Definition:</b> <a href="StelProjector_8hpp_source.html#l00046">StelProjector.hpp:46</a></div></div>
 <div class="ttc" id="classStelCore_html_a9a45fab32ede2d7d8081705c53d89fd8"><div class="ttname"><a href="classStelCore.html#a9a45fab32ede2d7d8081705c53d89fd8">StelCore::getInitTodayTime</a></div><div class="ttdeci">QTime getInitTodayTime(void)</div><div class="ttdoc">get the initial &quot;today time&quot; from the config file </div></div>
 <div class="ttc" id="classStelCore_html_aa2c61ac690953e56a109e26002eef8f8"><div class="ttname"><a href="classStelCore.html#aa2c61ac690953e56a109e26002eef8f8">StelCore::addDraconicMonth</a></div><div class="ttdeci">void addDraconicMonth()</div><div class="ttdoc">Add one draconic month to the simulation time. </div></div>
 <div class="ttc" id="classStelCore_html_ae1ef6a0aa77e0a1cef7684707b9c5f7b"><div class="ttname"><a href="classStelCore.html#ae1ef6a0aa77e0a1cef7684707b9c5f7b">StelCore::addSiderealCentury</a></div><div class="ttdeci">void addSiderealCentury()</div><div class="ttdoc">Add one sidereal century (100 sidereal years) to the simulation time. </div></div>
 <div class="ttc" id="classStelCore_html_addb521149eff601f309148ed43e2f00d"><div class="ttname"><a href="classStelCore.html#addb521149eff601f309148ed43e2f00d">StelCore::subtractTropicalMonth</a></div><div class="ttdeci">void subtractTropicalMonth()</div><div class="ttdoc">Subtract one mean tropical month to the simulation time. </div></div>
 <div class="ttc" id="classStelCore_html_a72e4022f7d49172fd016d564d5b3e153"><div class="ttname"><a href="classStelCore.html#a72e4022f7d49172fd016d564d5b3e153">StelCore::addSiderealMonth</a></div><div class="ttdeci">void addSiderealMonth()</div><div class="ttdoc">Add one sidereal month (1/12 of sidereal year) to the simulation time. </div></div>
 <div class="ttc" id="classStelCore_html_a39c97714f5701b1d5a692c890d01f482"><div class="ttname"><a href="classStelCore.html#a39c97714f5701b1d5a692c890d01f482">StelCore::subtractDraconicYear</a></div><div class="ttdeci">void subtractDraconicYear()</div><div class="ttdoc">Subtract one draconic year to the simulation time. </div></div>
-<div class="ttc" id="classStelCore_html_a3f3651835c4095911f14116f64535926"><div class="ttname"><a href="classStelCore.html#a3f3651835c4095911f14116f64535926">StelCore::setDeltaTCustomYear</a></div><div class="ttdeci">void setDeltaTCustomYear(float y)</div><div class="ttdoc">Set year for custom equation for calculation of Delta-T. </div><div class="ttdef"><b>Definition:</b> StelCore.hpp:498</div></div>
+<div class="ttc" id="classStelCore_html_a3f3651835c4095911f14116f64535926"><div class="ttname"><a href="classStelCore.html#a3f3651835c4095911f14116f64535926">StelCore::setDeltaTCustomYear</a></div><div class="ttdeci">void setDeltaTCustomYear(float y)</div><div class="ttdoc">Set year for custom equation for calculation of Delta-T. </div><div class="ttdef"><b>Definition:</b> <a href="StelCore_8hpp_source.html#l00500">StelCore.hpp:500</a></div></div>
 <div class="ttc" id="classStelCore_html_a0efce41ccb19e8383cf43a5cbe333136"><div class="ttname"><a href="classStelCore.html#a0efce41ccb19e8383cf43a5cbe333136">StelCore::getTimeRate</a></div><div class="ttdeci">double getTimeRate() const </div><div class="ttdoc">Get time speed in JDay/sec. </div></div>
 <div class="ttc" id="classVector3_html"><div class="ttname"><a href="classVector3.html">Vector3&lt; double &gt;</a></div></div>
 <div class="ttc" id="StelProjectorType_8hpp_html"><div class="ttname"><a href="StelProjectorType_8hpp.html">StelProjectorType.hpp</a></div><div class="ttdoc">Define the StelProjectorP type. </div></div>
-<div class="ttc" id="structStelProjector_1_1StelProjectorParams_html"><div class="ttname"><a href="structStelProjector_1_1StelProjectorParams.html">StelProjector::StelProjectorParams</a></div><div class="ttdoc">Contains all the param needed to initialize a StelProjector. </div><div class="ttdef"><b>Definition:</b> StelProjector.hpp:94</div></div>
+<div class="ttc" id="structStelProjector_1_1StelProjectorParams_html"><div class="ttname"><a href="structStelProjector_1_1StelProjectorParams.html">StelProjector::StelProjectorParams</a></div><div class="ttdoc">Contains all the param needed to initialize a StelProjector. </div><div class="ttdef"><b>Definition:</b> <a href="StelProjector_8hpp_source.html#l00094">StelProjector.hpp:94</a></div></div>
 <div class="ttc" id="classStelCore_html_a8333a8dceb625e3bab1ff91c6dcb3a93"><div class="ttname"><a href="classStelCore.html#a8333a8dceb625e3bab1ff91c6dcb3a93">StelCore::getCurrentProjectionTypeKey</a></div><div class="ttdeci">QString getCurrentProjectionTypeKey(void) const </div><div class="ttdoc">Get the current Mapping used by the Projection. </div></div>
 <div class="ttc" id="classStelCore_html_a8cd6b845dae8ab9ffbe29d7c66ef66e8"><div class="ttname"><a href="classStelCore.html#a8cd6b845dae8ab9ffbe29d7c66ef66e8">StelCore::subtractSiderealCentury</a></div><div class="ttdeci">void subtractSiderealCentury()</div><div class="ttdoc">Subtract one sidereal century (100 sidereal years) to the simulation time. </div></div>
 <div class="ttc" id="classStelCore_html_a66d83912bf421083c6940cfacd3ce2da"><div class="ttname"><a href="classStelCore.html#a66d83912bf421083c6940cfacd3ce2da">StelCore::increaseTimeSpeed</a></div><div class="ttdeci">void increaseTimeSpeed()</div><div class="ttdoc">Increase the time speed. </div></div>
@@ -525,7 +525,7 @@
 <div class="ttc" id="classStelCore_html_a45660b3a83f48241e891bb17fd7b4ac5"><div class="ttname"><a href="classStelCore.html#a45660b3a83f48241e891bb17fd7b4ac5">StelCore::setCurrentProjectionTypeKey</a></div><div class="ttdeci">void setCurrentProjectionTypeKey(QString type)</div><div class="ttdoc">Set the current ProjectionType to use from its key. </div></div>
 <div class="ttc" id="classStelCore_html_a2fe85c87a2fb23f39ce42b70bd739460"><div class="ttname"><a href="classStelCore.html#a2fe85c87a2fb23f39ce42b70bd739460">StelCore::setDefaultLocationID</a></div><div class="ttdeci">void setDefaultLocationID(const QString &amp;id)</div><div class="ttdoc">Set the location to use by default at startup. </div></div>
 <div class="ttc" id="classStelCore_html_aa5972efc56b34907cd38eca8c82df3ee"><div class="ttname"><a href="classStelCore.html#aa5972efc56b34907cd38eca8c82df3ee">StelCore::setMJDay</a></div><div class="ttdeci">void setMJDay(double MJD)</div><div class="ttdoc">Set the current date in Modified Julian Day. </div></div>
-<div class="ttc" id="classStelCore_html_a707a7d7f8f50f4da81dadadf179b9c94"><div class="ttname"><a href="classStelCore.html#a707a7d7f8f50f4da81dadadf179b9c94">StelCore::setDeltaTCustomNDot</a></div><div class="ttdeci">void setDeltaTCustomNDot(float v)</div><div class="ttdoc">Set n-dot for custom equation for calculation of Delta-T. </div><div class="ttdef"><b>Definition:</b> StelCore.hpp:501</div></div>
+<div class="ttc" id="classStelCore_html_a707a7d7f8f50f4da81dadadf179b9c94"><div class="ttname"><a href="classStelCore.html#a707a7d7f8f50f4da81dadadf179b9c94">StelCore::setDeltaTCustomNDot</a></div><div class="ttdeci">void setDeltaTCustomNDot(float v)</div><div class="ttdoc">Set n-dot for custom equation for calculation of Delta-T. </div><div class="ttdef"><b>Definition:</b> <a href="StelCore_8hpp_source.html#l00503">StelCore.hpp:503</a></div></div>
 <div class="ttc" id="classStelCore_html_a2aa2c82614d4450f02f49a9b29643bf2"><div class="ttname"><a href="classStelCore.html#a2aa2c82614d4450f02f49a9b29643bf2">StelCore::increaseTimeSpeedLess</a></div><div class="ttdeci">void increaseTimeSpeedLess()</div><div class="ttdoc">Increase the time speed, but not as much as with increaseTimeSpeed() </div></div>
 <div class="ttc" id="classStelCore_html_aa76f1faccc6689368898bf3f9fff6110"><div class="ttname"><a href="classStelCore.html#aa76f1faccc6689368898bf3f9fff6110">StelCore::subtractSiderealDay</a></div><div class="ttdeci">void subtractSiderealDay()</div><div class="ttdoc">Subtract one sidereal day to the simulation time. </div></div>
 <div class="ttc" id="classStelCore_html_a949de4859203bcb79d6256c006a4072d"><div class="ttname"><a href="classStelCore.html#a949de4859203bcb79d6256c006a4072d">StelCore::locationChanged</a></div><div class="ttdeci">void locationChanged(StelLocation)</div><div class="ttdoc">This signal is emitted when the observer location has changed. </div></div>
@@ -535,7 +535,7 @@
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Sun Mar 23 2014 16:33:16 for Stellarium by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Sun Jun 22 2014 21:09:08 for Stellarium by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.6
 </small></address>

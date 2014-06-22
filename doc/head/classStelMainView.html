@@ -30,7 +30,7 @@
       <li><a href="codingStyle.html"><span>Coding&#160;Style</span></a></li>
       <li><a href="scripting.html"><span>Scripting</span></a></li>
       <li><a href="plugins.html"><span>Plugins</span></a></li>
-      <li><a href="@ref fileStructure"><span>File&#160;Structure</span></a></li>
+      <li><a href="fileStructure.html"><span>File&#160;Structure</span></a></li>
     </ul>
   </div>
   <div id="navrow2" class="tabs2">
@@ -99,9 +99,15 @@ Public Slots</h2></td></tr>
 <tr class="memitem:a76cafa379753fddc95f03ae39108050a"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classStelMainView.html#a76cafa379753fddc95f03ae39108050a">getMaxFps</a> ()</td></tr>
 <tr class="memdesc:a76cafa379753fddc95f03ae39108050a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the current maximum frames per second.  <a href="#a76cafa379753fddc95f03ae39108050a">More...</a><br/></td></tr>
 <tr class="separator:a76cafa379753fddc95f03ae39108050a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adf2d701b7f0c69b135ee026c8ccbe28e"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="adf2d701b7f0c69b135ee026c8ccbe28e"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>maxFpsSceneUpdate</b> ()</td></tr>
+<tr class="separator:adf2d701b7f0c69b135ee026c8ccbe28e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a4843a5aaf835b8c6a2431170a2905d59"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classStelMainView.html#a4843a5aaf835b8c6a2431170a2905d59">updateScene</a> ()</td></tr>
 <tr class="memdesc:a4843a5aaf835b8c6a2431170a2905d59"><td class="mdescLeft">&#160;</td><td class="mdescRight">Updates the scene and process all events.  <a href="#a4843a5aaf835b8c6a2431170a2905d59">More...</a><br/></td></tr>
 <tr class="separator:a4843a5aaf835b8c6a2431170a2905d59"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a28740c8bd56ffe89d389849e4c71d69d"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classStelMainView.html#a28740c8bd56ffe89d389849e4c71d69d">thereWasAnEvent</a> ()</td></tr>
+<tr class="memdesc:a28740c8bd56ffe89d389849e4c71d69d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Notify that an event was handled by the program and therefore the FPS should be maximized for a couple of seconds.  <a href="#a28740c8bd56ffe89d389849e4c71d69d">More...</a><br/></td></tr>
+<tr class="separator:a28740c8bd56ffe89d389849e4c71d69d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="signals"></a>
 Signals</h2></td></tr>
@@ -162,6 +168,9 @@ virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>wheelEvent</b
 <tr class="memitem:afb9a0e45da3f43524466d4e74ddca93b"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="afb9a0e45da3f43524466d4e74ddca93b"></a>
 virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>moveEvent</b> (QMoveEvent *event)</td></tr>
 <tr class="separator:afb9a0e45da3f43524466d4e74ddca93b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a75245d17cb60e700578dd5d7762caf70"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a75245d17cb60e700578dd5d7762caf70"></a>
+virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>closeEvent</b> (QCloseEvent *event)</td></tr>
+<tr class="separator:a75245d17cb60e700578dd5d7762caf70"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a0ee0bc0557d1f1766f8b26e694a62548"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classStelMainView.html#a0ee0bc0557d1f1766f8b26e694a62548">drawBackground</a> (QPainter *painter, const QRectF &amp;rect)</td></tr>
 <tr class="memdesc:a0ee0bc0557d1f1766f8b26e694a62548"><td class="mdescLeft">&#160;</td><td class="mdescRight">Update the mouse pointer state and schedule next redraw.  <a href="#a0ee0bc0557d1f1766f8b26e694a62548">More...</a><br/></td></tr>
 <tr class="separator:a0ee0bc0557d1f1766f8b26e694a62548"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -175,6 +184,8 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><b>fullScreen</b></td></
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Reimplement a QGraphicsView for Stellarium. </p>
 <p>It is the class creating the singleton GL Widget, the main <a class="el" href="classStelApp.html" title="Singleton main Stellarium application class. ">StelApp</a> instance as well as the main GUI. </p>
+
+<p>Definition at line <a class="el" href="StelMainView_8hpp_source.html#l00040">40</a> of file <a class="el" href="StelMainView_8hpp_source.html">StelMainView.hpp</a>.</p>
 </div><h2 class="groupheader">Member Function Documentation</h2>
 <a class="anchor" id="a4ac4c9de5b87818180f8c9e8524f0d3e"></a>
 <div class="memitem">
@@ -270,6 +281,8 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><b>fullScreen</b></td></
 
 <p>Get the mouse cursor timeout in seconds. </p>
 
+<p>Definition at line <a class="el" href="StelMainView_8hpp_source.html#l00092">92</a> of file <a class="el" href="StelMainView_8hpp_source.html">StelMainView.hpp</a>.</p>
+
 </div>
 </div>
 <a class="anchor" id="affa3a5a203f70775d70a187200a0e991"></a>
@@ -294,6 +307,8 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><b>fullScreen</b></td></
 </div><div class="memdoc">
 
 <p>Get the state of the mouse cursor timeout flag. </p>
+
+<p>Definition at line <a class="el" href="StelMainView_8hpp_source.html#l00090">90</a> of file <a class="el" href="StelMainView_8hpp_source.html">StelMainView.hpp</a>.</p>
 
 </div>
 </div>
@@ -320,6 +335,8 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><b>fullScreen</b></td></
 
 <p>Get whether colors are inverted when saving screenshot. </p>
 
+<p>Definition at line <a class="el" href="StelMainView_8hpp_source.html#l00085">85</a> of file <a class="el" href="StelMainView_8hpp_source.html">StelMainView.hpp</a>.</p>
+
 </div>
 </div>
 <a class="anchor" id="af875b663fc6ec84c0da4409eba2c5a7f"></a>
@@ -344,6 +361,8 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><b>fullScreen</b></td></
 </div><div class="memdoc">
 
 <p>Return the parent gui widget, this should be used as parent to all the <a class="el" href="classStelDialog.html" title="Base class for all the GUI windows in Stellarium. ">StelDialog</a> instances. </p>
+
+<p>Definition at line <a class="el" href="StelMainView_8hpp_source.html#l00068">68</a> of file <a class="el" href="StelMainView_8hpp_source.html">StelMainView.hpp</a>.</p>
 
 </div>
 </div>
@@ -370,6 +389,8 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><b>fullScreen</b></td></
 
 <p>Get the <a class="el" href="classStelMainView.html" title="Reimplement a QGraphicsView for Stellarium. ">StelMainView</a> singleton instance. </p>
 
+<p>Definition at line <a class="el" href="StelMainView_8hpp_source.html#l00060">60</a> of file <a class="el" href="StelMainView_8hpp_source.html">StelMainView.hpp</a>.</p>
+
 </div>
 </div>
 <a class="anchor" id="a76cafa379753fddc95f03ae39108050a"></a>
@@ -395,6 +416,8 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><b>fullScreen</b></td></
 
 <p>Get the current maximum frames per second. </p>
 
+<p>Definition at line <a class="el" href="StelMainView_8hpp_source.html#l00109">109</a> of file <a class="el" href="StelMainView_8hpp_source.html">StelMainView.hpp</a>.</p>
+
 </div>
 </div>
 <a class="anchor" id="a93f5301d3debb5afb45ce93befbba337"></a>
@@ -419,6 +442,8 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><b>fullScreen</b></td></
 </div><div class="memdoc">
 
 <p>Get the current minimum frames per second. </p>
+
+<p>Definition at line <a class="el" href="StelMainView_8hpp_source.html#l00104">104</a> of file <a class="el" href="StelMainView_8hpp_source.html">StelMainView.hpp</a>.</p>
 
 </div>
 </div>
@@ -550,6 +575,8 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><b>fullScreen</b></td></
 
 <p>Set the mouse cursor timeout in seconds. </p>
 
+<p>Definition at line <a class="el" href="StelMainView_8hpp_source.html#l00096">96</a> of file <a class="el" href="StelMainView_8hpp_source.html">StelMainView.hpp</a>.</p>
+
 </div>
 </div>
 <a class="anchor" id="a0c1d36e12aaf0850c4fe3af3c5c1affe"></a>
@@ -576,6 +603,8 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><b>fullScreen</b></td></
 
 <p>Get the state of the mouse cursor timeout flag. </p>
 
+<p>Definition at line <a class="el" href="StelMainView_8hpp_source.html#l00094">94</a> of file <a class="el" href="StelMainView_8hpp_source.html">StelMainView.hpp</a>.</p>
+
 </div>
 </div>
 <a class="anchor" id="a7433d9c6156e2894bcdd1e3729140655"></a>
@@ -601,6 +630,8 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><b>fullScreen</b></td></
 </div><div class="memdoc">
 
 <p>Set whether colors should be inverted when saving screenshot. </p>
+
+<p>Definition at line <a class="el" href="StelMainView_8hpp_source.html#l00087">87</a> of file <a class="el" href="StelMainView_8hpp_source.html">StelMainView.hpp</a>.</p>
 
 </div>
 </div>
@@ -660,6 +691,8 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><b>fullScreen</b></td></
   </dd>
 </dl>
 
+<p>Definition at line <a class="el" href="StelMainView_8hpp_source.html#l00107">107</a> of file <a class="el" href="StelMainView_8hpp_source.html">StelMainView.hpp</a>.</p>
+
 </div>
 </div>
 <a class="anchor" id="acc53bab92d8da845ad2c1159b5a8cc42"></a>
@@ -693,6 +726,33 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><b>fullScreen</b></td></
   </dd>
 </dl>
 
+<p>Definition at line <a class="el" href="StelMainView_8hpp_source.html#l00102">102</a> of file <a class="el" href="StelMainView_8hpp_source.html">StelMainView.hpp</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a28740c8bd56ffe89d389849e4c71d69d"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void StelMainView::thereWasAnEvent </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">slot</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Notify that an event was handled by the program and therefore the FPS should be maximized for a couple of seconds. </p>
+
 </div>
 </div>
 <a class="anchor" id="a4843a5aaf835b8c6a2431170a2905d59"></a>
@@ -720,10 +780,13 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><b>fullScreen</b></td></
 
 </div>
 </div>
+<hr/>The documentation for this class was generated from the following file:<ul>
+<li>/home/aw/devel/stellarium/trunk/src/<a class="el" href="StelMainView_8hpp_source.html">StelMainView.hpp</a></li>
+</ul>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Sun Mar 23 2014 16:33:17 for Stellarium by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Sun Jun 22 2014 21:09:09 for Stellarium by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.6
 </small></address>

@@ -30,7 +30,7 @@
       <li><a href="codingStyle.html"><span>Coding&#160;Style</span></a></li>
       <li><a href="scripting.html"><span>Scripting</span></a></li>
       <li><a href="plugins.html"><span>Plugins</span></a></li>
-      <li><a href="@ref fileStructure"><span>File&#160;Structure</span></a></li>
+      <li><a href="fileStructure.html"><span>File&#160;Structure</span></a></li>
     </ul>
   </div>
   <div id="navrow2" class="tabs2">
@@ -263,9 +263,6 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:ad2655f22c4eb31d09f1a826ac4c7611f inherit pub_methods_classStelModule"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classStelModule.html#ad2655f22c4eb31d09f1a826ac4c7611f">deinit</a> ()</td></tr>
 <tr class="memdesc:ad2655f22c4eb31d09f1a826ac4c7611f inherit pub_methods_classStelModule"><td class="mdescLeft">&#160;</td><td class="mdescRight">Called before the module will be delete, and before the openGL context is suppressed.  <a href="#ad2655f22c4eb31d09f1a826ac4c7611f">More...</a><br/></td></tr>
 <tr class="separator:ad2655f22c4eb31d09f1a826ac4c7611f inherit pub_methods_classStelModule"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a068e8e8cc13ea65e3b9e5a2ec538c9e8 inherit pub_methods_classStelModule"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classStelModule.html#a068e8e8cc13ea65e3b9e5a2ec538c9e8">drawPartial</a> (<a class="el" href="classStelCore.html">StelCore</a> *core)</td></tr>
-<tr class="memdesc:a068e8e8cc13ea65e3b9e5a2ec538c9e8 inherit pub_methods_classStelModule"><td class="mdescLeft">&#160;</td><td class="mdescRight">Iterate through the drawing sequence.  <a href="#a068e8e8cc13ea65e3b9e5a2ec538c9e8">More...</a><br/></td></tr>
-<tr class="separator:a068e8e8cc13ea65e3b9e5a2ec538c9e8 inherit pub_methods_classStelModule"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a21fdf725bf909cc8ac6cc733b17d8b6b inherit pub_methods_classStelModule"><td class="memItemLeft" align="right" valign="top">virtual QString&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classStelModule.html#a21fdf725bf909cc8ac6cc733b17d8b6b">getModuleVersion</a> () const </td></tr>
 <tr class="memdesc:a21fdf725bf909cc8ac6cc733b17d8b6b inherit pub_methods_classStelModule"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the version of the module, default is stellarium main version.  <a href="#a21fdf725bf909cc8ac6cc733b17d8b6b">More...</a><br/></td></tr>
 <tr class="separator:a21fdf725bf909cc8ac6cc733b17d8b6b inherit pub_methods_classStelModule"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -287,6 +284,9 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:ab6a5e5ca552ce2056ff29bc1f08ef4a7 inherit pub_methods_classStelModule"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classStelModule.html#ab6a5e5ca552ce2056ff29bc1f08ef4a7">handleKeys</a> (class QKeyEvent *e)</td></tr>
 <tr class="memdesc:ab6a5e5ca552ce2056ff29bc1f08ef4a7 inherit pub_methods_classStelModule"><td class="mdescLeft">&#160;</td><td class="mdescRight">Handle key events.  <a href="#ab6a5e5ca552ce2056ff29bc1f08ef4a7">More...</a><br/></td></tr>
 <tr class="separator:ab6a5e5ca552ce2056ff29bc1f08ef4a7 inherit pub_methods_classStelModule"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a372fd47ff9580f1e776c35877ef5af6f inherit pub_methods_classStelModule"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classStelModule.html#a372fd47ff9580f1e776c35877ef5af6f">handlePinch</a> (qreal scale, bool started)</td></tr>
+<tr class="memdesc:a372fd47ff9580f1e776c35877ef5af6f inherit pub_methods_classStelModule"><td class="mdescLeft">&#160;</td><td class="mdescRight">Handle pinch gesture events.  <a href="#a372fd47ff9580f1e776c35877ef5af6f">More...</a><br/></td></tr>
+<tr class="separator:a372fd47ff9580f1e776c35877ef5af6f inherit pub_methods_classStelModule"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a361f28660ec3002520924cd5cee08ccd inherit pub_methods_classStelModule"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classStelModule.html#a361f28660ec3002520924cd5cee08ccd">configureGui</a> (bool show=true)</td></tr>
 <tr class="memdesc:a361f28660ec3002520924cd5cee08ccd inherit pub_methods_classStelModule"><td class="mdescLeft">&#160;</td><td class="mdescRight">Detect or show the configuration GUI elements for the module.  <a href="#a361f28660ec3002520924cd5cee08ccd">More...</a><br/></td></tr>
 <tr class="separator:a361f28660ec3002520924cd5cee08ccd inherit pub_methods_classStelModule"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -340,6 +340,8 @@ Additional Inherited Members</h2></td></tr>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Manages all the rendering at the level of the observer's surroundings. </p>
 <p>This includes landscape textures, fog, atmosphere and cardinal points. I decided to put all these elements together in a single class because they are inherently linked, especially when we start moving the observer in altitude. </p>
+
+<p>Definition at line <a class="el" href="LandscapeMgr_8hpp_source.html#l00041">41</a> of file <a class="el" href="LandscapeMgr_8hpp_source.html">LandscapeMgr.hpp</a>.</p>
 </div><h2 class="groupheader">Member Function Documentation</h2>
 <a class="anchor" id="aeecc72b67d6005cd5cc3a6669d829780"></a>
 <div class="memitem">
@@ -751,6 +753,8 @@ Additional Inherited Members</h2></td></tr>
 
 <p>Get the current landscape ID. </p>
 
+<p>Definition at line <a class="el" href="LandscapeMgr_8hpp_source.html#l00138">138</a> of file <a class="el" href="LandscapeMgr_8hpp_source.html">LandscapeMgr.hpp</a>.</p>
+
 </div>
 </div>
 <a class="anchor" id="a25c2ad62dd144a44637fa47654316c57"></a>
@@ -801,6 +805,8 @@ Additional Inherited Members</h2></td></tr>
 
 <p>Get the default landscape ID. </p>
 
+<p>Definition at line <a class="el" href="LandscapeMgr_8hpp_source.html#l00151">151</a> of file <a class="el" href="LandscapeMgr_8hpp_source.html">LandscapeMgr.hpp</a>.</p>
+
 </div>
 </div>
 <a class="anchor" id="a124e42c1014f952fbd5255c6eb0c89d5"></a>
@@ -825,6 +831,8 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Return the minimal brightness value of the landscape. </p>
+
+<p>Definition at line <a class="el" href="LandscapeMgr_8hpp_source.html#l00190">190</a> of file <a class="el" href="LandscapeMgr_8hpp_source.html">LandscapeMgr.hpp</a>.</p>
 
 </div>
 </div>
@@ -1026,6 +1034,8 @@ Additional Inherited Members</h2></td></tr>
 
 <p>Return the value of the flag determining if a change of landscape will update the observer location. </p>
 
+<p>Definition at line <a class="el" href="LandscapeMgr_8hpp_source.html#l00177">177</a> of file <a class="el" href="LandscapeMgr_8hpp_source.html">LandscapeMgr.hpp</a>.</p>
+
 </div>
 </div>
 <a class="anchor" id="a5d23b8decb7befff2aabbf758ce18ad0"></a>
@@ -1051,6 +1061,8 @@ Additional Inherited Members</h2></td></tr>
 
 <p>Return the value of the flag determining if the minimal brightness should be taken from landscape.ini. </p>
 
+<p>Definition at line <a class="el" href="LandscapeMgr_8hpp_source.html#l00186">186</a> of file <a class="el" href="LandscapeMgr_8hpp_source.html">LandscapeMgr.hpp</a>.</p>
+
 </div>
 </div>
 <a class="anchor" id="a423890ae45e5ad6a1fa66f64f06a32dc"></a>
@@ -1075,6 +1087,8 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Return the value of the flag determining if a minimal brightness should be used to keep landscape visible. </p>
+
+<p>Definition at line <a class="el" href="LandscapeMgr_8hpp_source.html#l00182">182</a> of file <a class="el" href="LandscapeMgr_8hpp_source.html">LandscapeMgr.hpp</a>.</p>
 
 </div>
 </div>
@@ -1611,6 +1625,8 @@ Additional Inherited Members</h2></td></tr>
 
 <p>Set the minimal brightness value of the landscape. </p>
 
+<p>Definition at line <a class="el" href="LandscapeMgr_8hpp_source.html#l00192">192</a> of file <a class="el" href="LandscapeMgr_8hpp_source.html">LandscapeMgr.hpp</a>.</p>
+
 </div>
 </div>
 <a class="anchor" id="a9692b777a833b81d7fb4e9f4e59b03e2"></a>
@@ -1793,6 +1809,8 @@ Additional Inherited Members</h2></td></tr>
 
 <p>Set the value of the flag determining if a change of landscape will update the observer location. </p>
 
+<p>Definition at line <a class="el" href="LandscapeMgr_8hpp_source.html#l00179">179</a> of file <a class="el" href="LandscapeMgr_8hpp_source.html">LandscapeMgr.hpp</a>.</p>
+
 </div>
 </div>
 <a class="anchor" id="ad69d3b589457af0e78421c31a2e73df9"></a>
@@ -1819,6 +1837,8 @@ Additional Inherited Members</h2></td></tr>
 
 <p>Sets the value of the flag determining if the minimal brightness should be taken from landscape.ini. </p>
 
+<p>Definition at line <a class="el" href="LandscapeMgr_8hpp_source.html#l00188">188</a> of file <a class="el" href="LandscapeMgr_8hpp_source.html">LandscapeMgr.hpp</a>.</p>
+
 </div>
 </div>
 <a class="anchor" id="a686dfc1da67886e59dffd32c49e841ec"></a>
@@ -1844,6 +1864,8 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Set the value of the flag determining if a minimal brightness should be used to keep landscape visible. </p>
+
+<p>Definition at line <a class="el" href="LandscapeMgr_8hpp_source.html#l00184">184</a> of file <a class="el" href="LandscapeMgr_8hpp_source.html">LandscapeMgr.hpp</a>.</p>
 
 </div>
 </div>
@@ -1940,10 +1962,13 @@ Additional Inherited Members</h2></td></tr>
 
 </div>
 </div>
+<hr/>The documentation for this class was generated from the following file:<ul>
+<li>/home/aw/devel/stellarium/trunk/src/core/modules/<a class="el" href="LandscapeMgr_8hpp_source.html">LandscapeMgr.hpp</a></li>
+</ul>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Sun Mar 23 2014 16:33:16 for Stellarium by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Sun Jun 22 2014 21:09:09 for Stellarium by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.6
 </small></address>

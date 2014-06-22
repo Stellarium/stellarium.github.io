@@ -30,7 +30,7 @@
       <li><a href="codingStyle.html"><span>Coding&#160;Style</span></a></li>
       <li><a href="scripting.html"><span>Scripting</span></a></li>
       <li><a href="plugins.html"><span>Plugins</span></a></li>
-      <li><a href="@ref fileStructure"><span>File&#160;Structure</span></a></li>
+      <li><a href="fileStructure.html"><span>File&#160;Structure</span></a></li>
     </ul>
   </div>
   <div id="navrow2" class="tabs2">
@@ -72,6 +72,9 @@ Public Slots</h2></td></tr>
 <tr class="memitem:af8fb58798e1d91800f9093834529310d"><td class="memItemLeft" align="right" valign="top">const QString&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classStelScriptMgr.html#af8fb58798e1d91800f9093834529310d">getDescription</a> (const QString &amp;s)</td></tr>
 <tr class="memdesc:af8fb58798e1d91800f9093834529310d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Gets a description of the script.  <a href="#af8fb58798e1d91800f9093834529310d">More...</a><br/></td></tr>
 <tr class="separator:af8fb58798e1d91800f9093834529310d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0db66216e89971cf0c4ef1d2c20a3340"><td class="memItemLeft" align="right" valign="top">const QString&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classStelScriptMgr.html#a0db66216e89971cf0c4ef1d2c20a3340">getShortcut</a> (const QString &amp;s)</td></tr>
+<tr class="memdesc:a0db66216e89971cf0c4ef1d2c20a3340"><td class="mdescLeft">&#160;</td><td class="mdescRight">Gets the default shortcut of the script.  <a href="#a0db66216e89971cf0c4ef1d2c20a3340">More...</a><br/></td></tr>
+<tr class="separator:a0db66216e89971cf0c4ef1d2c20a3340"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a00854d294c1d06c0027f3db7cc1bad62"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classStelScriptMgr.html#a00854d294c1d06c0027f3db7cc1bad62">runPreprocessedScript</a> (const QString &amp;preprocessedScript)</td></tr>
 <tr class="memdesc:a00854d294c1d06c0027f3db7cc1bad62"><td class="mdescLeft">&#160;</td><td class="mdescRight">Run the prprocessed script.  <a href="#a00854d294c1d06c0027f3db7cc1bad62">More...</a><br/></td></tr>
 <tr class="separator:a00854d294c1d06c0027f3db7cc1bad62"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -135,6 +138,8 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><b>preprocessScript</b> 
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Manage scripting in Stellarium. </p>
+
+<p>Definition at line <a class="el" href="StelScriptMgr_8hpp_source.html#l00039">39</a> of file <a class="el" href="StelScriptMgr_8hpp_source.html">StelScriptMgr.hpp</a>.</p>
 </div><h2 class="groupheader">Member Function Documentation</h2>
 <a class="anchor" id="ab30dc1d75263f6343a13b6ec823fac3b"></a>
 <div class="memitem">
@@ -334,6 +339,39 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><b>preprocessScript</b> 
 </div><div class="memdoc">
 
 <p>Get the rate at which the script is running as a multiple of the normal execution rate. </p>
+
+</div>
+</div>
+<a class="anchor" id="a0db66216e89971cf0c4ef1d2c20a3340"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">const QString StelScriptMgr::getShortcut </td>
+          <td>(</td>
+          <td class="paramtype">const QString &amp;&#160;</td>
+          <td class="paramname"><em>s</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">slot</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Gets the default shortcut of the script. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">s</td><td>the file name of the script whose name is to be returned. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>text following a comment with Shortcut: at the start. If no such comment is found, QString("") is returned. If the file is not found or cannot be opened for some reason, an Empty string will be returned. </dd></dl>
 
 </div>
 </div>
@@ -635,10 +673,13 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><b>preprocessScript</b> 
 
 </div>
 </div>
+<hr/>The documentation for this class was generated from the following file:<ul>
+<li>/home/aw/devel/stellarium/trunk/src/scripting/<a class="el" href="StelScriptMgr_8hpp_source.html">StelScriptMgr.hpp</a></li>
+</ul>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Sun Mar 23 2014 16:33:17 for Stellarium by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Sun Jun 22 2014 21:09:10 for Stellarium by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.6
 </small></address>

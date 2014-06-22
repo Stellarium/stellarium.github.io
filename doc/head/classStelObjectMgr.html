@@ -30,7 +30,7 @@
       <li><a href="codingStyle.html"><span>Coding&#160;Style</span></a></li>
       <li><a href="scripting.html"><span>Scripting</span></a></li>
       <li><a href="plugins.html"><span>Plugins</span></a></li>
-      <li><a href="@ref fileStructure"><span>File&#160;Structure</span></a></li>
+      <li><a href="fileStructure.html"><span>File&#160;Structure</span></a></li>
     </ul>
   </div>
   <div id="navrow2" class="tabs2">
@@ -141,9 +141,6 @@ QMap&lt; QString, QString &gt;&#160;</td><td class="memItemRight" valign="bottom
 <tr class="memitem:ad2655f22c4eb31d09f1a826ac4c7611f inherit pub_methods_classStelModule"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classStelModule.html#ad2655f22c4eb31d09f1a826ac4c7611f">deinit</a> ()</td></tr>
 <tr class="memdesc:ad2655f22c4eb31d09f1a826ac4c7611f inherit pub_methods_classStelModule"><td class="mdescLeft">&#160;</td><td class="mdescRight">Called before the module will be delete, and before the openGL context is suppressed.  <a href="#ad2655f22c4eb31d09f1a826ac4c7611f">More...</a><br/></td></tr>
 <tr class="separator:ad2655f22c4eb31d09f1a826ac4c7611f inherit pub_methods_classStelModule"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a068e8e8cc13ea65e3b9e5a2ec538c9e8 inherit pub_methods_classStelModule"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classStelModule.html#a068e8e8cc13ea65e3b9e5a2ec538c9e8">drawPartial</a> (<a class="el" href="classStelCore.html">StelCore</a> *core)</td></tr>
-<tr class="memdesc:a068e8e8cc13ea65e3b9e5a2ec538c9e8 inherit pub_methods_classStelModule"><td class="mdescLeft">&#160;</td><td class="mdescRight">Iterate through the drawing sequence.  <a href="#a068e8e8cc13ea65e3b9e5a2ec538c9e8">More...</a><br/></td></tr>
-<tr class="separator:a068e8e8cc13ea65e3b9e5a2ec538c9e8 inherit pub_methods_classStelModule"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a21fdf725bf909cc8ac6cc733b17d8b6b inherit pub_methods_classStelModule"><td class="memItemLeft" align="right" valign="top">virtual QString&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classStelModule.html#a21fdf725bf909cc8ac6cc733b17d8b6b">getModuleVersion</a> () const </td></tr>
 <tr class="memdesc:a21fdf725bf909cc8ac6cc733b17d8b6b inherit pub_methods_classStelModule"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the version of the module, default is stellarium main version.  <a href="#a21fdf725bf909cc8ac6cc733b17d8b6b">More...</a><br/></td></tr>
 <tr class="separator:a21fdf725bf909cc8ac6cc733b17d8b6b inherit pub_methods_classStelModule"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -165,6 +162,9 @@ QMap&lt; QString, QString &gt;&#160;</td><td class="memItemRight" valign="bottom
 <tr class="memitem:ab6a5e5ca552ce2056ff29bc1f08ef4a7 inherit pub_methods_classStelModule"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classStelModule.html#ab6a5e5ca552ce2056ff29bc1f08ef4a7">handleKeys</a> (class QKeyEvent *e)</td></tr>
 <tr class="memdesc:ab6a5e5ca552ce2056ff29bc1f08ef4a7 inherit pub_methods_classStelModule"><td class="mdescLeft">&#160;</td><td class="mdescRight">Handle key events.  <a href="#ab6a5e5ca552ce2056ff29bc1f08ef4a7">More...</a><br/></td></tr>
 <tr class="separator:ab6a5e5ca552ce2056ff29bc1f08ef4a7 inherit pub_methods_classStelModule"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a372fd47ff9580f1e776c35877ef5af6f inherit pub_methods_classStelModule"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classStelModule.html#a372fd47ff9580f1e776c35877ef5af6f">handlePinch</a> (qreal scale, bool started)</td></tr>
+<tr class="memdesc:a372fd47ff9580f1e776c35877ef5af6f inherit pub_methods_classStelModule"><td class="mdescLeft">&#160;</td><td class="mdescRight">Handle pinch gesture events.  <a href="#a372fd47ff9580f1e776c35877ef5af6f">More...</a><br/></td></tr>
+<tr class="separator:a372fd47ff9580f1e776c35877ef5af6f inherit pub_methods_classStelModule"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a9e03c52f02fb41a0727360f7644fc3d6 inherit pub_methods_classStelModule"><td class="memItemLeft" align="right" valign="top">virtual double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classStelModule.html#a9e03c52f02fb41a0727360f7644fc3d6">getCallOrder</a> (<a class="el" href="classStelModule.html#a11b61d014b51cf6424cd89b1ccd3d768">StelModuleActionName</a> actionName) const </td></tr>
 <tr class="memdesc:a9e03c52f02fb41a0727360f7644fc3d6 inherit pub_methods_classStelModule"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return the value defining the order of call for the given action For example if stars.callOrder[ActionDraw] == 10 and constellation.callOrder[ActionDraw] == 11, the stars module will be drawn before the constellations.  <a href="#a9e03c52f02fb41a0727360f7644fc3d6">More...</a><br/></td></tr>
 <tr class="separator:a9e03c52f02fb41a0727360f7644fc3d6 inherit pub_methods_classStelModule"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -203,6 +203,8 @@ Additional Inherited Members</h2></td></tr>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Manage the selection and queries on one or more StelObjects. </p>
 <p>Each module is then free to manage object selection as it wants. </p>
+
+<p>Definition at line <a class="el" href="StelObjectMgr_8hpp_source.html#l00036">36</a> of file <a class="el" href="StelObjectMgr_8hpp_source.html">StelObjectMgr.hpp</a>.</p>
 </div><h2 class="groupheader">Member Function Documentation</h2>
 <a class="anchor" id="a03c9070f44268bfd3afeed9c2cae5a18"></a>
 <div class="memitem">
@@ -235,6 +237,8 @@ Additional Inherited Members</h2></td></tr>
 </dl>
 
 <p>Reimplemented from <a class="el" href="classStelModule.html#a18fde2820af998395aea9e30bb1138b2">StelModule</a>.</p>
+
+<p>Definition at line <a class="el" href="StelObjectMgr_8hpp_source.html#l00046">46</a> of file <a class="el" href="StelObjectMgr_8hpp_source.html">StelObjectMgr.hpp</a>.</p>
 
 </div>
 </div>
@@ -427,6 +431,8 @@ Additional Inherited Members</h2></td></tr>
 
 <p>Get whether a pointer is to be drawn over selected object. </p>
 
+<p>Definition at line <a class="el" href="StelObjectMgr_8hpp_source.html#l00126">126</a> of file <a class="el" href="StelObjectMgr_8hpp_source.html">StelObjectMgr.hpp</a>.</p>
+
 </div>
 </div>
 <a class="anchor" id="a498ebf4f26aa50fb822287c6ae9aa6e2"></a>
@@ -451,6 +457,8 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Get the list objects which was recently selected by the user. </p>
+
+<p>Definition at line <a class="el" href="StelObjectMgr_8hpp_source.html#l00117">117</a> of file <a class="el" href="StelObjectMgr_8hpp_source.html">StelObjectMgr.hpp</a>.</p>
 
 </div>
 </div>
@@ -502,6 +510,8 @@ Additional Inherited Members</h2></td></tr>
 
 <p>Return whether an object was selected during last selection related event. </p>
 
+<p>Definition at line <a class="el" href="StelObjectMgr_8hpp_source.html#l00099">99</a> of file <a class="el" href="StelObjectMgr_8hpp_source.html">StelObjectMgr.hpp</a>.</p>
+
 </div>
 </div>
 <a class="anchor" id="a787fc57efa5428cb6db9595a95da3ba4"></a>
@@ -529,6 +539,8 @@ Additional Inherited Members</h2></td></tr>
 <p>If the initialization takes significant time, the progress should be displayed on the loading bar. </p>
 
 <p>Implements <a class="el" href="classStelModule.html#a32818e53cc8d640f15f84c38c454eab9">StelModule</a>.</p>
+
+<p>Definition at line <a class="el" href="StelObjectMgr_8hpp_source.html#l00045">45</a> of file <a class="el" href="StelObjectMgr_8hpp_source.html">StelObjectMgr.hpp</a>.</p>
 
 </div>
 </div>
@@ -730,6 +742,8 @@ Additional Inherited Members</h2></td></tr>
 <p>Set the weight of the distance factor when choosing the best object to select. </p>
 <p>Default to 1. </p>
 
+<p>Definition at line <a class="el" href="StelObjectMgr_8hpp_source.html#l00139">139</a> of file <a class="el" href="StelObjectMgr_8hpp_source.html">StelObjectMgr.hpp</a>.</p>
+
 </div>
 </div>
 <a class="anchor" id="aaf7574694e4e538ab85492f0af99de51"></a>
@@ -756,6 +770,8 @@ Additional Inherited Members</h2></td></tr>
 
 <p>Set whether a pointer is to be drawn over selected object. </p>
 
+<p>Definition at line <a class="el" href="StelObjectMgr_8hpp_source.html#l00124">124</a> of file <a class="el" href="StelObjectMgr_8hpp_source.html">StelObjectMgr.hpp</a>.</p>
+
 </div>
 </div>
 <a class="anchor" id="ab7ab4fee960b1729198df86069031773"></a>
@@ -781,6 +797,8 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Set the radius in pixel in which objects will be searched when clicking on a point in sky. </p>
+
+<p>Definition at line <a class="el" href="StelObjectMgr_8hpp_source.html#l00135">135</a> of file <a class="el" href="StelObjectMgr_8hpp_source.html">StelObjectMgr.hpp</a>.</p>
 
 </div>
 </div>
@@ -906,12 +924,17 @@ Additional Inherited Members</h2></td></tr>
 
 <p>Implements <a class="el" href="classStelModule.html#a029f960090bf001e4e9eff0d95c4f706">StelModule</a>.</p>
 
+<p>Definition at line <a class="el" href="StelObjectMgr_8hpp_source.html#l00047">47</a> of file <a class="el" href="StelObjectMgr_8hpp_source.html">StelObjectMgr.hpp</a>.</p>
+
 </div>
 </div>
+<hr/>The documentation for this class was generated from the following file:<ul>
+<li>/home/aw/devel/stellarium/trunk/src/core/<a class="el" href="StelObjectMgr_8hpp_source.html">StelObjectMgr.hpp</a></li>
+</ul>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Sun Mar 23 2014 16:33:17 for Stellarium by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Sun Jun 22 2014 21:09:10 for Stellarium by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.6
 </small></address>

@@ -30,7 +30,7 @@
       <li><a href="codingStyle.html"><span>Coding&#160;Style</span></a></li>
       <li><a href="scripting.html"><span>Scripting</span></a></li>
       <li><a href="plugins.html"><span>Plugins</span></a></li>
-      <li><a href="@ref fileStructure"><span>File&#160;Structure</span></a></li>
+      <li><a href="fileStructure.html"><span>File&#160;Structure</span></a></li>
     </ul>
   </div>
   <div id="navrow2" class="tabs2">
@@ -89,9 +89,6 @@ virtual QString&#160;</td><td class="memItemRight" valign="bottom"><b>getName</b
 <tr class="memitem:a18fde2820af998395aea9e30bb1138b2 inherit pub_methods_classStelModule"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classStelModule.html#a18fde2820af998395aea9e30bb1138b2">draw</a> (<a class="el" href="classStelCore.html">StelCore</a> *core)</td></tr>
 <tr class="memdesc:a18fde2820af998395aea9e30bb1138b2 inherit pub_methods_classStelModule"><td class="mdescLeft">&#160;</td><td class="mdescRight">Execute all the drawing functions for this module.  <a href="#a18fde2820af998395aea9e30bb1138b2">More...</a><br/></td></tr>
 <tr class="separator:a18fde2820af998395aea9e30bb1138b2 inherit pub_methods_classStelModule"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a068e8e8cc13ea65e3b9e5a2ec538c9e8 inherit pub_methods_classStelModule"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classStelModule.html#a068e8e8cc13ea65e3b9e5a2ec538c9e8">drawPartial</a> (<a class="el" href="classStelCore.html">StelCore</a> *core)</td></tr>
-<tr class="memdesc:a068e8e8cc13ea65e3b9e5a2ec538c9e8 inherit pub_methods_classStelModule"><td class="mdescLeft">&#160;</td><td class="mdescRight">Iterate through the drawing sequence.  <a href="#a068e8e8cc13ea65e3b9e5a2ec538c9e8">More...</a><br/></td></tr>
-<tr class="separator:a068e8e8cc13ea65e3b9e5a2ec538c9e8 inherit pub_methods_classStelModule"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a029f960090bf001e4e9eff0d95c4f706 inherit pub_methods_classStelModule"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classStelModule.html#a029f960090bf001e4e9eff0d95c4f706">update</a> (double deltaTime)=0</td></tr>
 <tr class="memdesc:a029f960090bf001e4e9eff0d95c4f706 inherit pub_methods_classStelModule"><td class="mdescLeft">&#160;</td><td class="mdescRight">Update the module with respect to the time.  <a href="#a029f960090bf001e4e9eff0d95c4f706">More...</a><br/></td></tr>
 <tr class="separator:a029f960090bf001e4e9eff0d95c4f706 inherit pub_methods_classStelModule"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -116,6 +113,9 @@ virtual QString&#160;</td><td class="memItemRight" valign="bottom"><b>getName</b
 <tr class="memitem:ab6a5e5ca552ce2056ff29bc1f08ef4a7 inherit pub_methods_classStelModule"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classStelModule.html#ab6a5e5ca552ce2056ff29bc1f08ef4a7">handleKeys</a> (class QKeyEvent *e)</td></tr>
 <tr class="memdesc:ab6a5e5ca552ce2056ff29bc1f08ef4a7 inherit pub_methods_classStelModule"><td class="mdescLeft">&#160;</td><td class="mdescRight">Handle key events.  <a href="#ab6a5e5ca552ce2056ff29bc1f08ef4a7">More...</a><br/></td></tr>
 <tr class="separator:ab6a5e5ca552ce2056ff29bc1f08ef4a7 inherit pub_methods_classStelModule"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a372fd47ff9580f1e776c35877ef5af6f inherit pub_methods_classStelModule"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classStelModule.html#a372fd47ff9580f1e776c35877ef5af6f">handlePinch</a> (qreal scale, bool started)</td></tr>
+<tr class="memdesc:a372fd47ff9580f1e776c35877ef5af6f inherit pub_methods_classStelModule"><td class="mdescLeft">&#160;</td><td class="mdescRight">Handle pinch gesture events.  <a href="#a372fd47ff9580f1e776c35877ef5af6f">More...</a><br/></td></tr>
+<tr class="separator:a372fd47ff9580f1e776c35877ef5af6f inherit pub_methods_classStelModule"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a9e03c52f02fb41a0727360f7644fc3d6 inherit pub_methods_classStelModule"><td class="memItemLeft" align="right" valign="top">virtual double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classStelModule.html#a9e03c52f02fb41a0727360f7644fc3d6">getCallOrder</a> (<a class="el" href="classStelModule.html#a11b61d014b51cf6424cd89b1ccd3d768">StelModuleActionName</a> actionName) const </td></tr>
 <tr class="memdesc:a9e03c52f02fb41a0727360f7644fc3d6 inherit pub_methods_classStelModule"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return the value defining the order of call for the given action For example if stars.callOrder[ActionDraw] == 10 and constellation.callOrder[ActionDraw] == 11, the stars module will be drawn before the constellations.  <a href="#a9e03c52f02fb41a0727360f7644fc3d6">More...</a><br/></td></tr>
 <tr class="separator:a9e03c52f02fb41a0727360f7644fc3d6 inherit pub_methods_classStelModule"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -154,6 +154,8 @@ Additional Inherited Members</h2></td></tr>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Specialization of <a class="el" href="classStelModule.html" title="This is the common base class for all the main components of stellarium. ">StelModule</a> which manages a collection of <a class="el" href="classStelObject.html" title="The base abstract class for sky objects used in Stellarium like Stars, Planets, Constellations etc...">StelObject</a>. </p>
 <p>Instances deriving from the <a class="el" href="classStelObjectModule.html" title="Specialization of StelModule which manages a collection of StelObject. ">StelObjectModule</a> class can be managed by the <a class="el" href="classStelObjectMgr.html" title="Manage the selection and queries on one or more StelObjects. ">StelObjectMgr</a>. The class defines extra abstract functions for searching and listing StelObjects. </p>
+
+<p>Definition at line <a class="el" href="StelObjectModule_8hpp_source.html#l00035">35</a> of file <a class="el" href="StelObjectModule_8hpp_source.html">StelObjectModule.hpp</a>.</p>
 </div><h2 class="groupheader">Member Function Documentation</h2>
 <a class="anchor" id="ad3b1e366dae01a7d1088f18785cc1104"></a>
 <div class="memitem">
@@ -384,10 +386,13 @@ Additional Inherited Members</h2></td></tr>
 
 </div>
 </div>
+<hr/>The documentation for this class was generated from the following file:<ul>
+<li>/home/aw/devel/stellarium/trunk/src/core/<a class="el" href="StelObjectModule_8hpp_source.html">StelObjectModule.hpp</a></li>
+</ul>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Sun Mar 23 2014 16:33:17 for Stellarium by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Sun Jun 22 2014 21:09:10 for Stellarium by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.6
 </small></address>
