@@ -280,6 +280,7 @@ printf('</div>
 		<li><a href="/wiki/index.php/Landscapes">%s</a></li>
 		<li><a href="/wiki/index.php/Scripts">%s</a></li>
 		<li><a href="/wiki/index.php/Plugins">%s</a></li>
+		<li><a href="/wiki/index.php/Textures">%s</a></li>
 		<li><a href="/wiki/index.php/Category:User\'s_Guide">%s</a></li>
 		<li><a href="/doc/">%s</a></li>
 		<li><a href="/doc/head/scripting.html">%s</a></li>
@@ -305,6 +306,7 @@ q_("FAQ"),
 q_("landscapes"),
 q_("scripts"),
 q_("plugins"),
+q_("textures"),
 q_("user's guides"),
 q_("developers documentation"),
 q_("scripting"),
