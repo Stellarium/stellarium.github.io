@@ -56,14 +56,16 @@ printf('
 		    <a href="%s">Linux<span>(%s)</span></a>
 		</div>
 		<div class="download macosx">
-		    <a href="%s">Mac OS X<span>%s; %s</span></a>
+		    <a href="%s">OS X<span>%s; %s</span></a>
 		</div>
 		<div class="download windows">
 		    <a href="%s">Windows<span>%s</span></a>
 		</div>
+		<!-- Win64 temporary disabled
 		<div class="download windows">
 		    <a href="%s">Windows<span>%s</span></a>
 		</div>
+		-->
 		<div class="download ubuntu">
 		    <a href="%s">Ubuntu<span>%s</span></a>
 		</div>
@@ -240,13 +242,13 @@ printf('</ul>
 		<ul class="smalllist"><li>%s</li><li>%s</li><li>%s</li><li>%s</li></ul>',
 q_("system requirements"),
 q_("minimal"),
-q_("Linux/Unix; Windows 2000/XP/Vista/7/8; 64-bit Mac OS X 10.6.8 or greater"),
-q_("3D graphics card which supports OpenGL 1.2"),
+q_("Linux/Unix; Windows XP or greater; 64-bit Mac OS X 10.7.4 or greater"),
+q_("3D graphics card which supports OpenGL 2.1"),
 q_("256 MiB RAM"),
-q_("120 MiB on disk"),
+q_("150 MiB on disk"),
 q_("recommended"),
-q_("Linux/Unix; Windows XP/Vista/7/8; 64-bit OS X 10.7.0 or greater"),
-q_("3D graphics card which supports OpenGL 2.1 or greater"),
+q_("Linux/Unix; Windows 7 or greater; 64-bit OS X 10.8.5 or greater"),
+q_("3D graphics card which supports OpenGL 3.1 or greater"),
 q_("1 GiB RAM or more"),
 q_("1.5 GiB on disk"));
 
