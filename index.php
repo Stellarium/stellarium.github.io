@@ -242,7 +242,7 @@ printf('</ul>
 		<ul class="smalllist"><li>%s</li><li>%s</li><li>%s</li><li>%s</li></ul>',
 q_("system requirements"),
 q_("minimal"),
-q_("Linux/Unix; Windows XP or greater; 64-bit Mac OS X 10.7.4 or greater"),
+q_("Linux/Unix; Windows XP or greater; 64-bit OS X 10.7.4 or greater"),
 q_("3D graphics card which supports OpenGL 2.1"),
 q_("256 MiB RAM"),
 q_("150 MiB on disk"),
