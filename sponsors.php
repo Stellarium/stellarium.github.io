@@ -165,7 +165,7 @@ foreach ($language as $langcode => $langname) {
 printf('
 </div></div>
 <div id="footer">
-    <a href="http://sourceforge.net/donate/index.php?group_id=48857"><img src="/img/nd/project.jpg" alt="Support This Project" width="88" height="32" border="0"></a> <a href="http://sourceforge.net/projects/stellarium"><img src="http://sourceforge.net/sflogo.php?group_id=48857&amp;type=5" alt="SourceForge.net Logo" width="108" height="32" border="0"></a>
+    <a href="%s"><img src="/img/nd/project.jpg" alt="Support This Project" width="88" height="32" border="0"></a> <a href="%s"><img src="http://sourceforge.net/sflogo.php?group_id=48857&amp;type=5" alt="SourceForge.net Logo" width="108" height="32" border="0"></a>
 </div>
 <div id="langlist">
 %s
@@ -173,6 +173,8 @@ printf('
 </div>
 </body>
 </html>',
+$donatelink,
+$projectlink,
 $langlinks);
 ?>
 

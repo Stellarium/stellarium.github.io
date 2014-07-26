@@ -85,5 +85,8 @@ $download_link_linux	= "http://sourceforge.net/projects/stellarium/files/Stellar
 $download_link_ppa	= "https://launchpad.net/~stellarium/+archive/stellarium-releases";
 $download_link_beta	= "https://launchpad.net/stellarium/+download";
 
+$donatelink	= "https://sourceforge.net/p/stellarium/donate/";
+$projectlink	= "https://sourceforge.net/projects/stellarium/";
+
 ?>
 
