@@ -293,7 +293,8 @@ printf('</div>
 		<ul class="sublist">
 			<li><a href="https://sourceforge.net/projects/stellarium/files/Stellarium-sources/">%s</a></li>
 			<li><a href="https://sourceforge.net/projects/stellarium/files/Stellarium-MacOSX/">%s</a></li>
-			<li><a href="https://sourceforge.net/projects/stellarium/files/Stellarium-win32/">%s</a></li>
+			<li><a href="https://sourceforge.net/projects/stellarium/files/Stellarium-win32/">%s (%s)</a></li>
+			<li><a href="https://sourceforge.net/projects/stellarium/files/Stellarium-win64/">%s (%s)</a></li>
 		</ul>
 		</li>
 	</ul>',
@@ -318,7 +319,11 @@ q_("development progress"),
 q_("older releases"),
 q_("for Linux (source)"),
 q_("for Mac OS X"),
-q_("for Windows"));
+q_("for Windows"),
+q_("32 bit"),
+q_("for Windows"),
+q_("64 bit"));
+
 printf('
 	<h2>%s</h2>
 		<p>%s</p>
