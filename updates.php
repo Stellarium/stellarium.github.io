@@ -3,7 +3,8 @@
 include("init.php");
 
 printf('{
-	"latestVersion": "%s"
-}', $version);
+	"latestVersion": "%s",
+	"requiredOpenGLVersion": %s
+}', $version, $OpenGL);
 
 ?>

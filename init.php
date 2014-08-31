@@ -77,6 +77,7 @@ if (($locale == "ar") or ($locale == "fa")) {
 $version	= "0.13.0";
 $next_version	= "0.13.1";
 $osx_version 	= "10.7+";
+$OpenGL		= 0x00001000;
 $download_link_win32	= "http://sourceforge.net/projects/stellarium/files/Stellarium-win32/".$version."/stellarium-".$version."-win32.exe/download";
 $download_link_win64	= "http://sourceforge.net/projects/stellarium/files/Stellarium-win64/".$version."/stellarium-".$version."-win64.exe/download";
 $download_link_osx_u	= "http://sourceforge.net/projects/stellarium/files/Stellarium-MacOSX/".$version."/Stellarium-".$version.".dmg/download";
