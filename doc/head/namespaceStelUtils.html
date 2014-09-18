@@ -74,6 +74,12 @@ Functions</h2></td></tr>
 <tr class="memitem:aff571115222c8a6d84dc35a18e79d31d"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceStelUtils.html#aff571115222c8a6d84dc35a18e79d31d">radToDms</a> (double rad, bool &amp;<a class="el" href="namespaceStelUtils.html#a0a076b60191a870c63f6388e490b67af">sign</a>, unsigned int &amp;d, unsigned int &amp;m, double &amp;s)</td></tr>
 <tr class="memdesc:aff571115222c8a6d84dc35a18e79d31d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Convert an angle in radian to +-dms format.  <a href="#aff571115222c8a6d84dc35a18e79d31d">More...</a><br /></td></tr>
 <tr class="separator:aff571115222c8a6d84dc35a18e79d31d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1ba55c0aff6692c10ae33ede66738f3d"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceStelUtils.html#a1ba55c0aff6692c10ae33ede66738f3d">radToDecDeg</a> (double rad, bool &amp;<a class="el" href="namespaceStelUtils.html#a0a076b60191a870c63f6388e490b67af">sign</a>, double &amp;deg)</td></tr>
+<tr class="memdesc:a1ba55c0aff6692c10ae33ede66738f3d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Convert an angle in radian to decimal degree.  <a href="#a1ba55c0aff6692c10ae33ede66738f3d">More...</a><br /></td></tr>
+<tr class="separator:a1ba55c0aff6692c10ae33ede66738f3d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a79c2115b6f7d1df450d10adabd81f3d2"><td class="memItemLeft" align="right" valign="top">QString&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceStelUtils.html#a79c2115b6f7d1df450d10adabd81f3d2">radToDecDegStr</a> (const double angle, const bool useD=false, const bool useC=false)</td></tr>
+<tr class="memdesc:a79c2115b6f7d1df450d10adabd81f3d2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Convert an angle in radian to a decimal degree string.  <a href="#a79c2115b6f7d1df450d10adabd81f3d2">More...</a><br /></td></tr>
+<tr class="separator:a79c2115b6f7d1df450d10adabd81f3d2"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a3f67debe9a761212f6ca6f1551a0ed5f"><td class="memItemLeft" align="right" valign="top">QString&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceStelUtils.html#a3f67debe9a761212f6ca6f1551a0ed5f">radToHmsStrAdapt</a> (const double angle)</td></tr>
 <tr class="memdesc:a3f67debe9a761212f6ca6f1551a0ed5f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Convert an angle in radian to a hms formatted string.  <a href="#a3f67debe9a761212f6ca6f1551a0ed5f">More...</a><br /></td></tr>
 <tr class="separator:a3f67debe9a761212f6ca6f1551a0ed5f"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -690,7 +696,7 @@ QString&#160;</td><td class="memItemRight" valign="bottom"><b>hoursToHmsStr</b> 
 
 <p>Compute acos(x) The taylor serie is not accurate around x=1 and x=-1. </p>
 
-<p>Definition at line <a class="el" href="StelUtils_8hpp_source.html#l00279">279</a> of file <a class="el" href="StelUtils_8hpp_source.html">StelUtils.hpp</a>.</p>
+<p>Definition at line <a class="el" href="StelUtils_8hpp_source.html#l00291">291</a> of file <a class="el" href="StelUtils_8hpp_source.html">StelUtils.hpp</a>.</p>
 
 </div>
 </div>
@@ -718,7 +724,7 @@ QString&#160;</td><td class="memItemRight" valign="bottom"><b>hoursToHmsStr</b> 
 
 <p>Compute exp(x) for small exponents x. </p>
 
-<p>Definition at line <a class="el" href="StelUtils_8hpp_source.html#l00285">285</a> of file <a class="el" href="StelUtils_8hpp_source.html">StelUtils.hpp</a>.</p>
+<p>Definition at line <a class="el" href="StelUtils_8hpp_source.html#l00297">297</a> of file <a class="el" href="StelUtils_8hpp_source.html">StelUtils.hpp</a>.</p>
 
 </div>
 </div>
@@ -1808,7 +1814,7 @@ QString&#160;</td><td class="memItemRight" valign="bottom"><b>hoursToHmsStr</b> 
 <p>Get a night mode version of a color. </p>
 <p>That is find the brightness of a color and set that in the red channel only </p>
 
-<p>Definition at line <a class="el" href="StelUtils_8hpp_source.html#l00294">294</a> of file <a class="el" href="StelUtils_8hpp_source.html">StelUtils.hpp</a>.</p>
+<p>Definition at line <a class="el" href="StelUtils_8hpp_source.html#l00306">306</a> of file <a class="el" href="StelUtils_8hpp_source.html">StelUtils.hpp</a>.</p>
 
 </div>
 </div>
@@ -2145,6 +2151,90 @@ QString&#160;</td><td class="memItemRight" valign="bottom"><b>hoursToHmsStr</b> 
 
 <p>Convert a time of day to the fraction of a Julian Day. </p>
 <p>Note that a Julian Day starts at 12:00, not 0:00, and so 12:00 == 0.0 and 0:00 == 0.5 </p>
+
+</div>
+</div>
+<a class="anchor" id="a1ba55c0aff6692c10ae33ede66738f3d"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void StelUtils::radToDecDeg </td>
+          <td>(</td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>rad</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool &amp;&#160;</td>
+          <td class="paramname"><em>sign</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double &amp;&#160;</td>
+          <td class="paramname"><em>deg</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Convert an angle in radian to decimal degree. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">rad</td><td>input angle in radian </td></tr>
+    <tr><td class="paramname">sign</td><td>true if positive, false otherwise </td></tr>
+    <tr><td class="paramname">deg</td><td>decimal degree </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a class="anchor" id="a79c2115b6f7d1df450d10adabd81f3d2"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">QString StelUtils::radToDecDegStr </td>
+          <td>(</td>
+          <td class="paramtype">const double&#160;</td>
+          <td class="paramname"><em>angle</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const bool&#160;</td>
+          <td class="paramname"><em>useD</em> = <code>false</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const bool&#160;</td>
+          <td class="paramname"><em>useC</em> = <code>false</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Convert an angle in radian to a decimal degree string. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">angle</td><td>input angle in radian </td></tr>
+    <tr><td class="paramname">useD</td><td>Define if letter "d" must be used instead of deg sign </td></tr>
+    <tr><td class="paramname">useC</td><td>Define if function should use 0-360 degrees </td></tr>
+  </table>
+  </dd>
+</dl>
 
 </div>
 </div>
@@ -2551,7 +2641,7 @@ template&lt;typename T &gt; </div>
 
 <p>Sign function from <a href="http://stackoverflow.com/questions/1903954/is-there-a-standard-sign-function-signum-sgn-in-c-c">http://stackoverflow.com/questions/1903954/is-there-a-standard-sign-function-signum-sgn-in-c-c</a>. </p>
 
-<p>Definition at line <a class="el" href="StelUtils_8hpp_source.html#l00582">582</a> of file <a class="el" href="StelUtils_8hpp_source.html">StelUtils.hpp</a>.</p>
+<p>Definition at line <a class="el" href="StelUtils_8hpp_source.html#l00594">594</a> of file <a class="el" href="StelUtils_8hpp_source.html">StelUtils.hpp</a>.</p>
 
 </div>
 </div>
@@ -2661,7 +2751,7 @@ template&lt;typename T &gt; </div>
   </dd>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>The corresponding vector </dd></dl>
-<dl class="deprecated"><dt><b><a class="el" href="deprecated.html#_deprecated000004">Deprecated:</a></b></dt><dd>Use the &gt;&gt; operator from Vec3f class </dd></dl>
+<dl class="deprecated"><dt><b><a class="el" href="deprecated.html#_deprecated000006">Deprecated:</a></b></dt><dd>Use the &gt;&gt; operator from Vec3f class </dd></dl>
 
 </div>
 </div>
@@ -2711,7 +2801,7 @@ template&lt;typename T &gt; </div>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Thu Aug 28 2014 23:26:55 for Stellarium by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Thu Sep 18 2014 20:10:25 for Stellarium by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.7
 </small></address>
