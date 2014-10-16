@@ -28,6 +28,13 @@
   <div id="content">
 	<p>
 	<?php
+		$pkgdir = opendir("../pkgdiff/");
+		while($pkgEntryName = readdir($pkgdir)) {
+			$pkgDirArray[] = $pkgEntryName;
+		}
+		closedir($pkgdir);
+		rsort($pkgDirArray);
+	
 		$dir = opendir(".");
 		while($entryName = readdir($dir)) {
 			$dirArray[] = $entryName;
@@ -38,7 +45,9 @@
 		print("<ul>\n");
 		for($index=0; $index < $indexCount; $index++) {
 			if (substr("$dirArray[$index]", 0, 1) != "." && "$dirArray[$index]" != "index.php"){ // don't list hidden files
-				print("<li><a href=\"$dirArray[$index]/\">$dirArray[$index]</a></li>");
+				$pkgdir = $pkgDirArray[$index-1];
+				$pkgdiff = str_replace("_"," ",$pkgdir);
+				print("<li><a href=\"$dirArray[$index]/\">$dirArray[$index]</a> (<a href=\"../pkgdiff/$pkgdir/changes_report.html\">see $pkgdiff changes</a>)</li>");
 			}
 		}
 		print("</ul>\n");
