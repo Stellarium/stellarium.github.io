@@ -79,7 +79,7 @@ printf('
 	</div>
     </div>',
 $locale,
-q_('latest version'),
+q_('latest version is'),
 $version,
 $download_link_source,
 q_('source'),
