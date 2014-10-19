@@ -15,7 +15,7 @@
  <tr style="height: 56px;">
   <td id="projectlogo"><img alt="Logo" src="stellarium-logo.png"/></td>
   <td style="padding-left: 0.5em;">
-   <div id="projectname">Stellarium 0.13.1</div>
+   <div id="projectname">Stellarium 0.13.2</div>
   </td>
  </tr>
  </tbody>
@@ -215,6 +215,12 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>setBaseFontSize</b> (
 <tr class="memitem:ac333a94bf31a2d769016bed2197148f5"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ac333a94bf31a2d769016bed2197148f5"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><b>removeProgressBar</b> (<a class="el" href="classStelProgressController.html">StelProgressController</a> *p)</td></tr>
 <tr class="separator:ac333a94bf31a2d769016bed2197148f5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5c00355f6dce0bc1121e339e7413da24"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classStelApp.html#a5c00355f6dce0bc1121e339e7413da24">setViewportEffect</a> (const QString &amp;effectName)</td></tr>
+<tr class="memdesc:a5c00355f6dce0bc1121e339e7413da24"><td class="mdescLeft">&#160;</td><td class="mdescRight">Define the type of viewport effect to use.  <a href="#a5c00355f6dce0bc1121e339e7413da24">More...</a><br /></td></tr>
+<tr class="separator:a5c00355f6dce0bc1121e339e7413da24"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adc0e0c5311a1d0939dceeaf50a3af515"><td class="memItemLeft" align="right" valign="top">QString&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classStelApp.html#adc0e0c5311a1d0939dceeaf50a3af515">getViewportEffect</a> () const </td></tr>
+<tr class="memdesc:adc0e0c5311a1d0939dceeaf50a3af515"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the type of viewport effect currently used.  <a href="#adc0e0c5311a1d0939dceeaf50a3af515">More...</a><br /></td></tr>
+<tr class="separator:adc0e0c5311a1d0939dceeaf50a3af515"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-static-methods"></a>
 Static Public Member Functions</h2></td></tr>
@@ -239,7 +245,7 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><b>nightMode</b></td></t
 <p>This is the central class of Stellarium. Only one singleton instance of this class is created and can be accessed from anywhere else. This class is the access point to several "Manager" class which provide application-wide services for managment of font, textures, localization, sky culture, and in theory all other services used by the other part of the program.</p>
 <p>The <a class="el" href="classStelApp.html" title="Singleton main Stellarium application class. ">StelApp</a> class is also the one managing the <a class="el" href="classStelModule.html" title="This is the common base class for all the main components of stellarium. ">StelModule</a> in a generic manner by calling their update, drawing and other methods when needed. </p><dl class="section author"><dt>Author</dt><dd>Fabien Chereau </dd></dl>
 
-<p>Definition at line <a class="el" href="StelApp_8hpp_source.html#l00060">60</a> of file <a class="el" href="StelApp_8hpp_source.html">StelApp.hpp</a>.</p>
+<p>Definition at line <a class="el" href="StelApp_8hpp_source.html#l00062">62</a> of file <a class="el" href="StelApp_8hpp_source.html">StelApp.hpp</a>.</p>
 </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a class="anchor" id="abd22a94a625994eafb2682718efea4b1"></a>
 <div class="memitem">
@@ -392,7 +398,7 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><b>nightMode</b></td></t
 
 <p>Get the size of font. </p>
 
-<p>Definition at line <a class="el" href="StelApp_8hpp_source.html#l00168">168</a> of file <a class="el" href="StelApp_8hpp_source.html">StelApp.hpp</a>.</p>
+<p>Definition at line <a class="el" href="StelApp_8hpp_source.html#l00170">170</a> of file <a class="el" href="StelApp_8hpp_source.html">StelApp.hpp</a>.</p>
 
 </div>
 </div>
@@ -420,7 +426,7 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><b>nightMode</b></td></t
 <p>Get the core of the program. </p>
 <p>It is the one which provide the projection, navigation and tone converter. </p><dl class="section return"><dt>Returns</dt><dd>the <a class="el" href="classStelCore.html" title="Main class for Stellarium core processing. ">StelCore</a> instance of the program </dd></dl>
 
-<p>Definition at line <a class="el" href="StelApp_8hpp_source.html#l00129">129</a> of file <a class="el" href="StelApp_8hpp_source.html">StelApp.hpp</a>.</p>
+<p>Definition at line <a class="el" href="StelApp_8hpp_source.html#l00131">131</a> of file <a class="el" href="StelApp_8hpp_source.html">StelApp.hpp</a>.</p>
 
 </div>
 </div>
@@ -447,7 +453,7 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><b>nightMode</b></td></t
 
 <p>Return the currently used style. </p>
 
-<p>Definition at line <a class="el" href="StelApp_8hpp_source.html#l00144">144</a> of file <a class="el" href="StelApp_8hpp_source.html">StelApp.hpp</a>.</p>
+<p>Definition at line <a class="el" href="StelApp_8hpp_source.html#l00146">146</a> of file <a class="el" href="StelApp_8hpp_source.html">StelApp.hpp</a>.</p>
 
 </div>
 </div>
@@ -475,7 +481,7 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><b>nightMode</b></td></t
 <p>Get the ratio between real device pixel and "Device Independent Pixel". </p>
 <p>Usually this value is 1, but for a mac with retina screen this will be value 2. </p>
 
-<p>Definition at line <a class="el" href="StelApp_8hpp_source.html#l00158">158</a> of file <a class="el" href="StelApp_8hpp_source.html">StelApp.hpp</a>.</p>
+<p>Definition at line <a class="el" href="StelApp_8hpp_source.html#l00160">160</a> of file <a class="el" href="StelApp_8hpp_source.html">StelApp.hpp</a>.</p>
 
 </div>
 </div>
@@ -503,7 +509,7 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><b>nightMode</b></td></t
 <p>Get the current number of frame per second. </p>
 <dl class="section return"><dt>Returns</dt><dd>the FPS averaged on the last second </dd></dl>
 
-<p>Definition at line <a class="el" href="StelApp_8hpp_source.html#l00204">204</a> of file <a class="el" href="StelApp_8hpp_source.html">StelApp.hpp</a>.</p>
+<p>Definition at line <a class="el" href="StelApp_8hpp_source.html#l00212">212</a> of file <a class="el" href="StelApp_8hpp_source.html">StelApp.hpp</a>.</p>
 
 </div>
 </div>
@@ -531,7 +537,7 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><b>nightMode</b></td></t
 <p>Get the scaling ratio to apply on all display elements, like GUI, text etc. </p>
 <p>When this ratio is 1, all pixel sizes used in Stellarium will look OK on a regular computer screen with 96 pixel per inch (reference for tuning sizes). </p>
 
-<p>Definition at line <a class="el" href="StelApp_8hpp_source.html#l00164">164</a> of file <a class="el" href="StelApp_8hpp_source.html">StelApp.hpp</a>.</p>
+<p>Definition at line <a class="el" href="StelApp_8hpp_source.html#l00166">166</a> of file <a class="el" href="StelApp_8hpp_source.html">StelApp.hpp</a>.</p>
 
 </div>
 </div>
@@ -558,7 +564,7 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><b>nightMode</b></td></t
 
 <p>Get the GUI instance implementing the abstract GUI interface. </p>
 
-<p>Definition at line <a class="el" href="StelApp_8hpp_source.html#l00172">172</a> of file <a class="el" href="StelApp_8hpp_source.html">StelApp.hpp</a>.</p>
+<p>Definition at line <a class="el" href="StelApp_8hpp_source.html#l00174">174</a> of file <a class="el" href="StelApp_8hpp_source.html">StelApp.hpp</a>.</p>
 
 </div>
 </div>
@@ -586,7 +592,7 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><b>nightMode</b></td></t
 <p>Get the <a class="el" href="classStelApp.html" title="Singleton main Stellarium application class. ">StelApp</a> singleton instance. </p>
 <dl class="section return"><dt>Returns</dt><dd>the <a class="el" href="classStelApp.html" title="Singleton main Stellarium application class. ">StelApp</a> singleton instance </dd></dl>
 
-<p>Definition at line <a class="el" href="StelApp_8hpp_source.html#l00089">89</a> of file <a class="el" href="StelApp_8hpp_source.html">StelApp.hpp</a>.</p>
+<p>Definition at line <a class="el" href="StelApp_8hpp_source.html#l00091">91</a> of file <a class="el" href="StelApp_8hpp_source.html">StelApp.hpp</a>.</p>
 
 </div>
 </div>
@@ -614,7 +620,7 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><b>nightMode</b></td></t
 <p>Get the locale manager to use for i18n &amp; date/time localization. </p>
 <dl class="section return"><dt>Returns</dt><dd>the font manager to use for loading fonts. </dd></dl>
 
-<p>Definition at line <a class="el" href="StelApp_8hpp_source.html#l00097">97</a> of file <a class="el" href="StelApp_8hpp_source.html">StelApp.hpp</a>.</p>
+<p>Definition at line <a class="el" href="StelApp_8hpp_source.html#l00099">99</a> of file <a class="el" href="StelApp_8hpp_source.html">StelApp.hpp</a>.</p>
 
 </div>
 </div>
@@ -642,7 +648,7 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><b>nightMode</b></td></t
 <p>Get the Location manager to use for managing stored locations. </p>
 <dl class="section return"><dt>Returns</dt><dd>the Location manager to use for managing stored locations </dd></dl>
 
-<p>Definition at line <a class="el" href="StelApp_8hpp_source.html#l00109">109</a> of file <a class="el" href="StelApp_8hpp_source.html">StelApp.hpp</a>.</p>
+<p>Definition at line <a class="el" href="StelApp_8hpp_source.html#l00111">111</a> of file <a class="el" href="StelApp_8hpp_source.html">StelApp.hpp</a>.</p>
 
 </div>
 </div>
@@ -669,7 +675,7 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><b>nightMode</b></td></t
 
 <p>Get the script API proxy (for signal handling) </p>
 
-<p>Definition at line <a class="el" href="StelApp_8hpp_source.html#l00179">179</a> of file <a class="el" href="StelApp_8hpp_source.html">StelApp.hpp</a>.</p>
+<p>Definition at line <a class="el" href="StelApp_8hpp_source.html#l00181">181</a> of file <a class="el" href="StelApp_8hpp_source.html">StelApp.hpp</a>.</p>
 
 </div>
 </div>
@@ -697,7 +703,7 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><b>nightMode</b></td></t
 <p>Get the module manager to use for accessing any module loaded in the application. </p>
 <dl class="section return"><dt>Returns</dt><dd>the module manager. </dd></dl>
 
-<p>Definition at line <a class="el" href="StelApp_8hpp_source.html#l00093">93</a> of file <a class="el" href="StelApp_8hpp_source.html">StelApp.hpp</a>.</p>
+<p>Definition at line <a class="el" href="StelApp_8hpp_source.html#l00095">95</a> of file <a class="el" href="StelApp_8hpp_source.html">StelApp.hpp</a>.</p>
 
 </div>
 </div>
@@ -724,7 +730,7 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><b>nightMode</b></td></t
 
 <p>Get the common instance of QNetworkAccessManager used in stellarium. </p>
 
-<p>Definition at line <a class="el" href="StelApp_8hpp_source.html#l00132">132</a> of file <a class="el" href="StelApp_8hpp_source.html">StelApp.hpp</a>.</p>
+<p>Definition at line <a class="el" href="StelApp_8hpp_source.html#l00134">134</a> of file <a class="el" href="StelApp_8hpp_source.html">StelApp.hpp</a>.</p>
 
 </div>
 </div>
@@ -751,7 +757,7 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><b>nightMode</b></td></t
 
 <p>Get the script manager. </p>
 
-<p>Definition at line <a class="el" href="StelApp_8hpp_source.html#l00181">181</a> of file <a class="el" href="StelApp_8hpp_source.html">StelApp.hpp</a>.</p>
+<p>Definition at line <a class="el" href="StelApp_8hpp_source.html#l00183">183</a> of file <a class="el" href="StelApp_8hpp_source.html">StelApp.hpp</a>.</p>
 
 </div>
 </div>
@@ -778,7 +784,7 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><b>nightMode</b></td></t
 
 <p>Return the main configuration options. </p>
 
-<p>Definition at line <a class="el" href="StelApp_8hpp_source.html#l00141">141</a> of file <a class="el" href="StelApp_8hpp_source.html">StelApp.hpp</a>.</p>
+<p>Definition at line <a class="el" href="StelApp_8hpp_source.html#l00143">143</a> of file <a class="el" href="StelApp_8hpp_source.html">StelApp.hpp</a>.</p>
 
 </div>
 </div>
@@ -806,7 +812,7 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><b>nightMode</b></td></t
 <p>Get the sky cultures manager. </p>
 <dl class="section return"><dt>Returns</dt><dd>the sky cultures manager </dd></dl>
 
-<p>Definition at line <a class="el" href="StelApp_8hpp_source.html#l00101">101</a> of file <a class="el" href="StelApp_8hpp_source.html">StelApp.hpp</a>.</p>
+<p>Definition at line <a class="el" href="StelApp_8hpp_source.html#l00103">103</a> of file <a class="el" href="StelApp_8hpp_source.html">StelApp.hpp</a>.</p>
 
 </div>
 </div>
@@ -833,7 +839,7 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><b>nightMode</b></td></t
 
 <p>Get the actions manager to use for managing and editing actions. </p>
 
-<p>Definition at line <a class="el" href="StelApp_8hpp_source.html#l00121">121</a> of file <a class="el" href="StelApp_8hpp_source.html">StelApp.hpp</a>.</p>
+<p>Definition at line <a class="el" href="StelApp_8hpp_source.html#l00123">123</a> of file <a class="el" href="StelApp_8hpp_source.html">StelApp.hpp</a>.</p>
 
 </div>
 </div>
@@ -860,7 +866,7 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><b>nightMode</b></td></t
 
 <p>Get the audio manager. </p>
 
-<p>Definition at line <a class="el" href="StelApp_8hpp_source.html#l00118">118</a> of file <a class="el" href="StelApp_8hpp_source.html">StelApp.hpp</a>.</p>
+<p>Definition at line <a class="el" href="StelApp_8hpp_source.html#l00120">120</a> of file <a class="el" href="StelApp_8hpp_source.html">StelApp.hpp</a>.</p>
 
 </div>
 </div>
@@ -888,7 +894,7 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><b>nightMode</b></td></t
 <p>Get the <a class="el" href="classStelObject.html" title="The base abstract class for sky objects used in Stellarium like Stars, Planets, Constellations etc...">StelObject</a> manager to use for querying from all stellarium objects. </p>
 <dl class="section return"><dt>Returns</dt><dd>the <a class="el" href="classStelObject.html" title="The base abstract class for sky objects used in Stellarium like Stars, Planets, Constellations etc...">StelObject</a> manager to use for querying from all stellarium objects . </dd></dl>
 
-<p>Definition at line <a class="el" href="StelApp_8hpp_source.html#l00113">113</a> of file <a class="el" href="StelApp_8hpp_source.html">StelApp.hpp</a>.</p>
+<p>Definition at line <a class="el" href="StelApp_8hpp_source.html#l00115">115</a> of file <a class="el" href="StelApp_8hpp_source.html">StelApp.hpp</a>.</p>
 
 </div>
 </div>
@@ -915,7 +921,7 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><b>nightMode</b></td></t
 
 <p>Get the video manager. </p>
 
-<p>Definition at line <a class="el" href="StelApp_8hpp_source.html#l00124">124</a> of file <a class="el" href="StelApp_8hpp_source.html">StelApp.hpp</a>.</p>
+<p>Definition at line <a class="el" href="StelApp_8hpp_source.html#l00126">126</a> of file <a class="el" href="StelApp_8hpp_source.html">StelApp.hpp</a>.</p>
 
 </div>
 </div>
@@ -943,7 +949,7 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><b>nightMode</b></td></t
 <p>Get the texture manager to use for loading textures. </p>
 <dl class="section return"><dt>Returns</dt><dd>the texture manager to use for loading textures. </dd></dl>
 
-<p>Definition at line <a class="el" href="StelApp_8hpp_source.html#l00105">105</a> of file <a class="el" href="StelApp_8hpp_source.html">StelApp.hpp</a>.</p>
+<p>Definition at line <a class="el" href="StelApp_8hpp_source.html#l00107">107</a> of file <a class="el" href="StelApp_8hpp_source.html">StelApp.hpp</a>.</p>
 
 </div>
 </div>
@@ -972,6 +978,23 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><b>nightMode</b></td></t
 
 </div>
 </div>
+<a class="anchor" id="adc0e0c5311a1d0939dceeaf50a3af515"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">QString StelApp::getViewportEffect </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Get the type of viewport effect currently used. </p>
+
+</div>
+</div>
 <a class="anchor" id="a4792de3ee4c5a4f5ee1fe5e4396c3d7d"></a>
 <div class="memitem">
 <div class="memproto">
@@ -995,7 +1018,7 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><b>nightMode</b></td></t
 
 <p>Get flag for activating night vision mode. </p>
 
-<p>Definition at line <a class="el" href="StelApp_8hpp_source.html#l00200">200</a> of file <a class="el" href="StelApp_8hpp_source.html">StelApp.hpp</a>.</p>
+<p>Definition at line <a class="el" href="StelApp_8hpp_source.html#l00208">208</a> of file <a class="el" href="StelApp_8hpp_source.html">StelApp.hpp</a>.</p>
 
 </div>
 </div>
@@ -1203,7 +1226,31 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><b>nightMode</b></td></t
 <p>Tell the <a class="el" href="classStelApp.html" title="Singleton main Stellarium application class. ">StelApp</a> instance which GUI si currently being used. </p>
 <p>The caller is responsible for destroying the GUI. </p>
 
-<p>Definition at line <a class="el" href="StelApp_8hpp_source.html#l00175">175</a> of file <a class="el" href="StelApp_8hpp_source.html">StelApp.hpp</a>.</p>
+<p>Definition at line <a class="el" href="StelApp_8hpp_source.html#l00177">177</a> of file <a class="el" href="StelApp_8hpp_source.html">StelApp.hpp</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a5c00355f6dce0bc1121e339e7413da24"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void StelApp::setViewportEffect </td>
+          <td>(</td>
+          <td class="paramtype">const QString &amp;&#160;</td>
+          <td class="paramname"><em>effectName</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Define the type of viewport effect to use. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">effectName</td><td>must be one of 'none', 'framebufferOnly', 'sphericMirrorDistorter' </td></tr>
+  </table>
+  </dd>
+</dl>
 
 </div>
 </div>
@@ -1291,7 +1338,7 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><b>nightMode</b></td></t
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Thu Sep 18 2014 20:10:25 for Stellarium by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Sun Oct 19 2014 16:43:24 for Stellarium by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.7
 </small></address>
