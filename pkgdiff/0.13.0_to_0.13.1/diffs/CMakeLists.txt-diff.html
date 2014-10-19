@@ -68,23 +68,18 @@
       <tr><td class="lineno" valign="top"></td><td class="left"></td><td> </td><td class="right"></td><td class="lineno" valign="top"></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="left">########### Main global variables ###########</td><td> </td><td class="right">########### Main global variables ###########</td><td class="lineno" valign="top"></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="left">IF(NOT CMAKE_BUILD_TYPE)</td><td> </td><td class="right">IF(NOT CMAKE_BUILD_TYPE)</td><td class="lineno" valign="top"></td></tr>
-      <tr><td><a name="diff0004" /></td></tr>
-      <tr><td class="lineno" valign="top"></td><td class="lblock">  SET(CMAKE_BUILD_TYPE <span class="delete">Release CACHE STRING "Choose the type of build, opti
+      <tr><td class="lineno" valign="top"></td><td class="left">  SET(CMAKE_BUILD_TYPE Release CACHE STRING "Choose the type of build, opti
 ons are: None Debug GProf Valgrind Release RelWithDebInfo MinSizeRel." FORC
-</span>E)</td><td> </td><td class="rblock">  SET(CMAKE_BUILD_TYPE <span class="insert">Debug CACHE STRING "Choose the type of build, option
-s are: None Debug GProf Valgrind Release RelWithDebInfo MinSizeRel." FORC</span>E)</td><td class="lineno" valign="top"></td></tr>
+E)</td><td> </td><td class="right">  SET(CMAKE_BUILD_TYPE Release CACHE STRING "Choose the type of build, opti
+ons are: None Debug GProf Valgrind Release RelWithDebInfo MinSizeRel." FORC
+E)</td><td class="lineno" valign="top"></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="left">ENDIF()</td><td> </td><td class="right">ENDIF()</td><td class="lineno" valign="top"></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="left"></td><td> </td><td class="right"></td><td class="lineno" valign="top"></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="left"># Add gprof build options if necessary.  Note gmon.out will be created in w
 orking directory when Stellarium is executed</td><td> </td><td class="right"># Add gprof build options if necessary.  Note gmon.out will be created in w
 orking directory when Stellarium is executed</td><td class="lineno" valign="top"></td></tr>
-      <tr><td class="lineno" valign="top"></td><td class="left">IF(${CMAKE_BUILD_TYPE} MATCHES "GProf")</td><td> </td><td class="right">IF(${CMAKE_BUILD_TYPE} MATCHES "GProf")</td><td class="lineno" valign="top"></td></tr>
-      <tr><td class="lineno" valign="top"></td><td class="left"> SET(CMAKE_C_FLAGS "${CMAKE_C_FLAGS} -fprofile-arcs")</td><td> </td><td class="right"> SET(CMAKE_C_FLAGS "${CMAKE_C_FLAGS} -fprofile-arcs")</td><td class="lineno" valign="top"></td></tr>
-      <tr><td class="lineno" valign="top"></td><td class="left"> SET(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -fprofile-arcs")</td><td> </td><td class="right"> SET(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -fprofile-arcs")</td><td class="lineno" valign="top"></td></tr>
-      <tr><td class="lineno" valign="top"></td><td class="left"> SET(CMAKE_EXE_LINKER_FLAGS "${CMAKE_EXE_LINKER_FLAGS} -pg")</td><td> </td><td class="right"> SET(CMAKE_EXE_LINKER_FLAGS "${CMAKE_EXE_LINKER_FLAGS} -pg")</td><td class="lineno" valign="top"></td></tr>
-      <tr><td class="lineno" valign="top"></td><td class="left">ENDIF()</td><td> </td><td class="right">ENDIF()</td><td class="lineno" valign="top"></td></tr>
-      <tr><td class="lineno" valign="top"></td><td class="left"></td><td> </td><td class="right"></td><td class="lineno" valign="top"></td></tr>
-      <tr><td class="lineno" valign="top"></td><td class="left"># Add valgrind build options if necessary</td><td> </td><td class="right"># Add valgrind build options if necessary</td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno"></td><td class="left"></td><td> </td><td class="right"></td><td class="lineno"></td></tr>
+      <tr bgcolor="gray" ><td></td><th><a name="part-l2" /><small>skipping to change at</small><em> line 43</em></th><th> </th><th><a name="part-r2" /><small>skipping to change at</small><em> line 47</em></th><td></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="left">IF(${CMAKE_BUILD_TYPE} MATCHES "Valgrind")</td><td> </td><td class="right">IF(${CMAKE_BUILD_TYPE} MATCHES "Valgrind")</td><td class="lineno" valign="top"></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="left"> SET(CMAKE_C_FLAGS "${CMAKE_C_FLAGS} -O0 -g")</td><td> </td><td class="right"> SET(CMAKE_C_FLAGS "${CMAKE_C_FLAGS} -O0 -g")</td><td class="lineno" valign="top"></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="left"> SET(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -O0 -g")</td><td> </td><td class="right"> SET(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -O0 -g")</td><td class="lineno" valign="top"></td></tr>
@@ -95,7 +90,7 @@ orking directory when Stellarium is executed</td><td class="lineno" valign="top"
       <tr><td class="lineno" valign="top"></td><td class="left">ENDIF()</td><td> </td><td class="right">ENDIF()</td><td class="lineno" valign="top"></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="left"></td><td> </td><td class="right"></td><td class="lineno" valign="top"></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="left">IF(CMAKE_COMPILER_IS_GNUCXX OR CMAKE_COMPILER_IS_GNUCC)</td><td> </td><td class="right">IF(CMAKE_COMPILER_IS_GNUCXX OR CMAKE_COMPILER_IS_GNUCC)</td><td class="lineno" valign="top"></td></tr>
-      <tr><td><a name="diff0005" /></td></tr>
+      <tr><td><a name="diff0004" /></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="lblock">  # The stars structs rely on gnu gcc packing of bit-fields.</td><td> </td><td class="rblock">  <span class="insert">IF(WIN32)</span></td><td class="lineno" valign="top"></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="lblock">  SET(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -mno-ms-bitfields")</td><td> </td><td class="rblock">    # The stars structs rely on gnu gcc packing of bit-fields.</td><td class="lineno" valign="top"></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="lblock"></td><td> </td><td class="rblock">    SET(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -mno-ms-bitfields")</td><td class="lineno" valign="top"></td></tr>
@@ -107,7 +102,7 @@ orking directory when Stellarium is executed</td><td class="lineno" valign="top"
       <tr><td class="lineno" valign="top"></td><td class="left"></td><td> </td><td class="right"></td><td class="lineno" valign="top"></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="left">IF(WIN32)</td><td> </td><td class="right">IF(WIN32)</td><td class="lineno" valign="top"></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="left">  IF(NOT MSVC)</td><td> </td><td class="right">  IF(NOT MSVC)</td><td class="lineno" valign="top"></td></tr>
-      <tr><td><a name="diff0006" /></td></tr>
+      <tr><td><a name="diff0005" /></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="lblock">    SET(CMAKE_C_FLAGS "${CMAKE_C_FLAGS} -Wall -fexceptions -fident -mthread</td><td> </td><td class="rblock">    SET(CMAKE_C_FLAGS "${CMAKE_C_FLAGS} -Wall -fexceptions -fident -mthread</td><td class="lineno" valign="top"></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="lblock"><span class="delete">s")</span></td><td> </td><td class="rblock"><span class="insert">s -Wno-unused-parameter -Wno-unused-result")</span></td><td class="lineno" valign="top"></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="lblock">    SET(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -Wall <span class="delete">-Wsign-promo</span> -fexceptions</td><td> </td><td class="rblock">    SET(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -Wall -fexceptions -fident <span class="insert">-mth</span></td><td class="lineno" valign="top"></td></tr>
@@ -118,7 +113,7 @@ orking directory when Stellarium is executed</td><td class="lineno" valign="top"
       <tr><td class="lineno" valign="top"></td><td class="left">    # Prevent MSVC from complaining about M_PI no matter where &lt;cmath&gt; is i
 ncluded first</td><td> </td><td class="right">    # Prevent MSVC from complaining about M_PI no matter where &lt;cmath&gt; is i
 ncluded first</td><td class="lineno" valign="top"></td></tr>
-      <tr><td><a name="diff0007" /></td></tr>
+      <tr><td><a name="diff0006" /></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="lblock">    ADD_DEFINITIONS(-D_USE_MATH_DEFINES)</td><td> </td><td class="rblock">    ADD_DEFINITIONS(-D_USE_MATH_DEFINES<span class="insert"> /D_CRT_SECURE_NO_WARNINGS /wd4244 /
 wd4005 /wd4101 /wd4996</span>)</td><td class="lineno" valign="top"></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="left">  ENDIF()</td><td> </td><td class="right">  ENDIF()</td><td class="lineno" valign="top"></td></tr>
@@ -138,7 +133,7 @@ pare")</td><td class="lineno" valign="top"></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="left"> # The cosmetic fix for Clang 3.4</td><td> </td><td class="right"> # The cosmetic fix for Clang 3.4</td><td class="lineno" valign="top"></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="left"> IF(${CMAKE_CXX_COMPILER_VERSION} VERSION_GREATER 3.3)</td><td> </td><td class="right"> IF(${CMAKE_CXX_COMPILER_VERSION} VERSION_GREATER 3.3)</td><td class="lineno" valign="top"></td></tr>
       <tr><td class="lineno"></td><td class="left"></td><td> </td><td class="right"></td><td class="lineno"></td></tr>
-      <tr bgcolor="gray" ><td></td><th><a name="part-l2" /><small>skipping to change at</small><em> line 374</em></th><th> </th><th><a name="part-r2" /><small>skipping to change at</small><em> line 380</em></th><td></td></tr>
+      <tr bgcolor="gray" ><td></td><th><a name="part-l3" /><small>skipping to change at</small><em> line 374</em></th><th> </th><th><a name="part-r3" /><small>skipping to change at</small><em> line 380</em></th><td></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="left">    ENDIF()</td><td> </td><td class="right">    ENDIF()</td><td class="lineno" valign="top"></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="left">    GET_FILENAME_COMPONENT(QT5_LIBS ${QtCore_location} PATH)</td><td> </td><td class="right">    GET_FILENAME_COMPONENT(QT5_LIBS ${QtCore_location} PATH)</td><td class="lineno" valign="top"></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="left">    IF(MSVC)</td><td> </td><td class="right">    IF(MSVC)</td><td class="lineno" valign="top"></td></tr>
@@ -159,7 +154,7 @@ Dir: \"{app}\";")</td><td class="lineno" valign="top"></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="left">    SET(ISS_WINDOWS_PLUGIN "Source: \"${QT5_LIBS}/../plugins/platforms/qwin
 dows.dll\"; DestDir: \"{app}/platforms/\";")</td><td> </td><td class="right">    SET(ISS_WINDOWS_PLUGIN "Source: \"${QT5_LIBS}/../plugins/platforms/qwin
 dows.dll\"; DestDir: \"{app}/platforms/\";")</td><td class="lineno" valign="top"></td></tr>
-      <tr><td><a name="diff0008" /></td></tr>
+      <tr><td><a name="diff0007" /></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="lblock"></td><td> </td><td class="rblock"><span class="insert">    SET(ISS_ICO_PLUGIN "Source: \"${QT5_LIBS}/../plugins/imageformats/qico.
 dll\"; DestDir: \"{app}/imageformats/\";")</span></td><td class="lineno" valign="top"></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="left">    IF(ENABLE_SOUND)</td><td> </td><td class="right">    IF(ENABLE_SOUND)</td><td class="lineno" valign="top"></td></tr>
@@ -190,8 +185,8 @@ DIR}/stellarium.iss @ONLY)</td><td> </td><td class="right">    CONFIGURE_FILE(${
 DIR}/stellarium.iss @ONLY)</td><td class="lineno" valign="top"></td></tr>
 
      <tr><td></td><td class="left"></td><td> </td><td class="right"></td><td></td></tr>
-     <tr bgcolor="gray"><th colspan="5" align="center"><a name="end">&nbsp;End of changes. 8 change blocks.&nbsp;</a></th></tr>
-     <tr class="stats"><td></td><th><i>12 lines changed or deleted</i></th><th><i> </i></th><th><i>19 lines changed or added</i></th><td></td></tr>
+     <tr bgcolor="gray"><th colspan="5" align="center"><a name="end">&nbsp;End of changes. 7 change blocks.&nbsp;</a></th></tr>
+     <tr class="stats"><td></td><th><i>11 lines changed or deleted</i></th><th><i> </i></th><th><i>18 lines changed or added</i></th><td></td></tr>
      <tr><td colspan="5" align="center" class="small"><br/>This html diff was produced by rfcdiff 1.41. The latest version is available from <a href="http://www.tools.ietf.org/tools/rfcdiff/" >http://tools.ietf.org/tools/rfcdiff/</a> </td></tr>
    </table>
    </body>
