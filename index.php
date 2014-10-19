@@ -61,11 +61,9 @@ printf('
 		<div class="download windows">
 		    <a href="%s">Windows<span>%s</span></a>
 		</div>
-		<!-- Win64 temporary disabled
 		<div class="download windows">
 		    <a href="%s">Windows<span>%s</span></a>
 		</div>
-		-->
 		<div class="download ubuntu">
 		    <a href="%s">Ubuntu<span>%s</span></a>
 		</div>
