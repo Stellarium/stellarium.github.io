@@ -1,4 +1,4 @@
-<!-- changed:0.3;added:2;removed:1;moved:0;renamed:0;changed:24;tool_version:1.6.2 -->
+<!-- changed:0.9;added:3;removed:1;moved:0;renamed:0;changed:207;tool_version:1.6.2 -->
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
     <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
     <head>
@@ -201,8 +201,8 @@ function sort_array(a,b)
 <h2>Test Results</h2><hr/>
 <table class='summary'>
 <tr><th class='left'>Total Packages</th><td><a href='#Packages' style='color:Blue;'>2</a></td></tr>
-<tr><th class='left'>Total Files</th><td><a href='#Files' style='color:Blue;'>2653</a></td></tr>
-<tr><th class='left'>Verdict</th><td><span style='color:Red;'><b>Changed<br/>(0.3%)</b></span></td></tr>
+<tr><th class='left'>Total Files</th><td><a href='#Files' style='color:Blue;'>2654</a></td></tr>
+<tr><th class='left'>Verdict</th><td><span style='color:Red;'><b>Changed<br/>(0.9%)</b></span></td></tr>
 </table>
 <a name='Deps'></a>
 <a name='Files'></a><h2>Changes In Files</h2><hr/>
@@ -213,7 +213,7 @@ function sort_array(a,b)
 <td><a href='#HeaderFiles' style='color:Blue;'>275</a></td>
 <td>0</td>
 <td>0</td>
-<td class='warning'><a href='#HeaderFiles' style='color:Blue;'>3</a></td>
+<td class='warning'><a href='#HeaderFiles' style='color:Blue;'>17</a></td>
 </tr>
 <tr>
 <td class='left'>C program</td>
@@ -227,7 +227,7 @@ function sort_array(a,b)
 <td><a href='#CPPPrograms' style='color:Blue;'>230</a></td>
 <td>0</td>
 <td>0</td>
-<td class='warning'><a href='#CPPPrograms' style='color:Blue;'>7</a></td>
+<td class='warning'><a href='#CPPPrograms' style='color:Blue;'>35</a></td>
 </tr>
 <tr>
 <td class='left'>Fortran program</td>
@@ -325,7 +325,7 @@ function sort_array(a,b)
 <td><a href='#XMLDocuments' style='color:Blue;'>2</a></td>
 <td>0</td>
 <td>0</td>
-<td>0</td>
+<td class='warning'><a href='#XMLDocuments' style='color:Blue;'>1</a></td>
 </tr>
 <tr>
 <td class='left'>CSS style sheet</td>
@@ -360,7 +360,7 @@ function sort_array(a,b)
 <td><a href='#GettextFiles' style='color:Blue;'>353</a></td>
 <td>0</td>
 <td>0</td>
-<td class='warning'><a href='#GettextFiles' style='color:Blue;'>1</a></td>
+<td class='warning'><a href='#GettextFiles' style='color:Blue;'>140</a></td>
 </tr>
 <tr>
 <td class='left'>GLSL Shader file</td>
@@ -469,10 +469,10 @@ function sort_array(a,b)
 </tr>
 <tr>
 <td class='left'>Image file</td>
-<td><a href='#ImageFiles' style='color:Blue;'>767</a></td>
-<td class='new'><a href='#ImageFiles' style='color:Blue;'>1</a></td>
+<td><a href='#ImageFiles' style='color:Blue;'>768</a></td>
+<td class='new'><a href='#ImageFiles' style='color:Blue;'>2</a></td>
 <td class='failed'><a href='#ImageFiles' style='color:Blue;'>1</a></td>
-<td>0</td>
+<td class='warning'><a href='#ImageFiles' style='color:Blue;'>1</a></td>
 </tr>
 <tr>
 <td class='left'>Vector Image file</td>
@@ -1636,9 +1636,9 @@ function sort_array(a,b)
 </tr>
 <tr>
 <td class='left f_path'>src/core/modules/MilkyWay.hpp</td>
-<td class='passed'>unchanged</td>
-<td></td>
-<td></td>
+<td class='warning'>changed</td>
+<td class='value'>1.2%</td>
+<td><a href='diffs/src/core/modules/MilkyWay.hpp-diff.html' target='_blank'>diff</a></td>
 <td></td>
 </tr>
 <tr>
@@ -1650,9 +1650,9 @@ function sort_array(a,b)
 </tr>
 <tr>
 <td class='left f_path'>src/core/modules/Nebula.hpp</td>
-<td class='passed'>unchanged</td>
-<td></td>
-<td></td>
+<td class='warning'>changed</td>
+<td class='value'>2%</td>
+<td><a href='diffs/src/core/modules/Nebula.hpp-diff.html' target='_blank'>diff</a></td>
 <td></td>
 </tr>
 <tr>
@@ -1671,9 +1671,9 @@ function sort_array(a,b)
 </tr>
 <tr>
 <td class='left f_path'>src/core/modules/Planet.hpp</td>
-<td class='passed'>unchanged</td>
-<td></td>
-<td></td>
+<td class='warning'>changed</td>
+<td class='value'>6%</td>
+<td><a href='diffs/src/core/modules/Planet.hpp-diff.html' target='_blank'>diff</a></td>
 <td></td>
 </tr>
 <tr>
@@ -1692,9 +1692,9 @@ function sort_array(a,b)
 </tr>
 <tr>
 <td class='left f_path'>src/core/modules/SolarSystem.hpp</td>
-<td class='passed'>unchanged</td>
-<td></td>
-<td></td>
+<td class='warning'>changed</td>
+<td class='value'>8.2%</td>
+<td><a href='diffs/src/core/modules/SolarSystem.hpp-diff.html' target='_blank'>diff</a></td>
 <td></td>
 </tr>
 <tr>
@@ -1832,9 +1832,9 @@ function sort_array(a,b)
 </tr>
 <tr>
 <td class='left f_path'>src/core/RefractionExtinction.hpp</td>
-<td class='passed'>unchanged</td>
-<td></td>
-<td></td>
+<td class='warning'>changed</td>
+<td class='value'>1.2%</td>
+<td><a href='diffs/src/core/RefractionExtinction.hpp-diff.html' target='_blank'>diff</a></td>
 <td></td>
 </tr>
 <tr>
@@ -1965,9 +1965,9 @@ function sort_array(a,b)
 </tr>
 <tr>
 <td class='left f_path'>src/core/StelObject.hpp</td>
-<td class='passed'>unchanged</td>
-<td></td>
-<td></td>
+<td class='warning'>changed</td>
+<td class='value'>0.8%</td>
+<td><a href='diffs/src/core/StelObject.hpp-diff.html' target='_blank'>diff</a></td>
 <td></td>
 </tr>
 <tr>
@@ -2007,9 +2007,9 @@ function sort_array(a,b)
 </tr>
 <tr>
 <td class='left f_path'>src/core/StelPainter.hpp</td>
-<td class='passed'>unchanged</td>
-<td></td>
-<td></td>
+<td class='warning'>changed</td>
+<td class='value'>11.2%</td>
+<td><a href='diffs/src/core/StelPainter.hpp-diff.html' target='_blank'>diff</a></td>
 <td></td>
 </tr>
 <tr>
@@ -2028,9 +2028,9 @@ function sort_array(a,b)
 </tr>
 <tr>
 <td class='left f_path'>src/core/StelProjector.hpp</td>
-<td class='passed'>unchanged</td>
-<td></td>
-<td></td>
+<td class='warning'>changed</td>
+<td class='value'>0.2%</td>
+<td><a href='diffs/src/core/StelProjector.hpp-diff.html' target='_blank'>diff</a></td>
 <td></td>
 </tr>
 <tr>
@@ -2098,9 +2098,9 @@ function sort_array(a,b)
 </tr>
 <tr>
 <td class='left f_path'>src/core/StelSphereGeometry.hpp</td>
-<td class='passed'>unchanged</td>
-<td></td>
-<td></td>
+<td class='warning'>changed</td>
+<td class='value'>0.2%</td>
+<td><a href='diffs/src/core/StelSphereGeometry.hpp-diff.html' target='_blank'>diff</a></td>
 <td></td>
 </tr>
 <tr>
@@ -2147,16 +2147,16 @@ function sort_array(a,b)
 </tr>
 <tr>
 <td class='left f_path'>src/core/StelUtils.hpp</td>
-<td class='passed'>unchanged</td>
-<td></td>
-<td></td>
+<td class='warning'>changed</td>
+<td class='value'>1%</td>
+<td><a href='diffs/src/core/StelUtils.hpp-diff.html' target='_blank'>diff</a></td>
 <td></td>
 </tr>
 <tr>
 <td class='left f_path'>src/core/StelVertexArray.hpp</td>
-<td class='passed'>unchanged</td>
-<td></td>
-<td></td>
+<td class='warning'>changed</td>
+<td class='value'>37.9%</td>
+<td><a href='diffs/src/core/StelVertexArray.hpp-diff.html' target='_blank'>diff</a></td>
 <td></td>
 </tr>
 <tr>
@@ -2245,9 +2245,9 @@ function sort_array(a,b)
 </tr>
 <tr>
 <td class='left f_path'>src/gui/LocationDialog.hpp</td>
-<td class='passed'>unchanged</td>
-<td></td>
-<td></td>
+<td class='warning'>changed</td>
+<td class='value'>2.1%</td>
+<td><a href='diffs/src/gui/LocationDialog.hpp-diff.html' target='_blank'>diff</a></td>
 <td></td>
 </tr>
 <tr>
@@ -2294,9 +2294,9 @@ function sort_array(a,b)
 </tr>
 <tr>
 <td class='left f_path'>src/gui/StelDialog.hpp</td>
-<td class='passed'>unchanged</td>
-<td></td>
-<td></td>
+<td class='warning'>changed</td>
+<td class='value'>0.8%</td>
+<td><a href='diffs/src/gui/StelDialog.hpp-diff.html' target='_blank'>diff</a></td>
 <td></td>
 </tr>
 <tr>
@@ -2350,9 +2350,9 @@ function sort_array(a,b)
 </tr>
 <tr>
 <td class='left f_path'>src/scripting/StelMainScriptAPI.hpp</td>
-<td class='passed'>unchanged</td>
-<td></td>
-<td></td>
+<td class='warning'>changed</td>
+<td class='value'>1.3%</td>
+<td><a href='diffs/src/scripting/StelMainScriptAPI.hpp-diff.html' target='_blank'>diff</a></td>
 <td></td>
 </tr>
 <tr>
@@ -2766,9 +2766,9 @@ function sort_array(a,b)
 </tr>
 <tr>
 <td class='left f_path'>plugins/AngleMeasure/src/gui/AngleMeasureDialog.cpp</td>
-<td class='passed'>unchanged</td>
-<td></td>
-<td></td>
+<td class='warning'>changed</td>
+<td class='value'>0.4%</td>
+<td><a href='diffs/plugins/AngleMeasure/src/gui/AngleMeasureDialog.cpp-diff.html' target='_blank'>diff</a></td>
 <td></td>
 </tr>
 <tr>
@@ -2808,9 +2808,9 @@ function sort_array(a,b)
 </tr>
 <tr>
 <td class='left f_path'>plugins/Exoplanets/src/gui/ExoplanetsDialog.cpp</td>
-<td class='passed'>unchanged</td>
-<td></td>
-<td></td>
+<td class='warning'>changed</td>
+<td class='value'>1.4%</td>
+<td><a href='diffs/plugins/Exoplanets/src/gui/ExoplanetsDialog.cpp-diff.html' target='_blank'>diff</a></td>
 <td></td>
 </tr>
 <tr>
@@ -2962,9 +2962,9 @@ function sort_array(a,b)
 </tr>
 <tr>
 <td class='left f_path'>plugins/MeteorShowers/src/gui/MeteorShowerDialog.cpp</td>
-<td class='passed'>unchanged</td>
-<td></td>
-<td></td>
+<td class='warning'>changed</td>
+<td class='value'>0.1%</td>
+<td><a href='diffs/plugins/MeteorShowers/src/gui/MeteorShowerDialog.cpp-diff.html' target='_blank'>diff</a></td>
 <td></td>
 </tr>
 <tr>
@@ -2997,9 +2997,9 @@ function sort_array(a,b)
 </tr>
 <tr>
 <td class='left f_path'>plugins/Novae/src/gui/NovaeDialog.cpp</td>
-<td class='passed'>unchanged</td>
-<td></td>
-<td></td>
+<td class='warning'>changed</td>
+<td class='value'>0.2%</td>
+<td><a href='diffs/plugins/Novae/src/gui/NovaeDialog.cpp-diff.html' target='_blank'>diff</a></td>
 <td></td>
 </tr>
 <tr>
@@ -3018,9 +3018,9 @@ function sort_array(a,b)
 </tr>
 <tr>
 <td class='left f_path'>plugins/Observability/src/gui/ObservabilityDialog.cpp</td>
-<td class='passed'>unchanged</td>
-<td></td>
-<td></td>
+<td class='warning'>changed</td>
+<td class='value'>0.2%</td>
+<td><a href='diffs/plugins/Observability/src/gui/ObservabilityDialog.cpp-diff.html' target='_blank'>diff</a></td>
 <td></td>
 </tr>
 <tr>
@@ -3040,7 +3040,7 @@ function sort_array(a,b)
 <tr>
 <td class='left f_path'>plugins/Oculars/src/gui/OcularDialog.cpp</td>
 <td class='warning'>changed</td>
-<td class='value'>1.1%</td>
+<td class='value'>1.2%</td>
 <td><a href='diffs/plugins/Oculars/src/gui/OcularDialog.cpp-diff.html' target='_blank'>diff</a></td>
 <td></td>
 </tr>
@@ -3102,9 +3102,9 @@ function sort_array(a,b)
 </tr>
 <tr>
 <td class='left f_path'>plugins/Pulsars/src/gui/PulsarsDialog.cpp</td>
-<td class='passed'>unchanged</td>
-<td></td>
-<td></td>
+<td class='warning'>changed</td>
+<td class='value'>0.2%</td>
+<td><a href='diffs/plugins/Pulsars/src/gui/PulsarsDialog.cpp-diff.html' target='_blank'>diff</a></td>
 <td></td>
 </tr>
 <tr>
@@ -3207,16 +3207,16 @@ function sort_array(a,b)
 </tr>
 <tr>
 <td class='left f_path'>plugins/Satellites/src/gui/SatellitesDialog.cpp</td>
-<td class='passed'>unchanged</td>
-<td></td>
-<td></td>
+<td class='warning'>changed</td>
+<td class='value'>0.1%</td>
+<td><a href='diffs/plugins/Satellites/src/gui/SatellitesDialog.cpp-diff.html' target='_blank'>diff</a></td>
 <td></td>
 </tr>
 <tr>
 <td class='left f_path'>plugins/Satellites/src/gui/SatellitesImportDialog.cpp</td>
-<td class='passed'>unchanged</td>
-<td></td>
-<td></td>
+<td class='warning'>changed</td>
+<td class='value'>0.2%</td>
+<td><a href='diffs/plugins/Satellites/src/gui/SatellitesImportDialog.cpp-diff.html' target='_blank'>diff</a></td>
 <td></td>
 </tr>
 <tr>
@@ -3270,9 +3270,9 @@ function sort_array(a,b)
 </tr>
 <tr>
 <td class='left f_path'>plugins/SolarSystemEditor/src/gui/SolarSystemManagerWindow.cpp</td>
-<td class='passed'>unchanged</td>
-<td></td>
-<td></td>
+<td class='warning'>changed</td>
+<td class='value'>0.3%</td>
+<td><a href='diffs/plugins/SolarSystemEditor/src/gui/SolarSystemManagerWindow.cpp-diff.html' target='_blank'>diff</a></td>
 <td></td>
 </tr>
 <tr>
@@ -3291,9 +3291,9 @@ function sort_array(a,b)
 </tr>
 <tr>
 <td class='left f_path'>plugins/Supernovae/src/gui/SupernovaeDialog.cpp</td>
-<td class='passed'>unchanged</td>
-<td></td>
-<td></td>
+<td class='warning'>changed</td>
+<td class='value'>0.2%</td>
+<td><a href='diffs/plugins/Supernovae/src/gui/SupernovaeDialog.cpp-diff.html' target='_blank'>diff</a></td>
 <td></td>
 </tr>
 <tr>
@@ -3354,9 +3354,9 @@ function sort_array(a,b)
 </tr>
 <tr>
 <td class='left f_path'>plugins/TelescopeControl/src/gui/TelescopeDialog.cpp</td>
-<td class='passed'>unchanged</td>
-<td></td>
-<td></td>
+<td class='warning'>changed</td>
+<td class='value'>0.1%</td>
+<td><a href='diffs/plugins/TelescopeControl/src/gui/TelescopeDialog.cpp-diff.html' target='_blank'>diff</a></td>
 <td></td>
 </tr>
 <tr>
@@ -3600,7 +3600,7 @@ function sort_array(a,b)
 <tr>
 <td class='left f_path'>src/core/modules/Landscape.cpp</td>
 <td class='warning'>changed</td>
-<td class='value'>4.8%</td>
+<td class='value'>4.9%</td>
 <td><a href='diffs/src/core/modules/Landscape.cpp-diff.html' target='_blank'>diff</a></td>
 <td></td>
 </tr>
@@ -3627,9 +3627,9 @@ function sort_array(a,b)
 </tr>
 <tr>
 <td class='left f_path'>src/core/modules/MilkyWay.cpp</td>
-<td class='passed'>unchanged</td>
-<td></td>
-<td></td>
+<td class='warning'>changed</td>
+<td class='value'>69.9%</td>
+<td><a href='diffs/src/core/modules/MilkyWay.cpp-diff.html' target='_blank'>diff</a></td>
 <td></td>
 </tr>
 <tr>
@@ -3662,9 +3662,9 @@ function sort_array(a,b)
 </tr>
 <tr>
 <td class='left f_path'>src/core/modules/Planet.cpp</td>
-<td class='passed'>unchanged</td>
-<td></td>
-<td></td>
+<td class='warning'>changed</td>
+<td class='value'>10%</td>
+<td><a href='diffs/src/core/modules/Planet.cpp-diff.html' target='_blank'>diff</a></td>
 <td></td>
 </tr>
 <tr>
@@ -3683,9 +3683,9 @@ function sort_array(a,b)
 </tr>
 <tr>
 <td class='left f_path'>src/core/modules/SolarSystem.cpp</td>
-<td class='passed'>unchanged</td>
-<td></td>
-<td></td>
+<td class='warning'>changed</td>
+<td class='value'>1.5%</td>
+<td><a href='diffs/src/core/modules/SolarSystem.cpp-diff.html' target='_blank'>diff</a></td>
 <td></td>
 </tr>
 <tr>
@@ -3851,16 +3851,16 @@ function sort_array(a,b)
 </tr>
 <tr>
 <td class='left f_path'>src/core/StelMovementMgr.cpp</td>
-<td class='passed'>unchanged</td>
-<td></td>
-<td></td>
+<td class='warning'>changed</td>
+<td class='value'>0.1%</td>
+<td><a href='diffs/src/core/StelMovementMgr.cpp-diff.html' target='_blank'>diff</a></td>
 <td></td>
 </tr>
 <tr>
 <td class='left f_path'>src/core/StelObject.cpp</td>
-<td class='passed'>unchanged</td>
-<td></td>
-<td></td>
+<td class='warning'>changed</td>
+<td class='value'>6.3%</td>
+<td><a href='diffs/src/core/StelObject.cpp-diff.html' target='_blank'>diff</a></td>
 <td></td>
 </tr>
 <tr>
@@ -3893,9 +3893,9 @@ function sort_array(a,b)
 </tr>
 <tr>
 <td class='left f_path'>src/core/StelPainter.cpp</td>
-<td class='passed'>unchanged</td>
-<td></td>
-<td></td>
+<td class='warning'>changed</td>
+<td class='value'>13.2%</td>
+<td><a href='diffs/src/core/StelPainter.cpp-diff.html' target='_blank'>diff</a></td>
 <td></td>
 </tr>
 <tr>
@@ -3956,9 +3956,9 @@ function sort_array(a,b)
 </tr>
 <tr>
 <td class='left f_path'>src/core/StelSphereGeometry.cpp</td>
-<td class='passed'>unchanged</td>
-<td></td>
-<td></td>
+<td class='warning'>changed</td>
+<td class='value'>0.6%</td>
+<td><a href='diffs/src/core/StelSphereGeometry.cpp-diff.html' target='_blank'>diff</a></td>
 <td></td>
 </tr>
 <tr>
@@ -3998,16 +3998,16 @@ function sort_array(a,b)
 </tr>
 <tr>
 <td class='left f_path'>src/core/StelUtils.cpp</td>
-<td class='passed'>unchanged</td>
-<td></td>
-<td></td>
+<td class='warning'>changed</td>
+<td class='value'>2.5%</td>
+<td><a href='diffs/src/core/StelUtils.cpp-diff.html' target='_blank'>diff</a></td>
 <td></td>
 </tr>
 <tr>
 <td class='left f_path'>src/core/StelVertexArray.cpp</td>
-<td class='passed'>unchanged</td>
-<td></td>
-<td></td>
+<td class='warning'>changed</td>
+<td class='value'>3.7%</td>
+<td><a href='diffs/src/core/StelVertexArray.cpp-diff.html' target='_blank'>diff</a></td>
 <td></td>
 </tr>
 <tr>
@@ -4082,16 +4082,16 @@ function sort_array(a,b)
 </tr>
 <tr>
 <td class='left f_path'>src/gui/HelpDialog.cpp</td>
-<td class='passed'>unchanged</td>
-<td></td>
-<td></td>
+<td class='warning'>changed</td>
+<td class='value'>0.1%</td>
+<td><a href='diffs/src/gui/HelpDialog.cpp-diff.html' target='_blank'>diff</a></td>
 <td></td>
 </tr>
 <tr>
 <td class='left f_path'>src/gui/LocationDialog.cpp</td>
-<td class='passed'>unchanged</td>
-<td></td>
-<td></td>
+<td class='warning'>changed</td>
+<td class='value'>0.1%</td>
+<td><a href='diffs/src/gui/LocationDialog.cpp-diff.html' target='_blank'>diff</a></td>
 <td></td>
 </tr>
 <tr>
@@ -4110,9 +4110,9 @@ function sort_array(a,b)
 </tr>
 <tr>
 <td class='left f_path'>src/gui/SearchDialog.cpp</td>
-<td class='passed'>unchanged</td>
-<td></td>
-<td></td>
+<td class='warning'>changed</td>
+<td class='value'>0.1%</td>
+<td><a href='diffs/src/gui/SearchDialog.cpp-diff.html' target='_blank'>diff</a></td>
 <td></td>
 </tr>
 <tr>
@@ -4124,9 +4124,9 @@ function sort_array(a,b)
 </tr>
 <tr>
 <td class='left f_path'>src/gui/ShortcutsDialog.cpp</td>
-<td class='passed'>unchanged</td>
-<td></td>
-<td></td>
+<td class='warning'>changed</td>
+<td class='value'>0.2%</td>
+<td><a href='diffs/src/gui/ShortcutsDialog.cpp-diff.html' target='_blank'>diff</a></td>
 <td></td>
 </tr>
 <tr>
@@ -4138,9 +4138,9 @@ function sort_array(a,b)
 </tr>
 <tr>
 <td class='left f_path'>src/gui/StelDialog.cpp</td>
-<td class='passed'>unchanged</td>
-<td></td>
-<td></td>
+<td class='warning'>changed</td>
+<td class='value'>1.4%</td>
+<td><a href='diffs/src/gui/StelDialog.cpp-diff.html' target='_blank'>diff</a></td>
 <td></td>
 </tr>
 <tr>
@@ -4167,7 +4167,7 @@ function sort_array(a,b)
 <tr>
 <td class='left f_path'>src/gui/ViewDialog.cpp</td>
 <td class='warning'>changed</td>
-<td class='value'>0.3%</td>
+<td class='value'>0.4%</td>
 <td><a href='diffs/src/gui/ViewDialog.cpp-diff.html' target='_blank'>diff</a></td>
 <td></td>
 </tr>
@@ -4194,9 +4194,9 @@ function sort_array(a,b)
 </tr>
 <tr>
 <td class='left f_path'>src/scripting/StelMainScriptAPI.cpp</td>
-<td class='passed'>unchanged</td>
-<td></td>
-<td></td>
+<td class='warning'>changed</td>
+<td class='value'>2.2%</td>
+<td><a href='diffs/src/scripting/StelMainScriptAPI.cpp-diff.html' target='_blank'>diff</a></td>
 <td></td>
 </tr>
 <tr>
@@ -4236,9 +4236,9 @@ function sort_array(a,b)
 </tr>
 <tr>
 <td class='left f_path'>src/StelMainView.cpp</td>
-<td class='passed'>unchanged</td>
-<td></td>
-<td></td>
+<td class='warning'>changed</td>
+<td class='value'>0.6%</td>
+<td><a href='diffs/src/StelMainView.cpp-diff.html' target='_blank'>diff</a></td>
 <td></td>
 </tr>
 <tr>
@@ -4292,9 +4292,9 @@ function sort_array(a,b)
 </tr>
 <tr>
 <td class='left f_path'>src/tests/testStelVertexArray.cpp</td>
-<td class='passed'>unchanged</td>
-<td></td>
-<td></td>
+<td class='warning'>changed</td>
+<td class='value'>13.4%</td>
+<td><a href='diffs/src/tests/testStelVertexArray.cpp-diff.html' target='_blank'>diff</a></td>
 <td></td>
 </tr>
 <tr>
@@ -5762,9 +5762,9 @@ function sort_array(a,b)
 <tr><th title='sort' onclick='javascript:sort(this, 1)' style='cursor:pointer'>Name</th><th title='sort' onclick='javascript:sort(this, 1)' style='cursor:pointer'>Status</th><th title='sort' onclick='javascript:sort(this, 1)' style='cursor:pointer'>Delta</th><th>Visual<br/>Diff</th><th>Detailed<br/>Report</th></tr>
 <tr>
 <td class='left f_path'>data/stellarium.appdata.xml</td>
-<td class='passed'>unchanged</td>
-<td></td>
-<td></td>
+<td class='warning'>changed</td>
+<td class='value'>9.3%</td>
+<td><a href='diffs/data/stellarium.appdata.xml-diff.html' target='_blank'>diff</a></td>
 <td></td>
 </tr>
 <tr>
@@ -6081,8 +6081,8 @@ function sort_array(a,b)
 </tr>
 <tr>
 <td class='left f_path'>po/stellarium-metainfo/cs.po</td>
-<td class='passed'>unchanged</td>
-<td></td>
+<td class='warning'>changed</td>
+<td class='value'>44.2%</td>
 <td></td>
 <td></td>
 </tr>
@@ -6487,8 +6487,8 @@ function sort_array(a,b)
 </tr>
 <tr>
 <td class='left f_path'>po/stellarium-metainfo/sk.po</td>
-<td class='passed'>unchanged</td>
-<td></td>
+<td class='warning'>changed</td>
+<td class='value'>44.7%</td>
 <td></td>
 <td></td>
 </tr>
@@ -6515,8 +6515,8 @@ function sort_array(a,b)
 </tr>
 <tr>
 <td class='left f_path'>po/stellarium-metainfo/stellarium-metainfo.pot</td>
-<td class='passed'>unchanged</td>
-<td></td>
+<td class='warning'>changed</td>
+<td class='value'>0.1%</td>
 <td></td>
 <td></td>
 </tr>
@@ -6557,8 +6557,8 @@ function sort_array(a,b)
 </tr>
 <tr>
 <td class='left f_path'>po/stellarium-metainfo/tr.po</td>
-<td class='passed'>unchanged</td>
-<td></td>
+<td class='warning'>changed</td>
+<td class='value'>17.5%</td>
 <td></td>
 <td></td>
 </tr>
@@ -6963,8 +6963,8 @@ function sort_array(a,b)
 </tr>
 <tr>
 <td class='left f_path'>po/stellarium-skycultures/gl.po</td>
-<td class='passed'>unchanged</td>
-<td></td>
+<td class='warning'>changed</td>
+<td class='value'>0.2%</td>
 <td></td>
 <td></td>
 </tr>
@@ -7257,8 +7257,8 @@ function sort_array(a,b)
 </tr>
 <tr>
 <td class='left f_path'>po/stellarium-skycultures/nl.po</td>
-<td class='passed'>unchanged</td>
-<td></td>
+<td class='warning'>changed</td>
+<td class='value'>0.4%</td>
 <td></td>
 <td></td>
 </tr>
@@ -7544,785 +7544,785 @@ function sort_array(a,b)
 </tr>
 <tr>
 <td class='left f_path'>po/stellarium/aa.po</td>
-<td class='passed'>unchanged</td>
-<td></td>
+<td class='warning'>changed</td>
+<td class='value'>0.2%</td>
 <td></td>
 <td></td>
 </tr>
 <tr>
 <td class='left f_path'>po/stellarium/ab.po</td>
-<td class='passed'>unchanged</td>
-<td></td>
+<td class='warning'>changed</td>
+<td class='value'>0.2%</td>
 <td></td>
 <td></td>
 </tr>
 <tr>
 <td class='left f_path'>po/stellarium/ae.po</td>
-<td class='passed'>unchanged</td>
-<td></td>
+<td class='warning'>changed</td>
+<td class='value'>0.2%</td>
 <td></td>
 <td></td>
 </tr>
 <tr>
 <td class='left f_path'>po/stellarium/af.po</td>
-<td class='passed'>unchanged</td>
-<td></td>
+<td class='warning'>changed</td>
+<td class='value'>0.2%</td>
 <td></td>
 <td></td>
 </tr>
 <tr>
 <td class='left f_path'>po/stellarium/ak.po</td>
-<td class='passed'>unchanged</td>
-<td></td>
+<td class='warning'>changed</td>
+<td class='value'>0.2%</td>
 <td></td>
 <td></td>
 </tr>
 <tr>
 <td class='left f_path'>po/stellarium/am.po</td>
-<td class='passed'>unchanged</td>
-<td></td>
+<td class='warning'>changed</td>
+<td class='value'>0.2%</td>
 <td></td>
 <td></td>
 </tr>
 <tr>
 <td class='left f_path'>po/stellarium/an.po</td>
-<td class='passed'>unchanged</td>
-<td></td>
+<td class='warning'>changed</td>
+<td class='value'>0.2%</td>
 <td></td>
 <td></td>
 </tr>
 <tr>
 <td class='left f_path'>po/stellarium/ar.po</td>
-<td class='passed'>unchanged</td>
-<td></td>
+<td class='warning'>changed</td>
+<td class='value'>0.1%</td>
 <td></td>
 <td></td>
 </tr>
 <tr>
 <td class='left f_path'>po/stellarium/as.po</td>
-<td class='passed'>unchanged</td>
-<td></td>
+<td class='warning'>changed</td>
+<td class='value'>0.2%</td>
 <td></td>
 <td></td>
 </tr>
 <tr>
 <td class='left f_path'>po/stellarium/ast.po</td>
-<td class='passed'>unchanged</td>
-<td></td>
+<td class='warning'>changed</td>
+<td class='value'>0.2%</td>
 <td></td>
 <td></td>
 </tr>
 <tr>
 <td class='left f_path'>po/stellarium/av.po</td>
-<td class='passed'>unchanged</td>
-<td></td>
+<td class='warning'>changed</td>
+<td class='value'>0.2%</td>
 <td></td>
 <td></td>
 </tr>
 <tr>
 <td class='left f_path'>po/stellarium/az.po</td>
-<td class='passed'>unchanged</td>
-<td></td>
+<td class='warning'>changed</td>
+<td class='value'>0.2%</td>
 <td></td>
 <td></td>
 </tr>
 <tr>
 <td class='left f_path'>po/stellarium/ba.po</td>
-<td class='passed'>unchanged</td>
-<td></td>
+<td class='warning'>changed</td>
+<td class='value'>0.2%</td>
 <td></td>
 <td></td>
 </tr>
 <tr>
 <td class='left f_path'>po/stellarium/be.po</td>
-<td class='passed'>unchanged</td>
-<td></td>
+<td class='warning'>changed</td>
+<td class='value'>0.1%</td>
 <td></td>
 <td></td>
 </tr>
 <tr>
 <td class='left f_path'>po/stellarium/bg.po</td>
-<td class='passed'>unchanged</td>
-<td></td>
+<td class='warning'>changed</td>
+<td class='value'>0.1%</td>
 <td></td>
 <td></td>
 </tr>
 <tr>
 <td class='left f_path'>po/stellarium/bh.po</td>
-<td class='passed'>unchanged</td>
-<td></td>
+<td class='warning'>changed</td>
+<td class='value'>0.2%</td>
 <td></td>
 <td></td>
 </tr>
 <tr>
 <td class='left f_path'>po/stellarium/bi.po</td>
-<td class='passed'>unchanged</td>
-<td></td>
+<td class='warning'>changed</td>
+<td class='value'>0.2%</td>
 <td></td>
 <td></td>
 </tr>
 <tr>
 <td class='left f_path'>po/stellarium/bn.po</td>
-<td class='passed'>unchanged</td>
-<td></td>
+<td class='warning'>changed</td>
+<td class='value'>0.1%</td>
 <td></td>
 <td></td>
 </tr>
 <tr>
 <td class='left f_path'>po/stellarium/bo.po</td>
-<td class='passed'>unchanged</td>
-<td></td>
+<td class='warning'>changed</td>
+<td class='value'>0.2%</td>
 <td></td>
 <td></td>
 </tr>
 <tr>
 <td class='left f_path'>po/stellarium/br.po</td>
-<td class='passed'>unchanged</td>
-<td></td>
+<td class='warning'>changed</td>
+<td class='value'>0.2%</td>
 <td></td>
 <td></td>
 </tr>
 <tr>
 <td class='left f_path'>po/stellarium/bs.po</td>
-<td class='passed'>unchanged</td>
-<td></td>
+<td class='warning'>changed</td>
+<td class='value'>0.2%</td>
 <td></td>
 <td></td>
 </tr>
 <tr>
 <td class='left f_path'>po/stellarium/ca.po</td>
-<td class='passed'>unchanged</td>
-<td></td>
+<td class='warning'>changed</td>
+<td class='value'>0.1%</td>
 <td></td>
 <td></td>
 </tr>
 <tr>
 <td class='left f_path'>po/stellarium/ce.po</td>
-<td class='passed'>unchanged</td>
-<td></td>
+<td class='warning'>changed</td>
+<td class='value'>0.2%</td>
 <td></td>
 <td></td>
 </tr>
 <tr>
 <td class='left f_path'>po/stellarium/ckb.po</td>
-<td class='passed'>unchanged</td>
-<td></td>
+<td class='warning'>changed</td>
+<td class='value'>0.2%</td>
 <td></td>
 <td></td>
 </tr>
 <tr>
 <td class='left f_path'>po/stellarium/cs.po</td>
-<td class='passed'>unchanged</td>
-<td></td>
+<td class='warning'>changed</td>
+<td class='value'>0.1%</td>
 <td></td>
 <td></td>
 </tr>
 <tr>
 <td class='left f_path'>po/stellarium/csb.po</td>
-<td class='passed'>unchanged</td>
-<td></td>
+<td class='warning'>changed</td>
+<td class='value'>0.2%</td>
 <td></td>
 <td></td>
 </tr>
 <tr>
 <td class='left f_path'>po/stellarium/cv.po</td>
-<td class='passed'>unchanged</td>
-<td></td>
+<td class='warning'>changed</td>
+<td class='value'>0.2%</td>
 <td></td>
 <td></td>
 </tr>
 <tr>
 <td class='left f_path'>po/stellarium/cy.po</td>
-<td class='passed'>unchanged</td>
-<td></td>
+<td class='warning'>changed</td>
+<td class='value'>0.2%</td>
 <td></td>
 <td></td>
 </tr>
 <tr>
 <td class='left f_path'>po/stellarium/da.po</td>
-<td class='passed'>unchanged</td>
-<td></td>
+<td class='warning'>changed</td>
+<td class='value'>0.2%</td>
 <td></td>
 <td></td>
 </tr>
 <tr>
 <td class='left f_path'>po/stellarium/de.po</td>
-<td class='passed'>unchanged</td>
-<td></td>
+<td class='warning'>changed</td>
+<td class='value'>0.1%</td>
 <td></td>
 <td></td>
 </tr>
 <tr>
 <td class='left f_path'>po/stellarium/dv.po</td>
-<td class='passed'>unchanged</td>
-<td></td>
+<td class='warning'>changed</td>
+<td class='value'>0.2%</td>
 <td></td>
 <td></td>
 </tr>
 <tr>
 <td class='left f_path'>po/stellarium/el.po</td>
-<td class='passed'>unchanged</td>
-<td></td>
+<td class='warning'>changed</td>
+<td class='value'>0.2%</td>
 <td></td>
 <td></td>
 </tr>
 <tr>
 <td class='left f_path'>po/stellarium/en.po</td>
-<td class='passed'>unchanged</td>
-<td></td>
+<td class='warning'>changed</td>
+<td class='value'>0.2%</td>
 <td></td>
 <td></td>
 </tr>
 <tr>
 <td class='left f_path'>po/stellarium/en_AU.po</td>
-<td class='passed'>unchanged</td>
-<td></td>
+<td class='warning'>changed</td>
+<td class='value'>0.2%</td>
 <td></td>
 <td></td>
 </tr>
 <tr>
 <td class='left f_path'>po/stellarium/en_CA.po</td>
-<td class='passed'>unchanged</td>
-<td></td>
+<td class='warning'>changed</td>
+<td class='value'>0.1%</td>
 <td></td>
 <td></td>
 </tr>
 <tr>
 <td class='left f_path'>po/stellarium/en_GB.po</td>
-<td class='passed'>unchanged</td>
-<td></td>
+<td class='warning'>changed</td>
+<td class='value'>0.2%</td>
 <td></td>
 <td></td>
 </tr>
 <tr>
 <td class='left f_path'>po/stellarium/en_US.po</td>
-<td class='passed'>unchanged</td>
-<td></td>
+<td class='warning'>changed</td>
+<td class='value'>0.2%</td>
 <td></td>
 <td></td>
 </tr>
 <tr>
 <td class='left f_path'>po/stellarium/eo.po</td>
-<td class='passed'>unchanged</td>
-<td></td>
+<td class='warning'>changed</td>
+<td class='value'>0.2%</td>
 <td></td>
 <td></td>
 </tr>
 <tr>
 <td class='left f_path'>po/stellarium/es.po</td>
-<td class='passed'>unchanged</td>
-<td></td>
+<td class='warning'>changed</td>
+<td class='value'>0.3%</td>
 <td></td>
 <td></td>
 </tr>
 <tr>
 <td class='left f_path'>po/stellarium/et.po</td>
-<td class='passed'>unchanged</td>
-<td></td>
+<td class='warning'>changed</td>
+<td class='value'>0.2%</td>
 <td></td>
 <td></td>
 </tr>
 <tr>
 <td class='left f_path'>po/stellarium/eu.po</td>
-<td class='passed'>unchanged</td>
-<td></td>
+<td class='warning'>changed</td>
+<td class='value'>0.2%</td>
 <td></td>
 <td></td>
 </tr>
 <tr>
 <td class='left f_path'>po/stellarium/fa.po</td>
-<td class='passed'>unchanged</td>
-<td></td>
+<td class='warning'>changed</td>
+<td class='value'>0.2%</td>
 <td></td>
 <td></td>
 </tr>
 <tr>
 <td class='left f_path'>po/stellarium/fi.po</td>
-<td class='passed'>unchanged</td>
-<td></td>
+<td class='warning'>changed</td>
+<td class='value'>0.2%</td>
 <td></td>
 <td></td>
 </tr>
 <tr>
 <td class='left f_path'>po/stellarium/fil.po</td>
-<td class='passed'>unchanged</td>
-<td></td>
+<td class='warning'>changed</td>
+<td class='value'>0.2%</td>
 <td></td>
 <td></td>
 </tr>
 <tr>
 <td class='left f_path'>po/stellarium/fj.po</td>
-<td class='passed'>unchanged</td>
-<td></td>
+<td class='warning'>changed</td>
+<td class='value'>0.2%</td>
 <td></td>
 <td></td>
 </tr>
 <tr>
 <td class='left f_path'>po/stellarium/fr.po</td>
-<td class='passed'>unchanged</td>
-<td></td>
+<td class='warning'>changed</td>
+<td class='value'>0.2%</td>
 <td></td>
 <td></td>
 </tr>
 <tr>
 <td class='left f_path'>po/stellarium/fy.po</td>
-<td class='passed'>unchanged</td>
-<td></td>
+<td class='warning'>changed</td>
+<td class='value'>0.2%</td>
 <td></td>
 <td></td>
 </tr>
 <tr>
 <td class='left f_path'>po/stellarium/ga.po</td>
-<td class='passed'>unchanged</td>
-<td></td>
+<td class='warning'>changed</td>
+<td class='value'>0.2%</td>
 <td></td>
 <td></td>
 </tr>
 <tr>
 <td class='left f_path'>po/stellarium/gd.po</td>
-<td class='passed'>unchanged</td>
-<td></td>
+<td class='warning'>changed</td>
+<td class='value'>0.2%</td>
 <td></td>
 <td></td>
 </tr>
 <tr>
 <td class='left f_path'>po/stellarium/gl.po</td>
-<td class='passed'>unchanged</td>
-<td></td>
+<td class='warning'>changed</td>
+<td class='value'>0.5%</td>
 <td></td>
 <td></td>
 </tr>
 <tr>
 <td class='left f_path'>po/stellarium/gn.po</td>
-<td class='passed'>unchanged</td>
-<td></td>
+<td class='warning'>changed</td>
+<td class='value'>0.2%</td>
 <td></td>
 <td></td>
 </tr>
 <tr>
 <td class='left f_path'>po/stellarium/gu.po</td>
-<td class='passed'>unchanged</td>
-<td></td>
+<td class='warning'>changed</td>
+<td class='value'>0.2%</td>
 <td></td>
 <td></td>
 </tr>
 <tr>
 <td class='left f_path'>po/stellarium/gv.po</td>
-<td class='passed'>unchanged</td>
-<td></td>
+<td class='warning'>changed</td>
+<td class='value'>0.2%</td>
 <td></td>
 <td></td>
 </tr>
 <tr>
 <td class='left f_path'>po/stellarium/haw.po</td>
-<td class='passed'>unchanged</td>
-<td></td>
+<td class='warning'>changed</td>
+<td class='value'>0.2%</td>
 <td></td>
 <td></td>
 </tr>
 <tr>
 <td class='left f_path'>po/stellarium/he.po</td>
-<td class='passed'>unchanged</td>
-<td></td>
+<td class='warning'>changed</td>
+<td class='value'>0.2%</td>
 <td></td>
 <td></td>
 </tr>
 <tr>
 <td class='left f_path'>po/stellarium/hi.po</td>
-<td class='passed'>unchanged</td>
-<td></td>
+<td class='warning'>changed</td>
+<td class='value'>0.2%</td>
 <td></td>
 <td></td>
 </tr>
 <tr>
 <td class='left f_path'>po/stellarium/hne.po</td>
-<td class='passed'>unchanged</td>
-<td></td>
+<td class='warning'>changed</td>
+<td class='value'>0.2%</td>
 <td></td>
 <td></td>
 </tr>
 <tr>
 <td class='left f_path'>po/stellarium/hr.po</td>
-<td class='passed'>unchanged</td>
-<td></td>
+<td class='warning'>changed</td>
+<td class='value'>0.2%</td>
 <td></td>
 <td></td>
 </tr>
 <tr>
 <td class='left f_path'>po/stellarium/hrx.po</td>
-<td class='passed'>unchanged</td>
-<td></td>
+<td class='warning'>changed</td>
+<td class='value'>0.2%</td>
 <td></td>
 <td></td>
 </tr>
 <tr>
 <td class='left f_path'>po/stellarium/ht.po</td>
-<td class='passed'>unchanged</td>
-<td></td>
+<td class='warning'>changed</td>
+<td class='value'>0.2%</td>
 <td></td>
 <td></td>
 </tr>
 <tr>
 <td class='left f_path'>po/stellarium/hu.po</td>
-<td class='passed'>unchanged</td>
-<td></td>
+<td class='warning'>changed</td>
+<td class='value'>0.1%</td>
 <td></td>
 <td></td>
 </tr>
 <tr>
 <td class='left f_path'>po/stellarium/hy.po</td>
-<td class='passed'>unchanged</td>
-<td></td>
+<td class='warning'>changed</td>
+<td class='value'>0.2%</td>
 <td></td>
 <td></td>
 </tr>
 <tr>
 <td class='left f_path'>po/stellarium/ia.po</td>
-<td class='passed'>unchanged</td>
-<td></td>
+<td class='warning'>changed</td>
+<td class='value'>0.2%</td>
 <td></td>
 <td></td>
 </tr>
 <tr>
 <td class='left f_path'>po/stellarium/id.po</td>
-<td class='passed'>unchanged</td>
-<td></td>
+<td class='warning'>changed</td>
+<td class='value'>0.2%</td>
 <td></td>
 <td></td>
 </tr>
 <tr>
 <td class='left f_path'>po/stellarium/is.po</td>
-<td class='passed'>unchanged</td>
-<td></td>
+<td class='warning'>changed</td>
+<td class='value'>0.2%</td>
 <td></td>
 <td></td>
 </tr>
 <tr>
 <td class='left f_path'>po/stellarium/it.po</td>
-<td class='passed'>unchanged</td>
-<td></td>
+<td class='warning'>changed</td>
+<td class='value'>0.1%</td>
 <td></td>
 <td></td>
 </tr>
 <tr>
 <td class='left f_path'>po/stellarium/ja.po</td>
-<td class='passed'>unchanged</td>
-<td></td>
+<td class='warning'>changed</td>
+<td class='value'>0.2%</td>
 <td></td>
 <td></td>
 </tr>
 <tr>
 <td class='left f_path'>po/stellarium/jv.po</td>
-<td class='passed'>unchanged</td>
-<td></td>
+<td class='warning'>changed</td>
+<td class='value'>0.2%</td>
 <td></td>
 <td></td>
 </tr>
 <tr>
 <td class='left f_path'>po/stellarium/ka.po</td>
-<td class='passed'>unchanged</td>
-<td></td>
+<td class='warning'>changed</td>
+<td class='value'>0.2%</td>
 <td></td>
 <td></td>
 </tr>
 <tr>
 <td class='left f_path'>po/stellarium/kg.po</td>
-<td class='passed'>unchanged</td>
-<td></td>
+<td class='warning'>changed</td>
+<td class='value'>0.2%</td>
 <td></td>
 <td></td>
 </tr>
 <tr>
 <td class='left f_path'>po/stellarium/kk.po</td>
-<td class='passed'>unchanged</td>
-<td></td>
+<td class='warning'>changed</td>
+<td class='value'>0.2%</td>
 <td></td>
 <td></td>
 </tr>
 <tr>
 <td class='left f_path'>po/stellarium/km.po</td>
-<td class='passed'>unchanged</td>
-<td></td>
+<td class='warning'>changed</td>
+<td class='value'>0.2%</td>
 <td></td>
 <td></td>
 </tr>
 <tr>
 <td class='left f_path'>po/stellarium/kn.po</td>
-<td class='passed'>unchanged</td>
-<td></td>
+<td class='warning'>changed</td>
+<td class='value'>0.2%</td>
 <td></td>
 <td></td>
 </tr>
 <tr>
 <td class='left f_path'>po/stellarium/ko.po</td>
-<td class='passed'>unchanged</td>
-<td></td>
+<td class='warning'>changed</td>
+<td class='value'>0.6%</td>
 <td></td>
 <td></td>
 </tr>
 <tr>
 <td class='left f_path'>po/stellarium/ky.po</td>
-<td class='passed'>unchanged</td>
-<td></td>
+<td class='warning'>changed</td>
+<td class='value'>0.2%</td>
 <td></td>
 <td></td>
 </tr>
 <tr>
 <td class='left f_path'>po/stellarium/la.po</td>
-<td class='passed'>unchanged</td>
-<td></td>
+<td class='warning'>changed</td>
+<td class='value'>0.2%</td>
 <td></td>
 <td></td>
 </tr>
 <tr>
 <td class='left f_path'>po/stellarium/lb.po</td>
-<td class='passed'>unchanged</td>
-<td></td>
+<td class='warning'>changed</td>
+<td class='value'>0.2%</td>
 <td></td>
 <td></td>
 </tr>
 <tr>
 <td class='left f_path'>po/stellarium/lo.po</td>
-<td class='passed'>unchanged</td>
-<td></td>
+<td class='warning'>changed</td>
+<td class='value'>0.2%</td>
 <td></td>
 <td></td>
 </tr>
 <tr>
 <td class='left f_path'>po/stellarium/lt.po</td>
-<td class='passed'>unchanged</td>
-<td></td>
+<td class='warning'>changed</td>
+<td class='value'>0.2%</td>
 <td></td>
 <td></td>
 </tr>
 <tr>
 <td class='left f_path'>po/stellarium/lv.po</td>
-<td class='passed'>unchanged</td>
-<td></td>
+<td class='warning'>changed</td>
+<td class='value'>0.2%</td>
 <td></td>
 <td></td>
 </tr>
 <tr>
 <td class='left f_path'>po/stellarium/mai.po</td>
-<td class='passed'>unchanged</td>
-<td></td>
+<td class='warning'>changed</td>
+<td class='value'>0.2%</td>
 <td></td>
 <td></td>
 </tr>
 <tr>
 <td class='left f_path'>po/stellarium/mi.po</td>
-<td class='passed'>unchanged</td>
-<td></td>
+<td class='warning'>changed</td>
+<td class='value'>0.2%</td>
 <td></td>
 <td></td>
 </tr>
 <tr>
 <td class='left f_path'>po/stellarium/mk.po</td>
-<td class='passed'>unchanged</td>
-<td></td>
+<td class='warning'>changed</td>
+<td class='value'>0.2%</td>
 <td></td>
 <td></td>
 </tr>
 <tr>
 <td class='left f_path'>po/stellarium/ml.po</td>
-<td class='passed'>unchanged</td>
-<td></td>
+<td class='warning'>changed</td>
+<td class='value'>0.1%</td>
 <td></td>
 <td></td>
 </tr>
 <tr>
 <td class='left f_path'>po/stellarium/mn.po</td>
-<td class='passed'>unchanged</td>
-<td></td>
+<td class='warning'>changed</td>
+<td class='value'>0.2%</td>
 <td></td>
 <td></td>
 </tr>
 <tr>
 <td class='left f_path'>po/stellarium/mo.po</td>
-<td class='passed'>unchanged</td>
-<td></td>
+<td class='warning'>changed</td>
+<td class='value'>0.2%</td>
 <td></td>
 <td></td>
 </tr>
 <tr>
 <td class='left f_path'>po/stellarium/mr.po</td>
-<td class='passed'>unchanged</td>
-<td></td>
+<td class='warning'>changed</td>
+<td class='value'>0.2%</td>
 <td></td>
 <td></td>
 </tr>
 <tr>
 <td class='left f_path'>po/stellarium/ms.po</td>
-<td class='passed'>unchanged</td>
-<td></td>
+<td class='warning'>changed</td>
+<td class='value'>0.1%</td>
 <td></td>
 <td></td>
 </tr>
 <tr>
 <td class='left f_path'>po/stellarium/mt.po</td>
-<td class='passed'>unchanged</td>
-<td></td>
+<td class='warning'>changed</td>
+<td class='value'>0.2%</td>
 <td></td>
 <td></td>
 </tr>
 <tr>
 <td class='left f_path'>po/stellarium/nan.po</td>
-<td class='passed'>unchanged</td>
-<td></td>
+<td class='warning'>changed</td>
+<td class='value'>0.2%</td>
 <td></td>
 <td></td>
 </tr>
 <tr>
 <td class='left f_path'>po/stellarium/nb.po</td>
-<td class='passed'>unchanged</td>
-<td></td>
+<td class='warning'>changed</td>
+<td class='value'>0.1%</td>
 <td></td>
 <td></td>
 </tr>
 <tr>
 <td class='left f_path'>po/stellarium/nds.po</td>
-<td class='passed'>unchanged</td>
-<td></td>
+<td class='warning'>changed</td>
+<td class='value'>0.2%</td>
 <td></td>
 <td></td>
 </tr>
 <tr>
 <td class='left f_path'>po/stellarium/ne.po</td>
-<td class='passed'>unchanged</td>
-<td></td>
+<td class='warning'>changed</td>
+<td class='value'>0.1%</td>
 <td></td>
 <td></td>
 </tr>
 <tr>
 <td class='left f_path'>po/stellarium/nl.po</td>
-<td class='passed'>unchanged</td>
-<td></td>
+<td class='warning'>changed</td>
+<td class='value'>0.7%</td>
 <td></td>
 <td></td>
 </tr>
 <tr>
 <td class='left f_path'>po/stellarium/nn.po</td>
-<td class='passed'>unchanged</td>
-<td></td>
+<td class='warning'>changed</td>
+<td class='value'>0.1%</td>
 <td></td>
 <td></td>
 </tr>
 <tr>
 <td class='left f_path'>po/stellarium/oc.po</td>
-<td class='passed'>unchanged</td>
-<td></td>
+<td class='warning'>changed</td>
+<td class='value'>0.2%</td>
 <td></td>
 <td></td>
 </tr>
 <tr>
 <td class='left f_path'>po/stellarium/os.po</td>
-<td class='passed'>unchanged</td>
-<td></td>
+<td class='warning'>changed</td>
+<td class='value'>0.2%</td>
 <td></td>
 <td></td>
 </tr>
 <tr>
 <td class='left f_path'>po/stellarium/pa.po</td>
-<td class='passed'>unchanged</td>
-<td></td>
+<td class='warning'>changed</td>
+<td class='value'>0.2%</td>
 <td></td>
 <td></td>
 </tr>
 <tr>
 <td class='left f_path'>po/stellarium/pl.po</td>
-<td class='passed'>unchanged</td>
-<td></td>
+<td class='warning'>changed</td>
+<td class='value'>0.2%</td>
 <td></td>
 <td></td>
 </tr>
 <tr>
 <td class='left f_path'>po/stellarium/pt.po</td>
-<td class='passed'>unchanged</td>
-<td></td>
+<td class='warning'>changed</td>
+<td class='value'>0.1%</td>
 <td></td>
 <td></td>
 </tr>
 <tr>
 <td class='left f_path'>po/stellarium/pt_BR.po</td>
-<td class='passed'>unchanged</td>
-<td></td>
+<td class='warning'>changed</td>
+<td class='value'>0.2%</td>
 <td></td>
 <td></td>
 </tr>
 <tr>
 <td class='left f_path'>po/stellarium/ro.po</td>
-<td class='passed'>unchanged</td>
-<td></td>
+<td class='warning'>changed</td>
+<td class='value'>0.2%</td>
 <td></td>
 <td></td>
 </tr>
 <tr>
 <td class='left f_path'>po/stellarium/ru.po</td>
-<td class='passed'>unchanged</td>
-<td></td>
+<td class='warning'>changed</td>
+<td class='value'>0.2%</td>
 <td></td>
 <td></td>
 </tr>
 <tr>
 <td class='left f_path'>po/stellarium/sah.po</td>
-<td class='passed'>unchanged</td>
-<td></td>
+<td class='warning'>changed</td>
+<td class='value'>0.2%</td>
 <td></td>
 <td></td>
 </tr>
 <tr>
 <td class='left f_path'>po/stellarium/sco.po</td>
-<td class='passed'>unchanged</td>
-<td></td>
+<td class='warning'>changed</td>
+<td class='value'>0.2%</td>
 <td></td>
 <td></td>
 </tr>
 <tr>
 <td class='left f_path'>po/stellarium/se.po</td>
-<td class='passed'>unchanged</td>
-<td></td>
+<td class='warning'>changed</td>
+<td class='value'>0.2%</td>
 <td></td>
 <td></td>
 </tr>
 <tr>
 <td class='left f_path'>po/stellarium/si.po</td>
-<td class='passed'>unchanged</td>
-<td></td>
+<td class='warning'>changed</td>
+<td class='value'>0.2%</td>
 <td></td>
 <td></td>
 </tr>
 <tr>
 <td class='left f_path'>po/stellarium/sk.po</td>
-<td class='passed'>unchanged</td>
-<td></td>
+<td class='warning'>changed</td>
+<td class='value'>0.3%</td>
 <td></td>
 <td></td>
 </tr>
 <tr>
 <td class='left f_path'>po/stellarium/sl.po</td>
-<td class='passed'>unchanged</td>
-<td></td>
+<td class='warning'>changed</td>
+<td class='value'>0.2%</td>
 <td></td>
 <td></td>
 </tr>
 <tr>
 <td class='left f_path'>po/stellarium/sm.po</td>
-<td class='passed'>unchanged</td>
-<td></td>
+<td class='warning'>changed</td>
+<td class='value'>0.2%</td>
 <td></td>
 <td></td>
 </tr>
 <tr>
 <td class='left f_path'>po/stellarium/sq.po</td>
-<td class='passed'>unchanged</td>
-<td></td>
+<td class='warning'>changed</td>
+<td class='value'>0.2%</td>
 <td></td>
 <td></td>
 </tr>
 <tr>
 <td class='left f_path'>po/stellarium/sr.po</td>
-<td class='passed'>unchanged</td>
-<td></td>
+<td class='warning'>changed</td>
+<td class='value'>0.1%</td>
 <td></td>
 <td></td>
 </tr>
@@ -8335,148 +8335,148 @@ function sort_array(a,b)
 </tr>
 <tr>
 <td class='left f_path'>po/stellarium/su.po</td>
-<td class='passed'>unchanged</td>
-<td></td>
+<td class='warning'>changed</td>
+<td class='value'>0.2%</td>
 <td></td>
 <td></td>
 </tr>
 <tr>
 <td class='left f_path'>po/stellarium/sv.po</td>
-<td class='passed'>unchanged</td>
-<td></td>
+<td class='warning'>changed</td>
+<td class='value'>0.3%</td>
 <td></td>
 <td></td>
 </tr>
 <tr>
 <td class='left f_path'>po/stellarium/sw.po</td>
-<td class='passed'>unchanged</td>
-<td></td>
+<td class='warning'>changed</td>
+<td class='value'>0.2%</td>
 <td></td>
 <td></td>
 </tr>
 <tr>
 <td class='left f_path'>po/stellarium/ta.po</td>
-<td class='passed'>unchanged</td>
-<td></td>
+<td class='warning'>changed</td>
+<td class='value'>0.2%</td>
 <td></td>
 <td></td>
 </tr>
 <tr>
 <td class='left f_path'>po/stellarium/te.po</td>
-<td class='passed'>unchanged</td>
-<td></td>
+<td class='warning'>changed</td>
+<td class='value'>0.2%</td>
 <td></td>
 <td></td>
 </tr>
 <tr>
 <td class='left f_path'>po/stellarium/tg.po</td>
-<td class='passed'>unchanged</td>
-<td></td>
+<td class='warning'>changed</td>
+<td class='value'>0.2%</td>
 <td></td>
 <td></td>
 </tr>
 <tr>
 <td class='left f_path'>po/stellarium/th.po</td>
-<td class='passed'>unchanged</td>
-<td></td>
+<td class='warning'>changed</td>
+<td class='value'>0.1%</td>
 <td></td>
 <td></td>
 </tr>
 <tr>
 <td class='left f_path'>po/stellarium/tl.po</td>
-<td class='passed'>unchanged</td>
-<td></td>
+<td class='warning'>changed</td>
+<td class='value'>0.2%</td>
 <td></td>
 <td></td>
 </tr>
 <tr>
 <td class='left f_path'>po/stellarium/tr.po</td>
-<td class='passed'>unchanged</td>
-<td></td>
+<td class='warning'>changed</td>
+<td class='value'>0.2%</td>
 <td></td>
 <td></td>
 </tr>
 <tr>
 <td class='left f_path'>po/stellarium/tt.po</td>
-<td class='passed'>unchanged</td>
-<td></td>
+<td class='warning'>changed</td>
+<td class='value'>0.2%</td>
 <td></td>
 <td></td>
 </tr>
 <tr>
 <td class='left f_path'>po/stellarium/ug.po</td>
-<td class='passed'>unchanged</td>
-<td></td>
+<td class='warning'>changed</td>
+<td class='value'>0.2%</td>
 <td></td>
 <td></td>
 </tr>
 <tr>
 <td class='left f_path'>po/stellarium/uk.po</td>
-<td class='passed'>unchanged</td>
-<td></td>
+<td class='warning'>changed</td>
+<td class='value'>0.2%</td>
 <td></td>
 <td></td>
 </tr>
 <tr>
 <td class='left f_path'>po/stellarium/uz.po</td>
-<td class='passed'>unchanged</td>
-<td></td>
+<td class='warning'>changed</td>
+<td class='value'>0.2%</td>
 <td></td>
 <td></td>
 </tr>
 <tr>
 <td class='left f_path'>po/stellarium/vi.po</td>
-<td class='passed'>unchanged</td>
-<td></td>
+<td class='warning'>changed</td>
+<td class='value'>0.2%</td>
 <td></td>
 <td></td>
 </tr>
 <tr>
 <td class='left f_path'>po/stellarium/wa.po</td>
-<td class='passed'>unchanged</td>
-<td></td>
+<td class='warning'>changed</td>
+<td class='value'>0.2%</td>
 <td></td>
 <td></td>
 </tr>
 <tr>
 <td class='left f_path'>po/stellarium/xh.po</td>
-<td class='passed'>unchanged</td>
-<td></td>
+<td class='warning'>changed</td>
+<td class='value'>0.2%</td>
 <td></td>
 <td></td>
 </tr>
 <tr>
 <td class='left f_path'>po/stellarium/zh.po</td>
-<td class='passed'>unchanged</td>
-<td></td>
+<td class='warning'>changed</td>
+<td class='value'>0.2%</td>
 <td></td>
 <td></td>
 </tr>
 <tr>
 <td class='left f_path'>po/stellarium/zh_CN.po</td>
-<td class='passed'>unchanged</td>
-<td></td>
+<td class='warning'>changed</td>
+<td class='value'>0.1%</td>
 <td></td>
 <td></td>
 </tr>
 <tr>
 <td class='left f_path'>po/stellarium/zh_HK.po</td>
-<td class='passed'>unchanged</td>
-<td></td>
+<td class='warning'>changed</td>
+<td class='value'>0.1%</td>
 <td></td>
 <td></td>
 </tr>
 <tr>
 <td class='left f_path'>po/stellarium/zh_TW.po</td>
-<td class='passed'>unchanged</td>
-<td></td>
+<td class='warning'>changed</td>
+<td class='value'>0.2%</td>
 <td></td>
 <td></td>
 </tr>
 <tr>
 <td class='left f_path'>po/stellarium/zu.po</td>
-<td class='passed'>unchanged</td>
-<td></td>
+<td class='warning'>changed</td>
+<td class='value'>0.2%</td>
 <td></td>
 <td></td>
 </tr>
@@ -10559,7 +10559,7 @@ function sort_array(a,b)
 </tr>
 </table>
 <a name='ImageFiles'></a>
-<h2>Image Files (767)</h2><hr/>
+<h2>Image Files (768)</h2><hr/>
 <table class='summary'>
 <tr><th title='sort' onclick='javascript:sort(this, 1)' style='cursor:pointer'>Name</th><th title='sort' onclick='javascript:sort(this, 1)' style='cursor:pointer'>Status</th><th title='sort' onclick='javascript:sort(this, 1)' style='cursor:pointer'>Delta</th><th>Visual<br/>Diff</th><th>Detailed<br/>Report</th></tr>
 <tr>
@@ -15639,7 +15639,14 @@ function sort_array(a,b)
 </tr>
 <tr>
 <td class='left f_path'>textures/milkyway.png</td>
-<td class='passed'>unchanged</td>
+<td class='warning'>changed</td>
+<td class='value'>100%</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class='left f_path new'>textures/milkyway_2048.png</td>
+<td class='new'>added</td>
 <td></td>
 <td></td>
 <td></td>
@@ -18855,6 +18862,6 @@ stellarium-0.13.2.tar.gz<br/>
 <br/><a style='font-size:11px;' href='#Top'>to the top</a><br/>
 </div>
 <br/><br/><br/><hr/>
-<div style='width:100%;font-size:11px;' align='right'><i>Generated on Sun Oct 26 15:22:45 2014 by <a href='http://lvc.github.com/pkgdiff/' target='_blank'>Package Changes Analyzer</a> - PkgDiff 1.6.2 &#160;<br/>A tool for analyzing changes in Linux software packages&#160;&#160;</i></div>
+<div style='width:100%;font-size:11px;' align='right'><i>Generated on Sun Nov  2 14:43:33 2014 by <a href='http://lvc.github.com/pkgdiff/' target='_blank'>Package Changes Analyzer</a> - PkgDiff 1.6.2 &#160;<br/>A tool for analyzing changes in Linux software packages&#160;&#160;</i></div>
 <div style='height:999px;'></div>
 </body></html>

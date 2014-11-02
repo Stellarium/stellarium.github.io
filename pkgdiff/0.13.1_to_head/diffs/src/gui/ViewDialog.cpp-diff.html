@@ -41,7 +41,49 @@
   <table border="0" cellpadding="0" cellspacing="0"> 
   <tr bgcolor="orange"><th></th><th>&nbsp;ViewDialog.cpp&nbsp;</th><th> </th><th>&nbsp;ViewDialog.cpp&nbsp;</th><th></th></tr> 
       <tr><td class="lineno"></td><td class="left"></td><td> </td><td class="right"></td><td class="lineno"></td></tr>
-      <tr bgcolor="gray" ><td></td><th><a name="part-l1" /><small>skipping to change at</small><em> line 224</em></th><th> </th><th><a name="part-r1" /><small>skipping to change at</small><em> line 224</em></th><td></td></tr>
+      <tr bgcolor="gray" ><td></td><th><a name="part-l1" /><small>skipping to change at</small><em> line 124</em></th><th> </th><th><a name="part-r1" /><small>skipping to change at</small><em> line 124</em></th><td></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="left">{</td><td> </td><td class="right">{</td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="left">       ui-&gt;setupUi(dialog);</td><td> </td><td class="right">       ui-&gt;setupUi(dialog);</td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="left">       connect(&amp;StelApp::getInstance(), SIGNAL(languageChanged()), this, SL
+OT(retranslate()));</td><td> </td><td class="right">       connect(&amp;StelApp::getInstance(), SIGNAL(languageChanged()), this, SL
+OT(retranslate()));</td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="left"></td><td> </td><td class="right"></td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="left">       // Set the Sky tab activated by default</td><td> </td><td class="right">       // Set the Sky tab activated by default</td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="left">       ui-&gt;stackedWidget-&gt;setCurrentIndex(0);</td><td> </td><td class="right">       ui-&gt;stackedWidget-&gt;setCurrentIndex(0);</td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="left">       ui-&gt;stackListWidget-&gt;setCurrentRow(0);</td><td> </td><td class="right">       ui-&gt;stackListWidget-&gt;setCurrentRow(0);</td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="left"></td><td> </td><td class="right"></td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="left">       //ui-&gt;viewTabWidget-&gt;removeTab(4);</td><td> </td><td class="right">       //ui-&gt;viewTabWidget-&gt;removeTab(4);</td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="left"></td><td> </td><td class="right"></td><td class="lineno" valign="top"></td></tr>
+      <tr><td><a name="diff0001" /></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="lblock"></td><td> </td><td class="rblock"><span class="insert">#ifdef Q_OS_WIN</span></td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="left">       //Kinetic scrolling for tablet pc and pc</td><td> </td><td class="right">       //Kinetic scrolling for tablet pc and pc</td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="left">       QList&lt;QWidget *&gt; addscroll;</td><td> </td><td class="right">       QList&lt;QWidget *&gt; addscroll;</td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="left">       addscroll &lt;&lt; ui-&gt;projectionListWidget &lt;&lt; ui-&gt;culturesListWidget &lt;&lt; u
+i-&gt;skyCultureTextBrowser &lt;&lt; ui-&gt;landscapesListWidget;</td><td> </td><td class="right">       addscroll &lt;&lt; ui-&gt;projectionListWidget &lt;&lt; ui-&gt;culturesListWidget &lt;&lt; u
+i-&gt;skyCultureTextBrowser &lt;&lt; ui-&gt;landscapesListWidget;</td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="left">       StelDialog::installKineticScrolling(addscroll);</td><td> </td><td class="right">       StelDialog::installKineticScrolling(addscroll);</td><td class="lineno" valign="top"></td></tr>
+      <tr><td><a name="diff0002" /></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="lblock"></td><td> </td><td class="rblock"><span class="insert">#endif</span></td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="left"></td><td> </td><td class="right"></td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="left">       connect(ui-&gt;closeStelWindow, SIGNAL(clicked()), this, SLOT(close()))
+;</td><td> </td><td class="right">       connect(ui-&gt;closeStelWindow, SIGNAL(clicked()), this, SLOT(close()))
+;</td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="left"></td><td> </td><td class="right"></td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="left">       populateLists();</td><td> </td><td class="right">       populateLists();</td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="left">       connect(ui-&gt;culturesListWidget, SIGNAL(currentTextChanged(const QStr
+ing&amp;)), this, SLOT(skyCultureChanged(const QString&amp;)));</td><td> </td><td class="right">       connect(ui-&gt;culturesListWidget, SIGNAL(currentTextChanged(const QStr
+ing&amp;)), this, SLOT(skyCultureChanged(const QString&amp;)));</td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="left">       connect(ui-&gt;projectionListWidget, SIGNAL(currentTextChanged(const QS
+tring&amp;)), this, SLOT(projectionChanged(const QString&amp;)));</td><td> </td><td class="right">       connect(ui-&gt;projectionListWidget, SIGNAL(currentTextChanged(const QS
+tring&amp;)), this, SLOT(projectionChanged(const QString&amp;)));</td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="left">       connect(ui-&gt;landscapesListWidget, SIGNAL(itemClicked(QListWidgetItem
+*)), this, SLOT(landscapeChanged(QListWidgetItem*)));</td><td> </td><td class="right">       connect(ui-&gt;landscapesListWidget, SIGNAL(itemClicked(QListWidgetItem
+*)), this, SLOT(landscapeChanged(QListWidgetItem*)));</td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="left"></td><td> </td><td class="right"></td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="left">       // Connect and initialize checkboxes and other widgets</td><td> </td><td class="right">       // Connect and initialize checkboxes and other widgets</td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="left"></td><td> </td><td class="right"></td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno"></td><td class="left"></td><td> </td><td class="right"></td><td class="lineno"></td></tr>
+      <tr bgcolor="gray" ><td></td><th><a name="part-l2" /><small>skipping to change at</small><em> line 224</em></th><th> </th><th><a name="part-r2" /><small>skipping to change at</small><em> line 226</em></th><td></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="left">       ui-&gt;planetsLabelsHorizontalSlider-&gt;setValue((int)(ssmgr-&gt;getLabelsAm
 ount()*10.f));</td><td> </td><td class="right">       ui-&gt;planetsLabelsHorizontalSlider-&gt;setValue((int)(ssmgr-&gt;getLabelsAm
 ount()*10.f));</td><td class="lineno" valign="top"></td></tr>
@@ -60,7 +102,7 @@ nt()*10.f));</td><td class="lineno" valign="top"></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="left">       connectCheckBox(ui-&gt;showGroundCheckBox, "actionShow_Ground");</td><td> </td><td class="right">       connectCheckBox(ui-&gt;showGroundCheckBox, "actionShow_Ground");</td><td class="lineno" valign="top"></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="left">       connectCheckBox(ui-&gt;showFogCheckBox, "actionShow_Fog");</td><td> </td><td class="right">       connectCheckBox(ui-&gt;showFogCheckBox, "actionShow_Fog");</td><td class="lineno" valign="top"></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="left">       connectGroupBox(ui-&gt;atmosphereGroupBox, "actionShow_Atmosphere");</td><td> </td><td class="right">       connectGroupBox(ui-&gt;atmosphereGroupBox, "actionShow_Atmosphere");</td><td class="lineno" valign="top"></td></tr>
-      <tr><td><a name="diff0001" /></td></tr>
+      <tr><td><a name="diff0003" /></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="lblock"></td><td> </td><td class="rblock"><span class="insert">       connectCheckBox(ui-&gt;landscapeIlluminationCheckBox, "actionShow_Lands
 capeIllumination");</span></td><td class="lineno" valign="top"></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="left"></td><td> </td><td class="right"></td><td class="lineno" valign="top"></td></tr>
@@ -85,8 +127,8 @@ onFromDatabase());</td><td> </td><td class="right">       ui-&gt;useLocationData
 onFromDatabase());</td><td class="lineno" valign="top"></td></tr>
 
      <tr><td></td><td class="left"></td><td> </td><td class="right"></td><td></td></tr>
-     <tr bgcolor="gray"><th colspan="5" align="center"><a name="end">&nbsp;End of changes. 1 change blocks.&nbsp;</a></th></tr>
-     <tr class="stats"><td></td><th><i>0 lines changed or deleted</i></th><th><i> </i></th><th><i>1 lines changed or added</i></th><td></td></tr>
+     <tr bgcolor="gray"><th colspan="5" align="center"><a name="end">&nbsp;End of changes. 3 change blocks.&nbsp;</a></th></tr>
+     <tr class="stats"><td></td><th><i>0 lines changed or deleted</i></th><th><i> </i></th><th><i>3 lines changed or added</i></th><td></td></tr>
      <tr><td colspan="5" align="center" class="small"><br/>This html diff was produced by rfcdiff 1.41. The latest version is available from <a href="http://www.tools.ietf.org/tools/rfcdiff/" >http://tools.ietf.org/tools/rfcdiff/</a> </td></tr>
    </table>
    </body>

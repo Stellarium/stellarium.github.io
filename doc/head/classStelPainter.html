@@ -63,7 +63,8 @@
 Public Types</h2></td></tr>
 <tr class="memitem:a7100a2d0bc030e0b7b82739cb4b16e4e"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classStelPainter.html#a7100a2d0bc030e0b7b82739cb4b16e4e">SphericalPolygonDrawMode</a> { <a class="el" href="classStelPainter.html#a7100a2d0bc030e0b7b82739cb4b16e4ea0d6835cf395c741271488728fc77ca28">SphericalPolygonDrawModeFill</a> =0, 
 <a class="el" href="classStelPainter.html#a7100a2d0bc030e0b7b82739cb4b16e4ea073928145dd15cab039d2acb6ee1d7eb">SphericalPolygonDrawModeBoundary</a> =1, 
-<a class="el" href="classStelPainter.html#a7100a2d0bc030e0b7b82739cb4b16e4eaa4a6d33eef7f5e2e0f1d0644f1de7fc7">SphericalPolygonDrawModeTextureFill</a> =2
+<a class="el" href="classStelPainter.html#a7100a2d0bc030e0b7b82739cb4b16e4eaa4a6d33eef7f5e2e0f1d0644f1de7fc7">SphericalPolygonDrawModeTextureFill</a> =2, 
+<a class="el" href="classStelPainter.html#a7100a2d0bc030e0b7b82739cb4b16e4eadffd8b4c851763bf9abfbbcfba7b3f94">SphericalPolygonDrawModeTextureFillColormodulated</a> =3
  }</td></tr>
 <tr class="memdesc:a7100a2d0bc030e0b7b82739cb4b16e4e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Define the drawing mode when drawing polygons.  <a href="classStelPainter.html#a7100a2d0bc030e0b7b82739cb4b16e4e">More...</a><br /></td></tr>
 <tr class="separator:a7100a2d0bc030e0b7b82739cb4b16e4e"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -107,9 +108,9 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>drawText</b> (const <
 <tr class="memitem:a40acbb3c4d3aeca2a17bf2312c7fdcda"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a40acbb3c4d3aeca2a17bf2312c7fdcda"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><b>drawGreatCircleArcs</b> (const <a class="el" href="structStelVertexArray.html">StelVertexArray</a> &amp;va, const <a class="el" href="classSphericalCap.html">SphericalCap</a> *clippingCap=NULL)</td></tr>
 <tr class="separator:a40acbb3c4d3aeca2a17bf2312c7fdcda"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a8cdb3556b7cff0824aad28708faa1f4b"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a8cdb3556b7cff0824aad28708faa1f4b"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>drawSphericalTriangles</b> (const <a class="el" href="structStelVertexArray.html">StelVertexArray</a> &amp;va, const bool textured, const <a class="el" href="classSphericalCap.html">SphericalCap</a> *clippingCap=NULL, const bool doSubDivide=true, const double maxSqDistortion=5.)</td></tr>
-<tr class="separator:a8cdb3556b7cff0824aad28708faa1f4b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9b94911220adc97820fe5773a79d76c9"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a9b94911220adc97820fe5773a79d76c9"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>drawSphericalTriangles</b> (const <a class="el" href="structStelVertexArray.html">StelVertexArray</a> &amp;va, const bool textured, const bool colored, const <a class="el" href="classSphericalCap.html">SphericalCap</a> *clippingCap=NULL, const bool doSubDivide=true, const double maxSqDistortion=5.)</td></tr>
+<tr class="separator:a9b94911220adc97820fe5773a79d76c9"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a080d1680ee62c81f83c683f22d63bd3b"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classStelPainter.html#a080d1680ee62c81f83c683f22d63bd3b">drawSmallCircleArc</a> (const <a class="el" href="classVector3.html">Vec3d</a> &amp;start, const <a class="el" href="classVector3.html">Vec3d</a> &amp;stop, const <a class="el" href="classVector3.html">Vec3d</a> &amp;rotCenter, void(*viewportEdgeIntersectCallback)(const <a class="el" href="classVector3.html">Vec3d</a> &amp;screenPos, const <a class="el" href="classVector3.html">Vec3d</a> &amp;direction, void *userData)=NULL, void *userData=NULL)</td></tr>
 <tr class="memdesc:a080d1680ee62c81f83c683f22d63bd3b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Draw a small circle arc between points start and stop with rotation point in rotCenter.  <a href="#a080d1680ee62c81f83c683f22d63bd3b">More...</a><br /></td></tr>
 <tr class="separator:a080d1680ee62c81f83c683f22d63bd3b"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -194,9 +195,9 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>setArrays</b> (const 
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-static-methods"></a>
 Static Public Member Functions</h2></td></tr>
-<tr class="memitem:a9db7da5592e5ab063ace2a9b07866991"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="structStelVertexArray.html">StelVertexArray</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classStelPainter.html#a9db7da5592e5ab063ace2a9b07866991">computeSphereNoLight</a> (const float radius, const float oneMinusOblateness, const int slices, const int stacks, const int orientInside=0, const bool flipTexture=false)</td></tr>
-<tr class="memdesc:a9db7da5592e5ab063ace2a9b07866991"><td class="mdescLeft">&#160;</td><td class="mdescRight">Generate a <a class="el" href="structStelVertexArray.html">StelVertexArray</a> for a sphere.  <a href="#a9db7da5592e5ab063ace2a9b07866991">More...</a><br /></td></tr>
-<tr class="separator:a9db7da5592e5ab063ace2a9b07866991"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aeed44ddfd54e8024b6e9eed9c02c4656"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="structStelVertexArray.html">StelVertexArray</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classStelPainter.html#aeed44ddfd54e8024b6e9eed9c02c4656">computeSphereNoLight</a> (const float radius, const float oneMinusOblateness, const int slices, const int stacks, const int orientInside=0, const bool flipTexture=false, const float topAngle=0.0f, const float bottomAngle=M_PI)</td></tr>
+<tr class="memdesc:aeed44ddfd54e8024b6e9eed9c02c4656"><td class="mdescLeft">&#160;</td><td class="mdescRight">Generate a <a class="el" href="structStelVertexArray.html">StelVertexArray</a> for a sphere.  <a href="#aeed44ddfd54e8024b6e9eed9c02c4656">More...</a><br /></td></tr>
+<tr class="separator:aeed44ddfd54e8024b6e9eed9c02c4656"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a0bc514db98de0b58bcee229b1b02f148"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classStelPainter.html#a0bc514db98de0b58bcee229b1b02f148">computeFanDisk</a> (float radius, int innerFanSlices, int level, QVector&lt; double &gt; &amp;vertexArr, QVector&lt; float &gt; &amp;texCoordArr)</td></tr>
 <tr class="memdesc:a0bc514db98de0b58bcee229b1b02f148"><td class="mdescLeft">&#160;</td><td class="mdescRight">Draw a disk with a special texturing mode having texture center at center of disk.  <a href="#a0bc514db98de0b58bcee229b1b02f148">More...</a><br /></td></tr>
 <tr class="separator:a0bc514db98de0b58bcee229b1b02f148"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -251,7 +252,7 @@ Static Public Member Functions</h2></td></tr>
 </td></tr>
 </table>
 
-<p>Definition at line <a class="el" href="StelPainter_8hpp_source.html#l00054">54</a> of file <a class="el" href="StelPainter_8hpp_source.html">StelPainter.hpp</a>.</p>
+<p>Definition at line <a class="el" href="StelPainter_8hpp_source.html#l00055">55</a> of file <a class="el" href="StelPainter_8hpp_source.html">StelPainter.hpp</a>.</p>
 
 </div>
 </div>
@@ -275,6 +276,9 @@ Static Public Member Functions</h2></td></tr>
 </td></tr>
 <tr><td class="fieldname"><a class="anchor" id="a7100a2d0bc030e0b7b82739cb4b16e4eaa4a6d33eef7f5e2e0f1d0644f1de7fc7"></a>SphericalPolygonDrawModeTextureFill&#160;</td><td class="fielddoc">
 <p>Draw the interior of the polygon filled with the current texture. </p>
+</td></tr>
+<tr><td class="fieldname"><a class="anchor" id="a7100a2d0bc030e0b7b82739cb4b16e4eadffd8b4c851763bf9abfbbcfba7b3f94"></a>SphericalPolygonDrawModeTextureFillColormodulated&#160;</td><td class="fielddoc">
+<p>Draw the interior of the polygon filled with the current texture multiplied by vertex colors. </p>
 </td></tr>
 </table>
 
@@ -347,7 +351,7 @@ Static Public Member Functions</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="a9db7da5592e5ab063ace2a9b07866991"></a>
+<a class="anchor" id="aeed44ddfd54e8024b6e9eed9c02c4656"></a>
 <div class="memitem">
 <div class="memproto">
 <table class="mlabels">
@@ -388,7 +392,19 @@ Static Public Member Functions</h2></td></tr>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">const bool&#160;</td>
-          <td class="paramname"><em>flipTexture</em> = <code>false</code>&#160;</td>
+          <td class="paramname"><em>flipTexture</em> = <code>false</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const float&#160;</td>
+          <td class="paramname"><em>topAngle</em> = <code>0.0f</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const float&#160;</td>
+          <td class="paramname"><em>bottomAngle</em> = <code>M_PI</code>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -404,6 +420,19 @@ Static Public Member Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Generate a <a class="el" href="structStelVertexArray.html">StelVertexArray</a> for a sphere. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">radius</td><td></td></tr>
+    <tr><td class="paramname">oneMinusOblateness</td><td></td></tr>
+    <tr><td class="paramname">slices</td><td>number of vertical segments ("meridian zones") </td></tr>
+    <tr><td class="paramname">stacks</td><td>number of horizontal segments ("latitude zones") </td></tr>
+    <tr><td class="paramname">orientInside</td><td>1 to have normals point inside, e.g. for Milky Way, Zodiacal Light, etc. </td></tr>
+    <tr><td class="paramname">flipTexture</td><td>if texture should be mapped to inside of sphere, e.g. Milky Way. </td></tr>
+    <tr><td class="paramname">topAngle</td><td>GZ: new parameter. An opening angle [radians] at top of the sphere. Useful if there is an empty region around the top pole, like North Galactic Pole. </td></tr>
+    <tr><td class="paramname">bottomAngle</td><td>GZ: new parameter. An opening angle [radians] at bottom of the sphere. Useful if there is an empty region around the bottom pole, like South Galactic Pole. </td></tr>
+  </table>
+  </dd>
+</dl>
 
 </div>
 </div>
@@ -1182,7 +1211,7 @@ Static Public Member Functions</h2></td></tr>
 
 <p>Return the instance of projector associated to this painter. </p>
 
-<p>Definition at line <a class="el" href="StelPainter_8hpp_source.html#l00069">69</a> of file <a class="el" href="StelPainter_8hpp_source.html">StelPainter.hpp</a>.</p>
+<p>Definition at line <a class="el" href="StelPainter_8hpp_source.html#l00070">70</a> of file <a class="el" href="StelPainter_8hpp_source.html">StelPainter.hpp</a>.</p>
 
 </div>
 </div>
@@ -1410,7 +1439,7 @@ Static Public Member Functions</h2></td></tr>
 
 <p>use instead of glColorPointer </p>
 
-<p>Definition at line <a class="el" href="StelPainter_8hpp_source.html#l00236">236</a> of file <a class="el" href="StelPainter_8hpp_source.html">StelPainter.hpp</a>.</p>
+<p>Definition at line <a class="el" href="StelPainter_8hpp_source.html#l00248">248</a> of file <a class="el" href="StelPainter_8hpp_source.html">StelPainter.hpp</a>.</p>
 
 </div>
 </div>
@@ -1466,7 +1495,7 @@ Static Public Member Functions</h2></td></tr>
 
 <p>use instead of glNormalPointer </p>
 
-<p>Definition at line <a class="el" href="StelPainter_8hpp_source.html#l00242">242</a> of file <a class="el" href="StelPainter_8hpp_source.html">StelPainter.hpp</a>.</p>
+<p>Definition at line <a class="el" href="StelPainter_8hpp_source.html#l00254">254</a> of file <a class="el" href="StelPainter_8hpp_source.html">StelPainter.hpp</a>.</p>
 
 </div>
 </div>
@@ -1510,7 +1539,7 @@ Static Public Member Functions</h2></td></tr>
 
 <p>use instead of glTexCoordPointer </p>
 
-<p>Definition at line <a class="el" href="StelPainter_8hpp_source.html#l00230">230</a> of file <a class="el" href="StelPainter_8hpp_source.html">StelPainter.hpp</a>.</p>
+<p>Definition at line <a class="el" href="StelPainter_8hpp_source.html#l00242">242</a> of file <a class="el" href="StelPainter_8hpp_source.html">StelPainter.hpp</a>.</p>
 
 </div>
 </div>
@@ -1554,7 +1583,7 @@ Static Public Member Functions</h2></td></tr>
 
 <p>use instead of glVertexPointer </p>
 
-<p>Definition at line <a class="el" href="StelPainter_8hpp_source.html#l00225">225</a> of file <a class="el" href="StelPainter_8hpp_source.html">StelPainter.hpp</a>.</p>
+<p>Definition at line <a class="el" href="StelPainter_8hpp_source.html#l00237">237</a> of file <a class="el" href="StelPainter_8hpp_source.html">StelPainter.hpp</a>.</p>
 
 </div>
 </div>
@@ -1610,7 +1639,7 @@ Static Public Member Functions</h2></td></tr>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Sun Oct 19 2014 16:43:24 for Stellarium by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Sun Nov 2 2014 14:22:03 for Stellarium by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.7
 </small></address>

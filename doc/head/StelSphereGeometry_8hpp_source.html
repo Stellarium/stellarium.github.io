@@ -237,7 +237,7 @@
 <div class="line"><a name="l00281"></a><span class="lineno"><a class="line" href="classSphericalCap.html#a4cad01940b0698ffcd04a5a4ce73ade0">  281</a></span>&#160;    <a class="code" href="classSphericalCap.html#a4cad01940b0698ffcd04a5a4ce73ade0">SphericalCap</a>(<span class="keywordtype">double</span> x, <span class="keywordtype">double</span> y, <span class="keywordtype">double</span> z) : <a class="code" href="classSphericalCap.html#acc1e4d18a51b380f87cf427eb7f5686c">n</a>(x,y,z), <a class="code" href="classSphericalCap.html#acf5d0a04709bf521b18d2a9c2879fbe3">d</a>(0) {;}</div>
 <div class="line"><a name="l00282"></a><span class="lineno">  282</span>&#160;</div>
 <div class="line"><a name="l00286"></a><span class="lineno"><a class="line" href="classSphericalCap.html#aa17272a27ca3e524bce7ebd9c5d17dac">  286</a></span>&#160;    <a class="code" href="classSphericalCap.html#aa17272a27ca3e524bce7ebd9c5d17dac">SphericalCap</a>(<span class="keyword">const</span> <a class="code" href="classVector3.html">Vec3d</a>&amp; an, <span class="keywordtype">double</span> ar) : <a class="code" href="classSphericalCap.html#acc1e4d18a51b380f87cf427eb7f5686c">n</a>(an), <a class="code" href="classSphericalCap.html#acf5d0a04709bf521b18d2a9c2879fbe3">d</a>(ar) {<span class="comment">//n.normalize();</span></div>
-<div class="line"><a name="l00287"></a><span class="lineno">  287</span>&#160;                                                             Q_ASSERT(<a class="code" href="classSphericalCap.html#acf5d0a04709bf521b18d2a9c2879fbe3">d</a>==0 || std::fabs(<a class="code" href="classSphericalCap.html#acc1e4d18a51b380f87cf427eb7f5686c">n</a>.lengthSquared()-1.)&lt;0.0000001);}</div>
+<div class="line"><a name="l00287"></a><span class="lineno">  287</span>&#160;        Q_ASSERT(<a class="code" href="classSphericalCap.html#acf5d0a04709bf521b18d2a9c2879fbe3">d</a>==0 || std::fabs(<a class="code" href="classSphericalCap.html#acc1e4d18a51b380f87cf427eb7f5686c">n</a>.lengthSquared()-1.)&lt;0.0000001);}</div>
 <div class="line"><a name="l00288"></a><span class="lineno">  288</span>&#160;    <span class="comment">// FIXME: GZ reports 2013-03-02: apparently the Q_ASSERT is here because n should be normalized at this point, but</span></div>
 <div class="line"><a name="l00289"></a><span class="lineno">  289</span>&#160;    <span class="comment">// for efficiency n.normalize() should not be called at this point.</span></div>
 <div class="line"><a name="l00290"></a><span class="lineno">  290</span>&#160;    <span class="comment">// However, when zooming in a bit in Hammer-Aitoff and Mercator projections, this Assertion fires.</span></div>
@@ -858,7 +858,7 @@
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Sun Oct 19 2014 16:43:23 for Stellarium by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Sun Nov 2 2014 14:22:02 for Stellarium by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.7
 </small></address>
