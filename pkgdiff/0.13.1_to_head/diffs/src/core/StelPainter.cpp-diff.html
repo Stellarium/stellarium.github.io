@@ -7,7 +7,7 @@
 <!-- Using wdiff: /usr/bin/wdiff: wdiff (GNU wdiff) 1.2.1 --> 
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en"> 
 <head> 
-  <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" /> 
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" /> 
   <meta http-equiv="Content-Style-Type" content="text/css" /> 
   <title>Diff: StelPainter.cpp - StelPainter.cpp</title> 
   <style type="text/css"> 
@@ -41,7 +41,131 @@
   <table border="0" cellpadding="0" cellspacing="0"> 
   <tr bgcolor="orange"><th></th><th>&nbsp;StelPainter.cpp&nbsp;</th><th> </th><th>&nbsp;StelPainter.cpp&nbsp;</th><th></th></tr> 
       <tr><td class="lineno"></td><td class="left"></td><td> </td><td class="right"></td><td class="lineno"></td></tr>
-      <tr bgcolor="gray" ><td></td><th><a name="part-l1" /><small>skipping to change at</small><em> line 695</em></th><th> </th><th><a name="part-r1" /><small>skipping to change at</small><em> line 695</em></th><td></td></tr>
+      <tr bgcolor="gray" ><td></td><th><a name="part-l1" /><small>skipping to change at</small><em> line 334</em></th><th> </th><th><a name="part-r1" /><small>skipping to change at</small><em> line 334</em></th><td></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="left"></td><td> </td><td class="right"></td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="left">}</td><td> </td><td class="right">}</td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="left"></td><td> </td><td class="right"></td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="left">static void sSphereMapTexCoordFast(float rho_div_fov, const float costheta,
+ const float sintheta, QVector&lt;float&gt;&amp; out)</td><td> </td><td class="right">static void sSphereMapTexCoordFast(float rho_div_fov, const float costheta,
+ const float sintheta, QVector&lt;float&gt;&amp; out)</td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="left">{</td><td> </td><td class="right">{</td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="left">       if (rho_div_fov&gt;0.5f)</td><td> </td><td class="right">       if (rho_div_fov&gt;0.5f)</td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="left">               rho_div_fov=0.5f;</td><td> </td><td class="right">               rho_div_fov=0.5f;</td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="left">       out &lt;&lt; 0.5f + rho_div_fov * costheta &lt;&lt; 0.5f + rho_div_fov * sinthet
+a;</td><td> </td><td class="right">       out &lt;&lt; 0.5f + rho_div_fov * costheta &lt;&lt; 0.5f + rho_div_fov * sinthet
+a;</td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="left">}</td><td> </td><td class="right">}</td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="left"></td><td> </td><td class="right"></td><td class="lineno" valign="top"></td></tr>
+      <tr><td><a name="diff0001" /></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="lblock">void StelPainter::sSphereMap(<span class="delete">const float radius, const int slices, const in
+t stacks, const float textureFov, const</span> int orientInside)</td><td> </td><td class="rblock">void StelPainter::sSphereMap(<span class="insert">float radius, int slices, int stacks, float te
+xtureFov,</span> int orientInside)</td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="left">{</td><td> </td><td class="right">{</td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="left">       float rho,x,y,z;</td><td> </td><td class="right">       float rho,x,y,z;</td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="left">       int i, j;</td><td> </td><td class="right">       int i, j;</td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="left">       const float* cos_sin_rho = StelUtils::ComputeCosSinRho(stacks);</td><td> </td><td class="right">       const float* cos_sin_rho = StelUtils::ComputeCosSinRho(stacks);</td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="left">       const float* cos_sin_rho_p;</td><td> </td><td class="right">       const float* cos_sin_rho_p;</td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="left"></td><td> </td><td class="right"></td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="left">       const float* cos_sin_theta = StelUtils::ComputeCosSinTheta(slices);</td><td> </td><td class="right">       const float* cos_sin_theta = StelUtils::ComputeCosSinTheta(slices);</td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="left">       const float* cos_sin_theta_p;</td><td> </td><td class="right">       const float* cos_sin_theta_p;</td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="left"></td><td> </td><td class="right"></td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="left">       float drho = M_PI / stacks;</td><td> </td><td class="right">       float drho = M_PI / stacks;</td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno"></td><td class="left"></td><td> </td><td class="right"></td><td class="lineno"></td></tr>
+      <tr bgcolor="gray" ><td></td><th><a name="part-l2" /><small>skipping to change at</small><em> line 407</em></th><th> </th><th><a name="part-r2" /><small>skipping to change at</small><em> line 407</em></th><td></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="left">                               z = cos_sin_rho_p[0];</td><td> </td><td class="right">                               z = cos_sin_rho_p[0];</td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="left">                               sSphereMapTexCoordFast(rho, cos_sin_theta_p[
+0], -cos_sin_theta_p[1], texCoordArr);</td><td> </td><td class="right">                               sSphereMapTexCoordFast(rho, cos_sin_theta_p[
+0], -cos_sin_theta_p[1], texCoordArr);</td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="left">                               vertexArr &lt;&lt; x*radius &lt;&lt; y*radius &lt;&lt; z*radiu
+s;</td><td> </td><td class="right">                               vertexArr &lt;&lt; x*radius &lt;&lt; y*radius &lt;&lt; z*radiu
+s;</td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="left">                       }</td><td> </td><td class="right">                       }</td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="left">                       setArrays((Vec3d*)vertexArr.constData(), (Vec2f*)tex
+CoordArr.constData());</td><td> </td><td class="right">                       setArrays((Vec3d*)vertexArr.constData(), (Vec2f*)tex
+CoordArr.constData());</td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="left">                       drawFromArray(TriangleStrip, vertexArr.size()/3);</td><td> </td><td class="right">                       drawFromArray(TriangleStrip, vertexArr.size()/3);</td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="left">               }</td><td> </td><td class="right">               }</td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="left">       }</td><td> </td><td class="right">       }</td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="left">}</td><td> </td><td class="right">}</td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="left"></td><td> </td><td class="right"></td><td class="lineno" valign="top"></td></tr>
+      <tr><td><a name="diff0002" /></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="lblock">void StelPainter::drawTextGravity180(float x, float y, const QString&amp; ws, <span class="delete">c
+onst float xshift, const</span> float yshift)</td><td> </td><td class="rblock">void StelPainter::drawTextGravity180(float x, float y, const QString&amp; ws, <span class="insert">f
+loat xshift,</span> float yshift)</td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="left">{</td><td> </td><td class="right">{</td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="left">       float dx, dy, d, theta, theta_o, psi;</td><td> </td><td class="right">       float dx, dy, d, theta, theta_o, psi;</td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="left">       dx = x - prj-&gt;viewportCenter[0];</td><td> </td><td class="right">       dx = x - prj-&gt;viewportCenter[0];</td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="left">       dy = y - prj-&gt;viewportCenter[1];</td><td> </td><td class="right">       dy = y - prj-&gt;viewportCenter[1];</td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="left">       d = std::sqrt(dx*dx + dy*dy);</td><td> </td><td class="right">       d = std::sqrt(dx*dx + dy*dy);</td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="left">       float limit = 120.;</td><td> </td><td class="right">       float limit = 120.;</td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="left"></td><td> </td><td class="right"></td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="left">       // If the text is too far away to be visible in the screen return</td><td> </td><td class="right">       // If the text is too far away to be visible in the screen return</td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="left">       if (d&gt;qMax(prj-&gt;viewportXywh[3], prj-&gt;viewportXywh[2])*2)</td><td> </td><td class="right">       if (d&gt;qMax(prj-&gt;viewportXywh[3], prj-&gt;viewportXywh[2])*2)</td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="left">               return;</td><td> </td><td class="right">               return;</td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno"></td><td class="left"></td><td> </td><td class="right"></td><td class="lineno"></td></tr>
+      <tr bgcolor="gray" ><td></td><th><a name="part-l3" /><small>skipping to change at</small><em> line 476</em></th><th> </th><th><a name="part-r3" /><small>skipping to change at</small><em> line 476</em></th><td></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="left">                       {</td><td> </td><td class="right">                       {</td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="left">                               x = d * std::cos (theta) + xVc;</td><td> </td><td class="right">                               x = d * std::cos (theta) + xVc;</td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="left">                               y = d * std::sin (theta) + yVc;</td><td> </td><td class="right">                               y = d * std::sin (theta) + yVc;</td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="left">                               drawText(x, y, ws[slen-1-i], 90. + theta*180
+./M_PI, 0., 0.);</td><td> </td><td class="right">                               drawText(x, y, ws[slen-1-i], 90. + theta*180
+./M_PI, 0., 0.);</td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="left">                               theta += psi * M_PI/180. * (1 + ((float)getF
+ontMetrics().width(ws[slen-1-i]) - cWidth)/ cWidth);</td><td> </td><td class="right">                               theta += psi * M_PI/180. * (1 + ((float)getF
+ontMetrics().width(ws[slen-1-i]) - cWidth)/ cWidth);</td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="left">                       }</td><td> </td><td class="right">                       }</td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="left">               }</td><td> </td><td class="right">               }</td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="left">       }</td><td> </td><td class="right">       }</td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="left">}</td><td> </td><td class="right">}</td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="left"></td><td> </td><td class="right"></td><td class="lineno" valign="top"></td></tr>
+      <tr><td><a name="diff0003" /></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="lblock">void StelPainter::drawText(const Vec3d&amp; v, const QString&amp; str, <span class="delete">const float 
+angleDeg, const float xshift, const float yshift, const</span> bool noGravity)</td><td> </td><td class="rblock">void StelPainter::drawText(const Vec3d&amp; v, const QString&amp; str, <span class="insert">float angleD
+eg, float xshift, float yshift,</span> bool noGravity)</td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="left">{</td><td> </td><td class="right">{</td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="left">       Vec3d win;</td><td> </td><td class="right">       Vec3d win;</td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="left">       if (prj-&gt;project(v, win))</td><td> </td><td class="right">       if (prj-&gt;project(v, win))</td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="left">               drawText(win[0], win[1], str, angleDeg, xshift, yshift, noGr
+avity);</td><td> </td><td class="right">               drawText(win[0], win[1], str, angleDeg, xshift, yshift, noGr
+avity);</td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="left">}</td><td> </td><td class="right">}</td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="left"></td><td> </td><td class="right"></td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="left">/*************************************************************************</td><td> </td><td class="right">/*************************************************************************</td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="left"> Draw the string at the given position and angle with the given font</td><td> </td><td class="right"> Draw the string at the given position and angle with the given font</td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="left">*************************************************************************/</td><td> </td><td class="right">*************************************************************************/</td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="left"></td><td> </td><td class="right"></td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno"></td><td class="left"></td><td> </td><td class="right"></td><td class="lineno"></td></tr>
+      <tr bgcolor="gray" ><td></td><th><a name="part-l4" /><small>skipping to change at</small><em> line 509</em></th><th> </th><th><a name="part-r4" /><small>skipping to change at</small><em> line 509</em></th><td></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="left">                 height(0),</td><td> </td><td class="right">                 height(0),</td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="left">                 subTexWidth(0),</td><td> </td><td class="right">                 subTexWidth(0),</td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="left">                 subTexHeight(0) {;}</td><td> </td><td class="right">                 subTexHeight(0) {;}</td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="left">       ~StringTexture()</td><td> </td><td class="right">       ~StringTexture()</td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="left">       {</td><td> </td><td class="right">       {</td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="left">               if (texture != 0)</td><td> </td><td class="right">               if (texture != 0)</td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="left">                       glDeleteTextures(1, &amp;texture);</td><td> </td><td class="right">                       glDeleteTextures(1, &amp;texture);</td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="left">       }</td><td> </td><td class="right">       }</td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="left">};</td><td> </td><td class="right">};</td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="left"></td><td> </td><td class="right"></td><td class="lineno" valign="top"></td></tr>
+      <tr><td><a name="diff0004" /></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="lblock">void StelPainter::drawText(float x, float y, const QString&amp; str, float angl
+eDeg, float xshift, float yshift, <span class="delete">const </span>bool noGravity)</td><td> </td><td class="rblock">void StelPainter::drawText(float x, float y, const QString&amp; str, float angl
+eDeg, float xshift, float yshift, bool noGravity)</td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="left">{</td><td> </td><td class="right">{</td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="left">       StelPainter::GLState state; // Will restore the opengl state at the 
+end of the function.</td><td> </td><td class="right">       StelPainter::GLState state; // Will restore the opengl state at the 
+end of the function.</td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="left">       if (prj-&gt;gravityLabels &amp;&amp; !noGravity)</td><td> </td><td class="right">       if (prj-&gt;gravityLabels &amp;&amp; !noGravity)</td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="left">       {</td><td> </td><td class="right">       {</td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="left">               drawTextGravity180(x, y, str, xshift, yshift);</td><td> </td><td class="right">               drawTextGravity180(x, y, str, xshift, yshift);</td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="left">       }</td><td> </td><td class="right">       }</td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="left">       else</td><td> </td><td class="right">       else</td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="left">       {</td><td> </td><td class="right">       {</td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="left">               QOpenGLPaintDevice device;</td><td> </td><td class="right">               QOpenGLPaintDevice device;</td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="left">               device.setSize(QSize(prj-&gt;getViewportWidth(), prj-&gt;getViewpo
+rtHeight()));</td><td> </td><td class="right">               device.setSize(QSize(prj-&gt;getViewportWidth(), prj-&gt;getViewpo
+rtHeight()));</td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno"></td><td class="left"></td><td> </td><td class="right"></td><td class="lineno"></td></tr>
+      <tr bgcolor="gray" ><td></td><th><a name="part-l5" /><small>skipping to change at</small><em> line 695</em></th><th> </th><th><a name="part-r5" /><small>skipping to change at</small><em> line 695</em></th><td></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="left">                               smallCircleVertexArray.append(Vec2f(p1[0], p
 1[1]));</td><td> </td><td class="right">                               smallCircleVertexArray.append(Vec2f(p1[0], p
 1[1]));</td><td class="lineno" valign="top"></td></tr>
@@ -58,13 +182,11 @@ oth, even for non linear distortion</td><td class="lineno" valign="top"></td></t
       <tr><td class="lineno" valign="top"></td><td class="left">void StelPainter::projectSphericalTriangle(const SphericalCap* clippingCap,
  const Vec3d* vertices, QVarLengthArray&lt;Vec3f, 4096&gt;* outVertices,</td><td> </td><td class="right">void StelPainter::projectSphericalTriangle(const SphericalCap* clippingCap,
  const Vec3d* vertices, QVarLengthArray&lt;Vec3f, 4096&gt;* outVertices,</td><td class="lineno" valign="top"></td></tr>
-      <tr><td><a name="diff0001" /></td></tr>
-      <tr><td class="lineno" valign="top"></td><td class="lblock">               const Vec2f* texturePos, QVarLengthArray&lt;Vec2f, 4096&gt;* outTe
-xturePos,</td><td> </td><td class="rblock">               const Vec2f* texturePos, QVarLengthArray&lt;Vec2f, 4096&gt;* outTe
-xturePos,<span class="insert"> const Vec3f *colors, QVarLengthArray&lt;Vec3f, 4096&gt; *outColors,</span></td><td class="lineno" valign="top"></td></tr>
-      <tr><td class="lineno" valign="top"></td><td class="left">               const double maxSqDistortion, const int nbI, const bool chec
-kDisc1, const bool checkDisc2, const bool checkDisc3) const</td><td> </td><td class="right">               const double maxSqDistortion, const int nbI, const bool chec
-kDisc1, const bool checkDisc2, const bool checkDisc3) const</td><td class="lineno" valign="top"></td></tr>
+      <tr><td><a name="diff0005" /></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="lblock">               const Vec2f* texturePos, QVarLengthArray&lt;Vec2f, 4096&gt;* <span class="delete">outTe</span></td><td> </td><td class="rblock">        const Vec2f* texturePos, QVarLengthArray&lt;Vec2f, 4096&gt;* <span class="insert">outTexturePo</span></td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="lblock"><span class="delete">xturePos,</span></td><td> </td><td class="rblock"><span class="insert">s,</span> const <span class="insert">Vec3f *colors, QVarLengthArray&lt;Vec3f, 4096&gt; *outColors,</span></td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="lblock">               const double maxSqDistortion, <span class="delete">const</span> int nbI, <span class="delete">const</span> bool <span class="delete">chec</span></td><td> </td><td class="rblock">        double maxSqDistortion, int nbI, bool <span class="insert">checkDisc1,</span> bool checkDisc2, </td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="lblock"><span class="delete">kDisc1, const</span> bool checkDisc2, <span class="delete">const</span> bool checkDisc3) const</td><td> </td><td class="rblock">bool checkDisc3) const</td><td class="lineno" valign="top"></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="left">{</td><td> </td><td class="right">{</td><td class="lineno" valign="top"></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="left">       Q_ASSERT(fabs(vertices[0].length()-1.)&lt;0.00001);</td><td> </td><td class="right">       Q_ASSERT(fabs(vertices[0].length()-1.)&lt;0.00001);</td><td class="lineno" valign="top"></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="left">       Q_ASSERT(fabs(vertices[1].length()-1.)&lt;0.00001);</td><td> </td><td class="right">       Q_ASSERT(fabs(vertices[1].length()-1.)&lt;0.00001);</td><td class="lineno" valign="top"></td></tr>
@@ -76,8 +198,11 @@ kDisc1, const bool checkDisc2, const bool checkDisc3) const</td><td class="linen
       <tr><td class="lineno" valign="top"></td><td class="left">       bool cDiscontinuity1 = checkDisc1 &amp;&amp; prj-&gt;intersectViewportDiscontin
 uity(vertices[0], vertices[1]);</td><td> </td><td class="right">       bool cDiscontinuity1 = checkDisc1 &amp;&amp; prj-&gt;intersectViewportDiscontin
 uity(vertices[0], vertices[1]);</td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="left">       bool cDiscontinuity2 = checkDisc2 &amp;&amp; prj-&gt;intersectViewportDiscontin
+uity(vertices[1], vertices[2]);</td><td> </td><td class="right">       bool cDiscontinuity2 = checkDisc2 &amp;&amp; prj-&gt;intersectViewportDiscontin
+uity(vertices[1], vertices[2]);</td><td class="lineno" valign="top"></td></tr>
       <tr><td class="lineno"></td><td class="left"></td><td> </td><td class="right"></td><td class="lineno"></td></tr>
-      <tr bgcolor="gray" ><td></td><th><a name="part-l2" /><small>skipping to change at</small><em> line 754</em></th><th> </th><th><a name="part-r2" /><small>skipping to change at</small><em> line 754</em></th><td></td></tr>
+      <tr bgcolor="gray" ><td></td><th><a name="part-l6" /><small>skipping to change at</small><em> line 754</em></th><th> </th><th><a name="part-r6" /><small>skipping to change at</small><em> line 754</em></th><td></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="left">               win3[1] -= (e0[1]+e2[1])*0.5;</td><td> </td><td class="right">               win3[1] -= (e0[1]+e2[1])*0.5;</td><td class="lineno" valign="top"></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="left">               cDiscontinuity3 = (win3[0]*win3[0]+win3[1]*win3[1])&gt;maxSqDis
 tortion;</td><td> </td><td class="right">               cDiscontinuity3 = (win3[0]*win3[0]+win3[1]*win3[1])&gt;maxSqDis
@@ -94,7 +219,7 @@ tortion;</td><td class="lineno" valign="top"></td></tr>
 ], e2[2]));</td><td class="lineno" valign="top"></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="left">               if (outTexturePos)</td><td> </td><td class="right">               if (outTexturePos)</td><td class="lineno" valign="top"></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="left">                       outTexturePos-&gt;append(texturePos,3);</td><td> </td><td class="right">                       outTexturePos-&gt;append(texturePos,3);</td><td class="lineno" valign="top"></td></tr>
-      <tr><td><a name="diff0002" /></td></tr>
+      <tr><td><a name="diff0006" /></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="lblock"></td><td> </td><td class="rblock">               <span class="insert">if (outColors)</span></td><td class="lineno" valign="top"></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="lblock"></td><td> </td><td class="rblock"><span class="insert">                       outColors-&gt;append(colors,3);</span></td><td class="lineno" valign="top"></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="left">               return;</td><td> </td><td class="right">               return;</td><td class="lineno" valign="top"></td></tr>
@@ -117,7 +242,7 @@ ve a discontinuity,</td><td class="lineno" valign="top"></td></tr>
 ], e2[2]));</td><td class="lineno" valign="top"></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="left">               if (outTexturePos)</td><td> </td><td class="right">               if (outTexturePos)</td><td class="lineno" valign="top"></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="left">                       outTexturePos-&gt;append(texturePos,3);</td><td> </td><td class="right">                       outTexturePos-&gt;append(texturePos,3);</td><td class="lineno" valign="top"></td></tr>
-      <tr><td><a name="diff0003" /></td></tr>
+      <tr><td><a name="diff0007" /></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="lblock"></td><td> </td><td class="rblock">               <span class="insert">if (outColors)</span></td><td class="lineno" valign="top"></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="lblock"></td><td> </td><td class="rblock"><span class="insert">                       outColors-&gt;append(colors,3);</span></td><td class="lineno" valign="top"></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="left">               return;</td><td> </td><td class="right">               return;</td><td class="lineno" valign="top"></td></tr>
@@ -129,7 +254,7 @@ ve a discontinuity,</td><td class="lineno" valign="top"></td></tr>
  split a different strategy is used.</td><td class="lineno" valign="top"></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="left">       Vec3d va[3];</td><td> </td><td class="right">       Vec3d va[3];</td><td class="lineno" valign="top"></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="left">       Vec2f ta[3];</td><td> </td><td class="right">       Vec2f ta[3];</td><td class="lineno" valign="top"></td></tr>
-      <tr><td><a name="diff0004" /></td></tr>
+      <tr><td><a name="diff0008" /></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="lblock"></td><td> </td><td class="rblock"><span class="insert">       Vec3f ca[3];</span></td><td class="lineno" valign="top"></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="left">       // Only 1 side has to be split: split the triangle in 2</td><td> </td><td class="right">       // Only 1 side has to be split: split the triangle in 2</td><td class="lineno" valign="top"></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="left">       if (cDiscontinuity1 &amp;&amp; !cDiscontinuity2 &amp;&amp; !cDiscontinuity3)</td><td> </td><td class="right">       if (cDiscontinuity1 &amp;&amp; !cDiscontinuity2 &amp;&amp; !cDiscontinuity3)</td><td class="lineno" valign="top"></td></tr>
@@ -144,7 +269,7 @@ ve a discontinuity,</td><td class="lineno" valign="top"></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="left">                       ta[1]=(texturePos[0]+texturePos[1])*0.5;</td><td> </td><td class="right">                       ta[1]=(texturePos[0]+texturePos[1])*0.5;</td><td class="lineno" valign="top"></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="left">                       ta[2]=texturePos[2];</td><td> </td><td class="right">                       ta[2]=texturePos[2];</td><td class="lineno" valign="top"></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="left">               }</td><td> </td><td class="right">               }</td><td class="lineno" valign="top"></td></tr>
-      <tr><td><a name="diff0005" /></td></tr>
+      <tr><td><a name="diff0009" /></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="lblock">               projectSphericalTriangle(clippingCap, va, outVertices, ta, o</td><td> </td><td class="rblock">               <span class="insert">if (outColors)</span></td><td class="lineno" valign="top"></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="lblock">utTexturePos, maxSqDistortion, nbI+1, true, true, false);</td><td> </td><td class="rblock"><span class="insert">               {</span></td><td class="lineno" valign="top"></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="lblock"></td><td> </td><td class="rblock"><span class="insert">                       ca[0]=colors[0];</span></td><td class="lineno" valign="top"></td></tr>
@@ -165,7 +290,7 @@ ve a discontinuity,</td><td class="lineno" valign="top"></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="left">                       ta[1]=texturePos[1];</td><td> </td><td class="right">                       ta[1]=texturePos[1];</td><td class="lineno" valign="top"></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="left">                       ta[2]=texturePos[2];</td><td> </td><td class="right">                       ta[2]=texturePos[2];</td><td class="lineno" valign="top"></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="left">               }</td><td> </td><td class="right">               }</td><td class="lineno" valign="top"></td></tr>
-      <tr><td><a name="diff0006" /></td></tr>
+      <tr><td><a name="diff0010" /></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="lblock">               projectSphericalTriangle(clippingCap, va, outVertices, ta, o</td><td> </td><td class="rblock">               <span class="insert">if (outColors)</span></td><td class="lineno" valign="top"></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="lblock">utTexturePos, maxSqDistortion, nbI+1, true, false, true);</td><td> </td><td class="rblock"><span class="insert">               {</span></td><td class="lineno" valign="top"></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="lblock"></td><td> </td><td class="rblock"><span class="insert">                       ca[0]=(colors[0]+colors[1])*0.5;</span></td><td class="lineno" valign="top"></td></tr>
@@ -189,7 +314,7 @@ ve a discontinuity,</td><td class="lineno" valign="top"></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="left">                       ta[1]=texturePos[1];</td><td> </td><td class="right">                       ta[1]=texturePos[1];</td><td class="lineno" valign="top"></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="left">                       ta[2]=(texturePos[1]+texturePos[2])*0.5;</td><td> </td><td class="right">                       ta[2]=(texturePos[1]+texturePos[2])*0.5;</td><td class="lineno" valign="top"></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="left">               }</td><td> </td><td class="right">               }</td><td class="lineno" valign="top"></td></tr>
-      <tr><td><a name="diff0007" /></td></tr>
+      <tr><td><a name="diff0011" /></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="lblock">               projectSphericalTriangle(clippingCap, va, outVertices, ta, o</td><td> </td><td class="rblock">               <span class="insert">if (outColors)</span></td><td class="lineno" valign="top"></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="lblock">utTexturePos, maxSqDistortion, nbI+1, false, true, true);</td><td> </td><td class="rblock"><span class="insert">               {</span></td><td class="lineno" valign="top"></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="lblock"></td><td> </td><td class="rblock"><span class="insert">                       ca[0]=colors[0];</span></td><td class="lineno" valign="top"></td></tr>
@@ -210,7 +335,7 @@ ve a discontinuity,</td><td class="lineno" valign="top"></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="left">                       ta[1]=(texturePos[1]+texturePos[2])*0.5;</td><td> </td><td class="right">                       ta[1]=(texturePos[1]+texturePos[2])*0.5;</td><td class="lineno" valign="top"></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="left">                       ta[2]=texturePos[2];</td><td> </td><td class="right">                       ta[2]=texturePos[2];</td><td class="lineno" valign="top"></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="left">               }</td><td> </td><td class="right">               }</td><td class="lineno" valign="top"></td></tr>
-      <tr><td><a name="diff0008" /></td></tr>
+      <tr><td><a name="diff0012" /></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="lblock">               projectSphericalTriangle(clippingCap, va, outVertices, ta, o</td><td> </td><td class="rblock">               <span class="insert">if (outColors)</span></td><td class="lineno" valign="top"></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="lblock">utTexturePos, maxSqDistortion, nbI+1, true, true, false);</td><td> </td><td class="rblock"><span class="insert">               {</span></td><td class="lineno" valign="top"></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="lblock"></td><td> </td><td class="rblock"><span class="insert">                       ca[0]=colors[0];</span></td><td class="lineno" valign="top"></td></tr>
@@ -234,7 +359,7 @@ ve a discontinuity,</td><td class="lineno" valign="top"></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="left">                       ta[1]=texturePos[1];</td><td> </td><td class="right">                       ta[1]=texturePos[1];</td><td class="lineno" valign="top"></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="left">                       ta[2]=(texturePos[0]+texturePos[2])*0.5;</td><td> </td><td class="right">                       ta[2]=(texturePos[0]+texturePos[2])*0.5;</td><td class="lineno" valign="top"></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="left">               }</td><td> </td><td class="right">               }</td><td class="lineno" valign="top"></td></tr>
-      <tr><td><a name="diff0009" /></td></tr>
+      <tr><td><a name="diff0013" /></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="lblock">               projectSphericalTriangle(clippingCap, va, outVertices, ta, o</td><td> </td><td class="rblock">               <span class="insert">if (outColors)</span></td><td class="lineno" valign="top"></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="lblock">utTexturePos, maxSqDistortion, nbI+1, false, true, true);</td><td> </td><td class="rblock"><span class="insert">               {</span></td><td class="lineno" valign="top"></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="lblock"></td><td> </td><td class="rblock"><span class="insert">                       ca[0]=colors[0];</span></td><td class="lineno" valign="top"></td></tr>
@@ -255,7 +380,7 @@ ve a discontinuity,</td><td class="lineno" valign="top"></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="left">                       ta[1]=texturePos[1];</td><td> </td><td class="right">                       ta[1]=texturePos[1];</td><td class="lineno" valign="top"></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="left">                       ta[2]=texturePos[2];</td><td> </td><td class="right">                       ta[2]=texturePos[2];</td><td class="lineno" valign="top"></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="left">               }</td><td> </td><td class="right">               }</td><td class="lineno" valign="top"></td></tr>
-      <tr><td><a name="diff0010" /></td></tr>
+      <tr><td><a name="diff0014" /></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="lblock">               projectSphericalTriangle(clippingCap, va, outVertices, ta, o</td><td> </td><td class="rblock">               <span class="insert">if (outColors)</span></td><td class="lineno" valign="top"></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="lblock">utTexturePos, maxSqDistortion, nbI+1, true, false, true);</td><td> </td><td class="rblock"><span class="insert">               {</span></td><td class="lineno" valign="top"></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="lblock"></td><td> </td><td class="rblock"><span class="insert">                       ca[0]=(colors[0]+colors[2])*0.5;</span></td><td class="lineno" valign="top"></td></tr>
@@ -281,7 +406,7 @@ ve a discontinuity,</td><td class="lineno" valign="top"></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="left">                       ta[1]=(texturePos[0]+texturePos[1])*0.5;</td><td> </td><td class="right">                       ta[1]=(texturePos[0]+texturePos[1])*0.5;</td><td class="lineno" valign="top"></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="left">                       ta[2]=(texturePos[1]+texturePos[2])*0.5;</td><td> </td><td class="right">                       ta[2]=(texturePos[1]+texturePos[2])*0.5;</td><td class="lineno" valign="top"></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="left">               }</td><td> </td><td class="right">               }</td><td class="lineno" valign="top"></td></tr>
-      <tr><td><a name="diff0011" /></td></tr>
+      <tr><td><a name="diff0015" /></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="lblock">               projectSphericalTriangle(clippingCap, va, outVertices, ta, o</td><td> </td><td class="rblock">               <span class="insert">if (outColors)</span></td><td class="lineno" valign="top"></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="lblock">utTexturePos, maxSqDistortion, nbI+1);</td><td> </td><td class="rblock"><span class="insert">               {</span></td><td class="lineno" valign="top"></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="lblock"></td><td> </td><td class="rblock"><span class="insert">                       ca[0]=colors[0];</span></td><td class="lineno" valign="top"></td></tr>
@@ -303,7 +428,7 @@ ve a discontinuity,</td><td class="lineno" valign="top"></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="left">                       ta[1]=texturePos[1];</td><td> </td><td class="right">                       ta[1]=texturePos[1];</td><td class="lineno" valign="top"></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="left">                       ta[2]=(texturePos[1]+texturePos[2])*0.5;</td><td> </td><td class="right">                       ta[2]=(texturePos[1]+texturePos[2])*0.5;</td><td class="lineno" valign="top"></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="left">               }</td><td> </td><td class="right">               }</td><td class="lineno" valign="top"></td></tr>
-      <tr><td><a name="diff0012" /></td></tr>
+      <tr><td><a name="diff0016" /></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="lblock">               projectSphericalTriangle(clippingCap, va, outVertices, ta, o</td><td> </td><td class="rblock">               <span class="insert">if (outColors)</span></td><td class="lineno" valign="top"></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="lblock">utTexturePos, maxSqDistortion, nbI+1);</td><td> </td><td class="rblock"><span class="insert">               {</span></td><td class="lineno" valign="top"></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="lblock"></td><td> </td><td class="rblock"><span class="insert">                       ca[0]=(colors[0]+colors[1])*0.5;</span></td><td class="lineno" valign="top"></td></tr>
@@ -324,7 +449,7 @@ ve a discontinuity,</td><td class="lineno" valign="top"></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="left">                       ta[1]=(texturePos[1]+texturePos[2])*0.5;</td><td> </td><td class="right">                       ta[1]=(texturePos[1]+texturePos[2])*0.5;</td><td class="lineno" valign="top"></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="left">                       ta[2]=texturePos[2];</td><td> </td><td class="right">                       ta[2]=texturePos[2];</td><td class="lineno" valign="top"></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="left">               }</td><td> </td><td class="right">               }</td><td class="lineno" valign="top"></td></tr>
-      <tr><td><a name="diff0013" /></td></tr>
+      <tr><td><a name="diff0017" /></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="lblock">               projectSphericalTriangle(clippingCap, va, outVertices, ta, o</td><td> </td><td class="rblock">               <span class="insert">if (outColors)</span></td><td class="lineno" valign="top"></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="lblock">utTexturePos, maxSqDistortion, nbI+1, true, true, false);</td><td> </td><td class="rblock"><span class="insert">               {</span></td><td class="lineno" valign="top"></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="lblock"></td><td> </td><td class="rblock"><span class="insert">                       ca[0]=colors[0];</span></td><td class="lineno" valign="top"></td></tr>
@@ -348,7 +473,7 @@ ve a discontinuity,</td><td class="lineno" valign="top"></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="left">                       ta[1]=(texturePos[0]+texturePos[1])*0.5;</td><td> </td><td class="right">                       ta[1]=(texturePos[0]+texturePos[1])*0.5;</td><td class="lineno" valign="top"></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="left">                       ta[2]=(texturePos[0]+texturePos[2])*0.5;</td><td> </td><td class="right">                       ta[2]=(texturePos[0]+texturePos[2])*0.5;</td><td class="lineno" valign="top"></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="left">               }</td><td> </td><td class="right">               }</td><td class="lineno" valign="top"></td></tr>
-      <tr><td><a name="diff0014" /></td></tr>
+      <tr><td><a name="diff0018" /></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="lblock">               projectSphericalTriangle(clippingCap, va, outVertices, ta, o</td><td> </td><td class="rblock">               <span class="insert">if (outColors)</span></td><td class="lineno" valign="top"></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="lblock">utTexturePos, maxSqDistortion, nbI+1);</td><td> </td><td class="rblock"><span class="insert">               {</span></td><td class="lineno" valign="top"></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="lblock"></td><td> </td><td class="rblock"><span class="insert">                       ca[0]=colors[0];</span></td><td class="lineno" valign="top"></td></tr>
@@ -370,7 +495,7 @@ ve a discontinuity,</td><td class="lineno" valign="top"></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="left">                       ta[1]=texturePos[2];</td><td> </td><td class="right">                       ta[1]=texturePos[2];</td><td class="lineno" valign="top"></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="left">                       ta[2]=(texturePos[0]+texturePos[2])*0.5;</td><td> </td><td class="right">                       ta[2]=(texturePos[0]+texturePos[2])*0.5;</td><td class="lineno" valign="top"></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="left">               }</td><td> </td><td class="right">               }</td><td class="lineno" valign="top"></td></tr>
-      <tr><td><a name="diff0015" /></td></tr>
+      <tr><td><a name="diff0019" /></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="lblock">               projectSphericalTriangle(clippingCap, va, outVertices, ta, o</td><td> </td><td class="rblock">               <span class="insert">if (outColors)</span></td><td class="lineno" valign="top"></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="lblock">utTexturePos, maxSqDistortion, nbI+1);</td><td> </td><td class="rblock"><span class="insert">               {</span></td><td class="lineno" valign="top"></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="lblock"></td><td> </td><td class="rblock"><span class="insert">                       ca[0]=(colors[0]+colors[1])*0.5;</span></td><td class="lineno" valign="top"></td></tr>
@@ -390,7 +515,7 @@ ve a discontinuity,</td><td class="lineno" valign="top"></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="left">                       ta[1]=texturePos[1];</td><td> </td><td class="right">                       ta[1]=texturePos[1];</td><td class="lineno" valign="top"></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="left">                       ta[2]=texturePos[2];</td><td> </td><td class="right">                       ta[2]=texturePos[2];</td><td class="lineno" valign="top"></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="left">               }</td><td> </td><td class="right">               }</td><td class="lineno" valign="top"></td></tr>
-      <tr><td><a name="diff0016" /></td></tr>
+      <tr><td><a name="diff0020" /></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="lblock">               projectSphericalTriangle(clippingCap, va, outVertices, ta, o</td><td> </td><td class="rblock">               <span class="insert">if (outColors)</span></td><td class="lineno" valign="top"></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="lblock">utTexturePos, maxSqDistortion, nbI+1, true, false, true);</td><td> </td><td class="rblock"><span class="insert">               {</span></td><td class="lineno" valign="top"></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="lblock"></td><td> </td><td class="rblock"><span class="insert">                       ca[0]=(colors[0]+colors[1])*0.5;</span></td><td class="lineno" valign="top"></td></tr>
@@ -414,7 +539,7 @@ ve a discontinuity,</td><td class="lineno" valign="top"></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="left">                       ta[1]=texturePos[1];</td><td> </td><td class="right">                       ta[1]=texturePos[1];</td><td class="lineno" valign="top"></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="left">                       ta[2]=(texturePos[1]+texturePos[2])*0.5;</td><td> </td><td class="right">                       ta[2]=(texturePos[1]+texturePos[2])*0.5;</td><td class="lineno" valign="top"></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="left">               }</td><td> </td><td class="right">               }</td><td class="lineno" valign="top"></td></tr>
-      <tr><td><a name="diff0017" /></td></tr>
+      <tr><td><a name="diff0021" /></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="lblock">               projectSphericalTriangle(clippingCap, va, outVertices, ta, o</td><td> </td><td class="rblock">               <span class="insert">if (outColors)</span></td><td class="lineno" valign="top"></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="lblock">utTexturePos, maxSqDistortion, nbI+1, false, true, true);</td><td> </td><td class="rblock"><span class="insert">               {</span></td><td class="lineno" valign="top"></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="lblock"></td><td> </td><td class="rblock"><span class="insert">                       ca[0]=colors[0];</span></td><td class="lineno" valign="top"></td></tr>
@@ -436,7 +561,7 @@ ve a discontinuity,</td><td class="lineno" valign="top"></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="left">                       ta[1]=texturePos[2];</td><td> </td><td class="right">                       ta[1]=texturePos[2];</td><td class="lineno" valign="top"></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="left">                       ta[2]=(texturePos[0]+texturePos[2])*0.5;</td><td> </td><td class="right">                       ta[2]=(texturePos[0]+texturePos[2])*0.5;</td><td class="lineno" valign="top"></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="left">               }</td><td> </td><td class="right">               }</td><td class="lineno" valign="top"></td></tr>
-      <tr><td><a name="diff0018" /></td></tr>
+      <tr><td><a name="diff0022" /></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="lblock">               projectSphericalTriangle(clippingCap, va, outVertices, ta, o</td><td> </td><td class="rblock">               <span class="insert">if (outColors)</span></td><td class="lineno" valign="top"></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="lblock">utTexturePos, maxSqDistortion, nbI+1);</td><td> </td><td class="rblock"><span class="insert">               {</span></td><td class="lineno" valign="top"></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="lblock"></td><td> </td><td class="rblock"><span class="insert">                       ca[0]=(colors[1]+colors[2])*0.5;</span></td><td class="lineno" valign="top"></td></tr>
@@ -458,7 +583,7 @@ ve a discontinuity,</td><td class="lineno" valign="top"></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="left">                       ta[1]=(texturePos[1]+texturePos[2])*0.5;</td><td> </td><td class="right">                       ta[1]=(texturePos[1]+texturePos[2])*0.5;</td><td class="lineno" valign="top"></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="left">                       ta[2]=(texturePos[0]+texturePos[2])*0.5;</td><td> </td><td class="right">                       ta[2]=(texturePos[0]+texturePos[2])*0.5;</td><td class="lineno" valign="top"></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="left">               }</td><td> </td><td class="right">               }</td><td class="lineno" valign="top"></td></tr>
-      <tr><td><a name="diff0019" /></td></tr>
+      <tr><td><a name="diff0023" /></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="lblock">               projectSphericalTriangle(clippingCap, va, outVertices, ta, o</td><td> </td><td class="rblock">               <span class="insert">if (outColors)</span></td><td class="lineno" valign="top"></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="lblock">utTexturePos, maxSqDistortion, nbI+1);</td><td> </td><td class="rblock"><span class="insert">               {</span></td><td class="lineno" valign="top"></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="lblock"></td><td> </td><td class="rblock"><span class="insert">                       ca[0]=colors[0];</span></td><td class="lineno" valign="top"></td></tr>
@@ -485,7 +610,7 @@ ve a discontinuity,</td><td class="lineno" valign="top"></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="left">               ta[1]=(texturePos[1]+texturePos[2])*0.5;</td><td> </td><td class="right">               ta[1]=(texturePos[1]+texturePos[2])*0.5;</td><td class="lineno" valign="top"></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="left">               ta[2]=(texturePos[0]+texturePos[2])*0.5;</td><td> </td><td class="right">               ta[2]=(texturePos[0]+texturePos[2])*0.5;</td><td class="lineno" valign="top"></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="left">       }</td><td> </td><td class="right">       }</td><td class="lineno" valign="top"></td></tr>
-      <tr><td><a name="diff0020" /></td></tr>
+      <tr><td><a name="diff0024" /></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="lblock">       projectSphericalTriangle(clippingCap, va, outVertices, ta, outTextur</td><td> </td><td class="rblock">       <span class="insert">if (outColors)</span></td><td class="lineno" valign="top"></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="lblock">ePos, maxSqDistortion, nbI+1);</td><td> </td><td class="rblock"><span class="insert">       {</span></td><td class="lineno" valign="top"></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="lblock"></td><td> </td><td class="rblock"><span class="insert">               ca[0]=(colors[0]+colors[1])*0.5;</span></td><td class="lineno" valign="top"></td></tr>
@@ -507,7 +632,7 @@ ve a discontinuity,</td><td class="lineno" valign="top"></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="left">               ta[1]=(texturePos[0]+texturePos[1])*0.5;</td><td> </td><td class="right">               ta[1]=(texturePos[0]+texturePos[1])*0.5;</td><td class="lineno" valign="top"></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="left">               ta[2]=(texturePos[0]+texturePos[2])*0.5;</td><td> </td><td class="right">               ta[2]=(texturePos[0]+texturePos[2])*0.5;</td><td class="lineno" valign="top"></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="left">       }</td><td> </td><td class="right">       }</td><td class="lineno" valign="top"></td></tr>
-      <tr><td><a name="diff0021" /></td></tr>
+      <tr><td><a name="diff0025" /></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="lblock">       projectSphericalTriangle(clippingCap, va, outVertices, ta, outTextur</td><td> </td><td class="rblock">       <span class="insert">if (outColors)</span></td><td class="lineno" valign="top"></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="lblock">ePos, maxSqDistortion, nbI+1);</td><td> </td><td class="rblock"><span class="insert">       {</span></td><td class="lineno" valign="top"></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="lblock"></td><td> </td><td class="rblock"><span class="insert">               ca[0]=colors[0];</span></td><td class="lineno" valign="top"></td></tr>
@@ -529,7 +654,7 @@ ve a discontinuity,</td><td class="lineno" valign="top"></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="left">               ta[1]=texturePos[1];</td><td> </td><td class="right">               ta[1]=texturePos[1];</td><td class="lineno" valign="top"></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="left">               ta[2]=(texturePos[1]+texturePos[2])*0.5;</td><td> </td><td class="right">               ta[2]=(texturePos[1]+texturePos[2])*0.5;</td><td class="lineno" valign="top"></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="left">       }</td><td> </td><td class="right">       }</td><td class="lineno" valign="top"></td></tr>
-      <tr><td><a name="diff0022" /></td></tr>
+      <tr><td><a name="diff0026" /></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="lblock">       projectSphericalTriangle(clippingCap, va, outVertices, ta, outTextur</td><td> </td><td class="rblock">       <span class="insert">if (outColors)</span></td><td class="lineno" valign="top"></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="lblock">ePos, maxSqDistortion, nbI+1);</td><td> </td><td class="rblock"><span class="insert">       {</span></td><td class="lineno" valign="top"></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="lblock"></td><td> </td><td class="rblock"><span class="insert">               ca[0]=(colors[0]+colors[1])*0.5;</span></td><td class="lineno" valign="top"></td></tr>
@@ -551,7 +676,7 @@ ve a discontinuity,</td><td class="lineno" valign="top"></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="left">               ta[1]=(texturePos[1]+texturePos[2])*0.5;</td><td> </td><td class="right">               ta[1]=(texturePos[1]+texturePos[2])*0.5;</td><td class="lineno" valign="top"></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="left">               ta[2]=texturePos[2];</td><td> </td><td class="right">               ta[2]=texturePos[2];</td><td class="lineno" valign="top"></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="left">       }</td><td> </td><td class="right">       }</td><td class="lineno" valign="top"></td></tr>
-      <tr><td><a name="diff0023" /></td></tr>
+      <tr><td><a name="diff0027" /></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="lblock">       projectSphericalTriangle(clippingCap, va, outVertices, ta, outTextur</td><td> </td><td class="rblock">       <span class="insert">if (outColors)</span></td><td class="lineno" valign="top"></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="lblock">ePos, maxSqDistortion, nbI+1);</td><td> </td><td class="rblock"><span class="insert">       {</span></td><td class="lineno" valign="top"></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="lblock"></td><td> </td><td class="rblock"><span class="insert">               ca[0]=(colors[0]+colors[2])*0.5;</span></td><td class="lineno" valign="top"></td></tr>
@@ -566,7 +691,7 @@ ve a discontinuity,</td><td class="lineno" valign="top"></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="left"></td><td> </td><td class="right"></td><td class="lineno" valign="top"></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="left">static QVarLengthArray&lt;Vec3f, 4096&gt; polygonVertexArray;</td><td> </td><td class="right">static QVarLengthArray&lt;Vec3f, 4096&gt; polygonVertexArray;</td><td class="lineno" valign="top"></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="left">static QVarLengthArray&lt;Vec2f, 4096&gt; polygonTextureCoordArray;</td><td> </td><td class="right">static QVarLengthArray&lt;Vec2f, 4096&gt; polygonTextureCoordArray;</td><td class="lineno" valign="top"></td></tr>
-      <tr><td><a name="diff0024" /></td></tr>
+      <tr><td><a name="diff0028" /></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="lblock"></td><td> </td><td class="rblock"><span class="insert">static QVarLengthArray&lt;Vec3f, 4096&gt; polygonColorArray;</span></td><td class="lineno" valign="top"></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="left">static QVarLengthArray&lt;unsigned int, 4096&gt; indexArray;</td><td> </td><td class="right">static QVarLengthArray&lt;unsigned int, 4096&gt; indexArray;</td><td class="lineno" valign="top"></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="left"></td><td> </td><td class="right"></td><td class="lineno" valign="top"></td></tr>
@@ -581,7 +706,7 @@ ricalCap* clippingCap)</td><td class="lineno" valign="top"></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="left">               case StelVertexArray::Lines:</td><td> </td><td class="right">               case StelVertexArray::Lines:</td><td class="lineno" valign="top"></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="left">                       Q_ASSERT(va.vertex.size()%2==0);</td><td> </td><td class="right">                       Q_ASSERT(va.vertex.size()%2==0);</td><td class="lineno" valign="top"></td></tr>
       <tr><td class="lineno"></td><td class="left"></td><td> </td><td class="right"></td><td class="lineno"></td></tr>
-      <tr bgcolor="gray" ><td></td><th><a name="part-l3" /><small>skipping to change at</small><em> line 1092</em></th><th> </th><th><a name="part-r3" /><small>skipping to change at</small><em> line 1212</em></th><td></td></tr>
+      <tr bgcolor="gray" ><td></td><th><a name="part-l7" /><small>skipping to change at</small><em> line 1092</em></th><th> </th><th><a name="part-r7" /><small>skipping to change at</small><em> line 1212</em></th><td></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="left"></td><td> </td><td class="right"></td><td class="lineno" valign="top"></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="left">// The function object that we use as an interface between VertexArray::for
 eachTriangle and</td><td> </td><td class="right">// The function object that we use as an interface between VertexArray::for
@@ -598,7 +723,7 @@ dinates in a StelVertexArray into our global</td><td class="lineno" valign="top"
       <tr><td class="lineno" valign="top"></td><td class="left">       VertexArrayProjector(const StelVertexArray&amp; ar, StelPainter* apainte
 r, const SphericalCap* aclippingCap,</td><td> </td><td class="right">       VertexArrayProjector(const StelVertexArray&amp; ar, StelPainter* apainte
 r, const SphericalCap* aclippingCap,</td><td class="lineno" valign="top"></td></tr>
-      <tr><td><a name="diff0025" /></td></tr>
+      <tr><td><a name="diff0029" /></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="lblock">                                                QVarLengthArray&lt;Vec3f, 4096
 &gt;* aoutVertices, QVarLengthArray&lt;Vec2f, 4096&gt;* aoutTexturePos=NULL, <span class="delete">double 
 </span>amaxSqDistortion=5.)</td><td> </td><td class="rblock">                                                QVarLengthArray&lt;Vec3f, 4096
@@ -607,7 +732,7 @@ gthArray&lt;Vec3f, 4096&gt;* aoutColors=NULL, double </span>amaxSqDistortion=5.)
       <tr><td class="lineno" valign="top"></td><td class="left">                  : vertexArray(ar), painter(apainter), clippingCap(aclippi
 ngCap), outVertices(aoutVertices),</td><td> </td><td class="right">                  : vertexArray(ar), painter(apainter), clippingCap(aclippi
 ngCap), outVertices(aoutVertices),</td><td class="lineno" valign="top"></td></tr>
-      <tr><td><a name="diff0026" /></td></tr>
+      <tr><td><a name="diff0030" /></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="lblock">                        out<span class="delete">TexturePos(aoutTexturePos), maxSqDistortion(amax
 </span>SqDistortion)</td><td> </td><td class="rblock">                        out<span class="insert">Colors(aoutColors), outTexturePos(aoutTexturePos
 ), maxSqDistortion(amax</span>SqDistortion)</td><td class="lineno" valign="top"></td></tr>
@@ -621,7 +746,7 @@ ngCap), outVertices(aoutVertices),</td><td class="lineno" valign="top"></td></tr
       <tr><td class="lineno" valign="top"></td><td class="left">                                                  const Vec2f* t0, const Ve
 c2f* t1, const Vec2f* t2,</td><td> </td><td class="right">                                                  const Vec2f* t0, const Ve
 c2f* t1, const Vec2f* t2,</td><td class="lineno" valign="top"></td></tr>
-      <tr><td><a name="diff0027" /></td></tr>
+      <tr><td><a name="diff0031" /></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="lblock"></td><td> </td><td class="rblock"><span class="insert">                                                  const Vec3f* c0, const Ve
 c3f* c1, const Vec3f* c2,</span></td><td class="lineno" valign="top"></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="left">                                                  unsigned int, unsigned in
@@ -632,21 +757,21 @@ t, unsigned)</td><td class="lineno" valign="top"></td></tr>
 the test outside of this method.</td><td> </td><td class="right">               // XXX: we may optimize more by putting the declaration and 
 the test outside of this method.</td><td class="lineno" valign="top"></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="left">               const Vec3d tmpVertex[3] = {*v0, *v1, *v2};</td><td> </td><td class="right">               const Vec3d tmpVertex[3] = {*v0, *v1, *v2};</td><td class="lineno" valign="top"></td></tr>
-      <tr><td><a name="diff0028" /></td></tr>
-      <tr><td class="lineno" valign="top"></td><td class="lblock">               if (outTexturePos)</td><td> </td><td class="rblock">               if <span class="insert">( (outTexturePos) &amp;&amp; (outColors))</span></td><td class="lineno" valign="top"></td></tr>
-      <tr><td class="lineno" valign="top"></td><td class="lblock"></td><td> </td><td class="rblock"><span class="insert">               {</span></td><td class="lineno" valign="top"></td></tr>
-      <tr><td class="lineno" valign="top"></td><td class="lblock"></td><td> </td><td class="rblock"><span class="insert">                       const Vec2f tmpTexture[3] = {*t0, *t1, *t2};</span></td><td class="lineno" valign="top"></td></tr>
-      <tr><td class="lineno" valign="top"></td><td class="lblock"></td><td> </td><td class="rblock"><span class="insert">                       const Vec3f tmpColor[3] = {*c0, *c1, *c2};</span></td><td class="lineno" valign="top"></td></tr>
-      <tr><td class="lineno" valign="top"></td><td class="lblock"></td><td> </td><td class="rblock"><span class="insert">                       painter-&gt;projectSphericalTriangle(clippingCap, tmpVe</span></td><td class="lineno" valign="top"></td></tr>
-      <tr><td class="lineno" valign="top"></td><td class="lblock"></td><td> </td><td class="rblock"><span class="insert">rtex, outVertices, tmpTexture, outTexturePos, tmpColor, outColors, maxSqDis</span></td><td class="lineno" valign="top"></td></tr>
-      <tr><td class="lineno" valign="top"></td><td class="lblock"></td><td> </td><td class="rblock"><span class="insert">tortion);</span></td><td class="lineno" valign="top"></td></tr>
-      <tr><td class="lineno" valign="top"></td><td class="lblock"></td><td> </td><td class="rblock"><span class="insert">               }</span></td><td class="lineno" valign="top"></td></tr>
-      <tr><td class="lineno" valign="top"></td><td class="lblock"></td><td> </td><td class="rblock"><span class="insert">               else if</span> (outTexturePos)</td><td class="lineno" valign="top"></td></tr>
+      <tr><td><a name="diff0032" /></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="lblock">               if (<span class="delete">outTexturePos</span>)</td><td> </td><td class="rblock">               if (<span class="insert"> (outTexturePos) &amp;&amp; (outColors)</span>)</td><td class="lineno" valign="top"></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="left">               {</td><td> </td><td class="right">               {</td><td class="lineno" valign="top"></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="left">                       const Vec2f tmpTexture[3] = {*t0, *t1, *t2};</td><td> </td><td class="right">                       const Vec2f tmpTexture[3] = {*t0, *t1, *t2};</td><td class="lineno" valign="top"></td></tr>
-      <tr><td><a name="diff0029" /></td></tr>
-      <tr><td class="lineno" valign="top"></td><td class="lblock">                       painter-&gt;projectSphericalTriangle(clippingCap, tmpVe</td><td> </td><td class="rblock">                       painter-&gt;projectSphericalTriangle(clippingCap, tmpVe</td><td class="lineno" valign="top"></td></tr>
-      <tr><td class="lineno" valign="top"></td><td class="lblock">rtex, outVertices, tmpTexture, outTexturePos, maxSqDistortion);</td><td> </td><td class="rblock">rtex, outVertices, tmpTexture, outTexturePos, <span class="insert">NULL, NULL, maxSqDistortion);</span></td><td class="lineno" valign="top"></td></tr>
+      <tr><td><a name="diff0033" /></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="lblock">                       painter-&gt;projectSphericalTriangle(clippingCap, tmpVe</td><td> </td><td class="rblock">                       <span class="insert">const Vec3f tmpColor[3] = {*c0, *c1, *c2};</span></td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="lblock">rtex, outVertices, tmpTexture, outTexturePos, maxSqDistortion);</td><td> </td><td class="rblock">                       painter-&gt;projectSphericalTriangle(clippingCap, tmpVe</td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="lblock"></td><td> </td><td class="rblock">rtex, outVertices, tmpTexture, outTexturePos, <span class="insert">tmpColor, outColors, maxSqDis</span></td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="lblock"></td><td> </td><td class="rblock"><span class="insert">tortion);</span></td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="lblock"></td><td> </td><td class="rblock"><span class="insert">               }</span></td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="lblock"></td><td> </td><td class="rblock"><span class="insert">               else if (outTexturePos)</span></td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="lblock"></td><td> </td><td class="rblock"><span class="insert">               {</span></td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="lblock"></td><td> </td><td class="rblock"><span class="insert">                       const Vec2f tmpTexture[3] = {*t0, *t1, *t2};</span></td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="lblock"></td><td> </td><td class="rblock"><span class="insert">                       painter-&gt;projectSphericalTriangle(clippingCap, tmpVe</span></td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="lblock"></td><td> </td><td class="rblock"><span class="insert">rtex, outVertices, tmpTexture, outTexturePos, NULL, NULL, maxSqDistortion);</span></td><td class="lineno" valign="top"></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="lblock"></td><td> </td><td class="rblock"><span class="insert">               }</span></td><td class="lineno" valign="top"></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="lblock"></td><td> </td><td class="rblock"><span class="insert">               else if (outColors)</span></td><td class="lineno" valign="top"></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="lblock"></td><td> </td><td class="rblock"><span class="insert">               {</span></td><td class="lineno" valign="top"></td></tr>
@@ -655,7 +780,7 @@ the test outside of this method.</td><td class="lineno" valign="top"></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="lblock"></td><td> </td><td class="rblock"><span class="insert">rtex, outVertices, NULL, NULL, tmpColor, outColors,</span> maxSqDistortion);</td><td class="lineno" valign="top"></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="left">               }</td><td> </td><td class="right">               }</td><td class="lineno" valign="top"></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="left">               else</td><td> </td><td class="right">               else</td><td class="lineno" valign="top"></td></tr>
-      <tr><td><a name="diff0030" /></td></tr>
+      <tr><td><a name="diff0034" /></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="lblock">                       painter-&gt;projectSphericalTriangle(clippingCap, tmpVe
 rtex, outVertices, NULL, NULL, maxSqDistortion);</td><td> </td><td class="rblock">                       painter-&gt;projectSphericalTriangle(clippingCap, tmpVe
 rtex, outVertices, NULL, NULL, <span class="insert">NULL, NULL, </span>maxSqDistortion);</td><td class="lineno" valign="top"></td></tr>
@@ -671,7 +796,7 @@ a());</td><td class="lineno" valign="top"></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="left">                       painter-&gt;setTexCoordPointer(2, GL_FLOAT, outTextureP
 os-&gt;constData());</td><td> </td><td class="right">                       painter-&gt;setTexCoordPointer(2, GL_FLOAT, outTextureP
 os-&gt;constData());</td><td class="lineno" valign="top"></td></tr>
-      <tr><td><a name="diff0031" /></td></tr>
+      <tr><td><a name="diff0035" /></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="lblock">               painter-&gt;enableClientStates(true, outTexturePos != NULL);</td><td> </td><td class="rblock">               <span class="insert">if (outColors)</span></td><td class="lineno" valign="top"></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="lblock"></td><td> </td><td class="rblock"><span class="insert">                       painter-&gt;setColorPointer(3, GL_FLOAT, outColors-&gt;con</span></td><td class="lineno" valign="top"></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="lblock"></td><td> </td><td class="rblock"><span class="insert">stData());</span></td><td class="lineno" valign="top"></td></tr>
@@ -689,15 +814,16 @@ size(), 0, false);</td><td class="lineno" valign="top"></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="left">       StelPainter* painter;</td><td> </td><td class="right">       StelPainter* painter;</td><td class="lineno" valign="top"></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="left">       const SphericalCap* clippingCap;</td><td> </td><td class="right">       const SphericalCap* clippingCap;</td><td class="lineno" valign="top"></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="left">       QVarLengthArray&lt;Vec3f, 4096&gt;* outVertices;</td><td> </td><td class="right">       QVarLengthArray&lt;Vec3f, 4096&gt;* outVertices;</td><td class="lineno" valign="top"></td></tr>
-      <tr><td><a name="diff0032" /></td></tr>
+      <tr><td><a name="diff0036" /></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="lblock"></td><td> </td><td class="rblock"><span class="insert">       QVarLengthArray&lt;Vec3f, 4096&gt;* outColors;</span></td><td class="lineno" valign="top"></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="left">       QVarLengthArray&lt;Vec2f, 4096&gt;* outTexturePos;</td><td> </td><td class="right">       QVarLengthArray&lt;Vec2f, 4096&gt;* outTexturePos;</td><td class="lineno" valign="top"></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="left">       double maxSqDistortion;</td><td> </td><td class="right">       double maxSqDistortion;</td><td class="lineno" valign="top"></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="left">};</td><td> </td><td class="right">};</td><td class="lineno" valign="top"></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="left"></td><td> </td><td class="right"></td><td class="lineno" valign="top"></td></tr>
-      <tr><td class="lineno" valign="top"></td><td class="left">void StelPainter::drawStelVertexArray(const StelVertexArray&amp; arr, const boo
-l checkDiscontinuity)</td><td> </td><td class="right">void StelPainter::drawStelVertexArray(const StelVertexArray&amp; arr, const boo
-l checkDiscontinuity)</td><td class="lineno" valign="top"></td></tr>
+      <tr><td><a name="diff0037" /></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="lblock">void StelPainter::drawStelVertexArray(const StelVertexArray&amp; arr, <span class="delete">const boo
+l chec</span>kDiscontinuity)</td><td> </td><td class="rblock">void StelPainter::drawStelVertexArray(const StelVertexArray&amp; arr, <span class="insert">bool chec
+</span>kDiscontinuity)</td><td class="lineno" valign="top"></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="left">{</td><td> </td><td class="right">{</td><td class="lineno" valign="top"></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="left">       if (checkDiscontinuity &amp;&amp; prj-&gt;hasDiscontinuity())</td><td> </td><td class="right">       if (checkDiscontinuity &amp;&amp; prj-&gt;hasDiscontinuity())</td><td class="lineno" valign="top"></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="left">       {</td><td> </td><td class="right">       {</td><td class="lineno" valign="top"></td></tr>
@@ -714,7 +840,7 @@ etProjector().data()), false);</td><td class="lineno" valign="top"></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="left">       if (arr.isTextured())</td><td> </td><td class="right">       if (arr.isTextured())</td><td class="lineno" valign="top"></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="left">       {</td><td> </td><td class="right">       {</td><td class="lineno" valign="top"></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="left">               setTexCoordPointer(2, GL_FLOAT, arr.texCoords.constData());</td><td> </td><td class="right">               setTexCoordPointer(2, GL_FLOAT, arr.texCoords.constData());</td><td class="lineno" valign="top"></td></tr>
-      <tr><td><a name="diff0033" /></td></tr>
+      <tr><td><a name="diff0038" /></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="lblock">               enableClientStates(true, true);</td><td> </td><td class="rblock">               <span class="insert">if (arr.isColored())</span></td><td class="lineno" valign="top"></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="lblock"></td><td> </td><td class="rblock"><span class="insert">               {</span></td><td class="lineno" valign="top"></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="lblock"></td><td> </td><td class="rblock"><span class="insert">                       setColorPointer(3, GL_FLOAT, arr.colors.constData())</span></td><td class="lineno" valign="top"></td></tr>
@@ -726,7 +852,7 @@ etProjector().data()), false);</td><td class="lineno" valign="top"></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="left">       }</td><td> </td><td class="right">       }</td><td class="lineno" valign="top"></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="left">       else</td><td> </td><td class="right">       else</td><td class="lineno" valign="top"></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="left">       {</td><td> </td><td class="right">       {</td><td class="lineno" valign="top"></td></tr>
-      <tr><td><a name="diff0034" /></td></tr>
+      <tr><td><a name="diff0039" /></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="lblock">               enableClientStates(true, false);</td><td> </td><td class="rblock">               <span class="insert">if (arr.isColored())</span></td><td class="lineno" valign="top"></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="lblock"></td><td> </td><td class="rblock"><span class="insert">               {</span></td><td class="lineno" valign="top"></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="lblock"></td><td> </td><td class="rblock"><span class="insert">                       setColorPointer(3, GL_FLOAT, arr.colors.constData())</span></td><td class="lineno" valign="top"></td></tr>
@@ -748,12 +874,12 @@ rr.vertex.size());</td><td class="lineno" valign="top"></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="left">       enableClientStates(false);</td><td> </td><td class="right">       enableClientStates(false);</td><td class="lineno" valign="top"></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="left">}</td><td> </td><td class="right">}</td><td class="lineno" valign="top"></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="left"></td><td> </td><td class="right"></td><td class="lineno" valign="top"></td></tr>
-      <tr><td><a name="diff0035" /></td></tr>
-      <tr><td class="lineno" valign="top"></td><td class="lblock">void StelPainter::drawSphericalTriangles(const StelVertexArray&amp; va, const b
-ool textured, const <span class="delete">SphericalCap* clippingCap, const bool doSubDivide, cons
-</span>t double maxSqDistortion)</td><td> </td><td class="rblock">void StelPainter::drawSphericalTriangles(const StelVertexArray&amp; va, const b
-ool textured, const <span class="insert">bool colored, const SphericalCap* clippingCap, const bo
-ol doSubDivide, cons</span>t double maxSqDistortion)</td><td class="lineno" valign="top"></td></tr>
+      <tr><td><a name="diff0040" /></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="lblock">void StelPainter::drawSphericalTriangles(const StelVertexArray&amp; va, <span class="delete">const b
+ool textured, const SphericalCap* clippingCap, const bool doSubDivide, cons
+t do</span>uble maxSqDistortion)</td><td> </td><td class="rblock">void StelPainter::drawSphericalTriangles(const StelVertexArray&amp; va, <span class="insert">bool te
+xtured, bool colored, const SphericalCap* clippingCap, bool doSubDivide, do
+</span>uble maxSqDistortion)</td><td class="lineno" valign="top"></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="left">{</td><td> </td><td class="right">{</td><td class="lineno" valign="top"></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="left">       if (va.vertex.isEmpty())</td><td> </td><td class="right">       if (va.vertex.isEmpty())</td><td class="lineno" valign="top"></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="left">               return;</td><td> </td><td class="right">               return;</td><td class="lineno" valign="top"></td></tr>
@@ -761,7 +887,7 @@ ol doSubDivide, cons</span>t double maxSqDistortion)</td><td class="lineno" vali
       <tr><td class="lineno" valign="top"></td><td class="left">       Q_ASSERT(va.vertex.size()&gt;2);</td><td> </td><td class="right">       Q_ASSERT(va.vertex.size()&gt;2);</td><td class="lineno" valign="top"></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="left">       polygonVertexArray.clear();</td><td> </td><td class="right">       polygonVertexArray.clear();</td><td class="lineno" valign="top"></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="left">       polygonTextureCoordArray.clear();</td><td> </td><td class="right">       polygonTextureCoordArray.clear();</td><td class="lineno" valign="top"></td></tr>
-      <tr><td><a name="diff0036" /></td></tr>
+      <tr><td><a name="diff0041" /></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="lblock"></td><td> </td><td class="rblock"><span class="insert">                                                                           </span></td><td class="lineno" valign="top"></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="left">       indexArray.clear();</td><td> </td><td class="right">       indexArray.clear();</td><td class="lineno" valign="top"></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="left"></td><td> </td><td class="right"></td><td class="lineno" valign="top"></td></tr>
@@ -781,7 +907,7 @@ y one.</td><td class="lineno" valign="top"></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="left">               // Project all the triangles of the VertexArray into our buf
 fer arrays.</td><td> </td><td class="right">               // Project all the triangles of the VertexArray into our buf
 fer arrays.</td><td class="lineno" valign="top"></td></tr>
-      <tr><td><a name="diff0037" /></td></tr>
+      <tr><td><a name="diff0042" /></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="lblock">               VertexArrayProjector result = va.foreachTriangle(VertexArray
 Projector(va, this, clippingCap, &amp;polygonVertexArray, textured ? &amp;polygonTe
 xtureCoordArray : NULL, <span class="delete">maxSqDistortio</span>n));</td><td> </td><td class="rblock">               VertexArrayProjector result = va.foreachTriangle(VertexArray
@@ -803,7 +929,7 @@ bDivise, const double maxSqDistortion)</td><td class="lineno" valign="top"></td>
       <tr><td class="lineno" valign="top"></td><td class="left">       if (!prj-&gt;getBoundingCap().intersects(poly-&gt;getBoundingCap()))</td><td> </td><td class="right">       if (!prj-&gt;getBoundingCap().intersects(poly-&gt;getBoundingCap()))</td><td class="lineno" valign="top"></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="left">               return;</td><td> </td><td class="right">               return;</td><td class="lineno" valign="top"></td></tr>
       <tr><td class="lineno"></td><td class="left"></td><td> </td><td class="right"></td><td class="lineno"></td></tr>
-      <tr bgcolor="gray" ><td></td><th><a name="part-l4" /><small>skipping to change at</small><em> line 1206</em></th><th> </th><th><a name="part-r4" /><small>skipping to change at</small><em> line 1355</em></th><td></td></tr>
+      <tr bgcolor="gray" ><td></td><th><a name="part-l8" /><small>skipping to change at</small><em> line 1206</em></th><th> </th><th><a name="part-r8" /><small>skipping to change at</small><em> line 1355</em></th><td></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="left">                       if (doSubDivise || prj-&gt;intersectViewportDiscontinui
 ty(poly-&gt;getBoundingCap()))</td><td> </td><td class="right">                       if (doSubDivise || prj-&gt;intersectViewportDiscontinui
 ty(poly-&gt;getBoundingCap()))</td><td class="lineno" valign="top"></td></tr>
@@ -822,7 +948,7 @@ ray(), false);</td><td class="lineno" valign="top"></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="left">                       if (doSubDivise || prj-&gt;intersectViewportDiscontinui
 ty(poly-&gt;getBoundingCap()))</td><td> </td><td class="right">                       if (doSubDivise || prj-&gt;intersectViewportDiscontinui
 ty(poly-&gt;getBoundingCap()))</td><td class="lineno" valign="top"></td></tr>
-      <tr><td><a name="diff0038" /></td></tr>
+      <tr><td><a name="diff0043" /></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="lblock">                               drawSphericalTriangles(poly-&gt;getFillVertexAr</td><td> </td><td class="rblock">                               <span class="insert">// flag for color-modulated textured mode (e</span></td><td class="lineno" valign="top"></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="lblock">ray(), <span class="delete">drawMode==SphericalPolygonDrawModeTextureFill,</span> clippingCap, <span class="delete">doSubDiv</span></td><td> </td><td class="rblock"><span class="insert">.g. for Milky Way/extincted)</span></td><td class="lineno" valign="top"></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="lblock"><span class="delete">ise, maxSqDistortion);</span></td><td> </td><td class="rblock">                               drawSphericalTriangles(poly-&gt;getFillVertexAr</td><td class="lineno" valign="top"></td></tr>
@@ -841,8 +967,152 @@ ty(poly-&gt;getBoundingCap()))</td><td class="lineno" valign="top"></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="left">       }</td><td> </td><td class="right">       }</td><td class="lineno" valign="top"></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="left">}</td><td> </td><td class="right">}</td><td class="lineno" valign="top"></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="left"></td><td> </td><td class="right"></td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="left">/*************************************************************************</td><td> </td><td class="right">/*************************************************************************</td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="left"> draw a simple circle, 2d viewport coordinates in pixel</td><td> </td><td class="right"> draw a simple circle, 2d viewport coordinates in pixel</td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="left">*************************************************************************/</td><td> </td><td class="right">*************************************************************************/</td><td class="lineno" valign="top"></td></tr>
+      <tr><td><a name="diff0044" /></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="lblock">void StelPainter::drawCircle(<span class="delete">const float x, const</span> float y, float r)</td><td> </td><td class="rblock">void StelPainter::drawCircle(<span class="insert">float x,</span> float y, float r)</td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="left">{</td><td> </td><td class="right">{</td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="left">       if (r &lt;= 1.0)</td><td> </td><td class="right">       if (r &lt;= 1.0)</td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="left">               return;</td><td> </td><td class="right">               return;</td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="left">       const Vec2f center(x,y);</td><td> </td><td class="right">       const Vec2f center(x,y);</td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="left">       const Vec2f v_center(0.5f*prj-&gt;viewportXywh[2],0.5f*prj-&gt;viewportXyw
+h[3]);</td><td> </td><td class="right">       const Vec2f v_center(0.5f*prj-&gt;viewportXywh[2],0.5f*prj-&gt;viewportXyw
+h[3]);</td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="left">       const float R = v_center.length();</td><td> </td><td class="right">       const float R = v_center.length();</td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="left">       const float d = (v_center-center).length();</td><td> </td><td class="right">       const float d = (v_center-center).length();</td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="left">       if (d &gt; r+R || d &lt; r-R)</td><td> </td><td class="right">       if (d &gt; r+R || d &lt; r-R)</td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="left">               return;</td><td> </td><td class="right">               return;</td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="left">       const int segments = 180;</td><td> </td><td class="right">       const int segments = 180;</td><td class="lineno" valign="top"></td></tr>
       <tr><td class="lineno"></td><td class="left"></td><td> </td><td class="right"></td><td class="lineno"></td></tr>
-      <tr bgcolor="gray" ><td></td><th><a name="part-l5" /><small>skipping to change at</small><em> line 1365</em></th><th> </th><th><a name="part-r5" /><small>skipping to change at</small><em> line 1515</em></th><td></td></tr>
+      <tr bgcolor="gray" ><td></td><th><a name="part-l9" /><small>skipping to change at</small><em> line 1251</em></th><th> </th><th><a name="part-r9" /><small>skipping to change at</small><em> line 1401</em></th><td></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="left">               r = dx*cp-dy*sp;</td><td> </td><td class="right">               r = dx*cp-dy*sp;</td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="left">               dy = dx*sp+dy*cp;</td><td> </td><td class="right">               dy = dx*sp+dy*cp;</td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="left">               dx = r;</td><td> </td><td class="right">               dx = r;</td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="left">       }</td><td> </td><td class="right">       }</td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="left">       enableClientStates(true);</td><td> </td><td class="right">       enableClientStates(true);</td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="left">       setVertexPointer(3, GL_FLOAT, circleVertexArray.data());</td><td> </td><td class="right">       setVertexPointer(3, GL_FLOAT, circleVertexArray.data());</td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="left">       drawFromArray(LineLoop, 180, 0, false);</td><td> </td><td class="right">       drawFromArray(LineLoop, 180, 0, false);</td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="left">       enableClientStates(false);</td><td> </td><td class="right">       enableClientStates(false);</td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="left">}</td><td> </td><td class="right">}</td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="left"></td><td> </td><td class="right"></td><td class="lineno" valign="top"></td></tr>
+      <tr><td><a name="diff0045" /></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="lblock">void StelPainter::drawSprite2dMode(<span class="delete">const float x, const float y, float radi
+</span>us)</td><td> </td><td class="rblock">void StelPainter::drawSprite2dMode(<span class="insert">float x, float y, float radi</span>us)</td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="left">{</td><td> </td><td class="right">{</td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="left">       static float vertexData[] = {-10.,-10.,10.,-10., 10.,10., -10.,10.};</td><td> </td><td class="right">       static float vertexData[] = {-10.,-10.,10.,-10., 10.,10., -10.,10.};</td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="left">       static const float texCoordData[] = {0.,0., 1.,0., 0.,1., 1.,1.};</td><td> </td><td class="right">       static const float texCoordData[] = {0.,0., 1.,0., 0.,1., 1.,1.};</td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="left"></td><td> </td><td class="right"></td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="left">       // Takes into account device pixel density and global scale ratio, a
+s we are drawing 2D stuff.</td><td> </td><td class="right">       // Takes into account device pixel density and global scale ratio, a
+s we are drawing 2D stuff.</td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="left">       radius *= prj-&gt;getDevicePixelsPerPixel()*StelApp::getInstance().getG
+lobalScalingRatio();</td><td> </td><td class="right">       radius *= prj-&gt;getDevicePixelsPerPixel()*StelApp::getInstance().getG
+lobalScalingRatio();</td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="left"></td><td> </td><td class="right"></td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="left">       vertexData[0]=x-radius; vertexData[1]=y-radius;</td><td> </td><td class="right">       vertexData[0]=x-radius; vertexData[1]=y-radius;</td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="left">       vertexData[2]=x+radius; vertexData[3]=y-radius;</td><td> </td><td class="right">       vertexData[2]=x+radius; vertexData[3]=y-radius;</td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="left">       vertexData[4]=x-radius; vertexData[5]=y+radius;</td><td> </td><td class="right">       vertexData[4]=x-radius; vertexData[5]=y+radius;</td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="left">       vertexData[6]=x+radius; vertexData[7]=y+radius;</td><td> </td><td class="right">       vertexData[6]=x+radius; vertexData[7]=y+radius;</td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="left">       enableClientStates(true, true);</td><td> </td><td class="right">       enableClientStates(true, true);</td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="left">       setVertexPointer(2, GL_FLOAT, vertexData);</td><td> </td><td class="right">       setVertexPointer(2, GL_FLOAT, vertexData);</td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="left">       setTexCoordPointer(2, GL_FLOAT, texCoordData);</td><td> </td><td class="right">       setTexCoordPointer(2, GL_FLOAT, texCoordData);</td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="left">       drawFromArray(TriangleStrip, 4, 0, false);</td><td> </td><td class="right">       drawFromArray(TriangleStrip, 4, 0, false);</td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="left">       enableClientStates(false);</td><td> </td><td class="right">       enableClientStates(false);</td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="left">}</td><td> </td><td class="right">}</td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="left"></td><td> </td><td class="right"></td><td class="lineno" valign="top"></td></tr>
+      <tr><td><a name="diff0046" /></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="lblock">void StelPainter::drawSprite2dModeNoDeviceScale(<span class="delete">const float x, const float 
+y, const float rad</span>ius)</td><td> </td><td class="rblock">void StelPainter::drawSprite2dModeNoDeviceScale(<span class="insert">float x, float y, float rad
+</span>ius)</td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="left">{</td><td> </td><td class="right">{</td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="left">       drawSprite2dMode(x, y, radius/(prj-&gt;getDevicePixelsPerPixel()*StelAp
+p::getInstance().getGlobalScalingRatio()));</td><td> </td><td class="right">       drawSprite2dMode(x, y, radius/(prj-&gt;getDevicePixelsPerPixel()*StelAp
+p::getInstance().getGlobalScalingRatio()));</td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="left">}</td><td> </td><td class="right">}</td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="left"></td><td> </td><td class="right"></td><td class="lineno" valign="top"></td></tr>
+      <tr><td><a name="diff0047" /></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="lblock">void StelPainter::drawSprite2dMode(const Vec3d&amp; v, <span class="delete">const </span>float radius)</td><td> </td><td class="rblock">void StelPainter::drawSprite2dMode(const Vec3d&amp; v, float radius)</td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="left">{</td><td> </td><td class="right">{</td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="left">       Vec3d win;</td><td> </td><td class="right">       Vec3d win;</td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="left">       if (prj-&gt;project(v, win))</td><td> </td><td class="right">       if (prj-&gt;project(v, win))</td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="left">               drawSprite2dMode(win[0], win[1], radius);</td><td> </td><td class="right">               drawSprite2dMode(win[0], win[1], radius);</td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="left">}</td><td> </td><td class="right">}</td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="left"></td><td> </td><td class="right"></td><td class="lineno" valign="top"></td></tr>
+      <tr><td><a name="diff0048" /></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="lblock">void StelPainter::drawSprite2dMode(<span class="delete">const float x, const float y, float radi
+us, const float ro</span>tation)</td><td> </td><td class="rblock">void StelPainter::drawSprite2dMode(<span class="insert">float x, float y, float radius, float ro
+</span>tation)</td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="left">{</td><td> </td><td class="right">{</td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="left">       static float vertexData[8];</td><td> </td><td class="right">       static float vertexData[8];</td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="left">       static const float texCoordData[] = {0.,0., 1.,0., 0.,1., 1.,1.};</td><td> </td><td class="right">       static const float texCoordData[] = {0.,0., 1.,0., 0.,1., 1.,1.};</td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="left"></td><td> </td><td class="right"></td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="left">       // compute the vertex coordinates applying the translation and the r
+otation</td><td> </td><td class="right">       // compute the vertex coordinates applying the translation and the r
+otation</td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="left">       static const float vertexBase[] = {-1., -1., 1., -1., -1., 1., 1., 1
+.};</td><td> </td><td class="right">       static const float vertexBase[] = {-1., -1., 1., -1., -1., 1., 1., 1
+.};</td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="left">       const float cosr = std::cos(rotation / 180 * M_PI);</td><td> </td><td class="right">       const float cosr = std::cos(rotation / 180 * M_PI);</td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="left">       const float sinr = std::sin(rotation / 180 * M_PI);</td><td> </td><td class="right">       const float sinr = std::sin(rotation / 180 * M_PI);</td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="left"></td><td> </td><td class="right"></td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="left">       // Takes into account device pixel density and global scale ratio, a
+s we are drawing 2D stuff.</td><td> </td><td class="right">       // Takes into account device pixel density and global scale ratio, a
+s we are drawing 2D stuff.</td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno"></td><td class="left"></td><td> </td><td class="right"></td><td class="lineno"></td></tr>
+      <tr bgcolor="gray" ><td></td><th><a name="part-l10" /><small>skipping to change at</small><em> line 1308</em></th><th> </th><th><a name="part-r10" /><small>skipping to change at</small><em> line 1458</em></th><td></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="left">               vertexData[i+1] = y + radius * vertexBase[i] * sinr + radius
+ * vertexBase[i+1] * cosr;</td><td> </td><td class="right">               vertexData[i+1] = y + radius * vertexBase[i] * sinr + radius
+ * vertexBase[i+1] * cosr;</td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="left">       }</td><td> </td><td class="right">       }</td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="left"></td><td> </td><td class="right"></td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="left">       enableClientStates(true, true);</td><td> </td><td class="right">       enableClientStates(true, true);</td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="left">       setVertexPointer(2, GL_FLOAT, vertexData);</td><td> </td><td class="right">       setVertexPointer(2, GL_FLOAT, vertexData);</td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="left">       setTexCoordPointer(2, GL_FLOAT, texCoordData);</td><td> </td><td class="right">       setTexCoordPointer(2, GL_FLOAT, texCoordData);</td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="left">       drawFromArray(TriangleStrip, 4, 0, false);</td><td> </td><td class="right">       drawFromArray(TriangleStrip, 4, 0, false);</td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="left">       enableClientStates(false);</td><td> </td><td class="right">       enableClientStates(false);</td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="left">}</td><td> </td><td class="right">}</td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="left"></td><td> </td><td class="right"></td><td class="lineno" valign="top"></td></tr>
+      <tr><td><a name="diff0049" /></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="lblock">void StelPainter::drawRect2d(<span class="delete">const float x, const float y, const float widt
+h, const float height, const b</span>ool textured)</td><td> </td><td class="rblock">void StelPainter::drawRect2d(<span class="insert">float x, float y, float width, float height, b
+</span>ool textured)</td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="left">{</td><td> </td><td class="right">{</td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="left">       static float vertexData[] = {-10.,-10.,10.,-10., 10.,10., -10.,10.};</td><td> </td><td class="right">       static float vertexData[] = {-10.,-10.,10.,-10., 10.,10., -10.,10.};</td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="left">       static const float texCoordData[] = {0.,0., 1.,0., 0.,1., 1.,1.};</td><td> </td><td class="right">       static const float texCoordData[] = {0.,0., 1.,0., 0.,1., 1.,1.};</td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="left">       vertexData[0]=x; vertexData[1]=y;</td><td> </td><td class="right">       vertexData[0]=x; vertexData[1]=y;</td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="left">       vertexData[2]=x+width; vertexData[3]=y;</td><td> </td><td class="right">       vertexData[2]=x+width; vertexData[3]=y;</td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="left">       vertexData[4]=x; vertexData[5]=y+height;</td><td> </td><td class="right">       vertexData[4]=x; vertexData[5]=y+height;</td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="left">       vertexData[6]=x+width; vertexData[7]=y+height;</td><td> </td><td class="right">       vertexData[6]=x+width; vertexData[7]=y+height;</td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="left">       if (textured)</td><td> </td><td class="right">       if (textured)</td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="left">       {</td><td> </td><td class="right">       {</td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="left">               enableClientStates(true, true);</td><td> </td><td class="right">               enableClientStates(true, true);</td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno"></td><td class="left"></td><td> </td><td class="right"></td><td class="lineno"></td></tr>
+      <tr bgcolor="gray" ><td></td><th><a name="part-l11" /><small>skipping to change at</small><em> line 1334</em></th><th> </th><th><a name="part-r11" /><small>skipping to change at</small><em> line 1484</em></th><td></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="left">               enableClientStates(true);</td><td> </td><td class="right">               enableClientStates(true);</td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="left">               setVertexPointer(2, GL_FLOAT, vertexData);</td><td> </td><td class="right">               setVertexPointer(2, GL_FLOAT, vertexData);</td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="left">       }</td><td> </td><td class="right">       }</td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="left">       drawFromArray(TriangleStrip, 4, 0, false);</td><td> </td><td class="right">       drawFromArray(TriangleStrip, 4, 0, false);</td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="left">       enableClientStates(false);</td><td> </td><td class="right">       enableClientStates(false);</td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="left">}</td><td> </td><td class="right">}</td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="left"></td><td> </td><td class="right"></td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="left">/*************************************************************************</td><td> </td><td class="right">/*************************************************************************</td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="left"> Draw a GL_POINT at the given position</td><td> </td><td class="right"> Draw a GL_POINT at the given position</td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="left">*************************************************************************/</td><td> </td><td class="right">*************************************************************************/</td><td class="lineno" valign="top"></td></tr>
+      <tr><td><a name="diff0050" /></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="lblock">void StelPainter::drawPoint2d(<span class="delete">const float x, const</span> float y)</td><td> </td><td class="rblock">void StelPainter::drawPoint2d(<span class="insert">float x,</span> float y)</td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="left">{</td><td> </td><td class="right">{</td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="left">       static float vertexData[] = {0.,0.};</td><td> </td><td class="right">       static float vertexData[] = {0.,0.};</td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="left">       vertexData[0]=x;</td><td> </td><td class="right">       vertexData[0]=x;</td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="left">       vertexData[1]=y;</td><td> </td><td class="right">       vertexData[1]=y;</td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="left"></td><td> </td><td class="right"></td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="left">       enableClientStates(true);</td><td> </td><td class="right">       enableClientStates(true);</td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="left">       setVertexPointer(2, GL_FLOAT, vertexData);</td><td> </td><td class="right">       setVertexPointer(2, GL_FLOAT, vertexData);</td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="left">       drawFromArray(Points, 1, 0, false);</td><td> </td><td class="right">       drawFromArray(Points, 1, 0, false);</td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="left">       enableClientStates(false);</td><td> </td><td class="right">       enableClientStates(false);</td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="left">}</td><td> </td><td class="right">}</td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno"></td><td class="left"></td><td> </td><td class="right"></td><td class="lineno"></td></tr>
+      <tr bgcolor="gray" ><td></td><th><a name="part-l12" /><small>skipping to change at</small><em> line 1365</em></th><th> </th><th><a name="part-r12" /><small>skipping to change at</small><em> line 1515</em></th><td></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="left">       vertexData[3]=y2;</td><td> </td><td class="right">       vertexData[3]=y2;</td><td class="lineno" valign="top"></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="left"></td><td> </td><td class="right"></td><td class="lineno" valign="top"></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="left">       enableClientStates(true);</td><td> </td><td class="right">       enableClientStates(true);</td><td class="lineno" valign="top"></td></tr>
@@ -853,7 +1123,7 @@ ty(poly-&gt;getBoundingCap()))</td><td class="lineno" valign="top"></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="left"></td><td> </td><td class="right"></td><td class="lineno" valign="top"></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="left">///////////////////////////////////////////////////////////////////////////</td><td> </td><td class="right">///////////////////////////////////////////////////////////////////////////</td><td class="lineno" valign="top"></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="left">// Drawing methods for general (non-linear) mode.</td><td> </td><td class="right">// Drawing methods for general (non-linear) mode.</td><td class="lineno" valign="top"></td></tr>
-      <tr><td><a name="diff0039" /></td></tr>
+      <tr><td><a name="diff0051" /></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="lblock">// <span class="delete">GZ This used to draw a full sphere. Now it's possible to have a spherica
 </span>l zone only.</td><td> </td><td class="rblock">// <span class="insert">This used to draw a full sphere. Since 0.13 it's possible to have a sphe
 rica</span>l zone only.</td><td class="lineno" valign="top"></td></tr>
@@ -883,7 +1153,7 @@ lipTexture, const float topAngle, const float bottomAngle)</td><td class="lineno
       <tr><td class="lineno" valign="top"></td><td class="left">       Q_ASSERT(topAngle&lt;bottomAngle); // don't forget: These are opening a
 ngles counted from top.</td><td> </td><td class="right">       Q_ASSERT(topAngle&lt;bottomAngle); // don't forget: These are opening a
 ngles counted from top.</td><td class="lineno" valign="top"></td></tr>
-      <tr><td><a name="diff0040" /></td></tr>
+      <tr><td><a name="diff0052" /></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="lblock">       if ((bottomAngle&gt;3.1415<span class="delete">) &amp;&amp; (topAngle&lt;0.0001</span>)) // safety margin.</td><td> </td><td class="rblock">       if ((bottomAngle&gt;3.1415<span class="insert">f) &amp;&amp; (topAngle&lt;0.0001f</span>)) // safety margin.</td><td class="lineno" valign="top"></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="left">               cos_sin_rho = StelUtils::ComputeCosSinRho(stacks);</td><td> </td><td class="right">               cos_sin_rho = StelUtils::ComputeCosSinRho(stacks);</td><td class="lineno" valign="top"></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="left">       else</td><td> </td><td class="right">       else</td><td class="lineno" valign="top"></td></tr>
@@ -895,7 +1165,7 @@ Rho:  originally just 180degrees/stacks, now the range clamped.</td><td class="l
 M_PI-bottomAngle);</td><td> </td><td class="right">               cos_sin_rho = StelUtils::ComputeCosSinRhoZone(drho, stacks, 
 M_PI-bottomAngle);</td><td class="lineno" valign="top"></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="left">       }</td><td> </td><td class="right">       }</td><td class="lineno" valign="top"></td></tr>
-      <tr><td><a name="diff0041" /></td></tr>
+      <tr><td><a name="diff0053" /></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="lblock">       // <span class="delete">GZ: </span>Allow parameters so that pole regions may remain free.</td><td> </td><td class="rblock">       // Allow parameters so that pole regions may remain free.</td><td class="lineno" valign="top"></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="left">       const float* cos_sin_rho_p;</td><td> </td><td class="right">       const float* cos_sin_rho_p;</td><td class="lineno" valign="top"></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="left"></td><td> </td><td class="right"></td><td class="lineno" valign="top"></td></tr>
@@ -917,7 +1187,7 @@ varies)</td><td class="lineno" valign="top"></td></tr>
 d</td><td> </td><td class="right">       const GLfloat dt = nsign / stacks; // from inside texture is reverse
 d</td><td class="lineno" valign="top"></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="left"></td><td> </td><td class="right"></td><td class="lineno" valign="top"></td></tr>
-      <tr><td><a name="diff0042" /></td></tr>
+      <tr><td><a name="diff0054" /></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="lblock">       // draw intermediate <span class="delete"> </span>as quad strips</td><td> </td><td class="rblock">       // draw intermediate as quad strips</td><td class="lineno" valign="top"></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="left">       static QVector&lt;double&gt; vertexArr;</td><td> </td><td class="right">       static QVector&lt;double&gt; vertexArr;</td><td class="lineno" valign="top"></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="left">       static QVector&lt;float&gt; texCoordArr;</td><td> </td><td class="right">       static QVector&lt;float&gt; texCoordArr;</td><td class="lineno" valign="top"></td></tr>
@@ -930,7 +1200,7 @@ d</td><td class="lineno" valign="top"></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="left">       indiceArr.resize(0);</td><td> </td><td class="right">       indiceArr.resize(0);</td><td class="lineno" valign="top"></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="left"></td><td> </td><td class="right"></td><td class="lineno" valign="top"></td></tr>
       <tr><td class="lineno"></td><td class="left"></td><td> </td><td class="right"></td><td class="lineno"></td></tr>
-      <tr bgcolor="gray" ><td></td><th><a name="part-l6" /><small>skipping to change at</small><em> line 1448</em></th><th> </th><th><a name="part-r6" /><small>skipping to change at</small><em> line 1598</em></th><td></td></tr>
+      <tr bgcolor="gray" ><td></td><th><a name="part-l13" /><small>skipping to change at</small><em> line 1448</em></th><th> </th><th><a name="part-r13" /><small>skipping to change at</small><em> line 1598</em></th><td></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="left">                       indiceArr &lt;&lt; offset+j &lt;&lt; offset+j-1 &lt;&lt; offset+j+1;</td><td> </td><td class="right">                       indiceArr &lt;&lt; offset+j &lt;&lt; offset+j-1 &lt;&lt; offset+j+1;</td><td class="lineno" valign="top"></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="left">               }</td><td> </td><td class="right">               }</td><td class="lineno" valign="top"></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="left">               t -= dt;</td><td> </td><td class="right">               t -= dt;</td><td class="lineno" valign="top"></td></tr>
@@ -945,11 +1215,11 @@ ata());</td><td> </td><td class="right">       drawFromArray(Triangles, indiceAr
 ata());</td><td class="lineno" valign="top"></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="left">}</td><td> </td><td class="right">}</td><td class="lineno" valign="top"></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="left"></td><td> </td><td class="right"></td><td class="lineno" valign="top"></td></tr>
-      <tr><td><a name="diff0043" /></td></tr>
-      <tr><td class="lineno" valign="top"></td><td class="lblock">StelVertexArray StelPainter::computeSphereNoLight(const float radius, const</td><td> </td><td class="rblock">StelVertexArray StelPainter::computeSphereNoLight(const float radius, const</td><td class="lineno" valign="top"></td></tr>
-      <tr><td class="lineno" valign="top"></td><td class="lblock"> float oneMinusOblateness, const int slices, const int stacks, const int <span class="delete">or</span></td><td> </td><td class="rblock"> float oneMinusOblateness, const int slices, const int stacks,</td><td class="lineno" valign="top"></td></tr>
-      <tr><td class="lineno" valign="top"></td><td class="lblock"><span class="delete">ientInside, const</span> bool <span class="delete">flipTexture)</span></td><td> </td><td class="rblock">                                                 const int <span class="insert">orientInside, co</span></td><td class="lineno" valign="top"></td></tr>
-      <tr><td class="lineno" valign="top"></td><td class="lblock"></td><td> </td><td class="rblock"><span class="insert">nst</span> bool <span class="insert">flipTexture, const float topAngle, const float bottomAngle)</span></td><td class="lineno" valign="top"></td></tr>
+      <tr><td><a name="diff0055" /></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="lblock">StelVertexArray <span class="delete">StelPainter::computeSphereNoLight(const float</span> radius, <span class="delete">const</span></td><td> </td><td class="rblock">StelVertexArray <span class="insert">StelPainter::computeSphereNoLight(float</span> radius, float <span class="insert">oneMi</span></td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="lblock"> float <span class="delete">oneMinusOblateness, const</span> int slices, <span class="delete">const</span> int stacks, <span class="delete">const</span> int <span class="delete">or</span></td><td> </td><td class="rblock"><span class="insert">nusOblateness,</span> int slices, int stacks,</td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="lblock"><span class="delete">ientInside, const</span> bool <span class="delete">flipTexture)</span></td><td> </td><td class="rblock">                          int <span class="insert">orientInside,</span> bool <span class="insert">flipTexture, float topAngl</span></td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="lblock"></td><td> </td><td class="rblock"><span class="insert">e, float bottomAngle)</span></td><td class="lineno" valign="top"></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="left">{</td><td> </td><td class="right">{</td><td class="lineno" valign="top"></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="left">       StelVertexArray result(StelVertexArray::Triangles);</td><td> </td><td class="right">       StelVertexArray result(StelVertexArray::Triangles);</td><td class="lineno" valign="top"></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="left">       GLfloat x, y, z;</td><td> </td><td class="right">       GLfloat x, y, z;</td><td class="lineno" valign="top"></td></tr>
@@ -967,7 +1237,7 @@ ata());</td><td class="lineno" valign="top"></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="left">               t=1.f;</td><td> </td><td class="right">               t=1.f;</td><td class="lineno" valign="top"></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="left">       }</td><td> </td><td class="right">       }</td><td class="lineno" valign="top"></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="left"></td><td> </td><td class="right"></td><td class="lineno" valign="top"></td></tr>
-      <tr><td><a name="diff0044" /></td></tr>
+      <tr><td><a name="diff0056" /></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="lblock">       const float* cos_sin_rho = StelUtils::ComputeCosSinRho(stacks);</td><td> </td><td class="rblock">       const float* cos_sin_rho = <span class="insert">NULL; //StelUtils::ComputeCosSinRho(stack</span></td><td class="lineno" valign="top"></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="lblock"></td><td> </td><td class="rblock"><span class="insert">s);</span></td><td class="lineno" valign="top"></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="lblock"></td><td> </td><td class="rblock"><span class="insert">       Q_ASSERT(topAngle&lt;bottomAngle); // don't forget: These are opening a</span></td><td class="lineno" valign="top"></td></tr>
@@ -1002,7 +1272,7 @@ varies)</td><td class="lineno" valign="top"></td></tr>
 d</td><td> </td><td class="right">       const GLfloat dt = nsign / stacks; // from inside texture is reverse
 d</td><td class="lineno" valign="top"></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="left"></td><td> </td><td class="right"></td><td class="lineno" valign="top"></td></tr>
-      <tr><td><a name="diff0045" /></td></tr>
+      <tr><td><a name="diff0057" /></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="lblock">       // draw intermediate <span class="delete"> </span>as quad strips</td><td> </td><td class="rblock">       // draw intermediate as quad strips</td><td class="lineno" valign="top"></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="left">       for (i = 0,cos_sin_rho_p = cos_sin_rho; i &lt; stacks; ++i,cos_sin_rho_
 p+=2)</td><td> </td><td class="right">       for (i = 0,cos_sin_rho_p = cos_sin_rho; i &lt; stacks; ++i,cos_sin_rho_
@@ -1020,10 +1290,109 @@ s_sin_theta_p+=2)</td><td class="lineno" valign="top"></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="left">                       result.vertex &lt;&lt; Vec3d(x*radius, y*radius, z*oneMinu
 sOblateness*radius);</td><td> </td><td class="right">                       result.vertex &lt;&lt; Vec3d(x*radius, y*radius, z*oneMinu
 sOblateness*radius);</td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno"></td><td class="left"></td><td> </td><td class="right"></td><td class="lineno"></td></tr>
+      <tr bgcolor="gray" ><td></td><th><a name="part-l14" /><small>skipping to change at</small><em> line 1509</em></th><th> </th><th><a name="part-r14" /><small>skipping to change at</small><em> line 1669</em></th><td></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="left">               {</td><td> </td><td class="right">               {</td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="left">                       result.indices &lt;&lt; offset+j-2 &lt;&lt; offset+j-1 &lt;&lt; offset
++j;</td><td> </td><td class="right">                       result.indices &lt;&lt; offset+j-2 &lt;&lt; offset+j-1 &lt;&lt; offset
++j;</td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="left">                       result.indices &lt;&lt; offset+j &lt;&lt; offset+j-1 &lt;&lt; offset+j
++1;</td><td> </td><td class="right">                       result.indices &lt;&lt; offset+j &lt;&lt; offset+j-1 &lt;&lt; offset+j
++1;</td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="left">               }</td><td> </td><td class="right">               }</td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="left">               t -= dt;</td><td> </td><td class="right">               t -= dt;</td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="left">       }</td><td> </td><td class="right">       }</td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="left">       return result;</td><td> </td><td class="right">       return result;</td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="left">}</td><td> </td><td class="right">}</td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="left"></td><td> </td><td class="right"></td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="left">// Reimplementation of gluCylinder : glu is overrided for non standard proj
+ection</td><td> </td><td class="right">// Reimplementation of gluCylinder : glu is overrided for non standard proj
+ection</td><td class="lineno" valign="top"></td></tr>
+      <tr><td><a name="diff0058" /></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="lblock">void StelPainter::sCylinder(<span class="delete">const float radius, const float height, const i
+nt slices, const int ori</span>entInside)</td><td> </td><td class="rblock">void StelPainter::sCylinder(<span class="insert">float radius, float height, int slices, int ori
+</span>entInside)</td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="left">{</td><td> </td><td class="right">{</td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="left">       if (orientInside)</td><td> </td><td class="right">       if (orientInside)</td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="left">               glCullFace(GL_FRONT);</td><td> </td><td class="right">               glCullFace(GL_FRONT);</td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="left"></td><td> </td><td class="right"></td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="left">       static QVarLengthArray&lt;Vec2f, 512&gt; texCoordArray;</td><td> </td><td class="right">       static QVarLengthArray&lt;Vec2f, 512&gt; texCoordArray;</td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="left">       static QVarLengthArray&lt;Vec3d, 512&gt; vertexArray;</td><td> </td><td class="right">       static QVarLengthArray&lt;Vec3d, 512&gt; vertexArray;</td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="left">       texCoordArray.clear();</td><td> </td><td class="right">       texCoordArray.clear();</td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="left">       vertexArray.clear();</td><td> </td><td class="right">       vertexArray.clear();</td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="left">       float s = 0.f;</td><td> </td><td class="right">       float s = 0.f;</td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="left">       float x, y;</td><td> </td><td class="right">       float x, y;</td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno"></td><td class="left"></td><td> </td><td class="right"></td><td class="lineno"></td></tr>
+      <tr bgcolor="gray" ><td></td><th><a name="part-l15" /><small>skipping to change at</small><em> line 1539</em></th><th> </th><th><a name="part-r15" /><small>skipping to change at</small><em> line 1699</em></th><td></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="left">               vertexArray.append(Vec3d(x*radius, y*radius, height));</td><td> </td><td class="right">               vertexArray.append(Vec3d(x*radius, y*radius, height));</td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="left">               s += ds;</td><td> </td><td class="right">               s += ds;</td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="left">       }</td><td> </td><td class="right">       }</td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="left">       setArrays(vertexArray.constData(), texCoordArray.constData());</td><td> </td><td class="right">       setArrays(vertexArray.constData(), texCoordArray.constData());</td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="left">       drawFromArray(TriangleStrip, vertexArray.size());</td><td> </td><td class="right">       drawFromArray(TriangleStrip, vertexArray.size());</td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="left"></td><td> </td><td class="right"></td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="left">       if (orientInside)</td><td> </td><td class="right">       if (orientInside)</td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="left">               glCullFace(GL_BACK);</td><td> </td><td class="right">               glCullFace(GL_BACK);</td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="left">}</td><td> </td><td class="right">}</td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="left"></td><td> </td><td class="right"></td><td class="lineno" valign="top"></td></tr>
+      <tr><td><a name="diff0059" /></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="lblock">void StelPainter::enableTexture2d(<span class="delete">const </span>bool b)</td><td> </td><td class="rblock">void StelPainter::enableTexture2d(bool b)</td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="left">{</td><td> </td><td class="right">{</td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="left">       texture2dEnabled = b;</td><td> </td><td class="right">       texture2dEnabled = b;</td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="left">}</td><td> </td><td class="right">}</td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="left"></td><td> </td><td class="right"></td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="left">void StelPainter::initGLShaders()</td><td> </td><td class="right">void StelPainter::initGLShaders()</td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="left">{</td><td> </td><td class="right">{</td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="left">       qWarning() &lt;&lt; "Intializing basic GL shaders... ";</td><td> </td><td class="right">       qWarning() &lt;&lt; "Intializing basic GL shaders... ";</td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="left">       // Basic shader: just vertex filled with plain color</td><td> </td><td class="right">       // Basic shader: just vertex filled with plain color</td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="left">       QOpenGLShader vshader3(QOpenGLShader::Vertex);</td><td> </td><td class="right">       QOpenGLShader vshader3(QOpenGLShader::Vertex);</td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="left">       const char *vsrc3 =</td><td> </td><td class="right">       const char *vsrc3 =</td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno"></td><td class="left"></td><td> </td><td class="right"></td><td class="lineno"></td></tr>
+      <tr bgcolor="gray" ><td></td><th><a name="part-l16" /><small>skipping to change at</small><em> line 1718</em></th><th> </th><th><a name="part-r16" /><small>skipping to change at</small><em> line 1878</em></th><td></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="left"></td><td> </td><td class="right"></td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="left">void StelPainter::setArrays(const Vec3f* vertices, const Vec2f* texCoords, 
+const Vec3f* colorArray, const Vec3f* normalArray)</td><td> </td><td class="right">void StelPainter::setArrays(const Vec3f* vertices, const Vec2f* texCoords, 
+const Vec3f* colorArray, const Vec3f* normalArray)</td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="left">{</td><td> </td><td class="right">{</td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="left">       enableClientStates(vertices, texCoords, colorArray, normalArray);</td><td> </td><td class="right">       enableClientStates(vertices, texCoords, colorArray, normalArray);</td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="left">       setVertexPointer(3, GL_FLOAT, vertices);</td><td> </td><td class="right">       setVertexPointer(3, GL_FLOAT, vertices);</td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="left">       setTexCoordPointer(2, GL_FLOAT, texCoords);</td><td> </td><td class="right">       setTexCoordPointer(2, GL_FLOAT, texCoords);</td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="left">       setColorPointer(3, GL_FLOAT, colorArray);</td><td> </td><td class="right">       setColorPointer(3, GL_FLOAT, colorArray);</td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="left">       setNormalPointer(GL_FLOAT, normalArray);</td><td> </td><td class="right">       setNormalPointer(GL_FLOAT, normalArray);</td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="left">}</td><td> </td><td class="right">}</td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="left"></td><td> </td><td class="right"></td><td class="lineno" valign="top"></td></tr>
+      <tr><td><a name="diff0060" /></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="lblock">void StelPainter::enableClientStates(<span class="delete">const bool vertex, const bool texture,
+ const bool color, const</span> bool normal)</td><td> </td><td class="rblock">void StelPainter::enableClientStates(<span class="insert">bool vertex, bool texture, bool color,
+</span> bool normal)</td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="left">{</td><td> </td><td class="right">{</td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="left">       vertexArray.enabled = vertex;</td><td> </td><td class="right">       vertexArray.enabled = vertex;</td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="left">       texCoordArray.enabled = texture;</td><td> </td><td class="right">       texCoordArray.enabled = texture;</td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="left">       colorArray.enabled = color;</td><td> </td><td class="right">       colorArray.enabled = color;</td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="left">       normalArray.enabled = normal;</td><td> </td><td class="right">       normalArray.enabled = normal;</td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="left">}</td><td> </td><td class="right">}</td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="left"></td><td> </td><td class="right"></td><td class="lineno" valign="top"></td></tr>
+      <tr><td><a name="diff0061" /></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="lblock">void StelPainter::drawFromArray(<span class="delete">const DrawingMode mode, const int count, co
+nst int offset, const bo</span>ol doProj, const unsigned short* indices)</td><td> </td><td class="rblock">void StelPainter::drawFromArray(<span class="insert">DrawingMode mode, int count, int offset, bo
+</span>ol doProj, const unsigned short* indices)</td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="left">{</td><td> </td><td class="right">{</td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="left">       ArrayDesc projectedVertexArray = vertexArray;</td><td> </td><td class="right">       ArrayDesc projectedVertexArray = vertexArray;</td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="left">       if (doProj)</td><td> </td><td class="right">       if (doProj)</td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="left">       {</td><td> </td><td class="right">       {</td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="left">               // Project the vertex array using current projection</td><td> </td><td class="right">               // Project the vertex array using current projection</td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="left">               if (indices)</td><td> </td><td class="right">               if (indices)</td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="left">                       projectedVertexArray = projectArray(vertexArray, 0, 
+count, indices + offset);</td><td> </td><td class="right">                       projectedVertexArray = projectArray(vertexArray, 0, 
+count, indices + offset);</td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="left">               else</td><td> </td><td class="right">               else</td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="left">                       projectedVertexArray = projectArray(vertexArray, off
+set, count, NULL);</td><td> </td><td class="right">                       projectedVertexArray = projectArray(vertexArray, off
+set, count, NULL);</td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="left">       }</td><td> </td><td class="right">       }</td><td class="lineno" valign="top"></td></tr>
 
      <tr><td></td><td class="left"></td><td> </td><td class="right"></td><td></td></tr>
-     <tr bgcolor="gray"><th colspan="5" align="center"><a name="end">&nbsp;End of changes. 45 change blocks.&nbsp;</a></th></tr>
-     <tr class="stats"><td></td><th><i>62 lines changed or deleted</i></th><th><i> </i></th><th><i>235 lines changed or added</i></th><td></td></tr>
+     <tr bgcolor="gray"><th colspan="5" align="center"><a name="end">&nbsp;End of changes. 61 change blocks.&nbsp;</a></th></tr>
+     <tr class="stats"><td></td><th><i>81 lines changed or deleted</i></th><th><i> </i></th><th><i>254 lines changed or added</i></th><td></td></tr>
      <tr><td colspan="5" align="center" class="small"><br/>This html diff was produced by rfcdiff 1.41. The latest version is available from <a href="http://www.tools.ietf.org/tools/rfcdiff/" >http://tools.ietf.org/tools/rfcdiff/</a> </td></tr>
    </table>
    </body>
