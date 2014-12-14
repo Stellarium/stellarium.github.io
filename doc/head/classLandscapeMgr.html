@@ -133,12 +133,12 @@ Public Slots</h2></td></tr>
 <tr class="memitem:ad69d3b589457af0e78421c31a2e73df9"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classLandscapeMgr.html#ad69d3b589457af0e78421c31a2e73df9">setFlagLandscapeSetsMinimalBrightness</a> (bool b)</td></tr>
 <tr class="memdesc:ad69d3b589457af0e78421c31a2e73df9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the value of the flag determining if the minimal brightness should be taken from landscape.ini.  <a href="#ad69d3b589457af0e78421c31a2e73df9">More...</a><br /></td></tr>
 <tr class="separator:ad69d3b589457af0e78421c31a2e73df9"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a124e42c1014f952fbd5255c6eb0c89d5"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classLandscapeMgr.html#a124e42c1014f952fbd5255c6eb0c89d5">getDefaultMinimalBrightness</a> () const </td></tr>
-<tr class="memdesc:a124e42c1014f952fbd5255c6eb0c89d5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return the minimal brightness value of the landscape.  <a href="#a124e42c1014f952fbd5255c6eb0c89d5">More...</a><br /></td></tr>
-<tr class="separator:a124e42c1014f952fbd5255c6eb0c89d5"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a45460fbb4f81b7b2f13b613643423efe"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classLandscapeMgr.html#a45460fbb4f81b7b2f13b613643423efe">setDefaultMinimalBrightness</a> (const float b)</td></tr>
-<tr class="memdesc:a45460fbb4f81b7b2f13b613643423efe"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the minimal brightness value of the landscape.  <a href="#a45460fbb4f81b7b2f13b613643423efe">More...</a><br /></td></tr>
-<tr class="separator:a45460fbb4f81b7b2f13b613643423efe"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acb657552d1b7947767f5e1f714f9eb2e"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classLandscapeMgr.html#acb657552d1b7947767f5e1f714f9eb2e">getDefaultMinimalBrightness</a> () const </td></tr>
+<tr class="memdesc:acb657552d1b7947767f5e1f714f9eb2e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return the minimal brightness value of the landscape.  <a href="#acb657552d1b7947767f5e1f714f9eb2e">More...</a><br /></td></tr>
+<tr class="separator:acb657552d1b7947767f5e1f714f9eb2e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acec26e2fd6ea2b3e550b69cec06243e1"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classLandscapeMgr.html#acec26e2fd6ea2b3e550b69cec06243e1">setDefaultMinimalBrightness</a> (const double b)</td></tr>
+<tr class="memdesc:acec26e2fd6ea2b3e550b69cec06243e1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the minimal brightness value of the landscape.  <a href="#acec26e2fd6ea2b3e550b69cec06243e1">More...</a><br /></td></tr>
+<tr class="separator:acec26e2fd6ea2b3e550b69cec06243e1"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:abdd4427d66e7dd5ee15bd5d23344452d"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classLandscapeMgr.html#abdd4427d66e7dd5ee15bd5d23344452d">setFlagUseLightPollutionFromDatabase</a> (const bool usage)</td></tr>
 <tr class="memdesc:abdd4427d66e7dd5ee15bd5d23344452d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the value of the flag usage light pollution (and bortle index) from locations database.  <a href="#abdd4427d66e7dd5ee15bd5d23344452d">More...</a><br /></td></tr>
 <tr class="separator:abdd4427d66e7dd5ee15bd5d23344452d"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -817,7 +817,7 @@ Additional Inherited Members</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="a124e42c1014f952fbd5255c6eb0c89d5"></a>
+<a class="anchor" id="acb657552d1b7947767f5e1f714f9eb2e"></a>
 <div class="memitem">
 <div class="memproto">
 <table class="mlabels">
@@ -825,7 +825,7 @@ Additional Inherited Members</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">float LandscapeMgr::getDefaultMinimalBrightness </td>
+          <td class="memname">double LandscapeMgr::getDefaultMinimalBrightness </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td> const</td>
@@ -1189,7 +1189,7 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Return the global landscape luminance [0..1], for being used e.g for setting eye adaptation. </p>
-<p>GZ 2014-01-03: THIS IS MISLEADING. Returns 1 if atmosphere drawing is on and no eclipse underway, 0 if atmosphere is switched off. The actual brightness is of no concern here. You may use <a class="el" href="classLandscapeMgr.html#abff24e60ea83ac83882390da4d752deb" title="return average luminance [cd/m^2] of atmosphere. Around 10 at sunset, 6400 in daylight, >0 in dark night. ">getAtmosphereAverageLuminance()</a> for this. </p>
+<p>It returns 1 if atmosphere drawing is on and no eclipse underway, 0 if atmosphere is switched off. The actual brightness is of no concern here. You may use <a class="el" href="classLandscapeMgr.html#abff24e60ea83ac83882390da4d752deb" title="return average luminance [cd/m^2] of atmosphere. Around 10 at sunset, 6400 in daylight, >0 in dark night. ">getAtmosphereAverageLuminance()</a> for this. </p>
 
 </div>
 </div>
@@ -1628,7 +1628,7 @@ Additional Inherited Members</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="a45460fbb4f81b7b2f13b613643423efe"></a>
+<a class="anchor" id="acec26e2fd6ea2b3e550b69cec06243e1"></a>
 <div class="memitem">
 <div class="memproto">
 <table class="mlabels">
@@ -1638,7 +1638,7 @@ Additional Inherited Members</h2></td></tr>
         <tr>
           <td class="memname">void LandscapeMgr::setDefaultMinimalBrightness </td>
           <td>(</td>
-          <td class="paramtype">const float&#160;</td>
+          <td class="paramtype">const double&#160;</td>
           <td class="paramname"><em>b</em></td><td>)</td>
           <td></td>
         </tr>
@@ -2019,7 +2019,7 @@ Additional Inherited Members</h2></td></tr>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Thu Nov 6 2014 00:05:05 for Stellarium by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Sun Dec 14 2014 16:36:51 for Stellarium by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.7
 </small></address>

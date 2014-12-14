@@ -43,6 +43,7 @@
 <ul><li class="level1"><a href="#intro_scripts">Introduction</a></li>
 <li class="level1"><a href="#scratoscript">StratoScript</a></li>
 <li class="level1"><a href="#scripting_api">Scripting API</a></li>
+<li class="level1"><a href="#include_scripts">Includes</a></li>
 <li class="level1"><a href="#script_console">Script Console</a></li>
 <li class="level1"><a href="#example_scripts">Examples</a><ul><li class="level2"><a href="#minimal_script">Minimal Script</a></li>
 <li class="level2"><a href="#using_module">Using a StelModule</a></li>
@@ -52,7 +53,7 @@
 </div>
 <div class="textblock"><h1><a class="anchor" id="intro_scripts"></a>
 Introduction</h1>
-<p>Since version 0.10.1, Stellarium includes a scripting feature based on the <a href="http://qt-project.org/doc/qt-4.8/qtscript.html">Qt Scripting Engine</a>. This makes it possible to write small programs within Stellarium to produce presentations, set up custom configurations, and to automate repetitive tasks. Prior to version 0.10.0, Stellarium used a different scripting engine called StratoScript.</p>
+<p>Since version 0.10.1, Stellarium includes a scripting feature based on the <a href="http://doc.qt.io/qt-5/qtscript-index.html">Qt Scripting Engine</a>. This makes it possible to write small programs within Stellarium to produce presentations, set up custom configurations, and to automate repetitive tasks. Prior to version 0.10.0, Stellarium used a different scripting engine called StratoScript.</p>
 <p>The core scripting language is <a href="http://en.wikipedia.org/wiki/ECMAScript">ECMAScript</a>, giving users access to all basic ECMAScript language features such as flow control, variables string manipulation and so on. Interaction with Stellarium-specific features is done via a collection of objects which represent components of Stellarium itself. See <a class="el" href="scripting.html#scripting_api">Scripting API</a> for more details.</p>
 <h1><a class="anchor" id="scratoscript"></a>
 StratoScript</h1>
@@ -65,7 +66,7 @@ StratoScript</h1>
 Scripting API</h1>
 <p>Interation with Stellarium-specific functionality is done by calling the <b>public slots</b> of instances of a group of Stellarium's core classes.</p>
 <ul>
-<li>The public slots in the class <a class="el" href="classStelMainScriptAPI.html" title="Provide script API for Stellarium global functions. ">StelMainScriptAPI</a> are available via an object named <b>core</b>. For example, to access StelMainScriptAPI::wait() from a script, use the scripting command: <div class="fragment"><div class="line">core.wait(...);</div>
+<li>The public slots in the class <a class="el" href="classStelMainScriptAPI.html" title="Provide script API for Stellarium global functions. ">StelMainScriptAPI</a> are available via an object named <b>core</b>. For example, to access <a class="el" href="classStelMainScriptAPI.html#add982ce88fd7aec6f61935cf7da12336" title="Pauses the script for t milliseconds. ">StelMainScriptAPI::wait()</a> from a script, use the scripting command: <div class="fragment"><div class="line">core.wait(...);</div>
 </div><!-- fragment --></li>
 <li>The public slots for each of the following classes are available in the scripting engine via an object with the same name as the corresponding class:<ul>
 <li><a class="el" href="classConstellationMgr.html" title="Display and manage the constellations. ">ConstellationMgr</a></li>
@@ -86,6 +87,10 @@ Scripting API</h1>
 For example, to access <a class="el" href="classLandscapeMgr.html#a9692b777a833b81d7fb4e9f4e59b03e2" title="Set flag for displaying Atmosphere. ">LandscapeMgr::setFlagAtmosphere()</a>, use the scripting command: <div class="fragment"><div class="line"><a class="code" href="classLandscapeMgr.html">LandscapeMgr</a>.<a class="code" href="classLandscapeMgr.html#a9692b777a833b81d7fb4e9f4e59b03e2">setFlagAtmosphere</a>(<span class="keyword">true</span>);</div>
 </div><!-- fragment --> Note: All of these except for <a class="el" href="classStelSkyDrawer.html" title="Provide a set of methods used to draw sky objects taking into account eyes adaptation, zoom level, instrument model and artificially set magnitude limits. ">StelSkyDrawer</a> are <a class="el" href="classStelModule.html" title="This is the common base class for all the main components of stellarium. ">StelModule</a> classes.</li>
 </ul>
+<h1><a class="anchor" id="include_scripts"></a>
+Includes</h1>
+<p>Stellarium provides mechanism for splitting scripts on different files. Typical functions or list of variables can be stored in separate <b></b>.inc file and used within script through <b>include()</b> command: </p><div class="fragment"><div class="line">include(<span class="stringliteral">&quot;common_objects.inc&quot;</span>);</div>
+</div><!-- fragment --><p> Note: Detailed example can be found <a href="http://bazaar.launchpad.net/~stellarium/stellarium/trunk/view/head:/scripts/constellations_tour.ssc">in Constellations Tour script</a>.</p>
 <h1><a class="anchor" id="script_console"></a>
 Script Console</h1>
 <p>It is possible to open, edit run and save scripts using the script console window. To toggle the script console, press F12. The script console also provides an output window in which script debugging output is visible.</p>
@@ -106,7 +111,7 @@ Using a StelModule</h2>
 </div><!-- fragment --> </div></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Thu Nov 6 2014 00:05:04 for Stellarium by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Sun Dec 14 2014 16:36:51 for Stellarium by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.7
 </small></address>

@@ -238,10 +238,10 @@ QString&#160;</td><td class="memItemRight" valign="bottom"><b>name</b></td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Store and manages the displaying of the <a class="el" href="classLandscape.html" title="Store and manages the displaying of the Landscape. ">Landscape</a>. </p>
-<p>Don't use this class directly, use the <a class="el" href="classLandscapeMgr.html" title="Manages all the rendering at the level of the observer&#39;s surroundings. ">LandscapeMgr</a>. A landscape's most important element is a photo panorama. Optional components include:</p><ul>
+<p>Don't use this class directly, use the <a class="el" href="classLandscapeMgr.html" title="Manages all the rendering at the level of the observer&#39;s surroundings. ">LandscapeMgr</a>. A landscape's most important element is a photo panorama, or at least a polygon that describes the true horizon visible from your observing location. Optional components include:</p><ul>
 <li>A fog texture that is displayed with the Fog [F] command (displayed only if atmosphere is on!).</li>
 <li>A location. It is possible to auto-move to the location when loading.</li>
-<li>Atmospheric conditions: temperature/pressure/extinction coefficients.</li>
+<li>Atmospheric conditions: temperature/pressure/extinction coefficients. These influence refraction and extinction.</li>
 <li>Light pollution information (Bortle index)</li>
 <li>A night texture that gets blended over the dimmed daylight panorama. (All landscapes except Polygonal.)</li>
 <li>A polygonal horizon line (required for PolygonalLandscape). If present, defines a measured horizon line, which can be plotted or queried for rise/set predictions.</li>
@@ -1584,7 +1584,7 @@ QString&#160;</td><td class="memItemRight" valign="bottom"><b>name</b></td></tr>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Thu Nov 6 2014 00:05:05 for Stellarium by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Sun Dec 14 2014 16:36:51 for Stellarium by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.7
 </small></address>
