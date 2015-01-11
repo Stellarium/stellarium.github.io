@@ -261,7 +261,7 @@ printf('<h2>%s</h2><p>
 	q_('developers'),
 	q_('Project coordinator:'),     '<a href="http://f4bien.blogspot.com/">Fabien Ch&eacute;reau</a>',
 	q_('Doc author/developer:'),    '<a href="http://porpoisehead.net/">Matthew Gates</a>',
-	q_('Developer:'),               '<a href="http://badlyhonedbytes.wordpress.com/">Bogdan Marinov</a>, <a href="http://astro.uni-altai.ru/~aw/">Alexander Wolf</a>, <a href="mailto:treaves%20(at)%20silverfieldstech.com">Timothy Reaves</a>, <a href="http://charlie137-2.blogspot.com/">Guillaume Ch&eacute;reau</a>, <a href="http://homepage.univie.ac.at/Georg.Zotti/">Georg Zotti</a>, Ferdinand Majerech, Jörg Müller, Marcos Cardinot',
+	q_('Developer:'),               '<a href="http://badlyhonedbytes.wordpress.com/">Bogdan Marinov</a>, <a href="http://astro.uni-altai.ru/~aw/">Alexander Wolf</a>, <a href="mailto:treaves%20(at)%20silverfieldstech.com">Timothy Reaves</a>, <a href="http://blog.noctua-software.com/">Guillaume Ch&eacute;reau</a>, <a href="http://homepage.univie.ac.at/Georg.Zotti/">Georg Zotti</a>, Ferdinand Majerech, Jörg Müller, Marcos Cardinot',
 	q_('Continuous Integration:'),  '<a href="http://lambermont.dyndns.org/">Hans Lambermont</a>',
 	q_('Tester:'),                  'Barry Gerdes, Khalid AlAjaji',
 	q_('and everyone else in the community.') );

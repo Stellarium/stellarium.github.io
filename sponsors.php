@@ -147,11 +147,13 @@ q_("developer"));
 printf('
 	<h2>%s</h2>		
 		<ul>
-			<li><a href="http://www.hypnosekreis.de/">%s</a></li>
+			<li><a href="http://www.myonlinetherapie.com/">%s</a></li>
+			<li><a href="http://www.sarahbeth.de/">%s</a></li>
 			<li><a href="http://obviouslycloe.com/">%s</a></li>
 		</ul>',
 q_("friends"),
-q_("Praxis Beatrice Ohms"),
+q_("My Online Therapie"),
+q_("Sarah Beth Heilpraktikerin"),
 q_("Portfolio of Cloe (working on new constellation art)"));
 
 $langlinks = "";	

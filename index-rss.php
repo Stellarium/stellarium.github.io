@@ -111,15 +111,12 @@
         </ul>
         <h2> developers </h2>
         <p> Project coordinator: <a href="mailto:stellarium%20(at)%20free.fr">Fabien Ch&eacute;reau</a><br>
-          Developer: <a href="mailto:rob%20(at)%20digitaliseducation.com">Rob Spearman</a><br>
           Graphic/other designer: <a href="http://users.pandora.be/jomejom">Johan Meuris</a><br>
           Doc author/developer: <a href="mailto:matthew%20(at)%20porpoisehead.net">Matthew Gates</a><br>
           Developer: <a href="mailto:gajdosik%20(at)%20users.sourceforge.net">Johannes Gajdosik</a><br>
           and everyone else in the community. </p>
         <h2>links </h2>
-        <div style="height:140px;"><a href="http://www.digitaliseducation.com"><img src="img/alpha2-transparent.png" alt="Digitarium Alpha 2 byDigitalis Eduaction Solutions" width="78" height="140" border="0" style="float:left; margin: 0em 0.6em;"></a>
-          <p style="padding-top:15px;">A modified version of Stellarium is used in portable planetarium projectors sold by co-developer <br>
-            <a href="http://www.digitaliseducation.com">Digitalis Education Solutions</a>.</p>
+        <div style="height:140px;">
         </div>
         <hr>
         <p>The Stellarium software project is not related to <a href="http://www.stellarium.com">stellarium.com</a>, who  offer custom built physical star map displays for use in museums.</p>
