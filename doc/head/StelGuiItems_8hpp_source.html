@@ -15,7 +15,7 @@
  <tr style="height: 56px;">
   <td id="projectlogo"><img alt="Logo" src="stellarium-logo.png"/></td>
   <td style="padding-left: 0.5em;">
-   <div id="projectname">Stellarium 0.13.2</div>
+   <div id="projectname">Stellarium 0.13.3</div>
   </td>
  </tr>
  </tbody>
@@ -238,71 +238,75 @@
 <div class="line"><a name="l00231"></a><span class="lineno"><a class="line" href="classBottomStelBar.html#a267e7d3b76db0611ee5b42f650840acc">  231</a></span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classBottomStelBar.html#a267e7d3b76db0611ee5b42f650840acc">setFlagTimeJd</a>(<span class="keywordtype">bool</span> b) {flagTimeJd=b;}</div>
 <div class="line"><a name="l00232"></a><span class="lineno">  232</span>&#160;    <span class="keywordtype">bool</span> getFlagTimeJd() { <span class="keywordflow">return</span> flagTimeJd; }</div>
 <div class="line"><a name="l00233"></a><span class="lineno">  233</span>&#160;</div>
-<div class="line"><a name="l00234"></a><span class="lineno">  234</span>&#160;signals:</div>
-<div class="line"><a name="l00235"></a><span class="lineno">  235</span>&#160;    <span class="keywordtype">void</span> sizeChanged();</div>
+<div class="line"><a name="l00234"></a><span class="lineno">  234</span>&#160;    <span class="keywordtype">void</span> setFlagShowTz(<span class="keywordtype">bool</span> b) { flagShowTZ=b; }</div>
+<div class="line"><a name="l00235"></a><span class="lineno">  235</span>&#160;    <span class="keywordtype">bool</span> getFlagShowTz() { <span class="keywordflow">return</span> flagShowTZ; }</div>
 <div class="line"><a name="l00236"></a><span class="lineno">  236</span>&#160;</div>
-<div class="line"><a name="l00237"></a><span class="lineno">  237</span>&#160;<span class="keyword">private</span> slots:</div>
-<div class="line"><a name="l00239"></a><span class="lineno">  239</span>&#160;    <span class="keywordtype">void</span> buttonHoverChanged(<span class="keywordtype">bool</span> b);</div>
-<div class="line"><a name="l00240"></a><span class="lineno">  240</span>&#160;</div>
-<div class="line"><a name="l00241"></a><span class="lineno">  241</span>&#160;<span class="keyword">private</span>:</div>
-<div class="line"><a name="l00242"></a><span class="lineno">  242</span>&#160;    <span class="keywordtype">void</span> updateText(<span class="keywordtype">bool</span> forceUpdatePos=<span class="keyword">false</span>);</div>
-<div class="line"><a name="l00243"></a><span class="lineno">  243</span>&#160;    <span class="keywordtype">void</span> updateButtonsGroups();</div>
-<div class="line"><a name="l00244"></a><span class="lineno">  244</span>&#160;    QRectF getButtonsBoundingRect() <span class="keyword">const</span>;</div>
-<div class="line"><a name="l00245"></a><span class="lineno">  245</span>&#160;    QGraphicsSimpleTextItem* location;</div>
-<div class="line"><a name="l00246"></a><span class="lineno">  246</span>&#160;    QGraphicsSimpleTextItem* datetime;</div>
-<div class="line"><a name="l00247"></a><span class="lineno">  247</span>&#160;    QGraphicsSimpleTextItem* fov;</div>
-<div class="line"><a name="l00248"></a><span class="lineno">  248</span>&#160;    QGraphicsSimpleTextItem* fps;</div>
-<div class="line"><a name="l00249"></a><span class="lineno">  249</span>&#160;</div>
-<div class="line"><a name="l00250"></a><span class="lineno">  250</span>&#160;    <span class="keyword">struct </span>ButtonGroup</div>
-<div class="line"><a name="l00251"></a><span class="lineno">  251</span>&#160;    {</div>
-<div class="line"><a name="l00252"></a><span class="lineno">  252</span>&#160;        ButtonGroup() : leftMargin(0), rightMargin(0),</div>
-<div class="line"><a name="l00253"></a><span class="lineno">  253</span>&#160;                        pixBackgroundLeft(NULL), pixBackgroundRight(NULL),</div>
-<div class="line"><a name="l00254"></a><span class="lineno">  254</span>&#160;                        pixBackgroundMiddle(NULL), pixBackgroundSingle(NULL) {;}</div>
-<div class="line"><a name="l00256"></a><span class="lineno">  256</span>&#160;        QList&lt;StelButton*&gt; elems;</div>
-<div class="line"><a name="l00258"></a><span class="lineno">  258</span>&#160;        <span class="keywordtype">int</span> leftMargin;</div>
-<div class="line"><a name="l00260"></a><span class="lineno">  260</span>&#160;        <span class="keywordtype">int</span> rightMargin;</div>
-<div class="line"><a name="l00262"></a><span class="lineno">  262</span>&#160;        QPixmap* pixBackgroundLeft;</div>
-<div class="line"><a name="l00263"></a><span class="lineno">  263</span>&#160;        QPixmap* pixBackgroundRight;</div>
-<div class="line"><a name="l00264"></a><span class="lineno">  264</span>&#160;        QPixmap* pixBackgroundMiddle;</div>
-<div class="line"><a name="l00265"></a><span class="lineno">  265</span>&#160;        QPixmap* pixBackgroundSingle;</div>
-<div class="line"><a name="l00266"></a><span class="lineno">  266</span>&#160;    };</div>
-<div class="line"><a name="l00267"></a><span class="lineno">  267</span>&#160;</div>
-<div class="line"><a name="l00268"></a><span class="lineno">  268</span>&#160;    QMap&lt;QString, ButtonGroup&gt; buttonGroups;</div>
-<div class="line"><a name="l00269"></a><span class="lineno">  269</span>&#160;    QPixmap pixBackgroundLeft;</div>
-<div class="line"><a name="l00270"></a><span class="lineno">  270</span>&#160;    QPixmap pixBackgroundRight;</div>
-<div class="line"><a name="l00271"></a><span class="lineno">  271</span>&#160;    QPixmap pixBackgroundMiddle;</div>
-<div class="line"><a name="l00272"></a><span class="lineno">  272</span>&#160;    QPixmap pixBackgroundSingle;</div>
-<div class="line"><a name="l00273"></a><span class="lineno">  273</span>&#160;</div>
-<div class="line"><a name="l00274"></a><span class="lineno">  274</span>&#160;    <span class="keywordtype">bool</span> flagShowTime;</div>
-<div class="line"><a name="l00275"></a><span class="lineno">  275</span>&#160;    <span class="keywordtype">bool</span> flagShowLocation;</div>
-<div class="line"><a name="l00276"></a><span class="lineno">  276</span>&#160;    <span class="keywordtype">bool</span> flagShowFps;</div>
-<div class="line"><a name="l00277"></a><span class="lineno">  277</span>&#160;    <span class="keywordtype">bool</span> flagShowFov;</div>
-<div class="line"><a name="l00278"></a><span class="lineno">  278</span>&#160;    <span class="keywordtype">bool</span> flagFovDms;</div>
-<div class="line"><a name="l00279"></a><span class="lineno">  279</span>&#160;    <span class="keywordtype">bool</span> flagTimeJd;</div>
-<div class="line"><a name="l00280"></a><span class="lineno">  280</span>&#160;</div>
-<div class="line"><a name="l00281"></a><span class="lineno">  281</span>&#160;    QGraphicsSimpleTextItem* helpLabel;</div>
-<div class="line"><a name="l00282"></a><span class="lineno">  282</span>&#160;};</div>
-<div class="line"><a name="l00283"></a><span class="lineno">  283</span>&#160;</div>
-<div class="line"><a name="l00284"></a><span class="lineno">  284</span>&#160;<span class="comment">// The path around the bottom left button bars</span></div>
-<div class="line"><a name="l00285"></a><span class="lineno"><a class="line" href="classStelBarsPath.html">  285</a></span>&#160;<span class="keyword">class </span><a class="code" href="classStelBarsPath.html">StelBarsPath</a> : <span class="keyword">public</span> QGraphicsPathItem</div>
-<div class="line"><a name="l00286"></a><span class="lineno">  286</span>&#160;{</div>
-<div class="line"><a name="l00287"></a><span class="lineno">  287</span>&#160;    <span class="keyword">public</span>:</div>
-<div class="line"><a name="l00288"></a><span class="lineno">  288</span>&#160;        <a class="code" href="classStelBarsPath.html">StelBarsPath</a>(QGraphicsItem* parent);</div>
-<div class="line"><a name="l00289"></a><span class="lineno">  289</span>&#160;        <span class="keywordtype">void</span> updatePath(<a class="code" href="classBottomStelBar.html">BottomStelBar</a>* bot, <a class="code" href="classLeftStelBar.html">LeftStelBar</a>* lef);</div>
-<div class="line"><a name="l00290"></a><span class="lineno">  290</span>&#160;        <span class="keywordtype">double</span> getRoundSize()<span class="keyword"> const </span>{<span class="keywordflow">return</span> roundSize;}</div>
-<div class="line"><a name="l00291"></a><span class="lineno">  291</span>&#160;        <span class="keywordtype">void</span> setBackgroundOpacity(<span class="keywordtype">double</span> opacity);</div>
-<div class="line"><a name="l00292"></a><span class="lineno">  292</span>&#160;    <span class="keyword">private</span>:</div>
-<div class="line"><a name="l00293"></a><span class="lineno">  293</span>&#160;        <span class="keywordtype">double</span> roundSize;</div>
-<div class="line"><a name="l00294"></a><span class="lineno">  294</span>&#160;};</div>
-<div class="line"><a name="l00295"></a><span class="lineno">  295</span>&#160;</div>
-<div class="line"><a name="l00296"></a><span class="lineno">  296</span>&#160;<span class="preprocessor">#endif // _STELGUIITEMS_HPP_</span></div>
+<div class="line"><a name="l00237"></a><span class="lineno">  237</span>&#160;signals:</div>
+<div class="line"><a name="l00238"></a><span class="lineno">  238</span>&#160;    <span class="keywordtype">void</span> sizeChanged();</div>
+<div class="line"><a name="l00239"></a><span class="lineno">  239</span>&#160;</div>
+<div class="line"><a name="l00240"></a><span class="lineno">  240</span>&#160;<span class="keyword">private</span> slots:</div>
+<div class="line"><a name="l00242"></a><span class="lineno">  242</span>&#160;    <span class="keywordtype">void</span> buttonHoverChanged(<span class="keywordtype">bool</span> b);</div>
+<div class="line"><a name="l00243"></a><span class="lineno">  243</span>&#160;</div>
+<div class="line"><a name="l00244"></a><span class="lineno">  244</span>&#160;<span class="keyword">private</span>:</div>
+<div class="line"><a name="l00245"></a><span class="lineno">  245</span>&#160;    <span class="keywordtype">void</span> updateText(<span class="keywordtype">bool</span> forceUpdatePos=<span class="keyword">false</span>);</div>
+<div class="line"><a name="l00246"></a><span class="lineno">  246</span>&#160;    <span class="keywordtype">void</span> updateButtonsGroups();</div>
+<div class="line"><a name="l00247"></a><span class="lineno">  247</span>&#160;    QRectF getButtonsBoundingRect() <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00248"></a><span class="lineno">  248</span>&#160;    QGraphicsSimpleTextItem* location;</div>
+<div class="line"><a name="l00249"></a><span class="lineno">  249</span>&#160;    QGraphicsSimpleTextItem* datetime;</div>
+<div class="line"><a name="l00250"></a><span class="lineno">  250</span>&#160;    QGraphicsSimpleTextItem* fov;</div>
+<div class="line"><a name="l00251"></a><span class="lineno">  251</span>&#160;    QGraphicsSimpleTextItem* fps;</div>
+<div class="line"><a name="l00252"></a><span class="lineno">  252</span>&#160;</div>
+<div class="line"><a name="l00253"></a><span class="lineno">  253</span>&#160;    <span class="keyword">struct </span>ButtonGroup</div>
+<div class="line"><a name="l00254"></a><span class="lineno">  254</span>&#160;    {</div>
+<div class="line"><a name="l00255"></a><span class="lineno">  255</span>&#160;        ButtonGroup() : leftMargin(0), rightMargin(0),</div>
+<div class="line"><a name="l00256"></a><span class="lineno">  256</span>&#160;                        pixBackgroundLeft(NULL), pixBackgroundRight(NULL),</div>
+<div class="line"><a name="l00257"></a><span class="lineno">  257</span>&#160;                        pixBackgroundMiddle(NULL), pixBackgroundSingle(NULL) {;}</div>
+<div class="line"><a name="l00259"></a><span class="lineno">  259</span>&#160;        QList&lt;StelButton*&gt; elems;</div>
+<div class="line"><a name="l00261"></a><span class="lineno">  261</span>&#160;        <span class="keywordtype">int</span> leftMargin;</div>
+<div class="line"><a name="l00263"></a><span class="lineno">  263</span>&#160;        <span class="keywordtype">int</span> rightMargin;</div>
+<div class="line"><a name="l00265"></a><span class="lineno">  265</span>&#160;        QPixmap* pixBackgroundLeft;</div>
+<div class="line"><a name="l00266"></a><span class="lineno">  266</span>&#160;        QPixmap* pixBackgroundRight;</div>
+<div class="line"><a name="l00267"></a><span class="lineno">  267</span>&#160;        QPixmap* pixBackgroundMiddle;</div>
+<div class="line"><a name="l00268"></a><span class="lineno">  268</span>&#160;        QPixmap* pixBackgroundSingle;</div>
+<div class="line"><a name="l00269"></a><span class="lineno">  269</span>&#160;    };</div>
+<div class="line"><a name="l00270"></a><span class="lineno">  270</span>&#160;</div>
+<div class="line"><a name="l00271"></a><span class="lineno">  271</span>&#160;    QMap&lt;QString, ButtonGroup&gt; buttonGroups;</div>
+<div class="line"><a name="l00272"></a><span class="lineno">  272</span>&#160;    QPixmap pixBackgroundLeft;</div>
+<div class="line"><a name="l00273"></a><span class="lineno">  273</span>&#160;    QPixmap pixBackgroundRight;</div>
+<div class="line"><a name="l00274"></a><span class="lineno">  274</span>&#160;    QPixmap pixBackgroundMiddle;</div>
+<div class="line"><a name="l00275"></a><span class="lineno">  275</span>&#160;    QPixmap pixBackgroundSingle;</div>
+<div class="line"><a name="l00276"></a><span class="lineno">  276</span>&#160;</div>
+<div class="line"><a name="l00277"></a><span class="lineno">  277</span>&#160;    <span class="keywordtype">bool</span> flagShowTime;</div>
+<div class="line"><a name="l00278"></a><span class="lineno">  278</span>&#160;    <span class="keywordtype">bool</span> flagShowLocation;</div>
+<div class="line"><a name="l00279"></a><span class="lineno">  279</span>&#160;    <span class="keywordtype">bool</span> flagShowFps;</div>
+<div class="line"><a name="l00280"></a><span class="lineno">  280</span>&#160;    <span class="keywordtype">bool</span> flagShowFov;</div>
+<div class="line"><a name="l00281"></a><span class="lineno">  281</span>&#160;    <span class="keywordtype">bool</span> flagFovDms;</div>
+<div class="line"><a name="l00282"></a><span class="lineno">  282</span>&#160;    <span class="keywordtype">bool</span> flagTimeJd;</div>
+<div class="line"><a name="l00283"></a><span class="lineno">  283</span>&#160;    <span class="keywordtype">bool</span> flagShowTZ;</div>
+<div class="line"><a name="l00284"></a><span class="lineno">  284</span>&#160;</div>
+<div class="line"><a name="l00285"></a><span class="lineno">  285</span>&#160;    QGraphicsSimpleTextItem* helpLabel;</div>
+<div class="line"><a name="l00286"></a><span class="lineno">  286</span>&#160;};</div>
+<div class="line"><a name="l00287"></a><span class="lineno">  287</span>&#160;</div>
+<div class="line"><a name="l00288"></a><span class="lineno">  288</span>&#160;<span class="comment">// The path around the bottom left button bars</span></div>
+<div class="line"><a name="l00289"></a><span class="lineno"><a class="line" href="classStelBarsPath.html">  289</a></span>&#160;<span class="keyword">class </span><a class="code" href="classStelBarsPath.html">StelBarsPath</a> : <span class="keyword">public</span> QGraphicsPathItem</div>
+<div class="line"><a name="l00290"></a><span class="lineno">  290</span>&#160;{</div>
+<div class="line"><a name="l00291"></a><span class="lineno">  291</span>&#160;    <span class="keyword">public</span>:</div>
+<div class="line"><a name="l00292"></a><span class="lineno">  292</span>&#160;        <a class="code" href="classStelBarsPath.html">StelBarsPath</a>(QGraphicsItem* parent);</div>
+<div class="line"><a name="l00293"></a><span class="lineno">  293</span>&#160;        <span class="keywordtype">void</span> updatePath(<a class="code" href="classBottomStelBar.html">BottomStelBar</a>* bot, <a class="code" href="classLeftStelBar.html">LeftStelBar</a>* lef);</div>
+<div class="line"><a name="l00294"></a><span class="lineno">  294</span>&#160;        <span class="keywordtype">double</span> getRoundSize()<span class="keyword"> const </span>{<span class="keywordflow">return</span> roundSize;}</div>
+<div class="line"><a name="l00295"></a><span class="lineno">  295</span>&#160;        <span class="keywordtype">void</span> setBackgroundOpacity(<span class="keywordtype">double</span> opacity);</div>
+<div class="line"><a name="l00296"></a><span class="lineno">  296</span>&#160;    <span class="keyword">private</span>:</div>
+<div class="line"><a name="l00297"></a><span class="lineno">  297</span>&#160;        <span class="keywordtype">double</span> roundSize;</div>
+<div class="line"><a name="l00298"></a><span class="lineno">  298</span>&#160;};</div>
+<div class="line"><a name="l00299"></a><span class="lineno">  299</span>&#160;</div>
+<div class="line"><a name="l00300"></a><span class="lineno">  300</span>&#160;<span class="preprocessor">#endif // _STELGUIITEMS_HPP_</span></div>
 <div class="ttc" id="classStelButton_html_a22ffcf1e6f17c0713191cab8f62f839f"><div class="ttname"><a href="classStelButton.html#a22ffcf1e6f17c0713191cab8f62f839f">StelButton::toggled</a></div><div class="ttdeci">void toggled(bool)</div><div class="ttdoc">Triggered when the button state changes. </div></div>
 <div class="ttc" id="classLeftStelBar_html_a2ce07ed363ee869c520bd48b63b3cee3"><div class="ttname"><a href="classLeftStelBar.html#a2ce07ed363ee869c520bd48b63b3cee3">LeftStelBar::setColor</a></div><div class="ttdeci">void setColor(const QColor &amp;c)</div><div class="ttdoc">Set the color for all the sub elements. </div></div>
 <div class="ttc" id="classStelButton_html_a763b6261c4eeeb4795294d84923ac7b8"><div class="ttname"><a href="classStelButton.html#a763b6261c4eeeb4795294d84923ac7b8">StelButton::getButtonPixmapWidth</a></div><div class="ttdeci">int getButtonPixmapWidth() const </div><div class="ttdoc">Get the width of the button image. </div><div class="ttdef"><b>Definition:</b> <a href="StelGuiItems_8hpp_source.html#l00106">StelGuiItems.hpp:106</a></div></div>
 <div class="ttc" id="classBottomStelBar_html_a0bd0fcf0f553f0ccb147ea1f05ad775e"><div class="ttname"><a href="classBottomStelBar.html#a0bd0fcf0f553f0ccb147ea1f05ad775e">BottomStelBar::setFlagShowTime</a></div><div class="ttdeci">void setFlagShowTime(bool b)</div><div class="ttdoc">Set whether time must be displayed in the bottom bar. </div><div class="ttdef"><b>Definition:</b> <a href="StelGuiItems_8hpp_source.html#l00216">StelGuiItems.hpp:216</a></div></div>
 <div class="ttc" id="classStelButton_html_ad336e3aa7c9616eda1c0101d58196ca4"><div class="ttname"><a href="classStelButton.html#ad336e3aa7c9616eda1c0101d58196ca4">StelButton::triggered</a></div><div class="ttdeci">void triggered()</div><div class="ttdoc">Triggered when the button state changes. </div></div>
 <div class="ttc" id="classBottomStelBar_html_afce1ac7ac82368c9cc4d1fe870a4051b"><div class="ttname"><a href="classBottomStelBar.html#afce1ac7ac82368c9cc4d1fe870a4051b">BottomStelBar::setFlagFovDms</a></div><div class="ttdeci">void setFlagFovDms(bool b)</div><div class="ttdoc">Set whether DMS format for FOV info must be displayed in the bottom bar. </div><div class="ttdef"><b>Definition:</b> <a href="StelGuiItems_8hpp_source.html#l00228">StelGuiItems.hpp:228</a></div></div>
-<div class="ttc" id="classStelBarsPath_html"><div class="ttname"><a href="classStelBarsPath.html">StelBarsPath</a></div><div class="ttdef"><b>Definition:</b> <a href="StelGuiItems_8hpp_source.html#l00285">StelGuiItems.hpp:285</a></div></div>
+<div class="ttc" id="classStelBarsPath_html"><div class="ttname"><a href="classStelBarsPath.html">StelBarsPath</a></div><div class="ttdef"><b>Definition:</b> <a href="StelGuiItems_8hpp_source.html#l00289">StelGuiItems.hpp:289</a></div></div>
 <div class="ttc" id="classStelButton_html_ad4e910e1903b78d9ce807f1bd4566aa0"><div class="ttname"><a href="classStelButton.html#ad4e910e1903b78d9ce807f1bd4566aa0">StelButton::hoverChanged</a></div><div class="ttdeci">void hoverChanged(bool b)</div><div class="ttdoc">Emitted when the hover state change. </div></div>
 <div class="ttc" id="classBottomStelBar_html"><div class="ttname"><a href="classBottomStelBar.html">BottomStelBar</a></div><div class="ttdef"><b>Definition:</b> <a href="StelGuiItems_8hpp_source.html#l00185">StelGuiItems.hpp:185</a></div></div>
 <div class="ttc" id="classStelAction_html"><div class="ttname"><a href="classStelAction.html">StelAction</a></div><div class="ttdef"><b>Definition:</b> <a href="StelActionMgr_8hpp_source.html#l00027">StelActionMgr.hpp:27</a></div></div>
@@ -328,7 +332,7 @@
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Sun Dec 14 2014 16:36:51 for Stellarium by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Tue Jan 20 2015 22:51:32 for Stellarium by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.7
 </small></address>
