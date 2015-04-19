@@ -56,6 +56,7 @@ $language = array(
     'ro'=>'Română',
     'ru'=>'русский',
     'sk'=>'slovenčina',
+    'sr'=>'Српски'
     'sv'=>'svenska',
     'th'=>'ภาษาไทย',
     'tr'=>'Türkçe',
