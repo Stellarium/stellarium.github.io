@@ -129,7 +129,7 @@ Public Slots</h2></td></tr>
 <tr class="memdesc:a49786ba3760413e1fc377426901bf0ae"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set whether keys can control zoom.  <a href="#a49786ba3760413e1fc377426901bf0ae">More...</a><br /></td></tr>
 <tr class="separator:a49786ba3760413e1fc377426901bf0ae"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:afd50fdcc615f38c75662e77c8398a8dc"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classStelMovementMgr.html#afd50fdcc615f38c75662e77c8398a8dc">getFlagEnableMoveKeys</a> () const </td></tr>
-<tr class="memdesc:afd50fdcc615f38c75662e77c8398a8dc"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get whether keys can control move.  <a href="#afd50fdcc615f38c75662e77c8398a8dc">More...</a><br /></td></tr>
+<tr class="memdesc:afd50fdcc615f38c75662e77c8398a8dc"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get whether keys can control movement.  <a href="#afd50fdcc615f38c75662e77c8398a8dc">More...</a><br /></td></tr>
 <tr class="separator:afd50fdcc615f38c75662e77c8398a8dc"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a110d3c98ef5bfa2a13df6a33530c2c96"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classStelMovementMgr.html#a110d3c98ef5bfa2a13df6a33530c2c96">setFlagEnableMoveKeys</a> (bool b)</td></tr>
 <tr class="memdesc:a110d3c98ef5bfa2a13df6a33530c2c96"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set whether keys can control movement.  <a href="#a110d3c98ef5bfa2a13df6a33530c2c96">More...</a><br /></td></tr>
@@ -254,6 +254,9 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:aacf15dfddd093dbbe03d6f4e40375b5a"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classStelMovementMgr.html#aacf15dfddd093dbbe03d6f4e40375b5a">handleMouseClicks</a> (class QMouseEvent *event)</td></tr>
 <tr class="memdesc:aacf15dfddd093dbbe03d6f4e40375b5a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Handle mouse click events.  <a href="#aacf15dfddd093dbbe03d6f4e40375b5a">More...</a><br /></td></tr>
 <tr class="separator:aacf15dfddd093dbbe03d6f4e40375b5a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a46e172bc54270ef6a476f50574fefea9"><td class="memItemLeft" align="right" valign="top">virtual double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classStelMovementMgr.html#a46e172bc54270ef6a476f50574fefea9">getCallOrder</a> (<a class="el" href="classStelModule.html#a11b61d014b51cf6424cd89b1ccd3d768">StelModuleActionName</a> actionName) const </td></tr>
+<tr class="memdesc:a46e172bc54270ef6a476f50574fefea9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return the value defining the order of call for the given action For example if stars.callOrder[ActionDraw] == 10 and constellation.callOrder[ActionDraw] == 11, the stars module will be drawn before the constellations.  <a href="#a46e172bc54270ef6a476f50574fefea9">More...</a><br /></td></tr>
+<tr class="separator:a46e172bc54270ef6a476f50574fefea9"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac67f2dc6a151ee4fb4bbbd8fb8b12b8b"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classStelMovementMgr.html#ac67f2dc6a151ee4fb4bbbd8fb8b12b8b">handlePinch</a> (qreal scale, bool started)</td></tr>
 <tr class="memdesc:ac67f2dc6a151ee4fb4bbbd8fb8b12b8b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Handle pinch gesture.  <a href="#ac67f2dc6a151ee4fb4bbbd8fb8b12b8b">More...</a><br /></td></tr>
 <tr class="separator:ac67f2dc6a151ee4fb4bbbd8fb8b12b8b"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -294,9 +297,6 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>setDragTriggerDistanc
 <tr class="memitem:a784c0ccdda13c89295da28a6d60e05dd inherit pub_methods_classStelModule"><td class="memItemLeft" align="right" valign="top">virtual QString&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classStelModule.html#a784c0ccdda13c89295da28a6d60e05dd">getAuthorEmail</a> () const </td></tr>
 <tr class="memdesc:a784c0ccdda13c89295da28a6d60e05dd inherit pub_methods_classStelModule"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the email adress of the module author.  <a href="#a784c0ccdda13c89295da28a6d60e05dd">More...</a><br /></td></tr>
 <tr class="separator:a784c0ccdda13c89295da28a6d60e05dd inherit pub_methods_classStelModule"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a9e03c52f02fb41a0727360f7644fc3d6 inherit pub_methods_classStelModule"><td class="memItemLeft" align="right" valign="top">virtual double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classStelModule.html#a9e03c52f02fb41a0727360f7644fc3d6">getCallOrder</a> (<a class="el" href="classStelModule.html#a11b61d014b51cf6424cd89b1ccd3d768">StelModuleActionName</a> actionName) const </td></tr>
-<tr class="memdesc:a9e03c52f02fb41a0727360f7644fc3d6 inherit pub_methods_classStelModule"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return the value defining the order of call for the given action For example if stars.callOrder[ActionDraw] == 10 and constellation.callOrder[ActionDraw] == 11, the stars module will be drawn before the constellations.  <a href="#a9e03c52f02fb41a0727360f7644fc3d6">More...</a><br /></td></tr>
-<tr class="separator:a9e03c52f02fb41a0727360f7644fc3d6 inherit pub_methods_classStelModule"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a361f28660ec3002520924cd5cee08ccd inherit pub_methods_classStelModule"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classStelModule.html#a361f28660ec3002520924cd5cee08ccd">configureGui</a> (bool show=true)</td></tr>
 <tr class="memdesc:a361f28660ec3002520924cd5cee08ccd inherit pub_methods_classStelModule"><td class="mdescLeft">&#160;</td><td class="mdescRight">Detect or show the configuration GUI elements for the module.  <a href="#a361f28660ec3002520924cd5cee08ccd">More...</a><br /></td></tr>
 <tr class="separator:a361f28660ec3002520924cd5cee08ccd inherit pub_methods_classStelModule"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -495,7 +495,42 @@ Additional Inherited Members</h2></td></tr>
 <p>Get automove duration in seconds. </p>
 <dl class="section return"><dt>Returns</dt><dd>the number of seconds it takes for an auto-move operation to complete. </dd></dl>
 
-<p>Definition at line <a class="el" href="StelMovementMgr_8hpp_source.html#l00122">122</a> of file <a class="el" href="StelMovementMgr_8hpp_source.html">StelMovementMgr.hpp</a>.</p>
+<p>Definition at line <a class="el" href="StelMovementMgr_8hpp_source.html#l00124">124</a> of file <a class="el" href="StelMovementMgr_8hpp_source.html">StelMovementMgr.hpp</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a46e172bc54270ef6a476f50574fefea9"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual double StelMovementMgr::getCallOrder </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classStelModule.html#a11b61d014b51cf6424cd89b1ccd3d768">StelModuleActionName</a>&#160;</td>
+          <td class="paramname"><em>actionName</em></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Return the value defining the order of call for the given action For example if stars.callOrder[ActionDraw] == 10 and constellation.callOrder[ActionDraw] == 11, the stars module will be drawn before the constellations. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">actionName</td><td>the name of the action for which we want the call order </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>the value defining the order. The closer to 0 the earlier the module's action will be called </dd></dl>
+
+<p>Reimplemented from <a class="el" href="classStelModule.html#a9e03c52f02fb41a0727360f7644fc3d6">StelModule</a>.</p>
 
 </div>
 </div>
@@ -522,7 +557,7 @@ Additional Inherited Members</h2></td></tr>
 
 <p>Get the current Field Of View in degrees. </p>
 
-<p>Definition at line <a class="el" href="StelMovementMgr_8hpp_source.html#l00161">161</a> of file <a class="el" href="StelMovementMgr_8hpp_source.html">StelMovementMgr.hpp</a>.</p>
+<p>Definition at line <a class="el" href="StelMovementMgr_8hpp_source.html#l00163">163</a> of file <a class="el" href="StelMovementMgr_8hpp_source.html">StelMovementMgr.hpp</a>.</p>
 
 </div>
 </div>
@@ -550,7 +585,7 @@ Additional Inherited Members</h2></td></tr>
 
 <p>Get whether auto zoom out will reset the viewing direction to the inital value. </p>
 
-<p>Definition at line <a class="el" href="StelMovementMgr_8hpp_source.html#l00127">127</a> of file <a class="el" href="StelMovementMgr_8hpp_source.html">StelMovementMgr.hpp</a>.</p>
+<p>Definition at line <a class="el" href="StelMovementMgr_8hpp_source.html#l00129">129</a> of file <a class="el" href="StelMovementMgr_8hpp_source.html">StelMovementMgr.hpp</a>.</p>
 
 </div>
 </div>
@@ -577,7 +612,7 @@ Additional Inherited Members</h2></td></tr>
 
 <p>Get whether mouse can control movement. </p>
 
-<p>Definition at line <a class="el" href="StelMovementMgr_8hpp_source.html#l00145">145</a> of file <a class="el" href="StelMovementMgr_8hpp_source.html">StelMovementMgr.hpp</a>.</p>
+<p>Definition at line <a class="el" href="StelMovementMgr_8hpp_source.html#l00147">147</a> of file <a class="el" href="StelMovementMgr_8hpp_source.html">StelMovementMgr.hpp</a>.</p>
 
 </div>
 </div>
@@ -604,7 +639,7 @@ Additional Inherited Members</h2></td></tr>
 
 <p>Get whether being at the edge of the screen activates movement. </p>
 
-<p>Definition at line <a class="el" href="StelMovementMgr_8hpp_source.html#l00140">140</a> of file <a class="el" href="StelMovementMgr_8hpp_source.html">StelMovementMgr.hpp</a>.</p>
+<p>Definition at line <a class="el" href="StelMovementMgr_8hpp_source.html#l00142">142</a> of file <a class="el" href="StelMovementMgr_8hpp_source.html">StelMovementMgr.hpp</a>.</p>
 
 </div>
 </div>
@@ -629,9 +664,9 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Get whether keys can control move. </p>
+<p>Get whether keys can control movement. </p>
 
-<p>Definition at line <a class="el" href="StelMovementMgr_8hpp_source.html#l00135">135</a> of file <a class="el" href="StelMovementMgr_8hpp_source.html">StelMovementMgr.hpp</a>.</p>
+<p>Definition at line <a class="el" href="StelMovementMgr_8hpp_source.html#l00137">137</a> of file <a class="el" href="StelMovementMgr_8hpp_source.html">StelMovementMgr.hpp</a>.</p>
 
 </div>
 </div>
@@ -658,7 +693,7 @@ Additional Inherited Members</h2></td></tr>
 
 <p>Get whether keys can control zoom. </p>
 
-<p>Definition at line <a class="el" href="StelMovementMgr_8hpp_source.html#l00130">130</a> of file <a class="el" href="StelMovementMgr_8hpp_source.html">StelMovementMgr.hpp</a>.</p>
+<p>Definition at line <a class="el" href="StelMovementMgr_8hpp_source.html#l00132">132</a> of file <a class="el" href="StelMovementMgr_8hpp_source.html">StelMovementMgr.hpp</a>.</p>
 
 </div>
 </div>
@@ -686,7 +721,7 @@ Additional Inherited Members</h2></td></tr>
 
 <p>Get whether sky position is locked. </p>
 
-<p>Definition at line <a class="el" href="StelMovementMgr_8hpp_source.html#l00109">109</a> of file <a class="el" href="StelMovementMgr_8hpp_source.html">StelMovementMgr.hpp</a>.</p>
+<p>Definition at line <a class="el" href="StelMovementMgr_8hpp_source.html#l00111">111</a> of file <a class="el" href="StelMovementMgr_8hpp_source.html">StelMovementMgr.hpp</a>.</p>
 
 </div>
 </div>
@@ -714,7 +749,7 @@ Additional Inherited Members</h2></td></tr>
 
 <p>Get current object tracking status. </p>
 
-<p>Definition at line <a class="el" href="StelMovementMgr_8hpp_source.html#l00104">104</a> of file <a class="el" href="StelMovementMgr_8hpp_source.html">StelMovementMgr.hpp</a>.</p>
+<p>Definition at line <a class="el" href="StelMovementMgr_8hpp_source.html#l00106">106</a> of file <a class="el" href="StelMovementMgr_8hpp_source.html">StelMovementMgr.hpp</a>.</p>
 
 </div>
 </div>
@@ -741,7 +776,7 @@ Additional Inherited Members</h2></td></tr>
 
 <p>Return the initial default FOV in degree. </p>
 
-<p>Definition at line <a class="el" href="StelMovementMgr_8hpp_source.html#l00164">164</a> of file <a class="el" href="StelMovementMgr_8hpp_source.html">StelMovementMgr.hpp</a>.</p>
+<p>Definition at line <a class="el" href="StelMovementMgr_8hpp_source.html#l00166">166</a> of file <a class="el" href="StelMovementMgr_8hpp_source.html">StelMovementMgr.hpp</a>.</p>
 
 </div>
 </div>
@@ -768,7 +803,7 @@ Additional Inherited Members</h2></td></tr>
 
 <p>Return the inital viewing direction in altazimuthal coordinates. </p>
 
-<p>Definition at line <a class="el" href="StelMovementMgr_8hpp_source.html#l00169">169</a> of file <a class="el" href="StelMovementMgr_8hpp_source.html">StelMovementMgr.hpp</a>.</p>
+<p>Definition at line <a class="el" href="StelMovementMgr_8hpp_source.html#l00171">171</a> of file <a class="el" href="StelMovementMgr_8hpp_source.html">StelMovementMgr.hpp</a>.</p>
 
 </div>
 </div>
@@ -796,7 +831,7 @@ Additional Inherited Members</h2></td></tr>
 
 <p>Get the maximum field of View in degrees. </p>
 
-<p>Definition at line <a class="el" href="StelMovementMgr_8hpp_source.html#l00181">181</a> of file <a class="el" href="StelMovementMgr_8hpp_source.html">StelMovementMgr.hpp</a>.</p>
+<p>Definition at line <a class="el" href="StelMovementMgr_8hpp_source.html#l00183">183</a> of file <a class="el" href="StelMovementMgr_8hpp_source.html">StelMovementMgr.hpp</a>.</p>
 
 </div>
 </div>
@@ -824,7 +859,7 @@ Additional Inherited Members</h2></td></tr>
 
 <p>Get current mount type defining the reference frame in which head movements occur. </p>
 
-<p>Definition at line <a class="el" href="StelMovementMgr_8hpp_source.html#l00203">203</a> of file <a class="el" href="StelMovementMgr_8hpp_source.html">StelMovementMgr.hpp</a>.</p>
+<p>Definition at line <a class="el" href="StelMovementMgr_8hpp_source.html#l00205">205</a> of file <a class="el" href="StelMovementMgr_8hpp_source.html">StelMovementMgr.hpp</a>.</p>
 
 </div>
 </div>
@@ -851,7 +886,7 @@ Additional Inherited Members</h2></td></tr>
 
 <p>Return the current viewing direction in equatorial J2000 frame. </p>
 
-<p>Definition at line <a class="el" href="StelMovementMgr_8hpp_source.html#l00175">175</a> of file <a class="el" href="StelMovementMgr_8hpp_source.html">StelMovementMgr.hpp</a>.</p>
+<p>Definition at line <a class="el" href="StelMovementMgr_8hpp_source.html#l00177">177</a> of file <a class="el" href="StelMovementMgr_8hpp_source.html">StelMovementMgr.hpp</a>.</p>
 
 </div>
 </div>
@@ -895,7 +930,7 @@ Additional Inherited Members</h2></td></tr>
 
 <p>Get the zoom speed. </p>
 
-<p>Definition at line <a class="el" href="StelMovementMgr_8hpp_source.html#l00084">84</a> of file <a class="el" href="StelMovementMgr_8hpp_source.html">StelMovementMgr.hpp</a>.</p>
+<p>Definition at line <a class="el" href="StelMovementMgr_8hpp_source.html#l00086">86</a> of file <a class="el" href="StelMovementMgr_8hpp_source.html">StelMovementMgr.hpp</a>.</p>
 
 </div>
 </div>
@@ -1223,7 +1258,7 @@ Additional Inherited Members</h2></td></tr>
   </dd>
 </dl>
 
-<p>Definition at line <a class="el" href="StelMovementMgr_8hpp_source.html#l00119">119</a> of file <a class="el" href="StelMovementMgr_8hpp_source.html">StelMovementMgr.hpp</a>.</p>
+<p>Definition at line <a class="el" href="StelMovementMgr_8hpp_source.html#l00121">121</a> of file <a class="el" href="StelMovementMgr_8hpp_source.html">StelMovementMgr.hpp</a>.</p>
 
 </div>
 </div>
@@ -1251,7 +1286,7 @@ Additional Inherited Members</h2></td></tr>
 
 <p>Define whether we should use equatorial mount or altazimuthal. </p>
 
-<p>Definition at line <a class="el" href="StelMovementMgr_8hpp_source.html#l00099">99</a> of file <a class="el" href="StelMovementMgr_8hpp_source.html">StelMovementMgr.hpp</a>.</p>
+<p>Definition at line <a class="el" href="StelMovementMgr_8hpp_source.html#l00101">101</a> of file <a class="el" href="StelMovementMgr_8hpp_source.html">StelMovementMgr.hpp</a>.</p>
 
 </div>
 </div>
@@ -1279,7 +1314,7 @@ Additional Inherited Members</h2></td></tr>
 
 <p>Set whether auto zoom out will reset the viewing direction to the inital value. </p>
 
-<p>Definition at line <a class="el" href="StelMovementMgr_8hpp_source.html#l00125">125</a> of file <a class="el" href="StelMovementMgr_8hpp_source.html">StelMovementMgr.hpp</a>.</p>
+<p>Definition at line <a class="el" href="StelMovementMgr_8hpp_source.html#l00127">127</a> of file <a class="el" href="StelMovementMgr_8hpp_source.html">StelMovementMgr.hpp</a>.</p>
 
 </div>
 </div>
@@ -1307,7 +1342,7 @@ Additional Inherited Members</h2></td></tr>
 
 <p>Set whether mouse can control movement. </p>
 
-<p>Definition at line <a class="el" href="StelMovementMgr_8hpp_source.html#l00147">147</a> of file <a class="el" href="StelMovementMgr_8hpp_source.html">StelMovementMgr.hpp</a>.</p>
+<p>Definition at line <a class="el" href="StelMovementMgr_8hpp_source.html#l00149">149</a> of file <a class="el" href="StelMovementMgr_8hpp_source.html">StelMovementMgr.hpp</a>.</p>
 
 </div>
 </div>
@@ -1335,7 +1370,7 @@ Additional Inherited Members</h2></td></tr>
 
 <p>Set whether being at the edge of the screen activates movement. </p>
 
-<p>Definition at line <a class="el" href="StelMovementMgr_8hpp_source.html#l00142">142</a> of file <a class="el" href="StelMovementMgr_8hpp_source.html">StelMovementMgr.hpp</a>.</p>
+<p>Definition at line <a class="el" href="StelMovementMgr_8hpp_source.html#l00144">144</a> of file <a class="el" href="StelMovementMgr_8hpp_source.html">StelMovementMgr.hpp</a>.</p>
 
 </div>
 </div>
@@ -1363,7 +1398,7 @@ Additional Inherited Members</h2></td></tr>
 
 <p>Set whether keys can control movement. </p>
 
-<p>Definition at line <a class="el" href="StelMovementMgr_8hpp_source.html#l00137">137</a> of file <a class="el" href="StelMovementMgr_8hpp_source.html">StelMovementMgr.hpp</a>.</p>
+<p>Definition at line <a class="el" href="StelMovementMgr_8hpp_source.html#l00139">139</a> of file <a class="el" href="StelMovementMgr_8hpp_source.html">StelMovementMgr.hpp</a>.</p>
 
 </div>
 </div>
@@ -1391,7 +1426,7 @@ Additional Inherited Members</h2></td></tr>
 
 <p>Set whether keys can control zoom. </p>
 
-<p>Definition at line <a class="el" href="StelMovementMgr_8hpp_source.html#l00132">132</a> of file <a class="el" href="StelMovementMgr_8hpp_source.html">StelMovementMgr.hpp</a>.</p>
+<p>Definition at line <a class="el" href="StelMovementMgr_8hpp_source.html#l00134">134</a> of file <a class="el" href="StelMovementMgr_8hpp_source.html">StelMovementMgr.hpp</a>.</p>
 
 </div>
 </div>
@@ -1471,7 +1506,7 @@ Additional Inherited Members</h2></td></tr>
 
 <p>Set the initial Field Of View in degree. </p>
 
-<p>Definition at line <a class="el" href="StelMovementMgr_8hpp_source.html#l00166">166</a> of file <a class="el" href="StelMovementMgr_8hpp_source.html">StelMovementMgr.hpp</a>.</p>
+<p>Definition at line <a class="el" href="StelMovementMgr_8hpp_source.html#l00168">168</a> of file <a class="el" href="StelMovementMgr_8hpp_source.html">StelMovementMgr.hpp</a>.</p>
 
 </div>
 </div>
@@ -1576,7 +1611,7 @@ Additional Inherited Members</h2></td></tr>
 
 <p>Toggle current mount mode between equatorial and altazimuthal. </p>
 
-<p>Definition at line <a class="el" href="StelMovementMgr_8hpp_source.html#l00097">97</a> of file <a class="el" href="StelMovementMgr_8hpp_source.html">StelMovementMgr.hpp</a>.</p>
+<p>Definition at line <a class="el" href="StelMovementMgr_8hpp_source.html#l00099">99</a> of file <a class="el" href="StelMovementMgr_8hpp_source.html">StelMovementMgr.hpp</a>.</p>
 
 </div>
 </div>
@@ -1703,7 +1738,7 @@ Additional Inherited Members</h2></td></tr>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Sat Feb 28 2015 22:27:43 for Stellarium by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Sat Apr 25 2015 22:49:29 for Stellarium by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.7
 </small></address>

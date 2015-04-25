@@ -84,6 +84,9 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a7c9495b583a5d7f37cbb1b69f2bc7f93"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classStelTexture.html#a7c9495b583a5d7f37cbb1b69f2bc7f93">getDimensions</a> (int &amp;width, int &amp;height)</td></tr>
 <tr class="memdesc:a7c9495b583a5d7f37cbb1b69f2bc7f93"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return the width and heigth of the texture in pixels.  <a href="#a7c9495b583a5d7f37cbb1b69f2bc7f93">More...</a><br /></td></tr>
 <tr class="separator:a7c9495b583a5d7f37cbb1b69f2bc7f93"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad42334ab0887c5623d4b6f1a487761ea"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classStelTexture.html#ad42334ab0887c5623d4b6f1a487761ea">hasAlphaChannel</a> () const </td></tr>
+<tr class="memdesc:ad42334ab0887c5623d4b6f1a487761ea"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns whether the texture has an alpha channel (GL_RGBA or GL_LUMINANCE_ALPHA format) This only returns valid information after the texture is fully loaded.  <a href="#ad42334ab0887c5623d4b6f1a487761ea">More...</a><br /></td></tr>
+<tr class="separator:ad42334ab0887c5623d4b6f1a487761ea"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aefebdf15ae3d9fa0ced76b44f08e9228"><td class="memItemLeft" align="right" valign="top">const QString &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classStelTexture.html#aefebdf15ae3d9fa0ced76b44f08e9228">getErrorMessage</a> () const </td></tr>
 <tr class="memdesc:aefebdf15ae3d9fa0ced76b44f08e9228"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the error message which caused the texture loading to fail.  <a href="#aefebdf15ae3d9fa0ced76b44f08e9228">More...</a><br /></td></tr>
 <tr class="separator:aefebdf15ae3d9fa0ced76b44f08e9228"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -168,7 +171,7 @@ Public Member Functions</h2></td></tr>
 
 <p>Return whether the texture can be binded, i.e. it is fully loaded. </p>
 
-<p>Definition at line <a class="el" href="StelTexture_8hpp_source.html#l00071">71</a> of file <a class="el" href="StelTexture_8hpp_source.html">StelTexture.hpp</a>.</p>
+<p>Definition at line <a class="el" href="StelTexture_8hpp_source.html#l00074">74</a> of file <a class="el" href="StelTexture_8hpp_source.html">StelTexture.hpp</a>.</p>
 
 </div>
 </div>
@@ -224,7 +227,7 @@ Public Member Functions</h2></td></tr>
 <p>Get the error message which caused the texture loading to fail. </p>
 <dl class="section return"><dt>Returns</dt><dd>the human friendly error message or empty string if no errors occured </dd></dl>
 
-<p>Definition at line <a class="el" href="StelTexture_8hpp_source.html#l00078">78</a> of file <a class="el" href="StelTexture_8hpp_source.html">StelTexture.hpp</a>.</p>
+<p>Definition at line <a class="el" href="StelTexture_8hpp_source.html#l00085">85</a> of file <a class="el" href="StelTexture_8hpp_source.html">StelTexture.hpp</a>.</p>
 
 </div>
 </div>
@@ -252,7 +255,34 @@ Public Member Functions</h2></td></tr>
 <p>Return the full path to the image file. </p>
 <p>If the texture was downloaded from a remote location, this function return the full URL. </p>
 
-<p>Definition at line <a class="el" href="StelTexture_8hpp_source.html#l00082">82</a> of file <a class="el" href="StelTexture_8hpp_source.html">StelTexture.hpp</a>.</p>
+<p>Definition at line <a class="el" href="StelTexture_8hpp_source.html#l00089">89</a> of file <a class="el" href="StelTexture_8hpp_source.html">StelTexture.hpp</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="ad42334ab0887c5623d4b6f1a487761ea"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool StelTexture::hasAlphaChannel </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Returns whether the texture has an alpha channel (GL_RGBA or GL_LUMINANCE_ALPHA format) This only returns valid information after the texture is fully loaded. </p>
+
+<p>Definition at line <a class="el" href="StelTexture_8hpp_source.html#l00081">81</a> of file <a class="el" href="StelTexture_8hpp_source.html">StelTexture.hpp</a>.</p>
 
 </div>
 </div>
@@ -279,7 +309,7 @@ Public Member Functions</h2></td></tr>
 
 <p>Return whether the image is currently being loaded. </p>
 
-<p>Definition at line <a class="el" href="StelTexture_8hpp_source.html#l00085">85</a> of file <a class="el" href="StelTexture_8hpp_source.html">StelTexture.hpp</a>.</p>
+<p>Definition at line <a class="el" href="StelTexture_8hpp_source.html#l00092">92</a> of file <a class="el" href="StelTexture_8hpp_source.html">StelTexture.hpp</a>.</p>
 
 </div>
 </div>
@@ -321,7 +351,7 @@ Public Member Functions</h2></td></tr>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Sat Feb 28 2015 22:27:44 for Stellarium by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Sat Apr 25 2015 22:49:29 for Stellarium by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.7
 </small></address>

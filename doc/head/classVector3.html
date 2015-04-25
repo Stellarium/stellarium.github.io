@@ -77,6 +77,9 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><b>operator==</b> (const
 <tr class="memitem:ad267f53b98aa494d226d3cf33654eceb"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ad267f53b98aa494d226d3cf33654eceb"></a>
 bool&#160;</td><td class="memItemRight" valign="bottom"><b>operator!=</b> (const <a class="el" href="classVector3.html">Vector3</a>&lt; T &gt; &amp;) const </td></tr>
 <tr class="separator:ad267f53b98aa494d226d3cf33654eceb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a56db0b8e3c7a38bebae5f1a5dfc36b73"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classVector3.html#a56db0b8e3c7a38bebae5f1a5dfc36b73">fuzzyEquals</a> (const <a class="el" href="classVector3.html">Vector3</a>&lt; T &gt; &amp;, T epsilon=std::numeric_limits&lt; T &gt;::epsilon()) const </td></tr>
+<tr class="memdesc:a56db0b8e3c7a38bebae5f1a5dfc36b73"><td class="mdescLeft">&#160;</td><td class="mdescRight">allows for a fuzzy comparison using some epsilon value  <a href="#a56db0b8e3c7a38bebae5f1a5dfc36b73">More...</a><br /></td></tr>
+<tr class="separator:a56db0b8e3c7a38bebae5f1a5dfc36b73"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a9ed6c3b015b8c852ccc6420241e13fb1"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a9ed6c3b015b8c852ccc6420241e13fb1"></a>
 T &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>operator[]</b> (int)</td></tr>
 <tr class="separator:a9ed6c3b015b8c852ccc6420241e13fb1"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -158,6 +161,12 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>transfo4d</b> (const 
 <tr class="memitem:a21fdda4b45399a0d6fdf6bf2052fef9a"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a21fdda4b45399a0d6fdf6bf2052fef9a"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><b>transfo4d</b> (const <a class="el" href="classMatrix4.html">Mat4f</a> &amp;)</td></tr>
 <tr class="separator:a21fdda4b45399a0d6fdf6bf2052fef9a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a90b7413d02f2bd1d697539f4b9d916ad"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a90b7413d02f2bd1d697539f4b9d916ad"></a>
+<a class="el" href="classVector3.html">Vec3f</a>&#160;</td><td class="memItemRight" valign="bottom"><b>toVec3f</b> () const </td></tr>
+<tr class="separator:a90b7413d02f2bd1d697539f4b9d916ad"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8b0d8c098f0564026098a8a70cd1fc1a"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a8b0d8c098f0564026098a8a70cd1fc1a"></a>
+<a class="el" href="classVector3.html">Vec3d</a>&#160;</td><td class="memItemRight" valign="bottom"><b>toVec3d</b> () const </td></tr>
+<tr class="separator:a8b0d8c098f0564026098a8a70cd1fc1a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a8007e90f127b647053df8e2af44609fb"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a8007e90f127b647053df8e2af44609fb"></a>
 QString&#160;</td><td class="memItemRight" valign="bottom"><b>toString</b> () const </td></tr>
 <tr class="separator:a8007e90f127b647053df8e2af44609fb"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -178,14 +187,55 @@ class Vector3&lt; T &gt;</h3>
 <p>A templatized 3d vector compatible with openGL. </p>
 <p>Use Vec3d or Vec3f typdef for vectors of double and float respectively. </p>
 
-<p>Definition at line <a class="el" href="VecMath_8hpp_source.html#l00031">31</a> of file <a class="el" href="VecMath_8hpp_source.html">VecMath.hpp</a>.</p>
-</div><hr/>The documentation for this class was generated from the following file:<ul>
+<p>Definition at line <a class="el" href="VecMath_8hpp_source.html#l00033">33</a> of file <a class="el" href="VecMath_8hpp_source.html">VecMath.hpp</a>.</p>
+</div><h2 class="groupheader">Member Function Documentation</h2>
+<a class="anchor" id="a56db0b8e3c7a38bebae5f1a5dfc36b73"></a>
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class T&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool <a class="el" href="classVector3.html">Vector3</a>&lt; T &gt;::fuzzyEquals </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classVector3.html">Vector3</a>&lt; T &gt; &amp;&#160;</td>
+          <td class="paramname"><em>a</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">T&#160;</td>
+          <td class="paramname"><em>epsilon</em> = <code>std::numeric_limits&lt;T&gt;::epsilon()</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>allows for a fuzzy comparison using some epsilon value </p>
+
+<p>Definition at line <a class="el" href="VecMath_8hpp_source.html#l00555">555</a> of file <a class="el" href="VecMath_8hpp_source.html">VecMath.hpp</a>.</p>
+
+</div>
+</div>
+<hr/>The documentation for this class was generated from the following file:<ul>
 <li><a class="el" href="VecMath_8hpp_source.html">VecMath.hpp</a></li>
 </ul>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Sat Feb 28 2015 22:27:44 for Stellarium by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Sat Apr 25 2015 22:49:29 for Stellarium by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.7
 </small></address>

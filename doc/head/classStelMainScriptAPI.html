@@ -196,6 +196,9 @@ Public Slots</h2></td></tr>
 <tr class="memitem:af27dc4e27c4426ffc039076c97d33465"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classStelMainScriptAPI.html#af27dc4e27c4426ffc039076c97d33465">setDiskViewport</a> (bool b)</td></tr>
 <tr class="memdesc:af27dc4e27c4426ffc039076c97d33465"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the disk viewport.  <a href="#af27dc4e27c4426ffc039076c97d33465">More...</a><br /></td></tr>
 <tr class="separator:af27dc4e27c4426ffc039076c97d33465"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aae9a72ecba1f131fd14bc95900931971"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classStelMainScriptAPI.html#aae9a72ecba1f131fd14bc95900931971">setSphericMirror</a> (bool b)</td></tr>
+<tr class="memdesc:aae9a72ecba1f131fd14bc95900931971"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the viewport distortion effect.  <a href="#aae9a72ecba1f131fd14bc95900931971">More...</a><br /></td></tr>
+<tr class="separator:aae9a72ecba1f131fd14bc95900931971"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab2f035898093af35f9866f54d1849c96"><td class="memItemLeft" align="right" valign="top">QStringList&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classStelMainScriptAPI.html#ab2f035898093af35f9866f54d1849c96">getAllSkyCultureIDs</a> ()</td></tr>
 <tr class="memdesc:ab2f035898093af35f9866f54d1849c96"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get a list of Sky Culture IDs.  <a href="#ab2f035898093af35f9866f54d1849c96">More...</a><br /></td></tr>
 <tr class="separator:ab2f035898093af35f9866f54d1849c96"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -477,7 +480,8 @@ double&#160;</td><td class="memItemRight" valign="bottom"><b>timeSpeed</b></td><
 <p>Clear the display options, setting a "standard" view. </p>
 <p>Preset states:</p><ul>
 <li>natural : azimuthal mount, atmosphere, landscape, no lines, labels or markers</li>
-<li>starchart : equatorial mount, constellation lines, no landscape, atmoshere etc. labels &amp; markers on. <dl class="params"><dt>Parameters</dt><dd>
+<li>starchart : equatorial mount, constellation lines, no landscape, atmosphere etc. labels &amp; markers on.</li>
+<li>deepspace : like starchart, but no planets, no eq.grid, no markers, no lines. <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">state</td><td>the name of a preset state. </td></tr>
   </table>
@@ -1140,7 +1144,9 @@ double&#160;</td><td class="memItemRight" valign="bottom"><b>timeSpeed</b></td><
 <li>location : city and country</li>
 <li>sidereal-year : duration of the sidereal year on the planet in Earth's days (since 0.12.0)</li>
 <li>sidereal-day : duration of the sidereal day on the planet in Earth's hours (since 0.12.0)</li>
-<li>solar-day : duration of the mean solar day on the planet in Earth's hours (since 0.12.0) </li>
+<li>solar-day : duration of the mean solar day on the planet in Earth's hours (since 0.12.0)</li>
+<li>local-sidereal-time : local sidereal time on the planet in hours (since 0.13.3)</li>
+<li>local-sidereal-time-hms : local sidereal time on the planet in hours in HMS format (since 0.13.3) </li>
 </ul>
 </dd></dl>
 
@@ -3796,6 +3802,38 @@ starting with version 0.13.2 all relative dates are set without DeltaT correctio
 
 </div>
 </div>
+<a class="anchor" id="aae9a72ecba1f131fd14bc95900931971"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void StelMainScriptAPI::setSphericMirror </td>
+          <td>(</td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>b</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">slot</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Set the viewport distortion effect. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">b</td><td>if true, sets the spherical mirror distortion effect for viewport on, else sets it off </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
 <a class="anchor" id="a90d8761b42dcd45d2cdfcc93796338db"></a>
 <div class="memitem">
 <div class="memproto">
@@ -4123,7 +4161,7 @@ starting with version 0.13.2 all relative dates are set without DeltaT correctio
 </dl>
 <dl class="section note"><dt>Note</dt><dd>This method is pure JavaScript implementation. </dd></dl>
 
-<p>Definition at line <a class="el" href="StelMainScriptAPI_8hpp_source.html#l00700">700</a> of file <a class="el" href="StelMainScriptAPI_8hpp_source.html">StelMainScriptAPI.hpp</a>.</p>
+<p>Definition at line <a class="el" href="StelMainScriptAPI_8hpp_source.html#l00707">707</a> of file <a class="el" href="StelMainScriptAPI_8hpp_source.html">StelMainScriptAPI.hpp</a>.</p>
 
 </div>
 </div>
@@ -4169,7 +4207,7 @@ starting with version 0.13.2 all relative dates are set without DeltaT correctio
 </dl>
 <dl class="section note"><dt>Note</dt><dd>This method is pure JavaScript implementation. </dd></dl>
 
-<p>Definition at line <a class="el" href="StelMainScriptAPI_8hpp_source.html#l00711">711</a> of file <a class="el" href="StelMainScriptAPI_8hpp_source.html">StelMainScriptAPI.hpp</a>.</p>
+<p>Definition at line <a class="el" href="StelMainScriptAPI_8hpp_source.html#l00718">718</a> of file <a class="el" href="StelMainScriptAPI_8hpp_source.html">StelMainScriptAPI.hpp</a>.</p>
 
 </div>
 </div>
@@ -4179,7 +4217,7 @@ starting with version 0.13.2 all relative dates are set without DeltaT correctio
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Sat Feb 28 2015 22:27:43 for Stellarium by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Sat Apr 25 2015 22:49:29 for Stellarium by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.7
 </small></address>

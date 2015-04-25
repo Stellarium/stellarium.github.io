@@ -152,44 +152,40 @@
 <div class="line"><a name="l00170"></a><span class="lineno">  170</span>&#160;</div>
 <div class="line"><a name="l00173"></a><span class="lineno">  173</span>&#160;    <span class="keywordtype">void</span> initActions();</div>
 <div class="line"><a name="l00174"></a><span class="lineno">  174</span>&#160;</div>
-<div class="line"><a name="l00175"></a><span class="lineno">  175</span>&#160;<span class="preprocessor">#ifdef ENABLE_STRATOSCRIPT_COMPAT</span></div>
-<div class="line"><a name="l00176"></a><span class="lineno">  176</span>&#160;    <span class="keywordtype">bool</span> preprocessStratoScript(QFile&amp; input, QString&amp; output, <span class="keyword">const</span> QString&amp; scriptDir);</div>
-<div class="line"><a name="l00177"></a><span class="lineno">  177</span>&#160;<span class="preprocessor">#endif</span></div>
-<div class="line"><a name="l00178"></a><span class="lineno">  178</span>&#160;</div>
-<div class="line"><a name="l00185"></a><span class="lineno">  185</span>&#160;    <span class="keyword">const</span> QString getHeaderSingleLineCommentText(<span class="keyword">const</span> QString&amp; s, <span class="keyword">const</span> QString&amp; <span class="keywordtype">id</span>, <span class="keyword">const</span> QString&amp; notFoundText=<span class="stringliteral">&quot;&quot;</span>);  </div>
-<div class="line"><a name="l00186"></a><span class="lineno">  186</span>&#160;    QScriptEngine engine;</div>
-<div class="line"><a name="l00187"></a><span class="lineno">  187</span>&#160;    </div>
-<div class="line"><a name="l00189"></a><span class="lineno">  189</span>&#160;    <a class="code" href="classStelMainScriptAPI.html">StelMainScriptAPI</a> *mainAPI;</div>
-<div class="line"><a name="l00190"></a><span class="lineno">  190</span>&#160;</div>
-<div class="line"><a name="l00191"></a><span class="lineno">  191</span>&#160;    QString scriptFileName;</div>
-<div class="line"><a name="l00192"></a><span class="lineno">  192</span>&#160;    </div>
-<div class="line"><a name="l00193"></a><span class="lineno">  193</span>&#160;    <span class="comment">//Script engine agent</span></div>
-<div class="line"><a name="l00194"></a><span class="lineno">  194</span>&#160;    <a class="code" href="classStelScriptEngineAgent.html">StelScriptEngineAgent</a> *agent;</div>
-<div class="line"><a name="l00195"></a><span class="lineno">  195</span>&#160;    </div>
-<div class="line"><a name="l00196"></a><span class="lineno">  196</span>&#160;};</div>
-<div class="line"><a name="l00197"></a><span class="lineno">  197</span>&#160;</div>
-<div class="line"><a name="l00198"></a><span class="lineno"><a class="line" href="classStelScriptEngineAgent.html">  198</a></span>&#160;<span class="keyword">class </span><a class="code" href="classStelScriptEngineAgent.html">StelScriptEngineAgent</a> : <span class="keyword">public</span> QScriptEngineAgent</div>
-<div class="line"><a name="l00199"></a><span class="lineno">  199</span>&#160;{</div>
-<div class="line"><a name="l00200"></a><span class="lineno">  200</span>&#160;<span class="keyword">public</span>:</div>
-<div class="line"><a name="l00201"></a><span class="lineno">  201</span>&#160;    <span class="keyword">explicit</span> <a class="code" href="classStelScriptEngineAgent.html">StelScriptEngineAgent</a>(QScriptEngine *engine);</div>
-<div class="line"><a name="l00202"></a><span class="lineno">  202</span>&#160;    <span class="keyword">virtual</span> ~<a class="code" href="classStelScriptEngineAgent.html">StelScriptEngineAgent</a>() {}</div>
-<div class="line"><a name="l00203"></a><span class="lineno">  203</span>&#160;</div>
-<div class="line"><a name="l00204"></a><span class="lineno">  204</span>&#160;    <span class="keywordtype">void</span> setPauseScript(<span class="keywordtype">bool</span> pause) { isPaused=pause; }</div>
-<div class="line"><a name="l00205"></a><span class="lineno">  205</span>&#160;    <span class="keywordtype">bool</span> getPauseScript() { <span class="keywordflow">return</span> isPaused; }</div>
-<div class="line"><a name="l00206"></a><span class="lineno">  206</span>&#160;</div>
-<div class="line"><a name="l00207"></a><span class="lineno">  207</span>&#160;    <span class="keywordtype">void</span> positionChange(qint64 scriptId, <span class="keywordtype">int</span> lineNumber, <span class="keywordtype">int</span> columnNumber);</div>
-<div class="line"><a name="l00208"></a><span class="lineno">  208</span>&#160;    </div>
-<div class="line"><a name="l00209"></a><span class="lineno">  209</span>&#160;<span class="keyword">private</span>:</div>
-<div class="line"><a name="l00210"></a><span class="lineno">  210</span>&#160;    <span class="keywordtype">bool</span> isPaused;</div>
-<div class="line"><a name="l00211"></a><span class="lineno">  211</span>&#160;</div>
-<div class="line"><a name="l00212"></a><span class="lineno">  212</span>&#160;};</div>
-<div class="line"><a name="l00213"></a><span class="lineno">  213</span>&#160;</div>
-<div class="line"><a name="l00214"></a><span class="lineno">  214</span>&#160;<span class="preprocessor">#endif // _STELSCRIPTMGR_HPP_</span></div>
+<div class="line"><a name="l00181"></a><span class="lineno">  181</span>&#160;    <span class="keyword">const</span> QString getHeaderSingleLineCommentText(<span class="keyword">const</span> QString&amp; s, <span class="keyword">const</span> QString&amp; <span class="keywordtype">id</span>, <span class="keyword">const</span> QString&amp; notFoundText=<span class="stringliteral">&quot;&quot;</span>);  </div>
+<div class="line"><a name="l00182"></a><span class="lineno">  182</span>&#160;    QScriptEngine engine;</div>
+<div class="line"><a name="l00183"></a><span class="lineno">  183</span>&#160;    </div>
+<div class="line"><a name="l00185"></a><span class="lineno">  185</span>&#160;    <a class="code" href="classStelMainScriptAPI.html">StelMainScriptAPI</a> *mainAPI;</div>
+<div class="line"><a name="l00186"></a><span class="lineno">  186</span>&#160;</div>
+<div class="line"><a name="l00187"></a><span class="lineno">  187</span>&#160;    QString scriptFileName;</div>
+<div class="line"><a name="l00188"></a><span class="lineno">  188</span>&#160;    </div>
+<div class="line"><a name="l00189"></a><span class="lineno">  189</span>&#160;    <span class="comment">//Script engine agent</span></div>
+<div class="line"><a name="l00190"></a><span class="lineno">  190</span>&#160;    <a class="code" href="classStelScriptEngineAgent.html">StelScriptEngineAgent</a> *agent;</div>
+<div class="line"><a name="l00191"></a><span class="lineno">  191</span>&#160;    </div>
+<div class="line"><a name="l00192"></a><span class="lineno">  192</span>&#160;};</div>
+<div class="line"><a name="l00193"></a><span class="lineno">  193</span>&#160;</div>
+<div class="line"><a name="l00194"></a><span class="lineno"><a class="line" href="classStelScriptEngineAgent.html">  194</a></span>&#160;<span class="keyword">class </span><a class="code" href="classStelScriptEngineAgent.html">StelScriptEngineAgent</a> : <span class="keyword">public</span> QScriptEngineAgent</div>
+<div class="line"><a name="l00195"></a><span class="lineno">  195</span>&#160;{</div>
+<div class="line"><a name="l00196"></a><span class="lineno">  196</span>&#160;<span class="keyword">public</span>:</div>
+<div class="line"><a name="l00197"></a><span class="lineno">  197</span>&#160;    <span class="keyword">explicit</span> <a class="code" href="classStelScriptEngineAgent.html">StelScriptEngineAgent</a>(QScriptEngine *engine);</div>
+<div class="line"><a name="l00198"></a><span class="lineno">  198</span>&#160;    <span class="keyword">virtual</span> ~<a class="code" href="classStelScriptEngineAgent.html">StelScriptEngineAgent</a>() {}</div>
+<div class="line"><a name="l00199"></a><span class="lineno">  199</span>&#160;</div>
+<div class="line"><a name="l00200"></a><span class="lineno">  200</span>&#160;    <span class="keywordtype">void</span> setPauseScript(<span class="keywordtype">bool</span> pause) { isPaused=pause; }</div>
+<div class="line"><a name="l00201"></a><span class="lineno">  201</span>&#160;    <span class="keywordtype">bool</span> getPauseScript() { <span class="keywordflow">return</span> isPaused; }</div>
+<div class="line"><a name="l00202"></a><span class="lineno">  202</span>&#160;</div>
+<div class="line"><a name="l00203"></a><span class="lineno">  203</span>&#160;    <span class="keywordtype">void</span> positionChange(qint64 scriptId, <span class="keywordtype">int</span> lineNumber, <span class="keywordtype">int</span> columnNumber);</div>
+<div class="line"><a name="l00204"></a><span class="lineno">  204</span>&#160;    </div>
+<div class="line"><a name="l00205"></a><span class="lineno">  205</span>&#160;<span class="keyword">private</span>:</div>
+<div class="line"><a name="l00206"></a><span class="lineno">  206</span>&#160;    <span class="keywordtype">bool</span> isPaused;</div>
+<div class="line"><a name="l00207"></a><span class="lineno">  207</span>&#160;</div>
+<div class="line"><a name="l00208"></a><span class="lineno">  208</span>&#160;};</div>
+<div class="line"><a name="l00209"></a><span class="lineno">  209</span>&#160;</div>
+<div class="line"><a name="l00210"></a><span class="lineno">  210</span>&#160;<span class="preprocessor">#endif // _STELSCRIPTMGR_HPP_</span></div>
 <div class="ttc" id="classStelScriptMgr_html_ab6f4c29b9143939d2cb8e43a1d3180be"><div class="ttname"><a href="classStelScriptMgr.html#ab6f4c29b9143939d2cb8e43a1d3180be">StelScriptMgr::getLicense</a></div><div class="ttdeci">const QString getLicense(const QString &amp;s)</div><div class="ttdoc">Gets the licensing terms for the script. </div></div>
 <div class="ttc" id="classStelScriptMgr_html_ac8f45eb3027f28c638e5e38d183054b2"><div class="ttname"><a href="classStelScriptMgr.html#ac8f45eb3027f28c638e5e38d183054b2">StelScriptMgr::getAuthor</a></div><div class="ttdeci">const QString getAuthor(const QString &amp;s)</div><div class="ttdoc">Gets the name of the script Author. </div></div>
 <div class="ttc" id="classStelScriptMgr_html_a4ae16f6682d202218f3ae778d14bdbb4"><div class="ttname"><a href="classStelScriptMgr.html#a4ae16f6682d202218f3ae778d14bdbb4">StelScriptMgr::runScript</a></div><div class="ttdeci">bool runScript(const QString &amp;fileName, const QString &amp;includePath=&quot;&quot;)</div><div class="ttdoc">Run the script located at the given location. </div></div>
 <div class="ttc" id="classStelScriptMgr_html_a251adf70871e844384276916ecaa7fa6"><div class="ttname"><a href="classStelScriptMgr.html#a251adf70871e844384276916ecaa7fa6">StelScriptMgr::debug</a></div><div class="ttdeci">void debug(const QString &amp;msg)</div><div class="ttdoc">cause the emission of the scriptDebug signal. </div></div>
-<div class="ttc" id="classStelScriptEngineAgent_html"><div class="ttname"><a href="classStelScriptEngineAgent.html">StelScriptEngineAgent</a></div><div class="ttdef"><b>Definition:</b> <a href="StelScriptMgr_8hpp_source.html#l00198">StelScriptMgr.hpp:198</a></div></div>
+<div class="ttc" id="classStelScriptEngineAgent_html"><div class="ttname"><a href="classStelScriptEngineAgent.html">StelScriptEngineAgent</a></div><div class="ttdef"><b>Definition:</b> <a href="StelScriptMgr_8hpp_source.html#l00194">StelScriptMgr.hpp:194</a></div></div>
 <div class="ttc" id="classStelScriptMgr_html_aeea51aa0d866d1dcd1daf8e4a6e132a7"><div class="ttname"><a href="classStelScriptMgr.html#aeea51aa0d866d1dcd1daf8e4a6e132a7">StelScriptMgr::setScriptRate</a></div><div class="ttdeci">void setScriptRate(float r)</div><div class="ttdoc">Changes the rate at which the script executes as a multiple of real time. </div></div>
 <div class="ttc" id="classStelScriptMgr_html_a2cf34cd52cbcdc182bd409172432f8e8"><div class="ttname"><a href="classStelScriptMgr.html#a2cf34cd52cbcdc182bd409172432f8e8">StelScriptMgr::scriptRunning</a></div><div class="ttdeci">void scriptRunning()</div><div class="ttdoc">Notification when a script starts running. </div></div>
 <div class="ttc" id="classStelScriptMgr_html_a587d4e9b21a2cb36065c395ddc8269b5"><div class="ttname"><a href="classStelScriptMgr.html#a587d4e9b21a2cb36065c395ddc8269b5">StelScriptMgr::scriptDebug</a></div><div class="ttdeci">void scriptDebug(const QString &amp;)</div><div class="ttdoc">Notification of a script event - warnings, current execution line etc. </div></div>
@@ -213,7 +209,7 @@
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Sat Feb 28 2015 22:27:43 for Stellarium by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Sat Apr 25 2015 22:49:28 for Stellarium by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.7
 </small></address>

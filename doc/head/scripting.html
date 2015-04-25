@@ -41,7 +41,6 @@
 <div class="contents">
 <div class="toc"><h3>Table of Contents</h3>
 <ul><li class="level1"><a href="#intro_scripts">Introduction</a></li>
-<li class="level1"><a href="#scratoscript">StratoScript</a></li>
 <li class="level1"><a href="#scripting_api">Scripting API</a></li>
 <li class="level1"><a href="#include_scripts">Includes</a></li>
 <li class="level1"><a href="#script_console">Script Console</a></li>
@@ -55,13 +54,6 @@
 Introduction</h1>
 <p>Since version 0.10.1, Stellarium includes a scripting feature based on the <a href="http://doc.qt.io/qt-5/qtscript-index.html">Qt Scripting Engine</a>. This makes it possible to write small programs within Stellarium to produce presentations, set up custom configurations, and to automate repetitive tasks. Prior to version 0.10.0, Stellarium used a different scripting engine called StratoScript.</p>
 <p>The core scripting language is <a href="http://en.wikipedia.org/wiki/ECMAScript">ECMAScript</a>, giving users access to all basic ECMAScript language features such as flow control, variables string manipulation and so on. Interaction with Stellarium-specific features is done via a collection of objects which represent components of Stellarium itself. See <a class="el" href="scripting.html#scripting_api">Scripting API</a> for more details.</p>
-<h1><a class="anchor" id="scratoscript"></a>
-StratoScript</h1>
-<p>Prior to version 0.10.0, Stellarium had a simple scripting engine, known as <em>StratoScript</em>. Using <em>StratoScript</em> it was possible to record and play back sequences of Stellarium commands, load and display custom images, and play sounds. In this way it was possible to make planetarium presentations - a feature used quite widely in the small planetarium community.</p>
-<p>However <em>StratoScript</em> lacked many features of a real programming language - there were no variables, no flow control and no way to introspect the state of Stellarium.</p>
-<p>The replacement scripting engine implemented in the 0.10.x series addresses these shortcomings, at the expense of a little complexity and a new language syntax.</p>
-<p>A compatibility mode which converts <em>StratoScript</em> into new scripting engine on the fly is in progress.</p>
-<p>Note: StratoScript compatibility is a build-time option. To enable this feature, Stellarium must be built using the ENABLE_STRATOSCRIPT_COMPAT=1 option to cmake.</p>
 <h1><a class="anchor" id="scripting_api"></a>
 Scripting API</h1>
 <p>Interation with Stellarium-specific functionality is done by calling the <b>public slots</b> of instances of a group of Stellarium's core classes.</p>
@@ -111,7 +103,7 @@ Using a StelModule</h2>
 </div><!-- fragment --> </div></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Sat Feb 28 2015 22:27:43 for Stellarium by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Sat Apr 25 2015 22:49:28 for Stellarium by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.7
 </small></address>
