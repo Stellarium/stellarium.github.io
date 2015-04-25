@@ -240,13 +240,13 @@ printf('</ul>
 		<ul class="smalllist"><li>%s</li><li>%s</li><li>%s</li><li>%s</li></ul>',
 q_("system requirements"),
 q_("minimal"),
-q_("Linux/Unix; Windows XP and above; OS X 10.7.4 and above"),
-q_("3D graphics card which supports OpenGL 2.1"),
-q_("256 MiB RAM"),
-q_("150 MiB on disk"),
+q_("Linux/Unix; Windows 7 and above; OS X 10.7.4 and above"),
+q_("3D graphics card which supports OpenGL 3.1"),
+q_("512 MiB RAM"),
+q_("250 MiB on disk"),
 q_("recommended"),
 q_("Linux/Unix; Windows 7 and above; OS X 10.8.5 and above"),
-q_("3D graphics card which supports OpenGL 3.1 and above"),
+q_("3D graphics card which supports OpenGL 3.3 and above"),
 q_("1 GiB RAM or more"),
 q_("1.5 GiB on disk"));
 
