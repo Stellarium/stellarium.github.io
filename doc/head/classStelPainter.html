@@ -120,6 +120,9 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>drawSphericalTriangle
 <tr class="memitem:a09b1850db5f1803fcfd41a9442e91da6"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classStelPainter.html#a09b1850db5f1803fcfd41a9442e91da6">drawGreatCircleArc</a> (const <a class="el" href="classVector3.html">Vec3d</a> &amp;start, const <a class="el" href="classVector3.html">Vec3d</a> &amp;stop, const <a class="el" href="classSphericalCap.html">SphericalCap</a> *clippingCap=NULL, void(*viewportEdgeIntersectCallback)(const <a class="el" href="classVector3.html">Vec3d</a> &amp;screenPos, const <a class="el" href="classVector3.html">Vec3d</a> &amp;direction, void *userData)=NULL, void *userData=NULL)</td></tr>
 <tr class="memdesc:a09b1850db5f1803fcfd41a9442e91da6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Draw a great circle arc between points start and stop.  <a href="#a09b1850db5f1803fcfd41a9442e91da6">More...</a><br /></td></tr>
 <tr class="separator:a09b1850db5f1803fcfd41a9442e91da6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab0256c8cefdfae4b3c2c402e326ddad8"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classStelPainter.html#ab0256c8cefdfae4b3c2c402e326ddad8">drawPath</a> (const QVector&lt; <a class="el" href="classVector3.html">Vec3d</a> &gt; &amp;points, const QVector&lt; <a class="el" href="classVector4.html">Vec4f</a> &gt; &amp;colors)</td></tr>
+<tr class="memdesc:ab0256c8cefdfae4b3c2c402e326ddad8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Draw a curve defined by a list of points.  <a href="#ab0256c8cefdfae4b3c2c402e326ddad8">More...</a><br /></td></tr>
+<tr class="separator:ab0256c8cefdfae4b3c2c402e326ddad8"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a3205e75a3c43ef2e641b5f31abdb069b"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classStelPainter.html#a3205e75a3c43ef2e641b5f31abdb069b">drawCircle</a> (float x, float y, float r)</td></tr>
 <tr class="memdesc:a3205e75a3c43ef2e641b5f31abdb069b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Draw a simple circle, 2d viewport coordinates in pixel.  <a href="#a3205e75a3c43ef2e641b5f31abdb069b">More...</a><br /></td></tr>
 <tr class="separator:a3205e75a3c43ef2e641b5f31abdb069b"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -655,6 +658,35 @@ Static Public Member Functions</h2></td></tr>
   </table>
   </dd>
 </dl>
+
+</div>
+</div>
+<a class="anchor" id="ab0256c8cefdfae4b3c2c402e326ddad8"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void StelPainter::drawPath </td>
+          <td>(</td>
+          <td class="paramtype">const QVector&lt; <a class="el" href="classVector3.html">Vec3d</a> &gt; &amp;&#160;</td>
+          <td class="paramname"><em>points</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const QVector&lt; <a class="el" href="classVector4.html">Vec4f</a> &gt; &amp;&#160;</td>
+          <td class="paramname"><em>colors</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Draw a curve defined by a list of points. </p>
+<p>The points should be already tesselated to ensure that the path will look smooth. The algorithm take care of cutting the path if it crosses a viewport discontinutiy. </p>
 
 </div>
 </div>
@@ -1443,7 +1475,7 @@ Static Public Member Functions</h2></td></tr>
 
 <p>use instead of glColorPointer </p>
 
-<p>Definition at line <a class="el" href="StelPainter_8hpp_source.html#l00250">250</a> of file <a class="el" href="StelPainter_8hpp_source.html">StelPainter.hpp</a>.</p>
+<p>Definition at line <a class="el" href="StelPainter_8hpp_source.html#l00255">255</a> of file <a class="el" href="StelPainter_8hpp_source.html">StelPainter.hpp</a>.</p>
 
 </div>
 </div>
@@ -1499,7 +1531,7 @@ Static Public Member Functions</h2></td></tr>
 
 <p>use instead of glNormalPointer </p>
 
-<p>Definition at line <a class="el" href="StelPainter_8hpp_source.html#l00256">256</a> of file <a class="el" href="StelPainter_8hpp_source.html">StelPainter.hpp</a>.</p>
+<p>Definition at line <a class="el" href="StelPainter_8hpp_source.html#l00261">261</a> of file <a class="el" href="StelPainter_8hpp_source.html">StelPainter.hpp</a>.</p>
 
 </div>
 </div>
@@ -1543,7 +1575,7 @@ Static Public Member Functions</h2></td></tr>
 
 <p>use instead of glTexCoordPointer </p>
 
-<p>Definition at line <a class="el" href="StelPainter_8hpp_source.html#l00244">244</a> of file <a class="el" href="StelPainter_8hpp_source.html">StelPainter.hpp</a>.</p>
+<p>Definition at line <a class="el" href="StelPainter_8hpp_source.html#l00249">249</a> of file <a class="el" href="StelPainter_8hpp_source.html">StelPainter.hpp</a>.</p>
 
 </div>
 </div>
@@ -1587,7 +1619,7 @@ Static Public Member Functions</h2></td></tr>
 
 <p>use instead of glVertexPointer </p>
 
-<p>Definition at line <a class="el" href="StelPainter_8hpp_source.html#l00239">239</a> of file <a class="el" href="StelPainter_8hpp_source.html">StelPainter.hpp</a>.</p>
+<p>Definition at line <a class="el" href="StelPainter_8hpp_source.html#l00244">244</a> of file <a class="el" href="StelPainter_8hpp_source.html">StelPainter.hpp</a>.</p>
 
 </div>
 </div>
@@ -1643,7 +1675,7 @@ Static Public Member Functions</h2></td></tr>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Sat May 2 2015 00:42:00 for Stellarium by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Sun May 17 2015 00:43:59 for Stellarium by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.7
 </small></address>

@@ -143,6 +143,9 @@ Functions</h2></td></tr>
 <tr class="memitem:a9f2ce4bf6c3d610e3de69c1f4d9e7f59"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceStelUtils.html#a9f2ce4bf6c3d610e3de69c1f4d9e7f59">equToEcl</a> (const double raRad, const double decRad, const double eclRad, double *lambdaRad, double *betaRad)</td></tr>
 <tr class="memdesc:a9f2ce4bf6c3d610e3de69c1f4d9e7f59"><td class="mdescLeft">&#160;</td><td class="mdescRight">Coordinate Transformation from equatorial to ecliptical.  <a href="#a9f2ce4bf6c3d610e3de69c1f4d9e7f59">More...</a><br /></td></tr>
 <tr class="separator:a9f2ce4bf6c3d610e3de69c1f4d9e7f59"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9e5a632badc072f6c5aac1c9b5503e51"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceStelUtils.html#a9e5a632badc072f6c5aac1c9b5503e51">eclToEqu</a> (const double lambdaRad, const double betaRad, const double eclRad, double *raRad, double *decRad)</td></tr>
+<tr class="memdesc:a9e5a632badc072f6c5aac1c9b5503e51"><td class="mdescLeft">&#160;</td><td class="mdescRight">Coordinate Transformation from ecliptical to equatorial.  <a href="#a9e5a632badc072f6c5aac1c9b5503e51">More...</a><br /></td></tr>
+<tr class="separator:a9e5a632badc072f6c5aac1c9b5503e51"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:acd88f8194549c7d46656952428720427"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceStelUtils.html#acd88f8194549c7d46656952428720427">getDecAngle</a> (const QString &amp;str)</td></tr>
 <tr class="memdesc:acd88f8194549c7d46656952428720427"><td class="mdescLeft">&#160;</td><td class="mdescRight">Convert a string longitude, latitude, RA or Declination angle to radians.  <a href="#acd88f8194549c7d46656952428720427">More...</a><br /></td></tr>
 <tr class="separator:acd88f8194549c7d46656952428720427"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -218,8 +221,8 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><b>changeDateTimeForRoll
 <tr class="memitem:a7f959d5efad01b6b8cc640b6ef3c4537"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceStelUtils.html#a7f959d5efad01b6b8cc640b6ef3c4537">calculateSiderealPeriod</a> (const double SemiMajorAxis)</td></tr>
 <tr class="memdesc:a7f959d5efad01b6b8cc640b6ef3c4537"><td class="mdescLeft">&#160;</td><td class="mdescRight">Calculate and getting sidereal period in days from semi-major axis (in AU)  <a href="#a7f959d5efad01b6b8cc640b6ef3c4537">More...</a><br /></td></tr>
 <tr class="separator:a7f959d5efad01b6b8cc640b6ef3c4537"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a3c33b4e8aae6e3e6b1f42f226ed7f431"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a3c33b4e8aae6e3e6b1f42f226ed7f431"></a>
-QString&#160;</td><td class="memItemRight" valign="bottom"><b>hoursToHmsStr</b> (const double hours)</td></tr>
+<tr class="memitem:a3c33b4e8aae6e3e6b1f42f226ed7f431"><td class="memItemLeft" align="right" valign="top">QString&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceStelUtils.html#a3c33b4e8aae6e3e6b1f42f226ed7f431">hoursToHmsStr</a> (const double hours)</td></tr>
+<tr class="memdesc:a3c33b4e8aae6e3e6b1f42f226ed7f431"><td class="mdescLeft">&#160;</td><td class="mdescRight">Convert decimal hours to hours, minutes, seconds.  <a href="#a3c33b4e8aae6e3e6b1f42f226ed7f431">More...</a><br /></td></tr>
 <tr class="separator:a3c33b4e8aae6e3e6b1f42f226ed7f431"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:abb0f71fd5a5d37e30415bdc6d8b6e014"><td class="memItemLeft" align="right" valign="top">long double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceStelUtils.html#abb0f71fd5a5d37e30415bdc6d8b6e014">secondsSinceStart</a> ()</td></tr>
 <tr class="memdesc:abb0f71fd5a5d37e30415bdc6d8b6e014"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the number of seconds since program start.  <a href="#abb0f71fd5a5d37e30415bdc6d8b6e014">More...</a><br /></td></tr>
@@ -650,6 +653,52 @@ double&#160;</td><td class="memItemRight" valign="bottom"><b>trunc</b> (double x
 
 </div>
 </div>
+<a class="anchor" id="a9e5a632badc072f6c5aac1c9b5503e51"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void StelUtils::eclToEqu </td>
+          <td>(</td>
+          <td class="paramtype">const double&#160;</td>
+          <td class="paramname"><em>lambdaRad</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const double&#160;</td>
+          <td class="paramname"><em>betaRad</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const double&#160;</td>
+          <td class="paramname"><em>eclRad</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double *&#160;</td>
+          <td class="paramname"><em>raRad</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double *&#160;</td>
+          <td class="paramname"><em>decRad</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Coordinate Transformation from ecliptical to equatorial. </p>
+
+</div>
+</div>
 <a class="anchor" id="a9f2ce4bf6c3d610e3de69c1f4d9e7f59"></a>
 <div class="memitem">
 <div class="memproto">
@@ -720,7 +769,7 @@ double&#160;</td><td class="memItemRight" valign="bottom"><b>trunc</b> (double x
 
 <p>Compute acos(x) The taylor serie is not accurate around x=1 and x=-1. </p>
 
-<p>Definition at line <a class="el" href="StelUtils_8hpp_source.html#l00301">301</a> of file <a class="el" href="StelUtils_8hpp_source.html">StelUtils.hpp</a>.</p>
+<p>Definition at line <a class="el" href="StelUtils_8hpp_source.html#l00304">304</a> of file <a class="el" href="StelUtils_8hpp_source.html">StelUtils.hpp</a>.</p>
 
 </div>
 </div>
@@ -748,7 +797,7 @@ double&#160;</td><td class="memItemRight" valign="bottom"><b>trunc</b> (double x
 
 <p>Compute exp(x) for small exponents x. </p>
 
-<p>Definition at line <a class="el" href="StelUtils_8hpp_source.html#l00307">307</a> of file <a class="el" href="StelUtils_8hpp_source.html">StelUtils.hpp</a>.</p>
+<p>Definition at line <a class="el" href="StelUtils_8hpp_source.html#l00310">310</a> of file <a class="el" href="StelUtils_8hpp_source.html">StelUtils.hpp</a>.</p>
 
 </div>
 </div>
@@ -1906,7 +1955,7 @@ double&#160;</td><td class="memItemRight" valign="bottom"><b>trunc</b> (double x
 <p>Get a night mode version of a color. </p>
 <p>That is find the brightness of a color and set that in the red channel only </p>
 
-<p>Definition at line <a class="el" href="StelUtils_8hpp_source.html#l00316">316</a> of file <a class="el" href="StelUtils_8hpp_source.html">StelUtils.hpp</a>.</p>
+<p>Definition at line <a class="el" href="StelUtils_8hpp_source.html#l00319">319</a> of file <a class="el" href="StelUtils_8hpp_source.html">StelUtils.hpp</a>.</p>
 
 </div>
 </div>
@@ -2007,6 +2056,24 @@ double&#160;</td><td class="memItemRight" valign="bottom"><b>trunc</b> (double x
   </dd>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>angle in radian </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a3c33b4e8aae6e3e6b1f42f226ed7f431"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">QString StelUtils::hoursToHmsStr </td>
+          <td>(</td>
+          <td class="paramtype">const double&#160;</td>
+          <td class="paramname"><em>hours</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Convert decimal hours to hours, minutes, seconds. </p>
 
 </div>
 </div>
@@ -2740,7 +2807,7 @@ template&lt;typename T &gt; </div>
 
 <p>Sign function from <a href="http://stackoverflow.com/questions/1903954/is-there-a-standard-sign-function-signum-sgn-in-c-c">http://stackoverflow.com/questions/1903954/is-there-a-standard-sign-function-signum-sgn-in-c-c</a>. </p>
 
-<p>Definition at line <a class="el" href="StelUtils_8hpp_source.html#l00613">613</a> of file <a class="el" href="StelUtils_8hpp_source.html">StelUtils.hpp</a>.</p>
+<p>Definition at line <a class="el" href="StelUtils_8hpp_source.html#l00617">617</a> of file <a class="el" href="StelUtils_8hpp_source.html">StelUtils.hpp</a>.</p>
 
 </div>
 </div>
@@ -3025,7 +3092,7 @@ template&lt;typename T &gt; </div>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Sat May 2 2015 00:42:00 for Stellarium by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Sun May 17 2015 00:43:59 for Stellarium by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.7
 </small></address>
