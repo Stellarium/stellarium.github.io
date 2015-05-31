@@ -73,27 +73,27 @@
 <div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;</div>
 <div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;<span class="preprocessor">#include &lt;QObject&gt;</span></div>
 <div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;</div>
-<div class="line"><a name="l00044"></a><span class="lineno"><a class="line" href="classStelDialog.html">   44</a></span>&#160;<span class="keyword">class </span><a class="code" href="classStelDialog.html">StelDialog</a> : <span class="keyword">public</span> QObject</div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;<span class="keyword">class </span><a class="codeRef" doxygen="/home/aw/devel/stellarium/trunk/builds/gcc/stellariumPlugins.tag:../../doc-plugins/0.14.0" href="../../doc-plugins/0.14.0/classStelDialog.html">StelDialog</a> : <span class="keyword">public</span> QObject</div>
 <div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;{</div>
 <div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;    Q_OBJECT</div>
-<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;    Q_PROPERTY(<span class="keywordtype">bool</span> visible READ visible WRITE <a class="code" href="classStelDialog.html#a287e46924c5da75d0f72f5bacfa220e3">setVisible</a> NOTIFY visibleChanged)</div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;    Q_PROPERTY(<span class="keywordtype">bool</span> visible READ visible WRITE setVisible NOTIFY visibleChanged)</div>
 <div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;<span class="keyword">public</span>:</div>
-<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;    <a class="code" href="classStelDialog.html">StelDialog</a>(QObject* parent=NULL);</div>
-<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;    <span class="keyword">virtual</span> ~<a class="code" href="classStelDialog.html">StelDialog</a>();</div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;    <a class="codeRef" doxygen="/home/aw/devel/stellarium/trunk/builds/gcc/stellariumPlugins.tag:../../doc-plugins/0.14.0" href="../../doc-plugins/0.14.0/classStelDialog.html">StelDialog</a>(QObject* parent=NULL);</div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;    <span class="keyword">virtual</span> ~<a class="codeRef" doxygen="/home/aw/devel/stellarium/trunk/builds/gcc/stellariumPlugins.tag:../../doc-plugins/0.14.0" href="../../doc-plugins/0.14.0/classStelDialog.html">StelDialog</a>();</div>
 <div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;</div>
 <div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;    <span class="keywordtype">bool</span> visible() <span class="keyword">const</span>;</div>
 <div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;</div>
 <div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;<span class="keyword">public</span> slots:</div>
-<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;    <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classStelDialog.html#a2519f3888c35b55ce1a77dcd2be82a2f">retranslate</a>() = 0;</div>
-<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classStelDialog.html#a287e46924c5da75d0f72f5bacfa220e3">setVisible</a>(<span class="keywordtype">bool</span>);</div>
-<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classStelDialog.html#a1e94b05a3f7a37ae19825ade63707ba2">close</a>();</div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;    <span class="keyword">virtual</span> <span class="keywordtype">void</span> retranslate() = 0;</div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;    <span class="keywordtype">void</span> setVisible(<span class="keywordtype">bool</span>);</div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;    <span class="keywordtype">void</span> close();</div>
 <div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;signals:</div>
 <div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;    <span class="keywordtype">void</span> visibleChanged(<span class="keywordtype">bool</span>);</div>
 <div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;</div>
 <div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;<span class="keyword">protected</span>:</div>
-<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;    <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classStelDialog.html#a0a6823b263934eb74b013ad0738235bd">createDialogContent</a>()=0;</div>
+<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;    <span class="keyword">virtual</span> <span class="keywordtype">void</span> createDialogContent()=0;</div>
 <div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;</div>
-<div class="line"><a name="l00078"></a><span class="lineno"><a class="line" href="classStelDialog.html#a0184f75f2bf1cf7dbb22c342ed59420e">   78</a></span>&#160;    QWidget* <a class="code" href="classStelDialog.html#a0184f75f2bf1cf7dbb22c342ed59420e">dialog</a>;</div>
+<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;    QWidget* dialog;</div>
 <div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;    <span class="keyword">class </span>CustomProxy* proxy;</div>
 <div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;</div>
 <div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;<span class="preprocessor">#ifdef Q_OS_WIN</span></div>
@@ -102,16 +102,11 @@
 <div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;};</div>
 <div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;</div>
 <div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;<span class="preprocessor">#endif // _STELDIALOG_HPP_</span></div>
-<div class="ttc" id="classStelDialog_html_a1e94b05a3f7a37ae19825ade63707ba2"><div class="ttname"><a href="classStelDialog.html#a1e94b05a3f7a37ae19825ade63707ba2">StelDialog::close</a></div><div class="ttdeci">void close()</div><div class="ttdoc">Closes the window (the window widget is not deleted, just not visible). </div></div>
-<div class="ttc" id="classStelDialog_html_a0a6823b263934eb74b013ad0738235bd"><div class="ttname"><a href="classStelDialog.html#a0a6823b263934eb74b013ad0738235bd">StelDialog::createDialogContent</a></div><div class="ttdeci">virtual void createDialogContent()=0</div><div class="ttdoc">Initialize the dialog widgets and connect the signals/slots. </div></div>
-<div class="ttc" id="classStelDialog_html"><div class="ttname"><a href="classStelDialog.html">StelDialog</a></div><div class="ttdoc">Base class for all the GUI windows in Stellarium. </div><div class="ttdef"><b>Definition:</b> <a href="StelDialog_8hpp_source.html#l00044">StelDialog.hpp:44</a></div></div>
-<div class="ttc" id="classStelDialog_html_a287e46924c5da75d0f72f5bacfa220e3"><div class="ttname"><a href="classStelDialog.html#a287e46924c5da75d0f72f5bacfa220e3">StelDialog::setVisible</a></div><div class="ttdeci">void setVisible(bool)</div><div class="ttdoc">On the first call with "true" populates the window contents. </div></div>
-<div class="ttc" id="classStelDialog_html_a0184f75f2bf1cf7dbb22c342ed59420e"><div class="ttname"><a href="classStelDialog.html#a0184f75f2bf1cf7dbb22c342ed59420e">StelDialog::dialog</a></div><div class="ttdeci">QWidget * dialog</div><div class="ttdoc">The main dialog. </div><div class="ttdef"><b>Definition:</b> <a href="StelDialog_8hpp_source.html#l00078">StelDialog.hpp:78</a></div></div>
-<div class="ttc" id="classStelDialog_html_a2519f3888c35b55ce1a77dcd2be82a2f"><div class="ttname"><a href="classStelDialog.html#a2519f3888c35b55ce1a77dcd2be82a2f">StelDialog::retranslate</a></div><div class="ttdeci">virtual void retranslate()=0</div><div class="ttdoc">Retranslate the content of the dialog. </div></div>
+<div class="ttc" id="classStelDialog_html"><div class="ttname"><a href="../../doc-plugins/0.14.0/classStelDialog.html">StelDialog</a></div><div class="ttdoc">Base class for all the GUI windows in Stellarium. </div><div class="ttdef"><b>Definition:</b> <a href="StelDialog_8hpp_source.html#l00044">StelDialog.hpp:44</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Sun May 17 2015 00:43:57 for Stellarium by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Sun May 31 2015 14:13:25 for Stellarium by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.7
 </small></address>

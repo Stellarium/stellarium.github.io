@@ -42,6 +42,7 @@
 <div class="toc"><h3>Table of Contents</h3>
 <ul><li class="level1"><a href="#introduction">Introduction</a></li>
 <li class="level1"><a href="#staticAndDynamicPlugins">Static and Dynamic Plugins</a></li>
+<li class="level1"><a href="#listPlugins">List of Static Plugins</a></li>
 <li class="level1"><a href="#code">Coding</a></li>
 <li class="level1"><a href="#examplePlugins">Example Plugins</a></li>
 <li class="level1"><a href="#buildingPlugins">Building Plugins</a></li>
@@ -72,15 +73,36 @@ Static and Dynamic Plugins</h1>
 </li>
 </ul>
 <p>See the implementation of <a class="el" href="classStelModuleMgr.html#aa5031a821f0b81ee3f991e19d660900c" title="Return the list of all the external module found in the modules directories. ">StelModuleMgr::getPluginsList()</a> for more details.</p>
+<h1><a class="anchor" id="listPlugins"></a>
+List of Static Plugins</h1>
+<p>A some details for static plugins you can find in each item of list of plugins:</p><ul>
+<li><a class="elRef" doxygen="/home/aw/devel/stellarium/trunk/builds/gcc/stellariumPlugins.tag:../../doc-plugins/0.14.0" href="../../doc-plugins/0.14.0/group__angleMeasure.html">Angle Measure plug-in</a></li>
+<li><a class="elRef" doxygen="/home/aw/devel/stellarium/trunk/builds/gcc/stellariumPlugins.tag:../../doc-plugins/0.14.0" href="../../doc-plugins/0.14.0/group__compassMarks.html">Compass Marks Plug-in</a></li>
+<li><a class="elRef" doxygen="/home/aw/devel/stellarium/trunk/builds/gcc/stellariumPlugins.tag:../../doc-plugins/0.14.0" href="../../doc-plugins/0.14.0/group__oculars.html">Oculars Plug-in</a></li>
+<li><a class="elRef" doxygen="/home/aw/devel/stellarium/trunk/builds/gcc/stellariumPlugins.tag:../../doc-plugins/0.14.0" href="../../doc-plugins/0.14.0/group__satellites.html">Satellites Plug-in</a></li>
+<li><a class="elRef" doxygen="/home/aw/devel/stellarium/trunk/builds/gcc/stellariumPlugins.tag:../../doc-plugins/0.14.0" href="../../doc-plugins/0.14.0/group__historicalSupernovae.html">Historical Supernovae Plug-in</a></li>
+<li><a class="elRef" doxygen="/home/aw/devel/stellarium/trunk/builds/gcc/stellariumPlugins.tag:../../doc-plugins/0.14.0" href="../../doc-plugins/0.14.0/group__quasars.html">Quasars Plug-in</a></li>
+<li><a class="elRef" doxygen="/home/aw/devel/stellarium/trunk/builds/gcc/stellariumPlugins.tag:../../doc-plugins/0.14.0" href="../../doc-plugins/0.14.0/group__pulsars.html">Pulsars Plug-in</a></li>
+<li><a class="elRef" doxygen="/home/aw/devel/stellarium/trunk/builds/gcc/stellariumPlugins.tag:../../doc-plugins/0.14.0" href="../../doc-plugins/0.14.0/group__exoplanets.html">Exoplanets Plug-in</a></li>
+<li><a class="elRef" doxygen="/home/aw/devel/stellarium/trunk/builds/gcc/stellariumPlugins.tag:../../doc-plugins/0.14.0" href="../../doc-plugins/0.14.0/group__observability.html">Observability Analysis Plug-in</a></li>
+<li><a class="elRef" doxygen="/home/aw/devel/stellarium/trunk/builds/gcc/stellariumPlugins.tag:../../doc-plugins/0.14.0" href="../../doc-plugins/0.14.0/group__brightNovae.html">Bright Novae Plug-in</a></li>
+<li><a class="elRef" doxygen="/home/aw/devel/stellarium/trunk/builds/gcc/stellariumPlugins.tag:../../doc-plugins/0.14.0" href="../../doc-plugins/0.14.0/group__equationOfTime.html">Equation of Time plug-in</a></li>
+<li><a class="elRef" doxygen="/home/aw/devel/stellarium/trunk/builds/gcc/stellariumPlugins.tag:../../doc-plugins/0.14.0" href="../../doc-plugins/0.14.0/group__fieldOfView.html">Field of View Plug-in</a></li>
+<li><a class="elRef" doxygen="/home/aw/devel/stellarium/trunk/builds/gcc/stellariumPlugins.tag:../../doc-plugins/0.14.0" href="../../doc-plugins/0.14.0/group__navigationalStars.html">Navigational Stars Plug-in</a></li>
+<li><a class="elRef" doxygen="/home/aw/devel/stellarium/trunk/builds/gcc/stellariumPlugins.tag:../../doc-plugins/0.14.0" href="../../doc-plugins/0.14.0/group__meteorShowers.html">Meteor Showers Plug-in</a></li>
+<li><a class="elRef" doxygen="/home/aw/devel/stellarium/trunk/builds/gcc/stellariumPlugins.tag:../../doc-plugins/0.14.0" href="../../doc-plugins/0.14.0/group__pointerCoordinates.html">Pointer Coordinates Plug-in</a></li>
+<li><a class="elRef" doxygen="/home/aw/devel/stellarium/trunk/builds/gcc/stellariumPlugins.tag:../../doc-plugins/0.14.0" href="../../doc-plugins/0.14.0/group__archaeoLines.html">ArchaeoLines Plug-in</a></li>
+</ul>
+<p>You can find some untechnical details on our wiki <a href="http://www.stellarium.org/wiki/index.php/Plugins">Plugins</a> page.</p>
 <h1><a class="anchor" id="code"></a>
 Coding</h1>
 <p>A plugin should contain a main class deriving from the <a class="el" href="classStelModule.html" title="This is the common base class for all the main components of stellarium. ">StelModule</a> class as well as an instance of the <a class="el" href="classStelPluginInterface.html" title="Define the interface to implement when creating a plugin. ">StelPluginInterface</a> which allows Stellarium to load it. At startup, the <a class="el" href="classStelModuleMgr.html" title="Manage a collection of StelModules including both core and plugin modules. ">StelModuleMgr</a> will load the library, and an instance of the <a class="el" href="classStelModule.html" title="This is the common base class for all the main components of stellarium. ">StelModule</a> it contains will be instantiated and added to the list of other "normal" StelModules.</p>
 <p>A plugin can interact with the users in many ways, not limited to:</p><ul>
 <li>painting directly on the viewport like other StelModules (see the examples below);</li>
-<li>defining <a href="http://qt-project.org/doc/qt-4.8/qaction.html">QActions</a> triggered with keyboard shortcut combinations with StelGui::addGuiActions();</li>
+<li>defining <a href="http://doc.qt.io/qt-5/qaction.html">QActions</a> triggered with keyboard shortcut combinations with StelGui::addGuiActions();</li>
 <li>buttons (<a class="el" href="classStelButton.html" title="A Button Graphicsitem for use in Stellarium&#39;s graphic widgets. ">StelButton</a>) added to the bottom button bar (<a class="el" href="classBottomStelBar.html">BottomStelBar</a>; see the examples below);</li>
-<li>windows (subclasses of <a class="el" href="classStelDialog.html" title="Base class for all the GUI windows in Stellarium. ">StelDialog</a>) that can be designed with Qt's UI editor (see the examples and the configuration windows of the official plugins);</li>
-<li>custom controls displayed anywhere on the screen based on any of the classes that inherit <a href="http://qt-project.org/doc/qt-4.8/qgraphicsitem.html">QGraphicsItem</a> (see <a href="http://qt-project.org/doc/qt-4.8/graphicsview.html">the documentation of Qt's Graphics View Framework</a>). To get a base widget to work on, use <a class="el" href="classStelGui.html#af8eb8aea49101eaeb83c79fc1e301f61" title="Get the SkyGui instance (useful for adding other interface elements). ">StelGui::getSkyGui()</a>.</li>
+<li>windows (subclasses of <a class="elRef" doxygen="/home/aw/devel/stellarium/trunk/builds/gcc/stellariumPlugins.tag:../../doc-plugins/0.14.0" href="../../doc-plugins/0.14.0/classStelDialog.html" title="Base class for all the GUI windows in Stellarium. ">StelDialog</a>) that can be designed with Qt's UI editor (see the examples and the configuration windows of the official plugins);</li>
+<li>custom controls displayed anywhere on the screen based on any of the classes that inherit <a href="http://doc.qt.io/qt-5/qgraphicsitem.html">QGraphicsItem</a> (see <a href="http://doc.qt.io/qt-5/qgraphicsview.html">the documentation of Qt's Graphics View Framework</a>). To get a base widget to work on, use <a class="el" href="classStelGui.html#af8eb8aea49101eaeb83c79fc1e301f61" title="Get the SkyGui instance (useful for adding other interface elements). ">StelGui::getSkyGui()</a>.</li>
 </ul>
 <p><em>Plugin developers - please note that classes used in plugins must inherit code from the core which is published under the GNU GPL. <b>If you distribute a binary plugin, you must do so under the terms of the same GNU General Public License that Stellarium uses</b> (as of August 2011, this is GNU GPL "version 2 or any later version"). No sneaky closed-source shenanigans now.</em></p>
 <h1><a class="anchor" id="examplePlugins"></a>
@@ -141,7 +163,7 @@ On Windows: <pre class="fragment"> cmake -G "MSYS Makefiles" ../..
 </li>
 </ul>
 <p>To install the plugin on Linux systems, simple add a <code>make install</code> command after the <code>make</code>. This will copy the necessary files to <code> $HOME/.stellarium/modules/AngleMeasure</code>.</p>
-<p>To install a plugin on Windows or OSX, you should locate the User Data Directory, and then create a sub-directory called <code>modules</code> in it. Inside this, create a subdirectory named for the plugin, e.g. <code>AngleMeasure</code>. Into this directory, you should copy the following files: </p><ul>
+<p>To install a plugin on Windows or OSX, you should locate the User Data Directory, and then create a sub-directory called <code>modules</code> in it. Inside this, create a subdirectory named for the plugin, e.g. <code><a class="elRef" doxygen="/home/aw/devel/stellarium/trunk/builds/gcc/stellariumPlugins.tag:../../doc-plugins/0.14.0" href="../../doc-plugins/0.14.0/classAngleMeasure.html">AngleMeasure</a></code>. Into this directory, you should copy the following files: </p><ul>
 <li>
 <code>module.ini</code> file from the plugin source directory. </li>
 <li>
@@ -152,7 +174,7 @@ Any other files which are needed for the plugin (there are no others for the exa
 </div></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Sun May 17 2015 00:43:58 for Stellarium by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Sun May 31 2015 14:13:25 for Stellarium by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.7
 </small></address>
