@@ -58,9 +58,9 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a4d7b951dd13cc409557dbdbe08069e32"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a4d7b951dd13cc409557dbdbe08069e32"></a>
 &#160;</td><td class="memItemRight" valign="bottom"><b>CometOrbit</b> (double pericenterDistance, double eccentricity, double inclination, double ascendingNode, double argOfPerhelion, double timeAtPerihelion, double orbitGoodDays, double meanMotion, double parentRotObliquity, double parentRotAscendingnode, double parentRotJ2000Longitude)</td></tr>
 <tr class="separator:a4d7b951dd13cc409557dbdbe08069e32"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a3cf8bddf9efb44be762cf07cb9462d96"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a3cf8bddf9efb44be762cf07cb9462d96"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>positionAtTimevInVSOP87Coordinates</b> (double JD, double *v, bool updateVelocityVector=true)</td></tr>
-<tr class="separator:a3cf8bddf9efb44be762cf07cb9462d96"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3076a83dec3c5e68fd00c478b402adbb"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a3076a83dec3c5e68fd00c478b402adbb"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>positionAtTimevInVSOP87Coordinates</b> (double JDE, double *v, bool updateVelocityVector=true)</td></tr>
+<tr class="separator:a3076a83dec3c5e68fd00c478b402adbb"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab5363e9d903117c298b77fc5425bcc81"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ab5363e9d903117c298b77fc5425bcc81"></a>
 bool&#160;</td><td class="memItemRight" valign="bottom"><b>getUpdateTails</b> () const </td></tr>
 <tr class="separator:ab5363e9d903117c298b77fc5425bcc81"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -68,11 +68,11 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><b>getUpdateTails</b> ()
 void&#160;</td><td class="memItemRight" valign="bottom"><b>setUpdateTails</b> (const bool update)</td></tr>
 <tr class="separator:af6f3ede00384d9f4e56664fcc154065d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab082a0ac83f96ea2260df217a201cb3e"><td class="memItemLeft" align="right" valign="top"><a class="el" href="singletonVector3.html">Vec3d</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classCometOrbit.html#ab082a0ac83f96ea2260df217a201cb3e">getVelocity</a> () const </td></tr>
-<tr class="memdesc:ab082a0ac83f96ea2260df217a201cb3e"><td class="mdescLeft">&#160;</td><td class="mdescRight">return speed value [AU/d] last computed by positionAtTimevInVSOP87Coordinates(JD, v, true)  <a href="#ab082a0ac83f96ea2260df217a201cb3e">More...</a><br /></td></tr>
+<tr class="memdesc:ab082a0ac83f96ea2260df217a201cb3e"><td class="mdescLeft">&#160;</td><td class="mdescRight">return speed value [AU/d] last computed by positionAtTimevInVSOP87Coordinates(JDE, v, true)  <a href="#ab082a0ac83f96ea2260df217a201cb3e">More...</a><br /></td></tr>
 <tr class="separator:ab082a0ac83f96ea2260df217a201cb3e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aff8f5bdba444562b7e5879c1575ab6eb"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aff8f5bdba444562b7e5879c1575ab6eb"></a>
-bool&#160;</td><td class="memItemRight" valign="bottom"><b>objectDateValid</b> (const double JD) const </td></tr>
-<tr class="separator:aff8f5bdba444562b7e5879c1575ab6eb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae8d11d5bd04d62664b30078549f76b84"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ae8d11d5bd04d62664b30078549f76b84"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><b>objectDateValid</b> (const double JDE) const </td></tr>
+<tr class="separator:ae8d11d5bd04d62664b30078549f76b84"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock">
@@ -99,7 +99,7 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><b>objectDateValid</b> (
 </table>
 </div><div class="memdoc">
 
-<p>return speed value [AU/d] last computed by positionAtTimevInVSOP87Coordinates(JD, v, true) </p>
+<p>return speed value [AU/d] last computed by positionAtTimevInVSOP87Coordinates(JDE, v, true) </p>
 
 <p>Definition at line <a class="el" href="Orbit_8hpp_source.html#l00100">100</a> of file <a class="el" href="Orbit_8hpp_source.html">Orbit.hpp</a>.</p>
 
@@ -111,7 +111,7 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><b>objectDateValid</b> (
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Tue Jun 9 2015 02:09:24 for Stellarium by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Fri Oct 2 2015 18:38:19 for Stellarium by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.8
 </small></address>

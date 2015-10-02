@@ -75,6 +75,12 @@ Public Slots</h2></td></tr>
 <tr class="memitem:a77d8216917b53cf1f75a8592c6497b86"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classStelApp.html#a77d8216917b53cf1f75a8592c6497b86">getFlagShowDecimalDegrees</a> () const </td></tr>
 <tr class="memdesc:a77d8216917b53cf1f75a8592c6497b86"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get flag for showing decimal degree in various places.  <a href="#a77d8216917b53cf1f75a8592c6497b86">More...</a><br /></td></tr>
 <tr class="separator:a77d8216917b53cf1f75a8592c6497b86"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0fa1459a00f27f6a689bf48eba389d4f"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classStelApp.html#a0fa1459a00f27f6a689bf48eba389d4f">getFlagOldAzimuthUsage</a> () const </td></tr>
+<tr class="memdesc:a0fa1459a00f27f6a689bf48eba389d4f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set flag for using calculation of azimuth from south towards west (as in old astronomical literature)  <a href="#a0fa1459a00f27f6a689bf48eba389d4f">More...</a><br /></td></tr>
+<tr class="separator:a0fa1459a00f27f6a689bf48eba389d4f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aba8893c9b0a6e1349aa1e290af43ed51"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classStelApp.html#aba8893c9b0a6e1349aa1e290af43ed51">setFlagOldAzimuthUsage</a> (bool use)</td></tr>
+<tr class="memdesc:aba8893c9b0a6e1349aa1e290af43ed51"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get flag for using calculation of azimuth from south towards west (as in old astronomical literature)  <a href="#aba8893c9b0a6e1349aa1e290af43ed51">More...</a><br /></td></tr>
+<tr class="separator:aba8893c9b0a6e1349aa1e290af43ed51"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae5146fd7f30499436c6ccc8fabfed328"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classStelApp.html#ae5146fd7f30499436c6ccc8fabfed328">getFps</a> () const </td></tr>
 <tr class="memdesc:ae5146fd7f30499436c6ccc8fabfed328"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the current number of frame per second.  <a href="#ae5146fd7f30499436c6ccc8fabfed328">More...</a><br /></td></tr>
 <tr class="separator:ae5146fd7f30499436c6ccc8fabfed328"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -129,6 +135,9 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a67ca2a111d005503c97d3584738d87ee"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classStelApp.html#a67ca2a111d005503c97d3584738d87ee">initPlugIns</a> ()</td></tr>
 <tr class="memdesc:a67ca2a111d005503c97d3584738d87ee"><td class="mdescLeft">&#160;</td><td class="mdescRight">Load and initialize external modules (plugins)  <a href="#a67ca2a111d005503c97d3584738d87ee">More...</a><br /></td></tr>
 <tr class="separator:a67ca2a111d005503c97d3584738d87ee"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7b56a22e175a447b3e5af0d79dc81fd3"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classStelApp.html#a7b56a22e175a447b3e5af0d79dc81fd3">initScriptMgr</a> ()</td></tr>
+<tr class="memdesc:a7b56a22e175a447b3e5af0d79dc81fd3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Registers all loaded StelModules with the ScriptMgr, and queues starting of the startup script.  <a href="#a7b56a22e175a447b3e5af0d79dc81fd3">More...</a><br /></td></tr>
+<tr class="separator:a7b56a22e175a447b3e5af0d79dc81fd3"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa6779e76260e5bf9b018b490c97e2803"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classStelModuleMgr.html">StelModuleMgr</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classStelApp.html#aa6779e76260e5bf9b018b490c97e2803">getModuleMgr</a> ()</td></tr>
 <tr class="memdesc:aa6779e76260e5bf9b018b490c97e2803"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the module manager to use for accessing any module loaded in the application.  <a href="#aa6779e76260e5bf9b018b490c97e2803">More...</a><br /></td></tr>
 <tr class="separator:aa6779e76260e5bf9b018b490c97e2803"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -398,7 +407,7 @@ static void&#160;</td><td class="memItemRight" valign="bottom"><b>deinitStatic</
 
 <p>Get the size of font. </p>
 
-<p>Definition at line <a class="el" href="StelApp_8hpp_source.html#l00169">169</a> of file <a class="el" href="StelApp_8hpp_source.html">StelApp.hpp</a>.</p>
+<p>Definition at line <a class="el" href="StelApp_8hpp_source.html#l00172">172</a> of file <a class="el" href="StelApp_8hpp_source.html">StelApp.hpp</a>.</p>
 
 </div>
 </div>
@@ -426,7 +435,7 @@ static void&#160;</td><td class="memItemRight" valign="bottom"><b>deinitStatic</
 <p>Get the core of the program. </p>
 <p>It is the one which provide the projection, navigation and tone converter. </p><dl class="section return"><dt>Returns</dt><dd>the <a class="el" href="classStelCore.html" title="Main class for Stellarium core processing. ">StelCore</a> instance of the program </dd></dl>
 
-<p>Definition at line <a class="el" href="StelApp_8hpp_source.html#l00129">129</a> of file <a class="el" href="StelApp_8hpp_source.html">StelApp.hpp</a>.</p>
+<p>Definition at line <a class="el" href="StelApp_8hpp_source.html#l00132">132</a> of file <a class="el" href="StelApp_8hpp_source.html">StelApp.hpp</a>.</p>
 
 </div>
 </div>
@@ -453,7 +462,7 @@ static void&#160;</td><td class="memItemRight" valign="bottom"><b>deinitStatic</
 
 <p>Return the currently used style. </p>
 
-<p>Definition at line <a class="el" href="StelApp_8hpp_source.html#l00144">144</a> of file <a class="el" href="StelApp_8hpp_source.html">StelApp.hpp</a>.</p>
+<p>Definition at line <a class="el" href="StelApp_8hpp_source.html#l00147">147</a> of file <a class="el" href="StelApp_8hpp_source.html">StelApp.hpp</a>.</p>
 
 </div>
 </div>
@@ -481,7 +490,34 @@ static void&#160;</td><td class="memItemRight" valign="bottom"><b>deinitStatic</
 <p>Get the ratio between real device pixel and "Device Independent Pixel". </p>
 <p>Usually this value is 1, but for a mac with retina screen this will be value 2. </p>
 
-<p>Definition at line <a class="el" href="StelApp_8hpp_source.html#l00159">159</a> of file <a class="el" href="StelApp_8hpp_source.html">StelApp.hpp</a>.</p>
+<p>Definition at line <a class="el" href="StelApp_8hpp_source.html#l00162">162</a> of file <a class="el" href="StelApp_8hpp_source.html">StelApp.hpp</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a0fa1459a00f27f6a689bf48eba389d4f"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool StelApp::getFlagOldAzimuthUsage </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">slot</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Set flag for using calculation of azimuth from south towards west (as in old astronomical literature) </p>
+
+<p>Definition at line <a class="el" href="StelApp_8hpp_source.html#l00218">218</a> of file <a class="el" href="StelApp_8hpp_source.html">StelApp.hpp</a>.</p>
 
 </div>
 </div>
@@ -508,7 +544,7 @@ static void&#160;</td><td class="memItemRight" valign="bottom"><b>deinitStatic</
 
 <p>Get flag for showing decimal degree in various places. </p>
 
-<p>Definition at line <a class="el" href="StelApp_8hpp_source.html#l00212">212</a> of file <a class="el" href="StelApp_8hpp_source.html">StelApp.hpp</a>.</p>
+<p>Definition at line <a class="el" href="StelApp_8hpp_source.html#l00215">215</a> of file <a class="el" href="StelApp_8hpp_source.html">StelApp.hpp</a>.</p>
 
 </div>
 </div>
@@ -536,7 +572,7 @@ static void&#160;</td><td class="memItemRight" valign="bottom"><b>deinitStatic</
 <p>Get the current number of frame per second. </p>
 <dl class="section return"><dt>Returns</dt><dd>the FPS averaged on the last second </dd></dl>
 
-<p>Definition at line <a class="el" href="StelApp_8hpp_source.html#l00216">216</a> of file <a class="el" href="StelApp_8hpp_source.html">StelApp.hpp</a>.</p>
+<p>Definition at line <a class="el" href="StelApp_8hpp_source.html#l00224">224</a> of file <a class="el" href="StelApp_8hpp_source.html">StelApp.hpp</a>.</p>
 
 </div>
 </div>
@@ -564,7 +600,7 @@ static void&#160;</td><td class="memItemRight" valign="bottom"><b>deinitStatic</
 <p>Get the scaling ratio to apply on all display elements, like GUI, text etc. </p>
 <p>When this ratio is 1, all pixel sizes used in Stellarium will look OK on a regular computer screen with 96 pixel per inch (reference for tuning sizes). </p>
 
-<p>Definition at line <a class="el" href="StelApp_8hpp_source.html#l00165">165</a> of file <a class="el" href="StelApp_8hpp_source.html">StelApp.hpp</a>.</p>
+<p>Definition at line <a class="el" href="StelApp_8hpp_source.html#l00168">168</a> of file <a class="el" href="StelApp_8hpp_source.html">StelApp.hpp</a>.</p>
 
 </div>
 </div>
@@ -591,7 +627,7 @@ static void&#160;</td><td class="memItemRight" valign="bottom"><b>deinitStatic</
 
 <p>Get the GUI instance implementing the abstract GUI interface. </p>
 
-<p>Definition at line <a class="el" href="StelApp_8hpp_source.html#l00173">173</a> of file <a class="el" href="StelApp_8hpp_source.html">StelApp.hpp</a>.</p>
+<p>Definition at line <a class="el" href="StelApp_8hpp_source.html#l00176">176</a> of file <a class="el" href="StelApp_8hpp_source.html">StelApp.hpp</a>.</p>
 
 </div>
 </div>
@@ -619,7 +655,7 @@ static void&#160;</td><td class="memItemRight" valign="bottom"><b>deinitStatic</
 <p>Get the <a class="el" href="classStelApp.html" title="Singleton main Stellarium application class. ">StelApp</a> singleton instance. </p>
 <dl class="section return"><dt>Returns</dt><dd>the <a class="el" href="classStelApp.html" title="Singleton main Stellarium application class. ">StelApp</a> singleton instance </dd></dl>
 
-<p>Definition at line <a class="el" href="StelApp_8hpp_source.html#l00089">89</a> of file <a class="el" href="StelApp_8hpp_source.html">StelApp.hpp</a>.</p>
+<p>Definition at line <a class="el" href="StelApp_8hpp_source.html#l00092">92</a> of file <a class="el" href="StelApp_8hpp_source.html">StelApp.hpp</a>.</p>
 
 </div>
 </div>
@@ -647,7 +683,7 @@ static void&#160;</td><td class="memItemRight" valign="bottom"><b>deinitStatic</
 <p>Get the locale manager to use for i18n &amp; date/time localization. </p>
 <dl class="section return"><dt>Returns</dt><dd>the font manager to use for loading fonts. </dd></dl>
 
-<p>Definition at line <a class="el" href="StelApp_8hpp_source.html#l00097">97</a> of file <a class="el" href="StelApp_8hpp_source.html">StelApp.hpp</a>.</p>
+<p>Definition at line <a class="el" href="StelApp_8hpp_source.html#l00100">100</a> of file <a class="el" href="StelApp_8hpp_source.html">StelApp.hpp</a>.</p>
 
 </div>
 </div>
@@ -675,7 +711,7 @@ static void&#160;</td><td class="memItemRight" valign="bottom"><b>deinitStatic</
 <p>Get the Location manager to use for managing stored locations. </p>
 <dl class="section return"><dt>Returns</dt><dd>the Location manager to use for managing stored locations </dd></dl>
 
-<p>Definition at line <a class="el" href="StelApp_8hpp_source.html#l00109">109</a> of file <a class="el" href="StelApp_8hpp_source.html">StelApp.hpp</a>.</p>
+<p>Definition at line <a class="el" href="StelApp_8hpp_source.html#l00112">112</a> of file <a class="el" href="StelApp_8hpp_source.html">StelApp.hpp</a>.</p>
 
 </div>
 </div>
@@ -702,7 +738,7 @@ static void&#160;</td><td class="memItemRight" valign="bottom"><b>deinitStatic</
 
 <p>Get the script API proxy (for signal handling) </p>
 
-<p>Definition at line <a class="el" href="StelApp_8hpp_source.html#l00180">180</a> of file <a class="el" href="StelApp_8hpp_source.html">StelApp.hpp</a>.</p>
+<p>Definition at line <a class="el" href="StelApp_8hpp_source.html#l00183">183</a> of file <a class="el" href="StelApp_8hpp_source.html">StelApp.hpp</a>.</p>
 
 </div>
 </div>
@@ -730,7 +766,7 @@ static void&#160;</td><td class="memItemRight" valign="bottom"><b>deinitStatic</
 <p>Get the module manager to use for accessing any module loaded in the application. </p>
 <dl class="section return"><dt>Returns</dt><dd>the module manager. </dd></dl>
 
-<p>Definition at line <a class="el" href="StelApp_8hpp_source.html#l00093">93</a> of file <a class="el" href="StelApp_8hpp_source.html">StelApp.hpp</a>.</p>
+<p>Definition at line <a class="el" href="StelApp_8hpp_source.html#l00096">96</a> of file <a class="el" href="StelApp_8hpp_source.html">StelApp.hpp</a>.</p>
 
 </div>
 </div>
@@ -757,7 +793,7 @@ static void&#160;</td><td class="memItemRight" valign="bottom"><b>deinitStatic</
 
 <p>Get the common instance of QNetworkAccessManager used in stellarium. </p>
 
-<p>Definition at line <a class="el" href="StelApp_8hpp_source.html#l00132">132</a> of file <a class="el" href="StelApp_8hpp_source.html">StelApp.hpp</a>.</p>
+<p>Definition at line <a class="el" href="StelApp_8hpp_source.html#l00135">135</a> of file <a class="el" href="StelApp_8hpp_source.html">StelApp.hpp</a>.</p>
 
 </div>
 </div>
@@ -784,7 +820,7 @@ static void&#160;</td><td class="memItemRight" valign="bottom"><b>deinitStatic</
 
 <p>Get the script manager. </p>
 
-<p>Definition at line <a class="el" href="StelApp_8hpp_source.html#l00182">182</a> of file <a class="el" href="StelApp_8hpp_source.html">StelApp.hpp</a>.</p>
+<p>Definition at line <a class="el" href="StelApp_8hpp_source.html#l00185">185</a> of file <a class="el" href="StelApp_8hpp_source.html">StelApp.hpp</a>.</p>
 
 </div>
 </div>
@@ -811,7 +847,7 @@ static void&#160;</td><td class="memItemRight" valign="bottom"><b>deinitStatic</
 
 <p>Return the main configuration options. </p>
 
-<p>Definition at line <a class="el" href="StelApp_8hpp_source.html#l00141">141</a> of file <a class="el" href="StelApp_8hpp_source.html">StelApp.hpp</a>.</p>
+<p>Definition at line <a class="el" href="StelApp_8hpp_source.html#l00144">144</a> of file <a class="el" href="StelApp_8hpp_source.html">StelApp.hpp</a>.</p>
 
 </div>
 </div>
@@ -839,7 +875,7 @@ static void&#160;</td><td class="memItemRight" valign="bottom"><b>deinitStatic</
 <p>Get the sky cultures manager. </p>
 <dl class="section return"><dt>Returns</dt><dd>the sky cultures manager </dd></dl>
 
-<p>Definition at line <a class="el" href="StelApp_8hpp_source.html#l00101">101</a> of file <a class="el" href="StelApp_8hpp_source.html">StelApp.hpp</a>.</p>
+<p>Definition at line <a class="el" href="StelApp_8hpp_source.html#l00104">104</a> of file <a class="el" href="StelApp_8hpp_source.html">StelApp.hpp</a>.</p>
 
 </div>
 </div>
@@ -866,7 +902,7 @@ static void&#160;</td><td class="memItemRight" valign="bottom"><b>deinitStatic</
 
 <p>Get the actions manager to use for managing and editing actions. </p>
 
-<p>Definition at line <a class="el" href="StelApp_8hpp_source.html#l00121">121</a> of file <a class="el" href="StelApp_8hpp_source.html">StelApp.hpp</a>.</p>
+<p>Definition at line <a class="el" href="StelApp_8hpp_source.html#l00124">124</a> of file <a class="el" href="StelApp_8hpp_source.html">StelApp.hpp</a>.</p>
 
 </div>
 </div>
@@ -893,7 +929,7 @@ static void&#160;</td><td class="memItemRight" valign="bottom"><b>deinitStatic</
 
 <p>Get the audio manager. </p>
 
-<p>Definition at line <a class="el" href="StelApp_8hpp_source.html#l00118">118</a> of file <a class="el" href="StelApp_8hpp_source.html">StelApp.hpp</a>.</p>
+<p>Definition at line <a class="el" href="StelApp_8hpp_source.html#l00121">121</a> of file <a class="el" href="StelApp_8hpp_source.html">StelApp.hpp</a>.</p>
 
 </div>
 </div>
@@ -921,7 +957,7 @@ static void&#160;</td><td class="memItemRight" valign="bottom"><b>deinitStatic</
 <p>Get the <a class="el" href="classStelObject.html" title="The base abstract class for sky objects used in Stellarium like Stars, Planets, Constellations etc...">StelObject</a> manager to use for querying from all stellarium objects. </p>
 <dl class="section return"><dt>Returns</dt><dd>the <a class="el" href="classStelObject.html" title="The base abstract class for sky objects used in Stellarium like Stars, Planets, Constellations etc...">StelObject</a> manager to use for querying from all stellarium objects . </dd></dl>
 
-<p>Definition at line <a class="el" href="StelApp_8hpp_source.html#l00113">113</a> of file <a class="el" href="StelApp_8hpp_source.html">StelApp.hpp</a>.</p>
+<p>Definition at line <a class="el" href="StelApp_8hpp_source.html#l00116">116</a> of file <a class="el" href="StelApp_8hpp_source.html">StelApp.hpp</a>.</p>
 
 </div>
 </div>
@@ -948,7 +984,7 @@ static void&#160;</td><td class="memItemRight" valign="bottom"><b>deinitStatic</
 
 <p>Get the video manager. </p>
 
-<p>Definition at line <a class="el" href="StelApp_8hpp_source.html#l00124">124</a> of file <a class="el" href="StelApp_8hpp_source.html">StelApp.hpp</a>.</p>
+<p>Definition at line <a class="el" href="StelApp_8hpp_source.html#l00127">127</a> of file <a class="el" href="StelApp_8hpp_source.html">StelApp.hpp</a>.</p>
 
 </div>
 </div>
@@ -976,7 +1012,7 @@ static void&#160;</td><td class="memItemRight" valign="bottom"><b>deinitStatic</
 <p>Get the texture manager to use for loading textures. </p>
 <dl class="section return"><dt>Returns</dt><dd>the texture manager to use for loading textures. </dd></dl>
 
-<p>Definition at line <a class="el" href="StelApp_8hpp_source.html#l00105">105</a> of file <a class="el" href="StelApp_8hpp_source.html">StelApp.hpp</a>.</p>
+<p>Definition at line <a class="el" href="StelApp_8hpp_source.html#l00108">108</a> of file <a class="el" href="StelApp_8hpp_source.html">StelApp.hpp</a>.</p>
 
 </div>
 </div>
@@ -1045,7 +1081,7 @@ static void&#160;</td><td class="memItemRight" valign="bottom"><b>deinitStatic</
 
 <p>Get flag for activating night vision mode. </p>
 
-<p>Definition at line <a class="el" href="StelApp_8hpp_source.html#l00207">207</a> of file <a class="el" href="StelApp_8hpp_source.html">StelApp.hpp</a>.</p>
+<p>Definition at line <a class="el" href="StelApp_8hpp_source.html#l00210">210</a> of file <a class="el" href="StelApp_8hpp_source.html">StelApp.hpp</a>.</p>
 
 </div>
 </div>
@@ -1121,6 +1157,23 @@ static void&#160;</td><td class="memItemRight" valign="bottom"><b>deinitStatic</
 </div><div class="memdoc">
 
 <p>Load and initialize external modules (plugins) </p>
+
+</div>
+</div>
+<a class="anchor" id="a7b56a22e175a447b3e5af0d79dc81fd3"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void StelApp::initScriptMgr </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Registers all loaded StelModules with the ScriptMgr, and queues starting of the startup script. </p>
 
 </div>
 </div>
@@ -1228,6 +1281,34 @@ static void&#160;</td><td class="memItemRight" valign="bottom"><b>deinitStatic</
 
 </div>
 </div>
+<a class="anchor" id="aba8893c9b0a6e1349aa1e290af43ed51"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void StelApp::setFlagOldAzimuthUsage </td>
+          <td>(</td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>use</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">slot</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Get flag for using calculation of azimuth from south towards west (as in old astronomical literature) </p>
+
+<p>Definition at line <a class="el" href="StelApp_8hpp_source.html#l00220">220</a> of file <a class="el" href="StelApp_8hpp_source.html">StelApp.hpp</a>.</p>
+
+</div>
+</div>
 <a class="anchor" id="ab53b34815ab00961af0982eeea936280"></a>
 <div class="memitem">
 <div class="memproto">
@@ -1279,7 +1360,7 @@ static void&#160;</td><td class="memItemRight" valign="bottom"><b>deinitStatic</
 <p>Tell the <a class="el" href="classStelApp.html" title="Singleton main Stellarium application class. ">StelApp</a> instance which GUI si currently being used. </p>
 <p>The caller is responsible for destroying the GUI. </p>
 
-<p>Definition at line <a class="el" href="StelApp_8hpp_source.html#l00176">176</a> of file <a class="el" href="StelApp_8hpp_source.html">StelApp.hpp</a>.</p>
+<p>Definition at line <a class="el" href="StelApp_8hpp_source.html#l00179">179</a> of file <a class="el" href="StelApp_8hpp_source.html">StelApp.hpp</a>.</p>
 
 </div>
 </div>
@@ -1391,7 +1472,7 @@ static void&#160;</td><td class="memItemRight" valign="bottom"><b>deinitStatic</
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Tue Jun 9 2015 02:09:24 for Stellarium by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Fri Oct 2 2015 18:38:20 for Stellarium by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.8
 </small></address>

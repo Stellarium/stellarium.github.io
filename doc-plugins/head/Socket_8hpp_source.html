@@ -28,6 +28,7 @@
     <ul class="tablist">
       <li><a href="index.html"><span>Main&#160;Page</span></a></li>
       <li><a href="modules.html"><span>Modules</span></a></li>
+      <li><a href="annotated.html"><span>Classes</span></a></li>
       <li><a href="../../doc/"><span>Core&#160;API</span></a></li>
     </ul>
   </div>
@@ -119,12 +120,12 @@
 <div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;</div>
 <div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;<span class="keywordtype">long</span> <span class="keywordtype">long</span> <span class="keywordtype">int</span> GetNow(<span class="keywordtype">void</span>);</div>
 <div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;</div>
-<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;<span class="keyword">class </span><a class="codeRef" doxygen="/home/aw/devel/stellarium/trunk/builds/gcc/stellariumPlugins.tag:../../doc-plugins/head" href="../../doc-plugins/head/classServer.html">Server</a>;</div>
+<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;<span class="keyword">class </span><a class="code" href="classServer.html">Server</a>;</div>
 <div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;</div>
-<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;<span class="keyword">class </span><a class="codeRef" doxygen="/home/aw/devel/stellarium/trunk/builds/gcc/stellariumPlugins.tag:../../doc-plugins/head" href="../../doc-plugins/head/classSocket.html">Socket</a></div>
+<div class="line"><a name="l00076"></a><span class="lineno"><a class="line" href="classSocket.html">   76</a></span>&#160;<span class="keyword">class </span><a class="code" href="classSocket.html">Socket</a></div>
 <div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;{</div>
 <div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;<span class="keyword">public</span>:</div>
-<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;    <span class="keyword">virtual</span> ~<a class="codeRef" doxygen="/home/aw/devel/stellarium/trunk/builds/gcc/stellariumPlugins.tag:../../doc-plugins/head" href="../../doc-plugins/head/classSocket.html">Socket</a>() { hangup(); }</div>
+<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;    <span class="keyword">virtual</span> ~<a class="code" href="classSocket.html">Socket</a>() { hangup(); }</div>
 <div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;    <span class="keywordtype">void</span> hangup();</div>
 <div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;    <span class="keyword">virtual</span> <span class="keywordtype">void</span> prepareSelectFds(fd_set &amp;read_fds, fd_set &amp;write_fds, <span class="keywordtype">int</span> &amp;fd_max) = 0;</div>
 <div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;    <span class="keyword">virtual</span> <span class="keywordtype">void</span> handleSelectFds(<span class="keyword">const</span> fd_set &amp;read_fds, <span class="keyword">const</span> fd_set &amp;write_fds) = 0;</div>
@@ -136,8 +137,8 @@
 <div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;    <span class="keyword">virtual</span> <span class="keywordtype">void</span> sendPosition(<span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> ra_int, <span class="keywordtype">int</span> dec_int, <span class="keywordtype">int</span> status) {Q_UNUSED(ra_int); Q_UNUSED(dec_int); Q_UNUSED(status);}</div>
 <div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;    </div>
 <div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;<span class="keyword">protected</span>:</div>
-<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;    <a class="codeRef" doxygen="/home/aw/devel/stellarium/trunk/builds/gcc/stellariumPlugins.tag:../../doc-plugins/head" href="../../doc-plugins/head/classSocket.html">Socket</a>(<a class="codeRef" doxygen="/home/aw/devel/stellarium/trunk/builds/gcc/stellariumPlugins.tag:../../doc-plugins/head" href="../../doc-plugins/head/classServer.html">Server</a> &amp;server, SOCKET fd) : server(server), fd(fd) {}</div>
-<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;    <a class="codeRef" doxygen="/home/aw/devel/stellarium/trunk/builds/gcc/stellariumPlugins.tag:../../doc-plugins/head" href="../../doc-plugins/head/classServer.html">Server</a> &amp; server;</div>
+<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;    <a class="code" href="classSocket.html">Socket</a>(<a class="code" href="classServer.html">Server</a> &amp;server, SOCKET fd) : server(server), fd(fd) {}</div>
+<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;    <a class="code" href="classServer.html">Server</a> &amp; server;</div>
 <div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;    </div>
 <div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;<span class="preprocessor">#ifdef Q_OS_WIN32</span></div>
 <div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;    <span class="keyword">virtual</span> <span class="keywordtype">int</span> readNonblocking(<span class="keywordtype">char</span> *buf, <span class="keywordtype">int</span> count)</div>
@@ -163,17 +164,17 @@
 <div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160;    </div>
 <div class="line"><a name="l00116"></a><span class="lineno">  116</span>&#160;<span class="keyword">private</span>:</div>
 <div class="line"><a name="l00117"></a><span class="lineno">  117</span>&#160;    <span class="comment">// no copying</span></div>
-<div class="line"><a name="l00118"></a><span class="lineno">  118</span>&#160;    <a class="codeRef" doxygen="/home/aw/devel/stellarium/trunk/builds/gcc/stellariumPlugins.tag:../../doc-plugins/head" href="../../doc-plugins/head/classSocket.html">Socket</a>(<span class="keyword">const</span> <a class="codeRef" doxygen="/home/aw/devel/stellarium/trunk/builds/gcc/stellariumPlugins.tag:../../doc-plugins/head" href="../../doc-plugins/head/classSocket.html">Socket</a>&amp;);</div>
-<div class="line"><a name="l00119"></a><span class="lineno">  119</span>&#160;    <span class="keyword">const</span> <a class="codeRef" doxygen="/home/aw/devel/stellarium/trunk/builds/gcc/stellariumPlugins.tag:../../doc-plugins/head" href="../../doc-plugins/head/classSocket.html">Socket</a> &amp;operator=(<span class="keyword">const</span> <a class="codeRef" doxygen="/home/aw/devel/stellarium/trunk/builds/gcc/stellariumPlugins.tag:../../doc-plugins/head" href="../../doc-plugins/head/classSocket.html">Socket</a>&amp;);</div>
+<div class="line"><a name="l00118"></a><span class="lineno">  118</span>&#160;    <a class="code" href="classSocket.html">Socket</a>(<span class="keyword">const</span> <a class="code" href="classSocket.html">Socket</a>&amp;);</div>
+<div class="line"><a name="l00119"></a><span class="lineno">  119</span>&#160;    <span class="keyword">const</span> <a class="code" href="classSocket.html">Socket</a> &amp;operator=(<span class="keyword">const</span> <a class="code" href="classSocket.html">Socket</a>&amp;);</div>
 <div class="line"><a name="l00120"></a><span class="lineno">  120</span>&#160;};</div>
 <div class="line"><a name="l00121"></a><span class="lineno">  121</span>&#160;</div>
 <div class="line"><a name="l00122"></a><span class="lineno">  122</span>&#160;<span class="preprocessor">#endif</span></div>
-<div class="ttc" id="classSocket_html"><div class="ttname"><a href="../../doc-plugins/head/classSocket.html">Socket</a></div><div class="ttdef"><b>Definition:</b> <a href="Socket_8hpp_source.html#l00076">Socket.hpp:76</a></div></div>
-<div class="ttc" id="classServer_html"><div class="ttname"><a href="../../doc-plugins/head/classServer.html">Server</a></div><div class="ttdoc">Base class for telescope server classes. </div><div class="ttdef"><b>Definition:</b> <a href="Server_8hpp_source.html#l00045">Server.hpp:45</a></div></div>
+<div class="ttc" id="classSocket_html"><div class="ttname"><a href="classSocket.html">Socket</a></div><div class="ttdef"><b>Definition:</b> <a href="Socket_8hpp_source.html#l00076">Socket.hpp:76</a></div></div>
+<div class="ttc" id="classServer_html"><div class="ttname"><a href="classServer.html">Server</a></div><div class="ttdoc">Base class for telescope server classes. </div><div class="ttdef"><b>Definition:</b> <a href="Server_8hpp_source.html#l00045">Server.hpp:45</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Tue Jun 9 2015 02:11:02 for Stellarium by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Fri Oct 2 2015 18:38:34 for Stellarium by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.8
 </small></address>

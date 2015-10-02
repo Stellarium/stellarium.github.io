@@ -28,6 +28,7 @@
     <ul class="tablist">
       <li><a href="index.html"><span>Main&#160;Page</span></a></li>
       <li><a href="modules.html"><span>Modules</span></a></li>
+      <li><a href="annotated.html"><span>Classes</span></a></li>
       <li><a href="../../doc/"><span>Core&#160;API</span></a></li>
     </ul>
   </div>
@@ -70,11 +71,11 @@
 <div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;<span class="preprocessor">#include &quot;StelModule.hpp&quot;</span></div>
 <div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;<span class="preprocessor">#include &lt;QFont&gt;</span></div>
 <div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;</div>
-<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;<span class="keyword">class </span><a class="codeRef" doxygen="/home/aw/devel/stellarium/trunk/builds/gcc/stellariumPlugins.tag:../../doc-plugins/head" href="../../doc-plugins/head/classHelloStelModule.html">HelloStelModule</a> : <span class="keyword">public</span> <a class="codeRef" doxygen="/home/aw/devel/stellarium/trunk/builds/gcc/stellarium.tag:../../doc/head/" href="../../doc/head/classStelModule.html">StelModule</a></div>
+<div class="line"><a name="l00026"></a><span class="lineno"><a class="line" href="classHelloStelModule.html">   26</a></span>&#160;<span class="keyword">class </span><a class="code" href="classHelloStelModule.html">HelloStelModule</a> : <span class="keyword">public</span> <a class="codeRef" doxygen="/home/aw/devel/stellarium/trunk/builds/gcc/stellarium.tag:../../doc/head/" href="../../doc/head/classStelModule.html">StelModule</a></div>
 <div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;{</div>
 <div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;<span class="keyword">public</span>:</div>
-<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;    <a class="codeRef" doxygen="/home/aw/devel/stellarium/trunk/builds/gcc/stellariumPlugins.tag:../../doc-plugins/head" href="../../doc-plugins/head/classHelloStelModule.html">HelloStelModule</a>();</div>
-<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;    <span class="keyword">virtual</span> ~<a class="codeRef" doxygen="/home/aw/devel/stellarium/trunk/builds/gcc/stellariumPlugins.tag:../../doc-plugins/head" href="../../doc-plugins/head/classHelloStelModule.html">HelloStelModule</a>();</div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;    <a class="code" href="classHelloStelModule.html">HelloStelModule</a>();</div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;    <span class="keyword">virtual</span> ~<a class="code" href="classHelloStelModule.html">HelloStelModule</a>();</div>
 <div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;</div>
 <div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;    <span class="comment">// Methods defined in the StelModule class</span></div>
 <div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;    <span class="keyword">virtual</span> <span class="keywordtype">void</span> init();</div>
@@ -90,28 +91,29 @@
 <div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;<span class="preprocessor">#include &lt;QObject&gt;</span></div>
 <div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;<span class="preprocessor">#include &quot;StelPluginInterface.hpp&quot;</span></div>
 <div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;</div>
-<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;<span class="keyword">class </span><a class="codeRef" doxygen="/home/aw/devel/stellarium/trunk/builds/gcc/stellariumPlugins.tag:../../doc-plugins/head" href="../../doc-plugins/head/classHelloStelModuleStelPluginInterface.html">HelloStelModuleStelPluginInterface</a> : <span class="keyword">public</span> QObject, <span class="keyword">public</span> <a class="codeRef" doxygen="/home/aw/devel/stellarium/trunk/builds/gcc/stellarium.tag:../../doc/head/" href="../../doc/head/classStelPluginInterface.html">StelPluginInterface</a></div>
+<div class="line"><a name="l00048"></a><span class="lineno"><a class="line" href="classHelloStelModuleStelPluginInterface.html">   48</a></span>&#160;<span class="keyword">class </span><a class="code" href="classHelloStelModuleStelPluginInterface.html">HelloStelModuleStelPluginInterface</a> : <span class="keyword">public</span> QObject, <span class="keyword">public</span> <a class="codeRef" doxygen="/home/aw/devel/stellarium/trunk/builds/gcc/stellarium.tag:../../doc/head/" href="../../doc/head/classStelPluginInterface.html">StelPluginInterface</a></div>
 <div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;{</div>
 <div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;    Q_OBJECT</div>
 <div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;    Q_PLUGIN_METADATA(IID StelPluginInterface_iid)</div>
 <div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;    Q_INTERFACES(<a class="codeRef" doxygen="/home/aw/devel/stellarium/trunk/builds/gcc/stellarium.tag:../../doc/head/" href="../../doc/head/classStelPluginInterface.html">StelPluginInterface</a>)</div>
-<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;public:</div>
-<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;    virtual <a class="codeRef" doxygen="/home/aw/devel/stellarium/trunk/builds/gcc/stellarium.tag:../../doc/head/" href="../../doc/head/classStelModule.html">StelModule</a>* <a class="codeRef" doxygen="/home/aw/devel/stellarium/trunk/builds/gcc/stellarium.tag:../../doc/head/" href="../../doc/head/classStelPluginInterface.html#afa2dc49ee2c01039a28e1764f334330c">getStelModule</a>() const;</div>
-<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;    virtual <a class="codeRef" doxygen="/home/aw/devel/stellarium/trunk/builds/gcc/stellarium.tag:../../doc/head/" href="../../doc/head/structStelPluginInfo.html">StelPluginInfo</a> getPluginInfo() const;</div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;<span class="keyword">public</span>:</div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;    <span class="keyword">virtual</span> <a class="codeRef" doxygen="/home/aw/devel/stellarium/trunk/builds/gcc/stellarium.tag:../../doc/head/" href="../../doc/head/classStelModule.html">StelModule</a>* <a class="codeRef" doxygen="/home/aw/devel/stellarium/trunk/builds/gcc/stellarium.tag:../../doc/head/" href="../../doc/head/classStelPluginInterface.html#afa2dc49ee2c01039a28e1764f334330c">getStelModule</a>() <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;    <span class="keyword">virtual</span> <a class="codeRef" doxygen="/home/aw/devel/stellarium/trunk/builds/gcc/stellarium.tag:../../doc/head/" href="../../doc/head/structStelPluginInfo.html">StelPluginInfo</a> <a class="codeRef" doxygen="/home/aw/devel/stellarium/trunk/builds/gcc/stellarium.tag:../../doc/head/" href="../../doc/head/classStelPluginInterface.html#a1708440c0e5754bfaecbd1b2bbde8afa">getPluginInfo</a>() <span class="keyword">const</span>;</div>
 <div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;};</div>
 <div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;</div>
 <div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;<span class="preprocessor">#endif </span><span class="comment">/*HELLOSTELMODULE_HPP_*/</span><span class="preprocessor"></span></div>
-<div class="ttc" id="classHelloStelModule_html"><div class="ttname"><a href="../../doc-plugins/head/classHelloStelModule.html">HelloStelModule</a></div><div class="ttdoc">This is an example of a plug-in which can be dynamically loaded into stellarium. </div><div class="ttdef"><b>Definition:</b> <a href="HelloStelModule_8hpp_source.html#l00026">HelloStelModule.hpp:26</a></div></div>
+<div class="ttc" id="classHelloStelModule_html"><div class="ttname"><a href="classHelloStelModule.html">HelloStelModule</a></div><div class="ttdoc">This is an example of a plug-in which can be dynamically loaded into stellarium. </div><div class="ttdef"><b>Definition:</b> <a href="HelloStelModule_8hpp_source.html#l00026">HelloStelModule.hpp:26</a></div></div>
 <div class="ttc" id="classStelPluginInterface_html"><div class="ttname"><a href="../../doc/head/classStelPluginInterface.html">StelPluginInterface</a></div></div>
-<div class="ttc" id="classHelloStelModuleStelPluginInterface_html"><div class="ttname"><a href="../../doc-plugins/head/classHelloStelModuleStelPluginInterface.html">HelloStelModuleStelPluginInterface</a></div><div class="ttdoc">This class is used by Qt to manage a plug-in interface. </div><div class="ttdef"><b>Definition:</b> <a href="HelloStelModule_8hpp_source.html#l00048">HelloStelModule.hpp:48</a></div></div>
+<div class="ttc" id="classHelloStelModuleStelPluginInterface_html"><div class="ttname"><a href="classHelloStelModuleStelPluginInterface.html">HelloStelModuleStelPluginInterface</a></div><div class="ttdoc">This class is used by Qt to manage a plug-in interface. </div><div class="ttdef"><b>Definition:</b> <a href="HelloStelModule_8hpp_source.html#l00048">HelloStelModule.hpp:48</a></div></div>
 <div class="ttc" id="classStelCore_html"><div class="ttname"><a href="../../doc/head/classStelCore.html">StelCore</a></div></div>
+<div class="ttc" id="classStelPluginInterface_html_a1708440c0e5754bfaecbd1b2bbde8afa"><div class="ttname"><a href="../../doc/head/classStelPluginInterface.html#a1708440c0e5754bfaecbd1b2bbde8afa">StelPluginInterface::getPluginInfo</a></div><div class="ttdeci">virtual StelPluginInfo getPluginInfo() const =0</div></div>
 <div class="ttc" id="classStelPluginInterface_html_afa2dc49ee2c01039a28e1764f334330c"><div class="ttname"><a href="../../doc/head/classStelPluginInterface.html#afa2dc49ee2c01039a28e1764f334330c">StelPluginInterface::getStelModule</a></div><div class="ttdeci">virtual class StelModule * getStelModule() const =0</div></div>
 <div class="ttc" id="classStelModule_html"><div class="ttname"><a href="../../doc/head/classStelModule.html">StelModule</a></div></div>
 <div class="ttc" id="structStelPluginInfo_html"><div class="ttname"><a href="../../doc/head/structStelPluginInfo.html">StelPluginInfo</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Tue Jun 9 2015 02:11:02 for Stellarium by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Fri Oct 2 2015 18:38:34 for Stellarium by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.8
 </small></address>

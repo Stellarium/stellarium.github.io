@@ -45,127 +45,53 @@
   <div class="summary">
 <a href="classMeteorShowers-members.html">List of all members</a> &#124;
 <a href="#nested-classes">Classes</a> &#124;
-<a href="#pub-types">Public Types</a> &#124;
-<a href="#pub-slots">Public Slots</a> &#124;
-<a href="#signals">Signals</a> &#124;
 <a href="#pub-methods">Public Member Functions</a>  </div>
   <div class="headertitle">
 <div class="title">MeteorShowers Class Reference<div class="ingroups"><a class="el" href="group__meteorShowers.html">Meteor Showers Plug-in</a></div></div>  </div>
 </div><!--header-->
 <div class="contents">
 
-<p>Main class of the Meteor Showers plugin.  
+<p>This class manages a collection of <a class="el" href="classMeteorShower.html" title="A MeteorShower object represents one meteor shower on the sky. ">MeteorShower</a> objects.  
  <a href="classMeteorShowers.html#details">More...</a></p>
 
 <p><code>#include &lt;<a class="el" href="MeteorShowers_8hpp_source.html">MeteorShowers.hpp</a>&gt;</code></p>
 <table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-types"></a>
-Public Types</h2></td></tr>
-<tr class="memitem:acfe8126b9014e0acadbea571b38cbd28"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMeteorShowers.html#acfe8126b9014e0acadbea571b38cbd28">UpdateState</a> { <br />
-&#160;&#160;<a class="el" href="classMeteorShowers.html#acfe8126b9014e0acadbea571b38cbd28a401f9c740b9d50bc38487cdce07a9df0">Updating</a>, 
-<a class="el" href="classMeteorShowers.html#acfe8126b9014e0acadbea571b38cbd28a6e9b7f354b501e480f37fbe933fae8ad">CompleteNoUpdates</a>, 
-<a class="el" href="classMeteorShowers.html#acfe8126b9014e0acadbea571b38cbd28ac6643c7c665cfe6798018df51666ff47">CompleteUpdates</a>, 
-<a class="el" href="classMeteorShowers.html#acfe8126b9014e0acadbea571b38cbd28a72b9c08a08763cd0f750b185ad267b76">DownloadError</a>, 
-<br />
-&#160;&#160;<a class="el" href="classMeteorShowers.html#acfe8126b9014e0acadbea571b38cbd28a3fc6fb2036ed6881149adb36760e95b2">OtherError</a>
-<br />
- }</td></tr>
-<tr class="memdesc:acfe8126b9014e0acadbea571b38cbd28"><td class="mdescLeft">&#160;</td><td class="mdescRight">Used for keeping track of the download/update status.  <a href="classMeteorShowers.html#acfe8126b9014e0acadbea571b38cbd28">More...</a><br /></td></tr>
-<tr class="separator:acfe8126b9014e0acadbea571b38cbd28"><td class="memSeparator" colspan="2">&#160;</td></tr>
-</table><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-slots"></a>
-Public Slots</h2></td></tr>
-<tr class="memitem:af6b151d2eb7968ba45c5c0f1469b359a"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMeteorShowers.html#af6b151d2eb7968ba45c5c0f1469b359a">updateJSON</a> (void)</td></tr>
-<tr class="memdesc:af6b151d2eb7968ba45c5c0f1469b359a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Download JSON from web recources described in the module section of the module.ini file and update the local JSON file.  <a href="#af6b151d2eb7968ba45c5c0f1469b359a">More...</a><br /></td></tr>
-<tr class="separator:af6b151d2eb7968ba45c5c0f1469b359a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:af445ce229148b767a012a52230045309"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="af445ce229148b767a012a52230045309"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>setFlagShowMS</b> (bool b)</td></tr>
-<tr class="separator:af445ce229148b767a012a52230045309"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a574ec863316418834474e22c5852bf68"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a574ec863316418834474e22c5852bf68"></a>
-bool&#160;</td><td class="memItemRight" valign="bottom"><b>getFlagShowMS</b> (void) const </td></tr>
-<tr class="separator:a574ec863316418834474e22c5852bf68"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a593dcebf9e7f8322500c877e85792842"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMeteorShowers.html#a593dcebf9e7f8322500c877e85792842">displayMessage</a> (const QString &amp;message, const QString hexColor=&quot;#999999&quot;)</td></tr>
-<tr class="memdesc:a593dcebf9e7f8322500c877e85792842"><td class="mdescLeft">&#160;</td><td class="mdescRight">Display a message. This is used for plugin-specific warnings and such.  <a href="#a593dcebf9e7f8322500c877e85792842">More...</a><br /></td></tr>
-<tr class="separator:a593dcebf9e7f8322500c877e85792842"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a4498bd46d6fc9d84cff2151cd2515ea1"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a4498bd46d6fc9d84cff2151cd2515ea1"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>messageTimeout</b> (void)</td></tr>
-<tr class="separator:a4498bd46d6fc9d84cff2151cd2515ea1"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac19aa7369b5583fd1863c2aa7e35dc01"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMeteorShowers.html#ac19aa7369b5583fd1863c2aa7e35dc01">setFlagShowMSButton</a> (bool b)</td></tr>
-<tr class="memdesc:ac19aa7369b5583fd1863c2aa7e35dc01"><td class="mdescLeft">&#160;</td><td class="mdescRight">Define whether the button toggling meteor showers should be visible.  <a href="#ac19aa7369b5583fd1863c2aa7e35dc01">More...</a><br /></td></tr>
-<tr class="separator:ac19aa7369b5583fd1863c2aa7e35dc01"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac35617dd6f86a2efdc4c9c327a5177c8"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ac35617dd6f86a2efdc4c9c327a5177c8"></a>
-bool&#160;</td><td class="memItemRight" valign="bottom"><b>getFlagShowMSButton</b> (void)</td></tr>
-<tr class="separator:ac35617dd6f86a2efdc4c9c327a5177c8"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a0722e9e49f83e0daebf5ced34a49c2c9"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMeteorShowers.html#a0722e9e49f83e0daebf5ced34a49c2c9">setLabelFontSize</a> (int size)</td></tr>
-<tr class="memdesc:a0722e9e49f83e0daebf5ced34a49c2c9"><td class="mdescLeft">&#160;</td><td class="mdescRight">set the label font size.  <a href="#a0722e9e49f83e0daebf5ced34a49c2c9">More...</a><br /></td></tr>
-<tr class="separator:a0722e9e49f83e0daebf5ced34a49c2c9"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:adec45850c2996d0f23e47ebdfa29cd2b"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMeteorShowers.html#adec45850c2996d0f23e47ebdfa29cd2b">setFlagLabels</a> (bool b)</td></tr>
-<tr class="memdesc:adec45850c2996d0f23e47ebdfa29cd2b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set whether text labels should be displayed next to radiant.  <a href="#adec45850c2996d0f23e47ebdfa29cd2b">More...</a><br /></td></tr>
-<tr class="separator:adec45850c2996d0f23e47ebdfa29cd2b"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a929a07145b5c38edb61b16ea94a105a2"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a929a07145b5c38edb61b16ea94a105a2"></a>
-bool&#160;</td><td class="memItemRight" valign="bottom"><b>getFlagActiveRadiant</b> (void)</td></tr>
-<tr class="separator:a929a07145b5c38edb61b16ea94a105a2"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a13f7f8c27cb1323a8f9db653a9d81b78"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a13f7f8c27cb1323a8f9db653a9d81b78"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>setFlagActiveRadiant</b> (bool b)</td></tr>
-<tr class="separator:a13f7f8c27cb1323a8f9db653a9d81b78"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:addd9aa710146bc781fda6eded158bf7d"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="addd9aa710146bc781fda6eded158bf7d"></a>
-bool&#160;</td><td class="memItemRight" valign="bottom"><b>getEnableAtStartup</b> (void)</td></tr>
-<tr class="separator:addd9aa710146bc781fda6eded158bf7d"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a3bb9090081e28ac96c1c541fb86227b5"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a3bb9090081e28ac96c1c541fb86227b5"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>setEnableAtStartup</b> (bool b)</td></tr>
-<tr class="separator:a3bb9090081e28ac96c1c541fb86227b5"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a36b529ee2e225c90cdb056a2b84710f2"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a36b529ee2e225c90cdb056a2b84710f2"></a>
-bool&#160;</td><td class="memItemRight" valign="bottom"><b>getFlagRadiant</b> (void) const </td></tr>
-<tr class="separator:a36b529ee2e225c90cdb056a2b84710f2"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a6237c01cd5dca4efb2e5f2a56f253935"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a6237c01cd5dca4efb2e5f2a56f253935"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>setFlagRadiant</b> (bool b)</td></tr>
-<tr class="separator:a6237c01cd5dca4efb2e5f2a56f253935"><td class="memSeparator" colspan="2">&#160;</td></tr>
-</table><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="signals"></a>
-Signals</h2></td></tr>
-<tr class="memitem:adc42dbeb9fb019b968dff1fe65ccfd8f"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMeteorShowers.html#adc42dbeb9fb019b968dff1fe65ccfd8f">updateStateChanged</a> (<a class="el" href="classMeteorShowers.html#acfe8126b9014e0acadbea571b38cbd28">MeteorShowers::UpdateState</a> state)</td></tr>
-<tr class="separator:adc42dbeb9fb019b968dff1fe65ccfd8f"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a6c9db8907ee4bd44238d71def4aa3ce1"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMeteorShowers.html#a6c9db8907ee4bd44238d71def4aa3ce1">jsonUpdateComplete</a> (void)</td></tr>
-<tr class="memdesc:a6c9db8907ee4bd44238d71def4aa3ce1"><td class="mdescLeft">&#160;</td><td class="mdescRight">emitted after a JSON update has run.  <a href="#a6c9db8907ee4bd44238d71def4aa3ce1">More...</a><br /></td></tr>
-<tr class="separator:a6c9db8907ee4bd44238d71def4aa3ce1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="nested-classes"></a>
+Classes</h2></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structMeteorShowers_1_1SearchResult.html">SearchResult</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:ad876b2279d197658437e57d3912a3ace"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ad876b2279d197658437e57d3912a3ace"></a>
-virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>init</b> ()</td></tr>
-<tr class="separator:ad876b2279d197658437e57d3912a3ace"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a90005da21f74d1a03dcc5ad14a8026c1"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMeteorShowers.html#a90005da21f74d1a03dcc5ad14a8026c1">deinit</a> ()</td></tr>
-<tr class="memdesc:a90005da21f74d1a03dcc5ad14a8026c1"><td class="mdescLeft">&#160;</td><td class="mdescRight">called before the plug-in is un-loaded.  <a href="#a90005da21f74d1a03dcc5ad14a8026c1">More...</a><br /></td></tr>
-<tr class="separator:a90005da21f74d1a03dcc5ad14a8026c1"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a304bf78d85392c01a9514cd8c49102b8"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a304bf78d85392c01a9514cd8c49102b8"></a>
-virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>update</b> (double deltaTime)</td></tr>
+<tr class="memitem:aa4e6cbbf21cfbefdf2ca5d7766c6af0f"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMeteorShowers.html#aa4e6cbbf21cfbefdf2ca5d7766c6af0f">MeteorShowers</a> (<a class="el" href="classMeteorShowersMgr.html">MeteorShowersMgr</a> *mgr)</td></tr>
+<tr class="memdesc:aa4e6cbbf21cfbefdf2ca5d7766c6af0f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructor.  <a href="#aa4e6cbbf21cfbefdf2ca5d7766c6af0f">More...</a><br /></td></tr>
+<tr class="separator:aa4e6cbbf21cfbefdf2ca5d7766c6af0f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5e6e3ce99c69a3107ac00dd85e7cf1b0"><td class="memItemLeft" align="right" valign="top">virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMeteorShowers.html#a5e6e3ce99c69a3107ac00dd85e7cf1b0">~MeteorShowers</a> ()</td></tr>
+<tr class="memdesc:a5e6e3ce99c69a3107ac00dd85e7cf1b0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Destructor.  <a href="#a5e6e3ce99c69a3107ac00dd85e7cf1b0">More...</a><br /></td></tr>
+<tr class="separator:a5e6e3ce99c69a3107ac00dd85e7cf1b0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a304bf78d85392c01a9514cd8c49102b8"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMeteorShowers.html#a304bf78d85392c01a9514cd8c49102b8">update</a> (double deltaTime)</td></tr>
+<tr class="memdesc:a304bf78d85392c01a9514cd8c49102b8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Update.  <a href="#a304bf78d85392c01a9514cd8c49102b8">More...</a><br /></td></tr>
 <tr class="separator:a304bf78d85392c01a9514cd8c49102b8"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a7c68a6cc3bcaea5c2d02bda163106782"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a7c68a6cc3bcaea5c2d02bda163106782"></a>
-virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>draw</b> (StelCore *core)</td></tr>
+<tr class="memitem:a7c68a6cc3bcaea5c2d02bda163106782"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMeteorShowers.html#a7c68a6cc3bcaea5c2d02bda163106782">draw</a> (<a class="elRef" doxygen="/home/aw/devel/stellarium/trunk/builds/gcc/stellarium.tag:../../doc/head/" href="../../doc/head/classStelCore.html">StelCore</a> *core)</td></tr>
+<tr class="memdesc:a7c68a6cc3bcaea5c2d02bda163106782"><td class="mdescLeft">&#160;</td><td class="mdescRight">Draw.  <a href="#a7c68a6cc3bcaea5c2d02bda163106782">More...</a><br /></td></tr>
 <tr class="separator:a7c68a6cc3bcaea5c2d02bda163106782"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a646fcc42231658b577ec1ffa76c87aba"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a646fcc42231658b577ec1ffa76c87aba"></a>
-virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>drawMarker</b> (StelCore *core, StelPainter &amp;painter)</td></tr>
-<tr class="separator:a646fcc42231658b577ec1ffa76c87aba"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a4279b7fbad0b15a7abb9cac5d58580c2"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a4279b7fbad0b15a7abb9cac5d58580c2"></a>
-virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>drawPointer</b> (StelCore *core, StelPainter &amp;painter)</td></tr>
-<tr class="separator:a4279b7fbad0b15a7abb9cac5d58580c2"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a80d54bbd40306ee5d726ac87ea72fc0f"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a80d54bbd40306ee5d726ac87ea72fc0f"></a>
-virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>drawStream</b> (StelCore *core, StelPainter &amp;painter)</td></tr>
-<tr class="separator:a80d54bbd40306ee5d726ac87ea72fc0f"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a0efeda2ffb98571c5949f1b6c8a2e58d"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a0efeda2ffb98571c5949f1b6c8a2e58d"></a>
-virtual double&#160;</td><td class="memItemRight" valign="bottom"><b>getCallOrder</b> (StelModuleActionName actionName) const </td></tr>
-<tr class="separator:a0efeda2ffb98571c5949f1b6c8a2e58d"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:afb82246a521ecc97b551b243650872b7"><td class="memItemLeft" align="right" valign="top">virtual QList&lt; StelObjectP &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMeteorShowers.html#afb82246a521ecc97b551b243650872b7">searchAround</a> (const Vec3d &amp;v, double limitFov, const StelCore *core) const </td></tr>
-<tr class="memdesc:afb82246a521ecc97b551b243650872b7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Used to get a list of objects which are near to some position.  <a href="#afb82246a521ecc97b551b243650872b7">More...</a><br /></td></tr>
+<tr class="memitem:a6e236ece97533aa56468fcecf20b3541"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMeteorShowers.html#a6e236ece97533aa56468fcecf20b3541">loadMeteorShowers</a> (const QVariantMap &amp;map)</td></tr>
+<tr class="memdesc:a6e236ece97533aa56468fcecf20b3541"><td class="mdescLeft">&#160;</td><td class="mdescRight">Loads all meteor showers contained in a QVariantMap.  <a href="#a6e236ece97533aa56468fcecf20b3541">More...</a><br /></td></tr>
+<tr class="separator:a6e236ece97533aa56468fcecf20b3541"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4d5a3d8c21af2a2d546995c766722513"><td class="memItemLeft" align="right" valign="top">QList&lt; <a class="el" href="structMeteorShowers_1_1SearchResult.html">SearchResult</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMeteorShowers.html#a4d5a3d8c21af2a2d546995c766722513">searchEvents</a> (QDate dateFrom, QDate dateTo) const </td></tr>
+<tr class="memdesc:a4d5a3d8c21af2a2d546995c766722513"><td class="mdescLeft">&#160;</td><td class="mdescRight">Find all meteor_shower events in a given date interval.  <a href="#a4d5a3d8c21af2a2d546995c766722513">More...</a><br /></td></tr>
+<tr class="separator:a4d5a3d8c21af2a2d546995c766722513"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afb82246a521ecc97b551b243650872b7"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="afb82246a521ecc97b551b243650872b7"></a>
+virtual QList&lt; <a class="elRef" doxygen="/home/aw/devel/stellarium/trunk/builds/gcc/stellarium.tag:../../doc/head/" href="../../doc/head/StelObjectType_8hpp.html#a3ae5fa6cd6f0b212dd9a120500ca7150">StelObjectP</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>searchAround</b> (const Vec3d &amp;v, double limitFov, const <a class="elRef" doxygen="/home/aw/devel/stellarium/trunk/builds/gcc/stellarium.tag:../../doc/head/" href="../../doc/head/classStelCore.html">StelCore</a> *core) const </td></tr>
 <tr class="separator:afb82246a521ecc97b551b243650872b7"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab875c5f9f5725a2ad0450e99a92073ae"><td class="memItemLeft" align="right" valign="top">virtual StelObjectP&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMeteorShowers.html#ab875c5f9f5725a2ad0450e99a92073ae">searchByNameI18n</a> (const QString &amp;nameI18n) const </td></tr>
-<tr class="memdesc:ab875c5f9f5725a2ad0450e99a92073ae"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return the matching satellite object's pointer if exists or NULL.  <a href="#ab875c5f9f5725a2ad0450e99a92073ae">More...</a><br /></td></tr>
+<tr class="memitem:ab875c5f9f5725a2ad0450e99a92073ae"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ab875c5f9f5725a2ad0450e99a92073ae"></a>
+virtual <a class="elRef" doxygen="/home/aw/devel/stellarium/trunk/builds/gcc/stellarium.tag:../../doc/head/" href="../../doc/head/StelObjectType_8hpp.html#a3ae5fa6cd6f0b212dd9a120500ca7150">StelObjectP</a>&#160;</td><td class="memItemRight" valign="bottom"><b>searchByNameI18n</b> (const QString &amp;nameI18n) const </td></tr>
 <tr class="separator:ab875c5f9f5725a2ad0450e99a92073ae"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a9162d5e01850ad58cf997ac4814ceb24"><td class="memItemLeft" align="right" valign="top">virtual StelObjectP&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMeteorShowers.html#a9162d5e01850ad58cf997ac4814ceb24">searchByName</a> (const QString &amp;name) const </td></tr>
-<tr class="memdesc:a9162d5e01850ad58cf997ac4814ceb24"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return the matching satellite if exists or NULL.  <a href="#a9162d5e01850ad58cf997ac4814ceb24">More...</a><br /></td></tr>
+<tr class="memitem:a9162d5e01850ad58cf997ac4814ceb24"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a9162d5e01850ad58cf997ac4814ceb24"></a>
+virtual <a class="elRef" doxygen="/home/aw/devel/stellarium/trunk/builds/gcc/stellarium.tag:../../doc/head/" href="../../doc/head/StelObjectType_8hpp.html#a3ae5fa6cd6f0b212dd9a120500ca7150">StelObjectP</a>&#160;</td><td class="memItemRight" valign="bottom"><b>searchByName</b> (const QString &amp;name) const </td></tr>
 <tr class="separator:a9162d5e01850ad58cf997ac4814ceb24"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac0cf2ea74cee89468371647c08f3d04e"><td class="memItemLeft" align="right" valign="top">virtual QStringList&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMeteorShowers.html#ac0cf2ea74cee89468371647c08f3d04e">listMatchingObjectsI18n</a> (const QString &amp;objPrefix, int maxNbItem=5, bool useStartOfWords=false) const </td></tr>
-<tr class="memdesc:ac0cf2ea74cee89468371647c08f3d04e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Find and return the list of at most maxNbItem objects auto-completing the passed object I18n name.  <a href="#ac0cf2ea74cee89468371647c08f3d04e">More...</a><br /></td></tr>
+<tr class="memitem:ac0cf2ea74cee89468371647c08f3d04e"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ac0cf2ea74cee89468371647c08f3d04e"></a>
+virtual QStringList&#160;</td><td class="memItemRight" valign="bottom"><b>listMatchingObjectsI18n</b> (const QString &amp;objPrefix, int maxNbItem=5, bool useStartOfWords=false) const </td></tr>
 <tr class="separator:ac0cf2ea74cee89468371647c08f3d04e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad325ff39674f93138570a2ce7546dc21"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ad325ff39674f93138570a2ce7546dc21"></a>
 virtual QStringList&#160;</td><td class="memItemRight" valign="bottom"><b>listMatchingObjects</b> (const QString &amp;objPrefix, int maxNbItem=5, bool useStartOfWords=false) const </td></tr>
@@ -173,120 +99,230 @@ virtual QStringList&#160;</td><td class="memItemRight" valign="bottom"><b>listMa
 <tr class="memitem:a52566a92bc9060a70eb46bbc1922374b"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a52566a92bc9060a70eb46bbc1922374b"></a>
 virtual QStringList&#160;</td><td class="memItemRight" valign="bottom"><b>listAllObjects</b> (bool inEnglish) const </td></tr>
 <tr class="separator:a52566a92bc9060a70eb46bbc1922374b"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a2580ca90df6becfd6e45a48dd6379385"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a2580ca90df6becfd6e45a48dd6379385"></a>
-virtual QStringList&#160;</td><td class="memItemRight" valign="bottom"><b>listAllObjectsByType</b> (const QString &amp;objType, bool inEnglish) const </td></tr>
-<tr class="separator:a2580ca90df6becfd6e45a48dd6379385"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a288edf9cb89aef80de8e210714223bcc"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a288edf9cb89aef80de8e210714223bcc"></a>
 virtual QString&#160;</td><td class="memItemRight" valign="bottom"><b>getName</b> () const </td></tr>
 <tr class="separator:a288edf9cb89aef80de8e210714223bcc"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:adc18b27753802abda5070808a709d041"><td class="memItemLeft" align="right" valign="top">MeteorShowerP&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMeteorShowers.html#adc18b27753802abda5070808a709d041">getByID</a> (const QString &amp;id)</td></tr>
-<tr class="memdesc:adc18b27753802abda5070808a709d041"><td class="mdescLeft">&#160;</td><td class="mdescRight">get a ms object by identifier  <a href="#adc18b27753802abda5070808a709d041">More...</a><br /></td></tr>
-<tr class="separator:adc18b27753802abda5070808a709d041"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a0686463b15ab0e61b127435405e890f1"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMeteorShowers.html#a0686463b15ab0e61b127435405e890f1">configureGui</a> (bool show=true)</td></tr>
-<tr class="memdesc:a0686463b15ab0e61b127435405e890f1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Implment this to tell the main Stellarium GUI that there is a GUI element to configure this plugin.  <a href="#a0686463b15ab0e61b127435405e890f1">More...</a><br /></td></tr>
-<tr class="separator:a0686463b15ab0e61b127435405e890f1"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab5ab86c65c3ffc7b2f8a0e75904056be"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMeteorShowers.html#ab5ab86c65c3ffc7b2f8a0e75904056be">restoreDefaults</a> (void)</td></tr>
-<tr class="memdesc:ab5ab86c65c3ffc7b2f8a0e75904056be"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set up the plugin with default values.  <a href="#ab5ab86c65c3ffc7b2f8a0e75904056be">More...</a><br /></td></tr>
-<tr class="separator:ab5ab86c65c3ffc7b2f8a0e75904056be"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ae8081851a681001be1bc8f114ae00f2c"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMeteorShowers.html#ae8081851a681001be1bc8f114ae00f2c">readSettingsFromConfig</a> (void)</td></tr>
-<tr class="memdesc:ae8081851a681001be1bc8f114ae00f2c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Read (or re-read) settings from the main config file.  <a href="#ae8081851a681001be1bc8f114ae00f2c">More...</a><br /></td></tr>
-<tr class="separator:ae8081851a681001be1bc8f114ae00f2c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a27670821a00bbbee5229834bbb5db946"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMeteorShowers.html#a27670821a00bbbee5229834bbb5db946">saveSettingsToConfig</a> (void)</td></tr>
-<tr class="memdesc:a27670821a00bbbee5229834bbb5db946"><td class="mdescLeft">&#160;</td><td class="mdescRight">Save the settings to the main configuration file.  <a href="#a27670821a00bbbee5229834bbb5db946">More...</a><br /></td></tr>
-<tr class="separator:a27670821a00bbbee5229834bbb5db946"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:af1bd12b550e26f6301e053a0befc1ec9"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMeteorShowers.html#af1bd12b550e26f6301e053a0befc1ec9">getUpdatesEnabled</a> (void)</td></tr>
-<tr class="memdesc:af1bd12b550e26f6301e053a0befc1ec9"><td class="mdescLeft">&#160;</td><td class="mdescRight">get whether or not the plugin will try to update TLE data from the internet  <a href="#af1bd12b550e26f6301e053a0befc1ec9">More...</a><br /></td></tr>
-<tr class="separator:af1bd12b550e26f6301e053a0befc1ec9"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a1acbbedef9625d51303709900b005508"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMeteorShowers.html#a1acbbedef9625d51303709900b005508">setUpdatesEnabled</a> (bool b)</td></tr>
-<tr class="memdesc:a1acbbedef9625d51303709900b005508"><td class="mdescLeft">&#160;</td><td class="mdescRight">set whether or not the plugin will try to update TLE data from the internet  <a href="#a1acbbedef9625d51303709900b005508">More...</a><br /></td></tr>
-<tr class="separator:a1acbbedef9625d51303709900b005508"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aad2556e29c15bac6b6fb025cd5ad2eee"><td class="memItemLeft" align="right" valign="top">QDateTime&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMeteorShowers.html#aad2556e29c15bac6b6fb025cd5ad2eee">getLastUpdate</a> (void)</td></tr>
-<tr class="memdesc:aad2556e29c15bac6b6fb025cd5ad2eee"><td class="mdescLeft">&#160;</td><td class="mdescRight">get the date and time the TLE elements were updated  <a href="#aad2556e29c15bac6b6fb025cd5ad2eee">More...</a><br /></td></tr>
-<tr class="separator:aad2556e29c15bac6b6fb025cd5ad2eee"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a4656b2ff58f89cfbd482b58e2aa791b5"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMeteorShowers.html#a4656b2ff58f89cfbd482b58e2aa791b5">getUpdateFrequencyHours</a> (void)</td></tr>
-<tr class="memdesc:a4656b2ff58f89cfbd482b58e2aa791b5"><td class="mdescLeft">&#160;</td><td class="mdescRight">get the update frequency in hours  <a href="#a4656b2ff58f89cfbd482b58e2aa791b5">More...</a><br /></td></tr>
-<tr class="separator:a4656b2ff58f89cfbd482b58e2aa791b5"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a9cf7eb8abd95f0d800c57448abbcac74"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a9cf7eb8abd95f0d800c57448abbcac74"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>setUpdateFrequencyHours</b> (int hours)</td></tr>
-<tr class="separator:a9cf7eb8abd95f0d800c57448abbcac74"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a8805db78af17b55616b3f139a4b2a1ae"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMeteorShowers.html#a8805db78af17b55616b3f139a4b2a1ae">getSecondsToUpdate</a> (void)</td></tr>
-<tr class="memdesc:a8805db78af17b55616b3f139a4b2a1ae"><td class="mdescLeft">&#160;</td><td class="mdescRight">get the number of seconds till the next update  <a href="#a8805db78af17b55616b3f139a4b2a1ae">More...</a><br /></td></tr>
-<tr class="separator:a8805db78af17b55616b3f139a4b2a1ae"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a891d0b646eb0bbff98e185d88e31bb7b"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classMeteorShowers.html#acfe8126b9014e0acadbea571b38cbd28">UpdateState</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMeteorShowers.html#a891d0b646eb0bbff98e185d88e31bb7b">getUpdateState</a> (void)</td></tr>
-<tr class="memdesc:a891d0b646eb0bbff98e185d88e31bb7b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the current updateState.  <a href="#a891d0b646eb0bbff98e185d88e31bb7b">More...</a><br /></td></tr>
-<tr class="separator:a891d0b646eb0bbff98e185d88e31bb7b"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a3e43c2af0cd8cffacb8b7f566cdfee4c"><td class="memItemLeft" align="right" valign="top">QColor&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMeteorShowers.html#a3e43c2af0cd8cffacb8b7f566cdfee4c">getColorARG</a> ()</td></tr>
-<tr class="memdesc:a3e43c2af0cd8cffacb8b7f566cdfee4c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get current color of active radiant based in generic data.  <a href="#a3e43c2af0cd8cffacb8b7f566cdfee4c">More...</a><br /></td></tr>
-<tr class="separator:a3e43c2af0cd8cffacb8b7f566cdfee4c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:acd5c3e137b802bc87cc74176ec481e90"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="acd5c3e137b802bc87cc74176ec481e90"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>setColorARG</b> (QColor color)</td></tr>
-<tr class="separator:acd5c3e137b802bc87cc74176ec481e90"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aa86ee24e2e7c46332fe3feaa5403d952"><td class="memItemLeft" align="right" valign="top">QColor&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMeteorShowers.html#aa86ee24e2e7c46332fe3feaa5403d952">getColorARR</a> ()</td></tr>
-<tr class="memdesc:aa86ee24e2e7c46332fe3feaa5403d952"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get current color of active radiant based in real data.  <a href="#aa86ee24e2e7c46332fe3feaa5403d952">More...</a><br /></td></tr>
-<tr class="separator:aa86ee24e2e7c46332fe3feaa5403d952"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a2d2d2e58dfe5dd8d421b0e32a8723890"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a2d2d2e58dfe5dd8d421b0e32a8723890"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>setColorARR</b> (QColor color)</td></tr>
-<tr class="separator:a2d2d2e58dfe5dd8d421b0e32a8723890"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a00ae9eedf2e5e264ad0f8f3339e28c9d"><td class="memItemLeft" align="right" valign="top">QColor&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMeteorShowers.html#a00ae9eedf2e5e264ad0f8f3339e28c9d">getColorIR</a> ()</td></tr>
-<tr class="memdesc:a00ae9eedf2e5e264ad0f8f3339e28c9d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get current inactive radiant color.  <a href="#a00ae9eedf2e5e264ad0f8f3339e28c9d">More...</a><br /></td></tr>
-<tr class="separator:a00ae9eedf2e5e264ad0f8f3339e28c9d"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac40e7e9654e8dcb3d3cf329feac0f0b7"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ac40e7e9654e8dcb3d3cf329feac0f0b7"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>setColorIR</b> (QColor color)</td></tr>
-<tr class="separator:ac40e7e9654e8dcb3d3cf329feac0f0b7"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac9017b87b4175c22ba3f0e1f15d54879"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMeteorShowers.html#ac9017b87b4175c22ba3f0e1f15d54879">getLabelFontSize</a> ()</td></tr>
-<tr class="memdesc:ac9017b87b4175c22ba3f0e1f15d54879"><td class="mdescLeft">&#160;</td><td class="mdescRight">get the label font size.  <a href="#ac9017b87b4175c22ba3f0e1f15d54879">More...</a><br /></td></tr>
-<tr class="separator:ac9017b87b4175c22ba3f0e1f15d54879"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ae1516933e69e14a695dd87d59a43b4e3"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMeteorShowers.html#ae1516933e69e14a695dd87d59a43b4e3">getFlagLabels</a> ()</td></tr>
-<tr class="memdesc:ae1516933e69e14a695dd87d59a43b4e3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get status of labels.  <a href="#ae1516933e69e14a695dd87d59a43b4e3">More...</a><br /></td></tr>
-<tr class="separator:ae1516933e69e14a695dd87d59a43b4e3"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a45d03ce0d47e104b3ba041dd8b3a8621"><td class="memItemLeft" align="right" valign="top">QDateTime&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMeteorShowers.html#a45d03ce0d47e104b3ba041dd8b3a8621">getSkyDate</a> ()</td></tr>
-<tr class="memdesc:a45d03ce0d47e104b3ba041dd8b3a8621"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get current sky date.  <a href="#a45d03ce0d47e104b3ba041dd8b3a8621">More...</a><br /></td></tr>
-<tr class="separator:a45d03ce0d47e104b3ba041dd8b3a8621"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a1f8816b0a2461f57a43a9d3c1e3a9a4d"><td class="memItemLeft" align="right" valign="top">QList&lt; MeteorShowerP &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMeteorShowers.html#a1f8816b0a2461f57a43a9d3c1e3a9a4d">searchEvents</a> (QDate dateFrom, QDate dateTo) const </td></tr>
-<tr class="memdesc:a1f8816b0a2461f57a43a9d3c1e3a9a4d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Find all meteor_shower events in a given date interval.  <a href="#a1f8816b0a2461f57a43a9d3c1e3a9a4d">More...</a><br /></td></tr>
-<tr class="separator:a1f8816b0a2461f57a43a9d3c1e3a9a4d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="inherit_header pub_methods_classMeteorShowersMgr"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_classMeteorShowersMgr')"><img src="closed.png" alt="-"/>&#160;Public Member Functions inherited from <a class="el" href="classMeteorShowersMgr.html">MeteorShowersMgr</a></td></tr>
+<tr class="memitem:aa66772a5662862bd9fc7416da7f80f32 inherit pub_methods_classMeteorShowersMgr"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMeteorShowersMgr.html#aa66772a5662862bd9fc7416da7f80f32">MeteorShowersMgr</a> ()</td></tr>
+<tr class="memdesc:aa66772a5662862bd9fc7416da7f80f32 inherit pub_methods_classMeteorShowersMgr"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructor.  <a href="#aa66772a5662862bd9fc7416da7f80f32">More...</a><br /></td></tr>
+<tr class="separator:aa66772a5662862bd9fc7416da7f80f32 inherit pub_methods_classMeteorShowersMgr"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab084246d79218aa3290f6576f036126b inherit pub_methods_classMeteorShowersMgr"><td class="memItemLeft" align="right" valign="top">virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMeteorShowersMgr.html#ab084246d79218aa3290f6576f036126b">~MeteorShowersMgr</a> ()</td></tr>
+<tr class="memdesc:ab084246d79218aa3290f6576f036126b inherit pub_methods_classMeteorShowersMgr"><td class="mdescLeft">&#160;</td><td class="mdescRight">Destructor.  <a href="#ab084246d79218aa3290f6576f036126b">More...</a><br /></td></tr>
+<tr class="separator:ab084246d79218aa3290f6576f036126b inherit pub_methods_classMeteorShowersMgr"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a742051fffee9d9638d461714a0fd8da9 inherit pub_methods_classMeteorShowersMgr"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMeteorShowersMgr.html#a742051fffee9d9638d461714a0fd8da9">restoreDefaultCatalog</a> (const QString &amp;destination)</td></tr>
+<tr class="memdesc:a742051fffee9d9638d461714a0fd8da9 inherit pub_methods_classMeteorShowersMgr"><td class="mdescLeft">&#160;</td><td class="mdescRight">Restore default catalog.  <a href="#a742051fffee9d9638d461714a0fd8da9">More...</a><br /></td></tr>
+<tr class="separator:a742051fffee9d9638d461714a0fd8da9 inherit pub_methods_classMeteorShowersMgr"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a06b98755c40f0088b7b3eee21a365735 inherit pub_methods_classMeteorShowersMgr"><td class="memItemLeft" align="right" valign="top"><a class="elRef" doxygen="/home/aw/devel/stellarium/trunk/builds/gcc/stellarium.tag:../../doc/head/" href="../../doc/head/StelTextureTypes_8hpp.html#a085a86bd020a5f6d1240e02d596eb4bb">StelTextureSP</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMeteorShowersMgr.html#a06b98755c40f0088b7b3eee21a365735">getBolideTexture</a> ()</td></tr>
+<tr class="memdesc:a06b98755c40f0088b7b3eee21a365735 inherit pub_methods_classMeteorShowersMgr"><td class="mdescLeft">&#160;</td><td class="mdescRight">Gets the bolide texture.  <a href="#a06b98755c40f0088b7b3eee21a365735">More...</a><br /></td></tr>
+<tr class="separator:a06b98755c40f0088b7b3eee21a365735 inherit pub_methods_classMeteorShowersMgr"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af522f4e7fb548fafb0901ace5b76d5b2 inherit pub_methods_classMeteorShowersMgr"><td class="memItemLeft" align="right" valign="top"><a class="elRef" doxygen="/home/aw/devel/stellarium/trunk/builds/gcc/stellarium.tag:../../doc/head/" href="../../doc/head/StelTextureTypes_8hpp.html#a085a86bd020a5f6d1240e02d596eb4bb">StelTextureSP</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMeteorShowersMgr.html#af522f4e7fb548fafb0901ace5b76d5b2">getPointerTexture</a> ()</td></tr>
+<tr class="memdesc:af522f4e7fb548fafb0901ace5b76d5b2 inherit pub_methods_classMeteorShowersMgr"><td class="mdescLeft">&#160;</td><td class="mdescRight">Gets the pointer texture.  <a href="#af522f4e7fb548fafb0901ace5b76d5b2">More...</a><br /></td></tr>
+<tr class="separator:af522f4e7fb548fafb0901ace5b76d5b2 inherit pub_methods_classMeteorShowersMgr"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3d963c0b5a13be23131d91e3606b8440 inherit pub_methods_classMeteorShowersMgr"><td class="memItemLeft" align="right" valign="top"><a class="elRef" doxygen="/home/aw/devel/stellarium/trunk/builds/gcc/stellarium.tag:../../doc/head/" href="../../doc/head/StelTextureTypes_8hpp.html#a085a86bd020a5f6d1240e02d596eb4bb">StelTextureSP</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMeteorShowersMgr.html#a3d963c0b5a13be23131d91e3606b8440">getRadiantTexture</a> ()</td></tr>
+<tr class="memdesc:a3d963c0b5a13be23131d91e3606b8440 inherit pub_methods_classMeteorShowersMgr"><td class="mdescLeft">&#160;</td><td class="mdescRight">Gets the radiant texture.  <a href="#a3d963c0b5a13be23131d91e3606b8440">More...</a><br /></td></tr>
+<tr class="separator:a3d963c0b5a13be23131d91e3606b8440 inherit pub_methods_classMeteorShowersMgr"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aac90b268e8145fdc4c214dec14c38582 inherit pub_methods_classMeteorShowersMgr"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classMeteorShowers.html">MeteorShowers</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMeteorShowersMgr.html#aac90b268e8145fdc4c214dec14c38582">getMeteorShowers</a> ()</td></tr>
+<tr class="memdesc:aac90b268e8145fdc4c214dec14c38582 inherit pub_methods_classMeteorShowersMgr"><td class="mdescLeft">&#160;</td><td class="mdescRight">Gets the <a class="el" href="classMeteorShowers.html" title="This class manages a collection of MeteorShower objects. ">MeteorShowers</a> instance.  <a href="#aac90b268e8145fdc4c214dec14c38582">More...</a><br /></td></tr>
+<tr class="separator:aac90b268e8145fdc4c214dec14c38582 inherit pub_methods_classMeteorShowersMgr"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3edebb0e03c7b93acf97c35a44240a68 inherit pub_methods_classMeteorShowersMgr"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMeteorShowersMgr.html#a3edebb0e03c7b93acf97c35a44240a68">setEnablePlugin</a> (const bool &amp;b)</td></tr>
+<tr class="memdesc:a3edebb0e03c7b93acf97c35a44240a68 inherit pub_methods_classMeteorShowersMgr"><td class="mdescLeft">&#160;</td><td class="mdescRight">Enable/disable the meteor showers plugin.  <a href="#a3edebb0e03c7b93acf97c35a44240a68">More...</a><br /></td></tr>
+<tr class="separator:a3edebb0e03c7b93acf97c35a44240a68 inherit pub_methods_classMeteorShowersMgr"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a418e47d893cd76ee98e6653c3eb0c37b inherit pub_methods_classMeteorShowersMgr"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a418e47d893cd76ee98e6653c3eb0c37b"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><b>getEnablePlugin</b> ()</td></tr>
+<tr class="separator:a418e47d893cd76ee98e6653c3eb0c37b inherit pub_methods_classMeteorShowersMgr"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae8a300ffec6807e61097d1f4eec38374 inherit pub_methods_classMeteorShowersMgr"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMeteorShowersMgr.html#ae8a300ffec6807e61097d1f4eec38374">getActiveRadiantOnly</a> ()</td></tr>
+<tr class="memdesc:ae8a300ffec6807e61097d1f4eec38374 inherit pub_methods_classMeteorShowersMgr"><td class="mdescLeft">&#160;</td><td class="mdescRight">True if user wants to see the active radiants only.  <a href="#ae8a300ffec6807e61097d1f4eec38374">More...</a><br /></td></tr>
+<tr class="separator:ae8a300ffec6807e61097d1f4eec38374 inherit pub_methods_classMeteorShowersMgr"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4097b636613dc0f1570edf9119007f71 inherit pub_methods_classMeteorShowersMgr"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMeteorShowersMgr.html#a4097b636613dc0f1570edf9119007f71">getShowEnableButton</a> ()</td></tr>
+<tr class="memdesc:a4097b636613dc0f1570edf9119007f71 inherit pub_methods_classMeteorShowersMgr"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the status of the enable button on the toolbar.  <a href="#a4097b636613dc0f1570edf9119007f71">More...</a><br /></td></tr>
+<tr class="separator:a4097b636613dc0f1570edf9119007f71 inherit pub_methods_classMeteorShowersMgr"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a77c277f5beccad99d57deab9c3ab2747 inherit pub_methods_classMeteorShowersMgr"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMeteorShowersMgr.html#a77c277f5beccad99d57deab9c3ab2747">getShowSearchButton</a> ()</td></tr>
+<tr class="memdesc:a77c277f5beccad99d57deab9c3ab2747 inherit pub_methods_classMeteorShowersMgr"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the status of the search button on the toolbar.  <a href="#a77c277f5beccad99d57deab9c3ab2747">More...</a><br /></td></tr>
+<tr class="separator:a77c277f5beccad99d57deab9c3ab2747 inherit pub_methods_classMeteorShowersMgr"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0b96ae2c540a14e32264f8c355f26d85 inherit pub_methods_classMeteorShowersMgr"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMeteorShowersMgr.html#a0b96ae2c540a14e32264f8c355f26d85">setColorARG</a> (const Vec3f &amp;rgb)</td></tr>
+<tr class="memdesc:a0b96ae2c540a14e32264f8c355f26d85 inherit pub_methods_classMeteorShowersMgr"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the color of the active radiant based on generic data.  <a href="#a0b96ae2c540a14e32264f8c355f26d85">More...</a><br /></td></tr>
+<tr class="separator:a0b96ae2c540a14e32264f8c355f26d85 inherit pub_methods_classMeteorShowersMgr"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa6e9fed725178a108de60220807896de inherit pub_methods_classMeteorShowersMgr"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aa6e9fed725178a108de60220807896de"></a>
+Vec3f&#160;</td><td class="memItemRight" valign="bottom"><b>getColorARG</b> ()</td></tr>
+<tr class="separator:aa6e9fed725178a108de60220807896de inherit pub_methods_classMeteorShowersMgr"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9b56fe79f0f08974bcbcf4f0e991a796 inherit pub_methods_classMeteorShowersMgr"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMeteorShowersMgr.html#a9b56fe79f0f08974bcbcf4f0e991a796">setColorARC</a> (const Vec3f &amp;rgb)</td></tr>
+<tr class="memdesc:a9b56fe79f0f08974bcbcf4f0e991a796 inherit pub_methods_classMeteorShowersMgr"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the color of the active radiant based on confirmed data.  <a href="#a9b56fe79f0f08974bcbcf4f0e991a796">More...</a><br /></td></tr>
+<tr class="separator:a9b56fe79f0f08974bcbcf4f0e991a796 inherit pub_methods_classMeteorShowersMgr"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5063b4bcf758392e236e4bd4bde33437 inherit pub_methods_classMeteorShowersMgr"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a5063b4bcf758392e236e4bd4bde33437"></a>
+Vec3f&#160;</td><td class="memItemRight" valign="bottom"><b>getColorARC</b> ()</td></tr>
+<tr class="separator:a5063b4bcf758392e236e4bd4bde33437 inherit pub_methods_classMeteorShowersMgr"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a64ad35ec394beaee31a1e283a3117fb4 inherit pub_methods_classMeteorShowersMgr"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMeteorShowersMgr.html#a64ad35ec394beaee31a1e283a3117fb4">setColorIR</a> (const Vec3f &amp;rgb)</td></tr>
+<tr class="memdesc:a64ad35ec394beaee31a1e283a3117fb4 inherit pub_methods_classMeteorShowersMgr"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the color of the inactive radiant.  <a href="#a64ad35ec394beaee31a1e283a3117fb4">More...</a><br /></td></tr>
+<tr class="separator:a64ad35ec394beaee31a1e283a3117fb4 inherit pub_methods_classMeteorShowersMgr"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7ad80e89fa08d65d75ed3131fbc235bf inherit pub_methods_classMeteorShowersMgr"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a7ad80e89fa08d65d75ed3131fbc235bf"></a>
+Vec3f&#160;</td><td class="memItemRight" valign="bottom"><b>getColorIR</b> ()</td></tr>
+<tr class="separator:a7ad80e89fa08d65d75ed3131fbc235bf inherit pub_methods_classMeteorShowersMgr"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aac078423322f263d5129254325ac7bde inherit pub_methods_classMeteorShowersMgr"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMeteorShowersMgr.html#aac078423322f263d5129254325ac7bde">getEnableAtStartup</a> ()</td></tr>
+<tr class="memdesc:aac078423322f263d5129254325ac7bde inherit pub_methods_classMeteorShowersMgr"><td class="mdescLeft">&#160;</td><td class="mdescRight">True if the plugin is enabled at Stellarium startup.  <a href="#aac078423322f263d5129254325ac7bde">More...</a><br /></td></tr>
+<tr class="separator:aac078423322f263d5129254325ac7bde inherit pub_methods_classMeteorShowersMgr"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4a655accaf23be81109a63ea0006caea inherit pub_methods_classMeteorShowersMgr"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMeteorShowersMgr.html#a4a655accaf23be81109a63ea0006caea">getFontSize</a> ()</td></tr>
+<tr class="memdesc:a4a655accaf23be81109a63ea0006caea inherit pub_methods_classMeteorShowersMgr"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the font size (used on radiant labels).  <a href="#a4a655accaf23be81109a63ea0006caea">More...</a><br /></td></tr>
+<tr class="separator:a4a655accaf23be81109a63ea0006caea inherit pub_methods_classMeteorShowersMgr"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2a4b758b0a580fd94ad58559a72bbdee inherit pub_methods_classMeteorShowersMgr"><td class="memItemLeft" align="right" valign="top">QFont&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMeteorShowersMgr.html#a2a4b758b0a580fd94ad58559a72bbdee">getFont</a> ()</td></tr>
+<tr class="memdesc:a2a4b758b0a580fd94ad58559a72bbdee inherit pub_methods_classMeteorShowersMgr"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the font.  <a href="#a2a4b758b0a580fd94ad58559a72bbdee">More...</a><br /></td></tr>
+<tr class="separator:a2a4b758b0a580fd94ad58559a72bbdee inherit pub_methods_classMeteorShowersMgr"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8c17bc25242527c89bb3f29a6492f745 inherit pub_methods_classMeteorShowersMgr"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMeteorShowersMgr.html#a8c17bc25242527c89bb3f29a6492f745">getEnableLabels</a> ()</td></tr>
+<tr class="memdesc:a8c17bc25242527c89bb3f29a6492f745 inherit pub_methods_classMeteorShowersMgr"><td class="mdescLeft">&#160;</td><td class="mdescRight">Enable/disable radiant labels.  <a href="#a8c17bc25242527c89bb3f29a6492f745">More...</a><br /></td></tr>
+<tr class="separator:a8c17bc25242527c89bb3f29a6492f745 inherit pub_methods_classMeteorShowersMgr"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ade8d812a916cb5ff693cd02f1d79b477 inherit pub_methods_classMeteorShowersMgr"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMeteorShowersMgr.html#ade8d812a916cb5ff693cd02f1d79b477">getEnableMarker</a> ()</td></tr>
+<tr class="memdesc:ade8d812a916cb5ff693cd02f1d79b477 inherit pub_methods_classMeteorShowersMgr"><td class="mdescLeft">&#160;</td><td class="mdescRight">Enable/disable radiant marker.  <a href="#ade8d812a916cb5ff693cd02f1d79b477">More...</a><br /></td></tr>
+<tr class="separator:ade8d812a916cb5ff693cd02f1d79b477 inherit pub_methods_classMeteorShowersMgr"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1c7e6d80b2d1119ad36154ff764d0db6 inherit pub_methods_classMeteorShowersMgr"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMeteorShowersMgr.html#a1c7e6d80b2d1119ad36154ff764d0db6">getUpdateFrequencyHours</a> ()</td></tr>
+<tr class="memdesc:a1c7e6d80b2d1119ad36154ff764d0db6 inherit pub_methods_classMeteorShowersMgr"><td class="mdescLeft">&#160;</td><td class="mdescRight">Gets the update frequency in hours.  <a href="#a1c7e6d80b2d1119ad36154ff764d0db6">More...</a><br /></td></tr>
+<tr class="separator:a1c7e6d80b2d1119ad36154ff764d0db6 inherit pub_methods_classMeteorShowersMgr"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac87abae2b591e771cd861600e0c8cb26 inherit pub_methods_classMeteorShowersMgr"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMeteorShowersMgr.html#ac87abae2b591e771cd861600e0c8cb26">getEnableAutoUpdates</a> ()</td></tr>
+<tr class="memdesc:ac87abae2b591e771cd861600e0c8cb26 inherit pub_methods_classMeteorShowersMgr"><td class="mdescLeft">&#160;</td><td class="mdescRight">Enable/disable catalog updates from the internet.  <a href="#ac87abae2b591e771cd861600e0c8cb26">More...</a><br /></td></tr>
+<tr class="separator:ac87abae2b591e771cd861600e0c8cb26 inherit pub_methods_classMeteorShowersMgr"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8f8d4630b76792bb65ff622f50c329ae inherit pub_methods_classMeteorShowersMgr"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMeteorShowersMgr.html#a8f8d4630b76792bb65ff622f50c329ae">setUrl</a> (const QString &amp;url)</td></tr>
+<tr class="memdesc:a8f8d4630b76792bb65ff622f50c329ae inherit pub_methods_classMeteorShowersMgr"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the URL for downloading the meteor showers catalog.  <a href="#a8f8d4630b76792bb65ff622f50c329ae">More...</a><br /></td></tr>
+<tr class="separator:a8f8d4630b76792bb65ff622f50c329ae inherit pub_methods_classMeteorShowersMgr"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a31bdddbf7fee5f79027c0e0d25e39622 inherit pub_methods_classMeteorShowersMgr"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a31bdddbf7fee5f79027c0e0d25e39622"></a>
+QString&#160;</td><td class="memItemRight" valign="bottom"><b>getUrl</b> ()</td></tr>
+<tr class="separator:a31bdddbf7fee5f79027c0e0d25e39622 inherit pub_methods_classMeteorShowersMgr"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2c7705fcdf30ab72379ee4b0e48d2bce inherit pub_methods_classMeteorShowersMgr"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMeteorShowersMgr.html#a2c7705fcdf30ab72379ee4b0e48d2bce">setLastUpdate</a> (const QDateTime &amp;datetime)</td></tr>
+<tr class="memdesc:a2c7705fcdf30ab72379ee4b0e48d2bce inherit pub_methods_classMeteorShowersMgr"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the date and time of last update.  <a href="#a2c7705fcdf30ab72379ee4b0e48d2bce">More...</a><br /></td></tr>
+<tr class="separator:a2c7705fcdf30ab72379ee4b0e48d2bce inherit pub_methods_classMeteorShowersMgr"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae0ec245c972c3d0330d3ff81ed743405 inherit pub_methods_classMeteorShowersMgr"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ae0ec245c972c3d0330d3ff81ed743405"></a>
+QDateTime&#160;</td><td class="memItemRight" valign="bottom"><b>getLastUpdate</b> ()</td></tr>
+<tr class="separator:ae0ec245c972c3d0330d3ff81ed743405 inherit pub_methods_classMeteorShowersMgr"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aaae283262b5fb995f4a7b7f956be2728 inherit pub_methods_classMeteorShowersMgr"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMeteorShowersMgr.html#aaae283262b5fb995f4a7b7f956be2728">setStatusOfLastUpdate</a> (const int &amp;downloadStatus)</td></tr>
+<tr class="memdesc:aaae283262b5fb995f4a7b7f956be2728 inherit pub_methods_classMeteorShowersMgr"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the status of the last update.  <a href="#aaae283262b5fb995f4a7b7f956be2728">More...</a><br /></td></tr>
+<tr class="separator:aaae283262b5fb995f4a7b7f956be2728 inherit pub_methods_classMeteorShowersMgr"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa8a70d3e1e134252e52f426d3e412428 inherit pub_methods_classMeteorShowersMgr"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aa8a70d3e1e134252e52f426d3e412428"></a>
+DownloadStatus&#160;</td><td class="memItemRight" valign="bottom"><b>getStatusOfLastUpdate</b> ()</td></tr>
+<tr class="separator:aa8a70d3e1e134252e52f426d3e412428 inherit pub_methods_classMeteorShowersMgr"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acf1deff3891ab96e4260078b8a36979c inherit pub_methods_classMeteorShowersMgr"><td class="memItemLeft" align="right" valign="top">QDateTime&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMeteorShowersMgr.html#acf1deff3891ab96e4260078b8a36979c">getNextUpdate</a> ()</td></tr>
+<tr class="memdesc:acf1deff3891ab96e4260078b8a36979c inherit pub_methods_classMeteorShowersMgr"><td class="mdescLeft">&#160;</td><td class="mdescRight">Gets the date of the next update.  <a href="#acf1deff3891ab96e4260078b8a36979c">More...</a><br /></td></tr>
+<tr class="separator:acf1deff3891ab96e4260078b8a36979c inherit pub_methods_classMeteorShowersMgr"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab2bb06515b87d7ef4974ef292d417639 inherit pub_methods_classMeteorShowersMgr"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMeteorShowersMgr.html#ab2bb06515b87d7ef4974ef292d417639">repaint</a> ()</td></tr>
+<tr class="memdesc:ab2bb06515b87d7ef4974ef292d417639 inherit pub_methods_classMeteorShowersMgr"><td class="mdescLeft">&#160;</td><td class="mdescRight">It's useful to force the update() and draw().  <a href="#ab2bb06515b87d7ef4974ef292d417639">More...</a><br /></td></tr>
+<tr class="separator:ab2bb06515b87d7ef4974ef292d417639 inherit pub_methods_classMeteorShowersMgr"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac42286f678f038a4ce55da90ed19ae04 inherit pub_methods_classMeteorShowersMgr"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ac42286f678f038a4ce55da90ed19ae04"></a>
+virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>init</b> ()</td></tr>
+<tr class="separator:ac42286f678f038a4ce55da90ed19ae04 inherit pub_methods_classMeteorShowersMgr"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a53aa725c0700f8a2df2672e8e963eab8 inherit pub_methods_classMeteorShowersMgr"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a53aa725c0700f8a2df2672e8e963eab8"></a>
+virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>deinit</b> ()</td></tr>
+<tr class="separator:a53aa725c0700f8a2df2672e8e963eab8 inherit pub_methods_classMeteorShowersMgr"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac7badb8c3e1b1a17e7ba7592b2797842 inherit pub_methods_classMeteorShowersMgr"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ac7badb8c3e1b1a17e7ba7592b2797842"></a>
+virtual double&#160;</td><td class="memItemRight" valign="bottom"><b>getCallOrder</b> (StelModuleActionName actionName) const </td></tr>
+<tr class="separator:ac7badb8c3e1b1a17e7ba7592b2797842 inherit pub_methods_classMeteorShowersMgr"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2bd4f48313066a33a2279bfcd859f46a inherit pub_methods_classMeteorShowersMgr"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a2bd4f48313066a33a2279bfcd859f46a"></a>
+virtual bool&#160;</td><td class="memItemRight" valign="bottom"><b>configureGui</b> (bool show=true)</td></tr>
+<tr class="separator:a2bd4f48313066a33a2279bfcd859f46a inherit pub_methods_classMeteorShowersMgr"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7f0c93c2d0d49d4f0e77d21b180f1d86 inherit pub_methods_classMeteorShowersMgr"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a7f0c93c2d0d49d4f0e77d21b180f1d86"></a>
+virtual QStringList&#160;</td><td class="memItemRight" valign="bottom"><b>listAllObjectsByType</b> (const QString &amp;, bool) const </td></tr>
+<tr class="separator:a7f0c93c2d0d49d4f0e77d21b180f1d86 inherit pub_methods_classMeteorShowersMgr"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="inherited"></a>
+Additional Inherited Members</h2></td></tr>
+<tr class="inherit_header pub_types_classMeteorShowersMgr"><td colspan="2" onclick="javascript:toggleInherit('pub_types_classMeteorShowersMgr')"><img src="closed.png" alt="-"/>&#160;Public Types inherited from <a class="el" href="classMeteorShowersMgr.html">MeteorShowersMgr</a></td></tr>
+<tr class="memitem:abc21fc3355e6a083b88caeb05c7b5b46 inherit pub_types_classMeteorShowersMgr"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="abc21fc3355e6a083b88caeb05c7b5b46"></a>enum &#160;</td><td class="memItemRight" valign="bottom"><b>DownloadStatus</b> { <b>OUTDATED</b>, 
+<b>UPDATING</b>, 
+<b>UPDATED</b>, 
+<b>FAILED</b>
+ }</td></tr>
+<tr class="separator:abc21fc3355e6a083b88caeb05c7b5b46 inherit pub_types_classMeteorShowersMgr"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="inherit_header pub_slots_classMeteorShowersMgr"><td colspan="2" onclick="javascript:toggleInherit('pub_slots_classMeteorShowersMgr')"><img src="closed.png" alt="-"/>&#160;Public Slots inherited from <a class="el" href="classMeteorShowersMgr.html">MeteorShowersMgr</a></td></tr>
+<tr class="memitem:a37c645154256353b62c2bc3a11e1aaf5 inherit pub_slots_classMeteorShowersMgr"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMeteorShowersMgr.html#a37c645154256353b62c2bc3a11e1aaf5">setEnableAtStartup</a> (const bool &amp;b)</td></tr>
+<tr class="memdesc:a37c645154256353b62c2bc3a11e1aaf5 inherit pub_slots_classMeteorShowersMgr"><td class="mdescLeft">&#160;</td><td class="mdescRight">Enable the meteor showers plugin at Stellarium startup.  <a href="#a37c645154256353b62c2bc3a11e1aaf5">More...</a><br /></td></tr>
+<tr class="separator:a37c645154256353b62c2bc3a11e1aaf5 inherit pub_slots_classMeteorShowersMgr"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae7766c1ba579110fc6d49d3ad6061950 inherit pub_slots_classMeteorShowersMgr"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMeteorShowersMgr.html#ae7766c1ba579110fc6d49d3ad6061950">setShowEnableButton</a> (const bool &amp;show)</td></tr>
+<tr class="memdesc:ae7766c1ba579110fc6d49d3ad6061950 inherit pub_slots_classMeteorShowersMgr"><td class="mdescLeft">&#160;</td><td class="mdescRight">Show/hide the button that enable/disable the meteor showers plugin.  <a href="#ae7766c1ba579110fc6d49d3ad6061950">More...</a><br /></td></tr>
+<tr class="separator:ae7766c1ba579110fc6d49d3ad6061950 inherit pub_slots_classMeteorShowersMgr"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad27a201e050bf1c6c4ca27c22a43371c inherit pub_slots_classMeteorShowersMgr"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMeteorShowersMgr.html#ad27a201e050bf1c6c4ca27c22a43371c">setShowSearchButton</a> (const bool &amp;show)</td></tr>
+<tr class="memdesc:ad27a201e050bf1c6c4ca27c22a43371c inherit pub_slots_classMeteorShowersMgr"><td class="mdescLeft">&#160;</td><td class="mdescRight">Show/hide the button that opens the search dialog.  <a href="#ad27a201e050bf1c6c4ca27c22a43371c">More...</a><br /></td></tr>
+<tr class="separator:ad27a201e050bf1c6c4ca27c22a43371c inherit pub_slots_classMeteorShowersMgr"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2adb2202ac809c637b732f9db5606136 inherit pub_slots_classMeteorShowersMgr"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMeteorShowersMgr.html#a2adb2202ac809c637b732f9db5606136">setEnableMarker</a> (const bool &amp;b)</td></tr>
+<tr class="memdesc:a2adb2202ac809c637b732f9db5606136 inherit pub_slots_classMeteorShowersMgr"><td class="mdescLeft">&#160;</td><td class="mdescRight">Enable/disable radiant marker.  <a href="#a2adb2202ac809c637b732f9db5606136">More...</a><br /></td></tr>
+<tr class="separator:a2adb2202ac809c637b732f9db5606136 inherit pub_slots_classMeteorShowersMgr"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad7bdc405debb6be759876d4f28da77e2 inherit pub_slots_classMeteorShowersMgr"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMeteorShowersMgr.html#ad7bdc405debb6be759876d4f28da77e2">setActiveRadiantOnly</a> (const bool &amp;b)</td></tr>
+<tr class="memdesc:ad7bdc405debb6be759876d4f28da77e2 inherit pub_slots_classMeteorShowersMgr"><td class="mdescLeft">&#160;</td><td class="mdescRight">True if user wants to see the active radiants only.  <a href="#ad7bdc405debb6be759876d4f28da77e2">More...</a><br /></td></tr>
+<tr class="separator:ad7bdc405debb6be759876d4f28da77e2 inherit pub_slots_classMeteorShowersMgr"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a74d5ec9fd051fddeb1363c361b3c0367 inherit pub_slots_classMeteorShowersMgr"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMeteorShowersMgr.html#a74d5ec9fd051fddeb1363c361b3c0367">setEnableLabels</a> (const bool &amp;b)</td></tr>
+<tr class="memdesc:a74d5ec9fd051fddeb1363c361b3c0367 inherit pub_slots_classMeteorShowersMgr"><td class="mdescLeft">&#160;</td><td class="mdescRight">Enable/disable radiant labels.  <a href="#a74d5ec9fd051fddeb1363c361b3c0367">More...</a><br /></td></tr>
+<tr class="separator:a74d5ec9fd051fddeb1363c361b3c0367 inherit pub_slots_classMeteorShowersMgr"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a542898203134712d2ed8e960110451b5 inherit pub_slots_classMeteorShowersMgr"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMeteorShowersMgr.html#a542898203134712d2ed8e960110451b5">setFontSize</a> (int pixelSize)</td></tr>
+<tr class="memdesc:a542898203134712d2ed8e960110451b5 inherit pub_slots_classMeteorShowersMgr"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the font size (used on radiant labels).  <a href="#a542898203134712d2ed8e960110451b5">More...</a><br /></td></tr>
+<tr class="separator:a542898203134712d2ed8e960110451b5 inherit pub_slots_classMeteorShowersMgr"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a47e1c8801d5b3f34875f962fbcf7f732 inherit pub_slots_classMeteorShowersMgr"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMeteorShowersMgr.html#a47e1c8801d5b3f34875f962fbcf7f732">setUpdateFrequencyHours</a> (const int &amp;hours)</td></tr>
+<tr class="memdesc:a47e1c8801d5b3f34875f962fbcf7f732 inherit pub_slots_classMeteorShowersMgr"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the update frequency in hours.  <a href="#a47e1c8801d5b3f34875f962fbcf7f732">More...</a><br /></td></tr>
+<tr class="separator:a47e1c8801d5b3f34875f962fbcf7f732 inherit pub_slots_classMeteorShowersMgr"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2afcc97cea44d25a3420c56825085cfd inherit pub_slots_classMeteorShowersMgr"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMeteorShowersMgr.html#a2afcc97cea44d25a3420c56825085cfd">setEnableAutoUpdates</a> (const bool &amp;b)</td></tr>
+<tr class="memdesc:a2afcc97cea44d25a3420c56825085cfd inherit pub_slots_classMeteorShowersMgr"><td class="mdescLeft">&#160;</td><td class="mdescRight">Enable/disable automatic catalog updates from the internet.  <a href="#a2afcc97cea44d25a3420c56825085cfd">More...</a><br /></td></tr>
+<tr class="separator:a2afcc97cea44d25a3420c56825085cfd inherit pub_slots_classMeteorShowersMgr"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8f3548ab578ebcdfac81323bcbc4c78a inherit pub_slots_classMeteorShowersMgr"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMeteorShowersMgr.html#a8f3548ab578ebcdfac81323bcbc4c78a">updateCatalog</a> ()</td></tr>
+<tr class="memdesc:a8f3548ab578ebcdfac81323bcbc4c78a inherit pub_slots_classMeteorShowersMgr"><td class="mdescLeft">&#160;</td><td class="mdescRight">Download the <a class="elRef" doxygen="/home/aw/devel/stellarium/trunk/builds/gcc/stellarium.tag:../../doc/head/" href="../../doc/head/classMeteor.html">Meteor</a> Showers catalog from the Internet.  <a href="#a8f3548ab578ebcdfac81323bcbc4c78a">More...</a><br /></td></tr>
+<tr class="separator:a8f3548ab578ebcdfac81323bcbc4c78a inherit pub_slots_classMeteorShowersMgr"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2e8f8477f15d25545f835186816cde93 inherit pub_slots_classMeteorShowersMgr"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMeteorShowersMgr.html#a2e8f8477f15d25545f835186816cde93">restoreDefaultSettings</a> ()</td></tr>
+<tr class="memdesc:a2e8f8477f15d25545f835186816cde93 inherit pub_slots_classMeteorShowersMgr"><td class="mdescLeft">&#160;</td><td class="mdescRight">Restore default settings.  <a href="#a2e8f8477f15d25545f835186816cde93">More...</a><br /></td></tr>
+<tr class="separator:a2e8f8477f15d25545f835186816cde93 inherit pub_slots_classMeteorShowersMgr"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0c3595561c3350a656ee6d413701a8dc inherit pub_slots_classMeteorShowersMgr"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMeteorShowersMgr.html#a0c3595561c3350a656ee6d413701a8dc">displayMessage</a> (const QString &amp;message, const QString hexColor=&quot;#999999&quot;)</td></tr>
+<tr class="memdesc:a0c3595561c3350a656ee6d413701a8dc inherit pub_slots_classMeteorShowersMgr"><td class="mdescLeft">&#160;</td><td class="mdescRight">Display a message. This is used for plugin-specific warnings and such.  <a href="#a0c3595561c3350a656ee6d413701a8dc">More...</a><br /></td></tr>
+<tr class="separator:a0c3595561c3350a656ee6d413701a8dc inherit pub_slots_classMeteorShowersMgr"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a80f3aceda2b5c253c9df5ca805993bee inherit pub_slots_classMeteorShowersMgr"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a80f3aceda2b5c253c9df5ca805993bee"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>messageTimeout</b> ()</td></tr>
+<tr class="separator:a80f3aceda2b5c253c9df5ca805993bee inherit pub_slots_classMeteorShowersMgr"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="inherit_header signals_classMeteorShowersMgr"><td colspan="2" onclick="javascript:toggleInherit('signals_classMeteorShowersMgr')"><img src="closed.png" alt="-"/>&#160;Signals inherited from <a class="el" href="classMeteorShowersMgr.html">MeteorShowersMgr</a></td></tr>
+<tr class="memitem:a46a504476e635e618059bbc0535ac567 inherit signals_classMeteorShowersMgr"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a46a504476e635e618059bbc0535ac567"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>downloadStatusChanged</b> (DownloadStatus)</td></tr>
+<tr class="separator:a46a504476e635e618059bbc0535ac567 inherit signals_classMeteorShowersMgr"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><p>Main class of the Meteor Showers plugin. </p>
-<dl class="section author"><dt>Author</dt><dd>Marcos Cardinot </dd></dl>
+<div class="textblock"><p>This class manages a collection of <a class="el" href="classMeteorShower.html" title="A MeteorShower object represents one meteor shower on the sky. ">MeteorShower</a> objects. </p>
+<p>It inherits from <a class="el" href="classMeteorShowersMgr.html" title="Main class of the Meteor Showers plugin, inherits from StelObjectModule. ">MeteorShowersMgr</a> and is basically used to reimplement the methods defined in the <a class="elRef" doxygen="/home/aw/devel/stellarium/trunk/builds/gcc/stellarium.tag:../../doc/head/" href="../../doc/head/classStelObjectModule.html">StelObjectModule</a> class. </p><dl class="section author"><dt>Author</dt><dd>Marcos Cardinot <a href="#" onclick="location.href='mai'+'lto:'+'mca'+'rd'+'ino'+'t@'+'gma'+'il'+'.co'+'m'; return false;">mcard<span style="display: none;">.nosp@m.</span>inot<span style="display: none;">.nosp@m.</span>@gmai<span style="display: none;">.nosp@m.</span>l.co<span style="display: none;">.nosp@m.</span>m</a> </dd></dl>
 
-<p>Definition at line <a class="el" href="MeteorShowers_8hpp_source.html#l00054">54</a> of file <a class="el" href="MeteorShowers_8hpp_source.html">MeteorShowers.hpp</a>.</p>
-</div><h2 class="groupheader">Member Enumeration Documentation</h2>
-<a class="anchor" id="acfe8126b9014e0acadbea571b38cbd28"></a>
+<p>Definition at line <a class="el" href="MeteorShowers_8hpp_source.html#l00034">34</a> of file <a class="el" href="MeteorShowers_8hpp_source.html">MeteorShowers.hpp</a>.</p>
+</div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
+<a class="anchor" id="aa4e6cbbf21cfbefdf2ca5d7766c6af0f"></a>
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">enum <a class="el" href="classMeteorShowers.html#acfe8126b9014e0acadbea571b38cbd28">MeteorShowers::UpdateState</a></td>
+          <td class="memname">MeteorShowers::MeteorShowers </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classMeteorShowersMgr.html">MeteorShowersMgr</a> *&#160;</td>
+          <td class="paramname"><em>mgr</em></td><td>)</td>
+          <td></td>
         </tr>
       </table>
 </div><div class="memdoc">
 
-<p>Used for keeping track of the download/update status. </p>
-<table class="fieldtable">
-<tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a class="anchor" id="acfe8126b9014e0acadbea571b38cbd28a401f9c740b9d50bc38487cdce07a9df0"></a>Updating&#160;</td><td class="fielddoc">
-<p>Update in progress. </p>
-</td></tr>
-<tr><td class="fieldname"><a class="anchor" id="acfe8126b9014e0acadbea571b38cbd28a6e9b7f354b501e480f37fbe933fae8ad"></a>CompleteNoUpdates&#160;</td><td class="fielddoc">
-<p>Update completed, there we no updates. </p>
-</td></tr>
-<tr><td class="fieldname"><a class="anchor" id="acfe8126b9014e0acadbea571b38cbd28ac6643c7c665cfe6798018df51666ff47"></a>CompleteUpdates&#160;</td><td class="fielddoc">
-<p>Update completed, there were updates. </p>
-</td></tr>
-<tr><td class="fieldname"><a class="anchor" id="acfe8126b9014e0acadbea571b38cbd28a72b9c08a08763cd0f750b185ad267b76"></a>DownloadError&#160;</td><td class="fielddoc">
-<p>Error during download phase. </p>
-</td></tr>
-<tr><td class="fieldname"><a class="anchor" id="acfe8126b9014e0acadbea571b38cbd28a3fc6fb2036ed6881149adb36760e95b2"></a>OtherError&#160;</td><td class="fielddoc">
-<p>Other error. </p>
-</td></tr>
-</table>
+<p>Constructor. </p>
 
-<p>Definition at line <a class="el" href="MeteorShowers_8hpp_source.html#l00062">62</a> of file <a class="el" href="MeteorShowers_8hpp_source.html">MeteorShowers.hpp</a>.</p>
+</div>
+</div>
+<a class="anchor" id="a5e6e3ce99c69a3107ac00dd85e7cf1b0"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual MeteorShowers::~MeteorShowers </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Destructor. </p>
 
 </div>
 </div>
 <h2 class="groupheader">Member Function Documentation</h2>
-<a class="anchor" id="a0686463b15ab0e61b127435405e890f1"></a>
+<a class="anchor" id="a7c68a6cc3bcaea5c2d02bda163106782"></a>
 <div class="memitem">
 <div class="memproto">
 <table class="mlabels">
@@ -294,10 +330,10 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>setColorIR</b> (QColo
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">virtual bool MeteorShowers::configureGui </td>
+          <td class="memname">virtual void MeteorShowers::draw </td>
           <td>(</td>
-          <td class="paramtype">bool&#160;</td>
-          <td class="paramname"><em>show</em> = <code>true</code></td><td>)</td>
+          <td class="paramtype"><a class="elRef" doxygen="/home/aw/devel/stellarium/trunk/builds/gcc/stellarium.tag:../../doc/head/" href="../../doc/head/classStelCore.html">StelCore</a> *&#160;</td>
+          <td class="paramname"><em>core</em></td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -308,629 +344,42 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>setColorIR</b> (QColo
 </table>
 </div><div class="memdoc">
 
-<p>Implment this to tell the main Stellarium GUI that there is a GUI element to configure this plugin. </p>
+<p>Draw. </p>
+
+<p>Reimplemented from <a class="el" href="classMeteorShowersMgr.html">MeteorShowersMgr</a>.</p>
 
 </div>
 </div>
-<a class="anchor" id="a90005da21f74d1a03dcc5ad14a8026c1"></a>
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">virtual void MeteorShowers::deinit </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">virtual</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>called before the plug-in is un-loaded. </p>
-<p>Useful for stopping processes, unloading textures, etc. </p>
-
-</div>
-</div>
-<a class="anchor" id="a593dcebf9e7f8322500c877e85792842"></a>
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">void MeteorShowers::displayMessage </td>
-          <td>(</td>
-          <td class="paramtype">const QString &amp;&#160;</td>
-          <td class="paramname"><em>message</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">const QString&#160;</td>
-          <td class="paramname"><em>hexColor</em> = <code>&quot;#999999&quot;</code>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">slot</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Display a message. This is used for plugin-specific warnings and such. </p>
-
-</div>
-</div>
-<a class="anchor" id="adc18b27753802abda5070808a709d041"></a>
+<a class="anchor" id="a6e236ece97533aa56468fcecf20b3541"></a>
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">MeteorShowerP MeteorShowers::getByID </td>
+          <td class="memname">void MeteorShowers::loadMeteorShowers </td>
           <td>(</td>
-          <td class="paramtype">const QString &amp;&#160;</td>
-          <td class="paramname"><em>id</em></td><td>)</td>
+          <td class="paramtype">const QVariantMap &amp;&#160;</td>
+          <td class="paramname"><em>map</em></td><td>)</td>
           <td></td>
         </tr>
       </table>
 </div><div class="memdoc">
 
-<p>get a ms object by identifier </p>
-
-</div>
-</div>
-<a class="anchor" id="a3e43c2af0cd8cffacb8b7f566cdfee4c"></a>
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">QColor MeteorShowers::getColorARG </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Get current color of active radiant based in generic data. </p>
-
-<p>Definition at line <a class="el" href="MeteorShowers_8hpp_source.html#l00175">175</a> of file <a class="el" href="MeteorShowers_8hpp_source.html">MeteorShowers.hpp</a>.</p>
-
-</div>
-</div>
-<a class="anchor" id="aa86ee24e2e7c46332fe3feaa5403d952"></a>
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">QColor MeteorShowers::getColorARR </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Get current color of active radiant based in real data. </p>
-
-<p>Definition at line <a class="el" href="MeteorShowers_8hpp_source.html#l00185">185</a> of file <a class="el" href="MeteorShowers_8hpp_source.html">MeteorShowers.hpp</a>.</p>
-
-</div>
-</div>
-<a class="anchor" id="a00ae9eedf2e5e264ad0f8f3339e28c9d"></a>
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">QColor MeteorShowers::getColorIR </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Get current inactive radiant color. </p>
-
-<p>Definition at line <a class="el" href="MeteorShowers_8hpp_source.html#l00195">195</a> of file <a class="el" href="MeteorShowers_8hpp_source.html">MeteorShowers.hpp</a>.</p>
-
-</div>
-</div>
-<a class="anchor" id="ae1516933e69e14a695dd87d59a43b4e3"></a>
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">bool MeteorShowers::getFlagLabels </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Get status of labels. </p>
-<dl class="section return"><dt>Returns</dt><dd>false: hidden </dd></dl>
-
-</div>
-</div>
-<a class="anchor" id="ac9017b87b4175c22ba3f0e1f15d54879"></a>
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">int MeteorShowers::getLabelFontSize </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>get the label font size. </p>
-<dl class="section return"><dt>Returns</dt><dd>the pixel size of the font </dd></dl>
-
-<p>Definition at line <a class="el" href="MeteorShowers_8hpp_source.html#l00206">206</a> of file <a class="el" href="MeteorShowers_8hpp_source.html">MeteorShowers.hpp</a>.</p>
-
-</div>
-</div>
-<a class="anchor" id="aad2556e29c15bac6b6fb025cd5ad2eee"></a>
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">QDateTime MeteorShowers::getLastUpdate </td>
-          <td>(</td>
-          <td class="paramtype">void&#160;</td>
-          <td class="paramname"></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>get the date and time the TLE elements were updated </p>
-
-<p>Definition at line <a class="el" href="MeteorShowers_8hpp_source.html#l00150">150</a> of file <a class="el" href="MeteorShowers_8hpp_source.html">MeteorShowers.hpp</a>.</p>
-
-</div>
-</div>
-<a class="anchor" id="a8805db78af17b55616b3f139a4b2a1ae"></a>
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">int MeteorShowers::getSecondsToUpdate </td>
-          <td>(</td>
-          <td class="paramtype">void&#160;</td>
-          <td class="paramname"></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>get the number of seconds till the next update </p>
-
-</div>
-</div>
-<a class="anchor" id="a45d03ce0d47e104b3ba041dd8b3a8621"></a>
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">QDateTime MeteorShowers::getSkyDate </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Get current sky date. </p>
-<dl class="section return"><dt>Returns</dt><dd>current sky date </dd></dl>
-
-<p>Definition at line <a class="el" href="MeteorShowers_8hpp_source.html#l00217">217</a> of file <a class="el" href="MeteorShowers_8hpp_source.html">MeteorShowers.hpp</a>.</p>
-
-</div>
-</div>
-<a class="anchor" id="a4656b2ff58f89cfbd482b58e2aa791b5"></a>
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">int MeteorShowers::getUpdateFrequencyHours </td>
-          <td>(</td>
-          <td class="paramtype">void&#160;</td>
-          <td class="paramname"></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>get the update frequency in hours </p>
-
-<p>Definition at line <a class="el" href="MeteorShowers_8hpp_source.html#l00156">156</a> of file <a class="el" href="MeteorShowers_8hpp_source.html">MeteorShowers.hpp</a>.</p>
-
-</div>
-</div>
-<a class="anchor" id="af1bd12b550e26f6301e053a0befc1ec9"></a>
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">bool MeteorShowers::getUpdatesEnabled </td>
-          <td>(</td>
-          <td class="paramtype">void&#160;</td>
-          <td class="paramname"></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>get whether or not the plugin will try to update TLE data from the internet </p>
-<dl class="section return"><dt>Returns</dt><dd>true if updates are set to be done, false otherwise </dd></dl>
-
-<p>Definition at line <a class="el" href="MeteorShowers_8hpp_source.html#l00138">138</a> of file <a class="el" href="MeteorShowers_8hpp_source.html">MeteorShowers.hpp</a>.</p>
-
-</div>
-</div>
-<a class="anchor" id="a891d0b646eb0bbff98e185d88e31bb7b"></a>
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="classMeteorShowers.html#acfe8126b9014e0acadbea571b38cbd28">UpdateState</a> MeteorShowers::getUpdateState </td>
-          <td>(</td>
-          <td class="paramtype">void&#160;</td>
-          <td class="paramname"></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Get the current updateState. </p>
-
-<p>Definition at line <a class="el" href="MeteorShowers_8hpp_source.html#l00169">169</a> of file <a class="el" href="MeteorShowers_8hpp_source.html">MeteorShowers.hpp</a>.</p>
-
-</div>
-</div>
-<a class="anchor" id="a6c9db8907ee4bd44238d71def4aa3ce1"></a>
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">void MeteorShowers::jsonUpdateComplete </td>
-          <td>(</td>
-          <td class="paramtype">void&#160;</td>
-          <td class="paramname"></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">signal</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>emitted after a JSON update has run. </p>
-
-</div>
-</div>
-<a class="anchor" id="ac0cf2ea74cee89468371647c08f3d04e"></a>
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">virtual QStringList MeteorShowers::listMatchingObjectsI18n </td>
-          <td>(</td>
-          <td class="paramtype">const QString &amp;&#160;</td>
-          <td class="paramname"><em>objPrefix</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">int&#160;</td>
-          <td class="paramname"><em>maxNbItem</em> = <code>5</code>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">bool&#160;</td>
-          <td class="paramname"><em>useStartOfWords</em> = <code>false</code>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td> const</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">virtual</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Find and return the list of at most maxNbItem objects auto-completing the passed object I18n name. </p>
+<p>Loads all meteor showers contained in a QVariantMap. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">objPrefix</td><td>the case insensitive first letters of the searched object </td></tr>
-    <tr><td class="paramname">maxNbItem</td><td>the maximum number of returned object names </td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="section return"><dt>Returns</dt><dd>a list of matching object name by order of relevance, or an empty list if nothing match </dd></dl>
-
-</div>
-</div>
-<a class="anchor" id="ae8081851a681001be1bc8f114ae00f2c"></a>
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">void MeteorShowers::readSettingsFromConfig </td>
-          <td>(</td>
-          <td class="paramtype">void&#160;</td>
-          <td class="paramname"></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Read (or re-read) settings from the main config file. </p>
-<p>This will be called from init and also when restoring defaults (i.e. from the configuration dialog / restore defaults button). </p>
-
-</div>
-</div>
-<a class="anchor" id="ab5ab86c65c3ffc7b2f8a0e75904056be"></a>
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">void MeteorShowers::restoreDefaults </td>
-          <td>(</td>
-          <td class="paramtype">void&#160;</td>
-          <td class="paramname"></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Set up the plugin with default values. </p>
-<p>This means clearing out the <a class="el" href="classMeteorShower.html" title="A MeteorShower object represents one meteor shower on the sky. ">MeteorShower</a> section in the main config.ini (if one already exists), and populating it with default values. It also creates the default showers.json file from the resource embedded in the plugin lib/dll file. </p>
-
-</div>
-</div>
-<a class="anchor" id="a27670821a00bbbee5229834bbb5db946"></a>
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">void MeteorShowers::saveSettingsToConfig </td>
-          <td>(</td>
-          <td class="paramtype">void&#160;</td>
-          <td class="paramname"></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Save the settings to the main configuration file. </p>
-
-</div>
-</div>
-<a class="anchor" id="afb82246a521ecc97b551b243650872b7"></a>
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">virtual QList&lt;StelObjectP&gt; MeteorShowers::searchAround </td>
-          <td>(</td>
-          <td class="paramtype">const Vec3d &amp;&#160;</td>
-          <td class="paramname"><em>v</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">double&#160;</td>
-          <td class="paramname"><em>limitFov</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">const StelCore *&#160;</td>
-          <td class="paramname"><em>core</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td> const</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">virtual</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Used to get a list of objects which are near to some position. </p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">v</td><td>a vector representing the position in th sky around which to search for nebulae. </td></tr>
-    <tr><td class="paramname">limitFov</td><td>the field of view around the position v in which to search for satellites. </td></tr>
-    <tr><td class="paramname">core</td><td>the StelCore to use for computations. </td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="section return"><dt>Returns</dt><dd>an list containing the satellites located inside the limitFov circle around position v. </dd></dl>
-
-</div>
-</div>
-<a class="anchor" id="a9162d5e01850ad58cf997ac4814ceb24"></a>
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">virtual StelObjectP MeteorShowers::searchByName </td>
-          <td>(</td>
-          <td class="paramtype">const QString &amp;&#160;</td>
-          <td class="paramname"><em>name</em></td><td>)</td>
-          <td> const</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">virtual</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Return the matching satellite if exists or NULL. </p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">name</td><td>The case in-sensistive standard program name </td></tr>
+    <tr><td class="paramname">map</td><td></td></tr>
   </table>
   </dd>
 </dl>
 
 </div>
 </div>
-<a class="anchor" id="ab875c5f9f5725a2ad0450e99a92073ae"></a>
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">virtual StelObjectP MeteorShowers::searchByNameI18n </td>
-          <td>(</td>
-          <td class="paramtype">const QString &amp;&#160;</td>
-          <td class="paramname"><em>nameI18n</em></td><td>)</td>
-          <td> const</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">virtual</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Return the matching satellite object's pointer if exists or NULL. </p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">nameI18n</td><td>The case in-sensistive satellite name </td></tr>
-  </table>
-  </dd>
-</dl>
-
-</div>
-</div>
-<a class="anchor" id="a1f8816b0a2461f57a43a9d3c1e3a9a4d"></a>
+<a class="anchor" id="a4d5a3d8c21af2a2d546995c766722513"></a>
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">QList&lt;MeteorShowerP&gt; MeteorShowers::searchEvents </td>
+          <td class="memname">QList&lt;<a class="el" href="structMeteorShowers_1_1SearchResult.html">SearchResult</a>&gt; MeteorShowers::searchEvents </td>
           <td>(</td>
           <td class="paramtype">QDate&#160;</td>
           <td class="paramname"><em>dateFrom</em>, </td>
@@ -957,11 +406,11 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>setColorIR</b> (QColo
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd>meteor_shower list </dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>list </dd></dl>
 
 </div>
 </div>
-<a class="anchor" id="adec45850c2996d0f23e47ebdfa29cd2b"></a>
+<a class="anchor" id="a304bf78d85392c01a9514cd8c49102b8"></a>
 <div class="memitem">
 <div class="memproto">
 <table class="mlabels">
@@ -969,175 +418,29 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>setColorIR</b> (QColo
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">void MeteorShowers::setFlagLabels </td>
+          <td class="memname">virtual void MeteorShowers::update </td>
           <td>(</td>
-          <td class="paramtype">bool&#160;</td>
-          <td class="paramname"><em>b</em></td><td>)</td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>deltaTime</em></td><td>)</td>
           <td></td>
         </tr>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">slot</span></span>  </td>
+<span class="mlabels"><span class="mlabel">virtual</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
 
-<p>Set whether text labels should be displayed next to radiant. </p>
+<p>Update. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">false</td><td>hidden </td></tr>
+    <tr><td class="paramname">deltaTime</td><td>the time increment in seconds since the last call. </td></tr>
   </table>
   </dd>
 </dl>
 
-</div>
-</div>
-<a class="anchor" id="ac19aa7369b5583fd1863c2aa7e35dc01"></a>
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">void MeteorShowers::setFlagShowMSButton </td>
-          <td>(</td>
-          <td class="paramtype">bool&#160;</td>
-          <td class="paramname"><em>b</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">slot</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Define whether the button toggling meteor showers should be visible. </p>
-
-</div>
-</div>
-<a class="anchor" id="a0722e9e49f83e0daebf5ced34a49c2c9"></a>
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">void MeteorShowers::setLabelFontSize </td>
-          <td>(</td>
-          <td class="paramtype">int&#160;</td>
-          <td class="paramname"><em>size</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">slot</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>set the label font size. </p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">size</td><td>the pixel size of the font </td></tr>
-  </table>
-  </dd>
-</dl>
-
-</div>
-</div>
-<a class="anchor" id="a1acbbedef9625d51303709900b005508"></a>
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">void MeteorShowers::setUpdatesEnabled </td>
-          <td>(</td>
-          <td class="paramtype">bool&#160;</td>
-          <td class="paramname"><em>b</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>set whether or not the plugin will try to update TLE data from the internet </p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">b</td><td>if true, updates will be enabled, else they will be disabled </td></tr>
-  </table>
-  </dd>
-</dl>
-
-<p>Definition at line <a class="el" href="MeteorShowers_8hpp_source.html#l00144">144</a> of file <a class="el" href="MeteorShowers_8hpp_source.html">MeteorShowers.hpp</a>.</p>
-
-</div>
-</div>
-<a class="anchor" id="af6b151d2eb7968ba45c5c0f1469b359a"></a>
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">void MeteorShowers::updateJSON </td>
-          <td>(</td>
-          <td class="paramtype">void&#160;</td>
-          <td class="paramname"></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">slot</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Download JSON from web recources described in the module section of the module.ini file and update the local JSON file. </p>
-
-</div>
-</div>
-<a class="anchor" id="adc42dbeb9fb019b968dff1fe65ccfd8f"></a>
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">void MeteorShowers::updateStateChanged </td>
-          <td>(</td>
-          <td class="paramtype"><a class="el" href="classMeteorShowers.html#acfe8126b9014e0acadbea571b38cbd28">MeteorShowers::UpdateState</a>&#160;</td>
-          <td class="paramname"><em>state</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">signal</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">state</td><td>the new update state. </td></tr>
-  </table>
-  </dd>
-</dl>
+<p>Reimplemented from <a class="el" href="classMeteorShowersMgr.html">MeteorShowersMgr</a>.</p>
 
 </div>
 </div>
@@ -1147,7 +450,7 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>setColorIR</b> (QColo
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Tue Jun 9 2015 02:09:19 for Stellarium by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Fri Oct 2 2015 18:38:34 for Stellarium by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.8
 </small></address>

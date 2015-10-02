@@ -102,10 +102,10 @@
 <div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;    <span class="comment">// which is the reference frame for VSOP87</span></div>
 <div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;    <span class="comment">// In order to rotate to VSOP87</span></div>
 <div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;    <span class="comment">// parentRotObliquity and parentRotAscendingnode must be supplied.</span></div>
-<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;    <span class="keywordtype">void</span> positionAtTimevInVSOP87Coordinates(<span class="keyword">const</span> <span class="keywordtype">double</span> JD, <span class="keywordtype">double</span>* v) <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;    <span class="keywordtype">void</span> positionAtTimevInVSOP87Coordinates(<span class="keyword">const</span> <span class="keywordtype">double</span> JDE, <span class="keywordtype">double</span>* v) <span class="keyword">const</span>;</div>
 <div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;</div>
 <div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;    <span class="comment">// Original one</span></div>
-<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;    <a class="code" href="singletonVector3.html">Vec3d</a> positionAtTime(<span class="keyword">const</span> <span class="keywordtype">double</span> JD) <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;    <a class="code" href="singletonVector3.html">Vec3d</a> positionAtTime(<span class="keyword">const</span> <span class="keywordtype">double</span> JDE) <span class="keyword">const</span>;</div>
 <div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;    <span class="keywordtype">double</span> getPeriod() <span class="keyword">const</span>;</div>
 <div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;    <span class="keywordtype">double</span> getBoundingRadius() <span class="keyword">const</span>;</div>
 <div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;    <span class="keyword">virtual</span> <span class="keywordtype">void</span> sample(<span class="keywordtype">double</span>, <span class="keywordtype">double</span>, <span class="keywordtype">int</span>, <a class="code" href="classOrbitSampleProc.html">OrbitSampleProc</a>&amp;) <span class="keyword">const</span>;</div>
@@ -142,12 +142,12 @@
 <div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;           );</div>
 <div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;    <span class="comment">// Compute the orbit for a specified Julian day and return a &quot;stellarium compliant&quot; function</span></div>
 <div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;    <span class="comment">// GZ: new optional variable: updateVelocityVector, true required for dust tail orientation!</span></div>
-<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;    <span class="keywordtype">void</span> positionAtTimevInVSOP87Coordinates(<span class="keywordtype">double</span> JD, <span class="keywordtype">double</span>* v, <span class="keywordtype">bool</span> updateVelocityVector=<span class="keyword">true</span>);</div>
+<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;    <span class="keywordtype">void</span> positionAtTimevInVSOP87Coordinates(<span class="keywordtype">double</span> JDE, <span class="keywordtype">double</span>* v, <span class="keywordtype">bool</span> updateVelocityVector=<span class="keyword">true</span>);</div>
 <div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;    <span class="comment">// updating the tails is a bit expensive. try not to overdo it.</span></div>
 <div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;    <span class="keywordtype">bool</span> getUpdateTails()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> updateTails; }</div>
 <div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;    <span class="keywordtype">void</span> setUpdateTails(<span class="keyword">const</span> <span class="keywordtype">bool</span> update){ updateTails=update; }</div>
 <div class="line"><a name="l00100"></a><span class="lineno"><a class="line" href="classCometOrbit.html#ab082a0ac83f96ea2260df217a201cb3e">  100</a></span>&#160;    <a class="code" href="singletonVector3.html">Vec3d</a> <a class="code" href="classCometOrbit.html#ab082a0ac83f96ea2260df217a201cb3e">getVelocity</a>()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> rdot; }</div>
-<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;    <span class="keywordtype">bool</span> objectDateValid(<span class="keyword">const</span> <span class="keywordtype">double</span> JD)<span class="keyword"> const </span>{ <span class="keywordflow">return</span> (fabs(t0-JD)&lt;orbitGood); }</div>
+<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;    <span class="keywordtype">bool</span> objectDateValid(<span class="keyword">const</span> <span class="keywordtype">double</span> JDE)<span class="keyword"> const </span>{ <span class="keywordflow">return</span> (fabs(t0-JDE)&lt;orbitGood); }</div>
 <div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;<span class="keyword">private</span>:</div>
 <div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;    <span class="keyword">const</span> <span class="keywordtype">double</span> q;  </div>
 <div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;    <span class="keyword">const</span> <span class="keywordtype">double</span> e;  </div>
@@ -183,11 +183,11 @@
 <div class="line"><a name="l00134"></a><span class="lineno">  134</span>&#160;<span class="keyword">public</span>:</div>
 <div class="line"><a name="l00135"></a><span class="lineno">  135</span>&#160;    <a class="code" href="classCachingOrbit.html">CachingOrbit</a>() : lastTime(1.0e-30) {} <span class="comment">//;</span></div>
 <div class="line"><a name="l00136"></a><span class="lineno">  136</span>&#160;</div>
-<div class="line"><a name="l00137"></a><span class="lineno">  137</span>&#160;    <span class="keyword">virtual</span> <a class="code" href="singletonVector3.html">Vec3d</a> computePosition(<span class="keywordtype">double</span> jd) <span class="keyword">const</span> = 0;</div>
+<div class="line"><a name="l00137"></a><span class="lineno">  137</span>&#160;    <span class="keyword">virtual</span> <a class="code" href="singletonVector3.html">Vec3d</a> computePosition(<span class="keywordtype">double</span> JDE) <span class="keyword">const</span> = 0;</div>
 <div class="line"><a name="l00138"></a><span class="lineno">  138</span>&#160;    <span class="keyword">virtual</span> <span class="keywordtype">double</span> getPeriod() <span class="keyword">const</span> = 0;</div>
 <div class="line"><a name="l00139"></a><span class="lineno">  139</span>&#160;    <span class="keyword">virtual</span> <span class="keywordtype">double</span> getBoundingRadius() <span class="keyword">const</span> = 0;</div>
 <div class="line"><a name="l00140"></a><span class="lineno">  140</span>&#160;</div>
-<div class="line"><a name="l00141"></a><span class="lineno">  141</span>&#160;    <a class="code" href="singletonVector3.html">Vec3d</a> positionAtTime(<span class="keywordtype">double</span> jd) <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00141"></a><span class="lineno">  141</span>&#160;    <a class="code" href="singletonVector3.html">Vec3d</a> positionAtTime(<span class="keywordtype">double</span> JDE) <span class="keyword">const</span>;</div>
 <div class="line"><a name="l00142"></a><span class="lineno">  142</span>&#160;</div>
 <div class="line"><a name="l00143"></a><span class="lineno">  143</span>&#160;    <span class="keyword">virtual</span> <span class="keywordtype">void</span> sample(<span class="keywordtype">double</span>, <span class="keywordtype">double</span>, <span class="keywordtype">int</span>, <a class="code" href="classOrbitSampleProc.html">OrbitSampleProc</a>&amp; proc) <span class="keyword">const</span>;</div>
 <div class="line"><a name="l00144"></a><span class="lineno">  144</span>&#160;</div>
@@ -204,12 +204,12 @@
 <div class="ttc" id="singletonVector3_html"><div class="ttname"><a href="singletonVector3.html">Vector3&lt; double &gt;</a></div></div>
 <div class="ttc" id="classCometOrbit_html"><div class="ttname"><a href="classCometOrbit.html">CometOrbit</a></div><div class="ttdef"><b>Definition:</b> <a href="Orbit_8hpp_source.html#l00079">Orbit.hpp:79</a></div></div>
 <div class="ttc" id="classEllipticalOrbit_html"><div class="ttname"><a href="classEllipticalOrbit.html">EllipticalOrbit</a></div><div class="ttdef"><b>Definition:</b> <a href="Orbit_8hpp_source.html#l00033">Orbit.hpp:33</a></div></div>
-<div class="ttc" id="classCometOrbit_html_ab082a0ac83f96ea2260df217a201cb3e"><div class="ttname"><a href="classCometOrbit.html#ab082a0ac83f96ea2260df217a201cb3e">CometOrbit::getVelocity</a></div><div class="ttdeci">Vec3d getVelocity() const </div><div class="ttdoc">return speed value [AU/d] last computed by positionAtTimevInVSOP87Coordinates(JD, v...</div><div class="ttdef"><b>Definition:</b> <a href="Orbit_8hpp_source.html#l00100">Orbit.hpp:100</a></div></div>
+<div class="ttc" id="classCometOrbit_html_ab082a0ac83f96ea2260df217a201cb3e"><div class="ttname"><a href="classCometOrbit.html#ab082a0ac83f96ea2260df217a201cb3e">CometOrbit::getVelocity</a></div><div class="ttdeci">Vec3d getVelocity() const </div><div class="ttdoc">return speed value [AU/d] last computed by positionAtTimevInVSOP87Coordinates(JDE, v, true) </div><div class="ttdef"><b>Definition:</b> <a href="Orbit_8hpp_source.html#l00100">Orbit.hpp:100</a></div></div>
 <div class="ttc" id="classCachingOrbit_html"><div class="ttname"><a href="classCachingOrbit.html">CachingOrbit</a></div><div class="ttdef"><b>Definition:</b> <a href="Orbit_8hpp_source.html#l00132">Orbit.hpp:132</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Tue Jun 9 2015 02:09:23 for Stellarium by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Fri Oct 2 2015 18:38:19 for Stellarium by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.8
 </small></address>

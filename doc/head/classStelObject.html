@@ -81,7 +81,8 @@ Public Types</h2></td></tr>
 <br />
 &#160;&#160;<a class="el" href="classStelObject.html#acf243e7987796a3a44e409140ecea8c6a06c3c53f2370753e8b1b088dd31909a9">ObjectType</a> = 0x00001000, 
 <a class="el" href="classStelObject.html#acf243e7987796a3a44e409140ecea8c6abd747356c16ad505411c0755d655e458">EclipticCoord</a> = 0x00002000, 
-<a class="el" href="classStelObject.html#acf243e7987796a3a44e409140ecea8c6aa651fd9d370fc652c77c663cd41a18ce">PlainText</a> = 0x00004000
+<a class="el" href="classStelObject.html#acf243e7987796a3a44e409140ecea8c6a3d3de1493867fe630c7acfefafcb6ef9">EclipticCoordXYZ</a> = 0x00004000, 
+<a class="el" href="classStelObject.html#acf243e7987796a3a44e409140ecea8c6aa651fd9d370fc652c77c663cd41a18ce">PlainText</a> = 0x00010000
 <br />
  }</td></tr>
 <tr class="separator:acf243e7987796a3a44e409140ecea8c6"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -150,10 +151,10 @@ Public Member Functions</h2></td></tr>
 <tr class="memdesc:a1a86802fb75967e085f2c6b025743e08"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get a color used to display info about the object.  <a href="#a1a86802fb75967e085f2c6b025743e08">More...</a><br /></td></tr>
 <tr class="separator:a1a86802fb75967e085f2c6b025743e08"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a33d342a81d05901435624f1cb1480c44"><td class="memItemLeft" align="right" valign="top">virtual double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classStelObject.html#a33d342a81d05901435624f1cb1480c44">getCloseViewFov</a> (const <a class="el" href="classStelCore.html">StelCore</a> *) const </td></tr>
-<tr class="memdesc:a33d342a81d05901435624f1cb1480c44"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return the best <a class="elRef" doxygen="/home/aw/devel/stellarium/trunk/builds/gcc/stellariumPlugins.tag:../../doc-plugins/head" href="../../doc-plugins/head/classFOV.html">FOV</a> in degree to use for a close view of the object.  <a href="#a33d342a81d05901435624f1cb1480c44">More...</a><br /></td></tr>
+<tr class="memdesc:a33d342a81d05901435624f1cb1480c44"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return the best FOV in degree to use for a close view of the object.  <a href="#a33d342a81d05901435624f1cb1480c44">More...</a><br /></td></tr>
 <tr class="separator:a33d342a81d05901435624f1cb1480c44"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a7a65617cf25417e4f480ca10794e2599"><td class="memItemLeft" align="right" valign="top">virtual double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classStelObject.html#a7a65617cf25417e4f480ca10794e2599">getSatellitesFov</a> (const <a class="el" href="classStelCore.html">StelCore</a> *) const </td></tr>
-<tr class="memdesc:a7a65617cf25417e4f480ca10794e2599"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return the best <a class="elRef" doxygen="/home/aw/devel/stellarium/trunk/builds/gcc/stellariumPlugins.tag:../../doc-plugins/head" href="../../doc-plugins/head/classFOV.html">FOV</a> in degree to use for a global view of the object satellite system (if there are satellites)  <a href="#a7a65617cf25417e4f480ca10794e2599">More...</a><br /></td></tr>
+<tr class="memdesc:a7a65617cf25417e4f480ca10794e2599"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return the best FOV in degree to use for a global view of the object satellite system (if there are satellites)  <a href="#a7a65617cf25417e4f480ca10794e2599">More...</a><br /></td></tr>
 <tr class="separator:a7a65617cf25417e4f480ca10794e2599"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:adda6548b315129179e2b311cf92d6ff1"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="adda6548b315129179e2b311cf92d6ff1"></a>
 virtual double&#160;</td><td class="memItemRight" valign="bottom"><b>getParentSatellitesFov</b> (const <a class="el" href="classStelCore.html">StelCore</a> *) const </td></tr>
@@ -234,6 +235,9 @@ Protected Member Functions</h2></td></tr>
 </td></tr>
 <tr><td class="fieldname"><a class="anchor" id="acf243e7987796a3a44e409140ecea8c6abd747356c16ad505411c0755d655e458"></a>EclipticCoord&#160;</td><td class="fielddoc">
 <p>The ecliptic position. </p>
+</td></tr>
+<tr><td class="fieldname"><a class="anchor" id="acf243e7987796a3a44e409140ecea8c6a3d3de1493867fe630c7acfefafcb6ef9"></a>EclipticCoordXYZ&#160;</td><td class="fielddoc">
+<p>The ecliptic position, XYZ of VSOP87A (used mainly for debugging, not public) </p>
 </td></tr>
 <tr><td class="fieldname"><a class="anchor" id="acf243e7987796a3a44e409140ecea8c6aa651fd9d370fc652c77c663cd41a18ce"></a>PlainText&#160;</td><td class="fielddoc">
 <p>Strip HTML tags from output. </p>
@@ -325,9 +329,9 @@ Protected Member Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Return the angular radius of a circle containing the object as seen from the observer with the circle center assumed to be at <a class="el" href="classStelObject.html#a50ac8b2a9be97d2cf58987c58af6b740" title="Get observer-centered equatorial coordinates at equinox J2000. ">getJ2000EquatorialPos()</a>. </p>
-<dl class="section return"><dt>Returns</dt><dd>radius in degree. This value is the apparent angular size of the object, and is independent of the current <a class="elRef" doxygen="/home/aw/devel/stellarium/trunk/builds/gcc/stellariumPlugins.tag:../../doc-plugins/head" href="../../doc-plugins/head/classFOV.html">FOV</a>. </dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>radius in degree. This value is the apparent angular size of the object, and is independent of the current FOV. </dd></dl>
 
-<p>Implemented in <a class="el" href="classPlanet.html#a95728c97e3d44de8c3c13d58b10bf3fa">Planet</a>, <a class="el" href="classStarWrapper.html#a041d221f7943792be12934e14746fdd3">StarWrapper&lt; Star &gt;</a>, <a class="el" href="classStarWrapper.html#a041d221f7943792be12934e14746fdd3">StarWrapper&lt; Star2 &gt;</a>, <a class="el" href="classStarWrapper.html#a041d221f7943792be12934e14746fdd3">StarWrapper&lt; Star3 &gt;</a>, <a class="el" href="classStarWrapper.html#a041d221f7943792be12934e14746fdd3">StarWrapper&lt; Star1 &gt;</a>, and <a class="el" href="classNebula.html#add1dca26fc1da44d632006e2e3c1458d">Nebula</a>.</p>
+<p>Implemented in <a class="el" href="classPlanet.html#a95728c97e3d44de8c3c13d58b10bf3fa">Planet</a>, <a class="el" href="classNebula.html#add1dca26fc1da44d632006e2e3c1458d">Nebula</a>, <a class="el" href="classStarWrapper.html#a041d221f7943792be12934e14746fdd3">StarWrapper&lt; Star &gt;</a>, <a class="el" href="classStarWrapper.html#a041d221f7943792be12934e14746fdd3">StarWrapper&lt; Star2 &gt;</a>, <a class="el" href="classStarWrapper.html#a041d221f7943792be12934e14746fdd3">StarWrapper&lt; Star3 &gt;</a>, and <a class="el" href="classStarWrapper.html#a041d221f7943792be12934e14746fdd3">StarWrapper&lt; Star1 &gt;</a>.</p>
 
 </div>
 </div>
@@ -353,11 +357,11 @@ Protected Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Return the best <a class="elRef" doxygen="/home/aw/devel/stellarium/trunk/builds/gcc/stellariumPlugins.tag:../../doc-plugins/head" href="../../doc-plugins/head/classFOV.html">FOV</a> in degree to use for a close view of the object. </p>
+<p>Return the best FOV in degree to use for a close view of the object. </p>
 
 <p>Reimplemented in <a class="el" href="classPlanet.html#a9d5bdd0cf0bc4eac40ce3b85a5a75724">Planet</a>, and <a class="el" href="classNebula.html#abe15fa6f556ab663eec3c1918641421b">Nebula</a>.</p>
 
-<p>Definition at line <a class="el" href="StelObject_8hpp_source.html#l00148">148</a> of file <a class="el" href="StelObject_8hpp_source.html">StelObject.hpp</a>.</p>
+<p>Definition at line <a class="el" href="StelObject_8hpp_source.html#l00158">158</a> of file <a class="el" href="StelObject_8hpp_source.html">StelObject.hpp</a>.</p>
 
 </div>
 </div>
@@ -384,7 +388,7 @@ Protected Member Functions</h2></td></tr>
 
 <p>Return object's name in english. </p>
 
-<p>Implemented in <a class="el" href="classPlanet.html#aa37559ced1458464c52dfe6f3787a4ad">Planet</a>, <a class="el" href="classStarWrapper1.html#a321e39e841eb9421eba69ebab6aea2dd">StarWrapper1</a>, <a class="el" href="classStarWrapper.html#a8225a1446a3fb2e2ca64ee269b89585c">StarWrapper&lt; Star &gt;</a>, <a class="el" href="classStarWrapper.html#a8225a1446a3fb2e2ca64ee269b89585c">StarWrapper&lt; Star2 &gt;</a>, <a class="el" href="classStarWrapper.html#a8225a1446a3fb2e2ca64ee269b89585c">StarWrapper&lt; Star3 &gt;</a>, <a class="el" href="classStarWrapper.html#a8225a1446a3fb2e2ca64ee269b89585c">StarWrapper&lt; Star1 &gt;</a>, <a class="el" href="classComet.html#aa6b7e4187efb2da98908b531be38d150">Comet</a>, <a class="el" href="classMinorPlanet.html#a8a797c6f23f43be07c7f6ffd1703699f">MinorPlanet</a>, <a class="el" href="classNebula.html#af6e081b109bb82d381514392f40365e5">Nebula</a>, and <a class="el" href="classStarWrapperBase.html#a74dc73c83c75eed1fdfd5efd5f9621c5">StarWrapperBase</a>.</p>
+<p>Implemented in <a class="el" href="classPlanet.html#aa37559ced1458464c52dfe6f3787a4ad">Planet</a>, <a class="el" href="classStarWrapper1.html#a321e39e841eb9421eba69ebab6aea2dd">StarWrapper1</a>, <a class="el" href="classNebula.html#af6e081b109bb82d381514392f40365e5">Nebula</a>, <a class="el" href="classStarWrapper.html#a8225a1446a3fb2e2ca64ee269b89585c">StarWrapper&lt; Star &gt;</a>, <a class="el" href="classStarWrapper.html#a8225a1446a3fb2e2ca64ee269b89585c">StarWrapper&lt; Star2 &gt;</a>, <a class="el" href="classStarWrapper.html#a8225a1446a3fb2e2ca64ee269b89585c">StarWrapper&lt; Star3 &gt;</a>, <a class="el" href="classStarWrapper.html#a8225a1446a3fb2e2ca64ee269b89585c">StarWrapper&lt; Star1 &gt;</a>, <a class="el" href="classComet.html#aa6b7e4187efb2da98908b531be38d150">Comet</a>, <a class="el" href="classMinorPlanet.html#a8a797c6f23f43be07c7f6ffd1703699f">MinorPlanet</a>, and <a class="el" href="classStarWrapperBase.html#a74dc73c83c75eed1fdfd5efd5f9621c5">StarWrapperBase</a>.</p>
 
 </div>
 </div>
@@ -448,9 +452,9 @@ Protected Member Functions</h2></td></tr>
 
 <p>Get a color used to display info about the object. </p>
 
-<p>Reimplemented in <a class="el" href="classPlanet.html#abc84a3cd305ceed6fef2163d2082346b">Planet</a>, <a class="el" href="classStarWrapper.html#a20d34317abededbe661875d808f0a546">StarWrapper&lt; Star &gt;</a>, <a class="el" href="classStarWrapper.html#a20d34317abededbe661875d808f0a546">StarWrapper&lt; Star2 &gt;</a>, <a class="el" href="classStarWrapper.html#a20d34317abededbe661875d808f0a546">StarWrapper&lt; Star3 &gt;</a>, <a class="el" href="classStarWrapper.html#a20d34317abededbe661875d808f0a546">StarWrapper&lt; Star1 &gt;</a>, and <a class="el" href="classNebula.html#a0201e9fda26a47b41933924bee060c9d">Nebula</a>.</p>
+<p>Reimplemented in <a class="el" href="classPlanet.html#abc84a3cd305ceed6fef2163d2082346b">Planet</a>, <a class="el" href="classNebula.html#a0201e9fda26a47b41933924bee060c9d">Nebula</a>, <a class="el" href="classStarWrapper.html#a20d34317abededbe661875d808f0a546">StarWrapper&lt; Star &gt;</a>, <a class="el" href="classStarWrapper.html#a20d34317abededbe661875d808f0a546">StarWrapper&lt; Star2 &gt;</a>, <a class="el" href="classStarWrapper.html#a20d34317abededbe661875d808f0a546">StarWrapper&lt; Star3 &gt;</a>, and <a class="el" href="classStarWrapper.html#a20d34317abededbe661875d808f0a546">StarWrapper&lt; Star1 &gt;</a>.</p>
 
-<p>Definition at line <a class="el" href="StelObject_8hpp_source.html#l00145">145</a> of file <a class="el" href="StelObject_8hpp_source.html">StelObject.hpp</a>.</p>
+<p>Definition at line <a class="el" href="StelObject_8hpp_source.html#l00155">155</a> of file <a class="el" href="StelObject_8hpp_source.html">StelObject.hpp</a>.</p>
 
 </div>
 </div>
@@ -496,7 +500,7 @@ Protected Member Functions</h2></td></tr>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>an HTML string containing information about the <a class="el" href="classStelObject.html" title="The base abstract class for sky objects used in Stellarium like Stars, Planets, Constellations etc...">StelObject</a>. </dd></dl>
 
-<p>Implemented in <a class="el" href="classPlanet.html#ad1b79eabc38f21d1972242455875bcc0">Planet</a>, <a class="el" href="classStarWrapper1.html#a9af41f3ada829f50bee39dac9683ce91">StarWrapper1</a>, <a class="el" href="classComet.html#a27c97603a0d7d27f229906eaee87d3f5">Comet</a>, <a class="el" href="classMinorPlanet.html#a6ba2fb1ca790edbbe36f718ebf3444b8">MinorPlanet</a>, <a class="el" href="classStarWrapperBase.html#a6c8a16017cd31cc8449c32b621e58d79">StarWrapperBase</a>, and <a class="el" href="classNebula.html#ae905ee3f6c8a7097336ebd2cf4cca3ad">Nebula</a>.</p>
+<p>Implemented in <a class="el" href="classPlanet.html#ad1b79eabc38f21d1972242455875bcc0">Planet</a>, <a class="el" href="classStarWrapper1.html#a9af41f3ada829f50bee39dac9683ce91">StarWrapper1</a>, <a class="el" href="classNebula.html#ae905ee3f6c8a7097336ebd2cf4cca3ad">Nebula</a>, <a class="el" href="classComet.html#a27c97603a0d7d27f229906eaee87d3f5">Comet</a>, <a class="el" href="classMinorPlanet.html#a6ba2fb1ca790edbbe36f718ebf3444b8">MinorPlanet</a>, and <a class="el" href="classStarWrapperBase.html#a6c8a16017cd31cc8449c32b621e58d79">StarWrapperBase</a>.</p>
 
 </div>
 </div>
@@ -524,7 +528,7 @@ Protected Member Functions</h2></td></tr>
 
 <p>Get observer-centered equatorial coordinates at equinox J2000. </p>
 
-<p>Implemented in <a class="el" href="classPlanet.html#ae65ddf7e5855d54fb03d5fa335c225e7">Planet</a>, <a class="el" href="classStarWrapper.html#abe30f650b570c34582e6228b29fad65f">StarWrapper&lt; Star &gt;</a>, <a class="el" href="classStarWrapper.html#abe30f650b570c34582e6228b29fad65f">StarWrapper&lt; Star2 &gt;</a>, <a class="el" href="classStarWrapper.html#abe30f650b570c34582e6228b29fad65f">StarWrapper&lt; Star3 &gt;</a>, <a class="el" href="classStarWrapper.html#abe30f650b570c34582e6228b29fad65f">StarWrapper&lt; Star1 &gt;</a>, and <a class="el" href="classNebula.html#a3ba01b6c6aa1f0732e1c7a274ec017e1">Nebula</a>.</p>
+<p>Implemented in <a class="el" href="classPlanet.html#ae65ddf7e5855d54fb03d5fa335c225e7">Planet</a>, <a class="el" href="classNebula.html#a3ba01b6c6aa1f0732e1c7a274ec017e1">Nebula</a>, <a class="el" href="classStarWrapper.html#abe30f650b570c34582e6228b29fad65f">StarWrapper&lt; Star &gt;</a>, <a class="el" href="classStarWrapper.html#abe30f650b570c34582e6228b29fad65f">StarWrapper&lt; Star2 &gt;</a>, <a class="el" href="classStarWrapper.html#abe30f650b570c34582e6228b29fad65f">StarWrapper&lt; Star3 &gt;</a>, and <a class="el" href="classStarWrapper.html#abe30f650b570c34582e6228b29fad65f">StarWrapper&lt; Star1 &gt;</a>.</p>
 
 </div>
 </div>
@@ -551,7 +555,7 @@ Protected Member Functions</h2></td></tr>
 
 <p>Return translated object's name. </p>
 
-<p>Implemented in <a class="el" href="classPlanet.html#a5d4a12ac26bb3f8870cc8a0bf62b8583">Planet</a>, <a class="el" href="classStarWrapper.html#a85f5987e89a7fd193414791330318a1a">StarWrapper&lt; Star &gt;</a>, <a class="el" href="classStarWrapper.html#a85f5987e89a7fd193414791330318a1a">StarWrapper&lt; Star2 &gt;</a>, <a class="el" href="classStarWrapper.html#a85f5987e89a7fd193414791330318a1a">StarWrapper&lt; Star3 &gt;</a>, <a class="el" href="classStarWrapper.html#a85f5987e89a7fd193414791330318a1a">StarWrapper&lt; Star1 &gt;</a>, <a class="el" href="classComet.html#ab71f6f1507c1a02fc57a9203b568e99b">Comet</a>, <a class="el" href="classMinorPlanet.html#aa1e30b710467bee73effa1862d5f379d">MinorPlanet</a>, <a class="el" href="classNebula.html#a867f6e685a178a75bc8a650ca93bec8b">Nebula</a>, and <a class="el" href="classStarWrapperBase.html#aa0d34406945d65f306f10d616df78f31">StarWrapperBase</a>.</p>
+<p>Implemented in <a class="el" href="classPlanet.html#a5d4a12ac26bb3f8870cc8a0bf62b8583">Planet</a>, <a class="el" href="classNebula.html#a867f6e685a178a75bc8a650ca93bec8b">Nebula</a>, <a class="el" href="classStarWrapper.html#a85f5987e89a7fd193414791330318a1a">StarWrapper&lt; Star &gt;</a>, <a class="el" href="classStarWrapper.html#a85f5987e89a7fd193414791330318a1a">StarWrapper&lt; Star2 &gt;</a>, <a class="el" href="classStarWrapper.html#a85f5987e89a7fd193414791330318a1a">StarWrapper&lt; Star3 &gt;</a>, <a class="el" href="classStarWrapper.html#a85f5987e89a7fd193414791330318a1a">StarWrapper&lt; Star1 &gt;</a>, <a class="el" href="classComet.html#ab71f6f1507c1a02fc57a9203b568e99b">Comet</a>, <a class="el" href="classMinorPlanet.html#aa1e30b710467bee73effa1862d5f379d">MinorPlanet</a>, and <a class="el" href="classStarWrapperBase.html#aa0d34406945d65f306f10d616df78f31">StarWrapperBase</a>.</p>
 
 </div>
 </div>
@@ -577,11 +581,11 @@ Protected Member Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Default implementation of the getPointInRegion method. </p>
-<p>Return the J2000 Equatorial <a class="elRef" doxygen="/home/aw/devel/stellarium/trunk/builds/gcc/stellariumPlugins.tag:../../doc-plugins/head" href="../../doc-plugins/head/structPosition.html">Position</a> of the object. </p>
+<p>Return the J2000 Equatorial Position of the object. </p>
 
 <p>Implements <a class="el" href="classStelRegionObject.html#a6d690e8c12ce4fe003389d3ad5970847">StelRegionObject</a>.</p>
 
-<p>Definition at line <a class="el" href="StelObject_8hpp_source.html#l00078">78</a> of file <a class="el" href="StelObject_8hpp_source.html">StelObject.hpp</a>.</p>
+<p>Definition at line <a class="el" href="StelObject_8hpp_source.html#l00088">88</a> of file <a class="el" href="StelObject_8hpp_source.html">StelObject.hpp</a>.</p>
 
 </div>
 </div>
@@ -649,7 +653,7 @@ Protected Member Functions</h2></td></tr>
 
 <p>Reimplemented in <a class="el" href="classNebula.html#a37dde6d2d3109e10ffa21662d3a2381c">Nebula</a>.</p>
 
-<p>Definition at line <a class="el" href="StelObject_8hpp_source.html#l00074">74</a> of file <a class="el" href="StelObject_8hpp_source.html">StelObject.hpp</a>.</p>
+<p>Definition at line <a class="el" href="StelObject_8hpp_source.html#l00084">84</a> of file <a class="el" href="StelObject_8hpp_source.html">StelObject.hpp</a>.</p>
 
 </div>
 </div>
@@ -675,11 +679,11 @@ Protected Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Return the best <a class="elRef" doxygen="/home/aw/devel/stellarium/trunk/builds/gcc/stellariumPlugins.tag:../../doc-plugins/head" href="../../doc-plugins/head/classFOV.html">FOV</a> in degree to use for a global view of the object satellite system (if there are satellites) </p>
+<p>Return the best FOV in degree to use for a global view of the object satellite system (if there are satellites) </p>
 
 <p>Reimplemented in <a class="el" href="classPlanet.html#a2df5e6c9fe0ff09c004f46498d06734c">Planet</a>.</p>
 
-<p>Definition at line <a class="el" href="StelObject_8hpp_source.html#l00151">151</a> of file <a class="el" href="StelObject_8hpp_source.html">StelObject.hpp</a>.</p>
+<p>Definition at line <a class="el" href="StelObject_8hpp_source.html#l00161">161</a> of file <a class="el" href="StelObject_8hpp_source.html">StelObject.hpp</a>.</p>
 
 </div>
 </div>
@@ -800,7 +804,7 @@ Protected Member Functions</h2></td></tr>
 
 <p>Return object's apparent V magnitude as seen from observer, without including extinction. </p>
 
-<p>Reimplemented in <a class="el" href="classPlanet.html#afb3d99bed9522c8a8bfc08665d8a0009">Planet</a>, <a class="el" href="classStarWrapper.html#a6d97127b55eba1a226a111cee952c437">StarWrapper&lt; Star &gt;</a>, <a class="el" href="classStarWrapper.html#a6d97127b55eba1a226a111cee952c437">StarWrapper&lt; Star2 &gt;</a>, <a class="el" href="classStarWrapper.html#a6d97127b55eba1a226a111cee952c437">StarWrapper&lt; Star3 &gt;</a>, <a class="el" href="classStarWrapper.html#a6d97127b55eba1a226a111cee952c437">StarWrapper&lt; Star1 &gt;</a>, <a class="el" href="classComet.html#a3a2ec0ce16a42615828ae1b5548a9627">Comet</a>, <a class="el" href="classMinorPlanet.html#a1ebcfcbc05954f8145b07fa241462f29">MinorPlanet</a>, and <a class="el" href="classNebula.html#aea9dab68cacead39b5e91b6c1e46304d">Nebula</a>.</p>
+<p>Reimplemented in <a class="el" href="classPlanet.html#afb3d99bed9522c8a8bfc08665d8a0009">Planet</a>, <a class="el" href="classNebula.html#aea9dab68cacead39b5e91b6c1e46304d">Nebula</a>, <a class="el" href="classStarWrapper.html#a6d97127b55eba1a226a111cee952c437">StarWrapper&lt; Star &gt;</a>, <a class="el" href="classStarWrapper.html#a6d97127b55eba1a226a111cee952c437">StarWrapper&lt; Star2 &gt;</a>, <a class="el" href="classStarWrapper.html#a6d97127b55eba1a226a111cee952c437">StarWrapper&lt; Star3 &gt;</a>, <a class="el" href="classStarWrapper.html#a6d97127b55eba1a226a111cee952c437">StarWrapper&lt; Star1 &gt;</a>, <a class="el" href="classComet.html#a3a2ec0ce16a42615828ae1b5548a9627">Comet</a>, and <a class="el" href="classMinorPlanet.html#a1ebcfcbc05954f8145b07fa241462f29">MinorPlanet</a>.</p>
 
 </div>
 </div>
@@ -898,7 +902,7 @@ Protected Member Functions</h2></td></tr>
 
 <p>A pre-defined set of specifiers for the getInfoString flags argument to getInfoString. </p>
 
-<p>Definition at line <a class="el" href="StelObject_8hpp_source.html#l00068">68</a> of file <a class="el" href="StelObject_8hpp_source.html">StelObject.hpp</a>.</p>
+<p>Definition at line <a class="el" href="StelObject_8hpp_source.html#l00078">78</a> of file <a class="el" href="StelObject_8hpp_source.html">StelObject.hpp</a>.</p>
 
 </div>
 </div>
@@ -908,7 +912,7 @@ Protected Member Functions</h2></td></tr>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Tue Jun 9 2015 02:09:24 for Stellarium by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Fri Oct 2 2015 18:38:20 for Stellarium by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.8
 </small></address>

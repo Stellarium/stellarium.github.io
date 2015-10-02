@@ -201,6 +201,9 @@ Static Public Member Functions</h2></td></tr>
 <tr class="memitem:ad3fd03cecf766d2aa41af02593ed0880"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ad3fd03cecf766d2aa41af02593ed0880"></a>
 static QString&#160;</td><td class="memItemRight" valign="bottom"><b>getCommonEnglishName</b> (int hip)</td></tr>
 <tr class="separator:ad3fd03cecf766d2aa41af02593ed0880"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac0c58a43b0ac0afe7cd8ad2f43ba34e2"><td class="memItemLeft" align="right" valign="top">static QString&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classStarMgr.html#ac0c58a43b0ac0afe7cd8ad2f43ba34e2">getCrossIndexDesignations</a> (int hip)</td></tr>
+<tr class="memdesc:ac0c58a43b0ac0afe7cd8ad2f43ba34e2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the cross-index designations for a star with a specified Hipparcos catalogue number.  <a href="#ac0c58a43b0ac0afe7cd8ad2f43ba34e2">More...</a><br /></td></tr>
+<tr class="separator:ac0c58a43b0ac0afe7cd8ad2f43ba34e2"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a6a0f3bb0ea94f3a9a41b93ccbcdadc86"><td class="memItemLeft" align="right" valign="top">static QString&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classStarMgr.html#a6a0f3bb0ea94f3a9a41b93ccbcdadc86">getGcvsVariabilityType</a> (int hip)</td></tr>
 <tr class="memdesc:a6a0f3bb0ea94f3a9a41b93ccbcdadc86"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the type of variability for a variable star with a specified Hipparcos catalogue number.  <a href="#a6a0f3bb0ea94f3a9a41b93ccbcdadc86">More...</a><br /></td></tr>
 <tr class="separator:a6a0f3bb0ea94f3a9a41b93ccbcdadc86"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -375,6 +378,39 @@ Additional Inherited Members</h2></td></tr>
   </dd>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>translated common name of star </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="ac0c58a43b0ac0afe7cd8ad2f43ba34e2"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static QString StarMgr::getCrossIndexDesignations </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>hip</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Get the cross-index designations for a star with a specified Hipparcos catalogue number. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">hip</td><td>The Hipparcos number of star </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>cross-index data </dd></dl>
 
 </div>
 </div>
@@ -793,7 +829,7 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Get the amount of star labels. </p>
-<p>The real amount is also proportional with <a class="elRef" doxygen="/home/aw/devel/stellarium/trunk/builds/gcc/stellariumPlugins.tag:../../doc-plugins/head" href="../../doc-plugins/head/classFOV.html">FOV</a>. </p><dl class="section return"><dt>Returns</dt><dd>the amount between 0 and 10. 0 is no labels, 10 is maximum of labels </dd></dl>
+<p>The real amount is also proportional with FOV. </p><dl class="section return"><dt>Returns</dt><dd>the amount between 0 and 10. 0 is no labels, 10 is maximum of labels </dd></dl>
 
 <p>Definition at line <a class="el" href="StarMgr_8hpp_source.html#l00177">177</a> of file <a class="el" href="StarMgr_8hpp_source.html">StarMgr.hpp</a>.</p>
 
@@ -1339,7 +1375,7 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Set the amount of star labels. </p>
-<p>The real amount is also proportional with <a class="elRef" doxygen="/home/aw/devel/stellarium/trunk/builds/gcc/stellariumPlugins.tag:../../doc-plugins/head" href="../../doc-plugins/head/classFOV.html">FOV</a>. The limit is set in function of the stars magnitude </p><dl class="params"><dt>Parameters</dt><dd>
+<p>The real amount is also proportional with FOV. The limit is set in function of the stars magnitude </p><dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">a</td><td>the amount between 0 and 10. 0 is no labels, 10 is maximum of labels </td></tr>
   </table>
@@ -1387,7 +1423,7 @@ Additional Inherited Members</h2></td></tr>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Tue Jun 9 2015 02:09:24 for Stellarium by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Fri Oct 2 2015 18:38:20 for Stellarium by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.8
 </small></address>

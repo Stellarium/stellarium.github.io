@@ -28,6 +28,7 @@
     <ul class="tablist">
       <li><a href="index.html"><span>Main&#160;Page</span></a></li>
       <li><a href="modules.html"><span>Modules</span></a></li>
+      <li><a href="annotated.html"><span>Classes</span></a></li>
       <li><a href="../../doc/"><span>Core&#160;API</span></a></li>
     </ul>
   </div>
@@ -77,150 +78,151 @@
 <div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;<span class="keyword">class </span>QTimer;</div>
 <div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;<span class="keyword">class </span>QPixmap;</div>
 <div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;<span class="keyword">class </span><a class="codeRef" doxygen="/home/aw/devel/stellarium/trunk/builds/gcc/stellarium.tag:../../doc/head/" href="../../doc/head/classStelButton.html">StelButton</a>;</div>
-<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;<span class="keyword">class </span><a class="codeRef" doxygen="/home/aw/devel/stellarium/trunk/builds/gcc/stellariumPlugins.tag:../../doc-plugins/head" href="../../doc-plugins/head/classAngleMeasureDialog.html">AngleMeasureDialog</a>;</div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;<span class="keyword">class </span><a class="code" href="classAngleMeasureDialog.html">AngleMeasureDialog</a>;</div>
 <div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;</div>
-<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;<span class="keyword">class </span><a class="codeRef" doxygen="/home/aw/devel/stellarium/trunk/builds/gcc/stellariumPlugins.tag:../../doc-plugins/head" href="../../doc-plugins/head/classAngleMeasure.html">AngleMeasure</a> : <span class="keyword">public</span> <a class="codeRef" doxygen="/home/aw/devel/stellarium/trunk/builds/gcc/stellarium.tag:../../doc/head/" href="../../doc/head/classStelModule.html">StelModule</a></div>
-<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;{</div>
-<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;    Q_OBJECT</div>
-<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;    Q_PROPERTY(<span class="keywordtype">bool</span> enabled</div>
-<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;           READ isEnabled</div>
-<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;           WRITE enableAngleMeasure)</div>
-<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;    Q_PROPERTY(<span class="keywordtype">bool</span> dmsFormat</div>
-<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;           READ isDmsFormat</div>
-<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;           WRITE useDmsFormat)</div>
-<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;    Q_PROPERTY(<span class="keywordtype">bool</span> paDisplayed</div>
-<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;           READ isPaDisplayed</div>
-<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;           WRITE showPositionAngle)</div>
-<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;<span class="keyword">public</span>:</div>
-<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;    <a class="codeRef" doxygen="/home/aw/devel/stellarium/trunk/builds/gcc/stellariumPlugins.tag:../../doc-plugins/head" href="../../doc-plugins/head/classAngleMeasure.html">AngleMeasure</a>();</div>
-<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;    <span class="keyword">virtual</span> ~<a class="codeRef" doxygen="/home/aw/devel/stellarium/trunk/builds/gcc/stellariumPlugins.tag:../../doc-plugins/head" href="../../doc-plugins/head/classAngleMeasure.html">AngleMeasure</a>();</div>
-<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;    </div>
-<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;    <span class="comment">// Methods defined in the StelModule class</span></div>
-<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;    <span class="keyword">virtual</span> <span class="keywordtype">void</span> init();</div>
-<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;    <span class="keyword">virtual</span> <span class="keywordtype">void</span> update(<span class="keywordtype">double</span> deltaTime);</div>
-<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;    <span class="keyword">virtual</span> <span class="keywordtype">void</span> draw(<a class="codeRef" doxygen="/home/aw/devel/stellarium/trunk/builds/gcc/stellarium.tag:../../doc/head/" href="../../doc/head/classStelCore.html">StelCore</a>* core);</div>
-<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;    <span class="keyword">virtual</span> <span class="keywordtype">double</span> getCallOrder(StelModuleActionName actionName) <span class="keyword">const</span>;</div>
-<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;    <span class="keyword">virtual</span> <span class="keywordtype">void</span> handleKeys(<span class="keyword">class</span> QKeyEvent* event);</div>
-<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;    <span class="keyword">virtual</span> <span class="keywordtype">void</span> handleMouseClicks(<span class="keyword">class</span> QMouseEvent* event);</div>
-<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;    <span class="keyword">virtual</span> <span class="keywordtype">bool</span> handleMouseMoves(<span class="keywordtype">int</span> x, <span class="keywordtype">int</span> y, Qt::MouseButtons b);</div>
-<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;    <span class="keyword">virtual</span> <span class="keywordtype">bool</span> configureGui(<span class="keywordtype">bool</span> show=<span class="keyword">true</span>);</div>
-<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;    <span class="keywordtype">bool</span> isEnabled()<span class="keyword"> const </span>{<span class="keywordflow">return</span> flagShowAngleMeasure;}</div>
-<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;    <span class="keywordtype">bool</span> isDmsFormat()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> flagUseDmsFormat; }</div>
-<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;    <span class="keywordtype">bool</span> isPaDisplayed()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> flagShowPA; }</div>
-<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;    <span class="keywordtype">bool</span> isEquatorial()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> flagShowEquatorial; }</div>
-<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;    <span class="keywordtype">bool</span> isHorizontal()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> flagShowHorizontal; }</div>
-<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;    <span class="keywordtype">bool</span> isHorizontalStartSkylinked()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> flagShowHorizontalStartSkylinked; }</div>
-<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;    <span class="keywordtype">bool</span> isHorizontalEndSkylinked()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> flagShowHorizontalEndSkylinked; }</div>
-<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;    <span class="keywordtype">bool</span> isHorPaDisplayed()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> flagShowHorizontalPA; }</div>
-<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;</div>
-<div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;</div>
-<div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;    <span class="keywordtype">void</span> <a class="codeRef" doxygen="/home/aw/devel/stellarium/trunk/builds/gcc/stellariumPlugins.tag:../../doc-plugins/head" href="../../doc-plugins/head/classAngleMeasure.html#a3ad17b707947d267a4f8a26713f6a40e">restoreDefaultSettings</a>();</div>
-<div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;</div>
-<div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160;    <span class="keywordtype">void</span> <a class="codeRef" doxygen="/home/aw/devel/stellarium/trunk/builds/gcc/stellariumPlugins.tag:../../doc-plugins/head" href="../../doc-plugins/head/classAngleMeasure.html#a63f58750b21d2325d97a5948adf0872a">loadSettings</a>();</div>
-<div class="line"><a name="l00116"></a><span class="lineno">  116</span>&#160;</div>
-<div class="line"><a name="l00123"></a><span class="lineno">  123</span>&#160;    <span class="keywordtype">void</span> <a class="codeRef" doxygen="/home/aw/devel/stellarium/trunk/builds/gcc/stellariumPlugins.tag:../../doc-plugins/head" href="../../doc-plugins/head/classAngleMeasure.html#afd74ac0108371f766c315b45a95bfe82">saveSettings</a>();</div>
-<div class="line"><a name="l00124"></a><span class="lineno">  124</span>&#160;</div>
-<div class="line"><a name="l00125"></a><span class="lineno">  125</span>&#160;<span class="keyword">public</span> slots:</div>
-<div class="line"><a name="l00126"></a><span class="lineno">  126</span>&#160;    <span class="keywordtype">void</span> enableAngleMeasure(<span class="keywordtype">bool</span> b);</div>
-<div class="line"><a name="l00127"></a><span class="lineno">  127</span>&#160;    <span class="keywordtype">void</span> useDmsFormat(<span class="keywordtype">bool</span> b);</div>
-<div class="line"><a name="l00128"></a><span class="lineno">  128</span>&#160;    <span class="keywordtype">void</span> showPositionAngle(<span class="keywordtype">bool</span> b);</div>
-<div class="line"><a name="l00129"></a><span class="lineno">  129</span>&#160;    <span class="keywordtype">void</span> showPositionAngleHor(<span class="keywordtype">bool</span> b);</div>
-<div class="line"><a name="l00130"></a><span class="lineno">  130</span>&#160;    <span class="keywordtype">void</span> showEquatorial(<span class="keywordtype">bool</span> b);</div>
-<div class="line"><a name="l00131"></a><span class="lineno">  131</span>&#160;    <span class="keywordtype">void</span> showHorizontal(<span class="keywordtype">bool</span> b);</div>
-<div class="line"><a name="l00132"></a><span class="lineno">  132</span>&#160;    <span class="keywordtype">void</span> showHorizontalStartSkylinked(<span class="keywordtype">bool</span> b);</div>
-<div class="line"><a name="l00133"></a><span class="lineno">  133</span>&#160;    <span class="keywordtype">void</span> showHorizontalEndSkylinked(<span class="keywordtype">bool</span> b);</div>
-<div class="line"><a name="l00134"></a><span class="lineno">  134</span>&#160;</div>
-<div class="line"><a name="l00135"></a><span class="lineno">  135</span>&#160;<span class="keyword">private</span> slots:</div>
-<div class="line"><a name="l00136"></a><span class="lineno">  136</span>&#160;    <span class="keywordtype">void</span> updateMessageText();</div>
-<div class="line"><a name="l00137"></a><span class="lineno">  137</span>&#160;    <span class="keywordtype">void</span> clearMessage();</div>
-<div class="line"><a name="l00138"></a><span class="lineno">  138</span>&#160;</div>
-<div class="line"><a name="l00139"></a><span class="lineno">  139</span>&#160;<span class="keyword">private</span>:</div>
-<div class="line"><a name="l00140"></a><span class="lineno">  140</span>&#160;    QFont font;</div>
-<div class="line"><a name="l00141"></a><span class="lineno">  141</span>&#160;    <span class="keywordtype">bool</span> flagShowAngleMeasure;</div>
-<div class="line"><a name="l00142"></a><span class="lineno">  142</span>&#160;    <span class="keywordtype">bool</span> withDecimalDegree;</div>
-<div class="line"><a name="l00143"></a><span class="lineno">  143</span>&#160;    <a class="codeRef" doxygen="/home/aw/devel/stellarium/trunk/builds/gcc/stellarium.tag:../../doc/head/" href="../../doc/head/classLinearFader.html">LinearFader</a> lineVisible;</div>
-<div class="line"><a name="l00144"></a><span class="lineno">  144</span>&#160;    <a class="codeRef" doxygen="/home/aw/devel/stellarium/trunk/builds/gcc/stellarium.tag:../../doc/head/" href="../../doc/head/classLinearFader.html">LinearFader</a> messageFader;</div>
-<div class="line"><a name="l00145"></a><span class="lineno">  145</span>&#160;    QTimer* messageTimer;</div>
-<div class="line"><a name="l00146"></a><span class="lineno">  146</span>&#160;    QString messageEnabled;</div>
-<div class="line"><a name="l00147"></a><span class="lineno">  147</span>&#160;    QString messageLeftButton;</div>
-<div class="line"><a name="l00148"></a><span class="lineno">  148</span>&#160;    QString messageRightButton;</div>
-<div class="line"><a name="l00149"></a><span class="lineno">  149</span>&#160;    QString messagePA;</div>
-<div class="line"><a name="l00150"></a><span class="lineno">  150</span>&#160;    <span class="keywordtype">bool</span> dragging;</div>
-<div class="line"><a name="l00151"></a><span class="lineno">  151</span>&#160;    Vec3d startPoint;</div>
-<div class="line"><a name="l00152"></a><span class="lineno">  152</span>&#160;    Vec3d endPoint;</div>
-<div class="line"><a name="l00153"></a><span class="lineno">  153</span>&#160;    Vec3d perp1StartPoint;</div>
-<div class="line"><a name="l00154"></a><span class="lineno">  154</span>&#160;    Vec3d perp1EndPoint;</div>
-<div class="line"><a name="l00155"></a><span class="lineno">  155</span>&#160;    Vec3d perp2StartPoint;</div>
-<div class="line"><a name="l00156"></a><span class="lineno">  156</span>&#160;    Vec3d perp2EndPoint;</div>
-<div class="line"><a name="l00157"></a><span class="lineno">  157</span>&#160;    Vec3f textColor;</div>
-<div class="line"><a name="l00158"></a><span class="lineno">  158</span>&#160;    Vec3f lineColor;</div>
-<div class="line"><a name="l00159"></a><span class="lineno">  159</span>&#160;    <span class="keywordtype">double</span> angle;</div>
-<div class="line"><a name="l00160"></a><span class="lineno">  160</span>&#160;    <span class="keywordtype">bool</span> flagUseDmsFormat;</div>
-<div class="line"><a name="l00161"></a><span class="lineno">  161</span>&#160;    <span class="keywordtype">bool</span> flagShowPA;</div>
-<div class="line"><a name="l00162"></a><span class="lineno">  162</span>&#160;    <span class="keywordtype">bool</span> flagShowEquatorial;</div>
-<div class="line"><a name="l00163"></a><span class="lineno">  163</span>&#160;    <span class="keywordtype">bool</span> flagShowHorizontal;</div>
-<div class="line"><a name="l00164"></a><span class="lineno">  164</span>&#160;    <span class="keywordtype">bool</span> flagShowHorizontalPA;</div>
-<div class="line"><a name="l00165"></a><span class="lineno">  165</span>&#160;    <span class="keywordtype">bool</span> flagShowHorizontalStartSkylinked;</div>
-<div class="line"><a name="l00166"></a><span class="lineno">  166</span>&#160;    <span class="keywordtype">bool</span> flagShowHorizontalEndSkylinked;</div>
-<div class="line"><a name="l00167"></a><span class="lineno">  167</span>&#160;    Vec3f horTextColor;</div>
-<div class="line"><a name="l00168"></a><span class="lineno">  168</span>&#160;    Vec3f horLineColor;</div>
-<div class="line"><a name="l00169"></a><span class="lineno">  169</span>&#160;    Vec3d startPointHor;</div>
-<div class="line"><a name="l00170"></a><span class="lineno">  170</span>&#160;    Vec3d endPointHor;</div>
-<div class="line"><a name="l00171"></a><span class="lineno">  171</span>&#160;    Vec3d perp1StartPointHor;</div>
-<div class="line"><a name="l00172"></a><span class="lineno">  172</span>&#160;    Vec3d perp1EndPointHor;</div>
-<div class="line"><a name="l00173"></a><span class="lineno">  173</span>&#160;    Vec3d perp2StartPointHor;</div>
-<div class="line"><a name="l00174"></a><span class="lineno">  174</span>&#160;    Vec3d perp2EndPointHor;</div>
-<div class="line"><a name="l00175"></a><span class="lineno">  175</span>&#160;    <span class="keywordtype">double</span> angleHor;</div>
-<div class="line"><a name="l00176"></a><span class="lineno">  176</span>&#160;</div>
-<div class="line"><a name="l00177"></a><span class="lineno">  177</span>&#160;</div>
-<div class="line"><a name="l00178"></a><span class="lineno">  178</span>&#160;    <a class="codeRef" doxygen="/home/aw/devel/stellarium/trunk/builds/gcc/stellarium.tag:../../doc/head/" href="../../doc/head/classStelButton.html">StelButton</a>* toolbarButton;</div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;<span class="keyword">class </span><a class="code" href="classAngleMeasure.html">AngleMeasure</a> : <span class="keyword">public</span> <a class="codeRef" doxygen="/home/aw/devel/stellarium/trunk/builds/gcc/stellarium.tag:../../doc/head/" href="../../doc/head/classStelModule.html">StelModule</a></div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;{</div>
+<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;    Q_OBJECT</div>
+<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;    Q_PROPERTY(<span class="keywordtype">bool</span> enabled</div>
+<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;           READ isEnabled</div>
+<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;           WRITE enableAngleMeasure)</div>
+<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;    Q_PROPERTY(<span class="keywordtype">bool</span> dmsFormat</div>
+<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;           READ isDmsFormat</div>
+<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;           WRITE useDmsFormat)</div>
+<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;    Q_PROPERTY(<span class="keywordtype">bool</span> paDisplayed</div>
+<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;           READ isPaDisplayed</div>
+<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;           WRITE showPositionAngle)</div>
+<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;<span class="keyword">public</span>:</div>
+<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;    <a class="code" href="classAngleMeasure.html">AngleMeasure</a>();</div>
+<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;    <span class="keyword">virtual</span> ~<a class="code" href="classAngleMeasure.html">AngleMeasure</a>();</div>
+<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;    </div>
+<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;    <span class="comment">// Methods defined in the StelModule class</span></div>
+<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;    <span class="keyword">virtual</span> <span class="keywordtype">void</span> init();</div>
+<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;    <span class="keyword">virtual</span> <span class="keywordtype">void</span> update(<span class="keywordtype">double</span> deltaTime);</div>
+<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;    <span class="keyword">virtual</span> <span class="keywordtype">void</span> draw(<a class="codeRef" doxygen="/home/aw/devel/stellarium/trunk/builds/gcc/stellarium.tag:../../doc/head/" href="../../doc/head/classStelCore.html">StelCore</a>* core);</div>
+<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;    <span class="keyword">virtual</span> <span class="keywordtype">double</span> getCallOrder(StelModuleActionName actionName) <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;    <span class="keyword">virtual</span> <span class="keywordtype">void</span> handleKeys(<span class="keyword">class</span> QKeyEvent* event);</div>
+<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;    <span class="keyword">virtual</span> <span class="keywordtype">void</span> handleMouseClicks(<span class="keyword">class</span> QMouseEvent* event);</div>
+<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;    <span class="keyword">virtual</span> <span class="keywordtype">bool</span> handleMouseMoves(<span class="keywordtype">int</span> x, <span class="keywordtype">int</span> y, Qt::MouseButtons b);</div>
+<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;    <span class="keyword">virtual</span> <span class="keywordtype">bool</span> configureGui(<span class="keywordtype">bool</span> show=<span class="keyword">true</span>);</div>
+<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;    <span class="keywordtype">bool</span> isEnabled()<span class="keyword"> const </span>{<span class="keywordflow">return</span> flagShowAngleMeasure;}</div>
+<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;    <span class="keywordtype">bool</span> isDmsFormat()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> flagUseDmsFormat; }</div>
+<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;    <span class="keywordtype">bool</span> isPaDisplayed()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> flagShowPA; }</div>
+<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;    <span class="keywordtype">bool</span> isEquatorial()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> flagShowEquatorial; }</div>
+<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;    <span class="keywordtype">bool</span> isHorizontal()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> flagShowHorizontal; }</div>
+<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;    <span class="keywordtype">bool</span> isHorizontalStartSkylinked()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> flagShowHorizontalStartSkylinked; }</div>
+<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;    <span class="keywordtype">bool</span> isHorizontalEndSkylinked()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> flagShowHorizontalEndSkylinked; }</div>
+<div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;    <span class="keywordtype">bool</span> isHorPaDisplayed()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> flagShowHorizontalPA; }</div>
+<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;</div>
+<div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;</div>
+<div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classAngleMeasure.html#a3ad17b707947d267a4f8a26713f6a40e">restoreDefaultSettings</a>();</div>
+<div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160;</div>
+<div class="line"><a name="l00117"></a><span class="lineno">  117</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classAngleMeasure.html#a63f58750b21d2325d97a5948adf0872a">loadSettings</a>();</div>
+<div class="line"><a name="l00118"></a><span class="lineno">  118</span>&#160;</div>
+<div class="line"><a name="l00125"></a><span class="lineno">  125</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classAngleMeasure.html#afd74ac0108371f766c315b45a95bfe82">saveSettings</a>();</div>
+<div class="line"><a name="l00126"></a><span class="lineno">  126</span>&#160;</div>
+<div class="line"><a name="l00127"></a><span class="lineno">  127</span>&#160;<span class="keyword">public</span> slots:</div>
+<div class="line"><a name="l00128"></a><span class="lineno">  128</span>&#160;    <span class="keywordtype">void</span> enableAngleMeasure(<span class="keywordtype">bool</span> b);</div>
+<div class="line"><a name="l00129"></a><span class="lineno">  129</span>&#160;    <span class="keywordtype">void</span> useDmsFormat(<span class="keywordtype">bool</span> b);</div>
+<div class="line"><a name="l00130"></a><span class="lineno">  130</span>&#160;    <span class="keywordtype">void</span> showPositionAngle(<span class="keywordtype">bool</span> b);</div>
+<div class="line"><a name="l00131"></a><span class="lineno">  131</span>&#160;    <span class="keywordtype">void</span> showPositionAngleHor(<span class="keywordtype">bool</span> b);</div>
+<div class="line"><a name="l00132"></a><span class="lineno">  132</span>&#160;    <span class="keywordtype">void</span> showEquatorial(<span class="keywordtype">bool</span> b);</div>
+<div class="line"><a name="l00133"></a><span class="lineno">  133</span>&#160;    <span class="keywordtype">void</span> showHorizontal(<span class="keywordtype">bool</span> b);</div>
+<div class="line"><a name="l00134"></a><span class="lineno">  134</span>&#160;    <span class="keywordtype">void</span> showHorizontalStartSkylinked(<span class="keywordtype">bool</span> b);</div>
+<div class="line"><a name="l00135"></a><span class="lineno">  135</span>&#160;    <span class="keywordtype">void</span> showHorizontalEndSkylinked(<span class="keywordtype">bool</span> b);</div>
+<div class="line"><a name="l00136"></a><span class="lineno">  136</span>&#160;</div>
+<div class="line"><a name="l00137"></a><span class="lineno">  137</span>&#160;<span class="keyword">private</span> slots:</div>
+<div class="line"><a name="l00138"></a><span class="lineno">  138</span>&#160;    <span class="keywordtype">void</span> updateMessageText();</div>
+<div class="line"><a name="l00139"></a><span class="lineno">  139</span>&#160;    <span class="keywordtype">void</span> clearMessage();</div>
+<div class="line"><a name="l00140"></a><span class="lineno">  140</span>&#160;</div>
+<div class="line"><a name="l00141"></a><span class="lineno">  141</span>&#160;<span class="keyword">private</span>:</div>
+<div class="line"><a name="l00142"></a><span class="lineno">  142</span>&#160;    QFont font;</div>
+<div class="line"><a name="l00143"></a><span class="lineno">  143</span>&#160;    <span class="keywordtype">bool</span> flagShowAngleMeasure;</div>
+<div class="line"><a name="l00144"></a><span class="lineno">  144</span>&#160;    <span class="keywordtype">bool</span> withDecimalDegree;</div>
+<div class="line"><a name="l00145"></a><span class="lineno">  145</span>&#160;    <a class="codeRef" doxygen="/home/aw/devel/stellarium/trunk/builds/gcc/stellarium.tag:../../doc/head/" href="../../doc/head/classLinearFader.html">LinearFader</a> lineVisible;</div>
+<div class="line"><a name="l00146"></a><span class="lineno">  146</span>&#160;    <a class="codeRef" doxygen="/home/aw/devel/stellarium/trunk/builds/gcc/stellarium.tag:../../doc/head/" href="../../doc/head/classLinearFader.html">LinearFader</a> messageFader;</div>
+<div class="line"><a name="l00147"></a><span class="lineno">  147</span>&#160;    QTimer* messageTimer;</div>
+<div class="line"><a name="l00148"></a><span class="lineno">  148</span>&#160;    QString messageEnabled;</div>
+<div class="line"><a name="l00149"></a><span class="lineno">  149</span>&#160;    QString messageLeftButton;</div>
+<div class="line"><a name="l00150"></a><span class="lineno">  150</span>&#160;    QString messageRightButton;</div>
+<div class="line"><a name="l00151"></a><span class="lineno">  151</span>&#160;    QString messagePA;</div>
+<div class="line"><a name="l00152"></a><span class="lineno">  152</span>&#160;    <span class="keywordtype">bool</span> dragging;</div>
+<div class="line"><a name="l00153"></a><span class="lineno">  153</span>&#160;    Vec3d startPoint;</div>
+<div class="line"><a name="l00154"></a><span class="lineno">  154</span>&#160;    Vec3d endPoint;</div>
+<div class="line"><a name="l00155"></a><span class="lineno">  155</span>&#160;    Vec3d perp1StartPoint;</div>
+<div class="line"><a name="l00156"></a><span class="lineno">  156</span>&#160;    Vec3d perp1EndPoint;</div>
+<div class="line"><a name="l00157"></a><span class="lineno">  157</span>&#160;    Vec3d perp2StartPoint;</div>
+<div class="line"><a name="l00158"></a><span class="lineno">  158</span>&#160;    Vec3d perp2EndPoint;</div>
+<div class="line"><a name="l00159"></a><span class="lineno">  159</span>&#160;    Vec3f textColor;</div>
+<div class="line"><a name="l00160"></a><span class="lineno">  160</span>&#160;    Vec3f lineColor;</div>
+<div class="line"><a name="l00161"></a><span class="lineno">  161</span>&#160;    <span class="keywordtype">double</span> angle;</div>
+<div class="line"><a name="l00162"></a><span class="lineno">  162</span>&#160;    <span class="keywordtype">bool</span> flagUseDmsFormat;</div>
+<div class="line"><a name="l00163"></a><span class="lineno">  163</span>&#160;    <span class="keywordtype">bool</span> flagShowPA;</div>
+<div class="line"><a name="l00164"></a><span class="lineno">  164</span>&#160;    <span class="keywordtype">bool</span> flagShowEquatorial;</div>
+<div class="line"><a name="l00165"></a><span class="lineno">  165</span>&#160;    <span class="keywordtype">bool</span> flagShowHorizontal;</div>
+<div class="line"><a name="l00166"></a><span class="lineno">  166</span>&#160;    <span class="keywordtype">bool</span> flagShowHorizontalPA;</div>
+<div class="line"><a name="l00167"></a><span class="lineno">  167</span>&#160;    <span class="keywordtype">bool</span> flagShowHorizontalStartSkylinked;</div>
+<div class="line"><a name="l00168"></a><span class="lineno">  168</span>&#160;    <span class="keywordtype">bool</span> flagShowHorizontalEndSkylinked;</div>
+<div class="line"><a name="l00169"></a><span class="lineno">  169</span>&#160;    Vec3f horTextColor;</div>
+<div class="line"><a name="l00170"></a><span class="lineno">  170</span>&#160;    Vec3f horLineColor;</div>
+<div class="line"><a name="l00171"></a><span class="lineno">  171</span>&#160;    Vec3d startPointHor;</div>
+<div class="line"><a name="l00172"></a><span class="lineno">  172</span>&#160;    Vec3d endPointHor;</div>
+<div class="line"><a name="l00173"></a><span class="lineno">  173</span>&#160;    Vec3d perp1StartPointHor;</div>
+<div class="line"><a name="l00174"></a><span class="lineno">  174</span>&#160;    Vec3d perp1EndPointHor;</div>
+<div class="line"><a name="l00175"></a><span class="lineno">  175</span>&#160;    Vec3d perp2StartPointHor;</div>
+<div class="line"><a name="l00176"></a><span class="lineno">  176</span>&#160;    Vec3d perp2EndPointHor;</div>
+<div class="line"><a name="l00177"></a><span class="lineno">  177</span>&#160;    <span class="keywordtype">double</span> angleHor;</div>
+<div class="line"><a name="l00178"></a><span class="lineno">  178</span>&#160;</div>
 <div class="line"><a name="l00179"></a><span class="lineno">  179</span>&#160;</div>
-<div class="line"><a name="l00180"></a><span class="lineno">  180</span>&#160;    <span class="keywordtype">void</span> calculateEnds();</div>
-<div class="line"><a name="l00181"></a><span class="lineno">  181</span>&#160;    <span class="keywordtype">void</span> calculateEndsOneLine(<span class="keyword">const</span> Vec3d start, <span class="keyword">const</span> Vec3d end, Vec3d &amp;perp1Start, Vec3d &amp;perp1End, Vec3d &amp;perp2Start, Vec3d &amp;perp2End, <span class="keywordtype">double</span> &amp;angle);</div>
-<div class="line"><a name="l00182"></a><span class="lineno">  182</span>&#160;    QString calculateAngle(<span class="keywordtype">bool</span> horizontal=<span class="keyword">false</span>) <span class="keyword">const</span>;</div>
-<div class="line"><a name="l00183"></a><span class="lineno">  183</span>&#160;    QString calculatePositionAngle(<span class="keyword">const</span> Vec3d p1, <span class="keyword">const</span> Vec3d p2) <span class="keyword">const</span>;</div>
-<div class="line"><a name="l00184"></a><span class="lineno">  184</span>&#160;    <span class="keywordtype">void</span> drawOne(<a class="codeRef" doxygen="/home/aw/devel/stellarium/trunk/builds/gcc/stellarium.tag:../../doc/head/" href="../../doc/head/classStelCore.html">StelCore</a> *core, <span class="keyword">const</span> StelCore::FrameType frameType, <span class="keyword">const</span> StelCore::RefractionMode refractionMode, <span class="keyword">const</span> Vec3f txtColor, <span class="keyword">const</span> Vec3f lineColor);</div>
-<div class="line"><a name="l00185"></a><span class="lineno">  185</span>&#160;</div>
-<div class="line"><a name="l00186"></a><span class="lineno">  186</span>&#160;    QSettings* conf;</div>
+<div class="line"><a name="l00180"></a><span class="lineno">  180</span>&#160;    <a class="codeRef" doxygen="/home/aw/devel/stellarium/trunk/builds/gcc/stellarium.tag:../../doc/head/" href="../../doc/head/classStelButton.html">StelButton</a>* toolbarButton;</div>
+<div class="line"><a name="l00181"></a><span class="lineno">  181</span>&#160;</div>
+<div class="line"><a name="l00182"></a><span class="lineno">  182</span>&#160;    <span class="keywordtype">void</span> calculateEnds();</div>
+<div class="line"><a name="l00183"></a><span class="lineno">  183</span>&#160;    <span class="keywordtype">void</span> calculateEndsOneLine(<span class="keyword">const</span> Vec3d start, <span class="keyword">const</span> Vec3d end, Vec3d &amp;perp1Start, Vec3d &amp;perp1End, Vec3d &amp;perp2Start, Vec3d &amp;perp2End, <span class="keywordtype">double</span> &amp;angle);</div>
+<div class="line"><a name="l00184"></a><span class="lineno">  184</span>&#160;    QString calculateAngle(<span class="keywordtype">bool</span> horizontal=<span class="keyword">false</span>) <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00185"></a><span class="lineno">  185</span>&#160;    QString calculatePositionAngle(<span class="keyword">const</span> Vec3d p1, <span class="keyword">const</span> Vec3d p2) <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00186"></a><span class="lineno">  186</span>&#160;    <span class="keywordtype">void</span> drawOne(<a class="codeRef" doxygen="/home/aw/devel/stellarium/trunk/builds/gcc/stellarium.tag:../../doc/head/" href="../../doc/head/classStelCore.html">StelCore</a> *core, <span class="keyword">const</span> StelCore::FrameType frameType, <span class="keyword">const</span> StelCore::RefractionMode refractionMode, <span class="keyword">const</span> Vec3f txtColor, <span class="keyword">const</span> Vec3f lineColor);</div>
 <div class="line"><a name="l00187"></a><span class="lineno">  187</span>&#160;</div>
-<div class="line"><a name="l00188"></a><span class="lineno">  188</span>&#160;    <span class="comment">// GUI</span></div>
-<div class="line"><a name="l00189"></a><span class="lineno">  189</span>&#160;    <a class="codeRef" doxygen="/home/aw/devel/stellarium/trunk/builds/gcc/stellariumPlugins.tag:../../doc-plugins/head" href="../../doc-plugins/head/classAngleMeasureDialog.html">AngleMeasureDialog</a>* configDialog;</div>
-<div class="line"><a name="l00190"></a><span class="lineno">  190</span>&#160;};</div>
-<div class="line"><a name="l00191"></a><span class="lineno">  191</span>&#160;</div>
-<div class="line"><a name="l00192"></a><span class="lineno">  192</span>&#160;</div>
+<div class="line"><a name="l00188"></a><span class="lineno">  188</span>&#160;    QSettings* conf;</div>
+<div class="line"><a name="l00189"></a><span class="lineno">  189</span>&#160;</div>
+<div class="line"><a name="l00190"></a><span class="lineno">  190</span>&#160;    <span class="comment">// GUI</span></div>
+<div class="line"><a name="l00191"></a><span class="lineno">  191</span>&#160;    <a class="code" href="classAngleMeasureDialog.html">AngleMeasureDialog</a>* configDialog;</div>
+<div class="line"><a name="l00192"></a><span class="lineno">  192</span>&#160;};</div>
 <div class="line"><a name="l00193"></a><span class="lineno">  193</span>&#160;</div>
-<div class="line"><a name="l00194"></a><span class="lineno">  194</span>&#160;<span class="preprocessor">#include &lt;QObject&gt;</span></div>
-<div class="line"><a name="l00195"></a><span class="lineno">  195</span>&#160;<span class="preprocessor">#include &quot;StelPluginInterface.hpp&quot;</span></div>
-<div class="line"><a name="l00196"></a><span class="lineno">  196</span>&#160;</div>
-<div class="line"><a name="l00198"></a><span class="lineno">  198</span>&#160;<span class="keyword">class </span><a class="codeRef" doxygen="/home/aw/devel/stellarium/trunk/builds/gcc/stellariumPlugins.tag:../../doc-plugins/head" href="../../doc-plugins/head/classAngleMeasureStelPluginInterface.html">AngleMeasureStelPluginInterface</a> : <span class="keyword">public</span> QObject, <span class="keyword">public</span> <a class="codeRef" doxygen="/home/aw/devel/stellarium/trunk/builds/gcc/stellarium.tag:../../doc/head/" href="../../doc/head/classStelPluginInterface.html">StelPluginInterface</a></div>
-<div class="line"><a name="l00199"></a><span class="lineno">  199</span>&#160;{</div>
-<div class="line"><a name="l00200"></a><span class="lineno">  200</span>&#160;    Q_OBJECT</div>
-<div class="line"><a name="l00201"></a><span class="lineno">  201</span>&#160;    Q_PLUGIN_METADATA(IID StelPluginInterface_iid)</div>
-<div class="line"><a name="l00202"></a><span class="lineno">  202</span>&#160;    Q_INTERFACES(<a class="codeRef" doxygen="/home/aw/devel/stellarium/trunk/builds/gcc/stellarium.tag:../../doc/head/" href="../../doc/head/classStelPluginInterface.html">StelPluginInterface</a>)</div>
-<div class="line"><a name="l00203"></a><span class="lineno">  203</span>&#160;public:</div>
-<div class="line"><a name="l00204"></a><span class="lineno">  204</span>&#160;    virtual <a class="codeRef" doxygen="/home/aw/devel/stellarium/trunk/builds/gcc/stellarium.tag:../../doc/head/" href="../../doc/head/classStelModule.html">StelModule</a>* <a class="codeRef" doxygen="/home/aw/devel/stellarium/trunk/builds/gcc/stellarium.tag:../../doc/head/" href="../../doc/head/classStelPluginInterface.html#afa2dc49ee2c01039a28e1764f334330c">getStelModule</a>() const;</div>
-<div class="line"><a name="l00205"></a><span class="lineno">  205</span>&#160;    virtual <a class="codeRef" doxygen="/home/aw/devel/stellarium/trunk/builds/gcc/stellarium.tag:../../doc/head/" href="../../doc/head/structStelPluginInfo.html">StelPluginInfo</a> getPluginInfo() const;</div>
-<div class="line"><a name="l00206"></a><span class="lineno">  206</span>&#160;};</div>
-<div class="line"><a name="l00207"></a><span class="lineno">  207</span>&#160;</div>
-<div class="line"><a name="l00208"></a><span class="lineno">  208</span>&#160;<span class="preprocessor">#endif </span><span class="comment">/*ANGLEMEASURE_HPP_*/</span><span class="preprocessor"></span></div>
+<div class="line"><a name="l00194"></a><span class="lineno">  194</span>&#160;</div>
+<div class="line"><a name="l00195"></a><span class="lineno">  195</span>&#160;</div>
+<div class="line"><a name="l00196"></a><span class="lineno">  196</span>&#160;<span class="preprocessor">#include &lt;QObject&gt;</span></div>
+<div class="line"><a name="l00197"></a><span class="lineno">  197</span>&#160;<span class="preprocessor">#include &quot;StelPluginInterface.hpp&quot;</span></div>
+<div class="line"><a name="l00198"></a><span class="lineno">  198</span>&#160;</div>
+<div class="line"><a name="l00200"></a><span class="lineno"><a class="line" href="classAngleMeasureStelPluginInterface.html">  200</a></span>&#160;<span class="keyword">class </span><a class="code" href="classAngleMeasureStelPluginInterface.html">AngleMeasureStelPluginInterface</a> : <span class="keyword">public</span> QObject, <span class="keyword">public</span> <a class="codeRef" doxygen="/home/aw/devel/stellarium/trunk/builds/gcc/stellarium.tag:../../doc/head/" href="../../doc/head/classStelPluginInterface.html">StelPluginInterface</a></div>
+<div class="line"><a name="l00201"></a><span class="lineno">  201</span>&#160;{</div>
+<div class="line"><a name="l00202"></a><span class="lineno">  202</span>&#160;    Q_OBJECT</div>
+<div class="line"><a name="l00203"></a><span class="lineno">  203</span>&#160;    Q_PLUGIN_METADATA(IID StelPluginInterface_iid)</div>
+<div class="line"><a name="l00204"></a><span class="lineno">  204</span>&#160;    Q_INTERFACES(<a class="codeRef" doxygen="/home/aw/devel/stellarium/trunk/builds/gcc/stellarium.tag:../../doc/head/" href="../../doc/head/classStelPluginInterface.html">StelPluginInterface</a>)</div>
+<div class="line"><a name="l00205"></a><span class="lineno">  205</span>&#160;<span class="keyword">public</span>:</div>
+<div class="line"><a name="l00206"></a><span class="lineno">  206</span>&#160;    <span class="keyword">virtual</span> <a class="codeRef" doxygen="/home/aw/devel/stellarium/trunk/builds/gcc/stellarium.tag:../../doc/head/" href="../../doc/head/classStelModule.html">StelModule</a>* <a class="codeRef" doxygen="/home/aw/devel/stellarium/trunk/builds/gcc/stellarium.tag:../../doc/head/" href="../../doc/head/classStelPluginInterface.html#afa2dc49ee2c01039a28e1764f334330c">getStelModule</a>() <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00207"></a><span class="lineno">  207</span>&#160;    <span class="keyword">virtual</span> <a class="codeRef" doxygen="/home/aw/devel/stellarium/trunk/builds/gcc/stellarium.tag:../../doc/head/" href="../../doc/head/structStelPluginInfo.html">StelPluginInfo</a> <a class="codeRef" doxygen="/home/aw/devel/stellarium/trunk/builds/gcc/stellarium.tag:../../doc/head/" href="../../doc/head/classStelPluginInterface.html#a1708440c0e5754bfaecbd1b2bbde8afa">getPluginInfo</a>() <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00208"></a><span class="lineno">  208</span>&#160;};</div>
 <div class="line"><a name="l00209"></a><span class="lineno">  209</span>&#160;</div>
+<div class="line"><a name="l00210"></a><span class="lineno">  210</span>&#160;<span class="preprocessor">#endif </span><span class="comment">/*ANGLEMEASURE_HPP_*/</span><span class="preprocessor"></span></div>
+<div class="line"><a name="l00211"></a><span class="lineno">  211</span>&#160;</div>
 <div class="ttc" id="classStelPluginInterface_html"><div class="ttname"><a href="../../doc/head/classStelPluginInterface.html">StelPluginInterface</a></div></div>
 <div class="ttc" id="classLinearFader_html"><div class="ttname"><a href="../../doc/head/classLinearFader.html">LinearFader</a></div></div>
-<div class="ttc" id="classAngleMeasure_html"><div class="ttname"><a href="../../doc-plugins/head/classAngleMeasure.html">AngleMeasure</a></div><div class="ttdoc">Main class of the Angle Measure plug-in. </div><div class="ttdef"><b>Definition:</b> <a href="AngleMeasure_8hpp_source.html#l00068">AngleMeasure.hpp:68</a></div></div>
+<div class="ttc" id="classAngleMeasure_html"><div class="ttname"><a href="classAngleMeasure.html">AngleMeasure</a></div><div class="ttdoc">Main class of the Angle Measure plug-in. </div><div class="ttdef"><b>Definition:</b> <a href="AngleMeasure_8hpp_source.html#l00070">AngleMeasure.hpp:70</a></div></div>
 <div class="ttc" id="classStelCore_html"><div class="ttname"><a href="../../doc/head/classStelCore.html">StelCore</a></div></div>
-<div class="ttc" id="classAngleMeasureStelPluginInterface_html"><div class="ttname"><a href="../../doc-plugins/head/classAngleMeasureStelPluginInterface.html">AngleMeasureStelPluginInterface</a></div><div class="ttdoc">This class is used by Qt to manage a plug-in interface. </div><div class="ttdef"><b>Definition:</b> <a href="AngleMeasure_8hpp_source.html#l00198">AngleMeasure.hpp:198</a></div></div>
-<div class="ttc" id="classAngleMeasure_html_a3ad17b707947d267a4f8a26713f6a40e"><div class="ttname"><a href="../../doc-plugins/head/classAngleMeasure.html#a3ad17b707947d267a4f8a26713f6a40e">AngleMeasure::restoreDefaultSettings</a></div><div class="ttdeci">void restoreDefaultSettings()</div></div>
-<div class="ttc" id="classAngleMeasure_html_afd74ac0108371f766c315b45a95bfe82"><div class="ttname"><a href="../../doc-plugins/head/classAngleMeasure.html#afd74ac0108371f766c315b45a95bfe82">AngleMeasure::saveSettings</a></div><div class="ttdeci">void saveSettings()</div></div>
+<div class="ttc" id="classAngleMeasureStelPluginInterface_html"><div class="ttname"><a href="classAngleMeasureStelPluginInterface.html">AngleMeasureStelPluginInterface</a></div><div class="ttdoc">This class is used by Qt to manage a plug-in interface. </div><div class="ttdef"><b>Definition:</b> <a href="AngleMeasure_8hpp_source.html#l00200">AngleMeasure.hpp:200</a></div></div>
+<div class="ttc" id="classStelPluginInterface_html_a1708440c0e5754bfaecbd1b2bbde8afa"><div class="ttname"><a href="../../doc/head/classStelPluginInterface.html#a1708440c0e5754bfaecbd1b2bbde8afa">StelPluginInterface::getPluginInfo</a></div><div class="ttdeci">virtual StelPluginInfo getPluginInfo() const =0</div></div>
+<div class="ttc" id="classAngleMeasure_html_a3ad17b707947d267a4f8a26713f6a40e"><div class="ttname"><a href="classAngleMeasure.html#a3ad17b707947d267a4f8a26713f6a40e">AngleMeasure::restoreDefaultSettings</a></div><div class="ttdeci">void restoreDefaultSettings()</div><div class="ttdoc">Restore the plug-in&#39;s settings to the default state. </div></div>
+<div class="ttc" id="classAngleMeasure_html_afd74ac0108371f766c315b45a95bfe82"><div class="ttname"><a href="classAngleMeasure.html#afd74ac0108371f766c315b45a95bfe82">AngleMeasure::saveSettings</a></div><div class="ttdeci">void saveSettings()</div><div class="ttdoc">Save the plug-in&#39;s settings to the configuration file. </div></div>
 <div class="ttc" id="classStelButton_html"><div class="ttname"><a href="../../doc/head/classStelButton.html">StelButton</a></div></div>
 <div class="ttc" id="classStelPluginInterface_html_afa2dc49ee2c01039a28e1764f334330c"><div class="ttname"><a href="../../doc/head/classStelPluginInterface.html#afa2dc49ee2c01039a28e1764f334330c">StelPluginInterface::getStelModule</a></div><div class="ttdeci">virtual class StelModule * getStelModule() const =0</div></div>
-<div class="ttc" id="classAngleMeasure_html_a63f58750b21d2325d97a5948adf0872a"><div class="ttname"><a href="../../doc-plugins/head/classAngleMeasure.html#a63f58750b21d2325d97a5948adf0872a">AngleMeasure::loadSettings</a></div><div class="ttdeci">void loadSettings()</div></div>
-<div class="ttc" id="classAngleMeasureDialog_html"><div class="ttname"><a href="../../doc-plugins/head/classAngleMeasureDialog.html">AngleMeasureDialog</a></div><div class="ttdoc">Main window of the Angle Measure plug-in. </div><div class="ttdef"><b>Definition:</b> <a href="AngleMeasureDialog_8hpp_source.html#l00034">AngleMeasureDialog.hpp:34</a></div></div>
+<div class="ttc" id="classAngleMeasure_html_a63f58750b21d2325d97a5948adf0872a"><div class="ttname"><a href="classAngleMeasure.html#a63f58750b21d2325d97a5948adf0872a">AngleMeasure::loadSettings</a></div><div class="ttdeci">void loadSettings()</div><div class="ttdoc">Load the plug-in&#39;s settings from the configuration file. </div></div>
+<div class="ttc" id="classAngleMeasureDialog_html"><div class="ttname"><a href="classAngleMeasureDialog.html">AngleMeasureDialog</a></div><div class="ttdoc">Main window of the Angle Measure plug-in. </div><div class="ttdef"><b>Definition:</b> <a href="AngleMeasureDialog_8hpp_source.html#l00034">AngleMeasureDialog.hpp:34</a></div></div>
 <div class="ttc" id="classStelModule_html"><div class="ttname"><a href="../../doc/head/classStelModule.html">StelModule</a></div></div>
 <div class="ttc" id="structStelPluginInfo_html"><div class="ttname"><a href="../../doc/head/structStelPluginInfo.html">StelPluginInfo</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Tue Jun 9 2015 02:11:02 for Stellarium by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Fri Oct 2 2015 18:38:34 for Stellarium by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.8
 </small></address>

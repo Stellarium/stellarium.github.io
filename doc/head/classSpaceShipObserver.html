@@ -89,9 +89,9 @@ virtual const QSharedPointer<br class="typebreak" />
 <tr class="memitem:a52d08a92eec2255990f875008d8b799b inherit pub_methods_classStelObserver"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classStelObserver.html#a52d08a92eec2255990f875008d8b799b">getDistanceFromCenter</a> (void) const </td></tr>
 <tr class="memdesc:a52d08a92eec2255990f875008d8b799b inherit pub_methods_classStelObserver"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the distance between observer and home planet center in AU.  <a href="#a52d08a92eec2255990f875008d8b799b">More...</a><br /></td></tr>
 <tr class="separator:a52d08a92eec2255990f875008d8b799b inherit pub_methods_classStelObserver"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a1b1df26f7c72f9360240d327e8bc1954 inherit pub_methods_classStelObserver"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a1b1df26f7c72f9360240d327e8bc1954"></a>
-<a class="el" href="singletonMatrix4.html">Mat4d</a>&#160;</td><td class="memItemRight" valign="bottom"><b>getRotAltAzToEquatorial</b> (double jd) const </td></tr>
-<tr class="separator:a1b1df26f7c72f9360240d327e8bc1954 inherit pub_methods_classStelObserver"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6b692d36c063ef6c489f4270803d35a3 inherit pub_methods_classStelObserver"><td class="memItemLeft" align="right" valign="top"><a class="el" href="singletonMatrix4.html">Mat4d</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classStelObserver.html#a6b692d36c063ef6c489f4270803d35a3">getRotAltAzToEquatorial</a> (double JD, double JDE) const </td></tr>
+<tr class="memdesc:a6b692d36c063ef6c489f4270803d35a3 inherit pub_methods_classStelObserver"><td class="mdescLeft">&#160;</td><td class="mdescRight">returns rotation matrix for conversion of alt-azimuthal to equatorial coordinates For Earth we need JD(UT), for other planets JDE! To be general, just have both in here!  <a href="#a6b692d36c063ef6c489f4270803d35a3">More...</a><br /></td></tr>
+<tr class="separator:a6b692d36c063ef6c489f4270803d35a3 inherit pub_methods_classStelObserver"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a821cc85479159baacc122cce99852d65 inherit pub_methods_classStelObserver"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a821cc85479159baacc122cce99852d65"></a>
 <a class="el" href="singletonMatrix4.html">Mat4d</a>&#160;</td><td class="memItemRight" valign="bottom"><b>getRotEquatorialToVsop87</b> (void) const </td></tr>
 <tr class="separator:a821cc85479159baacc122cce99852d65 inherit pub_methods_classStelObserver"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -112,7 +112,7 @@ QSharedPointer&lt; <a class="el" href="classPlanet.html">Planet</a> &gt;&#160;</
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>An observer which moves from from one position to another one and/or from one planet to another one. </p>
 
-<p>Definition at line <a class="el" href="StelObserver_8hpp_source.html#l00078">78</a> of file <a class="el" href="StelObserver_8hpp_source.html">StelObserver.hpp</a>.</p>
+<p>Definition at line <a class="el" href="StelObserver_8hpp_source.html#l00081">81</a> of file <a class="el" href="StelObserver_8hpp_source.html">StelObserver.hpp</a>.</p>
 </div><h2 class="groupheader">Member Function Documentation</h2>
 <a class="anchor" id="abaa59b95f4e76e61265fa4a32a6cc353"></a>
 <div class="memitem">
@@ -139,7 +139,7 @@ QSharedPointer&lt; <a class="el" href="classPlanet.html">Planet</a> &gt;&#160;</
 
 <p>Reimplemented from <a class="el" href="classStelObserver.html#ad46a5d519765e2938f2b20db07af6ac4">StelObserver</a>.</p>
 
-<p>Definition at line <a class="el" href="StelObserver_8hpp_source.html#l00089">89</a> of file <a class="el" href="StelObserver_8hpp_source.html">StelObserver.hpp</a>.</p>
+<p>Definition at line <a class="el" href="StelObserver_8hpp_source.html#l00092">92</a> of file <a class="el" href="StelObserver_8hpp_source.html">StelObserver.hpp</a>.</p>
 
 </div>
 </div>
@@ -168,7 +168,7 @@ QSharedPointer&lt; <a class="el" href="classPlanet.html">Planet</a> &gt;&#160;</
 
 <p>Reimplemented from <a class="el" href="classStelObserver.html#a03fb30cbea84cb46c37b9ee1b20d3b8d">StelObserver</a>.</p>
 
-<p>Definition at line <a class="el" href="StelObserver_8hpp_source.html#l00087">87</a> of file <a class="el" href="StelObserver_8hpp_source.html">StelObserver.hpp</a>.</p>
+<p>Definition at line <a class="el" href="StelObserver_8hpp_source.html#l00090">90</a> of file <a class="el" href="StelObserver_8hpp_source.html">StelObserver.hpp</a>.</p>
 
 </div>
 </div>
@@ -197,7 +197,7 @@ QSharedPointer&lt; <a class="el" href="classPlanet.html">Planet</a> &gt;&#160;</
 
 <p>Reimplemented from <a class="el" href="classStelObserver.html#a21ee9e7bec75a9953c18b896e6123493">StelObserver</a>.</p>
 
-<p>Definition at line <a class="el" href="StelObserver_8hpp_source.html#l00088">88</a> of file <a class="el" href="StelObserver_8hpp_source.html">StelObserver.hpp</a>.</p>
+<p>Definition at line <a class="el" href="StelObserver_8hpp_source.html#l00091">91</a> of file <a class="el" href="StelObserver_8hpp_source.html">StelObserver.hpp</a>.</p>
 
 </div>
 </div>
@@ -235,7 +235,7 @@ QSharedPointer&lt; <a class="el" href="classPlanet.html">Planet</a> &gt;&#160;</
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Tue Jun 9 2015 02:09:24 for Stellarium by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Fri Oct 2 2015 18:38:20 for Stellarium by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.8
 </small></address>

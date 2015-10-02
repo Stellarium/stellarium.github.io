@@ -64,6 +64,9 @@ Public Slots</h2></td></tr>
 <tr class="memitem:a87132c95c17c30ce43355da212017c9b"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classLabelMgr.html#a87132c95c17c30ce43355da212017c9b">labelObject</a> (const QString &amp;text, const QString &amp;objectName, bool visible=true, float fontSize=14, const QString &amp;fontColor=&quot;#999999&quot;, const QString &amp;side=&quot;E&quot;, double labelDistance=-1.0, const QString &amp;style=&quot;TextOnly&quot;)</td></tr>
 <tr class="memdesc:a87132c95c17c30ce43355da212017c9b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Create a label which is attached to a <a class="el" href="classStelObject.html" title="The base abstract class for sky objects used in Stellarium like Stars, Planets, Constellations etc...">StelObject</a>.  <a href="#a87132c95c17c30ce43355da212017c9b">More...</a><br /></td></tr>
 <tr class="separator:a87132c95c17c30ce43355da212017c9b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afd9c869cc05801a616f26958203936a4"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classLabelMgr.html#afd9c869cc05801a616f26958203936a4">labelHorizon</a> (const QString &amp;text, float az, float alt, bool visible=true, float fontSize=14, const QString &amp;fontColor=&quot;#999999&quot;)</td></tr>
+<tr class="memdesc:afd9c869cc05801a616f26958203936a4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Create a label in azimuthal coordinate system.  <a href="#afd9c869cc05801a616f26958203936a4">More...</a><br /></td></tr>
+<tr class="separator:afd9c869cc05801a616f26958203936a4"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a6673b1234e53699a7094c68b626d3be9"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classLabelMgr.html#a6673b1234e53699a7094c68b626d3be9">labelScreen</a> (const QString &amp;text, int x, int y, bool visible=true, float fontSize=14, const QString &amp;fontColor=&quot;#999999&quot;)</td></tr>
 <tr class="memdesc:a6673b1234e53699a7094c68b626d3be9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Create a label at fixed screen coordinates.  <a href="#a6673b1234e53699a7094c68b626d3be9">More...</a><br /></td></tr>
 <tr class="separator:a6673b1234e53699a7094c68b626d3be9"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -162,9 +165,9 @@ Additional Inherited Members</h2></td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Allows for creation of custom labels on objects or coordinates. </p>
-<p>Because this class is intended for use in scripting (although other uses are also fine), all label types and so on are specified by QString descriptions. TODO: when QT4.5 is out, change implementation to use QGraphicsTextItem. (QT4.5 should allow for opacity changes for fades, but it is not currently implemented. </p>
+<p>Because this class is intended for use in scripting (although other uses are also fine), all label types and so on are specified by QString descriptions. The labels are painted very late, i.e. also sky object labels will be written over the landscape. TODO: when QT4.5 is out, change implementation to use QGraphicsTextItem. (QT4.5 should allow for opacity changes for fades, but it is not currently implemented. </p>
 
-<p>Definition at line <a class="el" href="LabelMgr_8hpp_source.html#l00044">44</a> of file <a class="el" href="LabelMgr_8hpp_source.html">LabelMgr.hpp</a>.</p>
+<p>Definition at line <a class="el" href="LabelMgr_8hpp_source.html#l00046">46</a> of file <a class="el" href="LabelMgr_8hpp_source.html">LabelMgr.hpp</a>.</p>
 </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a class="anchor" id="a84d2232284a48b8f0ecd30a4345ff1c4"></a>
 <div class="memitem">
@@ -344,6 +347,77 @@ Additional Inherited Members</h2></td></tr>
 <p>Initialize the <a class="el" href="classLabelMgr.html" title="Allows for creation of custom labels on objects or coordinates. ">LabelMgr</a> object. </p>
 
 <p>Implements <a class="el" href="classStelModule.html#a32818e53cc8d640f15f84c38c454eab9">StelModule</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="afd9c869cc05801a616f26958203936a4"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int LabelMgr::labelHorizon </td>
+          <td>(</td>
+          <td class="paramtype">const QString &amp;&#160;</td>
+          <td class="paramname"><em>text</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float&#160;</td>
+          <td class="paramname"><em>az</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float&#160;</td>
+          <td class="paramname"><em>alt</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>visible</em> = <code>true</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float&#160;</td>
+          <td class="paramname"><em>fontSize</em> = <code>14</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const QString &amp;&#160;</td>
+          <td class="paramname"><em>fontColor</em> = <code>&quot;#999999&quot;</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">slot</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Create a label in azimuthal coordinate system. </p>
+<p>Can be used e.g. to show landscape features </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">text</td><td>the text to display </td></tr>
+    <tr><td class="paramname">az</td><td>azimuth, degrees </td></tr>
+    <tr><td class="paramname">alt</td><td>altitude, degrees </td></tr>
+    <tr><td class="paramname">visible</td><td>if true, the label starts displayed, else it starts hidden </td></tr>
+    <tr><td class="paramname">fontSize</td><td>size of the font to use </td></tr>
+    <tr><td class="paramname">fontColor</td><td>HTML-like color spec, e.g. "#ffff00" for yellow </td></tr>
+  </table>
+  </dd>
+</dl>
 
 </div>
 </div>
@@ -615,7 +689,7 @@ Additional Inherited Members</h2></td></tr>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Tue Jun 9 2015 02:09:24 for Stellarium by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Fri Oct 2 2015 18:38:19 for Stellarium by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.8
 </small></address>
