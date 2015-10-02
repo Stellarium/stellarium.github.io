@@ -82,10 +82,20 @@ ENGL_LIBRARIES} ${ICONV_LIBRARIES} ${INTL_LIBRARIES})</td><td class="lineno" val
       <tr><td class="lineno" valign="top"></td><td class="left">ADD_LIBRARY(MeteorShowers-static STATIC ${MeteorShowers_SRCS} ${MeteorShowe
 rs_MOC_SRCS} ${MeteorShowers_RES_CXX} ${MeteorShowersDialog_UIS_H})</td><td> </td><td class="right">ADD_LIBRARY(MeteorShowers-static STATIC ${MeteorShowers_SRCS} ${MeteorShowe
 rs_MOC_SRCS} ${MeteorShowers_RES_CXX} ${MeteorShowersDialog_UIS_H})</td><td class="lineno" valign="top"></td></tr>
+      <tr><td><a name="diff0003" /></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="lblock">QT5_USE_MODULES(MeteorShowers-static Core <span class="delete">Declarative Network</span>)</td><td> </td><td class="rblock">QT5_USE_MODULES(MeteorShowers-static Core <span class="insert">Network Widgets</span>)</td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="left">SET_TARGET_PROPERTIES(MeteorShowers-static PROPERTIES OUTPUT_NAME "MeteorSh
+owers")</td><td> </td><td class="right">SET_TARGET_PROPERTIES(MeteorShowers-static PROPERTIES OUTPUT_NAME "MeteorSh
+owers")</td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="left">TARGET_LINK_LIBRARIES(MeteorShowers-static ${extLinkerOption})</td><td> </td><td class="right">TARGET_LINK_LIBRARIES(MeteorShowers-static ${extLinkerOption})</td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="left">SET_TARGET_PROPERTIES(MeteorShowers-static PROPERTIES COMPILE_FLAGS "-DQT_S
+TATICPLUGIN")</td><td> </td><td class="right">SET_TARGET_PROPERTIES(MeteorShowers-static PROPERTIES COMPILE_FLAGS "-DQT_S
+TATICPLUGIN")</td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="left">ADD_DEPENDENCIES(AllStaticPlugins MeteorShowers-static)</td><td> </td><td class="right">ADD_DEPENDENCIES(AllStaticPlugins MeteorShowers-static)</td><td class="lineno" valign="top"></td></tr>
 
      <tr><td></td><td class="left"></td><td> </td><td class="right"></td><td></td></tr>
-     <tr bgcolor="gray"><th colspan="5" align="center"><a name="end">&nbsp;End of changes. 2 change blocks.&nbsp;</a></th></tr>
-     <tr class="stats"><td></td><th><i>5 lines changed or deleted</i></th><th><i> </i></th><th><i>11 lines changed or added</i></th><td></td></tr>
+     <tr bgcolor="gray"><th colspan="5" align="center"><a name="end">&nbsp;End of changes. 3 change blocks.&nbsp;</a></th></tr>
+     <tr class="stats"><td></td><th><i>6 lines changed or deleted</i></th><th><i> </i></th><th><i>12 lines changed or added</i></th><td></td></tr>
      <tr><td colspan="5" align="center" class="small"><br/>This html diff was produced by rfcdiff 1.41. The latest version is available from <a href="http://www.tools.ietf.org/tools/rfcdiff/" >http://tools.ietf.org/tools/rfcdiff/</a> </td></tr>
    </table>
    </body>

@@ -77,12 +77,21 @@
       <tr><td class="lineno" valign="top"></td><td class="left"></td><td> </td><td class="right"></td><td class="lineno" valign="top"></td></tr>
       <tr><td><a name="diff0004" /></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="lblock">Meteor::Meteor(const StelCore* core, <span class="delete">float v)</span></td><td> </td><td class="rblock">Meteor::Meteor(const StelCore* core, <span class="insert">const StelTextureSP&amp; bolideTexture)</span></td><td class="lineno" valign="top"></td></tr>
-      <tr><td class="lineno" valign="top"></td><td class="lblock">       : <span class="delete">m_distMultiplier(0.)</span></td><td> </td><td class="rblock">       : <span class="insert">m_core(core),</span></td><td class="lineno" valign="top"></td></tr>
-      <tr><td class="lineno" valign="top"></td><td class="lblock"><span class="delete">       ,</span> m_segments(10)</td><td> </td><td class="rblock"><span class="insert">         m_alive(false),</span></td><td class="lineno" valign="top"></td></tr>
-      <tr><td class="lineno" valign="top"></td><td class="lblock">{</td><td> </td><td class="rblock"><span class="insert">         m_bolideTexture(bolideTexture),</span></td><td class="lineno" valign="top"></td></tr>
-      <tr><td class="lineno" valign="top"></td><td class="lblock">       <span class="delete">qsrand (QDateTime::currentMSecsSinceEpoch());</span></td><td> </td><td class="rblock">         m_segments(10)</td><td class="lineno" valign="top"></td></tr>
-      <tr><td class="lineno" valign="top"></td><td class="lblock"><span class="delete">       // determine meteor velocity</span></td><td> </td><td class="rblock">{</td><td class="lineno" valign="top"></td></tr>
-      <tr><td class="lineno" valign="top"></td><td class="lblock"><span class="delete">       // abs range 11-72 km/s by default (see line 427 in StelApp.cpp)</span></td><td> </td><td class="rblock">       <span class="insert">qsrand(QDateTime::currentMSecsSinceEpoch());</span></td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="lblock">       : <span class="delete">m_distMultiplier(0.)</span></td><td> </td><td class="rblock">       : <span class="insert">m_core(core)</span></td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="lblock"></td><td> </td><td class="rblock"><span class="insert">       , m_alive(false)</span></td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="lblock"></td><td> </td><td class="rblock"><span class="insert">       , m_speed(72.)</span></td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="lblock"></td><td> </td><td class="rblock"><span class="insert">       , m_initialZ(1.)</span></td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="lblock"></td><td> </td><td class="rblock"><span class="insert">       , m_finalZ(1.)</span></td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="lblock"></td><td> </td><td class="rblock"><span class="insert">       , m_minDist(1.)</span></td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="lblock"></td><td> </td><td class="rblock"><span class="insert">       , m_absMag(.5)</span></td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="lblock"></td><td> </td><td class="rblock"><span class="insert">       , m_aptMag(.5)</span></td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="lblock"></td><td> </td><td class="rblock"><span class="insert">       , m_bolideTexture(bolideTexture)</span></td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="left">       , m_segments(10)</td><td> </td><td class="right">       , m_segments(10)</td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="left">{</td><td> </td><td class="right">{</td><td class="lineno" valign="top"></td></tr>
+      <tr><td><a name="diff0005" /></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="lblock">       <span class="delete">qsrand (QDateTime::currentMSecsSinceEpoch());</span></td><td> </td><td class="rblock">       <span class="insert">qsrand(QDateTime::currentMSecsSinceEpoch());</span></td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="lblock"><span class="delete">       // determine meteor velocity</span></td><td> </td><td class="rblock"></td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="lblock"><span class="delete">       // abs range 11-72 km/s by default (see line 427 in StelApp.cpp)</span></td><td> </td><td class="rblock"></td><td class="lineno" valign="top"></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="lblock"><span class="delete">       m_speed = 11+(float)qrand()/((float)RAND_MAX+1)*(v-11);</span></td><td> </td><td class="rblock"></td><td class="lineno" valign="top"></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="lblock"><span class="delete"></span></td><td> </td><td class="rblock"></td><td class="lineno" valign="top"></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="lblock"><span class="delete">       // view matrix of sporadic meteors model</span></td><td> </td><td class="rblock"></td><td class="lineno" valign="top"></td></tr>
@@ -104,132 +113,151 @@
       <tr><td class="lineno" valign="top"></td><td class="left"></td><td> </td><td class="right"></td><td class="lineno" valign="top"></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="left">Meteor::~Meteor()</td><td> </td><td class="right">Meteor::~Meteor()</td><td class="lineno" valign="top"></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="left">{</td><td> </td><td class="right">{</td><td class="lineno" valign="top"></td></tr>
-      <tr><td><a name="diff0005" /></td></tr>
+      <tr><td><a name="diff0006" /></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="lblock"></td><td> </td><td class="rblock"><span class="insert">       m_bolideTexture.clear();</span></td><td class="lineno" valign="top"></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="left">}</td><td> </td><td class="right">}</td><td class="lineno" valign="top"></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="left"></td><td> </td><td class="right"></td><td class="lineno" valign="top"></td></tr>
-      <tr><td><a name="diff0006" /></td></tr>
+      <tr><td><a name="diff0007" /></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="lblock"><span class="delete">// returns true if alive</span></td><td> </td><td class="rblock"><span class="insert">void Meteor::init(const float&amp; radiantAlpha,</span> const <span class="insert">float&amp; radiantDelta,</span></td><td class="lineno" valign="top"></td></tr>
-      <tr><td class="lineno" valign="top"></td><td class="lblock"><span class="delete">bool Meteor::initMeteorModel(const StelCore* core,</span> const <span class="delete">int segments, cons</span></td><td> </td><td class="rblock"><span class="insert">                 const float&amp; speed, const QList&lt;colorPair&gt; colors)</span></td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="lblock"><span class="delete">bool Meteor::initMeteorModel(const StelCore* core,</span> const <span class="delete">int segments, cons</span></td><td> </td><td class="rblock"><span class="insert">                 const float&amp; speed, const QList&lt;ColorPair&gt; colors)</span></td><td class="lineno" valign="top"></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="lblock"><span class="delete">t Mat4d viewMatrix, MeteorModel &amp;mm)</span></td><td> </td><td class="rblock"></td><td class="lineno" valign="top"></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="left">{</td><td> </td><td class="right">{</td><td class="lineno" valign="top"></td></tr>
-      <tr><td><a name="diff0007" /></td></tr>
-      <tr><td class="lineno" valign="top"></td><td class="lblock">       <span class="delete">float high_range</span> = <span class="delete">EARTH_RADIUS + HIGH_ALTITUDE;</span></td><td> </td><td class="rblock">       <span class="insert">// meteor velocity in km/s</span></td><td class="lineno" valign="top"></td></tr>
-      <tr><td class="lineno" valign="top"></td><td class="lblock"><span class="delete">       float low_range = EARTH_RADIUS + LOW_ALTITUDE;</span></td><td> </td><td class="rblock"><span class="insert">       m_speed</span> = <span class="insert">speed;</span></td><td class="lineno" valign="top"></td></tr>
-      <tr><td class="lineno" valign="top"></td><td class="left"></td><td> </td><td class="right"></td><td class="lineno" valign="top"></td></tr>
       <tr><td><a name="diff0008" /></td></tr>
-      <tr><td class="lineno" valign="top"></td><td class="lblock">       // find <span class="delete">observer position</span> in <span class="delete">meteor coordinate system</span></td><td> </td><td class="rblock">       // find <span class="insert">the radiant</span> in <span class="insert">horizontal coordinates</span></td><td class="lineno" valign="top"></td></tr>
-      <tr><td class="lineno" valign="top"></td><td class="lblock"><span class="delete">       mm.obs</span> = <span class="delete">core-&gt;altAzToJ2000(Vec3d(0,0,EARTH_RADIUS));</span></td><td> </td><td class="rblock"><span class="insert">       Vec3d radiantAltAz;</span></td><td class="lineno" valign="top"></td></tr>
-      <tr><td class="lineno" valign="top"></td><td class="lblock"><span class="delete">       mm.obs.transfo4d(viewMatrix.transpose());</span></td><td> </td><td class="rblock"><span class="insert">       StelUtils::spheToRect(radiantAlpha, radiantDelta, radiantAltAz);</span></td><td class="lineno" valign="top"></td></tr>
-      <tr><td class="lineno" valign="top"></td><td class="lblock"></td><td> </td><td class="rblock"><span class="insert">       radiantAltAz</span> = <span class="insert">m_core-&gt;j2000ToAltAz(radiantAltAz);</span></td><td class="lineno" valign="top"></td></tr>
-      <tr><td class="lineno" valign="top"></td><td class="lblock"></td><td> </td><td class="rblock"><span class="insert">       float radiantAlt, radiantAz;</span></td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="lblock">       float <span class="delete">high_range</span> = <span class="delete">EARTH_RADIUS + HIGH_ALTITUDE;</span></td><td> </td><td class="rblock">       <span class="insert">// meteor velocity in km/s</span></td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="lblock">       float <span class="delete">low_range</span> = <span class="delete">EARTH_RADIUS</span> + <span class="delete">LOW_ALTITUDE;</span></td><td> </td><td class="rblock"><span class="insert">       m_speed = speed;</span></td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="lblock"></td><td> </td><td class="rblock"><span class="insert"></span></td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="lblock"></td><td> </td><td class="rblock"><span class="insert">       // find the radiant in horizontal coordinates</span></td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="lblock"></td><td> </td><td class="rblock"><span class="insert">       Vec3d radiantAltAz;</span></td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="lblock"></td><td> </td><td class="rblock"><span class="insert">       StelUtils::spheToRect(radiantAlpha, radiantDelta, radiantAltAz);</span></td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="lblock"></td><td> </td><td class="rblock"><span class="insert">       radiantAltAz = m_core-&gt;j2000ToAltAz(radiantAltAz);</span></td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="lblock"></td><td> </td><td class="rblock">       float <span class="insert">radiantAlt, radiantAz;</span></td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="lblock"></td><td> </td><td class="rblock"><span class="insert">       // S is zero, E is 90 degrees (SDSS)</span></td><td class="lineno" valign="top"></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="lblock"></td><td> </td><td class="rblock"><span class="insert">       StelUtils::rectToSphe(&amp;radiantAz, &amp;radiantAlt, radiantAltAz);</span></td><td class="lineno" valign="top"></td></tr>
-      <tr><td class="lineno" valign="top"></td><td class="lblock"></td><td> </td><td class="rblock"><span class="insert">       // N is zero, E is 90 degrees</span></td><td class="lineno" valign="top"></td></tr>
-      <tr><td class="lineno" valign="top"></td><td class="lblock"></td><td> </td><td class="rblock"><span class="insert">       radiantAz = 3. * M_PI - radiantAz;</span></td><td class="lineno" valign="top"></td></tr>
-      <tr><td class="lineno" valign="top"></td><td class="lblock"></td><td> </td><td class="rblock"><span class="insert">       if (radiantAz &gt; M_PI*2)</span></td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="lblock"></td><td> </td><td class="rblock"><span class="insert"></span></td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="lblock"></td><td> </td><td class="rblock"><span class="insert">       // meteors won't be visible if radiant is below 0degrees</span></td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="lblock"></td><td> </td><td class="rblock"><span class="insert">       if (radiantAlt &lt; 0.f)</span></td><td class="lineno" valign="top"></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="lblock"></td><td> </td><td class="rblock"><span class="insert">       {</span></td><td class="lineno" valign="top"></td></tr>
-      <tr><td class="lineno" valign="top"></td><td class="lblock"></td><td> </td><td class="rblock"><span class="insert">               radiantAz -= M_PI*2;</span></td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="lblock"></td><td> </td><td class="rblock"><span class="insert">               return;</span></td><td class="lineno" valign="top"></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="lblock"></td><td> </td><td class="rblock"><span class="insert">       }</span></td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="lblock"></td><td> </td><td class="rblock"><span class="insert"></span></td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="lblock"></td><td> </td><td class="rblock"><span class="insert">       // define the radiant coordinate system</span></td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="lblock"></td><td> </td><td class="rblock"><span class="insert">       // rotation matrix to align z axis with radiant</span></td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="lblock"></td><td> </td><td class="rblock"><span class="insert">       m_matAltAzToRadiant</span> = <span class="insert">Mat4d::zrotation(radiantAz) * Mat4d::yrotation</span></td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="lblock"></td><td> </td><td class="rblock"><span class="insert">(M_PI_2 - radiantAlt);</span></td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="lblock"></td><td> </td><td class="rblock"><span class="insert"></span></td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="lblock"></td><td> </td><td class="rblock"><span class="insert">       // select a random initial meteor altitude in the horizontal system </span></td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="lblock"></td><td> </td><td class="rblock"><span class="insert">[MIN_ALTITUDE, MAX_ALTITUDE]</span></td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="lblock"></td><td> </td><td class="rblock">       float <span class="insert">initialAlt</span> = <span class="insert">MIN_ALTITUDE</span> + <span class="insert">(MAX_ALTITUDE - MIN_ALTITUDE) * ((</span></td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="lblock"></td><td> </td><td class="rblock"><span class="insert">float) qrand() / ((float) RAND_MAX + 1));</span></td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="lblock"></td><td> </td><td class="rblock"><span class="insert"></span></td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="lblock"></td><td> </td><td class="rblock"><span class="insert">       // calculates the max z-coordinate for the currrent radiant</span></td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="lblock"></td><td> </td><td class="rblock"><span class="insert">       float maxZ = meteorZ(M_PI_2 - radiantAlt, initialAlt);</span></td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="lblock"></td><td> </td><td class="rblock"><span class="insert"></span></td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="lblock"></td><td> </td><td class="rblock"><span class="insert">       // meteor trajectory</span></td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="lblock"></td><td> </td><td class="rblock"><span class="insert">       // select a random xy position in polar coordinates (radiant system)</span></td><td class="lineno" valign="top"></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="left"></td><td> </td><td class="right"></td><td class="lineno" valign="top"></td></tr>
       <tr><td><a name="diff0009" /></td></tr>
-      <tr><td class="lineno" valign="top"></td><td class="lblock">       // <span class="delete">select random trajectory using polar coordinates in XY plane, cen</span></td><td> </td><td class="rblock">       // <span class="insert">meteors won't be visible if radiant is below 0degrees</span></td><td class="lineno" valign="top"></td></tr>
-      <tr><td class="lineno" valign="top"></td><td class="lblock"><span class="delete">tered on observer</span></td><td> </td><td class="rblock"><span class="insert">       if (radiantAlt &lt; 0.f)</span></td><td class="lineno" valign="top"></td></tr>
-      <tr><td class="lineno" valign="top"></td><td class="lblock"><span class="delete">       mm.xydistance = (double)qrand() / ((double)RAND_MAX+1)*(VISIBLE_RADI</span></td><td> </td><td class="rblock"><span class="insert">       {</span></td><td class="lineno" valign="top"></td></tr>
-      <tr><td class="lineno" valign="top"></td><td class="lblock"><span class="delete">US);</span></td><td> </td><td class="rblock"><span class="insert">               return;</span></td><td class="lineno" valign="top"></td></tr>
-      <tr><td class="lineno" valign="top"></td><td class="lblock"><span class="delete">       float angle = (double)qrand() / ((double)RAND_MAX+1)*2*M_PI;</span></td><td> </td><td class="rblock"><span class="insert">       }</span></td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="lblock">       // <span class="delete">find observer position in meteor coordinate system</span></td><td> </td><td class="rblock">       <span class="insert">float xyDist = maxZ * ((double) qrand() / ((double) RAND_MAX + 1));</span> </td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="lblock"><span class="delete">       mm.obs</span> = <span class="delete">core-&gt;altAzToJ2000(Vec3d(0,0,EARTH_RADIUS));</span></td><td> </td><td class="rblock">// <span class="insert">[0, maxZ]</span></td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="lblock"><span class="delete">       mm.obs.transfo4d(viewMatrix.transpose());</span></td><td> </td><td class="rblock"><span class="insert">       float theta</span> = <span class="insert">2 * M_PI * ((double) qrand() / ((double) RAND_MAX + 1)</span></td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="lblock"></td><td> </td><td class="rblock"><span class="insert">); // [0, 2pi]</span></td><td class="lineno" valign="top"></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="left"></td><td> </td><td class="right"></td><td class="lineno" valign="top"></td></tr>
       <tr><td><a name="diff0010" /></td></tr>
-      <tr><td class="lineno" valign="top"></td><td class="lblock">       // <span class="delete">set meteor start x,y</span></td><td> </td><td class="rblock">       // <span class="insert">determine the rotation matrix to align z axis with radiant</span></td><td class="lineno" valign="top"></td></tr>
-      <tr><td class="lineno" valign="top"></td><td class="lblock"><span class="delete">       mm.position[0]</span> = <span class="delete">mm.posTrain[0] = mm.xydistance*cos(angle) + mm.obs[</span></td><td> </td><td class="rblock"><span class="insert">       m_matAltAzToRadiant</span> = <span class="insert">Mat4d::yrotation(M_PI_2 - radiantAlt) * Mat4d:</span></td><td class="lineno" valign="top"></td></tr>
-      <tr><td class="lineno" valign="top"></td><td class="lblock"><span class="delete">0];</span></td><td> </td><td class="rblock"><span class="insert">:zrotation(radiantAz);</span></td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="lblock">       // <span class="delete">select random trajectory using polar</span> coordinates <span class="delete">in XY plane, cen</span></td><td> </td><td class="rblock">       // <span class="insert">initial meteor</span> coordinates <span class="insert">(radiant system)</span></td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="lblock"><span class="delete">tered on observer</span></td><td> </td><td class="rblock"><span class="insert">       m_position[0]</span> = <span class="insert">xyDist * qCos(theta);</span></td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="lblock"><span class="delete">       mm.xydistance</span> = <span class="delete">(double)qrand() / ((double)RAND_MAX+1)*(VISIBLE_RADI</span></td><td> </td><td class="rblock"><span class="insert">       m_position[1]</span> = <span class="insert">xyDist * qSin(theta);</span></td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="lblock"><span class="delete">US);</span></td><td> </td><td class="rblock"><span class="insert">       m_position[2] = maxZ;</span></td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="lblock"><span class="delete">       float angle</span> = <span class="delete">(double)qrand() / ((double)RAND_MAX+1)*2*M_PI;</span></td><td> </td><td class="rblock"><span class="insert">       m_posTrain = m_position;</span></td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="left"></td><td> </td><td class="right"></td><td class="lineno" valign="top"></td></tr>
+      <tr><td><a name="diff0011" /></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="lblock">       // <span class="delete">set meteor start x,y</span></td><td> </td><td class="rblock">       // <span class="insert">store the initial z-component (radiant system)</span></td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="lblock"><span class="delete">       mm.position[0]</span> = <span class="delete">mm.posTrain[0] = mm.xydistance*cos(angle) + mm.obs[</span></td><td> </td><td class="rblock"><span class="insert">       m_initialZ</span> = <span class="insert">m_position[2];</span></td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="lblock"><span class="delete">0];</span></td><td> </td><td class="rblock"></td><td class="lineno" valign="top"></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="lblock"><span class="delete">       mm.position[1] = mm.posTrain[1] = mm.xydistance*sin(angle) + mm.obs[</span></td><td> </td><td class="rblock"></td><td class="lineno" valign="top"></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="lblock"><span class="delete">1];</span></td><td> </td><td class="rblock"></td><td class="lineno" valign="top"></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="left"></td><td> </td><td class="right"></td><td class="lineno" valign="top"></td></tr>
-      <tr><td><a name="diff0011" /></td></tr>
-      <tr><td class="lineno" valign="top"></td><td class="lblock">       // <span class="delete">D is distance from center of earth</span></td><td> </td><td class="rblock">       // <span class="insert">select a random initial meteor altitude [MIN_ALTITUDE, MAX_ALTITU</span></td><td class="lineno" valign="top"></td></tr>
-      <tr><td class="lineno" valign="top"></td><td class="lblock">       float <span class="delete">D</span> = <span class="delete">std::sqrt(mm.position[0]*mm.position[0]</span> + <span class="delete">mm.position[1]*m</span></td><td> </td><td class="rblock"><span class="insert">DE]</span></td><td class="lineno" valign="top"></td></tr>
-      <tr><td class="lineno" valign="top"></td><td class="lblock"><span class="delete">m.position[1]);</span></td><td> </td><td class="rblock">       float <span class="insert">initialAlt</span> = <span class="insert">MIN_ALTITUDE</span> + <span class="insert">(MAX_ALTITUDE - MIN_ALTITUDE) * ((</span></td><td class="lineno" valign="top"></td></tr>
-      <tr><td class="lineno" valign="top"></td><td class="lblock"></td><td> </td><td class="rblock"><span class="insert">float) qrand() / ((float) RAND_MAX + 1));</span></td><td class="lineno" valign="top"></td></tr>
-      <tr><td class="lineno" valign="top"></td><td class="left"></td><td> </td><td class="right"></td><td class="lineno" valign="top"></td></tr>
       <tr><td><a name="diff0012" /></td></tr>
-      <tr><td class="lineno" valign="top"></td><td class="lblock">       <span class="delete">if (D &gt; high_range)</span>     // <span class="delete">won't be visible, meteor still dead</span></td><td> </td><td class="rblock">       // <span class="insert">determine the initial distance from observer to radiant</span></td><td class="lineno" valign="top"></td></tr>
-      <tr><td class="lineno" valign="top"></td><td class="lblock"><span class="delete">       {</span></td><td> </td><td class="rblock"><span class="insert">       m_initialDist = meteorDistance(M_PI_2 - radiantAlt, initialAlt);</span></td><td class="lineno" valign="top"></td></tr>
-      <tr><td class="lineno" valign="top"></td><td class="lblock"><span class="delete">               return false;</span></td><td> </td><td class="rblock"></td><td class="lineno" valign="top"></td></tr>
-      <tr><td class="lineno" valign="top"></td><td class="lblock"><span class="delete">       }</span></td><td> </td><td class="rblock"></td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="lblock">       // <span class="delete">D is distance from center of earth</span></td><td> </td><td class="rblock">       // <span class="insert">find the initial meteor coordinates in the horizontal system</span></td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="lblock"><span class="delete">       float D</span> = <span class="delete">std::sqrt(mm.position[0]*mm.position[0] + mm.position[1]*m</span></td><td> </td><td class="rblock"><span class="insert">       Vec3d positionAltAz</span> = <span class="insert">m_position;</span></td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="lblock"><span class="delete">m.position[1]);</span></td><td> </td><td class="rblock"><span class="insert">       positionAltAz.transfo4d(m_matAltAzToRadiant);</span></td><td class="lineno" valign="top"></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="left"></td><td> </td><td class="right"></td><td class="lineno" valign="top"></td></tr>
       <tr><td><a name="diff0013" /></td></tr>
-      <tr><td class="lineno" valign="top"></td><td class="lblock">       <span class="delete">mm.posTrain[2]</span> = <span class="delete">mm.position[2]</span> = <span class="delete">mm.startH</span> = <span class="delete">std::sqrt(high_range*h</span></td><td> </td><td class="rblock">       <span class="insert">// meteor trajectory</span></td><td class="lineno" valign="top"></td></tr>
-      <tr><td class="lineno" valign="top"></td><td class="lblock"><span class="delete">igh_range - D*D);</span></td><td> </td><td class="rblock"><span class="insert">       m_xyDist</span> = <span class="insert">VISIBLE_RADIUS * ((double) qrand() / ((double) RAND_MAX +</span></td><td class="lineno" valign="top"></td></tr>
-      <tr><td class="lineno" valign="top"></td><td class="lblock"></td><td> </td><td class="rblock"><span class="insert"> 1)); // [0, visibleRadius]</span></td><td class="lineno" valign="top"></td></tr>
-      <tr><td class="lineno" valign="top"></td><td class="lblock"></td><td> </td><td class="rblock"><span class="insert">       float angle</span> = <span class="insert">2 * M_PI * ((double) qrand() / ((double) RAND_MAX + 1)</span></td><td class="lineno" valign="top"></td></tr>
-      <tr><td class="lineno" valign="top"></td><td class="lblock"></td><td> </td><td class="rblock"><span class="insert">); // [0, 2pi]</span></td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="lblock">       <span class="delete">if (D &gt; high_range)</span>     // <span class="delete">won't be visible,</span> meteor <span class="delete">still dead</span></td><td> </td><td class="rblock">       // <span class="insert">find the angle from horizon to</span> meteor</td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="lblock"></td><td> </td><td class="rblock">       <span class="insert">float meteorAlt = qAsin(positionAltAz[2] / positionAltAz.length());</span></td><td class="lineno" valign="top"></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="lblock"></td><td> </td><td class="rblock"><span class="insert"></span></td><td class="lineno" valign="top"></td></tr>
-      <tr><td class="lineno" valign="top"></td><td class="lblock"></td><td> </td><td class="rblock"><span class="insert">       // initial meteor coordinates</span></td><td class="lineno" valign="top"></td></tr>
-      <tr><td class="lineno" valign="top"></td><td class="lblock"></td><td> </td><td class="rblock"><span class="insert">       m_position[0]</span> = <span class="insert">m_xyDist * qCos(angle);</span></td><td class="lineno" valign="top"></td></tr>
-      <tr><td class="lineno" valign="top"></td><td class="lblock"></td><td> </td><td class="rblock"><span class="insert">       m_position[1] = m_xyDist * qSin(angle);</span></td><td class="lineno" valign="top"></td></tr>
-      <tr><td class="lineno" valign="top"></td><td class="lblock"></td><td> </td><td class="rblock"><span class="insert">       m_position[2] = m_initialDist;</span></td><td class="lineno" valign="top"></td></tr>
-      <tr><td class="lineno" valign="top"></td><td class="lblock"></td><td> </td><td class="rblock"><span class="insert">       m_posTrain = m_position;</span></td><td class="lineno" valign="top"></td></tr>
-      <tr><td class="lineno" valign="top"></td><td class="lblock"></td><td> </td><td class="rblock"><span class="insert"></span></td><td class="lineno" valign="top"></td></tr>
-      <tr><td class="lineno" valign="top"></td><td class="lblock"></td><td> </td><td class="rblock"><span class="insert">       // find the angle from horizon to meteor</span></td><td class="lineno" valign="top"></td></tr>
-      <tr><td class="lineno" valign="top"></td><td class="lblock"></td><td> </td><td class="rblock"><span class="insert">       Vec3d positionAltAz = radiantToAltAz(m_position);</span></td><td class="lineno" valign="top"></td></tr>
-      <tr><td class="lineno" valign="top"></td><td class="lblock"></td><td> </td><td class="rblock"><span class="insert">       float meteorLat = qAsin(positionAltAz[2] / positionAltAz.length());</span></td><td class="lineno" valign="top"></td></tr>
-      <tr><td class="lineno" valign="top"></td><td class="left"></td><td> </td><td class="right"></td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="lblock"></td><td> </td><td class="rblock"><span class="insert">       // this meteor should not be visible if it is above the maximum alti</span></td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="lblock"></td><td> </td><td class="rblock"><span class="insert">tude</span></td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="lblock"></td><td> </td><td class="rblock"><span class="insert">       // or if it's below the horizon!</span></td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="lblock"></td><td> </td><td class="rblock"><span class="insert">       if (positionAltAz[2] &gt; MAX_ALTITUDE || meteorAlt &lt;= 0.f)</span></td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="left">       {</td><td> </td><td class="right">       {</td><td class="lineno" valign="top"></td></tr>
       <tr><td><a name="diff0014" /></td></tr>
-      <tr><td class="lineno" valign="top"></td><td class="lblock">       // <span class="delete">determine end of burn point, and nearest point to observer for di</span></td><td> </td><td class="rblock">       // <span class="insert">below the horizon ?</span></td><td class="lineno" valign="top"></td></tr>
-      <tr><td class="lineno" valign="top"></td><td class="lblock"><span class="delete">stance mag calculation</span></td><td> </td><td class="rblock">       if <span class="insert">(meteorLat &lt; 0.f)</span></td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="lblock">               return<span class="delete"> false</span>;</td><td> </td><td class="rblock">               return;</td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="left">       }</td><td> </td><td class="right">       }</td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="left"></td><td> </td><td class="right"></td><td class="lineno" valign="top"></td></tr>
+      <tr><td><a name="diff0015" /></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="lblock">       <span class="delete">mm.posTrain[2] = mm.position[2] = mm.startH = std::sqrt(high_range*h</span></td><td> </td><td class="rblock">       // determine <span class="insert">the final z-component and the min distance between mete</span></td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="lblock"><span class="delete">igh_range - D*D);</span></td><td> </td><td class="rblock"><span class="insert">or</span> and observer</td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="lblock">                                                                           </td><td> </td><td class="rblock">       if <span class="insert">(radiantAlt &lt; 0.0262f) // (&lt;1.5 degrees) earth grazing meteor ?</span></td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="lblock">       // determine <span class="delete">end of burn point,</span> and <span class="delete">nearest point to</span> observer <span class="delete">for di</span></td><td> </td><td class="rblock"></td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="lblock"><span class="delete">stance mag calculation</span></td><td> </td><td class="rblock"></td><td class="lineno" valign="top"></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="lblock"><span class="delete">       // mag should be max at nearest point still burning</span></td><td> </td><td class="rblock"></td><td class="lineno" valign="top"></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="lblock">       if <span class="delete">(D &gt; low_range)</span></td><td> </td><td class="rblock"></td><td class="lineno" valign="top"></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="left">       {</td><td> </td><td class="right">       {</td><td class="lineno" valign="top"></td></tr>
-      <tr><td><a name="diff0015" /></td></tr>
-      <tr><td class="lineno" valign="top"></td><td class="lblock">               <span class="delete">mm.endH = -mm.startH;  // earth grazing</span></td><td> </td><td class="rblock">               <span class="insert">return;</span></td><td class="lineno" valign="top"></td></tr>
-      <tr><td class="lineno" valign="top"></td><td class="lblock"><span class="delete">               mm.minDist = mm.xydistance;</span></td><td> </td><td class="rblock"></td><td class="lineno" valign="top"></td></tr>
-      <tr><td class="lineno" valign="top"></td><td class="left">       }</td><td> </td><td class="right">       }</td><td class="lineno" valign="top"></td></tr>
       <tr><td><a name="diff0016" /></td></tr>
-      <tr><td class="lineno" valign="top"></td><td class="lblock">       <span class="delete">else</span></td><td> </td><td class="rblock">                                                                           </td><td class="lineno" valign="top"></td></tr>
-      <tr><td class="lineno" valign="top"></td><td class="lblock"></td><td> </td><td class="rblock">       <span class="insert">// determine the final distance from observer to meteor</span></td><td class="lineno" valign="top"></td></tr>
-      <tr><td class="lineno" valign="top"></td><td class="lblock"></td><td> </td><td class="rblock"><span class="insert">       if (radiantAlt &lt; 0.0174532925f) // (&lt;1 degrees) earth grazing meteor</span></td><td class="lineno" valign="top"></td></tr>
-      <tr><td class="lineno" valign="top"></td><td class="lblock"></td><td> </td><td class="rblock"><span class="insert"> ?</span></td><td class="lineno" valign="top"></td></tr>
-      <tr><td class="lineno" valign="top"></td><td class="left">       {</td><td> </td><td class="right">       {</td><td class="lineno" valign="top"></td></tr>
-      <tr><td><a name="diff0017" /></td></tr>
-      <tr><td class="lineno" valign="top"></td><td class="lblock">               <span class="delete">mm.endH</span> = <span class="delete">std::sqrt(low_range*low_range - D*D);</span></td><td> </td><td class="rblock">               <span class="insert">m_finalDist</span> = <span class="insert">-m_initialDist;</span></td><td class="lineno" valign="top"></td></tr>
-      <tr><td class="lineno" valign="top"></td><td class="lblock"><span class="delete">               mm.minDist = std::sqrt(mm.xydistance*mm.xydistance + pow(mm.</span></td><td> </td><td class="rblock"><span class="insert">               // a meteor cannot hit the observer</span></td><td class="lineno" valign="top"></td></tr>
-      <tr><td class="lineno" valign="top"></td><td class="lblock"><span class="delete">endH - mm.obs[2], 2));</span></td><td> </td><td class="rblock"><span class="insert">               if (m_xyDist &lt; BURN_ALTITUDE)</span></td><td class="lineno" valign="top"></td></tr>
-      <tr><td class="lineno" valign="top"></td><td class="lblock"></td><td> </td><td class="rblock"><span class="insert">               {</span></td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="lblock">               <span class="delete">mm.endH</span> = <span class="delete">-mm.startH;</span>  // <span class="delete">earth grazing</span></td><td> </td><td class="rblock">               <span class="insert">// earth-grazers are rare!</span></td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="lblock"><span class="delete">               mm.minDist</span> = <span class="delete">mm.xydistance;</span></td><td> </td><td class="rblock"><span class="insert">               // introduce a probabilistic factor just to make them a bit </span></td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="lblock"></td><td> </td><td class="rblock"><span class="insert">harder to occur</span></td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="lblock"></td><td> </td><td class="rblock"><span class="insert">               float prob</span> = <span class="insert">((float) qrand() / ((float) RAND_MAX + 1));</span></td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="lblock"></td><td> </td><td class="rblock"><span class="insert">               if (prob &gt; 0.3f) {</span></td><td class="lineno" valign="top"></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="lblock"></td><td> </td><td class="rblock"><span class="insert">                       return;</span></td><td class="lineno" valign="top"></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="lblock"></td><td> </td><td class="rblock"><span class="insert">               }</span></td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="lblock"></td><td> </td><td class="rblock">                                                                           </td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="lblock"></td><td> </td><td class="rblock">               // <span class="insert">limit lifetime to 12sec</span></td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="lblock"></td><td> </td><td class="rblock"><span class="insert">               m_finalZ = -m_position[2];</span></td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="lblock"></td><td> </td><td class="rblock"><span class="insert">               m_finalZ = qMax(m_position[2] - m_speed * 12.f, (double) m_f</span></td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="lblock"></td><td> </td><td class="rblock"><span class="insert">inalZ);</span></td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="lblock"></td><td> </td><td class="rblock"><span class="insert"></span></td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="lblock"></td><td> </td><td class="rblock"><span class="insert">               m_minDist</span> = <span class="insert">xyDist;</span></td><td class="lineno" valign="top"></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="left">       }</td><td> </td><td class="right">       }</td><td class="lineno" valign="top"></td></tr>
-      <tr><td><a name="diff0018" /></td></tr>
-      <tr><td class="lineno" valign="top"></td><td class="lblock">                                                                           </td><td> </td><td class="rblock">       <span class="insert">else</span></td><td class="lineno" valign="top"></td></tr>
-      <tr><td class="lineno" valign="top"></td><td class="lblock">       <span class="delete">if (mm.minDist &gt; VISIBLE_RADIUS)</span></td><td> </td><td class="rblock"></td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="left">       else</td><td> </td><td class="right">       else</td><td class="lineno" valign="top"></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="left">       {</td><td> </td><td class="right">       {</td><td class="lineno" valign="top"></td></tr>
-      <tr><td><a name="diff0019" /></td></tr>
-      <tr><td class="lineno" valign="top"></td><td class="lblock">               <span class="delete">// on average, not visible (although if were zoomed ...)</span></td><td> </td><td class="rblock">               <span class="insert">m_finalDist = meteorDistance(M_PI_2 - meteorLat, MIN_ALTITUD</span></td><td class="lineno" valign="top"></td></tr>
-      <tr><td class="lineno" valign="top"></td><td class="lblock"><span class="delete">               return false; //meteor still dead</span></td><td> </td><td class="rblock"><span class="insert">E);</span></td><td class="lineno" valign="top"></td></tr>
+      <tr><td><a name="diff0017" /></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="lblock">               <span class="delete">mm.endH</span> = <span class="delete">std::sqrt(low_range*low_range</span> - <span class="delete">D*D);</span></td><td> </td><td class="rblock">               <span class="insert">// limit lifetime to 12sec</span></td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="lblock"><span class="delete">               mm.minDist</span> = <span class="delete">std::sqrt(mm.xydistance*mm.xydistance + pow(mm.</span></td><td> </td><td class="rblock"><span class="insert">               m_finalZ</span> = <span class="insert">meteorZ(M_PI_2</span> - <span class="insert">meteorAlt, MIN_ALTITUDE);</span></td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="lblock"><span class="delete">endH</span> - <span class="delete">mm.obs[2], 2));</span></td><td> </td><td class="rblock"><span class="insert">               m_finalZ</span> = <span class="insert">qMax(m_position[2]</span> - <span class="insert">m_speed * 12.f, (double) m_f</span></td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="lblock"></td><td> </td><td class="rblock"><span class="insert">inalZ);</span></td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="lblock"></td><td> </td><td class="rblock"><span class="insert"></span></td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="lblock"></td><td> </td><td class="rblock"><span class="insert">               m_minDist = qSqrt(m_finalZ * m_finalZ + xyDist * xyDist);</span></td><td class="lineno" valign="top"></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="left">       }</td><td> </td><td class="right">       }</td><td class="lineno" valign="top"></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="left"></td><td> </td><td class="right"></td><td class="lineno" valign="top"></td></tr>
-      <tr><td class="lineno" valign="top"></td><td class="left">       // determine intensity [-3; 4.5]</td><td> </td><td class="right">       // determine intensity [-3; 4.5]</td><td class="lineno" valign="top"></td></tr>
-      <tr><td class="lineno" valign="top"></td><td class="left">       float Mag1 = (double)qrand()/((double)RAND_MAX+1)*7.5f - 3;</td><td> </td><td class="right">       float Mag1 = (double)qrand()/((double)RAND_MAX+1)*7.5f - 3;</td><td class="lineno" valign="top"></td></tr>
-      <tr><td class="lineno" valign="top"></td><td class="left">       float Mag2 = (double)qrand()/((double)RAND_MAX+1)*7.5f - 3;</td><td> </td><td class="right">       float Mag2 = (double)qrand()/((double)RAND_MAX+1)*7.5f - 3;</td><td class="lineno" valign="top"></td></tr>
-      <tr><td class="lineno" valign="top"></td><td class="left">       float Mag = (Mag1 + Mag2)/2.0f;</td><td> </td><td class="right">       float Mag = (Mag1 + Mag2)/2.0f;</td><td class="lineno" valign="top"></td></tr>
+      <tr><td><a name="diff0018" /></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="lblock">       <span class="delete">if (mm.minDist &gt; VISIBLE_RADIUS)</span></td><td> </td><td class="rblock">       // <span class="insert">a meteor cannot hit the observer!</span></td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="lblock"><span class="delete">       {</span></td><td> </td><td class="rblock">       if <span class="insert">(m_minDist &lt; MIN_ALTITUDE) {</span></td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="lblock">               // <span class="delete">on average, not visible (although</span> if <span class="delete">were zoomed ...)</span></td><td> </td><td class="rblock"><span class="insert">               return;</span></td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="lblock"><span class="delete">               return false; //meteor still dead</span></td><td> </td><td class="rblock"></td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="left">       }</td><td> </td><td class="right">       }</td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="left"></td><td> </td><td class="right"></td><td class="lineno" valign="top"></td></tr>
+      <tr><td><a name="diff0019" /></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="lblock">       // <span class="delete">determine intensity</span> [-3; 4.5]</td><td> </td><td class="rblock">       // <span class="insert">select random magnitude</span> [-3; 4.5]</td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="lblock">       float <span class="delete">Mag1 = (double)qrand()/((double)RAND_MAX+1)*7.5f - 3;</span></td><td> </td><td class="rblock">       float Mag = <span class="insert">(float) qrand() / ((float) RAND_MAX</span> + <span class="insert">1) * 7.5f - 3.f;</span></td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="lblock"><span class="delete">       float Mag2 = (double)qrand()/((double)RAND_MAX+1)*7.5f - 3;</span></td><td> </td><td class="rblock"></td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="lblock"><span class="delete">       float</span> Mag = <span class="delete">(Mag1</span> + <span class="delete">Mag2)/2.0f;</span></td><td> </td><td class="rblock"></td><td class="lineno" valign="top"></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="left"></td><td> </td><td class="right"></td><td class="lineno" valign="top"></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="left">       // compute RMag and CMag</td><td> </td><td class="right">       // compute RMag and CMag</td><td class="lineno" valign="top"></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="left">       RCMag rcMag;</td><td> </td><td class="right">       RCMag rcMag;</td><td class="lineno" valign="top"></td></tr>
       <tr><td><a name="diff0020" /></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="lblock">       <span class="delete">core-&gt;getSkyDrawer()-&gt;computeRCMag(Mag,</span> &amp;rcMag);</td><td> </td><td class="rblock">       <span class="insert">m_core-&gt;getSkyDrawer()-&gt;computeRCMag(Mag,</span> &amp;rcMag);</td><td class="lineno" valign="top"></td></tr>
-      <tr><td class="lineno" valign="top"></td><td class="lblock">       <span class="delete">mm.mag</span> = rcMag.luminance;</td><td> </td><td class="rblock">       <span class="insert">m_absMag</span> = rcMag.luminance;</td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="lblock">       <span class="delete">mm.mag</span> = rcMag.luminance;</td><td> </td><td class="rblock">       <span class="insert">m_absMag</span> = <span class="insert">rcMag.radius &lt;= 1.2f ? 0.f :</span> rcMag.luminance;</td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="lblock"></td><td> </td><td class="rblock">       <span class="insert">if (m_absMag == 0.f) {</span></td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="lblock"></td><td> </td><td class="rblock"><span class="insert">               return;</span></td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="lblock"></td><td> </td><td class="rblock"><span class="insert">       }</span></td><td class="lineno" valign="top"></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="left"></td><td> </td><td class="right"></td><td class="lineno" valign="top"></td></tr>
       <tr><td><a name="diff0021" /></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="lblock">       // most visible meteors are under about 18<span class="delete">0</span>km distant</td><td> </td><td class="rblock">       // most visible meteors are under about 18<span class="insert">4</span>km distant</td><td class="lineno" valign="top"></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="left">       // scale max mag down if outside this range</td><td> </td><td class="right">       // scale max mag down if outside this range</td><td class="lineno" valign="top"></td></tr>
       <tr><td><a name="diff0022" /></td></tr>
-      <tr><td class="lineno" valign="top"></td><td class="lblock">       float scale = <span class="delete">1;</span></td><td> </td><td class="rblock">       float scale = <span class="insert">qPow(184, 2) / qPow(m_initialDist, 2);</span></td><td class="lineno" valign="top"></td></tr>
-      <tr><td class="lineno" valign="top"></td><td class="lblock">       if <span class="delete">(mm.minDist)</span></td><td> </td><td class="rblock">       if <span class="insert">(scale &lt; 1.0f)</span></td><td class="lineno" valign="top"></td></tr>
-      <tr><td class="lineno" valign="top"></td><td class="lblock"></td><td> </td><td class="rblock"><span class="insert">       {</span></td><td class="lineno" valign="top"></td></tr>
-      <tr><td class="lineno" valign="top"></td><td class="lblock"></td><td> </td><td class="rblock"><span class="insert">               m_absMag *= scale;</span></td><td class="lineno" valign="top"></td></tr>
-      <tr><td class="lineno" valign="top"></td><td class="lblock"></td><td> </td><td class="rblock"><span class="insert">       }</span></td><td class="lineno" valign="top"></td></tr>
-      <tr><td class="lineno" valign="top"></td><td class="lblock"></td><td> </td><td class="rblock"><span class="insert"></span></td><td class="lineno" valign="top"></td></tr>
-      <tr><td class="lineno" valign="top"></td><td class="lblock"></td><td> </td><td class="rblock"><span class="insert">       m_firstBrightSegment = m_segments * ((float) qrand() / ((float) RAND</span></td><td class="lineno" valign="top"></td></tr>
-      <tr><td class="lineno" valign="top"></td><td class="lblock"></td><td> </td><td class="rblock"><span class="insert">_MAX + 1));</span></td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="lblock">       float scale = <span class="delete">1;</span></td><td> </td><td class="rblock">       float scale = <span class="insert">qPow(184.0 / m_minDist, 2);</span></td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="lblock">       if <span class="delete">(mm.minDist)</span></td><td> </td><td class="rblock"><span class="insert">       m_absMag *= qMin(scale, 1.0f);</span></td><td class="lineno" valign="top"></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="lblock"></td><td> </td><td class="rblock"><span class="insert"></span></td><td class="lineno" valign="top"></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="lblock"></td><td> </td><td class="rblock"><span class="insert">       // build the color vector</span></td><td class="lineno" valign="top"></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="lblock"></td><td> </td><td class="rblock"><span class="insert">       buildColorVectors(colors);</span></td><td class="lineno" valign="top"></td></tr>
@@ -239,62 +267,50 @@
       <tr><td class="lineno" valign="top"></td><td class="lblock"></td><td> </td><td class="rblock"><span class="insert"></span></td><td class="lineno" valign="top"></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="lblock"></td><td> </td><td class="rblock"><span class="insert">bool Meteor::update(double deltaTime)</span></td><td class="lineno" valign="top"></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="lblock"></td><td> </td><td class="rblock"><span class="insert">{</span></td><td class="lineno" valign="top"></td></tr>
-      <tr><td class="lineno" valign="top"></td><td class="lblock"></td><td> </td><td class="rblock"><span class="insert">       if (!m_alive)</span></td><td class="lineno" valign="top"></td></tr>
-      <tr><td class="lineno" valign="top"></td><td class="left">       {</td><td> </td><td class="right">       {</td><td class="lineno" valign="top"></td></tr>
-      <tr><td><a name="diff0023" /></td></tr>
-      <tr><td class="lineno" valign="top"></td><td class="lblock">               <span class="delete">scale = 180*180 / (mm.minDist*mm.minDist)</span>;</td><td> </td><td class="rblock">               <span class="insert">return false</span>;</td><td class="lineno" valign="top"></td></tr>
-      <tr><td class="lineno" valign="top"></td><td class="left">       }</td><td> </td><td class="right">       }</td><td class="lineno" valign="top"></td></tr>
-      <tr><td><a name="diff0024" /></td></tr>
-      <tr><td class="lineno" valign="top"></td><td class="lblock">       if <span class="delete">(scale</span> &lt; <span class="delete">1)</span></td><td> </td><td class="rblock">                                                                           </td><td class="lineno" valign="top"></td></tr>
-      <tr><td class="lineno" valign="top"></td><td class="lblock"></td><td> </td><td class="rblock">       if <span class="insert">(m_position[2]</span> &lt; <span class="insert">m_finalDist)</span></td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="lblock"></td><td> </td><td class="rblock">       if <span class="insert">(!m_alive)</span></td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="lblock"></td><td> </td><td class="rblock"><span class="insert">       {</span></td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="lblock"></td><td> </td><td class="rblock"><span class="insert">               return false;</span></td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="lblock"></td><td> </td><td class="rblock"><span class="insert">       }</span></td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="lblock"></td><td> </td><td class="rblock"><span class="insert"></span></td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="lblock"></td><td> </td><td class="rblock"><span class="insert">       if (m_position[2] &lt; m_finalZ)</span></td><td class="lineno" valign="top"></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="lblock"></td><td> </td><td class="rblock"><span class="insert">       {</span></td><td class="lineno" valign="top"></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="lblock"></td><td> </td><td class="rblock"><span class="insert">               // burning has stopped so magnitude fades out</span></td><td class="lineno" valign="top"></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="lblock"></td><td> </td><td class="rblock"><span class="insert">               // assume linear fade out</span></td><td class="lineno" valign="top"></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="lblock"></td><td> </td><td class="rblock"><span class="insert">               m_absMag -= deltaTime * 2.f;</span></td><td class="lineno" valign="top"></td></tr>
-      <tr><td class="lineno" valign="top"></td><td class="lblock"></td><td> </td><td class="rblock"><span class="insert">               m_aptMag = m_absMag;</span></td><td class="lineno" valign="top"></td></tr>
-      <tr><td class="lineno" valign="top"></td><td class="lblock"></td><td> </td><td class="rblock"><span class="insert">               if(m_absMag &lt; 0)</span></td><td class="lineno" valign="top"></td></tr>
-      <tr><td class="lineno" valign="top"></td><td class="lblock"></td><td> </td><td class="rblock"><span class="insert">               {</span></td><td class="lineno" valign="top"></td></tr>
-      <tr><td class="lineno" valign="top"></td><td class="lblock"></td><td> </td><td class="rblock"><span class="insert">                       m_alive = false;</span></td><td class="lineno" valign="top"></td></tr>
-      <tr><td class="lineno" valign="top"></td><td class="lblock"></td><td> </td><td class="rblock"><span class="insert">                       return false;    // no longer visible</span></td><td class="lineno" valign="top"></td></tr>
-      <tr><td class="lineno" valign="top"></td><td class="lblock"></td><td> </td><td class="rblock"><span class="insert">               }</span></td><td class="lineno" valign="top"></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="lblock"></td><td> </td><td class="rblock"><span class="insert">       }</span></td><td class="lineno" valign="top"></td></tr>
-      <tr><td class="lineno" valign="top"></td><td class="lblock"></td><td> </td><td class="rblock"><span class="insert">       else</span></td><td class="lineno" valign="top"></td></tr>
-      <tr><td class="lineno" valign="top"></td><td class="lblock"></td><td> </td><td class="rblock"><span class="insert">       {</span></td><td class="lineno" valign="top"></td></tr>
-      <tr><td class="lineno" valign="top"></td><td class="lblock"></td><td> </td><td class="rblock"><span class="insert">               // update apparent magnitude based on distance to observer</span></td><td class="lineno" valign="top"></td></tr>
-      <tr><td class="lineno" valign="top"></td><td class="lblock"></td><td> </td><td class="rblock"><span class="insert">               m_aptMag = m_absMag * 0.7f;</span></td><td class="lineno" valign="top"></td></tr>
-      <tr><td class="lineno" valign="top"></td><td class="lblock"></td><td> </td><td class="rblock"><span class="insert">               float mult;</span></td><td class="lineno" valign="top"></td></tr>
-      <tr><td class="lineno" valign="top"></td><td class="lblock"></td><td> </td><td class="rblock"><span class="insert">               if (m_finalDist == -m_initialDist) // earth-grazer?</span></td><td class="lineno" valign="top"></td></tr>
-      <tr><td class="lineno" valign="top"></td><td class="lblock"></td><td> </td><td class="rblock"><span class="insert">               {</span></td><td class="lineno" valign="top"></td></tr>
-      <tr><td class="lineno" valign="top"></td><td class="lblock"></td><td> </td><td class="rblock"><span class="insert">                       mult = qPow(m_xyDist, 2) / qPow(m_position[2], 2);</span></td><td class="lineno" valign="top"></td></tr>
-      <tr><td class="lineno" valign="top"></td><td class="lblock"></td><td> </td><td class="rblock"><span class="insert">               }</span></td><td class="lineno" valign="top"></td></tr>
-      <tr><td class="lineno" valign="top"></td><td class="lblock"></td><td> </td><td class="rblock"><span class="insert">               else</span></td><td class="lineno" valign="top"></td></tr>
-      <tr><td class="lineno" valign="top"></td><td class="lblock"></td><td> </td><td class="rblock"><span class="insert">               {</span></td><td class="lineno" valign="top"></td></tr>
-      <tr><td class="lineno" valign="top"></td><td class="lblock"></td><td> </td><td class="rblock"><span class="insert">                       mult = qPow(m_finalDist, 2) / qPow(m_position[2], 2)</span></td><td class="lineno" valign="top"></td></tr>
-      <tr><td class="lineno" valign="top"></td><td class="lblock"></td><td> </td><td class="rblock"><span class="insert">;</span></td><td class="lineno" valign="top"></td></tr>
-      <tr><td class="lineno" valign="top"></td><td class="lblock"></td><td> </td><td class="rblock"><span class="insert">               }</span></td><td class="lineno" valign="top"></td></tr>
-      <tr><td class="lineno" valign="top"></td><td class="lblock"></td><td> </td><td class="rblock"><span class="insert">               mult = mult &gt; 1.f? 1.f : mult;</span></td><td class="lineno" valign="top"></td></tr>
-      <tr><td class="lineno" valign="top"></td><td class="lblock"></td><td> </td><td class="rblock"><span class="insert">               m_aptMag += m_absMag * 0.3f * mult;</span></td><td class="lineno" valign="top"></td></tr>
-      <tr><td class="lineno" valign="top"></td><td class="lblock"></td><td> </td><td class="rblock"><span class="insert">               m_aptMag = m_aptMag &lt; 0.f ? 0.f : m_aptMag;</span></td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="lblock"></td><td> </td><td class="rblock"><span class="insert"></span></td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="lblock"></td><td> </td><td class="rblock"><span class="insert">       // no longer visible</span></td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="lblock"></td><td> </td><td class="rblock"><span class="insert">       if(m_absMag &lt;= 0.f)</span></td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="left">       {</td><td> </td><td class="right">       {</td><td class="lineno" valign="top"></td></tr>
+      <tr><td><a name="diff0023" /></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="lblock">               <span class="delete">scale</span> = <span class="delete">180*180 / (mm.minDist*mm.minDist);</span></td><td> </td><td class="rblock">               <span class="insert">m_alive</span> = <span class="insert">false;</span></td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="lblock"></td><td> </td><td class="rblock"><span class="insert">               return false;</span></td><td class="lineno" valign="top"></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="lblock"></td><td> </td><td class="rblock"><span class="insert">       }</span></td><td class="lineno" valign="top"></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="lblock"></td><td> </td><td class="rblock"><span class="insert"></span></td><td class="lineno" valign="top"></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="lblock"></td><td> </td><td class="rblock"><span class="insert">       m_position[2] -= m_speed * deltaTime;</span></td><td class="lineno" valign="top"></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="lblock"></td><td> </td><td class="rblock"><span class="insert"></span></td><td class="lineno" valign="top"></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="lblock"></td><td> </td><td class="rblock"><span class="insert">       // train doesn't extend beyond start of burn</span></td><td class="lineno" valign="top"></td></tr>
-      <tr><td class="lineno" valign="top"></td><td class="lblock"></td><td> </td><td class="rblock"><span class="insert">       if (m_position[2] + m_speed * 0.5f &gt; m_initialDist)</span></td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="lblock"></td><td> </td><td class="rblock"><span class="insert">       if (m_position[2] + m_speed * 0.5f &gt; m_initialZ)</span></td><td class="lineno" valign="top"></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="lblock"></td><td> </td><td class="rblock"><span class="insert">       {</span></td><td class="lineno" valign="top"></td></tr>
-      <tr><td class="lineno" valign="top"></td><td class="lblock"></td><td> </td><td class="rblock"><span class="insert">               m_posTrain[2] = m_initialDist;</span></td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="lblock"></td><td> </td><td class="rblock"><span class="insert">               m_posTrain[2] = m_initialZ;</span></td><td class="lineno" valign="top"></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="lblock"></td><td> </td><td class="rblock"><span class="insert">       }</span></td><td class="lineno" valign="top"></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="lblock"></td><td> </td><td class="rblock"><span class="insert">       else</span></td><td class="lineno" valign="top"></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="lblock"></td><td> </td><td class="rblock"><span class="insert">       {</span></td><td class="lineno" valign="top"></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="lblock"></td><td> </td><td class="rblock"><span class="insert">               m_posTrain[2] -= m_speed * deltaTime;</span></td><td class="lineno" valign="top"></td></tr>
-      <tr><td class="lineno" valign="top"></td><td class="lblock"></td><td> </td><td class="rblock"><span class="insert">       }</span></td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="left">       }</td><td> </td><td class="right">       }</td><td class="lineno" valign="top"></td></tr>
+      <tr><td><a name="diff0024" /></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="lblock">       if <span class="delete">(scale &lt; 1)</span></td><td> </td><td class="rblock">                                                                           </td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="lblock"></td><td> </td><td class="rblock">       <span class="insert">// update apparent magnitude based on distance to observer</span></td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="lblock"></td><td> </td><td class="rblock"><span class="insert">       float scale = qPow(m_minDist / m_position.length(), 2);</span></td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="lblock"></td><td> </td><td class="rblock"><span class="insert">       m_aptMag = m_absMag * qMin(scale, 1.f);</span></td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="lblock"></td><td> </td><td class="rblock"><span class="insert">       m_aptMag = qMax(m_aptMag, 0.f);</span></td><td class="lineno" valign="top"></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="lblock"></td><td> </td><td class="rblock"><span class="insert"></span></td><td class="lineno" valign="top"></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="lblock"></td><td> </td><td class="rblock"><span class="insert">       return true;</span></td><td class="lineno" valign="top"></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="lblock"></td><td> </td><td class="rblock"><span class="insert">}</span></td><td class="lineno" valign="top"></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="lblock"></td><td> </td><td class="rblock"><span class="insert"></span></td><td class="lineno" valign="top"></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="lblock"></td><td> </td><td class="rblock"><span class="insert">void Meteor::draw(const StelCore* core, StelPainter&amp; sPainter)</span></td><td class="lineno" valign="top"></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="lblock"></td><td> </td><td class="rblock"><span class="insert">{</span></td><td class="lineno" valign="top"></td></tr>
-      <tr><td class="lineno" valign="top"></td><td class="lblock"></td><td> </td><td class="rblock"><span class="insert">       if (!m_alive)</span></td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="lblock"></td><td> </td><td class="rblock">       if <span class="insert">(!m_alive)</span></td><td class="lineno" valign="top"></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="left">       {</td><td> </td><td class="right">       {</td><td class="lineno" valign="top"></td></tr>
       <tr><td><a name="diff0025" /></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="lblock">               <span class="delete">mm.mag *= scale</span>;</td><td> </td><td class="rblock">               <span class="insert">return</span>;</td><td class="lineno" valign="top"></td></tr>
@@ -363,7 +379,7 @@
       <tr><td class="lineno" valign="top"></td><td class="left">}</td><td> </td><td class="right">}</td><td class="lineno" valign="top"></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="left"></td><td> </td><td class="right"></td><td class="lineno" valign="top"></td></tr>
       <tr><td><a name="diff0035" /></td></tr>
-      <tr><td class="lineno" valign="top"></td><td class="lblock"><span class="delete">QList&lt;Meteor::colorPair&gt; Meteor::getRandColor() {</span></td><td> </td><td class="rblock">void <span class="insert">Meteor::buildColorVectors(const</span> QList&lt;colorPair&gt; <span class="insert">colors)</span></td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="lblock"><span class="delete">QList&lt;Meteor::colorPair&gt; Meteor::getRandColor() {</span></td><td> </td><td class="rblock">void <span class="insert">Meteor::buildColorVectors(const QList&lt;ColorPair&gt; colors)</span></td><td class="lineno" valign="top"></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="lblock"><span class="delete">       QList&lt;colorPair&gt; colors;</span></td><td> </td><td class="rblock"></td><td class="lineno" valign="top"></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="lblock"><span class="delete">       float prob = (double)qrand()/((double)RAND_MAX+1);</span></td><td> </td><td class="rblock"></td><td class="lineno" valign="top"></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="lblock"><span class="delete">       if (prob &gt; 0.9) {</span></td><td> </td><td class="rblock"></td><td class="lineno" valign="top"></td></tr>
@@ -385,109 +401,116 @@
       <tr><td class="lineno" valign="top"></td><td class="lblock"><span class="delete">}</span></td><td> </td><td class="rblock"></td><td class="lineno" valign="top"></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="lblock">                                                                           </td><td> </td><td class="rblock"></td><td class="lineno" valign="top"></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="lblock">void <span class="delete">Meteor::buildColorArrays(const int segments,</span></td><td> </td><td class="rblock"></td><td class="lineno" valign="top"></td></tr>
-      <tr><td class="lineno" valign="top"></td><td class="lblock"><span class="delete">                             const</span> QList&lt;colorPair&gt; <span class="delete">colors,</span></td><td> </td><td class="rblock"></td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="lblock"><span class="delete">                             const QList&lt;colorPair&gt; colors,</span></td><td> </td><td class="rblock"></td><td class="lineno" valign="top"></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="lblock"><span class="delete">                             QList&lt;Vec4f&gt; &amp;lineColorArray,</span></td><td> </td><td class="rblock"></td><td class="lineno" valign="top"></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="lblock"><span class="delete">                             QList&lt;Vec4f&gt; &amp;trainColorArray)</span></td><td> </td><td class="rblock"></td><td class="lineno" valign="top"></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="left">{</td><td> </td><td class="right">{</td><td class="lineno" valign="top"></td></tr>
-      <tr><td><a name="diff0036" /></td></tr>
-      <tr><td class="lineno" valign="top"></td><td class="lblock"></td><td> </td><td class="rblock">       <span class="insert">QList&lt;Vec4f&gt; lineColor;</span></td><td class="lineno" valign="top"></td></tr>
-      <tr><td class="lineno" valign="top"></td><td class="lblock"></td><td> </td><td class="rblock"><span class="insert">       QList&lt;Vec4f&gt; trainColor;</span></td><td class="lineno" valign="top"></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="left">       // building color arrays (line and prism)</td><td> </td><td class="right">       // building color arrays (line and prism)</td><td class="lineno" valign="top"></td></tr>
-      <tr><td class="lineno" valign="top"></td><td class="left">       int totalOfSegments = 0;</td><td> </td><td class="right">       int totalOfSegments = 0;</td><td class="lineno" valign="top"></td></tr>
-      <tr><td><a name="diff0037" /></td></tr>
-      <tr><td class="lineno" valign="top"></td><td class="lblock">       int currentSegment = <span class="delete">1+(double)qrand()/((double)RAND_MAX+1)*(segment</span></td><td> </td><td class="rblock">       int currentSegment = <span class="insert">1 + (m_segments - 1) * ((float) qrand() / ((flo</span></td><td class="lineno" valign="top"></td></tr>
-      <tr><td class="lineno" valign="top"></td><td class="lblock"><span class="delete">s-1);</span></td><td> </td><td class="rblock"><span class="insert">at) RAND_MAX + 1));</span></td><td class="lineno" valign="top"></td></tr>
-      <tr><td class="lineno" valign="top"></td><td class="lblock">       for (int <span class="delete">colorIndex=0; colorIndex&lt;colors.size();</span> colorIndex++) {</td><td> </td><td class="rblock">       for (int <span class="insert">colorIndex = 0; colorIndex &lt; colors.size();</span> colorIndex++)</td><td class="lineno" valign="top"></td></tr>
-      <tr><td class="lineno" valign="top"></td><td class="lblock"></td><td> </td><td class="rblock">       {</td><td class="lineno" valign="top"></td></tr>
-      <tr><td class="lineno" valign="top"></td><td class="left">               colorPair currentColor = colors[colorIndex];</td><td> </td><td class="right">               colorPair currentColor = colors[colorIndex];</td><td class="lineno" valign="top"></td></tr>
-      <tr><td class="lineno" valign="top"></td><td class="left"></td><td> </td><td class="right"></td><td class="lineno" valign="top"></td></tr>
-      <tr><td class="lineno" valign="top"></td><td class="left">               // segments which we'll paint with the current color</td><td> </td><td class="right">               // segments which we'll paint with the current color</td><td class="lineno" valign="top"></td></tr>
-      <tr><td><a name="diff0038" /></td></tr>
-      <tr><td class="lineno" valign="top"></td><td class="lblock">               int numOfSegments = <span class="delete">segments*(currentColor.second</span> / <span class="delete">100.f)</span> +</td><td> </td><td class="rblock">               int numOfSegments = <span class="insert">m_segments * (currentColor.second</span> / <span class="insert">100.</span></td><td class="lineno" valign="top"></td></tr>
-      <tr><td class="lineno" valign="top"></td><td class="lblock"> 0.4f; // +0.4 affect approximation</td><td> </td><td class="rblock"><span class="insert">f)</span> + 0.4f; // +0.4 affect approximation</td><td class="lineno" valign="top"></td></tr>
-      <tr><td class="lineno" valign="top"></td><td class="lblock">               if (colorIndex == colors.size()-1) {</td><td> </td><td class="rblock">               if (colorIndex == colors.size()-1)</td><td class="lineno" valign="top"></td></tr>
-      <tr><td class="lineno" valign="top"></td><td class="lblock">                       numOfSegments = <span class="delete">segments</span> - totalOfSegments;</td><td> </td><td class="rblock">               {</td><td class="lineno" valign="top"></td></tr>
-      <tr><td class="lineno" valign="top"></td><td class="lblock"></td><td> </td><td class="rblock">                       numOfSegments = <span class="insert">m_segments</span> - totalOfSegments;</td><td class="lineno" valign="top"></td></tr>
-      <tr><td class="lineno" valign="top"></td><td class="left">               }</td><td> </td><td class="right">               }</td><td class="lineno" valign="top"></td></tr>
-      <tr><td class="lineno" valign="top"></td><td class="left"></td><td> </td><td class="right"></td><td class="lineno" valign="top"></td></tr>
-      <tr><td class="lineno" valign="top"></td><td class="left">               totalOfSegments += numOfSegments;</td><td> </td><td class="right">               totalOfSegments += numOfSegments;</td><td class="lineno" valign="top"></td></tr>
-      <tr><td><a name="diff0039" /></td></tr>
-      <tr><td class="lineno" valign="top"></td><td class="lblock">               for (int i=0; i&lt;numOfSegments; i++) {</td><td> </td><td class="rblock">               for (int i=0; i&lt;numOfSegments; i++)</td><td class="lineno" valign="top"></td></tr>
-      <tr><td class="lineno" valign="top"></td><td class="lblock">                       <span class="delete">lineColorArray.insert(currentSegment, getColorFromNa</span></td><td> </td><td class="rblock">               {</td><td class="lineno" valign="top"></td></tr>
-      <tr><td class="lineno" valign="top"></td><td class="lblock"><span class="delete">me(currentColor.first));</span></td><td> </td><td class="rblock">                       <span class="insert">lineColor.insert(currentSegment, getColorFromName(cu</span></td><td class="lineno" valign="top"></td></tr>
-      <tr><td class="lineno" valign="top"></td><td class="lblock"><span class="delete">                       trainColorArray.insert(currentSegment, getColorFromN</span></td><td> </td><td class="rblock"><span class="insert">rrentColor.first));</span></td><td class="lineno" valign="top"></td></tr>
-      <tr><td class="lineno" valign="top"></td><td class="lblock"><span class="delete">ame(currentColor.first));</span></td><td> </td><td class="rblock"><span class="insert">                       trainColor.insert(currentSegment, getColorFromName(c</span></td><td class="lineno" valign="top"></td></tr>
-      <tr><td class="lineno" valign="top"></td><td class="lblock">                       if (currentSegment &gt;= <span class="delete">segments-1)</span> {</td><td> </td><td class="rblock"><span class="insert">urrentColor.first));</span></td><td class="lineno" valign="top"></td></tr>
-      <tr><td class="lineno" valign="top"></td><td class="lblock"></td><td> </td><td class="rblock">                       if (currentSegment &gt;= <span class="insert">m_segments-1)</span></td><td class="lineno" valign="top"></td></tr>
-      <tr><td class="lineno" valign="top"></td><td class="lblock"></td><td> </td><td class="rblock">                       {</td><td class="lineno" valign="top"></td></tr>
-      <tr><td class="lineno" valign="top"></td><td class="left">                               currentSegment = 0;</td><td> </td><td class="right">                               currentSegment = 0;</td><td class="lineno" valign="top"></td></tr>
-      <tr><td><a name="diff0040" /></td></tr>
-      <tr><td class="lineno" valign="top"></td><td class="lblock">                       } else {</td><td> </td><td class="rblock">                       }</td><td class="lineno" valign="top"></td></tr>
-      <tr><td class="lineno" valign="top"></td><td class="lblock"></td><td> </td><td class="rblock">                       else</td><td class="lineno" valign="top"></td></tr>
-      <tr><td class="lineno" valign="top"></td><td class="lblock"></td><td> </td><td class="rblock">                       {</td><td class="lineno" valign="top"></td></tr>
-      <tr><td class="lineno" valign="top"></td><td class="left">                               currentSegment++;</td><td> </td><td class="right">                               currentSegment++;</td><td class="lineno" valign="top"></td></tr>
-      <tr><td class="lineno" valign="top"></td><td class="left">                       }</td><td> </td><td class="right">                       }</td><td class="lineno" valign="top"></td></tr>
-      <tr><td><a name="diff0041" /></td></tr>
-      <tr><td class="lineno" valign="top"></td><td class="lblock">                       trainColor<span class="delete">Array.insert(currentSegment, getColorFromN
-ame(c</span>urrentColor.first));</td><td> </td><td class="rblock">                       trainColor<span class="insert">.insert(currentSegment, getColorFromName(c
-</span>urrentColor.first));</td><td class="lineno" valign="top"></td></tr>
+      <tr><td><a name="diff0036" /></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="lblock">       <span class="delete">int totalOfSegments = 0;</span></td><td> </td><td class="rblock">       <span class="insert">QList&lt;Vec4f&gt; lineColor;</span></td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="lblock"><span class="delete">       int currentSegment = 1+(double)qrand()/((double)RAND_MAX+1)*(segment</span></td><td> </td><td class="rblock"><span class="insert">       QList&lt;Vec4f&gt; trainColor;</span></td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="lblock"><span class="delete">s-1);</span></td><td> </td><td class="rblock"><span class="insert">       foreach (ColorPair color, colors)</span></td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="lblock"><span class="delete">       for (int colorIndex=0; colorIndex&lt;colors.size(); colorIndex++)</span> {</td><td> </td><td class="rblock">       {</td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="lblock">               <span class="delete">colorPair currentColor = colors[colorIndex];</span></td><td> </td><td class="rblock">               // segments <span class="insert">to be painted</span> with the current color</td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="lblock">                                                                           </td><td> </td><td class="rblock">               int <span class="insert">segs</span> = <span class="insert">qRound(m_segments * (color.second</span> / <span class="insert">100.f));</span> // <span class="insert">r</span></td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="lblock">               // segments <span class="delete">which we'll paint</span> with the current color</td><td> </td><td class="rblock"><span class="insert">ounds to nearest integer</span></td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="lblock">               int <span class="delete">numOfSegments</span> = <span class="delete">segments*(currentColor.second</span> / <span class="delete">100.f) +</span></td><td> </td><td class="rblock">               for (int <span class="insert">s</span> = 0; <span class="insert">s &lt; segs; ++s)</span></td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="lblock"><span class="delete"> 0.4f;</span> // <span class="delete">+0.4 affect approximation</span></td><td> </td><td class="rblock">               {</td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="lblock"><span class="delete">               if (colorIndex == colors.size()-1) {</span></td><td> </td><td class="rblock">                       <span class="insert">Vec4f rgba = getColorFromName(color.first);</span></td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="lblock"><span class="delete">                       numOfSegments = segments - totalOfSegments;</span></td><td> </td><td class="rblock"><span class="insert">                       lineColor.append(rgba);</span></td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="lblock"><span class="delete">               }</span></td><td> </td><td class="rblock"><span class="insert">                       trainColor.append(rgba);</span></td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="lblock"><span class="delete"></span></td><td> </td><td class="rblock"><span class="insert">                       trainColor.append(rgba);</span></td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="lblock"><span class="delete">               totalOfSegments += numOfSegments;</span></td><td> </td><td class="rblock"></td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="lblock">               for (int <span class="delete">i=0; i&lt;numOfSegments; i++) {</span></td><td> </td><td class="rblock"></td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="lblock"><span class="delete">                       lineColorArray.insert(currentSegment, getColorFromNa</span></td><td> </td><td class="rblock"></td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="lblock"><span class="delete">me(currentColor.first));</span></td><td> </td><td class="rblock"></td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="lblock"><span class="delete">                       trainColorArray.insert(currentSegment, getColorFromN</span></td><td> </td><td class="rblock"></td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="lblock"><span class="delete">ame(currentColor.first));</span></td><td> </td><td class="rblock"></td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="lblock"><span class="delete">                       if (currentSegment &gt;= segments-1) {</span></td><td> </td><td class="rblock"></td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="lblock"><span class="delete">                               currentSegment</span> = 0;</td><td> </td><td class="rblock"></td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="lblock">                       <span class="delete">} else</span> {</td><td> </td><td class="rblock"></td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="lblock">                               <span class="delete">currentSegment++;</span></td><td> </td><td class="rblock"></td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="lblock"><span class="delete">                       }</span></td><td> </td><td class="rblock"></td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="lblock"><span class="delete">                       trainColorArray.insert(currentSegment, getColorFromN</span></td><td> </td><td class="rblock"></td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="lblock"><span class="delete">ame(currentColor.first));</span></td><td> </td><td class="rblock"></td><td class="lineno" valign="top"></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="left">               }</td><td> </td><td class="right">               }</td><td class="lineno" valign="top"></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="left">       }</td><td> </td><td class="right">       }</td><td class="lineno" valign="top"></td></tr>
-      <tr><td><a name="diff0042" /></td></tr>
-      <tr><td class="lineno" valign="top"></td><td class="lblock"></td><td> </td><td class="rblock">       <span class="insert">m_lineColorVector = lineColor.toVector();</span></td><td class="lineno" valign="top"></td></tr>
+      <tr><td><a name="diff0037" /></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="lblock"><span class="delete">}</span></td><td> </td><td class="rblock"></td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="left"></td><td> </td><td class="right"></td><td class="lineno" valign="top"></td></tr>
+      <tr><td><a name="diff0038" /></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="lblock"><span class="delete">bool Meteor::updateMeteorModel(double deltaTime, double speed, MeteorModel </span></td><td> </td><td class="rblock">       <span class="insert">// make sure that all segments have been painted!</span></td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="lblock"><span class="delete">&amp;mm)</span></td><td> </td><td class="rblock"><span class="insert">       const int segs = lineColor.size();</span></td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="lblock"><span class="delete">{</span></td><td> </td><td class="rblock">       if <span class="insert">(segs</span> &lt; <span class="insert">m_segments)</span> {</td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="lblock">       if <span class="delete">(mm.position[2]</span> &lt; <span class="delete">mm.endH)</span></td><td> </td><td class="rblock">               // <span class="insert">use the last color to paint the last segments</span></td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="lblock">       {</td><td> </td><td class="rblock"><span class="insert">               Vec4f rgba = getColorFromName(colors.last().first);</span></td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="lblock">               // <span class="delete">burning has stopped so magnitude fades out</span></td><td> </td><td class="rblock"><span class="insert">               for (int s = segs; s</span> &lt; <span class="insert">m_segments; ++s) {</span></td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="lblock"><span class="delete">               // assume linear fade out</span></td><td> </td><td class="rblock"><span class="insert">                       lineColor.append(rgba);</span></td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="lblock"><span class="delete">               mm.mag -= deltaTime/500.0f;</span></td><td> </td><td class="rblock"><span class="insert">                       trainColor.append(rgba);</span></td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="lblock"><span class="delete">               if(mm.mag</span> &lt; <span class="delete">0)</span></td><td> </td><td class="rblock"><span class="insert">                       trainColor.append(rgba);</span></td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="lblock">               {</td><td> </td><td class="rblock"><span class="insert">               }</span></td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="lblock">                       <span class="delete">return false;</span>    // <span class="delete">no longer visible</span></td><td> </td><td class="rblock"><span class="insert">       } else if (segs &gt; m_segments)</span> {</td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="lblock"></td><td> </td><td class="rblock">               // <span class="insert">remove the extra segments</span></td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="lblock"></td><td> </td><td class="rblock"><span class="insert">               for (int s = segs; s &gt; m_segments; --s) {</span></td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="lblock"></td><td> </td><td class="rblock"><span class="insert">                       lineColor.removeLast();</span></td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="lblock"></td><td> </td><td class="rblock"><span class="insert">                       trainColor.removeLast();</span></td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="lblock"></td><td> </td><td class="rblock"><span class="insert">                       trainColor.removeLast();</span></td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="left">               }</td><td> </td><td class="right">               }</td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="left">       }</td><td> </td><td class="right">       }</td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="left"></td><td> </td><td class="right"></td><td class="lineno" valign="top"></td></tr>
+      <tr><td><a name="diff0039" /></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="lblock">       // <span class="delete">*** would need time direction multiplier</span> to <span class="delete">allow reverse time re</span></td><td> </td><td class="rblock">       // <span class="insert">multi-color ?</span></td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="lblock"><span class="delete">play</span></td><td> </td><td class="rblock"><span class="insert">       // select a random segment</span> to <span class="insert">be the first (to alternate colors)</span></td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="lblock"><span class="delete">       float dt</span> = <span class="delete">820+(double)qrand()/((double)RAND_MAX+1)*185; // range 82</span></td><td> </td><td class="rblock"><span class="insert">       if (colors.size() &gt; 1) {</span></td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="lblock"><span class="delete">0-1005</span></td><td> </td><td class="rblock"><span class="insert">               int firstSegment</span> = <span class="insert">(segs - 1) * ((float) qrand() / ((float) </span></td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="lblock"><span class="delete">       mm.position[2] -= speed*deltaTime/dt;</span></td><td> </td><td class="rblock"><span class="insert">RAND_MAX + 1));</span> // <span class="insert">[0, segments-1]</span></td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="lblock">                                                                           </td><td> </td><td class="rblock"><span class="insert">               QList&lt;Vec4f&gt; lineColor2 = lineColor.mid(0, firstSegment);</span></td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="lblock">       // <span class="delete">train doesn't extend beyond start of burn</span></td><td> </td><td class="rblock"><span class="insert">               QList&lt;Vec4f&gt; lineColor1 = lineColor.mid(firstSegment);</span></td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="lblock">       if <span class="delete">(mm.position[2] + speed*0.5f</span> &gt; <span class="delete">mm.startH)</span></td><td> </td><td class="rblock"><span class="insert">               lineColor.clear();</span></td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="lblock">       {</td><td> </td><td class="rblock"><span class="insert">               lineColor.append(lineColor1);</span></td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="lblock">               <span class="delete">mm.posTrain[2]</span> = <span class="delete">mm.startH;</span></td><td> </td><td class="rblock"><span class="insert">               lineColor.append(lineColor2);</span></td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="lblock"></td><td> </td><td class="rblock"><span class="insert"></span></td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="lblock"></td><td> </td><td class="rblock"><span class="insert">               firstSegment *= 2;</span></td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="lblock"></td><td> </td><td class="rblock"><span class="insert">               QList&lt;Vec4f&gt; trainColor2 = trainColor.mid(0, firstSegment);</span></td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="lblock"></td><td> </td><td class="rblock"><span class="insert">               QList&lt;Vec4f&gt; trainColor1 = trainColor.mid(firstSegment);</span></td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="lblock"></td><td> </td><td class="rblock"><span class="insert">               trainColor.clear();</span></td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="lblock"></td><td> </td><td class="rblock"><span class="insert">               trainColor.append(trainColor1);</span></td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="lblock"></td><td> </td><td class="rblock"><span class="insert">               trainColor.append(trainColor2);</span></td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="lblock"></td><td> </td><td class="rblock"><span class="insert">       }</span></td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="lblock"></td><td> </td><td class="rblock"><span class="insert"></span></td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="lblock"></td><td> </td><td class="rblock"><span class="insert">       m_lineColorVector = lineColor.toVector();</span></td><td class="lineno" valign="top"></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="lblock"></td><td> </td><td class="rblock"><span class="insert">       m_trainColorVector = trainColor.toVector();</span></td><td class="lineno" valign="top"></td></tr>
-      <tr><td class="lineno" valign="top"></td><td class="left">}</td><td> </td><td class="right">}</td><td class="lineno" valign="top"></td></tr>
-      <tr><td class="lineno" valign="top"></td><td class="left"></td><td> </td><td class="right"></td><td class="lineno" valign="top"></td></tr>
-      <tr><td><a name="diff0043" /></td></tr>
-      <tr><td class="lineno" valign="top"></td><td class="lblock"><span class="delete">bool Meteor::updateMeteorModel(double deltaTime, double speed, MeteorModel 
-&amp;mm</span>)</td><td> </td><td class="rblock"><span class="insert">float Meteor::meteorDistance(float zenithAngle, float altitude</span>)</td><td class="lineno" valign="top"></td></tr>
-      <tr><td class="lineno" valign="top"></td><td class="left">{</td><td> </td><td class="right">{</td><td class="lineno" valign="top"></td></tr>
-      <tr><td><a name="diff0044" /></td></tr>
-      <tr><td class="lineno" valign="top"></td><td class="lblock">       <span class="delete">if (mm.position[2] &lt; mm.endH)</span></td><td> </td><td class="rblock">       <span class="insert">float distance;</span></td><td class="lineno" valign="top"></td></tr>
-      <tr><td class="lineno" valign="top"></td><td class="lblock"><span class="delete">       {</span></td><td> </td><td class="rblock"></td><td class="lineno" valign="top"></td></tr>
-      <tr><td class="lineno" valign="top"></td><td class="lblock"><span class="delete">               // burning has stopped so magnitude fades out</span></td><td> </td><td class="rblock"></td><td class="lineno" valign="top"></td></tr>
-      <tr><td class="lineno" valign="top"></td><td class="lblock"><span class="delete">               // assume linear fade out</span></td><td> </td><td class="rblock"></td><td class="lineno" valign="top"></td></tr>
-      <tr><td class="lineno" valign="top"></td><td class="lblock"><span class="delete">               mm.mag -= deltaTime/500.0f;</span></td><td> </td><td class="rblock"></td><td class="lineno" valign="top"></td></tr>
-      <tr><td class="lineno" valign="top"></td><td class="lblock"><span class="delete">               if(mm.mag &lt; 0)</span></td><td> </td><td class="rblock"></td><td class="lineno" valign="top"></td></tr>
-      <tr><td class="lineno" valign="top"></td><td class="lblock"><span class="delete">               {</span></td><td> </td><td class="rblock"></td><td class="lineno" valign="top"></td></tr>
-      <tr><td class="lineno" valign="top"></td><td class="lblock"><span class="delete">                       return false;    // no longer visible</span></td><td> </td><td class="rblock"></td><td class="lineno" valign="top"></td></tr>
-      <tr><td class="lineno" valign="top"></td><td class="lblock"><span class="delete">               }</span></td><td> </td><td class="rblock"></td><td class="lineno" valign="top"></td></tr>
-      <tr><td class="lineno" valign="top"></td><td class="lblock"><span class="delete">       }</span></td><td> </td><td class="rblock"></td><td class="lineno" valign="top"></td></tr>
-      <tr><td class="lineno" valign="top"></td><td class="left"></td><td> </td><td class="right"></td><td class="lineno" valign="top"></td></tr>
-      <tr><td><a name="diff0045" /></td></tr>
-      <tr><td class="lineno" valign="top"></td><td class="lblock">       <span class="delete">// *** would need time direction multiplier to allow reverse time re</span></td><td> </td><td class="rblock">       if <span class="insert">(zenithAngle &gt; 1.13446401f) //</span> &gt; <span class="insert">65 degrees?</span></td><td class="lineno" valign="top"></td></tr>
-      <tr><td class="lineno" valign="top"></td><td class="lblock"><span class="delete">play</span></td><td> </td><td class="rblock"></td><td class="lineno" valign="top"></td></tr>
-      <tr><td class="lineno" valign="top"></td><td class="lblock"><span class="delete">       float dt = 820+(double)qrand()/((double)RAND_MAX+1)*185; // range 82</span></td><td> </td><td class="rblock"></td><td class="lineno" valign="top"></td></tr>
-      <tr><td class="lineno" valign="top"></td><td class="lblock"><span class="delete">0-1005</span></td><td> </td><td class="rblock"></td><td class="lineno" valign="top"></td></tr>
-      <tr><td class="lineno" valign="top"></td><td class="lblock"><span class="delete">       mm.position[2] -= speed*deltaTime/dt;</span></td><td> </td><td class="rblock"></td><td class="lineno" valign="top"></td></tr>
-      <tr><td class="lineno" valign="top"></td><td class="lblock"><span class="delete"></span></td><td> </td><td class="rblock"></td><td class="lineno" valign="top"></td></tr>
-      <tr><td class="lineno" valign="top"></td><td class="lblock"><span class="delete">       // train doesn't extend beyond start of burn</span></td><td> </td><td class="rblock"></td><td class="lineno" valign="top"></td></tr>
-      <tr><td class="lineno" valign="top"></td><td class="lblock">       if <span class="delete">(mm.position[2] + speed*0.5f</span> &gt; <span class="delete">mm.startH)</span></td><td> </td><td class="rblock"></td><td class="lineno" valign="top"></td></tr>
-      <tr><td class="lineno" valign="top"></td><td class="left">       {</td><td> </td><td class="right">       {</td><td class="lineno" valign="top"></td></tr>
-      <tr><td><a name="diff0046" /></td></tr>
-      <tr><td class="lineno" valign="top"></td><td class="lblock">               <span class="delete">mm.posTrain[2]</span> = <span class="delete">mm.startH;</span></td><td> </td><td class="rblock">               <span class="insert">float zcos</span> = <span class="insert">qCos(zenithAngle);</span></td><td class="lineno" valign="top"></td></tr>
-      <tr><td class="lineno" valign="top"></td><td class="lblock"></td><td> </td><td class="rblock"><span class="insert">               distance = qSqrt(EARTH_RADIUS2 * qPow(zcos, 2)</span></td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="lblock"></td><td> </td><td class="rblock"><span class="insert">}</span></td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="lblock"></td><td> </td><td class="rblock"><span class="insert"></span></td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="lblock"></td><td> </td><td class="rblock"><span class="insert">float Meteor::meteorZ(float zenithAngle, float altitude)</span></td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="lblock"></td><td> </td><td class="rblock"><span class="insert">{</span></td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="lblock"></td><td> </td><td class="rblock"><span class="insert">       float distance;</span></td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="lblock"></td><td> </td><td class="rblock">                                                                           </td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="lblock"></td><td> </td><td class="rblock">       if <span class="insert">(zenithAngle</span> &gt; <span class="insert">1.13446401f) // &gt; 65 degrees?</span></td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="lblock"></td><td> </td><td class="rblock">       {</td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="lblock"></td><td> </td><td class="rblock">               <span class="insert">float zcos = qCos(zenithAngle);</span></td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="lblock"></td><td> </td><td class="rblock"><span class="insert">               distance</span> = <span class="insert">qSqrt(EARTH_RADIUS2 * qPow(zcos, 2)</span></td><td class="lineno" valign="top"></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="lblock"></td><td> </td><td class="rblock"><span class="insert">                                + 2 * EARTH_RADIUS * altitude</span></td><td class="lineno" valign="top"></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="lblock"></td><td> </td><td class="rblock"><span class="insert">                                + qPow(altitude, 2));</span></td><td class="lineno" valign="top"></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="lblock"></td><td> </td><td class="rblock"><span class="insert">               distance -= EARTH_RADIUS * zcos;</span></td><td class="lineno" valign="top"></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="left">       }</td><td> </td><td class="right">       }</td><td class="lineno" valign="top"></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="left">       else</td><td> </td><td class="right">       else</td><td class="lineno" valign="top"></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="left">       {</td><td> </td><td class="right">       {</td><td class="lineno" valign="top"></td></tr>
-      <tr><td><a name="diff0047" /></td></tr>
+      <tr><td><a name="diff0040" /></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="lblock">               <span class="delete">mm.posTrain[2] -= speed*deltaTime/dt;</span></td><td> </td><td class="rblock">               <span class="insert">// (first order approximation)</span></td><td class="lineno" valign="top"></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="lblock"></td><td> </td><td class="rblock"><span class="insert">               distance = altitude / qCos(zenithAngle);</span></td><td class="lineno" valign="top"></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="left">       }</td><td> </td><td class="right">       }</td><td class="lineno" valign="top"></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="left"></td><td> </td><td class="right"></td><td class="lineno" valign="top"></td></tr>
-      <tr><td><a name="diff0048" /></td></tr>
+      <tr><td><a name="diff0041" /></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="lblock">       return <span class="delete">tru</span>e;</td><td> </td><td class="rblock">       return <span class="insert">distanc</span>e;</td><td class="lineno" valign="top"></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="left">}</td><td> </td><td class="right">}</td><td class="lineno" valign="top"></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="left"></td><td> </td><td class="right"></td><td class="lineno" valign="top"></td></tr>
-      <tr><td><a name="diff0049" /></td></tr>
+      <tr><td><a name="diff0042" /></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="lblock"><span class="delete">// returns true if alive</span></td><td> </td><td class="rblock"><span class="insert">Vec3d Meteor::altAzToRadiant(Vec3d position)</span></td><td class="lineno" valign="top"></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="lblock"><span class="delete">bool Meteor::update(double deltaTime)</span></td><td> </td><td class="rblock"></td><td class="lineno" valign="top"></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="left">{</td><td> </td><td class="right">{</td><td class="lineno" valign="top"></td></tr>
-      <tr><td><a name="diff0050" /></td></tr>
-      <tr><td class="lineno" valign="top"></td><td class="lblock">       <span class="delete">if (!m_alive)</span></td><td> </td><td class="rblock">       <span class="insert">position.transfo4d(m_matAltAzToRadiant);</span></td><td class="lineno" valign="top"></td></tr>
+      <tr><td><a name="diff0043" /></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="lblock">       <span class="delete">if (!m_alive)</span></td><td> </td><td class="rblock">       <span class="insert">position.transfo4d(m_matAltAzToRadiant.transpose());</span></td><td class="lineno" valign="top"></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="lblock"><span class="delete">       {</span></td><td> </td><td class="rblock"><span class="insert">       position *= 1242;</span></td><td class="lineno" valign="top"></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="lblock">               return <span class="delete">false;</span></td><td> </td><td class="rblock">       return <span class="insert">position;</span></td><td class="lineno" valign="top"></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="lblock"><span class="delete">       }</span></td><td> </td><td class="rblock"></td><td class="lineno" valign="top"></td></tr>
@@ -507,13 +530,13 @@ ame(c</span>urrentColor.first));</td><td> </td><td class="rblock">              
       <tr><td class="lineno" valign="top"></td><td class="lblock"><span class="delete">       return m_alive;</span></td><td> </td><td class="rblock"></td><td class="lineno" valign="top"></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="left">}</td><td> </td><td class="right">}</td><td class="lineno" valign="top"></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="left"></td><td> </td><td class="right"></td><td class="lineno" valign="top"></td></tr>
-      <tr><td><a name="diff0051" /></td></tr>
+      <tr><td><a name="diff0044" /></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="lblock"><span class="delete">void Meteor::insertVertex(const StelCore* core, const Mat4d&amp; viewMatrix, QV
 ector&lt;Vec3d&gt; &amp;vertexArray, Vec3d vertex</span>)</td><td> </td><td class="rblock"><span class="insert">Vec3d Meteor::radiantToAltAz(Vec3d position</span>)</td><td class="lineno" valign="top"></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="left">{</td><td> </td><td class="right">{</td><td class="lineno" valign="top"></td></tr>
-      <tr><td><a name="diff0052" /></td></tr>
-      <tr><td class="lineno" valign="top"></td><td class="lblock">       <span class="delete">vertex.transfo4d(viewMatrix);</span></td><td> </td><td class="rblock">       <span class="insert">position /= 1242;</span> // <span class="insert">1242</span> to scale down under 1</td><td class="lineno" valign="top"></td></tr>
-      <tr><td class="lineno" valign="top"></td><td class="lblock"><span class="delete">       vertex = core-&gt;j2000ToAltAz(vertex);</span></td><td> </td><td class="rblock">       <span class="insert">position.transfo4d(m_matAltAzToRadiant.transpose());</span></td><td class="lineno" valign="top"></td></tr>
+      <tr><td><a name="diff0045" /></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="lblock">       <span class="delete">vertex.transfo4d(viewMatrix);</span></td><td> </td><td class="rblock">       <span class="insert">position /= 1242.0;</span> // <span class="insert">1242</span> to scale down under 1</td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="lblock"><span class="delete">       vertex = core-&gt;j2000ToAltAz(vertex);</span></td><td> </td><td class="rblock">       <span class="insert">position.transfo4d(m_matAltAzToRadiant);</span></td><td class="lineno" valign="top"></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="lblock"><span class="delete">       vertex[2] -= EARTH_RADIUS;</span></td><td> </td><td class="rblock"><span class="insert">       return position;</span></td><td class="lineno" valign="top"></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="lblock"><span class="delete">       vertex/=1216;</span> // <span class="delete">1216 is</span> to scale down under 1 <span class="delete">for desktop version</span></td><td> </td><td class="rblock"></td><td class="lineno" valign="top"></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="lblock"><span class="delete">       vertexArray.push_back(vertex);</span></td><td> </td><td class="rblock"></td><td class="lineno" valign="top"></td></tr>
@@ -529,25 +552,24 @@ at&amp; bolideSize)</td><td class="lineno" valign="top"></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="left">       if (FOV &lt;= 0.5)</td><td> </td><td class="right">       if (FOV &lt;= 0.5)</td><td class="lineno" valign="top"></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="left">       {</td><td> </td><td class="right">       {</td><td class="lineno" valign="top"></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="left">               thickness = 0.013 * FOV; // decreasing faster</td><td> </td><td class="right">               thickness = 0.013 * FOV; // decreasing faster</td><td class="lineno" valign="top"></td></tr>
-      <tr><td><a name="diff0053" /></td></tr>
+      <tr><td><a name="diff0046" /></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="lblock">       } else if (FOV &gt; 100.0) {</td><td> </td><td class="rblock">       }</td><td class="lineno" valign="top"></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="lblock"></td><td> </td><td class="rblock">       else if (FOV &gt; 100.0)</td><td class="lineno" valign="top"></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="lblock"></td><td> </td><td class="rblock">       {</td><td class="lineno" valign="top"></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="left">               thickness = 0; // remove prism</td><td> </td><td class="right">               thickness = 0; // remove prism</td><td class="lineno" valign="top"></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="left">       }</td><td> </td><td class="right">       }</td><td class="lineno" valign="top"></td></tr>
-      <tr><td><a name="diff0054" /></td></tr>
+      <tr><td><a name="diff0047" /></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="lblock"></td><td> </td><td class="rblock"><span class="insert">                                                                           </span></td><td class="lineno" valign="top"></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="left">       bolideSize = thickness*3;</td><td> </td><td class="right">       bolideSize = thickness*3;</td><td class="lineno" valign="top"></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="left">}</td><td> </td><td class="right">}</td><td class="lineno" valign="top"></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="left"></td><td> </td><td class="right"></td><td class="lineno" valign="top"></td></tr>
-      <tr><td><a name="diff0055" /></td></tr>
+      <tr><td><a name="diff0048" /></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="lblock">void <span class="delete">Meteor::drawBolide(const StelCore* core, StelPainter&amp;</span> sPainter, const </td><td> </td><td class="rblock">void <span class="insert">Meteor::drawBolide(StelPainter&amp;</span> sPainter, const <span class="insert">float&amp;</span> bolideSize)</td><td class="lineno" valign="top"></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="lblock"><span class="delete">MeteorModel&amp; mm,</span></td><td> </td><td class="rblock"></td><td class="lineno" valign="top"></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="lblock"><span class="delete">                       const Mat4d&amp; viewMatrix, const float</span> bolideSize)</td><td> </td><td class="rblock"></td><td class="lineno" valign="top"></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="left">{</td><td> </td><td class="right">{</td><td class="lineno" valign="top"></td></tr>
-      <tr><td><a name="diff0056" /></td></tr>
-      <tr><td class="lineno" valign="top"></td><td class="lblock">       if <span class="delete">(!bolideSize)</span> {</td><td> </td><td class="rblock">       if <span class="insert">(!bolideSize || !m_bolideTexture || m_position[2] &gt; VISIBLE_RADIU</span></td><td class="lineno" valign="top"></td></tr>
-      <tr><td class="lineno" valign="top"></td><td class="lblock"></td><td> </td><td class="rblock"><span class="insert">S)</span></td><td class="lineno" valign="top"></td></tr>
+      <tr><td><a name="diff0049" /></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="lblock">       if <span class="delete">(!bolideSize)</span> {</td><td> </td><td class="rblock">       if <span class="insert">(!bolideSize || !m_bolideTexture)</span></td><td class="lineno" valign="top"></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="lblock"></td><td> </td><td class="rblock">       {</td><td class="lineno" valign="top"></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="left">               return;</td><td> </td><td class="right">               return;</td><td class="lineno" valign="top"></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="left">       }</td><td> </td><td class="right">       }</td><td class="lineno" valign="top"></td></tr>
@@ -556,41 +578,41 @@ at&amp; bolideSize)</td><td class="lineno" valign="top"></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="left">       //</td><td> </td><td class="right">       //</td><td class="lineno" valign="top"></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="left">       QVector&lt;Vec3d&gt; vertexArrayBolide;</td><td> </td><td class="right">       QVector&lt;Vec3d&gt; vertexArrayBolide;</td><td class="lineno" valign="top"></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="left">       QVector&lt;Vec4f&gt; colorArrayBolide;</td><td> </td><td class="right">       QVector&lt;Vec4f&gt; colorArrayBolide;</td><td class="lineno" valign="top"></td></tr>
-      <tr><td><a name="diff0057" /></td></tr>
+      <tr><td><a name="diff0050" /></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="lblock">       Vec4f bolideColor = Vec4f(1,<span class="delete">1,1,mm.m</span>ag);</td><td> </td><td class="rblock">       Vec4f bolideColor = Vec4f(1,<span class="insert"> 1, 1, m_aptM</span>ag);</td><td class="lineno" valign="top"></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="left"></td><td> </td><td class="right"></td><td class="lineno" valign="top"></td></tr>
-      <tr><td><a name="diff0058" /></td></tr>
+      <tr><td><a name="diff0051" /></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="lblock">       Vec3d topLeft = m<span class="delete">m.</span>position;</td><td> </td><td class="rblock">       Vec3d topLeft = m<span class="insert">_</span>position;</td><td class="lineno" valign="top"></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="left">       topLeft[1] -= bolideSize;</td><td> </td><td class="right">       topLeft[1] -= bolideSize;</td><td class="lineno" valign="top"></td></tr>
-      <tr><td><a name="diff0059" /></td></tr>
+      <tr><td><a name="diff0052" /></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="lblock">       <span class="delete">insertVertex(core, viewMatrix, vertexArrayBolide, topLeft</span>);</td><td> </td><td class="rblock">       <span class="insert">vertexArrayBolide.push_back(radiantToAltAz(topLeft)</span>);</td><td class="lineno" valign="top"></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="left">       colorArrayBolide.push_back(bolideColor);</td><td> </td><td class="right">       colorArrayBolide.push_back(bolideColor);</td><td class="lineno" valign="top"></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="left"></td><td> </td><td class="right"></td><td class="lineno" valign="top"></td></tr>
-      <tr><td><a name="diff0060" /></td></tr>
+      <tr><td><a name="diff0053" /></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="lblock">       Vec3d topRight = m<span class="delete">m.</span>position;</td><td> </td><td class="rblock">       Vec3d topRight = m<span class="insert">_</span>position;</td><td class="lineno" valign="top"></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="left">       topRight[0] -= bolideSize;</td><td> </td><td class="right">       topRight[0] -= bolideSize;</td><td class="lineno" valign="top"></td></tr>
-      <tr><td><a name="diff0061" /></td></tr>
+      <tr><td><a name="diff0054" /></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="lblock">       <span class="delete">insertVertex(core, viewMatrix, vertexArrayBolide, topRight</span>);</td><td> </td><td class="rblock">       <span class="insert">vertexArrayBolide.push_back(radiantToAltAz(topRight)</span>);</td><td class="lineno" valign="top"></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="left">       colorArrayBolide.push_back(bolideColor);</td><td> </td><td class="right">       colorArrayBolide.push_back(bolideColor);</td><td class="lineno" valign="top"></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="left"></td><td> </td><td class="right"></td><td class="lineno" valign="top"></td></tr>
-      <tr><td><a name="diff0062" /></td></tr>
+      <tr><td><a name="diff0055" /></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="lblock">       Vec3d bottomRight = m<span class="delete">m.</span>position;</td><td> </td><td class="rblock">       Vec3d bottomRight = m<span class="insert">_</span>position;</td><td class="lineno" valign="top"></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="left">       bottomRight[1] += bolideSize;</td><td> </td><td class="right">       bottomRight[1] += bolideSize;</td><td class="lineno" valign="top"></td></tr>
-      <tr><td><a name="diff0063" /></td></tr>
+      <tr><td><a name="diff0056" /></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="lblock">       <span class="delete">insertVertex(core, viewMatrix, vertexArrayBolide, bottomRight</span>);</td><td> </td><td class="rblock">       <span class="insert">vertexArrayBolide.push_back(radiantToAltAz(bottomRight)</span>);</td><td class="lineno" valign="top"></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="left">       colorArrayBolide.push_back(bolideColor);</td><td> </td><td class="right">       colorArrayBolide.push_back(bolideColor);</td><td class="lineno" valign="top"></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="left"></td><td> </td><td class="right"></td><td class="lineno" valign="top"></td></tr>
-      <tr><td><a name="diff0064" /></td></tr>
+      <tr><td><a name="diff0057" /></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="lblock">       Vec3d bottomLeft = m<span class="delete">m.</span>position;</td><td> </td><td class="rblock">       Vec3d bottomLeft = m<span class="insert">_</span>position;</td><td class="lineno" valign="top"></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="left">       bottomLeft[0] += bolideSize;</td><td> </td><td class="right">       bottomLeft[0] += bolideSize;</td><td class="lineno" valign="top"></td></tr>
-      <tr><td><a name="diff0065" /></td></tr>
+      <tr><td><a name="diff0058" /></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="lblock">       <span class="delete">insertVertex(core, viewMatrix, vertexArrayBolide, bottomLeft</span>);</td><td> </td><td class="rblock">       <span class="insert">vertexArrayBolide.push_back(radiantToAltAz(bottomLeft)</span>);</td><td class="lineno" valign="top"></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="left">       colorArrayBolide.push_back(bolideColor);</td><td> </td><td class="right">       colorArrayBolide.push_back(bolideColor);</td><td class="lineno" valign="top"></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="left"></td><td> </td><td class="right"></td><td class="lineno" valign="top"></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="left">       glEnable(GL_BLEND);</td><td> </td><td class="right">       glEnable(GL_BLEND);</td><td class="lineno" valign="top"></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="left">       glBlendFunc(GL_ONE, GL_ONE);</td><td> </td><td class="right">       glBlendFunc(GL_ONE, GL_ONE);</td><td class="lineno" valign="top"></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="left">       sPainter.enableClientStates(true, true, true);</td><td> </td><td class="right">       sPainter.enableClientStates(true, true, true);</td><td class="lineno" valign="top"></td></tr>
-      <tr><td><a name="diff0066" /></td></tr>
+      <tr><td><a name="diff0059" /></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="lblock">       <span class="delete">Meteor::</span>bolideTexture-&gt;bind();</td><td> </td><td class="rblock">       <span class="insert">m_</span>bolideTexture-&gt;bind();</td><td class="lineno" valign="top"></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="left">       static const float texCoordData[] = {1.,0., 0.,0., 0.,1., 1.,1.};</td><td> </td><td class="right">       static const float texCoordData[] = {1.,0., 0.,0., 0.,1., 1.,1.};</td><td class="lineno" valign="top"></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="left">       sPainter.setTexCoordPointer(2, GL_FLOAT, texCoordData);</td><td> </td><td class="right">       sPainter.setTexCoordPointer(2, GL_FLOAT, texCoordData);</td><td class="lineno" valign="top"></td></tr>
@@ -606,7 +628,7 @@ ize(), 0, true);</td><td class="lineno" valign="top"></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="left">       sPainter.enableClientStates(false);</td><td> </td><td class="right">       sPainter.enableClientStates(false);</td><td class="lineno" valign="top"></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="left">}</td><td> </td><td class="right">}</td><td class="lineno" valign="top"></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="left"></td><td> </td><td class="right"></td><td class="lineno" valign="top"></td></tr>
-      <tr><td><a name="diff0067" /></td></tr>
+      <tr><td><a name="diff0060" /></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="lblock">void <span class="delete">Meteor::drawTrain(const StelCore *core, StelPainter&amp;</span> sPainter, const <span class="delete">M</span></td><td> </td><td class="rblock">void <span class="insert">Meteor::drawTrain(StelPainter&amp;</span> sPainter, const <span class="insert">float&amp; thickness)</span></td><td class="lineno" valign="top"></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="lblock"><span class="delete">eteorModel&amp; mm,</span></td><td> </td><td class="rblock"></td><td class="lineno" valign="top"></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="lblock"><span class="delete">                      const Mat4d&amp; viewMatrix, const float thickness, const</span></td><td> </td><td class="rblock"></td><td class="lineno" valign="top"></td></tr>
@@ -614,7 +636,7 @@ ize(), 0, true);</td><td class="lineno" valign="top"></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="lblock"><span class="delete">                      QList&lt;Vec4f&gt; lineColorArray, QList&lt;Vec4f&gt; trainColorA</span></td><td> </td><td class="rblock"></td><td class="lineno" valign="top"></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="lblock"><span class="delete">rray)</span></td><td> </td><td class="rblock"></td><td class="lineno" valign="top"></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="left">{</td><td> </td><td class="right">{</td><td class="lineno" valign="top"></td></tr>
-      <tr><td><a name="diff0068" /></td></tr>
+      <tr><td><a name="diff0061" /></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="lblock">       if (<span class="delete">segments != lineColorArray.size() || 2*segments != trainColorArr
 ay</span>.size())</td><td> </td><td class="rblock">       if (<span class="insert">m_segments != m_lineColorVector.size() || 2*m_segments != m_trai
 nColorVector</span>.size())</td><td class="lineno" valign="top"></td></tr>
@@ -632,66 +654,63 @@ e!";</td><td class="lineno" valign="top"></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="left">       QVector&lt;Vec3d&gt; vertexArrayR;</td><td> </td><td class="right">       QVector&lt;Vec3d&gt; vertexArrayR;</td><td class="lineno" valign="top"></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="left">       QVector&lt;Vec3d&gt; vertexArrayTop;</td><td> </td><td class="right">       QVector&lt;Vec3d&gt; vertexArrayTop;</td><td class="lineno" valign="top"></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="left"></td><td> </td><td class="right"></td><td class="lineno" valign="top"></td></tr>
-      <tr><td><a name="diff0069" /></td></tr>
+      <tr><td><a name="diff0062" /></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="lblock">       Vec3d posTrainB = m<span class="delete">m.</span>posTrain;</td><td> </td><td class="rblock">       Vec3d posTrainB = m<span class="insert">_</span>posTrain;</td><td class="lineno" valign="top"></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="left">       posTrainB[0] += thickness*0.7;</td><td> </td><td class="right">       posTrainB[0] += thickness*0.7;</td><td class="lineno" valign="top"></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="left">       posTrainB[1] += thickness*0.7;</td><td> </td><td class="right">       posTrainB[1] += thickness*0.7;</td><td class="lineno" valign="top"></td></tr>
-      <tr><td><a name="diff0070" /></td></tr>
+      <tr><td><a name="diff0063" /></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="lblock">       Vec3d posTrainL = m<span class="delete">m.</span>posTrain;</td><td> </td><td class="rblock">       Vec3d posTrainL = m<span class="insert">_</span>posTrain;</td><td class="lineno" valign="top"></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="left">       posTrainL[1] -= thickness;</td><td> </td><td class="right">       posTrainL[1] -= thickness;</td><td class="lineno" valign="top"></td></tr>
-      <tr><td><a name="diff0071" /></td></tr>
+      <tr><td><a name="diff0064" /></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="lblock">       Vec3d posTrainR = m<span class="delete">m.</span>posTrain;</td><td> </td><td class="rblock">       Vec3d posTrainR = m<span class="insert">_</span>posTrain;</td><td class="lineno" valign="top"></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="left">       posTrainR[0] -= thickness;</td><td> </td><td class="right">       posTrainR[0] -= thickness;</td><td class="lineno" valign="top"></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="left"></td><td> </td><td class="right"></td><td class="lineno" valign="top"></td></tr>
-      <tr><td><a name="diff0072" /></td></tr>
-      <tr><td class="lineno" valign="top"></td><td class="lblock">       for (int i=0; <span class="delete">i&lt;segments;</span> i++) {</td><td> </td><td class="rblock">       for (int i=0; <span class="insert">i&lt;m_segments;</span> i++)</td><td class="lineno" valign="top"></td></tr>
-      <tr><td class="lineno" valign="top"></td><td class="lblock">               float mag = <span class="delete">mm.mag</span> * i/(3* <span class="delete">(segments-1));</span></td><td> </td><td class="rblock">       {</td><td class="lineno" valign="top"></td></tr>
-      <tr><td class="lineno" valign="top"></td><td class="lblock">               if (i &gt; <span class="delete">mm.firstBrightSegment)</span> {</td><td> </td><td class="rblock">               float mag = <span class="insert">m_aptMag</span> * i/(3* <span class="insert">(m_segments-1));</span></td><td class="lineno" valign="top"></td></tr>
-      <tr><td class="lineno" valign="top"></td><td class="lblock"></td><td> </td><td class="rblock">               if (i &gt; <span class="insert">m_firstBrightSegment)</span></td><td class="lineno" valign="top"></td></tr>
-      <tr><td class="lineno" valign="top"></td><td class="lblock"></td><td> </td><td class="rblock">               {</td><td class="lineno" valign="top"></td></tr>
-      <tr><td class="lineno" valign="top"></td><td class="left">                       mag *= 12./5.;</td><td> </td><td class="right">                       mag *= 12./5.;</td><td class="lineno" valign="top"></td></tr>
-      <tr><td class="lineno" valign="top"></td><td class="left">               }</td><td> </td><td class="right">               }</td><td class="lineno" valign="top"></td></tr>
-      <tr><td class="lineno" valign="top"></td><td class="left"></td><td> </td><td class="right"></td><td class="lineno" valign="top"></td></tr>
-      <tr><td><a name="diff0073" /></td></tr>
-      <tr><td class="lineno" valign="top"></td><td class="lblock">               double height = m<span class="delete">m.posTrain[2] + i*(mm.position[2] - mm.posT
-rain[2])/(</span>segments-1);</td><td> </td><td class="rblock">               double height = m<span class="insert">_posTrain[2] + i*(m_position[2] - m_posTrai
-n[2])/(m_</span>segments-1);</td><td class="lineno" valign="top"></td></tr>
+      <tr><td><a name="diff0065" /></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="lblock">       for (int <span class="delete">i=0; i&lt;segments; i++) {</span></td><td> </td><td class="rblock">       for (int <span class="insert">i</span> = <span class="insert">0; i &lt; m_segments; ++i)</span></td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="lblock"><span class="delete">               float mag</span> = <span class="delete">mm.mag * i/(3* (segments-1));</span></td><td> </td><td class="rblock">       {</td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="lblock"><span class="delete">               if (i &gt; mm.firstBrightSegment)</span> {</td><td> </td><td class="rblock">               double height = <span class="insert">m_posTrain[2]</span> + <span class="insert">i*(m_position[2]</span> - <span class="insert">m_posTrai</span></td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="lblock">                       <span class="delete">mag *= 12./5.;</span></td><td> </td><td class="rblock"><span class="insert">n[2])/(m_segments-1);</span></td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="lblock"><span class="delete">               }</span></td><td> </td><td class="rblock"></td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="lblock">                                                                           </td><td> </td><td class="rblock"></td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="lblock">               double height = <span class="delete">mm.posTrain[2]</span> + <span class="delete">i*(mm.position[2]</span> - <span class="delete">mm.posT</span></td><td> </td><td class="rblock"></td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="lblock"><span class="delete">rain[2])/(segments-1);</span></td><td> </td><td class="rblock"></td><td class="lineno" valign="top"></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="left">               Vec3d posi;</td><td> </td><td class="right">               Vec3d posi;</td><td class="lineno" valign="top"></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="left"></td><td> </td><td class="right"></td><td class="lineno" valign="top"></td></tr>
-      <tr><td><a name="diff0074" /></td></tr>
+      <tr><td><a name="diff0066" /></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="lblock">               posi = m<span class="delete">m.</span>posTrain;</td><td> </td><td class="rblock">               posi = m<span class="insert">_</span>posTrain;</td><td class="lineno" valign="top"></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="left">               posi[2] = height;</td><td> </td><td class="right">               posi[2] = height;</td><td class="lineno" valign="top"></td></tr>
-      <tr><td><a name="diff0075" /></td></tr>
+      <tr><td><a name="diff0067" /></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="lblock">               <span class="delete">insertVertex(core, viewMatrix, vertexArrayLine, posi</span>);</td><td> </td><td class="rblock">               <span class="insert">vertexArrayLine.push_back(radiantToAltAz(posi)</span>);</td><td class="lineno" valign="top"></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="left"></td><td> </td><td class="right"></td><td class="lineno" valign="top"></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="left">               posi = posTrainB;</td><td> </td><td class="right">               posi = posTrainB;</td><td class="lineno" valign="top"></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="left">               posi[2] = height;</td><td> </td><td class="right">               posi[2] = height;</td><td class="lineno" valign="top"></td></tr>
-      <tr><td><a name="diff0076" /></td></tr>
+      <tr><td><a name="diff0068" /></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="lblock">               <span class="delete">insertVertex(core, viewMatrix, vertexArrayL, posi);</span></td><td> </td><td class="rblock">               <span class="insert">vertexArrayL.push_back(radiantToAltAz(posi));</span></td><td class="lineno" valign="top"></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="lblock"><span class="delete">               insertVertex(core, viewMatrix, vertexArrayR, posi);</span></td><td> </td><td class="rblock"><span class="insert">               vertexArrayR.push_back(radiantToAltAz(posi));</span></td><td class="lineno" valign="top"></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="left"></td><td> </td><td class="right"></td><td class="lineno" valign="top"></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="left">               posi = posTrainL;</td><td> </td><td class="right">               posi = posTrainL;</td><td class="lineno" valign="top"></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="left">               posi[2] = height;</td><td> </td><td class="right">               posi[2] = height;</td><td class="lineno" valign="top"></td></tr>
-      <tr><td><a name="diff0077" /></td></tr>
+      <tr><td><a name="diff0069" /></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="lblock">               <span class="delete">insertVertex(core, viewMatrix, vertexArrayL, posi);</span></td><td> </td><td class="rblock">               <span class="insert">vertexArrayL.push_back(radiantToAltAz(posi));</span></td><td class="lineno" valign="top"></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="lblock"><span class="delete">               insertVertex(core, viewMatrix, vertexArrayTop, posi);</span></td><td> </td><td class="rblock"><span class="insert">               vertexArrayTop.push_back(radiantToAltAz(posi));</span></td><td class="lineno" valign="top"></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="left"></td><td> </td><td class="right"></td><td class="lineno" valign="top"></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="left">               posi = posTrainR;</td><td> </td><td class="right">               posi = posTrainR;</td><td class="lineno" valign="top"></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="left">               posi[2] = height;</td><td> </td><td class="right">               posi[2] = height;</td><td class="lineno" valign="top"></td></tr>
-      <tr><td><a name="diff0078" /></td></tr>
+      <tr><td><a name="diff0070" /></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="lblock">               <span class="delete">insertVertex(core, viewMatrix, vertexArrayR, posi);</span></td><td> </td><td class="rblock">               <span class="insert">vertexArrayR.push_back(radiantToAltAz(posi));</span></td><td class="lineno" valign="top"></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="lblock"><span class="delete">               insertVertex(core, viewMatrix, vertexArrayTop, posi);</span></td><td> </td><td class="rblock"><span class="insert">               vertexArrayTop.push_back(radiantToAltAz(posi));</span></td><td class="lineno" valign="top"></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="left"></td><td> </td><td class="right"></td><td class="lineno" valign="top"></td></tr>
-      <tr><td><a name="diff0079" /></td></tr>
-      <tr><td class="lineno" valign="top"></td><td class="lblock">               <span class="delete">lineColorArray[i][3]</span> = mag;</td><td> </td><td class="rblock">               <span class="insert">m_lineColorVector[i][3]</span> = mag;</td><td class="lineno" valign="top"></td></tr>
-      <tr><td class="lineno" valign="top"></td><td class="lblock">               <span class="delete">trainColorArray[i*2][3]</span> = mag;</td><td> </td><td class="rblock">               <span class="insert">m_trainColorVector[i*2][3]</span> = mag;</td><td class="lineno" valign="top"></td></tr>
-      <tr><td class="lineno" valign="top"></td><td class="lblock">               <span class="delete">trainColorArray[i*2+1][3]</span> = mag;</td><td> </td><td class="rblock">               <span class="insert">m_trainColorVector[i*2+1][3]</span> = mag;</td><td class="lineno" valign="top"></td></tr>
+      <tr><td><a name="diff0071" /></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="lblock">               <span class="delete">lineColorArray[i][3]</span> = mag;</td><td> </td><td class="rblock">               <span class="insert">float mag = m_aptMag * ((float) i / (float) (m_segments-1));</span></td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="lblock">               <span class="delete">trainColorArray[i*2][3]</span> = mag;</td><td> </td><td class="rblock"><span class="insert">               m_lineColorVector[i][3]</span> = mag;</td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="lblock">               <span class="delete">trainColorArray[i*2+1][3]</span> = mag;</td><td> </td><td class="rblock">               <span class="insert">m_trainColorVector[i*2][3]</span> = mag;</td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="lblock"></td><td> </td><td class="rblock">               <span class="insert">m_trainColorVector[i*2+1][3]</span> = mag;</td><td class="lineno" valign="top"></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="left">       }</td><td> </td><td class="right">       }</td><td class="lineno" valign="top"></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="left"></td><td> </td><td class="right"></td><td class="lineno" valign="top"></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="left">       glEnable(GL_BLEND);</td><td> </td><td class="right">       glEnable(GL_BLEND);</td><td class="lineno" valign="top"></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="left">       glBlendFunc(GL_SRC_ALPHA, GL_ONE_MINUS_SRC_ALPHA);</td><td> </td><td class="right">       glBlendFunc(GL_SRC_ALPHA, GL_ONE_MINUS_SRC_ALPHA);</td><td class="lineno" valign="top"></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="left">       sPainter.enableClientStates(true, false, true);</td><td> </td><td class="right">       sPainter.enableClientStates(true, false, true);</td><td class="lineno" valign="top"></td></tr>
-      <tr><td><a name="diff0080" /></td></tr>
+      <tr><td><a name="diff0072" /></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="lblock">       if (thickness) {</td><td> </td><td class="rblock">       if (thickness)</td><td class="lineno" valign="top"></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="lblock">               sPainter.setColorPointer(4, GL_FLOAT, <span class="delete">trainColorArray.toVect</span></td><td> </td><td class="rblock">       {</td><td class="lineno" valign="top"></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="lblock"><span class="delete">or().constData());</span></td><td> </td><td class="rblock">               sPainter.setColorPointer(4, GL_FLOAT, <span class="insert">m_trainColorVector.con</span></td><td class="lineno" valign="top"></td></tr>
@@ -718,7 +737,7 @@ Data());</td><td class="lineno" valign="top"></td></tr>
 ayTop.size(), 0, true);</td><td> </td><td class="right">               sPainter.drawFromArray(StelPainter::TriangleStrip, vertexArr
 ayTop.size(), 0, true);</td><td class="lineno" valign="top"></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="left">       }</td><td> </td><td class="right">       }</td><td class="lineno" valign="top"></td></tr>
-      <tr><td><a name="diff0081" /></td></tr>
+      <tr><td><a name="diff0073" /></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="lblock">       sPainter.setColorPointer(4, GL_FLOAT, <span class="delete">lineColorArray.toVector().cons
 tData())</span>;</td><td> </td><td class="rblock">       sPainter.setColorPointer(4, GL_FLOAT, <span class="insert">m_lineColorVector.constData())
 </span>;</td><td class="lineno" valign="top"></td></tr>
@@ -732,7 +751,7 @@ tData())</span>;</td><td> </td><td class="rblock">       sPainter.setColorPointe
       <tr><td class="lineno" valign="top"></td><td class="left">       glDisable(GL_BLEND);</td><td> </td><td class="right">       glDisable(GL_BLEND);</td><td class="lineno" valign="top"></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="left">       sPainter.enableClientStates(false);</td><td> </td><td class="right">       sPainter.enableClientStates(false);</td><td class="lineno" valign="top"></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="left">}</td><td> </td><td class="right">}</td><td class="lineno" valign="top"></td></tr>
-      <tr><td><a name="diff0082" /></td></tr>
+      <tr><td><a name="diff0074" /></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="lblock">                                                                           </td><td> </td><td class="rblock"></td><td class="lineno" valign="top"></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="lblock"><span class="delete">// returns true if visible</span></td><td> </td><td class="rblock"></td><td class="lineno" valign="top"></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="lblock"><span class="delete">// Assumes that we are in local frame</span></td><td> </td><td class="rblock"></td><td class="lineno" valign="top"></td></tr>
@@ -753,8 +772,8 @@ tData())</span>;</td><td> </td><td class="rblock">       sPainter.setColorPointe
       <tr><td class="lineno" valign="top"></td><td class="lblock"><span class="delete">}</span></td><td> </td><td class="rblock"></td><td class="lineno" valign="top"></td></tr>
 
      <tr><td></td><td class="left"></td><td> </td><td class="right"></td><td></td></tr>
-     <tr bgcolor="gray"><th colspan="5" align="center"><a name="end">&nbsp;End of changes. 82 change blocks.&nbsp;</a></th></tr>
-     <tr class="stats"><td></td><th><i>219 lines changed or deleted</i></th><th><i> </i></th><th><i>260 lines changed or added</i></th><td></td></tr>
+     <tr bgcolor="gray"><th colspan="5" align="center"><a name="end">&nbsp;End of changes. 74 change blocks.&nbsp;</a></th></tr>
+     <tr class="stats"><td></td><th><i>236 lines changed or deleted</i></th><th><i> </i></th><th><i>300 lines changed or added</i></th><td></td></tr>
      <tr><td colspan="5" align="center" class="small"><br/>This html diff was produced by rfcdiff 1.41. The latest version is available from <a href="http://www.tools.ietf.org/tools/rfcdiff/" >http://tools.ietf.org/tools/rfcdiff/</a> </td></tr>
    </table>
    </body>

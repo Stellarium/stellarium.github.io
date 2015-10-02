@@ -95,8 +95,10 @@
       <tr><td class="lineno" valign="top"></td><td class="left">       Q_PROPERTY(bool flipHorz READ getFlipHorz WRITE setFlipHorz)</td><td> </td><td class="right">       Q_PROPERTY(bool flipHorz READ getFlipHorz WRITE setFlipHorz)</td><td class="lineno" valign="top"></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="left">       Q_PROPERTY(bool flipVert READ getFlipVert WRITE setFlipVert)</td><td> </td><td class="right">       Q_PROPERTY(bool flipVert READ getFlipVert WRITE setFlipVert)</td><td class="lineno" valign="top"></td></tr>
       <tr><td><a name="diff0005" /></td></tr>
-      <tr><td class="lineno" valign="top"></td><td class="lblock"></td><td> </td><td class="rblock"><span class="insert">       Q_PROPERTY(bool flagUseNutation READ getUseNutation WRITE setUseNuta
-tion)</span></td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="lblock"></td><td> </td><td class="rblock">       <span class="insert">Q_PROPERTY(bool flagUseNutation READ getUseNutation WRITE setUseNuta</span></td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="lblock"></td><td> </td><td class="rblock"><span class="insert">tion)</span></td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="lblock"></td><td> </td><td class="rblock"><span class="insert">       Q_PROPERTY(bool flagUseTopocentricCoordinates READ getUseTopocentric</span></td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="lblock"></td><td> </td><td class="rblock"><span class="insert">Coordinates WRITE setUseTopocentricCoordinates)</span></td><td class="lineno" valign="top"></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="left"></td><td> </td><td class="right"></td><td class="lineno" valign="top"></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="left">public:</td><td> </td><td class="right">public:</td><td class="lineno" valign="top"></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="left">       //! @enum FrameType</td><td> </td><td class="right">       //! @enum FrameType</td><td class="lineno" valign="top"></td></tr>
@@ -169,7 +171,7 @@ i.e. apparent coordinates)</td><td class="lineno" valign="top"></td></tr>
 .e. geometric coordinates)</td><td class="lineno" valign="top"></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="left">       };</td><td> </td><td class="right">       };</td><td class="lineno" valign="top"></td></tr>
       <tr><td class="lineno"></td><td class="left"></td><td> </td><td class="right"></td><td class="lineno"></td></tr>
-      <tr bgcolor="gray" ><td></td><th><a name="part-l3" /><small>skipping to change at</small><em> line 123</em></th><th> </th><th><a name="part-r3" /><small>skipping to change at</small><em> line 129</em></th><td></td></tr>
+      <tr bgcolor="gray" ><td></td><th><a name="part-l3" /><small>skipping to change at</small><em> line 123</em></th><th> </th><th><a name="part-r3" /><small>skipping to change at</small><em> line 130</em></th><td></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="left">               StephensonMorrison1995,         //!&lt; Stephenson &amp; Morrison (
 1995) algorithm for DeltaT</td><td> </td><td class="right">               StephensonMorrison1995,         //!&lt; Stephenson &amp; Morrison (
 1995) algorithm for DeltaT</td><td class="lineno" valign="top"></td></tr>
@@ -225,7 +227,7 @@ ts for quadratic equation for DeltaT</td><td class="lineno" valign="top"></td></
       <tr><td class="lineno" valign="top"></td><td class="left"></td><td> </td><td class="right"></td><td class="lineno" valign="top"></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="left">       //! Init and load all main core components.</td><td> </td><td class="right">       //! Init and load all main core components.</td><td class="lineno" valign="top"></td></tr>
       <tr><td class="lineno"></td><td class="left"></td><td> </td><td class="right"></td><td class="lineno"></td></tr>
-      <tr bgcolor="gray" ><td></td><th><a name="part-l4" /><small>skipping to change at</small><em> line 152</em></th><th> </th><th><a name="part-r4" /><small>skipping to change at</small><em> line 159</em></th><td></td></tr>
+      <tr bgcolor="gray" ><td></td><th><a name="part-l4" /><small>skipping to change at</small><em> line 152</em></th><th> </th><th><a name="part-r4" /><small>skipping to change at</small><em> line 160</em></th><td></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="left">       //! Update core state before drawing modules.</td><td> </td><td class="right">       //! Update core state before drawing modules.</td><td class="lineno" valign="top"></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="left">       void preDraw();</td><td> </td><td class="right">       void preDraw();</td><td class="lineno" valign="top"></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="left"></td><td> </td><td class="right"></td><td class="lineno" valign="top"></td></tr>
@@ -268,7 +270,7 @@ ViewTransform, ProjectionType projType=(ProjectionType)1000) const;</td><td clas
       <tr><td class="lineno" valign="top"></td><td class="left">       //! Get the current StelSkyDrawer used in the core.</td><td> </td><td class="right">       //! Get the current StelSkyDrawer used in the core.</td><td class="lineno" valign="top"></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="left">       StelSkyDrawer* getSkyDrawer();</td><td> </td><td class="right">       StelSkyDrawer* getSkyDrawer();</td><td class="lineno" valign="top"></td></tr>
       <tr><td class="lineno"></td><td class="left"></td><td> </td><td class="right"></td><td class="lineno"></td></tr>
-      <tr bgcolor="gray" ><td></td><th><a name="part-l5" /><small>skipping to change at</small><em> line 212</em></th><th> </th><th><a name="part-r5" /><small>skipping to change at</small><em> line 219</em></th><td></td></tr>
+      <tr bgcolor="gray" ><td></td><th><a name="part-l5" /><small>skipping to change at</small><em> line 212</em></th><th> </th><th><a name="part-r5" /><small>skipping to change at</small><em> line 220</em></th><td></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="left">       Vec3d galacticToJ2000(const Vec3d&amp; v) const;</td><td> </td><td class="right">       Vec3d galacticToJ2000(const Vec3d&amp; v) const;</td><td class="lineno" valign="top"></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="left">       Vec3d equinoxEquToJ2000(const Vec3d&amp; v) const;</td><td> </td><td class="right">       Vec3d equinoxEquToJ2000(const Vec3d&amp; v) const;</td><td class="lineno" valign="top"></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="left">       Vec3d j2000ToEquinoxEqu(const Vec3d&amp; v) const;</td><td> </td><td class="right">       Vec3d j2000ToEquinoxEqu(const Vec3d&amp; v) const;</td><td class="lineno" valign="top"></td></tr>
@@ -436,7 +438,7 @@ days.</td><td class="lineno" valign="top"></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="lblock"><span class="delete">rker)</span> const;</td><td> </td><td class="rblock">       QString <span class="insert">getCurrentDeltaTAlgorithmValidRangeDescription(const double </span></td><td class="lineno" valign="top"></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="lblock">                                                                           </td><td> </td><td class="rblock"><span class="insert">JD,</span> QString* <span class="insert">marker)</span> const;</td><td class="lineno" valign="top"></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="lblock">       //! Checks for <span class="delete">current time</span> of <span class="delete">day</span> - <span class="delete">it's</span> night or day?</td><td> </td><td class="rblock">                                                                           </td><td class="lineno" valign="top"></td></tr>
-      <tr><td class="lineno" valign="top"></td><td class="lblock">       bool <span class="delete">isDay()</span> const;</td><td> </td><td class="rblock">       //! Checks for <span class="insert">altitude</span> of <span class="insert">sun</span> - <span class="insert">is it</span> night or day?</td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="lblock">       bool <span class="delete">isDay()</span> const;</td><td> </td><td class="rblock">       //! Checks for <span class="insert">altitude</span> of <span class="insert">the Sun</span> - <span class="insert">is it</span> night or day?</td><td class="lineno" valign="top"></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="lblock"></td><td> </td><td class="rblock">       <span class="insert">//! @return true if sun higher than about -6 degrees, i.e. "day" inc</span></td><td class="lineno" valign="top"></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="lblock"></td><td> </td><td class="rblock"><span class="insert">ludes civil twilight.</span></td><td class="lineno" valign="top"></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="lblock"></td><td> </td><td class="rblock"><span class="insert">       //! @note Useful mostly for brightness-controlled GUI decisions like</span></td><td class="lineno" valign="top"></td></tr>
@@ -457,7 +459,7 @@ cimal fraction, e.g. 2012.34567)</span></td><td class="lineno" valign="top"></td
       <tr><td class="lineno" valign="top"></td><td class="left">       ProjectionType getCurrentProjectionType() const;</td><td> </td><td class="right">       ProjectionType getCurrentProjectionType() const;</td><td class="lineno" valign="top"></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="left"></td><td> </td><td class="right"></td><td class="lineno" valign="top"></td></tr>
       <tr><td class="lineno"></td><td class="left"></td><td> </td><td class="right"></td><td class="lineno"></td></tr>
-      <tr bgcolor="gray" ><td></td><th><a name="part-l6" /><small>skipping to change at</small><em> line 356</em></th><th> </th><th><a name="part-r6" /><small>skipping to change at</small><em> line 367</em></th><td></td></tr>
+      <tr bgcolor="gray" ><td></td><th><a name="part-l6" /><small>skipping to change at</small><em> line 356</em></th><th> </th><th><a name="part-r6" /><small>skipping to change at</small><em> line 368</em></th><td></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="left"></td><td> </td><td class="right"></td><td class="lineno" valign="top"></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="left">       //! Get the location used by default at startup</td><td> </td><td class="right">       //! Get the location used by default at startup</td><td class="lineno" valign="top"></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="left">       QString getDefaultLocationID() const;</td><td> </td><td class="right">       QString getDefaultLocationID() const;</td><td class="lineno" valign="top"></td></tr>
@@ -525,6 +527,14 @@ mosphere and fog effects</td><td class="lineno" valign="top"></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="lblock"></td><td> </td><td class="rblock"><span class="insert">light wobble of Earth's axis, just a few arcseconds).</span></td><td class="lineno" valign="top"></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="lblock"></td><td> </td><td class="rblock"><span class="insert">       void setUseNutation(bool useNutation) { flagUseNutation=useNutation;</span></td><td class="lineno" valign="top"></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="lblock"></td><td> </td><td class="rblock"><span class="insert">}</span></td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="lblock"></td><td> </td><td class="rblock"><span class="insert"></span></td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="lblock"></td><td> </td><td class="rblock"><span class="insert">       //! @return whether topocentric coordinates are currently used.</span></td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="lblock"></td><td> </td><td class="rblock"><span class="insert">       bool getUseTopocentricCoordinates() const {return flagUseTopocentric</span></td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="lblock"></td><td> </td><td class="rblock"><span class="insert">Coordinates;}</span></td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="lblock"></td><td> </td><td class="rblock"><span class="insert">       //! Set whether you want computation and simulation of nutation (a s</span></td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="lblock"></td><td> </td><td class="rblock"><span class="insert">light wobble of Earth's axis, just a few arcseconds).</span></td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="lblock"></td><td> </td><td class="rblock"><span class="insert">       void setUseTopocentricCoordinates(bool use) { flagUseTopocentricCoor</span></td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="lblock"></td><td> </td><td class="rblock"><span class="insert">dinates=use;}</span></td><td class="lineno" valign="top"></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="lblock"></td><td> </td><td class="rblock">                                                                           </td><td class="lineno" valign="top"></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="left">       //! Return the preset sky time in JD</td><td> </td><td class="right">       //! Return the preset sky time in JD</td><td class="lineno" valign="top"></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="left">       double getPresetSkyTime() const;</td><td> </td><td class="right">       double getPresetSkyTime() const;</td><td class="lineno" valign="top"></td></tr>
@@ -537,7 +547,7 @@ mosphere and fog effects</td><td class="lineno" valign="top"></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="left">       double getTimeRate() const;</td><td> </td><td class="right">       double getTimeRate() const;</td><td class="lineno" valign="top"></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="left"></td><td> </td><td class="right"></td><td class="lineno" valign="top"></td></tr>
       <tr><td class="lineno"></td><td class="left"></td><td> </td><td class="right"></td><td class="lineno"></td></tr>
-      <tr bgcolor="gray" ><td></td><th><a name="part-l7" /><small>skipping to change at</small><em> line 404</em></th><th> </th><th><a name="part-r7" /><small>skipping to change at</small><em> line 445</em></th><td></td></tr>
+      <tr bgcolor="gray" ><td></td><th><a name="part-l7" /><small>skipping to change at</small><em> line 404</em></th><th> </th><th><a name="part-r7" /><small>skipping to change at</small><em> line 451</em></th><td></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="left">       //! Set stellarium time to current real world time</td><td> </td><td class="right">       //! Set stellarium time to current real world time</td><td class="lineno" valign="top"></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="left">       void setTimeNow();</td><td> </td><td class="right">       void setTimeNow();</td><td class="lineno" valign="top"></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="left">       //! Set the time to some value, leaving the day the same.</td><td> </td><td class="right">       //! Set the time to some value, leaving the day the same.</td><td class="lineno" valign="top"></td></tr>
@@ -752,7 +762,7 @@ tomEquationCoeff; }</td><td class="lineno" valign="top"></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="left">       void locationChanged(StelLocation);</td><td> </td><td class="right">       void locationChanged(StelLocation);</td><td class="lineno" valign="top"></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="left">       //! This signal is emitted when the time rate has changed</td><td> </td><td class="right">       //! This signal is emitted when the time rate has changed</td><td class="lineno" valign="top"></td></tr>
       <tr><td class="lineno"></td><td class="left"></td><td> </td><td class="right"></td><td class="lineno"></td></tr>
-      <tr bgcolor="gray" ><td></td><th><a name="part-l8" /><small>skipping to change at</small><em> line 553</em></th><th> </th><th><a name="part-r8" /><small>skipping to change at</small><em> line 608</em></th><td></td></tr>
+      <tr bgcolor="gray" ><td></td><th><a name="part-l8" /><small>skipping to change at</small><em> line 553</em></th><th> </th><th><a name="part-r8" /><small>skipping to change at</small><em> line 614</em></th><td></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="left">       DeltaTAlgorithm currentDeltaTAlgorithm;</td><td> </td><td class="right">       DeltaTAlgorithm currentDeltaTAlgorithm;</td><td class="lineno" valign="top"></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="left"></td><td> </td><td class="right"></td><td class="lineno" valign="top"></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="left">       // Parameters to use when creating new instances of StelProjector</td><td> </td><td class="right">       // Parameters to use when creating new instances of StelProjector</td><td class="lineno" valign="top"></td></tr>
@@ -776,15 +786,10 @@ tomEquationCoeff; }</td><td class="lineno" valign="top"></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="lblock">ntric ecliptic <span class="delete">(Vsop87)</span> to earth equatorial coordinate</td><td> </td><td class="rblock"><span class="insert">quatorial to topocentric (StelObserver)</span> altazimuthal coordinate</td><td class="lineno" valign="top"></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="lblock">       Mat4d matEquinoxEquToJ2000;</td><td> </td><td class="rblock">       Mat4d matHeliocentricEclipticToEquinoxEqu; // Transform from helioce</td><td class="lineno" valign="top"></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="lblock">       Mat4d matJ2000ToEquinoxEqu;</td><td> </td><td class="rblock">ntric ecliptic <span class="insert">Cartesian (VSOP87A)</span> to earth equatorial coordinate</td><td class="lineno" valign="top"></td></tr>
-      <tr><td class="lineno" valign="top"></td><td class="lblock"></td><td> </td><td class="rblock">       Mat4d matEquinoxEquToJ2000;                <span class="insert">// GZ For Earth, this sho</span></td><td class="lineno" valign="top"></td></tr>
-      <tr><td class="lineno" valign="top"></td><td class="lblock"></td><td> </td><td class="rblock"><span class="insert">uld be inverse precession matrix. Yes, =Rz(VSOPoffset)Rx(eps0)Rz(-psiA)Rx(-</span></td><td class="lineno" valign="top"></td></tr>
-      <tr><td class="lineno" valign="top"></td><td class="lblock"></td><td> </td><td class="rblock"><span class="insert">omA)Rz(chiA)</span></td><td class="lineno" valign="top"></td></tr>
-      <tr><td class="lineno" valign="top"></td><td class="lblock"></td><td> </td><td class="rblock">       Mat4d matJ2000ToEquinoxEqu;                <span class="insert">// GZ: Should be precessi</span></td><td class="lineno" valign="top"></td></tr>
-      <tr><td class="lineno" valign="top"></td><td class="lblock"></td><td> </td><td class="rblock"><span class="insert">on matrix?</span></td><td class="lineno" valign="top"></td></tr>
-      <tr><td class="lineno" valign="top"></td><td class="lblock"></td><td> </td><td class="rblock"><span class="insert">//     Mat4d matEclOfDateToVsop87;                // GZ NEW: precession of </span></td><td class="lineno" valign="top"></td></tr>
-      <tr><td class="lineno" valign="top"></td><td class="lblock"></td><td> </td><td class="rblock"><span class="insert">the ecliptic</span></td><td class="lineno" valign="top"></td></tr>
-      <tr><td class="lineno" valign="top"></td><td class="lblock"></td><td> </td><td class="rblock"><span class="insert">//     Mat4d matVsop87ToEclOfDate;                // GZ NEW: precession of </span></td><td class="lineno" valign="top"></td></tr>
-      <tr><td class="lineno" valign="top"></td><td class="lblock"></td><td> </td><td class="rblock"><span class="insert">the ecliptic</span></td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="lblock"></td><td> </td><td class="rblock">       Mat4d matEquinoxEquToJ2000;                <span class="insert">// For Earth, this is alm</span></td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="lblock"></td><td> </td><td class="rblock"><span class="insert">ost the inverse precession matrix, =Rz(VSOPbias)Rx(eps0)Rz(-psiA)Rx(-omA)Rz</span></td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="lblock"></td><td> </td><td class="rblock"><span class="insert">(chiA)</span></td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="lblock"></td><td> </td><td class="rblock">       Mat4d matJ2000ToEquinoxEqu;                <span class="insert">// precession matrix</span></td><td class="lineno" valign="top"></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="lblock"></td><td> </td><td class="rblock">                                                                           </td><td class="lineno" valign="top"></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="left">       Mat4d matJ2000ToAltAz;</td><td> </td><td class="right">       Mat4d matJ2000ToAltAz;</td><td class="lineno" valign="top"></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="left"></td><td> </td><td class="right"></td><td class="lineno" valign="top"></td></tr>
@@ -804,6 +809,9 @@ observer-centric altazimuthal drawing</td><td class="lineno" valign="top"></td><
       <tr><td class="lineno" valign="top"></td><td class="lblock"></td><td> </td><td class="rblock">       <span class="insert">// flag to indicate we want to use nutation (the small-scale wobble </span></td><td class="lineno" valign="top"></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="lblock"></td><td> </td><td class="rblock"><span class="insert">of earth's axis)</span></td><td class="lineno" valign="top"></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="lblock"></td><td> </td><td class="rblock"><span class="insert">       bool flagUseNutation;</span></td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="lblock"></td><td> </td><td class="rblock"><span class="insert">       // flag to indicate that we show topocentrically corrected coordinat</span></td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="lblock"></td><td> </td><td class="rblock"><span class="insert">es. (Switching to false for planetocentric coordinates is new for 0.14)</span></td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="lblock"></td><td> </td><td class="rblock"><span class="insert">       bool flagUseTopocentricCoordinates;</span></td><td class="lineno" valign="top"></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="lblock"></td><td> </td><td class="rblock">                                                                           </td><td class="lineno" valign="top"></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="left">       // Time variables</td><td> </td><td class="right">       // Time variables</td><td class="lineno" valign="top"></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="left">       double timeSpeed;                  // Positive : forward, Negative :
@@ -839,7 +847,7 @@ observer-centric altazimuthal drawing</td><td class="lineno" valign="top"></td><
 
      <tr><td></td><td class="left"></td><td> </td><td class="right"></td><td></td></tr>
      <tr bgcolor="gray"><th colspan="5" align="center"><a name="end">&nbsp;End of changes. 48 change blocks.&nbsp;</a></th></tr>
-     <tr class="stats"><td></td><th><i>129 lines changed or deleted</i></th><th><i> </i></th><th><i>223 lines changed or added</i></th><td></td></tr>
+     <tr class="stats"><td></td><th><i>129 lines changed or deleted</i></th><th><i> </i></th><th><i>232 lines changed or added</i></th><td></td></tr>
      <tr><td colspan="5" align="center" class="small"><br/>This html diff was produced by rfcdiff 1.41. The latest version is available from <a href="http://www.tools.ietf.org/tools/rfcdiff/" >http://tools.ietf.org/tools/rfcdiff/</a> </td></tr>
    </table>
    </body>

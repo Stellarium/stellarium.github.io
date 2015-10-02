@@ -99,7 +99,10 @@ ractionOff);</td><td class="lineno" valign="top"></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="left">Vec3d StelObject::getAltAzPosApparent(const StelCore* core) const</td><td> </td><td class="right">Vec3d StelObject::getAltAzPosApparent(const StelCore* core) const</td><td class="lineno" valign="top"></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="left">{</td><td> </td><td class="right">{</td><td class="lineno" valign="top"></td></tr>
       <tr><td class="lineno"></td><td class="left"></td><td> </td><td class="right"></td><td class="lineno"></td></tr>
-      <tr bgcolor="gray" ><td></td><th><a name="part-l2" /><small>skipping to change at</small><em> line 111</em></th><th> </th><th><a name="part-r2" /><small>skipping to change at</small><em> line 109</em></th><td></td></tr>
+      <tr bgcolor="gray" ><td></td><th><a name="part-l2" /><small>skipping to change at</small><em> line 110</em></th><th> </th><th><a name="part-r2" /><small>skipping to change at</small><em> line 108</em></th><td></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="left">       // without the test, planets flicker stupidly in fullsky atmosphere-
+less view.</td><td> </td><td class="right">       // without the test, planets flicker stupidly in fullsky atmosphere-
+less view.</td><td class="lineno" valign="top"></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="left">       if (core-&gt;getSkyDrawer()-&gt;getFlagHasAtmosphere())</td><td> </td><td class="right">       if (core-&gt;getSkyDrawer()-&gt;getFlagHasAtmosphere())</td><td class="lineno" valign="top"></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="left">               core-&gt;getSkyDrawer()-&gt;getExtinction().forward(altAzPos, &amp;vMa
 g);</td><td> </td><td class="right">               core-&gt;getSkyDrawer()-&gt;getExtinction().forward(altAzPos, &amp;vMa
@@ -115,11 +118,12 @@ tringGroup&amp; flags) const</td><td> </td><td class="right">QString StelObject:
 tringGroup&amp; flags) const</td><td class="lineno" valign="top"></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="left">{</td><td> </td><td class="right">{</td><td class="lineno" valign="top"></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="left">       bool withAtmosphere = core-&gt;getSkyDrawer()-&gt;getFlagHasAtmosphere();</td><td> </td><td class="right">       bool withAtmosphere = core-&gt;getSkyDrawer()-&gt;getFlagHasAtmosphere();</td><td class="lineno" valign="top"></td></tr>
-      <tr><td class="lineno" valign="top"></td><td class="left">       bool withDecimalDegree = StelApp::getInstance().getFlagShowDecimalDe
-grees();;</td><td> </td><td class="right">       bool withDecimalDegree = StelApp::getInstance().getFlagShowDecimalDe
-grees();;</td><td class="lineno" valign="top"></td></tr>
       <tr><td><a name="diff0005" /></td></tr>
-      <tr><td class="lineno" valign="top"></td><td class="lblock">       double <span class="delete">currentEpoch = core-&gt;getCurrentEpoch();</span></td><td> </td><td class="rblock">       double <span class="insert">az_app, alt_app;</span></td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="lblock">       bool withDecimalDegree = StelApp::getInstance().getFlagShowDecimalDe</td><td> </td><td class="rblock">       bool withDecimalDegree = StelApp::getInstance().getFlagShowDecimalDe</td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="lblock"><span class="delete">grees();;</span></td><td> </td><td class="rblock"><span class="insert">grees();</span></td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="lblock"><span class="delete">       double currentEpoch</span> = <span class="delete">core-&gt;getCurrentEpoch();</span></td><td> </td><td class="rblock"><span class="insert">       bool useOldAzimuth</span> = <span class="insert">StelApp::getInstance().getFlagOldAzimuthUsage()</span></td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="lblock"></td><td> </td><td class="rblock"><span class="insert">;</span></td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="lblock"></td><td> </td><td class="rblock"><span class="insert">       double az_app, alt_app;</span></td><td class="lineno" valign="top"></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="lblock"></td><td> </td><td class="rblock"><span class="insert">       StelUtils::rectToSphe(&amp;az_app,&amp;alt_app,getAltAzPosApparent(core));</span></td><td class="lineno" valign="top"></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="lblock"></td><td> </td><td class="rblock"><span class="insert">       Q_UNUSED(az_app);</span></td><td class="lineno" valign="top"></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="left">       QString cepoch = qc_("on date", "coordinates for current epoch");</td><td> </td><td class="right">       QString cepoch = qc_("on date", "coordinates for current epoch");</td><td class="lineno" valign="top"></td></tr>
@@ -138,20 +142,33 @@ grees();;</td><td class="lineno" valign="top"></td></tr>
 lPos(core));</td><td> </td><td class="right">               StelUtils::rectToSphe(&amp;ra_j2000,&amp;dec_j2000,getJ2000Equatoria
 lPos(core));</td><td class="lineno" valign="top"></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="left">               if (withDecimalDegree)</td><td> </td><td class="right">               if (withDecimalDegree)</td><td class="lineno" valign="top"></td></tr>
-      <tr><td class="lineno" valign="top"></td><td class="left">                       res += q_("RA/Dec") + QString(" (J%1): %2/%3").arg(Q
+      <tr><td><a name="diff0007" /></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="lblock">                       res += q_("RA/Dec") + QString(" (J<span class="delete">%1): %2/%3").arg(Q
 String::number(2000.f, 'f', 1), StelUtils::radToDecDegStr(ra_j2000,5,false,
-true), StelUtils::radToDecDegStr(dec_j2000)) + "&lt;br&gt;";</td><td> </td><td class="right">                       res += q_("RA/Dec") + QString(" (J%1): %2/%3").arg(Q
-String::number(2000.f, 'f', 1), StelUtils::radToDecDegStr(ra_j2000,5,false,
-true), StelUtils::radToDecDegStr(dec_j2000)) + "&lt;br&gt;";</td><td class="lineno" valign="top"></td></tr>
+true), StelUtils::radToDecDeg</span>Str(dec_j2000)) + "&lt;br&gt;";</td><td> </td><td class="rblock">                       res += q_("RA/Dec") + QString(" (J<span class="insert">2000.0): %1/%2").a
+rg(StelUtils::radToDecDegStr(ra_j2000,5,false,true), StelUtils::radToDecDeg
+</span>Str(dec_j2000)) + "&lt;br&gt;";</td><td class="lineno" valign="top"></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="left">               else</td><td> </td><td class="right">               else</td><td class="lineno" valign="top"></td></tr>
-      <tr><td class="lineno" valign="top"></td><td class="left">                       res += q_("RA/Dec") + QString(" (J%1): %2/%3").arg(Q
+      <tr><td><a name="diff0008" /></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="lblock">                       res += q_("RA/Dec") + QString(" (J<span class="delete">%1): %2/%3").arg(Q
 String::number(2000.f, 'f', 1), StelUtils::radToHmsStr(ra_j2000,true), Stel
-Utils::radToDmsStr(dec_j2000,true)) + "&lt;br&gt;";</td><td> </td><td class="right">                       res += q_("RA/Dec") + QString(" (J%1): %2/%3").arg(Q
-String::number(2000.f, 'f', 1), StelUtils::radToHmsStr(ra_j2000,true), Stel
-Utils::radToDmsStr(dec_j2000,true)) + "&lt;br&gt;";</td><td class="lineno" valign="top"></td></tr>
+Utils::radToDmsStr(dec_j2000,</span>true)) + "&lt;br&gt;";</td><td> </td><td class="rblock">                       res += q_("RA/Dec") + QString(" (J<span class="insert">2000.0): %1/%2").a
+rg(StelUtils::radToHmsStr(ra_j2000,true), StelUtils::radToDmsStr(dec_j2000,
+</span>true)) + "&lt;br&gt;";</td><td class="lineno" valign="top"></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="left">       }</td><td> </td><td class="right">       }</td><td class="lineno" valign="top"></td></tr>
-      <tr><td class="lineno"></td><td class="left"></td><td> </td><td class="right"></td><td class="lineno"></td></tr>
-      <tr bgcolor="gray" ><td></td><th><a name="part-l3" /><small>skipping to change at</small><em> line 145</em></th><th> </th><th><a name="part-r3" /><small>skipping to change at</small><em> line 140</em></th><td></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="left"></td><td> </td><td class="right"></td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="left">       if (flags&amp;RaDecOfDate)</td><td> </td><td class="right">       if (flags&amp;RaDecOfDate)</td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="left">       {</td><td> </td><td class="right">       {</td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="left">               double dec_equ, ra_equ;</td><td> </td><td class="right">               double dec_equ, ra_equ;</td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="left">               StelUtils::rectToSphe(&amp;ra_equ,&amp;dec_equ,getEquinoxEquatorialP
+os(core));</td><td> </td><td class="right">               StelUtils::rectToSphe(&amp;ra_equ,&amp;dec_equ,getEquinoxEquatorialP
+os(core));</td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="left">               if (withDecimalDegree)</td><td> </td><td class="right">               if (withDecimalDegree)</td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="left">                       res += q_("RA/Dec") + QString(" (%1): %2/%3").arg(ce
+poch, StelUtils::radToDecDegStr(ra_equ,5,false,true), StelUtils::radToDecDe
+gStr(dec_equ)) + "&lt;br&gt;";</td><td> </td><td class="right">                       res += q_("RA/Dec") + QString(" (%1): %2/%3").arg(ce
+poch, StelUtils::radToDecDegStr(ra_equ,5,false,true), StelUtils::radToDecDe
+gStr(dec_equ)) + "&lt;br&gt;";</td><td class="lineno" valign="top"></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="left">               else</td><td> </td><td class="right">               else</td><td class="lineno" valign="top"></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="left">                       res += q_("RA/Dec") + QString(" (%1): %2/%3").arg(ce
 poch, StelUtils::radToHmsStr(ra_equ,true), StelUtils::radToDmsStr(dec_equ,t
@@ -168,7 +185,7 @@ rue)) + "&lt;br&gt;";</td><td class="lineno" valign="top"></td></tr>
 PosGeometric(core));</td><td> </td><td class="right">               StelUtils::rectToSphe(&amp;ra_sidereal,&amp;dec_sidereal,getSidereal
 PosGeometric(core));</td><td class="lineno" valign="top"></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="left">               ra_sidereal = 2.*M_PI-ra_sidereal;</td><td> </td><td class="right">               ra_sidereal = 2.*M_PI-ra_sidereal;</td><td class="lineno" valign="top"></td></tr>
-      <tr><td><a name="diff0007" /></td></tr>
+      <tr><td><a name="diff0009" /></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="lblock">               if (withAtmosphere<span class="delete">)</span></td><td> </td><td class="rblock">               if (withAtmosphere<span class="insert"> &amp;&amp; (alt_app&gt;-3.0*M_PI/180.0)) // Don't sh
 ow refracted values much below horizon where model is meaningless.</span></td><td class="lineno" valign="top"></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="left">               {</td><td> </td><td class="right">               {</td><td class="lineno" valign="top"></td></tr>
@@ -190,7 +207,14 @@ f', 5);</td><td class="lineno" valign="top"></td></tr>
  StelUtils::radToDecDegStr(dec_sidereal)) + " " + q_("(apparent)") + "&lt;br&gt;"
 ;</td><td class="lineno" valign="top"></td></tr>
       <tr><td class="lineno"></td><td class="left"></td><td> </td><td class="right"></td><td class="lineno"></td></tr>
-      <tr bgcolor="gray" ><td></td><th><a name="part-l4" /><small>skipping to change at</small><em> line 183</em></th><th> </th><th><a name="part-r4" /><small>skipping to change at</small><em> line 178</em></th><td></td></tr>
+      <tr bgcolor="gray" ><td></td><th><a name="part-l3" /><small>skipping to change at</small><em> line 180</em></th><th> </th><th><a name="part-r3" /><small>skipping to change at</small><em> line 176</em></th><td></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="left">                       else</td><td> </td><td class="right">                       else</td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="left">                               res += q_("Hour angle/DE: %1/%2").arg(StelUt
+ils::radToHmsStr(ra_sidereal,true), StelUtils::radToDmsStr(dec_sidereal,tru
+e)) + " " + "&lt;br&gt;";</td><td> </td><td class="right">                               res += q_("Hour angle/DE: %1/%2").arg(StelUt
+ils::radToHmsStr(ra_sidereal,true), StelUtils::radToDmsStr(dec_sidereal,tru
+e)) + " " + "&lt;br&gt;";</td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="left">               }</td><td> </td><td class="right">               }</td><td class="lineno" valign="top"></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="left">       }</td><td> </td><td class="right">       }</td><td class="lineno" valign="top"></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="left"></td><td> </td><td class="right"></td><td class="lineno" valign="top"></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="left">       if (flags&amp;AltAzi)</td><td> </td><td class="right">       if (flags&amp;AltAzi)</td><td class="lineno" valign="top"></td></tr>
@@ -198,28 +222,32 @@ f', 5);</td><td class="lineno" valign="top"></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="left">               // calculate alt az</td><td> </td><td class="right">               // calculate alt az</td><td class="lineno" valign="top"></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="left">               double az,alt;</td><td> </td><td class="right">               double az,alt;</td><td class="lineno" valign="top"></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="left">               StelUtils::rectToSphe(&amp;az,&amp;alt,getAltAzPosGeometric(core));</td><td> </td><td class="right">               StelUtils::rectToSphe(&amp;az,&amp;alt,getAltAzPosGeometric(core));</td><td class="lineno" valign="top"></td></tr>
-      <tr><td class="lineno" valign="top"></td><td class="left">               az = 3.*M_PI - az;  // N is zero, E is 90 degrees</td><td> </td><td class="right">               az = 3.*M_PI - az;  // N is zero, E is 90 degrees</td><td class="lineno" valign="top"></td></tr>
+      <tr><td><a name="diff0010" /></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="lblock">               <span class="delete">az</span> = <span class="delete">3.*M_PI - az;</span>  // N is zero, E is 90 degrees</td><td> </td><td class="rblock">               <span class="insert">float direction</span> = <span class="insert">3.;</span> // N is zero, E is 90 degrees</td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="lblock"></td><td> </td><td class="rblock">               <span class="insert">if (useOldAzimuth)</span></td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="lblock"></td><td> </td><td class="rblock"><span class="insert">                       direction = 2.;</span></td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="lblock"></td><td> </td><td class="rblock"><span class="insert">               az = direction*M_PI - az;</span></td><td class="lineno" valign="top"></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="left">               if (az &gt; M_PI*2)</td><td> </td><td class="right">               if (az &gt; M_PI*2)</td><td class="lineno" valign="top"></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="left">                       az -= M_PI*2;</td><td> </td><td class="right">                       az -= M_PI*2;</td><td class="lineno" valign="top"></td></tr>
-      <tr><td><a name="diff0008" /></td></tr>
+      <tr><td><a name="diff0011" /></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="lblock">               if (withAtmosphere<span class="delete">)</span></td><td> </td><td class="rblock">               if (withAtmosphere<span class="insert"> &amp;&amp; (alt_app&gt;-3.0*M_PI/180.0)) // Don't sh
 ow refracted altitude much below horizon where model is meaningless.</span></td><td class="lineno" valign="top"></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="left">               {</td><td> </td><td class="right">               {</td><td class="lineno" valign="top"></td></tr>
-      <tr><td><a name="diff0009" /></td></tr>
+      <tr><td><a name="diff0012" /></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="lblock">                       <span class="delete">StelUtils::rectToSphe(&amp;az,&amp;alt,getAltAzPosApparent(c</span></td><td> </td><td class="rblock"></td><td class="lineno" valign="top"></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="lblock"><span class="delete">ore));</span></td><td> </td><td class="rblock"></td><td class="lineno" valign="top"></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="lblock"><span class="delete">                       az = 3.*M_PI - az;  // N is zero, E is 90 degrees</span></td><td> </td><td class="rblock"></td><td class="lineno" valign="top"></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="lblock"><span class="delete">                       if (az &gt; M_PI*2)</span></td><td> </td><td class="rblock"></td><td class="lineno" valign="top"></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="lblock"><span class="delete">                               az -= M_PI*2;</span></td><td> </td><td class="rblock"></td><td class="lineno" valign="top"></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="left">                       if (withDecimalDegree)</td><td> </td><td class="right">                       if (withDecimalDegree)</td><td class="lineno" valign="top"></td></tr>
-      <tr><td><a name="diff0010" /></td></tr>
+      <tr><td><a name="diff0013" /></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="lblock">                               res += q_("Az/Alt: %1/%2").arg(StelUtils::ra
 dToDecDegStr(az), StelUtils::radToDecDegStr(alt<span class="delete">)) + " " + q_("(apparent)") 
 </span>+ "&lt;br&gt;";</td><td> </td><td class="rblock">                               res += q_("Az/Alt: %1/%2").arg(StelUtils::ra
 dToDecDegStr(az), StelUtils::radToDecDegStr(alt<span class="insert">_app)) + " " + q_("(apparent
 )") </span>+ "&lt;br&gt;";</td><td class="lineno" valign="top"></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="left">                       else</td><td> </td><td class="right">                       else</td><td class="lineno" valign="top"></td></tr>
-      <tr><td><a name="diff0011" /></td></tr>
+      <tr><td><a name="diff0014" /></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="lblock">                               res += q_("Az/Alt: %1/%2").arg(StelUtils::ra
 dToDmsStr(az,true), StelUtils::radToDmsStr(alt<span class="delete">,true)) + " " + q_("(apparent
 </span>)") + "&lt;br&gt;";</td><td> </td><td class="rblock">                               res += q_("Az/Alt: %1/%2").arg(StelUtils::ra
@@ -241,7 +269,7 @@ dToDmsStr(az,true), StelUtils::radToDmsStr(alt,true)) + " " + "&lt;br&gt;";</td>
       <tr><td class="lineno" valign="top"></td><td class="left"></td><td> </td><td class="right"></td><td class="lineno" valign="top"></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="left">       if (flags&amp;EclipticCoord)</td><td> </td><td class="right">       if (flags&amp;EclipticCoord)</td><td class="lineno" valign="top"></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="left">       {</td><td> </td><td class="right">       {</td><td class="lineno" valign="top"></td></tr>
-      <tr><td><a name="diff0012" /></td></tr>
+      <tr><td><a name="diff0015" /></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="lblock">               double <span class="delete">ecl = core-&gt;getCurrentPlanet()-&gt;getRotObliquity(24515</span></td><td> </td><td class="rblock">               <span class="insert">// N.B. Ecliptical coordinates are particularly earth-bound.</span></td><td class="lineno" valign="top"></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="lblock"><span class="delete">45.0);</span></td><td> </td><td class="rblock"><span class="insert">               // It may be OK to have terrestrial ecliptical coordinates o</span></td><td class="lineno" valign="top"></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="lblock"></td><td> </td><td class="rblock"><span class="insert">f J2000.0 (standard epoch) because those are in practice linked with VSOP X</span></td><td class="lineno" valign="top"></td></tr>
@@ -265,35 +293,46 @@ dToDmsStr(az,true), StelUtils::radToDmsStr(alt,true)) + " " + "&lt;br&gt;";</td>
       <tr><td class="lineno" valign="top"></td><td class="left">               StelUtils::equToEcl(ra_equ, dec_equ, ecl, &amp;lambda, &amp;beta);</td><td> </td><td class="right">               StelUtils::equToEcl(ra_equ, dec_equ, ecl, &amp;lambda, &amp;beta);</td><td class="lineno" valign="top"></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="left">               if (lambda&lt;0) lambda+=2.0*M_PI;</td><td> </td><td class="right">               if (lambda&lt;0) lambda+=2.0*M_PI;</td><td class="lineno" valign="top"></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="left">               if (withDecimalDegree)</td><td> </td><td class="right">               if (withDecimalDegree)</td><td class="lineno" valign="top"></td></tr>
-      <tr><td class="lineno" valign="top"></td><td class="left">                       res += q_("Ecliptic longitude/latitude") + QString("
- (J%1): %2/%3").arg(QString::number(2000.f, 'f', 1), StelUtils::radToDecDeg
-Str(lambda), StelUtils::radToDecDegStr(beta)) + "&lt;br&gt;";</td><td> </td><td class="right">                       res += q_("Ecliptic longitude/latitude") + QString("
- (J%1): %2/%3").arg(QString::number(2000.f, 'f', 1), StelUtils::radToDecDeg
-Str(lambda), StelUtils::radToDecDegStr(beta)) + "&lt;br&gt;";</td><td class="lineno" valign="top"></td></tr>
+      <tr><td><a name="diff0016" /></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="lblock">                       res += q_("Ecliptic longitude/latitude") + QString("</td><td> </td><td class="rblock">                       res += q_("Ecliptic longitude/latitude") + QString("</td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="lblock"> <span class="delete">(J%1): %2/%3").arg(QString::number(2000.f, 'f', 1), StelUtils::radToDecDeg</span></td><td> </td><td class="rblock"> <span class="insert">(J2000.0): %1/%2").arg(StelUtils::radToDecDegStr(lambda), StelUtils::radTo</span></td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="lblock"><span class="delete">Str(lambda), StelUtils::radToDecDegStr(beta)) + "&lt;br&gt;";</span></td><td> </td><td class="rblock"><span class="insert">DecDegStr(beta))</span> + "&lt;br&gt;";</td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="lblock"><span class="delete">               else</span></td><td> </td><td class="rblock"></td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="lblock"><span class="delete">                       res += q_("Ecliptic longitude/latitude") + QString("</span></td><td> </td><td class="rblock"></td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="lblock"><span class="delete"> (J%1): %2/%3").arg(QString::number(2000.f, 'f', 1), StelUtils::radToDmsStr</span></td><td> </td><td class="rblock"></td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="lblock"><span class="delete">(lambda, true), StelUtils::radToDmsStr(beta, true)) + "&lt;br&gt;";</span></td><td> </td><td class="rblock"></td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="lblock"><span class="delete">               ecl = core-&gt;getCurrentPlanet()-&gt;getRotObliquity(core-&gt;getJDa</span></td><td> </td><td class="rblock"></td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="lblock"><span class="delete">y());</span></td><td> </td><td class="rblock"></td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="lblock"><span class="delete">               StelUtils::rectToSphe(&amp;ra_equ,&amp;dec_equ,getEquinoxEquatorialP</span></td><td> </td><td class="rblock"></td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="lblock"><span class="delete">os(core));</span></td><td> </td><td class="rblock"></td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="lblock"><span class="delete">               StelUtils::equToEcl(ra_equ, dec_equ, ecl, &amp;lambda, &amp;beta);</span></td><td> </td><td class="rblock"></td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="lblock"><span class="delete">               if (lambda&lt;0) lambda+=2.0*M_PI;</span></td><td> </td><td class="rblock"></td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="lblock"><span class="delete">               if (withDecimalDegree)</span></td><td> </td><td class="rblock"></td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="lblock"><span class="delete">                       res += q_("Ecliptic longitude/latitude") + QString("</span></td><td> </td><td class="rblock"></td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="lblock"><span class="delete"> (%1): %2/%3").arg(cepoch, StelUtils::radToDecDegStr(lambda), StelUtils::ra</span></td><td> </td><td class="rblock"></td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="lblock"><span class="delete">dToDecDegStr(beta))</span> + "&lt;br&gt;";</td><td> </td><td class="rblock"></td><td class="lineno" valign="top"></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="left">               else</td><td> </td><td class="right">               else</td><td class="lineno" valign="top"></td></tr>
-      <tr><td class="lineno" valign="top"></td><td class="left">                       res += q_("Ecliptic longitude/latitude") + QString("
- (J%1): %2/%3").arg(QString::number(2000.f, 'f', 1), StelUtils::radToDmsStr
-(lambda, true), StelUtils::radToDmsStr(beta, true)) + "&lt;br&gt;";</td><td> </td><td class="right">                       res += q_("Ecliptic longitude/latitude") + QString("
- (J%1): %2/%3").arg(QString::number(2000.f, 'f', 1), StelUtils::radToDmsStr
-(lambda, true), StelUtils::radToDmsStr(beta, true)) + "&lt;br&gt;";</td><td class="lineno" valign="top"></td></tr>
-      <tr><td><a name="diff0013" /></td></tr>
-      <tr><td class="lineno" valign="top"></td><td class="lblock">               ecl = <span class="delete">core-&gt;getCurrentPlanet()-&gt;getRotObliquity(core-&gt;getJDa</span></td><td> </td><td class="rblock">                                                                           </td><td class="lineno" valign="top"></td></tr>
-      <tr><td class="lineno" valign="top"></td><td class="lblock"><span class="delete">y());</span></td><td> </td><td class="rblock">               <span class="insert">if (core-&gt;getCurrentPlanet()-&gt;getEnglishName()=="Earth")</span></td><td class="lineno" valign="top"></td></tr>
-      <tr><td class="lineno" valign="top"></td><td class="lblock"><span class="delete">               StelUtils::rectToSphe(&amp;ra_equ,&amp;dec_equ,getEquinoxEquatorialP</span></td><td> </td><td class="rblock"><span class="insert">               {</span></td><td class="lineno" valign="top"></td></tr>
-      <tr><td class="lineno" valign="top"></td><td class="lblock"><span class="delete">os(core));</span></td><td> </td><td class="rblock">                       ecl = <span class="insert">GETSTELMODULE(SolarSystem)-&gt;getEarth()-&gt;getRot</span></td><td class="lineno" valign="top"></td></tr>
-      <tr><td class="lineno" valign="top"></td><td class="lblock">               StelUtils::equToEcl(ra_equ, dec_equ, ecl, &amp;lambda, <span class="delete">&amp;beta);</span></td><td> </td><td class="rblock"><span class="insert">Obliquity(2451545.0);</span></td><td class="lineno" valign="top"></td></tr>
-      <tr><td class="lineno" valign="top"></td><td class="lblock">               if (lambda&lt;0) lambda+=2.0*M_PI;</td><td> </td><td class="rblock"><span class="insert"></span></td><td class="lineno" valign="top"></td></tr>
-      <tr><td class="lineno" valign="top"></td><td class="lblock">               if (withDecimalDegree)</td><td> </td><td class="rblock"><span class="insert">                       StelUtils::rectToSphe(&amp;ra_equ,&amp;dec_equ,getEquinoxEqu</span></td><td class="lineno" valign="top"></td></tr>
-      <tr><td class="lineno" valign="top"></td><td class="lblock">                       res += q_("Ecliptic longitude/latitude") + <span class="delete">QString("</span></td><td> </td><td class="rblock"><span class="insert">atorialPos(core));</span></td><td class="lineno" valign="top"></td></tr>
-      <tr><td class="lineno" valign="top"></td><td class="lblock"> (%1): %2/%3").arg(cepoch, StelUtils::radToDecDegStr(lambda), <span class="delete">StelUtils::ra</span></td><td> </td><td class="rblock">                       StelUtils::equToEcl(ra_equ, dec_equ, ecl, &amp;lambda, <span class="insert">&amp;</span></td><td class="lineno" valign="top"></td></tr>
-      <tr><td class="lineno" valign="top"></td><td class="lblock"><span class="delete">dToDecDegStr(beta))</span> + "&lt;br&gt;";</td><td> </td><td class="rblock"><span class="insert">beta);</span></td><td class="lineno" valign="top"></td></tr>
-      <tr><td class="lineno" valign="top"></td><td class="lblock">               else</td><td> </td><td class="rblock">                       if (lambda&lt;0) lambda+=2.0*M_PI;</td><td class="lineno" valign="top"></td></tr>
-      <tr><td class="lineno" valign="top"></td><td class="lblock">                       res += q_("Ecliptic longitude/latitude") + <span class="delete">QString("</span></td><td> </td><td class="rblock">                       if (withDecimalDegree)</td><td class="lineno" valign="top"></td></tr>
-      <tr><td class="lineno" valign="top"></td><td class="lblock"> (%1): %2/%3").arg(cepoch, StelUtils::radToDmsStr(lambda, true), <span class="delete">StelUtils:</span></td><td> </td><td class="rblock">                               res += q_("Ecliptic longitude/latitude") + <span class="insert">Q</span></td><td class="lineno" valign="top"></td></tr>
-      <tr><td class="lineno" valign="top"></td><td class="lblock"><span class="delete">:radToDmsStr(beta,</span> true)) + "&lt;br&gt;";</td><td> </td><td class="rblock"><span class="insert">String("</span> (%1): %2/%3").arg(cepoch, StelUtils::radToDecDegStr(lambda), <span class="insert">StelU</span></td><td class="lineno" valign="top"></td></tr>
-      <tr><td class="lineno" valign="top"></td><td class="lblock"></td><td> </td><td class="rblock"><span class="insert">tils::radToDecDegStr(beta))</span> + "&lt;br&gt;";</td><td class="lineno" valign="top"></td></tr>
-      <tr><td class="lineno" valign="top"></td><td class="lblock"></td><td> </td><td class="rblock">                       else</td><td class="lineno" valign="top"></td></tr>
-      <tr><td class="lineno" valign="top"></td><td class="lblock"></td><td> </td><td class="rblock">                               res += q_("Ecliptic longitude/latitude") + <span class="insert">Q</span></td><td class="lineno" valign="top"></td></tr>
+      <tr><td><a name="diff0017" /></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="lblock">                       res += q_("Ecliptic longitude/latitude") + QString("</td><td> </td><td class="rblock">                       res += q_("Ecliptic longitude/latitude") + QString("</td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="lblock"> (%1): %2/%3").arg(cepoch, StelUtils::radToDmsStr(lambda, true), <span class="delete">StelUtils:</span></td><td> </td><td class="rblock"> <span class="insert">(J2000.0): %1/%2").arg(StelUtils::radToDmsStr(lambda, true), StelUtils::ra</span></td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="lblock"><span class="delete">:radToDmsStr(beta,</span> true)) + "&lt;br&gt;";</td><td> </td><td class="rblock"><span class="insert">dToDmsStr(beta, true)) + "&lt;br&gt;";</span></td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="lblock"></td><td> </td><td class="rblock"><span class="insert"></span></td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="lblock"></td><td> </td><td class="rblock"><span class="insert">               if (core-&gt;getCurrentPlanet()-&gt;getEnglishName()=="Earth")</span></td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="lblock"></td><td> </td><td class="rblock"><span class="insert">               {</span></td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="lblock"></td><td> </td><td class="rblock"><span class="insert">                       ecl = GETSTELMODULE(SolarSystem)-&gt;getEarth()-&gt;getRot</span></td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="lblock"></td><td> </td><td class="rblock"><span class="insert">Obliquity(2451545.0);</span></td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="lblock"></td><td> </td><td class="rblock"><span class="insert"></span></td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="lblock"></td><td> </td><td class="rblock"><span class="insert">                       StelUtils::rectToSphe(&amp;ra_equ,&amp;dec_equ,getEquinoxEqu</span></td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="lblock"></td><td> </td><td class="rblock"><span class="insert">atorialPos(core));</span></td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="lblock"></td><td> </td><td class="rblock"><span class="insert">                       StelUtils::equToEcl(ra_equ, dec_equ, ecl, &amp;lambda, &amp;</span></td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="lblock"></td><td> </td><td class="rblock"><span class="insert">beta);</span></td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="lblock"></td><td> </td><td class="rblock"><span class="insert">                       if (lambda&lt;0) lambda+=2.0*M_PI;</span></td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="lblock"></td><td> </td><td class="rblock"><span class="insert">                       if (withDecimalDegree)</span></td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="lblock"></td><td> </td><td class="rblock"><span class="insert">                               res += q_("Ecliptic longitude/latitude") + Q</span></td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="lblock"></td><td> </td><td class="rblock"><span class="insert">String(" (%1): %2/%3").arg(cepoch, StelUtils::radToDecDegStr(lambda), StelU</span></td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="lblock"></td><td> </td><td class="rblock"><span class="insert">tils::radToDecDegStr(beta)) + "&lt;br&gt;";</span></td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="lblock"></td><td> </td><td class="rblock"><span class="insert">                       else</span></td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="lblock"></td><td> </td><td class="rblock"><span class="insert">                               res += q_("Ecliptic longitude/latitude") + Q</span></td><td class="lineno" valign="top"></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="lblock"></td><td> </td><td class="rblock"><span class="insert">String("</span> (%1): %2/%3").arg(cepoch, StelUtils::radToDmsStr(lambda, true), <span class="insert">St</span></td><td class="lineno" valign="top"></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="lblock"></td><td> </td><td class="rblock"><span class="insert">elUtils::radToDmsStr(beta,</span> true)) + "&lt;br&gt;";</td><td class="lineno" valign="top"></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="lblock"></td><td> </td><td class="rblock">                       <span class="insert">// GZ Only for now: display epsilon_A, angle between</span></td><td class="lineno" valign="top"></td></tr>
@@ -325,7 +364,7 @@ StelUtils::radToDmsStr(glong,true), StelUtils::radToDmsStr(glat,true)) + "&lt;
 br&gt;";</td><td class="lineno" valign="top"></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="left">       }</td><td> </td><td class="right">       }</td><td class="lineno" valign="top"></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="left"></td><td> </td><td class="right"></td><td class="lineno" valign="top"></td></tr>
-      <tr><td><a name="diff0014" /></td></tr>
+      <tr><td><a name="diff0018" /></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="lblock"></td><td> </td><td class="rblock">       <span class="insert">if ((flags&amp;Extra) &amp;&amp; core-&gt;getCurrentPlanet()-&gt;getEnglishName()=="Ea</span></td><td class="lineno" valign="top"></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="lblock"></td><td> </td><td class="rblock"><span class="insert">rth")</span></td><td class="lineno" valign="top"></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="lblock"></td><td> </td><td class="rblock"><span class="insert">       {</span></td><td class="lineno" valign="top"></td></tr>
@@ -353,7 +392,7 @@ br&gt;";</td><td class="lineno" valign="top"></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="left"></td><td> </td><td class="right"></td><td class="lineno" valign="top"></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="left">       if (flags&amp;PlainText)</td><td> </td><td class="right">       if (flags&amp;PlainText)</td><td class="lineno" valign="top"></td></tr>
       <tr><td class="lineno"></td><td class="left"></td><td> </td><td class="right"></td><td class="lineno"></td></tr>
-      <tr bgcolor="gray" ><td></td><th><a name="part-l5" /><small>skipping to change at</small><em> line 255</em></th><th> </th><th><a name="part-r5" /><small>skipping to change at</small><em> line 272</em></th><td></td></tr>
+      <tr bgcolor="gray" ><td></td><th><a name="part-l4" /><small>skipping to change at</small><em> line 255</em></th><th> </th><th><a name="part-r4" /><small>skipping to change at</small><em> line 276</em></th><td></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="left">               str.replace("&lt;b&gt;", "");</td><td> </td><td class="right">               str.replace("&lt;b&gt;", "");</td><td class="lineno" valign="top"></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="left">               str.replace("&lt;/b&gt;", "");</td><td> </td><td class="right">               str.replace("&lt;/b&gt;", "");</td><td class="lineno" valign="top"></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="left">               str.replace("&lt;h2&gt;", "");</td><td> </td><td class="right">               str.replace("&lt;h2&gt;", "");</td><td class="lineno" valign="top"></td></tr>
@@ -364,12 +403,12 @@ br&gt;";</td><td class="lineno" valign="top"></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="left">       {</td><td> </td><td class="right">       {</td><td class="lineno" valign="top"></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="left">               Vec3f color = getInfoColor();</td><td> </td><td class="right">               Vec3f color = getInfoColor();</td><td class="lineno" valign="top"></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="left">               StelCore* core = StelApp::getInstance().getCore();</td><td> </td><td class="right">               StelCore* core = StelApp::getInstance().getCore();</td><td class="lineno" valign="top"></td></tr>
-      <tr><td><a name="diff0015" /></td></tr>
+      <tr><td><a name="diff0019" /></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="lblock">               if (core-&gt;is<span class="delete">Day() &amp;&amp; core-&gt;getSkyDrawer()-&gt;getFlagHasAtmosph
-</span>ere()==true)</td><td> </td><td class="rblock">               if (core-&gt;is<span class="insert">BrightDaylight() &amp;&amp; core-&gt;getSkyDrawer()-&gt;getFla
-gHasAtmosph</span>ere()==true)</td><td class="lineno" valign="top"></td></tr>
+ere()==true</span>)</td><td> </td><td class="rblock">               if (core-&gt;is<span class="insert">BrightDaylight() &amp;&amp; core-&gt;getSkyDrawer()-&gt;getFla
+gHasAtmosphere()==true &amp;&amp; !StelApp::getInstance().getVisionModeNight()</span>)</td><td class="lineno" valign="top"></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="left">               {</td><td> </td><td class="right">               {</td><td class="lineno" valign="top"></td></tr>
-      <tr><td><a name="diff0016" /></td></tr>
+      <tr><td><a name="diff0020" /></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="lblock">                       // <span class="delete">Let's</span> make info text <span class="delete">is</span> more readable when <span class="delete">atmosp</span></td><td> </td><td class="rblock">                       // make info text more readable when <span class="insert">atmosphere enab</span></td><td class="lineno" valign="top"></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="lblock"><span class="delete">here enabled</span> at daylight.</td><td> </td><td class="rblock"><span class="insert">led</span> at daylight.</td><td class="lineno" valign="top"></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="lblock">                       color = StelUtils::strToVec3f(StelApp::getInstance()</td><td> </td><td class="rblock">                       color = StelUtils::strToVec3f(StelApp::getInstance()</td><td class="lineno" valign="top"></td></tr>
@@ -384,8 +423,8 @@ oHtmlColor(color)));</td><td class="lineno" valign="top"></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="left">}</td><td> </td><td class="right">}</td><td class="lineno" valign="top"></td></tr>
 
      <tr><td></td><td class="left"></td><td> </td><td class="right"></td><td></td></tr>
-     <tr bgcolor="gray"><th colspan="5" align="center"><a name="end">&nbsp;End of changes. 16 change blocks.&nbsp;</a></th></tr>
-     <tr class="stats"><td></td><th><i>45 lines changed or deleted</i></th><th><i> </i></th><th><i>77 lines changed or added</i></th><td></td></tr>
+     <tr bgcolor="gray"><th colspan="5" align="center"><a name="end">&nbsp;End of changes. 20 change blocks.&nbsp;</a></th></tr>
+     <tr class="stats"><td></td><th><i>56 lines changed or deleted</i></th><th><i> </i></th><th><i>93 lines changed or added</i></th><td></td></tr>
      <tr><td colspan="5" align="center" class="small"><br/>This html diff was produced by rfcdiff 1.41. The latest version is available from <a href="http://www.tools.ietf.org/tools/rfcdiff/" >http://tools.ietf.org/tools/rfcdiff/</a> </td></tr>
    </table>
    </body>

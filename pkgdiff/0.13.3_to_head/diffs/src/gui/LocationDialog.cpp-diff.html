@@ -41,7 +41,8 @@
   <table border="0" cellpadding="0" cellspacing="0"> 
   <tr bgcolor="orange"><th></th><th>&nbsp;LocationDialog.cpp&nbsp;</th><th> </th><th>&nbsp;LocationDialog.cpp&nbsp;</th><th></th></tr> 
       <tr><td class="lineno"></td><td class="left"></td><td> </td><td class="right"></td><td class="lineno"></td></tr>
-      <tr bgcolor="gray" ><td></td><th><a name="part-l1" /><small>skipping to change at</small><em> line 343</em></th><th> </th><th><a name="part-r1" /><small>skipping to change at</small><em> line 343</em></th><td></td></tr>
+      <tr bgcolor="gray" ><td></td><th><a name="part-l1" /><small>skipping to change at</small><em> line 342</em></th><th> </th><th><a name="part-r1" /><small>skipping to change at</small><em> line 342</em></th><td></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="left"></td><td> </td><td class="right"></td><td class="lineno" valign="top"></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="left">// Create a StelLocation instance from the fields</td><td> </td><td class="right">// Create a StelLocation instance from the fields</td><td class="lineno" valign="top"></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="left">StelLocation LocationDialog::locationFromFields() const</td><td> </td><td class="right">StelLocation LocationDialog::locationFromFields() const</td><td class="lineno" valign="top"></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="left">{</td><td> </td><td class="right">{</td><td class="lineno" valign="top"></td></tr>
@@ -55,10 +56,11 @@ ntText()</td><td class="lineno" valign="top"></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="left">               loc.planetName = ui-&gt;planetNameComboBox-&gt;itemData(index).toS
 tring();</td><td> </td><td class="right">               loc.planetName = ui-&gt;planetNameComboBox-&gt;itemData(index).toS
 tring();</td><td class="lineno" valign="top"></td></tr>
-      <tr><td class="lineno" valign="top"></td><td class="left">       loc.name = ui-&gt;cityNameLineEdit-&gt;text();</td><td> </td><td class="right">       loc.name = ui-&gt;cityNameLineEdit-&gt;text();</td><td class="lineno" valign="top"></td></tr>
       <tr><td><a name="diff0001" /></td></tr>
-      <tr><td class="lineno" valign="top"></td><td class="lblock">       loc.latitude = <span class="delete">ui-&gt;latitudeSpinBox-&gt;valueDegrees(</span>);</td><td> </td><td class="rblock">       loc.latitude = <span class="insert">qMin(90.0, qMax(-90.0, ui-&gt;latitudeSpinBox-&gt;valueDegr
-ees())</span>);</td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="lblock">       loc.name = <span class="delete">ui-&gt;cityNameLineEdit-&gt;text();</span></td><td> </td><td class="rblock">       loc.name = <span class="insert">ui-&gt;cityNameLineEdit-&gt;text().trimmed(); // avoid location</span></td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="lblock">       loc.latitude = <span class="delete">ui-&gt;latitudeSpinBox-&gt;valueDegrees();</span></td><td> </td><td class="rblock"><span class="insert">s with leading whitespace</span></td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="lblock"></td><td> </td><td class="rblock">       loc.latitude = <span class="insert">qMin(90.0, qMax(-90.0, ui-&gt;latitudeSpinBox-&gt;valueDegr</span></td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="lblock"></td><td> </td><td class="rblock"><span class="insert">ees()));</span></td><td class="lineno" valign="top"></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="left">       loc.longitude = ui-&gt;longitudeSpinBox-&gt;valueDegrees();</td><td> </td><td class="right">       loc.longitude = ui-&gt;longitudeSpinBox-&gt;valueDegrees();</td><td class="lineno" valign="top"></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="left">       loc.altitude = ui-&gt;altitudeSpinBox-&gt;value();</td><td> </td><td class="right">       loc.altitude = ui-&gt;altitudeSpinBox-&gt;value();</td><td class="lineno" valign="top"></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="left">       index = ui-&gt;countryNameComboBox-&gt;currentIndex();</td><td> </td><td class="right">       index = ui-&gt;countryNameComboBox-&gt;currentIndex();</td><td class="lineno" valign="top"></td></tr>
@@ -76,7 +78,7 @@ ing();</td><td class="lineno" valign="top"></td></tr>
 
      <tr><td></td><td class="left"></td><td> </td><td class="right"></td><td></td></tr>
      <tr bgcolor="gray"><th colspan="5" align="center"><a name="end">&nbsp;End of changes. 1 change blocks.&nbsp;</a></th></tr>
-     <tr class="stats"><td></td><th><i>1 lines changed or deleted</i></th><th><i> </i></th><th><i>1 lines changed or added</i></th><td></td></tr>
+     <tr class="stats"><td></td><th><i>2 lines changed or deleted</i></th><th><i> </i></th><th><i>4 lines changed or added</i></th><td></td></tr>
      <tr><td colspan="5" align="center" class="small"><br/>This html diff was produced by rfcdiff 1.41. The latest version is available from <a href="http://www.tools.ietf.org/tools/rfcdiff/" >http://tools.ietf.org/tools/rfcdiff/</a> </td></tr>
    </table>
    </body>

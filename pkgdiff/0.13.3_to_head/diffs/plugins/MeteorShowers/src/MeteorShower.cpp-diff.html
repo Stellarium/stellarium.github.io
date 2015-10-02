@@ -156,82 +156,82 @@
       <tr><td class="lineno" valign="top"></td><td class="lblock"></td><td> </td><td class="rblock"><span class="insert">                               d.variable.append(variable.at(i).toInt(&amp;ok))</span></td><td class="lineno" valign="top"></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="lblock"></td><td> </td><td class="rblock"><span class="insert">;</span></td><td class="lineno" valign="top"></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="lblock"></td><td> </td><td class="rblock"><span class="insert">                       }</span></td><td class="lineno" valign="top"></td></tr>
-      <tr><td class="lineno" valign="top"></td><td class="lblock"></td><td> </td><td class="rblock"><span class="insert"></span></td><td class="lineno" valign="top"></td></tr>
-      <tr><td class="lineno" valign="top"></td><td class="lblock"></td><td> </td><td class="rblock"><span class="insert">                       if (!ok)</span></td><td class="lineno" valign="top"></td></tr>
-      <tr><td class="lineno" valign="top"></td><td class="lblock"></td><td> </td><td class="rblock"><span class="insert">                       {</span></td><td class="lineno" valign="top"></td></tr>
-      <tr><td class="lineno" valign="top"></td><td class="lblock"></td><td> </td><td class="rblock"><span class="insert">                               qWarning() &lt;&lt; "MeteorShower: INVALID data fo</span></td><td class="lineno" valign="top"></td></tr>
-      <tr><td class="lineno" valign="top"></td><td class="lblock"></td><td> </td><td class="rblock"><span class="insert">r " &lt;&lt; m_showerID;</span></td><td class="lineno" valign="top"></td></tr>
-      <tr><td class="lineno" valign="top"></td><td class="lblock"></td><td> </td><td class="rblock"><span class="insert">                               qWarning() &lt;&lt; "MeteorShower: Please, check y</span></td><td class="lineno" valign="top"></td></tr>
-      <tr><td class="lineno" valign="top"></td><td class="lblock"></td><td> </td><td class="rblock"><span class="insert">our 'showers.json' catalog!";</span></td><td class="lineno" valign="top"></td></tr>
-      <tr><td class="lineno" valign="top"></td><td class="lblock"></td><td> </td><td class="rblock"><span class="insert">                               return;</span></td><td class="lineno" valign="top"></td></tr>
-      <tr><td class="lineno" valign="top"></td><td class="lblock"></td><td> </td><td class="rblock"><span class="insert">                       }</span></td><td class="lineno" valign="top"></td></tr>
-      <tr><td class="lineno" valign="top"></td><td class="lblock"></td><td> </td><td class="rblock"><span class="insert">               }</span></td><td class="lineno" valign="top"></td></tr>
-      <tr><td class="lineno" valign="top"></td><td class="lblock"></td><td> </td><td class="rblock"><span class="insert"></span></td><td class="lineno" valign="top"></td></tr>
-      <tr><td class="lineno" valign="top"></td><td class="lblock"></td><td> </td><td class="rblock"><span class="insert">               //</span></td><td class="lineno" valign="top"></td></tr>
-      <tr><td class="lineno" valign="top"></td><td class="lblock"></td><td> </td><td class="rblock"><span class="insert">               // 'start', 'finish' and 'peak' fields</span></td><td class="lineno" valign="top"></td></tr>
-      <tr><td class="lineno" valign="top"></td><td class="lblock"></td><td> </td><td class="rblock"><span class="insert">               //</span></td><td class="lineno" valign="top"></td></tr>
-      <tr><td class="lineno" valign="top"></td><td class="lblock"></td><td> </td><td class="rblock"><span class="insert">               d.year = activityMap.value("year").toInt();</span></td><td class="lineno" valign="top"></td></tr>
-      <tr><td class="lineno" valign="top"></td><td class="lblock"></td><td> </td><td class="rblock"><span class="insert">               QString year = QString::number(d.year == 0 ? genericYear : d</span></td><td class="lineno" valign="top"></td></tr>
-      <tr><td class="lineno" valign="top"></td><td class="lblock"></td><td> </td><td class="rblock"><span class="insert">.year);</span></td><td class="lineno" valign="top"></td></tr>
-      <tr><td class="lineno" valign="top"></td><td class="lblock"></td><td> </td><td class="rblock"><span class="insert"></span></td><td class="lineno" valign="top"></td></tr>
-      <tr><td class="lineno" valign="top"></td><td class="lblock"></td><td> </td><td class="rblock"><span class="insert">               QString start = activityMap.value("start").toString();</span></td><td class="lineno" valign="top"></td></tr>
-      <tr><td class="lineno" valign="top"></td><td class="lblock"></td><td> </td><td class="rblock"><span class="insert">               start = start.isEmpty() ? "" : start + " " + year;</span></td><td class="lineno" valign="top"></td></tr>
-      <tr><td class="lineno" valign="top"></td><td class="lblock"></td><td> </td><td class="rblock"><span class="insert">               d.start = QDate::fromString(start, "MM.dd yyyy");</span></td><td class="lineno" valign="top"></td></tr>
-      <tr><td class="lineno" valign="top"></td><td class="lblock"></td><td> </td><td class="rblock"><span class="insert"></span></td><td class="lineno" valign="top"></td></tr>
-      <tr><td class="lineno" valign="top"></td><td class="lblock"></td><td> </td><td class="rblock"><span class="insert">               QString finish = activityMap.value("finish").toString();</span></td><td class="lineno" valign="top"></td></tr>
-      <tr><td class="lineno" valign="top"></td><td class="lblock"></td><td> </td><td class="rblock"><span class="insert">               finish = finish.isEmpty() ? "" : finish + " " + year;</span></td><td class="lineno" valign="top"></td></tr>
-      <tr><td class="lineno" valign="top"></td><td class="lblock"></td><td> </td><td class="rblock"><span class="insert">               d.finish = QDate::fromString(finish, "MM.dd yyyy");</span></td><td class="lineno" valign="top"></td></tr>
-      <tr><td class="lineno" valign="top"></td><td class="lblock"></td><td> </td><td class="rblock"><span class="insert"></span></td><td class="lineno" valign="top"></td></tr>
-      <tr><td class="lineno" valign="top"></td><td class="lblock"></td><td> </td><td class="rblock"><span class="insert">               QString peak = activityMap.value("peak").toString();</span></td><td class="lineno" valign="top"></td></tr>
-      <tr><td class="lineno" valign="top"></td><td class="lblock"></td><td> </td><td class="rblock"><span class="insert">               peak = peak.isEmpty() ? "" : peak + " " + year;</span></td><td class="lineno" valign="top"></td></tr>
-      <tr><td class="lineno" valign="top"></td><td class="lblock"></td><td> </td><td class="rblock"><span class="insert">               d.peak = QDate::fromString(peak, "MM.dd yyyy");</span></td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="left"></td><td> </td><td class="right"></td><td class="lineno" valign="top"></td></tr>
+      <tr><td><a name="diff0008" /></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="lblock">       <span class="delete">showerID = map.value("showerID").toString();</span></td><td> </td><td class="rblock">                       <span class="insert">if (!ok)</span></td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="lblock"><span class="delete">       designation</span>  = <span class="delete">map.value("designation").toString();</span></td><td> </td><td class="rblock"><span class="insert">                       {</span></td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="lblock"><span class="delete">       speed</span> = <span class="delete">map.value("speed").toInt();</span></td><td> </td><td class="rblock"><span class="insert">                               qWarning() &lt;&lt; "MeteorShower: INVALID data fo</span></td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="lblock"><span class="delete">       rAlphaPeak</span> = <span class="delete">radiantAlpha</span> = <span class="delete">StelUtils::getDecAngle(map.value("radian</span></td><td> </td><td class="rblock"><span class="insert">r " &lt;&lt; m_showerID;</span></td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="lblock"><span class="delete">tAlpha").toString());</span></td><td> </td><td class="rblock"><span class="insert">                               qWarning() &lt;&lt; "MeteorShower: Please, check y</span></td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="lblock"><span class="delete">       rDeltaPeak</span> = <span class="delete">radiantDelta</span> = <span class="delete">StelUtils::getDecAngle(map.value("radian</span></td><td> </td><td class="rblock"><span class="insert">our 'showers.json' catalog!";</span></td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="lblock"><span class="delete">tDelta").toString());</span></td><td> </td><td class="rblock"><span class="insert">                               return;</span></td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="lblock"><span class="delete">       driftAlpha</span> = <span class="delete">StelUtils::getDecAngle(map.value("driftAlpha").toString</span></td><td> </td><td class="rblock"><span class="insert">                       }</span></td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="lblock"><span class="delete">());</span></td><td> </td><td class="rblock"><span class="insert">               }</span></td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="lblock"><span class="delete">       driftDelta</span> = <span class="delete">StelUtils::getDecAngle(map.value("driftDelta").toString</span></td><td> </td><td class="rblock"><span class="insert"></span></td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="lblock"><span class="delete">());</span></td><td> </td><td class="rblock"><span class="insert">               //</span></td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="lblock"><span class="delete">       parentObj</span> = <span class="delete">map.value("parentObj").toString();</span></td><td> </td><td class="rblock"><span class="insert">               // 'start', 'finish' and 'peak' fields</span></td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="lblock"><span class="delete">       pidx</span> = <span class="delete">map.value("pidx").toFloat();</span></td><td> </td><td class="rblock"><span class="insert">               //</span></td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="lblock"><span class="delete"></span></td><td> </td><td class="rblock"><span class="insert">               d.year</span> = <span class="insert">activityMap.value("year").toInt();</span></td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="lblock"><span class="delete">       if(map.contains("activity"))</span></td><td> </td><td class="rblock"><span class="insert">               QString year = QString::number(d.year == 0 ? genericYear : d</span></td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="lblock">       {</td><td> </td><td class="rblock"><span class="insert">.year);</span></td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="lblock">               <span class="delete">foreach(const QVariant &amp;ms, map.value("activity").toList())</span></td><td> </td><td class="rblock"><span class="insert"></span></td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="lblock">               {</td><td> </td><td class="rblock"><span class="insert">               QString start</span> = <span class="insert">activityMap.value("start").toString();</span></td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="lblock">                       <span class="delete">QVariantMap activityMap = ms.toMap();</span></td><td> </td><td class="rblock"><span class="insert">               start</span> = <span class="insert">start.isEmpty() ? "" : start + " " + year;</span></td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="lblock"><span class="delete">                       activityData d;</span></td><td> </td><td class="rblock"><span class="insert">               d.start</span> = <span class="insert">QDate::fromString(start, "MM.dd yyyy");</span></td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="lblock"><span class="delete">                       d.year</span> = <span class="delete">activityMap.value("year").toString();</span></td><td> </td><td class="rblock"><span class="insert"></span></td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="lblock"><span class="delete">                       d.zhr</span> = <span class="delete">activityMap.value("zhr").toInt();</span></td><td> </td><td class="rblock"><span class="insert">               QString finish</span> = <span class="insert">activityMap.value("finish").toString();</span></td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="lblock"><span class="delete">                       d.variable</span> = <span class="delete">activityMap.value("variable").toString(</span></td><td> </td><td class="rblock"><span class="insert">               finish</span> = <span class="insert">finish.isEmpty() ? "" : finish + " " + year;</span></td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="lblock"><span class="delete">);</span></td><td> </td><td class="rblock"><span class="insert">               d.finish</span> = <span class="insert">QDate::fromString(finish, "MM.dd yyyy");</span></td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="lblock"><span class="delete">                       d.peak</span> = <span class="delete">activityMap.value("peak").toString();</span></td><td> </td><td class="rblock"><span class="insert"></span></td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="lblock"><span class="delete">                       d.start</span> = <span class="delete">activityMap.value("start").toString();</span></td><td> </td><td class="rblock"><span class="insert">               QString peak</span> = <span class="insert">activityMap.value("peak").toString();</span></td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="lblock"><span class="delete">                       d.finish</span> = <span class="delete">activityMap.value("finish").toString();</span></td><td> </td><td class="rblock"><span class="insert">               peak</span> = <span class="insert">peak.isEmpty() ? "" : peak + " " + year;</span></td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="lblock"><span class="delete">                       activity.append(d);</span></td><td> </td><td class="rblock"><span class="insert">               d.peak</span> = <span class="insert">QDate::fromString(peak, "MM.dd yyyy");</span></td><td class="lineno" valign="top"></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="lblock"></td><td> </td><td class="rblock"><span class="insert"></span></td><td class="lineno" valign="top"></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="lblock"></td><td> </td><td class="rblock"><span class="insert">               if (d.start.isValid() &amp;&amp; d.finish.isValid() &amp;&amp; d.peak.isVali</span></td><td class="lineno" valign="top"></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="lblock"></td><td> </td><td class="rblock"><span class="insert">d())</span></td><td class="lineno" valign="top"></td></tr>
-      <tr><td class="lineno" valign="top"></td><td class="lblock"></td><td> </td><td class="rblock"><span class="insert">               {</span></td><td class="lineno" valign="top"></td></tr>
-      <tr><td class="lineno" valign="top"></td><td class="lblock"></td><td> </td><td class="rblock"><span class="insert">                       // Fix the 'finish' year! Handling cases when the sh</span></td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="lblock"></td><td> </td><td class="rblock">               {</td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="lblock"></td><td> </td><td class="rblock">                       <span class="insert">// Fix the 'finish' year! Handling cases when the sh</span></td><td class="lineno" valign="top"></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="lblock"></td><td> </td><td class="rblock"><span class="insert">ower starts on</span></td><td class="lineno" valign="top"></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="lblock"></td><td> </td><td class="rblock"><span class="insert">                       // the current year and ends on the next year!</span></td><td class="lineno" valign="top"></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="lblock"></td><td> </td><td class="rblock"><span class="insert">                       if(d.start.operator &gt;(d.finish))</span></td><td class="lineno" valign="top"></td></tr>
-      <tr><td class="lineno" valign="top"></td><td class="lblock"></td><td> </td><td class="rblock"><span class="insert">                       {</span></td><td class="lineno" valign="top"></td></tr>
-      <tr><td class="lineno" valign="top"></td><td class="lblock"></td><td> </td><td class="rblock"><span class="insert">                               d.finish = d.finish.addYears(1);</span></td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="lblock"></td><td> </td><td class="rblock">                       {</td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="lblock"></td><td> </td><td class="rblock">                               <span class="insert">d.finish</span> = <span class="insert">d.finish.addYears(1);</span></td><td class="lineno" valign="top"></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="lblock"></td><td> </td><td class="rblock"><span class="insert">                       }</span></td><td class="lineno" valign="top"></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="lblock"></td><td> </td><td class="rblock"><span class="insert">                       // Fix the 'peak' year</span></td><td class="lineno" valign="top"></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="lblock"></td><td> </td><td class="rblock"><span class="insert">                       if(d.start.operator &gt;(d.peak))</span></td><td class="lineno" valign="top"></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="lblock"></td><td> </td><td class="rblock"><span class="insert">                       {</span></td><td class="lineno" valign="top"></td></tr>
-      <tr><td class="lineno" valign="top"></td><td class="lblock"></td><td> </td><td class="rblock"><span class="insert">                               d.peak = d.peak.addYears(1);</span></td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="lblock"></td><td> </td><td class="rblock"><span class="insert">                               d.peak</span> = <span class="insert">d.peak.addYears(1);</span></td><td class="lineno" valign="top"></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="lblock"></td><td> </td><td class="rblock"><span class="insert">                       }</span></td><td class="lineno" valign="top"></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="lblock"></td><td> </td><td class="rblock"><span class="insert">               }</span></td><td class="lineno" valign="top"></td></tr>
-      <tr><td class="lineno" valign="top"></td><td class="left"></td><td> </td><td class="right"></td><td class="lineno" valign="top"></td></tr>
-      <tr><td><a name="diff0008" /></td></tr>
-      <tr><td class="lineno" valign="top"></td><td class="lblock">       <span class="delete">showerID = map.value("showerID").toString();</span></td><td> </td><td class="rblock">               <span class="insert">m_activities.append(d);</span></td><td class="lineno" valign="top"></td></tr>
-      <tr><td class="lineno" valign="top"></td><td class="lblock"><span class="delete">       designation  = map.value("designation").toString();</span></td><td> </td><td class="rblock"><span class="insert">       }</span></td><td class="lineno" valign="top"></td></tr>
-      <tr><td class="lineno" valign="top"></td><td class="lblock"><span class="delete">       speed = map.value("speed").toInt();</span></td><td> </td><td class="rblock"><span class="insert"></span></td><td class="lineno" valign="top"></td></tr>
-      <tr><td class="lineno" valign="top"></td><td class="lblock"><span class="delete">       rAlphaPeak = radiantAlpha = StelUtils::getDecAngle(map.value("radian</span></td><td> </td><td class="rblock"><span class="insert">       // filling null values of the activity list with generic data</span></td><td class="lineno" valign="top"></td></tr>
-      <tr><td class="lineno" valign="top"></td><td class="lblock"><span class="delete">tAlpha").toString());</span></td><td> </td><td class="rblock"><span class="insert">       const Activity&amp; g = m_activities.at(0);</span></td><td class="lineno" valign="top"></td></tr>
-      <tr><td class="lineno" valign="top"></td><td class="lblock"><span class="delete">       rDeltaPeak = radiantDelta = StelUtils::getDecAngle(map.value("radian</span></td><td> </td><td class="rblock"><span class="insert">       const int activitiesSize = m_activities.size();</span></td><td class="lineno" valign="top"></td></tr>
-      <tr><td class="lineno" valign="top"></td><td class="lblock"><span class="delete">tDelta").toString());</span></td><td> </td><td class="rblock"><span class="insert">       for (int i = 1; i &lt; activitiesSize; ++i)</span></td><td class="lineno" valign="top"></td></tr>
-      <tr><td class="lineno" valign="top"></td><td class="lblock"><span class="delete">       driftAlpha = StelUtils::getDecAngle(map.value("driftAlpha").toString</span></td><td> </td><td class="rblock">       {</td><td class="lineno" valign="top"></td></tr>
-      <tr><td class="lineno" valign="top"></td><td class="lblock"><span class="delete">());</span></td><td> </td><td class="rblock">               <span class="insert">Activity a</span> = <span class="insert">m_activities.at(i);</span></td><td class="lineno" valign="top"></td></tr>
-      <tr><td class="lineno" valign="top"></td><td class="lblock"><span class="delete">       driftDelta = StelUtils::getDecAngle(map.value("driftDelta").toString</span></td><td> </td><td class="rblock"><span class="insert">               if (a.zhr == 0)</span></td><td class="lineno" valign="top"></td></tr>
-      <tr><td class="lineno" valign="top"></td><td class="lblock"><span class="delete">());</span></td><td> </td><td class="rblock"><span class="insert">               {</span></td><td class="lineno" valign="top"></td></tr>
-      <tr><td class="lineno" valign="top"></td><td class="lblock"><span class="delete">       parentObj = map.value("parentObj").toString();</span></td><td> </td><td class="rblock"><span class="insert">                       a.zhr</span> = <span class="insert">g.zhr;</span></td><td class="lineno" valign="top"></td></tr>
-      <tr><td class="lineno" valign="top"></td><td class="lblock"><span class="delete">       pidx = map.value("pidx").toFloat();</span></td><td> </td><td class="rblock"><span class="insert">                       a.variable</span> = <span class="insert">g.variable;</span></td><td class="lineno" valign="top"></td></tr>
-      <tr><td class="lineno" valign="top"></td><td class="lblock"><span class="delete"></span></td><td> </td><td class="rblock"><span class="insert">               }</span></td><td class="lineno" valign="top"></td></tr>
-      <tr><td class="lineno" valign="top"></td><td class="lblock"><span class="delete">       if(map.contains("activity"))</span></td><td> </td><td class="rblock"><span class="insert"></span></td><td class="lineno" valign="top"></td></tr>
-      <tr><td class="lineno" valign="top"></td><td class="lblock">       {</td><td> </td><td class="rblock"><span class="insert">               int aux = a.year - genericYear;</span></td><td class="lineno" valign="top"></td></tr>
-      <tr><td class="lineno" valign="top"></td><td class="lblock">               <span class="delete">foreach(const QVariant &amp;ms, map.value("activity").toList())</span></td><td> </td><td class="rblock"><span class="insert">               a.start = a.start.isValid() ? a.start : g.start.addYears(aux</span></td><td class="lineno" valign="top"></td></tr>
-      <tr><td class="lineno" valign="top"></td><td class="lblock"><span class="delete">               {</span></td><td> </td><td class="rblock">);</td><td class="lineno" valign="top"></td></tr>
-      <tr><td class="lineno" valign="top"></td><td class="lblock"><span class="delete">                       QVariantMap activityMap = ms.toMap();</span></td><td> </td><td class="rblock">               <span class="insert">a.finish</span> = <span class="insert">a.finish.isValid() ? a.finish : g.finish.addYears</span></td><td class="lineno" valign="top"></td></tr>
-      <tr><td class="lineno" valign="top"></td><td class="lblock"><span class="delete">                       activityData d;</span></td><td> </td><td class="rblock"><span class="insert">(aux);</span></td><td class="lineno" valign="top"></td></tr>
-      <tr><td class="lineno" valign="top"></td><td class="lblock"><span class="delete">                       d.year</span> = <span class="delete">activityMap.value("year").toString();</span></td><td> </td><td class="rblock"><span class="insert">               a.peak = a.peak.isValid() ? a.peak : g.peak.addYears(aux);</span></td><td class="lineno" valign="top"></td></tr>
-      <tr><td class="lineno" valign="top"></td><td class="lblock"><span class="delete">                       d.zhr</span> = <span class="delete">activityMap.value("zhr").toInt();</span></td><td> </td><td class="rblock"><span class="insert">               m_activities.replace(i, a);</span></td><td class="lineno" valign="top"></td></tr>
-      <tr><td class="lineno" valign="top"></td><td class="lblock"><span class="delete">                       d.variable</span> = <span class="delete">activityMap.value("variable").toString(</span></td><td> </td><td class="rblock"><span class="insert"></span></td><td class="lineno" valign="top"></td></tr>
-      <tr><td class="lineno" valign="top"></td><td class="lblock">);</td><td> </td><td class="rblock"><span class="insert">               if (!a.start.isValid() || !a.finish.isValid() || !a.peak.isV</span></td><td class="lineno" valign="top"></td></tr>
-      <tr><td class="lineno" valign="top"></td><td class="lblock">                       <span class="delete">d.peak = activityMap.value("peak").toString();</span></td><td> </td><td class="rblock"><span class="insert">alid())</span></td><td class="lineno" valign="top"></td></tr>
-      <tr><td class="lineno" valign="top"></td><td class="lblock"><span class="delete">                       d.start</span> = <span class="delete">activityMap.value("start").toString();</span></td><td> </td><td class="rblock"><span class="insert">               {</span></td><td class="lineno" valign="top"></td></tr>
-      <tr><td class="lineno" valign="top"></td><td class="lblock"><span class="delete">                       d.finish = activityMap.value("finish").toString();</span></td><td> </td><td class="rblock"><span class="insert">                       qWarning() &lt;&lt; "MeteorShower: INVALID data for "</span></td><td class="lineno" valign="top"></td></tr>
-      <tr><td class="lineno" valign="top"></td><td class="lblock"><span class="delete">                       activity.append(d);</span></td><td> </td><td class="rblock"><span class="insert">                                  &lt;&lt; m_showerID &lt;&lt; "Unable to read some dat</span></td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="lblock"></td><td> </td><td class="rblock"><span class="insert"></span></td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="lblock"></td><td> </td><td class="rblock"><span class="insert">               m_activities.append(d);</span></td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="lblock"></td><td> </td><td class="rblock"><span class="insert">       }</span></td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="lblock"></td><td> </td><td class="rblock"><span class="insert"></span></td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="lblock"></td><td> </td><td class="rblock"><span class="insert">       // filling null values of the activity list with generic data</span></td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="lblock"></td><td> </td><td class="rblock"><span class="insert">       const Activity&amp; g = m_activities.at(0);</span></td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="lblock"></td><td> </td><td class="rblock"><span class="insert">       const int activitiesSize = m_activities.size();</span></td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="lblock"></td><td> </td><td class="rblock"><span class="insert">       for (int i = 1; i &lt; activitiesSize; ++i)</span></td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="lblock"></td><td> </td><td class="rblock"><span class="insert">       {</span></td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="lblock"></td><td> </td><td class="rblock"><span class="insert">               Activity a</span> = <span class="insert">m_activities.at(i);</span></td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="lblock"></td><td> </td><td class="rblock"><span class="insert">               if (a.zhr == 0)</span></td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="lblock"></td><td> </td><td class="rblock"><span class="insert">               {</span></td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="lblock"></td><td> </td><td class="rblock"><span class="insert">                       a.zhr</span> = <span class="insert">g.zhr;</span></td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="lblock"></td><td> </td><td class="rblock"><span class="insert">                       a.variable</span> = <span class="insert">g.variable;</span></td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="lblock"></td><td> </td><td class="rblock"><span class="insert">               }</span></td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="lblock"></td><td> </td><td class="rblock"><span class="insert"></span></td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="lblock"></td><td> </td><td class="rblock"><span class="insert">               int aux = a.year - genericYear;</span></td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="lblock"></td><td> </td><td class="rblock"><span class="insert">               a.start = a.start.isValid() ? a.start : g.start.addYears(aux</span></td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="lblock"></td><td> </td><td class="rblock"><span class="insert">);</span></td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="lblock"></td><td> </td><td class="rblock"><span class="insert">               a.finish</span> = <span class="insert">a.finish.isValid() ? a.finish : g.finish.addYears</span></td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="lblock"></td><td> </td><td class="rblock"><span class="insert">(aux);</span></td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="lblock"></td><td> </td><td class="rblock"><span class="insert">               a.peak = a.peak.isValid() ? a.peak : g.peak.addYears(aux);</span></td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="lblock"></td><td> </td><td class="rblock"><span class="insert">               m_activities.replace(i, a);</span></td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="lblock"></td><td> </td><td class="rblock"><span class="insert"></span></td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="lblock"></td><td> </td><td class="rblock"><span class="insert">               if (!a.start.isValid() || !a.finish.isValid() || !a.peak.isV</span></td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="lblock"></td><td> </td><td class="rblock"><span class="insert">alid())</span></td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="lblock"></td><td> </td><td class="rblock"><span class="insert">               {</span></td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="lblock"></td><td> </td><td class="rblock"><span class="insert">                       qWarning() &lt;&lt; "MeteorShower: INVALID data for "</span></td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="lblock"></td><td> </td><td class="rblock"><span class="insert">                                  &lt;&lt; m_showerID &lt;&lt; "Unable to read some dat</span></td><td class="lineno" valign="top"></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="lblock"></td><td> </td><td class="rblock"><span class="insert">es!";</span></td><td class="lineno" valign="top"></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="lblock"></td><td> </td><td class="rblock"><span class="insert">                       qWarning() &lt;&lt; "MeteorShower: Please, check your 'sho</span></td><td class="lineno" valign="top"></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="lblock"></td><td> </td><td class="rblock"><span class="insert">wers.json' catalog!";</span></td><td class="lineno" valign="top"></td></tr>
@@ -241,42 +241,56 @@
       <tr><td class="lineno" valign="top"></td><td class="left"></td><td> </td><td class="right"></td><td class="lineno" valign="top"></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="left">       if(map.contains("colors"))</td><td> </td><td class="right">       if(map.contains("colors"))</td><td class="lineno" valign="top"></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="left">       {</td><td> </td><td class="right">       {</td><td class="lineno" valign="top"></td></tr>
+      <tr><td><a name="diff0009" /></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="lblock"></td><td> </td><td class="rblock"><span class="insert">               int totalIntensity = 0;</span></td><td class="lineno" valign="top"></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="left">               foreach(const QVariant &amp;ms, map.value("colors").toList())</td><td> </td><td class="right">               foreach(const QVariant &amp;ms, map.value("colors").toList())</td><td class="lineno" valign="top"></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="left">               {</td><td> </td><td class="right">               {</td><td class="lineno" valign="top"></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="left">                       QVariantMap colorMap = ms.toMap();</td><td> </td><td class="right">                       QVariantMap colorMap = ms.toMap();</td><td class="lineno" valign="top"></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="left">                       QString color = colorMap.value("color").toString();</td><td> </td><td class="right">                       QString color = colorMap.value("color").toString();</td><td class="lineno" valign="top"></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="left">                       int intensity = colorMap.value("intensity").toInt();</td><td> </td><td class="right">                       int intensity = colorMap.value("intensity").toInt();</td><td class="lineno" valign="top"></td></tr>
-      <tr><td><a name="diff0009" /></td></tr>
-      <tr><td class="lineno" valign="top"></td><td class="lblock">                       <span class="delete">colors.append(colorPair(color, intensity))</span>;</td><td> </td><td class="rblock">                       <span class="insert">m_colors.append(Meteor::colorPair(color, intensity))
-</span>;</td><td class="lineno" valign="top"></td></tr>
+      <tr><td><a name="diff0010" /></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="lblock">                       <span class="delete">colors.append(colorPair(color, intensity));</span></td><td> </td><td class="rblock">                       <span class="insert">m_colors.append(Meteor::ColorPair(color, intensity))</span></td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="lblock"></td><td> </td><td class="rblock"><span class="insert">;</span></td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="lblock"></td><td> </td><td class="rblock"><span class="insert">                       totalIntensity += intensity;</span></td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="lblock"></td><td> </td><td class="rblock"><span class="insert">               }</span></td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="lblock"></td><td> </td><td class="rblock"><span class="insert"></span></td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="lblock"></td><td> </td><td class="rblock"><span class="insert">               // the total intensity must be 100</span></td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="lblock"></td><td> </td><td class="rblock"><span class="insert">               if (totalIntensity != 100) {</span></td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="lblock"></td><td> </td><td class="rblock"><span class="insert">                       qWarning() &lt;&lt; "MeteorShower: INVALID data for "</span></td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="lblock"></td><td> </td><td class="rblock"><span class="insert">                                  &lt;&lt; m_showerID &lt;&lt; "The total intensity mus</span></td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="lblock"></td><td> </td><td class="rblock"><span class="insert">t be equal to 100";</span></td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="lblock"></td><td> </td><td class="rblock"><span class="insert">                       qWarning() &lt;&lt; "MeteorShower: Please, check your 'sho</span></td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="lblock"></td><td> </td><td class="rblock"><span class="insert">wers.json' catalog!";</span></td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="lblock"></td><td> </td><td class="rblock"><span class="insert">                       m_colors.clear();</span></td><td class="lineno" valign="top"></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="left">               }</td><td> </td><td class="right">               }</td><td class="lineno" valign="top"></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="left">       }</td><td> </td><td class="right">       }</td><td class="lineno" valign="top"></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="left"></td><td> </td><td class="right"></td><td class="lineno" valign="top"></td></tr>
-      <tr><td><a name="diff0010" /></td></tr>
-      <tr><td class="lineno" valign="top"></td><td class="lblock">       <span class="delete">updateCurrentData(getSkyQDateTime());</span></td><td> </td><td class="rblock">       <span class="insert">m_status = UNDEFINED;</span></td><td class="lineno" valign="top"></td></tr>
-      <tr><td class="lineno" valign="top"></td><td class="lblock"><span class="delete">       // ensures that all objects will be drawn once</span></td><td> </td><td class="rblock"></td><td class="lineno" valign="top"></td></tr>
-      <tr><td class="lineno" valign="top"></td><td class="lblock"><span class="delete">       // that's to avoid crashes by trying select a nonexistent object</span></td><td> </td><td class="rblock"></td><td class="lineno" valign="top"></td></tr>
+      <tr><td><a name="diff0011" /></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="lblock">       <span class="delete">updateCurrentData(getSkyQDateTime());</span></td><td> </td><td class="rblock">       <span class="insert">if (m_colors.isEmpty()) {</span></td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="lblock"><span class="delete">       // ensures that all objects will be drawn once</span></td><td> </td><td class="rblock"><span class="insert">               m_colors.push_back(Meteor::ColorPair("white", 100));</span></td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="lblock"><span class="delete">       // that's to avoid crashes by trying select a nonexistent object</span></td><td> </td><td class="rblock"><span class="insert">       }</span></td><td class="lineno" valign="top"></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="lblock"><span class="delete">       StelPainter painter(StelApp::getInstance().getCore()-&gt;getProjection(</span></td><td> </td><td class="rblock"></td><td class="lineno" valign="top"></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="lblock"><span class="delete">StelCore::FrameJ2000));</span></td><td> </td><td class="rblock"></td><td class="lineno" valign="top"></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="lblock"><span class="delete">       draw(painter);</span></td><td> </td><td class="rblock"></td><td class="lineno" valign="top"></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="left"></td><td> </td><td class="right"></td><td class="lineno" valign="top"></td></tr>
-      <tr><td class="lineno" valign="top"></td><td class="left">       qsrand(QDateTime::currentMSecsSinceEpoch());</td><td> </td><td class="right">       qsrand(QDateTime::currentMSecsSinceEpoch());</td><td class="lineno" valign="top"></td></tr>
-      <tr><td><a name="diff0011" /></td></tr>
-      <tr><td class="lineno" valign="top"></td><td class="lblock">                                                                           </td><td> </td><td class="rblock"></td><td class="lineno" valign="top"></td></tr>
-      <tr><td class="lineno" valign="top"></td><td class="lblock">       <span class="delete">initialized = true;</span></td><td> </td><td class="rblock"></td><td class="lineno" valign="top"></td></tr>
+      <tr><td><a name="diff0012" /></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="lblock">       <span class="delete">qsrand(QDateTime::currentMSecsSinceEpoch())</span>;</td><td> </td><td class="rblock">       <span class="insert">m_status = UNDEFINED</span>;</td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="left"></td><td> </td><td class="right"></td><td class="lineno" valign="top"></td></tr>
+      <tr><td><a name="diff0013" /></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="lblock">       <span class="delete">initialized = true</span>;</td><td> </td><td class="rblock">       <span class="insert">qsrand(QDateTime::currentMSecsSinceEpoch())</span>;</td><td class="lineno" valign="top"></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="left">}</td><td> </td><td class="right">}</td><td class="lineno" valign="top"></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="left"></td><td> </td><td class="right"></td><td class="lineno" valign="top"></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="left">MeteorShower::~MeteorShower()</td><td> </td><td class="right">MeteorShower::~MeteorShower()</td><td class="lineno" valign="top"></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="left">{</td><td> </td><td class="right">{</td><td class="lineno" valign="top"></td></tr>
-      <tr><td><a name="diff0012" /></td></tr>
+      <tr><td><a name="diff0014" /></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="lblock">       <span class="delete">//</span></td><td> </td><td class="rblock">       <span class="insert">qDeleteAll(m_activeMeteors);</span></td><td class="lineno" valign="top"></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="lblock"></td><td> </td><td class="rblock"><span class="insert">       m_activeMeteors.clear();</span></td><td class="lineno" valign="top"></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="left">}</td><td> </td><td class="right">}</td><td class="lineno" valign="top"></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="left"></td><td> </td><td class="right"></td><td class="lineno" valign="top"></td></tr>
-      <tr><td><a name="diff0013" /></td></tr>
+      <tr><td><a name="diff0015" /></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="lblock"><span class="delete">QVariantMap MeteorShower::getMap(void)</span></td><td> </td><td class="rblock"><span class="insert">bool MeteorShower::enabled() const</span></td><td class="lineno" valign="top"></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="left">{</td><td> </td><td class="right">{</td><td class="lineno" valign="top"></td></tr>
-      <tr><td><a name="diff0014" /></td></tr>
+      <tr><td><a name="diff0016" /></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="lblock">       <span class="delete">QVariantMap map;</span></td><td> </td><td class="rblock">       <span class="insert">if (m_status == INVALID)</span></td><td class="lineno" valign="top"></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="lblock"><span class="delete">       map["showerID"] = showerID;</span></td><td> </td><td class="rblock"></td><td class="lineno" valign="top"></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="lblock"><span class="delete">       map["designation"] = designation;</span></td><td> </td><td class="rblock"></td><td class="lineno" valign="top"></td></tr>
@@ -291,7 +305,7 @@
       <tr><td class="lineno" valign="top"></td><td class="lblock"><span class="delete">       QVariantList activityList;</span></td><td> </td><td class="rblock"></td><td class="lineno" valign="top"></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="lblock"><span class="delete">       foreach(const activityData &amp;p, activity)</span></td><td> </td><td class="rblock"></td><td class="lineno" valign="top"></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="left">       {</td><td> </td><td class="right">       {</td><td class="lineno" valign="top"></td></tr>
-      <tr><td><a name="diff0015" /></td></tr>
+      <tr><td><a name="diff0017" /></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="lblock">               <span class="delete">QVariantMap activityMap;</span></td><td> </td><td class="rblock">               <span class="insert">return false;</span></td><td class="lineno" valign="top"></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="lblock"><span class="delete">               activityMap["year"] = p.year;</span></td><td> </td><td class="rblock"></td><td class="lineno" valign="top"></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="lblock"><span class="delete">               activityMap["zhr"] = p.zhr;</span></td><td> </td><td class="rblock"></td><td class="lineno" valign="top"></td></tr>
@@ -301,19 +315,19 @@
       <tr><td class="lineno" valign="top"></td><td class="lblock"><span class="delete">               activityMap["peak"] = p.peak;</span></td><td> </td><td class="rblock"></td><td class="lineno" valign="top"></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="lblock"><span class="delete">               activityList &lt;&lt; activityMap;</span></td><td> </td><td class="rblock"></td><td class="lineno" valign="top"></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="left">       }</td><td> </td><td class="right">       }</td><td class="lineno" valign="top"></td></tr>
-      <tr><td><a name="diff0016" /></td></tr>
+      <tr><td><a name="diff0018" /></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="lblock">       <span class="delete">map["activity"] = activityList;</span></td><td> </td><td class="rblock">       <span class="insert">else if (m_status == UNDEFINED)</span></td><td class="lineno" valign="top"></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="lblock"><span class="delete"></span></td><td> </td><td class="rblock"></td><td class="lineno" valign="top"></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="lblock"><span class="delete">       QVariantList colorList;</span></td><td> </td><td class="rblock"></td><td class="lineno" valign="top"></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="lblock"><span class="delete">       foreach(const colorPair &amp;c, colors)</span></td><td> </td><td class="rblock"></td><td class="lineno" valign="top"></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="left">       {</td><td> </td><td class="right">       {</td><td class="lineno" valign="top"></td></tr>
-      <tr><td><a name="diff0017" /></td></tr>
+      <tr><td><a name="diff0019" /></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="lblock">               <span class="delete">QVariantMap colorMap;</span></td><td> </td><td class="rblock">               <span class="insert">return true;</span></td><td class="lineno" valign="top"></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="lblock"><span class="delete">               colorMap["color"] = c.first;</span></td><td> </td><td class="rblock"></td><td class="lineno" valign="top"></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="lblock"><span class="delete">               colorMap["intensity"] = c.second;</span></td><td> </td><td class="rblock"></td><td class="lineno" valign="top"></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="lblock"><span class="delete">               colorList &lt;&lt; colorMap;</span></td><td> </td><td class="rblock"></td><td class="lineno" valign="top"></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="left">       }</td><td> </td><td class="right">       }</td><td class="lineno" valign="top"></td></tr>
-      <tr><td><a name="diff0018" /></td></tr>
+      <tr><td><a name="diff0020" /></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="lblock">       <span class="delete">map["colors"] = colorList;</span></td><td> </td><td class="rblock">       <span class="insert">else</span> if <span class="insert">(m_mgr-&gt;getActiveRadiantOnly())</span></td><td class="lineno" valign="top"></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="lblock"><span class="delete"></span></td><td> </td><td class="rblock"></td><td class="lineno" valign="top"></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="lblock"><span class="delete">       return map;</span></td><td> </td><td class="rblock"></td><td class="lineno" valign="top"></td></tr>
@@ -328,7 +342,7 @@
       <tr><td class="lineno" valign="top"></td><td class="lblock"><span class="delete">{</span></td><td> </td><td class="rblock"></td><td class="lineno" valign="top"></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="lblock">       if <span class="delete">(showerID.toInt()) // if showerID is a number</span></td><td> </td><td class="rblock"></td><td class="lineno" valign="top"></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="left">       {</td><td> </td><td class="right">       {</td><td class="lineno" valign="top"></td></tr>
-      <tr><td><a name="diff0019" /></td></tr>
+      <tr><td><a name="diff0021" /></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="lblock">               return <span class="delete">"";</span></td><td> </td><td class="rblock">               return <span class="insert">m_status == ACTIVE_GENERIC || m_status == ACTIVE_CONF</span></td><td class="lineno" valign="top"></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="lblock"></td><td> </td><td class="rblock"><span class="insert">IRMED;</span></td><td class="lineno" valign="top"></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="lblock"></td><td> </td><td class="rblock"><span class="insert">       }</span></td><td class="lineno" valign="top"></td></tr>
@@ -336,23 +350,24 @@
       <tr><td class="lineno" valign="top"></td><td class="lblock"></td><td> </td><td class="rblock"><span class="insert">       {</span></td><td class="lineno" valign="top"></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="lblock"></td><td> </td><td class="rblock"><span class="insert">               return true;</span></td><td class="lineno" valign="top"></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="left">       }</td><td> </td><td class="right">       }</td><td class="lineno" valign="top"></td></tr>
-      <tr><td><a name="diff0020" /></td></tr>
+      <tr><td><a name="diff0022" /></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="lblock"><span class="delete">       return showerID;</span></td><td> </td><td class="rblock"></td><td class="lineno" valign="top"></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="left">}</td><td> </td><td class="right">}</td><td class="lineno" valign="top"></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="left"></td><td> </td><td class="right"></td><td class="lineno" valign="top"></td></tr>
-      <tr><td><a name="diff0021" /></td></tr>
+      <tr><td><a name="diff0023" /></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="lblock"><span class="delete">QString MeteorShower::getDateFromJSON(QString jsondate) const</span></td><td> </td><td class="rblock"><span class="insert">void MeteorShower::update(StelCore* core, double deltaTime)</span></td><td class="lineno" valign="top"></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="left">{</td><td> </td><td class="right">{</td><td class="lineno" valign="top"></td></tr>
-      <tr><td><a name="diff0022" /></td></tr>
+      <tr><td><a name="diff0024" /></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="lblock">       <span class="delete">QStringList parsedDate = jsondate.split(".");</span></td><td> </td><td class="rblock">       <span class="insert">if (m_status == INVALID)</span></td><td class="lineno" valign="top"></td></tr>
-      <tr><td class="lineno" valign="top"></td><td class="lblock"></td><td> </td><td class="rblock"><span class="insert">       {</span></td><td class="lineno" valign="top"></td></tr>
-      <tr><td class="lineno" valign="top"></td><td class="lblock"></td><td> </td><td class="rblock"><span class="insert">               return;</span></td><td class="lineno" valign="top"></td></tr>
-      <tr><td class="lineno" valign="top"></td><td class="lblock"></td><td> </td><td class="rblock"><span class="insert">       }</span></td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="lblock"><span class="delete"></span></td><td> </td><td class="rblock"><span class="insert">       {</span></td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="lblock"><span class="delete">       return QString("%1 %2").arg(parsedDate.at(1).toInt()).arg(getMonthNa</span></td><td> </td><td class="rblock"><span class="insert">               return;</span></td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="lblock"><span class="delete">me(parsedDate.at(0).toInt()));</span></td><td> </td><td class="rblock">       }</td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="lblock">}</td><td> </td><td class="rblock"></td><td class="lineno" valign="top"></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="left"></td><td> </td><td class="right"></td><td class="lineno" valign="top"></td></tr>
-      <tr><td><a name="diff0023" /></td></tr>
-      <tr><td class="lineno" valign="top"></td><td class="lblock">       <span class="delete">return QString("%1 %2").arg(parsedDate.at(1).toInt()).arg(getMonthNa</span></td><td> </td><td class="rblock">       <span class="insert">// gets the current UTC date</span></td><td class="lineno" valign="top"></td></tr>
-      <tr><td class="lineno" valign="top"></td><td class="lblock"><span class="delete">me(parsedDate.at(0).toInt()));</span></td><td> </td><td class="rblock"><span class="insert">       double currentJD = core-&gt;getJD();</span></td><td class="lineno" valign="top"></td></tr>
-      <tr><td class="lineno" valign="top"></td><td class="lblock">}</td><td> </td><td class="rblock"><span class="insert">       QDate currentDate = QDate::fromJulianDay(currentJD);</span></td><td class="lineno" valign="top"></td></tr>
+      <tr><td><a name="diff0025" /></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="lblock"><span class="delete">QString MeteorShower::getDayFromJSON(QString jsondate) const</span></td><td> </td><td class="rblock">       <span class="insert">// gets the current UTC date</span></td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="lblock">{</td><td> </td><td class="rblock"><span class="insert">       double currentJD = core-&gt;getJD();</span></td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="lblock">       <span class="delete">QStringList parsedDate</span> = <span class="delete">jsondate.split(".");</span></td><td> </td><td class="rblock"><span class="insert">       QDate currentDate = QDate::fromJulianDay(currentJD);</span></td><td class="lineno" valign="top"></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="lblock"></td><td> </td><td class="rblock"><span class="insert"></span></td><td class="lineno" valign="top"></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="lblock"></td><td> </td><td class="rblock"><span class="insert">       // updating status and activity</span></td><td class="lineno" valign="top"></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="lblock"></td><td> </td><td class="rblock"><span class="insert">       bool found = false;</span></td><td class="lineno" valign="top"></td></tr>
@@ -366,64 +381,60 @@
       <tr><td class="lineno" valign="top"></td><td class="lblock"></td><td> </td><td class="rblock"><span class="insert">       {</span></td><td class="lineno" valign="top"></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="lblock"></td><td> </td><td class="rblock"><span class="insert">               m_activity = hasGenericShower(currentDate, found);</span></td><td class="lineno" valign="top"></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="lblock"></td><td> </td><td class="rblock"><span class="insert">               if (found)</span></td><td class="lineno" valign="top"></td></tr>
-      <tr><td class="lineno" valign="top"></td><td class="lblock"></td><td> </td><td class="rblock"><span class="insert">               {</span></td><td class="lineno" valign="top"></td></tr>
-      <tr><td class="lineno" valign="top"></td><td class="lblock"></td><td> </td><td class="rblock"><span class="insert">                       m_status = ACTIVE_GENERIC;</span></td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="lblock"></td><td> </td><td class="rblock">               {</td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="lblock"></td><td> </td><td class="rblock">                       <span class="insert">m_status</span> = <span class="insert">ACTIVE_GENERIC;</span></td><td class="lineno" valign="top"></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="lblock"></td><td> </td><td class="rblock"><span class="insert">               }</span></td><td class="lineno" valign="top"></td></tr>
-      <tr><td class="lineno" valign="top"></td><td class="lblock"></td><td> </td><td class="rblock">       }</td><td class="lineno" valign="top"></td></tr>
-      <tr><td class="lineno" valign="top"></td><td class="left"></td><td> </td><td class="right"></td><td class="lineno" valign="top"></td></tr>
-      <tr><td><a name="diff0024" /></td></tr>
-      <tr><td class="lineno" valign="top"></td><td class="lblock"><span class="delete">QString MeteorShower::getDayFromJSON(QString jsondate) const</span></td><td> </td><td class="rblock">       <span class="insert">// will be displayed?</span></td><td class="lineno" valign="top"></td></tr>
-      <tr><td class="lineno" valign="top"></td><td class="lblock">{</td><td> </td><td class="rblock"><span class="insert">       if (!enabled())</span></td><td class="lineno" valign="top"></td></tr>
-      <tr><td class="lineno" valign="top"></td><td class="lblock">       <span class="delete">QStringList parsedDate = jsondate.split(".");</span></td><td> </td><td class="rblock">       {</td><td class="lineno" valign="top"></td></tr>
-      <tr><td class="lineno" valign="top"></td><td class="lblock"></td><td> </td><td class="rblock">               <span class="insert">return;</span></td><td class="lineno" valign="top"></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="lblock"></td><td> </td><td class="rblock"><span class="insert">       }</span></td><td class="lineno" valign="top"></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="left"></td><td> </td><td class="right"></td><td class="lineno" valign="top"></td></tr>
-      <tr><td><a name="diff0025" /></td></tr>
-      <tr><td class="lineno" valign="top"></td><td class="lblock">       <span class="delete">return QString("%1").arg(parsedDate.at(1).toInt());</span></td><td> </td><td class="rblock">       <span class="insert">// fix the radiant position (considering drift)</span></td><td class="lineno" valign="top"></td></tr>
-      <tr><td class="lineno" valign="top"></td><td class="lblock">}</td><td> </td><td class="rblock"><span class="insert">       m_radiantAlpha = m_rAlphaPeak;</span></td><td class="lineno" valign="top"></td></tr>
-      <tr><td class="lineno" valign="top"></td><td class="lblock"></td><td> </td><td class="rblock"><span class="insert">       m_radiantDelta = m_rDeltaPeak;</span></td><td class="lineno" valign="top"></td></tr>
-      <tr><td class="lineno" valign="top"></td><td class="lblock"></td><td> </td><td class="rblock"><span class="insert">       if (m_status != INACTIVE)</span></td><td class="lineno" valign="top"></td></tr>
+      <tr><td><a name="diff0026" /></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="lblock">       <span class="delete">return QString("%1").arg(parsedDate.at(1).toInt());</span></td><td> </td><td class="rblock">       <span class="insert">// will be displayed?</span></td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="lblock">}</td><td> </td><td class="rblock"><span class="insert">       if (!enabled())</span></td><td class="lineno" valign="top"></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="lblock"></td><td> </td><td class="rblock"><span class="insert">       {</span></td><td class="lineno" valign="top"></td></tr>
-      <tr><td class="lineno" valign="top"></td><td class="lblock"></td><td> </td><td class="rblock"><span class="insert">               double daysToPeak = currentJD - m_activity.peak.toJulianDay(</span></td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="lblock"></td><td> </td><td class="rblock"><span class="insert">               return;</span></td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="lblock"></td><td> </td><td class="rblock">       }</td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="left"></td><td> </td><td class="right"></td><td class="lineno" valign="top"></td></tr>
+      <tr><td><a name="diff0027" /></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="lblock"><span class="delete">int MeteorShower::getMonthFromJSON(QString jsondate) const</span></td><td> </td><td class="rblock">       <span class="insert">// fix the radiant position (considering drift)</span></td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="lblock">{</td><td> </td><td class="rblock"><span class="insert">       m_radiantAlpha = m_rAlphaPeak;</span></td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="lblock">       <span class="delete">QStringList parsedDate</span> = <span class="delete">jsondate.split(".");</span></td><td> </td><td class="rblock"><span class="insert">       m_radiantDelta = m_rDeltaPeak;</span></td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="lblock"></td><td> </td><td class="rblock"><span class="insert">       if (m_status != INACTIVE)</span></td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="lblock"></td><td> </td><td class="rblock">       {</td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="lblock"></td><td> </td><td class="rblock">               <span class="insert">double daysToPeak</span> = <span class="insert">currentJD - m_activity.peak.toJulianDay(</span></td><td class="lineno" valign="top"></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="lblock"></td><td> </td><td class="rblock"><span class="insert">);</span></td><td class="lineno" valign="top"></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="lblock"></td><td> </td><td class="rblock"><span class="insert">               m_radiantAlpha += m_driftAlpha * daysToPeak;</span></td><td class="lineno" valign="top"></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="lblock"></td><td> </td><td class="rblock"><span class="insert">               m_radiantDelta += m_driftDelta * daysToPeak;</span></td><td class="lineno" valign="top"></td></tr>
-      <tr><td class="lineno" valign="top"></td><td class="lblock"></td><td> </td><td class="rblock">       }</td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="lblock"></td><td> </td><td class="rblock"><span class="insert">       }</span></td><td class="lineno" valign="top"></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="left"></td><td> </td><td class="right"></td><td class="lineno" valign="top"></td></tr>
-      <tr><td><a name="diff0026" /></td></tr>
-      <tr><td class="lineno" valign="top"></td><td class="lblock"><span class="delete">int MeteorShower::getMonthFromJSON(QString jsondate) const</span></td><td> </td><td class="rblock">       <span class="insert">// step through and update all active meteors</span></td><td class="lineno" valign="top"></td></tr>
-      <tr><td class="lineno" valign="top"></td><td class="lblock">{</td><td> </td><td class="rblock"><span class="insert">       foreach (MeteorObj* m, m_activeMeteors)</span></td><td class="lineno" valign="top"></td></tr>
-      <tr><td class="lineno" valign="top"></td><td class="lblock">       <span class="delete">QStringList parsedDate = jsondate.split(".");</span></td><td> </td><td class="rblock">       {</td><td class="lineno" valign="top"></td></tr>
-      <tr><td class="lineno" valign="top"></td><td class="lblock"></td><td> </td><td class="rblock">               <span class="insert">if (!m-&gt;update(deltaTime))</span></td><td class="lineno" valign="top"></td></tr>
+      <tr><td><a name="diff0028" /></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="lblock">       <span class="delete">return parsedDate.at(0).toInt();</span></td><td> </td><td class="rblock">       <span class="insert">// step through and update all active meteors</span></td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="lblock">}</td><td> </td><td class="rblock"><span class="insert">       foreach (MeteorObj* m, m_activeMeteors)</span></td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="lblock"></td><td> </td><td class="rblock"><span class="insert">       {</span></td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="lblock"></td><td> </td><td class="rblock"><span class="insert">               if (!m-&gt;update(deltaTime))</span></td><td class="lineno" valign="top"></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="lblock"></td><td> </td><td class="rblock"><span class="insert">               {</span></td><td class="lineno" valign="top"></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="lblock"></td><td> </td><td class="rblock"><span class="insert">                       m_activeMeteors.removeOne(m);</span></td><td class="lineno" valign="top"></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="lblock"></td><td> </td><td class="rblock"><span class="insert">               }</span></td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="lblock"></td><td> </td><td class="rblock">       }</td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="left"></td><td> </td><td class="right"></td><td class="lineno" valign="top"></td></tr>
+      <tr><td><a name="diff0029" /></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="lblock"><span class="delete">QString MeteorShower::getMonthNameFromJSON(QString jsondate) const</span></td><td> </td><td class="rblock">       <span class="insert">// going forward or backward ?</span></td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="lblock">{</td><td> </td><td class="rblock"><span class="insert">       // don't create new meteors</span></td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="lblock">       <span class="delete">QStringList parsedDate = jsondate.split(".");</span></td><td> </td><td class="rblock"><span class="insert">       if(!core-&gt;getRealTimeSpeed())</span></td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="lblock"></td><td> </td><td class="rblock">       {</td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="lblock"></td><td> </td><td class="rblock">               <span class="insert">return;</span></td><td class="lineno" valign="top"></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="lblock"></td><td> </td><td class="rblock"><span class="insert">       }</span></td><td class="lineno" valign="top"></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="left"></td><td> </td><td class="right"></td><td class="lineno" valign="top"></td></tr>
-      <tr><td><a name="diff0027" /></td></tr>
-      <tr><td class="lineno" valign="top"></td><td class="lblock">       <span class="delete">return parsedDate.at(0).toInt();</span></td><td> </td><td class="rblock">       <span class="insert">// going forward or backward ?</span></td><td class="lineno" valign="top"></td></tr>
-      <tr><td class="lineno" valign="top"></td><td class="lblock">}</td><td> </td><td class="rblock"><span class="insert">       // don't create new meteors</span></td><td class="lineno" valign="top"></td></tr>
-      <tr><td class="lineno" valign="top"></td><td class="lblock"></td><td> </td><td class="rblock"><span class="insert">       if(!core-&gt;getRealTimeSpeed())</span></td><td class="lineno" valign="top"></td></tr>
+      <tr><td><a name="diff0030" /></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="lblock">       <span class="delete">return QString("%1").arg(getMonthName(parsedDate.at(0).toInt()));</span></td><td> </td><td class="rblock">       <span class="insert">// calculates a ZHR for the current date</span></td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="lblock">}</td><td> </td><td class="rblock"><span class="insert">       int currentZHR = calculateZHR(currentJD);</span></td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="lblock"></td><td> </td><td class="rblock"><span class="insert">       if (currentZHR &lt; 1)</span></td><td class="lineno" valign="top"></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="lblock"></td><td> </td><td class="rblock"><span class="insert">       {</span></td><td class="lineno" valign="top"></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="lblock"></td><td> </td><td class="rblock"><span class="insert">               return;</span></td><td class="lineno" valign="top"></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="lblock"></td><td> </td><td class="rblock">       }</td><td class="lineno" valign="top"></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="left"></td><td> </td><td class="right"></td><td class="lineno" valign="top"></td></tr>
-      <tr><td><a name="diff0028" /></td></tr>
-      <tr><td class="lineno" valign="top"></td><td class="lblock"><span class="delete">QString MeteorShower::getMonthNameFromJSON(QString jsondate) const</span></td><td> </td><td class="rblock">       <span class="insert">// calculates a ZHR for the current date</span></td><td class="lineno" valign="top"></td></tr>
-      <tr><td class="lineno" valign="top"></td><td class="lblock"><span class="delete">{</span></td><td> </td><td class="rblock"><span class="insert">       int currentZHR</span> = <span class="insert">calculateZHR(currentJD);</span></td><td class="lineno" valign="top"></td></tr>
-      <tr><td class="lineno" valign="top"></td><td class="lblock"><span class="delete">       QStringList parsedDate</span> = <span class="delete">jsondate.split(".");</span></td><td> </td><td class="rblock"><span class="insert">       if (currentZHR &lt; 1)</span></td><td class="lineno" valign="top"></td></tr>
-      <tr><td class="lineno" valign="top"></td><td class="lblock"></td><td> </td><td class="rblock"><span class="insert">       {</span></td><td class="lineno" valign="top"></td></tr>
-      <tr><td class="lineno" valign="top"></td><td class="lblock"></td><td> </td><td class="rblock"><span class="insert">               return;</span></td><td class="lineno" valign="top"></td></tr>
-      <tr><td class="lineno" valign="top"></td><td class="lblock"></td><td> </td><td class="rblock"><span class="insert">       }</span></td><td class="lineno" valign="top"></td></tr>
-      <tr><td class="lineno" valign="top"></td><td class="left"></td><td> </td><td class="right"></td><td class="lineno" valign="top"></td></tr>
-      <tr><td><a name="diff0029" /></td></tr>
-      <tr><td class="lineno" valign="top"></td><td class="lblock">       <span class="delete">return QString("%1").arg(getMonthName(parsedDate.at(0).toInt()));</span></td><td> </td><td class="rblock">       <span class="insert">// average meteors per frame</span></td><td class="lineno" valign="top"></td></tr>
-      <tr><td class="lineno" valign="top"></td><td class="lblock"><span class="delete">}</span></td><td> </td><td class="rblock"><span class="insert">       float mpf = currentZHR * deltaTime / 3600.f;</span></td><td class="lineno" valign="top"></td></tr>
-      <tr><td class="lineno" valign="top"></td><td class="left"></td><td> </td><td class="right"></td><td class="lineno" valign="top"></td></tr>
-      <tr><td><a name="diff0030" /></td></tr>
-      <tr><td class="lineno" valign="top"></td><td class="lblock"><span class="delete">QString MeteorShower::getMonthName(int number) const</span></td><td> </td><td class="rblock">       <span class="insert">// maximum amount of meteors for the current frame</span></td><td class="lineno" valign="top"></td></tr>
-      <tr><td class="lineno" valign="top"></td><td class="lblock"><span class="delete">{</span></td><td> </td><td class="rblock"><span class="insert">       int maxMpf = qRound(mpf);</span></td><td class="lineno" valign="top"></td></tr>
-      <tr><td class="lineno" valign="top"></td><td class="lblock"><span class="delete">       QStringList monthList;</span></td><td> </td><td class="rblock"><span class="insert">       maxMpf = maxMpf &lt; 1 ? 1 : maxMpf;</span></td><td class="lineno" valign="top"></td></tr>
+      <tr><td><a name="diff0031" /></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="lblock"><span class="delete">QString MeteorShower::getMonthName(int number) const</span></td><td> </td><td class="rblock">       <span class="insert">// average meteors per frame</span></td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="lblock"><span class="delete">{</span></td><td> </td><td class="rblock"><span class="insert">       float mpf = currentZHR * deltaTime / 3600.f;</span></td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="lblock"><span class="delete">       QStringList monthList;</span></td><td> </td><td class="rblock"></td><td class="lineno" valign="top"></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="lblock"><span class="delete">       monthList.append(N_("January"));</span></td><td> </td><td class="rblock"></td><td class="lineno" valign="top"></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="lblock"><span class="delete">       monthList.append(N_("February"));</span></td><td> </td><td class="rblock"></td><td class="lineno" valign="top"></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="lblock"><span class="delete">       monthList.append(N_("March"));</span></td><td> </td><td class="rblock"></td><td class="lineno" valign="top"></td></tr>
@@ -437,8 +448,12 @@
       <tr><td class="lineno" valign="top"></td><td class="lblock"><span class="delete">       monthList.append(N_("November"));</span></td><td> </td><td class="rblock"></td><td class="lineno" valign="top"></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="lblock"><span class="delete">       monthList.append(N_("December"));</span></td><td> </td><td class="rblock"></td><td class="lineno" valign="top"></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="left"></td><td> </td><td class="right"></td><td class="lineno" valign="top"></td></tr>
-      <tr><td><a name="diff0031" /></td></tr>
-      <tr><td class="lineno" valign="top"></td><td class="lblock">       <span class="delete">return q_(monthList.at(number-1));</span></td><td> </td><td class="rblock">       <span class="insert">float rate = mpf / (float) maxMpf;</span></td><td class="lineno" valign="top"></td></tr>
+      <tr><td><a name="diff0032" /></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="lblock">       <span class="delete">return q_(monthList.at(number-1));</span></td><td> </td><td class="rblock">       <span class="insert">// maximum amount of meteors for the current frame</span></td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="lblock"></td><td> </td><td class="rblock"><span class="insert">       int maxMpf = qRound(mpf);</span></td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="lblock"></td><td> </td><td class="rblock"><span class="insert">       maxMpf = maxMpf &lt; 1 ? 1 : maxMpf;</span></td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="lblock"></td><td> </td><td class="rblock"><span class="insert"></span></td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="lblock"></td><td> </td><td class="rblock"><span class="insert">       float rate = mpf / (float) maxMpf;</span></td><td class="lineno" valign="top"></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="lblock"></td><td> </td><td class="rblock"><span class="insert">       for (int i = 0; i &lt; maxMpf; ++i)</span></td><td class="lineno" valign="top"></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="lblock"></td><td> </td><td class="rblock"><span class="insert">       {</span></td><td class="lineno" valign="top"></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="lblock"></td><td> </td><td class="rblock"><span class="insert">               float prob = (float) qrand() / (float) RAND_MAX;</span></td><td class="lineno" valign="top"></td></tr>
@@ -448,15 +463,18 @@
       <tr><td class="lineno" valign="top"></td><td class="lblock"></td><td> </td><td class="rblock"><span class="insert">tAlpha, m_radiantDelta,</span></td><td class="lineno" valign="top"></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="lblock"></td><td> </td><td class="rblock"><span class="insert">                                                    m_pidx, m_colors, m_mgr</span></td><td class="lineno" valign="top"></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="lblock"></td><td> </td><td class="rblock"><span class="insert">-&gt;getBolideTexture());</span></td><td class="lineno" valign="top"></td></tr>
-      <tr><td class="lineno" valign="top"></td><td class="lblock"></td><td> </td><td class="rblock"><span class="insert">                       m_activeMeteors.append(m);</span></td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="lblock"></td><td> </td><td class="rblock"><span class="insert">                       if (m-&gt;isAlive())</span></td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="lblock"></td><td> </td><td class="rblock"><span class="insert">                       {</span></td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="lblock"></td><td> </td><td class="rblock"><span class="insert">                               m_activeMeteors.append(m);</span></td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="lblock"></td><td> </td><td class="rblock"><span class="insert">                       }</span></td><td class="lineno" valign="top"></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="lblock"></td><td> </td><td class="rblock"><span class="insert">               }</span></td><td class="lineno" valign="top"></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="lblock"></td><td> </td><td class="rblock"><span class="insert">       }</span></td><td class="lineno" valign="top"></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="left">}</td><td> </td><td class="right">}</td><td class="lineno" valign="top"></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="left"></td><td> </td><td class="right"></td><td class="lineno" valign="top"></td></tr>
-      <tr><td><a name="diff0032" /></td></tr>
+      <tr><td><a name="diff0033" /></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="lblock"><span class="delete">QDateTime MeteorShower::getSkyQDateTime() const</span></td><td> </td><td class="rblock"><span class="insert">void MeteorShower::draw(StelCore* core)</span></td><td class="lineno" valign="top"></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="left">{</td><td> </td><td class="right">{</td><td class="lineno" valign="top"></td></tr>
-      <tr><td><a name="diff0033" /></td></tr>
+      <tr><td><a name="diff0034" /></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="lblock">       <span class="delete">StelCore* core = StelApp::getInstance().getCore();</span></td><td> </td><td class="rblock">       <span class="insert">if (!enabled())</span></td><td class="lineno" valign="top"></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="lblock"><span class="delete">       //get the current sky date</span></td><td> </td><td class="rblock"><span class="insert">       {</span></td><td class="lineno" valign="top"></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="lblock"><span class="delete">       double JD = core-&gt;getJDay();</span></td><td> </td><td class="rblock"><span class="insert">               return;</span></td><td class="lineno" valign="top"></td></tr>
@@ -465,28 +483,28 @@
       <tr><td class="lineno" valign="top"></td><td class="lblock"></td><td> </td><td class="rblock"><span class="insert">       drawMeteors(core);</span></td><td class="lineno" valign="top"></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="left">}</td><td> </td><td class="right">}</td><td class="lineno" valign="top"></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="left"></td><td> </td><td class="right"></td><td class="lineno" valign="top"></td></tr>
-      <tr><td><a name="diff0034" /></td></tr>
+      <tr><td><a name="diff0035" /></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="lblock">void MeteorShower::<span class="delete">updateCurrentData(QDateTime skyDat</span>e)</td><td> </td><td class="rblock">void MeteorShower::<span class="insert">drawRadiant(StelCore *cor</span>e)</td><td class="lineno" valign="top"></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="left">{</td><td> </td><td class="right">{</td><td class="lineno" valign="top"></td></tr>
-      <tr><td><a name="diff0035" /></td></tr>
+      <tr><td><a name="diff0036" /></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="lblock">       <span class="delete">//Check if we have real data for the current sky year</span></td><td> </td><td class="rblock">       <span class="insert">StelPainter painter(core-&gt;getProjection(StelCore::FrameJ2000));</span></td><td class="lineno" valign="top"></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="lblock"><span class="delete">       int index = searchRealData(skyDate.toString("yyyy"));</span></td><td> </td><td class="rblock"></td><td class="lineno" valign="top"></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="left"></td><td> </td><td class="right"></td><td class="lineno" valign="top"></td></tr>
-      <tr><td><a name="diff0036" /></td></tr>
+      <tr><td><a name="diff0037" /></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="lblock">       <span class="delete">/**************************</span></td><td> </td><td class="rblock">       <span class="insert">Vec3d XY;</span></td><td class="lineno" valign="top"></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="lblock"><span class="delete">        *ZHR info</span></td><td> </td><td class="rblock"><span class="insert">       StelUtils::spheToRect(m_radiantAlpha, m_radiantDelta, m_position);</span></td><td class="lineno" valign="top"></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="lblock"><span class="delete">        **************************/</span></td><td> </td><td class="rblock"><span class="insert">       painter.getProjector()-&gt;project(m_position, XY);</span></td><td class="lineno" valign="top"></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="lblock"><span class="delete">       zhr = activity[index].zhr == 0 ? activity[0].zhr : activity[index].z</span></td><td> </td><td class="rblock"></td><td class="lineno" valign="top"></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="lblock"><span class="delete">hr;</span></td><td> </td><td class="rblock"></td><td class="lineno" valign="top"></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="left"></td><td> </td><td class="right"></td><td class="lineno" valign="top"></td></tr>
-      <tr><td><a name="diff0037" /></td></tr>
+      <tr><td><a name="diff0038" /></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="lblock">       <span class="delete">if (zhr == -1)</span></td><td> </td><td class="rblock">       <span class="insert">glEnable(GL_TEXTURE_2D);</span></td><td class="lineno" valign="top"></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="lblock"><span class="delete">               variable = activity[index].variable.isEmpty() ? activity[0].</span></td><td> </td><td class="rblock"><span class="insert">       glEnable(GL_BLEND);</span></td><td class="lineno" valign="top"></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="lblock"><span class="delete">variable : activity[index].variable;</span></td><td> </td><td class="rblock"><span class="insert">       glBlendFunc(GL_SRC_ALPHA, GL_ONE);</span></td><td class="lineno" valign="top"></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="lblock"><span class="delete">       else</span></td><td> </td><td class="rblock"></td><td class="lineno" valign="top"></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="lblock"><span class="delete">               variable = "";</span></td><td> </td><td class="rblock"></td><td class="lineno" valign="top"></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="left"></td><td> </td><td class="right"></td><td class="lineno" valign="top"></td></tr>
-      <tr><td><a name="diff0038" /></td></tr>
+      <tr><td><a name="diff0039" /></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="lblock">       <span class="delete">/***************************</span></td><td> </td><td class="rblock">       <span class="insert">Vec3f rgb;</span></td><td class="lineno" valign="top"></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="lblock"><span class="delete">        *Dates - start/finish/peak</span></td><td> </td><td class="rblock"><span class="insert">       float alpha = 0.85f + ((float) qrand() / (float) RAND_MAX) / 10.f;</span></td><td class="lineno" valign="top"></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="lblock"><span class="delete">        ***************************/</span></td><td> </td><td class="rblock"><span class="insert">       switch(m_status)</span></td><td class="lineno" valign="top"></td></tr>
@@ -503,12 +521,12 @@
       <tr><td class="lineno" valign="top"></td><td class="lblock"><span class="delete">       int monthStart = getMonthFromJSON(dateStart);</span></td><td> </td><td class="rblock"><span class="insert">       rgb /= 255.f;</span></td><td class="lineno" valign="top"></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="lblock"><span class="delete">       int monthFinish = getMonthFromJSON(dateFinish);</span></td><td> </td><td class="rblock"><span class="insert">       painter.setColor(rgb[0], rgb[1], rgb[2], alpha);</span></td><td class="lineno" valign="top"></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="left"></td><td> </td><td class="right"></td><td class="lineno" valign="top"></td></tr>
-      <tr><td><a name="diff0039" /></td></tr>
+      <tr><td><a name="diff0040" /></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="lblock">       <span class="delete">if(monthStart &gt; monthFinish)</span></td><td> </td><td class="rblock">       <span class="insert">Vec3d win;</span></td><td class="lineno" valign="top"></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="lblock"></td><td> </td><td class="rblock"><span class="insert">       if (m_mgr-&gt;getEnableMarker() &amp;&amp; painter.getProjector()-&gt;projectCheck</span></td><td class="lineno" valign="top"></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="lblock"></td><td> </td><td class="rblock"><span class="insert">(m_position, win))</span></td><td class="lineno" valign="top"></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="left">       {</td><td> </td><td class="right">       {</td><td class="lineno" valign="top"></td></tr>
-      <tr><td><a name="diff0040" /></td></tr>
+      <tr><td><a name="diff0041" /></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="lblock">               <span class="delete">if(monthStart == skyDate.toString("MM").toInt())</span></td><td> </td><td class="rblock">               <span class="insert">m_mgr-&gt;getRadiantTexture()-&gt;bind();</span></td><td class="lineno" valign="top"></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="lblock"><span class="delete">               {</span></td><td> </td><td class="rblock"><span class="insert">               painter.drawSprite2dMode(XY[0], XY[1], 45);</span></td><td class="lineno" valign="top"></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="lblock"><span class="delete">                       yearS = yearBase;</span></td><td> </td><td class="rblock"><span class="insert"></span></td><td class="lineno" valign="top"></td></tr>
@@ -516,7 +534,7 @@
       <tr><td class="lineno" valign="top"></td><td class="lblock"><span class="delete">               }</span></td><td> </td><td class="rblock"></td><td class="lineno" valign="top"></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="lblock"><span class="delete">               else</span></td><td> </td><td class="rblock"></td><td class="lineno" valign="top"></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="left">               {</td><td> </td><td class="right">               {</td><td class="lineno" valign="top"></td></tr>
-      <tr><td><a name="diff0041" /></td></tr>
+      <tr><td><a name="diff0042" /></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="lblock">                       <span class="delete">yearS</span> = <span class="delete">QString("%1").arg(yearBase.toInt() - 1);</span></td><td> </td><td class="rblock">                       <span class="insert">painter.setFont(m_mgr-&gt;getFont());</span></td><td class="lineno" valign="top"></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="lblock"><span class="delete">                       yearF</span> = <span class="delete">yearBase;</span></td><td> </td><td class="rblock"><span class="insert">                       float size</span> = <span class="insert">getAngularSize(NULL)*M_PI/180.*painter.</span></td><td class="lineno" valign="top"></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="lblock"></td><td> </td><td class="rblock"><span class="insert">getProjector()-&gt;getPixelPerRadAtCenter();</span></td><td class="lineno" valign="top"></td></tr>
@@ -525,48 +543,48 @@
       <tr><td class="lineno" valign="top"></td><td class="lblock"></td><td> </td><td class="rblock"><span class="insert">8n(), 0, 0, 0, false);</span></td><td class="lineno" valign="top"></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="left">               }</td><td> </td><td class="right">               }</td><td class="lineno" valign="top"></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="left">       }</td><td> </td><td class="right">       }</td><td class="lineno" valign="top"></td></tr>
-      <tr><td><a name="diff0042" /></td></tr>
+      <tr><td><a name="diff0043" /></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="lblock">       <span class="delete">else</span></td><td> </td><td class="rblock"><span class="insert">}</span></td><td class="lineno" valign="top"></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="lblock"></td><td> </td><td class="rblock"><span class="insert"></span></td><td class="lineno" valign="top"></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="lblock"></td><td> </td><td class="rblock"><span class="insert">void MeteorShower::drawMeteors(StelCore *core)</span></td><td class="lineno" valign="top"></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="lblock"></td><td> </td><td class="rblock"><span class="insert">{</span></td><td class="lineno" valign="top"></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="lblock"></td><td> </td><td class="rblock"><span class="insert">       if (!core-&gt;getSkyDrawer()-&gt;getFlagHasAtmosphere())</span></td><td class="lineno" valign="top"></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="left">       {</td><td> </td><td class="right">       {</td><td class="lineno" valign="top"></td></tr>
-      <tr><td><a name="diff0043" /></td></tr>
-      <tr><td class="lineno" valign="top"></td><td class="lblock">               <span class="delete">yearS = yearF = yearBase</span>;</td><td> </td><td class="rblock">               <span class="insert">return</span>;</td><td class="lineno" valign="top"></td></tr>
+      <tr><td><a name="diff0044" /></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="lblock">               <span class="delete">yearS</span> = <span class="delete">yearF = yearBase;</span></td><td> </td><td class="rblock">               <span class="insert">return;</span></td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="lblock"></td><td> </td><td class="rblock"><span class="insert">       }</span></td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="lblock"></td><td> </td><td class="rblock"><span class="insert"></span></td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="lblock"></td><td> </td><td class="rblock"><span class="insert">       LandscapeMgr* landmgr</span> = <span class="insert">GETSTELMODULE(LandscapeMgr);</span></td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="lblock"></td><td> </td><td class="rblock"><span class="insert">       if (landmgr-&gt;getFlagAtmosphere() &amp;&amp; landmgr-&gt;getLuminance() &gt; 5.f)</span></td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="lblock"></td><td> </td><td class="rblock"><span class="insert">       {</span></td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="lblock"></td><td> </td><td class="rblock"><span class="insert">               return;</span></td><td class="lineno" valign="top"></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="left">       }</td><td> </td><td class="right">       }</td><td class="lineno" valign="top"></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="left"></td><td> </td><td class="right"></td><td class="lineno" valign="top"></td></tr>
-      <tr><td><a name="diff0044" /></td></tr>
-      <tr><td class="lineno" valign="top"></td><td class="lblock">       <span class="delete">start</span> = <span class="delete">QDateTime::fromString(dateStart + " " + yearS, "MM.dd yyyy")</span></td><td> </td><td class="rblock">       <span class="insert">LandscapeMgr* landmgr</span> = <span class="insert">GETSTELMODULE(LandscapeMgr);</span></td><td class="lineno" valign="top"></td></tr>
-      <tr><td class="lineno" valign="top"></td><td class="lblock"><span class="delete">;</span></td><td> </td><td class="rblock"><span class="insert">       if (landmgr-&gt;getFlagAtmosphere() &amp;&amp; landmgr-&gt;getLuminance() &gt; 5.f)</span></td><td class="lineno" valign="top"></td></tr>
-      <tr><td class="lineno" valign="top"></td><td class="lblock"><span class="delete">       finish = QDateTime::fromString(dateFinish + " " + yearF, "MM.dd yyyy</span></td><td> </td><td class="rblock"><span class="insert">       {</span></td><td class="lineno" valign="top"></td></tr>
-      <tr><td class="lineno" valign="top"></td><td class="lblock"><span class="delete">");</span></td><td> </td><td class="rblock"><span class="insert">               return;</span></td><td class="lineno" valign="top"></td></tr>
-      <tr><td class="lineno" valign="top"></td><td class="lblock"><span class="delete">       peak = QDateTime::fromString(datePeak + " " + yearS, "MM.dd yyyy");</span></td><td> </td><td class="rblock"><span class="insert">       }</span></td><td class="lineno" valign="top"></td></tr>
-      <tr><td class="lineno" valign="top"></td><td class="left"></td><td> </td><td class="right"></td><td class="lineno" valign="top"></td></tr>
       <tr><td><a name="diff0045" /></td></tr>
-      <tr><td class="lineno" valign="top"></td><td class="lblock">       <span class="delete">if (peak.operator &lt;(start) || peak.operator &gt;(finish))</span></td><td> </td><td class="rblock">       <span class="insert">// step through and draw all active meteors</span></td><td class="lineno" valign="top"></td></tr>
-      <tr><td class="lineno" valign="top"></td><td class="lblock"><span class="delete">               peak = QDateTime::fromString(datePeak + " " + yearF, "MM.dd </span></td><td> </td><td class="rblock"><span class="insert">       StelPainter painter(core-&gt;getProjection(StelCore::FrameAltAz));</span></td><td class="lineno" valign="top"></td></tr>
-      <tr><td class="lineno" valign="top"></td><td class="lblock"><span class="delete">yyyy");</span></td><td> </td><td class="rblock"><span class="insert">       foreach (MeteorObj* m, m_activeMeteors)</span></td><td class="lineno" valign="top"></td></tr>
-      <tr><td class="lineno" valign="top"></td><td class="lblock"></td><td> </td><td class="rblock"><span class="insert">       {</span></td><td class="lineno" valign="top"></td></tr>
-      <tr><td class="lineno" valign="top"></td><td class="lblock"></td><td> </td><td class="rblock"><span class="insert">               m-&gt;draw(core, painter);</span></td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="lblock">       <span class="delete">start = QDateTime::fromString(dateStart + " " + yearS, "MM.dd yyyy")</span></td><td> </td><td class="rblock">       <span class="insert">// step through and draw all active meteors</span></td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="lblock"><span class="delete">;</span></td><td> </td><td class="rblock"><span class="insert">       StelPainter painter(core-&gt;getProjection(StelCore::FrameAltAz));</span></td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="lblock"><span class="delete">       finish = QDateTime::fromString(dateFinish + " " + yearF, "MM.dd yyyy</span></td><td> </td><td class="rblock"><span class="insert">       foreach (MeteorObj* m, m_activeMeteors)</span></td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="lblock"><span class="delete">");</span></td><td> </td><td class="rblock"><span class="insert">       {</span></td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="lblock"><span class="delete">       peak = QDateTime::fromString(datePeak + " " + yearS, "MM.dd yyyy");</span></td><td> </td><td class="rblock"><span class="insert">               m-&gt;draw(core, painter);</span></td><td class="lineno" valign="top"></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="lblock"></td><td> </td><td class="rblock"><span class="insert">       }</span></td><td class="lineno" valign="top"></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="lblock"></td><td> </td><td class="rblock"><span class="insert">}</span></td><td class="lineno" valign="top"></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="left"></td><td> </td><td class="right"></td><td class="lineno" valign="top"></td></tr>
       <tr><td><a name="diff0046" /></td></tr>
-      <tr><td class="lineno" valign="top"></td><td class="lblock">       <span class="delete">/***************************</span></td><td> </td><td class="rblock"><span class="insert">MeteorShower::Activity MeteorShower::hasGenericShower(QDate date, bool &amp;fou</span></td><td class="lineno" valign="top"></td></tr>
-      <tr><td class="lineno" valign="top"></td><td class="lblock"><span class="delete">        *Activity - is active?</span></td><td> </td><td class="rblock"><span class="insert">nd) const</span></td><td class="lineno" valign="top"></td></tr>
-      <tr><td class="lineno" valign="top"></td><td class="lblock"><span class="delete">        ***************************/</span></td><td> </td><td class="rblock"><span class="insert">{</span></td><td class="lineno" valign="top"></td></tr>
-      <tr><td class="lineno" valign="top"></td><td class="lblock"><span class="delete">       if(skyDate.operator &gt;=(start) &amp;&amp; skyDate.operator &lt;=(finish))</span></td><td> </td><td class="rblock"><span class="insert">       int year = date.year();</span></td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="lblock">       <span class="delete">if (peak.operator &lt;(start) || peak.operator &gt;(finish))</span></td><td> </td><td class="rblock"><span class="insert">MeteorShower::Activity MeteorShower::hasGenericShower(QDate date, bool &amp;fou</span></td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="lblock"><span class="delete">               peak</span> = <span class="delete">QDateTime::fromString(datePeak + " " + yearF, "MM.dd </span></td><td> </td><td class="rblock"><span class="insert">nd) const</span></td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="lblock"><span class="delete">yyyy");</span></td><td> </td><td class="rblock"><span class="insert">{</span></td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="lblock"></td><td> </td><td class="rblock"><span class="insert">       int year</span> = <span class="insert">date.year();</span></td><td class="lineno" valign="top"></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="lblock"></td><td> </td><td class="rblock"><span class="insert">       Activity g = m_activities.at(0);</span></td><td class="lineno" valign="top"></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="lblock"></td><td> </td><td class="rblock"><span class="insert">       bool peakOnStart = g.peak.year() == g.start.year(); // 'peak' and 's</span></td><td class="lineno" valign="top"></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="lblock"></td><td> </td><td class="rblock"><span class="insert">tart' on the same year ?</span></td><td class="lineno" valign="top"></td></tr>
-      <tr><td class="lineno" valign="top"></td><td class="lblock"></td><td> </td><td class="rblock"><span class="insert"></span></td><td class="lineno" valign="top"></td></tr>
-      <tr><td class="lineno" valign="top"></td><td class="lblock"></td><td> </td><td class="rblock"><span class="insert">       //Fix the 'generic years'!</span></td><td class="lineno" valign="top"></td></tr>
-      <tr><td class="lineno" valign="top"></td><td class="lblock"></td><td> </td><td class="rblock"><span class="insert">       // Handling cases when the shower starts on the current year and</span></td><td class="lineno" valign="top"></td></tr>
-      <tr><td class="lineno" valign="top"></td><td class="lblock"></td><td> </td><td class="rblock"><span class="insert">       // ends on the next year; or when it started on the last year...</span></td><td class="lineno" valign="top"></td></tr>
-      <tr><td class="lineno" valign="top"></td><td class="lblock"></td><td> </td><td class="rblock"><span class="insert">       if (g.start.year() != g.finish.year()) // edge case?</span></td><td class="lineno" valign="top"></td></tr>
-      <tr><td class="lineno" valign="top"></td><td class="left">       {</td><td> </td><td class="right">       {</td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="left"></td><td> </td><td class="right"></td><td class="lineno" valign="top"></td></tr>
       <tr><td><a name="diff0047" /></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="lblock">       <span class="delete">/***************************</span></td><td> </td><td class="rblock">       <span class="insert">//Fix the 'generic years'!</span></td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="lblock"><span class="delete">        *Activity - is active?</span></td><td> </td><td class="rblock"><span class="insert">       // Handling cases when the shower starts on the current year and</span></td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="lblock"><span class="delete">        ***************************/</span></td><td> </td><td class="rblock"><span class="insert">       // ends on the next year; or when it started on the last year...</span></td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="lblock"><span class="delete">       if(skyDate.operator &gt;=(start) &amp;&amp; skyDate.operator &lt;=(finish))</span></td><td> </td><td class="rblock"><span class="insert">       if (g.start.year() != g.finish.year()) // edge case?</span></td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="left">       {</td><td> </td><td class="right">       {</td><td class="lineno" valign="top"></td></tr>
+      <tr><td><a name="diff0048" /></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="lblock">               <span class="delete">if(index)</span></td><td> </td><td class="rblock">               // <span class="insert">trying the current year with the next year</span></td><td class="lineno" valign="top"></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="lblock"><span class="delete">                       status = ACTIVE_REAL;</span> // <span class="delete">real data</span></td><td> </td><td class="rblock"><span class="insert">               g.start.setDate(year, g.start.month(), g.start.day());</span></td><td class="lineno" valign="top"></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="lblock"><span class="delete">               else</span></td><td> </td><td class="rblock"><span class="insert">               g.finish.setDate(year + 1, g.finish.month(), g.finish.day())</span></td><td class="lineno" valign="top"></td></tr>
@@ -587,16 +605,16 @@
       <tr><td class="lineno" valign="top"></td><td class="left">       }</td><td> </td><td class="right">       }</td><td class="lineno" valign="top"></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="left">       else</td><td> </td><td class="right">       else</td><td class="lineno" valign="top"></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="left">       {</td><td> </td><td class="right">       {</td><td class="lineno" valign="top"></td></tr>
-      <tr><td><a name="diff0048" /></td></tr>
+      <tr><td><a name="diff0049" /></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="lblock">               <span class="delete">status</span> = <span class="delete">INACTIVE; // isn't active</span></td><td> </td><td class="rblock">               <span class="insert">g.start.setDate(year, g.start.month(), g.start.day());</span></td><td class="lineno" valign="top"></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="lblock"></td><td> </td><td class="rblock"><span class="insert">               g.finish.setDate(year, g.finish.month(), g.finish.day());</span></td><td class="lineno" valign="top"></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="lblock"></td><td> </td><td class="rblock"><span class="insert">               found</span> = <span class="insert">date.operator &gt;=(g.start) &amp;&amp; date.operator &lt;=(g.fini</span></td><td class="lineno" valign="top"></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="lblock"></td><td> </td><td class="rblock"><span class="insert">sh);</span></td><td class="lineno" valign="top"></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="left">       }</td><td> </td><td class="right">       }</td><td class="lineno" valign="top"></td></tr>
-      <tr><td><a name="diff0049" /></td></tr>
+      <tr><td><a name="diff0050" /></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="lblock"><span class="delete">       active = (status != INACTIVE) || !showActiveRadiantsOnly;</span></td><td> </td><td class="rblock"></td><td class="lineno" valign="top"></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="left"></td><td> </td><td class="right"></td><td class="lineno" valign="top"></td></tr>
-      <tr><td><a name="diff0050" /></td></tr>
+      <tr><td><a name="diff0051" /></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="lblock">       <span class="delete">/**************************</span></td><td> </td><td class="rblock">       <span class="insert">if (found)</span></td><td class="lineno" valign="top"></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="lblock"><span class="delete">        *Radiant drift</span></td><td> </td><td class="rblock"><span class="insert">       {</span></td><td class="lineno" valign="top"></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="lblock"><span class="delete">        *************************/</span></td><td> </td><td class="rblock"><span class="insert">               g.year</span> = <span class="insert">g.start.year();</span></td><td class="lineno" valign="top"></td></tr>
@@ -609,14 +627,14 @@
       <tr><td class="lineno" valign="top"></td><td class="lblock"></td><td> </td><td class="rblock"><span class="insert">       return Activity();</span></td><td class="lineno" valign="top"></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="lblock"></td><td> </td><td class="rblock"><span class="insert">}</span></td><td class="lineno" valign="top"></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="left"></td><td> </td><td class="right"></td><td class="lineno" valign="top"></td></tr>
-      <tr><td><a name="diff0051" /></td></tr>
+      <tr><td><a name="diff0052" /></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="lblock">       <span class="delete">if (status != INACTIVE)</span></td><td> </td><td class="rblock"><span class="insert">MeteorShower::Activity MeteorShower::hasConfirmedShower(QDate date, bool&amp; f</span></td><td class="lineno" valign="top"></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="lblock"></td><td> </td><td class="rblock"><span class="insert">ound) const</span></td><td class="lineno" valign="top"></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="lblock"></td><td> </td><td class="rblock"><span class="insert">{</span></td><td class="lineno" valign="top"></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="lblock"></td><td> </td><td class="rblock"><span class="insert">       const int activitiesSize = m_activities.size();</span></td><td class="lineno" valign="top"></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="lblock"></td><td> </td><td class="rblock"><span class="insert">       for (int i = 1; i &lt; activitiesSize; ++i)</span></td><td class="lineno" valign="top"></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="left">       {</td><td> </td><td class="right">       {</td><td class="lineno" valign="top"></td></tr>
-      <tr><td><a name="diff0052" /></td></tr>
+      <tr><td><a name="diff0053" /></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="lblock">               <span class="delete">double time</span> = <span class="delete">(StelUtils::qDateTimeToJd(skyDate) - StelUtils</span></td><td> </td><td class="rblock">               <span class="insert">const Activity&amp; a</span> = <span class="insert">m_activities.at(i);</span></td><td class="lineno" valign="top"></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="lblock"><span class="delete">::qDateTimeToJd(peak))*24;</span></td><td> </td><td class="rblock"><span class="insert">               if (date.operator &gt;=(a.start) &amp;&amp; date.operator &lt;=(a.finish))</span></td><td class="lineno" valign="top"></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="lblock"><span class="delete">               radiantAlpha += (driftAlpha/120)*time;</span></td><td> </td><td class="rblock"><span class="insert">               {</span></td><td class="lineno" valign="top"></td></tr>
@@ -624,14 +642,14 @@
       <tr><td class="lineno" valign="top"></td><td class="lblock"></td><td> </td><td class="rblock"><span class="insert">                       return a;</span></td><td class="lineno" valign="top"></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="lblock"></td><td> </td><td class="rblock"><span class="insert">               }</span></td><td class="lineno" valign="top"></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="left">       }</td><td> </td><td class="right">       }</td><td class="lineno" valign="top"></td></tr>
-      <tr><td><a name="diff0053" /></td></tr>
+      <tr><td><a name="diff0054" /></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="lblock"></td><td> </td><td class="rblock"><span class="insert">       return Activity();</span></td><td class="lineno" valign="top"></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="left">}</td><td> </td><td class="right">}</td><td class="lineno" valign="top"></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="left"></td><td> </td><td class="right"></td><td class="lineno" valign="top"></td></tr>
-      <tr><td><a name="diff0054" /></td></tr>
+      <tr><td><a name="diff0055" /></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="lblock">int MeteorShower::<span class="delete">searchRealData(QString yyyy) const</span></td><td> </td><td class="rblock">int MeteorShower::<span class="insert">calculateZHR(const double&amp; currentJD)</span></td><td class="lineno" valign="top"></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="left">{</td><td> </td><td class="right">{</td><td class="lineno" valign="top"></td></tr>
-      <tr><td><a name="diff0055" /></td></tr>
+      <tr><td><a name="diff0056" /></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="lblock">       <span class="delete">int index</span> = <span class="delete">-1;</span></td><td> </td><td class="rblock">       <span class="insert">double startJD</span> = <span class="insert">m_activity.start.toJulianDay();</span></td><td class="lineno" valign="top"></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="lblock"><span class="delete">       foreach(const activityData &amp;p, activity)</span></td><td> </td><td class="rblock"><span class="insert">       double finishJD = m_activity.finish.toJulianDay();</span></td><td class="lineno" valign="top"></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="lblock"></td><td> </td><td class="rblock"><span class="insert">       double peakJD = m_activity.peak.toJulianDay();</span></td><td class="lineno" valign="top"></td></tr>
@@ -639,27 +657,26 @@
       <tr><td class="lineno" valign="top"></td><td class="lblock"></td><td> </td><td class="rblock"><span class="insert">       float sd; //standard deviation</span></td><td class="lineno" valign="top"></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="lblock"></td><td> </td><td class="rblock"><span class="insert">       if (currentJD &gt;= startJD &amp;&amp; currentJD &lt; peakJD) //left side of gauss</span></td><td class="lineno" valign="top"></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="lblock"></td><td> </td><td class="rblock"><span class="insert">ian</span></td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="lblock"></td><td> </td><td class="rblock"><span class="insert">       {</span></td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="lblock"></td><td> </td><td class="rblock"><span class="insert">               sd = (peakJD - startJD) / 2.f;</span></td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="lblock"></td><td> </td><td class="rblock"><span class="insert">       }</span></td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="lblock"></td><td> </td><td class="rblock"><span class="insert">       else</span></td><td class="lineno" valign="top"></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="left">       {</td><td> </td><td class="right">       {</td><td class="lineno" valign="top"></td></tr>
-      <tr><td><a name="diff0056" /></td></tr>
-      <tr><td class="lineno" valign="top"></td><td class="lblock">               <span class="delete">index++;</span></td><td> </td><td class="rblock">               <span class="insert">sd = (peakJD - startJD) / 2.f;</span></td><td class="lineno" valign="top"></td></tr>
+      <tr><td><a name="diff0057" /></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="lblock">               <span class="delete">index++;</span></td><td> </td><td class="rblock">               <span class="insert">sd = (finishJD - peakJD) / 2.f;</span></td><td class="lineno" valign="top"></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="lblock"><span class="delete">               if(p.year == yyyy)</span></td><td> </td><td class="rblock"></td><td class="lineno" valign="top"></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="lblock"><span class="delete">                       return index;</span></td><td> </td><td class="rblock"></td><td class="lineno" valign="top"></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="left">       }</td><td> </td><td class="right">       }</td><td class="lineno" valign="top"></td></tr>
-      <tr><td><a name="diff0057" /></td></tr>
-      <tr><td class="lineno" valign="top"></td><td class="lblock"></td><td> </td><td class="rblock">       <span class="insert">else</span></td><td class="lineno" valign="top"></td></tr>
-      <tr><td class="lineno" valign="top"></td><td class="lblock"></td><td> </td><td class="rblock"><span class="insert">       {</span></td><td class="lineno" valign="top"></td></tr>
-      <tr><td class="lineno" valign="top"></td><td class="lblock"></td><td> </td><td class="rblock"><span class="insert">               sd = (finishJD - peakJD) / 2.f;</span></td><td class="lineno" valign="top"></td></tr>
-      <tr><td class="lineno" valign="top"></td><td class="lblock"></td><td> </td><td class="rblock"><span class="insert">       }</span></td><td class="lineno" valign="top"></td></tr>
-      <tr><td class="lineno" valign="top"></td><td class="lblock"></td><td> </td><td class="rblock"><span class="insert"></span></td><td class="lineno" valign="top"></td></tr>
-      <tr><td class="lineno" valign="top"></td><td class="lblock"></td><td> </td><td class="rblock"><span class="insert">       float maxZHR = m_activity.zhr == -1 ? m_activity.variable.at(1) : m_</span></td><td class="lineno" valign="top"></td></tr>
-      <tr><td class="lineno" valign="top"></td><td class="lblock"></td><td> </td><td class="rblock"><span class="insert">activity.zhr;</span></td><td class="lineno" valign="top"></td></tr>
-      <tr><td class="lineno" valign="top"></td><td class="lblock"></td><td> </td><td class="rblock"><span class="insert">       float minZHR = m_activity.zhr == -1 ? m_activity.variable.at(0) : 0;</span></td><td class="lineno" valign="top"></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="left"></td><td> </td><td class="right"></td><td class="lineno" valign="top"></td></tr>
       <tr><td><a name="diff0058" /></td></tr>
-      <tr><td class="lineno" valign="top"></td><td class="lblock">       return <span class="delete">0;</span></td><td> </td><td class="rblock">       <span class="insert">float gaussian = maxZHR * qExp( - qPow(currentJD - peakJD, 2) / (sd </span></td><td class="lineno" valign="top"></td></tr>
-      <tr><td class="lineno" valign="top"></td><td class="lblock"></td><td> </td><td class="rblock"><span class="insert">* sd) ) + minZHR;</span></td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="lblock">       <span class="delete">return</span> 0;</td><td> </td><td class="rblock">       <span class="insert">float maxZHR = m_activity.zhr == -1 ? m_activity.variable.at(1) : m_</span></td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="lblock"></td><td> </td><td class="rblock"><span class="insert">activity.zhr;</span></td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="lblock"></td><td> </td><td class="rblock"><span class="insert">       float minZHR = m_activity.zhr == -1 ? m_activity.variable.at(0) :</span> 0;</td><td class="lineno" valign="top"></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="lblock"></td><td> </td><td class="rblock">                                                                           </td><td class="lineno" valign="top"></td></tr>
-      <tr><td class="lineno" valign="top"></td><td class="lblock"></td><td> </td><td class="rblock">       return <span class="insert">qRound(gaussian);</span></td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="lblock"></td><td> </td><td class="rblock">       <span class="insert">float gaussian = maxZHR * qExp( - qPow(currentJD - peakJD, 2) / (sd </span></td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="lblock"></td><td> </td><td class="rblock"><span class="insert">* sd) ) + minZHR;</span></td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="lblock"></td><td> </td><td class="rblock"><span class="insert"></span></td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="lblock"></td><td> </td><td class="rblock"><span class="insert">       return qRound(gaussian);</span></td><td class="lineno" valign="top"></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="left">}</td><td> </td><td class="right">}</td><td class="lineno" valign="top"></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="left"></td><td> </td><td class="right"></td><td class="lineno" valign="top"></td></tr>
       <tr><td><a name="diff0059" /></td></tr>
@@ -674,14 +691,15 @@
 ht</td><td> </td><td class="right">       //The mean longitude of the Sun, corrected for the aberration of lig
 ht</td><td class="lineno" valign="top"></td></tr>
       <tr><td><a name="diff0061" /></td></tr>
-      <tr><td class="lineno" valign="top"></td><td class="lblock">       float <span class="delete">slong</span> = <span class="delete">(280.460</span> + <span class="delete">0.9856474*n) / 360;</span></td><td> </td><td class="rblock">       float <span class="insert">l</span> = <span class="insert">280.460</span> + <span class="insert">0.9856474 * n;</span></td><td class="lineno" valign="top"></td></tr>
-      <tr><td class="lineno" valign="top"></td><td class="lblock"><span class="delete">       slong</span> = <span class="delete">(slong</span> - (int) <span class="delete">slong)</span> * <span class="delete">360</span> - <span class="delete">1;</span></td><td> </td><td class="rblock"><span class="insert"></span></td><td class="lineno" valign="top"></td></tr>
-      <tr><td class="lineno" valign="top"></td><td class="lblock"></td><td> </td><td class="rblock"><span class="insert">       // put it in the range 0 to 360 degrees</span></td><td class="lineno" valign="top"></td></tr>
-      <tr><td class="lineno" valign="top"></td><td class="lblock"></td><td> </td><td class="rblock"><span class="insert">       l /= 360.f;</span></td><td class="lineno" valign="top"></td></tr>
-      <tr><td class="lineno" valign="top"></td><td class="lblock"></td><td> </td><td class="rblock"><span class="insert">       l</span> = <span class="insert">(l</span> - (int) <span class="insert">l)</span> * <span class="insert">360.f</span> - <span class="insert">1.f;</span></td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="lblock">       float <span class="delete">slong</span> = <span class="delete">(280.460</span> + <span class="delete">0.9856474*n) / 360;</span></td><td> </td><td class="rblock">       float <span class="insert">l</span> = <span class="insert">280.460</span> + <span class="insert">0.9856474</span> * <span class="insert">n;</span></td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="lblock"><span class="delete">       slong = (slong - (int) slong)</span> * <span class="delete">360 - 1;</span></td><td> </td><td class="rblock"></td><td class="lineno" valign="top"></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="left"></td><td> </td><td class="right"></td><td class="lineno" valign="top"></td></tr>
       <tr><td><a name="diff0062" /></td></tr>
-      <tr><td class="lineno" valign="top"></td><td class="lblock">       return <span class="delete">slong;</span></td><td> </td><td class="rblock">       return <span class="insert">QString::number(l, 'f', 2);</span></td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="lblock">       return <span class="delete">slong;</span></td><td> </td><td class="rblock">       <span class="insert">// put it in the range 0 to 360 degrees</span></td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="lblock"></td><td> </td><td class="rblock"><span class="insert">       l /= 360.f;</span></td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="lblock"></td><td> </td><td class="rblock"><span class="insert">       l = (l - (int) l) * 360.f - 1.f;</span></td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="lblock"></td><td> </td><td class="rblock">                                                                           </td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="lblock"></td><td> </td><td class="rblock">       return <span class="insert">QString::number(l, 'f', 2);</span></td><td class="lineno" valign="top"></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="lblock"></td><td> </td><td class="rblock"><span class="insert">}</span></td><td class="lineno" valign="top"></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="lblock"></td><td> </td><td class="rblock"><span class="insert"></span></td><td class="lineno" valign="top"></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="lblock"></td><td> </td><td class="rblock"><span class="insert">QString MeteorShower::getDesignation() const</span></td><td class="lineno" valign="top"></td></tr>
@@ -935,7 +953,7 @@ rg(<span class="insert">m_</span>speed) &lt;&lt; "&lt;br /&gt;";</td><td class="
 
      <tr><td></td><td class="left"></td><td> </td><td class="right"></td><td></td></tr>
      <tr bgcolor="gray"><th colspan="5" align="center"><a name="end">&nbsp;End of changes. 80 change blocks.&nbsp;</a></th></tr>
-     <tr class="stats"><td></td><th><i>271 lines changed or deleted</i></th><th><i> </i></th><th><i>476 lines changed or added</i></th><td></td></tr>
+     <tr class="stats"><td></td><th><i>272 lines changed or deleted</i></th><th><i> </i></th><th><i>497 lines changed or added</i></th><td></td></tr>
      <tr><td colspan="5" align="center" class="small"><br/>This html diff was produced by rfcdiff 1.41. The latest version is available from <a href="http://www.tools.ietf.org/tools/rfcdiff/" >http://tools.ietf.org/tools/rfcdiff/</a> </td></tr>
    </table>
    </body>

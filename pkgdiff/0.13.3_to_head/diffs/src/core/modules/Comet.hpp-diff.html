@@ -41,7 +41,33 @@
   <table border="0" cellpadding="0" cellspacing="0"> 
   <tr bgcolor="orange"><th></th><th>&nbsp;Comet.hpp&nbsp;</th><th> </th><th>&nbsp;Comet.hpp&nbsp;</th><th></th></tr> 
       <tr><td class="lineno"></td><td class="left"></td><td> </td><td class="right"></td><td class="lineno"></td></tr>
-      <tr bgcolor="gray" ><td></td><th><a name="part-l1" /><small>skipping to change at</small><em> line 99</em></th><th> </th><th><a name="part-r1" /><small>skipping to change at</small><em> line 99</em></th><td></td></tr>
+      <tr bgcolor="gray" ><td></td><th><a name="part-l1" /><small>skipping to change at</small><em> line 45</em></th><th> </th><th><a name="part-r1" /><small>skipping to change at</small><em> line 45</em></th><td></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="left">       2014-11: GZ: tail extinction, better brightness balance.</td><td> </td><td class="right">       2014-11: GZ: tail extinction, better brightness balance.</td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="left">  */</td><td> </td><td class="right">  */</td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="left">class Comet : public Planet</td><td> </td><td class="right">class Comet : public Planet</td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="left">{</td><td> </td><td class="right">{</td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="left">public:</td><td> </td><td class="right">public:</td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="left">       friend class SolarSystem;               // Solar System initializes 
+static constants.</td><td> </td><td class="right">       friend class SolarSystem;               // Solar System initializes 
+static constants.</td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="left">       Comet(const QString&amp; englishName,</td><td> </td><td class="right">       Comet(const QString&amp; englishName,</td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="left">             int flagLighting,</td><td> </td><td class="right">             int flagLighting,</td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="left">             double radius,</td><td> </td><td class="right">             double radius,</td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="left">             double oblateness,</td><td> </td><td class="right">             double oblateness,</td><td class="lineno" valign="top"></td></tr>
+      <tr><td><a name="diff0001" /></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="lblock">             Vec3f color,</td><td> </td><td class="rblock">             Vec3f <span class="insert">halo</span>color,</td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="left">             float albedo,</td><td> </td><td class="right">             float albedo,</td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="left">             const QString&amp; texMapName,</td><td> </td><td class="right">             const QString&amp; texMapName,</td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="left">             posFuncType _coordFunc,</td><td> </td><td class="right">             posFuncType _coordFunc,</td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="left">             void* userDataPtr,</td><td> </td><td class="right">             void* userDataPtr,</td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="left">             OsculatingFunctType *osculatingFunc,</td><td> </td><td class="right">             OsculatingFunctType *osculatingFunc,</td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="left">             bool closeOrbit,</td><td> </td><td class="right">             bool closeOrbit,</td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="left">             bool hidden,</td><td> </td><td class="right">             bool hidden,</td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="left">             const QString &amp;pTypeStr,</td><td> </td><td class="right">             const QString &amp;pTypeStr,</td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="left">             float dustTailWidthFact=1.5f,</td><td> </td><td class="right">             float dustTailWidthFact=1.5f,</td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="left">             float dustTailLengthFact=0.4f,</td><td> </td><td class="right">             float dustTailLengthFact=0.4f,</td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno"></td><td class="left"></td><td> </td><td class="right"></td><td class="lineno"></td></tr>
+      <tr bgcolor="gray" ><td></td><th><a name="part-l2" /><small>skipping to change at</small><em> line 99</em></th><th> </th><th><a name="part-r2" /><small>skipping to change at</small><em> line 99</em></th><td></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="left">       //! different distances from the Sun. They are not used in the same 
 way</td><td> </td><td class="right">       //! different distances from the Sun. They are not used in the same 
 way</td><td class="lineno" valign="top"></td></tr>
@@ -58,7 +84,7 @@ e (paraboloid, hyperboloid orbit)</td><td> </td><td class="right">       //! get
 e (paraboloid, hyperboloid orbit)</td><td class="lineno" valign="top"></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="left">       virtual double getSiderealPeriod() const;</td><td> </td><td class="right">       virtual double getSiderealPeriod() const;</td><td class="lineno" valign="top"></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="left"></td><td> </td><td class="right"></td><td class="lineno" valign="top"></td></tr>
-      <tr><td><a name="diff0001" /></td></tr>
+      <tr><td><a name="diff0002" /></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="lblock">       <span class="delete">//! GZ: override from Planet: extend with tail details.</span></td><td> </td><td class="rblock"></td><td class="lineno" valign="top"></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="lblock"><span class="delete">       //virtual void computePosition(const double date);</span></td><td> </td><td class="rblock"></td><td class="lineno" valign="top"></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="lblock">                                                                           </td><td> </td><td class="rblock"></td><td class="lineno" valign="top"></td></tr>
@@ -70,7 +96,7 @@ lanetNameFont);</td><td class="lineno" valign="top"></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="left">       // re-implementation of Planet's update() to prepare tails (extincti
 on etc). @param deltaTime: ms (since last call)</td><td> </td><td class="right">       // re-implementation of Planet's update() to prepare tails (extincti
 on etc). @param deltaTime: ms (since last call)</td><td class="lineno" valign="top"></td></tr>
-      <tr><td><a name="diff0002" /></td></tr>
+      <tr><td><a name="diff0003" /></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="lblock"><span class="delete">       // TODO: computePosition can be removed and things added here!</span></td><td> </td><td class="rblock"></td><td class="lineno" valign="top"></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="left">       virtual void update(int deltaTime);</td><td> </td><td class="right">       virtual void update(int deltaTime);</td><td class="lineno" valign="top"></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="left"></td><td> </td><td class="right"></td><td class="lineno" valign="top"></td></tr>
@@ -93,7 +119,7 @@ sfo);</td><td class="lineno" valign="top"></td></tr>
 server.</td><td> </td><td class="right">       //! compute a coma, faked as simple disk to be tilted towards the ob
 server.</td><td class="lineno" valign="top"></td></tr>
       <tr><td class="lineno"></td><td class="left"></td><td> </td><td class="right"></td><td class="lineno"></td></tr>
-      <tr bgcolor="gray" ><td></td><th><a name="part-l2" /><small>skipping to change at</small><em> line 142</em></th><th> </th><th><a name="part-r2" /><small>skipping to change at</small><em> line 138</em></th><td></td></tr>
+      <tr bgcolor="gray" ><td></td><th><a name="part-l3" /><small>skipping to change at</small><em> line 142</em></th><th> </th><th><a name="part-r3" /><small>skipping to change at</small><em> line 138</em></th><td></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="left">       double absoluteMagnitude;</td><td> </td><td class="right">       double absoluteMagnitude;</td><td class="lineno" valign="top"></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="left">       double slopeParameter;</td><td> </td><td class="right">       double slopeParameter;</td><td class="lineno" valign="top"></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="left">       double semiMajorAxis;</td><td> </td><td class="right">       double semiMajorAxis;</td><td class="lineno" valign="top"></td></tr>
@@ -112,7 +138,7 @@ ugh to be worth drawing. Drawing tails is quite costly.</td><td class="lineno" v
       <tr><td class="lineno" valign="top"></td><td class="left">       bool tailBright;                //! true if tail is bright enough to
  draw.</td><td> </td><td class="right">       bool tailBright;                //! true if tail is bright enough to
  draw.</td><td class="lineno" valign="top"></td></tr>
-      <tr><td><a name="diff0003" /></td></tr>
+      <tr><td><a name="diff0004" /></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="lblock">       double <span class="delete">deltaJDtail;</span>             //! like <span class="delete">deltaJD,</span> but time <span class="delete">differenc</span></td><td> </td><td class="rblock">       double <span class="insert">deltaJDEtail;</span>            //! like <span class="insert">deltaJDE,</span> but time <span class="insert">differen</span></td><td class="lineno" valign="top"></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="lblock"><span class="delete">e</span> between tail geometry updates.</td><td> </td><td class="rblock"><span class="insert">ce</span> between tail geometry updates.</td><td class="lineno" valign="top"></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="lblock">       double <span class="delete">lastJDtail;</span>              //! like <span class="delete">lastJD,</span> but time of last <span class="delete">ta</span></td><td> </td><td class="rblock">       double <span class="insert">lastJDEtail;</span>             //! like <span class="insert">lastJDE,</span> but time of last <span class="insert">t</span></td><td class="lineno" valign="top"></td></tr>
@@ -147,8 +173,8 @@ e equal.</td><td class="lineno" valign="top"></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="left">       static bool createTailIndices;</td><td> </td><td class="right">       static bool createTailIndices;</td><td class="lineno" valign="top"></td></tr>
 
      <tr><td></td><td class="left"></td><td> </td><td class="right"></td><td></td></tr>
-     <tr bgcolor="gray"><th colspan="5" align="center"><a name="end">&nbsp;End of changes. 3 change blocks.&nbsp;</a></th></tr>
-     <tr class="stats"><td></td><th><i>8 lines changed or deleted</i></th><th><i> </i></th><th><i>4 lines changed or added</i></th><td></td></tr>
+     <tr bgcolor="gray"><th colspan="5" align="center"><a name="end">&nbsp;End of changes. 4 change blocks.&nbsp;</a></th></tr>
+     <tr class="stats"><td></td><th><i>9 lines changed or deleted</i></th><th><i> </i></th><th><i>5 lines changed or added</i></th><td></td></tr>
      <tr><td colspan="5" align="center" class="small"><br/>This html diff was produced by rfcdiff 1.41. The latest version is available from <a href="http://www.tools.ietf.org/tools/rfcdiff/" >http://tools.ietf.org/tools/rfcdiff/</a> </td></tr>
    </table>
    </body>

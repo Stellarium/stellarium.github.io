@@ -79,12 +79,22 @@
       <tr><td class="lineno" valign="top"></td><td class="left">       , defaultTemperature(-1000.)</td><td> </td><td class="right">       , defaultTemperature(-1000.)</td><td class="lineno" valign="top"></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="left">       , defaultPressure(-2.)</td><td> </td><td class="right">       , defaultPressure(-2.)</td><td class="lineno" valign="top"></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="left">       , horizonPolygon(NULL)</td><td> </td><td class="right">       , horizonPolygon(NULL)</td><td class="lineno" valign="top"></td></tr>
+      <tr><td><a name="diff0003" /></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="lblock"></td><td> </td><td class="rblock"><span class="insert">       , fontSize(18)</span></td><td class="lineno" valign="top"></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="left">{</td><td> </td><td class="right">{</td><td class="lineno" valign="top"></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="left">       validLandscape = 0;</td><td> </td><td class="right">       validLandscape = 0;</td><td class="lineno" valign="top"></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="left">}</td><td> </td><td class="right">}</td><td class="lineno" valign="top"></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="left"></td><td> </td><td class="right"></td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="left">Landscape::~Landscape()</td><td> </td><td class="right">Landscape::~Landscape()</td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="left">{}</td><td> </td><td class="right">{}</td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="left"></td><td> </td><td class="right"></td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="left">// Load attributes common to all landscapes</td><td> </td><td class="right">// Load attributes common to all landscapes</td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="left">void Landscape::loadCommon(const QSettings&amp; landscapeIni, const QString&amp; la
+ndscapeId)</td><td> </td><td class="right">void Landscape::loadCommon(const QSettings&amp; landscapeIni, const QString&amp; la
+ndscapeId)</td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="left">{</td><td> </td><td class="right">{</td><td class="lineno" valign="top"></td></tr>
       <tr><td class="lineno"></td><td class="left"></td><td> </td><td class="right"></td><td class="lineno"></td></tr>
-      <tr bgcolor="gray" ><td></td><th><a name="part-l2" /><small>skipping to change at</small><em> line 117</em></th><th> </th><th><a name="part-r2" /><small>skipping to change at</small><em> line 119</em></th><td></td></tr>
+      <tr bgcolor="gray" ><td></td><th><a name="part-l2" /><small>skipping to change at</small><em> line 117</em></th><th> </th><th><a name="part-r2" /><small>skipping to change at</small><em> line 120</em></th><td></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="left"></td><td> </td><td class="right"></td><td class="lineno" valign="top"></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="left">               defaultFogSetting = landscapeIni.value("location/display_fog
 ", -1).toInt();</td><td> </td><td class="right">               defaultFogSetting = landscapeIni.value("location/display_fog
@@ -105,7 +115,7 @@ ressure", -2.0).toDouble(); // -2=no change! [-1=computeFromAltitude]</td><td cl
 1.0).toDouble();</td><td> </td><td class="right">       minBrightness = landscapeIni.value("landscape/minimal_brightness", -
 1.0).toDouble();</td><td class="lineno" valign="top"></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="left"></td><td> </td><td class="right"></td><td class="lineno" valign="top"></td></tr>
-      <tr><td><a name="diff0003" /></td></tr>
+      <tr><td><a name="diff0004" /></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="lblock"></td><td> </td><td class="rblock">       <span class="insert">// set a minimal altitude which the landscape covers. (new in 0.14)</span></td><td class="lineno" valign="top"></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="lblock"></td><td> </td><td class="rblock"><span class="insert">       // This is to allow landscapes with "holes" in the ground (space sta</span></td><td class="lineno" valign="top"></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="lblock"></td><td> </td><td class="rblock"><span class="insert">tion?) (Bug lp:1469407)</span></td><td class="lineno" valign="top"></td></tr>
@@ -138,12 +148,12 @@ nal_horizon_list_mode", "azDeg_altDeg").toString());</td><td class="lineno" vali
       <tr><td class="lineno" valign="top"></td><td class="left">               // This line can then be drawn in all classes with the color
  specified here. If not specified, don't draw it! (flagged by negative red)</td><td> </td><td class="right">               // This line can then be drawn in all classes with the color
  specified here. If not specified, don't draw it! (flagged by negative red)</td><td class="lineno" valign="top"></td></tr>
-      <tr><td><a name="diff0004" /></td></tr>
+      <tr><td><a name="diff0005" /></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="lblock">               horizonPolygonLineColor=StelUtils::strToVec3f(<span class="delete"> landscapeIni.
 v</span>alue("landscape/horizon_line_color", "-1,0,0" ).toString());</td><td> </td><td class="rblock">               horizonPolygonLineColor=StelUtils::strToVec3f(<span class="insert">landscapeIni.v
 </span>alue("landscape/horizon_line_color", "-1,0,0" ).toString());</td><td class="lineno" valign="top"></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="left">       }</td><td> </td><td class="right">       }</td><td class="lineno" valign="top"></td></tr>
-      <tr><td><a name="diff0005" /></td></tr>
+      <tr><td><a name="diff0006" /></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="lblock"></td><td> </td><td class="rblock">       <span class="insert">// we must get label color, this is global. (No sense to make that p</span></td><td class="lineno" valign="top"></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="lblock"></td><td> </td><td class="rblock"><span class="insert">er-landscape!)</span></td><td class="lineno" valign="top"></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="lblock"></td><td> </td><td class="rblock"><span class="insert">       QSettings *config = StelApp::getInstance().getSettings();</span></td><td class="lineno" valign="top"></td></tr>
@@ -168,7 +178,7 @@ dexOf(listMode);</td><td> </td><td class="right">       const horizonListMode co
 dexOf(listMode);</td><td class="lineno" valign="top"></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="left"></td><td> </td><td class="right"></td><td class="lineno" valign="top"></td></tr>
       <tr><td class="lineno"></td><td class="left"></td><td> </td><td class="right"></td><td class="lineno"></td></tr>
-      <tr bgcolor="gray" ><td></td><th><a name="part-l3" /><small>skipping to change at</small><em> line 225</em></th><th> </th><th><a name="part-r3" /><small>skipping to change at</small><em> line 236</em></th><td></td></tr>
+      <tr bgcolor="gray" ><td></td><th><a name="part-l3" /><small>skipping to change at</small><em> line 225</em></th><th> </th><th><a name="part-r3" /><small>skipping to change at</small><em> line 237</em></th><td></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="left">#include &lt;iostream&gt;</td><td> </td><td class="right">#include &lt;iostream&gt;</td><td class="lineno" valign="top"></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="left">const QString Landscape::getTexturePath(const QString&amp; basename, const QStr
 ing&amp; landscapeId) const</td><td> </td><td class="right">const QString Landscape::getTexturePath(const QString&amp; basename, const QStr
@@ -185,7 +195,7 @@ o global textures directory</td><td class="lineno" valign="top"></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="left">       return path;</td><td> </td><td class="right">       return path;</td><td class="lineno" valign="top"></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="left">}</td><td> </td><td class="right">}</td><td class="lineno" valign="top"></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="left"></td><td> </td><td class="right"></td><td class="lineno" valign="top"></td></tr>
-      <tr><td><a name="diff0006" /></td></tr>
+      <tr><td><a name="diff0007" /></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="lblock"></td><td> </td><td class="rblock"><span class="insert">// find optional file and fill landscapeLabels list.</span></td><td class="lineno" valign="top"></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="lblock"></td><td> </td><td class="rblock"><span class="insert">void Landscape::loadLabels(const QString&amp; landscapeId)</span></td><td class="lineno" valign="top"></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="lblock"></td><td> </td><td class="rblock"><span class="insert">{</span></td><td class="lineno" valign="top"></td></tr>
@@ -322,7 +332,7 @@ o global textures directory</td><td class="lineno" valign="top"></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="left">       , fogAngleShift(0.)</td><td> </td><td class="right">       , fogAngleShift(0.)</td><td class="lineno" valign="top"></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="left">       , decorAltAngle(0.)</td><td> </td><td class="right">       , decorAltAngle(0.)</td><td class="lineno" valign="top"></td></tr>
       <tr><td class="lineno"></td><td class="left"></td><td> </td><td class="right"></td><td class="lineno"></td></tr>
-      <tr bgcolor="gray" ><td></td><th><a name="part-l4" /><small>skipping to change at</small><em> line 257</em></th><th> </th><th><a name="part-r4" /><small>skipping to change at</small><em> line 373</em></th><td></td></tr>
+      <tr bgcolor="gray" ><td></td><th><a name="part-l4" /><small>skipping to change at</small><em> line 257</em></th><th> </th><th><a name="part-r4" /><small>skipping to change at</small><em> line 374</em></th><td></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="left">               delete [] sideTexs;</td><td> </td><td class="right">               delete [] sideTexs;</td><td class="lineno" valign="top"></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="left">               sideTexs = NULL;</td><td> </td><td class="right">               sideTexs = NULL;</td><td class="lineno" valign="top"></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="left">       }</td><td> </td><td class="right">       }</td><td class="lineno" valign="top"></td></tr>
@@ -333,7 +343,7 @@ o global textures directory</td><td class="lineno" valign="top"></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="left">               qDeleteAll(sidesImages);</td><td> </td><td class="right">               qDeleteAll(sidesImages);</td><td class="lineno" valign="top"></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="left">               sidesImages.clear();</td><td> </td><td class="right">               sidesImages.clear();</td><td class="lineno" valign="top"></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="left">       }</td><td> </td><td class="right">       }</td><td class="lineno" valign="top"></td></tr>
-      <tr><td><a name="diff0007" /></td></tr>
+      <tr><td><a name="diff0008" /></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="lblock"></td><td> </td><td class="rblock"><span class="insert">       landscapeLabels.clear();</span></td><td class="lineno" valign="top"></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="left">}</td><td> </td><td class="right">}</td><td class="lineno" valign="top"></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="left"></td><td> </td><td class="right"></td><td class="lineno" valign="top"></td></tr>
@@ -352,7 +362,7 @@ ow!</td><td class="lineno" valign="top"></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="left">       //rows = landscapeIni.value("landscape/tesselate_rows", 8).toInt();</td><td> </td><td class="right">       //rows = landscapeIni.value("landscape/tesselate_rows", 8).toInt();</td><td class="lineno" valign="top"></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="left">       //cols = landscapeIni.value("landscape/tesselate_cols", 16).toInt();</td><td> </td><td class="right">       //cols = landscapeIni.value("landscape/tesselate_cols", 16).toInt();</td><td class="lineno" valign="top"></td></tr>
       <tr><td class="lineno"></td><td class="left"></td><td> </td><td class="right"></td><td class="lineno"></td></tr>
-      <tr bgcolor="gray" ><td></td><th><a name="part-l5" /><small>skipping to change at</small><em> line 538</em></th><th> </th><th><a name="part-r5" /><small>skipping to change at</small><em> line 655</em></th><td></td></tr>
+      <tr bgcolor="gray" ><td></td><th><a name="part-l5" /><small>skipping to change at</small><em> line 538</em></th><th> </th><th><a name="part-r5" /><small>skipping to change at</small><em> line 656</em></th><td></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="left">               //qDebug() &lt;&lt; "drawing line";</td><td> </td><td class="right">               //qDebug() &lt;&lt; "drawing line";</td><td class="lineno" valign="top"></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="left">               StelProjector::ModelViewTranformP transfo = core-&gt;getAltAzMo
 delViewTransform(StelCore::RefractionOff);</td><td> </td><td class="right">               StelProjector::ModelViewTranformP transfo = core-&gt;getAltAzMo
@@ -369,7 +379,7 @@ er::SphericalPolygonDrawModeBoundary);</td><td> </td><td class="right">         
 er::SphericalPolygonDrawModeBoundary);</td><td class="lineno" valign="top"></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="left">       }</td><td> </td><td class="right">       }</td><td class="lineno" valign="top"></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="left">       //else qDebug() &lt;&lt; "no polygon defined";</td><td> </td><td class="right">       //else qDebug() &lt;&lt; "no polygon defined";</td><td class="lineno" valign="top"></td></tr>
-      <tr><td><a name="diff0008" /></td></tr>
+      <tr><td><a name="diff0009" /></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="lblock"></td><td> </td><td class="rblock">                                                                           </td><td class="lineno" valign="top"></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="lblock"></td><td> </td><td class="rblock">       <span class="insert">drawLabels(core, &amp;painter);</span></td><td class="lineno" valign="top"></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="left">}</td><td> </td><td class="right">}</td><td class="lineno" valign="top"></td></tr>
@@ -385,7 +395,46 @@ t</td><td class="lineno" valign="top"></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="left">               return;</td><td> </td><td class="right">               return;</td><td class="lineno" valign="top"></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="left">       if (!(core-&gt;getSkyDrawer()-&gt;getFlagHasAtmosphere()))</td><td> </td><td class="right">       if (!(core-&gt;getSkyDrawer()-&gt;getFlagHasAtmosphere()))</td><td class="lineno" valign="top"></td></tr>
       <tr><td class="lineno"></td><td class="left"></td><td> </td><td class="right"></td><td class="lineno"></td></tr>
-      <tr bgcolor="gray" ><td></td><th><a name="part-l6" /><small>skipping to change at</small><em> line 684</em></th><th> </th><th><a name="part-r6" /><small>skipping to change at</small><em> line 803</em></th><td></td></tr>
+      <tr bgcolor="gray" ><td></td><th><a name="part-l6" /><small>skipping to change at</small><em> line 637</em></th><th> </th><th><a name="part-r6" /><small>skipping to change at</small><em> line 757</em></th><td></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="left">       }</td><td> </td><td class="right">       }</td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="left">       // Else, sample the images...</td><td> </td><td class="right">       // Else, sample the images...</td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="left">       const float alt_rad = std::asin(azalt[2]);  // sampled altitude, rad
+ians</td><td> </td><td class="right">       const float alt_rad = std::asin(azalt[2]);  // sampled altitude, rad
+ians</td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="left">       if (alt_rad &lt; decorAngleShift*M_PI/180.0f) return 1.0f; // below dec
+or, i.e. certainly opaque ground.</td><td> </td><td class="right">       if (alt_rad &lt; decorAngleShift*M_PI/180.0f) return 1.0f; // below dec
+or, i.e. certainly opaque ground.</td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="left">       if (alt_rad &gt; (decorAltAngle+decorAngleShift)*M_PI/180.0f) return 0.
+0f; // above decor, i.e. certainly free sky.</td><td> </td><td class="right">       if (alt_rad &gt; (decorAltAngle+decorAngleShift)*M_PI/180.0f) return 0.
+0f; // above decor, i.e. certainly free sky.</td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="left">       if (!calibrated) // the result of this function has no real use here
+: just complain and return result for math. horizon.</td><td> </td><td class="right">       if (!calibrated) // the result of this function has no real use here
+: just complain and return result for math. horizon.</td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="left">       {</td><td> </td><td class="right">       {</td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="left">               static QString lastLandscapeName;</td><td> </td><td class="right">               static QString lastLandscapeName;</td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="left">               if (lastLandscapeName != name)</td><td> </td><td class="right">               if (lastLandscapeName != name)</td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="left">               {</td><td> </td><td class="right">               {</td><td class="lineno" valign="top"></td></tr>
+      <tr><td><a name="diff0010" /></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="lblock">                       qWarning() &lt;&lt; "Dubious result: Landscape <span class="delete">\"" &lt;&lt; name
+ &lt;&lt; "\" not calibrated. Opacity test represents mathematical horizon only."
+</span>;</td><td> </td><td class="rblock">                       qWarning() &lt;&lt; "Dubious result: Landscape <span class="insert">" &lt;&lt; name &lt;
+&lt; " not calibrated. Opacity test represents mathematical horizon only."</span>;</td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="left">                       lastLandscapeName=name;</td><td> </td><td class="right">                       lastLandscapeName=name;</td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="left">               }</td><td> </td><td class="right">               }</td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="left">               return (azalt[2] &gt; 0 ? 0.0f : 1.0f);</td><td> </td><td class="right">               return (azalt[2] &gt; 0 ? 0.0f : 1.0f);</td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="left">       }</td><td> </td><td class="right">       }</td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="left">       float az=atan2(azalt[0], azalt[1]) / M_PI + 0.5f;  // -0.5..+1.5</td><td> </td><td class="right">       float az=atan2(azalt[0], azalt[1]) / M_PI + 0.5f;  // -0.5..+1.5</td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="left">       if (az&lt;0) az+=2.0f;                                //  0..2 = N.E.S.
+W.N</td><td> </td><td class="right">       if (az&lt;0) az+=2.0f;                                //  0..2 = N.E.S.
+W.N</td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="left">       // we go to 0..1 domain, it's easier to think.</td><td> </td><td class="right">       // we go to 0..1 domain, it's easier to think.</td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="left">       const float xShift=angleRotateZ /(2.0f*M_PI); // shift value in -1..
+1</td><td> </td><td class="right">       const float xShift=angleRotateZ /(2.0f*M_PI); // shift value in -1..
+1</td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="left">       Q_ASSERT(xShift &gt;= -1.0f);</td><td> </td><td class="right">       Q_ASSERT(xShift &gt;= -1.0f);</td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="left">       Q_ASSERT(xShift &lt;=  1.0f);</td><td> </td><td class="right">       Q_ASSERT(xShift &lt;=  1.0f);</td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno"></td><td class="left"></td><td> </td><td class="right"></td><td class="lineno"></td></tr>
+      <tr bgcolor="gray" ><td></td><th><a name="part-l7" /><small>skipping to change at</small><em> line 684</em></th><th> </th><th><a name="part-r7" /><small>skipping to change at</small><em> line 804</em></th><td></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="left">               if (alt_pm1&gt;img_top_pm1) { Q_ASSERT(0); return 0.0f; } // sh
 ould have been caught above with alt_rad tests</td><td> </td><td class="right">               if (alt_pm1&gt;img_top_pm1) { Q_ASSERT(0); return 0.0f; } // sh
 ould have been caught above with alt_rad tests</td><td class="lineno" valign="top"></td></tr>
@@ -408,7 +457,7 @@ currentSide].texCoords[3]-sides[currentSide].texCoords[1]);</td><td class="linen
   // pixel Y from top.</td><td> </td><td class="right">       int y=(1.0-y_baseImg_1)*sidesImages[currentSide]-&gt;height();         
   // pixel Y from top.</td><td class="lineno" valign="top"></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="left">       QRgb pixVal=sidesImages[currentSide]-&gt;pixel(x, y);</td><td> </td><td class="right">       QRgb pixVal=sidesImages[currentSide]-&gt;pixel(x, y);</td><td class="lineno" valign="top"></td></tr>
-      <tr><td><a name="diff0009" /></td></tr>
+      <tr><td><a name="diff0011" /></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="lblock"></td><td> </td><td class="rblock"><span class="insert">/*</span></td><td class="lineno" valign="top"></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="left">#ifndef NDEBUG</td><td> </td><td class="right">#ifndef NDEBUG</td><td class="lineno" valign="top"></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="left">       // GZ: please leave the comment available for further development!</td><td> </td><td class="right">       // GZ: please leave the comment available for further development!</td><td class="lineno" valign="top"></td></tr>
@@ -426,7 +475,7 @@ currentSide].texCoords[3]-sides[currentSide].texCoords[1]);</td><td class="linen
 pha(pixVal)/255.0f;</td><td> </td><td class="right">                        &lt;&lt; " --&gt; x:" &lt;&lt; x &lt;&lt; " y:" &lt;&lt; y &lt;&lt; " alpha:" &lt;&lt; qAl
 pha(pixVal)/255.0f;</td><td class="lineno" valign="top"></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="left">#endif</td><td> </td><td class="right">#endif</td><td class="lineno" valign="top"></td></tr>
-      <tr><td><a name="diff0010" /></td></tr>
+      <tr><td><a name="diff0012" /></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="lblock"></td><td> </td><td class="rblock"><span class="insert">*/</span></td><td class="lineno" valign="top"></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="left">       return qAlpha(pixVal)/255.0f;</td><td> </td><td class="right">       return qAlpha(pixVal)/255.0f;</td><td class="lineno" valign="top"></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="left">}</td><td> </td><td class="right">}</td><td class="lineno" valign="top"></td></tr>
@@ -439,7 +488,7 @@ pha(pixVal)/255.0f;</td><td class="lineno" valign="top"></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="left">{}</td><td> </td><td class="right">{}</td><td class="lineno" valign="top"></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="left"></td><td> </td><td class="right"></td><td class="lineno" valign="top"></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="left">LandscapePolygonal::~LandscapePolygonal()</td><td> </td><td class="right">LandscapePolygonal::~LandscapePolygonal()</td><td class="lineno" valign="top"></td></tr>
-      <tr><td><a name="diff0011" /></td></tr>
+      <tr><td><a name="diff0013" /></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="lblock"><span class="delete">{}</span></td><td> </td><td class="rblock"><span class="insert">{</span></td><td class="lineno" valign="top"></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="lblock"></td><td> </td><td class="rblock"><span class="insert">       landscapeLabels.clear();</span></td><td class="lineno" valign="top"></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="lblock"></td><td> </td><td class="rblock"><span class="insert">}</span></td><td class="lineno" valign="top"></td></tr>
@@ -462,7 +511,7 @@ dscapeId &lt;&lt; ", expected polygonal, found " &lt;&lt; type &lt;&lt; ".  No l
 se.\n";</td><td class="lineno" valign="top"></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="left">               validLandscape = 0;</td><td> </td><td class="right">               validLandscape = 0;</td><td class="lineno" valign="top"></td></tr>
       <tr><td class="lineno"></td><td class="left"></td><td> </td><td class="right"></td><td class="lineno"></td></tr>
-      <tr bgcolor="gray" ><td></td><th><a name="part-l7" /><small>skipping to change at</small><em> line 765</em></th><th> </th><th><a name="part-r7" /><small>skipping to change at</small><em> line 888</em></th><td></td></tr>
+      <tr bgcolor="gray" ><td></td><th><a name="part-l8" /><small>skipping to change at</small><em> line 765</em></th><th> </th><th><a name="part-r8" /><small>skipping to change at</small><em> line 889</em></th><td></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="left">                       glEnable(GL_LINE_SMOOTH);</td><td> </td><td class="right">                       glEnable(GL_LINE_SMOOTH);</td><td class="lineno" valign="top"></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="left">               #endif</td><td> </td><td class="right">               #endif</td><td class="lineno" valign="top"></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="left">               sPainter.setColor(horizonPolygonLineColor[0], horizonPolygon
@@ -479,7 +528,7 @@ e()==QSurfaceFormat::OpenGL)</td><td class="lineno" valign="top"></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="left">               #endif</td><td> </td><td class="right">               #endif</td><td class="lineno" valign="top"></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="left">       }</td><td> </td><td class="right">       }</td><td class="lineno" valign="top"></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="left">       glDisable(GL_CULL_FACE);</td><td> </td><td class="right">       glDisable(GL_CULL_FACE);</td><td class="lineno" valign="top"></td></tr>
-      <tr><td><a name="diff0012" /></td></tr>
+      <tr><td><a name="diff0014" /></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="lblock"></td><td> </td><td class="rblock"><span class="insert">       drawLabels(core, &amp;sPainter);</span></td><td class="lineno" valign="top"></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="left">}</td><td> </td><td class="right">}</td><td class="lineno" valign="top"></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="left"></td><td> </td><td class="right"></td><td class="lineno" valign="top"></td></tr>
@@ -494,7 +543,7 @@ e()==QSurfaceFormat::OpenGL)</td><td class="lineno" valign="top"></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="left">}</td><td> </td><td class="right">}</td><td class="lineno" valign="top"></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="left"></td><td> </td><td class="right"></td><td class="lineno" valign="top"></td></tr>
       <tr><td class="lineno"></td><td class="left"></td><td> </td><td class="right"></td><td class="lineno"></td></tr>
-      <tr bgcolor="gray" ><td></td><th><a name="part-l8" /><small>skipping to change at</small><em> line 788</em></th><th> </th><th><a name="part-r8" /><small>skipping to change at</small><em> line 912</em></th><td></td></tr>
+      <tr bgcolor="gray" ><td></td><th><a name="part-l9" /><small>skipping to change at</small><em> line 788</em></th><th> </th><th><a name="part-r9" /><small>skipping to change at</small><em> line 913</em></th><td></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="left"></td><td> </td><td class="right"></td><td class="lineno" valign="top"></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="left">LandscapeFisheye::LandscapeFisheye(float _radius)</td><td> </td><td class="right">LandscapeFisheye::LandscapeFisheye(float _radius)</td><td class="lineno" valign="top"></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="left">       : Landscape(_radius)</td><td> </td><td class="right">       : Landscape(_radius)</td><td class="lineno" valign="top"></td></tr>
@@ -505,7 +554,7 @@ e()==QSurfaceFormat::OpenGL)</td><td class="lineno" valign="top"></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="left">LandscapeFisheye::~LandscapeFisheye()</td><td> </td><td class="right">LandscapeFisheye::~LandscapeFisheye()</td><td class="lineno" valign="top"></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="left">{</td><td> </td><td class="right">{</td><td class="lineno" valign="top"></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="left">       if (mapImage) delete mapImage;</td><td> </td><td class="right">       if (mapImage) delete mapImage;</td><td class="lineno" valign="top"></td></tr>
-      <tr><td><a name="diff0013" /></td></tr>
+      <tr><td><a name="diff0015" /></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="lblock"></td><td> </td><td class="rblock"><span class="insert">       landscapeLabels.clear();</span></td><td class="lineno" valign="top"></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="left">}</td><td> </td><td class="right">}</td><td class="lineno" valign="top"></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="left"></td><td> </td><td class="right"></td><td class="lineno" valign="top"></td></tr>
@@ -524,7 +573,7 @@ dscapeId &lt;&lt; ", expected fisheye, found " &lt;&lt; type &lt;&lt; ".  No lan
 dscapeId &lt;&lt; ", expected fisheye, found " &lt;&lt; type &lt;&lt; ".  No landscape in use
 .\n";</td><td class="lineno" valign="top"></td></tr>
       <tr><td class="lineno"></td><td class="left"></td><td> </td><td class="right"></td><td class="lineno"></td></tr>
-      <tr bgcolor="gray" ><td></td><th><a name="part-l9" /><small>skipping to change at</small><em> line 868</em></th><th> </th><th><a name="part-r9" /><small>skipping to change at</small><em> line 993</em></th><td></td></tr>
+      <tr bgcolor="gray" ><td></td><th><a name="part-l10" /><small>skipping to change at</small><em> line 868</em></th><th> </th><th><a name="part-r10" /><small>skipping to change at</small><em> line 994</em></th><td></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="left">       {</td><td> </td><td class="right">       {</td><td class="lineno" valign="top"></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="left">               glBlendFunc(GL_SRC_ALPHA, GL_ONE);</td><td> </td><td class="right">               glBlendFunc(GL_SRC_ALPHA, GL_ONE);</td><td class="lineno" valign="top"></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="left">               sPainter.setColor(illumFader.getInterstate()*lightScapeBrigh
@@ -541,7 +590,7 @@ tness, landFader.getInterstate());</td><td class="lineno" valign="top"></td></tr
       <tr><td class="lineno" valign="top"></td><td class="left">       }</td><td> </td><td class="right">       }</td><td class="lineno" valign="top"></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="left"></td><td> </td><td class="right"></td><td class="lineno" valign="top"></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="left">       glDisable(GL_CULL_FACE);</td><td> </td><td class="right">       glDisable(GL_CULL_FACE);</td><td class="lineno" valign="top"></td></tr>
-      <tr><td><a name="diff0014" /></td></tr>
+      <tr><td><a name="diff0016" /></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="lblock"></td><td> </td><td class="rblock"><span class="insert">       drawLabels(core, &amp;sPainter);</span></td><td class="lineno" valign="top"></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="left">}</td><td> </td><td class="right">}</td><td class="lineno" valign="top"></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="left"></td><td> </td><td class="right"></td><td class="lineno" valign="top"></td></tr>
@@ -556,7 +605,7 @@ nd fast.</td><td class="lineno" valign="top"></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="left">       if (horizonPolygon)</td><td> </td><td class="right">       if (horizonPolygon)</td><td class="lineno" valign="top"></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="left">       {</td><td> </td><td class="right">       {</td><td class="lineno" valign="top"></td></tr>
       <tr><td class="lineno"></td><td class="left"></td><td> </td><td class="right"></td><td class="lineno"></td></tr>
-      <tr bgcolor="gray" ><td></td><th><a name="part-l10" /><small>skipping to change at</small><em> line 896</em></th><th> </th><th><a name="part-r10" /><small>skipping to change at</small><em> line 1022</em></th><td></td></tr>
+      <tr bgcolor="gray" ><td></td><th><a name="part-l11" /><small>skipping to change at</small><em> line 896</em></th><th> </th><th><a name="part-r11" /><small>skipping to change at</small><em> line 1023</em></th><td></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="left">       if (M_PI/2-alt_rad &gt; texFov/2.0 ) return 1.0; // outside fov, in the
  clamped texture zone: always opaque.</td><td> </td><td class="right">       if (M_PI/2-alt_rad &gt; texFov/2.0 ) return 1.0; // outside fov, in the
  clamped texture zone: always opaque.</td><td class="lineno" valign="top"></td></tr>
@@ -575,7 +624,7 @@ Image.height/2</td><td class="lineno" valign="top"></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="left">       int y= mapImage-&gt;height()/2*(1 + radius*std::cos(az));</td><td> </td><td class="right">       int y= mapImage-&gt;height()/2*(1 + radius*std::cos(az));</td><td class="lineno" valign="top"></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="left"></td><td> </td><td class="right"></td><td class="lineno" valign="top"></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="left">       QRgb pixVal=mapImage-&gt;pixel(x, y);</td><td> </td><td class="right">       QRgb pixVal=mapImage-&gt;pixel(x, y);</td><td class="lineno" valign="top"></td></tr>
-      <tr><td><a name="diff0015" /></td></tr>
+      <tr><td><a name="diff0017" /></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="lblock"></td><td> </td><td class="rblock"><span class="insert">/*</span></td><td class="lineno" valign="top"></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="left">#ifndef NDEBUG</td><td> </td><td class="right">#ifndef NDEBUG</td><td class="lineno" valign="top"></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="left">       // GZ: please leave the comment available for further development!</td><td> </td><td class="right">       // GZ: please leave the comment available for further development!</td><td class="lineno" valign="top"></td></tr>
@@ -589,7 +638,7 @@ e-&gt;height()</td><td class="lineno" valign="top"></td></tr>
 pha(pixVal)/255.0f;</td><td> </td><td class="right">                        &lt;&lt; " --&gt; x:" &lt;&lt; x &lt;&lt; " y:" &lt;&lt; y &lt;&lt; " alpha:" &lt;&lt; qAl
 pha(pixVal)/255.0f;</td><td class="lineno" valign="top"></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="left">#endif</td><td> </td><td class="right">#endif</td><td class="lineno" valign="top"></td></tr>
-      <tr><td><a name="diff0016" /></td></tr>
+      <tr><td><a name="diff0018" /></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="lblock"></td><td> </td><td class="rblock"><span class="insert">*/</span></td><td class="lineno" valign="top"></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="left">       return qAlpha(pixVal)/255.0f;</td><td> </td><td class="right">       return qAlpha(pixVal)/255.0f;</td><td class="lineno" valign="top"></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="left"></td><td> </td><td class="right"></td><td class="lineno" valign="top"></td></tr>
@@ -613,7 +662,7 @@ pha(pixVal)/255.0f;</td><td class="lineno" valign="top"></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="left">LandscapeSpherical::~LandscapeSpherical()</td><td> </td><td class="right">LandscapeSpherical::~LandscapeSpherical()</td><td class="lineno" valign="top"></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="left">{</td><td> </td><td class="right">{</td><td class="lineno" valign="top"></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="left">       if (mapImage) delete mapImage;</td><td> </td><td class="right">       if (mapImage) delete mapImage;</td><td class="lineno" valign="top"></td></tr>
-      <tr><td><a name="diff0017" /></td></tr>
+      <tr><td><a name="diff0019" /></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="lblock"></td><td> </td><td class="rblock"><span class="insert">       landscapeLabels.clear();</span></td><td class="lineno" valign="top"></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="left">}</td><td> </td><td class="right">}</td><td class="lineno" valign="top"></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="left"></td><td> </td><td class="right"></td><td class="lineno" valign="top"></td></tr>
@@ -632,7 +681,7 @@ olygon defined!" ;</td><td> </td><td class="right">//             qDebug() &lt;&
 olygon defined!" ;</td><td class="lineno" valign="top"></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="left"></td><td> </td><td class="right"></td><td class="lineno" valign="top"></td></tr>
       <tr><td class="lineno"></td><td class="left"></td><td> </td><td class="right"></td><td class="lineno"></td></tr>
-      <tr bgcolor="gray" ><td></td><th><a name="part-l11" /><small>skipping to change at</small><em> line 1040</em></th><th> </th><th><a name="part-r11" /><small>skipping to change at</small><em> line 1169</em></th><td></td></tr>
+      <tr bgcolor="gray" ><td></td><th><a name="part-l12" /><small>skipping to change at</small><em> line 1040</em></th><th> </th><th><a name="part-r12" /><small>skipping to change at</small><em> line 1170</em></th><td></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="left">               transfo = core-&gt;getAltAzModelViewTransform(StelCore::Refract
 ionOff);</td><td> </td><td class="right">               transfo = core-&gt;getAltAzModelViewTransform(StelCore::Refract
 ionOff);</td><td class="lineno" valign="top"></td></tr>
@@ -649,7 +698,7 @@ ter::SphericalPolygonDrawModeBoundary);</td><td class="lineno" valign="top"></td
       <tr><td class="lineno" valign="top"></td><td class="left">       }</td><td> </td><td class="right">       }</td><td class="lineno" valign="top"></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="left">       //else qDebug() &lt;&lt; "no polygon defined";</td><td> </td><td class="right">       //else qDebug() &lt;&lt; "no polygon defined";</td><td class="lineno" valign="top"></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="left">       glDisable(GL_CULL_FACE);</td><td> </td><td class="right">       glDisable(GL_CULL_FACE);</td><td class="lineno" valign="top"></td></tr>
-      <tr><td><a name="diff0018" /></td></tr>
+      <tr><td><a name="diff0020" /></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="lblock">       <span class="delete">                                                                    </span></td><td> </td><td class="rblock">       <span class="insert">drawLabels(core, &amp;sPainter);</span></td><td class="lineno" valign="top"></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="left">}</td><td> </td><td class="right">}</td><td class="lineno" valign="top"></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="left"></td><td> </td><td class="right"></td><td class="lineno" valign="top"></td></tr>
@@ -664,7 +713,7 @@ ibility computation like sunrise on the visible horizon etc.</td><td class="line
       <tr><td class="lineno" valign="top"></td><td class="left">               azalt.transfo4d(Mat4d::zrotation(angleRotateZOffset));</td><td> </td><td class="right">               azalt.transfo4d(Mat4d::zrotation(angleRotateZOffset));</td><td class="lineno" valign="top"></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="left"></td><td> </td><td class="right"></td><td class="lineno" valign="top"></td></tr>
       <tr><td class="lineno"></td><td class="left"></td><td> </td><td class="right"></td><td class="lineno"></td></tr>
-      <tr bgcolor="gray" ><td></td><th><a name="part-l12" /><small>skipping to change at</small><em> line 1081</em></th><th> </th><th><a name="part-r12" /><small>skipping to change at</small><em> line 1210</em></th><td></td></tr>
+      <tr bgcolor="gray" ><td></td><th><a name="part-l13" /><small>skipping to change at</small><em> line 1081</em></th><th> </th><th><a name="part-r13" /><small>skipping to change at</small><em> line 1211</em></th><td></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="left">       if (az&lt;0) az+=2.0f;                                //  0..2 = N.E.S.
 W.N</td><td> </td><td class="right">       if (az&lt;0) az+=2.0f;                                //  0..2 = N.E.S.
 W.N</td><td class="lineno" valign="top"></td></tr>
@@ -683,7 +732,7 @@ tateZ</td><td class="lineno" valign="top"></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="left">       int x=(az_phot/2.0f) * mapImage-&gt;width(); // pixel X from left.</td><td> </td><td class="right">       int x=(az_phot/2.0f) * mapImage-&gt;width(); // pixel X from left.</td><td class="lineno" valign="top"></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="left"></td><td> </td><td class="right"></td><td class="lineno" valign="top"></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="left">       QRgb pixVal=mapImage-&gt;pixel(x, y);</td><td> </td><td class="right">       QRgb pixVal=mapImage-&gt;pixel(x, y);</td><td class="lineno" valign="top"></td></tr>
-      <tr><td><a name="diff0019" /></td></tr>
+      <tr><td><a name="diff0021" /></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="lblock"></td><td> </td><td class="rblock"><span class="insert">/*</span></td><td class="lineno" valign="top"></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="left">#ifndef NDEBUG</td><td> </td><td class="right">#ifndef NDEBUG</td><td class="lineno" valign="top"></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="left">       // GZ: please leave the comment available for further development!</td><td> </td><td class="right">       // GZ: please leave the comment available for further development!</td><td class="lineno" valign="top"></td></tr>
@@ -700,15 +749,15 @@ _pm1*90.0f</td><td class="lineno" valign="top"></td></tr>
 pha(pixVal)/255.0f;</td><td> </td><td class="right">                        &lt;&lt; " --&gt; x:" &lt;&lt; x &lt;&lt; " y:" &lt;&lt; y &lt;&lt; " alpha:" &lt;&lt; qAl
 pha(pixVal)/255.0f;</td><td class="lineno" valign="top"></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="left">#endif</td><td> </td><td class="right">#endif</td><td class="lineno" valign="top"></td></tr>
-      <tr><td><a name="diff0020" /></td></tr>
+      <tr><td><a name="diff0022" /></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="lblock"></td><td> </td><td class="rblock"><span class="insert">*/</span></td><td class="lineno" valign="top"></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="left">       return qAlpha(pixVal)/255.0f;</td><td> </td><td class="right">       return qAlpha(pixVal)/255.0f;</td><td class="lineno" valign="top"></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="left"></td><td> </td><td class="right"></td><td class="lineno" valign="top"></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="left">}</td><td> </td><td class="right">}</td><td class="lineno" valign="top"></td></tr>
 
      <tr><td></td><td class="left"></td><td> </td><td class="right"></td><td></td></tr>
-     <tr bgcolor="gray"><th colspan="5" align="center"><a name="end">&nbsp;End of changes. 20 change blocks.&nbsp;</a></th></tr>
-     <tr class="stats"><td></td><th><i>3 lines changed or deleted</i></th><th><i> </i></th><th><i>158 lines changed or added</i></th><td></td></tr>
+     <tr bgcolor="gray"><th colspan="5" align="center"><a name="end">&nbsp;End of changes. 22 change blocks.&nbsp;</a></th></tr>
+     <tr class="stats"><td></td><th><i>4 lines changed or deleted</i></th><th><i> </i></th><th><i>160 lines changed or added</i></th><td></td></tr>
      <tr><td colspan="5" align="center" class="small"><br/>This html diff was produced by rfcdiff 1.41. The latest version is available from <a href="http://www.tools.ietf.org/tools/rfcdiff/" >http://tools.ietf.org/tools/rfcdiff/</a> </td></tr>
    </table>
    </body>

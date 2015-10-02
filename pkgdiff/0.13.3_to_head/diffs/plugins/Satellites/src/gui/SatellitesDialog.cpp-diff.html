@@ -40,8 +40,99 @@
 <body > 
   <table border="0" cellpadding="0" cellspacing="0"> 
   <tr bgcolor="orange"><th></th><th>&nbsp;SatellitesDialog.cpp&nbsp;</th><th> </th><th>&nbsp;SatellitesDialog.cpp&nbsp;</th><th></th></tr> 
+      <tr><td class="lineno" valign="top"></td><td class="left">/*</td><td> </td><td class="right">/*</td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="left"> * Stellarium Satellites plugin config dialog</td><td> </td><td class="right"> * Stellarium Satellites plugin config dialog</td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="left"> *</td><td> </td><td class="right"> *</td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="left"> * Copyright (C) 2009, 2012 Matthew Gates</td><td> </td><td class="right"> * Copyright (C) 2009, 2012 Matthew Gates</td><td class="lineno" valign="top"></td></tr>
+      <tr><td><a name="diff0001" /></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="lblock"></td><td> </td><td class="rblock"><span class="insert"> * Copyright (C) 2015 Nick Fedoseev (Iridium flares)</span></td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="left"> *</td><td> </td><td class="right"> *</td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="left"> * This program is free software; you can redistribute it and/or</td><td> </td><td class="right"> * This program is free software; you can redistribute it and/or</td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="left"> * modify it under the terms of the GNU General Public License</td><td> </td><td class="right"> * modify it under the terms of the GNU General Public License</td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="left"> * as published by the Free Software Foundation; either version 2</td><td> </td><td class="right"> * as published by the Free Software Foundation; either version 2</td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="left"> * of the License, or (at your option) any later version.</td><td> </td><td class="right"> * of the License, or (at your option) any later version.</td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="left"> *</td><td> </td><td class="right"> *</td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="left"> * This program is distributed in the hope that it will be useful,</td><td> </td><td class="right"> * This program is distributed in the hope that it will be useful,</td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="left"> * but WITHOUT ANY WARRANTY; without even the implied warranty of</td><td> </td><td class="right"> * but WITHOUT ANY WARRANTY; without even the implied warranty of</td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="left"> * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the</td><td> </td><td class="right"> * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the</td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="left"> * GNU General Public License for more details.</td><td> </td><td class="right"> * GNU General Public License for more details.</td><td class="lineno" valign="top"></td></tr>
       <tr><td class="lineno"></td><td class="left"></td><td> </td><td class="right"></td><td class="lineno"></td></tr>
-      <tr bgcolor="gray" ><td></td><th><a name="part-l1" /><small>skipping to change at</small><em> line 210</em></th><th> </th><th><a name="part-r1" /><small>skipping to change at</small><em> line 210</em></th><td></td></tr>
+      <tr bgcolor="gray" ><td></td><th><a name="part-l2" /><small>skipping to change at</small><em> line 28</em></th><th> </th><th><a name="part-r2" /><small>skipping to change at</small><em> line 29</em></th><td></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="left"> * Foundation, Inc., 51 Franklin Street, Suite 500, Boston, MA  02110-1335,
+ USA.</td><td> </td><td class="right"> * Foundation, Inc., 51 Franklin Street, Suite 500, Boston, MA  02110-1335,
+ USA.</td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="left">*/</td><td> </td><td class="right">*/</td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="left"></td><td> </td><td class="right"></td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="left">#include &lt;QDebug&gt;</td><td> </td><td class="right">#include &lt;QDebug&gt;</td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="left">#include &lt;QDateTime&gt;</td><td> </td><td class="right">#include &lt;QDateTime&gt;</td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="left">#include &lt;QFileDialog&gt;</td><td> </td><td class="right">#include &lt;QFileDialog&gt;</td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="left">#include &lt;QSortFilterProxyModel&gt;</td><td> </td><td class="right">#include &lt;QSortFilterProxyModel&gt;</td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="left">#include &lt;QStandardItemModel&gt;</td><td> </td><td class="right">#include &lt;QStandardItemModel&gt;</td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="left">#include &lt;QTimer&gt;</td><td> </td><td class="right">#include &lt;QTimer&gt;</td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="left">#include &lt;QUrl&gt;</td><td> </td><td class="right">#include &lt;QUrl&gt;</td><td class="lineno" valign="top"></td></tr>
+      <tr><td><a name="diff0002" /></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="lblock"></td><td> </td><td class="rblock"><span class="insert">#include &lt;QTabWidget&gt;</span></td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="left"></td><td> </td><td class="right"></td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="left">#include "StelApp.hpp"</td><td> </td><td class="right">#include "StelApp.hpp"</td><td class="lineno" valign="top"></td></tr>
+      <tr><td><a name="diff0003" /></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="lblock"></td><td> </td><td class="rblock"><span class="insert">#include "StelCore.hpp"</span></td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="left">#include "ui_satellitesDialog.h"</td><td> </td><td class="right">#include "ui_satellitesDialog.h"</td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="left">#include "SatellitesDialog.hpp"</td><td> </td><td class="right">#include "SatellitesDialog.hpp"</td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="left">#include "SatellitesImportDialog.hpp"</td><td> </td><td class="right">#include "SatellitesImportDialog.hpp"</td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="left">#include "SatellitesListModel.hpp"</td><td> </td><td class="right">#include "SatellitesListModel.hpp"</td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="left">#include "SatellitesListFilterModel.hpp"</td><td> </td><td class="right">#include "SatellitesListFilterModel.hpp"</td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="left">#include "Satellites.hpp"</td><td> </td><td class="right">#include "Satellites.hpp"</td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="left">#include "StelModuleMgr.hpp"</td><td> </td><td class="right">#include "StelModuleMgr.hpp"</td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="left">#include "StelObjectMgr.hpp"</td><td> </td><td class="right">#include "StelObjectMgr.hpp"</td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="left">#include "StelMovementMgr.hpp"</td><td> </td><td class="right">#include "StelMovementMgr.hpp"</td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="left">#include "StelStyle.hpp"</td><td> </td><td class="right">#include "StelStyle.hpp"</td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="left">#include "StelGui.hpp"</td><td> </td><td class="right">#include "StelGui.hpp"</td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="left">#include "StelMainView.hpp"</td><td> </td><td class="right">#include "StelMainView.hpp"</td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="left">#include "StelFileMgr.hpp"</td><td> </td><td class="right">#include "StelFileMgr.hpp"</td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="left">#include "StelTranslator.hpp"</td><td> </td><td class="right">#include "StelTranslator.hpp"</td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="left">#include "StelActionMgr.hpp"</td><td> </td><td class="right">#include "StelActionMgr.hpp"</td><td class="lineno" valign="top"></td></tr>
+      <tr><td><a name="diff0004" /></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="lblock"></td><td> </td><td class="rblock"><span class="insert">#include "StelUtils.hpp"</span></td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="left"></td><td> </td><td class="right"></td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="left">SatellitesDialog::SatellitesDialog()</td><td> </td><td class="right">SatellitesDialog::SatellitesDialog()</td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="left">       : satelliteModified(false)</td><td> </td><td class="right">       : satelliteModified(false)</td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="left">       , updateTimer(0)</td><td> </td><td class="right">       , updateTimer(0)</td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="left">       , importWindow(0)</td><td> </td><td class="right">       , importWindow(0)</td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="left">       , filterModel(0)</td><td> </td><td class="right">       , filterModel(0)</td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="left">       , checkStateRole(Qt::UserRole)</td><td> </td><td class="right">       , checkStateRole(Qt::UserRole)</td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="left">{</td><td> </td><td class="right">{</td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="left">       ui = new Ui_satellitesDialog;</td><td> </td><td class="right">       ui = new Ui_satellitesDialog;</td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="left">}</td><td> </td><td class="right">}</td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno"></td><td class="left"></td><td> </td><td class="right"></td><td class="lineno"></td></tr>
+      <tr bgcolor="gray" ><td></td><th><a name="part-l3" /><small>skipping to change at</small><em> line 82</em></th><th> </th><th><a name="part-r3" /><small>skipping to change at</small><em> line 86</em></th><td></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="left">}</td><td> </td><td class="right">}</td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="left"></td><td> </td><td class="right"></td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="left">void SatellitesDialog::retranslate()</td><td> </td><td class="right">void SatellitesDialog::retranslate()</td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="left">{</td><td> </td><td class="right">{</td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="left">       if (dialog)</td><td> </td><td class="right">       if (dialog)</td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="left">       {</td><td> </td><td class="right">       {</td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="left">               ui-&gt;retranslateUi(dialog);</td><td> </td><td class="right">               ui-&gt;retranslateUi(dialog);</td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="left">               updateSettingsPage(); // For the button; also calls updateCo
+untdown()</td><td> </td><td class="right">               updateSettingsPage(); // For the button; also calls updateCo
+untdown()</td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="left">               populateAboutPage();</td><td> </td><td class="right">               populateAboutPage();</td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="left">               populateFilterMenu();</td><td> </td><td class="right">               populateFilterMenu();</td><td class="lineno" valign="top"></td></tr>
+      <tr><td><a name="diff0005" /></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="lblock"></td><td> </td><td class="rblock"><span class="insert">               initListIridiumFlares();</span></td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="left">       }</td><td> </td><td class="right">       }</td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="left">}</td><td> </td><td class="right">}</td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="left"></td><td> </td><td class="right"></td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="left">// Initialize the dialog widgets and connect the signals/slots</td><td> </td><td class="right">// Initialize the dialog widgets and connect the signals/slots</td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="left">void SatellitesDialog::createDialogContent()</td><td> </td><td class="right">void SatellitesDialog::createDialogContent()</td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="left">{</td><td> </td><td class="right">{</td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="left">       ui-&gt;setupUi(dialog);</td><td> </td><td class="right">       ui-&gt;setupUi(dialog);</td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="left">       ui-&gt;tabs-&gt;setCurrentIndex(0);</td><td> </td><td class="right">       ui-&gt;tabs-&gt;setCurrentIndex(0);</td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="left">       ui-&gt;labelAutoAdd-&gt;setVisible(false);</td><td> </td><td class="right">       ui-&gt;labelAutoAdd-&gt;setVisible(false);</td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="left">       connect(ui-&gt;closeStelWindow, SIGNAL(clicked()), this, SLOT(close()))
+;</td><td> </td><td class="right">       connect(ui-&gt;closeStelWindow, SIGNAL(clicked()), this, SLOT(close()))
+;</td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno"></td><td class="left"></td><td> </td><td class="right"></td><td class="lineno"></td></tr>
+      <tr bgcolor="gray" ><td></td><th><a name="part-l4" /><small>skipping to change at</small><em> line 210</em></th><th> </th><th><a name="part-r4" /><small>skipping to change at</small><em> line 215</em></th><td></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="left">       // Sources tab</td><td> </td><td class="right">       // Sources tab</td><td class="lineno" valign="top"></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="left">       connect(ui-&gt;sourceList, SIGNAL(currentTextChanged(const QString&amp;)), 
 ui-&gt;sourceEdit, SLOT(setText(const QString&amp;)));</td><td> </td><td class="right">       connect(ui-&gt;sourceList, SIGNAL(currentTextChanged(const QString&amp;)), 
@@ -58,7 +149,7 @@ Row()));</td><td> </td><td class="right">       connect(ui-&gt;addSourceButton, 
 Row()));</td><td class="lineno" valign="top"></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="left">       connect(plugin, SIGNAL(settingsChanged()),</td><td> </td><td class="right">       connect(plugin, SIGNAL(settingsChanged()),</td><td class="lineno" valign="top"></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="left">               this, SLOT(toggleCheckableSources()));</td><td> </td><td class="right">               this, SLOT(toggleCheckableSources()));</td><td class="lineno" valign="top"></td></tr>
-      <tr><td><a name="diff0001" /></td></tr>
+      <tr><td><a name="diff0006" /></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="lblock">       connect(ui-&gt;sourceList, SIGNAL(currentRowChanged(int)), <span class="delete">this, SLOT(r</span></td><td> </td><td class="rblock">                                                                           </td><td class="lineno" valign="top"></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="lblock"><span class="delete">epaintSourceList()));</span></td><td> </td><td class="rblock">       <span class="insert">// bug #1350669 (https://bugs.launchpad.net/stellarium/+bug/1350669)</span></td><td class="lineno" valign="top"></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="lblock"></td><td> </td><td class="rblock">       connect(ui-&gt;sourceList, SIGNAL(currentRowChanged(int)), <span class="insert">ui-&gt;sourceLi</span></td><td class="lineno" valign="top"></td></tr>
@@ -69,17 +160,18 @@ Row()));</td><td class="lineno" valign="top"></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="left"></td><td> </td><td class="right"></td><td class="lineno" valign="top"></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="left">       populateFilterMenu();</td><td> </td><td class="right">       populateFilterMenu();</td><td class="lineno" valign="top"></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="left">       populateSourcesList();</td><td> </td><td class="right">       populateSourcesList();</td><td class="lineno" valign="top"></td></tr>
+      <tr><td><a name="diff0007" /></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="lblock"><span class="delete">}</span></td><td> </td><td class="rblock"></td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="left"></td><td> </td><td class="right"></td><td class="lineno" valign="top"></td></tr>
+      <tr><td><a name="diff0008" /></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="lblock"><span class="delete">void SatellitesDialog::repaintSourceList()</span></td><td> </td><td class="rblock">       <span class="insert">initListIridiumFlares();</span></td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="lblock"><span class="delete">{</span></td><td> </td><td class="rblock"><span class="insert">       connect(ui-&gt;pushButtonPredictIridiumFlares, SIGNAL(clicked()), this,</span></td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="lblock"><span class="delete">       // Enable force repaint sourceList to avoiding artifacts</span></td><td> </td><td class="rblock"><span class="insert"> SLOT(predictIridiumFlares()));</span></td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="lblock"><span class="delete">       // Seems bug in Qt5. Details: https://bugs.launchpad.net/stellarium/</span></td><td> </td><td class="rblock"><span class="insert">       connect(ui-&gt;iridiumFlaresTreeWidget, SIGNAL(doubleClicked(QModelInde</span></td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="lblock"><span class="delete">+bug/1350669</span></td><td> </td><td class="rblock"><span class="insert">x)), this, SLOT(selectCurrentIridiumFlare(QModelIndex)));</span></td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="lblock"><span class="delete">       ui-&gt;sourceList-&gt;repaint();</span></td><td> </td><td class="rblock"></td><td class="lineno" valign="top"></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="left">}</td><td> </td><td class="right">}</td><td class="lineno" valign="top"></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="left"></td><td> </td><td class="right"></td><td class="lineno" valign="top"></td></tr>
-      <tr><td><a name="diff0002" /></td></tr>
-      <tr><td class="lineno" valign="top"></td><td class="lblock"><span class="delete">void SatellitesDialog::repaintSourceList()</span></td><td> </td><td class="rblock"></td><td class="lineno" valign="top"></td></tr>
-      <tr><td class="lineno" valign="top"></td><td class="lblock"><span class="delete">{</span></td><td> </td><td class="rblock"></td><td class="lineno" valign="top"></td></tr>
-      <tr><td class="lineno" valign="top"></td><td class="lblock"><span class="delete">       // Enable force repaint sourceList to avoiding artifacts</span></td><td> </td><td class="rblock"></td><td class="lineno" valign="top"></td></tr>
-      <tr><td class="lineno" valign="top"></td><td class="lblock"><span class="delete">       // Seems bug in Qt5. Details: https://bugs.launchpad.net/stellarium/</span></td><td> </td><td class="rblock"></td><td class="lineno" valign="top"></td></tr>
-      <tr><td class="lineno" valign="top"></td><td class="lblock"><span class="delete">+bug/1350669</span></td><td> </td><td class="rblock"></td><td class="lineno" valign="top"></td></tr>
-      <tr><td class="lineno" valign="top"></td><td class="lblock"><span class="delete">       ui-&gt;sourceList-&gt;repaint();</span></td><td> </td><td class="rblock"></td><td class="lineno" valign="top"></td></tr>
-      <tr><td class="lineno" valign="top"></td><td class="lblock"><span class="delete">}</span></td><td> </td><td class="rblock"></td><td class="lineno" valign="top"></td></tr>
-      <tr><td class="lineno" valign="top"></td><td class="lblock">                                                                           </td><td> </td><td class="rblock"></td><td class="lineno" valign="top"></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="left">void SatellitesDialog::filterListByGroup(int index)</td><td> </td><td class="right">void SatellitesDialog::filterListByGroup(int index)</td><td class="lineno" valign="top"></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="left">{</td><td> </td><td class="right">{</td><td class="lineno" valign="top"></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="left">       if (index &lt; 0)</td><td> </td><td class="right">       if (index &lt; 0)</td><td class="lineno" valign="top"></td></tr>
@@ -88,10 +180,8 @@ Row()));</td><td class="lineno" valign="top"></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="left">       QString groupId = ui-&gt;groupFilterCombo-&gt;itemData(index).toString();</td><td> </td><td class="right">       QString groupId = ui-&gt;groupFilterCombo-&gt;itemData(index).toString();</td><td class="lineno" valign="top"></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="left">       if (groupId == "all")</td><td> </td><td class="right">       if (groupId == "all")</td><td class="lineno" valign="top"></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="left">               filterModel-&gt;setSecondaryFilters(QString(), SatNoFlags);</td><td> </td><td class="right">               filterModel-&gt;setSecondaryFilters(QString(), SatNoFlags);</td><td class="lineno" valign="top"></td></tr>
-      <tr><td class="lineno" valign="top"></td><td class="left">       else if (groupId == "[displayed]")</td><td> </td><td class="right">       else if (groupId == "[displayed]")</td><td class="lineno" valign="top"></td></tr>
-      <tr><td class="lineno" valign="top"></td><td class="left">               filterModel-&gt;setSecondaryFilters(QString(), SatDisplayed);</td><td> </td><td class="right">               filterModel-&gt;setSecondaryFilters(QString(), SatDisplayed);</td><td class="lineno" valign="top"></td></tr>
       <tr><td class="lineno"></td><td class="left"></td><td> </td><td class="right"></td><td class="lineno"></td></tr>
-      <tr bgcolor="gray" ><td></td><th><a name="part-l2" /><small>skipping to change at</small><em> line 297</em></th><th> </th><th><a name="part-r2" /><small>skipping to change at</small><em> line 292</em></th><td></td></tr>
+      <tr bgcolor="gray" ><td></td><th><a name="part-l5" /><small>skipping to change at</small><em> line 297</em></th><th> </th><th><a name="part-r5" /><small>skipping to change at</small><em> line 301</em></th><td></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="left">               ui-&gt;nameEdit-&gt;setText(index.data(Qt::DisplayRole).toString()
 );</td><td> </td><td class="right">               ui-&gt;nameEdit-&gt;setText(index.data(Qt::DisplayRole).toString()
 );</td><td class="lineno" valign="top"></td></tr>
@@ -112,7 +202,7 @@ String());</td><td class="lineno" valign="top"></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="left">               ui-&gt;tleSecondLineEdit-&gt;setCursorPosition(0);</td><td> </td><td class="right">               ui-&gt;tleSecondLineEdit-&gt;setCursorPosition(0);</td><td class="lineno" valign="top"></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="left">       }</td><td> </td><td class="right">       }</td><td class="lineno" valign="top"></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="left"></td><td> </td><td class="right"></td><td class="lineno" valign="top"></td></tr>
-      <tr><td><a name="diff0003" /></td></tr>
+      <tr><td><a name="diff0009" /></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="lblock">       // <span class="delete">Enable force repaint satellitesList to avoiding artifacts</span></td><td> </td><td class="rblock">       // bug <span class="insert">#1350669 (https://bugs.launchpad.net/stellarium/+bug/1350669)</span></td><td class="lineno" valign="top"></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="lblock"><span class="delete">       // Seems</span> bug <span class="delete">in Qt5. Details: https://bugs.launchpad.net/stellarium/</span></td><td> </td><td class="rblock"></td><td class="lineno" valign="top"></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="lblock"><span class="delete">+bug/1350669</span></td><td> </td><td class="rblock"></td><td class="lineno" valign="top"></td></tr>
@@ -126,10 +216,182 @@ String());</td><td class="lineno" valign="top"></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="left">       GroupSet groupsUsedBySome;</td><td> </td><td class="right">       GroupSet groupsUsedBySome;</td><td class="lineno" valign="top"></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="left">       GroupSet groupsUsedByAll = globalGroups;</td><td> </td><td class="right">       GroupSet groupsUsedByAll = globalGroups;</td><td class="lineno" valign="top"></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="left">       ui-&gt;displayedCheckbox-&gt;setChecked(false);</td><td> </td><td class="right">       ui-&gt;displayedCheckbox-&gt;setChecked(false);</td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno"></td><td class="left"></td><td> </td><td class="right"></td><td class="lineno"></td></tr>
+      <tr bgcolor="gray" ><td></td><th><a name="part-l6" /><small>skipping to change at</small><em> line 403</em></th><th> </th><th><a name="part-r6" /><small>skipping to change at</small><em> line 406</em></th><td></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="left">       GETSTELMODULE(Satellites)-&gt;saveCatalog();</td><td> </td><td class="right">       GETSTELMODULE(Satellites)-&gt;saveCatalog();</td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="left">}</td><td> </td><td class="right">}</td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="left"></td><td> </td><td class="right"></td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="left">void SatellitesDialog::populateAboutPage()</td><td> </td><td class="right">void SatellitesDialog::populateAboutPage()</td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="left">{</td><td> </td><td class="right">{</td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="left">       QString jsonFileName("&lt;tt&gt;satellites.json&lt;/tt&gt;");</td><td> </td><td class="right">       QString jsonFileName("&lt;tt&gt;satellites.json&lt;/tt&gt;");</td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="left">       QString oldJsonFileName("&lt;tt&gt;satellites.json.old&lt;/tt&gt;");</td><td> </td><td class="right">       QString oldJsonFileName("&lt;tt&gt;satellites.json.old&lt;/tt&gt;");</td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="left">       QString html = "&lt;html&gt;&lt;head&gt;&lt;/head&gt;&lt;body&gt;";</td><td> </td><td class="right">       QString html = "&lt;html&gt;&lt;head&gt;&lt;/head&gt;&lt;body&gt;";</td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="left">       html += "&lt;h2&gt;" + q_("Stellarium Satellites Plugin") + "&lt;/h2&gt;&lt;table w
+idth=\"90%\"&gt;";</td><td> </td><td class="right">       html += "&lt;h2&gt;" + q_("Stellarium Satellites Plugin") + "&lt;/h2&gt;&lt;table w
+idth=\"90%\"&gt;";</td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="left">       html += "&lt;tr width=\"30%\"&gt;&lt;td&gt;&lt;strong&gt;" + q_("Version") + "&lt;/strong
+&gt;&lt;/td&gt;&lt;td&gt;" + SATELLITES_PLUGIN_VERSION + "&lt;/td&gt;&lt;/td&gt;";</td><td> </td><td class="right">       html += "&lt;tr width=\"30%\"&gt;&lt;td&gt;&lt;strong&gt;" + q_("Version") + "&lt;/strong
+&gt;&lt;/td&gt;&lt;td&gt;" + SATELLITES_PLUGIN_VERSION + "&lt;/td&gt;&lt;/td&gt;";</td><td class="lineno" valign="top"></td></tr>
+      <tr><td><a name="diff0010" /></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="lblock">       html += "&lt;tr&gt;&lt;td rowspan=<span class="delete">3</span>&gt;&lt;strong&gt;" + q_("Authors") + "&lt;/strong&gt;&lt;/t
+d&gt;&lt;td&gt;Matthew Gates &amp;lt;matthewg42@gmail.com&amp;gt;&lt;/td&gt;&lt;/td&gt;";</td><td> </td><td class="rblock">       html += "&lt;tr&gt;&lt;td rowspan=<span class="insert">4</span>&gt;&lt;strong&gt;" + q_("Authors") + "&lt;/strong&gt;&lt;/t
+d&gt;&lt;td&gt;Matthew Gates &amp;lt;matthewg42@gmail.com&amp;gt;&lt;/td&gt;&lt;/td&gt;";</td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="left">       html += "&lt;tr&gt;&lt;td&gt;Jose Luis Canales &amp;lt;jlcanales.gasco@gmail.com&amp;gt;
+&lt;/td&gt;&lt;/tr&gt;";</td><td> </td><td class="right">       html += "&lt;tr&gt;&lt;td&gt;Jose Luis Canales &amp;lt;jlcanales.gasco@gmail.com&amp;gt;
+&lt;/td&gt;&lt;/tr&gt;";</td><td class="lineno" valign="top"></td></tr>
+      <tr><td><a name="diff0011" /></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="lblock">       html += "&lt;tr&gt;&lt;td&gt;Bogdan Marinov &amp;lt;bogdan.marinov84@gmail.com&amp;gt;&lt;/</td><td> </td><td class="rblock">       html += "&lt;tr&gt;&lt;td&gt;Bogdan Marinov &amp;lt;bogdan.marinov84@gmail.com&amp;gt;&lt;/</td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="lblock"><span class="delete">td&gt;&lt;/tr&gt;&lt;/table&gt;";</span></td><td> </td><td class="rblock"><span class="insert">td&gt;&lt;/tr&gt;";</span></td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="lblock"></td><td> </td><td class="rblock"><span class="insert">       html += "&lt;tr&gt;&lt;td&gt;Nick Fedoseev &amp;lt;nick.ut2uz@gmail.com&amp;gt; (" + q_(</span></td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="lblock"></td><td> </td><td class="rblock"><span class="insert">"Iridium flares") + ")&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;";</span></td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="left"></td><td> </td><td class="right"></td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="left">       html += "&lt;p&gt;" + q_("The Satellites plugin predicts the positions of 
+artificial satellites in Earth orbit.") + "&lt;/p&gt;";</td><td> </td><td class="right">       html += "&lt;p&gt;" + q_("The Satellites plugin predicts the positions of 
+artificial satellites in Earth orbit.") + "&lt;/p&gt;";</td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="left"></td><td> </td><td class="right"></td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="left">       html += "&lt;h3&gt;" + q_("Notes for users") + "&lt;/h3&gt;&lt;p&gt;&lt;ul&gt;";</td><td> </td><td class="right">       html += "&lt;h3&gt;" + q_("Notes for users") + "&lt;/h3&gt;&lt;p&gt;&lt;ul&gt;";</td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="left">       html += "&lt;li&gt;" + q_("Satellites and their orbits are only shown when
+ the observer is on Earth.") + "&lt;/li&gt;";</td><td> </td><td class="right">       html += "&lt;li&gt;" + q_("Satellites and their orbits are only shown when
+ the observer is on Earth.") + "&lt;/li&gt;";</td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="left">       html += "&lt;li&gt;" + q_("Predicted positions are only good for a fairly 
+short time (on the order of days, weeks or perhaps a month into the past an
+d future). Expect high weirdness when looking at dates outside this range."
+) + "&lt;/li&gt;";</td><td> </td><td class="right">       html += "&lt;li&gt;" + q_("Predicted positions are only good for a fairly 
+short time (on the order of days, weeks or perhaps a month into the past an
+d future). Expect high weirdness when looking at dates outside this range."
+) + "&lt;/li&gt;";</td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="left">       html += "&lt;li&gt;" + q_("Orbital elements go out of date pretty quickly 
+(over mere weeks, sometimes days).  To get useful data out, you need to upd
+ate the TLE data regularly.") + "&lt;/li&gt;";</td><td> </td><td class="right">       html += "&lt;li&gt;" + q_("Orbital elements go out of date pretty quickly 
+(over mere weeks, sometimes days).  To get useful data out, you need to upd
+ate the TLE data regularly.") + "&lt;/li&gt;";</td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="left">       // TRANSLATORS: The translated names of the button and the tab are f
+illed in automatically. You can check the original names in Stellarium. Fil
+e names are not translated.</td><td> </td><td class="right">       // TRANSLATORS: The translated names of the button and the tab are f
+illed in automatically. You can check the original names in Stellarium. Fil
+e names are not translated.</td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="left">       QString resetSettingsText = QString(q_("Clicking the \"%1\" button i
+n the \"%2\" tab of this dialog will revert to the default %3 file.  The ol
+d file will be backed up as %4.  This can be found in the user data directo
+ry, under \"modules/Satellites/\"."))</td><td> </td><td class="right">       QString resetSettingsText = QString(q_("Clicking the \"%1\" button i
+n the \"%2\" tab of this dialog will revert to the default %3 file.  The ol
+d file will be backed up as %4.  This can be found in the user data directo
+ry, under \"modules/Satellites/\"."))</td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="left">                       .arg(ui-&gt;restoreDefaultsButton-&gt;text())</td><td> </td><td class="right">                       .arg(ui-&gt;restoreDefaultsButton-&gt;text())</td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno"></td><td class="left"></td><td> </td><td class="right"></td><td class="lineno"></td></tr>
+      <tr bgcolor="gray" ><td></td><th><a name="part-l7" /><small>skipping to change at</small><em> line 931</em></th><th> </th><th><a name="part-r7" /><small>skipping to change at</small><em> line 935</em></th><td></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="left">       }</td><td> </td><td class="right">       }</td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="left">}</td><td> </td><td class="right">}</td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="left"></td><td> </td><td class="right"></td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="left">void SatellitesDialog::enableSatelliteDataForm(bool enabled)</td><td> </td><td class="right">void SatellitesDialog::enableSatelliteDataForm(bool enabled)</td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="left">{</td><td> </td><td class="right">{</td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="left">       // NOTE: I'm still not sure if this is necessary, if the right signa
+ls are used to trigger changes...--BM</td><td> </td><td class="right">       // NOTE: I'm still not sure if this is necessary, if the right signa
+ls are used to trigger changes...--BM</td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="left">       ui-&gt;displayedCheckbox-&gt;blockSignals(!enabled);</td><td> </td><td class="right">       ui-&gt;displayedCheckbox-&gt;blockSignals(!enabled);</td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="left">       ui-&gt;orbitCheckbox-&gt;blockSignals(!enabled);</td><td> </td><td class="right">       ui-&gt;orbitCheckbox-&gt;blockSignals(!enabled);</td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="left">       ui-&gt;userCheckBox-&gt;blockSignals(!enabled);</td><td> </td><td class="right">       ui-&gt;userCheckBox-&gt;blockSignals(!enabled);</td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="left">}</td><td> </td><td class="right">}</td><td class="lineno" valign="top"></td></tr>
+      <tr><td><a name="diff0012" /></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="lblock"></td><td> </td><td class="rblock">                                                                           </td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="lblock"></td><td> </td><td class="rblock"><span class="insert">void SatellitesDialog::setIridiumFlaresHeaderNames()</span></td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="lblock"></td><td> </td><td class="rblock"><span class="insert">{</span></td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="lblock"></td><td> </td><td class="rblock"><span class="insert">       QStringList headerStrings;</span></td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="lblock"></td><td> </td><td class="rblock"><span class="insert">       headerStrings &lt;&lt; q_("Time");</span></td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="lblock"></td><td> </td><td class="rblock"><span class="insert">       headerStrings &lt;&lt; q_("Brightness");</span></td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="lblock"></td><td> </td><td class="rblock"><span class="insert">       headerStrings &lt;&lt; q_("Altitude");</span></td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="lblock"></td><td> </td><td class="rblock"><span class="insert">       headerStrings &lt;&lt; q_("Azimuth");</span></td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="lblock"></td><td> </td><td class="rblock"><span class="insert">       headerStrings &lt;&lt; q_("Satellite");</span></td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="lblock"></td><td> </td><td class="rblock"><span class="insert"></span></td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="lblock"></td><td> </td><td class="rblock"><span class="insert">       ui-&gt;iridiumFlaresTreeWidget-&gt;setHeaderLabels(headerStrings);</span></td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="lblock"></td><td> </td><td class="rblock"><span class="insert"></span></td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="lblock"></td><td> </td><td class="rblock"><span class="insert">       // adjust the column width</span></td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="lblock"></td><td> </td><td class="rblock"><span class="insert">       for(int i = 0; i &lt; IridiumFlaresCount; ++i)</span></td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="lblock"></td><td> </td><td class="rblock"><span class="insert">       {</span></td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="lblock"></td><td> </td><td class="rblock"><span class="insert">           ui-&gt;iridiumFlaresTreeWidget-&gt;resizeColumnToContents(i);</span></td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="lblock"></td><td> </td><td class="rblock"><span class="insert">       }</span></td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="lblock"></td><td> </td><td class="rblock"><span class="insert"></span></td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="lblock"></td><td> </td><td class="rblock"><span class="insert">       // sort-by-date</span></td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="lblock"></td><td> </td><td class="rblock"><span class="insert">       ui-&gt;iridiumFlaresTreeWidget-&gt;sortItems(IridiumFlaresDate, Qt::Ascend</span></td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="lblock"></td><td> </td><td class="rblock"><span class="insert">ingOrder);</span></td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="lblock"></td><td> </td><td class="rblock"><span class="insert">}</span></td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="lblock"></td><td> </td><td class="rblock"><span class="insert"></span></td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="lblock"></td><td> </td><td class="rblock"><span class="insert">void SatellitesDialog::initListIridiumFlares()</span></td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="lblock"></td><td> </td><td class="rblock"><span class="insert">{</span></td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="lblock"></td><td> </td><td class="rblock"><span class="insert">       ui-&gt;iridiumFlaresTreeWidget-&gt;clear();</span></td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="lblock"></td><td> </td><td class="rblock"><span class="insert">       ui-&gt;iridiumFlaresTreeWidget-&gt;setColumnCount(IridiumFlaresCount);</span></td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="lblock"></td><td> </td><td class="rblock"><span class="insert">       setIridiumFlaresHeaderNames();</span></td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="lblock"></td><td> </td><td class="rblock"><span class="insert">       ui-&gt;iridiumFlaresTreeWidget-&gt;header()-&gt;setSectionsMovable(false);</span></td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="lblock"></td><td> </td><td class="rblock"><span class="insert">}</span></td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="lblock"></td><td> </td><td class="rblock"><span class="insert"></span></td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="lblock"></td><td> </td><td class="rblock"><span class="insert">void SatellitesDialog::predictIridiumFlares()</span></td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="lblock"></td><td> </td><td class="rblock"><span class="insert">{</span></td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="lblock"></td><td> </td><td class="rblock"><span class="insert">       IridiumFlaresPredictionList predictions = GETSTELMODULE(Satellites)-</span></td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="lblock"></td><td> </td><td class="rblock"><span class="insert">&gt;getIridiumFlaresPrediction();</span></td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="lblock"></td><td> </td><td class="rblock"><span class="insert"></span></td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="lblock"></td><td> </td><td class="rblock"><span class="insert">       ui-&gt;iridiumFlaresTreeWidget-&gt;clear();</span></td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="lblock"></td><td> </td><td class="rblock"><span class="insert">       foreach (const IridiumFlaresPrediction&amp; flare, predictions)</span></td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="lblock"></td><td> </td><td class="rblock"><span class="insert">       {</span></td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="lblock"></td><td> </td><td class="rblock"><span class="insert">               SatPIFTreeWidgetItem *treeItem = new SatPIFTreeWidgetItem(ui</span></td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="lblock"></td><td> </td><td class="rblock"><span class="insert">-&gt;iridiumFlaresTreeWidget);</span></td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="lblock"></td><td> </td><td class="rblock"><span class="insert">               QString dt = flare.datetime;</span></td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="lblock"></td><td> </td><td class="rblock"><span class="insert">               treeItem-&gt;setText(IridiumFlaresDate, QString("%1 %2").arg(dt</span></td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="lblock"></td><td> </td><td class="rblock"><span class="insert">.left(10)).arg(dt.right(8)));</span></td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="lblock"></td><td> </td><td class="rblock"><span class="insert">               treeItem-&gt;setText(IridiumFlaresMagnitude, QString::number(fl</span></td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="lblock"></td><td> </td><td class="rblock"><span class="insert">are.magnitude,'f',1));</span></td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="lblock"></td><td> </td><td class="rblock"><span class="insert">               treeItem-&gt;setTextAlignment(IridiumFlaresMagnitude, Qt::Align</span></td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="lblock"></td><td> </td><td class="rblock"><span class="insert">Right);</span></td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="lblock"></td><td> </td><td class="rblock"><span class="insert">               treeItem-&gt;setText(IridiumFlaresAltitude, StelUtils::radToDms</span></td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="lblock"></td><td> </td><td class="rblock"><span class="insert">Str(flare.altitude));</span></td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="lblock"></td><td> </td><td class="rblock"><span class="insert">               treeItem-&gt;setTextAlignment(IridiumFlaresAltitude, Qt::AlignR</span></td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="lblock"></td><td> </td><td class="rblock"><span class="insert">ight);</span></td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="lblock"></td><td> </td><td class="rblock"><span class="insert">               treeItem-&gt;setText(IridiumFlaresAzimuth, StelUtils::radToDmsS</span></td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="lblock"></td><td> </td><td class="rblock"><span class="insert">tr(flare.azimuth));</span></td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="lblock"></td><td> </td><td class="rblock"><span class="insert">               treeItem-&gt;setTextAlignment(IridiumFlaresAzimuth, Qt::AlignRi</span></td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="lblock"></td><td> </td><td class="rblock"><span class="insert">ght);</span></td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="lblock"></td><td> </td><td class="rblock"><span class="insert">               treeItem-&gt;setText(IridiumFlaresSatellite, flare.satellite);</span></td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="lblock"></td><td> </td><td class="rblock"><span class="insert">       }</span></td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="lblock"></td><td> </td><td class="rblock"><span class="insert"></span></td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="lblock"></td><td> </td><td class="rblock"><span class="insert">       for(int i = 0; i &lt; IridiumFlaresCount; ++i)</span></td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="lblock"></td><td> </td><td class="rblock"><span class="insert">       {</span></td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="lblock"></td><td> </td><td class="rblock"><span class="insert">           ui-&gt;iridiumFlaresTreeWidget-&gt;resizeColumnToContents(i);</span></td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="lblock"></td><td> </td><td class="rblock"><span class="insert">       }</span></td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="lblock"></td><td> </td><td class="rblock"><span class="insert">}</span></td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="lblock"></td><td> </td><td class="rblock"><span class="insert"></span></td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="lblock"></td><td> </td><td class="rblock"><span class="insert">void SatellitesDialog::selectCurrentIridiumFlare(const QModelIndex &amp;modelIn</span></td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="lblock"></td><td> </td><td class="rblock"><span class="insert">dex)</span></td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="lblock"></td><td> </td><td class="rblock"><span class="insert">{</span></td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="lblock"></td><td> </td><td class="rblock"><span class="insert">       // Find the object</span></td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="lblock"></td><td> </td><td class="rblock"><span class="insert">       QString name = modelIndex.sibling(modelIndex.row(), IridiumFlaresSat</span></td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="lblock"></td><td> </td><td class="rblock"><span class="insert">ellite).data().toString();</span></td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="lblock"></td><td> </td><td class="rblock"><span class="insert">       QString date = modelIndex.sibling(modelIndex.row(), IridiumFlaresDat</span></td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="lblock"></td><td> </td><td class="rblock"><span class="insert">e).data().toString();</span></td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="lblock"></td><td> </td><td class="rblock"><span class="insert">       bool ok;</span></td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="lblock"></td><td> </td><td class="rblock"><span class="insert">       double JD  = StelUtils::getJulianDayFromISO8601String(date.left(10) </span></td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="lblock"></td><td> </td><td class="rblock"><span class="insert">+ "T" + date.right(8), &amp;ok);</span></td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="lblock"></td><td> </td><td class="rblock"><span class="insert">       JD -= StelUtils::getGMTShiftFromQT(JD)/24.;</span></td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="lblock"></td><td> </td><td class="rblock"><span class="insert"></span></td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="lblock"></td><td> </td><td class="rblock"><span class="insert">       StelObjectMgr* objectMgr = GETSTELMODULE(StelObjectMgr);</span></td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="lblock"></td><td> </td><td class="rblock"><span class="insert">       if (objectMgr-&gt;findAndSelectI18n(name) || objectMgr-&gt;findAndSelect(n</span></td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="lblock"></td><td> </td><td class="rblock"><span class="insert">ame))</span></td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="lblock"></td><td> </td><td class="rblock"><span class="insert">       {</span></td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="lblock"></td><td> </td><td class="rblock"><span class="insert">               StelApp::getInstance().getCore()-&gt;setJD(JD);</span></td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="lblock"></td><td> </td><td class="rblock"><span class="insert">               const QList&lt;StelObjectP&gt; newSelected = objectMgr-&gt;getSelecte</span></td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="lblock"></td><td> </td><td class="rblock"><span class="insert">dObject();</span></td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="lblock"></td><td> </td><td class="rblock"><span class="insert">               if (!newSelected.empty())</span></td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="lblock"></td><td> </td><td class="rblock"><span class="insert">               {</span></td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="lblock"></td><td> </td><td class="rblock"><span class="insert">                       StelMovementMgr* mvmgr = GETSTELMODULE(StelMovementM</span></td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="lblock"></td><td> </td><td class="rblock"><span class="insert">gr);</span></td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="lblock"></td><td> </td><td class="rblock"><span class="insert">                       mvmgr-&gt;moveToObject(newSelected[0], mvmgr-&gt;getAutoMo</span></td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="lblock"></td><td> </td><td class="rblock"><span class="insert">veDuration());</span></td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="lblock"></td><td> </td><td class="rblock"><span class="insert">                       mvmgr-&gt;setFlagTracking(true);</span></td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="lblock"></td><td> </td><td class="rblock"><span class="insert">               }</span></td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="lblock"></td><td> </td><td class="rblock"><span class="insert">       }</span></td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="lblock"></td><td> </td><td class="rblock"><span class="insert">}</span></td><td class="lineno" valign="top"></td></tr>
 
      <tr><td></td><td class="left"></td><td> </td><td class="right"></td><td></td></tr>
-     <tr bgcolor="gray"><th colspan="5" align="center"><a name="end">&nbsp;End of changes. 3 change blocks.&nbsp;</a></th></tr>
-     <tr class="stats"><td></td><th><i>13 lines changed or deleted</i></th><th><i> </i></th><th><i>5 lines changed or added</i></th><td></td></tr>
+     <tr bgcolor="gray"><th colspan="5" align="center"><a name="end">&nbsp;End of changes. 12 change blocks.&nbsp;</a></th></tr>
+     <tr class="stats"><td></td><th><i>15 lines changed or deleted</i></th><th><i> </i></th><th><i>20 lines changed or added</i></th><td></td></tr>
      <tr><td colspan="5" align="center" class="small"><br/>This html diff was produced by rfcdiff 1.41. The latest version is available from <a href="http://www.tools.ietf.org/tools/rfcdiff/" >http://tools.ietf.org/tools/rfcdiff/</a> </td></tr>
    </table>
    </body>

@@ -177,7 +177,8 @@ ${Qt5Core_VERSION_STRING}\"<span class="delete">, required is \"${MINIMAL_QT_VER
 ${Qt5Core_VERSION_STRING}\")")</td><td class="lineno" valign="top"></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="left">ENDIF()</td><td> </td><td class="right">ENDIF()</td><td class="lineno" valign="top"></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="left">FIND_PACKAGE(Qt5Concurrent REQUIRED)</td><td> </td><td class="right">FIND_PACKAGE(Qt5Concurrent REQUIRED)</td><td class="lineno" valign="top"></td></tr>
-      <tr><td class="lineno" valign="top"></td><td class="left">FIND_PACKAGE(Qt5Declarative REQUIRED)</td><td> </td><td class="right">FIND_PACKAGE(Qt5Declarative REQUIRED)</td><td class="lineno" valign="top"></td></tr>
+      <tr><td><a name="diff0006" /></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="lblock"><span class="delete">FIND_PACKAGE(Qt5Declarative REQUIRED)</span></td><td> </td><td class="rblock"></td><td class="lineno" valign="top"></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="left">FIND_PACKAGE(Qt5Gui REQUIRED)</td><td> </td><td class="right">FIND_PACKAGE(Qt5Gui REQUIRED)</td><td class="lineno" valign="top"></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="left">FIND_PACKAGE(Qt5Network REQUIRED)</td><td> </td><td class="right">FIND_PACKAGE(Qt5Network REQUIRED)</td><td class="lineno" valign="top"></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="left">FIND_PACKAGE(Qt5OpenGL REQUIRED)</td><td> </td><td class="right">FIND_PACKAGE(Qt5OpenGL REQUIRED)</td><td class="lineno" valign="top"></td></tr>
@@ -185,8 +186,11 @@ ${Qt5Core_VERSION_STRING}\")")</td><td class="lineno" valign="top"></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="left">IF(WIN32)</td><td> </td><td class="right">IF(WIN32)</td><td class="lineno" valign="top"></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="left">    FIND_PACKAGE(Qt5Sql REQUIRED)</td><td> </td><td class="right">    FIND_PACKAGE(Qt5Sql REQUIRED)</td><td class="lineno" valign="top"></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="left">    FIND_PACKAGE(Qt5XmlPatterns REQUIRED)</td><td> </td><td class="right">    FIND_PACKAGE(Qt5XmlPatterns REQUIRED)</td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="left">ENDIF()</td><td> </td><td class="right">ENDIF()</td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="left"></td><td> </td><td class="right"></td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="left"># Tell CMake to run moc when necessary:</td><td> </td><td class="right"># Tell CMake to run moc when necessary:</td><td class="lineno" valign="top"></td></tr>
       <tr><td class="lineno"></td><td class="left"></td><td> </td><td class="right"></td><td class="lineno"></td></tr>
-      <tr bgcolor="gray" ><td></td><th><a name="part-l4" /><small>skipping to change at</small><em> line 301</em></th><th> </th><th><a name="part-r4" /><small>skipping to change at</small><em> line 304</em></th><td></td></tr>
+      <tr bgcolor="gray" ><td></td><th><a name="part-l4" /><small>skipping to change at</small><em> line 301</em></th><th> </th><th><a name="part-r4" /><small>skipping to change at</small><em> line 303</em></th><td></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="left">    ENDIF(ENABLE_WINDOWS_EXE_ICON AND NOT RC_COMPILER_PATH)</td><td> </td><td class="right">    ENDIF(ENABLE_WINDOWS_EXE_ICON AND NOT RC_COMPILER_PATH)</td><td class="lineno" valign="top"></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="left">ENDIF()</td><td> </td><td class="right">ENDIF()</td><td class="lineno" valign="top"></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="left"></td><td> </td><td class="right"></td><td class="lineno" valign="top"></td></tr>
@@ -199,16 +203,16 @@ ${Qt5Core_VERSION_STRING}\")")</td><td class="lineno" valign="top"></td></tr>
 ne switches the installer to 64-bit mode.")</td><td> </td><td class="right">        SET(ISS_ARCHITECTURE_SPECIFIC ";In the 64-bit only version, this li
 ne switches the installer to 64-bit mode.")</td><td class="lineno" valign="top"></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="left">        SET(ISS_PACKAGE_PLATFORM "win32")</td><td> </td><td class="right">        SET(ISS_PACKAGE_PLATFORM "win32")</td><td class="lineno" valign="top"></td></tr>
-      <tr><td><a name="diff0006" /></td></tr>
+      <tr><td><a name="diff0007" /></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="lblock"></td><td> </td><td class="rblock"><span class="insert">        SET(REDIST_VERSION "VC_REDIST_X86")</span></td><td class="lineno" valign="top"></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="left">        IF(MSVC)</td><td> </td><td class="right">        IF(MSVC)</td><td class="lineno" valign="top"></td></tr>
-      <tr><td><a name="diff0007" /></td></tr>
+      <tr><td><a name="diff0008" /></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="lblock"><span class="delete">          #SET(REDIST_FILES "Source: \"${CMAKE_INSTALL_PREFIX}/bin/msvc*.dl
 l\"; DestDir: \"{app}\";")</span></td><td> </td><td class="rblock"></td><td class="lineno" valign="top"></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="left">          SET(REDIST_FILES "Source: \"${CMAKE_SOURCE_DIR}/util/vcredist/vcr
 edist_x86.exe\"; DestDir: \"{tmp}\";")</td><td> </td><td class="right">          SET(REDIST_FILES "Source: \"${CMAKE_SOURCE_DIR}/util/vcredist/vcr
 edist_x86.exe\"; DestDir: \"{tmp}\";")</td><td class="lineno" valign="top"></td></tr>
-      <tr><td><a name="diff0008" /></td></tr>
+      <tr><td><a name="diff0009" /></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="lblock">          SET(REDIST_RUN "Filename: \"{tmp}/vcredist_x86.exe\"; Parameters:
  \"/passive /Q:a /c:\"\"msiexec /qb /i vcredist.msi\"\" \"; StatusMsg: \"{c
 m:RedistRun}\"")</td><td> </td><td class="rblock">          SET(REDIST_RUN "Filename: \"{tmp}/vcredist_x86.exe\"; Parameters:
@@ -233,16 +237,16 @@ sInstallIn64BitMode=x64")</td><td> </td><td class="right">        SET(ISS_ARCHIT
 4:\nArchitecturesAllowed=x64\n;Switch to 64-bit install mode:\nArchitecture
 sInstallIn64BitMode=x64")</td><td class="lineno" valign="top"></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="left">        SET(ISS_PACKAGE_PLATFORM "win64")</td><td> </td><td class="right">        SET(ISS_PACKAGE_PLATFORM "win64")</td><td class="lineno" valign="top"></td></tr>
-      <tr><td><a name="diff0009" /></td></tr>
+      <tr><td><a name="diff0010" /></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="lblock"></td><td> </td><td class="rblock"><span class="insert">        SET(REDIST_VERSION "VC_REDIST_X64")</span></td><td class="lineno" valign="top"></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="left">        IF(MSVC)</td><td> </td><td class="right">        IF(MSVC)</td><td class="lineno" valign="top"></td></tr>
-      <tr><td><a name="diff0010" /></td></tr>
+      <tr><td><a name="diff0011" /></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="lblock"><span class="delete">          #SET(REDIST_FILES "Source: \"${CMAKE_INSTALL_PREFIX}/bin/msvc*.dl
 l\"; DestDir: \"{app}\";")</span></td><td> </td><td class="rblock"></td><td class="lineno" valign="top"></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="left">          SET(REDIST_FILES "Source: \"${CMAKE_SOURCE_DIR}/util/vcredist/vcr
 edist_x64.exe\"; DestDir: \"{tmp}\";")</td><td> </td><td class="right">          SET(REDIST_FILES "Source: \"${CMAKE_SOURCE_DIR}/util/vcredist/vcr
 edist_x64.exe\"; DestDir: \"{tmp}\";")</td><td class="lineno" valign="top"></td></tr>
-      <tr><td><a name="diff0011" /></td></tr>
+      <tr><td><a name="diff0012" /></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="lblock">          SET(REDIST_RUN "Filename: \"{tmp}/vcredist_x64.exe\"; Parameters:
  \"/passive /Q:a /c:\"\"msiexec /qb /i vcredist.msi\"\" \"; StatusMsg: \"{c
 m:RedistRun}\"")</td><td> </td><td class="rblock">          SET(REDIST_RUN "Filename: \"{tmp}/vcredist_x64.exe\"; Parameters:
@@ -272,7 +276,7 @@ is run.")</td><td class="lineno" valign="top"></td></tr>
 dll\"; DestDir: \"{app}\";")</td><td> </td><td class="right">        SET(STELMAINLIB "Source: \"${CMAKE_INSTALL_PREFIX}/lib/libstelMain.
 dll\"; DestDir: \"{app}\";")</td><td class="lineno" valign="top"></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="left">    ELSE()</td><td> </td><td class="right">    ELSE()</td><td class="lineno" valign="top"></td></tr>
-      <tr><td><a name="diff0012" /></td></tr>
+      <tr><td><a name="diff0013" /></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="lblock">        SET(STELMAINLIB "; StelMainLib <span class="delete">do</span>n't used")</td><td> </td><td class="rblock">        SET(STELMAINLIB "; StelMainLib <span class="insert">is</span>n't used")</td><td class="lineno" valign="top"></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="left">    ENDIF()</td><td> </td><td class="right">    ENDIF()</td><td class="lineno" valign="top"></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="left">    GET_TARGET_PROPERTY(QtConcurrent_location Qt5::Concurrent LOCATION)</td><td> </td><td class="right">    GET_TARGET_PROPERTY(QtConcurrent_location Qt5::Concurrent LOCATION)</td><td class="lineno" valign="top"></td></tr>
@@ -281,7 +285,8 @@ dll\"; DestDir: \"{app}\";")</td><td class="lineno" valign="top"></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="left">    GET_TARGET_PROPERTY(QtOpenGL_location Qt5::OpenGL LOCATION)</td><td> </td><td class="right">    GET_TARGET_PROPERTY(QtOpenGL_location Qt5::OpenGL LOCATION)</td><td class="lineno" valign="top"></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="left">    GET_TARGET_PROPERTY(QtNetwork_location Qt5::Network LOCATION)</td><td> </td><td class="right">    GET_TARGET_PROPERTY(QtNetwork_location Qt5::Network LOCATION)</td><td class="lineno" valign="top"></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="left">    GET_TARGET_PROPERTY(QtWidgets_location Qt5::Widgets LOCATION)</td><td> </td><td class="right">    GET_TARGET_PROPERTY(QtWidgets_location Qt5::Widgets LOCATION)</td><td class="lineno" valign="top"></td></tr>
-      <tr><td class="lineno" valign="top"></td><td class="left">    GET_TARGET_PROPERTY(QtDeclarative_location Qt5::Declarative LOCATION)</td><td> </td><td class="right">    GET_TARGET_PROPERTY(QtDeclarative_location Qt5::Declarative LOCATION)</td><td class="lineno" valign="top"></td></tr>
+      <tr><td><a name="diff0014" /></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="lblock"><span class="delete">    GET_TARGET_PROPERTY(QtDeclarative_location Qt5::Declarative LOCATION)</span></td><td> </td><td class="rblock"></td><td class="lineno" valign="top"></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="left">    GET_TARGET_PROPERTY(QtSql_location Qt5::Sql LOCATION)</td><td> </td><td class="right">    GET_TARGET_PROPERTY(QtSql_location Qt5::Sql LOCATION)</td><td class="lineno" valign="top"></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="left">    GET_TARGET_PROPERTY(QtXmlPatterns_location Qt5::XmlPatterns LOCATION)</td><td> </td><td class="right">    GET_TARGET_PROPERTY(QtXmlPatterns_location Qt5::XmlPatterns LOCATION)</td><td class="lineno" valign="top"></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="left">    IF(ENABLE_SCRIPTING)</td><td> </td><td class="right">    IF(ENABLE_SCRIPTING)</td><td class="lineno" valign="top"></td></tr>
@@ -290,7 +295,7 @@ dll\"; DestDir: \"{app}\";")</td><td class="lineno" valign="top"></td></tr>
 p}\";")</td><td> </td><td class="right">        SET(ISS_QT_SCRIPT "Source: \"${QtScript_location}\"; DestDir: \"{ap
 p}\";")</td><td class="lineno" valign="top"></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="left">    ELSE()</td><td> </td><td class="right">    ELSE()</td><td class="lineno" valign="top"></td></tr>
-      <tr><td><a name="diff0013" /></td></tr>
+      <tr><td><a name="diff0015" /></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="lblock">        SET(ISS_QT_SCRIPT "; QtScript <span class="delete">do</span>n't used")</td><td> </td><td class="rblock">        SET(ISS_QT_SCRIPT "; QtScript <span class="insert">is</span>n't used")</td><td class="lineno" valign="top"></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="left">    ENDIF()</td><td> </td><td class="right">    ENDIF()</td><td class="lineno" valign="top"></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="left">    IF(ENABLE_SOUND)</td><td> </td><td class="right">    IF(ENABLE_SOUND)</td><td class="lineno" valign="top"></td></tr>
@@ -304,7 +309,7 @@ r: \"{app}\";\nSource: \"${QtMultimediaWidgets_location}\"; DestDir: \"{app
 r: \"{app}\";\nSource: \"${QtMultimediaWidgets_location}\"; DestDir: \"{app
 }\";")</td><td class="lineno" valign="top"></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="left">    ELSE()</td><td> </td><td class="right">    ELSE()</td><td class="lineno" valign="top"></td></tr>
-      <tr><td><a name="diff0014" /></td></tr>
+      <tr><td><a name="diff0016" /></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="lblock">        SET(ISS_QT_MULTIMEDIA "; QtMultimedia <span class="delete">do</span>n't used")</td><td> </td><td class="rblock">        SET(ISS_QT_MULTIMEDIA "; QtMultimedia <span class="insert">is</span>n't used")</td><td class="lineno" valign="top"></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="left">    ENDIF()</td><td> </td><td class="right">    ENDIF()</td><td class="lineno" valign="top"></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="left">    GET_FILENAME_COMPONENT(QT5_LIBS ${QtCore_location} PATH)</td><td> </td><td class="right">    GET_FILENAME_COMPONENT(QT5_LIBS ${QtCore_location} PATH)</td><td class="lineno" valign="top"></td></tr>
@@ -343,7 +348,7 @@ IBS}/../plugins/mediaservice/qtmedia_audioengine.dll\"; DestDir: \"{app}/me
 diaservice/\";\nSource: \"${QT5_LIBS}/../plugins/playlistformats/qtmultimed
 ia_m3u.dll\"; DestDir: \"{app}/playlistformats/\";")</td><td class="lineno" valign="top"></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="left">    ELSE()</td><td> </td><td class="right">    ELSE()</td><td class="lineno" valign="top"></td></tr>
-      <tr><td><a name="diff0015" /></td></tr>
+      <tr><td><a name="diff0017" /></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="lblock">        SET(ISS_MULTIMEDIA_PLUGINS "; QtMultimedia <span class="delete">do</span>n't used")</td><td> </td><td class="rblock">        SET(ISS_MULTIMEDIA_PLUGINS "; QtMultimedia <span class="insert">is</span>n't used")</td><td class="lineno" valign="top"></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="left">    ENDIF()</td><td> </td><td class="right">    ENDIF()</td><td class="lineno" valign="top"></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="left">    SET(ISS_QML_DIR "Source: \"${QT5_LIBS}/../imports/Qt/labs/shaders/qmldi
@@ -366,7 +371,7 @@ OURCE_DIR}/stellarium-patch.iss @ONLY)</td><td class="lineno" valign="top"></td>
       <tr><td class="lineno" valign="top"></td><td class="left"></td><td> </td><td class="right"></td><td class="lineno" valign="top"></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="left">IF(APPLE)</td><td> </td><td class="right">IF(APPLE)</td><td class="lineno" valign="top"></td></tr>
       <tr><td class="lineno"></td><td class="left"></td><td> </td><td class="right"></td><td class="lineno"></td></tr>
-      <tr bgcolor="gray" ><td></td><th><a name="part-l5" /><small>skipping to change at</small><em> line 440</em></th><th> </th><th><a name="part-r5" /><small>skipping to change at</small><em> line 443</em></th><td></td></tr>
+      <tr bgcolor="gray" ><td></td><th><a name="part-l5" /><small>skipping to change at</small><em> line 440</em></th><th> </th><th><a name="part-r5" /><small>skipping to change at</small><em> line 441</em></th><td></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="left">               DEPENDS ${CMAKE_CURRENT_BINARY_DIR}/Stellarium.app</td><td> </td><td class="right">               DEPENDS ${CMAKE_CURRENT_BINARY_DIR}/Stellarium.app</td><td class="lineno" valign="top"></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="left">               WORKING_DIRECTORY ${PROJECT_SOURCE_DIR}</td><td> </td><td class="right">               WORKING_DIRECTORY ${PROJECT_SOURCE_DIR}</td><td class="lineno" valign="top"></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="left">               COMMENT "making the macosx bundle."</td><td> </td><td class="right">               COMMENT "making the macosx bundle."</td><td class="lineno" valign="top"></td></tr>
@@ -383,7 +388,7 @@ NG_DIRECTORY ${CMAKE_CURRENT_BINARY_DIR} COMMENT "Generate the doxygen docu
 mentation into the doc directory.")</td><td> </td><td class="right">ADD_CUSTOM_TARGET(apidoc doxygen ${CMAKE_CURRENT_BINARY_DIR}/Doxyfile WORKI
 NG_DIRECTORY ${CMAKE_CURRENT_BINARY_DIR} COMMENT "Generate the doxygen docu
 mentation into the doc directory.")</td><td class="lineno" valign="top"></td></tr>
-      <tr><td><a name="diff0016" /></td></tr>
+      <tr><td><a name="diff0018" /></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="lblock"></td><td> </td><td class="rblock"><span class="insert">CONFIGURE_FILE(${PROJECT_SOURCE_DIR}/Doxyfile-plugins.cmake ${CMAKE_CURRENT</span></td><td class="lineno" valign="top"></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="lblock"></td><td> </td><td class="rblock"><span class="insert">_BINARY_DIR}/Doxyfile-plugins @ONLY)</span></td><td class="lineno" valign="top"></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="lblock"></td><td> </td><td class="rblock"><span class="insert">ADD_CUSTOM_TARGET(apidoc-plugins doxygen ${CMAKE_CURRENT_BINARY_DIR}/Doxyfi</span></td><td class="lineno" valign="top"></td></tr>
@@ -405,8 +410,8 @@ OJECT_SOURCE_DIR}/util/copy-translations.bat @ONLY NEWLINE_STYLE WIN32)</td><td 
       <tr><td class="lineno" valign="top"></td><td class="left"># This will be used for all compilations in sub-directories</td><td> </td><td class="right"># This will be used for all compilations in sub-directories</td><td class="lineno" valign="top"></td></tr>
 
      <tr><td></td><td class="left"></td><td> </td><td class="right"></td><td></td></tr>
-     <tr bgcolor="gray"><th colspan="5" align="center"><a name="end">&nbsp;End of changes. 16 change blocks.&nbsp;</a></th></tr>
-     <tr class="stats"><td></td><th><i>14 lines changed or deleted</i></th><th><i> </i></th><th><i>23 lines changed or added</i></th><td></td></tr>
+     <tr bgcolor="gray"><th colspan="5" align="center"><a name="end">&nbsp;End of changes. 18 change blocks.&nbsp;</a></th></tr>
+     <tr class="stats"><td></td><th><i>16 lines changed or deleted</i></th><th><i> </i></th><th><i>23 lines changed or added</i></th><td></td></tr>
      <tr><td colspan="5" align="center" class="small"><br/>This html diff was produced by rfcdiff 1.41. The latest version is available from <a href="http://www.tools.ietf.org/tools/rfcdiff/" >http://tools.ietf.org/tools/rfcdiff/</a> </td></tr>
    </table>
    </body>

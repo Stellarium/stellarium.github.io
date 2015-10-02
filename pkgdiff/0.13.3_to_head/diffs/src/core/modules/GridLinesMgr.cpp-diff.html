@@ -106,14 +106,65 @@ on*1000.f));}</td><td class="lineno" valign="top"></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="left">       void setFontSize(double newSize);</td><td> </td><td class="right">       void setFontSize(double newSize);</td><td class="lineno" valign="top"></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="left">       //! Re-translates the label.</td><td> </td><td class="right">       //! Re-translates the label.</td><td class="lineno" valign="top"></td></tr>
       <tr><td class="lineno"></td><td class="left"></td><td> </td><td class="right"></td><td class="lineno"></td></tr>
-      <tr bgcolor="gray" ><td></td><th><a name="part-l3" /><small>skipping to change at</small><em> line 204</em></th><th> </th><th><a name="part-r3" /><small>skipping to change at</small><em> line 209</em></th><td></td></tr>
+      <tr bgcolor="gray" ><td></td><th><a name="part-l3" /><small>skipping to change at</small><em> line 168</em></th><th> </th><th><a name="part-r3" /><small>skipping to change at</small><em> line 173</em></th><td></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="left">};</td><td> </td><td class="right">};</td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="left"></td><td> </td><td class="right"></td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="left">// Callback which draws the label of the grid</td><td> </td><td class="right">// Callback which draws the label of the grid</td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="left">void viewportEdgeIntersectCallback(const Vec3d&amp; screenPos, const Vec3d&amp; dir
+ection, void* userData)</td><td> </td><td class="right">void viewportEdgeIntersectCallback(const Vec3d&amp; screenPos, const Vec3d&amp; dir
+ection, void* userData)</td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="left">{</td><td> </td><td class="right">{</td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="left">       ViewportEdgeIntersectCallbackData* d = static_cast&lt;ViewportEdgeInter
+sectCallbackData*&gt;(userData);</td><td> </td><td class="right">       ViewportEdgeIntersectCallbackData* d = static_cast&lt;ViewportEdgeInter
+sectCallbackData*&gt;(userData);</td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="left">       Vec3d direc(direction);</td><td> </td><td class="right">       Vec3d direc(direction);</td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="left">       direc.normalize();</td><td> </td><td class="right">       direc.normalize();</td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="left">       const Vec4f tmpColor = d-&gt;sPainter-&gt;getColor();</td><td> </td><td class="right">       const Vec4f tmpColor = d-&gt;sPainter-&gt;getColor();</td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="left">       d-&gt;sPainter-&gt;setColor(d-&gt;textColor[0], d-&gt;textColor[1], d-&gt;textColor
+[2], d-&gt;textColor[3]);</td><td> </td><td class="right">       d-&gt;sPainter-&gt;setColor(d-&gt;textColor[0], d-&gt;textColor[1], d-&gt;textColor
+[2], d-&gt;textColor[3]);</td><td class="lineno" valign="top"></td></tr>
+      <tr><td><a name="diff0004" /></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="lblock">       bool withDecimalDegree = StelApp::getInstance().getFlagShowDecimalDe</td><td> </td><td class="rblock">       bool withDecimalDegree = StelApp::getInstance().getFlagShowDecimalDe</td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="lblock"><span class="delete">grees();;</span></td><td> </td><td class="rblock"><span class="insert">grees();</span></td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="lblock"></td><td> </td><td class="rblock"><span class="insert">       bool useOldAzimuth = StelApp::getInstance().getFlagOldAzimuthUsage()</span></td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="lblock"></td><td> </td><td class="rblock"><span class="insert">;</span></td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="left"></td><td> </td><td class="right"></td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="left">       QString text;</td><td> </td><td class="right">       QString text;</td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="left">       if (d-&gt;text.isEmpty())</td><td> </td><td class="right">       if (d-&gt;text.isEmpty())</td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="left">       {</td><td> </td><td class="right">       {</td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="left">               // We are in the case of meridians, we need to determine whi
+ch of the 2 labels (3h or 15h to use)</td><td> </td><td class="right">               // We are in the case of meridians, we need to determine whi
+ch of the 2 labels (3h or 15h to use)</td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="left">               Vec3d tmpV;</td><td> </td><td class="right">               Vec3d tmpV;</td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="left">               d-&gt;sPainter-&gt;getProjector()-&gt;unProject(screenPos, tmpV);</td><td> </td><td class="right">               d-&gt;sPainter-&gt;getProjector()-&gt;unProject(screenPos, tmpV);</td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="left">               double lon, lat, textAngle;</td><td> </td><td class="right">               double lon, lat, textAngle;</td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="left">               StelUtils::rectToSphe(&amp;lon, &amp;lat, tmpV);</td><td> </td><td class="right">               StelUtils::rectToSphe(&amp;lon, &amp;lat, tmpV);</td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="left">               switch (d-&gt;frameType)</td><td> </td><td class="right">               switch (d-&gt;frameType)</td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno"></td><td class="left"></td><td> </td><td class="right"></td><td class="lineno"></td></tr>
+      <tr bgcolor="gray" ><td></td><th><a name="part-l4" /><small>skipping to change at</small><em> line 197</em></th><th> </th><th><a name="part-r4" /><small>skipping to change at</small><em> line 203</em></th><td></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="left"></td><td> </td><td class="right"></td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="left">                               const double delta = raAngle&lt;M_PI ? M_PI : -
+M_PI;</td><td> </td><td class="right">                               const double delta = raAngle&lt;M_PI ? M_PI : -
+M_PI;</td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="left">                               if (std::fabs(lon-raAngle) &lt; 0.01 || (lon==0
+. &amp;&amp; raAngle!=M_PI))</td><td> </td><td class="right">                               if (std::fabs(lon-raAngle) &lt; 0.01 || (lon==0
+. &amp;&amp; raAngle!=M_PI))</td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="left">                                       textAngle = raAngle;</td><td> </td><td class="right">                                       textAngle = raAngle;</td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="left">                               else</td><td> </td><td class="right">                               else</td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="left">                                       textAngle = raAngle+delta;</td><td> </td><td class="right">                                       textAngle = raAngle+delta;</td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="left"></td><td> </td><td class="right"></td><td class="lineno" valign="top"></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="left">                               if (raAngle==2*M_PI &amp;&amp; delta==-M_PI)</td><td> </td><td class="right">                               if (raAngle==2*M_PI &amp;&amp; delta==-M_PI)</td><td class="lineno" valign="top"></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="left">                                       textAngle = 0;</td><td> </td><td class="right">                                       textAngle = 0;</td><td class="lineno" valign="top"></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="left"></td><td> </td><td class="right"></td><td class="lineno" valign="top"></td></tr>
+      <tr><td><a name="diff0005" /></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="lblock"></td><td> </td><td class="rblock">                               <span class="insert">if (useOldAzimuth)</span></td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="lblock"></td><td> </td><td class="rblock"><span class="insert">                                       textAngle += M_PI;</span></td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="lblock"></td><td> </td><td class="rblock">                                                                           </td><td class="lineno" valign="top"></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="left">                               if (withDecimalDegree)</td><td> </td><td class="right">                               if (withDecimalDegree)</td><td class="lineno" valign="top"></td></tr>
-      <tr><td class="lineno" valign="top"></td><td class="left">                                       text = StelUtils::radToDecDegStr(tex
-tAngle);</td><td> </td><td class="right">                                       text = StelUtils::radToDecDegStr(tex
-tAngle);</td><td class="lineno" valign="top"></td></tr>
+      <tr><td><a name="diff0006" /></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="lblock">                                       text = StelUtils::radToDecDegStr(tex
+tAngle);</td><td> </td><td class="rblock">                                       text = StelUtils::radToDecDegStr(tex
+tAngle<span class="insert">, 4, false, true</span>);</td><td class="lineno" valign="top"></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="left">                               else</td><td> </td><td class="right">                               else</td><td class="lineno" valign="top"></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="left">                                       text = StelUtils::radToDmsStrAdapt(t
 extAngle);</td><td> </td><td class="right">                                       text = StelUtils::radToDmsStrAdapt(t
@@ -121,7 +172,7 @@ extAngle);</td><td class="lineno" valign="top"></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="left"></td><td> </td><td class="right"></td><td class="lineno" valign="top"></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="left">                               break;</td><td> </td><td class="right">                               break;</td><td class="lineno" valign="top"></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="left">                       }</td><td> </td><td class="right">                       }</td><td class="lineno" valign="top"></td></tr>
-      <tr><td><a name="diff0004" /></td></tr>
+      <tr><td><a name="diff0007" /></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="lblock">                       case <span class="delete">StelCore::FrameObservercentricEcliptic:</span></td><td> </td><td class="rblock">                       case <span class="insert">StelCore::FrameObservercentricEclipticJ2000:</span></td><td class="lineno" valign="top"></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="lblock"></td><td> </td><td class="rblock"><span class="insert">                       case StelCore::FrameObservercentricEclipticOfDate:</span></td><td class="lineno" valign="top"></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="left">                       {</td><td> </td><td class="right">                       {</td><td class="lineno" valign="top"></td></tr>
@@ -137,7 +188,99 @@ at meridian 0</td><td> </td><td class="right">                               if 
 at meridian 0</td><td class="lineno" valign="top"></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="left">                                       lon = 0.;</td><td> </td><td class="right">                                       lon = 0.;</td><td class="lineno" valign="top"></td></tr>
       <tr><td class="lineno"></td><td class="left"></td><td> </td><td class="right"></td><td class="lineno"></td></tr>
-      <tr bgcolor="gray" ><td></td><th><a name="part-l4" /><small>skipping to change at</small><em> line 357</em></th><th> </th><th><a name="part-r4" /><small>skipping to change at</small><em> line 363</em></th><td></td></tr>
+      <tr bgcolor="gray" ><td></td><th><a name="part-l5" /><small>skipping to change at</small><em> line 226</em></th><th> </th><th><a name="part-r5" /><small>skipping to change at</small><em> line 236</em></th><td></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="left">                               const double delta = raAngle&lt;M_PI ? M_PI : -
+M_PI;</td><td> </td><td class="right">                               const double delta = raAngle&lt;M_PI ? M_PI : -
+M_PI;</td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="left">                               if (std::fabs(lon-raAngle) &lt; 1. || lon==0.)</td><td> </td><td class="right">                               if (std::fabs(lon-raAngle) &lt; 1. || lon==0.)</td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="left">                                       textAngle = raAngle;</td><td> </td><td class="right">                                       textAngle = raAngle;</td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="left">                               else</td><td> </td><td class="right">                               else</td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="left">                                       textAngle = raAngle+delta;</td><td> </td><td class="right">                                       textAngle = raAngle+delta;</td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="left"></td><td> </td><td class="right"></td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="left">                               if (raAngle==2*M_PI &amp;&amp; delta==-M_PI)</td><td> </td><td class="right">                               if (raAngle==2*M_PI &amp;&amp; delta==-M_PI)</td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="left">                                       textAngle = 0;</td><td> </td><td class="right">                                       textAngle = 0;</td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="left"></td><td> </td><td class="right"></td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="left">                               if (withDecimalDegree)</td><td> </td><td class="right">                               if (withDecimalDegree)</td><td class="lineno" valign="top"></td></tr>
+      <tr><td><a name="diff0008" /></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="lblock">                                       text = StelUtils::radToDecDegStr(tex
+tAngle);</td><td> </td><td class="rblock">                                       text = StelUtils::radToDecDegStr(tex
+tAngle<span class="insert">, 4, false, true</span>);</td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="left">                               else</td><td> </td><td class="right">                               else</td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="left">                                       text = StelUtils::radToDmsStrAdapt(t
+extAngle);</td><td> </td><td class="right">                                       text = StelUtils::radToDmsStrAdapt(t
+extAngle);</td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="left"></td><td> </td><td class="right"></td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="left">                               break;</td><td> </td><td class="right">                               break;</td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="left">                       }</td><td> </td><td class="right">                       }</td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="left">                       case StelCore::FrameGalactic:</td><td> </td><td class="right">                       case StelCore::FrameGalactic:</td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="left">                       {</td><td> </td><td class="right">                       {</td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="left">                               double raAngle = M_PI-d-&gt;raAngle;</td><td> </td><td class="right">                               double raAngle = M_PI-d-&gt;raAngle;</td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="left">                               lon = M_PI-lon;</td><td> </td><td class="right">                               lon = M_PI-lon;</td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="left"></td><td> </td><td class="right"></td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno"></td><td class="left"></td><td> </td><td class="right"></td><td class="lineno"></td></tr>
+      <tr bgcolor="gray" ><td></td><th><a name="part-l6" /><small>skipping to change at</small><em> line 255</em></th><th> </th><th><a name="part-r6" /><small>skipping to change at</small><em> line 265</em></th><td></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="left"></td><td> </td><td class="right"></td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="left">                               if (std::fabs(lon-raAngle) &lt; 0.01)</td><td> </td><td class="right">                               if (std::fabs(lon-raAngle) &lt; 0.01)</td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="left">                                       textAngle = -raAngle+M_PI;</td><td> </td><td class="right">                                       textAngle = -raAngle+M_PI;</td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="left">                               else</td><td> </td><td class="right">                               else</td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="left">                               {</td><td> </td><td class="right">                               {</td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="left">                                       const double delta = raAngle&lt;M_PI ? 
+M_PI : -M_PI;</td><td> </td><td class="right">                                       const double delta = raAngle&lt;M_PI ? 
+M_PI : -M_PI;</td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="left">                                       textAngle = -raAngle-delta+M_PI;</td><td> </td><td class="right">                                       textAngle = -raAngle-delta+M_PI;</td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="left">                               }</td><td> </td><td class="right">                               }</td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="left"></td><td> </td><td class="right"></td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="left">                               if (withDecimalDegree)</td><td> </td><td class="right">                               if (withDecimalDegree)</td><td class="lineno" valign="top"></td></tr>
+      <tr><td><a name="diff0009" /></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="lblock">                                       text = StelUtils::radToDecDegStr(tex
+tAngle);</td><td> </td><td class="rblock">                                       text = StelUtils::radToDecDegStr(tex
+tAngle<span class="insert">, 4, false, true</span>);</td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="left">                               else</td><td> </td><td class="right">                               else</td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="left">                                       text = StelUtils::radToDmsStrAdapt(t
+extAngle);</td><td> </td><td class="right">                                       text = StelUtils::radToDmsStrAdapt(t
+extAngle);</td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="left">                               break;</td><td> </td><td class="right">                               break;</td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="left">                       }</td><td> </td><td class="right">                       }</td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="left">                       default:</td><td> </td><td class="right">                       default:</td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="left">                       {</td><td> </td><td class="right">                       {</td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="left">                               if (std::fabs(2.*M_PI-lon)&lt;0.001)</td><td> </td><td class="right">                               if (std::fabs(2.*M_PI-lon)&lt;0.001)</td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="left">                               {</td><td> </td><td class="right">                               {</td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="left">                                       // We are at meridian 0</td><td> </td><td class="right">                                       // We are at meridian 0</td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="left">                                       lon = 0.;</td><td> </td><td class="right">                                       lon = 0.;</td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno"></td><td class="left"></td><td> </td><td class="right"></td><td class="lineno"></td></tr>
+      <tr bgcolor="gray" ><td></td><th><a name="part-l7" /><small>skipping to change at</small><em> line 277</em></th><th> </th><th><a name="part-r7" /><small>skipping to change at</small><em> line 287</em></th><td></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="left">                               const double delta = d-&gt;raAngle&lt;M_PI ? M_PI 
+: -M_PI;</td><td> </td><td class="right">                               const double delta = d-&gt;raAngle&lt;M_PI ? M_PI 
+: -M_PI;</td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="left">                               if (std::fabs(lon-d-&gt;raAngle) &lt; 1. || lon==0
+. || d-&gt;raAngle==M_PI)</td><td> </td><td class="right">                               if (std::fabs(lon-d-&gt;raAngle) &lt; 1. || lon==0
+. || d-&gt;raAngle==M_PI)</td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="left">                                       textAngle = d-&gt;raAngle;</td><td> </td><td class="right">                                       textAngle = d-&gt;raAngle;</td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="left">                               else</td><td> </td><td class="right">                               else</td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="left">                                       textAngle = d-&gt;raAngle+delta;</td><td> </td><td class="right">                                       textAngle = d-&gt;raAngle+delta;</td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="left"></td><td> </td><td class="right"></td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="left">                               if (d-&gt;raAngle+delta==0.)</td><td> </td><td class="right">                               if (d-&gt;raAngle+delta==0.)</td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="left">                                       textAngle = M_PI;</td><td> </td><td class="right">                                       textAngle = M_PI;</td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="left"></td><td> </td><td class="right"></td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="left">                               if (withDecimalDegree)</td><td> </td><td class="right">                               if (withDecimalDegree)</td><td class="lineno" valign="top"></td></tr>
+      <tr><td><a name="diff0010" /></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="lblock">                                       text = StelUtils::radToDecDegStr(tex
+tAngle);</td><td> </td><td class="rblock">                                       text = StelUtils::radToDecDegStr(tex
+tAngle<span class="insert">, 4, false, true</span>);</td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="left">                               else</td><td> </td><td class="right">                               else</td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="left">                                       text = StelUtils::radToHmsStrAdapt(t
+extAngle);</td><td> </td><td class="right">                                       text = StelUtils::radToHmsStrAdapt(t
+extAngle);</td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="left">                       }</td><td> </td><td class="right">                       }</td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="left">               }</td><td> </td><td class="right">               }</td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="left">       }</td><td> </td><td class="right">       }</td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="left">       else</td><td> </td><td class="right">       else</td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="left">               text = d-&gt;text;</td><td> </td><td class="right">               text = d-&gt;text;</td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="left"></td><td> </td><td class="right"></td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="left">       double angleDeg = std::atan2(-direc[1], -direc[0])*180./M_PI;</td><td> </td><td class="right">       double angleDeg = std::atan2(-direc[1], -direc[0])*180./M_PI;</td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="left">       float xshift=6.f;</td><td> </td><td class="right">       float xshift=6.f;</td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno"></td><td class="left"></td><td> </td><td class="right"></td><td class="lineno"></td></tr>
+      <tr bgcolor="gray" ><td></td><th><a name="part-l8" /><small>skipping to change at</small><em> line 357</em></th><th> </th><th><a name="part-r8" /><small>skipping to change at</small><em> line 367</em></th><td></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="left"></td><td> </td><td class="right"></td><td class="lineno" valign="top"></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="left">       // Initialize a painter and set OpenGL state</td><td> </td><td class="right">       // Initialize a painter and set OpenGL state</td><td class="lineno" valign="top"></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="left">       StelPainter sPainter(prj);</td><td> </td><td class="right">       StelPainter sPainter(prj);</td><td class="lineno" valign="top"></td></tr>
@@ -152,12 +295,12 @@ rfaceFormat::OpenGL)</td><td> </td><td class="right">       if (QOpenGLContext::
 rfaceFormat::OpenGL)</td><td class="lineno" valign="top"></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="left">               glEnable(GL_LINE_SMOOTH);</td><td> </td><td class="right">               glEnable(GL_LINE_SMOOTH);</td><td class="lineno" valign="top"></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="left">       #endif</td><td> </td><td class="right">       #endif</td><td class="lineno" valign="top"></td></tr>
-      <tr><td><a name="diff0005" /></td></tr>
+      <tr><td><a name="diff0011" /></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="lblock">       <span class="delete">Vec4f textColor(color[0], color[1], color[2], 0);</span></td><td> </td><td class="rblock"></td><td class="lineno" valign="top"></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="lblock"><span class="delete">       sPainter.setColor(color[0],color[1],color[2], fader.getInterstate())</span></td><td> </td><td class="rblock"></td><td class="lineno" valign="top"></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="lblock"><span class="delete">;</span></td><td> </td><td class="rblock"></td><td class="lineno" valign="top"></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="left"></td><td> </td><td class="right"></td><td class="lineno" valign="top"></td></tr>
-      <tr><td><a name="diff0006" /></td></tr>
+      <tr><td><a name="diff0012" /></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="lblock">       <span class="delete">textColor*=2;</span></td><td> </td><td class="rblock">       <span class="insert">// make text colors just a bit brighter. (But if &gt;1, QColor::setRgb </span></td><td class="lineno" valign="top"></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="lblock"><span class="delete">       textColor[3]=fader.getInterstate();</span></td><td> </td><td class="rblock"><span class="insert">fails and makes text invisible.)</span></td><td class="lineno" valign="top"></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="lblock"></td><td> </td><td class="rblock"><span class="insert">       Vec4f textColor(qMin(1.0f, 1.25f*color[0]), qMin(1.0f, 1.25f*color[1</span></td><td class="lineno" valign="top"></td></tr>
@@ -175,7 +318,7 @@ rfaceFormat::OpenGL)</td><td class="lineno" valign="top"></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="left">       SphericalCap meridianSphericalCap(Vec3d(1,0,0), 0);</td><td> </td><td class="right">       SphericalCap meridianSphericalCap(Vec3d(1,0,0), 0);</td><td class="lineno" valign="top"></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="left">       Mat4d rotLon = Mat4d::zrotation(gridStepMeridianRad);</td><td> </td><td class="right">       Mat4d rotLon = Mat4d::zrotation(gridStepMeridianRad);</td><td class="lineno" valign="top"></td></tr>
       <tr><td class="lineno"></td><td class="left"></td><td> </td><td class="right"></td><td class="lineno"></td></tr>
-      <tr bgcolor="gray" ><td></td><th><a name="part-l5" /><small>skipping to change at</small><em> line 587</em></th><th> </th><th><a name="part-r5" /><small>skipping to change at</small><em> line 592</em></th><td></td></tr>
+      <tr bgcolor="gray" ><td></td><th><a name="part-l9" /><small>skipping to change at</small><em> line 587</em></th><th> </th><th><a name="part-r9" /><small>skipping to change at</small><em> line 596</em></th><td></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="left">}</td><td> </td><td class="right">}</td><td class="lineno" valign="top"></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="left"></td><td> </td><td class="right"></td><td class="lineno" valign="top"></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="left">void SkyLine::updateLabel()</td><td> </td><td class="right">void SkyLine::updateLabel()</td><td class="lineno" valign="top"></td></tr>
@@ -186,19 +329,19 @@ rfaceFormat::OpenGL)</td><td class="lineno" valign="top"></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="left">                       frameType = StelCore::FrameAltAz;</td><td> </td><td class="right">                       frameType = StelCore::FrameAltAz;</td><td class="lineno" valign="top"></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="left">                       label = q_("Meridian");</td><td> </td><td class="right">                       label = q_("Meridian");</td><td class="lineno" valign="top"></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="left">                       break;</td><td> </td><td class="right">                       break;</td><td class="lineno" valign="top"></td></tr>
-      <tr><td><a name="diff0007" /></td></tr>
+      <tr><td><a name="diff0013" /></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="lblock">               case <span class="delete">ECLIPTIC:</span></td><td> </td><td class="rblock">               case <span class="insert">ECLIPTIC_J2000:</span></td><td class="lineno" valign="top"></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="lblock">                       frameType = <span class="delete">StelCore::FrameObservercentricEcliptic;</span></td><td> </td><td class="rblock">                       frameType = <span class="insert">StelCore::FrameObservercentricEclipticJ2</span></td><td class="lineno" valign="top"></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="lblock">                       label = <span class="delete">q_("Ecliptic");</span></td><td> </td><td class="rblock"><span class="insert">000;</span></td><td class="lineno" valign="top"></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="lblock"></td><td> </td><td class="rblock">                       label = <span class="insert">q_("Ecliptic of J2000.0");</span></td><td class="lineno" valign="top"></td></tr>
-      <tr><td class="lineno" valign="top"></td><td class="left">                       break;</td><td> </td><td class="right">                       break;</td><td class="lineno" valign="top"></td></tr>
-      <tr><td><a name="diff0008" /></td></tr>
-      <tr><td class="lineno" valign="top"></td><td class="lblock">               case <span class="delete">EQUATOR:</span></td><td> </td><td class="rblock">               case <span class="insert">ECLIPTIC_OF_DATE:</span></td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="lblock"></td><td> </td><td class="rblock"><span class="insert">                       break;</span></td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="lblock"></td><td> </td><td class="rblock"><span class="insert">               case ECLIPTIC_OF_DATE:</span></td><td class="lineno" valign="top"></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="lblock"></td><td> </td><td class="rblock"><span class="insert">                       frameType = StelCore::FrameObservercentricEclipticOf</span></td><td class="lineno" valign="top"></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="lblock"></td><td> </td><td class="rblock"><span class="insert">Date;</span></td><td class="lineno" valign="top"></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="lblock"></td><td> </td><td class="rblock"><span class="insert">                       label = q_("Ecliptic of Date");</span></td><td class="lineno" valign="top"></td></tr>
-      <tr><td class="lineno" valign="top"></td><td class="lblock"></td><td> </td><td class="rblock"><span class="insert">                       break;</span></td><td class="lineno" valign="top"></td></tr>
-      <tr><td class="lineno" valign="top"></td><td class="lblock"></td><td> </td><td class="rblock"><span class="insert">               case EQUATOR_J2000:</span></td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="left">                       break;</td><td> </td><td class="right">                       break;</td><td class="lineno" valign="top"></td></tr>
+      <tr><td><a name="diff0014" /></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="lblock">               case <span class="delete">EQUATOR:</span></td><td> </td><td class="rblock">               case <span class="insert">EQUATOR_J2000:</span></td><td class="lineno" valign="top"></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="lblock"></td><td> </td><td class="rblock"><span class="insert">                       frameType = StelCore::FrameJ2000;</span></td><td class="lineno" valign="top"></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="lblock"></td><td> </td><td class="rblock"><span class="insert">                       label = q_("Equator of J2000.0");</span></td><td class="lineno" valign="top"></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="lblock"></td><td> </td><td class="rblock"><span class="insert">                       break;</span></td><td class="lineno" valign="top"></td></tr>
@@ -206,7 +349,7 @@ rfaceFormat::OpenGL)</td><td class="lineno" valign="top"></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="left">                       frameType = StelCore::FrameEquinoxEqu;</td><td> </td><td class="right">                       frameType = StelCore::FrameEquinoxEqu;</td><td class="lineno" valign="top"></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="left">                       label = q_("Equator");</td><td> </td><td class="right">                       label = q_("Equator");</td><td class="lineno" valign="top"></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="left">                       break;</td><td> </td><td class="right">                       break;</td><td class="lineno" valign="top"></td></tr>
-      <tr><td><a name="diff0009" /></td></tr>
+      <tr><td><a name="diff0015" /></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="lblock"></td><td> </td><td class="rblock">               <span class="insert">case PRECESSIONCIRCLE_N:</span></td><td class="lineno" valign="top"></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="lblock"></td><td> </td><td class="rblock"><span class="insert">               case PRECESSIONCIRCLE_S:</span></td><td class="lineno" valign="top"></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="lblock"></td><td> </td><td class="rblock"><span class="insert">                       frameType = StelCore::FrameObservercentricEclipticOf</span></td><td class="lineno" valign="top"></td></tr>
@@ -222,7 +365,7 @@ rfaceFormat::OpenGL)</td><td class="lineno" valign="top"></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="left">                       label = q_("Galactic Equator");</td><td> </td><td class="right">                       label = q_("Galactic Equator");</td><td class="lineno" valign="top"></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="left">                       break;</td><td> </td><td class="right">                       break;</td><td class="lineno" valign="top"></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="left">               case LONGITUDE:</td><td> </td><td class="right">               case LONGITUDE:</td><td class="lineno" valign="top"></td></tr>
-      <tr><td><a name="diff0010" /></td></tr>
+      <tr><td><a name="diff0016" /></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="lblock">                       frameType = StelCore::FrameObservercentricEcliptic<span class="delete">;</span></td><td> </td><td class="rblock">                       frameType = StelCore::FrameObservercentricEcliptic<span class="insert">J2
 000; // TODO: Switch to FrameObservercentriEclipticOfDate</span></td><td class="lineno" valign="top"></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="left">                       // TRANSLATORS: Full term is "opposition/conjunction
@@ -230,7 +373,7 @@ rfaceFormat::OpenGL)</td><td class="lineno" valign="top"></td></tr>
  longitude"</td><td class="lineno" valign="top"></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="left">                       label = q_("O./C. longitude");</td><td> </td><td class="right">                       label = q_("O./C. longitude");</td><td class="lineno" valign="top"></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="left">                       break;</td><td> </td><td class="right">                       break;</td><td class="lineno" valign="top"></td></tr>
-      <tr><td><a name="diff0011" /></td></tr>
+      <tr><td><a name="diff0017" /></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="lblock"></td><td> </td><td class="rblock">               <span class="insert">default:</span></td><td class="lineno" valign="top"></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="lblock"></td><td> </td><td class="rblock"><span class="insert">                       Q_ASSERT(0);</span></td><td class="lineno" valign="top"></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="left">       }</td><td> </td><td class="right">       }</td><td class="lineno" valign="top"></td></tr>
@@ -257,7 +400,7 @@ ore::FrameAltAz ? StelCore::RefractionAuto : StelCore::RefractionOff);</td><td c
       <tr><td class="lineno" valign="top"></td><td class="left">       glBlendFunc(GL_SRC_ALPHA, GL_ONE_MINUS_SRC_ALPHA); // Normal transpa
 rency mode</td><td> </td><td class="right">       glBlendFunc(GL_SRC_ALPHA, GL_ONE_MINUS_SRC_ALPHA); // Normal transpa
 rency mode</td><td class="lineno" valign="top"></td></tr>
-      <tr><td><a name="diff0012" /></td></tr>
+      <tr><td><a name="diff0018" /></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="lblock">                                                                           </td><td> </td><td class="rblock">       <span class="insert">#ifdef GL_LINE_SMOOTH</span></td><td class="lineno" valign="top"></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="lblock"></td><td> </td><td class="rblock"><span class="insert">       if (QOpenGLContext::currentContext()-&gt;format().renderableType()==QSu</span></td><td class="lineno" valign="top"></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="lblock"></td><td> </td><td class="rblock"><span class="insert">rfaceFormat::OpenGL)</span></td><td class="lineno" valign="top"></td></tr>
@@ -272,7 +415,7 @@ rency mode</td><td class="lineno" valign="top"></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="left">       userData.text = label;</td><td> </td><td class="right">       userData.text = label;</td><td class="lineno" valign="top"></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="left">       /////////////////////////////////////////////////</td><td> </td><td class="right">       /////////////////////////////////////////////////</td><td class="lineno" valign="top"></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="left">       // Draw the line</td><td> </td><td class="right">       // Draw the line</td><td class="lineno" valign="top"></td></tr>
-      <tr><td><a name="diff0013" /></td></tr>
+      <tr><td><a name="diff0019" /></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="lblock"></td><td> </td><td class="rblock">                                                                           </td><td class="lineno" valign="top"></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="lblock"></td><td> </td><td class="rblock">       <span class="insert">// Precession circles are Small Circles, all others are Great Circle</span></td><td class="lineno" valign="top"></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="lblock"></td><td> </td><td class="rblock"><span class="insert">s.</span></td><td class="lineno" valign="top"></td></tr>
@@ -373,7 +516,7 @@ rency mode</td><td class="lineno" valign="top"></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="left">       {</td><td> </td><td class="right">       {</td><td class="lineno" valign="top"></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="left">               Vec3d coord;</td><td> </td><td class="right">               Vec3d coord;</td><td class="lineno" valign="top"></td></tr>
       <tr><td class="lineno"></td><td class="left"></td><td> </td><td class="right"></td><td class="lineno"></td></tr>
-      <tr bgcolor="gray" ><td></td><th><a name="part-l6" /><small>skipping to change at</small><em> line 683</em></th><th> </th><th><a name="part-r6" /><small>skipping to change at</small><em> line 778</em></th><td></td></tr>
+      <tr bgcolor="gray" ><td></td><th><a name="part-l10" /><small>skipping to change at</small><em> line 683</em></th><th> </th><th><a name="part-r10" /><small>skipping to change at</small><em> line 782</em></th><td></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="left"></td><td> </td><td class="right"></td><td class="lineno" valign="top"></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="left">       Vec3d middlePoint = p1+p2;</td><td> </td><td class="right">       Vec3d middlePoint = p1+p2;</td><td class="lineno" valign="top"></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="left">       middlePoint.normalize();</td><td> </td><td class="right">       middlePoint.normalize();</td><td class="lineno" valign="top"></td></tr>
@@ -388,7 +531,7 @@ sectCallback, &amp;userData);</td><td class="lineno" valign="top"></td></tr>
 sectCallback, &amp;userData);</td><td> </td><td class="right">       sPainter.drawGreatCircleArc(p2, middlePoint, NULL, viewportEdgeInter
 sectCallback, &amp;userData);</td><td class="lineno" valign="top"></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="left"></td><td> </td><td class="right"></td><td class="lineno" valign="top"></td></tr>
-      <tr><td><a name="diff0014" /></td></tr>
+      <tr><td><a name="diff0020" /></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="lblock"></td><td> </td><td class="rblock">       <span class="insert">// OpenGL ES 2.0 doesn't have GL_LINE_SMOOTH</span></td><td class="lineno" valign="top"></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="lblock"></td><td> </td><td class="rblock"><span class="insert">       #ifdef GL_LINE_SMOOTH</span></td><td class="lineno" valign="top"></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="lblock"></td><td> </td><td class="rblock"><span class="insert">       if (QOpenGLContext::currentContext()-&gt;format().renderableType()==QSu</span></td><td class="lineno" valign="top"></td></tr>
@@ -413,13 +556,13 @@ n:</td><td class="lineno" valign="top"></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="left">       setObjectName("GridLinesMgr");</td><td> </td><td class="right">       setObjectName("GridLinesMgr");</td><td class="lineno" valign="top"></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="left">       equGrid = new SkyGrid(StelCore::FrameEquinoxEqu);</td><td> </td><td class="right">       equGrid = new SkyGrid(StelCore::FrameEquinoxEqu);</td><td class="lineno" valign="top"></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="left">       equJ2000Grid = new SkyGrid(StelCore::FrameJ2000);</td><td> </td><td class="right">       equJ2000Grid = new SkyGrid(StelCore::FrameJ2000);</td><td class="lineno" valign="top"></td></tr>
-      <tr><td><a name="diff0015" /></td></tr>
+      <tr><td><a name="diff0021" /></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="lblock">       eclJ2000Grid = new <span class="delete">SkyGrid(StelCore::FrameObservercentricEcliptic);</span></td><td> </td><td class="rblock">       eclJ2000Grid = new <span class="insert">SkyGrid(StelCore::FrameObservercentricEclipticJ20</span></td><td class="lineno" valign="top"></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="lblock"></td><td> </td><td class="rblock"><span class="insert">00);</span></td><td class="lineno" valign="top"></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="lblock"></td><td> </td><td class="rblock"><span class="insert">       eclGrid = new SkyGrid(StelCore::FrameObservercentricEclipticOfDate);</span></td><td class="lineno" valign="top"></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="left">       galacticGrid = new SkyGrid(StelCore::FrameGalactic);</td><td> </td><td class="right">       galacticGrid = new SkyGrid(StelCore::FrameGalactic);</td><td class="lineno" valign="top"></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="left">       aziGrid = new SkyGrid(StelCore::FrameAltAz);</td><td> </td><td class="right">       aziGrid = new SkyGrid(StelCore::FrameAltAz);</td><td class="lineno" valign="top"></td></tr>
-      <tr><td><a name="diff0016" /></td></tr>
+      <tr><td><a name="diff0022" /></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="lblock">       equatorLine = new <span class="delete">SkyLine(SkyLine::EQUATOR);</span></td><td> </td><td class="rblock">       equatorLine = new <span class="insert">SkyLine(SkyLine::EQUATOR_OF_DATE);</span></td><td class="lineno" valign="top"></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="lblock">       eclipticLine = new <span class="delete">SkyLine(SkyLine::ECLIPTIC);</span></td><td> </td><td class="rblock"><span class="insert">       equatorJ2000Line = new SkyLine(SkyLine::EQUATOR_J2000);</span></td><td class="lineno" valign="top"></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="lblock"></td><td> </td><td class="rblock"><span class="insert">       eclipticJ2000Line = new SkyLine(SkyLine::ECLIPTIC_J2000); // previou</span></td><td class="lineno" valign="top"></td></tr>
@@ -438,15 +581,15 @@ n:</td><td class="lineno" valign="top"></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="left">       delete equGrid;</td><td> </td><td class="right">       delete equGrid;</td><td class="lineno" valign="top"></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="left">       delete equJ2000Grid;</td><td> </td><td class="right">       delete equJ2000Grid;</td><td class="lineno" valign="top"></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="left">       delete eclJ2000Grid;</td><td> </td><td class="right">       delete eclJ2000Grid;</td><td class="lineno" valign="top"></td></tr>
-      <tr><td><a name="diff0017" /></td></tr>
+      <tr><td><a name="diff0023" /></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="lblock"></td><td> </td><td class="rblock"><span class="insert">       delete eclGrid;</span></td><td class="lineno" valign="top"></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="left">       delete galacticGrid;</td><td> </td><td class="right">       delete galacticGrid;</td><td class="lineno" valign="top"></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="left">       delete aziGrid;</td><td> </td><td class="right">       delete aziGrid;</td><td class="lineno" valign="top"></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="left">       delete equatorLine;</td><td> </td><td class="right">       delete equatorLine;</td><td class="lineno" valign="top"></td></tr>
-      <tr><td><a name="diff0018" /></td></tr>
+      <tr><td><a name="diff0024" /></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="lblock"></td><td> </td><td class="rblock"><span class="insert">       delete equatorJ2000Line;</span></td><td class="lineno" valign="top"></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="left">       delete eclipticLine;</td><td> </td><td class="right">       delete eclipticLine;</td><td class="lineno" valign="top"></td></tr>
-      <tr><td><a name="diff0019" /></td></tr>
+      <tr><td><a name="diff0025" /></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="lblock"></td><td> </td><td class="rblock">       <span class="insert">delete eclipticJ2000Line;</span></td><td class="lineno" valign="top"></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="lblock"></td><td> </td><td class="rblock"><span class="insert">       delete precessionCircleN;</span></td><td class="lineno" valign="top"></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="lblock"></td><td> </td><td class="rblock"><span class="insert">       delete precessionCircleS;</span></td><td class="lineno" valign="top"></td></tr>
@@ -461,7 +604,7 @@ n:</td><td class="lineno" valign="top"></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="left">*************************************************************************/</td><td> </td><td class="right">*************************************************************************/</td><td class="lineno" valign="top"></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="left">double GridLinesMgr::getCallOrder(StelModuleActionName actionName) const</td><td> </td><td class="right">double GridLinesMgr::getCallOrder(StelModuleActionName actionName) const</td><td class="lineno" valign="top"></td></tr>
       <tr><td class="lineno"></td><td class="left"></td><td> </td><td class="right"></td><td class="lineno"></td></tr>
-      <tr bgcolor="gray" ><td></td><th><a name="part-l7" /><small>skipping to change at</small><em> line 739</em></th><th> </th><th><a name="part-r7" /><small>skipping to change at</small><em> line 852</em></th><td></td></tr>
+      <tr bgcolor="gray" ><td></td><th><a name="part-l11" /><small>skipping to change at</small><em> line 739</em></th><th> </th><th><a name="part-r11" /><small>skipping to change at</small><em> line 856</em></th><td></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="left"></td><td> </td><td class="right"></td><td class="lineno" valign="top"></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="left">void GridLinesMgr::init()</td><td> </td><td class="right">void GridLinesMgr::init()</td><td class="lineno" valign="top"></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="left">{</td><td> </td><td class="right">{</td><td class="lineno" valign="top"></td></tr>
@@ -480,7 +623,7 @@ rid").toBool());</td><td class="lineno" valign="top"></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="left">       setFlagEclipticJ2000Grid(conf-&gt;value("viewing/flag_ecliptic_J2000_gr
 id").toBool());</td><td> </td><td class="right">       setFlagEclipticJ2000Grid(conf-&gt;value("viewing/flag_ecliptic_J2000_gr
 id").toBool());</td><td class="lineno" valign="top"></td></tr>
-      <tr><td><a name="diff0020" /></td></tr>
+      <tr><td><a name="diff0026" /></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="lblock"></td><td> </td><td class="rblock"><span class="insert">       setFlagEclipticGrid(conf-&gt;value("viewing/flag_ecliptic_grid").toBool
 ());</span></td><td class="lineno" valign="top"></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="left">       setFlagGalacticGrid(conf-&gt;value("viewing/flag_galactic_grid").toBool
@@ -489,13 +632,13 @@ id").toBool());</td><td class="lineno" valign="top"></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="left">       setFlagEquatorLine(conf-&gt;value("viewing/flag_equator_line").toBool()
 );</td><td> </td><td class="right">       setFlagEquatorLine(conf-&gt;value("viewing/flag_equator_line").toBool()
 );</td><td class="lineno" valign="top"></td></tr>
-      <tr><td><a name="diff0021" /></td></tr>
+      <tr><td><a name="diff0027" /></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="lblock"></td><td> </td><td class="rblock"><span class="insert">       setFlagEquatorJ2000Line(conf-&gt;value("viewing/flag_equator_J2000_line
 ").toBool());</span></td><td class="lineno" valign="top"></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="left">       setFlagEclipticLine(conf-&gt;value("viewing/flag_ecliptic_line").toBool
 ());</td><td> </td><td class="right">       setFlagEclipticLine(conf-&gt;value("viewing/flag_ecliptic_line").toBool
 ());</td><td class="lineno" valign="top"></td></tr>
-      <tr><td><a name="diff0022" /></td></tr>
+      <tr><td><a name="diff0028" /></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="lblock"></td><td> </td><td class="rblock">       <span class="insert">setFlagEclipticJ2000Line(conf-&gt;value("viewing/flag_ecliptic_J2000_li</span></td><td class="lineno" valign="top"></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="lblock"></td><td> </td><td class="rblock"><span class="insert">ne").toBool());</span></td><td class="lineno" valign="top"></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="lblock"></td><td> </td><td class="rblock"><span class="insert">       setFlagPrecessionCircles(conf-&gt;value("viewing/flag_precession_circle</span></td><td class="lineno" valign="top"></td></tr>
@@ -531,13 +674,13 @@ rid"), "azimuthalGridDisplayed", "Z");</td><td class="lineno" valign="top"></td>
       <tr><td class="lineno" valign="top"></td><td class="left">       addAction("actionShow_Ecliptic_Line", displayGroup, N_("Ecliptic lin
 e"), "eclipticLineDisplayed", ",");</td><td> </td><td class="right">       addAction("actionShow_Ecliptic_Line", displayGroup, N_("Ecliptic lin
 e"), "eclipticLineDisplayed", ",");</td><td class="lineno" valign="top"></td></tr>
-      <tr><td><a name="diff0023" /></td></tr>
+      <tr><td><a name="diff0029" /></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="lblock"></td><td> </td><td class="rblock"><span class="insert">       addAction("actionShow_Ecliptic_J2000_Line", displayGroup, N_("Eclipt
 ic J2000 line"), "eclipticJ2000LineDisplayed");</span></td><td class="lineno" valign="top"></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="left">       addAction("actionShow_Equator_Line", displayGroup, N_("Equator line"
 ), "equatorLineDisplayed", ".");</td><td> </td><td class="right">       addAction("actionShow_Equator_Line", displayGroup, N_("Equator line"
 ), "equatorLineDisplayed", ".");</td><td class="lineno" valign="top"></td></tr>
-      <tr><td><a name="diff0024" /></td></tr>
+      <tr><td><a name="diff0030" /></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="lblock"></td><td> </td><td class="rblock"><span class="insert">       addAction("actionShow_Equator_J2000_Line", displayGroup, N_("Equator
  J2000 line"), "equatorJ2000LineDisplayed"); // or with Hotkey??</span></td><td class="lineno" valign="top"></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="left">       addAction("actionShow_Meridian_Line", displayGroup, N_("Meridian lin
@@ -552,7 +695,7 @@ torial J2000 grid"), "equatorJ2000GridDisplayed");</td><td class="lineno" valign
       <tr><td class="lineno" valign="top"></td><td class="left">       addAction("actionShow_Ecliptic_J2000_Grid", displayGroup, N_("Eclipt
 ic J2000 grid"), "eclipticJ2000GridDisplayed");</td><td> </td><td class="right">       addAction("actionShow_Ecliptic_J2000_Grid", displayGroup, N_("Eclipt
 ic J2000 grid"), "eclipticJ2000GridDisplayed");</td><td class="lineno" valign="top"></td></tr>
-      <tr><td><a name="diff0025" /></td></tr>
+      <tr><td><a name="diff0031" /></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="lblock"></td><td> </td><td class="rblock"><span class="insert">       addAction("actionShow_Ecliptic_Grid", displayGroup, N_("Ecliptic gri
 d"), "eclipticGridDisplayed");</span></td><td class="lineno" valign="top"></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="left">       addAction("actionShow_Galactic_Grid", displayGroup, N_("Galactic gri
@@ -564,7 +707,7 @@ ctic equator"), "galacticEquatorLineDisplayed");</td><td class="lineno" valign="
       <tr><td class="lineno" valign="top"></td><td class="left">       addAction("actionShow_Longitude_Line", displayGroup, N_("Opposition/
 conjunction longitude line"), "longitudeLineDisplayed");</td><td> </td><td class="right">       addAction("actionShow_Longitude_Line", displayGroup, N_("Opposition/
 conjunction longitude line"), "longitudeLineDisplayed");</td><td class="lineno" valign="top"></td></tr>
-      <tr><td><a name="diff0026" /></td></tr>
+      <tr><td><a name="diff0032" /></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="lblock"></td><td> </td><td class="rblock"><span class="insert">       addAction("actionShow_Precession_Circles", displayGroup, N_("Precess
 ion Circles"), "precessionCirclesDisplayed");</span></td><td class="lineno" valign="top"></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="left">}</td><td> </td><td class="right">}</td><td class="lineno" valign="top"></td></tr>
@@ -575,15 +718,15 @@ ion Circles"), "precessionCirclesDisplayed");</span></td><td class="lineno" vali
       <tr><td class="lineno" valign="top"></td><td class="left">       equGrid-&gt;update(deltaTime);</td><td> </td><td class="right">       equGrid-&gt;update(deltaTime);</td><td class="lineno" valign="top"></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="left">       equJ2000Grid-&gt;update(deltaTime);</td><td> </td><td class="right">       equJ2000Grid-&gt;update(deltaTime);</td><td class="lineno" valign="top"></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="left">       eclJ2000Grid-&gt;update(deltaTime);</td><td> </td><td class="right">       eclJ2000Grid-&gt;update(deltaTime);</td><td class="lineno" valign="top"></td></tr>
-      <tr><td><a name="diff0027" /></td></tr>
+      <tr><td><a name="diff0033" /></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="lblock"></td><td> </td><td class="rblock"><span class="insert">       eclGrid-&gt;update(deltaTime);</span></td><td class="lineno" valign="top"></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="left">       galacticGrid-&gt;update(deltaTime);</td><td> </td><td class="right">       galacticGrid-&gt;update(deltaTime);</td><td class="lineno" valign="top"></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="left">       aziGrid-&gt;update(deltaTime);</td><td> </td><td class="right">       aziGrid-&gt;update(deltaTime);</td><td class="lineno" valign="top"></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="left">       equatorLine-&gt;update(deltaTime);</td><td> </td><td class="right">       equatorLine-&gt;update(deltaTime);</td><td class="lineno" valign="top"></td></tr>
-      <tr><td><a name="diff0028" /></td></tr>
+      <tr><td><a name="diff0034" /></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="lblock"></td><td> </td><td class="rblock"><span class="insert">       equatorJ2000Line-&gt;update(deltaTime);</span></td><td class="lineno" valign="top"></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="left">       eclipticLine-&gt;update(deltaTime);</td><td> </td><td class="right">       eclipticLine-&gt;update(deltaTime);</td><td class="lineno" valign="top"></td></tr>
-      <tr><td><a name="diff0029" /></td></tr>
+      <tr><td><a name="diff0035" /></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="lblock"></td><td> </td><td class="rblock">       <span class="insert">eclipticJ2000Line-&gt;update(deltaTime);</span></td><td class="lineno" valign="top"></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="lblock"></td><td> </td><td class="rblock"><span class="insert">       precessionCircleN-&gt;update(deltaTime);</span></td><td class="lineno" valign="top"></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="lblock"></td><td> </td><td class="rblock"><span class="insert">       precessionCircleS-&gt;update(deltaTime);</span></td><td class="lineno" valign="top"></td></tr>
@@ -595,13 +738,13 @@ ion Circles"), "precessionCirclesDisplayed");</span></td><td class="lineno" vali
       <tr><td class="lineno" valign="top"></td><td class="left"></td><td> </td><td class="right"></td><td class="lineno" valign="top"></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="left">void GridLinesMgr::draw(StelCore* core)</td><td> </td><td class="right">void GridLinesMgr::draw(StelCore* core)</td><td class="lineno" valign="top"></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="left">{</td><td> </td><td class="right">{</td><td class="lineno" valign="top"></td></tr>
-      <tr><td><a name="diff0030" /></td></tr>
+      <tr><td><a name="diff0036" /></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="lblock"><span class="delete">       equGrid-&gt;draw(core);</span></td><td> </td><td class="rblock"></td><td class="lineno" valign="top"></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="left">       galacticGrid-&gt;draw(core);</td><td> </td><td class="right">       galacticGrid-&gt;draw(core);</td><td class="lineno" valign="top"></td></tr>
-      <tr><td><a name="diff0031" /></td></tr>
+      <tr><td><a name="diff0037" /></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="lblock"><span class="delete">       equJ2000Grid-&gt;draw(core);</span></td><td> </td><td class="rblock"></td><td class="lineno" valign="top"></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="left">       eclJ2000Grid-&gt;draw(core);</td><td> </td><td class="right">       eclJ2000Grid-&gt;draw(core);</td><td class="lineno" valign="top"></td></tr>
-      <tr><td><a name="diff0032" /></td></tr>
+      <tr><td><a name="diff0038" /></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="lblock"></td><td> </td><td class="rblock">       <span class="insert">// While ecliptic of J2000 may be helpful to get a feeling of the Z=</span></td><td class="lineno" valign="top"></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="lblock"></td><td> </td><td class="rblock"><span class="insert">0 plane of VSOP87,</span></td><td class="lineno" valign="top"></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="lblock"></td><td> </td><td class="rblock"><span class="insert">       // ecliptic of date is related to Earth and does not make much sense</span></td><td class="lineno" valign="top"></td></tr>
@@ -613,7 +756,7 @@ ion Circles"), "precessionCirclesDisplayed");</span></td><td class="lineno" vali
       <tr><td class="lineno" valign="top"></td><td class="lblock"></td><td> </td><td class="rblock"><span class="insert">       equJ2000Grid-&gt;draw(core);</span></td><td class="lineno" valign="top"></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="lblock"></td><td> </td><td class="rblock"><span class="insert">       equGrid-&gt;draw(core);</span></td><td class="lineno" valign="top"></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="left">       aziGrid-&gt;draw(core);</td><td> </td><td class="right">       aziGrid-&gt;draw(core);</td><td class="lineno" valign="top"></td></tr>
-      <tr><td><a name="diff0033" /></td></tr>
+      <tr><td><a name="diff0039" /></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="lblock"></td><td> </td><td class="rblock">       <span class="insert">// Lines after grids, to be able to e.g. draw equators in different </span></td><td class="lineno" valign="top"></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="lblock"></td><td> </td><td class="rblock"><span class="insert">color!</span></td><td class="lineno" valign="top"></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="lblock"></td><td> </td><td class="rblock"><span class="insert">       galacticEquatorLine-&gt;draw(core);</span></td><td class="lineno" valign="top"></td></tr>
@@ -627,11 +770,11 @@ ion Circles"), "precessionCirclesDisplayed");</span></td><td class="lineno" vali
       <tr><td class="lineno" valign="top"></td><td class="lblock"></td><td> </td><td class="rblock"><span class="insert">       longitudeLine-&gt;draw(core);</span></td><td class="lineno" valign="top"></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="lblock"></td><td> </td><td class="rblock"><span class="insert">       equatorJ2000Line-&gt;draw(core);</span></td><td class="lineno" valign="top"></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="left">       equatorLine-&gt;draw(core);</td><td> </td><td class="right">       equatorLine-&gt;draw(core);</td><td class="lineno" valign="top"></td></tr>
-      <tr><td><a name="diff0034" /></td></tr>
+      <tr><td><a name="diff0040" /></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="lblock"><span class="delete">       eclipticLine-&gt;draw(core);</span></td><td> </td><td class="rblock"></td><td class="lineno" valign="top"></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="left">       meridianLine-&gt;draw(core);</td><td> </td><td class="right">       meridianLine-&gt;draw(core);</td><td class="lineno" valign="top"></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="left">       horizonLine-&gt;draw(core);</td><td> </td><td class="right">       horizonLine-&gt;draw(core);</td><td class="lineno" valign="top"></td></tr>
-      <tr><td><a name="diff0035" /></td></tr>
+      <tr><td><a name="diff0041" /></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="lblock">       <span class="delete">galacticEquatorLine-&gt;draw(core);</span></td><td> </td><td class="rblock"></td><td class="lineno" valign="top"></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="lblock"><span class="delete">       longitudeLine-&gt;draw(core);</span></td><td> </td><td class="rblock"></td><td class="lineno" valign="top"></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="left">}</td><td> </td><td class="right">}</td><td class="lineno" valign="top"></td></tr>
@@ -650,7 +793,7 @@ torial_color", defaultColor).toString()));</td><td class="lineno" valign="top"><
       <tr><td class="lineno" valign="top"></td><td class="left">       setColorEquatorJ2000Grid(StelUtils::strToVec3f(conf-&gt;value(section+"
 /equatorial_J2000_color", defaultColor).toString()));</td><td> </td><td class="right">       setColorEquatorJ2000Grid(StelUtils::strToVec3f(conf-&gt;value(section+"
 /equatorial_J2000_color", defaultColor).toString()));</td><td class="lineno" valign="top"></td></tr>
-      <tr><td><a name="diff0036" /></td></tr>
+      <tr><td><a name="diff0042" /></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="lblock">       setColorEclipticJ2000Grid(StelUtils::strToVec3f(conf-&gt;value(section+</td><td> </td><td class="rblock">       setColorEclipticJ2000Grid(StelUtils::strToVec3f(conf-&gt;value(section+</td><td class="lineno" valign="top"></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="lblock"><span class="delete">"/ecliptic_J2000_color",</span> defaultColor).toString()));</td><td> </td><td class="rblock"><span class="insert">"/ecliptical_J2000_color", defaultColor).toString()));</span></td><td class="lineno" valign="top"></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="lblock"></td><td> </td><td class="rblock"><span class="insert">       setColorEclipticGrid(StelUtils::strToVec3f(conf-&gt;value(section+"/ecl</span></td><td class="lineno" valign="top"></td></tr>
@@ -667,7 +810,7 @@ tor_color", defaultColor).toString()));</td><td class="lineno" valign="top"></td
       <tr><td class="lineno" valign="top"></td><td class="left">       setColorEclipticLine(StelUtils::strToVec3f(conf-&gt;value(section+"/ecl
 iptic_color", defaultColor).toString()));</td><td> </td><td class="right">       setColorEclipticLine(StelUtils::strToVec3f(conf-&gt;value(section+"/ecl
 iptic_color", defaultColor).toString()));</td><td class="lineno" valign="top"></td></tr>
-      <tr><td><a name="diff0037" /></td></tr>
+      <tr><td><a name="diff0043" /></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="lblock"></td><td> </td><td class="rblock">       <span class="insert">setColorEclipticJ2000Line(StelUtils::strToVec3f(conf-&gt;value(section+</span></td><td class="lineno" valign="top"></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="lblock"></td><td> </td><td class="rblock"><span class="insert">"/ecliptic_J2000_color", defaultColor).toString()));</span></td><td class="lineno" valign="top"></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="lblock"></td><td> </td><td class="rblock"><span class="insert">       setColorPrecessionCircles(StelUtils::strToVec3f(conf-&gt;value(section+</span></td><td class="lineno" valign="top"></td></tr>
@@ -688,11 +831,11 @@ ngitude_color", defaultColor).toString()));</td><td class="lineno" valign="top">
       <tr><td class="lineno" valign="top"></td><td class="left"></td><td> </td><td class="right"></td><td class="lineno" valign="top"></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="left">void GridLinesMgr::updateLineLabels()</td><td> </td><td class="right">void GridLinesMgr::updateLineLabels()</td><td class="lineno" valign="top"></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="left">{</td><td> </td><td class="right">{</td><td class="lineno" valign="top"></td></tr>
-      <tr><td><a name="diff0038" /></td></tr>
+      <tr><td><a name="diff0044" /></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="lblock"></td><td> </td><td class="rblock"><span class="insert">       equatorJ2000Line-&gt;updateLabel();</span></td><td class="lineno" valign="top"></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="left">       equatorLine-&gt;updateLabel();</td><td> </td><td class="right">       equatorLine-&gt;updateLabel();</td><td class="lineno" valign="top"></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="left">       eclipticLine-&gt;updateLabel();</td><td> </td><td class="right">       eclipticLine-&gt;updateLabel();</td><td class="lineno" valign="top"></td></tr>
-      <tr><td><a name="diff0039" /></td></tr>
+      <tr><td><a name="diff0045" /></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="lblock"></td><td> </td><td class="rblock">       <span class="insert">eclipticJ2000Line-&gt;updateLabel();</span></td><td class="lineno" valign="top"></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="lblock"></td><td> </td><td class="rblock"><span class="insert">       precessionCircleN-&gt;updateLabel();</span></td><td class="lineno" valign="top"></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="lblock"></td><td> </td><td class="rblock"><span class="insert">       precessionCircleS-&gt;updateLabel();</span></td><td class="lineno" valign="top"></td></tr>
@@ -707,7 +850,7 @@ ngitude_color", defaultColor).toString()));</td><td class="lineno" valign="top">
       <tr><td class="lineno" valign="top"></td><td class="left">{</td><td> </td><td class="right">{</td><td class="lineno" valign="top"></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="left">       if(displayed != aziGrid-&gt;isDisplayed()) {</td><td> </td><td class="right">       if(displayed != aziGrid-&gt;isDisplayed()) {</td><td class="lineno" valign="top"></td></tr>
       <tr><td class="lineno"></td><td class="left"></td><td> </td><td class="right"></td><td class="lineno"></td></tr>
-      <tr bgcolor="gray" ><td></td><th><a name="part-l8" /><small>skipping to change at</small><em> line 925</em></th><th> </th><th><a name="part-r8" /><small>skipping to change at</small><em> line 1071</em></th><td></td></tr>
+      <tr bgcolor="gray" ><td></td><th><a name="part-l12" /><small>skipping to change at</small><em> line 925</em></th><th> </th><th><a name="part-r12" /><small>skipping to change at</small><em> line 1075</em></th><td></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="left">       return eclJ2000Grid-&gt;getColor();</td><td> </td><td class="right">       return eclJ2000Grid-&gt;getColor();</td><td class="lineno" valign="top"></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="left">}</td><td> </td><td class="right">}</td><td class="lineno" valign="top"></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="left">void GridLinesMgr::setColorEclipticJ2000Grid(const Vec3f&amp; newColor)</td><td> </td><td class="right">void GridLinesMgr::setColorEclipticJ2000Grid(const Vec3f&amp; newColor)</td><td class="lineno" valign="top"></td></tr>
@@ -718,7 +861,7 @@ ngitude_color", defaultColor).toString()));</td><td class="lineno" valign="top">
       <tr><td class="lineno" valign="top"></td><td class="left">       }</td><td> </td><td class="right">       }</td><td class="lineno" valign="top"></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="left">}</td><td> </td><td class="right">}</td><td class="lineno" valign="top"></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="left"></td><td> </td><td class="right"></td><td class="lineno" valign="top"></td></tr>
-      <tr><td><a name="diff0040" /></td></tr>
+      <tr><td><a name="diff0046" /></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="lblock"></td><td> </td><td class="rblock"><span class="insert">//! Set flag for displaying Ecliptic of Date Grid</span></td><td class="lineno" valign="top"></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="lblock"></td><td> </td><td class="rblock"><span class="insert">void GridLinesMgr::setFlagEclipticGrid(const bool displayed)</span></td><td class="lineno" valign="top"></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="lblock"></td><td> </td><td class="rblock"><span class="insert">{</span></td><td class="lineno" valign="top"></td></tr>
@@ -755,7 +898,7 @@ ngitude_color", defaultColor).toString()));</td><td class="lineno" valign="top">
       <tr><td class="lineno" valign="top"></td><td class="left">//! Get flag for displaying Galactic Grid</td><td> </td><td class="right">//! Get flag for displaying Galactic Grid</td><td class="lineno" valign="top"></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="left">bool GridLinesMgr::getFlagGalacticGrid(void) const</td><td> </td><td class="right">bool GridLinesMgr::getFlagGalacticGrid(void) const</td><td class="lineno" valign="top"></td></tr>
       <tr><td class="lineno"></td><td class="left"></td><td> </td><td class="right"></td><td class="lineno"></td></tr>
-      <tr bgcolor="gray" ><td></td><th><a name="part-l9" /><small>skipping to change at</small><em> line 975</em></th><th> </th><th><a name="part-r9" /><small>skipping to change at</small><em> line 1146</em></th><td></td></tr>
+      <tr bgcolor="gray" ><td></td><th><a name="part-l13" /><small>skipping to change at</small><em> line 975</em></th><th> </th><th><a name="part-r13" /><small>skipping to change at</small><em> line 1150</em></th><td></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="left">       return equatorLine-&gt;getColor();</td><td> </td><td class="right">       return equatorLine-&gt;getColor();</td><td class="lineno" valign="top"></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="left">}</td><td> </td><td class="right">}</td><td class="lineno" valign="top"></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="left">void GridLinesMgr::setColorEquatorLine(const Vec3f&amp; newColor)</td><td> </td><td class="right">void GridLinesMgr::setColorEquatorLine(const Vec3f&amp; newColor)</td><td class="lineno" valign="top"></td></tr>
@@ -766,7 +909,7 @@ ngitude_color", defaultColor).toString()));</td><td class="lineno" valign="top">
       <tr><td class="lineno" valign="top"></td><td class="left">       }</td><td> </td><td class="right">       }</td><td class="lineno" valign="top"></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="left">}</td><td> </td><td class="right">}</td><td class="lineno" valign="top"></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="left"></td><td> </td><td class="right"></td><td class="lineno" valign="top"></td></tr>
-      <tr><td><a name="diff0041" /></td></tr>
+      <tr><td><a name="diff0047" /></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="lblock"></td><td> </td><td class="rblock"><span class="insert">//! Set flag for displaying J2000 Equatorial Line</span></td><td class="lineno" valign="top"></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="lblock"></td><td> </td><td class="rblock"><span class="insert">void GridLinesMgr::setFlagEquatorJ2000Line(const bool displayed)</span></td><td class="lineno" valign="top"></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="lblock"></td><td> </td><td class="rblock"><span class="insert">{</span></td><td class="lineno" valign="top"></td></tr>
@@ -803,7 +946,7 @@ ngitude_color", defaultColor).toString()));</td><td class="lineno" valign="top">
       <tr><td class="lineno" valign="top"></td><td class="left">//! Get flag for displaying Ecliptic Line</td><td> </td><td class="right">//! Get flag for displaying Ecliptic Line</td><td class="lineno" valign="top"></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="left">bool GridLinesMgr::getFlagEclipticLine(void) const</td><td> </td><td class="right">bool GridLinesMgr::getFlagEclipticLine(void) const</td><td class="lineno" valign="top"></td></tr>
       <tr><td class="lineno"></td><td class="left"></td><td> </td><td class="right"></td><td class="lineno"></td></tr>
-      <tr bgcolor="gray" ><td></td><th><a name="part-l10" /><small>skipping to change at</small><em> line 1000</em></th><th> </th><th><a name="part-r10" /><small>skipping to change at</small><em> line 1196</em></th><td></td></tr>
+      <tr bgcolor="gray" ><td></td><th><a name="part-l14" /><small>skipping to change at</small><em> line 1000</em></th><th> </th><th><a name="part-r14" /><small>skipping to change at</small><em> line 1200</em></th><td></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="left">       return eclipticLine-&gt;getColor();</td><td> </td><td class="right">       return eclipticLine-&gt;getColor();</td><td class="lineno" valign="top"></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="left">}</td><td> </td><td class="right">}</td><td class="lineno" valign="top"></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="left">void GridLinesMgr::setColorEclipticLine(const Vec3f&amp; newColor)</td><td> </td><td class="right">void GridLinesMgr::setColorEclipticLine(const Vec3f&amp; newColor)</td><td class="lineno" valign="top"></td></tr>
@@ -814,7 +957,7 @@ ngitude_color", defaultColor).toString()));</td><td class="lineno" valign="top">
       <tr><td class="lineno" valign="top"></td><td class="left">       }</td><td> </td><td class="right">       }</td><td class="lineno" valign="top"></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="left">}</td><td> </td><td class="right">}</td><td class="lineno" valign="top"></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="left"></td><td> </td><td class="right"></td><td class="lineno" valign="top"></td></tr>
-      <tr><td><a name="diff0042" /></td></tr>
+      <tr><td><a name="diff0048" /></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="lblock"></td><td> </td><td class="rblock"><span class="insert">//! Set flag for displaying Ecliptic J2000 Line</span></td><td class="lineno" valign="top"></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="lblock"></td><td> </td><td class="rblock"><span class="insert">void GridLinesMgr::setFlagEclipticJ2000Line(const bool displayed)</span></td><td class="lineno" valign="top"></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="lblock"></td><td> </td><td class="rblock"><span class="insert">{</span></td><td class="lineno" valign="top"></td></tr>
@@ -880,8 +1023,8 @@ ngitude_color", defaultColor).toString()));</td><td class="lineno" valign="top">
       <tr><td class="lineno" valign="top"></td><td class="left">bool GridLinesMgr::getFlagMeridianLine(void) const</td><td> </td><td class="right">bool GridLinesMgr::getFlagMeridianLine(void) const</td><td class="lineno" valign="top"></td></tr>
 
      <tr><td></td><td class="left"></td><td> </td><td class="right"></td><td></td></tr>
-     <tr bgcolor="gray"><th colspan="5" align="center"><a name="end">&nbsp;End of changes. 42 change blocks.&nbsp;</a></th></tr>
-     <tr class="stats"><td></td><th><i>25 lines changed or deleted</i></th><th><i> </i></th><th><i>309 lines changed or added</i></th><td></td></tr>
+     <tr bgcolor="gray"><th colspan="5" align="center"><a name="end">&nbsp;End of changes. 48 change blocks.&nbsp;</a></th></tr>
+     <tr class="stats"><td></td><th><i>31 lines changed or deleted</i></th><th><i> </i></th><th><i>320 lines changed or added</i></th><td></td></tr>
      <tr><td colspan="5" align="center" class="small"><br/>This html diff was produced by rfcdiff 1.41. The latest version is available from <a href="http://www.tools.ietf.org/tools/rfcdiff/" >http://tools.ietf.org/tools/rfcdiff/</a> </td></tr>
    </table>
    </body>

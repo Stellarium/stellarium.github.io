@@ -126,7 +126,26 @@ d StelSkyImageTile.</td><td class="lineno" valign="top"></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="left">       //! - AltAzi</td><td> </td><td class="right">       //! - AltAzi</td><td class="lineno" valign="top"></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="left">       //! - Distance</td><td> </td><td class="right">       //! - Distance</td><td class="lineno" valign="top"></td></tr>
       <tr><td class="lineno"></td><td class="left"></td><td> </td><td class="right"></td><td class="lineno"></td></tr>
-      <tr bgcolor="gray" ><td></td><th><a name="part-l2" /><small>skipping to change at</small><em> line 75</em></th><th> </th><th><a name="part-r2" /><small>skipping to change at</small><em> line 117</em></th><td></td></tr>
+      <tr bgcolor="gray" ><td></td><th><a name="part-l2" /><small>skipping to change at</small><em> line 64</em></th><th> </th><th><a name="part-r2" /><small>skipping to change at</small><em> line 106</em></th><td></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="left">       //! @return a QString containing an HMTL encoded description of the 
+Nebula.</td><td> </td><td class="right">       //! @return a QString containing an HMTL encoded description of the 
+Nebula.</td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="left">       virtual QString getInfoString(const StelCore *core, const InfoString
+Group&amp; flags) const;</td><td> </td><td class="right">       virtual QString getInfoString(const StelCore *core, const InfoString
+Group&amp; flags) const;</td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="left">       virtual QString getType() const {return "Nebula";}</td><td> </td><td class="right">       virtual QString getType() const {return "Nebula";}</td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="left">       virtual Vec3d getJ2000EquatorialPos(const StelCore*) const {return X
+YZ;}</td><td> </td><td class="right">       virtual Vec3d getJ2000EquatorialPos(const StelCore*) const {return X
+YZ;}</td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="left">       virtual double getCloseViewFov(const StelCore* core = NULL) const;</td><td> </td><td class="right">       virtual double getCloseViewFov(const StelCore* core = NULL) const;</td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="left">       virtual float getVMagnitude(const StelCore* core) const;</td><td> </td><td class="right">       virtual float getVMagnitude(const StelCore* core) const;</td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="left">       virtual float getSelectPriority(const StelCore* core) const;</td><td> </td><td class="right">       virtual float getSelectPriority(const StelCore* core) const;</td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="left">       virtual Vec3f getInfoColor() const;</td><td> </td><td class="right">       virtual Vec3f getInfoColor() const;</td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="left">       virtual QString getNameI18n() const {return nameI18;}</td><td> </td><td class="right">       virtual QString getNameI18n() const {return nameI18;}</td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="left">       virtual QString getEnglishName() const {return englishName;}</td><td> </td><td class="right">       virtual QString getEnglishName() const {return englishName;}</td><td class="lineno" valign="top"></td></tr>
+      <tr><td><a name="diff0002" /></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="lblock">       virtual double getAngularSize(const StelCore*) const<span class="delete"> {return angular
+Size*0.5;}</span></td><td> </td><td class="rblock">       virtual double getAngularSize(const StelCore*) const<span class="insert">;</span></td><td class="lineno" valign="top"></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="left">       virtual SphericalRegionP getRegion() const {return pointRegion;}</td><td> </td><td class="right">       virtual SphericalRegionP getRegion() const {return pointRegion;}</td><td class="lineno" valign="top"></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="left"></td><td> </td><td class="right"></td><td class="lineno" valign="top"></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="left">       // Methods specific to Nebula</td><td> </td><td class="right">       // Methods specific to Nebula</td><td class="lineno" valign="top"></td></tr>
@@ -137,7 +156,7 @@ d StelSkyImageTile.</td><td class="lineno" valign="top"></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="left">       //! @return the nebula type code.</td><td> </td><td class="right">       //! @return the nebula type code.</td><td class="lineno" valign="top"></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="left">       QString getTypeString() const;</td><td> </td><td class="right">       QString getTypeString() const;</td><td class="lineno" valign="top"></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="left"></td><td> </td><td class="right"></td><td class="lineno" valign="top"></td></tr>
-      <tr><td><a name="diff0002" /></td></tr>
+      <tr><td><a name="diff0003" /></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="lblock"></td><td> </td><td class="rblock">       <span class="insert">//! Get the printable morphological nebula Type.</span></td><td class="lineno" valign="top"></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="lblock"></td><td> </td><td class="rblock"><span class="insert">       //! @return the nebula morphological type string.</span></td><td class="lineno" valign="top"></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="lblock"></td><td> </td><td class="rblock"><span class="insert">       QString getMorphologicalTypeString() const;</span></td><td class="lineno" valign="top"></td></tr>
@@ -147,8 +166,12 @@ d StelSkyImageTile.</td><td class="lineno" valign="top"></td></tr>
 ;</td><td> </td><td class="right">       float getSurfaceBrightnessWithExtinction(const StelCore* core) const
 ;</td><td class="lineno" valign="top"></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="left"></td><td> </td><td class="right"></td><td class="lineno" valign="top"></td></tr>
-      <tr><td><a name="diff0003" /></td></tr>
-      <tr><td class="lineno" valign="top"></td><td class="lblock"></td><td> </td><td class="rblock">       <span class="insert">void setProperName(QString name) { englishName = name; }</span></td><td class="lineno" valign="top"></td></tr>
+      <tr><td><a name="diff0004" /></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="lblock"></td><td> </td><td class="rblock">       <span class="insert">//! Get the surface area.</span></td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="lblock"></td><td> </td><td class="rblock"><span class="insert">       //! @return surface area in square degrees.</span></td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="lblock"></td><td> </td><td class="rblock"><span class="insert">       float getSurfaceArea(void) const;</span></td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="lblock"></td><td> </td><td class="rblock"><span class="insert"></span></td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="lblock"></td><td> </td><td class="rblock"><span class="insert">       void setProperName(QString name) { englishName = name; }</span></td><td class="lineno" valign="top"></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="lblock"></td><td> </td><td class="rblock">                                                                           </td><td class="lineno" valign="top"></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="left">private:</td><td> </td><td class="right">private:</td><td class="lineno" valign="top"></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="left">       friend struct DrawNebulaFuncObject;</td><td> </td><td class="right">       friend struct DrawNebulaFuncObject;</td><td class="lineno" valign="top"></td></tr>
@@ -156,7 +179,7 @@ d StelSkyImageTile.</td><td class="lineno" valign="top"></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="left">       //! @enum NebulaType Nebula types</td><td> </td><td class="right">       //! @enum NebulaType Nebula types</td><td class="lineno" valign="top"></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="left">       enum NebulaType</td><td> </td><td class="right">       enum NebulaType</td><td class="lineno" valign="top"></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="left">       {</td><td> </td><td class="right">       {</td><td class="lineno" valign="top"></td></tr>
-      <tr><td><a name="diff0004" /></td></tr>
+      <tr><td><a name="diff0005" /></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="lblock">               <span class="delete">NebGx=0,</span>     //!&lt; Galaxy</td><td> </td><td class="rblock">               <span class="insert">NebGx           = 0,</span>    //!&lt; Galaxy</td><td class="lineno" valign="top"></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="lblock">               <span class="delete">NebOc=1,</span>     //!&lt; Open star cluster</td><td> </td><td class="rblock">               <span class="insert">NebAGx          = 1,    //!&lt; Active galaxy</span></td><td class="lineno" valign="top"></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="lblock">               <span class="delete">NebGc=2,</span>     //!&lt; Globular star cluster, usually in the <span class="delete">Milk</span></td><td> </td><td class="rblock"><span class="insert">               NebRGx          = 2,    //!&lt; Radio galaxy</span></td><td class="lineno" valign="top"></td></tr>
@@ -180,16 +203,16 @@ d StelSkyImageTile.</td><td class="lineno" valign="top"></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="lblock"><span class="delete">       {</span></td><td> </td><td class="rblock"><span class="insert">               NebSNR          = 18,   //!&lt; Supernova remnant</span></td><td class="lineno" valign="top"></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="lblock"><span class="delete">               FormCir=1,   //!&lt; circular form</span></td><td> </td><td class="rblock"><span class="insert">               NebISM          = 19,   //!&lt; Interstellar matter</span></td><td class="lineno" valign="top"></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="lblock"><span class="delete">               FormEll=2,   //!&lt; elliptical form</span></td><td> </td><td class="rblock"><span class="insert">               NebEMO          = 20,   //!&lt; Emission object</span></td><td class="lineno" valign="top"></td></tr>
-      <tr><td class="lineno" valign="top"></td><td class="lblock"><span class="delete">               FormIrr=3    //!&lt; irregular form</span></td><td> </td><td class="rblock"><span class="insert">               NebUnknown      = 21    //!&lt;</span> Unknown type, catalog errors, <span class="insert">"</span></td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="lblock"><span class="delete">               FormIrr=3    //!&lt; irregular form</span></td><td> </td><td class="rblock"><span class="insert">               NebBLL          = 21,   //!&lt; BL Lac object</span></td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="lblock"><span class="delete">       };</span></td><td> </td><td class="rblock"><span class="insert">               NebBLA          = 22,   //!&lt; Blazar</span></td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="lblock"><span class="delete"></span></td><td> </td><td class="rblock"><span class="insert">               NebMolCld       = 23,   //!&lt; Molecular Cloud</span></td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="lblock"><span class="delete">       //! @enum HIIStructureType HII region structure types</span></td><td> </td><td class="rblock"><span class="insert">               NebYSO          = 24,   //!&lt; Young Stellar Object</span></td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="lblock"><span class="delete">       enum HIIStructureType</span></td><td> </td><td class="rblock"><span class="insert">               NebPossQSO      = 25,   //!&lt; Possible Quasar</span></td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="lblock"><span class="delete">       {</span></td><td> </td><td class="rblock"><span class="insert">               NebPossPN       = 26,   //!&lt; Possible Planetary Nebula</span></td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="lblock"><span class="delete">               StructureAmo=1,   //!&lt; amorphous structure</span></td><td> </td><td class="rblock"><span class="insert">               NebPPN          = 27,   //!&lt; Protoplanetary Nebula</span></td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="lblock"><span class="delete">               StructureCon=2,   //!&lt; conventional structure</span></td><td> </td><td class="rblock"><span class="insert">               NebStar         = 28,   //!&lt; Star</span></td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="lblock"><span class="delete">               StructureFil=3    //!&lt; filamentary structure</span></td><td> </td><td class="rblock"><span class="insert">               NebUnknown      = 29    //!&lt;</span> Unknown type, catalog errors, <span class="insert">"</span></td><td class="lineno" valign="top"></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="lblock"><span class="delete">       };</span></td><td> </td><td class="rblock"><span class="insert">Unidentified</span> Southern Objects" etc.</td><td class="lineno" valign="top"></td></tr>
-      <tr><td class="lineno" valign="top"></td><td class="lblock"><span class="delete"></span></td><td> </td><td class="rblock"></td><td class="lineno" valign="top"></td></tr>
-      <tr><td class="lineno" valign="top"></td><td class="lblock"><span class="delete">       //! @enum HIIStructureType HII region structure types</span></td><td> </td><td class="rblock"></td><td class="lineno" valign="top"></td></tr>
-      <tr><td class="lineno" valign="top"></td><td class="lblock"><span class="delete">       enum HIIStructureType</span></td><td> </td><td class="rblock"></td><td class="lineno" valign="top"></td></tr>
-      <tr><td class="lineno" valign="top"></td><td class="lblock"><span class="delete">       {</span></td><td> </td><td class="rblock"></td><td class="lineno" valign="top"></td></tr>
-      <tr><td class="lineno" valign="top"></td><td class="lblock"><span class="delete">               StructureAmo=1,   //!&lt; amorphous structure</span></td><td> </td><td class="rblock"></td><td class="lineno" valign="top"></td></tr>
-      <tr><td class="lineno" valign="top"></td><td class="lblock"><span class="delete">               StructureCon=2,   //!&lt; conventional structure</span></td><td> </td><td class="rblock"></td><td class="lineno" valign="top"></td></tr>
-      <tr><td class="lineno" valign="top"></td><td class="lblock"><span class="delete">               StructureFil=3    //!&lt; filamentary structure</span></td><td> </td><td class="rblock"></td><td class="lineno" valign="top"></td></tr>
-      <tr><td class="lineno" valign="top"></td><td class="lblock"><span class="delete">       };</span></td><td> </td><td class="rblock"></td><td class="lineno" valign="top"></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="lblock"><span class="delete"></span></td><td> </td><td class="rblock"></td><td class="lineno" valign="top"></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="lblock"><span class="delete">       //! @enum HIIBrightnessType HII region brightness types</span></td><td> </td><td class="rblock"></td><td class="lineno" valign="top"></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="lblock"><span class="delete">       enum HIIBrightnessType</span></td><td> </td><td class="rblock"></td><td class="lineno" valign="top"></td></tr>
@@ -213,7 +236,7 @@ d StelSkyImageTile.</td><td class="lineno" valign="top"></td></tr>
 anslate(englishName);}</td><td> </td><td class="right">       void translateName(const StelTranslator&amp; trans) {nameI18 = trans.qtr
 anslate(englishName);}</td><td class="lineno" valign="top"></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="left"></td><td> </td><td class="right"></td><td class="lineno" valign="top"></td></tr>
-      <tr><td><a name="diff0005" /></td></tr>
+      <tr><td><a name="diff0006" /></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="lblock">       <span class="delete">bool readNGC(char *record);</span></td><td> </td><td class="rblock">       void <span class="insert">readDSO(QDataStream&amp;</span> in);</td><td class="lineno" valign="top"></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="lblock">       void <span class="delete">readNGC(QDataStream&amp;</span> in);</td><td> </td><td class="rblock"></td><td class="lineno" valign="top"></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="lblock">       <span class="delete">bool readBarnard(QString record);</span></td><td> </td><td class="rblock"></td><td class="lineno" valign="top"></td></tr>
@@ -226,17 +249,17 @@ anslate(englishName);}</td><td class="lineno" valign="top"></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="left">       void drawLabel(StelPainter&amp; sPainter, float maxMagLabel);</td><td> </td><td class="right">       void drawLabel(StelPainter&amp; sPainter, float maxMagLabel);</td><td class="lineno" valign="top"></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="left">       void drawHints(StelPainter&amp; sPainter, float maxMagHints);</td><td> </td><td class="right">       void drawHints(StelPainter&amp; sPainter, float maxMagHints);</td><td class="lineno" valign="top"></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="left"></td><td> </td><td class="right"></td><td class="lineno" valign="top"></td></tr>
-      <tr><td><a name="diff0006" /></td></tr>
-      <tr><td class="lineno" valign="top"></td><td class="lblock">       //! Get the printable <span class="delete">HII region form</span> type.</td><td> </td><td class="rblock">       <span class="insert">bool objectInDisplayedType();</span></td><td class="lineno" valign="top"></td></tr>
-      <tr><td class="lineno" valign="top"></td><td class="lblock">       <span class="delete">QString getHIIFormTypeString() const;</span></td><td> </td><td class="rblock">                                                                           </td><td class="lineno" valign="top"></td></tr>
+      <tr><td><a name="diff0007" /></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="lblock">       <span class="delete">//! Get the printable HII region form type.</span></td><td> </td><td class="rblock">       <span class="insert">bool objectInDisplayedType()</span> const;</td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="lblock"><span class="delete">       QString getHIIFormTypeString() const;</span></td><td> </td><td class="rblock">                                                                           </td><td class="lineno" valign="top"></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="lblock"><span class="delete">       //! Get the printable HII region structure type.</span></td><td> </td><td class="rblock">       //! Get the printable <span class="insert">description of morphological nebula</span> type.</td><td class="lineno" valign="top"></td></tr>
-      <tr><td class="lineno" valign="top"></td><td class="lblock"><span class="delete">       QString getHIIStructureTypeString() const;</span></td><td> </td><td class="rblock">       //! <span class="insert">@return</span> the <span class="insert">nebula morphological type string.</span></td><td class="lineno" valign="top"></td></tr>
-      <tr><td class="lineno" valign="top"></td><td class="lblock"><span class="delete">       //! Get the printable HII region brightness type.</span></td><td> </td><td class="rblock">       QString <span class="insert">getMorphologicalTypeDescription()</span> const;</td><td class="lineno" valign="top"></td></tr>
-      <tr><td class="lineno" valign="top"></td><td class="lblock"><span class="delete">       QString getHIIBrightnessTypeString() const;</span></td><td> </td><td class="rblock"></td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="lblock"><span class="delete">       QString getHIIStructureTypeString()</span> const;</td><td> </td><td class="rblock">       //! <span class="insert">@return</span> the <span class="insert">nebula morphological type string.</span></td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="lblock">       //! Get the printable <span class="delete">HII region brightness</span> type.</td><td> </td><td class="rblock">       QString <span class="insert">getMorphologicalTypeDescription()</span> const;</td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="lblock">       <span class="delete">QString getHIIBrightnessTypeString() const;</span></td><td> </td><td class="rblock"></td><td class="lineno" valign="top"></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="lblock">       //! <span class="delete">Get</span> the <span class="delete">printable H-α emission region brightness type.</span></td><td> </td><td class="rblock"></td><td class="lineno" valign="top"></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="lblock">       QString <span class="delete">getHaBrightnessTypeString()</span> const;</td><td> </td><td class="rblock"></td><td class="lineno" valign="top"></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="left"></td><td> </td><td class="right"></td><td class="lineno" valign="top"></td></tr>
-      <tr><td><a name="diff0007" /></td></tr>
+      <tr><td><a name="diff0008" /></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="lblock"></td><td> </td><td class="rblock"><span class="insert">       unsigned int DSO_nb;</span></td><td class="lineno" valign="top"></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="left">       unsigned int M_nb;              // Messier Catalog number</td><td> </td><td class="right">       unsigned int M_nb;              // Messier Catalog number</td><td class="lineno" valign="top"></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="left">       unsigned int NGC_nb;            // New General Catalog number</td><td> </td><td class="right">       unsigned int NGC_nb;            // New General Catalog number</td><td class="lineno" valign="top"></td></tr>
@@ -262,7 +285,7 @@ gue of Bright Nebulae (Lynds, 1965))</td><td> </td><td class="right">       unsi
 gue of Bright Nebulae (Lynds, 1965))</td><td class="lineno" valign="top"></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="left">       unsigned int Cr_nb;             // Collinder Catalog number</td><td> </td><td class="right">       unsigned int Cr_nb;             // Collinder Catalog number</td><td class="lineno" valign="top"></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="left">       unsigned int Mel_nb;            // Melotte Catalog number</td><td> </td><td class="right">       unsigned int Mel_nb;            // Melotte Catalog number</td><td class="lineno" valign="top"></td></tr>
-      <tr><td><a name="diff0008" /></td></tr>
+      <tr><td><a name="diff0009" /></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="lblock"></td><td> </td><td class="rblock">       <span class="insert">unsigned int PGC_nb;            // PGC number (Catalog of galaxies)</span></td><td class="lineno" valign="top"></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="lblock"></td><td> </td><td class="rblock"><span class="insert">       unsigned int UGC_nb;            // UGC number (The Uppsala General C</span></td><td class="lineno" valign="top"></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="lblock"></td><td> </td><td class="rblock"><span class="insert">atalogue of Galaxies)</span></td><td class="lineno" valign="top"></td></tr>
@@ -270,18 +293,14 @@ gue of Bright Nebulae (Lynds, 1965))</td><td class="lineno" valign="top"></td></
       <tr><td class="lineno" valign="top"></td><td class="lblock"></td><td> </td><td class="rblock"><span class="insert">bright diffuse Galactic nebulae)</span></td><td class="lineno" valign="top"></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="left">       QString englishName;            // English name</td><td> </td><td class="right">       QString englishName;            // English name</td><td class="lineno" valign="top"></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="left">       QString nameI18;                // Nebula name</td><td> </td><td class="right">       QString nameI18;                // Nebula name</td><td class="lineno" valign="top"></td></tr>
-      <tr><td><a name="diff0009" /></td></tr>
-      <tr><td class="lineno" valign="top"></td><td class="lblock">       float mag;                      // Apparent magnitude. For Dark Nebu</td><td> </td><td class="rblock">       <span class="insert">QString mTypeString;            // Morphological type of object (as </span></td><td class="lineno" valign="top"></td></tr>
-      <tr><td class="lineno" valign="top"></td><td class="lblock">lae, opacity is stored here.</td><td> </td><td class="rblock"><span class="insert">string)</span></td><td class="lineno" valign="top"></td></tr>
-      <tr><td class="lineno" valign="top"></td><td class="lblock">       float angularSize;              // Angular size in degree</td><td> </td><td class="rblock">       float mag;                      // Apparent magnitude. For Dark Nebu</td><td class="lineno" valign="top"></td></tr>
-      <tr><td class="lineno" valign="top"></td><td class="lblock"></td><td> </td><td class="rblock">lae, opacity is stored here. <span class="insert">-- OUTDATED!</span></td><td class="lineno" valign="top"></td></tr>
-      <tr><td class="lineno" valign="top"></td><td class="lblock"></td><td> </td><td class="rblock"><span class="insert">       float bMag;                     // B magnitude</span></td><td class="lineno" valign="top"></td></tr>
-      <tr><td class="lineno" valign="top"></td><td class="lblock"></td><td> </td><td class="rblock"><span class="insert">       float vMag;                     // V magnitude. For Dark Nebulae, op</span></td><td class="lineno" valign="top"></td></tr>
-      <tr><td class="lineno" valign="top"></td><td class="lblock"></td><td> </td><td class="rblock"><span class="insert">acity is stored here.</span></td><td class="lineno" valign="top"></td></tr>
-      <tr><td class="lineno" valign="top"></td><td class="lblock"></td><td> </td><td class="rblock">       float angularSize;              // Angular size in degree <span class="insert">-- OUTDATE</span></td><td class="lineno" valign="top"></td></tr>
-      <tr><td class="lineno" valign="top"></td><td class="lblock"></td><td> </td><td class="rblock"><span class="insert">D!</span></td><td class="lineno" valign="top"></td></tr>
-      <tr><td class="lineno" valign="top"></td><td class="lblock"></td><td> </td><td class="rblock"><span class="insert">       float majorAxisSize;            // Major axis size in arcmin</span></td><td class="lineno" valign="top"></td></tr>
-      <tr><td class="lineno" valign="top"></td><td class="lblock"></td><td> </td><td class="rblock"><span class="insert">       float minorAxisSize;            // Minor axis size in arcmin</span></td><td class="lineno" valign="top"></td></tr>
+      <tr><td><a name="diff0010" /></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="lblock">       float <span class="delete">mag;</span>                      // <span class="delete">Apparent</span> magnitude. For Dark <span class="delete">Nebu</span></td><td> </td><td class="rblock">       <span class="insert">QString mTypeString;            // Morphological type of object (as </span></td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="lblock"><span class="delete">lae, opacity</span> is stored here.</td><td> </td><td class="rblock"><span class="insert">string)</span></td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="lblock">       float <span class="delete">angularSize;</span>              // <span class="delete">Angular</span> size in <span class="delete">degree</span></td><td> </td><td class="rblock"><span class="insert">       float bMag;                     // B magnitude</span></td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="lblock"></td><td> </td><td class="rblock">       float <span class="insert">vMag;</span>                     // <span class="insert">V</span> magnitude. For Dark <span class="insert">Nebulae, op</span></td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="lblock"></td><td> </td><td class="rblock"><span class="insert">acity</span> is stored here.</td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="lblock"></td><td> </td><td class="rblock">       float <span class="insert">majorAxisSize;</span>            // <span class="insert">Major axis</span> size in <span class="insert">degrees</span></td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="lblock"></td><td> </td><td class="rblock"><span class="insert">       float minorAxisSize;            // Minor axis size in degrees</span></td><td class="lineno" valign="top"></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="lblock"></td><td> </td><td class="rblock"><span class="insert">       int orientationAngle;           // Orientation angle in degrees</span></td><td class="lineno" valign="top"></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="lblock"></td><td> </td><td class="rblock"><span class="insert">       float oDistance;                // distance (Mpc for galaxies, kpc f</span></td><td class="lineno" valign="top"></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="lblock"></td><td> </td><td class="rblock"><span class="insert">or other objects)</span></td><td class="lineno" valign="top"></td></tr>
@@ -297,7 +316,7 @@ gue of Bright Nebulae (Lynds, 1965))</td><td class="lineno" valign="top"></td></
       <tr><td class="lineno" valign="top"></td><td class="left">       Vec3d XY;                       // Store temporary 2D position</td><td> </td><td class="right">       Vec3d XY;                       // Store temporary 2D position</td><td class="lineno" valign="top"></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="left">       NebulaType nType;</td><td> </td><td class="right">       NebulaType nType;</td><td class="lineno" valign="top"></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="left"></td><td> </td><td class="right"></td><td class="lineno" valign="top"></td></tr>
-      <tr><td><a name="diff0010" /></td></tr>
+      <tr><td><a name="diff0011" /></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="lblock">       <span class="delete">HIIFormType formType;</span></td><td> </td><td class="rblock"></td><td class="lineno" valign="top"></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="lblock"><span class="delete">       HIIStructureType structureType;</span></td><td> </td><td class="rblock"></td><td class="lineno" valign="top"></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="lblock"><span class="delete">       HIIBrightnessType brightnessType;</span></td><td> </td><td class="rblock"></td><td class="lineno" valign="top"></td></tr>
@@ -317,7 +336,7 @@ gue of Bright Nebulae (Lynds, 1965))</td><td class="lineno" valign="top"></td></
       <tr><td class="lineno" valign="top"></td><td class="left">       static StelTextureSP texOpenClusterWithNebulosity; // Type 7</td><td> </td><td class="right">       static StelTextureSP texOpenClusterWithNebulosity; // Type 7</td><td class="lineno" valign="top"></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="left">       static float hintsBrightness;</td><td> </td><td class="right">       static float hintsBrightness;</td><td class="lineno" valign="top"></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="left"></td><td> </td><td class="right"></td><td class="lineno" valign="top"></td></tr>
-      <tr><td><a name="diff0011" /></td></tr>
+      <tr><td><a name="diff0012" /></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="lblock">       static Vec3f labelColor, <span class="delete">circleColor;</span></td><td> </td><td class="rblock">       static Vec3f labelColor, <span class="insert">circleColor, galaxyColor, radioGalaxyColor,</span></td><td class="lineno" valign="top"></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="lblock"></td><td> </td><td class="rblock"><span class="insert"> activeGalaxyColor, interactingGalaxyColor,</span></td><td class="lineno" valign="top"></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="lblock"></td><td> </td><td class="rblock"><span class="insert">                    brightNebulaColor, darkNebulaColor, hydrogenRegionColor</span></td><td class="lineno" valign="top"></td></tr>
@@ -326,22 +345,23 @@ gue of Bright Nebulae (Lynds, 1965))</td><td class="lineno" valign="top"></td></
 ircle</td><td> </td><td class="right">       static float circleScale;       // Define the scaling of the hints c
 ircle</td><td class="lineno" valign="top"></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="left">       static bool drawHintProportional; // scale hint with nebula size?</td><td> </td><td class="right">       static bool drawHintProportional; // scale hint with nebula size?</td><td class="lineno" valign="top"></td></tr>
-      <tr><td><a name="diff0012" /></td></tr>
-      <tr><td class="lineno" valign="top"></td><td class="lblock"></td><td> </td><td class="rblock">                                                                           </td><td class="lineno" valign="top"></td></tr>
-      <tr><td class="lineno" valign="top"></td><td class="lblock"></td><td> </td><td class="rblock">       <span class="insert">static bool flagUsageTypeFilter;</span></td><td class="lineno" valign="top"></td></tr>
+      <tr><td><a name="diff0013" /></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="lblock"></td><td> </td><td class="rblock">       <span class="insert">static bool surfaceBrightnessUsage;</span></td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="lblock"></td><td> </td><td class="rblock"><span class="insert"></span></td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="lblock"></td><td> </td><td class="rblock"><span class="insert">       static bool flagUsageTypeFilter;</span></td><td class="lineno" valign="top"></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="lblock"></td><td> </td><td class="rblock"><span class="insert">       static CatalogGroup catalogFilters;</span></td><td class="lineno" valign="top"></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="lblock"></td><td> </td><td class="rblock"><span class="insert">       static TypeGroup typeFilters;</span></td><td class="lineno" valign="top"></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="left">};</td><td> </td><td class="right">};</td><td class="lineno" valign="top"></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="left"></td><td> </td><td class="right"></td><td class="lineno" valign="top"></td></tr>
-      <tr><td><a name="diff0013" /></td></tr>
+      <tr><td><a name="diff0014" /></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="lblock"></td><td> </td><td class="rblock"><span class="insert">Q_DECLARE_OPERATORS_FOR_FLAGS(Nebula::CatalogGroup)</span></td><td class="lineno" valign="top"></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="lblock"></td><td> </td><td class="rblock"><span class="insert">Q_DECLARE_OPERATORS_FOR_FLAGS(Nebula::TypeGroup)</span></td><td class="lineno" valign="top"></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="lblock"></td><td> </td><td class="rblock">                                                                           </td><td class="lineno" valign="top"></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="left">#endif // _NEBULA_HPP_</td><td> </td><td class="right">#endif // _NEBULA_HPP_</td><td class="lineno" valign="top"></td></tr>
 
      <tr><td></td><td class="left"></td><td> </td><td class="right"></td><td></td></tr>
-     <tr bgcolor="gray"><th colspan="5" align="center"><a name="end">&nbsp;End of changes. 13 change blocks.&nbsp;</a></th></tr>
-     <tr class="stats"><td></td><th><i>76 lines changed or deleted</i></th><th><i> </i></th><th><i>134 lines changed or added</i></th><td></td></tr>
+     <tr bgcolor="gray"><th colspan="5" align="center"><a name="end">&nbsp;End of changes. 14 change blocks.&nbsp;</a></th></tr>
+     <tr class="stats"><td></td><th><i>77 lines changed or deleted</i></th><th><i> </i></th><th><i>144 lines changed or added</i></th><td></td></tr>
      <tr><td colspan="5" align="center" class="small"><br/>This html diff was produced by rfcdiff 1.41. The latest version is available from <a href="http://www.tools.ietf.org/tools/rfcdiff/" >http://tools.ietf.org/tools/rfcdiff/</a> </td></tr>
    </table>
    </body>

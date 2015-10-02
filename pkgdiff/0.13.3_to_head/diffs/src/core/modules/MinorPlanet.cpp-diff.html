@@ -41,7 +41,36 @@
   <table border="0" cellpadding="0" cellspacing="0"> 
   <tr bgcolor="orange"><th></th><th>&nbsp;MinorPlanet.cpp&nbsp;</th><th> </th><th>&nbsp;MinorPlanet.cpp&nbsp;</th><th></th></tr> 
       <tr><td class="lineno"></td><td class="left"></td><td> </td><td class="right"></td><td class="lineno"></td></tr>
-      <tr bgcolor="gray" ><td></td><th><a name="part-l1" /><small>skipping to change at</small><em> line 67</em></th><th> </th><th><a name="part-r1" /><small>skipping to change at</small><em> line 67</em></th><td></td></tr>
+      <tr bgcolor="gray" ><td></td><th><a name="part-l1" /><small>skipping to change at</small><em> line 40</em></th><th> </th><th><a name="part-r1" /><small>skipping to change at</small><em> line 40</em></th><td></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="left">#include "StelUtils.hpp"</td><td> </td><td class="right">#include "StelUtils.hpp"</td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="left">#include "StelFileMgr.hpp"</td><td> </td><td class="right">#include "StelFileMgr.hpp"</td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="left"></td><td> </td><td class="right"></td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="left">#include &lt;QRegExp&gt;</td><td> </td><td class="right">#include &lt;QRegExp&gt;</td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="left">#include &lt;QDebug&gt;</td><td> </td><td class="right">#include &lt;QDebug&gt;</td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="left"></td><td> </td><td class="right"></td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="left">MinorPlanet::MinorPlanet(const QString&amp; englishName,</td><td> </td><td class="right">MinorPlanet::MinorPlanet(const QString&amp; englishName,</td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="left">                        int flagLighting,</td><td> </td><td class="right">                        int flagLighting,</td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="left">                        double radius,</td><td> </td><td class="right">                        double radius,</td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="left">                        double oblateness,</td><td> </td><td class="right">                        double oblateness,</td><td class="lineno" valign="top"></td></tr>
+      <tr><td><a name="diff0001" /></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="lblock">                        Vec3f color,</td><td> </td><td class="rblock">                        Vec3f <span class="insert">halo</span>color,</td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="left">                        float albedo,</td><td> </td><td class="right">                        float albedo,</td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="left">                        const QString&amp; atexMapName,</td><td> </td><td class="right">                        const QString&amp; atexMapName,</td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="left">                        posFuncType coordFunc,</td><td> </td><td class="right">                        posFuncType coordFunc,</td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="left">                        void* auserDataPtr,</td><td> </td><td class="right">                        void* auserDataPtr,</td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="left">                        OsculatingFunctType *osculatingFunc,</td><td> </td><td class="right">                        OsculatingFunctType *osculatingFunc,</td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="left">                        bool acloseOrbit,</td><td> </td><td class="right">                        bool acloseOrbit,</td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="left">                        bool hidden,</td><td> </td><td class="right">                        bool hidden,</td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="left">                        const QString &amp;pTypeStr)</td><td> </td><td class="right">                        const QString &amp;pTypeStr)</td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="left">       : Planet (englishName,</td><td> </td><td class="right">       : Planet (englishName,</td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="left">                 flagLighting,</td><td> </td><td class="right">                 flagLighting,</td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="left">                 radius,</td><td> </td><td class="right">                 radius,</td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="left">                 oblateness,</td><td> </td><td class="right">                 oblateness,</td><td class="lineno" valign="top"></td></tr>
+      <tr><td><a name="diff0002" /></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="lblock">                 color,</td><td> </td><td class="rblock">                 <span class="insert">halo</span>color,</td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="left">                 albedo,</td><td> </td><td class="right">                 albedo,</td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="left">                 atexMapName,</td><td> </td><td class="right">                 atexMapName,</td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="left">                 "",</td><td> </td><td class="right">                 "",</td><td class="lineno" valign="top"></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="left">                 coordFunc,</td><td> </td><td class="right">                 coordFunc,</td><td class="lineno" valign="top"></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="left">                 auserDataPtr,</td><td> </td><td class="right">                 auserDataPtr,</td><td class="lineno" valign="top"></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="left">                 osculatingFunc,</td><td> </td><td class="right">                 osculatingFunc,</td><td class="lineno" valign="top"></td></tr>
@@ -52,7 +81,7 @@
       <tr><td class="lineno" valign="top"></td><td class="left">                 pTypeStr)</td><td> </td><td class="right">                 pTypeStr)</td><td class="lineno" valign="top"></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="left">{</td><td> </td><td class="right">{</td><td class="lineno" valign="top"></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="left">       texMapName = atexMapName;</td><td> </td><td class="right">       texMapName = atexMapName;</td><td class="lineno" valign="top"></td></tr>
-      <tr><td><a name="diff0001" /></td></tr>
+      <tr><td><a name="diff0003" /></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="lblock">       <span class="delete">lastOrbitJD</span> =0;</td><td> </td><td class="rblock">       <span class="insert">lastOrbitJDE</span> =0;</td><td class="lineno" valign="top"></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="lblock">       <span class="delete">deltaJD</span> = StelCore::JD_SECOND;</td><td> </td><td class="rblock">       <span class="insert">deltaJDE</span> = StelCore::JD_SECOND;</td><td class="lineno" valign="top"></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="left">       orbitCached = 0;</td><td> </td><td class="right">       orbitCached = 0;</td><td class="lineno" valign="top"></td></tr>
@@ -83,7 +112,7 @@ ead(StelFileMgr::getInstallationDir()+"/textures/"+texMapName, StelTexture:
       <tr><td class="lineno" valign="top"></td><td class="left">       // GZ: in case we have very many asteroids, this helps improving spe
 ed usually without sacrificing accuracy:</td><td> </td><td class="right">       // GZ: in case we have very many asteroids, this helps improving spe
 ed usually without sacrificing accuracy:</td><td class="lineno" valign="top"></td></tr>
-      <tr><td><a name="diff0002" /></td></tr>
+      <tr><td><a name="diff0004" /></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="lblock">       deltaJD = 2.0*semiMajorAxis*StelCore::JD_SECOND;</td><td> </td><td class="rblock">       deltaJD<span class="insert">E</span> = 2.0*semiMajorAxis*StelCore::JD_SECOND;</td><td class="lineno" valign="top"></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="left">}</td><td> </td><td class="right">}</td><td class="lineno" valign="top"></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="left"></td><td> </td><td class="right"></td><td class="lineno" valign="top"></td></tr>
@@ -95,10 +124,76 @@ ed usually without sacrificing accuracy:</td><td class="lineno" valign="top"></t
       <tr><td class="lineno" valign="top"></td><td class="left">       minorPlanetNumber = number;</td><td> </td><td class="right">       minorPlanetNumber = number;</td><td class="lineno" valign="top"></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="left">}</td><td> </td><td class="right">}</td><td class="lineno" valign="top"></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="left"></td><td> </td><td class="right"></td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno"></td><td class="left"></td><td> </td><td class="right"></td><td class="lineno"></td></tr>
+      <tr bgcolor="gray" ><td></td><th><a name="part-l3" /><small>skipping to change at</small><em> line 184</em></th><th> </th><th><a name="part-r3" /><small>skipping to change at</small><em> line 184</em></th><td></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="left">       //TODO: This feature has to be implemented better, anyway.</td><td> </td><td class="right">       //TODO: This feature has to be implemented better, anyway.</td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="left">       provisionalDesignationHtml = renderProvisionalDesignationinHtml(desi
+gnation);</td><td> </td><td class="right">       provisionalDesignationHtml = renderProvisionalDesignationinHtml(desi
+gnation);</td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="left">}</td><td> </td><td class="right">}</td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="left"></td><td> </td><td class="right"></td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="left">QString MinorPlanet::getInfoString(const StelCore *core, const InfoStringGr
+oup &amp;flags) const</td><td> </td><td class="right">QString MinorPlanet::getInfoString(const StelCore *core, const InfoStringGr
+oup &amp;flags) const</td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="left">{</td><td> </td><td class="right">{</td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="left">       //Mostly copied from Planet::getInfoString():</td><td> </td><td class="right">       //Mostly copied from Planet::getInfoString():</td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="left"></td><td> </td><td class="right"></td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="left">       QString str;</td><td> </td><td class="right">       QString str;</td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="left">       QTextStream oss(&amp;str);</td><td> </td><td class="right">       QTextStream oss(&amp;str);</td><td class="lineno" valign="top"></td></tr>
+      <tr><td><a name="diff0005" /></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="lblock"></td><td> </td><td class="rblock">       <span class="insert">double az_app, alt_app;</span></td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="lblock"></td><td> </td><td class="rblock"><span class="insert">       StelUtils::rectToSphe(&amp;az_app,&amp;alt_app,getAltAzPosApparent(core));</span></td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="lblock"></td><td> </td><td class="rblock"><span class="insert">       Q_UNUSED(az_app);</span></td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="left"></td><td> </td><td class="right"></td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="left">       if (flags&amp;Name)</td><td> </td><td class="right">       if (flags&amp;Name)</td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="left">       {</td><td> </td><td class="right">       {</td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="left">               oss &lt;&lt; "&lt;h2&gt;";</td><td> </td><td class="right">               oss &lt;&lt; "&lt;h2&gt;";</td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="left">               if (minorPlanetNumber)</td><td> </td><td class="right">               if (minorPlanetNumber)</td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="left">                       oss &lt;&lt; QString("(%1) ").arg(minorPlanetNumber);</td><td> </td><td class="right">                       oss &lt;&lt; QString("(%1) ").arg(minorPlanetNumber);</td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="left">               if (nameIsProvisionalDesignation)</td><td> </td><td class="right">               if (nameIsProvisionalDesignation)</td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="left">                       oss &lt;&lt; provisionalDesignationHtml;</td><td> </td><td class="right">                       oss &lt;&lt; provisionalDesignationHtml;</td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="left">               else</td><td> </td><td class="right">               else</td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="left">                       oss &lt;&lt; getNameI18n();  // UI translation can differ 
+from sky translation</td><td> </td><td class="right">                       oss &lt;&lt; getNameI18n();  // UI translation can differ 
+from sky translation</td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno"></td><td class="left"></td><td> </td><td class="right"></td><td class="lineno"></td></tr>
+      <tr bgcolor="gray" ><td></td><th><a name="part-l4" /><small>skipping to change at</small><em> line 213</em></th><th> </th><th><a name="part-r4" /><small>skipping to change at</small><em> line 216</em></th><td></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="left">               }</td><td> </td><td class="right">               }</td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="left">       }</td><td> </td><td class="right">       }</td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="left"></td><td> </td><td class="right"></td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="left">       if (flags&amp;ObjectType &amp;&amp; getPlanetType()!=isUNDEFINED)</td><td> </td><td class="right">       if (flags&amp;ObjectType &amp;&amp; getPlanetType()!=isUNDEFINED)</td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="left">       {</td><td> </td><td class="right">       {</td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="left">               oss &lt;&lt; q_("Type: &lt;b&gt;%1&lt;/b&gt;").arg(q_(getPlanetTypeString())) 
+&lt;&lt; "&lt;br /&gt;";</td><td> </td><td class="right">               oss &lt;&lt; q_("Type: &lt;b&gt;%1&lt;/b&gt;").arg(q_(getPlanetTypeString())) 
+&lt;&lt; "&lt;br /&gt;";</td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="left">       }</td><td> </td><td class="right">       }</td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="left"></td><td> </td><td class="right"></td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="left">       if (flags&amp;Magnitude)</td><td> </td><td class="right">       if (flags&amp;Magnitude)</td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="left">       {</td><td> </td><td class="right">       {</td><td class="lineno" valign="top"></td></tr>
+      <tr><td><a name="diff0006" /></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="lblock">           if (core-&gt;getSkyDrawer()-&gt;getFlagHasAtmosphere()<span class="delete">)</span></td><td> </td><td class="rblock">           if (core-&gt;getSkyDrawer()-&gt;getFlagHasAtmosphere()<span class="insert"> &amp;&amp; (alt_app&gt;-3.
+0*M_PI/180.0)) // Don't show extincted magnitude much below horizon where m
+odel is meaningless.</span></td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="left">               oss &lt;&lt; q_("Magnitude: &lt;b&gt;%1&lt;/b&gt; (extincted to: &lt;b&gt;%2&lt;/b&gt;)").
+arg(QString::number(getVMagnitude(core), 'f', 2),</td><td> </td><td class="right">               oss &lt;&lt; q_("Magnitude: &lt;b&gt;%1&lt;/b&gt; (extincted to: &lt;b&gt;%2&lt;/b&gt;)").
+arg(QString::number(getVMagnitude(core), 'f', 2),</td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="left">                                                                           
+    QString::number(getVMagnitudeWithExtinction(core), 'f', 2)) &lt;&lt; "&lt;br&gt;";</td><td> </td><td class="right">                                                                           
+    QString::number(getVMagnitudeWithExtinction(core), 'f', 2)) &lt;&lt; "&lt;br&gt;";</td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="left">           else</td><td> </td><td class="right">           else</td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="left">               oss &lt;&lt; q_("Magnitude: &lt;b&gt;%1&lt;/b&gt;").arg(getVMagnitude(core), 0
+, 'f', 2) &lt;&lt; "&lt;br&gt;";</td><td> </td><td class="right">               oss &lt;&lt; q_("Magnitude: &lt;b&gt;%1&lt;/b&gt;").arg(getVMagnitude(core), 0
+, 'f', 2) &lt;&lt; "&lt;br&gt;";</td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="left"></td><td> </td><td class="right"></td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="left">       }</td><td> </td><td class="right">       }</td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="left"></td><td> </td><td class="right"></td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="left">       if (flags&amp;AbsoluteMagnitude)</td><td> </td><td class="right">       if (flags&amp;AbsoluteMagnitude)</td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="left">       {</td><td> </td><td class="right">       {</td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="left">               //TODO: Make sure absolute magnitude is a sane value</td><td> </td><td class="right">               //TODO: Make sure absolute magnitude is a sane value</td><td class="lineno" valign="top"></td></tr>
 
      <tr><td></td><td class="left"></td><td> </td><td class="right"></td><td></td></tr>
-     <tr bgcolor="gray"><th colspan="5" align="center"><a name="end">&nbsp;End of changes. 2 change blocks.&nbsp;</a></th></tr>
-     <tr class="stats"><td></td><th><i>3 lines changed or deleted</i></th><th><i> </i></th><th><i>3 lines changed or added</i></th><td></td></tr>
+     <tr bgcolor="gray"><th colspan="5" align="center"><a name="end">&nbsp;End of changes. 6 change blocks.&nbsp;</a></th></tr>
+     <tr class="stats"><td></td><th><i>6 lines changed or deleted</i></th><th><i> </i></th><th><i>9 lines changed or added</i></th><td></td></tr>
      <tr><td colspan="5" align="center" class="small"><br/>This html diff was produced by rfcdiff 1.41. The latest version is available from <a href="http://www.tools.ietf.org/tools/rfcdiff/" >http://tools.ietf.org/tools/rfcdiff/</a> </td></tr>
    </table>
    </body>

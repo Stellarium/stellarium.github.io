@@ -229,8 +229,12 @@ e", 10).toInt());</td><td class="lineno" valign="top"></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="lblock"><span class="delete">uble)mpf))</span></td><td> </td><td class="rblock"></td><td class="lineno" valign="top"></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="left">               {</td><td> </td><td class="right">               {</td><td class="lineno" valign="top"></td></tr>
       <tr><td><a name="diff0025" /></td></tr>
-      <tr><td class="lineno" valign="top"></td><td class="lblock">                       <span class="delete">Meteor *m = new Meteor(core, maxVelocity);</span></td><td> </td><td class="rblock">                       <span class="insert">activeMeteors.append(new SporadicMeteor(core, m_maxV</span></td><td class="lineno" valign="top"></td></tr>
-      <tr><td class="lineno" valign="top"></td><td class="lblock"><span class="delete">                       active.push_back(m);</span></td><td> </td><td class="rblock"><span class="insert">elocity, m_bolideTexture));</span></td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="lblock">                       <span class="delete">Meteor *m</span> = new <span class="delete">Meteor(core, maxVelocity);</span></td><td> </td><td class="rblock">                       <span class="insert">SporadicMeteor* m</span> = new <span class="insert">SporadicMeteor(core, m_maxVe</span></td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="lblock"><span class="delete">                       active.push_back(m);</span></td><td> </td><td class="rblock"><span class="insert">locity, m_bolideTexture);</span></td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="lblock"></td><td> </td><td class="rblock"><span class="insert">                       if (m-&gt;isAlive())</span></td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="lblock"></td><td> </td><td class="rblock"><span class="insert">                       {</span></td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="lblock"></td><td> </td><td class="rblock"><span class="insert">                               activeMeteors.append(m);</span></td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="lblock"></td><td> </td><td class="rblock"><span class="insert">                       }</span></td><td class="lineno" valign="top"></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="left">               }</td><td> </td><td class="right">               }</td><td class="lineno" valign="top"></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="left">       }</td><td> </td><td class="right">       }</td><td class="lineno" valign="top"></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="left">}</td><td> </td><td class="right">}</td><td class="lineno" valign="top"></td></tr>
@@ -271,7 +275,7 @@ e", 10).toInt());</td><td class="lineno" valign="top"></td></tr>
 
      <tr><td></td><td class="left"></td><td> </td><td class="right"></td><td></td></tr>
      <tr bgcolor="gray"><th colspan="5" align="center"><a name="end">&nbsp;End of changes. 31 change blocks.&nbsp;</a></th></tr>
-     <tr class="stats"><td></td><th><i>92 lines changed or deleted</i></th><th><i> </i></th><th><i>52 lines changed or added</i></th><td></td></tr>
+     <tr class="stats"><td></td><th><i>92 lines changed or deleted</i></th><th><i> </i></th><th><i>56 lines changed or added</i></th><td></td></tr>
      <tr><td colspan="5" align="center" class="small"><br/>This html diff was produced by rfcdiff 1.41. The latest version is available from <a href="http://www.tools.ietf.org/tools/rfcdiff/" >http://tools.ietf.org/tools/rfcdiff/</a> </td></tr>
    </table>
    </body>
