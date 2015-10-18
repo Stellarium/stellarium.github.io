@@ -77,9 +77,9 @@
 <div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;</div>
 <div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;<span class="preprocessor">#include &quot;StelObject.hpp&quot;</span></div>
 <div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;<span class="preprocessor">#include &quot;StelFader.hpp&quot;</span></div>
-<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;<span class="preprocessor">#include &quot;<a class="codeRef" doxygen="/home/aw/devel/stellarium/trunk/builds/gcc/stellarium.tag:../../doc/head/" href="../../doc/head/StelProjectorType_8hpp.html">StelProjectorType.hpp</a>&quot;</span></div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;<span class="preprocessor">#include &quot;StelProjectorType.hpp&quot;</span></div>
 <div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;</div>
-<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;<span class="keyword">class </span><a class="codeRef" doxygen="/home/aw/devel/stellarium/trunk/builds/gcc/stellarium.tag:../../doc/head/" href="../../doc/head/classStelPainter.html">StelPainter</a>;</div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;<span class="keyword">class </span>StelPainter;</div>
 <div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;</div>
 <div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;<span class="comment">//</span></div>
 <div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;<span class="comment">// GZ NOTE from JDfix for V0.14:</span></div>
@@ -87,7 +87,7 @@
 <div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;<span class="comment">// If DT, please change relevant calls from core-&gt;getJD() to getJDE() etc</span></div>
 <div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;<span class="comment">// and rename variables to include JDE for clarity.</span></div>
 <div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;</div>
-<div class="line"><a name="l00046"></a><span class="lineno"><a class="line" href="classNova.html">   46</a></span>&#160;<span class="keyword">class </span><a class="code" href="classNova.html">Nova</a> : <span class="keyword">public</span> <a class="codeRef" doxygen="/home/aw/devel/stellarium/trunk/builds/gcc/stellarium.tag:../../doc/head/" href="../../doc/head/classStelObject.html">StelObject</a></div>
+<div class="line"><a name="l00046"></a><span class="lineno"><a class="line" href="classNova.html">   46</a></span>&#160;<span class="keyword">class </span><a class="code" href="classNova.html">Nova</a> : <span class="keyword">public</span> StelObject</div>
 <div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;{</div>
 <div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;    <span class="keyword">friend</span> <span class="keyword">class </span><a class="code" href="classNovae.html">Novae</a>;</div>
 <div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;<span class="keyword">public</span>:</div>
@@ -101,14 +101,14 @@
 <div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;        <span class="keywordflow">return</span> <span class="stringliteral">&quot;Nova&quot;</span>;</div>
 <div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;    }</div>
 <div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;</div>
-<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;    <span class="keyword">virtual</span> QString <a class="code" href="classNova.html#afbf71f9318a9599b99939cfa82196da8">getInfoString</a>(<span class="keyword">const</span> <a class="codeRef" doxygen="/home/aw/devel/stellarium/trunk/builds/gcc/stellarium.tag:../../doc/head/" href="../../doc/head/classStelCore.html">StelCore</a>* core, <span class="keyword">const</span> InfoStringGroup&amp; flags) <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;    <span class="keyword">virtual</span> QString <a class="code" href="classNova.html#afbf71f9318a9599b99939cfa82196da8">getInfoString</a>(<span class="keyword">const</span> StelCore* core, <span class="keyword">const</span> InfoStringGroup&amp; flags) <span class="keyword">const</span>;</div>
 <div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;    <span class="keyword">virtual</span> Vec3f getInfoColor(<span class="keywordtype">void</span>) <span class="keyword">const</span>;</div>
-<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;    <span class="keyword">virtual</span> Vec3d getJ2000EquatorialPos(<span class="keyword">const</span> <a class="codeRef" doxygen="/home/aw/devel/stellarium/trunk/builds/gcc/stellarium.tag:../../doc/head/" href="../../doc/head/classStelCore.html">StelCore</a>*)<span class="keyword"> const</span></div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;    <span class="keyword">virtual</span> Vec3d getJ2000EquatorialPos(<span class="keyword">const</span> StelCore*)<span class="keyword"> const</span></div>
 <div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;<span class="keyword">    </span>{</div>
 <div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;        <span class="keywordflow">return</span> XYZ;</div>
 <div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;    }</div>
-<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;    <span class="keyword">virtual</span> <span class="keywordtype">float</span> getVMagnitude(<span class="keyword">const</span> <a class="codeRef" doxygen="/home/aw/devel/stellarium/trunk/builds/gcc/stellarium.tag:../../doc/head/" href="../../doc/head/classStelCore.html">StelCore</a>* core) <span class="keyword">const</span>;</div>
-<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;    <span class="keyword">virtual</span> <span class="keywordtype">double</span> getAngularSize(<span class="keyword">const</span> <a class="codeRef" doxygen="/home/aw/devel/stellarium/trunk/builds/gcc/stellarium.tag:../../doc/head/" href="../../doc/head/classStelCore.html">StelCore</a>* core) <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;    <span class="keyword">virtual</span> <span class="keywordtype">float</span> getVMagnitude(<span class="keyword">const</span> StelCore* core) <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;    <span class="keyword">virtual</span> <span class="keywordtype">double</span> getAngularSize(<span class="keyword">const</span> StelCore* core) <span class="keyword">const</span>;</div>
 <div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;    <span class="keyword">virtual</span> QString getNameI18n(<span class="keywordtype">void</span>) <span class="keyword">const</span>;</div>
 <div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;    <span class="keyword">virtual</span> QString getEnglishName(<span class="keywordtype">void</span>) <span class="keyword">const</span>;</div>
 <div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;    QString getDesignation(<span class="keywordtype">void</span>) <span class="keyword">const</span>;</div>
@@ -120,7 +120,7 @@
 <div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;</div>
 <div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;    Vec3d XYZ;                         <span class="comment">// holds J2000 position</span></div>
 <div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;</div>
-<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;    <span class="keywordtype">void</span> draw(<a class="codeRef" doxygen="/home/aw/devel/stellarium/trunk/builds/gcc/stellarium.tag:../../doc/head/" href="../../doc/head/classStelCore.html">StelCore</a>* core, <a class="codeRef" doxygen="/home/aw/devel/stellarium/trunk/builds/gcc/stellarium.tag:../../doc/head/" href="../../doc/head/classStelPainter.html">StelPainter</a>* painter);</div>
+<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;    <span class="keywordtype">void</span> draw(StelCore* core, StelPainter* painter);</div>
 <div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;</div>
 <div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;    <span class="comment">// Nova</span></div>
 <div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;    QString designation;        </div>
@@ -137,26 +137,21 @@
 <div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;    <span class="keywordtype">double</span> Dec;         </div>
 <div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;    <span class="keywordtype">double</span> distance;        </div>
 <div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;</div>
-<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;    <a class="codeRef" doxygen="/home/aw/devel/stellarium/trunk/builds/gcc/stellarium.tag:../../doc/head/" href="../../doc/head/classLinearFader.html">LinearFader</a> labelsFader;</div>
+<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;    LinearFader labelsFader;</div>
 <div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;</div>
 <div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;    QString getMaxBrightnessDate(<span class="keyword">const</span> <span class="keywordtype">double</span> JD) <span class="keyword">const</span>;</div>
 <div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;};</div>
 <div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;</div>
 <div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;<span class="preprocessor">#endif // _NOVA_HPP_</span></div>
-<div class="ttc" id="classLinearFader_html"><div class="ttname"><a href="../../doc/head/classLinearFader.html">LinearFader</a></div></div>
-<div class="ttc" id="classStelObject_html"><div class="ttname"><a href="../../doc/head/classStelObject.html">StelObject</a></div></div>
 <div class="ttc" id="classNovae_html"><div class="ttname"><a href="classNovae.html">Novae</a></div><div class="ttdoc">Main class of the Bright Novae plugin. </div><div class="ttdef"><b>Definition:</b> <a href="Novae_8hpp_source.html#l00067">Novae.hpp:67</a></div></div>
-<div class="ttc" id="classStelCore_html"><div class="ttname"><a href="../../doc/head/classStelCore.html">StelCore</a></div></div>
 <div class="ttc" id="classNova_html_afbf71f9318a9599b99939cfa82196da8"><div class="ttname"><a href="classNova.html#afbf71f9318a9599b99939cfa82196da8">Nova::getInfoString</a></div><div class="ttdeci">virtual QString getInfoString(const StelCore *core, const InfoStringGroup &amp;flags) const </div><div class="ttdoc">Get an HTML string to describe the object. </div></div>
-<div class="ttc" id="classStelPainter_html"><div class="ttname"><a href="../../doc/head/classStelPainter.html">StelPainter</a></div></div>
 <div class="ttc" id="classNova_html_ae9f8aac0cbf0bce9fadc0b9ea6ac11df"><div class="ttname"><a href="classNova.html#ae9f8aac0cbf0bce9fadc0b9ea6ac11df">Nova::getMap</a></div><div class="ttdeci">QVariantMap getMap(void)</div><div class="ttdoc">Get a QVariantMap which describes the nova. </div></div>
 <div class="ttc" id="classNova_html_ad021a3c7f9b9113627b7616a00903730"><div class="ttname"><a href="classNova.html#ad021a3c7f9b9113627b7616a00903730">Nova::Nova</a></div><div class="ttdeci">Nova(const QVariantMap &amp;map)</div></div>
 <div class="ttc" id="classNova_html"><div class="ttname"><a href="classNova.html">Nova</a></div><div class="ttdoc">A Nova object represents one nova on the sky. </div><div class="ttdef"><b>Definition:</b> <a href="Nova_8hpp_source.html#l00046">Nova.hpp:46</a></div></div>
-<div class="ttc" id="StelProjectorType_8hpp_html"><div class="ttname"><a href="../../doc/head/StelProjectorType_8hpp.html">StelProjectorType.hpp</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Fri Oct 2 2015 18:38:34 for Stellarium by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Sun Oct 18 2015 20:28:54 for Stellarium by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.8
 </small></address>

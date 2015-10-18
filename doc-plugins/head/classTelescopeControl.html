@@ -129,19 +129,19 @@ virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>deinit</b> ()
 virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>update</b> (double deltaTime)</td></tr>
 <tr class="separator:a3feae3486aaddd5d9e5ca69e8edf7aab"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a010d5567fc1ed0e34ece403740c7fa1d"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a010d5567fc1ed0e34ece403740c7fa1d"></a>
-virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>draw</b> (<a class="elRef" doxygen="/home/aw/devel/stellarium/trunk/builds/gcc/stellarium.tag:../../doc/head/" href="../../doc/head/classStelCore.html">StelCore</a> *core)</td></tr>
+virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>draw</b> (StelCore *core)</td></tr>
 <tr class="separator:a010d5567fc1ed0e34ece403740c7fa1d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a7cdecd4fdfea59c263cf49faf838b69d"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a7cdecd4fdfea59c263cf49faf838b69d"></a>
 virtual double&#160;</td><td class="memItemRight" valign="bottom"><b>getCallOrder</b> (StelModuleActionName actionName) const </td></tr>
 <tr class="separator:a7cdecd4fdfea59c263cf49faf838b69d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a0d5dcd838cfda4bb564a92fe243745a4"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a0d5dcd838cfda4bb564a92fe243745a4"></a>
-virtual QList&lt; <a class="elRef" doxygen="/home/aw/devel/stellarium/trunk/builds/gcc/stellarium.tag:../../doc/head/" href="../../doc/head/StelObjectType_8hpp.html#a3ae5fa6cd6f0b212dd9a120500ca7150">StelObjectP</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>searchAround</b> (const Vec3d &amp;v, double limitFov, const <a class="elRef" doxygen="/home/aw/devel/stellarium/trunk/builds/gcc/stellarium.tag:../../doc/head/" href="../../doc/head/classStelCore.html">StelCore</a> *core) const </td></tr>
+virtual QList&lt; StelObjectP &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>searchAround</b> (const Vec3d &amp;v, double limitFov, const StelCore *core) const </td></tr>
 <tr class="separator:a0d5dcd838cfda4bb564a92fe243745a4"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a525685b45a5f70878604b6437d2a7e2a"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a525685b45a5f70878604b6437d2a7e2a"></a>
-virtual <a class="elRef" doxygen="/home/aw/devel/stellarium/trunk/builds/gcc/stellarium.tag:../../doc/head/" href="../../doc/head/StelObjectType_8hpp.html#a3ae5fa6cd6f0b212dd9a120500ca7150">StelObjectP</a>&#160;</td><td class="memItemRight" valign="bottom"><b>searchByNameI18n</b> (const QString &amp;nameI18n) const </td></tr>
+virtual StelObjectP&#160;</td><td class="memItemRight" valign="bottom"><b>searchByNameI18n</b> (const QString &amp;nameI18n) const </td></tr>
 <tr class="separator:a525685b45a5f70878604b6437d2a7e2a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a0e929b2b036b1536827436ee5d7d6d18"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a0e929b2b036b1536827436ee5d7d6d18"></a>
-virtual <a class="elRef" doxygen="/home/aw/devel/stellarium/trunk/builds/gcc/stellarium.tag:../../doc/head/" href="../../doc/head/StelObjectType_8hpp.html#a3ae5fa6cd6f0b212dd9a120500ca7150">StelObjectP</a>&#160;</td><td class="memItemRight" valign="bottom"><b>searchByName</b> (const QString &amp;name) const </td></tr>
+virtual StelObjectP&#160;</td><td class="memItemRight" valign="bottom"><b>searchByName</b> (const QString &amp;name) const </td></tr>
 <tr class="separator:a0e929b2b036b1536827436ee5d7d6d18"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a4bd558967a5ef7309bdf71233679b8f3"><td class="memItemLeft" align="right" valign="top">virtual QStringList&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classTelescopeControl.html#a4bd558967a5ef7309bdf71233679b8f3">listMatchingObjectsI18n</a> (const QString &amp;objPrefix, int maxNbItem=5, bool useStartOfWords=false) const </td></tr>
 <tr class="memdesc:a4bd558967a5ef7309bdf71233679b8f3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Find and return the list of at most maxNbItem objects auto-completing the passed object I18n name.  <a href="#a4bd558967a5ef7309bdf71233679b8f3">More...</a><br /></td></tr>
@@ -700,8 +700,6 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><b>getFlagUseTelescopeSe
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>a list of matching object name by order of relevance, or an empty list if nothing match </dd></dl>
 
-<p>Implements <a class="elRef" doxygen="/home/aw/devel/stellarium/trunk/builds/gcc/stellarium.tag:../../doc/head/" href="../../doc/head/classStelObjectModule.html#ad3b1e366dae01a7d1088f18785cc1104">StelObjectModule</a>.</p>
-
 </div>
 </div>
 <a class="anchor" id="a4bd558967a5ef7309bdf71233679b8f3"></a>
@@ -752,8 +750,6 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><b>getFlagUseTelescopeSe
   </dd>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>a list of matching object name by order of relevance, or an empty list if nothing match </dd></dl>
-
-<p>Implements <a class="elRef" doxygen="/home/aw/devel/stellarium/trunk/builds/gcc/stellarium.tag:../../doc/head/" href="../../doc/head/classStelObjectModule.html#a677ae9d6f7f9b248036dbbdcb13c37bd">StelObjectModule</a>.</p>
 
 </div>
 </div>
@@ -1123,7 +1119,7 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><b>getFlagUseTelescopeSe
 </div><div class="memdoc">
 
 <p>slews a telescope to the selected object. </p>
-<p>For use from the GUI. The telescope number will be deduced from the name of the <a class="elRef" doxygen="/home/aw/devel/stellarium/trunk/builds/gcc/stellarium.tag:../../doc/head/" href="../../doc/head/classStelAction.html">StelAction</a> which triggered the slot. </p>
+<p>For use from the GUI. The telescope number will be deduced from the name of the StelAction which triggered the slot. </p>
 
 </div>
 </div>
@@ -1149,7 +1145,7 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><b>getFlagUseTelescopeSe
 </div><div class="memdoc">
 
 <p>slews a telescope to the point of the celestial sphere currently in the center of the screen. </p>
-<p>For use from the GUI. The telescope number will be deduced from the name of the <a class="elRef" doxygen="/home/aw/devel/stellarium/trunk/builds/gcc/stellarium.tag:../../doc/head/" href="../../doc/head/classStelAction.html">StelAction</a> which triggered the slot. </p>
+<p>For use from the GUI. The telescope number will be deduced from the name of the StelAction which triggered the slot. </p>
 
 </div>
 </div>
@@ -1247,7 +1243,7 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><b>getFlagUseTelescopeSe
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Fri Oct 2 2015 18:38:34 for Stellarium by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Sun Oct 18 2015 20:28:55 for Stellarium by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.8
 </small></address>
