@@ -459,7 +459,33 @@ cimal fraction, e.g. 2012.34567)</span></td><td class="lineno" valign="top"></td
       <tr><td class="lineno" valign="top"></td><td class="left">       ProjectionType getCurrentProjectionType() const;</td><td> </td><td class="right">       ProjectionType getCurrentProjectionType() const;</td><td class="lineno" valign="top"></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="left"></td><td> </td><td class="right"></td><td class="lineno" valign="top"></td></tr>
       <tr><td class="lineno"></td><td class="left"></td><td> </td><td class="right"></td><td class="lineno"></td></tr>
-      <tr bgcolor="gray" ><td></td><th><a name="part-l6" /><small>skipping to change at</small><em> line 356</em></th><th> </th><th><a name="part-r6" /><small>skipping to change at</small><em> line 368</em></th><td></td></tr>
+      <tr bgcolor="gray" ><td></td><th><a name="part-l6" /><small>skipping to change at</small><em> line 333</em></th><th> </th><th><a name="part-r6" /><small>skipping to change at</small><em> line 345</em></th><td></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="left">       //! Set the current algorithm to use from its key</td><td> </td><td class="right">       //! Set the current algorithm to use from its key</td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="left">       void setCurrentDeltaTAlgorithmKey(QString type);</td><td> </td><td class="right">       void setCurrentDeltaTAlgorithmKey(QString type);</td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="left"></td><td> </td><td class="right"></td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="left">       //! Set the mask type.</td><td> </td><td class="right">       //! Set the mask type.</td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="left">       void setMaskType(StelProjector::StelProjectorMaskType m);</td><td> </td><td class="right">       void setMaskType(StelProjector::StelProjectorMaskType m);</td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="left"></td><td> </td><td class="right"></td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="left">       //! Set the flag with decides whether to arrage labels so that</td><td> </td><td class="right">       //! Set the flag with decides whether to arrage labels so that</td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="left">       //! they are aligned with the bottom of a 2d screen, or a 3d dome.</td><td> </td><td class="right">       //! they are aligned with the bottom of a 2d screen, or a 3d dome.</td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="left">       void setFlagGravityLabels(bool gravity);</td><td> </td><td class="right">       void setFlagGravityLabels(bool gravity);</td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="left">       //! Set the offset rotation angle in degree to apply to gravity text
+ (only if gravityLabels is set to false).</td><td> </td><td class="right">       //! Set the offset rotation angle in degree to apply to gravity text
+ (only if gravityLabels is set to false).</td><td class="lineno" valign="top"></td></tr>
+      <tr><td><a name="diff0026" /></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="lblock">       void setDefautAngleForGravityText(float a);</td><td> </td><td class="rblock">       void setDefau<span class="insert">l</span>tAngleForGravityText(float a);</td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="left">       //! Set the horizontal flip status.</td><td> </td><td class="right">       //! Set the horizontal flip status.</td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="left">       //! @param flip The new value (true = flipped, false = unflipped).</td><td> </td><td class="right">       //! @param flip The new value (true = flipped, false = unflipped).</td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="left">       void setFlipHorz(bool flip);</td><td> </td><td class="right">       void setFlipHorz(bool flip);</td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="left">       //! Set the vertical flip status.</td><td> </td><td class="right">       //! Set the vertical flip status.</td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="left">       //! @param flip The new value (true = flipped, false = unflipped).</td><td> </td><td class="right">       //! @param flip The new value (true = flipped, false = unflipped).</td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="left">       void setFlipVert(bool flip);</td><td> </td><td class="right">       void setFlipVert(bool flip);</td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="left">       //! Get the state of the horizontal flip.</td><td> </td><td class="right">       //! Get the state of the horizontal flip.</td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="left">       //! @return True if flipped horizontally, else false.</td><td> </td><td class="right">       //! @return True if flipped horizontally, else false.</td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="left">       bool getFlipHorz(void) const;</td><td> </td><td class="right">       bool getFlipHorz(void) const;</td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="left">       //! Get the state of the vertical flip.</td><td> </td><td class="right">       //! Get the state of the vertical flip.</td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno"></td><td class="left"></td><td> </td><td class="right"></td><td class="lineno"></td></tr>
+      <tr bgcolor="gray" ><td></td><th><a name="part-l7" /><small>skipping to change at</small><em> line 356</em></th><th> </th><th><a name="part-r7" /><small>skipping to change at</small><em> line 368</em></th><td></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="left"></td><td> </td><td class="right"></td><td class="lineno" valign="top"></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="left">       //! Get the location used by default at startup</td><td> </td><td class="right">       //! Get the location used by default at startup</td><td class="lineno" valign="top"></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="left">       QString getDefaultLocationID() const;</td><td> </td><td class="right">       QString getDefaultLocationID() const;</td><td class="lineno" valign="top"></td></tr>
@@ -472,7 +498,7 @@ mosphere and fog effects</td><td> </td><td class="right">       //! Return to th
 mosphere and fog effects</td><td class="lineno" valign="top"></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="left">       void returnToHome();</td><td> </td><td class="right">       void returnToHome();</td><td class="lineno" valign="top"></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="left"></td><td> </td><td class="right"></td><td class="lineno" valign="top"></td></tr>
-      <tr><td><a name="diff0026" /></td></tr>
+      <tr><td><a name="diff0027" /></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="lblock">       //! Set the current date in Julian Day</td><td> </td><td class="rblock">       //! Set the current date in Julian Day <span class="insert">(UT)</span></td><td class="lineno" valign="top"></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="lblock">       void <span class="delete">setJDay(double JD);</span></td><td> </td><td class="rblock">       void <span class="insert">setJD(double newJD);</span></td><td class="lineno" valign="top"></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="lblock">       //! Get the current date in Julian Day</td><td> </td><td class="rblock"><span class="insert">       //! Set the current date in Julian Day (TT).</span></td><td class="lineno" valign="top"></td></tr>
@@ -493,11 +519,11 @@ mosphere and fog effects</td><td class="lineno" valign="top"></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="lblock"></td><td> </td><td class="rblock"><span class="insert">rting days at midnight.</span></td><td class="lineno" valign="top"></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="lblock"></td><td> </td><td class="rblock"><span class="insert">       //! It is mostly used in satellite contexts.</span></td><td class="lineno" valign="top"></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="left">       void setMJDay(double MJD);</td><td> </td><td class="right">       void setMJDay(double MJD);</td><td class="lineno" valign="top"></td></tr>
-      <tr><td><a name="diff0027" /></td></tr>
+      <tr><td><a name="diff0028" /></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="lblock">       //! Get the current date in Modified Julian Day</td><td> </td><td class="rblock">       //! Get the current date in Modified Julian Day<span class="insert"> (UT)</span></td><td class="lineno" valign="top"></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="left">       double getMJDay() const;</td><td> </td><td class="right">       double getMJDay() const;</td><td class="lineno" valign="top"></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="left"></td><td> </td><td class="right"></td><td class="lineno" valign="top"></td></tr>
-      <tr><td><a name="diff0028" /></td></tr>
+      <tr><td><a name="diff0029" /></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="lblock"></td><td> </td><td class="rblock">       <span class="insert">//! Compute Delta-T estimation for a given date.</span></td><td class="lineno" valign="top"></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="lblock"></td><td> </td><td class="rblock"><span class="insert">       //! DeltaT is the accumulated effect of earth's rotation slowly gett</span></td><td class="lineno" valign="top"></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="lblock"></td><td> </td><td class="rblock"><span class="insert">ing slower, mostly caused by tidal braking by the Moon.</span></td><td class="lineno" valign="top"></td></tr>
@@ -547,7 +573,7 @@ mosphere and fog effects</td><td class="lineno" valign="top"></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="left">       double getTimeRate() const;</td><td> </td><td class="right">       double getTimeRate() const;</td><td class="lineno" valign="top"></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="left"></td><td> </td><td class="right"></td><td class="lineno" valign="top"></td></tr>
       <tr><td class="lineno"></td><td class="left"></td><td> </td><td class="right"></td><td class="lineno"></td></tr>
-      <tr bgcolor="gray" ><td></td><th><a name="part-l7" /><small>skipping to change at</small><em> line 404</em></th><th> </th><th><a name="part-r7" /><small>skipping to change at</small><em> line 451</em></th><td></td></tr>
+      <tr bgcolor="gray" ><td></td><th><a name="part-l8" /><small>skipping to change at</small><em> line 404</em></th><th> </th><th><a name="part-r8" /><small>skipping to change at</small><em> line 451</em></th><td></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="left">       //! Set stellarium time to current real world time</td><td> </td><td class="right">       //! Set stellarium time to current real world time</td><td class="lineno" valign="top"></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="left">       void setTimeNow();</td><td> </td><td class="right">       void setTimeNow();</td><td class="lineno" valign="top"></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="left">       //! Set the time to some value, leaving the day the same.</td><td> </td><td class="right">       //! Set the time to some value, leaving the day the same.</td><td class="lineno" valign="top"></td></tr>
@@ -558,10 +584,10 @@ mosphere and fog effects</td><td class="lineno" valign="top"></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="left">       //! get the initial "today time" from the config file</td><td> </td><td class="right">       //! get the initial "today time" from the config file</td><td class="lineno" valign="top"></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="left">       QTime getInitTodayTime(void);</td><td> </td><td class="right">       QTime getInitTodayTime(void);</td><td class="lineno" valign="top"></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="left">       //! set the initial "today time" from the config file</td><td> </td><td class="right">       //! set the initial "today time" from the config file</td><td class="lineno" valign="top"></td></tr>
-      <tr><td><a name="diff0029" /></td></tr>
+      <tr><td><a name="diff0030" /></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="lblock">       void setInitTodayTime(const QTime&amp; t);</td><td> </td><td class="rblock">       void setInitTodayTime(const QTime&amp; t<span class="insert">ime</span>);</td><td class="lineno" valign="top"></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="left">       //! Set the preset sky time from a QDateTime</td><td> </td><td class="right">       //! Set the preset sky time from a QDateTime</td><td class="lineno" valign="top"></td></tr>
-      <tr><td><a name="diff0030" /></td></tr>
+      <tr><td><a name="diff0031" /></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="lblock">       void setPresetSkyTime(QDateTime d<span class="delete">t</span>);</td><td> </td><td class="rblock">       void setPresetSkyTime(QDateTime d<span class="insert">ateTime</span>);</td><td class="lineno" valign="top"></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="left"></td><td> </td><td class="right"></td><td class="lineno" valign="top"></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="left">       //! Add one [Earth, solar] hour to the current simulation time.</td><td> </td><td class="right">       //! Add one [Earth, solar] hour to the current simulation time.</td><td class="lineno" valign="top"></td></tr>
@@ -576,7 +602,7 @@ depends</td><td> </td><td class="right">       //! Add one sidereal day to the s
 depends</td><td class="lineno" valign="top"></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="left">       //! on the current planetary body on which the observer is located.</td><td> </td><td class="right">       //! on the current planetary body on which the observer is located.</td><td class="lineno" valign="top"></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="left">       void addSiderealDay();</td><td> </td><td class="right">       void addSiderealDay();</td><td class="lineno" valign="top"></td></tr>
-      <tr><td><a name="diff0031" /></td></tr>
+      <tr><td><a name="diff0032" /></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="lblock">       <span class="delete">//! Add one sidereal week (7 sidereal days) to the simulation time. </span></td><td> </td><td class="rblock"></td><td class="lineno" valign="top"></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="lblock"><span class="delete">The length</span></td><td> </td><td class="rblock"></td><td class="lineno" valign="top"></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="lblock"><span class="delete">       //! of time depends on the current planetary body on which the obser</span></td><td> </td><td class="rblock"></td><td class="lineno" valign="top"></td></tr>
@@ -596,7 +622,7 @@ Sidereal year</td><td> </td><td class="right">       //! on the current planetar
 Sidereal year</td><td class="lineno" valign="top"></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="left">       //! connected to orbital period of planets.</td><td> </td><td class="right">       //! connected to orbital period of planets.</td><td class="lineno" valign="top"></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="left">       void addSiderealYear();</td><td> </td><td class="right">       void addSiderealYear();</td><td class="lineno" valign="top"></td></tr>
-      <tr><td><a name="diff0032" /></td></tr>
+      <tr><td><a name="diff0033" /></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="lblock">       //! Add <span class="delete">one</span> sidereal <span class="delete">century (100 sidereal years)</span> to the simulation </td><td> </td><td class="rblock">       //! Add <span class="insert">n</span> sidereal <span class="insert">years</span> to the simulation time. The length of time </td><td class="lineno" valign="top"></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="lblock">time. The length</td><td> </td><td class="rblock">depends</td><td class="lineno" valign="top"></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="lblock">       <span class="delete">//!</span> of time depends on the current planetary body on which the <span class="delete">obser</span></td><td> </td><td class="rblock">       <span class="insert">//!</span> on the current planetary body on which the <span class="insert">observer</span> is located. </td><td class="lineno" valign="top"></td></tr>
@@ -616,7 +642,7 @@ time depends</td><td> </td><td class="right">       //! Subtract one sidereal da
 time depends</td><td class="lineno" valign="top"></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="left">       //! on the current planetary body on which the observer is located.</td><td> </td><td class="right">       //! on the current planetary body on which the observer is located.</td><td class="lineno" valign="top"></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="left">       void subtractSiderealDay();</td><td> </td><td class="right">       void subtractSiderealDay();</td><td class="lineno" valign="top"></td></tr>
-      <tr><td><a name="diff0033" /></td></tr>
+      <tr><td><a name="diff0034" /></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="lblock">       <span class="delete">//! Subtract one sidereal week (7 sidereal days) to the simulation t</span></td><td> </td><td class="rblock"></td><td class="lineno" valign="top"></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="lblock"><span class="delete">ime. The length</span></td><td> </td><td class="rblock"></td><td class="lineno" valign="top"></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="lblock"><span class="delete">       //! of time depends on the current planetary body on which the obser</span></td><td> </td><td class="rblock"></td><td class="lineno" valign="top"></td></tr>
@@ -636,7 +662,7 @@ Sidereal year</td><td> </td><td class="right">       //! on the current planetar
 Sidereal year</td><td class="lineno" valign="top"></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="left">       //! connected to orbital period of planets.</td><td> </td><td class="right">       //! connected to orbital period of planets.</td><td class="lineno" valign="top"></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="left">       void subtractSiderealYear();</td><td> </td><td class="right">       void subtractSiderealYear();</td><td class="lineno" valign="top"></td></tr>
-      <tr><td><a name="diff0034" /></td></tr>
+      <tr><td><a name="diff0035" /></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="lblock">       //! Subtract <span class="delete">one</span> sidereal <span class="delete">century (100 sidereal years)</span> to the <span class="delete">simula</span></td><td> </td><td class="rblock">       //! Subtract <span class="insert">n</span> sidereal <span class="insert">years</span> to the <span class="insert">simulation</span> time. The length of </td><td class="lineno" valign="top"></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="lblock"><span class="delete">tion</span> time. The length</td><td> </td><td class="rblock">time depends</td><td class="lineno" valign="top"></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="lblock">       <span class="delete">//!</span> of time depends on the current planetary body on which the <span class="delete">obser</span></td><td> </td><td class="rblock">       <span class="insert">//!</span> on the current planetary body on which the <span class="insert">observer</span> is located. </td><td class="lineno" valign="top"></td></tr>
@@ -654,23 +680,23 @@ Sidereal year</td><td class="lineno" valign="top"></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="left"></td><td> </td><td class="right"></td><td class="lineno" valign="top"></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="left">       //! Add one anomalistic month to the simulation time.</td><td> </td><td class="right">       //! Add one anomalistic month to the simulation time.</td><td class="lineno" valign="top"></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="left">       void addAnomalisticMonth();</td><td> </td><td class="right">       void addAnomalisticMonth();</td><td class="lineno" valign="top"></td></tr>
-      <tr><td><a name="diff0035" /></td></tr>
+      <tr><td><a name="diff0036" /></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="lblock"></td><td> </td><td class="rblock">       <span class="insert">//! Add one anomalistic year to the simulation time.</span></td><td class="lineno" valign="top"></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="lblock"></td><td> </td><td class="rblock"><span class="insert">       void addAnomalisticYear();</span></td><td class="lineno" valign="top"></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="lblock"></td><td> </td><td class="rblock"><span class="insert">       //! Add n anomalistic years to the simulation time.</span></td><td class="lineno" valign="top"></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="lblock"></td><td> </td><td class="rblock"><span class="insert">       void addAnomalisticYears(float n=100.f);</span></td><td class="lineno" valign="top"></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="left"></td><td> </td><td class="right"></td><td class="lineno" valign="top"></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="left">       //! Add one mean tropical month to the simulation time.</td><td> </td><td class="right">       //! Add one mean tropical month to the simulation time.</td><td class="lineno" valign="top"></td></tr>
-      <tr><td><a name="diff0036" /></td></tr>
+      <tr><td><a name="diff0037" /></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="lblock">       void addTropicalMonth();</td><td> </td><td class="rblock">       void add<span class="insert">Mean</span>TropicalMonth();</td><td class="lineno" valign="top"></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="left">       //! Add one mean tropical year to the simulation time.</td><td> </td><td class="right">       //! Add one mean tropical year to the simulation time.</td><td class="lineno" valign="top"></td></tr>
-      <tr><td><a name="diff0037" /></td></tr>
+      <tr><td><a name="diff0038" /></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="lblock"></td><td> </td><td class="rblock">       <span class="insert">void addMeanTropicalYear();</span></td><td class="lineno" valign="top"></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="lblock"></td><td> </td><td class="rblock"><span class="insert">       //! Add n mean tropical years to the simulation time.</span></td><td class="lineno" valign="top"></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="lblock"></td><td> </td><td class="rblock"><span class="insert">       void addMeanTropicalYears(float n=100.f);</span></td><td class="lineno" valign="top"></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="lblock"></td><td> </td><td class="rblock"><span class="insert">       //! Add one tropical year to the simulation time.</span></td><td class="lineno" valign="top"></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="left">       void addTropicalYear();</td><td> </td><td class="right">       void addTropicalYear();</td><td class="lineno" valign="top"></td></tr>
-      <tr><td><a name="diff0038" /></td></tr>
+      <tr><td><a name="diff0039" /></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="lblock">       //! Add one <span class="delete">mean tropical century</span> to the simulation time.</td><td> </td><td class="rblock">                                                                           </td><td class="lineno" valign="top"></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="lblock">       void <span class="delete">addTropicalCentury();</span></td><td> </td><td class="rblock">       //! Add one <span class="insert">Julian year</span> to the simulation time.</td><td class="lineno" valign="top"></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="lblock"></td><td> </td><td class="rblock">       void <span class="insert">addJulianYear();</span></td><td class="lineno" valign="top"></td></tr>
@@ -690,23 +716,23 @@ Sidereal year</td><td class="lineno" valign="top"></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="left"></td><td> </td><td class="right"></td><td class="lineno" valign="top"></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="left">       //! Subtract one anomalistic month to the simulation time.</td><td> </td><td class="right">       //! Subtract one anomalistic month to the simulation time.</td><td class="lineno" valign="top"></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="left">       void subtractAnomalisticMonth();</td><td> </td><td class="right">       void subtractAnomalisticMonth();</td><td class="lineno" valign="top"></td></tr>
-      <tr><td><a name="diff0039" /></td></tr>
+      <tr><td><a name="diff0040" /></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="lblock"></td><td> </td><td class="rblock">       <span class="insert">//! Subtract one anomalistic year to the simulation time.</span></td><td class="lineno" valign="top"></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="lblock"></td><td> </td><td class="rblock"><span class="insert">       void subtractAnomalisticYear();</span></td><td class="lineno" valign="top"></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="lblock"></td><td> </td><td class="rblock"><span class="insert">       //! Subtract n anomalistic years to the simulation time.</span></td><td class="lineno" valign="top"></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="lblock"></td><td> </td><td class="rblock"><span class="insert">       void subtractAnomalisticYears(float n=100.f);</span></td><td class="lineno" valign="top"></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="left"></td><td> </td><td class="right"></td><td class="lineno" valign="top"></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="left">       //! Subtract one mean tropical month to the simulation time.</td><td> </td><td class="right">       //! Subtract one mean tropical month to the simulation time.</td><td class="lineno" valign="top"></td></tr>
-      <tr><td><a name="diff0040" /></td></tr>
+      <tr><td><a name="diff0041" /></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="lblock">       void subtractTropicalMonth();</td><td> </td><td class="rblock">       void subtract<span class="insert">Mean</span>TropicalMonth();</td><td class="lineno" valign="top"></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="left">       //! Subtract one mean tropical year to the simulation time.</td><td> </td><td class="right">       //! Subtract one mean tropical year to the simulation time.</td><td class="lineno" valign="top"></td></tr>
-      <tr><td><a name="diff0041" /></td></tr>
+      <tr><td><a name="diff0042" /></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="lblock"></td><td> </td><td class="rblock">       <span class="insert">void subtractMeanTropicalYear();</span></td><td class="lineno" valign="top"></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="lblock"></td><td> </td><td class="rblock"><span class="insert">       //! Subtract n mean tropical years to the simulation time.</span></td><td class="lineno" valign="top"></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="lblock"></td><td> </td><td class="rblock"><span class="insert">       void subtractMeanTropicalYears(float n=100.f);</span></td><td class="lineno" valign="top"></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="lblock"></td><td> </td><td class="rblock"><span class="insert">       //! Subtract one tropical year to the simulation time.</span></td><td class="lineno" valign="top"></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="left">       void subtractTropicalYear();</td><td> </td><td class="right">       void subtractTropicalYear();</td><td class="lineno" valign="top"></td></tr>
-      <tr><td><a name="diff0042" /></td></tr>
+      <tr><td><a name="diff0043" /></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="lblock">       //! Subtract one <span class="delete">mean tropical century</span> to the simulation time.</td><td> </td><td class="rblock">                                                                           </td><td class="lineno" valign="top"></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="lblock">       void <span class="delete">subtractTropicalCentury();</span></td><td> </td><td class="rblock">       //! Subtract one <span class="insert">Julian year</span> to the simulation time.</td><td class="lineno" valign="top"></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="lblock"></td><td> </td><td class="rblock">       void <span class="insert">subtractJulianYear();</span></td><td class="lineno" valign="top"></td></tr>
@@ -734,7 +760,7 @@ thing if</td><td class="lineno" valign="top"></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="left">       //! the selected object is of the correct type - i.e. a planet.</td><td> </td><td class="right">       //! the selected object is of the correct type - i.e. a planet.</td><td class="lineno" valign="top"></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="left">       void moveObserverToSelected();</td><td> </td><td class="right">       void moveObserverToSelected();</td><td class="lineno" valign="top"></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="left"></td><td> </td><td class="right"></td><td class="lineno" valign="top"></td></tr>
-      <tr><td><a name="diff0043" /></td></tr>
+      <tr><td><a name="diff0044" /></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="lblock">       //! Set year for custom equation for calculation of Delta-T</td><td> </td><td class="rblock">       //! Set <span class="insert">central </span>year for custom equation for calculation of Delta-T</td><td class="lineno" valign="top"></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="left">       //! @param y the year, e.g. 1820</td><td> </td><td class="right">       //! @param y the year, e.g. 1820</td><td class="lineno" valign="top"></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="left">       void setDeltaTCustomYear(float y) { deltaTCustomYear=y; }</td><td> </td><td class="right">       void setDeltaTCustomYear(float y) { deltaTCustomYear=y; }</td><td class="lineno" valign="top"></td></tr>
@@ -747,7 +773,7 @@ thing if</td><td class="lineno" valign="top"></td></tr>
 tionCoeff=c; }</td><td> </td><td class="right">       void setDeltaTCustomEquationCoefficients(Vec3f c) { deltaTCustomEqua
 tionCoeff=c; }</td><td class="lineno" valign="top"></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="left"></td><td> </td><td class="right"></td><td class="lineno" valign="top"></td></tr>
-      <tr><td><a name="diff0044" /></td></tr>
+      <tr><td><a name="diff0045" /></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="lblock">       //! Get year for custom equation for calculation of Delta-T</td><td> </td><td class="rblock">       //! Get <span class="insert">central </span>year for custom equation for calculation of Delta-T</td><td class="lineno" valign="top"></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="left">       float getDeltaTCustomYear() const { return deltaTCustomYear; }</td><td> </td><td class="right">       float getDeltaTCustomYear() const { return deltaTCustomYear; }</td><td class="lineno" valign="top"></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="left">       //! Get n-dot for custom equation for calculation of Delta-T</td><td> </td><td class="right">       //! Get n-dot for custom equation for calculation of Delta-T</td><td class="lineno" valign="top"></td></tr>
@@ -762,7 +788,7 @@ tomEquationCoeff; }</td><td class="lineno" valign="top"></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="left">       void locationChanged(StelLocation);</td><td> </td><td class="right">       void locationChanged(StelLocation);</td><td class="lineno" valign="top"></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="left">       //! This signal is emitted when the time rate has changed</td><td> </td><td class="right">       //! This signal is emitted when the time rate has changed</td><td class="lineno" valign="top"></td></tr>
       <tr><td class="lineno"></td><td class="left"></td><td> </td><td class="right"></td><td class="lineno"></td></tr>
-      <tr bgcolor="gray" ><td></td><th><a name="part-l8" /><small>skipping to change at</small><em> line 553</em></th><th> </th><th><a name="part-r8" /><small>skipping to change at</small><em> line 614</em></th><td></td></tr>
+      <tr bgcolor="gray" ><td></td><th><a name="part-l9" /><small>skipping to change at</small><em> line 553</em></th><th> </th><th><a name="part-r9" /><small>skipping to change at</small><em> line 614</em></th><td></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="left">       DeltaTAlgorithm currentDeltaTAlgorithm;</td><td> </td><td class="right">       DeltaTAlgorithm currentDeltaTAlgorithm;</td><td class="lineno" valign="top"></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="left"></td><td> </td><td class="right"></td><td class="lineno" valign="top"></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="left">       // Parameters to use when creating new instances of StelProjector</td><td> </td><td class="right">       // Parameters to use when creating new instances of StelProjector</td><td class="lineno" valign="top"></td></tr>
@@ -773,7 +799,7 @@ tomEquationCoeff; }</td><td class="lineno" valign="top"></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="left">       void resetSync();</td><td> </td><td class="right">       void resetSync();</td><td class="lineno" valign="top"></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="left"></td><td> </td><td class="right"></td><td class="lineno" valign="top"></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="left">       // Matrices used for every coordinate transfo</td><td> </td><td class="right">       // Matrices used for every coordinate transfo</td><td class="lineno" valign="top"></td></tr>
-      <tr><td><a name="diff0045" /></td></tr>
+      <tr><td><a name="diff0046" /></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="lblock">       Mat4d <span class="delete">matHeliocentricEclipticToAltAz;</span>      // Transform from helioce</td><td> </td><td class="rblock">       Mat4d <span class="insert">matHeliocentricEclipticJ2000ToAltAz;</span> // Transform from helioce</td><td class="lineno" valign="top"></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="lblock">ntric ecliptic <span class="delete">(Vsop87)</span> to <span class="delete">observer-centric altazimuthal</span> coordinate</td><td> </td><td class="rblock">ntric ecliptic <span class="insert">Cartesian (VSOP87A)</span> to <span class="insert">topocentric (StelObserver) altazimuth</span></td><td class="lineno" valign="top"></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="lblock">       Mat4d <span class="delete">matAltAzToHeliocentricEcliptic;</span>      // Transform from <span class="delete">observe</span></td><td> </td><td class="rblock"><span class="insert">al</span> coordinate</td><td class="lineno" valign="top"></td></tr>
@@ -805,7 +831,7 @@ observer-centric altazimuthal drawing</td><td class="lineno" valign="top"></td><
       <tr><td class="lineno" valign="top"></td><td class="left">       // The ID of the default startup location</td><td> </td><td class="right">       // The ID of the default startup location</td><td class="lineno" valign="top"></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="left">       QString defaultLocationID;</td><td> </td><td class="right">       QString defaultLocationID;</td><td class="lineno" valign="top"></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="left"></td><td> </td><td class="right"></td><td class="lineno" valign="top"></td></tr>
-      <tr><td><a name="diff0046" /></td></tr>
+      <tr><td><a name="diff0047" /></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="lblock"></td><td> </td><td class="rblock">       <span class="insert">// flag to indicate we want to use nutation (the small-scale wobble </span></td><td class="lineno" valign="top"></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="lblock"></td><td> </td><td class="rblock"><span class="insert">of earth's axis)</span></td><td class="lineno" valign="top"></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="lblock"></td><td> </td><td class="rblock"><span class="insert">       bool flagUseNutation;</span></td><td class="lineno" valign="top"></td></tr>
@@ -817,7 +843,7 @@ observer-centric altazimuthal drawing</td><td class="lineno" valign="top"></td><
       <tr><td class="lineno" valign="top"></td><td class="left">       double timeSpeed;                  // Positive : forward, Negative :
  Backward, 1 = 1sec/sec</td><td> </td><td class="right">       double timeSpeed;                  // Positive : forward, Negative :
  Backward, 1 = 1sec/sec</td><td class="lineno" valign="top"></td></tr>
-      <tr><td><a name="diff0047" /></td></tr>
+      <tr><td><a name="diff0048" /></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="lblock">       <span class="delete">double</span> JDay;                       // <span class="delete">Curent</span> time in Julian <span class="delete">day</span></td><td> </td><td class="rblock">       <span class="insert">//double</span> JDay;                     // <span class="insert">Current</span> time in Julian <span class="insert">day. IN</span></td><td class="lineno" valign="top"></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="lblock"></td><td> </td><td class="rblock"><span class="insert"> V0.12 TO V0.14, this was JD in TT, and all places where UT was required ha</span></td><td class="lineno" valign="top"></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="lblock"></td><td> </td><td class="rblock"><span class="insert">d to subtract getDeltaT() explicitly.</span></td><td class="lineno" valign="top"></td></tr>
@@ -830,7 +856,7 @@ observer-centric altazimuthal drawing</td><td class="lineno" valign="top"></td><
       <tr><td class="lineno" valign="top"></td><td class="left">       double presetSkyTime;</td><td> </td><td class="right">       double presetSkyTime;</td><td class="lineno" valign="top"></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="left">       QTime initTodayTime;</td><td> </td><td class="right">       QTime initTodayTime;</td><td class="lineno" valign="top"></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="left">       QString startupTimeMode;</td><td> </td><td class="right">       QString startupTimeMode;</td><td class="lineno" valign="top"></td></tr>
-      <tr><td><a name="diff0048" /></td></tr>
+      <tr><td><a name="diff0049" /></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="lblock">       double <span class="delete">secondsOfLastJDayUpdate;</span>         // Time in seconds when the </td><td> </td><td class="rblock">       double <span class="insert">secondsOfLastJDUpdate;</span>    // Time in seconds when the time <span class="insert">ra</span></td><td class="lineno" valign="top"></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="lblock">time <span class="delete">rate</span> or time last changed</td><td> </td><td class="rblock"><span class="insert">te</span> or time last changed</td><td class="lineno" valign="top"></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="lblock">       double <span class="delete">JDayOfLastJDayUpdate;</span>         // <span class="delete">JDay</span> when the time rate or <span class="delete">t</span></td><td> </td><td class="rblock">       double <span class="insert">jdOfLastJDUpdate;</span>         // <span class="insert">JD</span> when the time rate or <span class="insert">time la</span></td><td class="lineno" valign="top"></td></tr>
@@ -846,8 +872,8 @@ observer-centric altazimuthal drawing</td><td class="lineno" valign="top"></td><
       <tr><td class="lineno" valign="top"></td><td class="left">#endif // _STELCORE_HPP_</td><td> </td><td class="right">#endif // _STELCORE_HPP_</td><td class="lineno" valign="top"></td></tr>
 
      <tr><td></td><td class="left"></td><td> </td><td class="right"></td><td></td></tr>
-     <tr bgcolor="gray"><th colspan="5" align="center"><a name="end">&nbsp;End of changes. 48 change blocks.&nbsp;</a></th></tr>
-     <tr class="stats"><td></td><th><i>129 lines changed or deleted</i></th><th><i> </i></th><th><i>232 lines changed or added</i></th><td></td></tr>
+     <tr bgcolor="gray"><th colspan="5" align="center"><a name="end">&nbsp;End of changes. 49 change blocks.&nbsp;</a></th></tr>
+     <tr class="stats"><td></td><th><i>130 lines changed or deleted</i></th><th><i> </i></th><th><i>233 lines changed or added</i></th><td></td></tr>
      <tr><td colspan="5" align="center" class="small"><br/>This html diff was produced by rfcdiff 1.41. The latest version is available from <a href="http://www.tools.ietf.org/tools/rfcdiff/" >http://tools.ietf.org/tools/rfcdiff/</a> </td></tr>
    </table>
    </body>

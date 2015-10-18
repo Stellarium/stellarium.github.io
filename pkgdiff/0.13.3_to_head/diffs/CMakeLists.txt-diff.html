@@ -275,9 +275,13 @@ is run.")</td><td class="lineno" valign="top"></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="left">        SET(STELMAINLIB "Source: \"${CMAKE_INSTALL_PREFIX}/lib/libstelMain.
 dll\"; DestDir: \"{app}\";")</td><td> </td><td class="right">        SET(STELMAINLIB "Source: \"${CMAKE_INSTALL_PREFIX}/lib/libstelMain.
 dll\"; DestDir: \"{app}\";")</td><td class="lineno" valign="top"></td></tr>
-      <tr><td class="lineno" valign="top"></td><td class="left">    ELSE()</td><td> </td><td class="right">    ELSE()</td><td class="lineno" valign="top"></td></tr>
       <tr><td><a name="diff0013" /></td></tr>
-      <tr><td class="lineno" valign="top"></td><td class="lblock">        SET(STELMAINLIB "; StelMainLib <span class="delete">do</span>n't used")</td><td> </td><td class="rblock">        SET(STELMAINLIB "; StelMainLib <span class="insert">is</span>n't used")</td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="lblock"></td><td> </td><td class="rblock"><span class="insert">        SET(MESALIB "; MESA libraries isn't used")</span></td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="left">    ELSE()</td><td> </td><td class="right">    ELSE()</td><td class="lineno" valign="top"></td></tr>
+      <tr><td><a name="diff0014" /></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="lblock">        SET(STELMAINLIB "; StelMainLib <span class="delete">don't</span> used")</td><td> </td><td class="rblock">        SET(STELMAINLIB "; StelMainLib <span class="insert">isn't</span> used")</td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="lblock"></td><td> </td><td class="rblock">        <span class="insert">SET(MESALIB "Source: \"${CMAKE_SOURCE_DIR}/util/MESA/opengl32sw.dll</span></td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="lblock"></td><td> </td><td class="rblock"><span class="insert">\"; DestDir: \"{app}\";")</span></td><td class="lineno" valign="top"></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="left">    ENDIF()</td><td> </td><td class="right">    ENDIF()</td><td class="lineno" valign="top"></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="left">    GET_TARGET_PROPERTY(QtConcurrent_location Qt5::Concurrent LOCATION)</td><td> </td><td class="right">    GET_TARGET_PROPERTY(QtConcurrent_location Qt5::Concurrent LOCATION)</td><td class="lineno" valign="top"></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="left">    GET_TARGET_PROPERTY(QtCore_location Qt5::Core LOCATION)</td><td> </td><td class="right">    GET_TARGET_PROPERTY(QtCore_location Qt5::Core LOCATION)</td><td class="lineno" valign="top"></td></tr>
@@ -285,7 +289,7 @@ dll\"; DestDir: \"{app}\";")</td><td class="lineno" valign="top"></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="left">    GET_TARGET_PROPERTY(QtOpenGL_location Qt5::OpenGL LOCATION)</td><td> </td><td class="right">    GET_TARGET_PROPERTY(QtOpenGL_location Qt5::OpenGL LOCATION)</td><td class="lineno" valign="top"></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="left">    GET_TARGET_PROPERTY(QtNetwork_location Qt5::Network LOCATION)</td><td> </td><td class="right">    GET_TARGET_PROPERTY(QtNetwork_location Qt5::Network LOCATION)</td><td class="lineno" valign="top"></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="left">    GET_TARGET_PROPERTY(QtWidgets_location Qt5::Widgets LOCATION)</td><td> </td><td class="right">    GET_TARGET_PROPERTY(QtWidgets_location Qt5::Widgets LOCATION)</td><td class="lineno" valign="top"></td></tr>
-      <tr><td><a name="diff0014" /></td></tr>
+      <tr><td><a name="diff0015" /></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="lblock"><span class="delete">    GET_TARGET_PROPERTY(QtDeclarative_location Qt5::Declarative LOCATION)</span></td><td> </td><td class="rblock"></td><td class="lineno" valign="top"></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="left">    GET_TARGET_PROPERTY(QtSql_location Qt5::Sql LOCATION)</td><td> </td><td class="right">    GET_TARGET_PROPERTY(QtSql_location Qt5::Sql LOCATION)</td><td class="lineno" valign="top"></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="left">    GET_TARGET_PROPERTY(QtXmlPatterns_location Qt5::XmlPatterns LOCATION)</td><td> </td><td class="right">    GET_TARGET_PROPERTY(QtXmlPatterns_location Qt5::XmlPatterns LOCATION)</td><td class="lineno" valign="top"></td></tr>
@@ -295,7 +299,7 @@ dll\"; DestDir: \"{app}\";")</td><td class="lineno" valign="top"></td></tr>
 p}\";")</td><td> </td><td class="right">        SET(ISS_QT_SCRIPT "Source: \"${QtScript_location}\"; DestDir: \"{ap
 p}\";")</td><td class="lineno" valign="top"></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="left">    ELSE()</td><td> </td><td class="right">    ELSE()</td><td class="lineno" valign="top"></td></tr>
-      <tr><td><a name="diff0015" /></td></tr>
+      <tr><td><a name="diff0016" /></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="lblock">        SET(ISS_QT_SCRIPT "; QtScript <span class="delete">do</span>n't used")</td><td> </td><td class="rblock">        SET(ISS_QT_SCRIPT "; QtScript <span class="insert">is</span>n't used")</td><td class="lineno" valign="top"></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="left">    ENDIF()</td><td> </td><td class="right">    ENDIF()</td><td class="lineno" valign="top"></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="left">    IF(ENABLE_SOUND)</td><td> </td><td class="right">    IF(ENABLE_SOUND)</td><td class="lineno" valign="top"></td></tr>
@@ -309,7 +313,7 @@ r: \"{app}\";\nSource: \"${QtMultimediaWidgets_location}\"; DestDir: \"{app
 r: \"{app}\";\nSource: \"${QtMultimediaWidgets_location}\"; DestDir: \"{app
 }\";")</td><td class="lineno" valign="top"></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="left">    ELSE()</td><td> </td><td class="right">    ELSE()</td><td class="lineno" valign="top"></td></tr>
-      <tr><td><a name="diff0016" /></td></tr>
+      <tr><td><a name="diff0017" /></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="lblock">        SET(ISS_QT_MULTIMEDIA "; QtMultimedia <span class="delete">do</span>n't used")</td><td> </td><td class="rblock">        SET(ISS_QT_MULTIMEDIA "; QtMultimedia <span class="insert">is</span>n't used")</td><td class="lineno" valign="top"></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="left">    ENDIF()</td><td> </td><td class="right">    ENDIF()</td><td class="lineno" valign="top"></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="left">    GET_FILENAME_COMPONENT(QT5_LIBS ${QtCore_location} PATH)</td><td> </td><td class="right">    GET_FILENAME_COMPONENT(QT5_LIBS ${QtCore_location} PATH)</td><td class="lineno" valign="top"></td></tr>
@@ -348,7 +352,7 @@ IBS}/../plugins/mediaservice/qtmedia_audioengine.dll\"; DestDir: \"{app}/me
 diaservice/\";\nSource: \"${QT5_LIBS}/../plugins/playlistformats/qtmultimed
 ia_m3u.dll\"; DestDir: \"{app}/playlistformats/\";")</td><td class="lineno" valign="top"></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="left">    ELSE()</td><td> </td><td class="right">    ELSE()</td><td class="lineno" valign="top"></td></tr>
-      <tr><td><a name="diff0017" /></td></tr>
+      <tr><td><a name="diff0018" /></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="lblock">        SET(ISS_MULTIMEDIA_PLUGINS "; QtMultimedia <span class="delete">do</span>n't used")</td><td> </td><td class="rblock">        SET(ISS_MULTIMEDIA_PLUGINS "; QtMultimedia <span class="insert">is</span>n't used")</td><td class="lineno" valign="top"></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="left">    ENDIF()</td><td> </td><td class="right">    ENDIF()</td><td class="lineno" valign="top"></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="left">    SET(ISS_QML_DIR "Source: \"${QT5_LIBS}/../imports/Qt/labs/shaders/qmldi
@@ -371,7 +375,7 @@ OURCE_DIR}/stellarium-patch.iss @ONLY)</td><td class="lineno" valign="top"></td>
       <tr><td class="lineno" valign="top"></td><td class="left"></td><td> </td><td class="right"></td><td class="lineno" valign="top"></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="left">IF(APPLE)</td><td> </td><td class="right">IF(APPLE)</td><td class="lineno" valign="top"></td></tr>
       <tr><td class="lineno"></td><td class="left"></td><td> </td><td class="right"></td><td class="lineno"></td></tr>
-      <tr bgcolor="gray" ><td></td><th><a name="part-l5" /><small>skipping to change at</small><em> line 440</em></th><th> </th><th><a name="part-r5" /><small>skipping to change at</small><em> line 441</em></th><td></td></tr>
+      <tr bgcolor="gray" ><td></td><th><a name="part-l5" /><small>skipping to change at</small><em> line 440</em></th><th> </th><th><a name="part-r5" /><small>skipping to change at</small><em> line 443</em></th><td></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="left">               DEPENDS ${CMAKE_CURRENT_BINARY_DIR}/Stellarium.app</td><td> </td><td class="right">               DEPENDS ${CMAKE_CURRENT_BINARY_DIR}/Stellarium.app</td><td class="lineno" valign="top"></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="left">               WORKING_DIRECTORY ${PROJECT_SOURCE_DIR}</td><td> </td><td class="right">               WORKING_DIRECTORY ${PROJECT_SOURCE_DIR}</td><td class="lineno" valign="top"></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="left">               COMMENT "making the macosx bundle."</td><td> </td><td class="right">               COMMENT "making the macosx bundle."</td><td class="lineno" valign="top"></td></tr>
@@ -388,7 +392,7 @@ NG_DIRECTORY ${CMAKE_CURRENT_BINARY_DIR} COMMENT "Generate the doxygen docu
 mentation into the doc directory.")</td><td> </td><td class="right">ADD_CUSTOM_TARGET(apidoc doxygen ${CMAKE_CURRENT_BINARY_DIR}/Doxyfile WORKI
 NG_DIRECTORY ${CMAKE_CURRENT_BINARY_DIR} COMMENT "Generate the doxygen docu
 mentation into the doc directory.")</td><td class="lineno" valign="top"></td></tr>
-      <tr><td><a name="diff0018" /></td></tr>
+      <tr><td><a name="diff0019" /></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="lblock"></td><td> </td><td class="rblock"><span class="insert">CONFIGURE_FILE(${PROJECT_SOURCE_DIR}/Doxyfile-plugins.cmake ${CMAKE_CURRENT</span></td><td class="lineno" valign="top"></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="lblock"></td><td> </td><td class="rblock"><span class="insert">_BINARY_DIR}/Doxyfile-plugins @ONLY)</span></td><td class="lineno" valign="top"></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="lblock"></td><td> </td><td class="rblock"><span class="insert">ADD_CUSTOM_TARGET(apidoc-plugins doxygen ${CMAKE_CURRENT_BINARY_DIR}/Doxyfi</span></td><td class="lineno" valign="top"></td></tr>
@@ -410,8 +414,8 @@ OJECT_SOURCE_DIR}/util/copy-translations.bat @ONLY NEWLINE_STYLE WIN32)</td><td 
       <tr><td class="lineno" valign="top"></td><td class="left"># This will be used for all compilations in sub-directories</td><td> </td><td class="right"># This will be used for all compilations in sub-directories</td><td class="lineno" valign="top"></td></tr>
 
      <tr><td></td><td class="left"></td><td> </td><td class="right"></td><td></td></tr>
-     <tr bgcolor="gray"><th colspan="5" align="center"><a name="end">&nbsp;End of changes. 18 change blocks.&nbsp;</a></th></tr>
-     <tr class="stats"><td></td><th><i>16 lines changed or deleted</i></th><th><i> </i></th><th><i>23 lines changed or added</i></th><td></td></tr>
+     <tr bgcolor="gray"><th colspan="5" align="center"><a name="end">&nbsp;End of changes. 19 change blocks.&nbsp;</a></th></tr>
+     <tr class="stats"><td></td><th><i>16 lines changed or deleted</i></th><th><i> </i></th><th><i>26 lines changed or added</i></th><td></td></tr>
      <tr><td colspan="5" align="center" class="small"><br/>This html diff was produced by rfcdiff 1.41. The latest version is available from <a href="http://www.tools.ietf.org/tools/rfcdiff/" >http://tools.ietf.org/tools/rfcdiff/</a> </td></tr>
    </table>
    </body>

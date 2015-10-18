@@ -41,7 +41,9 @@
   <table border="0" cellpadding="0" cellspacing="0"> 
   <tr bgcolor="orange"><th></th><th>&nbsp;PointerCoordinates.cpp&nbsp;</th><th> </th><th>&nbsp;PointerCoordinates.cpp&nbsp;</th><th></th></tr> 
       <tr><td class="lineno"></td><td class="left"></td><td> </td><td class="right"></td><td class="lineno"></td></tr>
-      <tr bgcolor="gray" ><td></td><th><a name="part-l1" /><small>skipping to change at</small><em> line 129</em></th><th> </th><th><a name="part-r1" /><small>skipping to change at</small><em> line 129</em></th><td></td></tr>
+      <tr bgcolor="gray" ><td></td><th><a name="part-l1" /><small>skipping to change at</small><em> line 127</em></th><th> </th><th><a name="part-r1" /><small>skipping to change at</small><em> line 127</em></th><td></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="left">       font.setPixelSize(getFontSize());</td><td> </td><td class="right">       font.setPixelSize(getFontSize());</td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="left">       sPainter.setFont(font);</td><td> </td><td class="right">       sPainter.setFont(font);</td><td class="lineno" valign="top"></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="left"></td><td> </td><td class="right"></td><td class="lineno" valign="top"></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="left">       QPoint p = StelMainView::getInstance().getMousePos(); // get screen 
 coordinates of mouse cursor</td><td> </td><td class="right">       QPoint p = StelMainView::getInstance().getMousePos(); // get screen 
@@ -62,22 +64,27 @@ cted to bottom</td><td class="lineno" valign="top"></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="left">       // calculate position of mouse cursor via position of center of the 
 screen (and invert axis Y)</td><td> </td><td class="right">       // calculate position of mouse cursor via position of center of the 
 screen (and invert axis Y)</td><td class="lineno" valign="top"></td></tr>
-      <tr><td class="lineno" valign="top"></td><td class="left">       prj-&gt;unProject(prj-&gt;getViewportPosX()+wh+mx, prj-&gt;getViewportPosY()+
-hh+1-my, mousePosition);</td><td> </td><td class="right">       prj-&gt;unProject(prj-&gt;getViewportPosX()+wh+mx, prj-&gt;getViewportPosY()+
-hh+1-my, mousePosition);</td><td class="lineno" valign="top"></td></tr>
-      <tr><td class="lineno" valign="top"></td><td class="left">       { // Nick Fedoseev patch</td><td> </td><td class="right">       { // Nick Fedoseev patch</td><td class="lineno" valign="top"></td></tr>
       <tr><td><a name="diff0001" /></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="lblock">       prj-&gt;unProject(prj-&gt;getViewportPosX()+wh+mx, <span class="delete">prj-&gt;getViewportPosY()+</span></td><td> </td><td class="rblock">       <span class="insert">// If coordinates are invalid, don't draw them.</span></td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="lblock"><span class="delete">hh+1-my,</span> mousePosition);</td><td> </td><td class="rblock"><span class="insert">       bool coordsValid=false;</span></td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="lblock"></td><td> </td><td class="rblock"><span class="insert">       coordsValid =</span> prj-&gt;unProject(prj-&gt;getViewportPosX()+wh+mx, <span class="insert">prj-&gt;getV</span></td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="lblock"></td><td> </td><td class="rblock"><span class="insert">iewportPosY()+hh+1-my,</span> mousePosition);</td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="left">       { // Nick Fedoseev patch</td><td> </td><td class="right">       { // Nick Fedoseev patch</td><td class="lineno" valign="top"></td></tr>
+      <tr><td><a name="diff0002" /></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="lblock">          Vec3d win;</td><td> </td><td class="rblock">               Vec3d win;</td><td class="lineno" valign="top"></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="lblock">          prj-&gt;project(mousePosition,win);</td><td> </td><td class="rblock">               prj-&gt;project(mousePosition,win);</td><td class="lineno" valign="top"></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="lblock">          float dx = prj-&gt;getViewportPosX()+wh+mx - win.v[0];</td><td> </td><td class="rblock">               float dx = prj-&gt;getViewportPosX()+wh+mx - win.v[0];</td><td class="lineno" valign="top"></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="lblock">          float dy = prj-&gt;getViewportPosY()+hh+1-my - win.v[1];</td><td> </td><td class="rblock">               float dy = prj-&gt;getViewportPosY()+hh+1-my - win.v[1];</td><td class="lineno" valign="top"></td></tr>
-      <tr><td class="lineno" valign="top"></td><td class="lblock">          prj-&gt;unProject(prj-&gt;getViewportPosX()+wh+mx+dx, <span class="delete">prj-&gt;getViewportP</span></td><td> </td><td class="rblock">               prj-&gt;unProject(prj-&gt;getViewportPosX()+wh+mx+dx, <span class="insert">prj-&gt;getView</span></td><td class="lineno" valign="top"></td></tr>
-      <tr><td class="lineno" valign="top"></td><td class="lblock"><span class="delete">osY()+hh+1-my+dy,</span> mousePosition);</td><td> </td><td class="rblock"><span class="insert">portPosY()+hh+1-my+dy,</span> mousePosition);</td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="lblock">          <span class="delete">prj-&gt;unProject(prj-&gt;getViewportPosX()+wh+mx+dx, prj-&gt;getViewportP</span></td><td> </td><td class="rblock">               <span class="insert">coordsValid = prj-&gt;unProject(prj-&gt;getViewportPosX()+wh+mx+dx</span></td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="lblock"><span class="delete">osY()+hh+1-my+dy,</span> mousePosition);</td><td> </td><td class="rblock"><span class="insert">, prj-&gt;getViewportPosY()+hh+1-my+dy,</span> mousePosition);</td><td class="lineno" valign="top"></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="lblock">         }</td><td> </td><td class="rblock">       }</td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="lblock"></td><td> </td><td class="rblock">       <span class="insert">if (!coordsValid)</span></td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="lblock"></td><td> </td><td class="rblock"><span class="insert">               return;</span></td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="lblock"></td><td> </td><td class="rblock">                                                                           </td><td class="lineno" valign="top"></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="left">       bool withDecimalDegree = StelApp::getInstance().getFlagShowDecimalDe
 grees();</td><td> </td><td class="right">       bool withDecimalDegree = StelApp::getInstance().getFlagShowDecimalDe
 grees();</td><td class="lineno" valign="top"></td></tr>
-      <tr><td><a name="diff0002" /></td></tr>
+      <tr><td><a name="diff0003" /></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="lblock"></td><td> </td><td class="rblock"><span class="insert">       bool useOldAzimuth = StelApp::getInstance().getFlagOldAzimuthUsage()
 ;</span></td><td class="lineno" valign="top"></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="left"></td><td> </td><td class="right"></td><td class="lineno" valign="top"></td></tr>
@@ -95,7 +102,7 @@ in the plugin");</td><td> </td><td class="right">                       coordsSy
 in the plugin");</td><td class="lineno" valign="top"></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="left">                       if (withDecimalDegree)</td><td> </td><td class="right">                       if (withDecimalDegree)</td><td class="lineno" valign="top"></td></tr>
       <tr><td class="lineno"></td><td class="left"></td><td> </td><td class="right"></td><td class="lineno"></td></tr>
-      <tr bgcolor="gray" ><td></td><th><a name="part-l2" /><small>skipping to change at</small><em> line 176</em></th><th> </th><th><a name="part-r2" /><small>skipping to change at</small><em> line 177</em></th><td></td></tr>
+      <tr bgcolor="gray" ><td></td><th><a name="part-l2" /><small>skipping to change at</small><em> line 176</em></th><th> </th><th><a name="part-r2" /><small>skipping to change at</small><em> line 182</em></th><td></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="left">                       else</td><td> </td><td class="right">                       else</td><td class="lineno" valign="top"></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="left">                       {</td><td> </td><td class="right">                       {</td><td class="lineno" valign="top"></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="left">                               cxt = StelUtils::radToHmsStr(cx, true);</td><td> </td><td class="right">                               cxt = StelUtils::radToHmsStr(cx, true);</td><td class="lineno" valign="top"></td></tr>
@@ -108,7 +115,7 @@ in the plugin");</td><td class="lineno" valign="top"></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="left">                       StelUtils::rectToSphe(&amp;cy,&amp;cx,core-&gt;j2000ToAltAz(mou
 sePosition, StelCore::RefractionAuto));</td><td> </td><td class="right">                       StelUtils::rectToSphe(&amp;cy,&amp;cx,core-&gt;j2000ToAltAz(mou
 sePosition, StelCore::RefractionAuto));</td><td class="lineno" valign="top"></td></tr>
-      <tr><td><a name="diff0003" /></td></tr>
+      <tr><td><a name="diff0004" /></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="lblock">                       <span class="delete">cy</span> = <span class="delete">3.*M_PI - cy;</span>  // N is zero, E is 90 degrees</td><td> </td><td class="rblock">                       <span class="insert">float direction</span> = <span class="insert">3.;</span> // N is zero, E is 90 degrees</td><td class="lineno" valign="top"></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="lblock"></td><td> </td><td class="rblock">                       <span class="insert">if (useOldAzimuth)</span></td><td class="lineno" valign="top"></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="lblock"></td><td> </td><td class="rblock"><span class="insert">                               direction = 2.;</span></td><td class="lineno" valign="top"></td></tr>
@@ -126,7 +133,7 @@ gin");</td><td class="lineno" valign="top"></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="left">                       }</td><td> </td><td class="right">                       }</td><td class="lineno" valign="top"></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="left">                       else</td><td> </td><td class="right">                       else</td><td class="lineno" valign="top"></td></tr>
       <tr><td class="lineno"></td><td class="left"></td><td> </td><td class="right"></td><td class="lineno"></td></tr>
-      <tr bgcolor="gray" ><td></td><th><a name="part-l3" /><small>skipping to change at</small><em> line 213</em></th><th> </th><th><a name="part-r3" /><small>skipping to change at</small><em> line 217</em></th><td></td></tr>
+      <tr bgcolor="gray" ><td></td><th><a name="part-l3" /><small>skipping to change at</small><em> line 213</em></th><th> </th><th><a name="part-r3" /><small>skipping to change at</small><em> line 222</em></th><td></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="left">                       {</td><td> </td><td class="right">                       {</td><td class="lineno" valign="top"></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="left">                               cxt = StelUtils::radToDmsStr(cx, true);</td><td> </td><td class="right">                               cxt = StelUtils::radToDmsStr(cx, true);</td><td class="lineno" valign="top"></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="left">                               cyt = StelUtils::radToDmsStr(cy, true);</td><td> </td><td class="right">                               cyt = StelUtils::radToDmsStr(cy, true);</td><td class="lineno" valign="top"></td></tr>
@@ -139,7 +146,7 @@ gin");</td><td class="lineno" valign="top"></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="left">                       StelUtils::rectToSphe(&amp;cx,&amp;cy,core-&gt;j2000ToEquinoxEq
 u(mousePosition));</td><td> </td><td class="right">                       StelUtils::rectToSphe(&amp;cx,&amp;cy,core-&gt;j2000ToEquinoxEq
 u(mousePosition));</td><td class="lineno" valign="top"></td></tr>
-      <tr><td><a name="diff0004" /></td></tr>
+      <tr><td><a name="diff0005" /></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="lblock">                       StelUtils::equToEcl(cx, cy, core-&gt;getCurrentPlanet()
 -&gt;getRotObliquity(core-&gt;getJD<span class="delete">ay()), &amp;lambda, &amp;beta); // Calculate ecliptic 
 p</span>osition and show it...</td><td> </td><td class="rblock">                       StelUtils::equToEcl(cx, cy, core-&gt;getCurrentPlanet()
@@ -158,7 +165,7 @@ the plugin");</td><td class="lineno" valign="top"></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="left">                       {</td><td> </td><td class="right">                       {</td><td class="lineno" valign="top"></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="left">                               cxt = StelUtils::radToDmsStr(lambda, true);</td><td> </td><td class="right">                               cxt = StelUtils::radToDmsStr(lambda, true);</td><td class="lineno" valign="top"></td></tr>
       <tr><td class="lineno"></td><td class="left"></td><td> </td><td class="right"></td><td class="lineno"></td></tr>
-      <tr bgcolor="gray" ><td></td><th><a name="part-l4" /><small>skipping to change at</small><em> line 250</em></th><th> </th><th><a name="part-r4" /><small>skipping to change at</small><em> line 254</em></th><td></td></tr>
+      <tr bgcolor="gray" ><td></td><th><a name="part-l4" /><small>skipping to change at</small><em> line 250</em></th><th> </th><th><a name="part-r4" /><small>skipping to change at</small><em> line 259</em></th><td></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="left">                       else</td><td> </td><td class="right">                       else</td><td class="lineno" valign="top"></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="left">                       {</td><td> </td><td class="right">                       {</td><td class="lineno" valign="top"></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="left">                               cxt = StelUtils::radToDmsStr(lambda, true);</td><td> </td><td class="right">                               cxt = StelUtils::radToDmsStr(lambda, true);</td><td class="lineno" valign="top"></td></tr>
@@ -171,7 +178,7 @@ the plugin");</td><td class="lineno" valign="top"></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="left">                       Vec3d v = core-&gt;j2000ToAltAz(mousePosition, StelCore
 ::RefractionAuto);</td><td> </td><td class="right">                       Vec3d v = core-&gt;j2000ToAltAz(mousePosition, StelCore
 ::RefractionAuto);</td><td class="lineno" valign="top"></td></tr>
-      <tr><td><a name="diff0005" /></td></tr>
+      <tr><td><a name="diff0006" /></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="lblock">                       StelUtils::rectToSphe(&amp;cx,&amp;cy,Mat4d::zrotation(-core
 -&gt;getLocalSiderealTime()<span class="delete">+((core-&gt;getDeltaT(core-&gt;getJDay())/240.)*M_PI/180.
 ))*core-&gt;altAzToEquinoxEqu(v, StelCore::RefractionOf</span>f));</td><td> </td><td class="rblock">                       StelUtils::rectToSphe(&amp;cx,&amp;cy,Mat4d::zrotation(-core
@@ -193,8 +200,8 @@ gin");</td><td class="lineno" valign="top"></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="left"></td><td> </td><td class="right"></td><td class="lineno" valign="top"></td></tr>
 
      <tr><td></td><td class="left"></td><td> </td><td class="right"></td><td></td></tr>
-     <tr bgcolor="gray"><th colspan="5" align="center"><a name="end">&nbsp;End of changes. 5 change blocks.&nbsp;</a></th></tr>
-     <tr class="stats"><td></td><th><i>10 lines changed or deleted</i></th><th><i> </i></th><th><i>14 lines changed or added</i></th><td></td></tr>
+     <tr bgcolor="gray"><th colspan="5" align="center"><a name="end">&nbsp;End of changes. 6 change blocks.&nbsp;</a></th></tr>
+     <tr class="stats"><td></td><th><i>12 lines changed or deleted</i></th><th><i> </i></th><th><i>21 lines changed or added</i></th><td></td></tr>
      <tr><td colspan="5" align="center" class="small"><br/>This html diff was produced by rfcdiff 1.41. The latest version is available from <a href="http://www.tools.ietf.org/tools/rfcdiff/" >http://tools.ietf.org/tools/rfcdiff/</a> </td></tr>
    </table>
    </body>
