@@ -241,7 +241,7 @@ printf('</ul>
 q_("system requirements"),
 q_("minimal"),
 q_("Linux/Unix; Windows 7 and above; OS X 10.7.4 and above"),
-q_("3D graphics card which supports OpenGL 3.1"),
+q_("3D graphics card which supports OpenGL 3.0 and GLSL 1.3"),
 q_("512 MiB RAM"),
 q_("250 MiB on disk"),
 q_("recommended"),
