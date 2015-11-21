@@ -9,7 +9,7 @@
 <head> 
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" /> 
   <meta http-equiv="Content-Style-Type" content="text/css" /> 
-  <title>Diff: default_config.ini - default_config.ini</title> 
+  <title>Diff: CMakeLists.txt - CMakeLists.txt</title> 
   <style type="text/css"> 
     body    { font-size:16px; margin: 0.4ex; margin-right: auto; } 
     tr      { } 
@@ -39,20 +39,22 @@
 </head> 
 <body > 
   <table border="0" cellpadding="0" cellspacing="0"> 
-  <tr bgcolor="orange"><th></th><th>&nbsp;default_config.ini&nbsp;</th><th> </th><th>&nbsp;default_config.ini&nbsp;</th><th></th></tr> 
-      <tr><td class="lineno" valign="top"></td><td class="left">[main]</td><td> </td><td class="right">[main]</td><td class="lineno" valign="top"></td></tr>
+  <tr bgcolor="orange"><th></th><th>&nbsp;CMakeLists.txt&nbsp;</th><th> </th><th>&nbsp;CMakeLists.txt&nbsp;</th><th></th></tr> 
+      <tr><td class="lineno" valign="top"></td><td class="left"># This is the cmake config file for the AngleMeasure plugin</td><td> </td><td class="right"># This is the cmake config file for the AngleMeasure plugin</td><td class="lineno" valign="top"></td></tr>
       <tr><td><a name="diff0001" /></td></tr>
-      <tr><td class="lineno" valign="top"></td><td class="lblock">version                             = 0.1<span class="delete">4</span>.0</td><td> </td><td class="rblock">version                             = 0.1<span class="insert">5</span>.0</td><td class="lineno" valign="top"></td></tr>
-      <tr><td class="lineno" valign="top"></td><td class="left">invert_screenshots_colors           = false</td><td> </td><td class="right">invert_screenshots_colors           = false</td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="lblock">SET(ANGLEMEASURE_VERSION "0.4.<span class="delete">3</span>")</td><td> </td><td class="rblock">SET(ANGLEMEASURE_VERSION "0.4.<span class="insert">4</span>")</td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="left">ADD_DEFINITIONS(-DANGLEMEASURE_VERSION="${ANGLEMEASURE_VERSION}")</td><td> </td><td class="right">ADD_DEFINITIONS(-DANGLEMEASURE_VERSION="${ANGLEMEASURE_VERSION}")</td><td class="lineno" valign="top"></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="left"></td><td> </td><td class="right"></td><td class="lineno" valign="top"></td></tr>
-      <tr><td class="lineno" valign="top"></td><td class="left">[plugins_load_at_startup]</td><td> </td><td class="right">[plugins_load_at_startup]</td><td class="lineno" valign="top"></td></tr>
-      <tr><td class="lineno" valign="top"></td><td class="left">Oculars                             = true</td><td> </td><td class="right">Oculars                             = true</td><td class="lineno" valign="top"></td></tr>
-      <tr><td class="lineno" valign="top"></td><td class="left">Satellites                          = true</td><td> </td><td class="right">Satellites                          = true</td><td class="lineno" valign="top"></td></tr>
-      <tr><td class="lineno" valign="top"></td><td class="left">SolarSystemEditor                   = true</td><td> </td><td class="right">SolarSystemEditor                   = true</td><td class="lineno" valign="top"></td></tr>
-      <tr><td class="lineno" valign="top"></td><td class="left">TimeZoneConfiguration               = true</td><td> </td><td class="right">TimeZoneConfiguration               = true</td><td class="lineno" valign="top"></td></tr>
-      <tr><td class="lineno" valign="top"></td><td class="left">Exoplanets                          = true</td><td> </td><td class="right">Exoplanets                          = true</td><td class="lineno" valign="top"></td></tr>
-      <tr><td class="lineno" valign="top"></td><td class="left">MeteorShowers                       = true</td><td> </td><td class="right">MeteorShowers                       = true</td><td class="lineno" valign="top"></td></tr>
-      <tr><td class="lineno" valign="top"></td><td class="left">Novae                               = true</td><td> </td><td class="right">Novae                               = true</td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="left">ADD_SUBDIRECTORY( src )</td><td> </td><td class="right">ADD_SUBDIRECTORY( src )</td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="left"></td><td> </td><td class="right"></td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="left">IF(APPLE)</td><td> </td><td class="right">IF(APPLE)</td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="left">     SET(CMAKE_INSTALL_PREFIX $ENV{HOME}/Library/Application\ Support/Stell
+arium)</td><td> </td><td class="right">     SET(CMAKE_INSTALL_PREFIX $ENV{HOME}/Library/Application\ Support/Stell
+arium)</td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="left">ElSE(APPLE)</td><td> </td><td class="right">ElSE(APPLE)</td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="left">     SET(CMAKE_INSTALL_PREFIX $ENV{HOME}/.stellarium)</td><td> </td><td class="right">     SET(CMAKE_INSTALL_PREFIX $ENV{HOME}/.stellarium)</td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="left">ENDIF(APPLE)</td><td> </td><td class="right">ENDIF(APPLE)</td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="left">INSTALL(FILES DESTINATION "modules/AngleMeasure")</td><td> </td><td class="right">INSTALL(FILES DESTINATION "modules/AngleMeasure")</td><td class="lineno" valign="top"></td></tr>
 
      <tr><td></td><td class="left"></td><td> </td><td class="right"></td><td></td></tr>
      <tr bgcolor="gray"><th colspan="5" align="center"><a name="end">&nbsp;End of changes. 1 change blocks.&nbsp;</a></th></tr>

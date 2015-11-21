@@ -1,4 +1,4 @@
-<!-- changed:0.0001;added:0;removed:0;moved:0;renamed:0;changed:3;tool_version:1.6.4 -->
+<!-- changed:0.7;added:2;removed:5;moved:0;renamed:0;changed:289;tool_version:1.6.4 -->
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
     <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
     <head>
@@ -201,19 +201,33 @@ function sort_array(a,b)
 <h2>Test Results</h2><hr/>
 <table class='summary'>
 <tr><th class='left'>Total Packages</th><td><a href='#Packages' style='color:Blue;'>2</a></td></tr>
-<tr><th class='left'>Total Files</th><td><a href='#Files' style='color:Blue;'>3108</a></td></tr>
-<tr><th class='left'>Verdict</th><td><span style='color:Red;'><b>Changed<br/>(0.0001%)</b></span></td></tr>
+<tr><th class='left'>Total Files</th><td><a href='#Files' style='color:Blue;'>3110</a></td></tr>
+<tr><th class='left'>Verdict</th><td><span style='color:Red;'><b>Changed<br/>(0.7%)</b></span></td></tr>
 </table>
 <a name='Deps'></a>
 <a name='Files'></a><h2>Changes In Files</h2><hr/>
 <table class='summary'>
 <tr><th>File Type</th><th>Total</th><th>Added</th><th>Removed</th><th>Changed</th></tr>
 <tr>
+<td class='left'>Header file</td>
+<td><a href='#HeaderFiles' style='color:Blue;'>14</a></td>
+<td>0</td>
+<td>0</td>
+<td class='warning'><a href='#HeaderFiles' style='color:Blue;'>14</a></td>
+</tr>
+<tr>
+<td class='left'>C++ program</td>
+<td><a href='#CPPPrograms' style='color:Blue;'>25</a></td>
+<td>0</td>
+<td>0</td>
+<td class='warning'><a href='#CPPPrograms' style='color:Blue;'>25</a></td>
+</tr>
+<tr>
 <td class='left'>CMake file</td>
-<td><a href='#CMakeFiles' style='color:Blue;'>1</a></td>
-<td>0</td>
-<td>0</td>
-<td class='warning'><a href='#CMakeFiles' style='color:Blue;'>1</a></td>
+<td><a href='#CMakeFiles' style='color:Blue;'>13</a></td>
+<td class='new'><a href='#CMakeFiles' style='color:Blue;'>1</a></td>
+<td class='failed'><a href='#CMakeFiles' style='color:Blue;'>1</a></td>
+<td class='warning'><a href='#CMakeFiles' style='color:Blue;'>11</a></td>
 </tr>
 <tr>
 <td class='left'>Initialization file</td>
@@ -223,22 +237,438 @@ function sort_array(a,b)
 <td class='warning'><a href='#InitializationFiles' style='color:Blue;'>1</a></td>
 </tr>
 <tr>
+<td class='left'>JSON file</td>
+<td><a href='#JSONFiles' style='color:Blue;'>1</a></td>
+<td>0</td>
+<td>0</td>
+<td class='warning'><a href='#JSONFiles' style='color:Blue;'>1</a></td>
+</tr>
+<tr>
 <td class='left'>Manifest file</td>
-<td><a href='#ManifestFiles' style='color:Blue;'>1</a></td>
+<td><a href='#ManifestFiles' style='color:Blue;'>2</a></td>
+<td class='new'><a href='#ManifestFiles' style='color:Blue;'>1</a></td>
+<td class='failed'><a href='#ManifestFiles' style='color:Blue;'>1</a></td>
+<td>0</td>
+</tr>
+<tr>
+<td class='left'>XML document</td>
+<td><a href='#XMLDocuments' style='color:Blue;'>1</a></td>
 <td>0</td>
 <td>0</td>
-<td class='warning'><a href='#ManifestFiles' style='color:Blue;'>1</a></td>
+<td class='warning'><a href='#XMLDocuments' style='color:Blue;'>1</a></td>
+</tr>
+<tr>
+<td class='left'>Gettext file</td>
+<td><a href='#GettextFiles' style='color:Blue;'>230</a></td>
+<td>0</td>
+<td>0</td>
+<td class='warning'><a href='#GettextFiles' style='color:Blue;'>230</a></td>
+</tr>
+<tr>
+<td class='left'>Qt UI file</td>
+<td><a href='#QtUIFiles' style='color:Blue;'>5</a></td>
+<td>0</td>
+<td>0</td>
+<td class='warning'><a href='#QtUIFiles' style='color:Blue;'>5</a></td>
+</tr>
+<tr>
+<td class='left'>Resource file</td>
+<td><a href='#ResourceFiles' style='color:Blue;'>1</a></td>
+<td>0</td>
+<td class='failed'><a href='#ResourceFiles' style='color:Blue;'>1</a></td>
+<td>0</td>
+</tr>
+<tr>
+<td class='left'>Archive</td>
+<td><a href='#Archives' style='color:Blue;'>2</a></td>
+<td>0</td>
+<td class='failed'><a href='#Archives' style='color:Blue;'>2</a></td>
+<td>0</td>
+</tr>
+<tr>
+<td class='left'>Text file</td>
+<td><a href='#TextFiles' style='color:Blue;'>1</a></td>
+<td>0</td>
+<td>0</td>
+<td class='warning'><a href='#TextFiles' style='color:Blue;'>1</a></td>
+</tr>
+</table>
+<a name='HeaderFiles'></a>
+<h2>Header Files (14)</h2><hr/>
+<table class='summary'>
+<tr><th title='sort' onclick='javascript:sort(this, 1)' style='cursor:pointer'>Name</th><th title='sort' onclick='javascript:sort(this, 1)' style='cursor:pointer'>Status</th><th title='sort' onclick='javascript:sort(this, 1)' style='cursor:pointer'>Delta</th><th>Visual<br/>Diff</th><th>Detailed<br/>Report</th></tr>
+<tr>
+<td class='left f_path'>plugins/AngleMeasure/src/AngleMeasure.hpp</td>
+<td class='warning'>changed</td>
+<td class='value'>5.8%</td>
+<td><a href='diffs/plugins/AngleMeasure/src/AngleMeasure.hpp-diff.html' target='_blank'>diff</a></td>
+<td></td>
+</tr>
+<tr>
+<td class='left f_path'>plugins/AngleMeasure/src/gui/AngleMeasureDialog.hpp</td>
+<td class='warning'>changed</td>
+<td class='value'>2.5%</td>
+<td><a href='diffs/plugins/AngleMeasure/src/gui/AngleMeasureDialog.hpp-diff.html' target='_blank'>diff</a></td>
+<td></td>
+</tr>
+<tr>
+<td class='left f_path'>plugins/CompassMarks/src/CompassMarks.hpp</td>
+<td class='warning'>changed</td>
+<td class='value'>9.3%</td>
+<td><a href='diffs/plugins/CompassMarks/src/CompassMarks.hpp-diff.html' target='_blank'>diff</a></td>
+<td></td>
+</tr>
+<tr>
+<td class='left f_path'>plugins/EquationOfTime/src/EquationOfTime.hpp</td>
+<td class='warning'>changed</td>
+<td class='value'>2.4%</td>
+<td><a href='diffs/plugins/EquationOfTime/src/EquationOfTime.hpp-diff.html' target='_blank'>diff</a></td>
+<td></td>
+</tr>
+<tr>
+<td class='left f_path'>plugins/Oculars/src/CCD.hpp</td>
+<td class='warning'>changed</td>
+<td class='value'>50.1%</td>
+<td><a href='diffs/plugins/Oculars/src/CCD.hpp-diff.html' target='_blank'>diff</a></td>
+<td></td>
+</tr>
+<tr>
+<td class='left f_path'>plugins/Oculars/src/gui/OcularDialog.hpp</td>
+<td class='warning'>changed</td>
+<td class='value'>1.3%</td>
+<td><a href='diffs/plugins/Oculars/src/gui/OcularDialog.hpp-diff.html' target='_blank'>diff</a></td>
+<td></td>
+</tr>
+<tr>
+<td class='left f_path'>plugins/Oculars/src/Oculars.hpp</td>
+<td class='warning'>changed</td>
+<td class='value'>0.6%</td>
+<td><a href='diffs/plugins/Oculars/src/Oculars.hpp-diff.html' target='_blank'>diff</a></td>
+<td></td>
+</tr>
+<tr>
+<td class='left f_path'>plugins/Oculars/src/Telescope.hpp</td>
+<td class='warning'>changed</td>
+<td class='value'>7.3%</td>
+<td><a href='diffs/plugins/Oculars/src/Telescope.hpp-diff.html' target='_blank'>diff</a></td>
+<td></td>
+</tr>
+<tr>
+<td class='left f_path'>plugins/TelescopeControl/src/gui/TelescopeConfigurationDialog.hpp</td>
+<td class='warning'>changed</td>
+<td class='value'>1.5%</td>
+<td><a href='diffs/plugins/TelescopeControl/src/gui/TelescopeConfigurationDialog.hpp-diff.html' target='_blank'>diff</a></td>
+<td></td>
+</tr>
+<tr>
+<td class='left f_path'>plugins/TelescopeControl/src/TelescopeControlGlobals.hpp</td>
+<td class='warning'>changed</td>
+<td class='value'>18.2%</td>
+<td><a href='diffs/plugins/TelescopeControl/src/TelescopeControlGlobals.hpp-diff.html' target='_blank'>diff</a></td>
+<td></td>
+</tr>
+<tr>
+<td class='left f_path'>src/core/modules/Planet.hpp</td>
+<td class='warning'>changed</td>
+<td class='value'>0.4%</td>
+<td><a href='diffs/src/core/modules/Planet.hpp-diff.html' target='_blank'>diff</a></td>
+<td></td>
+</tr>
+<tr>
+<td class='left f_path'>src/core/modules/SolarSystem.hpp</td>
+<td class='warning'>changed</td>
+<td class='value'>0.6%</td>
+<td><a href='diffs/src/core/modules/SolarSystem.hpp-diff.html' target='_blank'>diff</a></td>
+<td></td>
+</tr>
+<tr>
+<td class='left f_path'>src/core/planetsephems/precession.h</td>
+<td class='warning'>changed</td>
+<td class='value'>8.1%</td>
+<td><a href='diffs/src/core/planetsephems/precession.h-diff.html' target='_blank'>diff</a></td>
+<td></td>
+</tr>
+<tr>
+<td class='left f_path'>src/core/VecMath.hpp</td>
+<td class='warning'>changed</td>
+<td class='value'>0.1%</td>
+<td><a href='diffs/src/core/VecMath.hpp-diff.html' target='_blank'>diff</a></td>
+<td></td>
+</tr>
+</table>
+<a name='CPPPrograms'></a>
+<h2>C++ Programs (25)</h2><hr/>
+<table class='summary'>
+<tr><th title='sort' onclick='javascript:sort(this, 1)' style='cursor:pointer'>Name</th><th title='sort' onclick='javascript:sort(this, 1)' style='cursor:pointer'>Status</th><th title='sort' onclick='javascript:sort(this, 1)' style='cursor:pointer'>Delta</th><th>Visual<br/>Diff</th><th>Detailed<br/>Report</th></tr>
+<tr>
+<td class='left f_path'>plugins/AngleMeasure/src/AngleMeasure.cpp</td>
+<td class='warning'>changed</td>
+<td class='value'>11.7%</td>
+<td><a href='diffs/plugins/AngleMeasure/src/AngleMeasure.cpp-diff.html' target='_blank'>diff</a></td>
+<td></td>
+</tr>
+<tr>
+<td class='left f_path'>plugins/AngleMeasure/src/gui/AngleMeasureDialog.cpp</td>
+<td class='warning'>changed</td>
+<td class='value'>2.9%</td>
+<td><a href='diffs/plugins/AngleMeasure/src/gui/AngleMeasureDialog.cpp-diff.html' target='_blank'>diff</a></td>
+<td></td>
+</tr>
+<tr>
+<td class='left f_path'>plugins/ArchaeoLines/src/ArchaeoLines.cpp</td>
+<td class='warning'>changed</td>
+<td class='value'>0.4%</td>
+<td><a href='diffs/plugins/ArchaeoLines/src/ArchaeoLines.cpp-diff.html' target='_blank'>diff</a></td>
+<td></td>
+</tr>
+<tr>
+<td class='left f_path'>plugins/CompassMarks/src/CompassMarks.cpp</td>
+<td class='warning'>changed</td>
+<td class='value'>4.6%</td>
+<td><a href='diffs/plugins/CompassMarks/src/CompassMarks.cpp-diff.html' target='_blank'>diff</a></td>
+<td></td>
+</tr>
+<tr>
+<td class='left f_path'>plugins/EquationOfTime/src/EquationOfTime.cpp</td>
+<td class='warning'>changed</td>
+<td class='value'>0.4%</td>
+<td><a href='diffs/plugins/EquationOfTime/src/EquationOfTime.cpp-diff.html' target='_blank'>diff</a></td>
+<td></td>
+</tr>
+<tr>
+<td class='left f_path'>plugins/MeteorShowers/src/MeteorShower.cpp</td>
+<td class='warning'>changed</td>
+<td class='value'>5.7%</td>
+<td><a href='diffs/plugins/MeteorShowers/src/MeteorShower.cpp-diff.html' target='_blank'>diff</a></td>
+<td></td>
+</tr>
+<tr>
+<td class='left f_path'>plugins/Oculars/src/CCD.cpp</td>
+<td class='warning'>changed</td>
+<td class='value'>63.9%</td>
+<td><a href='diffs/plugins/Oculars/src/CCD.cpp-diff.html' target='_blank'>diff</a></td>
+<td></td>
+</tr>
+<tr>
+<td class='left f_path'>plugins/Oculars/src/gui/OcularDialog.cpp</td>
+<td class='warning'>changed</td>
+<td class='value'>8.4%</td>
+<td><a href='diffs/plugins/Oculars/src/gui/OcularDialog.cpp-diff.html' target='_blank'>diff</a></td>
+<td></td>
+</tr>
+<tr>
+<td class='left f_path'>plugins/Oculars/src/gui/OcularsGuiPanel.cpp</td>
+<td class='warning'>changed</td>
+<td class='value'>0.4%</td>
+<td><a href='diffs/plugins/Oculars/src/gui/OcularsGuiPanel.cpp-diff.html' target='_blank'>diff</a></td>
+<td></td>
+</tr>
+<tr>
+<td class='left f_path'>plugins/Oculars/src/Oculars.cpp</td>
+<td class='warning'>changed</td>
+<td class='value'>4.7%</td>
+<td><a href='diffs/plugins/Oculars/src/Oculars.cpp-diff.html' target='_blank'>diff</a></td>
+<td></td>
+</tr>
+<tr>
+<td class='left f_path'>plugins/Oculars/src/Telescope.cpp</td>
+<td class='warning'>changed</td>
+<td class='value'>10.4%</td>
+<td><a href='diffs/plugins/Oculars/src/Telescope.cpp-diff.html' target='_blank'>diff</a></td>
+<td></td>
+</tr>
+<tr>
+<td class='left f_path'>plugins/Satellites/src/gui/SatellitesDialog.cpp</td>
+<td class='warning'>changed</td>
+<td class='value'>0.2%</td>
+<td><a href='diffs/plugins/Satellites/src/gui/SatellitesDialog.cpp-diff.html' target='_blank'>diff</a></td>
+<td></td>
+</tr>
+<tr>
+<td class='left f_path'>plugins/TelescopeControl/src/gui/TelescopeConfigurationDialog.cpp</td>
+<td class='warning'>changed</td>
+<td class='value'>15.2%</td>
+<td><a href='diffs/plugins/TelescopeControl/src/gui/TelescopeConfigurationDialog.cpp-diff.html' target='_blank'>diff</a></td>
+<td></td>
+</tr>
+<tr>
+<td class='left f_path'>src/core/modules/MinorPlanet.cpp</td>
+<td class='warning'>changed</td>
+<td class='value'>2.9%</td>
+<td><a href='diffs/src/core/modules/MinorPlanet.cpp-diff.html' target='_blank'>diff</a></td>
+<td></td>
+</tr>
+<tr>
+<td class='left f_path'>src/core/modules/Nebula.cpp</td>
+<td class='warning'>changed</td>
+<td class='value'>3.4%</td>
+<td><a href='diffs/src/core/modules/Nebula.cpp-diff.html' target='_blank'>diff</a></td>
+<td></td>
+</tr>
+<tr>
+<td class='left f_path'>src/core/modules/Planet.cpp</td>
+<td class='warning'>changed</td>
+<td class='value'>2.5%</td>
+<td><a href='diffs/src/core/modules/Planet.cpp-diff.html' target='_blank'>diff</a></td>
+<td></td>
+</tr>
+<tr>
+<td class='left f_path'>src/core/modules/SolarSystem.cpp</td>
+<td class='warning'>changed</td>
+<td class='value'>0.3%</td>
+<td><a href='diffs/src/core/modules/SolarSystem.cpp-diff.html' target='_blank'>diff</a></td>
+<td></td>
+</tr>
+<tr>
+<td class='left f_path'>src/core/StelApp.cpp</td>
+<td class='warning'>changed</td>
+<td class='value'>0.5%</td>
+<td><a href='diffs/src/core/StelApp.cpp-diff.html' target='_blank'>diff</a></td>
+<td></td>
+</tr>
+<tr>
+<td class='left f_path'>src/core/StelFileMgr.cpp</td>
+<td class='warning'>changed</td>
+<td class='value'>4.5%</td>
+<td><a href='diffs/src/core/StelFileMgr.cpp-diff.html' target='_blank'>diff</a></td>
+<td></td>
+</tr>
+<tr>
+<td class='left f_path'>src/core/StelUtils.cpp</td>
+<td class='warning'>changed</td>
+<td class='value'>0.2%</td>
+<td><a href='diffs/src/core/StelUtils.cpp-diff.html' target='_blank'>diff</a></td>
+<td></td>
+</tr>
+<tr>
+<td class='left f_path'>src/gui/ConfigurationDialog.cpp</td>
+<td class='warning'>changed</td>
+<td class='value'>1.2%</td>
+<td><a href='diffs/src/gui/ConfigurationDialog.cpp-diff.html' target='_blank'>diff</a></td>
+<td></td>
+</tr>
+<tr>
+<td class='left f_path'>src/gui/HelpDialog.cpp</td>
+<td class='warning'>changed</td>
+<td class='value'>0.6%</td>
+<td><a href='diffs/src/gui/HelpDialog.cpp-diff.html' target='_blank'>diff</a></td>
+<td></td>
+</tr>
+<tr>
+<td class='left f_path'>src/gui/SkyGui.cpp</td>
+<td class='warning'>changed</td>
+<td class='value'>0.9%</td>
+<td><a href='diffs/src/gui/SkyGui.cpp-diff.html' target='_blank'>diff</a></td>
+<td></td>
+</tr>
+<tr>
+<td class='left f_path'>src/main.cpp</td>
+<td class='warning'>changed</td>
+<td class='value'>2.7%</td>
+<td><a href='diffs/src/main.cpp-diff.html' target='_blank'>diff</a></td>
+<td></td>
+</tr>
+<tr>
+<td class='left f_path'>src/tests/testStelSphereGeometry.cpp</td>
+<td class='warning'>changed</td>
+<td class='value'>0.7%</td>
+<td><a href='diffs/src/tests/testStelSphereGeometry.cpp-diff.html' target='_blank'>diff</a></td>
+<td></td>
 </tr>
 </table>
 <a name='CMakeFiles'></a>
-<h2>CMake Files (1)</h2><hr/>
+<h2>CMake Files (13)</h2><hr/>
 <table class='summary'>
 <tr><th title='sort' onclick='javascript:sort(this, 1)' style='cursor:pointer'>Name</th><th title='sort' onclick='javascript:sort(this, 1)' style='cursor:pointer'>Status</th><th title='sort' onclick='javascript:sort(this, 1)' style='cursor:pointer'>Delta</th><th>Visual<br/>Diff</th><th>Detailed<br/>Report</th></tr>
 <tr>
 <td class='left f_path'>CMakeLists.txt</td>
 <td class='warning'>changed</td>
-<td class='value'>0.8%</td>
+<td class='value'>10.5%</td>
 <td><a href='diffs/CMakeLists.txt-diff.html' target='_blank'>diff</a></td>
+<td></td>
+</tr>
+<tr>
+<td class='left f_path failed'>data/stellarium.exe.manifest.cmake</td>
+<td class='failed'>removed</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class='left f_path new'>data/stellarium.rc.cmake</td>
+<td class='new'>added</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class='left f_path'>plugins/AngleMeasure/CMakeLists.txt</td>
+<td class='warning'>changed</td>
+<td class='value'>8.8%</td>
+<td><a href='diffs/plugins/AngleMeasure/CMakeLists.txt-diff.html' target='_blank'>diff</a></td>
+<td></td>
+</tr>
+<tr>
+<td class='left f_path'>plugins/ArchaeoLines/CMakeLists.txt</td>
+<td class='warning'>changed</td>
+<td class='value'>8.8%</td>
+<td><a href='diffs/plugins/ArchaeoLines/CMakeLists.txt-diff.html' target='_blank'>diff</a></td>
+<td></td>
+</tr>
+<tr>
+<td class='left f_path'>plugins/CompassMarks/CMakeLists.txt</td>
+<td class='warning'>changed</td>
+<td class='value'>8.8%</td>
+<td><a href='diffs/plugins/CompassMarks/CMakeLists.txt-diff.html' target='_blank'>diff</a></td>
+<td></td>
+</tr>
+<tr>
+<td class='left f_path'>plugins/EquationOfTime/CMakeLists.txt</td>
+<td class='warning'>changed</td>
+<td class='value'>6.1%</td>
+<td><a href='diffs/plugins/EquationOfTime/CMakeLists.txt-diff.html' target='_blank'>diff</a></td>
+<td></td>
+</tr>
+<tr>
+<td class='left f_path'>plugins/Oculars/CMakeLists.txt</td>
+<td class='warning'>changed</td>
+<td class='value'>13.9%</td>
+<td><a href='diffs/plugins/Oculars/CMakeLists.txt-diff.html' target='_blank'>diff</a></td>
+<td></td>
+</tr>
+<tr>
+<td class='left f_path'>plugins/TelescopeControl/src/CMakeLists.txt</td>
+<td class='warning'>changed</td>
+<td class='value'>3.4%</td>
+<td><a href='diffs/plugins/TelescopeControl/src/CMakeLists.txt-diff.html' target='_blank'>diff</a></td>
+<td></td>
+</tr>
+<tr>
+<td class='left f_path'>scenery3d/Sterngarten/CMakeLists.txt</td>
+<td class='warning'>changed</td>
+<td class='value'>65.9%</td>
+<td><a href='diffs/scenery3d/Sterngarten/CMakeLists.txt-diff.html' target='_blank'>diff</a></td>
+<td></td>
+</tr>
+<tr>
+<td class='left f_path'>src/CMakeLists.txt</td>
+<td class='warning'>changed</td>
+<td class='value'>2.9%</td>
+<td><a href='diffs/src/CMakeLists.txt-diff.html' target='_blank'>diff</a></td>
+<td></td>
+</tr>
+<tr>
+<td class='left f_path'>stellarium-patch.iss.cmake</td>
+<td class='warning'>changed</td>
+<td class='value'>0.3%</td>
+<td><a href='diffs/stellarium-patch.iss.cmake-diff.html' target='_blank'>diff</a></td>
+<td></td>
+</tr>
+<tr>
+<td class='left f_path'>stellarium.iss.cmake</td>
+<td class='warning'>changed</td>
+<td class='value'>7.1%</td>
+<td><a href='diffs/stellarium.iss.cmake-diff.html' target='_blank'>diff</a></td>
 <td></td>
 </tr>
 </table>
@@ -254,15 +684,1744 @@ function sort_array(a,b)
 <td></td>
 </tr>
 </table>
-<a name='ManifestFiles'></a>
-<h2>Manifest Files (1)</h2><hr/>
+<a name='JSONFiles'></a>
+<h2>JSON Files (1)</h2><hr/>
 <table class='summary'>
 <tr><th title='sort' onclick='javascript:sort(this, 1)' style='cursor:pointer'>Name</th><th title='sort' onclick='javascript:sort(this, 1)' style='cursor:pointer'>Status</th><th title='sort' onclick='javascript:sort(this, 1)' style='cursor:pointer'>Delta</th><th>Visual<br/>Diff</th><th>Detailed<br/>Report</th></tr>
 <tr>
-<td class='left f_path'>data/stellarium.exe.manifest</td>
+<td class='left f_path'>plugins/Exoplanets/resources/exoplanets.json</td>
 <td class='warning'>changed</td>
-<td class='value'>3.9%</td>
-<td><a href='diffs/data/stellarium.exe.manifest-diff.html' target='_blank'>diff</a></td>
+<td class='value'>6.3%</td>
+<td><a href='diffs/plugins/Exoplanets/resources/exoplanets.json-diff.html' target='_blank'>diff</a></td>
+<td></td>
+</tr>
+</table>
+<a name='ManifestFiles'></a>
+<h2>Manifest Files (2)</h2><hr/>
+<table class='summary'>
+<tr><th title='sort' onclick='javascript:sort(this, 1)' style='cursor:pointer'>Name</th><th title='sort' onclick='javascript:sort(this, 1)' style='cursor:pointer'>Status</th><th title='sort' onclick='javascript:sort(this, 1)' style='cursor:pointer'>Delta</th><th>Visual<br/>Diff</th><th>Detailed<br/>Report</th></tr>
+<tr>
+<td class='left f_path failed'>data/stellarium.exe.manifest</td>
+<td class='failed'>removed</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class='left f_path new'>stellarium.exe.manifest</td>
+<td class='new'>added</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+</table>
+<a name='XMLDocuments'></a>
+<h2>XML Documents (1)</h2><hr/>
+<table class='summary'>
+<tr><th title='sort' onclick='javascript:sort(this, 1)' style='cursor:pointer'>Name</th><th title='sort' onclick='javascript:sort(this, 1)' style='cursor:pointer'>Status</th><th title='sort' onclick='javascript:sort(this, 1)' style='cursor:pointer'>Delta</th><th>Visual<br/>Diff</th><th>Detailed<br/>Report</th></tr>
+<tr>
+<td class='left f_path'>data/stellarium.appdata.xml</td>
+<td class='warning'>changed</td>
+<td class='value'>5.9%</td>
+<td><a href='diffs/data/stellarium.appdata.xml-diff.html' target='_blank'>diff</a></td>
+<td></td>
+</tr>
+</table>
+<a name='GettextFiles'></a>
+<h2>Gettext Files (230)</h2><hr/>
+<table class='summary'>
+<tr><th title='sort' onclick='javascript:sort(this, 1)' style='cursor:pointer'>Name</th><th title='sort' onclick='javascript:sort(this, 1)' style='cursor:pointer'>Status</th><th title='sort' onclick='javascript:sort(this, 1)' style='cursor:pointer'>Delta</th><th>Visual<br/>Diff</th><th>Detailed<br/>Report</th></tr>
+<tr>
+<td class='left f_path'>po/stellarium-desktop/nl.po</td>
+<td class='warning'>changed</td>
+<td class='value'>2.1%</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class='left f_path'>po/stellarium-desktop/sk.po</td>
+<td class='warning'>changed</td>
+<td class='value'>6.6%</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class='left f_path'>po/stellarium-metainfo/af.po</td>
+<td class='warning'>changed</td>
+<td class='value'>0.05%</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class='left f_path'>po/stellarium-metainfo/an.po</td>
+<td class='warning'>changed</td>
+<td class='value'>0.05%</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class='left f_path'>po/stellarium-metainfo/ar.po</td>
+<td class='warning'>changed</td>
+<td class='value'>0.03%</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class='left f_path'>po/stellarium-metainfo/ast.po</td>
+<td class='warning'>changed</td>
+<td class='value'>0.05%</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class='left f_path'>po/stellarium-metainfo/az.po</td>
+<td class='warning'>changed</td>
+<td class='value'>0.05%</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class='left f_path'>po/stellarium-metainfo/be.po</td>
+<td class='warning'>changed</td>
+<td class='value'>0.03%</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class='left f_path'>po/stellarium-metainfo/bg.po</td>
+<td class='warning'>changed</td>
+<td class='value'>0.05%</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class='left f_path'>po/stellarium-metainfo/bn.po</td>
+<td class='warning'>changed</td>
+<td class='value'>0.02%</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class='left f_path'>po/stellarium-metainfo/br.po</td>
+<td class='warning'>changed</td>
+<td class='value'>0.05%</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class='left f_path'>po/stellarium-metainfo/bs.po</td>
+<td class='warning'>changed</td>
+<td class='value'>0.05%</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class='left f_path'>po/stellarium-metainfo/ca.po</td>
+<td class='warning'>changed</td>
+<td class='value'>0.03%</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class='left f_path'>po/stellarium-metainfo/cs.po</td>
+<td class='warning'>changed</td>
+<td class='value'>0.03%</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class='left f_path'>po/stellarium-metainfo/csb.po</td>
+<td class='warning'>changed</td>
+<td class='value'>0.05%</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class='left f_path'>po/stellarium-metainfo/cy.po</td>
+<td class='warning'>changed</td>
+<td class='value'>0.05%</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class='left f_path'>po/stellarium-metainfo/da.po</td>
+<td class='warning'>changed</td>
+<td class='value'>0.05%</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class='left f_path'>po/stellarium-metainfo/de.po</td>
+<td class='warning'>changed</td>
+<td class='value'>0.03%</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class='left f_path'>po/stellarium-metainfo/el.po</td>
+<td class='warning'>changed</td>
+<td class='value'>0.03%</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class='left f_path'>po/stellarium-metainfo/en_CA.po</td>
+<td class='warning'>changed</td>
+<td class='value'>0.03%</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class='left f_path'>po/stellarium-metainfo/en_GB.po</td>
+<td class='warning'>changed</td>
+<td class='value'>0.03%</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class='left f_path'>po/stellarium-metainfo/eo.po</td>
+<td class='warning'>changed</td>
+<td class='value'>0.05%</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class='left f_path'>po/stellarium-metainfo/es.po</td>
+<td class='warning'>changed</td>
+<td class='value'>0.03%</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class='left f_path'>po/stellarium-metainfo/et.po</td>
+<td class='warning'>changed</td>
+<td class='value'>0.05%</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class='left f_path'>po/stellarium-metainfo/eu.po</td>
+<td class='warning'>changed</td>
+<td class='value'>0.05%</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class='left f_path'>po/stellarium-metainfo/fa.po</td>
+<td class='warning'>changed</td>
+<td class='value'>0.03%</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class='left f_path'>po/stellarium-metainfo/fi.po</td>
+<td class='warning'>changed</td>
+<td class='value'>0.03%</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class='left f_path'>po/stellarium-metainfo/fr.po</td>
+<td class='warning'>changed</td>
+<td class='value'>0.03%</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class='left f_path'>po/stellarium-metainfo/ga.po</td>
+<td class='warning'>changed</td>
+<td class='value'>0.05%</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class='left f_path'>po/stellarium-metainfo/gd.po</td>
+<td class='warning'>changed</td>
+<td class='value'>0.03%</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class='left f_path'>po/stellarium-metainfo/gl.po</td>
+<td class='warning'>changed</td>
+<td class='value'>0.03%</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class='left f_path'>po/stellarium-metainfo/gu.po</td>
+<td class='warning'>changed</td>
+<td class='value'>0.05%</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class='left f_path'>po/stellarium-metainfo/he.po</td>
+<td class='warning'>changed</td>
+<td class='value'>0.05%</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class='left f_path'>po/stellarium-metainfo/hi.po</td>
+<td class='warning'>changed</td>
+<td class='value'>0.05%</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class='left f_path'>po/stellarium-metainfo/hne.po</td>
+<td class='warning'>changed</td>
+<td class='value'>0.05%</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class='left f_path'>po/stellarium-metainfo/hr.po</td>
+<td class='warning'>changed</td>
+<td class='value'>0.05%</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class='left f_path'>po/stellarium-metainfo/hu.po</td>
+<td class='warning'>changed</td>
+<td class='value'>0.03%</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class='left f_path'>po/stellarium-metainfo/hy.po</td>
+<td class='warning'>changed</td>
+<td class='value'>0.03%</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class='left f_path'>po/stellarium-metainfo/id.po</td>
+<td class='warning'>changed</td>
+<td class='value'>0.03%</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class='left f_path'>po/stellarium-metainfo/is.po</td>
+<td class='warning'>changed</td>
+<td class='value'>0.03%</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class='left f_path'>po/stellarium-metainfo/it.po</td>
+<td class='warning'>changed</td>
+<td class='value'>0.03%</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class='left f_path'>po/stellarium-metainfo/ja.po</td>
+<td class='warning'>changed</td>
+<td class='value'>0.05%</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class='left f_path'>po/stellarium-metainfo/jv.po</td>
+<td class='warning'>changed</td>
+<td class='value'>0.05%</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class='left f_path'>po/stellarium-metainfo/ka.po</td>
+<td class='warning'>changed</td>
+<td class='value'>0.05%</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class='left f_path'>po/stellarium-metainfo/kk.po</td>
+<td class='warning'>changed</td>
+<td class='value'>0.05%</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class='left f_path'>po/stellarium-metainfo/km.po</td>
+<td class='warning'>changed</td>
+<td class='value'>0.05%</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class='left f_path'>po/stellarium-metainfo/ko.po</td>
+<td class='warning'>changed</td>
+<td class='value'>0.03%</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class='left f_path'>po/stellarium-metainfo/ky.po</td>
+<td class='warning'>changed</td>
+<td class='value'>0.05%</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class='left f_path'>po/stellarium-metainfo/la.po</td>
+<td class='warning'>changed</td>
+<td class='value'>0.05%</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class='left f_path'>po/stellarium-metainfo/lb.po</td>
+<td class='warning'>changed</td>
+<td class='value'>0.05%</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class='left f_path'>po/stellarium-metainfo/lt.po</td>
+<td class='warning'>changed</td>
+<td class='value'>0.03%</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class='left f_path'>po/stellarium-metainfo/lv.po</td>
+<td class='warning'>changed</td>
+<td class='value'>0.05%</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class='left f_path'>po/stellarium-metainfo/mai.po</td>
+<td class='warning'>changed</td>
+<td class='value'>0.05%</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class='left f_path'>po/stellarium-metainfo/mk.po</td>
+<td class='warning'>changed</td>
+<td class='value'>0.05%</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class='left f_path'>po/stellarium-metainfo/ml.po</td>
+<td class='warning'>changed</td>
+<td class='value'>0.05%</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class='left f_path'>po/stellarium-metainfo/mr.po</td>
+<td class='warning'>changed</td>
+<td class='value'>0.05%</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class='left f_path'>po/stellarium-metainfo/ms.po</td>
+<td class='warning'>changed</td>
+<td class='value'>0.04%</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class='left f_path'>po/stellarium-metainfo/nb.po</td>
+<td class='warning'>changed</td>
+<td class='value'>0.04%</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class='left f_path'>po/stellarium-metainfo/nds.po</td>
+<td class='warning'>changed</td>
+<td class='value'>0.05%</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class='left f_path'>po/stellarium-metainfo/ne.po</td>
+<td class='warning'>changed</td>
+<td class='value'>0.05%</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class='left f_path'>po/stellarium-metainfo/nl.po</td>
+<td class='warning'>changed</td>
+<td class='value'>42.8%</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class='left f_path'>po/stellarium-metainfo/nn.po</td>
+<td class='warning'>changed</td>
+<td class='value'>0.05%</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class='left f_path'>po/stellarium-metainfo/oc.po</td>
+<td class='warning'>changed</td>
+<td class='value'>0.05%</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class='left f_path'>po/stellarium-metainfo/pa.po</td>
+<td class='warning'>changed</td>
+<td class='value'>0.05%</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class='left f_path'>po/stellarium-metainfo/pl.po</td>
+<td class='warning'>changed</td>
+<td class='value'>0.03%</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class='left f_path'>po/stellarium-metainfo/pt.po</td>
+<td class='warning'>changed</td>
+<td class='value'>0.03%</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class='left f_path'>po/stellarium-metainfo/pt_BR.po</td>
+<td class='warning'>changed</td>
+<td class='value'>0.03%</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class='left f_path'>po/stellarium-metainfo/ro.po</td>
+<td class='warning'>changed</td>
+<td class='value'>0.03%</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class='left f_path'>po/stellarium-metainfo/ru.po</td>
+<td class='warning'>changed</td>
+<td class='value'>0.03%</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class='left f_path'>po/stellarium-metainfo/sah.po</td>
+<td class='warning'>changed</td>
+<td class='value'>0.05%</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class='left f_path'>po/stellarium-metainfo/se.po</td>
+<td class='warning'>changed</td>
+<td class='value'>0.05%</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class='left f_path'>po/stellarium-metainfo/si.po</td>
+<td class='warning'>changed</td>
+<td class='value'>0.05%</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class='left f_path'>po/stellarium-metainfo/sk.po</td>
+<td class='warning'>changed</td>
+<td class='value'>0.03%</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class='left f_path'>po/stellarium-metainfo/sl.po</td>
+<td class='warning'>changed</td>
+<td class='value'>0.05%</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class='left f_path'>po/stellarium-metainfo/sq.po</td>
+<td class='warning'>changed</td>
+<td class='value'>0.05%</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class='left f_path'>po/stellarium-metainfo/sr.po</td>
+<td class='warning'>changed</td>
+<td class='value'>0.03%</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class='left f_path'>po/stellarium-metainfo/stellarium-metainfo.pot</td>
+<td class='warning'>changed</td>
+<td class='value'>0.1%</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class='left f_path'>po/stellarium-metainfo/sv.po</td>
+<td class='warning'>changed</td>
+<td class='value'>0.03%</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class='left f_path'>po/stellarium-metainfo/ta.po</td>
+<td class='warning'>changed</td>
+<td class='value'>0.02%</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class='left f_path'>po/stellarium-metainfo/te.po</td>
+<td class='warning'>changed</td>
+<td class='value'>0.05%</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class='left f_path'>po/stellarium-metainfo/tg.po</td>
+<td class='warning'>changed</td>
+<td class='value'>0.05%</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class='left f_path'>po/stellarium-metainfo/th.po</td>
+<td class='warning'>changed</td>
+<td class='value'>0.02%</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class='left f_path'>po/stellarium-metainfo/tr.po</td>
+<td class='warning'>changed</td>
+<td class='value'>0.03%</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class='left f_path'>po/stellarium-metainfo/tt.po</td>
+<td class='warning'>changed</td>
+<td class='value'>0.05%</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class='left f_path'>po/stellarium-metainfo/ug.po</td>
+<td class='warning'>changed</td>
+<td class='value'>0.05%</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class='left f_path'>po/stellarium-metainfo/uk.po</td>
+<td class='warning'>changed</td>
+<td class='value'>0.03%</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class='left f_path'>po/stellarium-metainfo/vi.po</td>
+<td class='warning'>changed</td>
+<td class='value'>0.03%</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class='left f_path'>po/stellarium-metainfo/xh.po</td>
+<td class='warning'>changed</td>
+<td class='value'>0.05%</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class='left f_path'>po/stellarium-metainfo/zh_CN.po</td>
+<td class='warning'>changed</td>
+<td class='value'>0.05%</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class='left f_path'>po/stellarium-metainfo/zh_HK.po</td>
+<td class='warning'>changed</td>
+<td class='value'>0.05%</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class='left f_path'>po/stellarium-metainfo/zh_TW.po</td>
+<td class='warning'>changed</td>
+<td class='value'>0.05%</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class='left f_path'>po/stellarium-skycultures/be.po</td>
+<td class='warning'>changed</td>
+<td class='value'>0.01%</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class='left f_path'>po/stellarium-skycultures/fi.po</td>
+<td class='warning'>changed</td>
+<td class='value'>0.0005%</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class='left f_path'>po/stellarium-skycultures/nl.po</td>
+<td class='warning'>changed</td>
+<td class='value'>0.02%</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class='left f_path'>po/stellarium-skycultures/sk.po</td>
+<td class='warning'>changed</td>
+<td class='value'>0.1%</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class='left f_path'>po/stellarium/aa.po</td>
+<td class='warning'>changed</td>
+<td class='value'>0.2%</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class='left f_path'>po/stellarium/ab.po</td>
+<td class='warning'>changed</td>
+<td class='value'>0.2%</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class='left f_path'>po/stellarium/ae.po</td>
+<td class='warning'>changed</td>
+<td class='value'>0.2%</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class='left f_path'>po/stellarium/af.po</td>
+<td class='warning'>changed</td>
+<td class='value'>0.3%</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class='left f_path'>po/stellarium/ak.po</td>
+<td class='warning'>changed</td>
+<td class='value'>0.2%</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class='left f_path'>po/stellarium/am.po</td>
+<td class='warning'>changed</td>
+<td class='value'>0.2%</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class='left f_path'>po/stellarium/an.po</td>
+<td class='warning'>changed</td>
+<td class='value'>0.2%</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class='left f_path'>po/stellarium/ar.po</td>
+<td class='warning'>changed</td>
+<td class='value'>0.2%</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class='left f_path'>po/stellarium/as.po</td>
+<td class='warning'>changed</td>
+<td class='value'>0.2%</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class='left f_path'>po/stellarium/ast.po</td>
+<td class='warning'>changed</td>
+<td class='value'>0.3%</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class='left f_path'>po/stellarium/av.po</td>
+<td class='warning'>changed</td>
+<td class='value'>0.2%</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class='left f_path'>po/stellarium/az.po</td>
+<td class='warning'>changed</td>
+<td class='value'>0.3%</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class='left f_path'>po/stellarium/ba.po</td>
+<td class='warning'>changed</td>
+<td class='value'>0.2%</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class='left f_path'>po/stellarium/be.po</td>
+<td class='warning'>changed</td>
+<td class='value'>0.3%</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class='left f_path'>po/stellarium/bg.po</td>
+<td class='warning'>changed</td>
+<td class='value'>0.3%</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class='left f_path'>po/stellarium/bh.po</td>
+<td class='warning'>changed</td>
+<td class='value'>0.2%</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class='left f_path'>po/stellarium/bi.po</td>
+<td class='warning'>changed</td>
+<td class='value'>0.2%</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class='left f_path'>po/stellarium/bn.po</td>
+<td class='warning'>changed</td>
+<td class='value'>0.2%</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class='left f_path'>po/stellarium/bo.po</td>
+<td class='warning'>changed</td>
+<td class='value'>0.2%</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class='left f_path'>po/stellarium/br.po</td>
+<td class='warning'>changed</td>
+<td class='value'>0.3%</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class='left f_path'>po/stellarium/bs.po</td>
+<td class='warning'>changed</td>
+<td class='value'>0.3%</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class='left f_path'>po/stellarium/ca.po</td>
+<td class='warning'>changed</td>
+<td class='value'>0.3%</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class='left f_path'>po/stellarium/ce.po</td>
+<td class='warning'>changed</td>
+<td class='value'>0.2%</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class='left f_path'>po/stellarium/ckb.po</td>
+<td class='warning'>changed</td>
+<td class='value'>0.2%</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class='left f_path'>po/stellarium/cs.po</td>
+<td class='warning'>changed</td>
+<td class='value'>0.3%</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class='left f_path'>po/stellarium/csb.po</td>
+<td class='warning'>changed</td>
+<td class='value'>0.2%</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class='left f_path'>po/stellarium/cv.po</td>
+<td class='warning'>changed</td>
+<td class='value'>0.2%</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class='left f_path'>po/stellarium/cy.po</td>
+<td class='warning'>changed</td>
+<td class='value'>0.2%</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class='left f_path'>po/stellarium/da.po</td>
+<td class='warning'>changed</td>
+<td class='value'>0.3%</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class='left f_path'>po/stellarium/de.po</td>
+<td class='warning'>changed</td>
+<td class='value'>0.4%</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class='left f_path'>po/stellarium/dv.po</td>
+<td class='warning'>changed</td>
+<td class='value'>0.2%</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class='left f_path'>po/stellarium/el.po</td>
+<td class='warning'>changed</td>
+<td class='value'>0.3%</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class='left f_path'>po/stellarium/en.po</td>
+<td class='warning'>changed</td>
+<td class='value'>0.2%</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class='left f_path'>po/stellarium/en_AU.po</td>
+<td class='warning'>changed</td>
+<td class='value'>0.3%</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class='left f_path'>po/stellarium/en_CA.po</td>
+<td class='warning'>changed</td>
+<td class='value'>0.3%</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class='left f_path'>po/stellarium/en_GB.po</td>
+<td class='warning'>changed</td>
+<td class='value'>0.4%</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class='left f_path'>po/stellarium/en_US.po</td>
+<td class='warning'>changed</td>
+<td class='value'>0.2%</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class='left f_path'>po/stellarium/eo.po</td>
+<td class='warning'>changed</td>
+<td class='value'>0.2%</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class='left f_path'>po/stellarium/es.po</td>
+<td class='warning'>changed</td>
+<td class='value'>0.3%</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class='left f_path'>po/stellarium/et.po</td>
+<td class='warning'>changed</td>
+<td class='value'>0.3%</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class='left f_path'>po/stellarium/eu.po</td>
+<td class='warning'>changed</td>
+<td class='value'>0.3%</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class='left f_path'>po/stellarium/fa.po</td>
+<td class='warning'>changed</td>
+<td class='value'>0.3%</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class='left f_path'>po/stellarium/fi.po</td>
+<td class='warning'>changed</td>
+<td class='value'>0.3%</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class='left f_path'>po/stellarium/fil.po</td>
+<td class='warning'>changed</td>
+<td class='value'>0.3%</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class='left f_path'>po/stellarium/fj.po</td>
+<td class='warning'>changed</td>
+<td class='value'>0.2%</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class='left f_path'>po/stellarium/fr.po</td>
+<td class='warning'>changed</td>
+<td class='value'>0.4%</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class='left f_path'>po/stellarium/fy.po</td>
+<td class='warning'>changed</td>
+<td class='value'>0.2%</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class='left f_path'>po/stellarium/ga.po</td>
+<td class='warning'>changed</td>
+<td class='value'>0.2%</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class='left f_path'>po/stellarium/gd.po</td>
+<td class='warning'>changed</td>
+<td class='value'>0.2%</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class='left f_path'>po/stellarium/gl.po</td>
+<td class='warning'>changed</td>
+<td class='value'>0.3%</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class='left f_path'>po/stellarium/gn.po</td>
+<td class='warning'>changed</td>
+<td class='value'>0.2%</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class='left f_path'>po/stellarium/gu.po</td>
+<td class='warning'>changed</td>
+<td class='value'>0.2%</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class='left f_path'>po/stellarium/gv.po</td>
+<td class='warning'>changed</td>
+<td class='value'>0.2%</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class='left f_path'>po/stellarium/haw.po</td>
+<td class='warning'>changed</td>
+<td class='value'>0.2%</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class='left f_path'>po/stellarium/he.po</td>
+<td class='warning'>changed</td>
+<td class='value'>0.3%</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class='left f_path'>po/stellarium/hi.po</td>
+<td class='warning'>changed</td>
+<td class='value'>0.2%</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class='left f_path'>po/stellarium/hne.po</td>
+<td class='warning'>changed</td>
+<td class='value'>0.2%</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class='left f_path'>po/stellarium/hr.po</td>
+<td class='warning'>changed</td>
+<td class='value'>0.3%</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class='left f_path'>po/stellarium/hrx.po</td>
+<td class='warning'>changed</td>
+<td class='value'>0.2%</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class='left f_path'>po/stellarium/ht.po</td>
+<td class='warning'>changed</td>
+<td class='value'>0.2%</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class='left f_path'>po/stellarium/hu.po</td>
+<td class='warning'>changed</td>
+<td class='value'>0.4%</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class='left f_path'>po/stellarium/hy.po</td>
+<td class='warning'>changed</td>
+<td class='value'>0.3%</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class='left f_path'>po/stellarium/ia.po</td>
+<td class='warning'>changed</td>
+<td class='value'>0.2%</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class='left f_path'>po/stellarium/id.po</td>
+<td class='warning'>changed</td>
+<td class='value'>0.3%</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class='left f_path'>po/stellarium/is.po</td>
+<td class='warning'>changed</td>
+<td class='value'>0.3%</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class='left f_path'>po/stellarium/it.po</td>
+<td class='warning'>changed</td>
+<td class='value'>0.4%</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class='left f_path'>po/stellarium/ja.po</td>
+<td class='warning'>changed</td>
+<td class='value'>0.3%</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class='left f_path'>po/stellarium/jv.po</td>
+<td class='warning'>changed</td>
+<td class='value'>0.2%</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class='left f_path'>po/stellarium/ka.po</td>
+<td class='warning'>changed</td>
+<td class='value'>0.3%</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class='left f_path'>po/stellarium/kg.po</td>
+<td class='warning'>changed</td>
+<td class='value'>0.2%</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class='left f_path'>po/stellarium/kk.po</td>
+<td class='warning'>changed</td>
+<td class='value'>0.2%</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class='left f_path'>po/stellarium/km.po</td>
+<td class='warning'>changed</td>
+<td class='value'>0.2%</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class='left f_path'>po/stellarium/kn.po</td>
+<td class='warning'>changed</td>
+<td class='value'>0.2%</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class='left f_path'>po/stellarium/ko.po</td>
+<td class='warning'>changed</td>
+<td class='value'>0.3%</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class='left f_path'>po/stellarium/ky.po</td>
+<td class='warning'>changed</td>
+<td class='value'>0.3%</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class='left f_path'>po/stellarium/la.po</td>
+<td class='warning'>changed</td>
+<td class='value'>0.2%</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class='left f_path'>po/stellarium/lb.po</td>
+<td class='warning'>changed</td>
+<td class='value'>0.2%</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class='left f_path'>po/stellarium/lo.po</td>
+<td class='warning'>changed</td>
+<td class='value'>0.2%</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class='left f_path'>po/stellarium/lt.po</td>
+<td class='warning'>changed</td>
+<td class='value'>0.3%</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class='left f_path'>po/stellarium/lv.po</td>
+<td class='warning'>changed</td>
+<td class='value'>0.3%</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class='left f_path'>po/stellarium/mai.po</td>
+<td class='warning'>changed</td>
+<td class='value'>0.2%</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class='left f_path'>po/stellarium/mi.po</td>
+<td class='warning'>changed</td>
+<td class='value'>0.2%</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class='left f_path'>po/stellarium/mk.po</td>
+<td class='warning'>changed</td>
+<td class='value'>0.3%</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class='left f_path'>po/stellarium/ml.po</td>
+<td class='warning'>changed</td>
+<td class='value'>0.2%</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class='left f_path'>po/stellarium/mn.po</td>
+<td class='warning'>changed</td>
+<td class='value'>0.2%</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class='left f_path'>po/stellarium/mo.po</td>
+<td class='warning'>changed</td>
+<td class='value'>0.2%</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class='left f_path'>po/stellarium/mr.po</td>
+<td class='warning'>changed</td>
+<td class='value'>0.3%</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class='left f_path'>po/stellarium/ms.po</td>
+<td class='warning'>changed</td>
+<td class='value'>0.3%</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class='left f_path'>po/stellarium/mt.po</td>
+<td class='warning'>changed</td>
+<td class='value'>0.2%</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class='left f_path'>po/stellarium/na.po</td>
+<td class='warning'>changed</td>
+<td class='value'>0.2%</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class='left f_path'>po/stellarium/nan.po</td>
+<td class='warning'>changed</td>
+<td class='value'>0.2%</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class='left f_path'>po/stellarium/nb.po</td>
+<td class='warning'>changed</td>
+<td class='value'>0.4%</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class='left f_path'>po/stellarium/nds.po</td>
+<td class='warning'>changed</td>
+<td class='value'>0.2%</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class='left f_path'>po/stellarium/ne.po</td>
+<td class='warning'>changed</td>
+<td class='value'>0.3%</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class='left f_path'>po/stellarium/nl.po</td>
+<td class='warning'>changed</td>
+<td class='value'>0.3%</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class='left f_path'>po/stellarium/nn.po</td>
+<td class='warning'>changed</td>
+<td class='value'>0.3%</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class='left f_path'>po/stellarium/oc.po</td>
+<td class='warning'>changed</td>
+<td class='value'>0.2%</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class='left f_path'>po/stellarium/os.po</td>
+<td class='warning'>changed</td>
+<td class='value'>0.2%</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class='left f_path'>po/stellarium/pa.po</td>
+<td class='warning'>changed</td>
+<td class='value'>0.2%</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class='left f_path'>po/stellarium/pl.po</td>
+<td class='warning'>changed</td>
+<td class='value'>0.2%</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class='left f_path'>po/stellarium/pt.po</td>
+<td class='warning'>changed</td>
+<td class='value'>0.4%</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class='left f_path'>po/stellarium/pt_BR.po</td>
+<td class='warning'>changed</td>
+<td class='value'>0.3%</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class='left f_path'>po/stellarium/ro.po</td>
+<td class='warning'>changed</td>
+<td class='value'>0.3%</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class='left f_path'>po/stellarium/ru.po</td>
+<td class='warning'>changed</td>
+<td class='value'>0.4%</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class='left f_path'>po/stellarium/sah.po</td>
+<td class='warning'>changed</td>
+<td class='value'>0.2%</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class='left f_path'>po/stellarium/sco.po</td>
+<td class='warning'>changed</td>
+<td class='value'>0.2%</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class='left f_path'>po/stellarium/se.po</td>
+<td class='warning'>changed</td>
+<td class='value'>0.2%</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class='left f_path'>po/stellarium/si.po</td>
+<td class='warning'>changed</td>
+<td class='value'>0.3%</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class='left f_path'>po/stellarium/sk.po</td>
+<td class='warning'>changed</td>
+<td class='value'>2.9%</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class='left f_path'>po/stellarium/sl.po</td>
+<td class='warning'>changed</td>
+<td class='value'>0.3%</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class='left f_path'>po/stellarium/sm.po</td>
+<td class='warning'>changed</td>
+<td class='value'>0.2%</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class='left f_path'>po/stellarium/sq.po</td>
+<td class='warning'>changed</td>
+<td class='value'>0.3%</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class='left f_path'>po/stellarium/sr.po</td>
+<td class='warning'>changed</td>
+<td class='value'>0.2%</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class='left f_path'>po/stellarium/stellarium.pot</td>
+<td class='warning'>changed</td>
+<td class='value'>0.2%</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class='left f_path'>po/stellarium/su.po</td>
+<td class='warning'>changed</td>
+<td class='value'>0.2%</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class='left f_path'>po/stellarium/sv.po</td>
+<td class='warning'>changed</td>
+<td class='value'>0.3%</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class='left f_path'>po/stellarium/sw.po</td>
+<td class='warning'>changed</td>
+<td class='value'>0.2%</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class='left f_path'>po/stellarium/ta.po</td>
+<td class='warning'>changed</td>
+<td class='value'>0.3%</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class='left f_path'>po/stellarium/te.po</td>
+<td class='warning'>changed</td>
+<td class='value'>0.2%</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class='left f_path'>po/stellarium/tg.po</td>
+<td class='warning'>changed</td>
+<td class='value'>0.2%</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class='left f_path'>po/stellarium/th.po</td>
+<td class='warning'>changed</td>
+<td class='value'>0.2%</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class='left f_path'>po/stellarium/tl.po</td>
+<td class='warning'>changed</td>
+<td class='value'>0.2%</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class='left f_path'>po/stellarium/tr.po</td>
+<td class='warning'>changed</td>
+<td class='value'>0.3%</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class='left f_path'>po/stellarium/tt.po</td>
+<td class='warning'>changed</td>
+<td class='value'>0.2%</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class='left f_path'>po/stellarium/ug.po</td>
+<td class='warning'>changed</td>
+<td class='value'>0.2%</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class='left f_path'>po/stellarium/uk.po</td>
+<td class='warning'>changed</td>
+<td class='value'>0.4%</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class='left f_path'>po/stellarium/uz.po</td>
+<td class='warning'>changed</td>
+<td class='value'>0.2%</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class='left f_path'>po/stellarium/vi.po</td>
+<td class='warning'>changed</td>
+<td class='value'>0.7%</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class='left f_path'>po/stellarium/wa.po</td>
+<td class='warning'>changed</td>
+<td class='value'>0.2%</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class='left f_path'>po/stellarium/xh.po</td>
+<td class='warning'>changed</td>
+<td class='value'>0.2%</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class='left f_path'>po/stellarium/zh.po</td>
+<td class='warning'>changed</td>
+<td class='value'>0.2%</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class='left f_path'>po/stellarium/zh_CN.po</td>
+<td class='warning'>changed</td>
+<td class='value'>0.3%</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class='left f_path'>po/stellarium/zh_HK.po</td>
+<td class='warning'>changed</td>
+<td class='value'>0.3%</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class='left f_path'>po/stellarium/zh_TW.po</td>
+<td class='warning'>changed</td>
+<td class='value'>0.3%</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class='left f_path'>po/stellarium/zu.po</td>
+<td class='warning'>changed</td>
+<td class='value'>0.2%</td>
+<td></td>
+<td></td>
+</tr>
+</table>
+<a name='QtUIFiles'></a>
+<h2>Qt UI Files (5)</h2><hr/>
+<table class='summary'>
+<tr><th title='sort' onclick='javascript:sort(this, 1)' style='cursor:pointer'>Name</th><th title='sort' onclick='javascript:sort(this, 1)' style='cursor:pointer'>Status</th><th title='sort' onclick='javascript:sort(this, 1)' style='cursor:pointer'>Delta</th><th>Visual<br/>Diff</th><th>Detailed<br/>Report</th></tr>
+<tr>
+<td class='left f_path'>plugins/AngleMeasure/src/gui/angleMeasureDialog.ui</td>
+<td class='warning'>changed</td>
+<td class='value'>16.8%</td>
+<td><a href='diffs/plugins/AngleMeasure/src/gui/angleMeasureDialog.ui-diff.html' target='_blank'>diff</a></td>
+<td></td>
+</tr>
+<tr>
+<td class='left f_path'>plugins/Oculars/src/gui/ocularDialog.ui</td>
+<td class='warning'>changed</td>
+<td class='value'>8.4%</td>
+<td><a href='diffs/plugins/Oculars/src/gui/ocularDialog.ui-diff.html' target='_blank'>diff</a></td>
+<td></td>
+</tr>
+<tr>
+<td class='left f_path'>plugins/TelescopeControl/src/gui/telescopeConfigurationDialog.ui</td>
+<td class='warning'>changed</td>
+<td class='value'>10.9%</td>
+<td><a href='diffs/plugins/TelescopeControl/src/gui/telescopeConfigurationDialog.ui-diff.html' target='_blank'>diff</a></td>
+<td></td>
+</tr>
+<tr>
+<td class='left f_path'>src/gui/configurationDialog.ui</td>
+<td class='warning'>changed</td>
+<td class='value'>0.5%</td>
+<td><a href='diffs/src/gui/configurationDialog.ui-diff.html' target='_blank'>diff</a></td>
+<td></td>
+</tr>
+<tr>
+<td class='left f_path'>src/gui/viewDialog.ui</td>
+<td class='warning'>changed</td>
+<td class='value'>0.3%</td>
+<td><a href='diffs/src/gui/viewDialog.ui-diff.html' target='_blank'>diff</a></td>
+<td></td>
+</tr>
+</table>
+<a name='ResourceFiles'></a>
+<h2>Resource Files (1)</h2><hr/>
+<table class='summary'>
+<tr><th title='sort' onclick='javascript:sort(this, 1)' style='cursor:pointer'>Name</th><th title='sort' onclick='javascript:sort(this, 1)' style='cursor:pointer'>Status</th><th title='sort' onclick='javascript:sort(this, 1)' style='cursor:pointer'>Delta</th><th>Visual<br/>Diff</th><th>Detailed<br/>Report</th></tr>
+<tr>
+<td class='left f_path failed'>data/stellarium.rc</td>
+<td class='failed'>removed</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+</table>
+<a name='Archives'></a>
+<h2>Archives (2)</h2><hr/>
+<table class='summary'>
+<tr><th title='sort' onclick='javascript:sort(this, 1)' style='cursor:pointer'>Name</th><th title='sort' onclick='javascript:sort(this, 1)' style='cursor:pointer'>Status</th><th title='sort' onclick='javascript:sort(this, 1)' style='cursor:pointer'>Delta</th><th>Visual<br/>Diff</th><th>Detailed<br/>Report</th></tr>
+<tr>
+<td class='left f_path failed'>scenery3d/Sterngarten/Sterngarten_Wien_innerArea-optimized.obj.gz</td>
+<td class='failed'>removed</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class='left f_path failed'>scenery3d/Testscene/Stellarium-Testscene_withGrid_Bump-separateSpheres.obj.gz</td>
+<td class='failed'>removed</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+</table>
+<a name='TextFiles'></a>
+<h2>Text Files (1)</h2><hr/>
+<table class='summary'>
+<tr><th title='sort' onclick='javascript:sort(this, 1)' style='cursor:pointer'>Name</th><th title='sort' onclick='javascript:sort(this, 1)' style='cursor:pointer'>Status</th><th title='sort' onclick='javascript:sort(this, 1)' style='cursor:pointer'>Delta</th><th>Visual<br/>Diff</th><th>Detailed<br/>Report</th></tr>
+<tr>
+<td class='left f_path'>stars/default/name.fab</td>
+<td class='warning'>changed</td>
+<td class='value'>0.1%</td>
+<td><a href='diffs/stars/default/name.fab-diff.html' target='_blank'>diff</a></td>
 <td></td>
 </tr>
 </table>
@@ -275,6 +2434,6 @@ stellarium-head.tar.gz<br/>
 <br/><a style='font-size:11px;' href='#Top'>to the top</a><br/>
 </div>
 <br/><br/><br/><hr/>
-<div style='width:100%;font-size:11px;' align='right'><i>Generated on Sat Oct 24 13:15:49 2015 by <a href='http://lvc.github.com/pkgdiff/' target='_blank'>Package Changes Analyzer</a> - PkgDiff 1.6.4 &#160;<br/>A tool for analyzing changes in Linux software packages&#160;&#160;</i></div>
+<div style='width:100%;font-size:11px;' align='right'><i>Generated on Sat Nov 21 22:57:22 2015 by <a href='http://lvc.github.com/pkgdiff/' target='_blank'>Package Changes Analyzer</a> - PkgDiff 1.6.4 &#160;<br/>A tool for analyzing changes in Linux software packages&#160;&#160;</i></div>
 <div style='height:999px;'></div>
 </body></html>
