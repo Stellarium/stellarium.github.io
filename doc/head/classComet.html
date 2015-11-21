@@ -17,7 +17,7 @@
  <tr style="height: 56px;">
   <td id="projectlogo"><img alt="Logo" src="stellarium-logo.png"/></td>
   <td style="padding-left: 0.5em;">
-   <div id="projectname">Stellarium 0.14.0</div>
+   <div id="projectname">Stellarium 0.15.0</div>
   </td>
  </tr>
  </tbody>
@@ -97,10 +97,10 @@ virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>update</b> (i
 &#160;</td><td class="memItemRight" valign="bottom"><b>Planet</b> (const QString &amp;englishName, int flagLighting, double radius, double oblateness, <a class="el" href="singletonVector3.html">Vec3f</a> halocolor, float albedo, const QString &amp;texMapName, const QString &amp;normalMapName, posFuncType _coordFunc, void *userDataPtr, OsculatingFunctType *osculatingFunc, bool closeOrbit, bool hidden, bool hasAtmosphere, bool hasHalo, const QString &amp;pTypeStr)</td></tr>
 <tr class="separator:ac259668c014d7f12e2052ededd0e4793 inherit pub_methods_classPlanet"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a9d5bdd0cf0bc4eac40ce3b85a5a75724 inherit pub_methods_classPlanet"><td class="memItemLeft" align="right" valign="top">virtual double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPlanet.html#a9d5bdd0cf0bc4eac40ce3b85a5a75724">getCloseViewFov</a> (const <a class="el" href="classStelCore.html">StelCore</a> *core) const </td></tr>
-<tr class="memdesc:a9d5bdd0cf0bc4eac40ce3b85a5a75724 inherit pub_methods_classPlanet"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return the best <a class="elRef" doxygen="/home/aw/devel/stellarium/trunk/builds/gcc/stellariumPlugins.tag:../../doc-plugins/head" href="../../doc-plugins/head/classFOV.html">FOV</a> in degree to use for a close view of the object.  <a href="#a9d5bdd0cf0bc4eac40ce3b85a5a75724">More...</a><br /></td></tr>
+<tr class="memdesc:a9d5bdd0cf0bc4eac40ce3b85a5a75724 inherit pub_methods_classPlanet"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return the best FOV in degree to use for a close view of the object.  <a href="#a9d5bdd0cf0bc4eac40ce3b85a5a75724">More...</a><br /></td></tr>
 <tr class="separator:a9d5bdd0cf0bc4eac40ce3b85a5a75724 inherit pub_methods_classPlanet"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a2df5e6c9fe0ff09c004f46498d06734c inherit pub_methods_classPlanet"><td class="memItemLeft" align="right" valign="top">virtual double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPlanet.html#a2df5e6c9fe0ff09c004f46498d06734c">getSatellitesFov</a> (const <a class="el" href="classStelCore.html">StelCore</a> *core) const </td></tr>
-<tr class="memdesc:a2df5e6c9fe0ff09c004f46498d06734c inherit pub_methods_classPlanet"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return the best <a class="elRef" doxygen="/home/aw/devel/stellarium/trunk/builds/gcc/stellariumPlugins.tag:../../doc-plugins/head" href="../../doc-plugins/head/classFOV.html">FOV</a> in degree to use for a global view of the object satellite system (if there are satellites)  <a href="#a2df5e6c9fe0ff09c004f46498d06734c">More...</a><br /></td></tr>
+<tr class="memdesc:a2df5e6c9fe0ff09c004f46498d06734c inherit pub_methods_classPlanet"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return the best FOV in degree to use for a global view of the object satellite system (if there are satellites)  <a href="#a2df5e6c9fe0ff09c004f46498d06734c">More...</a><br /></td></tr>
 <tr class="separator:a2df5e6c9fe0ff09c004f46498d06734c inherit pub_methods_classPlanet"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a4c7192a4e17d6557e086d0351ef62862 inherit pub_methods_classPlanet"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a4c7192a4e17d6557e086d0351ef62862"></a>
 virtual double&#160;</td><td class="memItemRight" valign="bottom"><b>getParentSatellitesFov</b> (const <a class="el" href="classStelCore.html">StelCore</a> *core) const </td></tr>
@@ -394,6 +394,9 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><b>closeOrbit</b></td></
 <tr class="memitem:af97ae7bdabab5f515e72cb38078f4c30 inherit pub_static_attribs_classPlanet"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="af97ae7bdabab5f515e72cb38078f4c30"></a>
 static <a class="el" href="singletonVector3.html">Vec3f</a>&#160;</td><td class="memItemRight" valign="bottom"><b>orbitColor</b></td></tr>
 <tr class="separator:af97ae7bdabab5f515e72cb38078f4c30 inherit pub_static_attribs_classPlanet"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1c6b56200109240180d3b53fd7b09007 inherit pub_static_attribs_classPlanet"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a1c6b56200109240180d3b53fd7b09007"></a>
+static bool&#160;</td><td class="memItemRight" valign="bottom"><b>permanentDrawingOrbits</b></td></tr>
+<tr class="separator:a1c6b56200109240180d3b53fd7b09007 inherit pub_static_attribs_classPlanet"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pub_static_attribs_classStelObject"><td colspan="2" onclick="javascript:toggleInherit('pub_static_attribs_classStelObject')"><img src="closed.png" alt="-"/>&#160;Static Public Attributes inherited from <a class="el" href="classStelObject.html">StelObject</a></td></tr>
 <tr class="memitem:a82e64755dc156e071733350e83a6826c inherit pub_static_attribs_classStelObject"><td class="memItemLeft" align="right" valign="top">static const <a class="el" href="classStelObject.html#acf243e7987796a3a44e409140ecea8c6">InfoStringGroupFlags</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classStelObject.html#a82e64755dc156e071733350e83a6826c">ShortInfo</a> = (<a class="el" href="classStelObject.html#acf243e7987796a3a44e409140ecea8c6">InfoStringGroupFlags</a>)(<a class="el" href="classStelObject.html#acf243e7987796a3a44e409140ecea8c6ab14de19b496f04e198a835899cefd934">Name</a>|<a class="el" href="classStelObject.html#acf243e7987796a3a44e409140ecea8c6a57d62b46f2f2849da8e3e234c7d27b0e">CatalogNumber</a>|<a class="el" href="classStelObject.html#acf243e7987796a3a44e409140ecea8c6a04e5ef1bf85944db7b25b57f2663c79d">Magnitude</a>|<a class="el" href="classStelObject.html#acf243e7987796a3a44e409140ecea8c6aefb86264a540d299b32c5931ca302ced">RaDecJ2000</a>)</td></tr>
 <tr class="memdesc:a82e64755dc156e071733350e83a6826c inherit pub_static_attribs_classStelObject"><td class="mdescLeft">&#160;</td><td class="mdescRight">A pre-defined set of specifiers for the getInfoString flags argument to getInfoString.  <a href="#a82e64755dc156e071733350e83a6826c">More...</a><br /></td></tr>
@@ -870,7 +873,7 @@ static QOpenGLShaderProgram *&#160;</td><td class="memItemRight" valign="bottom"
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Sat Oct 24 2015 12:57:57 for Stellarium by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Sat Nov 21 2015 22:51:37 for Stellarium by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.8
 </small></address>
