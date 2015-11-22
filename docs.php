@@ -110,7 +110,7 @@ printf('
 	<div id="apidoc" class="block">
 		<h2>%s</h2>
 			',
-q_("API Documentation"));
+q_("api documentation"));
 
 $dir = opendir("./doc/");
 while($entryName = readdir($dir)) {
@@ -132,7 +132,7 @@ printf('
 </div>
 <div id="apipluginsdoc" class="block">
 	<h2>%s</h2>',
-q_("Plugins API Documentation"));
+q_("plugins api documentation"));
 
 $dir = opendir("./doc-plugins/");
 while($entryName = readdir($dir)) {
@@ -155,7 +155,7 @@ printf('
 </div>
 <div id="pkgdiff" class="block">
 	<h2>%s</h2>',
-q_("Changes between packages"));
+q_("changes between packages"));
 
 $pkgdir = opendir("./pkgdiff/");
 while($pkgEntryName = readdir($pkgdir)) {
