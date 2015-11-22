@@ -100,8 +100,8 @@ printf('
 	<div id="apidocs-describe" class="block">
 		<p>%s <em>head</em> %s %s</p>
 	</div>',
-q_("Here you can find API and Plugins API documentation for various version of Stellarium."),
-q_("refers to the latest version from devlopment (although this may lag behind a little as the documentation is only uploaded every so often)."),
+q_("Here you can find API documentation for various version of Stellarium."),
+q_("refers to the latest version from development (although this may lag behind a little as the documentation is only uploaded every so often)."),
 q_("Here you can find changes between packages also."));
 
 printf('
