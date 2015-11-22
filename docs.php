@@ -28,7 +28,7 @@ printf('<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0//EN" "http://www.w3.org/TR/R
 $langdir,
 $locale,
 q_("Stellarium is a planetarium software that shows exactly what you see when you look up at the stars. It's easy to use, and free."),
-q_("Supporters and friends of Stellarium"),
+q_("Documentation for developers of scripts, plugins and main program"),
 $langdir,
 q_("Stellarium: Project News"));
 
