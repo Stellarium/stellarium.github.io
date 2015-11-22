@@ -282,7 +282,7 @@ printf('</div>
 		<li><a href="/wiki/index.php/Plugins">%s</a></li>
 		<li><a href="/wiki/index.php/Textures">%s</a></li>
 		<li><a href="/wiki/index.php/Category:User\'s_Guide">%s</a></li>
-		<li><a href="/doc/">%s</a></li>
+		<li><a href="./docs.php">%s</a></li>
 		<li><a href="/doc/head/scripting.html">%s</a></li>
 		<li><a href="https://answers.launchpad.net/stellarium">%s</a></li>
 		<li><a href="http://bugs.launchpad.net/stellarium">%s</a></li>
