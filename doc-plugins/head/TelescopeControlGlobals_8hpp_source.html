@@ -17,7 +17,7 @@
  <tr style="height: 56px;">
   <td id="projectlogo"><img alt="Logo" src="stellarium-logo.png"/></td>
   <td style="padding-left: 0.5em;">
-   <div id="projectname">Stellarium 0.14.0</div>
+   <div id="projectname">Stellarium 0.15.0</div>
   </td>
  </tr>
  </tbody>
@@ -28,6 +28,7 @@
     <ul class="tablist">
       <li><a href="index.html"><span>Main&#160;Page</span></a></li>
       <li><a href="modules.html"><span>Modules</span></a></li>
+      <li><a href="annotated.html"><span>Classes</span></a></li>
       <li><a href="../../doc/"><span>Core&#160;API</span></a></li>
     </ul>
   </div>
@@ -89,7 +90,7 @@
 <div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;    <span class="keyword">const</span> QString SERIAL_PORT_PREFIX = QString(<span class="stringliteral">&quot;COM&quot;</span>);</div>
 <div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;<span class="preprocessor">    #else</span></div>
 <div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;    <span class="keyword">const</span> QString TELESCOPE_SERVER_PATH = QString(<span class="stringliteral">&quot;/%1&quot;</span>);</div>
-<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;    <span class="keyword">const</span> QString SERIAL_PORT_PREFIX = QString(<span class="stringliteral">&quot;/dev/&quot;</span>);</div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;    <span class="keyword">const</span> QString SERIAL_PORT_PREFIX = QString(<span class="stringliteral">&quot;/&quot;</span>);</div>
 <div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;<span class="preprocessor">    #endif</span></div>
 <div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;    </div>
 <div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;    <span class="keyword">const</span> <span class="keywordtype">int</span> DEFAULT_DELAY = 500000; <span class="comment">//Microseconds; == 0.5 seconds</span></div>
@@ -105,7 +106,7 @@
 <div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;        ConnectionCount</div>
 <div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;    };</div>
 <div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;    </div>
-<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;    <span class="keyword">struct </span>DeviceModel</div>
+<div class="line"><a name="l00060"></a><span class="lineno"><a class="line" href="structTelescopeControlGlobals_1_1DeviceModel.html">   60</a></span>&#160;    <span class="keyword">struct </span><a class="code" href="structTelescopeControlGlobals_1_1DeviceModel.html">DeviceModel</a></div>
 <div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;    {</div>
 <div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;        QString name;</div>
 <div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;        QString description;</div>
@@ -113,25 +114,17 @@
 <div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;        <span class="keywordtype">int</span> defaultDelay;</div>
 <div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;        <span class="keywordtype">bool</span> useExecutable;</div>
 <div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;    };</div>
-<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;    </div>
-<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;    </div>
-<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;<span class="preprocessor">    #ifdef Q_OS_WIN32</span></div>
-<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;    <span class="keyword">const</span> QStringList SERIAL_PORT_NAMES = QString(<span class="stringliteral">&quot;COM1 COM2 COM3 COM4&quot;</span>).split(<span class="charliteral">&#39; &#39;</span>, QString::SkipEmptyParts);</div>
-<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;<span class="preprocessor">    #elif defined(Q_OS_MAC)</span></div>
-<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;    <span class="keyword">const</span> QStringList SERIAL_PORT_NAMES = QString(<span class="stringliteral">&quot;/dev/ &quot;</span>).split(<span class="charliteral">&#39; &#39;</span>, QString::SkipEmptyParts);</div>
-<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;<span class="preprocessor">    #else</span></div>
-<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;    <span class="keyword">const</span> QStringList SERIAL_PORT_NAMES = QString(<span class="stringliteral">&quot;/dev/ttyS0 /dev/ttyS1 /dev/ttyS2 /dev/ttyS3 /dev/ttyUSB0 /dev/ttyUSB1 /dev/ttyUSB2 /dev/ttyUSB3&quot;</span>).split(<span class="charliteral">&#39; &#39;</span>, QString::SkipEmptyParts);</div>
-<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;<span class="preprocessor">    #endif</span></div>
-<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;    </div>
-<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;    <span class="keyword">const</span> QStringList EMBEDDED_TELESCOPE_SERVERS = QString(<span class="stringliteral">&quot;TelescopeServerDummy TelescopeServerLx200 TelescopeServerNexStar&quot;</span>).split(<span class="charliteral">&#39; &#39;</span>, QString::SkipEmptyParts);</div>
-<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;};</div>
-<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;</div>
-<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;<span class="preprocessor">#endif //_TELESCOPE_CONTROL_GLOBALS_</span></div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;</div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;    <span class="keyword">const</span> QStringList EMBEDDED_TELESCOPE_SERVERS = QString(<span class="stringliteral">&quot;TelescopeServerDummy TelescopeServerLx200 TelescopeServerNexStar&quot;</span>).split(<span class="charliteral">&#39; &#39;</span>, QString::SkipEmptyParts);</div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;};</div>
+<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;</div>
+<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;<span class="preprocessor">#endif //_TELESCOPE_CONTROL_GLOBALS_</span></div>
 <div class="ttc" id="namespaceTelescopeControlGlobals_html"><div class="ttname"><a href="namespaceTelescopeControlGlobals.html">TelescopeControlGlobals</a></div><div class="ttdef"><b>Definition:</b> <a href="TelescopeControlGlobals_8hpp_source.html#l00027">TelescopeControlGlobals.hpp:27</a></div></div>
+<div class="ttc" id="structTelescopeControlGlobals_1_1DeviceModel_html"><div class="ttname"><a href="structTelescopeControlGlobals_1_1DeviceModel.html">TelescopeControlGlobals::DeviceModel</a></div><div class="ttdef"><b>Definition:</b> <a href="TelescopeControlGlobals_8hpp_source.html#l00060">TelescopeControlGlobals.hpp:60</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Sat Oct 24 2015 13:02:00 for Stellarium by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Sat Nov 28 2015 15:08:15 for Stellarium by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.8
 </small></address>

@@ -106,10 +106,111 @@ lGrid());</td><td class="lineno" valign="top"></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="left">       conf-&gt;setValue("viewing/flag_equatorial_grid", glmgr-&gt;getFlagEquator
 Grid());</td><td> </td><td class="right">       conf-&gt;setValue("viewing/flag_equatorial_grid", glmgr-&gt;getFlagEquator
 Grid());</td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno"></td><td class="left"></td><td> </td><td class="right"></td><td class="lineno"></td></tr>
+      <tr bgcolor="gray" ><td></td><th><a name="part-l2" /><small>skipping to change at</small><em> line 1133</em></th><th> </th><th><a name="part-r2" /><small>skipping to change at</small><em> line 1129</em></th><td></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="left">       req.setRawHeader("User-Agent", userAgent.toLatin1());</td><td> </td><td class="right">       req.setRawHeader("User-Agent", userAgent.toLatin1());</td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="left">       starCatalogDownloadReply = StelApp::getInstance().getNetworkAccessMa
+nager()-&gt;get(req);</td><td> </td><td class="right">       starCatalogDownloadReply = StelApp::getInstance().getNetworkAccessMa
+nager()-&gt;get(req);</td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="left">       starCatalogDownloadReply-&gt;setReadBufferSize(1024*1024*2);</td><td> </td><td class="right">       starCatalogDownloadReply-&gt;setReadBufferSize(1024*1024*2);</td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="left">       connect(starCatalogDownloadReply, SIGNAL(finished()), this, SLOT(dow
+nloadFinished()));</td><td> </td><td class="right">       connect(starCatalogDownloadReply, SIGNAL(finished()), this, SLOT(dow
+nloadFinished()));</td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="left">       connect(starCatalogDownloadReply, SIGNAL(error(QNetworkReply::Networ
+kError)), this, SLOT(downloadError(QNetworkReply::NetworkError)));</td><td> </td><td class="right">       connect(starCatalogDownloadReply, SIGNAL(error(QNetworkReply::Networ
+kError)), this, SLOT(downloadError(QNetworkReply::NetworkError)));</td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="left"></td><td> </td><td class="right"></td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="left">       progressBar = StelApp::getInstance().addProgressBar();</td><td> </td><td class="right">       progressBar = StelApp::getInstance().addProgressBar();</td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="left">       progressBar-&gt;setValue(0);</td><td> </td><td class="right">       progressBar-&gt;setValue(0);</td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="left">       progressBar-&gt;setRange(0, nextStarCatalogToDownload.value("sizeMb").t
+oDouble()*1024);</td><td> </td><td class="right">       progressBar-&gt;setRange(0, nextStarCatalogToDownload.value("sizeMb").t
+oDouble()*1024);</td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="left">       progressBar-&gt;setFormat(QString("%1: %p%").arg(nextStarCatalogToDownl
+oad.value("id").toString()));</td><td> </td><td class="right">       progressBar-&gt;setFormat(QString("%1: %p%").arg(nextStarCatalogToDownl
+oad.value("id").toString()));</td><td class="lineno" valign="top"></td></tr>
+      <tr><td><a name="diff0003" /></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="lblock"></td><td> </td><td class="rblock">                                                                           </td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="lblock"></td><td> </td><td class="rblock">       <span class="insert">qDebug() &lt;&lt; "Downloading file" &lt;&lt; nextStarCatalogToDownload.value("u</span></td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="lblock"></td><td> </td><td class="rblock"><span class="insert">rl").toString();</span></td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="left">}</td><td> </td><td class="right">}</td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="left"></td><td> </td><td class="right"></td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="left">void ConfigurationDialog::downloadError(QNetworkReply::NetworkError)</td><td> </td><td class="right">void ConfigurationDialog::downloadError(QNetworkReply::NetworkError)</td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="left">{</td><td> </td><td class="right">{</td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="left">       Q_ASSERT(currentDownloadFile);</td><td> </td><td class="right">       Q_ASSERT(currentDownloadFile);</td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="left">       Q_ASSERT(starCatalogDownloadReply);</td><td> </td><td class="right">       Q_ASSERT(starCatalogDownloadReply);</td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="left"></td><td> </td><td class="right"></td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="left">       isDownloadingStarCatalog = false;</td><td> </td><td class="right">       isDownloadingStarCatalog = false;</td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="left">       qWarning() &lt;&lt; "Error downloading file" &lt;&lt; starCatalogDownloadReply-&gt;
+url() &lt;&lt; ": " &lt;&lt; starCatalogDownloadReply-&gt;errorString();</td><td> </td><td class="right">       qWarning() &lt;&lt; "Error downloading file" &lt;&lt; starCatalogDownloadReply-&gt;
+url() &lt;&lt; ": " &lt;&lt; starCatalogDownloadReply-&gt;errorString();</td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="left">       ui-&gt;downloadLabel-&gt;setText(q_("Error downloading %1:\n%2").arg(nextS
+tarCatalogToDownload.value("id").toString()).arg(starCatalogDownloadReply-&gt;
+errorString()));</td><td> </td><td class="right">       ui-&gt;downloadLabel-&gt;setText(q_("Error downloading %1:\n%2").arg(nextS
+tarCatalogToDownload.value("id").toString()).arg(starCatalogDownloadReply-&gt;
+errorString()));</td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno"></td><td class="left"></td><td> </td><td class="right"></td><td class="lineno"></td></tr>
+      <tr bgcolor="gray" ><td></td><th><a name="part-l3" /><small>skipping to change at</small><em> line 1167</em></th><th> </th><th><a name="part-r3" /><small>skipping to change at</small><em> line 1165</em></th><td></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="left">               starCatalogDownloadReply-&gt;deleteLater();</td><td> </td><td class="right">               starCatalogDownloadReply-&gt;deleteLater();</td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="left">               starCatalogDownloadReply = NULL;</td><td> </td><td class="right">               starCatalogDownloadReply = NULL;</td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="left">               currentDownloadFile-&gt;close();</td><td> </td><td class="right">               currentDownloadFile-&gt;close();</td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="left">               currentDownloadFile-&gt;deleteLater();</td><td> </td><td class="right">               currentDownloadFile-&gt;deleteLater();</td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="left">               currentDownloadFile = NULL;</td><td> </td><td class="right">               currentDownloadFile = NULL;</td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="left">               StelApp::getInstance().removeProgressBar(progressBar);</td><td> </td><td class="right">               StelApp::getInstance().removeProgressBar(progressBar);</td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="left">               progressBar=NULL;</td><td> </td><td class="right">               progressBar=NULL;</td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="left">               return;</td><td> </td><td class="right">               return;</td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="left">       }</td><td> </td><td class="right">       }</td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="left"></td><td> </td><td class="right"></td><td class="lineno" valign="top"></td></tr>
+      <tr><td><a name="diff0004" /></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="lblock">       <span class="delete">Q_ASSERT(starCatalogDownloadReply-&gt;bytesAvailable()==0);</span></td><td> </td><td class="rblock"></td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="lblock">                                                                           </td><td> </td><td class="rblock"></td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="left">       const QVariant&amp; redirect = starCatalogDownloadReply-&gt;attribute(QNetw
+orkRequest::RedirectionTargetAttribute);</td><td> </td><td class="right">       const QVariant&amp; redirect = starCatalogDownloadReply-&gt;attribute(QNetw
+orkRequest::RedirectionTargetAttribute);</td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="left">       if (!redirect.isNull())</td><td> </td><td class="right">       if (!redirect.isNull())</td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="left">       {</td><td> </td><td class="right">       {</td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="left">               // We got a redirection, we need to follow</td><td> </td><td class="right">               // We got a redirection, we need to follow</td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="left">               starCatalogDownloadReply-&gt;deleteLater();</td><td> </td><td class="right">               starCatalogDownloadReply-&gt;deleteLater();</td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="left">               QNetworkRequest req(redirect.toUrl());</td><td> </td><td class="right">               QNetworkRequest req(redirect.toUrl());</td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="left">               req.setAttribute(QNetworkRequest::CacheSaveControlAttribute,
+ false);</td><td> </td><td class="right">               req.setAttribute(QNetworkRequest::CacheSaveControlAttribute,
+ false);</td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="left">               req.setAttribute(QNetworkRequest::RedirectionTargetAttribute
+, false);</td><td> </td><td class="right">               req.setAttribute(QNetworkRequest::RedirectionTargetAttribute
+, false);</td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="left">               req.setRawHeader("User-Agent", userAgent.toLatin1());</td><td> </td><td class="right">               req.setRawHeader("User-Agent", userAgent.toLatin1());</td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="left">               starCatalogDownloadReply = StelApp::getInstance().getNetwork
+AccessManager()-&gt;get(req);</td><td> </td><td class="right">               starCatalogDownloadReply = StelApp::getInstance().getNetwork
+AccessManager()-&gt;get(req);</td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="left">               starCatalogDownloadReply-&gt;setReadBufferSize(1024*1024*2);</td><td> </td><td class="right">               starCatalogDownloadReply-&gt;setReadBufferSize(1024*1024*2);</td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="left">               connect(starCatalogDownloadReply, SIGNAL(readyRead()), this,
+ SLOT(newStarCatalogData()));</td><td> </td><td class="right">               connect(starCatalogDownloadReply, SIGNAL(readyRead()), this,
+ SLOT(newStarCatalogData()));</td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="left">               connect(starCatalogDownloadReply, SIGNAL(finished()), this, 
+SLOT(downloadFinished()));</td><td> </td><td class="right">               connect(starCatalogDownloadReply, SIGNAL(finished()), this, 
+SLOT(downloadFinished()));</td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="left">               connect(starCatalogDownloadReply, SIGNAL(error(QNetworkReply
+::NetworkError)), this, SLOT(downloadError(QNetworkReply::NetworkError)));</td><td> </td><td class="right">               connect(starCatalogDownloadReply, SIGNAL(error(QNetworkReply
+::NetworkError)), this, SLOT(downloadError(QNetworkReply::NetworkError)));</td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="left">               return;</td><td> </td><td class="right">               return;</td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="left">       }</td><td> </td><td class="right">       }</td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="left"></td><td> </td><td class="right"></td><td class="lineno" valign="top"></td></tr>
+      <tr><td><a name="diff0005" /></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="lblock"></td><td> </td><td class="rblock">       <span class="insert">Q_ASSERT(starCatalogDownloadReply-&gt;bytesAvailable()==0);</span></td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="lblock"></td><td> </td><td class="rblock">                                                                           </td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="left">       isDownloadingStarCatalog = false;</td><td> </td><td class="right">       isDownloadingStarCatalog = false;</td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="left">       currentDownloadFile-&gt;close();</td><td> </td><td class="right">       currentDownloadFile-&gt;close();</td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="left">       currentDownloadFile-&gt;deleteLater();</td><td> </td><td class="right">       currentDownloadFile-&gt;deleteLater();</td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="left">       currentDownloadFile = NULL;</td><td> </td><td class="right">       currentDownloadFile = NULL;</td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="left">       starCatalogDownloadReply-&gt;deleteLater();</td><td> </td><td class="right">       starCatalogDownloadReply-&gt;deleteLater();</td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="left">       starCatalogDownloadReply = NULL;</td><td> </td><td class="right">       starCatalogDownloadReply = NULL;</td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="left">       StelApp::getInstance().removeProgressBar(progressBar);</td><td> </td><td class="right">       StelApp::getInstance().removeProgressBar(progressBar);</td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="left">       progressBar=NULL;</td><td> </td><td class="right">       progressBar=NULL;</td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="left"></td><td> </td><td class="right"></td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="left">       ui-&gt;downloadLabel-&gt;setText(q_("Verifying file integrity..."));</td><td> </td><td class="right">       ui-&gt;downloadLabel-&gt;setText(q_("Verifying file integrity..."));</td><td class="lineno" valign="top"></td></tr>
 
      <tr><td></td><td class="left"></td><td> </td><td class="right"></td><td></td></tr>
-     <tr bgcolor="gray"><th colspan="5" align="center"><a name="end">&nbsp;End of changes. 2 change blocks.&nbsp;</a></th></tr>
-     <tr class="stats"><td></td><th><i>12 lines changed or deleted</i></th><th><i> </i></th><th><i>16 lines changed or added</i></th><td></td></tr>
+     <tr bgcolor="gray"><th colspan="5" align="center"><a name="end">&nbsp;End of changes. 5 change blocks.&nbsp;</a></th></tr>
+     <tr class="stats"><td></td><th><i>14 lines changed or deleted</i></th><th><i> </i></th><th><i>21 lines changed or added</i></th><td></td></tr>
      <tr><td colspan="5" align="center" class="small"><br/>This html diff was produced by rfcdiff 1.41. The latest version is available from <a href="http://www.tools.ietf.org/tools/rfcdiff/" >http://tools.ietf.org/tools/rfcdiff/</a> </td></tr>
    </table>
    </body>

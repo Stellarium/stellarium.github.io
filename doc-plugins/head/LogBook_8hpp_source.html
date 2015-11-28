@@ -17,7 +17,7 @@
  <tr style="height: 56px;">
   <td id="projectlogo"><img alt="Logo" src="stellarium-logo.png"/></td>
   <td style="padding-left: 0.5em;">
-   <div id="projectname">Stellarium 0.14.0</div>
+   <div id="projectname">Stellarium 0.15.0</div>
   </td>
  </tr>
  </tbody>
@@ -28,6 +28,7 @@
     <ul class="tablist">
       <li><a href="index.html"><span>Main&#160;Page</span></a></li>
       <li><a href="modules.html"><span>Modules</span></a></li>
+      <li><a href="annotated.html"><span>Classes</span></a></li>
       <li><a href="../../doc/"><span>Core&#160;API</span></a></li>
     </ul>
   </div>
@@ -70,10 +71,10 @@
 <div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;<span class="preprocessor">#include &quot;StelModule.hpp&quot;</span></div>
 <div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;<span class="preprocessor">#include &lt;QMap&gt;</span></div>
 <div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;</div>
-<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;<span class="keyword">class </span><a class="codeRef" doxygen="/home/aw/devel/stellarium/trunk/builds/gcc/stellariumPlugins.tag:../../doc-plugins/head" href="../../doc-plugins/head/classLogBookConfigDialog.html">LogBookConfigDialog</a>;</div>
-<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;<span class="keyword">class </span><a class="codeRef" doxygen="/home/aw/devel/stellarium/trunk/builds/gcc/stellariumPlugins.tag:../../doc-plugins/head" href="../../doc-plugins/head/classObservationsDialog.html">ObservationsDialog</a>;</div>
-<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;<span class="keyword">class </span><a class="codeRef" doxygen="/home/aw/devel/stellarium/trunk/builds/gcc/stellariumPlugins.tag:../../doc-plugins/head" href="../../doc-plugins/head/classSessionsDialog.html">SessionsDialog</a>;</div>
-<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;<span class="keyword">class </span><a class="codeRef" doxygen="/home/aw/devel/stellarium/trunk/builds/gcc/stellariumPlugins.tag:../../doc-plugins/head" href="../../doc-plugins/head/classTargetsDialog.html">TargetsDialog</a>;</div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;<span class="keyword">class </span><a class="code" href="classLogBookConfigDialog.html">LogBookConfigDialog</a>;</div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;<span class="keyword">class </span><a class="code" href="classObservationsDialog.html">ObservationsDialog</a>;</div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;<span class="keyword">class </span><a class="code" href="classSessionsDialog.html">SessionsDialog</a>;</div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;<span class="keyword">class </span><a class="code" href="classTargetsDialog.html">TargetsDialog</a>;</div>
 <div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;</div>
 <div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;<span class="keyword">class </span>QKeyEvent;</div>
 <div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;<span class="keyword">class </span>QMouseEvent;</div>
@@ -82,27 +83,27 @@
 <div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;<span class="keyword">class </span>QSqlTableModel;</div>
 <div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;<span class="keyword">class </span>QSqlQuery;</div>
 <div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;</div>
-<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;<span class="keyword">class </span><a class="codeRef" doxygen="/home/aw/devel/stellarium/trunk/builds/gcc/stellarium.tag:../../doc/head/" href="../../doc/head/classStelButton.html">StelButton</a>;</div>
-<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;<span class="keyword">class </span><a class="codeRef" doxygen="/home/aw/devel/stellarium/trunk/builds/gcc/stellarium.tag:../../doc/head/" href="../../doc/head/classStelStyle.html">StelStyle</a>;</div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;<span class="keyword">class </span>StelButton;</div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;<span class="keyword">class </span>StelStyle;</div>
 <div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;</div>
-<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;<span class="keyword">class </span><a class="codeRef" doxygen="/home/aw/devel/stellarium/trunk/builds/gcc/stellariumPlugins.tag:../../doc-plugins/head" href="../../doc-plugins/head/classLogBook.html">LogBook</a> : <span class="keyword">public</span> <a class="codeRef" doxygen="/home/aw/devel/stellarium/trunk/builds/gcc/stellarium.tag:../../doc/head/" href="../../doc/head/classStelModule.html">StelModule</a></div>
+<div class="line"><a name="l00041"></a><span class="lineno"><a class="line" href="classLogBook.html">   41</a></span>&#160;<span class="keyword">class </span><a class="code" href="classLogBook.html">LogBook</a> : <span class="keyword">public</span> StelModule</div>
 <div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;{</div>
 <div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;    Q_OBJECT</div>
 <div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;<span class="keyword">public</span>:</div>
-<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;    <a class="codeRef" doxygen="/home/aw/devel/stellarium/trunk/builds/gcc/stellariumPlugins.tag:../../doc-plugins/head" href="../../doc-plugins/head/classLogBook.html">LogBook</a>();</div>
-<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;    <span class="keyword">virtual</span> ~<a class="codeRef" doxygen="/home/aw/devel/stellarium/trunk/builds/gcc/stellariumPlugins.tag:../../doc-plugins/head" href="../../doc-plugins/head/classLogBook.html">LogBook</a>();</div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;    <a class="code" href="classLogBook.html">LogBook</a>();</div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;    <span class="keyword">virtual</span> ~<a class="code" href="classLogBook.html">LogBook</a>();</div>
 <div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;</div>
 <div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;    <span class="comment">// Methods defined in the StelModule class</span></div>
 <div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;    <span class="keyword">virtual</span> <span class="keywordtype">bool</span> configureGui(<span class="keywordtype">bool</span> show=<span class="keyword">true</span>);</div>
-<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;    <span class="keyword">virtual</span> <span class="keywordtype">void</span> draw(<a class="codeRef" doxygen="/home/aw/devel/stellarium/trunk/builds/gcc/stellarium.tag:../../doc/head/" href="../../doc/head/classStelCore.html">StelCore</a>* core);</div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;    <span class="keyword">virtual</span> <span class="keywordtype">void</span> draw(StelCore* core);</div>
 <div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;    <span class="keyword">virtual</span> <span class="keywordtype">double</span> getCallOrder(StelModuleActionName actionName) <span class="keyword">const</span>;</div>
-<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;    <span class="keyword">const</span> <a class="codeRef" doxygen="/home/aw/devel/stellarium/trunk/builds/gcc/stellarium.tag:../../doc/head/" href="../../doc/head/classStelStyle.html">StelStyle</a> <a class="codeRef" doxygen="/home/aw/devel/stellarium/trunk/builds/gcc/stellariumPlugins.tag:../../doc-plugins/head" href="../../doc-plugins/head/classLogBook.html#a5a1ca6e53559128f9600a40289f9a232">getModuleStyleSheet</a>(<span class="keyword">const</span> <a class="codeRef" doxygen="/home/aw/devel/stellarium/trunk/builds/gcc/stellarium.tag:../../doc/head/" href="../../doc/head/classStelStyle.html">StelStyle</a>&amp; style);</div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;    <span class="keyword">const</span> StelStyle <a class="code" href="classLogBook.html#a5a1ca6e53559128f9600a40289f9a232">getModuleStyleSheet</a>(<span class="keyword">const</span> StelStyle&amp; style);</div>
 <div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;    <span class="keyword">virtual</span> <span class="keywordtype">void</span> init();</div>
 <div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;    <span class="keyword">virtual</span> <span class="keywordtype">void</span> setStelStyle(<span class="keyword">const</span> QString&amp; section);</div>
 <div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;    <span class="keyword">virtual</span> <span class="keywordtype">void</span> update(<span class="keywordtype">double</span>) {;}</div>
 <div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;</div>
 <div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;<span class="keyword">public</span> slots:</div>
-<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;    <span class="keywordtype">void</span> <a class="codeRef" doxygen="/home/aw/devel/stellarium/trunk/builds/gcc/stellariumPlugins.tag:../../doc-plugins/head" href="../../doc-plugins/head/classLogBook.html#ad54dd403614a1583b9c9f10a4dd4aa34">enableLogBook</a>(<span class="keywordtype">bool</span> b);</div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classLogBook.html#ad54dd403614a1583b9c9f10a4dd4aa34">enableLogBook</a>(<span class="keywordtype">bool</span> b);</div>
 <div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;    <span class="keywordtype">void</span> setConfigDialogVisible(<span class="keywordtype">bool</span> b);</div>
 <div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;    <span class="keywordtype">void</span> setTargetsDialogVisible(<span class="keywordtype">bool</span> b);</div>
 <div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;</div>
@@ -121,9 +122,9 @@
 <div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;</div>
 <div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;    <span class="keywordtype">bool</span> processSqlFile(QString &amp;fileName);</div>
 <div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;</div>
-<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;    <a class="codeRef" doxygen="/home/aw/devel/stellarium/trunk/builds/gcc/stellariumPlugins.tag:../../doc-plugins/head" href="../../doc-plugins/head/classLogBookConfigDialog.html">LogBookConfigDialog</a> *configDialog;</div>
-<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;    <a class="codeRef" doxygen="/home/aw/devel/stellarium/trunk/builds/gcc/stellariumPlugins.tag:../../doc-plugins/head" href="../../doc-plugins/head/classSessionsDialog.html">SessionsDialog</a> *sessionsDialog;</div>
-<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;    <a class="codeRef" doxygen="/home/aw/devel/stellarium/trunk/builds/gcc/stellariumPlugins.tag:../../doc-plugins/head" href="../../doc-plugins/head/classTargetsDialog.html">TargetsDialog</a> *targetsDialog;</div>
+<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;    <a class="code" href="classLogBookConfigDialog.html">LogBookConfigDialog</a> *configDialog;</div>
+<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;    <a class="code" href="classSessionsDialog.html">SessionsDialog</a> *sessionsDialog;</div>
+<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;    <a class="code" href="classTargetsDialog.html">TargetsDialog</a> *targetsDialog;</div>
 <div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;</div>
 <div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;    <span class="keywordtype">bool</span> flagShowLogBook;</div>
 <div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;    QMap&lt;QString, QSqlTableModel *&gt; tableModels;</div>
@@ -132,43 +133,36 @@
 <div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;    QPixmap* pxmapGlow;</div>
 <div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;    QPixmap* pxmapOnIcon;</div>
 <div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;    QPixmap* pxmapOffIcon;</div>
-<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;    <a class="codeRef" doxygen="/home/aw/devel/stellarium/trunk/builds/gcc/stellarium.tag:../../doc/head/" href="../../doc/head/classStelButton.html">StelButton</a>* toolbarButton;</div>
+<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;    StelButton* toolbarButton;</div>
 <div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;};</div>
 <div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;</div>
 <div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;</div>
 <div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160;<span class="preprocessor">#include &lt;QObject&gt;</span></div>
 <div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160;<span class="preprocessor">#include &quot;StelPluginInterface.hpp&quot;</span></div>
 <div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160;</div>
-<div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160;<span class="keyword">class </span><a class="codeRef" doxygen="/home/aw/devel/stellarium/trunk/builds/gcc/stellariumPlugins.tag:../../doc-plugins/head" href="../../doc-plugins/head/classLogBookStelPluginInterface.html">LogBookStelPluginInterface</a> : <span class="keyword">public</span> QObject, <span class="keyword">public</span> <a class="codeRef" doxygen="/home/aw/devel/stellarium/trunk/builds/gcc/stellarium.tag:../../doc/head/" href="../../doc/head/classStelPluginInterface.html">StelPluginInterface</a></div>
+<div class="line"><a name="l00114"></a><span class="lineno"><a class="line" href="classLogBookStelPluginInterface.html">  114</a></span>&#160;<span class="keyword">class </span><a class="code" href="classLogBookStelPluginInterface.html">LogBookStelPluginInterface</a> : <span class="keyword">public</span> QObject, <span class="keyword">public</span> StelPluginInterface</div>
 <div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160;{</div>
 <div class="line"><a name="l00116"></a><span class="lineno">  116</span>&#160;    Q_OBJECT</div>
 <div class="line"><a name="l00117"></a><span class="lineno">  117</span>&#160;    Q_PLUGIN_METADATA(IID StelPluginInterface_iid)</div>
-<div class="line"><a name="l00118"></a><span class="lineno">  118</span>&#160;    Q_INTERFACES(<a class="codeRef" doxygen="/home/aw/devel/stellarium/trunk/builds/gcc/stellarium.tag:../../doc/head/" href="../../doc/head/classStelPluginInterface.html">StelPluginInterface</a>)</div>
-<div class="line"><a name="l00119"></a><span class="lineno">  119</span>&#160;public:</div>
-<div class="line"><a name="l00120"></a><span class="lineno">  120</span>&#160;    virtual <a class="codeRef" doxygen="/home/aw/devel/stellarium/trunk/builds/gcc/stellarium.tag:../../doc/head/" href="../../doc/head/classStelModule.html">StelModule</a>* <a class="codeRef" doxygen="/home/aw/devel/stellarium/trunk/builds/gcc/stellarium.tag:../../doc/head/" href="../../doc/head/classStelPluginInterface.html#afa2dc49ee2c01039a28e1764f334330c">getStelModule</a>() const;</div>
-<div class="line"><a name="l00121"></a><span class="lineno">  121</span>&#160;    virtual <a class="codeRef" doxygen="/home/aw/devel/stellarium/trunk/builds/gcc/stellarium.tag:../../doc/head/" href="../../doc/head/structStelPluginInfo.html">StelPluginInfo</a> getPluginInfo() const;</div>
+<div class="line"><a name="l00118"></a><span class="lineno">  118</span>&#160;    Q_INTERFACES(StelPluginInterface)</div>
+<div class="line"><a name="l00119"></a><span class="lineno">  119</span>&#160;<span class="keyword">public</span>:</div>
+<div class="line"><a name="l00120"></a><span class="lineno">  120</span>&#160;    <span class="keyword">virtual</span> StelModule* getStelModule() <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00121"></a><span class="lineno">  121</span>&#160;    <span class="keyword">virtual</span> StelPluginInfo getPluginInfo() <span class="keyword">const</span>;</div>
 <div class="line"><a name="l00122"></a><span class="lineno">  122</span>&#160;};</div>
 <div class="line"><a name="l00123"></a><span class="lineno">  123</span>&#160;</div>
 <div class="line"><a name="l00124"></a><span class="lineno">  124</span>&#160;<span class="preprocessor">#endif </span><span class="comment">/*LOGBOOK_HPP_*/</span><span class="preprocessor"></span></div>
-<div class="ttc" id="classTargetsDialog_html"><div class="ttname"><a href="../../doc-plugins/head/classTargetsDialog.html">TargetsDialog</a></div><div class="ttdef"><b>Definition:</b> <a href="TargetsDialog_8hpp_source.html#l00033">TargetsDialog.hpp:33</a></div></div>
-<div class="ttc" id="classStelPluginInterface_html"><div class="ttname"><a href="../../doc/head/classStelPluginInterface.html">StelPluginInterface</a></div></div>
-<div class="ttc" id="classLogBook_html_a5a1ca6e53559128f9600a40289f9a232"><div class="ttname"><a href="../../doc-plugins/head/classLogBook.html#a5a1ca6e53559128f9600a40289f9a232">LogBook::getModuleStyleSheet</a></div><div class="ttdeci">const StelStyle getModuleStyleSheet(const StelStyle &amp;style)</div></div>
-<div class="ttc" id="classStelCore_html"><div class="ttname"><a href="../../doc/head/classStelCore.html">StelCore</a></div></div>
-<div class="ttc" id="classObservationsDialog_html"><div class="ttname"><a href="../../doc-plugins/head/classObservationsDialog.html">ObservationsDialog</a></div><div class="ttdef"><b>Definition:</b> <a href="ObservationsDialog_8hpp_source.html#l00035">ObservationsDialog.hpp:35</a></div></div>
-<div class="ttc" id="classLogBook_html"><div class="ttname"><a href="../../doc-plugins/head/classLogBook.html">LogBook</a></div><div class="ttdoc">This is an example of a plug-in which can be dynamically loaded into stellarium. </div><div class="ttdef"><b>Definition:</b> <a href="LogBook_8hpp_source.html#l00041">LogBook.hpp:41</a></div></div>
-<div class="ttc" id="classStelButton_html"><div class="ttname"><a href="../../doc/head/classStelButton.html">StelButton</a></div></div>
-<div class="ttc" id="classStelPluginInterface_html_afa2dc49ee2c01039a28e1764f334330c"><div class="ttname"><a href="../../doc/head/classStelPluginInterface.html#afa2dc49ee2c01039a28e1764f334330c">StelPluginInterface::getStelModule</a></div><div class="ttdeci">virtual class StelModule * getStelModule() const =0</div></div>
-<div class="ttc" id="classLogBookStelPluginInterface_html"><div class="ttname"><a href="../../doc-plugins/head/classLogBookStelPluginInterface.html">LogBookStelPluginInterface</a></div><div class="ttdoc">This class is used by Qt to manage a plug-in interface. </div><div class="ttdef"><b>Definition:</b> <a href="LogBook_8hpp_source.html#l00114">LogBook.hpp:114</a></div></div>
-<div class="ttc" id="classSessionsDialog_html"><div class="ttname"><a href="../../doc-plugins/head/classSessionsDialog.html">SessionsDialog</a></div><div class="ttdef"><b>Definition:</b> <a href="SessionsDialog_8hpp_source.html#l00035">SessionsDialog.hpp:35</a></div></div>
-<div class="ttc" id="classLogBookConfigDialog_html"><div class="ttname"><a href="../../doc-plugins/head/classLogBookConfigDialog.html">LogBookConfigDialog</a></div><div class="ttdef"><b>Definition:</b> <a href="LogBookConfigDialog_8hpp_source.html#l00040">LogBookConfigDialog.hpp:40</a></div></div>
-<div class="ttc" id="classStelStyle_html"><div class="ttname"><a href="../../doc/head/classStelStyle.html">StelStyle</a></div></div>
-<div class="ttc" id="classLogBook_html_ad54dd403614a1583b9c9f10a4dd4aa34"><div class="ttname"><a href="../../doc-plugins/head/classLogBook.html#ad54dd403614a1583b9c9f10a4dd4aa34">LogBook::enableLogBook</a></div><div class="ttdeci">void enableLogBook(bool b)</div></div>
-<div class="ttc" id="classStelModule_html"><div class="ttname"><a href="../../doc/head/classStelModule.html">StelModule</a></div></div>
-<div class="ttc" id="structStelPluginInfo_html"><div class="ttname"><a href="../../doc/head/structStelPluginInfo.html">StelPluginInfo</a></div></div>
+<div class="ttc" id="classTargetsDialog_html"><div class="ttname"><a href="classTargetsDialog.html">TargetsDialog</a></div><div class="ttdef"><b>Definition:</b> <a href="TargetsDialog_8hpp_source.html#l00033">TargetsDialog.hpp:33</a></div></div>
+<div class="ttc" id="classLogBook_html_a5a1ca6e53559128f9600a40289f9a232"><div class="ttname"><a href="classLogBook.html#a5a1ca6e53559128f9600a40289f9a232">LogBook::getModuleStyleSheet</a></div><div class="ttdeci">const StelStyle getModuleStyleSheet(const StelStyle &amp;style)</div><div class="ttdoc">Returns the module-specific style sheet. </div></div>
+<div class="ttc" id="classObservationsDialog_html"><div class="ttname"><a href="classObservationsDialog.html">ObservationsDialog</a></div><div class="ttdef"><b>Definition:</b> <a href="ObservationsDialog_8hpp_source.html#l00035">ObservationsDialog.hpp:35</a></div></div>
+<div class="ttc" id="classLogBook_html"><div class="ttname"><a href="classLogBook.html">LogBook</a></div><div class="ttdoc">This is an example of a plug-in which can be dynamically loaded into stellarium. </div><div class="ttdef"><b>Definition:</b> <a href="LogBook_8hpp_source.html#l00041">LogBook.hpp:41</a></div></div>
+<div class="ttc" id="classLogBookStelPluginInterface_html"><div class="ttname"><a href="classLogBookStelPluginInterface.html">LogBookStelPluginInterface</a></div><div class="ttdoc">This class is used by Qt to manage a plug-in interface. </div><div class="ttdef"><b>Definition:</b> <a href="LogBook_8hpp_source.html#l00114">LogBook.hpp:114</a></div></div>
+<div class="ttc" id="classSessionsDialog_html"><div class="ttname"><a href="classSessionsDialog.html">SessionsDialog</a></div><div class="ttdef"><b>Definition:</b> <a href="SessionsDialog_8hpp_source.html#l00035">SessionsDialog.hpp:35</a></div></div>
+<div class="ttc" id="classLogBookConfigDialog_html"><div class="ttname"><a href="classLogBookConfigDialog.html">LogBookConfigDialog</a></div><div class="ttdef"><b>Definition:</b> <a href="LogBookConfigDialog_8hpp_source.html#l00040">LogBookConfigDialog.hpp:40</a></div></div>
+<div class="ttc" id="classLogBook_html_ad54dd403614a1583b9c9f10a4dd4aa34"><div class="ttname"><a href="classLogBook.html#ad54dd403614a1583b9c9f10a4dd4aa34">LogBook::enableLogBook</a></div><div class="ttdeci">void enableLogBook(bool b)</div><div class="ttdoc">This method is called with we detect that our hot key is pressed. </div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Sat Oct 24 2015 13:01:59 for Stellarium by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Sat Nov 28 2015 15:08:14 for Stellarium by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.8
 </small></address>
