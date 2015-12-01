@@ -1,0 +1,705 @@
+<!-- changed:0.7;added:0;removed:3;moved:0;renamed:0;changed:47;tool_version:1.6.4 -->
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+    <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+    <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="keywords" content="stellarium, changes, report" />
+    <meta name="description" content="Changes report for the stellarium package between 0.14.1 and head versions (hidden unchanged files)" />
+    <title>
+        stellarium: 0.14.1 to head changes report
+    </title>
+    <style type="text/css">
+    body {
+    font-family:Arial, sans-serif;
+    color:Black;
+    font-size:14px;
+}
+hr {
+    color:Black;
+    background-color:Black;
+    height:1px;
+    border:0;
+}
+h1 {
+    margin-bottom:0px;
+    padding-bottom:0px;
+    font-size:26px;
+}
+h2 {
+    margin-bottom:0px;
+    padding-bottom:0px;
+    font-size:20px;
+    white-space:nowrap;
+}
+table.summary {
+    border-collapse:collapse;
+    border:1px outset black;
+}
+table.summary th {
+    background-color:#eeeeee;
+    font-weight:bold;
+    text-align:left;
+    font-size:15px;
+    white-space:nowrap;
+    border:1px inset gray;
+    padding: 3px;
+}
+table.summary td {
+    text-align:right;
+    font-size:16px;
+    white-space:nowrap;
+    border:1px inset gray;
+    padding: 3px 5px 3px 5px;
+}
+table.summary td.left {
+    text-align:left;
+}
+table.summary th.left {
+    text-align:left;
+    font-weight:100;
+}
+table.summary td.f_path {
+    font-size:14px;
+    font-family:Consolas, 'DejaVu Sans Mono', 'Droid Sans Mono', Monaco, Monospace;
+}
+table.summary td.value {
+    padding-left:10px;
+}
+td.passed, tr.passed {
+    background-color:#CCFFCC;
+}
+td.warning, tr.warning {
+    background-color:#F4F4AF;
+}
+td.renamed, tr.renamed {
+    background-color:#FFDAA3;
+}
+td.moved, tr.moved {
+    background-color:#FFDAA3;
+}
+td.failed, tr.failed {
+    background-color:#FFC3CE;
+}
+td.new, tr.new {
+    background-color:#C6DEFF;
+}
+a.default {
+    color:#336699;
+}
+div.p_list {
+    padding-left:10px;
+    color:#333333;
+    font-size:15px;
+}
+    </style>
+    <script type="text/javascript" language="JavaScript">
+    <!--
+    function sort(el, status)
+{ 
+    var col_sort = el.innerHTML;
+    var tr = el.parentNode;
+    var table = tr.parentNode;
+    var td, col_sort_num;
+    for (var i=0; (td = tr.getElementsByTagName('th').item(i)); i++)
+    {
+        if(td.innerHTML == col_sort)
+        {
+            col_sort_num = i;
+            if(td.prevsort == 'y') {
+                el.up = Number(!el.up);
+            }
+            else if(td.prevsort == 'n') {
+                td.prevsort = 'y';
+                el.up = 0;
+            }
+            else
+            {
+                if(col_sort_num==0)
+                { // already sorted
+                    td.prevsort = 'n';
+                    el.up = 1;
+                }
+                else if(col_sort_num==2)
+                { // delta
+                    td.prevsort = 'n';
+                    el.up = 1;
+                }
+                else
+                {
+                    td.prevsort = 'y';
+                    el.up = 0;
+                }
+            }
+        }
+        else
+        {
+            if(td.prevsort == 'y') {
+                td.prevsort = 'n';
+            }
+        }
+    }
+    
+    var a = new Array();
+    for(var i=1; i < table.rows.length; i++)
+    {
+        var cols = table.rows[i].getElementsByTagName('td');
+        if(cols.item(status)==null)
+        { // double status
+            a[i-2][2] = table.rows[i];
+        }
+        else
+        {
+            a[i-1] = new Array();
+            var indent = cols.item(col_sort_num).innerHTML;
+            if(indent=='') indent='0';
+            if(indent.substr(indent.length-1, 1)=="%")
+            { // delta
+                indent = indent.substr(0, indent.length-1)*100;
+            }
+            a[i-1][0] = indent;
+            a[i-1][1] = table.rows[i];
+            a[i-1][2] = null;
+        }
+    }
+    
+    // sort table
+    a.sort(sort_array);
+    if(el.up) a.reverse();
+    
+    // draw table
+    for(var i in a)
+    {
+        table.appendChild(a[i][1]);
+        if(a[i][2]!=null) {
+            table.appendChild(a[i][2]);
+        }
+    }
+}
+
+function sort_array(a,b)
+{
+    if(a[0] == b[0]) return 0;
+    if(a[0] > b[0]) return 1;
+    return -1;
+}
+    -->
+    </script>
+    </head>
+<body>
+<div><a name='Top'></a>
+<h1>Changes report for the <span style='color:Blue;'>stellarium</span> package between <span style='color:Red;'>0.14.1</span> and <span style='color:Red;'>head</span> versions (hidden unchanged files)</h1>
+<br/><table class='summary'>
+    <tr><td class='new' width='80px'>added</td><td class='passed' width='80px'>unchanged</td></tr>
+    <tr><td class='warning'>changed</td><td class='failed'>removed</td></tr></table>
+<h2>Test Info</h2><hr/>
+<table class='summary'>
+<tr><th class='left'>Package Name</th><td>stellarium</td></tr>
+<tr><th class='left'>Package Format</th><td>TAR.GZ</td></tr>
+<tr><th class='left'>Version #1</th><td>0.14.1</td></tr>
+<tr><th class='left'>Version #2</th><td>head</td></tr>
+</table>
+<h2>Test Results</h2><hr/>
+<table class='summary'>
+<tr><th class='left'>Total Packages</th><td><a href='#Packages' style='color:Blue;'>2</a></td></tr>
+<tr><th class='left'>Total Files</th><td><a href='#Files' style='color:Blue;'>3115</a></td></tr>
+<tr><th class='left'>Verdict</th><td><span style='color:Red;'><b>Changed<br/>(0.7%)</b></span></td></tr>
+</table>
+<a name='Deps'></a>
+<a name='Files'></a><h2>Changes In Files</h2><hr/>
+<table class='summary'>
+<tr><th>File Type</th><th>Total</th><th>Added</th><th>Removed</th><th>Changed</th></tr>
+<tr>
+<td class='left'>Header file</td>
+<td><a href='#HeaderFiles' style='color:Blue;'>11</a></td>
+<td>0</td>
+<td>0</td>
+<td class='warning'><a href='#HeaderFiles' style='color:Blue;'>11</a></td>
+</tr>
+<tr>
+<td class='left'>C++ program</td>
+<td><a href='#CPPPrograms' style='color:Blue;'>19</a></td>
+<td>0</td>
+<td>0</td>
+<td class='warning'><a href='#CPPPrograms' style='color:Blue;'>19</a></td>
+</tr>
+<tr>
+<td class='left'>Perl program</td>
+<td><a href='#PerlPrograms' style='color:Blue;'>1</a></td>
+<td>0</td>
+<td>0</td>
+<td class='warning'><a href='#PerlPrograms' style='color:Blue;'>1</a></td>
+</tr>
+<tr>
+<td class='left'>CMake file</td>
+<td><a href='#CMakeFiles' style='color:Blue;'>7</a></td>
+<td>0</td>
+<td>0</td>
+<td class='warning'><a href='#CMakeFiles' style='color:Blue;'>7</a></td>
+</tr>
+<tr>
+<td class='left'>Initialization file</td>
+<td><a href='#InitializationFiles' style='color:Blue;'>1</a></td>
+<td>0</td>
+<td>0</td>
+<td class='warning'><a href='#InitializationFiles' style='color:Blue;'>1</a></td>
+</tr>
+<tr>
+<td class='left'>JSON file</td>
+<td><a href='#JSONFiles' style='color:Blue;'>2</a></td>
+<td>0</td>
+<td>0</td>
+<td class='warning'><a href='#JSONFiles' style='color:Blue;'>2</a></td>
+</tr>
+<tr>
+<td class='left'>XML document</td>
+<td><a href='#XMLDocuments' style='color:Blue;'>1</a></td>
+<td>0</td>
+<td>0</td>
+<td class='warning'><a href='#XMLDocuments' style='color:Blue;'>1</a></td>
+</tr>
+<tr>
+<td class='left'>Gettext file</td>
+<td><a href='#GettextFiles' style='color:Blue;'>2</a></td>
+<td>0</td>
+<td>0</td>
+<td class='warning'><a href='#GettextFiles' style='color:Blue;'>2</a></td>
+</tr>
+<tr>
+<td class='left'>Qt UI file</td>
+<td><a href='#QtUIFiles' style='color:Blue;'>3</a></td>
+<td>0</td>
+<td>0</td>
+<td class='warning'><a href='#QtUIFiles' style='color:Blue;'>3</a></td>
+</tr>
+<tr>
+<td class='left'>YAML file</td>
+<td><a href='#YAMLFiles' style='color:Blue;'>1</a></td>
+<td>0</td>
+<td class='failed'><a href='#YAMLFiles' style='color:Blue;'>1</a></td>
+<td>0</td>
+</tr>
+<tr>
+<td class='left'>Archive</td>
+<td><a href='#Archives' style='color:Blue;'>2</a></td>
+<td>0</td>
+<td class='failed'><a href='#Archives' style='color:Blue;'>2</a></td>
+<td>0</td>
+</tr>
+</table>
+<a name='HeaderFiles'></a>
+<h2>Header Files (11)</h2><hr/>
+<table class='summary'>
+<tr><th title='sort' onclick='javascript:sort(this, 1)' style='cursor:pointer'>Name</th><th title='sort' onclick='javascript:sort(this, 1)' style='cursor:pointer'>Status</th><th title='sort' onclick='javascript:sort(this, 1)' style='cursor:pointer'>Delta</th><th>Visual<br/>Diff</th><th>Detailed<br/>Report</th></tr>
+<tr>
+<td class='left f_path'>plugins/AngleMeasure/src/AngleMeasure.hpp</td>
+<td class='warning'>changed</td>
+<td class='value'>5.8%</td>
+<td><a href='diffs/plugins/AngleMeasure/src/AngleMeasure.hpp-diff.html' target='_blank'>diff</a></td>
+<td></td>
+</tr>
+<tr>
+<td class='left f_path'>plugins/AngleMeasure/src/gui/AngleMeasureDialog.hpp</td>
+<td class='warning'>changed</td>
+<td class='value'>2.5%</td>
+<td><a href='diffs/plugins/AngleMeasure/src/gui/AngleMeasureDialog.hpp-diff.html' target='_blank'>diff</a></td>
+<td></td>
+</tr>
+<tr>
+<td class='left f_path'>plugins/CompassMarks/src/CompassMarks.hpp</td>
+<td class='warning'>changed</td>
+<td class='value'>9.3%</td>
+<td><a href='diffs/plugins/CompassMarks/src/CompassMarks.hpp-diff.html' target='_blank'>diff</a></td>
+<td></td>
+</tr>
+<tr>
+<td class='left f_path'>plugins/EquationOfTime/src/EquationOfTime.hpp</td>
+<td class='warning'>changed</td>
+<td class='value'>2.4%</td>
+<td><a href='diffs/plugins/EquationOfTime/src/EquationOfTime.hpp-diff.html' target='_blank'>diff</a></td>
+<td></td>
+</tr>
+<tr>
+<td class='left f_path'>src/core/modules/GridLinesMgr.hpp</td>
+<td class='warning'>changed</td>
+<td class='value'>11.6%</td>
+<td><a href='diffs/src/core/modules/GridLinesMgr.hpp-diff.html' target='_blank'>diff</a></td>
+<td></td>
+</tr>
+<tr>
+<td class='left f_path'>src/core/modules/LandscapeMgr.hpp</td>
+<td class='warning'>changed</td>
+<td class='value'>0.7%</td>
+<td><a href='diffs/src/core/modules/LandscapeMgr.hpp-diff.html' target='_blank'>diff</a></td>
+<td></td>
+</tr>
+<tr>
+<td class='left f_path'>src/core/modules/Planet.hpp</td>
+<td class='warning'>changed</td>
+<td class='value'>0.1%</td>
+<td><a href='diffs/src/core/modules/Planet.hpp-diff.html' target='_blank'>diff</a></td>
+<td></td>
+</tr>
+<tr>
+<td class='left f_path'>src/core/planetsephems/precession.h</td>
+<td class='warning'>changed</td>
+<td class='value'>8.1%</td>
+<td><a href='diffs/src/core/planetsephems/precession.h-diff.html' target='_blank'>diff</a></td>
+<td></td>
+</tr>
+<tr>
+<td class='left f_path'>src/core/StelMovementMgr.hpp</td>
+<td class='warning'>changed</td>
+<td class='value'>1.9%</td>
+<td><a href='diffs/src/core/StelMovementMgr.hpp-diff.html' target='_blank'>diff</a></td>
+<td></td>
+</tr>
+<tr>
+<td class='left f_path'>src/core/StelProjector.hpp</td>
+<td class='warning'>changed</td>
+<td class='value'>0.3%</td>
+<td><a href='diffs/src/core/StelProjector.hpp-diff.html' target='_blank'>diff</a></td>
+<td></td>
+</tr>
+<tr>
+<td class='left f_path'>src/core/VecMath.hpp</td>
+<td class='warning'>changed</td>
+<td class='value'>0.1%</td>
+<td><a href='diffs/src/core/VecMath.hpp-diff.html' target='_blank'>diff</a></td>
+<td></td>
+</tr>
+</table>
+<a name='CPPPrograms'></a>
+<h2>C++ Programs (19)</h2><hr/>
+<table class='summary'>
+<tr><th title='sort' onclick='javascript:sort(this, 1)' style='cursor:pointer'>Name</th><th title='sort' onclick='javascript:sort(this, 1)' style='cursor:pointer'>Status</th><th title='sort' onclick='javascript:sort(this, 1)' style='cursor:pointer'>Delta</th><th>Visual<br/>Diff</th><th>Detailed<br/>Report</th></tr>
+<tr>
+<td class='left f_path'>plugins/AngleMeasure/src/AngleMeasure.cpp</td>
+<td class='warning'>changed</td>
+<td class='value'>11.7%</td>
+<td><a href='diffs/plugins/AngleMeasure/src/AngleMeasure.cpp-diff.html' target='_blank'>diff</a></td>
+<td></td>
+</tr>
+<tr>
+<td class='left f_path'>plugins/AngleMeasure/src/gui/AngleMeasureDialog.cpp</td>
+<td class='warning'>changed</td>
+<td class='value'>2.9%</td>
+<td><a href='diffs/plugins/AngleMeasure/src/gui/AngleMeasureDialog.cpp-diff.html' target='_blank'>diff</a></td>
+<td></td>
+</tr>
+<tr>
+<td class='left f_path'>plugins/ArchaeoLines/src/ArchaeoLines.cpp</td>
+<td class='warning'>changed</td>
+<td class='value'>0.4%</td>
+<td><a href='diffs/plugins/ArchaeoLines/src/ArchaeoLines.cpp-diff.html' target='_blank'>diff</a></td>
+<td></td>
+</tr>
+<tr>
+<td class='left f_path'>plugins/CompassMarks/src/CompassMarks.cpp</td>
+<td class='warning'>changed</td>
+<td class='value'>4.6%</td>
+<td><a href='diffs/plugins/CompassMarks/src/CompassMarks.cpp-diff.html' target='_blank'>diff</a></td>
+<td></td>
+</tr>
+<tr>
+<td class='left f_path'>plugins/EquationOfTime/src/EquationOfTime.cpp</td>
+<td class='warning'>changed</td>
+<td class='value'>0.4%</td>
+<td><a href='diffs/plugins/EquationOfTime/src/EquationOfTime.cpp-diff.html' target='_blank'>diff</a></td>
+<td></td>
+</tr>
+<tr>
+<td class='left f_path'>plugins/MeteorShowers/src/MeteorShower.cpp</td>
+<td class='warning'>changed</td>
+<td class='value'>3.1%</td>
+<td><a href='diffs/plugins/MeteorShowers/src/MeteorShower.cpp-diff.html' target='_blank'>diff</a></td>
+<td></td>
+</tr>
+<tr>
+<td class='left f_path'>plugins/Scenery3d/src/Scenery3d.cpp</td>
+<td class='warning'>changed</td>
+<td class='value'>0.7%</td>
+<td><a href='diffs/plugins/Scenery3d/src/Scenery3d.cpp-diff.html' target='_blank'>diff</a></td>
+<td></td>
+</tr>
+<tr>
+<td class='left f_path'>src/core/modules/GridLinesMgr.cpp</td>
+<td class='warning'>changed</td>
+<td class='value'>7.2%</td>
+<td><a href='diffs/src/core/modules/GridLinesMgr.cpp-diff.html' target='_blank'>diff</a></td>
+<td></td>
+</tr>
+<tr>
+<td class='left f_path'>src/core/modules/MinorPlanet.cpp</td>
+<td class='warning'>changed</td>
+<td class='value'>2.9%</td>
+<td><a href='diffs/src/core/modules/MinorPlanet.cpp-diff.html' target='_blank'>diff</a></td>
+<td></td>
+</tr>
+<tr>
+<td class='left f_path'>src/core/modules/Planet.cpp</td>
+<td class='warning'>changed</td>
+<td class='value'>1.7%</td>
+<td><a href='diffs/src/core/modules/Planet.cpp-diff.html' target='_blank'>diff</a></td>
+<td></td>
+</tr>
+<tr>
+<td class='left f_path'>src/core/StelApp.cpp</td>
+<td class='warning'>changed</td>
+<td class='value'>0.5%</td>
+<td><a href='diffs/src/core/StelApp.cpp-diff.html' target='_blank'>diff</a></td>
+<td></td>
+</tr>
+<tr>
+<td class='left f_path'>src/core/StelMovementMgr.cpp</td>
+<td class='warning'>changed</td>
+<td class='value'>0.4%</td>
+<td><a href='diffs/src/core/StelMovementMgr.cpp-diff.html' target='_blank'>diff</a></td>
+<td></td>
+</tr>
+<tr>
+<td class='left f_path'>src/core/StelProjector.cpp</td>
+<td class='warning'>changed</td>
+<td class='value'>0.6%</td>
+<td><a href='diffs/src/core/StelProjector.cpp-diff.html' target='_blank'>diff</a></td>
+<td></td>
+</tr>
+<tr>
+<td class='left f_path'>src/core/StelUtils.cpp</td>
+<td class='warning'>changed</td>
+<td class='value'>0.2%</td>
+<td><a href='diffs/src/core/StelUtils.cpp-diff.html' target='_blank'>diff</a></td>
+<td></td>
+</tr>
+<tr>
+<td class='left f_path'>src/gui/ConfigurationDialog.cpp</td>
+<td class='warning'>changed</td>
+<td class='value'>0.5%</td>
+<td><a href='diffs/src/gui/ConfigurationDialog.cpp-diff.html' target='_blank'>diff</a></td>
+<td></td>
+</tr>
+<tr>
+<td class='left f_path'>src/gui/HelpDialog.cpp</td>
+<td class='warning'>changed</td>
+<td class='value'>0.6%</td>
+<td><a href='diffs/src/gui/HelpDialog.cpp-diff.html' target='_blank'>diff</a></td>
+<td></td>
+</tr>
+<tr>
+<td class='left f_path'>src/gui/SkyGui.cpp</td>
+<td class='warning'>changed</td>
+<td class='value'>0.9%</td>
+<td><a href='diffs/src/gui/SkyGui.cpp-diff.html' target='_blank'>diff</a></td>
+<td></td>
+</tr>
+<tr>
+<td class='left f_path'>src/gui/ViewDialog.cpp</td>
+<td class='warning'>changed</td>
+<td class='value'>1.6%</td>
+<td><a href='diffs/src/gui/ViewDialog.cpp-diff.html' target='_blank'>diff</a></td>
+<td></td>
+</tr>
+<tr>
+<td class='left f_path'>src/tests/testStelSphereGeometry.cpp</td>
+<td class='warning'>changed</td>
+<td class='value'>0.7%</td>
+<td><a href='diffs/src/tests/testStelSphereGeometry.cpp-diff.html' target='_blank'>diff</a></td>
+<td></td>
+</tr>
+</table>
+<a name='PerlPrograms'></a>
+<h2>Perl Programs (1)</h2><hr/>
+<table class='summary'>
+<tr><th title='sort' onclick='javascript:sort(this, 1)' style='cursor:pointer'>Name</th><th title='sort' onclick='javascript:sort(this, 1)' style='cursor:pointer'>Status</th><th title='sort' onclick='javascript:sort(this, 1)' style='cursor:pointer'>Delta</th><th>Visual<br/>Diff</th><th>Detailed<br/>Report</th></tr>
+<tr>
+<td class='left f_path'>plugins/Pulsars/util/psrcat2json.pl</td>
+<td class='warning'>changed</td>
+<td class='value'>0.2%</td>
+<td><a href='diffs/plugins/Pulsars/util/psrcat2json.pl-diff.html' target='_blank'>diff</a></td>
+<td></td>
+</tr>
+</table>
+<a name='CMakeFiles'></a>
+<h2>CMake Files (7)</h2><hr/>
+<table class='summary'>
+<tr><th title='sort' onclick='javascript:sort(this, 1)' style='cursor:pointer'>Name</th><th title='sort' onclick='javascript:sort(this, 1)' style='cursor:pointer'>Status</th><th title='sort' onclick='javascript:sort(this, 1)' style='cursor:pointer'>Delta</th><th>Visual<br/>Diff</th><th>Detailed<br/>Report</th></tr>
+<tr>
+<td class='left f_path'>CMakeLists.txt</td>
+<td class='warning'>changed</td>
+<td class='value'>1.8%</td>
+<td><a href='diffs/CMakeLists.txt-diff.html' target='_blank'>diff</a></td>
+<td></td>
+</tr>
+<tr>
+<td class='left f_path'>data/default_config.ini.cmake</td>
+<td class='warning'>changed</td>
+<td class='value'>0.9%</td>
+<td><a href='diffs/data/default_config.ini.cmake-diff.html' target='_blank'>diff</a></td>
+<td></td>
+</tr>
+<tr>
+<td class='left f_path'>plugins/AngleMeasure/CMakeLists.txt</td>
+<td class='warning'>changed</td>
+<td class='value'>8.8%</td>
+<td><a href='diffs/plugins/AngleMeasure/CMakeLists.txt-diff.html' target='_blank'>diff</a></td>
+<td></td>
+</tr>
+<tr>
+<td class='left f_path'>plugins/ArchaeoLines/CMakeLists.txt</td>
+<td class='warning'>changed</td>
+<td class='value'>8.8%</td>
+<td><a href='diffs/plugins/ArchaeoLines/CMakeLists.txt-diff.html' target='_blank'>diff</a></td>
+<td></td>
+</tr>
+<tr>
+<td class='left f_path'>plugins/CompassMarks/CMakeLists.txt</td>
+<td class='warning'>changed</td>
+<td class='value'>8.8%</td>
+<td><a href='diffs/plugins/CompassMarks/CMakeLists.txt-diff.html' target='_blank'>diff</a></td>
+<td></td>
+</tr>
+<tr>
+<td class='left f_path'>plugins/EquationOfTime/CMakeLists.txt</td>
+<td class='warning'>changed</td>
+<td class='value'>6.1%</td>
+<td><a href='diffs/plugins/EquationOfTime/CMakeLists.txt-diff.html' target='_blank'>diff</a></td>
+<td></td>
+</tr>
+<tr>
+<td class='left f_path'>scenery3d/Sterngarten/CMakeLists.txt</td>
+<td class='warning'>changed</td>
+<td class='value'>65.9%</td>
+<td><a href='diffs/scenery3d/Sterngarten/CMakeLists.txt-diff.html' target='_blank'>diff</a></td>
+<td></td>
+</tr>
+</table>
+<a name='InitializationFiles'></a>
+<h2>Initialization Files (1)</h2><hr/>
+<table class='summary'>
+<tr><th title='sort' onclick='javascript:sort(this, 1)' style='cursor:pointer'>Name</th><th title='sort' onclick='javascript:sort(this, 1)' style='cursor:pointer'>Status</th><th title='sort' onclick='javascript:sort(this, 1)' style='cursor:pointer'>Delta</th><th>Visual<br/>Diff</th><th>Detailed<br/>Report</th></tr>
+<tr>
+<td class='left f_path'>data/default_config.ini</td>
+<td class='warning'>changed</td>
+<td class='value'>1.3%</td>
+<td><a href='diffs/data/default_config.ini-diff.html' target='_blank'>diff</a></td>
+<td></td>
+</tr>
+</table>
+<a name='JSONFiles'></a>
+<h2>JSON Files (2)</h2><hr/>
+<table class='summary'>
+<tr><th title='sort' onclick='javascript:sort(this, 1)' style='cursor:pointer'>Name</th><th title='sort' onclick='javascript:sort(this, 1)' style='cursor:pointer'>Status</th><th title='sort' onclick='javascript:sort(this, 1)' style='cursor:pointer'>Delta</th><th>Visual<br/>Diff</th><th>Detailed<br/>Report</th></tr>
+<tr>
+<td class='left f_path'>plugins/Exoplanets/resources/exoplanets.json</td>
+<td class='warning'>changed</td>
+<td class='value'>6.3%</td>
+<td><a href='diffs/plugins/Exoplanets/resources/exoplanets.json-diff.html' target='_blank'>diff</a></td>
+<td></td>
+</tr>
+<tr>
+<td class='left f_path'>plugins/Pulsars/resources/pulsars.json</td>
+<td class='warning'>changed</td>
+<td class='value'>2.1%</td>
+<td><a href='diffs/plugins/Pulsars/resources/pulsars.json-diff.html' target='_blank'>diff</a></td>
+<td></td>
+</tr>
+</table>
+<a name='XMLDocuments'></a>
+<h2>XML Documents (1)</h2><hr/>
+<table class='summary'>
+<tr><th title='sort' onclick='javascript:sort(this, 1)' style='cursor:pointer'>Name</th><th title='sort' onclick='javascript:sort(this, 1)' style='cursor:pointer'>Status</th><th title='sort' onclick='javascript:sort(this, 1)' style='cursor:pointer'>Delta</th><th>Visual<br/>Diff</th><th>Detailed<br/>Report</th></tr>
+<tr>
+<td class='left f_path'>data/stellarium.appdata.xml</td>
+<td class='warning'>changed</td>
+<td class='value'>5.9%</td>
+<td><a href='diffs/data/stellarium.appdata.xml-diff.html' target='_blank'>diff</a></td>
+<td></td>
+</tr>
+</table>
+<a name='GettextFiles'></a>
+<h2>Gettext Files (2)</h2><hr/>
+<table class='summary'>
+<tr><th title='sort' onclick='javascript:sort(this, 1)' style='cursor:pointer'>Name</th><th title='sort' onclick='javascript:sort(this, 1)' style='cursor:pointer'>Status</th><th title='sort' onclick='javascript:sort(this, 1)' style='cursor:pointer'>Delta</th><th>Visual<br/>Diff</th><th>Detailed<br/>Report</th></tr>
+<tr>
+<td class='left f_path'>po/stellarium-metainfo/stellarium-metainfo.pot</td>
+<td class='warning'>changed</td>
+<td class='value'>0.1%</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class='left f_path'>po/stellarium/stellarium.pot</td>
+<td class='warning'>changed</td>
+<td class='value'>0.2%</td>
+<td></td>
+<td></td>
+</tr>
+</table>
+<a name='QtUIFiles'></a>
+<h2>Qt UI Files (3)</h2><hr/>
+<table class='summary'>
+<tr><th title='sort' onclick='javascript:sort(this, 1)' style='cursor:pointer'>Name</th><th title='sort' onclick='javascript:sort(this, 1)' style='cursor:pointer'>Status</th><th title='sort' onclick='javascript:sort(this, 1)' style='cursor:pointer'>Delta</th><th>Visual<br/>Diff</th><th>Detailed<br/>Report</th></tr>
+<tr>
+<td class='left f_path'>plugins/AngleMeasure/src/gui/angleMeasureDialog.ui</td>
+<td class='warning'>changed</td>
+<td class='value'>16.8%</td>
+<td><a href='diffs/plugins/AngleMeasure/src/gui/angleMeasureDialog.ui-diff.html' target='_blank'>diff</a></td>
+<td></td>
+</tr>
+<tr>
+<td class='left f_path'>src/gui/configurationDialog.ui</td>
+<td class='warning'>changed</td>
+<td class='value'>0.5%</td>
+<td><a href='diffs/src/gui/configurationDialog.ui-diff.html' target='_blank'>diff</a></td>
+<td></td>
+</tr>
+<tr>
+<td class='left f_path'>src/gui/viewDialog.ui</td>
+<td class='warning'>changed</td>
+<td class='value'>8.5%</td>
+<td><a href='diffs/src/gui/viewDialog.ui-diff.html' target='_blank'>diff</a></td>
+<td></td>
+</tr>
+</table>
+<a name='YAMLFiles'></a>
+<h2>YAML Files (1)</h2><hr/>
+<table class='summary'>
+<tr><th title='sort' onclick='javascript:sort(this, 1)' style='cursor:pointer'>Name</th><th title='sort' onclick='javascript:sort(this, 1)' style='cursor:pointer'>Status</th><th title='sort' onclick='javascript:sort(this, 1)' style='cursor:pointer'>Delta</th><th>Visual<br/>Diff</th><th>Detailed<br/>Report</th></tr>
+<tr>
+<td class='left f_path failed'>.travis.yml</td>
+<td class='failed'>removed</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+</table>
+<a name='Archives'></a>
+<h2>Archives (2)</h2><hr/>
+<table class='summary'>
+<tr><th title='sort' onclick='javascript:sort(this, 1)' style='cursor:pointer'>Name</th><th title='sort' onclick='javascript:sort(this, 1)' style='cursor:pointer'>Status</th><th title='sort' onclick='javascript:sort(this, 1)' style='cursor:pointer'>Delta</th><th>Visual<br/>Diff</th><th>Detailed<br/>Report</th></tr>
+<tr>
+<td class='left f_path failed'>scenery3d/Sterngarten/Sterngarten_Wien_innerArea-optimized.obj.gz</td>
+<td class='failed'>removed</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class='left f_path failed'>scenery3d/Testscene/Stellarium-Testscene_withGrid_Bump-separateSpheres.obj.gz</td>
+<td class='failed'>removed</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+</table>
+<a name='Packages'></a>
+<h2>Packages (2)</h2><hr/>
+<div class='p_list'>
+stellarium-0.14.1.tar.gz<br/>
+stellarium-head.tar.gz<br/>
+</div>
+<br/><a style='font-size:11px;' href='#Top'>to the top</a><br/>
+</div>
+<br/><br/><br/><hr/>
+<div style='width:100%;font-size:11px;' align='right'><i>Generated on Wed Dec  2 02:09:05 2015 by <a href='http://lvc.github.com/pkgdiff/' target='_blank'>Package Changes Analyzer</a> - PkgDiff 1.6.4 &#160;<br/>A tool for analyzing changes in Linux software packages&#160;&#160;</i></div>
+<div style='height:999px;'></div>
+</body></html>
