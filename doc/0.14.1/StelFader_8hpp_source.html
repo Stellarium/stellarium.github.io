@@ -27,6 +27,7 @@
   <div id="navrow1" class="tabs">
     <ul class="tablist">
       <li><a href="index.html"><span>Main&#160;Page</span></a></li>
+      <li><a href="namespaces.html"><span>Namespaces</span></a></li>
       <li><a href="annotated.html"><span>Classes</span></a></li>
       <li><a href="codingStyle.html"><span>Coding&#160;Style</span></a></li>
       <li><a href="scripting.html"><span>Scripting</span></a></li>
@@ -37,6 +38,7 @@
   <div id="navrow2" class="tabs2">
     <ul class="tablist">
       <li><a href="files.html"><span>File&#160;List</span></a></li>
+      <li><a href="globals.html"><span>File&#160;Members</span></a></li>
     </ul>
   </div>
 <div id="nav-path" class="navpath">
@@ -73,19 +75,19 @@
 <div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;</div>
 <div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;<span class="preprocessor">#include &lt;QtGlobal&gt;</span></div>
 <div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;</div>
-<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;<span class="keyword">class </span><a class="codeRef" doxygen="/home/aw/devel/stellarium/0.14/builds/pkg/stellarium.tag:../../doc/0.14.1/" href="../../doc/0.14.1/classStelFader.html">StelFader</a></div>
+<div class="line"><a name="l00028"></a><span class="lineno"><a class="line" href="classStelFader.html">   28</a></span>&#160;<span class="keyword">class </span><a class="code" href="classStelFader.html">StelFader</a></div>
 <div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;{</div>
 <div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;<span class="keyword">public</span>:</div>
 <div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;    <span class="comment">// Create and initialise</span></div>
-<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;    <a class="codeRef" doxygen="/home/aw/devel/stellarium/0.14/builds/pkg/stellarium.tag:../../doc/0.14.1/" href="../../doc/0.14.1/classStelFader.html">StelFader</a>(<span class="keywordtype">bool</span> initialState, <span class="keywordtype">float</span> minimumValue=0.f, <span class="keywordtype">float</span> maximumValue=1.f) : state(initialState), minValue(minimumValue), maxValue(maximumValue) {;}</div>
-<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;    <span class="keyword">virtual</span> ~<a class="codeRef" doxygen="/home/aw/devel/stellarium/0.14/builds/pkg/stellarium.tag:../../doc/0.14.1/" href="../../doc/0.14.1/classStelFader.html">StelFader</a>() {;}</div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;    <a class="code" href="classStelFader.html">StelFader</a>(<span class="keywordtype">bool</span> initialState, <span class="keywordtype">float</span> minimumValue=0.f, <span class="keywordtype">float</span> maximumValue=1.f) : state(initialState), minValue(minimumValue), maxValue(maximumValue) {;}</div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;    <span class="keyword">virtual</span> ~<a class="code" href="classStelFader.html">StelFader</a>() {;}</div>
 <div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;    <span class="comment">// Increments the internal counter of deltaTime ticks</span></div>
 <div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;    <span class="keyword">virtual</span> <span class="keywordtype">void</span> update(<span class="keywordtype">int</span> deltaTicks) = 0;</div>
 <div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;    <span class="comment">// Gets current switch state</span></div>
 <div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;    <span class="keyword">virtual</span> <span class="keywordtype">float</span> getInterstate() <span class="keyword">const</span> = 0;</div>
 <div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;    <span class="keyword">virtual</span> <span class="keywordtype">float</span> getInterstatePercentage() <span class="keyword">const</span> = 0;</div>
 <div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;    <span class="comment">// Switchors can be used just as bools</span></div>
-<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;    <span class="keyword">virtual</span> <a class="codeRef" doxygen="/home/aw/devel/stellarium/0.14/builds/pkg/stellarium.tag:../../doc/0.14.1/" href="../../doc/0.14.1/classStelFader.html">StelFader</a>&amp; operator=(<span class="keywordtype">bool</span> s) = 0;</div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;    <span class="keyword">virtual</span> <a class="code" href="classStelFader.html">StelFader</a>&amp; operator=(<span class="keywordtype">bool</span> s) = 0;</div>
 <div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;    <span class="keywordtype">bool</span> operator==(<span class="keywordtype">bool</span> s)<span class="keyword"> const </span>{<span class="keywordflow">return</span> state==s;}</div>
 <div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;    <span class="keyword">operator</span> bool()<span class="keyword"> const </span>{<span class="keywordflow">return</span> state;}</div>
 <div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;    <span class="keyword">virtual</span> <span class="keywordtype">void</span> setDuration(<span class="keywordtype">int</span>) {;}</div>
@@ -99,29 +101,29 @@
 <div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;    <span class="keywordtype">float</span> minValue, maxValue;</div>
 <div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;};</div>
 <div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;</div>
-<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;<span class="keyword">class </span><a class="codeRef" doxygen="/home/aw/devel/stellarium/0.14/builds/pkg/stellarium.tag:../../doc/0.14.1/" href="../../doc/0.14.1/classBooleanFader.html">BooleanFader</a> : <span class="keyword">public</span> <a class="codeRef" doxygen="/home/aw/devel/stellarium/0.14/builds/pkg/stellarium.tag:../../doc/0.14.1/" href="../../doc/0.14.1/classStelFader.html">StelFader</a></div>
+<div class="line"><a name="l00056"></a><span class="lineno"><a class="line" href="classBooleanFader.html">   56</a></span>&#160;<span class="keyword">class </span><a class="code" href="classBooleanFader.html">BooleanFader</a> : <span class="keyword">public</span> <a class="code" href="classStelFader.html">StelFader</a></div>
 <div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;{</div>
 <div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;<span class="keyword">public</span>:</div>
 <div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;    <span class="comment">// Create and initialise</span></div>
-<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;    <a class="codeRef" doxygen="/home/aw/devel/stellarium/0.14/builds/pkg/stellarium.tag:../../doc/0.14.1/" href="../../doc/0.14.1/classBooleanFader.html">BooleanFader</a>(<span class="keywordtype">bool</span> initialState=<span class="keyword">false</span>, <span class="keywordtype">float</span> minimumValue=0.f, <span class="keywordtype">float</span> maximumValue=1.f) : <a class="codeRef" doxygen="/home/aw/devel/stellarium/0.14/builds/pkg/stellarium.tag:../../doc/0.14.1/" href="../../doc/0.14.1/classStelFader.html">StelFader</a>(initialState, minimumValue, maximumValue) {;}</div>
-<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;    ~<a class="codeRef" doxygen="/home/aw/devel/stellarium/0.14/builds/pkg/stellarium.tag:../../doc/0.14.1/" href="../../doc/0.14.1/classBooleanFader.html">BooleanFader</a>() {;}</div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;    <a class="code" href="classBooleanFader.html">BooleanFader</a>(<span class="keywordtype">bool</span> initialState=<span class="keyword">false</span>, <span class="keywordtype">float</span> minimumValue=0.f, <span class="keywordtype">float</span> maximumValue=1.f) : <a class="code" href="classStelFader.html">StelFader</a>(initialState, minimumValue, maximumValue) {;}</div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;    ~<a class="code" href="classBooleanFader.html">BooleanFader</a>() {;}</div>
 <div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;    <span class="comment">// Increments the internal counter of deltaTime ticks</span></div>
 <div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;    <span class="keywordtype">void</span> update(<span class="keywordtype">int</span> deltaTicks) {Q_UNUSED(deltaTicks);}</div>
 <div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;    <span class="comment">// Gets current switch state</span></div>
 <div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;    <span class="keywordtype">float</span> getInterstate()<span class="keyword"> const </span>{<span class="keywordflow">return</span> state ? maxValue : minValue;}</div>
 <div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;    <span class="keywordtype">float</span> getInterstatePercentage()<span class="keyword"> const </span>{<span class="keywordflow">return</span> state ? 100.f : 0.f;}</div>
 <div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;    <span class="comment">// Switchors can be used just as bools</span></div>
-<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;    <a class="codeRef" doxygen="/home/aw/devel/stellarium/0.14/builds/pkg/stellarium.tag:../../doc/0.14.1/" href="../../doc/0.14.1/classStelFader.html">StelFader</a>&amp; operator=(<span class="keywordtype">bool</span> s) {state=s; <span class="keywordflow">return</span> *<span class="keyword">this</span>;}</div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;    <a class="code" href="classStelFader.html">StelFader</a>&amp; operator=(<span class="keywordtype">bool</span> s) {state=s; <span class="keywordflow">return</span> *<span class="keyword">this</span>;}</div>
 <div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;    <span class="keyword">virtual</span> <span class="keywordtype">float</span> getDuration() {<span class="keywordflow">return</span> 0.f;}</div>
 <div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;<span class="keyword">protected</span>:</div>
 <div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;};</div>
 <div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;</div>
-<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;<span class="keyword">class </span><a class="codeRef" doxygen="/home/aw/devel/stellarium/0.14/builds/pkg/stellarium.tag:../../doc/0.14.1/" href="../../doc/0.14.1/classLinearFader.html">LinearFader</a> : <span class="keyword">public</span> <a class="codeRef" doxygen="/home/aw/devel/stellarium/0.14/builds/pkg/stellarium.tag:../../doc/0.14.1/" href="../../doc/0.14.1/classStelFader.html">StelFader</a></div>
+<div class="line"><a name="l00077"></a><span class="lineno"><a class="line" href="classLinearFader.html">   77</a></span>&#160;<span class="keyword">class </span><a class="code" href="classLinearFader.html">LinearFader</a> : <span class="keyword">public</span> <a class="code" href="classStelFader.html">StelFader</a></div>
 <div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;{</div>
 <div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;<span class="keyword">public</span>:</div>
 <div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;    <span class="comment">// Create and initialise to default</span></div>
-<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;    <a class="codeRef" doxygen="/home/aw/devel/stellarium/0.14/builds/pkg/stellarium.tag:../../doc/0.14.1/" href="../../doc/0.14.1/classLinearFader.html">LinearFader</a>(<span class="keywordtype">int</span> _duration=1000, <span class="keywordtype">float</span> minimumValue=0.f, <span class="keywordtype">float</span> maximumValue=1.f, <span class="keywordtype">bool</span> initialState=<span class="keyword">false</span>)</div>
-<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;        : <a class="codeRef" doxygen="/home/aw/devel/stellarium/0.14/builds/pkg/stellarium.tag:../../doc/0.14.1/" href="../../doc/0.14.1/classStelFader.html">StelFader</a>(initialState, minimumValue, maximumValue)</div>
+<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;    <a class="code" href="classLinearFader.html">LinearFader</a>(<span class="keywordtype">int</span> _duration=1000, <span class="keywordtype">float</span> minimumValue=0.f, <span class="keywordtype">float</span> maximumValue=1.f, <span class="keywordtype">bool</span> initialState=<span class="keyword">false</span>)</div>
+<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;        : <a class="code" href="classStelFader.html">StelFader</a>(initialState, minimumValue, maximumValue)</div>
 <div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;        , startValue(0.)</div>
 <div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;        , targetValue(0.)</div>
 <div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;        , counter(0)</div>
@@ -131,7 +133,7 @@
 <div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;        interstate = state ? maxValue : minValue;</div>
 <div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;    }</div>
 <div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;</div>
-<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;    ~<a class="codeRef" doxygen="/home/aw/devel/stellarium/0.14/builds/pkg/stellarium.tag:../../doc/0.14.1/" href="../../doc/0.14.1/classLinearFader.html">LinearFader</a>() {;}</div>
+<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;    ~<a class="code" href="classLinearFader.html">LinearFader</a>() {;}</div>
 <div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;</div>
 <div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;    <span class="comment">// Increments the internal counter of deltaTime ticks</span></div>
 <div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;    <span class="keywordtype">void</span> update(<span class="keywordtype">int</span> deltaTicks)</div>
@@ -156,7 +158,7 @@
 <div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160;    <span class="keywordtype">float</span> getInterstatePercentage()<span class="keyword"> const </span>{<span class="keywordflow">return</span> 100.f * (interstate-minValue)/(maxValue-minValue);}</div>
 <div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160;</div>
 <div class="line"><a name="l00116"></a><span class="lineno">  116</span>&#160;    <span class="comment">// StelFaders can be used just as bools</span></div>
-<div class="line"><a name="l00117"></a><span class="lineno">  117</span>&#160;    <a class="codeRef" doxygen="/home/aw/devel/stellarium/0.14/builds/pkg/stellarium.tag:../../doc/0.14.1/" href="../../doc/0.14.1/classStelFader.html">StelFader</a>&amp; operator=(<span class="keywordtype">bool</span> s)</div>
+<div class="line"><a name="l00117"></a><span class="lineno">  117</span>&#160;    <a class="code" href="classStelFader.html">StelFader</a>&amp; operator=(<span class="keywordtype">bool</span> s)</div>
 <div class="line"><a name="l00118"></a><span class="lineno">  118</span>&#160;    {</div>
 <div class="line"><a name="l00119"></a><span class="lineno">  119</span>&#160;</div>
 <div class="line"><a name="l00120"></a><span class="lineno">  120</span>&#160;        <span class="keywordflow">if</span>(isTransiting) {</div>
@@ -202,19 +204,19 @@
 <div class="line"><a name="l00160"></a><span class="lineno">  160</span>&#160;</div>
 <div class="line"><a name="l00161"></a><span class="lineno">  161</span>&#160;<span class="comment">// Please note that state is updated instantaneously, so if you need to draw something fading in</span></div>
 <div class="line"><a name="l00162"></a><span class="lineno">  162</span>&#160;<span class="comment">// and out, you need to check the interstate value (!=0) to know to draw when on AND during transitions</span></div>
-<div class="line"><a name="l00163"></a><span class="lineno">  163</span>&#160;<span class="keyword">class </span><a class="codeRef" doxygen="/home/aw/devel/stellarium/0.14/builds/pkg/stellarium.tag:../../doc/0.14.1/" href="../../doc/0.14.1/classParabolicFader.html">ParabolicFader</a> : <span class="keyword">public</span> <a class="codeRef" doxygen="/home/aw/devel/stellarium/0.14/builds/pkg/stellarium.tag:../../doc/0.14.1/" href="../../doc/0.14.1/classStelFader.html">StelFader</a></div>
+<div class="line"><a name="l00163"></a><span class="lineno"><a class="line" href="classParabolicFader.html">  163</a></span>&#160;<span class="keyword">class </span><a class="code" href="classParabolicFader.html">ParabolicFader</a> : <span class="keyword">public</span> <a class="code" href="classStelFader.html">StelFader</a></div>
 <div class="line"><a name="l00164"></a><span class="lineno">  164</span>&#160;{</div>
 <div class="line"><a name="l00165"></a><span class="lineno">  165</span>&#160;<span class="keyword">public</span>:</div>
 <div class="line"><a name="l00166"></a><span class="lineno">  166</span>&#160;    <span class="comment">// Create and initialise to default</span></div>
-<div class="line"><a name="l00167"></a><span class="lineno">  167</span>&#160;    <a class="codeRef" doxygen="/home/aw/devel/stellarium/0.14/builds/pkg/stellarium.tag:../../doc/0.14.1/" href="../../doc/0.14.1/classParabolicFader.html">ParabolicFader</a>(<span class="keywordtype">int</span> _duration=1000, <span class="keywordtype">float</span> minimumValue=0.f, <span class="keywordtype">float</span> maximumValue=1.f, <span class="keywordtype">bool</span> initialState=<span class="keyword">false</span>)</div>
-<div class="line"><a name="l00168"></a><span class="lineno">  168</span>&#160;        : <a class="codeRef" doxygen="/home/aw/devel/stellarium/0.14/builds/pkg/stellarium.tag:../../doc/0.14.1/" href="../../doc/0.14.1/classStelFader.html">StelFader</a>(initialState, minimumValue, maximumValue)</div>
+<div class="line"><a name="l00167"></a><span class="lineno">  167</span>&#160;    <a class="code" href="classParabolicFader.html">ParabolicFader</a>(<span class="keywordtype">int</span> _duration=1000, <span class="keywordtype">float</span> minimumValue=0.f, <span class="keywordtype">float</span> maximumValue=1.f, <span class="keywordtype">bool</span> initialState=<span class="keyword">false</span>)</div>
+<div class="line"><a name="l00168"></a><span class="lineno">  168</span>&#160;        : <a class="code" href="classStelFader.html">StelFader</a>(initialState, minimumValue, maximumValue)</div>
 <div class="line"><a name="l00169"></a><span class="lineno">  169</span>&#160;    {</div>
 <div class="line"><a name="l00170"></a><span class="lineno">  170</span>&#160;        isTransiting = <span class="keyword">false</span>;</div>
 <div class="line"><a name="l00171"></a><span class="lineno">  171</span>&#160;        duration = _duration;</div>
 <div class="line"><a name="l00172"></a><span class="lineno">  172</span>&#160;        interstate = state ? maxValue : minValue;</div>
 <div class="line"><a name="l00173"></a><span class="lineno">  173</span>&#160;    }</div>
 <div class="line"><a name="l00174"></a><span class="lineno">  174</span>&#160;</div>
-<div class="line"><a name="l00175"></a><span class="lineno">  175</span>&#160;    ~<a class="codeRef" doxygen="/home/aw/devel/stellarium/0.14/builds/pkg/stellarium.tag:../../doc/0.14.1/" href="../../doc/0.14.1/classParabolicFader.html">ParabolicFader</a>() {;}</div>
+<div class="line"><a name="l00175"></a><span class="lineno">  175</span>&#160;    ~<a class="code" href="classParabolicFader.html">ParabolicFader</a>() {;}</div>
 <div class="line"><a name="l00176"></a><span class="lineno">  176</span>&#160;</div>
 <div class="line"><a name="l00177"></a><span class="lineno">  177</span>&#160;    <span class="comment">// Increments the internal counter of deltaTime ticks</span></div>
 <div class="line"><a name="l00178"></a><span class="lineno">  178</span>&#160;    <span class="keywordtype">void</span> update(<span class="keywordtype">int</span> deltaTicks)</div>
@@ -242,7 +244,7 @@
 <div class="line"><a name="l00200"></a><span class="lineno">  200</span>&#160;    <span class="keywordtype">float</span> getInterstatePercentage(<span class="keywordtype">void</span>)<span class="keyword"> const </span>{<span class="keywordflow">return</span> 100.f * (interstate-minValue)/(maxValue-minValue);}</div>
 <div class="line"><a name="l00201"></a><span class="lineno">  201</span>&#160;</div>
 <div class="line"><a name="l00202"></a><span class="lineno">  202</span>&#160;    <span class="comment">// StelFaders can be used just as bools</span></div>
-<div class="line"><a name="l00203"></a><span class="lineno">  203</span>&#160;    <a class="codeRef" doxygen="/home/aw/devel/stellarium/0.14/builds/pkg/stellarium.tag:../../doc/0.14.1/" href="../../doc/0.14.1/classStelFader.html">StelFader</a>&amp; operator=(<span class="keywordtype">bool</span> s)</div>
+<div class="line"><a name="l00203"></a><span class="lineno">  203</span>&#160;    <a class="code" href="classStelFader.html">StelFader</a>&amp; operator=(<span class="keywordtype">bool</span> s)</div>
 <div class="line"><a name="l00204"></a><span class="lineno">  204</span>&#160;    {</div>
 <div class="line"><a name="l00205"></a><span class="lineno">  205</span>&#160;</div>
 <div class="line"><a name="l00206"></a><span class="lineno">  206</span>&#160;        <span class="keywordflow">if</span>(isTransiting) {</div>
@@ -281,14 +283,14 @@
 <div class="line"><a name="l00239"></a><span class="lineno">  239</span>&#160;};</div>
 <div class="line"><a name="l00240"></a><span class="lineno">  240</span>&#160;</div>
 <div class="line"><a name="l00241"></a><span class="lineno">  241</span>&#160;<span class="preprocessor">#endif // _STELFADER_HPP_</span></div>
-<div class="ttc" id="classLinearFader_html"><div class="ttname"><a href="../../doc/0.14.1/classLinearFader.html">LinearFader</a></div><div class="ttdoc">Implementation of StelFader which implements a linear transition. </div><div class="ttdef"><b>Definition:</b> <a href="StelFader_8hpp_source.html#l00077">StelFader.hpp:77</a></div></div>
-<div class="ttc" id="classBooleanFader_html"><div class="ttname"><a href="../../doc/0.14.1/classBooleanFader.html">BooleanFader</a></div><div class="ttdoc">Implementation of StelFader which behaves like a normal boolean, i.e. </div><div class="ttdef"><b>Definition:</b> <a href="StelFader_8hpp_source.html#l00056">StelFader.hpp:56</a></div></div>
-<div class="ttc" id="classStelFader_html"><div class="ttname"><a href="../../doc/0.14.1/classStelFader.html">StelFader</a></div><div class="ttdoc">Manages a (usually smooth) transition between two states (typically ON/OFF) in function of a counter ...</div><div class="ttdef"><b>Definition:</b> <a href="StelFader_8hpp_source.html#l00028">StelFader.hpp:28</a></div></div>
-<div class="ttc" id="classParabolicFader_html"><div class="ttname"><a href="../../doc/0.14.1/classParabolicFader.html">ParabolicFader</a></div><div class="ttdef"><b>Definition:</b> <a href="StelFader_8hpp_source.html#l00163">StelFader.hpp:163</a></div></div>
+<div class="ttc" id="classLinearFader_html"><div class="ttname"><a href="classLinearFader.html">LinearFader</a></div><div class="ttdoc">Implementation of StelFader which implements a linear transition. </div><div class="ttdef"><b>Definition:</b> <a href="StelFader_8hpp_source.html#l00077">StelFader.hpp:77</a></div></div>
+<div class="ttc" id="classBooleanFader_html"><div class="ttname"><a href="classBooleanFader.html">BooleanFader</a></div><div class="ttdoc">Implementation of StelFader which behaves like a normal boolean, i.e. </div><div class="ttdef"><b>Definition:</b> <a href="StelFader_8hpp_source.html#l00056">StelFader.hpp:56</a></div></div>
+<div class="ttc" id="classStelFader_html"><div class="ttname"><a href="classStelFader.html">StelFader</a></div><div class="ttdoc">Manages a (usually smooth) transition between two states (typically ON/OFF) in function of a counter ...</div><div class="ttdef"><b>Definition:</b> <a href="StelFader_8hpp_source.html#l00028">StelFader.hpp:28</a></div></div>
+<div class="ttc" id="classParabolicFader_html"><div class="ttname"><a href="classParabolicFader.html">ParabolicFader</a></div><div class="ttdef"><b>Definition:</b> <a href="StelFader_8hpp_source.html#l00163">StelFader.hpp:163</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Wed Dec 2 2015 02:21:56 for Stellarium by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Wed Dec 2 2015 21:30:35 for Stellarium by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.8
 </small></address>
