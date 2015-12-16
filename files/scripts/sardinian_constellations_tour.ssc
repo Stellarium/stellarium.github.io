@@ -1,0 +1,68 @@
+//
+// Name: Sardinian Constellations Tour
+// License: Public Domain
+// Author: Giuseppe Putzolu
+// Shortcut: Ctrl+U,1
+// Description: A tour via western constellations with their name in the ancient sardinian culture.
+
+include("common_objects.inc");
+
+var constellations = new Array("Ursa Major","Cygnus","Taurus","Corona Borealis","Draco","Orion","Canis Major","Canis Minor","Perseus","Leo");
+var sardinian_names = new Array("Sos Sette Frades","Sa Rughe de Santu Antinu","Su Trubadore de s'Udrone","Sa Mandra 'e Crabile","Su Trubadore de sos Sette Frades","Sos Bacheddos et sas Tres Marias","Su Trubadore de sos Bacheddos","Su Gajone","Su Corru 'e Cherbu","Sa Frache");
+
+y = core.getScreenHeight()/768;
+x = core.getScreenWidth()/1024;
+
+core.clear("starchart");
+GridLinesMgr.setFlagEquatorGrid(false);
+ConstellationMgr.setFlagArt(false);
+ConstellationMgr.setFlagBoundaries(false);
+ConstellationMgr.setFlagLines(false);
+ConstellationMgr.setFlagLabels(false);
+LandscapeMgr.setFlagLandscape(false);
+
+core.wait(3);
+ConstellationMgr.setFlagBoundaries(true);
+ConstellationMgr.setFlagLines(true);
+ConstellationMgr.setFlagLabels(true);
+ConstellationMgr.setFlagIsolateSelected(true);
+
+for (i=0; i<constellations.length; i++)
+{
+	objName = constellations[i];
+	txt1 = LabelMgr.labelScreen(sardinian_names[i], 280 * x, 20 * y, false, 20 * x, "#FFFFFF");
+	LabelMgr.setLabelShow(txt1, true);
+	core.selectObjectByName(objName, true);
+	StelMovementMgr.autoZoomIn();
+	core.wait(3);
+	StelMovementMgr.autoZoomOut();
+	core.wait(3);
+	ConstellationMgr.setFlagArt(true);
+	core.wait(10);
+	ConstellationMgr.setFlagArt(false);
+	LabelMgr.setLabelShow(txt1, false);
+}
+
+
+
+var objects = new Array("M45");
+var sardinian_names = new Array("S'Udrone");
+
+for (i=0; i<objects.length; i++)
+{
+
+	mName = objects[i];
+	var mInfo = core.getObjectPosition(mName);
+
+	core.moveToRaDec(mInfo['ra'], mInfo['dec'], 3);
+	core.wait(3);
+        txt1 = LabelMgr.labelScreen(sardinian_names[i], 280 * x, 20 * y, false, 20 * x, "#FFFFFF");
+        LabelMgr.setLabelShow(txt1, true);
+	StelMovementMgr.zoomTo(2.30, 3);
+	core.wait(5);
+	StelMovementMgr.zoomTo(20.0, 3);
+	ConstellationMgr.setFlagArt(true);
+	core.wait(10);
+        ConstellationMgr.setFlagArt(false);
+	LabelMgr.setLabelShow(txt1, false);
+}
