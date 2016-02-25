@@ -65,20 +65,20 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a73731511a1eee2208bedc847407aea74"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a73731511a1eee2208bedc847407aea74"></a>
 virtual QString&#160;</td><td class="memItemRight" valign="bottom"><b>getType</b> (void) const </td></tr>
 <tr class="separator:a73731511a1eee2208bedc847407aea74"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a2301fbeac311588e9a9e447504fb7a47"><td class="memItemLeft" align="right" valign="top">virtual QString&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSupernova.html#a2301fbeac311588e9a9e447504fb7a47">getInfoString</a> (const <a class="elRef" doxygen="/home/aw/devel/stellarium/trunk/builds/gcc/stellarium.tag:../../doc/head/" href="../../doc/head/classStelCore.html">StelCore</a> *core, const InfoStringGroup &amp;flags) const </td></tr>
+<tr class="memitem:a2301fbeac311588e9a9e447504fb7a47"><td class="memItemLeft" align="right" valign="top">virtual QString&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSupernova.html#a2301fbeac311588e9a9e447504fb7a47">getInfoString</a> (const StelCore *core, const InfoStringGroup &amp;flags) const </td></tr>
 <tr class="memdesc:a2301fbeac311588e9a9e447504fb7a47"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get an HTML string to describe the object.  <a href="#a2301fbeac311588e9a9e447504fb7a47">More...</a><br /></td></tr>
 <tr class="separator:a2301fbeac311588e9a9e447504fb7a47"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aae8d74af8c72f309612b5abede4a0dab"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aae8d74af8c72f309612b5abede4a0dab"></a>
 virtual Vec3f&#160;</td><td class="memItemRight" valign="bottom"><b>getInfoColor</b> (void) const </td></tr>
 <tr class="separator:aae8d74af8c72f309612b5abede4a0dab"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:afb49f39717688f79ac60540eb0e9d0d3"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="afb49f39717688f79ac60540eb0e9d0d3"></a>
-virtual Vec3d&#160;</td><td class="memItemRight" valign="bottom"><b>getJ2000EquatorialPos</b> (const <a class="elRef" doxygen="/home/aw/devel/stellarium/trunk/builds/gcc/stellarium.tag:../../doc/head/" href="../../doc/head/classStelCore.html">StelCore</a> *) const </td></tr>
+virtual Vec3d&#160;</td><td class="memItemRight" valign="bottom"><b>getJ2000EquatorialPos</b> (const StelCore *) const </td></tr>
 <tr class="separator:afb49f39717688f79ac60540eb0e9d0d3"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af877175a2d64d0d9a26949be131ac9d7"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="af877175a2d64d0d9a26949be131ac9d7"></a>
-virtual float&#160;</td><td class="memItemRight" valign="bottom"><b>getVMagnitude</b> (const <a class="elRef" doxygen="/home/aw/devel/stellarium/trunk/builds/gcc/stellarium.tag:../../doc/head/" href="../../doc/head/classStelCore.html">StelCore</a> *core) const </td></tr>
+virtual float&#160;</td><td class="memItemRight" valign="bottom"><b>getVMagnitude</b> (const StelCore *core) const </td></tr>
 <tr class="separator:af877175a2d64d0d9a26949be131ac9d7"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a400e447e4111321223a8ad439bb8664b"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a400e447e4111321223a8ad439bb8664b"></a>
-virtual double&#160;</td><td class="memItemRight" valign="bottom"><b>getAngularSize</b> (const <a class="elRef" doxygen="/home/aw/devel/stellarium/trunk/builds/gcc/stellarium.tag:../../doc/head/" href="../../doc/head/classStelCore.html">StelCore</a> *core) const </td></tr>
+virtual double&#160;</td><td class="memItemRight" valign="bottom"><b>getAngularSize</b> (const StelCore *core) const </td></tr>
 <tr class="separator:a400e447e4111321223a8ad439bb8664b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a79ef63017b6d9451d0458a4724cfca98"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a79ef63017b6d9451d0458a4724cfca98"></a>
 virtual QString&#160;</td><td class="memItemRight" valign="bottom"><b>getNameI18n</b> (void) const </td></tr>
@@ -129,7 +129,7 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>update</b> (double de
         <tr>
           <td class="memname">virtual QString Supernova::getInfoString </td>
           <td>(</td>
-          <td class="paramtype">const <a class="elRef" doxygen="/home/aw/devel/stellarium/trunk/builds/gcc/stellarium.tag:../../doc/head/" href="../../doc/head/classStelCore.html">StelCore</a> *&#160;</td>
+          <td class="paramtype">const StelCore *&#160;</td>
           <td class="paramname"><em>core</em>, </td>
         </tr>
         <tr>
@@ -159,8 +159,6 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>update</b> (double de
   </dd>
 </dl>
 
-<p>Implements <a class="elRef" doxygen="/home/aw/devel/stellarium/trunk/builds/gcc/stellarium.tag:../../doc/head/" href="../../doc/head/classStelObject.html#aba01f4a7783fb557cb28bd8d1319a6b8">StelObject</a>.</p>
-
 </div>
 </div>
 <a class="anchor" id="acb8f4b65e95b6551d2e9e37753949e87"></a>
@@ -188,7 +186,7 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>update</b> (double de
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Thu Feb 25 2016 10:05:09 for Stellarium by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Thu Feb 25 2016 10:23:32 for Stellarium by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.8
 </small></address>
