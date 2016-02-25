@@ -27,6 +27,7 @@
   <div id="navrow1" class="tabs">
     <ul class="tablist">
       <li><a href="index.html"><span>Main&#160;Page</span></a></li>
+      <li><a href="namespaces.html"><span>Namespaces</span></a></li>
       <li><a href="annotated.html"><span>Classes</span></a></li>
       <li><a href="codingStyle.html"><span>Coding&#160;Style</span></a></li>
       <li><a href="scripting.html"><span>Scripting</span></a></li>
@@ -38,6 +39,7 @@
   <div id="navrow2" class="tabs2">
     <ul class="tablist">
       <li><a href="files.html"><span>File&#160;List</span></a></li>
+      <li><a href="globals.html"><span>File&#160;Members</span></a></li>
     </ul>
   </div>
 <div id="nav-path" class="navpath">
@@ -78,22 +80,22 @@
 <div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;<span class="keyword">class </span>QNetworkReply;</div>
 <div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;<span class="keyword">class </span>QNetworkAccessManager;</div>
 <div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;</div>
-<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;<span class="keyword">class </span><a class="codeRef" doxygen="/home/aw/devel/stellarium/trunk/builds/gcc/stellarium.tag:../../doc/head/" href="../../doc/head/classSimbadLookupReply.html">SimbadLookupReply</a> : <span class="keyword">public</span> QObject</div>
+<div class="line"><a name="l00032"></a><span class="lineno"><a class="line" href="classSimbadLookupReply.html">   32</a></span>&#160;<span class="keyword">class </span><a class="code" href="classSimbadLookupReply.html">SimbadLookupReply</a> : <span class="keyword">public</span> QObject</div>
 <div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;{</div>
 <div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;    Q_OBJECT</div>
 <div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;    Q_ENUMS(SimbadLookupStatus)</div>
 <div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;</div>
-<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;public:</div>
-<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;    friend class <a class="codeRef" doxygen="/home/aw/devel/stellarium/trunk/builds/gcc/stellarium.tag:../../doc/head/" href="../../doc/head/classSimbadSearcher.html">SimbadSearcher</a>;</div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;<span class="keyword">public</span>:</div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;    <span class="keyword">friend</span> <span class="keyword">class </span><a class="code" href="classSimbadSearcher.html">SimbadSearcher</a>;</div>
 <div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;</div>
-<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;    enum SimbadLookupStatus</div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;    <span class="keyword">enum</span> SimbadLookupStatus</div>
 <div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;    {</div>
 <div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;        SimbadLookupQuerying,       </div>
 <div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;        SimbadLookupErrorOccured,   </div>
 <div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;        SimbadLookupFinished        </div>
 <div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;    };</div>
 <div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;</div>
-<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;    ~<a class="codeRef" doxygen="/home/aw/devel/stellarium/trunk/builds/gcc/stellarium.tag:../../doc/head/" href="../../doc/head/classSimbadLookupReply.html">SimbadLookupReply</a>();</div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;    ~<a class="code" href="classSimbadLookupReply.html">SimbadLookupReply</a>();</div>
 <div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;</div>
 <div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;    QMap&lt;QString, Vec3d&gt; getResults()<span class="keyword"> const </span>{<span class="keywordflow">return</span> resultPositions;}</div>
 <div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;</div>
@@ -104,14 +106,14 @@
 <div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;    QString getErrorString()<span class="keyword"> const </span>{<span class="keywordflow">return</span> errorString;}</div>
 <div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;</div>
 <div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;signals:</div>
-<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;    <span class="keywordtype">void</span> <a class="codeRef" doxygen="/home/aw/devel/stellarium/trunk/builds/gcc/stellarium.tag:../../doc/head/" href="../../doc/head/classSimbadLookupReply.html#a8ad43ac32879e6a8d6f5cd6caa15dcc0">statusChanged</a>();</div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classSimbadLookupReply.html#a8ad43ac32879e6a8d6f5cd6caa15dcc0">statusChanged</a>();</div>
 <div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;</div>
 <div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;<span class="keyword">private</span> slots:</div>
 <div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;    <span class="keywordtype">void</span> httpQueryFinished();</div>
 <div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;    <span class="keywordtype">void</span> delayTimerCompleted();</div>
 <div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;</div>
 <div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;<span class="keyword">private</span>:</div>
-<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;    <a class="codeRef" doxygen="/home/aw/devel/stellarium/trunk/builds/gcc/stellarium.tag:../../doc/head/" href="../../doc/head/classSimbadLookupReply.html">SimbadLookupReply</a>(<span class="keyword">const</span> QString&amp; url, QNetworkAccessManager* mgr, <span class="keywordtype">int</span> delayMs=500);</div>
+<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;    <a class="code" href="classSimbadLookupReply.html">SimbadLookupReply</a>(<span class="keyword">const</span> QString&amp; url, QNetworkAccessManager* mgr, <span class="keywordtype">int</span> delayMs=500);</div>
 <div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;</div>
 <div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;    QString url;</div>
 <div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;</div>
@@ -126,28 +128,28 @@
 <div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;};</div>
 <div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;</div>
 <div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;</div>
-<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;<span class="keyword">class </span><a class="codeRef" doxygen="/home/aw/devel/stellarium/trunk/builds/gcc/stellarium.tag:../../doc/head/" href="../../doc/head/classSimbadSearcher.html">SimbadSearcher</a> : <span class="keyword">public</span> QObject</div>
+<div class="line"><a name="l00094"></a><span class="lineno"><a class="line" href="classSimbadSearcher.html">   94</a></span>&#160;<span class="keyword">class </span><a class="code" href="classSimbadSearcher.html">SimbadSearcher</a> : <span class="keyword">public</span> QObject</div>
 <div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;{</div>
 <div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;    Q_OBJECT</div>
 <div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;</div>
 <div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;<span class="keyword">public</span>:</div>
-<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;    <a class="codeRef" doxygen="/home/aw/devel/stellarium/trunk/builds/gcc/stellarium.tag:../../doc/head/" href="../../doc/head/classSimbadSearcher.html">SimbadSearcher</a>(QObject* parent);</div>
+<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;    <a class="code" href="classSimbadSearcher.html">SimbadSearcher</a>(QObject* parent);</div>
 <div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;</div>
-<div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;    <a class="codeRef" doxygen="/home/aw/devel/stellarium/trunk/builds/gcc/stellarium.tag:../../doc/head/" href="../../doc/head/classSimbadLookupReply.html">SimbadLookupReply</a>* <a class="codeRef" doxygen="/home/aw/devel/stellarium/trunk/builds/gcc/stellarium.tag:../../doc/head/" href="../../doc/head/classSimbadSearcher.html#a3e01b2910aebc675bdf6cd4a182aa945">lookup</a>(<span class="keyword">const</span> QString&amp; serverUrl, <span class="keyword">const</span> QString&amp; objectName, <span class="keywordtype">int</span> maxNbResult=1, <span class="keywordtype">int</span> delayMs=500);</div>
+<div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;    <a class="code" href="classSimbadLookupReply.html">SimbadLookupReply</a>* <a class="code" href="classSimbadSearcher.html#a3e01b2910aebc675bdf6cd4a182aa945">lookup</a>(<span class="keyword">const</span> QString&amp; serverUrl, <span class="keyword">const</span> QString&amp; objectName, <span class="keywordtype">int</span> maxNbResult=1, <span class="keywordtype">int</span> delayMs=500);</div>
 <div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;</div>
 <div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160;<span class="keyword">private</span>:</div>
 <div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160;    QNetworkAccessManager* networkMgr;</div>
 <div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160;};</div>
 <div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160;</div>
 <div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160;<span class="preprocessor">#endif </span><span class="comment">/*SIMBADSEARCHER_HPP_*/</span><span class="preprocessor"></span></div>
-<div class="ttc" id="classSimbadLookupReply_html_a8ad43ac32879e6a8d6f5cd6caa15dcc0"><div class="ttname"><a href="../../doc/head/classSimbadLookupReply.html#a8ad43ac32879e6a8d6f5cd6caa15dcc0">SimbadLookupReply::statusChanged</a></div><div class="ttdeci">void statusChanged()</div></div>
-<div class="ttc" id="classSimbadLookupReply_html"><div class="ttname"><a href="../../doc/head/classSimbadLookupReply.html">SimbadLookupReply</a></div><div class="ttdoc">Contains all the information about a current simbad lookup query. </div><div class="ttdef"><b>Definition:</b> <a href="SimbadSearcher_8hpp_source.html#l00032">SimbadSearcher.hpp:32</a></div></div>
-<div class="ttc" id="classSimbadSearcher_html"><div class="ttname"><a href="../../doc/head/classSimbadSearcher.html">SimbadSearcher</a></div><div class="ttdoc">Provides lookup features into the online Simbad service from CDS. </div><div class="ttdef"><b>Definition:</b> <a href="SimbadSearcher_8hpp_source.html#l00094">SimbadSearcher.hpp:94</a></div></div>
-<div class="ttc" id="classSimbadSearcher_html_a3e01b2910aebc675bdf6cd4a182aa945"><div class="ttname"><a href="../../doc/head/classSimbadSearcher.html#a3e01b2910aebc675bdf6cd4a182aa945">SimbadSearcher::lookup</a></div><div class="ttdeci">SimbadLookupReply * lookup(const QString &amp;serverUrl, const QString &amp;objectName, int maxNbResult=1, int delayMs=500)</div></div>
+<div class="ttc" id="classSimbadLookupReply_html_a8ad43ac32879e6a8d6f5cd6caa15dcc0"><div class="ttname"><a href="classSimbadLookupReply.html#a8ad43ac32879e6a8d6f5cd6caa15dcc0">SimbadLookupReply::statusChanged</a></div><div class="ttdeci">void statusChanged()</div><div class="ttdoc">Triggered when the lookup status change. </div></div>
+<div class="ttc" id="classSimbadLookupReply_html"><div class="ttname"><a href="classSimbadLookupReply.html">SimbadLookupReply</a></div><div class="ttdoc">Contains all the information about a current simbad lookup query. </div><div class="ttdef"><b>Definition:</b> <a href="SimbadSearcher_8hpp_source.html#l00032">SimbadSearcher.hpp:32</a></div></div>
+<div class="ttc" id="classSimbadSearcher_html"><div class="ttname"><a href="classSimbadSearcher.html">SimbadSearcher</a></div><div class="ttdoc">Provides lookup features into the online Simbad service from CDS. </div><div class="ttdef"><b>Definition:</b> <a href="SimbadSearcher_8hpp_source.html#l00094">SimbadSearcher.hpp:94</a></div></div>
+<div class="ttc" id="classSimbadSearcher_html_a3e01b2910aebc675bdf6cd4a182aa945"><div class="ttname"><a href="classSimbadSearcher.html#a3e01b2910aebc675bdf6cd4a182aa945">SimbadSearcher::lookup</a></div><div class="ttdeci">SimbadLookupReply * lookup(const QString &amp;serverUrl, const QString &amp;objectName, int maxNbResult=1, int delayMs=500)</div><div class="ttdoc">Lookup in Simbad for object which have a name starting with objectName. </div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Thu Feb 25 2016 11:00:49 for Stellarium by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Thu Feb 25 2016 14:16:07 for Stellarium by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.8
 </small></address>
