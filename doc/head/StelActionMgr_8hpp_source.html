@@ -27,7 +27,6 @@
   <div id="navrow1" class="tabs">
     <ul class="tablist">
       <li><a href="index.html"><span>Main&#160;Page</span></a></li>
-      <li><a href="namespaces.html"><span>Namespaces</span></a></li>
       <li><a href="annotated.html"><span>Classes</span></a></li>
       <li><a href="codingStyle.html"><span>Coding&#160;Style</span></a></li>
       <li><a href="scripting.html"><span>Scripting</span></a></li>
@@ -39,7 +38,6 @@
   <div id="navrow2" class="tabs2">
     <ul class="tablist">
       <li><a href="files.html"><span>File&#160;List</span></a></li>
-      <li><a href="globals.html"><span>File&#160;Members</span></a></li>
     </ul>
   </div>
 <div id="nav-path" class="navpath">
@@ -78,34 +76,34 @@
 <div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;<span class="preprocessor">#include &lt;QKeySequence&gt;</span></div>
 <div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;<span class="preprocessor">#include &lt;QList&gt;</span></div>
 <div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;</div>
-<div class="line"><a name="l00027"></a><span class="lineno"><a class="line" href="classStelAction.html">   27</a></span>&#160;<span class="keyword">class </span><a class="code" href="classStelAction.html">StelAction</a> : <span class="keyword">public</span> QObject</div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;<span class="keyword">class </span><a class="codeRef" doxygen="/home/aw/devel/stellarium/trunk/builds/gcc/stellarium.tag:../../doc/0.15.0/" href="../../doc/0.15.0/classStelAction.html">StelAction</a> : <span class="keyword">public</span> QObject</div>
 <div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;{</div>
 <div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;    Q_OBJECT</div>
 <div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;<span class="keyword">public</span>:</div>
-<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;    <span class="keyword">friend</span> <span class="keyword">class </span><a class="code" href="classStelActionMgr.html">StelActionMgr</a>;</div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;    <span class="keyword">friend</span> <span class="keyword">class </span><a class="codeRef" doxygen="/home/aw/devel/stellarium/trunk/builds/gcc/stellarium.tag:../../doc/0.15.0/" href="../../doc/0.15.0/classStelActionMgr.html">StelActionMgr</a>;</div>
 <div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;    Q_PROPERTY(<span class="keywordtype">bool</span> checked READ isChecked WRITE setChecked NOTIFY toggled)</div>
 <div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;</div>
 <div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;    </div>
-<div class="line"><a name="l00035"></a><span class="lineno"><a class="line" href="classStelAction.html#a68444ee047d7288ad61c5779189b5b6d">   35</a></span>&#160;    <a class="code" href="classStelAction.html">StelAction</a>(QObject *parent)</div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;    <a class="codeRef" doxygen="/home/aw/devel/stellarium/trunk/builds/gcc/stellarium.tag:../../doc/0.15.0/" href="../../doc/0.15.0/classStelAction.html#a68444ee047d7288ad61c5779189b5b6d">StelAction</a>(QObject *parent)</div>
 <div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;        : QObject(parent)</div>
 <div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;        , checkable(false)</div>
 <div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;        , checked(false)</div>
 <div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;        , global(false)</div>
 <div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;        , target(NULL)</div>
 <div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;        , property(NULL)</div>
-<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;    <span class="preprocessor">#ifndef USE_QUICKVIEW</span></div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;    #ifndef USE_QUICKVIEW</div>
 <div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;        , qAction(NULL)</div>
-<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;    <span class="preprocessor">#endif</span></div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;    #endif</div>
 <div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;    {}</div>
 <div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;</div>
-<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;    <a class="code" href="classStelAction.html#a68444ee047d7288ad61c5779189b5b6d">StelAction</a>(<span class="keyword">const</span> QString&amp; actionId,</div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;    <a class="codeRef" doxygen="/home/aw/devel/stellarium/trunk/builds/gcc/stellarium.tag:../../doc/0.15.0/" href="../../doc/0.15.0/classStelAction.html#a68444ee047d7288ad61c5779189b5b6d">StelAction</a>(<span class="keyword">const</span> QString&amp; actionId,</div>
 <div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;               <span class="keyword">const</span> QString&amp; groupId,</div>
 <div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;               <span class="keyword">const</span> QString&amp; text,</div>
 <div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;               <span class="keyword">const</span> QString&amp; primaryKey=<span class="stringliteral">&quot;&quot;</span>,</div>
 <div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;               <span class="keyword">const</span> QString&amp; altKey=<span class="stringliteral">&quot;&quot;</span>,</div>
 <div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;               <span class="keywordtype">bool</span> global=<span class="keyword">false</span>);</div>
-<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classStelAction.html#a1c8f2842694adafb136baccbc111c29d">connectToObject</a>(QObject* obj, <span class="keyword">const</span> <span class="keywordtype">char</span>* slot);</div>
-<div class="line"><a name="l00060"></a><span class="lineno"><a class="line" href="classStelAction.html#a99cba39adccf2793862b265bdd7d5d16">   60</a></span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classStelAction.html#a99cba39adccf2793862b265bdd7d5d16">setCheckable</a>(<span class="keywordtype">bool</span> value) {checkable = value; emit changed();}</div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;    <span class="keywordtype">void</span> <a class="codeRef" doxygen="/home/aw/devel/stellarium/trunk/builds/gcc/stellarium.tag:../../doc/0.15.0/" href="../../doc/0.15.0/classStelAction.html#a1c8f2842694adafb136baccbc111c29d">connectToObject</a>(QObject* obj, <span class="keyword">const</span> <span class="keywordtype">char</span>* slot);</div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;    <span class="keywordtype">void</span> <a class="codeRef" doxygen="/home/aw/devel/stellarium/trunk/builds/gcc/stellarium.tag:../../doc/0.15.0/" href="../../doc/0.15.0/classStelAction.html#a99cba39adccf2793862b265bdd7d5d16">setCheckable</a>(<span class="keywordtype">bool</span> value) {checkable = value; emit changed();}</div>
 <div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;    <span class="keywordtype">bool</span> isCheckable()<span class="keyword"> const </span>{<span class="keywordflow">return</span> checkable;}</div>
 <div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;    <span class="keywordtype">bool</span> isChecked()<span class="keyword"> const </span>{<span class="keywordflow">return</span> checked;}</div>
 <div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;    <span class="keywordtype">bool</span> isGlobal()<span class="keyword"> const </span>{<span class="keywordflow">return</span> global;}</div>
@@ -154,46 +152,46 @@
 <div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;<span class="preprocessor">#endif</span></div>
 <div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;};</div>
 <div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;</div>
-<div class="line"><a name="l00109"></a><span class="lineno"><a class="line" href="classStelActionMgr.html">  109</a></span>&#160;<span class="keyword">class </span><a class="code" href="classStelActionMgr.html">StelActionMgr</a> : <span class="keyword">public</span> QObject</div>
+<div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;<span class="keyword">class </span><a class="codeRef" doxygen="/home/aw/devel/stellarium/trunk/builds/gcc/stellarium.tag:../../doc/0.15.0/" href="../../doc/0.15.0/classStelActionMgr.html">StelActionMgr</a> : <span class="keyword">public</span> QObject</div>
 <div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160;{</div>
 <div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160;    Q_OBJECT</div>
 <div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160;<span class="keyword">public</span>:</div>
-<div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160;    <a class="code" href="classStelActionMgr.html">StelActionMgr</a>();</div>
-<div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160;    ~<a class="code" href="classStelActionMgr.html">StelActionMgr</a>();</div>
-<div class="line"><a name="l00127"></a><span class="lineno">  127</span>&#160;    <a class="code" href="classStelAction.html">StelAction</a>* <a class="code" href="classStelActionMgr.html#a716444f0794da5410f0abaf6069f9ca6">addAction</a>(<span class="keyword">const</span> QString&amp; <span class="keywordtype">id</span>, <span class="keyword">const</span> QString&amp; groupId, <span class="keyword">const</span> QString&amp; text,</div>
+<div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160;    <a class="codeRef" doxygen="/home/aw/devel/stellarium/trunk/builds/gcc/stellarium.tag:../../doc/0.15.0/" href="../../doc/0.15.0/classStelActionMgr.html">StelActionMgr</a>();</div>
+<div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160;    ~<a class="codeRef" doxygen="/home/aw/devel/stellarium/trunk/builds/gcc/stellarium.tag:../../doc/0.15.0/" href="../../doc/0.15.0/classStelActionMgr.html">StelActionMgr</a>();</div>
+<div class="line"><a name="l00127"></a><span class="lineno">  127</span>&#160;    <a class="codeRef" doxygen="/home/aw/devel/stellarium/trunk/builds/gcc/stellarium.tag:../../doc/0.15.0/" href="../../doc/0.15.0/classStelAction.html">StelAction</a>* <a class="codeRef" doxygen="/home/aw/devel/stellarium/trunk/builds/gcc/stellarium.tag:../../doc/0.15.0/" href="../../doc/0.15.0/classStelActionMgr.html#a716444f0794da5410f0abaf6069f9ca6">addAction</a>(<span class="keyword">const</span> QString&amp; <span class="keywordtype">id</span>, <span class="keyword">const</span> QString&amp; groupId, <span class="keyword">const</span> QString&amp; text,</div>
 <div class="line"><a name="l00128"></a><span class="lineno">  128</span>&#160;                          QObject* target, <span class="keyword">const</span> <span class="keywordtype">char</span>* slot,</div>
 <div class="line"><a name="l00129"></a><span class="lineno">  129</span>&#160;                          <span class="keyword">const</span> QString&amp; shortcut=<span class="stringliteral">&quot;&quot;</span>, <span class="keyword">const</span> QString&amp; altShortcut=<span class="stringliteral">&quot;&quot;</span>,</div>
 <div class="line"><a name="l00130"></a><span class="lineno">  130</span>&#160;                          <span class="keywordtype">bool</span> global=<span class="keyword">false</span>);</div>
-<div class="line"><a name="l00131"></a><span class="lineno">  131</span>&#160;    <a class="code" href="classStelAction.html">StelAction</a>* findAction(<span class="keyword">const</span> QString&amp; <span class="keywordtype">id</span>);</div>
+<div class="line"><a name="l00131"></a><span class="lineno">  131</span>&#160;    <a class="codeRef" doxygen="/home/aw/devel/stellarium/trunk/builds/gcc/stellarium.tag:../../doc/0.15.0/" href="../../doc/0.15.0/classStelAction.html">StelAction</a>* findAction(<span class="keyword">const</span> QString&amp; <span class="keywordtype">id</span>);</div>
 <div class="line"><a name="l00132"></a><span class="lineno">  132</span>&#160;    <span class="keywordtype">bool</span> pushKey(<span class="keywordtype">int</span> key, <span class="keywordtype">bool</span> global=<span class="keyword">false</span>);</div>
 <div class="line"><a name="l00133"></a><span class="lineno">  133</span>&#160;</div>
 <div class="line"><a name="l00134"></a><span class="lineno">  134</span>&#160;    QStringList getGroupList() <span class="keyword">const</span>;</div>
 <div class="line"><a name="l00135"></a><span class="lineno">  135</span>&#160;    QList&lt;StelAction*&gt; getActionList(<span class="keyword">const</span> QString&amp; group) <span class="keyword">const</span>;</div>
 <div class="line"><a name="l00136"></a><span class="lineno">  136</span>&#160;</div>
-<div class="line"><a name="l00138"></a><span class="lineno">  138</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classStelActionMgr.html#af6d68721cf1ce9e3e74a92d64a51dfc6">saveShortcuts</a>();</div>
-<div class="line"><a name="l00140"></a><span class="lineno">  140</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classStelActionMgr.html#a82786e51962574eca606a79112977256">restoreDefaultShortcuts</a>();</div>
+<div class="line"><a name="l00138"></a><span class="lineno">  138</span>&#160;    <span class="keywordtype">void</span> <a class="codeRef" doxygen="/home/aw/devel/stellarium/trunk/builds/gcc/stellarium.tag:../../doc/0.15.0/" href="../../doc/0.15.0/classStelActionMgr.html#af6d68721cf1ce9e3e74a92d64a51dfc6">saveShortcuts</a>();</div>
+<div class="line"><a name="l00140"></a><span class="lineno">  140</span>&#160;    <span class="keywordtype">void</span> <a class="codeRef" doxygen="/home/aw/devel/stellarium/trunk/builds/gcc/stellarium.tag:../../doc/0.15.0/" href="../../doc/0.15.0/classStelActionMgr.html#a82786e51962574eca606a79112977256">restoreDefaultShortcuts</a>();</div>
 <div class="line"><a name="l00141"></a><span class="lineno">  141</span>&#160;</div>
 <div class="line"><a name="l00142"></a><span class="lineno">  142</span>&#160;<span class="keyword">public</span> slots:</div>
-<div class="line"><a name="l00146"></a><span class="lineno"><a class="line" href="classStelActionMgr.html#aee6d6685c2efafb7c498643a0941063e">  146</a></span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classStelActionMgr.html#aee6d6685c2efafb7c498643a0941063e">setAllActionsEnabled</a>(<span class="keywordtype">bool</span> value) {actionsEnabled = value;}</div>
+<div class="line"><a name="l00146"></a><span class="lineno">  146</span>&#160;    <span class="keywordtype">void</span> <a class="codeRef" doxygen="/home/aw/devel/stellarium/trunk/builds/gcc/stellarium.tag:../../doc/0.15.0/" href="../../doc/0.15.0/classStelActionMgr.html#aee6d6685c2efafb7c498643a0941063e">setAllActionsEnabled</a>(<span class="keywordtype">bool</span> value) {actionsEnabled = value;}</div>
 <div class="line"><a name="l00147"></a><span class="lineno">  147</span>&#160;<span class="keyword">private</span>:</div>
 <div class="line"><a name="l00148"></a><span class="lineno">  148</span>&#160;    <span class="keywordtype">bool</span> actionsEnabled;</div>
 <div class="line"><a name="l00149"></a><span class="lineno">  149</span>&#160;    QList&lt;int&gt; keySequence;</div>
 <div class="line"><a name="l00150"></a><span class="lineno">  150</span>&#160;};</div>
 <div class="line"><a name="l00151"></a><span class="lineno">  151</span>&#160;</div>
 <div class="line"><a name="l00152"></a><span class="lineno">  152</span>&#160;<span class="preprocessor">#endif // _STELACTIONMGR_HPP_</span></div>
-<div class="ttc" id="classStelActionMgr_html_a716444f0794da5410f0abaf6069f9ca6"><div class="ttname"><a href="classStelActionMgr.html#a716444f0794da5410f0abaf6069f9ca6">StelActionMgr::addAction</a></div><div class="ttdeci">StelAction * addAction(const QString &amp;id, const QString &amp;groupId, const QString &amp;text, QObject *target, const char *slot, const QString &amp;shortcut=&quot;&quot;, const QString &amp;altShortcut=&quot;&quot;, bool global=false)</div><div class="ttdoc">Create and add a new StelAction, connected to an object property or slot. </div></div>
-<div class="ttc" id="classStelAction_html_a68444ee047d7288ad61c5779189b5b6d"><div class="ttname"><a href="classStelAction.html#a68444ee047d7288ad61c5779189b5b6d">StelAction::StelAction</a></div><div class="ttdeci">StelAction(QObject *parent)</div><div class="ttdoc">Don&#39;t use this constructor, this is just there to ease the migration from QAction. </div><div class="ttdef"><b>Definition:</b> <a href="StelActionMgr_8hpp_source.html#l00035">StelActionMgr.hpp:35</a></div></div>
-<div class="ttc" id="classStelAction_html_a1c8f2842694adafb136baccbc111c29d"><div class="ttname"><a href="classStelAction.html#a1c8f2842694adafb136baccbc111c29d">StelAction::connectToObject</a></div><div class="ttdeci">void connectToObject(QObject *obj, const char *slot)</div><div class="ttdoc">Connect the action to an object property or slot. </div></div>
-<div class="ttc" id="classStelAction_html_a99cba39adccf2793862b265bdd7d5d16"><div class="ttname"><a href="classStelAction.html#a99cba39adccf2793862b265bdd7d5d16">StelAction::setCheckable</a></div><div class="ttdeci">void setCheckable(bool value)</div><div class="ttdoc">Don&#39;t use setCheckable, connectToObject can automatically determine if the action is checkable or not...</div><div class="ttdef"><b>Definition:</b> <a href="StelActionMgr_8hpp_source.html#l00060">StelActionMgr.hpp:60</a></div></div>
-<div class="ttc" id="classStelAction_html"><div class="ttname"><a href="classStelAction.html">StelAction</a></div><div class="ttdef"><b>Definition:</b> <a href="StelActionMgr_8hpp_source.html#l00027">StelActionMgr.hpp:27</a></div></div>
-<div class="ttc" id="classStelActionMgr_html_a82786e51962574eca606a79112977256"><div class="ttname"><a href="classStelActionMgr.html#a82786e51962574eca606a79112977256">StelActionMgr::restoreDefaultShortcuts</a></div><div class="ttdeci">void restoreDefaultShortcuts()</div><div class="ttdoc">Restore the default shortcuts combinations. </div></div>
-<div class="ttc" id="classStelActionMgr_html"><div class="ttname"><a href="classStelActionMgr.html">StelActionMgr</a></div><div class="ttdef"><b>Definition:</b> <a href="StelActionMgr_8hpp_source.html#l00109">StelActionMgr.hpp:109</a></div></div>
-<div class="ttc" id="classStelActionMgr_html_af6d68721cf1ce9e3e74a92d64a51dfc6"><div class="ttname"><a href="classStelActionMgr.html#af6d68721cf1ce9e3e74a92d64a51dfc6">StelActionMgr::saveShortcuts</a></div><div class="ttdeci">void saveShortcuts()</div><div class="ttdoc">Save current shortcuts to file. </div></div>
-<div class="ttc" id="classStelActionMgr_html_aee6d6685c2efafb7c498643a0941063e"><div class="ttname"><a href="classStelActionMgr.html#aee6d6685c2efafb7c498643a0941063e">StelActionMgr::setAllActionsEnabled</a></div><div class="ttdeci">void setAllActionsEnabled(bool value)</div><div class="ttdoc">Enable/disable all actions of application. </div><div class="ttdef"><b>Definition:</b> <a href="StelActionMgr_8hpp_source.html#l00146">StelActionMgr.hpp:146</a></div></div>
+<div class="ttc" id="classStelActionMgr_html_a716444f0794da5410f0abaf6069f9ca6"><div class="ttname"><a href="../../doc/0.15.0/classStelActionMgr.html#a716444f0794da5410f0abaf6069f9ca6">StelActionMgr::addAction</a></div><div class="ttdeci">StelAction * addAction(const QString &amp;id, const QString &amp;groupId, const QString &amp;text, QObject *target, const char *slot, const QString &amp;shortcut=&quot;&quot;, const QString &amp;altShortcut=&quot;&quot;, bool global=false)</div></div>
+<div class="ttc" id="classStelAction_html_a68444ee047d7288ad61c5779189b5b6d"><div class="ttname"><a href="../../doc/0.15.0/classStelAction.html#a68444ee047d7288ad61c5779189b5b6d">StelAction::StelAction</a></div><div class="ttdeci">StelAction(QObject *parent)</div></div>
+<div class="ttc" id="classStelAction_html_a1c8f2842694adafb136baccbc111c29d"><div class="ttname"><a href="../../doc/0.15.0/classStelAction.html#a1c8f2842694adafb136baccbc111c29d">StelAction::connectToObject</a></div><div class="ttdeci">void connectToObject(QObject *obj, const char *slot)</div></div>
+<div class="ttc" id="classStelAction_html_a99cba39adccf2793862b265bdd7d5d16"><div class="ttname"><a href="../../doc/0.15.0/classStelAction.html#a99cba39adccf2793862b265bdd7d5d16">StelAction::setCheckable</a></div><div class="ttdeci">void setCheckable(bool value)</div></div>
+<div class="ttc" id="classStelAction_html"><div class="ttname"><a href="../../doc/0.15.0/classStelAction.html">StelAction</a></div><div class="ttdef"><b>Definition:</b> <a href="StelActionMgr_8hpp_source.html#l00027">StelActionMgr.hpp:27</a></div></div>
+<div class="ttc" id="classStelActionMgr_html_a82786e51962574eca606a79112977256"><div class="ttname"><a href="../../doc/0.15.0/classStelActionMgr.html#a82786e51962574eca606a79112977256">StelActionMgr::restoreDefaultShortcuts</a></div><div class="ttdeci">void restoreDefaultShortcuts()</div></div>
+<div class="ttc" id="classStelActionMgr_html"><div class="ttname"><a href="../../doc/0.15.0/classStelActionMgr.html">StelActionMgr</a></div><div class="ttdef"><b>Definition:</b> <a href="StelActionMgr_8hpp_source.html#l00109">StelActionMgr.hpp:109</a></div></div>
+<div class="ttc" id="classStelActionMgr_html_af6d68721cf1ce9e3e74a92d64a51dfc6"><div class="ttname"><a href="../../doc/0.15.0/classStelActionMgr.html#af6d68721cf1ce9e3e74a92d64a51dfc6">StelActionMgr::saveShortcuts</a></div><div class="ttdeci">void saveShortcuts()</div></div>
+<div class="ttc" id="classStelActionMgr_html_aee6d6685c2efafb7c498643a0941063e"><div class="ttname"><a href="../../doc/0.15.0/classStelActionMgr.html#aee6d6685c2efafb7c498643a0941063e">StelActionMgr::setAllActionsEnabled</a></div><div class="ttdeci">void setAllActionsEnabled(bool value)</div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Thu Feb 25 2016 10:44:15 for Stellarium by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Thu Feb 25 2016 11:00:49 for Stellarium by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.8
 </small></address>

@@ -27,7 +27,6 @@
   <div id="navrow1" class="tabs">
     <ul class="tablist">
       <li><a href="index.html"><span>Main&#160;Page</span></a></li>
-      <li><a href="namespaces.html"><span>Namespaces</span></a></li>
       <li><a href="annotated.html"><span>Classes</span></a></li>
       <li><a href="codingStyle.html"><span>Coding&#160;Style</span></a></li>
       <li><a href="scripting.html"><span>Scripting</span></a></li>
@@ -39,7 +38,6 @@
   <div id="navrow2" class="tabs2">
     <ul class="tablist">
       <li><a href="files.html"><span>File&#160;List</span></a></li>
-      <li><a href="globals.html"><span>File&#160;Members</span></a></li>
     </ul>
   </div>
 <div id="nav-path" class="navpath">
@@ -52,7 +50,7 @@
 <div class="title">StelObjectType.hpp</div>  </div>
 </div><!--header-->
 <div class="contents">
-<a href="StelObjectType_8hpp.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="comment">/*</span></div>
+<div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="comment">/*</span></div>
 <div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="comment"> * Stellarium</span></div>
 <div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="comment"> * Copyright (C) 2007 Fabien Chereau</span></div>
 <div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="comment"> *</span></div>
@@ -76,29 +74,28 @@
 <div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;</div>
 <div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;<span class="preprocessor">#include &lt;QSharedPointer&gt;</span></div>
 <div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;</div>
-<div class="line"><a name="l00027"></a><span class="lineno"><a class="line" href="classQSharedPointerNoDelete.html">   27</a></span>&#160;<span class="keyword">template</span> &lt;<span class="keyword">class</span> T&gt; <span class="keyword">class </span><a class="code" href="classQSharedPointerNoDelete.html">QSharedPointerNoDelete</a> : <span class="keyword">public</span> QSharedPointer&lt;T&gt;</div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;<span class="keyword">template</span> &lt;<span class="keyword">class</span> T&gt; <span class="keyword">class </span><a class="codeRef" doxygen="/home/aw/devel/stellarium/trunk/builds/gcc/stellarium.tag:../../doc/0.15.0/" href="../../doc/0.15.0/classQSharedPointerNoDelete.html">QSharedPointerNoDelete</a> : <span class="keyword">public</span> QSharedPointer&lt;T&gt;</div>
 <div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;{</div>
 <div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;<span class="keyword">public</span>:</div>
-<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;    <a class="code" href="classQSharedPointerNoDelete.html">QSharedPointerNoDelete</a>() {;}</div>
-<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;    <a class="code" href="classQSharedPointerNoDelete.html">QSharedPointerNoDelete</a>(T *ptr) : QSharedPointer&lt;T&gt;(ptr, QSharedPointerNoDelete::noDelete) {;}</div>
-<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;    <a class="code" href="classQSharedPointerNoDelete.html">QSharedPointerNoDelete</a>(T *ptr, <span class="keywordtype">bool</span> own) : QSharedPointer&lt;T&gt;(ptr) {Q_UNUSED(own); Q_ASSERT(own==<span class="keyword">true</span>);}</div>
-<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;    <a class="code" href="classQSharedPointerNoDelete.html">QSharedPointerNoDelete</a>(<span class="keyword">const</span> QSharedPointer&lt;T&gt;&amp; ptr) : QSharedPointer&lt;T&gt;(ptr) {;}</div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;    <a class="codeRef" doxygen="/home/aw/devel/stellarium/trunk/builds/gcc/stellarium.tag:../../doc/0.15.0/" href="../../doc/0.15.0/classQSharedPointerNoDelete.html">QSharedPointerNoDelete</a>() {;}</div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;    <a class="codeRef" doxygen="/home/aw/devel/stellarium/trunk/builds/gcc/stellarium.tag:../../doc/0.15.0/" href="../../doc/0.15.0/classQSharedPointerNoDelete.html">QSharedPointerNoDelete</a>(T *ptr) : QSharedPointer&lt;T&gt;(ptr, <a class="codeRef" doxygen="/home/aw/devel/stellarium/trunk/builds/gcc/stellarium.tag:../../doc/0.15.0/" href="../../doc/0.15.0/classQSharedPointerNoDelete.html">QSharedPointerNoDelete</a>::noDelete) {;}</div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;    <a class="codeRef" doxygen="/home/aw/devel/stellarium/trunk/builds/gcc/stellarium.tag:../../doc/0.15.0/" href="../../doc/0.15.0/classQSharedPointerNoDelete.html">QSharedPointerNoDelete</a>(T *ptr, <span class="keywordtype">bool</span> own) : QSharedPointer&lt;T&gt;(ptr) {Q_UNUSED(own); Q_ASSERT(own==<span class="keyword">true</span>);}</div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;    <a class="codeRef" doxygen="/home/aw/devel/stellarium/trunk/builds/gcc/stellarium.tag:../../doc/0.15.0/" href="../../doc/0.15.0/classQSharedPointerNoDelete.html">QSharedPointerNoDelete</a>(<span class="keyword">const</span> QSharedPointer&lt;T&gt;&amp; ptr) : QSharedPointer&lt;T&gt;(ptr) {;}</div>
 <div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;    <span class="keyword">static</span> <span class="keywordtype">void</span> noDelete(T *ptr) {Q_UNUSED(ptr);}</div>
 <div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;};</div>
 <div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;</div>
 <div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;</div>
-<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;<span class="keyword">class </span><a class="code" href="classStelObject.html">StelObject</a>;</div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;<span class="keyword">class </span><a class="codeRef" doxygen="/home/aw/devel/stellarium/trunk/builds/gcc/stellarium.tag:../../doc/0.15.0/" href="../../doc/0.15.0/classStelObject.html">StelObject</a>;</div>
 <div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;</div>
-<div class="line"><a name="l00044"></a><span class="lineno"><a class="line" href="StelObjectType_8hpp.html#a3ae5fa6cd6f0b212dd9a120500ca7150">   44</a></span>&#160;<span class="keyword">typedef</span> <a class="code" href="classQSharedPointerNoDelete.html">QSharedPointerNoDelete&lt;StelObject&gt;</a> <a class="code" href="StelObjectType_8hpp.html#a3ae5fa6cd6f0b212dd9a120500ca7150">StelObjectP</a>;</div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;<span class="keyword">typedef</span> <a class="codeRef" doxygen="/home/aw/devel/stellarium/trunk/builds/gcc/stellarium.tag:../../doc/0.15.0/" href="../../doc/0.15.0/classQSharedPointerNoDelete.html">QSharedPointerNoDelete&lt;StelObject&gt;</a> <a class="codeRef" doxygen="/home/aw/devel/stellarium/trunk/builds/gcc/stellarium.tag:../../doc/0.15.0/" href="../../doc/0.15.0/classQSharedPointerNoDelete.html">StelObjectP</a>;</div>
 <div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;</div>
 <div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;<span class="preprocessor">#endif // _STELOBJECTTYPE_HPP_</span></div>
-<div class="ttc" id="classStelObject_html"><div class="ttname"><a href="classStelObject.html">StelObject</a></div><div class="ttdoc">The base abstract class for sky objects used in Stellarium like Stars, Planets, Constellations etc...</div><div class="ttdef"><b>Definition:</b> <a href="StelObject_8hpp_source.html#l00036">StelObject.hpp:36</a></div></div>
-<div class="ttc" id="classQSharedPointerNoDelete_html"><div class="ttname"><a href="classQSharedPointerNoDelete.html">QSharedPointerNoDelete</a></div><div class="ttdoc">Special version of QSharedPointer which by default doesn&#39;t delete the referenced pointer when the ref...</div><div class="ttdef"><b>Definition:</b> <a href="StelObjectType_8hpp_source.html#l00027">StelObjectType.hpp:27</a></div></div>
-<div class="ttc" id="StelObjectType_8hpp_html_a3ae5fa6cd6f0b212dd9a120500ca7150"><div class="ttname"><a href="StelObjectType_8hpp.html#a3ae5fa6cd6f0b212dd9a120500ca7150">StelObjectP</a></div><div class="ttdeci">QSharedPointerNoDelete&lt; StelObject &gt; StelObjectP</div><div class="ttdoc">Intrusive pointer used to manage StelObject with smart pointers. </div><div class="ttdef"><b>Definition:</b> <a href="StelObjectType_8hpp_source.html#l00044">StelObjectType.hpp:44</a></div></div>
+<div class="ttc" id="classStelObject_html"><div class="ttname"><a href="../../doc/0.15.0/classStelObject.html">StelObject</a></div><div class="ttdoc">The base abstract class for sky objects used in Stellarium like Stars, Planets, Constellations etc...</div><div class="ttdef"><b>Definition:</b> <a href="StelObject_8hpp_source.html#l00036">StelObject.hpp:36</a></div></div>
+<div class="ttc" id="classQSharedPointerNoDelete_html"><div class="ttname"><a href="../../doc/0.15.0/classQSharedPointerNoDelete.html">QSharedPointerNoDelete</a></div><div class="ttdoc">Special version of QSharedPointer which by default doesn&#39;t delete the referenced pointer when the ref...</div><div class="ttdef"><b>Definition:</b> <a href="StelObjectType_8hpp_source.html#l00027">StelObjectType.hpp:27</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Thu Feb 25 2016 10:44:15 for Stellarium by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Thu Feb 25 2016 11:00:49 for Stellarium by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.8
 </small></address>
