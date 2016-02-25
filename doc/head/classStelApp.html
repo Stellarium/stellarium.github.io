@@ -33,6 +33,7 @@
       <li><a href="scripting.html"><span>Scripting</span></a></li>
       <li><a href="plugins.html"><span>Plugins</span></a></li>
       <li><a href="fileStructure.html"><span>File&#160;Structure</span></a></li>
+      <li><a href="examples.html"><span>Examples</span></a></li>
     </ul>
   </div>
   <div id="navrow2" class="tabs2">
@@ -87,6 +88,9 @@ Public Slots</h2></td></tr>
 <tr class="memitem:ab8a4e3c56ca766f04623f804d73c3b84"><td class="memItemLeft" align="right" valign="top">static double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classStelApp.html#ab8a4e3c56ca766f04623f804d73c3b84">getTotalRunTime</a> ()</td></tr>
 <tr class="memdesc:ab8a4e3c56ca766f04623f804d73c3b84"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return the time since when stellarium is running in second.  <a href="#ab8a4e3c56ca766f04623f804d73c3b84">More...</a><br /></td></tr>
 <tr class="separator:ab8a4e3c56ca766f04623f804d73c3b84"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adaea1274c468cb06aa90deedbfc961df"><td class="memItemLeft" align="right" valign="top">static double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classStelApp.html#adaea1274c468cb06aa90deedbfc961df">getAnimationTime</a> ()</td></tr>
+<tr class="memdesc:adaea1274c468cb06aa90deedbfc961df"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return the scaled time for animated objects.  <a href="#adaea1274c468cb06aa90deedbfc961df">More...</a><br /></td></tr>
+<tr class="separator:adaea1274c468cb06aa90deedbfc961df"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad50a11d9faf8e114b234dd781f2ad34c"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classStelApp.html#ad50a11d9faf8e114b234dd781f2ad34c">reportFileDownloadFinished</a> (QNetworkReply *reply)</td></tr>
 <tr class="memdesc:ad50a11d9faf8e114b234dd781f2ad34c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Report that a download occured.  <a href="#ad50a11d9faf8e114b234dd781f2ad34c">More...</a><br /></td></tr>
 <tr class="separator:ad50a11d9faf8e114b234dd781f2ad34c"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -165,7 +169,7 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a51dacbdef4a1d3d3039bb03f0c23313a"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classStelActionMgr.html">StelActionMgr</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classStelApp.html#a51dacbdef4a1d3d3039bb03f0c23313a">getStelActionManager</a> ()</td></tr>
 <tr class="memdesc:a51dacbdef4a1d3d3039bb03f0c23313a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the actions manager to use for managing and editing actions.  <a href="#a51dacbdef4a1d3d3039bb03f0c23313a">More...</a><br /></td></tr>
 <tr class="separator:a51dacbdef4a1d3d3039bb03f0c23313a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aabdee5e65034bb0f741285570713f14e"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classStelVideoMgr.html">StelVideoMgr</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classStelApp.html#aabdee5e65034bb0f741285570713f14e">getStelVideoMgr</a> ()</td></tr>
+<tr class="memitem:aabdee5e65034bb0f741285570713f14e"><td class="memItemLeft" align="right" valign="top">StelVideoMgr *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classStelApp.html#aabdee5e65034bb0f741285570713f14e">getStelVideoMgr</a> ()</td></tr>
 <tr class="memdesc:aabdee5e65034bb0f741285570713f14e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the video manager.  <a href="#aabdee5e65034bb0f741285570713f14e">More...</a><br /></td></tr>
 <tr class="separator:aabdee5e65034bb0f741285570713f14e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:abd6f84eab64f4dbd54f2893f82d65ee7"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classStelCore.html">StelCore</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classStelApp.html#abd6f84eab64f4dbd54f2893f82d65ee7">getCore</a> ()</td></tr>
@@ -381,6 +385,31 @@ static void&#160;</td><td class="memItemRight" valign="bottom"><b>deinitStatic</
 </div><div class="memdoc">
 
 <p>Draw all registered <a class="el" href="classStelModule.html" title="This is the common base class for all the main components of stellarium. ">StelModule</a> in the order defined by the order lists. </p>
+
+</div>
+</div>
+<a class="anchor" id="adaea1274c468cb06aa90deedbfc961df"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static double StelApp::getAnimationTime </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span><span class="mlabel">slot</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Return the scaled time for animated objects. </p>
 
 </div>
 </div>
@@ -969,7 +998,7 @@ static void&#160;</td><td class="memItemRight" valign="bottom"><b>deinitStatic</
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="classStelVideoMgr.html">StelVideoMgr</a>* StelApp::getStelVideoMgr </td>
+          <td class="memname">StelVideoMgr* StelApp::getStelVideoMgr </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
@@ -1472,7 +1501,7 @@ static void&#160;</td><td class="memItemRight" valign="bottom"><b>deinitStatic</
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Sat Nov 28 2015 15:23:44 for Stellarium by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Thu Feb 25 2016 10:04:57 for Stellarium by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.8
 </small></address>

@@ -33,6 +33,7 @@
       <li><a href="scripting.html"><span>Scripting</span></a></li>
       <li><a href="plugins.html"><span>Plugins</span></a></li>
       <li><a href="fileStructure.html"><span>File&#160;Structure</span></a></li>
+      <li><a href="examples.html"><span>Examples</span></a></li>
     </ul>
   </div>
   <div id="navrow2" class="tabs2">
@@ -142,6 +143,18 @@ virtual QValidator::State&#160;</td><td class="memItemRight" valign="bottom"><b>
 <tr class="memitem:a43d10bc8fb4ec7e06fdc54d9c81e9784"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classAngleSpinBox.html#aa9c437ab89fa51414b7ba4cd94fc6cb4">PrefixType</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAngleSpinBox.html#a43d10bc8fb4ec7e06fdc54d9c81e9784">prefixType</a> ()</td></tr>
 <tr class="memdesc:a43d10bc8fb4ec7e06fdc54d9c81e9784"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the current display format.  <a href="#a43d10bc8fb4ec7e06fdc54d9c81e9784">More...</a><br /></td></tr>
 <tr class="separator:a43d10bc8fb4ec7e06fdc54d9c81e9784"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae9ce308f35d6b9a5d08cab07e1826ded"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAngleSpinBox.html#ae9ce308f35d6b9a5d08cab07e1826ded">setMinimum</a> (const double min, const bool isDegrees=false)</td></tr>
+<tr class="memdesc:ae9ce308f35d6b9a5d08cab07e1826ded"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the minimum value.  <a href="#ae9ce308f35d6b9a5d08cab07e1826ded">More...</a><br /></td></tr>
+<tr class="separator:ae9ce308f35d6b9a5d08cab07e1826ded"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3f155ba79c1de2597f6830f6997eaa99"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAngleSpinBox.html#a3f155ba79c1de2597f6830f6997eaa99">getMinimum</a> (const bool isDegrees)</td></tr>
+<tr class="memdesc:a3f155ba79c1de2597f6830f6997eaa99"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the minimum value.  <a href="#a3f155ba79c1de2597f6830f6997eaa99">More...</a><br /></td></tr>
+<tr class="separator:a3f155ba79c1de2597f6830f6997eaa99"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a20077642d63851d65bf25fc705088399"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAngleSpinBox.html#a20077642d63851d65bf25fc705088399">setMaximum</a> (const double max, const bool isDegrees=false)</td></tr>
+<tr class="memdesc:a20077642d63851d65bf25fc705088399"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the maximum value.  <a href="#a20077642d63851d65bf25fc705088399">More...</a><br /></td></tr>
+<tr class="separator:a20077642d63851d65bf25fc705088399"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3afd2dc2ba062d5ba7bd4b88680a7f77"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAngleSpinBox.html#a3afd2dc2ba062d5ba7bd4b88680a7f77">getMaximum</a> (const bool isDegrees)</td></tr>
+<tr class="memdesc:a3afd2dc2ba062d5ba7bd4b88680a7f77"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the maximum value.  <a href="#a3afd2dc2ba062d5ba7bd4b88680a7f77">More...</a><br /></td></tr>
+<tr class="separator:a3afd2dc2ba062d5ba7bd4b88680a7f77"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-methods"></a>
 Protected Member Functions</h2></td></tr>
@@ -151,9 +164,9 @@ virtual StepEnabled&#160;</td><td class="memItemRight" valign="bottom"><b>stepEn
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>A spin box for displaying/entering angular values. </p>
-<p>This class can accept angles in various formats commonly used in astronomy including decimal degrees, DMS and HMS. </p>
+<p>This class can accept angles in various formats commonly used in astronomy including decimal degrees, DMS and HMS. You should set upper and lower limits (maximum, minimum) and decide whether the values wrap around or are blocked at the limits (wrapping). </p>
 
-<p>Definition at line <a class="el" href="AngleSpinBox_8hpp_source.html#l00030">30</a> of file <a class="el" href="AngleSpinBox_8hpp_source.html">AngleSpinBox.hpp</a>.</p>
+<p>Definition at line <a class="el" href="AngleSpinBox_8hpp_source.html#l00034">34</a> of file <a class="el" href="AngleSpinBox_8hpp_source.html">AngleSpinBox.hpp</a>.</p>
 </div><h2 class="groupheader">Member Enumeration Documentation</h2>
 <a class="anchor" id="a6b7392493e988db467779b8aac05868f"></a>
 <div class="memitem">
@@ -190,7 +203,7 @@ virtual StepEnabled&#160;</td><td class="memItemRight" valign="bottom"><b>stepEn
 </td></tr>
 </table>
 
-<p>Definition at line <a class="el" href="AngleSpinBox_8hpp_source.html#l00037">37</a> of file <a class="el" href="AngleSpinBox_8hpp_source.html">AngleSpinBox.hpp</a>.</p>
+<p>Definition at line <a class="el" href="AngleSpinBox_8hpp_source.html#l00041">41</a> of file <a class="el" href="AngleSpinBox_8hpp_source.html">AngleSpinBox.hpp</a>.</p>
 
 </div>
 </div>
@@ -220,7 +233,7 @@ virtual StepEnabled&#160;</td><td class="memItemRight" valign="bottom"><b>stepEn
 </td></tr>
 </table>
 
-<p>Definition at line <a class="el" href="AngleSpinBox_8hpp_source.html#l00050">50</a> of file <a class="el" href="AngleSpinBox_8hpp_source.html">AngleSpinBox.hpp</a>.</p>
+<p>Definition at line <a class="el" href="AngleSpinBox_8hpp_source.html#l00054">54</a> of file <a class="el" href="AngleSpinBox_8hpp_source.html">AngleSpinBox.hpp</a>.</p>
 
 </div>
 </div>
@@ -274,7 +287,7 @@ virtual StepEnabled&#160;</td><td class="memItemRight" valign="bottom"><b>stepEn
 <p>Get the number of decimal places to express float values to (e.g. </p>
 <p>seconds in DMSLetters format). </p><dl class="section return"><dt>Returns</dt><dd>the number of decimal places used. </dd></dl>
 
-<p>Definition at line <a class="el" href="AngleSpinBox_8hpp_source.html#l00079">79</a> of file <a class="el" href="AngleSpinBox_8hpp_source.html">AngleSpinBox.hpp</a>.</p>
+<p>Definition at line <a class="el" href="AngleSpinBox_8hpp_source.html#l00083">83</a> of file <a class="el" href="AngleSpinBox_8hpp_source.html">AngleSpinBox.hpp</a>.</p>
 
 </div>
 </div>
@@ -302,7 +315,77 @@ virtual StepEnabled&#160;</td><td class="memItemRight" valign="bottom"><b>stepEn
 <p>Get the current display format. </p>
 <dl class="section return"><dt>Returns</dt><dd>the current DisplayFormat. </dd></dl>
 
-<p>Definition at line <a class="el" href="AngleSpinBox_8hpp_source.html#l00087">87</a> of file <a class="el" href="AngleSpinBox_8hpp_source.html">AngleSpinBox.hpp</a>.</p>
+<p>Definition at line <a class="el" href="AngleSpinBox_8hpp_source.html#l00091">91</a> of file <a class="el" href="AngleSpinBox_8hpp_source.html">AngleSpinBox.hpp</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a3afd2dc2ba062d5ba7bd4b88680a7f77"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">double AngleSpinBox::getMaximum </td>
+          <td>(</td>
+          <td class="paramtype">const bool&#160;</td>
+          <td class="paramname"><em>isDegrees</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Get the maximum value. </p>
+<dl class="section return"><dt>Returns</dt><dd>the current maximum value </dd></dl>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">isDegrees</td><td>true if the maximum value is required in degrees, else max is returned as radians. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p>Definition at line <a class="el" href="AngleSpinBox_8hpp_source.html#l00117">117</a> of file <a class="el" href="AngleSpinBox_8hpp_source.html">AngleSpinBox.hpp</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a3f155ba79c1de2597f6830f6997eaa99"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">double AngleSpinBox::getMinimum </td>
+          <td>(</td>
+          <td class="paramtype">const bool&#160;</td>
+          <td class="paramname"><em>isDegrees</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Get the minimum value. </p>
+<dl class="section return"><dt>Returns</dt><dd>the current minimum value </dd></dl>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">isDegrees</td><td>true if the minimum value is required in degrees, else min is returned as radians. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p>Definition at line <a class="el" href="AngleSpinBox_8hpp_source.html#l00108">108</a> of file <a class="el" href="AngleSpinBox_8hpp_source.html">AngleSpinBox.hpp</a>.</p>
 
 </div>
 </div>
@@ -330,7 +413,7 @@ virtual StepEnabled&#160;</td><td class="memItemRight" valign="bottom"><b>stepEn
 <p>Get the current display format. </p>
 <dl class="section return"><dt>Returns</dt><dd>the current DisplayFormat. </dd></dl>
 
-<p>Definition at line <a class="el" href="AngleSpinBox_8hpp_source.html#l00095">95</a> of file <a class="el" href="AngleSpinBox_8hpp_source.html">AngleSpinBox.hpp</a>.</p>
+<p>Definition at line <a class="el" href="AngleSpinBox_8hpp_source.html#l00099">99</a> of file <a class="el" href="AngleSpinBox_8hpp_source.html">AngleSpinBox.hpp</a>.</p>
 
 </div>
 </div>
@@ -364,7 +447,7 @@ virtual StepEnabled&#160;</td><td class="memItemRight" valign="bottom"><b>stepEn
   </dd>
 </dl>
 
-<p>Definition at line <a class="el" href="AngleSpinBox_8hpp_source.html#l00075">75</a> of file <a class="el" href="AngleSpinBox_8hpp_source.html">AngleSpinBox.hpp</a>.</p>
+<p>Definition at line <a class="el" href="AngleSpinBox_8hpp_source.html#l00079">79</a> of file <a class="el" href="AngleSpinBox_8hpp_source.html">AngleSpinBox.hpp</a>.</p>
 
 </div>
 </div>
@@ -430,7 +513,97 @@ virtual StepEnabled&#160;</td><td class="memItemRight" valign="bottom"><b>stepEn
   </dd>
 </dl>
 
-<p>Definition at line <a class="el" href="AngleSpinBox_8hpp_source.html#l00083">83</a> of file <a class="el" href="AngleSpinBox_8hpp_source.html">AngleSpinBox.hpp</a>.</p>
+<p>Definition at line <a class="el" href="AngleSpinBox_8hpp_source.html#l00087">87</a> of file <a class="el" href="AngleSpinBox_8hpp_source.html">AngleSpinBox.hpp</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a20077642d63851d65bf25fc705088399"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void AngleSpinBox::setMaximum </td>
+          <td>(</td>
+          <td class="paramtype">const double&#160;</td>
+          <td class="paramname"><em>max</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const bool&#160;</td>
+          <td class="paramname"><em>isDegrees</em> = <code>false</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Set the maximum value. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">max</td><td>the new maximum value </td></tr>
+    <tr><td class="paramname">isDegrees</td><td>true if the new maximum value is given in degrees, else max is understood as radians. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p>Definition at line <a class="el" href="AngleSpinBox_8hpp_source.html#l00113">113</a> of file <a class="el" href="AngleSpinBox_8hpp_source.html">AngleSpinBox.hpp</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="ae9ce308f35d6b9a5d08cab07e1826ded"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void AngleSpinBox::setMinimum </td>
+          <td>(</td>
+          <td class="paramtype">const double&#160;</td>
+          <td class="paramname"><em>min</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const bool&#160;</td>
+          <td class="paramname"><em>isDegrees</em> = <code>false</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Set the minimum value. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">min</td><td>the new minimum value </td></tr>
+    <tr><td class="paramname">isDegrees</td><td>true if the new minimum value is given in degrees, else min is understood as radians. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p>Definition at line <a class="el" href="AngleSpinBox_8hpp_source.html#l00104">104</a> of file <a class="el" href="AngleSpinBox_8hpp_source.html">AngleSpinBox.hpp</a>.</p>
 
 </div>
 </div>
@@ -464,7 +637,7 @@ virtual StepEnabled&#160;</td><td class="memItemRight" valign="bottom"><b>stepEn
   </dd>
 </dl>
 
-<p>Definition at line <a class="el" href="AngleSpinBox_8hpp_source.html#l00091">91</a> of file <a class="el" href="AngleSpinBox_8hpp_source.html">AngleSpinBox.hpp</a>.</p>
+<p>Definition at line <a class="el" href="AngleSpinBox_8hpp_source.html#l00095">95</a> of file <a class="el" href="AngleSpinBox_8hpp_source.html">AngleSpinBox.hpp</a>.</p>
 
 </div>
 </div>
@@ -567,7 +740,7 @@ virtual StepEnabled&#160;</td><td class="memItemRight" valign="bottom"><b>stepEn
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Sat Nov 28 2015 15:23:44 for Stellarium by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Thu Feb 25 2016 10:04:57 for Stellarium by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.8
 </small></address>

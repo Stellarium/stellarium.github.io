@@ -33,6 +33,7 @@
       <li><a href="scripting.html"><span>Scripting</span></a></li>
       <li><a href="plugins.html"><span>Plugins</span></a></li>
       <li><a href="fileStructure.html"><span>File&#160;Structure</span></a></li>
+      <li><a href="examples.html"><span>Examples</span></a></li>
     </ul>
   </div>
   <div id="navrow2" class="tabs2">
@@ -90,6 +91,9 @@ float&#160;</td><td class="memItemRight" valign="bottom"><b>getFadeIntensity</b>
 <tr class="memitem:aac139ca9e47231843239d53751c6c5dc"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAtmosphere.html#aac139ca9e47231843239d53751c6c5dc">getAverageLuminance</a> () const </td></tr>
 <tr class="memdesc:aac139ca9e47231843239d53751c6c5dc"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the average luminance of the atmosphere in cd/m2 If atmosphere is off, the luminance includes the background starlight + light pollution.  <a href="#aac139ca9e47231843239d53751c6c5dc">More...</a><br /></td></tr>
 <tr class="separator:aac139ca9e47231843239d53751c6c5dc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aced822581173499b066c621b4547ce4c"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAtmosphere.html#aced822581173499b066c621b4547ce4c">setAverageLuminance</a> (float overrideLum)</td></tr>
+<tr class="memdesc:aced822581173499b066c621b4547ce4c"><td class="mdescLeft">&#160;</td><td class="mdescRight">override computable luminance.  <a href="#aced822581173499b066c621b4547ce4c">More...</a><br /></td></tr>
+<tr class="separator:aced822581173499b066c621b4547ce4c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:abf3f252effeca3f035e41b79efdbe620"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAtmosphere.html#abf3f252effeca3f035e41b79efdbe620">setLightPollutionLuminance</a> (float f)</td></tr>
 <tr class="memdesc:abf3f252effeca3f035e41b79efdbe620"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the light pollution luminance in cd/m^2.  <a href="#abf3f252effeca3f035e41b79efdbe620">More...</a><br /></td></tr>
 <tr class="separator:abf3f252effeca3f035e41b79efdbe620"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -208,7 +212,7 @@ float&#160;</td><td class="memItemRight" valign="bottom"><b>getFadeIntensity</b>
 
 <p>Get the light pollution luminance in cd/m^2. </p>
 
-<p>Definition at line <a class="el" href="Atmosphere_8hpp_source.html#l00077">77</a> of file <a class="el" href="Atmosphere_8hpp_source.html">Atmosphere.hpp</a>.</p>
+<p>Definition at line <a class="el" href="Atmosphere_8hpp_source.html#l00080">80</a> of file <a class="el" href="Atmosphere_8hpp_source.html">Atmosphere.hpp</a>.</p>
 
 </div>
 </div>
@@ -237,6 +241,25 @@ float&#160;</td><td class="memItemRight" valign="bottom"><b>getFadeIntensity</b>
 <dl class="section return"><dt>Returns</dt><dd>the display intensity ranging from 0 to 1 </dd></dl>
 
 <p>Definition at line <a class="el" href="Atmosphere_8hpp_source.html#l00063">63</a> of file <a class="el" href="Atmosphere_8hpp_source.html">Atmosphere.hpp</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="aced822581173499b066c621b4547ce4c"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Atmosphere::setAverageLuminance </td>
+          <td>(</td>
+          <td class="paramtype">float&#160;</td>
+          <td class="paramname"><em>overrideLum</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>override computable luminance. </p>
+<p>This is for special operations only, e.g. for scripting of brightness-balanced image export. To return to auto-computed values, set any negative value at the end of the script. </p>
 
 </div>
 </div>
@@ -320,7 +343,7 @@ float&#160;</td><td class="memItemRight" valign="bottom"><b>getFadeIntensity</b>
 
 <p>Set the light pollution luminance in cd/m^2. </p>
 
-<p>Definition at line <a class="el" href="Atmosphere_8hpp_source.html#l00075">75</a> of file <a class="el" href="Atmosphere_8hpp_source.html">Atmosphere.hpp</a>.</p>
+<p>Definition at line <a class="el" href="Atmosphere_8hpp_source.html#l00078">78</a> of file <a class="el" href="Atmosphere_8hpp_source.html">Atmosphere.hpp</a>.</p>
 
 </div>
 </div>
@@ -330,7 +353,7 @@ float&#160;</td><td class="memItemRight" valign="bottom"><b>getFadeIntensity</b>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Sat Nov 28 2015 15:23:44 for Stellarium by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Thu Feb 25 2016 10:04:57 for Stellarium by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.8
 </small></address>

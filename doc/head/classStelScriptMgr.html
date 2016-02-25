@@ -33,6 +33,7 @@
       <li><a href="scripting.html"><span>Scripting</span></a></li>
       <li><a href="plugins.html"><span>Plugins</span></a></li>
       <li><a href="fileStructure.html"><span>File&#160;Structure</span></a></li>
+      <li><a href="examples.html"><span>Examples</span></a></li>
     </ul>
   </div>
   <div id="navrow2" class="tabs2">
@@ -78,7 +79,7 @@ Public Slots</h2></td></tr>
 <tr class="memdesc:a0db66216e89971cf0c4ef1d2c20a3340"><td class="mdescLeft">&#160;</td><td class="mdescRight">Gets the default shortcut of the script.  <a href="#a0db66216e89971cf0c4ef1d2c20a3340">More...</a><br /></td></tr>
 <tr class="separator:a0db66216e89971cf0c4ef1d2c20a3340"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a00854d294c1d06c0027f3db7cc1bad62"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classStelScriptMgr.html#a00854d294c1d06c0027f3db7cc1bad62">runPreprocessedScript</a> (const QString &amp;preprocessedScript)</td></tr>
-<tr class="memdesc:a00854d294c1d06c0027f3db7cc1bad62"><td class="mdescLeft">&#160;</td><td class="mdescRight">Run the prprocessed script.  <a href="#a00854d294c1d06c0027f3db7cc1bad62">More...</a><br /></td></tr>
+<tr class="memdesc:a00854d294c1d06c0027f3db7cc1bad62"><td class="mdescLeft">&#160;</td><td class="mdescRight">Run the preprocessed script.  <a href="#a00854d294c1d06c0027f3db7cc1bad62">More...</a><br /></td></tr>
 <tr class="separator:a00854d294c1d06c0027f3db7cc1bad62"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a4ae16f6682d202218f3ae778d14bdbb4"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classStelScriptMgr.html#a4ae16f6682d202218f3ae778d14bdbb4">runScript</a> (const QString &amp;fileName, const QString &amp;includePath=&quot;&quot;)</td></tr>
 <tr class="memdesc:a4ae16f6682d202218f3ae778d14bdbb4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Run the script located at the given location.  <a href="#a4ae16f6682d202218f3ae778d14bdbb4">More...</a><br /></td></tr>
@@ -101,6 +102,9 @@ Public Slots</h2></td></tr>
 <tr class="memitem:a3f82e776255ce7e28191f08de3d545b6"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classStelScriptMgr.html#a3f82e776255ce7e28191f08de3d545b6">resetOutput</a> (void)</td></tr>
 <tr class="memdesc:a3f82e776255ce7e28191f08de3d545b6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Reset output file and cause the emission of an (empty) scriptOutput signal.  <a href="#a3f82e776255ce7e28191f08de3d545b6">More...</a><br /></td></tr>
 <tr class="separator:a3f82e776255ce7e28191f08de3d545b6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a65324d83c83add3ba5a9e07ef0a32b48"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classStelScriptMgr.html#a65324d83c83add3ba5a9e07ef0a32b48">saveOutputAs</a> (const QString &amp;filename)</td></tr>
+<tr class="memdesc:a65324d83c83add3ba5a9e07ef0a32b48"><td class="mdescLeft">&#160;</td><td class="mdescRight">Save output file to new file (in same directory as output.txt).  <a href="#a65324d83c83add3ba5a9e07ef0a32b48">More...</a><br /></td></tr>
+<tr class="separator:a65324d83c83add3ba5a9e07ef0a32b48"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae548729ca1af31a55a920913d0e9448c"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classStelScriptMgr.html#ae548729ca1af31a55a920913d0e9448c">pauseScript</a> ()</td></tr>
 <tr class="memdesc:ae548729ca1af31a55a920913d0e9448c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Pause a running script.  <a href="#ae548729ca1af31a55a920913d0e9448c">More...</a><br /></td></tr>
 <tr class="separator:ae548729ca1af31a55a920913d0e9448c"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -137,8 +141,8 @@ QStringList&#160;</td><td class="memItemRight" valign="bottom"><b>getScriptList<
 <tr class="memitem:a93c388aec98eab1e3008f830c4c47dc0"><td class="memItemLeft" align="right" valign="top">QString&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classStelScriptMgr.html#a93c388aec98eab1e3008f830c4c47dc0">runningScriptId</a> ()</td></tr>
 <tr class="memdesc:a93c388aec98eab1e3008f830c4c47dc0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the ID (filename) of the currently running script.  <a href="#a93c388aec98eab1e3008f830c4c47dc0">More...</a><br /></td></tr>
 <tr class="separator:a93c388aec98eab1e3008f830c4c47dc0"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a41ae8cd74b65a66fc877773fc6aa3511"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a41ae8cd74b65a66fc877773fc6aa3511"></a>
-bool&#160;</td><td class="memItemRight" valign="bottom"><b>preprocessScript</b> (const QString &amp;input, QString &amp;<a class="el" href="classStelScriptMgr.html#a2497ff90374109cd4c2e9c51d51b183e">output</a>, const QString &amp;scriptDir)</td></tr>
+<tr class="memitem:a41ae8cd74b65a66fc877773fc6aa3511"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classStelScriptMgr.html#a41ae8cd74b65a66fc877773fc6aa3511">preprocessScript</a> (const QString &amp;input, QString &amp;<a class="el" href="classStelScriptMgr.html#a2497ff90374109cd4c2e9c51d51b183e">output</a>, const QString &amp;scriptDir)</td></tr>
+<tr class="memdesc:a41ae8cd74b65a66fc877773fc6aa3511"><td class="mdescLeft">&#160;</td><td class="mdescRight">Preprocess script, esp.  <a href="#a41ae8cd74b65a66fc877773fc6aa3511">More...</a><br /></td></tr>
 <tr class="separator:a41ae8cd74b65a66fc877773fc6aa3511"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a298b3f5478691624bd7563bc5f360575"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a298b3f5478691624bd7563bc5f360575"></a>
 bool&#160;</td><td class="memItemRight" valign="bottom"><b>preprocessScript</b> (QFile &amp;input, QString &amp;<a class="el" href="classStelScriptMgr.html#a2497ff90374109cd4c2e9c51d51b183e">output</a>, const QString &amp;scriptDir)</td></tr>
@@ -438,6 +442,41 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><b>preprocessScript</b> 
 
 </div>
 </div>
+<a class="anchor" id="a41ae8cd74b65a66fc877773fc6aa3511"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool StelScriptMgr::preprocessScript </td>
+          <td>(</td>
+          <td class="paramtype">const QString &amp;&#160;</td>
+          <td class="paramname"><em>input</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">QString &amp;&#160;</td>
+          <td class="paramname"><em>output</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const QString &amp;&#160;</td>
+          <td class="paramname"><em>scriptDir</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Preprocess script, esp. </p>
+<p>process include instructions. if the command line option &ndash;verbose has been given, this dumps the preprocessed script with line numbers attached to log. This helps to understand the line number given by the usual error message. </p>
+
+</div>
+</div>
 <a class="anchor" id="a3f82e776255ce7e28191f08de3d545b6"></a>
 <div class="memitem">
 <div class="memproto">
@@ -529,7 +568,7 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><b>preprocessScript</b> 
 </table>
 </div><div class="memdoc">
 
-<p>Run the prprocessed script. </p>
+<p>Run the preprocessed script. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">preprocessedScript</td><td>the string containing the preprocessed script. </td></tr>
@@ -581,6 +620,33 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><b>preprocessScript</b> 
   </dd>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>false if the named script could not be run, true otherwise </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a65324d83c83add3ba5a9e07ef0a32b48"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void StelScriptMgr::saveOutputAs </td>
+          <td>(</td>
+          <td class="paramtype">const QString &amp;&#160;</td>
+          <td class="paramname"><em>filename</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">slot</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Save output file to new file (in same directory as output.txt). </p>
+<p>This is required to allow reading with other program on Windows while output.txt is still open. </p>
 
 </div>
 </div>
@@ -768,7 +834,7 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><b>preprocessScript</b> 
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Sat Nov 28 2015 15:23:45 for Stellarium by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Thu Feb 25 2016 10:04:58 for Stellarium by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.8
 </small></address>

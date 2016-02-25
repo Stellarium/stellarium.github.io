@@ -33,6 +33,7 @@
       <li><a href="scripting.html"><span>Scripting</span></a></li>
       <li><a href="plugins.html"><span>Plugins</span></a></li>
       <li><a href="fileStructure.html"><span>File&#160;Structure</span></a></li>
+      <li><a href="examples.html"><span>Examples</span></a></li>
     </ul>
   </div>
   <div id="navrow2" class="tabs2">
@@ -101,7 +102,7 @@ Public Member Functions</h2></td></tr>
 <tr class="memdesc:a85988280365d6fd731876c9c5df0ae04"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get a HTML version of the short description for this projection type.  <a href="#a85988280365d6fd731876c9c5df0ae04">More...</a><br /></td></tr>
 <tr class="separator:a85988280365d6fd731876c9c5df0ae04"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aef4aa6a98699023c1a7ebc998d71db73"><td class="memItemLeft" align="right" valign="top">virtual float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classStelProjector.html#aef4aa6a98699023c1a7ebc998d71db73">getMaxFov</a> () const =0</td></tr>
-<tr class="memdesc:aef4aa6a98699023c1a7ebc998d71db73"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the maximum <a class="elRef" doxygen="/home/aw/devel/stellarium/trunk/builds/gcc/stellariumPlugins.tag:../../doc-plugins/head" href="../../doc-plugins/head/classFOV.html">FOV</a> apperture in degree.  <a href="#aef4aa6a98699023c1a7ebc998d71db73">More...</a><br /></td></tr>
+<tr class="memdesc:aef4aa6a98699023c1a7ebc998d71db73"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the maximum FOV apperture in degree.  <a href="#aef4aa6a98699023c1a7ebc998d71db73">More...</a><br /></td></tr>
 <tr class="separator:aef4aa6a98699023c1a7ebc998d71db73"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:abd6860a25765a570691ead7786e47a2a"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classStelProjector.html#abd6860a25765a570691ead7786e47a2a">forward</a> (<a class="el" href="singletonVector3.html">Vec3f</a> &amp;v) const =0</td></tr>
 <tr class="memdesc:abd6860a25765a570691ead7786e47a2a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Apply the transformation in the forward direction in place.  <a href="#abd6860a25765a570691ead7786e47a2a">More...</a><br /></td></tr>
@@ -110,7 +111,7 @@ Public Member Functions</h2></td></tr>
 <tr class="memdesc:a23bbda304a664c3debb70c310f963bcc"><td class="mdescLeft">&#160;</td><td class="mdescRight">Apply the transformation in the backward projection in place.  <a href="#a23bbda304a664c3debb70c310f963bcc">More...</a><br /></td></tr>
 <tr class="separator:a23bbda304a664c3debb70c310f963bcc"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac29a31eaa4e4e40726378ffccba64f68"><td class="memItemLeft" align="right" valign="top">virtual float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classStelProjector.html#ac29a31eaa4e4e40726378ffccba64f68">deltaZoom</a> (float fov) const =0</td></tr>
-<tr class="memdesc:ac29a31eaa4e4e40726378ffccba64f68"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return the small zoom increment to use at the given <a class="elRef" doxygen="/home/aw/devel/stellarium/trunk/builds/gcc/stellariumPlugins.tag:../../doc-plugins/head" href="../../doc-plugins/head/classFOV.html">FOV</a> for nice movements.  <a href="#ac29a31eaa4e4e40726378ffccba64f68">More...</a><br /></td></tr>
+<tr class="memdesc:ac29a31eaa4e4e40726378ffccba64f68"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return the small zoom increment to use at the given FOV for nice movements.  <a href="#ac29a31eaa4e4e40726378ffccba64f68">More...</a><br /></td></tr>
 <tr class="separator:ac29a31eaa4e4e40726378ffccba64f68"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a1a45ecfa760d03883d53831285957f94"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classStelProjector.html#a1a45ecfa760d03883d53831285957f94">intersectViewportDiscontinuity</a> (const <a class="el" href="singletonVector3.html">Vec3d</a> &amp;p1, const <a class="el" href="singletonVector3.html">Vec3d</a> &amp;p2) const </td></tr>
 <tr class="memdesc:a1a45ecfa760d03883d53831285957f94"><td class="mdescLeft">&#160;</td><td class="mdescRight">Determine whether a great circle connection p1 and p2 intersects with a projection discontinuity.  <a href="#a1a45ecfa760d03883d53831285957f94">More...</a><br /></td></tr>
@@ -133,6 +134,9 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><b>intersectViewportDisc
 <tr class="memitem:a22834577accb9032d4d3c258145c407d"><td class="memItemLeft" align="right" valign="top"><a class="el" href="singletonVector2.html">Vec2f</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classStelProjector.html#a22834577accb9032d4d3c258145c407d">getViewportCenter</a> () const </td></tr>
 <tr class="memdesc:a22834577accb9032d4d3c258145c407d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the center of the viewport relative to the lower left corner of the screen.  <a href="#a22834577accb9032d4d3c258145c407d">More...</a><br /></td></tr>
 <tr class="separator:a22834577accb9032d4d3c258145c407d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ade883262c26d8f0d203d0111232f0c03"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ade883262c26d8f0d203d0111232f0c03"></a>
+<a class="el" href="singletonVector2.html">Vec2f</a>&#160;</td><td class="memItemRight" valign="bottom"><b>getViewportCenterOffset</b> () const </td></tr>
+<tr class="separator:ade883262c26d8f0d203d0111232f0c03"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a1be7c48ab18038110b93942c5b54e3f3"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classStelProjector.html#a1be7c48ab18038110b93942c5b54e3f3">getViewportPosX</a> () const </td></tr>
 <tr class="memdesc:a1be7c48ab18038110b93942c5b54e3f3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the horizontal viewport offset in pixels.  <a href="#a1be7c48ab18038110b93942c5b54e3f3">More...</a><br /></td></tr>
 <tr class="separator:a1be7c48ab18038110b93942c5b54e3f3"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -158,7 +162,7 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><b>intersectViewportDisc
 <tr class="memdesc:a3917122099cb40e04ee8fbfc090af88b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get size of a radian in pixels at the center of the viewport disk.  <a href="#a3917122099cb40e04ee8fbfc090af88b">More...</a><br /></td></tr>
 <tr class="separator:a3917122099cb40e04ee8fbfc090af88b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a2b5166ac0de6ec48763c51c5f639aecf"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classStelProjector.html#a2b5166ac0de6ec48763c51c5f639aecf">getFov</a> () const </td></tr>
-<tr class="memdesc:a2b5166ac0de6ec48763c51c5f639aecf"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the current <a class="elRef" doxygen="/home/aw/devel/stellarium/trunk/builds/gcc/stellariumPlugins.tag:../../doc-plugins/head" href="../../doc-plugins/head/classFOV.html">FOV</a> diameter in degrees.  <a href="#a2b5166ac0de6ec48763c51c5f639aecf">More...</a><br /></td></tr>
+<tr class="memdesc:a2b5166ac0de6ec48763c51c5f639aecf"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the current FOV diameter in degrees.  <a href="#a2b5166ac0de6ec48763c51c5f639aecf">More...</a><br /></td></tr>
 <tr class="separator:a2b5166ac0de6ec48763c51c5f639aecf"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a385fd39eb86651f7d683c9b59d4b6dec"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classStelProjector.html#a385fd39eb86651f7d683c9b59d4b6dec">needGlFrontFaceCW</a> () const </td></tr>
 <tr class="memdesc:a385fd39eb86651f7d683c9b59d4b6dec"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get whether front faces need to be oriented in the clockwise direction.  <a href="#a385fd39eb86651f7d683c9b59d4b6dec">More...</a><br /></td></tr>
@@ -389,7 +393,7 @@ float&#160;</td><td class="memItemRight" valign="bottom"><b>devicePixelsPerPixel
 
 <p>Private constructor. Only <a class="el" href="classStelCore.html" title="Main class for Stellarium core processing. ">StelCore</a> can create instances of <a class="el" href="classStelProjector.html" title="Provide the main interface to all operations of projecting coordinates from sky to screen...">StelProjector</a>. </p>
 
-<p>Definition at line <a class="el" href="StelProjector_8hpp_source.html#l00287">287</a> of file <a class="el" href="StelProjector_8hpp_source.html">StelProjector.hpp</a>.</p>
+<p>Definition at line <a class="el" href="StelProjector_8hpp_source.html#l00288">288</a> of file <a class="el" href="StelProjector_8hpp_source.html">StelProjector.hpp</a>.</p>
 
 </div>
 </div>
@@ -509,7 +513,7 @@ float&#160;</td><td class="memItemRight" valign="bottom"><b>devicePixelsPerPixel
 </table>
 </div><div class="memdoc">
 
-<p>Return the small zoom increment to use at the given <a class="elRef" doxygen="/home/aw/devel/stellarium/trunk/builds/gcc/stellariumPlugins.tag:../../doc-plugins/head" href="../../doc-plugins/head/classFOV.html">FOV</a> for nice movements. </p>
+<p>Return the small zoom increment to use at the given FOV for nice movements. </p>
 
 <p>Implemented in <a class="el" href="classStelProjector2d.html#a8b53232e59ccaf1d753510557c133523">StelProjector2d</a>, <a class="el" href="classStelProjectorOrthographic.html#a7033e3ddbc34568363a5f200d0f99b4e">StelProjectorOrthographic</a>, <a class="el" href="classStelProjectorMercator.html#a528ffb38438b2d8cca399210787e1c2e">StelProjectorMercator</a>, <a class="el" href="classStelProjectorCylinder.html#a58c0edecd7c0db1b87e6c3e9a9e31b5e">StelProjectorCylinder</a>, <a class="el" href="classStelProjectorHammer.html#a97d3838b86b4a28790929577ad92165c">StelProjectorHammer</a>, <a class="el" href="classStelProjectorFisheye.html#a9245101d35c506f37374f734a8a87754">StelProjectorFisheye</a>, <a class="el" href="classStelProjectorStereographic.html#ad36867b703bf25323816a59c846846e6">StelProjectorStereographic</a>, <a class="el" href="classStelProjectorEqualArea.html#a3e508cb51acac77d429a96adf215bcee">StelProjectorEqualArea</a>, and <a class="el" href="classStelProjectorPerspective.html#a336220b4b36eb2543b6b6cd05daf634d">StelProjectorPerspective</a>.</p>
 
@@ -641,7 +645,7 @@ float&#160;</td><td class="memItemRight" valign="bottom"><b>devicePixelsPerPixel
 
 <p>Get the number of device pixels per "Device Independent Pixels" (value is usually 1, but 2 for mac retina screens). </p>
 
-<p>Definition at line <a class="el" href="StelProjector_8hpp_source.html#l00182">182</a> of file <a class="el" href="StelProjector_8hpp_source.html">StelProjector.hpp</a>.</p>
+<p>Definition at line <a class="el" href="StelProjector_8hpp_source.html#l00183">183</a> of file <a class="el" href="StelProjector_8hpp_source.html">StelProjector.hpp</a>.</p>
 
 </div>
 </div>
@@ -675,7 +679,7 @@ float&#160;</td><td class="memItemRight" valign="bottom"><b>devicePixelsPerPixel
       </table>
 </div><div class="memdoc">
 
-<p>Get the current <a class="elRef" doxygen="/home/aw/devel/stellarium/trunk/builds/gcc/stellariumPlugins.tag:../../doc-plugins/head" href="../../doc-plugins/head/classFOV.html">FOV</a> diameter in degrees. </p>
+<p>Get the current FOV diameter in degrees. </p>
 
 </div>
 </div>
@@ -735,7 +739,7 @@ float&#160;</td><td class="memItemRight" valign="bottom"><b>devicePixelsPerPixel
 </table>
 </div><div class="memdoc">
 
-<p>Get the maximum <a class="elRef" doxygen="/home/aw/devel/stellarium/trunk/builds/gcc/stellariumPlugins.tag:../../doc-plugins/head" href="../../doc-plugins/head/classFOV.html">FOV</a> apperture in degree. </p>
+<p>Get the maximum FOV apperture in degree. </p>
 
 <p>Implemented in <a class="el" href="classStelProjector2d.html#a5a9b64f6ce22311df593dcc6798f8278">StelProjector2d</a>, <a class="el" href="classStelProjectorOrthographic.html#ae02ff8ecc9b5981a3ecc444069c9ebde">StelProjectorOrthographic</a>, <a class="el" href="classStelProjectorMercator.html#ab5dfcf4967a4e2fec203cf3609583d91">StelProjectorMercator</a>, <a class="el" href="classStelProjectorCylinder.html#a8d424aae3da4c6e5b39f8cbd13077833">StelProjectorCylinder</a>, <a class="el" href="classStelProjectorHammer.html#aeee07d039673f395d5cc327bde8f9ec3">StelProjectorHammer</a>, <a class="el" href="classStelProjectorFisheye.html#a71cda372dac57e190bf05c6bf67200e6">StelProjectorFisheye</a>, <a class="el" href="classStelProjectorStereographic.html#a7f65202ea01470ad7733f23c9c3eac89">StelProjectorStereographic</a>, <a class="el" href="classStelProjectorEqualArea.html#a4a59719f5dc8854029dd1f0b439563f9">StelProjectorEqualArea</a>, and <a class="el" href="classStelProjectorPerspective.html#af4df18148df7b09f39539ffd006242b0">StelProjectorPerspective</a>.</p>
 
@@ -1501,7 +1505,7 @@ float&#160;</td><td class="memItemRight" valign="bottom"><b>devicePixelsPerPixel
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Sat Nov 28 2015 15:23:45 for Stellarium by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Thu Feb 25 2016 10:04:58 for Stellarium by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.8
 </small></address>

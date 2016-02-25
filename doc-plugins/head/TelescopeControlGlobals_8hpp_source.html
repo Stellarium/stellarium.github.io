@@ -28,7 +28,6 @@
     <ul class="tablist">
       <li><a href="index.html"><span>Main&#160;Page</span></a></li>
       <li><a href="modules.html"><span>Modules</span></a></li>
-      <li><a href="annotated.html"><span>Classes</span></a></li>
       <li><a href="../../doc/"><span>Core&#160;API</span></a></li>
     </ul>
   </div>
@@ -85,46 +84,43 @@
 <div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;    </div>
 <div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;    <span class="keyword">const</span> <span class="keywordtype">int</span> MAX_CIRCLE_COUNT = 10;</div>
 <div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;    </div>
-<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;<span class="preprocessor">    #ifdef Q_OS_WIN32</span></div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;<span class="preprocessor">    #ifdef Q_OS_WIN</span></div>
 <div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;    <span class="keyword">const</span> QString TELESCOPE_SERVER_PATH = QString(<span class="stringliteral">&quot;/%1.exe&quot;</span>);</div>
-<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;    <span class="keyword">const</span> QString SERIAL_PORT_PREFIX = QString(<span class="stringliteral">&quot;COM&quot;</span>);</div>
-<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;<span class="preprocessor">    #else</span></div>
-<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;    <span class="keyword">const</span> QString TELESCOPE_SERVER_PATH = QString(<span class="stringliteral">&quot;/%1&quot;</span>);</div>
-<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;    <span class="keyword">const</span> QString SERIAL_PORT_PREFIX = QString(<span class="stringliteral">&quot;/&quot;</span>);</div>
-<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;<span class="preprocessor">    #endif</span></div>
-<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;    </div>
-<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;    <span class="keyword">const</span> <span class="keywordtype">int</span> DEFAULT_DELAY = 500000; <span class="comment">//Microseconds; == 0.5 seconds</span></div>
-<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;<span class="preprocessor">    #define MICROSECONDS_FROM_SECONDS(X) (X * 1000000)</span></div>
-<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;<span class="preprocessor">    #define SECONDS_FROM_MICROSECONDS(X) ((double) X / 1000000)</span></div>
-<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;    </div>
-<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;    <span class="keyword">enum</span> ConnectionType {</div>
-<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;        ConnectionNA = 0,</div>
-<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;        ConnectionVirtual,</div>
-<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;        ConnectionInternal,</div>
-<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;        ConnectionLocal,</div>
-<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;        ConnectionRemote,</div>
-<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;        ConnectionCount</div>
-<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;    };</div>
-<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;    </div>
-<div class="line"><a name="l00060"></a><span class="lineno"><a class="line" href="structTelescopeControlGlobals_1_1DeviceModel.html">   60</a></span>&#160;    <span class="keyword">struct </span><a class="code" href="structTelescopeControlGlobals_1_1DeviceModel.html">DeviceModel</a></div>
-<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;    {</div>
-<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;        QString name;</div>
-<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;        QString description;</div>
-<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;        QString server;</div>
-<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;        <span class="keywordtype">int</span> defaultDelay;</div>
-<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;        <span class="keywordtype">bool</span> useExecutable;</div>
-<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;    };</div>
-<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;</div>
-<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;    <span class="keyword">const</span> QStringList EMBEDDED_TELESCOPE_SERVERS = QString(<span class="stringliteral">&quot;TelescopeServerDummy TelescopeServerLx200 TelescopeServerNexStar&quot;</span>).split(<span class="charliteral">&#39; &#39;</span>, QString::SkipEmptyParts);</div>
-<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;};</div>
-<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;</div>
-<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;<span class="preprocessor">#endif //_TELESCOPE_CONTROL_GLOBALS_</span></div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;<span class="preprocessor">    #else</span></div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;    <span class="keyword">const</span> QString TELESCOPE_SERVER_PATH = QString(<span class="stringliteral">&quot;/%1&quot;</span>);</div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;<span class="preprocessor">    #endif</span></div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;    </div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;    <span class="keyword">const</span> <span class="keywordtype">int</span> DEFAULT_DELAY = 500000; <span class="comment">//Microseconds; == 0.5 seconds</span></div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;<span class="preprocessor">    #define MICROSECONDS_FROM_SECONDS(X) (X * 1000000)</span></div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;<span class="preprocessor">    #define SECONDS_FROM_MICROSECONDS(X) ((double) X / 1000000)</span></div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;    </div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;    <span class="keyword">enum</span> ConnectionType {</div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;        ConnectionNA = 0,</div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;        ConnectionVirtual,</div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;        ConnectionInternal,</div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;        ConnectionLocal,</div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;        ConnectionRemote,</div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;        ConnectionCount</div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;    };</div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;    </div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;    <span class="keyword">struct </span>DeviceModel</div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;    {</div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;        QString name;</div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;        QString description;</div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;        QString server;</div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;        <span class="keywordtype">int</span> defaultDelay;</div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;        <span class="keywordtype">bool</span> useExecutable;</div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;    };</div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;</div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;    <span class="keyword">const</span> QStringList EMBEDDED_TELESCOPE_SERVERS = QString(<span class="stringliteral">&quot;TelescopeServerDummy TelescopeServerLx200 TelescopeServerNexStar&quot;</span>).split(<span class="charliteral">&#39; &#39;</span>, QString::SkipEmptyParts);</div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;};</div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;</div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;<span class="preprocessor">#endif //_TELESCOPE_CONTROL_GLOBALS_</span></div>
 <div class="ttc" id="namespaceTelescopeControlGlobals_html"><div class="ttname"><a href="namespaceTelescopeControlGlobals.html">TelescopeControlGlobals</a></div><div class="ttdef"><b>Definition:</b> <a href="TelescopeControlGlobals_8hpp_source.html#l00027">TelescopeControlGlobals.hpp:27</a></div></div>
-<div class="ttc" id="structTelescopeControlGlobals_1_1DeviceModel_html"><div class="ttname"><a href="structTelescopeControlGlobals_1_1DeviceModel.html">TelescopeControlGlobals::DeviceModel</a></div><div class="ttdef"><b>Definition:</b> <a href="TelescopeControlGlobals_8hpp_source.html#l00060">TelescopeControlGlobals.hpp:60</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Sat Nov 28 2015 15:08:15 for Stellarium by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Thu Feb 25 2016 10:05:14 for Stellarium by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.8
 </small></address>

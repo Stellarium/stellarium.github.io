@@ -33,6 +33,7 @@
       <li><a href="scripting.html"><span>Scripting</span></a></li>
       <li><a href="plugins.html"><span>Plugins</span></a></li>
       <li><a href="fileStructure.html"><span>File&#160;Structure</span></a></li>
+      <li><a href="examples.html"><span>Examples</span></a></li>
     </ul>
   </div>
   <div id="navrow2" class="tabs2">
@@ -63,7 +64,7 @@ Public Member Functions</h2></td></tr>
 <tr class="memdesc:abe7ca16120482c7d687e452ddcc6853a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Draw the image.  <a href="#abe7ca16120482c7d687e452ddcc6853a">More...</a><br /></td></tr>
 <tr class="separator:abe7ca16120482c7d687e452ddcc6853a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a68673b0131e926fcd81fce49b0f0ccdd"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classScreenImage.html#a68673b0131e926fcd81fce49b0f0ccdd">update</a> (double deltaTime)</td></tr>
-<tr class="memdesc:a68673b0131e926fcd81fce49b0f0ccdd"><td class="mdescLeft">&#160;</td><td class="mdescRight">update fade for on/off action  <a href="#a68673b0131e926fcd81fce49b0f0ccdd">More...</a><br /></td></tr>
+<tr class="memdesc:a68673b0131e926fcd81fce49b0f0ccdd"><td class="mdescLeft">&#160;</td><td class="mdescRight">Empty dummy. The various animations are updated by other means.  <a href="#a68673b0131e926fcd81fce49b0f0ccdd">More...</a><br /></td></tr>
 <tr class="separator:a68673b0131e926fcd81fce49b0f0ccdd"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:abc8190251697e015a1e723fae345d54d"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classScreenImage.html#abc8190251697e015a1e723fae345d54d">setFadeDuration</a> (float duration)</td></tr>
 <tr class="memdesc:abc8190251697e015a1e723fae345d54d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the duration used for the fade in / fade out of the image.  <a href="#abc8190251697e015a1e723fae345d54d">More...</a><br /></td></tr>
@@ -89,6 +90,15 @@ virtual int&#160;</td><td class="memItemRight" valign="bottom"><b>imageHeight</b
 <tr class="memitem:aba8f07a60fbae590e6d99234cb1a349d"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aba8f07a60fbae590e6d99234cb1a349d"></a>
 virtual int&#160;</td><td class="memItemRight" valign="bottom"><b>imageWidth</b> (void)</td></tr>
 <tr class="separator:aba8f07a60fbae590e6d99234cb1a349d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8219d324b9848b3d31cd104740648fca"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classScreenImage.html#a8219d324b9848b3d31cd104740648fca">setScale</a> (float scaleX, float scaleY, float duration=0.)</td></tr>
+<tr class="memdesc:a8219d324b9848b3d31cd104740648fca"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the image scale relative to the size originally loaded.  <a href="#a8219d324b9848b3d31cd104740648fca">More...</a><br /></td></tr>
+<tr class="separator:a8219d324b9848b3d31cd104740648fca"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aaeef8981cd4c3b7356eff5477d38cef3"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aaeef8981cd4c3b7356eff5477d38cef3"></a>
+virtual float&#160;</td><td class="memItemRight" valign="bottom"><b>imageScaleX</b> (void)</td></tr>
+<tr class="separator:aaeef8981cd4c3b7356eff5477d38cef3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6bd4b0d6d70b6df77eee507c6e40040a"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a6bd4b0d6d70b6df77eee507c6e40040a"></a>
+virtual float&#160;</td><td class="memItemRight" valign="bottom"><b>imageScaleY</b> (void)</td></tr>
+<tr class="separator:a6bd4b0d6d70b6df77eee507c6e40040a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-attribs"></a>
 Protected Attributes</h2></td></tr>
@@ -101,13 +111,19 @@ QTimeLine *&#160;</td><td class="memItemRight" valign="bottom"><b>moveTimer</b><
 <tr class="memitem:a2b79fd708bea4f480e1a4bd148ce5c46"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a2b79fd708bea4f480e1a4bd148ce5c46"></a>
 QTimeLine *&#160;</td><td class="memItemRight" valign="bottom"><b>fadeTimer</b></td></tr>
 <tr class="separator:a2b79fd708bea4f480e1a4bd148ce5c46"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2d958c4e9bdb050539aec14049b07017"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a2d958c4e9bdb050539aec14049b07017"></a>
+QTimeLine *&#160;</td><td class="memItemRight" valign="bottom"><b>scaleTimer</b></td></tr>
+<tr class="separator:a2d958c4e9bdb050539aec14049b07017"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab5657de9f382866c0ca2fc27791a2459"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ab5657de9f382866c0ca2fc27791a2459"></a>
 QGraphicsItemAnimation *&#160;</td><td class="memItemRight" valign="bottom"><b>anim</b></td></tr>
 <tr class="separator:ab5657de9f382866c0ca2fc27791a2459"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5140063b19761fb3ac1d471a471ca8a5"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a5140063b19761fb3ac1d471a471ca8a5"></a>
+QGraphicsItemAnimation *&#160;</td><td class="memItemRight" valign="bottom"><b>scaleAnim</b></td></tr>
+<tr class="separator:a5140063b19761fb3ac1d471a471ca8a5"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock">
-<p>Definition at line <a class="el" href="ScreenImageMgr_8hpp_source.html#l00039">39</a> of file <a class="el" href="ScreenImageMgr_8hpp_source.html">ScreenImageMgr.hpp</a>.</p>
+<p>Definition at line <a class="el" href="ScreenImageMgr_8hpp_source.html#l00040">40</a> of file <a class="el" href="ScreenImageMgr_8hpp_source.html">ScreenImageMgr.hpp</a>.</p>
 </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a class="anchor" id="a4a4a245db37e7ba4304c40272770678e"></a>
 <div class="memitem">
@@ -170,7 +186,7 @@ QGraphicsItemAnimation *&#160;</td><td class="memItemRight" valign="bottom"><b>a
     <tr><td class="paramname">x</td><td>the screen x-position for the texture (in pixels), measured from the left side of the screen. </td></tr>
     <tr><td class="paramname">y</td><td>the screen x-position for the texture (in pixels), measured from the bottom of the screen. </td></tr>
     <tr><td class="paramname">show</td><td>the initial displayed status of the image (false == hidden). </td></tr>
-    <tr><td class="paramname">scale</td><td>scale factor for the image. 1 = original size, 0.5 = 50% size etc. </td></tr>
+    <tr><td class="paramname">scale</td><td>scale factor for the image. 1 = original size, 0.5 = 50% size etc. Note that this also controls the final resolution of the image! Scale smaller that 1 leads to reduced resolution, larger than 1 of course creates upsampling artifacts. The scaling that happens after loading is a simple stretch of this loaded pixmap. In order to get a small image on screen which you might want to grow later, load with this scale=1 and <a class="el" href="classScreenImage.html#a8219d324b9848b3d31cd104740648fca" title="Set the image scale relative to the size originally loaded. ">setScale()</a> later. </td></tr>
     <tr><td class="paramname">fadeDuration</td><td>the time it takes for screen images to fade in/out/change alpha in seconds. </td></tr>
   </table>
   </dd>
@@ -378,6 +394,56 @@ QGraphicsItemAnimation *&#160;</td><td class="memItemRight" valign="bottom"><b>a
 
 </div>
 </div>
+<a class="anchor" id="a8219d324b9848b3d31cd104740648fca"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual void ScreenImage::setScale </td>
+          <td>(</td>
+          <td class="paramtype">float&#160;</td>
+          <td class="paramname"><em>scaleX</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float&#160;</td>
+          <td class="paramname"><em>scaleY</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float&#160;</td>
+          <td class="paramname"><em>duration</em> = <code>0.</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Set the image scale relative to the size originally loaded. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">scaleX</td><td>new (target) horizontal scale factor. Native size=1. </td></tr>
+    <tr><td class="paramname">scaleY</td><td>new (target) vertical scale factor. Native size=1. </td></tr>
+    <tr><td class="paramname">duration</td><td>how long for the resize to take in seconds </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
 <a class="anchor" id="a6dcbf259ea2d3c3a3438ed1a0f6c40ff"></a>
 <div class="memitem">
 <div class="memproto">
@@ -450,7 +516,7 @@ QGraphicsItemAnimation *&#160;</td><td class="memItemRight" valign="bottom"><b>a
 </table>
 </div><div class="memdoc">
 
-<p>update fade for on/off action </p>
+<p>Empty dummy. The various animations are updated by other means. </p>
 
 </div>
 </div>
@@ -460,7 +526,7 @@ QGraphicsItemAnimation *&#160;</td><td class="memItemRight" valign="bottom"><b>a
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Sat Nov 28 2015 15:23:44 for Stellarium by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Thu Feb 25 2016 10:04:57 for Stellarium by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.8
 </small></address>

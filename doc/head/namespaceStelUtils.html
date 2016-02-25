@@ -33,6 +33,7 @@
       <li><a href="scripting.html"><span>Scripting</span></a></li>
       <li><a href="plugins.html"><span>Plugins</span></a></li>
       <li><a href="fileStructure.html"><span>File&#160;Structure</span></a></li>
+      <li><a href="examples.html"><span>Examples</span></a></li>
     </ul>
   </div>
   <div id="navrow2" class="tabs2">
@@ -319,6 +320,9 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><b>changeDateTimeForRoll
 <tr class="memitem:afb657c757069457aad6ad6373724afb9"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceStelUtils.html#afb657c757069457aad6ad6373724afb9">getDeltaTStandardError</a> (const double jDay)</td></tr>
 <tr class="memdesc:afb657c757069457aad6ad6373724afb9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the standard error (sigma) for the value of DeltaT.  <a href="#afb657c757069457aad6ad6373724afb9">More...</a><br /></td></tr>
 <tr class="separator:afb657c757069457aad6ad6373724afb9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2ea9ea00cf66d4cb638114ba1c8a248c"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceStelUtils.html#a2ea9ea00cf66d4cb638114ba1c8a248c">getMoonFluctuation</a> (const double jDay)</td></tr>
+<tr class="memdesc:a2ea9ea00cf66d4cb638114ba1c8a248c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get value of the Moon fluctuation Source: The Rotation of the Earth, and the Secular Accelerations of the Sun, Moon and Planets Spencer Jones, H.  <a href="#a2ea9ea00cf66d4cb638114ba1c8a248c">More...</a><br /></td></tr>
+<tr class="separator:a2ea9ea00cf66d4cb638114ba1c8a248c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a0a076b60191a870c63f6388e490b67af"><td class="memTemplParams" colspan="2">template&lt;typename T &gt; </td></tr>
 <tr class="memitem:a0a076b60191a870c63f6388e490b67af"><td class="memTemplItemLeft" align="right" valign="top">int&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespaceStelUtils.html#a0a076b60191a870c63f6388e490b67af">sign</a> (T val)</td></tr>
 <tr class="memdesc:a0a076b60191a870c63f6388e490b67af"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sign function from <a href="http://stackoverflow.com/questions/1903954/is-there-a-standard-sign-function-signum-sgn-in-c-c">http://stackoverflow.com/questions/1903954/is-there-a-standard-sign-function-signum-sgn-in-c-c</a>.  <a href="#a0a076b60191a870c63f6388e490b67af">More...</a><br /></td></tr>
@@ -1895,6 +1899,31 @@ double&#160;</td><td class="memItemRight" valign="bottom"><b>trunc</b> (double x
 
 </div>
 </div>
+<a class="anchor" id="a2ea9ea00cf66d4cb638114ba1c8a248c"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">double StelUtils::getMoonFluctuation </td>
+          <td>(</td>
+          <td class="paramtype">const double&#160;</td>
+          <td class="paramname"><em>jDay</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Get value of the Moon fluctuation Source: The Rotation of the Earth, and the Secular Accelerations of the Sun, Moon and Planets Spencer Jones, H. </p>
+<p>Monthly Notices of the Royal Astronomical Society, 99 (1939), 541-558 1939MNRAS..99..541S [<a href="http://adsabs.harvard.edu/abs/1939MNRAS..99..541S">http://adsabs.harvard.edu/abs/1939MNRAS..99..541S</a>] </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">jDay</td><td>the JD </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>fluctuation in seconds </dd></dl>
+
+</div>
+</div>
 <a class="anchor" id="aea671814ea3b6fa1402e5ff0d69b529e"></a>
 <div class="memitem">
 <div class="memproto">
@@ -2809,7 +2838,7 @@ template&lt;typename T &gt; </div>
 
 <p>Sign function from <a href="http://stackoverflow.com/questions/1903954/is-there-a-standard-sign-function-signum-sgn-in-c-c">http://stackoverflow.com/questions/1903954/is-there-a-standard-sign-function-signum-sgn-in-c-c</a>. </p>
 
-<p>Definition at line <a class="el" href="StelUtils_8hpp_source.html#l00617">617</a> of file <a class="el" href="StelUtils_8hpp_source.html">StelUtils.hpp</a>.</p>
+<p>Definition at line <a class="el" href="StelUtils_8hpp_source.html#l00626">626</a> of file <a class="el" href="StelUtils_8hpp_source.html">StelUtils.hpp</a>.</p>
 
 </div>
 </div>
@@ -2919,7 +2948,7 @@ template&lt;typename T &gt; </div>
   </dd>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>The corresponding vector </dd></dl>
-<dl class="deprecated"><dt><b><a class="el" href="deprecated.html#_deprecated000006">Deprecated:</a></b></dt><dd>Use the &gt;&gt; operator from Vec3f class </dd></dl>
+<dl class="deprecated"><dt><b><a class="el" href="deprecated.html#_deprecated000008">Deprecated:</a></b></dt><dd>Use the &gt;&gt; operator from Vec3f class </dd></dl>
 
 </div>
 </div>
@@ -3094,7 +3123,7 @@ template&lt;typename T &gt; </div>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Sat Nov 28 2015 15:23:45 for Stellarium by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Thu Feb 25 2016 10:04:58 for Stellarium by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.8
 </small></address>

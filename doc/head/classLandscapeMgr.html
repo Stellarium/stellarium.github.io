@@ -33,6 +33,7 @@
       <li><a href="scripting.html"><span>Scripting</span></a></li>
       <li><a href="plugins.html"><span>Plugins</span></a></li>
       <li><a href="fileStructure.html"><span>File&#160;Structure</span></a></li>
+      <li><a href="examples.html"><span>Examples</span></a></li>
     </ul>
   </div>
   <div id="navrow2" class="tabs2">
@@ -62,6 +63,15 @@
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-slots"></a>
 Public Slots</h2></td></tr>
+<tr class="memitem:aec2e1b7d4da3c4057172dc7bf9572362"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classLandscapeMgr.html#aec2e1b7d4da3c4057172dc7bf9572362">getLuminance</a> () const </td></tr>
+<tr class="memdesc:aec2e1b7d4da3c4057172dc7bf9572362"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return the global landscape luminance [0..1], for being used e.g for setting eye adaptation.  <a href="#aec2e1b7d4da3c4057172dc7bf9572362">More...</a><br /></td></tr>
+<tr class="separator:aec2e1b7d4da3c4057172dc7bf9572362"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abff24e60ea83ac83882390da4d752deb"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classLandscapeMgr.html#abff24e60ea83ac83882390da4d752deb">getAtmosphereAverageLuminance</a> () const </td></tr>
+<tr class="memdesc:abff24e60ea83ac83882390da4d752deb"><td class="mdescLeft">&#160;</td><td class="mdescRight">return average luminance [cd/m^2] of atmosphere. Expect 10 at sunset, 6400 in daylight, &gt;0 in dark night.  <a href="#abff24e60ea83ac83882390da4d752deb">More...</a><br /></td></tr>
+<tr class="separator:abff24e60ea83ac83882390da4d752deb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab587e8773ece5f59d0ccef81ea14a30a"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classLandscapeMgr.html#ab587e8773ece5f59d0ccef81ea14a30a">setAtmosphereAverageLuminance</a> (const float overrideLuminance)</td></tr>
+<tr class="memdesc:ab587e8773ece5f59d0ccef81ea14a30a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Override autocomputed value and set average luminance [cd/m^2] of atmosphere.  <a href="#ab587e8773ece5f59d0ccef81ea14a30a">More...</a><br /></td></tr>
+<tr class="separator:ab587e8773ece5f59d0ccef81ea14a30a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a764288fbea78b8bde732e7d21d38990b"><td class="memItemLeft" align="right" valign="top">QStringList&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classLandscapeMgr.html#a764288fbea78b8bde732e7d21d38990b">getAllLandscapeNames</a> () const </td></tr>
 <tr class="memdesc:a764288fbea78b8bde732e7d21d38990b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Retrieve a list of the names of all the available landscapes in the file search path sub-directories of the landscape area.  <a href="#a764288fbea78b8bde732e7d21d38990b">More...</a><br /></td></tr>
 <tr class="separator:a764288fbea78b8bde732e7d21d38990b"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -218,6 +228,12 @@ Public Slots</h2></td></tr>
 <tr class="memitem:a28d76e79430fa9067368a847521c9154"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classLandscapeMgr.html#a28d76e79430fa9067368a847521c9154">getLandscapeOpacity</a> (<a class="el" href="singletonVector3.html">Vec3d</a> azalt) const </td></tr>
 <tr class="memdesc:a28d76e79430fa9067368a847521c9154"><td class="mdescLeft">&#160;</td><td class="mdescRight">Forward opacity query to current landscape.  <a href="#a28d76e79430fa9067368a847521c9154">More...</a><br /></td></tr>
 <tr class="separator:a28d76e79430fa9067368a847521c9154"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a53daca32288c4a376d4c8b30745b6224"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a53daca32288c4a376d4c8b30745b6224"></a>
+float&#160;</td><td class="memItemRight" valign="bottom"><b>getLandscapeOpacity</b> (<a class="el" href="singletonVector3.html">Vec3f</a> azalt) const </td></tr>
+<tr class="separator:a53daca32288c4a376d4c8b30745b6224"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1032c0cf92fc29a685ca91f4a021c9fe"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classLandscapeMgr.html#a1032c0cf92fc29a685ca91f4a021c9fe">getLandscapeOpacity</a> (float azimuth, float altitude) const </td></tr>
+<tr class="memdesc:a1032c0cf92fc29a685ca91f4a021c9fe"><td class="mdescLeft">&#160;</td><td class="mdescRight">Forward opacity query to current landscape.  <a href="#a1032c0cf92fc29a685ca91f4a021c9fe">More...</a><br /></td></tr>
+<tr class="separator:a1032c0cf92fc29a685ca91f4a021c9fe"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="signals"></a>
 Signals</h2></td></tr>
@@ -275,12 +291,6 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:aede7841be63d56f89c9512ed66ae41ab"><td class="memItemLeft" align="right" valign="top">virtual double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classLandscapeMgr.html#aede7841be63d56f89c9512ed66ae41ab">getCallOrder</a> (<a class="el" href="classStelModule.html#a11b61d014b51cf6424cd89b1ccd3d768">StelModuleActionName</a> actionName) const </td></tr>
 <tr class="memdesc:aede7841be63d56f89c9512ed66ae41ab"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the order in which this module will draw its objects relative to other modules.  <a href="#aede7841be63d56f89c9512ed66ae41ab">More...</a><br /></td></tr>
 <tr class="separator:aede7841be63d56f89c9512ed66ae41ab"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aec2e1b7d4da3c4057172dc7bf9572362"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classLandscapeMgr.html#aec2e1b7d4da3c4057172dc7bf9572362">getLuminance</a> () const </td></tr>
-<tr class="memdesc:aec2e1b7d4da3c4057172dc7bf9572362"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return the global landscape luminance [0..1], for being used e.g for setting eye adaptation.  <a href="#aec2e1b7d4da3c4057172dc7bf9572362">More...</a><br /></td></tr>
-<tr class="separator:aec2e1b7d4da3c4057172dc7bf9572362"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:abff24e60ea83ac83882390da4d752deb"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classLandscapeMgr.html#abff24e60ea83ac83882390da4d752deb">getAtmosphereAverageLuminance</a> () const </td></tr>
-<tr class="memdesc:abff24e60ea83ac83882390da4d752deb"><td class="mdescLeft">&#160;</td><td class="mdescRight">return average luminance [cd/m^2] of atmosphere. Around 10 at sunset, 6400 in daylight, &gt;0 in dark night.  <a href="#abff24e60ea83ac83882390da4d752deb">More...</a><br /></td></tr>
-<tr class="separator:abff24e60ea83ac83882390da4d752deb"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a797caf1e2db666ee25f780cd7faaae45"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classLandscapeMgr.html#a797caf1e2db666ee25f780cd7faaae45">loadLandscape</a> (QMap&lt; QString, QString &gt; &amp;param)</td></tr>
 <tr class="memdesc:a797caf1e2db666ee25f780cd7faaae45"><td class="mdescLeft">&#160;</td><td class="mdescRight">Load a landscape based on a hash of parameters mirroring the landscape.ini file and make it the current landscape.  <a href="#a797caf1e2db666ee25f780cd7faaae45">More...</a><br /></td></tr>
 <tr class="separator:a797caf1e2db666ee25f780cd7faaae45"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -594,6 +604,9 @@ Additional Inherited Members</h2></td></tr>
 <a class="anchor" id="abff24e60ea83ac83882390da4d752deb"></a>
 <div class="memitem">
 <div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
       <table class="memname">
         <tr>
           <td class="memname">float LandscapeMgr::getAtmosphereAverageLuminance </td>
@@ -602,9 +615,14 @@ Additional Inherited Members</h2></td></tr>
           <td> const</td>
         </tr>
       </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">slot</span></span>  </td>
+  </tr>
+</table>
 </div><div class="memdoc">
 
-<p>return average luminance [cd/m^2] of atmosphere. Around 10 at sunset, 6400 in daylight, &gt;0 in dark night. </p>
+<p>return average luminance [cd/m^2] of atmosphere. Expect 10 at sunset, 6400 in daylight, &gt;0 in dark night. </p>
 
 </div>
 </div>
@@ -734,7 +752,7 @@ Additional Inherited Members</h2></td></tr>
 
 <p>Get the current landscape object. </p>
 
-<p>Definition at line <a class="el" href="LandscapeMgr_8hpp_source.html#l00162">162</a> of file <a class="el" href="LandscapeMgr_8hpp_source.html">LandscapeMgr.hpp</a>.</p>
+<p>Definition at line <a class="el" href="LandscapeMgr_8hpp_source.html#l00170">170</a> of file <a class="el" href="LandscapeMgr_8hpp_source.html">LandscapeMgr.hpp</a>.</p>
 
 </div>
 </div>
@@ -786,7 +804,7 @@ Additional Inherited Members</h2></td></tr>
 
 <p>Get the current landscape ID. </p>
 
-<p>Definition at line <a class="el" href="LandscapeMgr_8hpp_source.html#l00147">147</a> of file <a class="el" href="LandscapeMgr_8hpp_source.html">LandscapeMgr.hpp</a>.</p>
+<p>Definition at line <a class="el" href="LandscapeMgr_8hpp_source.html#l00155">155</a> of file <a class="el" href="LandscapeMgr_8hpp_source.html">LandscapeMgr.hpp</a>.</p>
 
 </div>
 </div>
@@ -838,7 +856,7 @@ Additional Inherited Members</h2></td></tr>
 
 <p>Get the default landscape ID. </p>
 
-<p>Definition at line <a class="el" href="LandscapeMgr_8hpp_source.html#l00165">165</a> of file <a class="el" href="LandscapeMgr_8hpp_source.html">LandscapeMgr.hpp</a>.</p>
+<p>Definition at line <a class="el" href="LandscapeMgr_8hpp_source.html#l00173">173</a> of file <a class="el" href="LandscapeMgr_8hpp_source.html">LandscapeMgr.hpp</a>.</p>
 
 </div>
 </div>
@@ -865,7 +883,7 @@ Additional Inherited Members</h2></td></tr>
 
 <p>Return the minimal brightness value of the landscape. </p>
 
-<p>Definition at line <a class="el" href="LandscapeMgr_8hpp_source.html#l00214">214</a> of file <a class="el" href="LandscapeMgr_8hpp_source.html">LandscapeMgr.hpp</a>.</p>
+<p>Definition at line <a class="el" href="LandscapeMgr_8hpp_source.html#l00222">222</a> of file <a class="el" href="LandscapeMgr_8hpp_source.html">LandscapeMgr.hpp</a>.</p>
 
 </div>
 </div>
@@ -1117,7 +1135,7 @@ Additional Inherited Members</h2></td></tr>
 
 <p>Return the value of the flag determining if a change of landscape will update the observer location. </p>
 
-<p>Definition at line <a class="el" href="LandscapeMgr_8hpp_source.html#l00201">201</a> of file <a class="el" href="LandscapeMgr_8hpp_source.html">LandscapeMgr.hpp</a>.</p>
+<p>Definition at line <a class="el" href="LandscapeMgr_8hpp_source.html#l00209">209</a> of file <a class="el" href="LandscapeMgr_8hpp_source.html">LandscapeMgr.hpp</a>.</p>
 
 </div>
 </div>
@@ -1144,7 +1162,7 @@ Additional Inherited Members</h2></td></tr>
 
 <p>Return the value of the flag determining if the minimal brightness should be taken from landscape.ini. </p>
 
-<p>Definition at line <a class="el" href="LandscapeMgr_8hpp_source.html#l00210">210</a> of file <a class="el" href="LandscapeMgr_8hpp_source.html">LandscapeMgr.hpp</a>.</p>
+<p>Definition at line <a class="el" href="LandscapeMgr_8hpp_source.html#l00218">218</a> of file <a class="el" href="LandscapeMgr_8hpp_source.html">LandscapeMgr.hpp</a>.</p>
 
 </div>
 </div>
@@ -1171,7 +1189,7 @@ Additional Inherited Members</h2></td></tr>
 
 <p>Return the value of the flag determining if a minimal brightness should be used to keep landscape visible. </p>
 
-<p>Definition at line <a class="el" href="LandscapeMgr_8hpp_source.html#l00206">206</a> of file <a class="el" href="LandscapeMgr_8hpp_source.html">LandscapeMgr.hpp</a>.</p>
+<p>Definition at line <a class="el" href="LandscapeMgr_8hpp_source.html#l00214">214</a> of file <a class="el" href="LandscapeMgr_8hpp_source.html">LandscapeMgr.hpp</a>.</p>
 
 </div>
 </div>
@@ -1255,7 +1273,52 @@ Additional Inherited Members</h2></td></tr>
   </dd>
 </dl>
 
-<p>Definition at line <a class="el" href="LandscapeMgr_8hpp_source.html#l00341">341</a> of file <a class="el" href="LandscapeMgr_8hpp_source.html">LandscapeMgr.hpp</a>.</p>
+<p>Definition at line <a class="el" href="LandscapeMgr_8hpp_source.html#l00349">349</a> of file <a class="el" href="LandscapeMgr_8hpp_source.html">LandscapeMgr.hpp</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a1032c0cf92fc29a685ca91f4a021c9fe"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">float LandscapeMgr::getLandscapeOpacity </td>
+          <td>(</td>
+          <td class="paramtype">float&#160;</td>
+          <td class="paramname"><em>azimuth</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float&#160;</td>
+          <td class="paramname"><em>altitude</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">slot</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Forward opacity query to current landscape. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">azimuth</td><td>in degrees </td></tr>
+    <tr><td class="paramname">altitude</td><td>in degrees </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p>Definition at line <a class="el" href="LandscapeMgr_8hpp_source.html#l00355">355</a> of file <a class="el" href="LandscapeMgr_8hpp_source.html">LandscapeMgr.hpp</a>.</p>
 
 </div>
 </div>
@@ -1287,6 +1350,9 @@ Additional Inherited Members</h2></td></tr>
 <a class="anchor" id="aec2e1b7d4da3c4057172dc7bf9572362"></a>
 <div class="memitem">
 <div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
       <table class="memname">
         <tr>
           <td class="memname">float LandscapeMgr::getLuminance </td>
@@ -1295,10 +1361,15 @@ Additional Inherited Members</h2></td></tr>
           <td> const</td>
         </tr>
       </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">slot</span></span>  </td>
+  </tr>
+</table>
 </div><div class="memdoc">
 
 <p>Return the global landscape luminance [0..1], for being used e.g for setting eye adaptation. </p>
-<p>It returns 1 if atmosphere drawing is on and no eclipse underway, 0 if atmosphere is switched off. The actual brightness is of no concern here. You may use <a class="el" href="classLandscapeMgr.html#abff24e60ea83ac83882390da4d752deb" title="return average luminance [cd/m^2] of atmosphere. Around 10 at sunset, 6400 in daylight, >0 in dark night. ">getAtmosphereAverageLuminance()</a> for this. </p>
+<p>It returns 1 if atmosphere drawing is on and no eclipse underway, 0 if atmosphere is switched off. The actual brightness is of no concern here. You may use <a class="el" href="classLandscapeMgr.html#abff24e60ea83ac83882390da4d752deb" title="return average luminance [cd/m^2] of atmosphere. Expect 10 at sunset, 6400 in daylight, >0 in dark night. ">getAtmosphereAverageLuminance()</a> for this. </p>
 
 </div>
 </div>
@@ -1586,6 +1657,33 @@ Additional Inherited Members</h2></td></tr>
 
 </div>
 </div>
+<a class="anchor" id="ab587e8773ece5f59d0ccef81ea14a30a"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void LandscapeMgr::setAtmosphereAverageLuminance </td>
+          <td>(</td>
+          <td class="paramtype">const float&#160;</td>
+          <td class="paramname"><em>overrideLuminance</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">slot</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Override autocomputed value and set average luminance [cd/m^2] of atmosphere. </p>
+<p>This is around 10 at sunset, 6400 in daylight, &gt;0 in dark night. Usually there is no need to call this, the luminance is properly computed. This is a function which can be useful in rare cases, e.g. in scripts when you want to create images of adjacent sky regions with the same brightness setting, or for creation of a virtual camera which can deliberately show over- or underexposure. For these cases, it is advisable to first center the brightest luminary (sun or moon), call <a class="el" href="classLandscapeMgr.html#abff24e60ea83ac83882390da4d752deb" title="return average luminance [cd/m^2] of atmosphere. Expect 10 at sunset, 6400 in daylight, >0 in dark night. ">getAtmosphereAverageLuminance()</a> and then set this value explicitly to freeze it during image export. To unfreeze, call this again with any negative value. </p>
+
+</div>
+</div>
 <a class="anchor" id="aa410a8c3fa75cfccad9eb1324cc28c86"></a>
 <div class="memitem">
 <div class="memproto">
@@ -1808,7 +1906,7 @@ Additional Inherited Members</h2></td></tr>
 
 <p>Set the minimal brightness value of the landscape. </p>
 
-<p>Definition at line <a class="el" href="LandscapeMgr_8hpp_source.html#l00216">216</a> of file <a class="el" href="LandscapeMgr_8hpp_source.html">LandscapeMgr.hpp</a>.</p>
+<p>Definition at line <a class="el" href="LandscapeMgr_8hpp_source.html#l00224">224</a> of file <a class="el" href="LandscapeMgr_8hpp_source.html">LandscapeMgr.hpp</a>.</p>
 
 </div>
 </div>
@@ -2044,7 +2142,7 @@ Additional Inherited Members</h2></td></tr>
 
 <p>Set the value of the flag determining if a change of landscape will update the observer location. </p>
 
-<p>Definition at line <a class="el" href="LandscapeMgr_8hpp_source.html#l00203">203</a> of file <a class="el" href="LandscapeMgr_8hpp_source.html">LandscapeMgr.hpp</a>.</p>
+<p>Definition at line <a class="el" href="LandscapeMgr_8hpp_source.html#l00211">211</a> of file <a class="el" href="LandscapeMgr_8hpp_source.html">LandscapeMgr.hpp</a>.</p>
 
 </div>
 </div>
@@ -2072,7 +2170,7 @@ Additional Inherited Members</h2></td></tr>
 
 <p>Sets the value of the flag determining if the minimal brightness should be taken from landscape.ini. </p>
 
-<p>Definition at line <a class="el" href="LandscapeMgr_8hpp_source.html#l00212">212</a> of file <a class="el" href="LandscapeMgr_8hpp_source.html">LandscapeMgr.hpp</a>.</p>
+<p>Definition at line <a class="el" href="LandscapeMgr_8hpp_source.html#l00220">220</a> of file <a class="el" href="LandscapeMgr_8hpp_source.html">LandscapeMgr.hpp</a>.</p>
 
 </div>
 </div>
@@ -2100,7 +2198,7 @@ Additional Inherited Members</h2></td></tr>
 
 <p>Set the value of the flag determining if a minimal brightness should be used to keep landscape visible. </p>
 
-<p>Definition at line <a class="el" href="LandscapeMgr_8hpp_source.html#l00208">208</a> of file <a class="el" href="LandscapeMgr_8hpp_source.html">LandscapeMgr.hpp</a>.</p>
+<p>Definition at line <a class="el" href="LandscapeMgr_8hpp_source.html#l00216">216</a> of file <a class="el" href="LandscapeMgr_8hpp_source.html">LandscapeMgr.hpp</a>.</p>
 
 </div>
 </div>
@@ -2202,7 +2300,7 @@ Additional Inherited Members</h2></td></tr>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Sat Nov 28 2015 15:23:44 for Stellarium by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Thu Feb 25 2016 10:04:57 for Stellarium by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.8
 </small></address>
