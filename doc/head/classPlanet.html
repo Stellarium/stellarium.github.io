@@ -74,6 +74,24 @@ Classes</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-types"></a>
 Public Types</h2></td></tr>
+<tr class="memitem:a17e4791dd977209187facc29820272f3"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPlanet.html#a17e4791dd977209187facc29820272f3">PlanetType</a> { <br />
+&#160;&#160;<b>isStar</b>, 
+<b>isPlanet</b>, 
+<b>isMoon</b>, 
+<b>isAsteroid</b>, 
+<br />
+&#160;&#160;<b>isPlutino</b>, 
+<b>isComet</b>, 
+<b>isDwarfPlanet</b>, 
+<b>isCubewano</b>, 
+<br />
+&#160;&#160;<b>isSDO</b>, 
+<b>isOCO</b>, 
+<b>isUNDEFINED</b>
+<br />
+ }</td></tr>
+<tr class="memdesc:a17e4791dd977209187facc29820272f3"><td class="mdescLeft">&#160;</td><td class="mdescRight">numeric typecodes for the type descriptions in ssystem.ini  <a href="classPlanet.html#a17e4791dd977209187facc29820272f3">More...</a><br /></td></tr>
+<tr class="separator:a17e4791dd977209187facc29820272f3"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aecd6e43717bb28b27e1f5885df52cf3a"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aecd6e43717bb28b27e1f5885df52cf3a"></a>enum &#160;</td><td class="memItemRight" valign="bottom"><b>ApparentMagnitudeAlgorithm</b> { <br />
 &#160;&#160;<b>Planesas</b>, 
 <b>Mueller</b>, 
@@ -115,9 +133,6 @@ typedef QFlags<br class="typebreak" />
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:ad0906ed41a660575cf3d2d6461d18f76"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPlanet.html#ad0906ed41a660575cf3d2d6461d18f76">Q_ENUMS</a> (PlanetType) Q_ENUMS(ApparentMagnitudeAlgorithm) enum PlanetType</td></tr>
-<tr class="memdesc:ad0906ed41a660575cf3d2d6461d18f76"><td class="mdescLeft">&#160;</td><td class="mdescRight">numeric typecodes for the type descriptions in ssystem.ini  <a href="#ad0906ed41a660575cf3d2d6461d18f76">More...</a><br /></td></tr>
-<tr class="separator:ad0906ed41a660575cf3d2d6461d18f76"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac259668c014d7f12e2052ededd0e4793"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ac259668c014d7f12e2052ededd0e4793"></a>
 &#160;</td><td class="memItemRight" valign="bottom"><b>Planet</b> (const QString &amp;englishName, int flagLighting, double radius, double oblateness, <a class="el" href="singletonVector3.html">Vec3f</a> halocolor, float albedo, const QString &amp;texMapName, const QString &amp;normalMapName, posFuncType _coordFunc, void *userDataPtr, OsculatingFunctType *osculatingFunc, bool closeOrbit, bool hidden, bool hasAtmosphere, bool hasHalo, const QString &amp;pTypeStr)</td></tr>
 <tr class="separator:ac259668c014d7f12e2052ededd0e4793"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -191,7 +206,7 @@ const QString &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>getTex
 const QString&#160;</td><td class="memItemRight" valign="bottom"><b>getPlanetTypeString</b> () const </td></tr>
 <tr class="separator:a312b2d46f11e7904df5fa8d21570c175"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a716c9421efc1de7d0961a80b7103312b"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a716c9421efc1de7d0961a80b7103312b"></a>
-PlanetType&#160;</td><td class="memItemRight" valign="bottom"><b>getPlanetType</b> () const </td></tr>
+<a class="el" href="classPlanet.html#a17e4791dd977209187facc29820272f3">PlanetType</a>&#160;</td><td class="memItemRight" valign="bottom"><b>getPlanetType</b> () const </td></tr>
 <tr class="separator:a716c9421efc1de7d0961a80b7103312b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:abf86f25a2816d51aa6c395aa997c3fe9"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="abf86f25a2816d51aa6c395aa997c3fe9"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><b>setNativeName</b> (QString planet)</td></tr>
@@ -317,9 +332,6 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>drawOrbit</b> (const 
 <tr class="memdesc:a2abfbdc917502317f98fd34d6bef481c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return the list of planets which project some shadow on this planet.  <a href="#a2abfbdc917502317f98fd34d6bef481c">More...</a><br /></td></tr>
 <tr class="separator:a2abfbdc917502317f98fd34d6bef481c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pub_methods_classStelObject"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_classStelObject')"><img src="closed.png" alt="-"/>&#160;Public Member Functions inherited from <a class="el" href="classStelObject.html">StelObject</a></td></tr>
-<tr class="memitem:a919cd9a0c1edbeb8e51e07650a7fd25e inherit pub_methods_classStelObject"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classStelObject.html#a919cd9a0c1edbeb8e51e07650a7fd25e">Q_FLAGS</a> (InfoStringGroup) static const <a class="el" href="classStelObject.html#acf243e7987796a3a44e409140ecea8c6">InfoStringGroupFlags</a> AllInfo</td></tr>
-<tr class="memdesc:a919cd9a0c1edbeb8e51e07650a7fd25e inherit pub_methods_classStelObject"><td class="mdescLeft">&#160;</td><td class="mdescRight">A pre-defined set of specifiers for the getInfoString flags argument to getInfoString.  <a href="#a919cd9a0c1edbeb8e51e07650a7fd25e">More...</a><br /></td></tr>
-<tr class="separator:a919cd9a0c1edbeb8e51e07650a7fd25e inherit pub_methods_classStelObject"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a900191d6bb5e88dfece40d89acc4b72e inherit pub_methods_classStelObject"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="classSphericalRegionP.html">SphericalRegionP</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classStelObject.html#a900191d6bb5e88dfece40d89acc4b72e">getRegion</a> () const </td></tr>
 <tr class="memdesc:a900191d6bb5e88dfece40d89acc4b72e inherit pub_methods_classStelObject"><td class="mdescLeft">&#160;</td><td class="mdescRight">Default implementation of the getRegion method.  <a href="#a900191d6bb5e88dfece40d89acc4b72e">More...</a><br /></td></tr>
 <tr class="separator:a900191d6bb5e88dfece40d89acc4b72e inherit pub_methods_classStelObject"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -411,6 +423,9 @@ static <a class="el" href="singletonVector3.html">Vec3f</a>&#160;</td><td class=
 static bool&#160;</td><td class="memItemRight" valign="bottom"><b>permanentDrawingOrbits</b></td></tr>
 <tr class="separator:a1c6b56200109240180d3b53fd7b09007"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pub_static_attribs_classStelObject"><td colspan="2" onclick="javascript:toggleInherit('pub_static_attribs_classStelObject')"><img src="closed.png" alt="-"/>&#160;Static Public Attributes inherited from <a class="el" href="classStelObject.html">StelObject</a></td></tr>
+<tr class="memitem:aff8b9cd662b044e33c39577b1ec2501f inherit pub_static_attribs_classStelObject"><td class="memItemLeft" align="right" valign="top">static const <a class="el" href="classStelObject.html#acf243e7987796a3a44e409140ecea8c6">InfoStringGroupFlags</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classStelObject.html#aff8b9cd662b044e33c39577b1ec2501f">AllInfo</a></td></tr>
+<tr class="memdesc:aff8b9cd662b044e33c39577b1ec2501f inherit pub_static_attribs_classStelObject"><td class="mdescLeft">&#160;</td><td class="mdescRight">A pre-defined set of specifiers for the getInfoString flags argument to getInfoString.  <a href="#aff8b9cd662b044e33c39577b1ec2501f">More...</a><br /></td></tr>
+<tr class="separator:aff8b9cd662b044e33c39577b1ec2501f inherit pub_static_attribs_classStelObject"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a82e64755dc156e071733350e83a6826c inherit pub_static_attribs_classStelObject"><td class="memItemLeft" align="right" valign="top">static const <a class="el" href="classStelObject.html#acf243e7987796a3a44e409140ecea8c6">InfoStringGroupFlags</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classStelObject.html#a82e64755dc156e071733350e83a6826c">ShortInfo</a> = (<a class="el" href="classStelObject.html#acf243e7987796a3a44e409140ecea8c6">InfoStringGroupFlags</a>)(<a class="el" href="classStelObject.html#acf243e7987796a3a44e409140ecea8c6ab14de19b496f04e198a835899cefd934">Name</a>|<a class="el" href="classStelObject.html#acf243e7987796a3a44e409140ecea8c6a57d62b46f2f2849da8e3e234c7d27b0e">CatalogNumber</a>|<a class="el" href="classStelObject.html#acf243e7987796a3a44e409140ecea8c6a04e5ef1bf85944db7b25b57f2663c79d">Magnitude</a>|<a class="el" href="classStelObject.html#acf243e7987796a3a44e409140ecea8c6aefb86264a540d299b32c5931ca302ced">RaDecJ2000</a>)</td></tr>
 <tr class="memdesc:a82e64755dc156e071733350e83a6826c inherit pub_static_attribs_classStelObject"><td class="mdescLeft">&#160;</td><td class="mdescRight">A pre-defined set of specifiers for the getInfoString flags argument to getInfoString.  <a href="#a82e64755dc156e071733350e83a6826c">More...</a><br /></td></tr>
 <tr class="separator:a82e64755dc156e071733350e83a6826c inherit pub_static_attribs_classStelObject"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -551,7 +566,7 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><b>atmosphere</b></td></
 bool&#160;</td><td class="memItemRight" valign="bottom"><b>halo</b></td></tr>
 <tr class="separator:ad38c09993b5c0feedd580497a7933e60"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a1ea88e0888c70c32dba657064b099435"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a1ea88e0888c70c32dba657064b099435"></a>
-PlanetType&#160;</td><td class="memItemRight" valign="bottom"><b>pType</b></td></tr>
+<a class="el" href="classPlanet.html#a17e4791dd977209187facc29820272f3">PlanetType</a>&#160;</td><td class="memItemRight" valign="bottom"><b>pType</b></td></tr>
 <tr class="separator:a1ea88e0888c70c32dba657064b099435"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a06b44601ff583fdbec72645b0eb4784e"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a06b44601ff583fdbec72645b0eb4784e"></a>
 ApparentMagnitudeAlgorithm&#160;</td><td class="memItemRight" valign="bottom"><b>vMagAlgorithm</b></td></tr>
@@ -569,7 +584,7 @@ static <a class="el" href="singletonVector3.html">Vec3f</a>&#160;</td><td class=
 static <a class="el" href="StelTextureTypes_8hpp.html#a085a86bd020a5f6d1240e02d596eb4bb">StelTextureSP</a>&#160;</td><td class="memItemRight" valign="bottom"><b>hintCircleTex</b></td></tr>
 <tr class="separator:a0a7c364eec41a7c49741d4b5430115e9"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a8767f8766d008670511019409de84d5a"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a8767f8766d008670511019409de84d5a"></a>
-static QMap&lt; PlanetType, QString &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>pTypeMap</b></td></tr>
+static QMap&lt; <a class="el" href="classPlanet.html#a17e4791dd977209187facc29820272f3">PlanetType</a>, QString &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>pTypeMap</b></td></tr>
 <tr class="separator:a8767f8766d008670511019409de84d5a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a11396f7b586e2ed4f3178d36caaf1b34"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a11396f7b586e2ed4f3178d36caaf1b34"></a>
 static QMap<br class="typebreak" />
@@ -604,7 +619,24 @@ class&#160;</td><td class="memItemRight" valign="bottom"><b>SolarSystem</b></td>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock">
 <p>Definition at line <a class="el" href="Planet_8hpp_source.html#l00073">73</a> of file <a class="el" href="Planet_8hpp_source.html">Planet.hpp</a>.</p>
-</div><h2 class="groupheader">Member Function Documentation</h2>
+</div><h2 class="groupheader">Member Enumeration Documentation</h2>
+<a class="anchor" id="a17e4791dd977209187facc29820272f3"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">enum <a class="el" href="classPlanet.html#a17e4791dd977209187facc29820272f3">Planet::PlanetType</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>numeric typecodes for the type descriptions in ssystem.ini </p>
+
+<p>Definition at line <a class="el" href="Planet_8hpp_source.html#l00084">84</a> of file <a class="el" href="Planet_8hpp_source.html">Planet.hpp</a>.</p>
+
+</div>
+</div>
+<h2 class="groupheader">Member Function Documentation</h2>
 <a class="anchor" id="a95728c97e3d44de8c3c13d58b10bf3fa"></a>
 <div class="memitem">
 <div class="memproto">
@@ -1179,34 +1211,6 @@ class&#160;</td><td class="memItemRight" valign="bottom"><b>SolarSystem</b></td>
 
 </div>
 </div>
-<a class="anchor" id="ad0906ed41a660575cf3d2d6461d18f76"></a>
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">Planet::Q_ENUMS </td>
-          <td>(</td>
-          <td class="paramtype">PlanetType&#160;</td>
-          <td class="paramname"></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>numeric typecodes for the type descriptions in ssystem.ini </p>
-
-<p>Definition at line <a class="el" href="Planet_8hpp_source.html#l00078">78</a> of file <a class="el" href="Planet_8hpp_source.html">Planet.hpp</a>.</p>
-
-</div>
-</div>
 <a class="anchor" id="a8c977bafde42a4d36187db0d92f9532d"></a>
 <div class="memitem">
 <div class="memproto">
@@ -1241,7 +1245,7 @@ class&#160;</td><td class="memItemRight" valign="bottom"><b>SolarSystem</b></td>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Sat Feb 27 2016 22:03:10 for Stellarium by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Sat Feb 27 2016 23:13:24 for Stellarium by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.8
 </small></address>

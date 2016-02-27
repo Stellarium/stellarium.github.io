@@ -52,6 +52,12 @@
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-types"></a>
 Public Types</h2></td></tr>
+<tr class="memitem:a4289dccf6a570229bf775f9ef971487d"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structS3DEnum.html#a4289dccf6a570229bf775f9ef971487d">CubemappingMode</a> { <a class="el" href="structS3DEnum.html#a4289dccf6a570229bf775f9ef971487da7a2de97b836c86ba995c87b3d7b99fd3">CM_TEXTURES</a>, 
+<a class="el" href="structS3DEnum.html#a4289dccf6a570229bf775f9ef971487da43684c7b8002a653ae03b026dc2a8caa">CM_CUBEMAP</a>, 
+<a class="el" href="structS3DEnum.html#a4289dccf6a570229bf775f9ef971487da1c314085401de3b0b1ce0054cc302431">CM_CUBEMAP_GSACCEL</a>
+ }</td></tr>
+<tr class="memdesc:a4289dccf6a570229bf775f9ef971487d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Determines the method used for cubemap creation.  <a href="structS3DEnum.html#a4289dccf6a570229bf775f9ef971487d">More...</a><br /></td></tr>
+<tr class="separator:a4289dccf6a570229bf775f9ef971487d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a09ff385afdc5df2220ca533b30d7dc65"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structS3DEnum.html#a09ff385afdc5df2220ca533b30d7dc65">ShadowFilterQuality</a> { <br />
 &#160;&#160;<a class="el" href="structS3DEnum.html#a09ff385afdc5df2220ca533b30d7dc65a2977ceb405c2191ba03ea478f1f41a9d">SFQ_OFF</a>, 
 <a class="el" href="structS3DEnum.html#a09ff385afdc5df2220ca533b30d7dc65a0e0aa6e58e56a3a077d508f9b8a916bf">SFQ_HARDWARE</a>, 
@@ -69,6 +75,33 @@ Public Types</h2></td></tr>
 <div class="textblock">
 <p>Definition at line <a class="el" href="S3DEnum_8hpp_source.html#l00028">28</a> of file <a class="el" href="S3DEnum_8hpp_source.html">S3DEnum.hpp</a>.</p>
 </div><h2 class="groupheader">Member Enumeration Documentation</h2>
+<a class="anchor" id="a4289dccf6a570229bf775f9ef971487d"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">enum <a class="el" href="structS3DEnum.html#a4289dccf6a570229bf775f9ef971487d">S3DEnum::CubemappingMode</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Determines the method used for cubemap creation. </p>
+<table class="fieldtable">
+<tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a class="anchor" id="a4289dccf6a570229bf775f9ef971487da7a2de97b836c86ba995c87b3d7b99fd3"></a>CM_TEXTURES&#160;</td><td class="fielddoc">
+<p>Uses 6 textures, one for each side of the cube. Seems to be the best for old Intel drivers. </p>
+</td></tr>
+<tr><td class="fieldname"><a class="anchor" id="a4289dccf6a570229bf775f9ef971487da43684c7b8002a653ae03b026dc2a8caa"></a>CM_CUBEMAP&#160;</td><td class="fielddoc">
+<p>Uses a single GL_TEXTURE_CUBEMAP, seems to work a bit better on "modern" GPUs. </p>
+</td></tr>
+<tr><td class="fieldname"><a class="anchor" id="a4289dccf6a570229bf775f9ef971487da1c314085401de3b0b1ce0054cc302431"></a>CM_CUBEMAP_GSACCEL&#160;</td><td class="fielddoc">
+<p>Uses a single GL_TEXTURE_CUBEMAP and a geometry shader to render all 6 sides in one pass. </p>
+</td></tr>
+</table>
+
+<p>Definition at line <a class="el" href="S3DEnum_8hpp_source.html#l00035">35</a> of file <a class="el" href="S3DEnum_8hpp_source.html">S3DEnum.hpp</a>.</p>
+
+</div>
+</div>
 <a class="anchor" id="a09ff385afdc5df2220ca533b30d7dc65"></a>
 <div class="memitem">
 <div class="memproto">
@@ -111,7 +144,7 @@ Public Types</h2></td></tr>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Sat Feb 27 2016 22:02:13 for Stellarium by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Sat Feb 27 2016 23:13:16 for Stellarium by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.8
 </small></address>

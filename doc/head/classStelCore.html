@@ -47,8 +47,11 @@
 <div class="header">
   <div class="summary">
 <a href="classStelCore-members.html">List of all members</a> &#124;
+<a href="#pub-types">Public Types</a> &#124;
 <a href="#pub-slots">Public Slots</a> &#124;
-<a href="#signals">Signals</a>  </div>
+<a href="#signals">Signals</a> &#124;
+<a href="#pub-methods">Public Member Functions</a> &#124;
+<a href="#pub-static-attribs">Static Public Attributes</a>  </div>
   <div class="headertitle">
 <div class="title">StelCore Class Reference</div>  </div>
 </div><!--header-->
@@ -59,13 +62,95 @@
 
 <p><code>#include &lt;<a class="el" href="StelCore_8hpp_source.html">StelCore.hpp</a>&gt;</code></p>
 <table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-types"></a>
+Public Types</h2></td></tr>
+<tr class="memitem:af18f0c34c957103a7fa3008e2aa4aec1"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classStelCore.html#af18f0c34c957103a7fa3008e2aa4aec1">FrameType</a> { <br />
+&#160;&#160;<a class="el" href="classStelCore.html#af18f0c34c957103a7fa3008e2aa4aec1a6caf91e764d43b6a218e66507f7b4323">FrameUninitialized</a>, 
+<a class="el" href="classStelCore.html#af18f0c34c957103a7fa3008e2aa4aec1aafae2ea8dbf9f73c83b646ba5d57801c">FrameAltAz</a>, 
+<a class="el" href="classStelCore.html#af18f0c34c957103a7fa3008e2aa4aec1a0fbbca6cbf907e7a8cf69111c1ca900b">FrameHeliocentricEclipticJ2000</a>, 
+<a class="el" href="classStelCore.html#af18f0c34c957103a7fa3008e2aa4aec1a7882b2a5383622bb4deefca2b490efef">FrameObservercentricEclipticJ2000</a>, 
+<br />
+&#160;&#160;<a class="el" href="classStelCore.html#af18f0c34c957103a7fa3008e2aa4aec1a0b10426494827710dc3c8a6a1ec688e2">FrameObservercentricEclipticOfDate</a>, 
+<a class="el" href="classStelCore.html#af18f0c34c957103a7fa3008e2aa4aec1a916cb23d24a97909552ecb3bd2c53011">FrameEquinoxEqu</a>, 
+<a class="el" href="classStelCore.html#af18f0c34c957103a7fa3008e2aa4aec1a4c25c7bdcf0d5fa956743e0ae0561d32">FrameJ2000</a>, 
+<a class="el" href="classStelCore.html#af18f0c34c957103a7fa3008e2aa4aec1aba391ab2f0ec54e0a72453b5b4bbb43a">FrameGalactic</a>
+<br />
+ }</td></tr>
+<tr class="memdesc:af18f0c34c957103a7fa3008e2aa4aec1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Supported reference frame types.  <a href="classStelCore.html#af18f0c34c957103a7fa3008e2aa4aec1">More...</a><br /></td></tr>
+<tr class="separator:af18f0c34c957103a7fa3008e2aa4aec1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae7a591a79245086278e00c2c7076ba1f"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classStelCore.html#ae7a591a79245086278e00c2c7076ba1f">ProjectionType</a> { <br />
+&#160;&#160;<a class="el" href="classStelCore.html#ae7a591a79245086278e00c2c7076ba1faa46fd2b1668caac8b906a55e7da59962">ProjectionPerspective</a>, 
+<a class="el" href="classStelCore.html#ae7a591a79245086278e00c2c7076ba1fad86044939c8a4af51a937b3535188ac9">ProjectionEqualArea</a>, 
+<a class="el" href="classStelCore.html#ae7a591a79245086278e00c2c7076ba1fac1909dc0f67fc8482fea8b6d1704d491">ProjectionStereographic</a>, 
+<a class="el" href="classStelCore.html#ae7a591a79245086278e00c2c7076ba1fada8170d857fb32f8f7c4d2e85f0b7e2c">ProjectionFisheye</a>, 
+<br />
+&#160;&#160;<a class="el" href="classStelCore.html#ae7a591a79245086278e00c2c7076ba1fa0fc474ebbba902497766debdbeb172a2">ProjectionHammer</a>, 
+<a class="el" href="classStelCore.html#ae7a591a79245086278e00c2c7076ba1fa2934a0c168cf68a7ba204b784dbc5fd5">ProjectionCylinder</a>, 
+<a class="el" href="classStelCore.html#ae7a591a79245086278e00c2c7076ba1fadbc0e44ee4471a1bb9c0746656ff696a">ProjectionMercator</a>, 
+<a class="el" href="classStelCore.html#ae7a591a79245086278e00c2c7076ba1fab87fb82a60b8aefb09d732171e132718">ProjectionOrthographic</a>, 
+<br />
+&#160;&#160;<a class="el" href="classStelCore.html#ae7a591a79245086278e00c2c7076ba1fafffa26bd2bed8bbd84910e4521a76a80">ProjectionSinusoidal</a>
+<br />
+ }</td></tr>
+<tr class="memdesc:ae7a591a79245086278e00c2c7076ba1f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Available projection types.  <a href="classStelCore.html#ae7a591a79245086278e00c2c7076ba1f">More...</a><br /></td></tr>
+<tr class="separator:ae7a591a79245086278e00c2c7076ba1f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afddf8e4cf0bbdf1f1ed366152f5488ab"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classStelCore.html#afddf8e4cf0bbdf1f1ed366152f5488ab">RefractionMode</a> { <a class="el" href="classStelCore.html#afddf8e4cf0bbdf1f1ed366152f5488aba93e2d6d3cf22de840dc23c9b7a6a327c">RefractionAuto</a>, 
+<a class="el" href="classStelCore.html#afddf8e4cf0bbdf1f1ed366152f5488abab6c62346c56e4d0fffe4e6d795659699">RefractionOn</a>, 
+<a class="el" href="classStelCore.html#afddf8e4cf0bbdf1f1ed366152f5488aba47b44fb614a85a4945774c7de848c5ca">RefractionOff</a>
+ }</td></tr>
+<tr class="memdesc:afddf8e4cf0bbdf1f1ed366152f5488ab"><td class="mdescLeft">&#160;</td><td class="mdescRight">Available refraction mode.  <a href="classStelCore.html#afddf8e4cf0bbdf1f1ed366152f5488ab">More...</a><br /></td></tr>
+<tr class="separator:afddf8e4cf0bbdf1f1ed366152f5488ab"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae3fcc2b5a1eac3e07986ffa817030700"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classStelCore.html#ae3fcc2b5a1eac3e07986ffa817030700">DeltaTAlgorithm</a> { <br />
+&#160;&#160;<a class="el" href="classStelCore.html#ae3fcc2b5a1eac3e07986ffa817030700ab0b833a73df0e0d1e1e56123694fd640">WithoutCorrection</a>, 
+<a class="el" href="classStelCore.html#ae3fcc2b5a1eac3e07986ffa817030700a2fcec61a53595c230939d0289773252d">Schoch</a>, 
+<a class="el" href="classStelCore.html#ae3fcc2b5a1eac3e07986ffa817030700a01fb168c49694e2d63520bfbf8e87d47">Clemence</a>, 
+<a class="el" href="classStelCore.html#ae3fcc2b5a1eac3e07986ffa817030700abc62c4e94b6333256fe68c8381992ae2">IAU</a>, 
+<br />
+&#160;&#160;<a class="el" href="classStelCore.html#ae3fcc2b5a1eac3e07986ffa817030700a0c4d124711513f34d666bc91d99951aa">AstronomicalEphemeris</a>, 
+<a class="el" href="classStelCore.html#ae3fcc2b5a1eac3e07986ffa817030700a138b2f5694731286c64807a2e8125047">TuckermanGoldstine</a>, 
+<a class="el" href="classStelCore.html#ae3fcc2b5a1eac3e07986ffa817030700a39308521e69bfbf8d55757515502618a">MullerStephenson</a>, 
+<a class="el" href="classStelCore.html#ae3fcc2b5a1eac3e07986ffa817030700adc48b13f0a8fa69e4c593abfbe39422a">Stephenson1978</a>, 
+<br />
+&#160;&#160;<a class="el" href="classStelCore.html#ae3fcc2b5a1eac3e07986ffa817030700ae413d621965c187a2c2cba28f77320e3">SchmadelZech1979</a>, 
+<a class="el" href="classStelCore.html#ae3fcc2b5a1eac3e07986ffa817030700a182a96172bc05d436b5d75216dd28651">MorrisonStephenson1982</a>, 
+<a class="el" href="classStelCore.html#ae3fcc2b5a1eac3e07986ffa817030700a322d618573d42e137b2577e4f282b6e2">StephensonMorrison1984</a>, 
+<a class="el" href="classStelCore.html#ae3fcc2b5a1eac3e07986ffa817030700a4bb2580086dbc4018c99bed9a05e4cec">StephensonHoulden</a>, 
+<br />
+&#160;&#160;<a class="el" href="classStelCore.html#ae3fcc2b5a1eac3e07986ffa817030700a7c3501ff46fc0269447e6827ddb1333a">Espenak</a>, 
+<a class="el" href="classStelCore.html#ae3fcc2b5a1eac3e07986ffa817030700a5106ebd20dae4b667264cf01dabba699">Borkowski</a>, 
+<a class="el" href="classStelCore.html#ae3fcc2b5a1eac3e07986ffa817030700ab4a72ad9db534ae4ad3f58b76a012135">SchmadelZech1988</a>, 
+<a class="el" href="classStelCore.html#ae3fcc2b5a1eac3e07986ffa817030700a04f6c14d9011a46bd71ad0a39e38db96">ChaprontTouze</a>, 
+<br />
+&#160;&#160;<a class="el" href="classStelCore.html#ae3fcc2b5a1eac3e07986ffa817030700ad86da521c9446107d5d00d2288ef63f2">StephensonMorrison1995</a>, 
+<a class="el" href="classStelCore.html#ae3fcc2b5a1eac3e07986ffa817030700a65796ef44a612a572df189062df2693d">Stephenson1997</a>, 
+<a class="el" href="classStelCore.html#ae3fcc2b5a1eac3e07986ffa817030700aecfcc6785b90a3224f782bef40516344">ChaprontMeeus</a>, 
+<a class="el" href="classStelCore.html#ae3fcc2b5a1eac3e07986ffa817030700a217e7836579ac11962852006e6d31f38">JPLHorizons</a>, 
+<br />
+&#160;&#160;<a class="el" href="classStelCore.html#ae3fcc2b5a1eac3e07986ffa817030700ac3f54b7f3a82e348c24686cb1961c63d">MeeusSimons</a>, 
+<a class="el" href="classStelCore.html#ae3fcc2b5a1eac3e07986ffa817030700aa44c16b9e1edb176ee31d5d0f4a81918">MontenbruckPfleger</a>, 
+<a class="el" href="classStelCore.html#ae3fcc2b5a1eac3e07986ffa817030700a0346955aafa2023eed8fd406f5815e40">ReingoldDershowitz</a>, 
+<a class="el" href="classStelCore.html#ae3fcc2b5a1eac3e07986ffa817030700a813b3b73d4af67fa496c21e0471ec8a5">MorrisonStephenson2004</a>, 
+<br />
+&#160;&#160;<a class="el" href="classStelCore.html#ae3fcc2b5a1eac3e07986ffa817030700a6e35c102b98ab2512e53393ac53b1145">Reijs</a>, 
+<a class="el" href="classStelCore.html#ae3fcc2b5a1eac3e07986ffa817030700a45ba953f8eca7f96dcaee44455fbe27f">EspenakMeeus</a>, 
+<a class="el" href="classStelCore.html#ae3fcc2b5a1eac3e07986ffa817030700a961629ce9d4d77eb8d6de7245143ae97">EspenakMeeusZeroMoonAccel</a>, 
+<a class="el" href="classStelCore.html#ae3fcc2b5a1eac3e07986ffa817030700a188a7dfb8bd2676882c34b3f9868b832">Banjevic</a>, 
+<br />
+&#160;&#160;<a class="el" href="classStelCore.html#ae3fcc2b5a1eac3e07986ffa817030700a6c378aa642d325faf1ba83756f14a326">IslamSadiqQureshi</a>, 
+<a class="el" href="classStelCore.html#ae3fcc2b5a1eac3e07986ffa817030700a4f60ffde7be1b9df57e042014f86517e">KhalidSultanaZaidi</a>, 
+<a class="el" href="classStelCore.html#ae3fcc2b5a1eac3e07986ffa817030700a19eb3ead51105dbc5e5be7b928d6948b">Custom</a>
+<br />
+ }</td></tr>
+<tr class="memdesc:ae3fcc2b5a1eac3e07986ffa817030700"><td class="mdescLeft">&#160;</td><td class="mdescRight">Available DeltaT algorithms.  <a href="classStelCore.html#ae3fcc2b5a1eac3e07986ffa817030700">More...</a><br /></td></tr>
+<tr class="separator:ae3fcc2b5a1eac3e07986ffa817030700"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-slots"></a>
 Public Slots</h2></td></tr>
-<tr class="memitem:ad0e9377f5937b74c1ec0b9805863b4cf"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classStelCore.html#ad0e9377f5937b74c1ec0b9805863b4cf">setCurrentProjectionType</a> (ProjectionType type)</td></tr>
+<tr class="memitem:ad0e9377f5937b74c1ec0b9805863b4cf"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classStelCore.html#ad0e9377f5937b74c1ec0b9805863b4cf">setCurrentProjectionType</a> (<a class="el" href="classStelCore.html#ae7a591a79245086278e00c2c7076ba1f">ProjectionType</a> type)</td></tr>
 <tr class="memdesc:ad0e9377f5937b74c1ec0b9805863b4cf"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the current ProjectionType to use.  <a href="#ad0e9377f5937b74c1ec0b9805863b4cf">More...</a><br /></td></tr>
 <tr class="separator:ad0e9377f5937b74c1ec0b9805863b4cf"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:adfcadafd0f05e5be755e9b41f4a45708"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="adfcadafd0f05e5be755e9b41f4a45708"></a>
-ProjectionType&#160;</td><td class="memItemRight" valign="bottom"><b>getCurrentProjectionType</b> () const </td></tr>
+<a class="el" href="classStelCore.html#ae7a591a79245086278e00c2c7076ba1f">ProjectionType</a>&#160;</td><td class="memItemRight" valign="bottom"><b>getCurrentProjectionType</b> () const </td></tr>
 <tr class="separator:adfcadafd0f05e5be755e9b41f4a45708"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a8333a8dceb625e3bab1ff91c6dcb3a93"><td class="memItemLeft" align="right" valign="top">QString&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classStelCore.html#a8333a8dceb625e3bab1ff91c6dcb3a93">getCurrentProjectionTypeKey</a> (void) const </td></tr>
 <tr class="memdesc:a8333a8dceb625e3bab1ff91c6dcb3a93"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the current Mapping used by the Projection.  <a href="#a8333a8dceb625e3bab1ff91c6dcb3a93">More...</a><br /></td></tr>
@@ -76,10 +161,10 @@ ProjectionType&#160;</td><td class="memItemRight" valign="bottom"><b>getCurrentP
 <tr class="memitem:a6a7a2adbc0d4a483fa2f610533d93c07"><td class="memItemLeft" align="right" valign="top">QStringList&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classStelCore.html#a6a7a2adbc0d4a483fa2f610533d93c07">getAllProjectionTypeKeys</a> () const </td></tr>
 <tr class="memdesc:a6a7a2adbc0d4a483fa2f610533d93c07"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the list of all the available projections.  <a href="#a6a7a2adbc0d4a483fa2f610533d93c07">More...</a><br /></td></tr>
 <tr class="separator:a6a7a2adbc0d4a483fa2f610533d93c07"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ae4ec950ae0da48dcd7745512152ca0ca"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classStelCore.html#ae4ec950ae0da48dcd7745512152ca0ca">setCurrentDeltaTAlgorithm</a> (DeltaTAlgorithm algorithm)</td></tr>
+<tr class="memitem:ae4ec950ae0da48dcd7745512152ca0ca"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classStelCore.html#ae4ec950ae0da48dcd7745512152ca0ca">setCurrentDeltaTAlgorithm</a> (<a class="el" href="classStelCore.html#ae3fcc2b5a1eac3e07986ffa817030700">DeltaTAlgorithm</a> algorithm)</td></tr>
 <tr class="memdesc:ae4ec950ae0da48dcd7745512152ca0ca"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the current algorithm for time correction (DeltaT)  <a href="#ae4ec950ae0da48dcd7745512152ca0ca">More...</a><br /></td></tr>
 <tr class="separator:ae4ec950ae0da48dcd7745512152ca0ca"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ae81826e080e8f89bc7107c69d9c5a1c8"><td class="memItemLeft" align="right" valign="top">DeltaTAlgorithm&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classStelCore.html#ae81826e080e8f89bc7107c69d9c5a1c8">getCurrentDeltaTAlgorithm</a> () const </td></tr>
+<tr class="memitem:ae81826e080e8f89bc7107c69d9c5a1c8"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classStelCore.html#ae3fcc2b5a1eac3e07986ffa817030700">DeltaTAlgorithm</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classStelCore.html#ae81826e080e8f89bc7107c69d9c5a1c8">getCurrentDeltaTAlgorithm</a> () const </td></tr>
 <tr class="memdesc:ae81826e080e8f89bc7107c69d9c5a1c8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the current algorithm for time correction (DeltaT)  <a href="#ae81826e080e8f89bc7107c69d9c5a1c8">More...</a><br /></td></tr>
 <tr class="separator:ae81826e080e8f89bc7107c69d9c5a1c8"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af1d2b0fc3230e34ac320c5ffbcb5aafd"><td class="memItemLeft" align="right" valign="top">QString&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classStelCore.html#af1d2b0fc3230e34ac320c5ffbcb5aafd">getCurrentDeltaTAlgorithmDescription</a> (void) const </td></tr>
@@ -383,13 +468,440 @@ Signals</h2></td></tr>
 <tr class="memitem:a819a8213233be96f43a2a612a0ab3485"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classStelCore.html#a819a8213233be96f43a2a612a0ab3485">timeRateChanged</a> (double rate)</td></tr>
 <tr class="memdesc:a819a8213233be96f43a2a612a0ab3485"><td class="mdescLeft">&#160;</td><td class="mdescRight">This signal is emitted when the time rate has changed.  <a href="#a819a8213233be96f43a2a612a0ab3485">More...</a><br /></td></tr>
 <tr class="separator:a819a8213233be96f43a2a612a0ab3485"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
+Public Member Functions</h2></td></tr>
+<tr class="memitem:a85f2569001fcd08ddeb5924275bd26c4"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classStelCore.html#a85f2569001fcd08ddeb5924275bd26c4">init</a> ()</td></tr>
+<tr class="memdesc:a85f2569001fcd08ddeb5924275bd26c4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Init and load all main core components.  <a href="#a85f2569001fcd08ddeb5924275bd26c4">More...</a><br /></td></tr>
+<tr class="separator:a85f2569001fcd08ddeb5924275bd26c4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a769642085383336310fdb213a249e68e"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classStelCore.html#a769642085383336310fdb213a249e68e">update</a> (double deltaTime)</td></tr>
+<tr class="memdesc:a769642085383336310fdb213a249e68e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Update all the objects with respect to the time.  <a href="#a769642085383336310fdb213a249e68e">More...</a><br /></td></tr>
+<tr class="separator:a769642085383336310fdb213a249e68e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6d13893c8b1b0ab7cdf12d838474329d"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classStelCore.html#a6d13893c8b1b0ab7cdf12d838474329d">windowHasBeenResized</a> (float x, float y, float width, float height)</td></tr>
+<tr class="memdesc:a6d13893c8b1b0ab7cdf12d838474329d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Handle the resizing of the window.  <a href="#a6d13893c8b1b0ab7cdf12d838474329d">More...</a><br /></td></tr>
+<tr class="separator:a6d13893c8b1b0ab7cdf12d838474329d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa52e2d5c1ef4a6794320bf105d9a97a2"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classStelCore.html#aa52e2d5c1ef4a6794320bf105d9a97a2">preDraw</a> ()</td></tr>
+<tr class="memdesc:aa52e2d5c1ef4a6794320bf105d9a97a2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Update core state before drawing modules.  <a href="#aa52e2d5c1ef4a6794320bf105d9a97a2">More...</a><br /></td></tr>
+<tr class="separator:aa52e2d5c1ef4a6794320bf105d9a97a2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a400c51da392571ed233b715435b6bef8"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classStelCore.html#a400c51da392571ed233b715435b6bef8">postDraw</a> ()</td></tr>
+<tr class="memdesc:a400c51da392571ed233b715435b6bef8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Update core state after drawing modules.  <a href="#a400c51da392571ed233b715435b6bef8">More...</a><br /></td></tr>
+<tr class="separator:a400c51da392571ed233b715435b6bef8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab8177bf3e6c521325b535f911f64c5a2"><td class="memItemLeft" align="right" valign="top"><a class="el" href="StelProjectorType_8hpp.html#a286221a2d4640bbeec2090cfbfadb0ff">StelProjectorP</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classStelCore.html#ab8177bf3e6c521325b535f911f64c5a2">getProjection2d</a> () const </td></tr>
+<tr class="memdesc:ab8177bf3e6c521325b535f911f64c5a2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get a new instance of a simple 2d projection.  <a href="#ab8177bf3e6c521325b535f911f64c5a2">More...</a><br /></td></tr>
+<tr class="separator:ab8177bf3e6c521325b535f911f64c5a2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac6e17bbb0097a1a8311326b1ad9a96ed"><td class="memItemLeft" align="right" valign="top"><a class="el" href="StelProjectorType_8hpp.html#a286221a2d4640bbeec2090cfbfadb0ff">StelProjectorP</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classStelCore.html#ac6e17bbb0097a1a8311326b1ad9a96ed">getProjection</a> (<a class="el" href="classStelCore.html#af18f0c34c957103a7fa3008e2aa4aec1">FrameType</a> frameType, <a class="el" href="classStelCore.html#afddf8e4cf0bbdf1f1ed366152f5488ab">RefractionMode</a> refractionMode=<a class="el" href="classStelCore.html#afddf8e4cf0bbdf1f1ed366152f5488aba93e2d6d3cf22de840dc23c9b7a6a327c">RefractionAuto</a>) const </td></tr>
+<tr class="memdesc:ac6e17bbb0097a1a8311326b1ad9a96ed"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get a new instance of projector using a modelview transformation corresponding to the given frame.  <a href="#ac6e17bbb0097a1a8311326b1ad9a96ed">More...</a><br /></td></tr>
+<tr class="separator:ac6e17bbb0097a1a8311326b1ad9a96ed"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a10653362a91bbccfd31dddf1340c90fb"><td class="memItemLeft" align="right" valign="top"><a class="el" href="StelProjectorType_8hpp.html#a286221a2d4640bbeec2090cfbfadb0ff">StelProjectorP</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classStelCore.html#a10653362a91bbccfd31dddf1340c90fb">getProjection</a> (<a class="el" href="classStelProjector.html#ae6b42a6973558f855691b91701edf0dc">StelProjector::ModelViewTranformP</a> modelViewTransform, <a class="el" href="classStelCore.html#ae7a591a79245086278e00c2c7076ba1f">ProjectionType</a> projType=(<a class="el" href="classStelCore.html#ae7a591a79245086278e00c2c7076ba1f">ProjectionType</a>) 1000) const </td></tr>
+<tr class="memdesc:a10653362a91bbccfd31dddf1340c90fb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get a new instance of projector using the given modelview transformation.  <a href="#a10653362a91bbccfd31dddf1340c90fb">More...</a><br /></td></tr>
+<tr class="separator:a10653362a91bbccfd31dddf1340c90fb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8f35e326d36252be7cab4b3a828ecdbc"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classStelToneReproducer.html">StelToneReproducer</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classStelCore.html#a8f35e326d36252be7cab4b3a828ecdbc">getToneReproducer</a> ()</td></tr>
+<tr class="memdesc:a8f35e326d36252be7cab4b3a828ecdbc"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the current tone reproducer used in the core.  <a href="#a8f35e326d36252be7cab4b3a828ecdbc">More...</a><br /></td></tr>
+<tr class="separator:a8f35e326d36252be7cab4b3a828ecdbc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acf560181e2988f5115e6841472e9abe6"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="classStelToneReproducer.html">StelToneReproducer</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classStelCore.html#acf560181e2988f5115e6841472e9abe6">getToneReproducer</a> () const </td></tr>
+<tr class="memdesc:acf560181e2988f5115e6841472e9abe6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the current tone reproducer used in the core.  <a href="#acf560181e2988f5115e6841472e9abe6">More...</a><br /></td></tr>
+<tr class="separator:acf560181e2988f5115e6841472e9abe6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adaebda05c696b721edbbf7bfcc44227d"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classStelSkyDrawer.html">StelSkyDrawer</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classStelCore.html#adaebda05c696b721edbbf7bfcc44227d">getSkyDrawer</a> ()</td></tr>
+<tr class="memdesc:adaebda05c696b721edbbf7bfcc44227d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the current <a class="el" href="classStelSkyDrawer.html" title="Provide a set of methods used to draw sky objects taking into account eyes adaptation, zoom level, instrument model and artificially set magnitude limits. ">StelSkyDrawer</a> used in the core.  <a href="#adaebda05c696b721edbbf7bfcc44227d">More...</a><br /></td></tr>
+<tr class="separator:adaebda05c696b721edbbf7bfcc44227d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acf15d91313d3a60c13d8f8b4da956453"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="classStelSkyDrawer.html">StelSkyDrawer</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classStelCore.html#acf15d91313d3a60c13d8f8b4da956453">getSkyDrawer</a> () const </td></tr>
+<tr class="memdesc:acf15d91313d3a60c13d8f8b4da956453"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the current <a class="el" href="classStelSkyDrawer.html" title="Provide a set of methods used to draw sky objects taking into account eyes adaptation, zoom level, instrument model and artificially set magnitude limits. ">StelSkyDrawer</a> used in the core.  <a href="#acf15d91313d3a60c13d8f8b4da956453">More...</a><br /></td></tr>
+<tr class="separator:acf15d91313d3a60c13d8f8b4da956453"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae1e4cec0732fe9f0a52b774fc2ca1001"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="classStelGeodesicGrid.html">StelGeodesicGrid</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classStelCore.html#ae1e4cec0732fe9f0a52b774fc2ca1001">getGeodesicGrid</a> (int maxLevel) const </td></tr>
+<tr class="memdesc:ae1e4cec0732fe9f0a52b774fc2ca1001"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get an instance of <a class="el" href="classStelGeodesicGrid.html" title="Grid of triangles (zones) on the sphere with radius 1, generated by subdividing the icosahedron...">StelGeodesicGrid</a> which is garanteed to allow for at least maxLevel levels.  <a href="#ae1e4cec0732fe9f0a52b774fc2ca1001">More...</a><br /></td></tr>
+<tr class="separator:ae1e4cec0732fe9f0a52b774fc2ca1001"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab7419274290fa6fcd186879384c36457"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classStelMovementMgr.html">StelMovementMgr</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classStelCore.html#ab7419274290fa6fcd186879384c36457">getMovementMgr</a> ()</td></tr>
+<tr class="memdesc:ab7419274290fa6fcd186879384c36457"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the instance of movement manager.  <a href="#ab7419274290fa6fcd186879384c36457">More...</a><br /></td></tr>
+<tr class="separator:ab7419274290fa6fcd186879384c36457"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af3c844db5adc4d0ae9daa7dd1cad4914"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="classStelMovementMgr.html">StelMovementMgr</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classStelCore.html#af3c844db5adc4d0ae9daa7dd1cad4914">getMovementMgr</a> () const </td></tr>
+<tr class="memdesc:af3c844db5adc4d0ae9daa7dd1cad4914"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the const instance of movement manager.  <a href="#af3c844db5adc4d0ae9daa7dd1cad4914">More...</a><br /></td></tr>
+<tr class="separator:af3c844db5adc4d0ae9daa7dd1cad4914"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a60e7fdf7ff6753f419e37d72af9343b3"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classStelCore.html#a60e7fdf7ff6753f419e37d72af9343b3">setClippingPlanes</a> (double znear, double zfar)</td></tr>
+<tr class="memdesc:a60e7fdf7ff6753f419e37d72af9343b3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the near and far clipping planes.  <a href="#a60e7fdf7ff6753f419e37d72af9343b3">More...</a><br /></td></tr>
+<tr class="separator:a60e7fdf7ff6753f419e37d72af9343b3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abc0d1358cf44b345077c406f7f4e5156"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classStelCore.html#abc0d1358cf44b345077c406f7f4e5156">getClippingPlanes</a> (double *zn, double *zf) const </td></tr>
+<tr class="memdesc:abc0d1358cf44b345077c406f7f4e5156"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the near and far clipping planes.  <a href="#abc0d1358cf44b345077c406f7f4e5156">More...</a><br /></td></tr>
+<tr class="separator:abc0d1358cf44b345077c406f7f4e5156"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4210c22dca827c77b4657b691470654c"><td class="memItemLeft" align="right" valign="top">QString&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classStelCore.html#a4210c22dca827c77b4657b691470654c">projectionTypeKeyToNameI18n</a> (const QString &amp;key) const </td></tr>
+<tr class="memdesc:a4210c22dca827c77b4657b691470654c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the translated projection name from its TypeKey for the current locale.  <a href="#a4210c22dca827c77b4657b691470654c">More...</a><br /></td></tr>
+<tr class="separator:a4210c22dca827c77b4657b691470654c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aff7b2ff8633408607ab4de6669d74484"><td class="memItemLeft" align="right" valign="top">QString&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classStelCore.html#aff7b2ff8633408607ab4de6669d74484">projectionNameI18nToTypeKey</a> (const QString &amp;nameI18n) const </td></tr>
+<tr class="memdesc:aff7b2ff8633408607ab4de6669d74484"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the projection TypeKey from its translated name for the current locale.  <a href="#aff7b2ff8633408607ab4de6669d74484">More...</a><br /></td></tr>
+<tr class="separator:aff7b2ff8633408607ab4de6669d74484"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ace50124a2a104bd9341c453452ac1957"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structStelProjector_1_1StelProjectorParams.html">StelProjector::StelProjectorParams</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classStelCore.html#ace50124a2a104bd9341c453452ac1957">getCurrentStelProjectorParams</a> () const </td></tr>
+<tr class="memdesc:ace50124a2a104bd9341c453452ac1957"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the current set of parameters to use when creating a new <a class="el" href="classStelProjector.html" title="Provide the main interface to all operations of projecting coordinates from sky to screen...">StelProjector</a>.  <a href="#ace50124a2a104bd9341c453452ac1957">More...</a><br /></td></tr>
+<tr class="separator:ace50124a2a104bd9341c453452ac1957"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a81f64c06db94437cb24237f82699e83e"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classStelCore.html#a81f64c06db94437cb24237f82699e83e">setCurrentStelProjectorParams</a> (const <a class="el" href="structStelProjector_1_1StelProjectorParams.html">StelProjector::StelProjectorParams</a> &amp;newParams)</td></tr>
+<tr class="memdesc:a81f64c06db94437cb24237f82699e83e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the set of parameters to use when creating a new <a class="el" href="classStelProjector.html" title="Provide the main interface to all operations of projecting coordinates from sky to screen...">StelProjector</a>.  <a href="#a81f64c06db94437cb24237f82699e83e">More...</a><br /></td></tr>
+<tr class="separator:a81f64c06db94437cb24237f82699e83e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a63b9c829c7ab0af04c794d295962a8e6"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classStelCore.html#a63b9c829c7ab0af04c794d295962a8e6">lookAtJ2000</a> (const <a class="el" href="singletonVector3.html">Vec3d</a> &amp;pos, const <a class="el" href="singletonVector3.html">Vec3d</a> &amp;up)</td></tr>
+<tr class="memdesc:a63b9c829c7ab0af04c794d295962a8e6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set vision direction.  <a href="#a63b9c829c7ab0af04c794d295962a8e6">More...</a><br /></td></tr>
+<tr class="separator:a63b9c829c7ab0af04c794d295962a8e6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4caf402486df9b57ca61558925214bb9"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a4caf402486df9b57ca61558925214bb9"></a>
+<a class="el" href="singletonVector3.html">Vec3d</a>&#160;</td><td class="memItemRight" valign="bottom"><b>altAzToEquinoxEqu</b> (const <a class="el" href="singletonVector3.html">Vec3d</a> &amp;v, <a class="el" href="classStelCore.html#afddf8e4cf0bbdf1f1ed366152f5488ab">RefractionMode</a> refMode=<a class="el" href="classStelCore.html#afddf8e4cf0bbdf1f1ed366152f5488aba93e2d6d3cf22de840dc23c9b7a6a327c">RefractionAuto</a>) const </td></tr>
+<tr class="separator:a4caf402486df9b57ca61558925214bb9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2a2bb8d4595280c6479510fce1e65ea2"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a2a2bb8d4595280c6479510fce1e65ea2"></a>
+<a class="el" href="singletonVector3.html">Vec3d</a>&#160;</td><td class="memItemRight" valign="bottom"><b>equinoxEquToAltAz</b> (const <a class="el" href="singletonVector3.html">Vec3d</a> &amp;v, <a class="el" href="classStelCore.html#afddf8e4cf0bbdf1f1ed366152f5488ab">RefractionMode</a> refMode=<a class="el" href="classStelCore.html#afddf8e4cf0bbdf1f1ed366152f5488aba93e2d6d3cf22de840dc23c9b7a6a327c">RefractionAuto</a>) const </td></tr>
+<tr class="separator:a2a2bb8d4595280c6479510fce1e65ea2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0778a5ca9f3507d2c9f54ffca4251fc3"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a0778a5ca9f3507d2c9f54ffca4251fc3"></a>
+<a class="el" href="singletonVector3.html">Vec3d</a>&#160;</td><td class="memItemRight" valign="bottom"><b>altAzToJ2000</b> (const <a class="el" href="singletonVector3.html">Vec3d</a> &amp;v, <a class="el" href="classStelCore.html#afddf8e4cf0bbdf1f1ed366152f5488ab">RefractionMode</a> refMode=<a class="el" href="classStelCore.html#afddf8e4cf0bbdf1f1ed366152f5488aba93e2d6d3cf22de840dc23c9b7a6a327c">RefractionAuto</a>) const </td></tr>
+<tr class="separator:a0778a5ca9f3507d2c9f54ffca4251fc3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a81c4302ff871f714a44f2f2c4fa666ac"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a81c4302ff871f714a44f2f2c4fa666ac"></a>
+<a class="el" href="singletonVector3.html">Vec3d</a>&#160;</td><td class="memItemRight" valign="bottom"><b>j2000ToAltAz</b> (const <a class="el" href="singletonVector3.html">Vec3d</a> &amp;v, <a class="el" href="classStelCore.html#afddf8e4cf0bbdf1f1ed366152f5488ab">RefractionMode</a> refMode=<a class="el" href="classStelCore.html#afddf8e4cf0bbdf1f1ed366152f5488aba93e2d6d3cf22de840dc23c9b7a6a327c">RefractionAuto</a>) const </td></tr>
+<tr class="separator:a81c4302ff871f714a44f2f2c4fa666ac"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ade15ba9219289e82f8db03bd9a819b8f"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ade15ba9219289e82f8db03bd9a819b8f"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>j2000ToAltAzInPlaceNoRefraction</b> (<a class="el" href="singletonVector3.html">Vec3f</a> *v) const </td></tr>
+<tr class="separator:ade15ba9219289e82f8db03bd9a819b8f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8aec7c7867b65a9bbbb56d20166efbd9"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a8aec7c7867b65a9bbbb56d20166efbd9"></a>
+<a class="el" href="singletonVector3.html">Vec3d</a>&#160;</td><td class="memItemRight" valign="bottom"><b>galacticToJ2000</b> (const <a class="el" href="singletonVector3.html">Vec3d</a> &amp;v) const </td></tr>
+<tr class="separator:a8aec7c7867b65a9bbbb56d20166efbd9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af144b2d007515e4fc34d2ca08a1c6e82"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="af144b2d007515e4fc34d2ca08a1c6e82"></a>
+<a class="el" href="singletonVector3.html">Vec3d</a>&#160;</td><td class="memItemRight" valign="bottom"><b>equinoxEquToJ2000</b> (const <a class="el" href="singletonVector3.html">Vec3d</a> &amp;v) const </td></tr>
+<tr class="separator:af144b2d007515e4fc34d2ca08a1c6e82"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a256ad4afe1c26a6d562b5e3422cf3a2c"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a256ad4afe1c26a6d562b5e3422cf3a2c"></a>
+<a class="el" href="singletonVector3.html">Vec3d</a>&#160;</td><td class="memItemRight" valign="bottom"><b>j2000ToEquinoxEqu</b> (const <a class="el" href="singletonVector3.html">Vec3d</a> &amp;v) const </td></tr>
+<tr class="separator:a256ad4afe1c26a6d562b5e3422cf3a2c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7757076b2ed85b6d3ae49d300a1b8493"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a7757076b2ed85b6d3ae49d300a1b8493"></a>
+<a class="el" href="singletonVector3.html">Vec3d</a>&#160;</td><td class="memItemRight" valign="bottom"><b>j2000ToGalactic</b> (const <a class="el" href="singletonVector3.html">Vec3d</a> &amp;v) const </td></tr>
+<tr class="separator:a7757076b2ed85b6d3ae49d300a1b8493"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a137cfbc60728b6d3a9944481fcd64ffc"><td class="memItemLeft" align="right" valign="top"><a class="el" href="singletonVector3.html">Vec3d</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classStelCore.html#a137cfbc60728b6d3a9944481fcd64ffc">heliocentricEclipticToAltAz</a> (const <a class="el" href="singletonVector3.html">Vec3d</a> &amp;v, <a class="el" href="classStelCore.html#afddf8e4cf0bbdf1f1ed366152f5488ab">RefractionMode</a> refMode=<a class="el" href="classStelCore.html#afddf8e4cf0bbdf1f1ed366152f5488aba93e2d6d3cf22de840dc23c9b7a6a327c">RefractionAuto</a>) const </td></tr>
+<tr class="memdesc:a137cfbc60728b6d3a9944481fcd64ffc"><td class="mdescLeft">&#160;</td><td class="mdescRight">Transform vector from heliocentric ecliptic coordinate to altazimuthal.  <a href="#a137cfbc60728b6d3a9944481fcd64ffc">More...</a><br /></td></tr>
+<tr class="separator:a137cfbc60728b6d3a9944481fcd64ffc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a52c76be9ac6e80e4eb685b9f2bac2fef"><td class="memItemLeft" align="right" valign="top"><a class="el" href="singletonVector3.html">Vec3d</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classStelCore.html#a52c76be9ac6e80e4eb685b9f2bac2fef">heliocentricEclipticToEquinoxEqu</a> (const <a class="el" href="singletonVector3.html">Vec3d</a> &amp;v) const </td></tr>
+<tr class="memdesc:a52c76be9ac6e80e4eb685b9f2bac2fef"><td class="mdescLeft">&#160;</td><td class="mdescRight">Transform from heliocentric coordinate to equatorial at current equinox (for the planet where the observer stands)  <a href="#a52c76be9ac6e80e4eb685b9f2bac2fef">More...</a><br /></td></tr>
+<tr class="separator:a52c76be9ac6e80e4eb685b9f2bac2fef"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3ffdf233c6bba5edd13ca2094550cdb7"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classStelProjector.html#ae6b42a6973558f855691b91701edf0dc">StelProjector::ModelViewTranformP</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classStelCore.html#a3ffdf233c6bba5edd13ca2094550cdb7">getHeliocentricEclipticModelViewTransform</a> (<a class="el" href="classStelCore.html#afddf8e4cf0bbdf1f1ed366152f5488ab">RefractionMode</a> refMode=<a class="el" href="classStelCore.html#afddf8e4cf0bbdf1f1ed366152f5488aba93e2d6d3cf22de840dc23c9b7a6a327c">RefractionAuto</a>) const </td></tr>
+<tr class="memdesc:a3ffdf233c6bba5edd13ca2094550cdb7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the modelview matrix for heliocentric ecliptic (Vsop87) drawing.  <a href="#a3ffdf233c6bba5edd13ca2094550cdb7">More...</a><br /></td></tr>
+<tr class="separator:a3ffdf233c6bba5edd13ca2094550cdb7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a40f7a858c67e6da439eec1f875e703b2"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classStelProjector.html#ae6b42a6973558f855691b91701edf0dc">StelProjector::ModelViewTranformP</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classStelCore.html#a40f7a858c67e6da439eec1f875e703b2">getObservercentricEclipticJ2000ModelViewTransform</a> (<a class="el" href="classStelCore.html#afddf8e4cf0bbdf1f1ed366152f5488ab">RefractionMode</a> refMode=<a class="el" href="classStelCore.html#afddf8e4cf0bbdf1f1ed366152f5488aba93e2d6d3cf22de840dc23c9b7a6a327c">RefractionAuto</a>) const </td></tr>
+<tr class="memdesc:a40f7a858c67e6da439eec1f875e703b2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the modelview matrix for observer-centric ecliptic (Vsop87) drawing.  <a href="#a40f7a858c67e6da439eec1f875e703b2">More...</a><br /></td></tr>
+<tr class="separator:a40f7a858c67e6da439eec1f875e703b2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a20c39e612536a2929c14b639038e32c3"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classStelProjector.html#ae6b42a6973558f855691b91701edf0dc">StelProjector::ModelViewTranformP</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classStelCore.html#a20c39e612536a2929c14b639038e32c3">getObservercentricEclipticOfDateModelViewTransform</a> (<a class="el" href="classStelCore.html#afddf8e4cf0bbdf1f1ed366152f5488ab">RefractionMode</a> refMode=<a class="el" href="classStelCore.html#afddf8e4cf0bbdf1f1ed366152f5488aba93e2d6d3cf22de840dc23c9b7a6a327c">RefractionAuto</a>) const </td></tr>
+<tr class="memdesc:a20c39e612536a2929c14b639038e32c3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the modelview matrix for observer-centric ecliptic of Date drawing.  <a href="#a20c39e612536a2929c14b639038e32c3">More...</a><br /></td></tr>
+<tr class="separator:a20c39e612536a2929c14b639038e32c3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8516e781a256bfa51d6b76a0dc498a71"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classStelProjector.html#ae6b42a6973558f855691b91701edf0dc">StelProjector::ModelViewTranformP</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classStelCore.html#a8516e781a256bfa51d6b76a0dc498a71">getEquinoxEquModelViewTransform</a> (<a class="el" href="classStelCore.html#afddf8e4cf0bbdf1f1ed366152f5488ab">RefractionMode</a> refMode=<a class="el" href="classStelCore.html#afddf8e4cf0bbdf1f1ed366152f5488aba93e2d6d3cf22de840dc23c9b7a6a327c">RefractionAuto</a>) const </td></tr>
+<tr class="memdesc:a8516e781a256bfa51d6b76a0dc498a71"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the modelview matrix for observer-centric equatorial at equinox drawing.  <a href="#a8516e781a256bfa51d6b76a0dc498a71">More...</a><br /></td></tr>
+<tr class="separator:a8516e781a256bfa51d6b76a0dc498a71"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a90ec6f426e94eaa39024650ebf65e03e"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classStelProjector.html#ae6b42a6973558f855691b91701edf0dc">StelProjector::ModelViewTranformP</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classStelCore.html#a90ec6f426e94eaa39024650ebf65e03e">getAltAzModelViewTransform</a> (<a class="el" href="classStelCore.html#afddf8e4cf0bbdf1f1ed366152f5488ab">RefractionMode</a> refMode=<a class="el" href="classStelCore.html#afddf8e4cf0bbdf1f1ed366152f5488aba93e2d6d3cf22de840dc23c9b7a6a327c">RefractionAuto</a>) const </td></tr>
+<tr class="memdesc:a90ec6f426e94eaa39024650ebf65e03e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the modelview matrix for observer-centric altazimuthal drawing.  <a href="#a90ec6f426e94eaa39024650ebf65e03e">More...</a><br /></td></tr>
+<tr class="separator:a90ec6f426e94eaa39024650ebf65e03e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3102aa42d4a40a036f9af2b89298bb14"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classStelProjector.html#ae6b42a6973558f855691b91701edf0dc">StelProjector::ModelViewTranformP</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classStelCore.html#a3102aa42d4a40a036f9af2b89298bb14">getJ2000ModelViewTransform</a> (<a class="el" href="classStelCore.html#afddf8e4cf0bbdf1f1ed366152f5488ab">RefractionMode</a> refMode=<a class="el" href="classStelCore.html#afddf8e4cf0bbdf1f1ed366152f5488aba93e2d6d3cf22de840dc23c9b7a6a327c">RefractionAuto</a>) const </td></tr>
+<tr class="memdesc:a3102aa42d4a40a036f9af2b89298bb14"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the modelview matrix for observer-centric J2000 equatorial drawing.  <a href="#a3102aa42d4a40a036f9af2b89298bb14">More...</a><br /></td></tr>
+<tr class="separator:a3102aa42d4a40a036f9af2b89298bb14"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a86cbbf3009ba9ff6de85461ed9bba30e"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classStelProjector.html#ae6b42a6973558f855691b91701edf0dc">StelProjector::ModelViewTranformP</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classStelCore.html#a86cbbf3009ba9ff6de85461ed9bba30e">getGalacticModelViewTransform</a> (<a class="el" href="classStelCore.html#afddf8e4cf0bbdf1f1ed366152f5488ab">RefractionMode</a> refMode=<a class="el" href="classStelCore.html#afddf8e4cf0bbdf1f1ed366152f5488aba93e2d6d3cf22de840dc23c9b7a6a327c">RefractionAuto</a>) const </td></tr>
+<tr class="memdesc:a86cbbf3009ba9ff6de85461ed9bba30e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the modelview matrix for observer-centric Galactic equatorial drawing.  <a href="#a86cbbf3009ba9ff6de85461ed9bba30e">More...</a><br /></td></tr>
+<tr class="separator:a86cbbf3009ba9ff6de85461ed9bba30e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae93a59275df5af1e4ed646c557e0eba0"><td class="memItemLeft" align="right" valign="top"><a class="el" href="singletonVector3.html">Vec3d</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classStelCore.html#ae93a59275df5af1e4ed646c557e0eba0">getObserverHeliocentricEclipticPos</a> () const </td></tr>
+<tr class="memdesc:ae93a59275df5af1e4ed646c557e0eba0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return the observer heliocentric ecliptic position.  <a href="#ae93a59275df5af1e4ed646c557e0eba0">More...</a><br /></td></tr>
+<tr class="separator:ae93a59275df5af1e4ed646c557e0eba0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6ce6d4c62b93d871c07e4fccca131930"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="classStelLocation.html">StelLocation</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classStelCore.html#a6ce6d4c62b93d871c07e4fccca131930">getCurrentLocation</a> () const </td></tr>
+<tr class="memdesc:a6ce6d4c62b93d871c07e4fccca131930"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the informations on the current location.  <a href="#a6ce6d4c62b93d871c07e4fccca131930">More...</a><br /></td></tr>
+<tr class="separator:a6ce6d4c62b93d871c07e4fccca131930"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1141380d6dc43fb1a82a7167c60c3aa0"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a1141380d6dc43fb1a82a7167c60c3aa0"></a>
+const QSharedPointer&lt; class <br class="typebreak" />
+<a class="el" href="classPlanet.html">Planet</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>getCurrentPlanet</b> () const </td></tr>
+<tr class="separator:a1141380d6dc43fb1a82a7167c60c3aa0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad492c627105bd42bdf1b2f496adec1e2"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="classStelObserver.html">StelObserver</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classStelCore.html#ad492c627105bd42bdf1b2f496adec1e2">getCurrentObserver</a> () const </td></tr>
+<tr class="memdesc:ad492c627105bd42bdf1b2f496adec1e2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Unfortunately we also need this.  <a href="#ad492c627105bd42bdf1b2f496adec1e2">More...</a><br /></td></tr>
+<tr class="separator:ad492c627105bd42bdf1b2f496adec1e2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a430f45fd23c1076fec9908ca50041193"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a430f45fd23c1076fec9908ca50041193"></a>
+<a class="el" href="classSphericalCap.html">SphericalCap</a>&#160;</td><td class="memItemRight" valign="bottom"><b>getVisibleSkyArea</b> () const </td></tr>
+<tr class="separator:a430f45fd23c1076fec9908ca50041193"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a580c6a530e4fd606a2a63777747d2933"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classStelCore.html#a580c6a530e4fd606a2a63777747d2933">moveObserverTo</a> (const <a class="el" href="classStelLocation.html">StelLocation</a> &amp;target, double duration=1., double durationIfPlanetChange=1.)</td></tr>
+<tr class="memdesc:a580c6a530e4fd606a2a63777747d2933"><td class="mdescLeft">&#160;</td><td class="mdescRight">Smoothly move the observer to the given location.  <a href="#a580c6a530e4fd606a2a63777747d2933">More...</a><br /></td></tr>
+<tr class="separator:a580c6a530e4fd606a2a63777747d2933"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af8c61e30243086177b88b800e08ec6c2"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classStelCore.html#af8c61e30243086177b88b800e08ec6c2">getLocalSiderealTime</a> () const </td></tr>
+<tr class="memdesc:af8c61e30243086177b88b800e08ec6c2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the sidereal time shifted by the observer longitude.  <a href="#af8c61e30243086177b88b800e08ec6c2">More...</a><br /></td></tr>
+<tr class="separator:af8c61e30243086177b88b800e08ec6c2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a44a7d0208057c5998afe49eb305b36ca"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classStelCore.html#a44a7d0208057c5998afe49eb305b36ca">getLocalSiderealDayLength</a> () const </td></tr>
+<tr class="memdesc:a44a7d0208057c5998afe49eb305b36ca"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the duration of a sidereal day for the current observer in day.  <a href="#a44a7d0208057c5998afe49eb305b36ca">More...</a><br /></td></tr>
+<tr class="separator:a44a7d0208057c5998afe49eb305b36ca"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a849a0eea40056013cdb2a29716520d98"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classStelCore.html#a849a0eea40056013cdb2a29716520d98">getLocalSiderealYearLength</a> () const </td></tr>
+<tr class="memdesc:a849a0eea40056013cdb2a29716520d98"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the duration of a sidereal year for the current observer in days.  <a href="#a849a0eea40056013cdb2a29716520d98">More...</a><br /></td></tr>
+<tr class="separator:a849a0eea40056013cdb2a29716520d98"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac7b5687dbaaf1e7a582523173248f786"><td class="memItemLeft" align="right" valign="top">QString&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classStelCore.html#ac7b5687dbaaf1e7a582523173248f786">getStartupTimeMode</a> ()</td></tr>
+<tr class="memdesc:ac7b5687dbaaf1e7a582523173248f786"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return the startup mode, can be "actual" (i.e.  <a href="#ac7b5687dbaaf1e7a582523173248f786">More...</a><br /></td></tr>
+<tr class="separator:ac7b5687dbaaf1e7a582523173248f786"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0b6d28c198f03b4e0ee24b2b0bfdb0e5"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a0b6d28c198f03b4e0ee24b2b0bfdb0e5"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>setStartupTimeMode</b> (const QString &amp;s)</td></tr>
+<tr class="separator:a0b6d28c198f03b4e0ee24b2b0bfdb0e5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af8d53b89e437f470d571ea565eab0429"><td class="memItemLeft" align="right" valign="top">QString&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classStelCore.html#af8d53b89e437f470d571ea565eab0429">getCurrentDeltaTAlgorithmValidRangeDescription</a> (const double JD, QString *marker) const </td></tr>
+<tr class="memdesc:af8d53b89e437f470d571ea565eab0429"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get info about valid range for current algorithm for calculation of Delta-T.  <a href="#af8d53b89e437f470d571ea565eab0429">More...</a><br /></td></tr>
+<tr class="separator:af8d53b89e437f470d571ea565eab0429"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a419592d928b131a0e8f4cbb1022d104c"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classStelCore.html#a419592d928b131a0e8f4cbb1022d104c">isBrightDaylight</a> () const </td></tr>
+<tr class="memdesc:a419592d928b131a0e8f4cbb1022d104c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Checks for altitude of the Sun - is it night or day?  <a href="#a419592d928b131a0e8f4cbb1022d104c">More...</a><br /></td></tr>
+<tr class="separator:a419592d928b131a0e8f4cbb1022d104c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8923df7c5e26c6850f134bdaabaefd63"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classStelCore.html#a8923df7c5e26c6850f134bdaabaefd63">getCurrentEpoch</a> () const </td></tr>
+<tr class="memdesc:a8923df7c5e26c6850f134bdaabaefd63"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get value of the current Julian epoch (i.e. current year with decimal fraction, e.g. 2012.34567)  <a href="#a8923df7c5e26c6850f134bdaabaefd63">More...</a><br /></td></tr>
+<tr class="separator:a8923df7c5e26c6850f134bdaabaefd63"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afedbda35b35d41f1c575a70cb737ac6e"><td class="memItemLeft" align="right" valign="top">QString&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classStelCore.html#afedbda35b35d41f1c575a70cb737ac6e">getDefaultProjectionTypeKey</a> (void) const </td></tr>
+<tr class="memdesc:afedbda35b35d41f1c575a70cb737ac6e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the default Mapping used by the Projection.  <a href="#afedbda35b35d41f1c575a70cb737ac6e">More...</a><br /></td></tr>
+<tr class="separator:afedbda35b35d41f1c575a70cb737ac6e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-static-attribs"></a>
+Static Public Attributes</h2></td></tr>
+<tr class="memitem:aec8a93e12eed04f527082f9edfc5806e"><td class="memItemLeft" align="right" valign="top">static const <a class="el" href="singletonMatrix4.html">Mat4d</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classStelCore.html#aec8a93e12eed04f527082f9edfc5806e">matJ2000ToVsop87</a></td></tr>
+<tr class="memdesc:aec8a93e12eed04f527082f9edfc5806e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Rotation matrix from equatorial J2000 to ecliptic (VSOP87A).  <a href="#aec8a93e12eed04f527082f9edfc5806e">More...</a><br /></td></tr>
+<tr class="separator:aec8a93e12eed04f527082f9edfc5806e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0b3b0981fbcf0b985cdbadddbb4a68b7"><td class="memItemLeft" align="right" valign="top">static const <a class="el" href="singletonMatrix4.html">Mat4d</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classStelCore.html#a0b3b0981fbcf0b985cdbadddbb4a68b7">matVsop87ToJ2000</a></td></tr>
+<tr class="memdesc:a0b3b0981fbcf0b985cdbadddbb4a68b7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Rotation matrix from ecliptic (VSOP87A) to equatorial J2000.  <a href="#a0b3b0981fbcf0b985cdbadddbb4a68b7">More...</a><br /></td></tr>
+<tr class="separator:a0b3b0981fbcf0b985cdbadddbb4a68b7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac218290d7f6ed6f20e65787b504393f3"><td class="memItemLeft" align="right" valign="top">static const <a class="el" href="singletonMatrix4.html">Mat4d</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classStelCore.html#ac218290d7f6ed6f20e65787b504393f3">matJ2000ToGalactic</a></td></tr>
+<tr class="memdesc:ac218290d7f6ed6f20e65787b504393f3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Rotation matrix from J2000 to Galactic reference frame, using FITS convention.  <a href="#ac218290d7f6ed6f20e65787b504393f3">More...</a><br /></td></tr>
+<tr class="separator:ac218290d7f6ed6f20e65787b504393f3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a263b7d2403c498befbea2d93cd977177"><td class="memItemLeft" align="right" valign="top">static const <a class="el" href="singletonMatrix4.html">Mat4d</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classStelCore.html#a263b7d2403c498befbea2d93cd977177">matGalacticToJ2000</a></td></tr>
+<tr class="memdesc:a263b7d2403c498befbea2d93cd977177"><td class="mdescLeft">&#160;</td><td class="mdescRight">Rotation matrix from J2000 to Galactic reference frame, using FITS convention.  <a href="#a263b7d2403c498befbea2d93cd977177">More...</a><br /></td></tr>
+<tr class="separator:a263b7d2403c498befbea2d93cd977177"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a31f5374e5e7c28e065c430c871fb144f"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a31f5374e5e7c28e065c430c871fb144f"></a>
+static const double&#160;</td><td class="memItemRight" valign="bottom"><b>JD_SECOND</b></td></tr>
+<tr class="separator:a31f5374e5e7c28e065c430c871fb144f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab45e7680e6b155539ea2555efdcb99c4"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ab45e7680e6b155539ea2555efdcb99c4"></a>
+static const double&#160;</td><td class="memItemRight" valign="bottom"><b>JD_MINUTE</b></td></tr>
+<tr class="separator:ab45e7680e6b155539ea2555efdcb99c4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6e4bde10189825335e73698d2b2c93f7"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a6e4bde10189825335e73698d2b2c93f7"></a>
+static const double&#160;</td><td class="memItemRight" valign="bottom"><b>JD_HOUR</b></td></tr>
+<tr class="separator:a6e4bde10189825335e73698d2b2c93f7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa99d531462183ccfb66193fa965422ec"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aa99d531462183ccfb66193fa965422ec"></a>
+static const double&#160;</td><td class="memItemRight" valign="bottom"><b>JD_DAY</b></td></tr>
+<tr class="separator:aa99d531462183ccfb66193fa965422ec"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa822a6e86e346b483c458c5388ba76ce"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aa822a6e86e346b483c458c5388ba76ce"></a>
+static const double&#160;</td><td class="memItemRight" valign="bottom"><b>ONE_OVER_JD_SECOND</b></td></tr>
+<tr class="separator:aa822a6e86e346b483c458c5388ba76ce"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Main class for Stellarium core processing. </p>
 <p>This class provides services like management of sky projections, tone conversion, or reference frame conversion. It is used by the various StelModules to update and display themselves. There is currently only one <a class="el" href="classStelCore.html" title="Main class for Stellarium core processing. ">StelCore</a> instance in Stellarium, but in the future they may be more, allowing for example to display several independent views of the sky at the same time. </p><dl class="section author"><dt>Author</dt><dd>Fabien Chereau, Matthew Gates, Georg Zotti </dd></dl>
 
 <p>Definition at line <a class="el" href="StelCore_8hpp_source.html#l00048">48</a> of file <a class="el" href="StelCore_8hpp_source.html">StelCore.hpp</a>.</p>
-</div><h2 class="groupheader">Member Function Documentation</h2>
+</div><h2 class="groupheader">Member Enumeration Documentation</h2>
+<a class="anchor" id="ae3fcc2b5a1eac3e07986ffa817030700"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">enum <a class="el" href="classStelCore.html#ae3fcc2b5a1eac3e07986ffa817030700">StelCore::DeltaTAlgorithm</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Available DeltaT algorithms. </p>
+<table class="fieldtable">
+<tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a class="anchor" id="ae3fcc2b5a1eac3e07986ffa817030700ab0b833a73df0e0d1e1e56123694fd640"></a>WithoutCorrection&#160;</td><td class="fielddoc">
+<p>Without correction, DeltaT is Zero. Like Stellarium versions before 0.12. </p>
+</td></tr>
+<tr><td class="fieldname"><a class="anchor" id="ae3fcc2b5a1eac3e07986ffa817030700a2fcec61a53595c230939d0289773252d"></a>Schoch&#160;</td><td class="fielddoc">
+<p>Schoch (1931) algorithm for DeltaT. </p>
+</td></tr>
+<tr><td class="fieldname"><a class="anchor" id="ae3fcc2b5a1eac3e07986ffa817030700a01fb168c49694e2d63520bfbf8e87d47"></a>Clemence&#160;</td><td class="fielddoc">
+<p>Clemence (1948) algorithm for DeltaT. </p>
+</td></tr>
+<tr><td class="fieldname"><a class="anchor" id="ae3fcc2b5a1eac3e07986ffa817030700abc62c4e94b6333256fe68c8381992ae2"></a>IAU&#160;</td><td class="fielddoc">
+<p>IAU (1952) algorithm for DeltaT (based on observations by Spencer Jones (1939)) </p>
+</td></tr>
+<tr><td class="fieldname"><a class="anchor" id="ae3fcc2b5a1eac3e07986ffa817030700a0c4d124711513f34d666bc91d99951aa"></a>AstronomicalEphemeris&#160;</td><td class="fielddoc">
+<p>Astronomical Ephemeris (1960) algorithm for DeltaT. </p>
+</td></tr>
+<tr><td class="fieldname"><a class="anchor" id="ae3fcc2b5a1eac3e07986ffa817030700a138b2f5694731286c64807a2e8125047"></a>TuckermanGoldstine&#160;</td><td class="fielddoc">
+<p>Tuckerman (1962, 1964) &amp; Goldstine (1973) algorithm for DeltaT. </p>
+</td></tr>
+<tr><td class="fieldname"><a class="anchor" id="ae3fcc2b5a1eac3e07986ffa817030700a39308521e69bfbf8d55757515502618a"></a>MullerStephenson&#160;</td><td class="fielddoc">
+<p>Muller &amp; Stephenson (1975) algorithm for DeltaT. </p>
+</td></tr>
+<tr><td class="fieldname"><a class="anchor" id="ae3fcc2b5a1eac3e07986ffa817030700adc48b13f0a8fa69e4c593abfbe39422a"></a>Stephenson1978&#160;</td><td class="fielddoc">
+<p>Stephenson (1978) algorithm for DeltaT. </p>
+</td></tr>
+<tr><td class="fieldname"><a class="anchor" id="ae3fcc2b5a1eac3e07986ffa817030700ae413d621965c187a2c2cba28f77320e3"></a>SchmadelZech1979&#160;</td><td class="fielddoc">
+<p>Schmadel &amp; Zech (1979) algorithm for DeltaT. </p>
+</td></tr>
+<tr><td class="fieldname"><a class="anchor" id="ae3fcc2b5a1eac3e07986ffa817030700a182a96172bc05d436b5d75216dd28651"></a>MorrisonStephenson1982&#160;</td><td class="fielddoc">
+<p>Morrison &amp; Stephenson (1982) algorithm for DeltaT (used by RedShift) </p>
+</td></tr>
+<tr><td class="fieldname"><a class="anchor" id="ae3fcc2b5a1eac3e07986ffa817030700a322d618573d42e137b2577e4f282b6e2"></a>StephensonMorrison1984&#160;</td><td class="fielddoc">
+<p>Stephenson &amp; Morrison (1984) algorithm for DeltaT. </p>
+</td></tr>
+<tr><td class="fieldname"><a class="anchor" id="ae3fcc2b5a1eac3e07986ffa817030700a4bb2580086dbc4018c99bed9a05e4cec"></a>StephensonHoulden&#160;</td><td class="fielddoc">
+<p>Stephenson &amp; Houlden (1986) algorithm for DeltaT. </p>
+</td></tr>
+<tr><td class="fieldname"><a class="anchor" id="ae3fcc2b5a1eac3e07986ffa817030700a7c3501ff46fc0269447e6827ddb1333a"></a>Espenak&#160;</td><td class="fielddoc">
+<p>Espenak (1987, 1989) algorithm for DeltaT. </p>
+</td></tr>
+<tr><td class="fieldname"><a class="anchor" id="ae3fcc2b5a1eac3e07986ffa817030700a5106ebd20dae4b667264cf01dabba699"></a>Borkowski&#160;</td><td class="fielddoc">
+<p>Borkowski (1988) algorithm for DeltaT. </p>
+</td></tr>
+<tr><td class="fieldname"><a class="anchor" id="ae3fcc2b5a1eac3e07986ffa817030700ab4a72ad9db534ae4ad3f58b76a012135"></a>SchmadelZech1988&#160;</td><td class="fielddoc">
+<p>Schmadel &amp; Zech (1988) algorithm for DeltaT. </p>
+</td></tr>
+<tr><td class="fieldname"><a class="anchor" id="ae3fcc2b5a1eac3e07986ffa817030700a04f6c14d9011a46bd71ad0a39e38db96"></a>ChaprontTouze&#160;</td><td class="fielddoc">
+<p>Chapront-Touzé &amp; Chapront (1991) algorithm for DeltaT. </p>
+</td></tr>
+<tr><td class="fieldname"><a class="anchor" id="ae3fcc2b5a1eac3e07986ffa817030700ad86da521c9446107d5d00d2288ef63f2"></a>StephensonMorrison1995&#160;</td><td class="fielddoc">
+<p>Stephenson &amp; Morrison (1995) algorithm for DeltaT. </p>
+</td></tr>
+<tr><td class="fieldname"><a class="anchor" id="ae3fcc2b5a1eac3e07986ffa817030700a65796ef44a612a572df189062df2693d"></a>Stephenson1997&#160;</td><td class="fielddoc">
+<p>Stephenson (1997) algorithm for DeltaT. </p>
+</td></tr>
+<tr><td class="fieldname"><a class="anchor" id="ae3fcc2b5a1eac3e07986ffa817030700aecfcc6785b90a3224f782bef40516344"></a>ChaprontMeeus&#160;</td><td class="fielddoc">
+<p>Chapront, Chapront-Touze &amp; Francou (1997) &amp; Meeus (1998) algorithm for DeltaT. </p>
+</td></tr>
+<tr><td class="fieldname"><a class="anchor" id="ae3fcc2b5a1eac3e07986ffa817030700a217e7836579ac11962852006e6d31f38"></a>JPLHorizons&#160;</td><td class="fielddoc">
+<p>JPL Horizons algorithm for DeltaT. </p>
+</td></tr>
+<tr><td class="fieldname"><a class="anchor" id="ae3fcc2b5a1eac3e07986ffa817030700ac3f54b7f3a82e348c24686cb1961c63d"></a>MeeusSimons&#160;</td><td class="fielddoc">
+<p>Meeus &amp; Simons (2000) algorithm for DeltaT. </p>
+</td></tr>
+<tr><td class="fieldname"><a class="anchor" id="ae3fcc2b5a1eac3e07986ffa817030700aa44c16b9e1edb176ee31d5d0f4a81918"></a>MontenbruckPfleger&#160;</td><td class="fielddoc">
+<p>Montenbruck &amp; Pfleger (2000) algorithm for DeltaT. </p>
+</td></tr>
+<tr><td class="fieldname"><a class="anchor" id="ae3fcc2b5a1eac3e07986ffa817030700a0346955aafa2023eed8fd406f5815e40"></a>ReingoldDershowitz&#160;</td><td class="fielddoc">
+<p>Reingold &amp; Dershowitz (2002, 2007) algorithm for DeltaT. </p>
+</td></tr>
+<tr><td class="fieldname"><a class="anchor" id="ae3fcc2b5a1eac3e07986ffa817030700a813b3b73d4af67fa496c21e0471ec8a5"></a>MorrisonStephenson2004&#160;</td><td class="fielddoc">
+<p>Morrison &amp; Stephenson (2004, 2005) algorithm for DeltaT. </p>
+</td></tr>
+<tr><td class="fieldname"><a class="anchor" id="ae3fcc2b5a1eac3e07986ffa817030700a6e35c102b98ab2512e53393ac53b1145"></a>Reijs&#160;</td><td class="fielddoc">
+<p>Reijs (2006) algorithm for DeltaT. </p>
+</td></tr>
+<tr><td class="fieldname"><a class="anchor" id="ae3fcc2b5a1eac3e07986ffa817030700a45ba953f8eca7f96dcaee44455fbe27f"></a>EspenakMeeus&#160;</td><td class="fielddoc">
+<p>Espenak &amp; Meeus (2006) algorithm for DeltaT (Recommended, default) </p>
+</td></tr>
+<tr><td class="fieldname"><a class="anchor" id="ae3fcc2b5a1eac3e07986ffa817030700a961629ce9d4d77eb8d6de7245143ae97"></a>EspenakMeeusZeroMoonAccel&#160;</td><td class="fielddoc">
+<p>Espenak &amp; Meeus (2006) algorithm for DeltaT (but without additional Lunar acceleration. FOR TESTING ONLY, NONPUBLIC) </p>
+</td></tr>
+<tr><td class="fieldname"><a class="anchor" id="ae3fcc2b5a1eac3e07986ffa817030700a188a7dfb8bd2676882c34b3f9868b832"></a>Banjevic&#160;</td><td class="fielddoc">
+<p>Banjevic (2006) algorithm for DeltaT. </p>
+</td></tr>
+<tr><td class="fieldname"><a class="anchor" id="ae3fcc2b5a1eac3e07986ffa817030700a6c378aa642d325faf1ba83756f14a326"></a>IslamSadiqQureshi&#160;</td><td class="fielddoc">
+<p>Islam, Sadiq &amp; Qureshi (2008 + revisited 2013) algorithm for DeltaT (6 polynomials) </p>
+</td></tr>
+<tr><td class="fieldname"><a class="anchor" id="ae3fcc2b5a1eac3e07986ffa817030700a4f60ffde7be1b9df57e042014f86517e"></a>KhalidSultanaZaidi&#160;</td><td class="fielddoc">
+<p>M. Khalid, Mariam Sultana and Faheem Zaidi polinomial approximation of time period 1620-2013 (2014) </p>
+</td></tr>
+<tr><td class="fieldname"><a class="anchor" id="ae3fcc2b5a1eac3e07986ffa817030700a19eb3ead51105dbc5e5be7b928d6948b"></a>Custom&#160;</td><td class="fielddoc">
+<p>User defined coefficients for quadratic equation for DeltaT. </p>
+</td></tr>
+</table>
+
+<p>Definition at line <a class="el" href="StelCore_8hpp_source.html#l00102">102</a> of file <a class="el" href="StelCore_8hpp_source.html">StelCore.hpp</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="af18f0c34c957103a7fa3008e2aa4aec1"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">enum <a class="el" href="classStelCore.html#af18f0c34c957103a7fa3008e2aa4aec1">StelCore::FrameType</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Supported reference frame types. </p>
+<table class="fieldtable">
+<tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a class="anchor" id="af18f0c34c957103a7fa3008e2aa4aec1a6caf91e764d43b6a218e66507f7b4323"></a>FrameUninitialized&#160;</td><td class="fielddoc">
+<p>Reference frame is not set (FMajerech: Added to avoid condition on uninitialized value in <a class="el" href="classStelSkyLayerMgr.html#aa1501b7f9400f123e91cd274314b7f01" title="Draws sky background. ">StelSkyLayerMgr::draw()</a>) </p>
+</td></tr>
+<tr><td class="fieldname"><a class="anchor" id="af18f0c34c957103a7fa3008e2aa4aec1aafae2ea8dbf9f73c83b646ba5d57801c"></a>FrameAltAz&#160;</td><td class="fielddoc">
+<p>Altazimuthal reference frame centered on observer. </p>
+</td></tr>
+<tr><td class="fieldname"><a class="anchor" id="af18f0c34c957103a7fa3008e2aa4aec1a0fbbca6cbf907e7a8cf69111c1ca900b"></a>FrameHeliocentricEclipticJ2000&#160;</td><td class="fielddoc">
+<p>Fixed-ecliptic reference frame centered on the Sun. GZ: This is J2000 ecliptical / almost VSOP87. </p>
+</td></tr>
+<tr><td class="fieldname"><a class="anchor" id="af18f0c34c957103a7fa3008e2aa4aec1a7882b2a5383622bb4deefca2b490efef"></a>FrameObservercentricEclipticJ2000&#160;</td><td class="fielddoc">
+<p>Fixed-ecliptic reference frame centered on the Observer. GZ: was ObservercentricEcliptic, but renamed because it is Ecliptic of J2000! </p>
+</td></tr>
+<tr><td class="fieldname"><a class="anchor" id="af18f0c34c957103a7fa3008e2aa4aec1a0b10426494827710dc3c8a6a1ec688e2"></a>FrameObservercentricEclipticOfDate&#160;</td><td class="fielddoc">
+<p>Moving ecliptic reference frame centered on the Observer. GZ new for V0.14: Ecliptic of date, i.e. includes the precession of the ecliptic. </p>
+</td></tr>
+<tr><td class="fieldname"><a class="anchor" id="af18f0c34c957103a7fa3008e2aa4aec1a916cb23d24a97909552ecb3bd2c53011"></a>FrameEquinoxEqu&#160;</td><td class="fielddoc">
+<p>Equatorial reference frame at the current equinox centered on the observer. </p>
+<p>The north pole follows the precession of the planet on which the observer is located. On Earth, this may include nutation if so configured. Has been corrected for V0.14 to really properly reflect ecliptical motion and precession (Vondrak 2011 model) and nutation. </p>
+</td></tr>
+<tr><td class="fieldname"><a class="anchor" id="af18f0c34c957103a7fa3008e2aa4aec1a4c25c7bdcf0d5fa956743e0ae0561d32"></a>FrameJ2000&#160;</td><td class="fielddoc">
+<p>Equatorial reference frame at the J2000 equinox centered on the observer. This is also the ICRS reference frame. </p>
+</td></tr>
+<tr><td class="fieldname"><a class="anchor" id="af18f0c34c957103a7fa3008e2aa4aec1aba391ab2f0ec54e0a72453b5b4bbb43a"></a>FrameGalactic&#160;</td><td class="fielddoc">
+<p>Galactic reference frame centered on observer. </p>
+</td></tr>
+</table>
+
+<p>Definition at line <a class="el" href="StelCore_8hpp_source.html#l00062">62</a> of file <a class="el" href="StelCore_8hpp_source.html">StelCore.hpp</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="ae7a591a79245086278e00c2c7076ba1f"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">enum <a class="el" href="classStelCore.html#ae7a591a79245086278e00c2c7076ba1f">StelCore::ProjectionType</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Available projection types. </p>
+<p>A value of 1000 indicate the default projection </p>
+<table class="fieldtable">
+<tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a class="anchor" id="ae7a591a79245086278e00c2c7076ba1faa46fd2b1668caac8b906a55e7da59962"></a>ProjectionPerspective&#160;</td><td class="fielddoc">
+<p>Perspective projection. </p>
+</td></tr>
+<tr><td class="fieldname"><a class="anchor" id="ae7a591a79245086278e00c2c7076ba1fad86044939c8a4af51a937b3535188ac9"></a>ProjectionEqualArea&#160;</td><td class="fielddoc">
+<p>Equal Area projection. </p>
+</td></tr>
+<tr><td class="fieldname"><a class="anchor" id="ae7a591a79245086278e00c2c7076ba1fac1909dc0f67fc8482fea8b6d1704d491"></a>ProjectionStereographic&#160;</td><td class="fielddoc">
+<p>Stereograhic projection. </p>
+</td></tr>
+<tr><td class="fieldname"><a class="anchor" id="ae7a591a79245086278e00c2c7076ba1fada8170d857fb32f8f7c4d2e85f0b7e2c"></a>ProjectionFisheye&#160;</td><td class="fielddoc">
+<p>Fisheye projection. </p>
+</td></tr>
+<tr><td class="fieldname"><a class="anchor" id="ae7a591a79245086278e00c2c7076ba1fa0fc474ebbba902497766debdbeb172a2"></a>ProjectionHammer&#160;</td><td class="fielddoc">
+<p>Hammer-Aitoff projection. </p>
+</td></tr>
+<tr><td class="fieldname"><a class="anchor" id="ae7a591a79245086278e00c2c7076ba1fa2934a0c168cf68a7ba204b784dbc5fd5"></a>ProjectionCylinder&#160;</td><td class="fielddoc">
+<p>Cylinder projection. </p>
+</td></tr>
+<tr><td class="fieldname"><a class="anchor" id="ae7a591a79245086278e00c2c7076ba1fadbc0e44ee4471a1bb9c0746656ff696a"></a>ProjectionMercator&#160;</td><td class="fielddoc">
+<p>Mercator projection. </p>
+</td></tr>
+<tr><td class="fieldname"><a class="anchor" id="ae7a591a79245086278e00c2c7076ba1fab87fb82a60b8aefb09d732171e132718"></a>ProjectionOrthographic&#160;</td><td class="fielddoc">
+<p>Orthographic projection. </p>
+</td></tr>
+<tr><td class="fieldname"><a class="anchor" id="ae7a591a79245086278e00c2c7076ba1fafffa26bd2bed8bbd84910e4521a76a80"></a>ProjectionSinusoidal&#160;</td><td class="fielddoc">
+<p>Sinusoidal projection. </p>
+</td></tr>
+</table>
+
+<p>Definition at line <a class="el" href="StelCore_8hpp_source.html#l00078">78</a> of file <a class="el" href="StelCore_8hpp_source.html">StelCore.hpp</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="afddf8e4cf0bbdf1f1ed366152f5488ab"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">enum <a class="el" href="classStelCore.html#afddf8e4cf0bbdf1f1ed366152f5488ab">StelCore::RefractionMode</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Available refraction mode. </p>
+<table class="fieldtable">
+<tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a class="anchor" id="afddf8e4cf0bbdf1f1ed366152f5488aba93e2d6d3cf22de840dc23c9b7a6a327c"></a>RefractionAuto&#160;</td><td class="fielddoc">
+<p>Automatically decide to add refraction if atmosphere is activated. </p>
+</td></tr>
+<tr><td class="fieldname"><a class="anchor" id="afddf8e4cf0bbdf1f1ed366152f5488abab6c62346c56e4d0fffe4e6d795659699"></a>RefractionOn&#160;</td><td class="fielddoc">
+<p>Always add refraction (i.e. apparent coordinates) </p>
+</td></tr>
+<tr><td class="fieldname"><a class="anchor" id="afddf8e4cf0bbdf1f1ed366152f5488aba47b44fb614a85a4945774c7de848c5ca"></a>RefractionOff&#160;</td><td class="fielddoc">
+<p>Never add refraction (i.e. geometric coordinates) </p>
+</td></tr>
+</table>
+
+<p>Definition at line <a class="el" href="StelCore_8hpp_source.html#l00093">93</a> of file <a class="el" href="StelCore_8hpp_source.html">StelCore.hpp</a>.</p>
+
+</div>
+</div>
+<h2 class="groupheader">Member Function Documentation</h2>
 <a class="anchor" id="a9be652601e7cbb95b44f479c2103decd"></a>
 <div class="memitem">
 <div class="memproto">
@@ -1147,6 +1659,52 @@ Use this only if needed, prefer calling <a class="el" href="classStelCore.html#a
 
 </div>
 </div>
+<a class="anchor" id="a90ec6f426e94eaa39024650ebf65e03e"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classStelProjector.html#ae6b42a6973558f855691b91701edf0dc">StelProjector::ModelViewTranformP</a> StelCore::getAltAzModelViewTransform </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classStelCore.html#afddf8e4cf0bbdf1f1ed366152f5488ab">RefractionMode</a>&#160;</td>
+          <td class="paramname"><em>refMode</em> = <code><a class="el" href="classStelCore.html#afddf8e4cf0bbdf1f1ed366152f5488aba93e2d6d3cf22de840dc23c9b7a6a327c">RefractionAuto</a></code></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Get the modelview matrix for observer-centric altazimuthal drawing. </p>
+
+</div>
+</div>
+<a class="anchor" id="abc0d1358cf44b345077c406f7f4e5156"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void StelCore::getClippingPlanes </td>
+          <td>(</td>
+          <td class="paramtype">double *&#160;</td>
+          <td class="paramname"><em>zn</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double *&#160;</td>
+          <td class="paramname"><em>zf</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Get the near and far clipping planes. </p>
+
+</div>
+</div>
 <a class="anchor" id="ae81826e080e8f89bc7107c69d9c5a1c8"></a>
 <div class="memitem">
 <div class="memproto">
@@ -1155,7 +1713,7 @@ Use this only if needed, prefer calling <a class="el" href="classStelCore.html#a
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">DeltaTAlgorithm StelCore::getCurrentDeltaTAlgorithm </td>
+          <td class="memname"><a class="el" href="classStelCore.html#ae3fcc2b5a1eac3e07986ffa817030700">DeltaTAlgorithm</a> StelCore::getCurrentDeltaTAlgorithm </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td> const</td>
@@ -1170,7 +1728,7 @@ Use this only if needed, prefer calling <a class="el" href="classStelCore.html#a
 
 <p>Get the current algorithm for time correction (DeltaT) </p>
 
-<p>Definition at line <a class="el" href="StelCore_8hpp_source.html#l00327">327</a> of file <a class="el" href="StelCore_8hpp_source.html">StelCore.hpp</a>.</p>
+<p>Definition at line <a class="el" href="StelCore_8hpp_source.html#l00332">332</a> of file <a class="el" href="StelCore_8hpp_source.html">StelCore.hpp</a>.</p>
 
 </div>
 </div>
@@ -1226,6 +1784,93 @@ Use this only if needed, prefer calling <a class="el" href="classStelCore.html#a
 
 </div>
 </div>
+<a class="anchor" id="af8d53b89e437f470d571ea565eab0429"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">QString StelCore::getCurrentDeltaTAlgorithmValidRangeDescription </td>
+          <td>(</td>
+          <td class="paramtype">const double&#160;</td>
+          <td class="paramname"><em>JD</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">QString *&#160;</td>
+          <td class="paramname"><em>marker</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Get info about valid range for current algorithm for calculation of Delta-T. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">JD</td><td>the Julian Day number to test. </td></tr>
+    <tr><td class="paramname">marker</td><td>receives a string: "*" if jDay is outside valid range, or "?" if range unknown, else an empty string. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>valid range as explanatory string. </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a8923df7c5e26c6850f134bdaabaefd63"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">double StelCore::getCurrentEpoch </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Get value of the current Julian epoch (i.e. current year with decimal fraction, e.g. 2012.34567) </p>
+
+</div>
+</div>
+<a class="anchor" id="a6ce6d4c62b93d871c07e4fccca131930"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const <a class="el" href="classStelLocation.html">StelLocation</a>&amp; StelCore::getCurrentLocation </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Get the informations on the current location. </p>
+
+</div>
+</div>
+<a class="anchor" id="ad492c627105bd42bdf1b2f496adec1e2"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const <a class="el" href="classStelObserver.html">StelObserver</a>* StelCore::getCurrentObserver </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Unfortunately we also need this. </p>
+
+</div>
+</div>
 <a class="anchor" id="a8333a8dceb625e3bab1ff91c6dcb3a93"></a>
 <div class="memitem">
 <div class="memproto">
@@ -1252,6 +1897,23 @@ Use this only if needed, prefer calling <a class="el" href="classStelCore.html#a
 
 </div>
 </div>
+<a class="anchor" id="ace50124a2a104bd9341c453452ac1957"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="structStelProjector_1_1StelProjectorParams.html">StelProjector::StelProjectorParams</a> StelCore::getCurrentStelProjectorParams </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Get the current set of parameters to use when creating a new <a class="el" href="classStelProjector.html" title="Provide the main interface to all operations of projecting coordinates from sky to screen...">StelProjector</a>. </p>
+
+</div>
+</div>
 <a class="anchor" id="a9d6938bd0f96d6f914f88c400f797d17"></a>
 <div class="memitem">
 <div class="memproto">
@@ -1274,6 +1936,24 @@ Use this only if needed, prefer calling <a class="el" href="classStelCore.html#a
 </div><div class="memdoc">
 
 <p>Get the location used by default at startup. </p>
+
+</div>
+</div>
+<a class="anchor" id="afedbda35b35d41f1c575a70cb737ac6e"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">QString StelCore::getDefaultProjectionTypeKey </td>
+          <td>(</td>
+          <td class="paramtype">void&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Get the default Mapping used by the Projection. </p>
 
 </div>
 </div>
@@ -1325,7 +2005,7 @@ Use this only if needed, prefer calling <a class="el" href="classStelCore.html#a
 
 <p>Get coefficients for custom equation for calculation of Delta-T. </p>
 
-<p>Definition at line <a class="el" href="StelCore_8hpp_source.html#l00580">580</a> of file <a class="el" href="StelCore_8hpp_source.html">StelCore.hpp</a>.</p>
+<p>Definition at line <a class="el" href="StelCore_8hpp_source.html#l00585">585</a> of file <a class="el" href="StelCore_8hpp_source.html">StelCore.hpp</a>.</p>
 
 </div>
 </div>
@@ -1352,7 +2032,7 @@ Use this only if needed, prefer calling <a class="el" href="classStelCore.html#a
 
 <p>Get n-dot for custom equation for calculation of Delta-T. </p>
 
-<p>Definition at line <a class="el" href="StelCore_8hpp_source.html#l00578">578</a> of file <a class="el" href="StelCore_8hpp_source.html">StelCore.hpp</a>.</p>
+<p>Definition at line <a class="el" href="StelCore_8hpp_source.html#l00583">583</a> of file <a class="el" href="StelCore_8hpp_source.html">StelCore.hpp</a>.</p>
 
 </div>
 </div>
@@ -1379,7 +2059,25 @@ Use this only if needed, prefer calling <a class="el" href="classStelCore.html#a
 
 <p>Get central year for custom equation for calculation of Delta-T. </p>
 
-<p>Definition at line <a class="el" href="StelCore_8hpp_source.html#l00576">576</a> of file <a class="el" href="StelCore_8hpp_source.html">StelCore.hpp</a>.</p>
+<p>Definition at line <a class="el" href="StelCore_8hpp_source.html#l00581">581</a> of file <a class="el" href="StelCore_8hpp_source.html">StelCore.hpp</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a8516e781a256bfa51d6b76a0dc498a71"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classStelProjector.html#ae6b42a6973558f855691b91701edf0dc">StelProjector::ModelViewTranformP</a> StelCore::getEquinoxEquModelViewTransform </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classStelCore.html#afddf8e4cf0bbdf1f1ed366152f5488ab">RefractionMode</a>&#160;</td>
+          <td class="paramname"><em>refMode</em> = <code><a class="el" href="classStelCore.html#afddf8e4cf0bbdf1f1ed366152f5488aba93e2d6d3cf22de840dc23c9b7a6a327c">RefractionAuto</a></code></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Get the modelview matrix for observer-centric equatorial at equinox drawing. </p>
 
 </div>
 </div>
@@ -1437,6 +2135,60 @@ Use this only if needed, prefer calling <a class="el" href="classStelCore.html#a
 
 </div>
 </div>
+<a class="anchor" id="a86cbbf3009ba9ff6de85461ed9bba30e"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classStelProjector.html#ae6b42a6973558f855691b91701edf0dc">StelProjector::ModelViewTranformP</a> StelCore::getGalacticModelViewTransform </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classStelCore.html#afddf8e4cf0bbdf1f1ed366152f5488ab">RefractionMode</a>&#160;</td>
+          <td class="paramname"><em>refMode</em> = <code><a class="el" href="classStelCore.html#afddf8e4cf0bbdf1f1ed366152f5488aba93e2d6d3cf22de840dc23c9b7a6a327c">RefractionAuto</a></code></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Get the modelview matrix for observer-centric Galactic equatorial drawing. </p>
+
+</div>
+</div>
+<a class="anchor" id="ae1e4cec0732fe9f0a52b774fc2ca1001"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const <a class="el" href="classStelGeodesicGrid.html">StelGeodesicGrid</a>* StelCore::getGeodesicGrid </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>maxLevel</em></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Get an instance of <a class="el" href="classStelGeodesicGrid.html" title="Grid of triangles (zones) on the sphere with radius 1, generated by subdividing the icosahedron...">StelGeodesicGrid</a> which is garanteed to allow for at least maxLevel levels. </p>
+
+</div>
+</div>
+<a class="anchor" id="a3ffdf233c6bba5edd13ca2094550cdb7"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classStelProjector.html#ae6b42a6973558f855691b91701edf0dc">StelProjector::ModelViewTranformP</a> StelCore::getHeliocentricEclipticModelViewTransform </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classStelCore.html#afddf8e4cf0bbdf1f1ed366152f5488ab">RefractionMode</a>&#160;</td>
+          <td class="paramname"><em>refMode</em> = <code><a class="el" href="classStelCore.html#afddf8e4cf0bbdf1f1ed366152f5488aba93e2d6d3cf22de840dc23c9b7a6a327c">RefractionAuto</a></code></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Get the modelview matrix for heliocentric ecliptic (Vsop87) drawing. </p>
+
+</div>
+</div>
 <a class="anchor" id="a9a45fab32ede2d7d8081705c53d89fd8"></a>
 <div class="memitem">
 <div class="memproto">
@@ -1485,6 +2237,24 @@ Use this only if needed, prefer calling <a class="el" href="classStelCore.html#a
 </div><div class="memdoc">
 
 <p>Get whether the current stellarium time is the real world time. </p>
+
+</div>
+</div>
+<a class="anchor" id="a3102aa42d4a40a036f9af2b89298bb14"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classStelProjector.html#ae6b42a6973558f855691b91701edf0dc">StelProjector::ModelViewTranformP</a> StelCore::getJ2000ModelViewTransform </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classStelCore.html#afddf8e4cf0bbdf1f1ed366152f5488ab">RefractionMode</a>&#160;</td>
+          <td class="paramname"><em>refMode</em> = <code><a class="el" href="classStelCore.html#afddf8e4cf0bbdf1f1ed366152f5488aba93e2d6d3cf22de840dc23c9b7a6a327c">RefractionAuto</a></code></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Get the modelview matrix for observer-centric J2000 equatorial drawing. </p>
 
 </div>
 </div>
@@ -1539,6 +2309,58 @@ Use this only if needed, prefer calling <a class="el" href="classStelCore.html#a
 
 </div>
 </div>
+<a class="anchor" id="a44a7d0208057c5998afe49eb305b36ca"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">double StelCore::getLocalSiderealDayLength </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Get the duration of a sidereal day for the current observer in day. </p>
+
+</div>
+</div>
+<a class="anchor" id="af8c61e30243086177b88b800e08ec6c2"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">double StelCore::getLocalSiderealTime </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Get the sidereal time shifted by the observer longitude. </p>
+<dl class="section return"><dt>Returns</dt><dd>the local sidereal time in radian </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a849a0eea40056013cdb2a29716520d98"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">double StelCore::getLocalSiderealYearLength </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Get the duration of a sidereal year for the current observer in days. </p>
+
+</div>
+</div>
 <a class="anchor" id="a5470e4d6de0c1f469931d9d07bd2b600"></a>
 <div class="memitem">
 <div class="memproto">
@@ -1561,6 +2383,93 @@ Use this only if needed, prefer calling <a class="el" href="classStelCore.html#a
 </div><div class="memdoc">
 
 <p>Get the current date in Modified Julian Day (UT) </p>
+
+</div>
+</div>
+<a class="anchor" id="ab7419274290fa6fcd186879384c36457"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classStelMovementMgr.html">StelMovementMgr</a>* StelCore::getMovementMgr </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Get the instance of movement manager. </p>
+
+</div>
+</div>
+<a class="anchor" id="af3c844db5adc4d0ae9daa7dd1cad4914"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const <a class="el" href="classStelMovementMgr.html">StelMovementMgr</a>* StelCore::getMovementMgr </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Get the const instance of movement manager. </p>
+
+</div>
+</div>
+<a class="anchor" id="a40f7a858c67e6da439eec1f875e703b2"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classStelProjector.html#ae6b42a6973558f855691b91701edf0dc">StelProjector::ModelViewTranformP</a> StelCore::getObservercentricEclipticJ2000ModelViewTransform </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classStelCore.html#afddf8e4cf0bbdf1f1ed366152f5488ab">RefractionMode</a>&#160;</td>
+          <td class="paramname"><em>refMode</em> = <code><a class="el" href="classStelCore.html#afddf8e4cf0bbdf1f1ed366152f5488aba93e2d6d3cf22de840dc23c9b7a6a327c">RefractionAuto</a></code></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Get the modelview matrix for observer-centric ecliptic (Vsop87) drawing. </p>
+
+</div>
+</div>
+<a class="anchor" id="a20c39e612536a2929c14b639038e32c3"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classStelProjector.html#ae6b42a6973558f855691b91701edf0dc">StelProjector::ModelViewTranformP</a> StelCore::getObservercentricEclipticOfDateModelViewTransform </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classStelCore.html#afddf8e4cf0bbdf1f1ed366152f5488ab">RefractionMode</a>&#160;</td>
+          <td class="paramname"><em>refMode</em> = <code><a class="el" href="classStelCore.html#afddf8e4cf0bbdf1f1ed366152f5488aba93e2d6d3cf22de840dc23c9b7a6a327c">RefractionAuto</a></code></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Get the modelview matrix for observer-centric ecliptic of Date drawing. </p>
+
+</div>
+</div>
+<a class="anchor" id="ae93a59275df5af1e4ed646c557e0eba0"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="singletonVector3.html">Vec3d</a> StelCore::getObserverHeliocentricEclipticPos </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Return the observer heliocentric ecliptic position. </p>
 
 </div>
 </div>
@@ -1589,6 +2498,82 @@ Use this only if needed, prefer calling <a class="el" href="classStelCore.html#a
 
 </div>
 </div>
+<a class="anchor" id="ac6e17bbb0097a1a8311326b1ad9a96ed"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="StelProjectorType_8hpp.html#a286221a2d4640bbeec2090cfbfadb0ff">StelProjectorP</a> StelCore::getProjection </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classStelCore.html#af18f0c34c957103a7fa3008e2aa4aec1">FrameType</a>&#160;</td>
+          <td class="paramname"><em>frameType</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="classStelCore.html#afddf8e4cf0bbdf1f1ed366152f5488ab">RefractionMode</a>&#160;</td>
+          <td class="paramname"><em>refractionMode</em> = <code><a class="el" href="classStelCore.html#afddf8e4cf0bbdf1f1ed366152f5488aba93e2d6d3cf22de840dc23c9b7a6a327c">RefractionAuto</a></code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Get a new instance of projector using a modelview transformation corresponding to the given frame. </p>
+<p>If not specified the refraction effect is included if atmosphere is on. </p>
+
+</div>
+</div>
+<a class="anchor" id="a10653362a91bbccfd31dddf1340c90fb"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="StelProjectorType_8hpp.html#a286221a2d4640bbeec2090cfbfadb0ff">StelProjectorP</a> StelCore::getProjection </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classStelProjector.html#ae6b42a6973558f855691b91701edf0dc">StelProjector::ModelViewTranformP</a>&#160;</td>
+          <td class="paramname"><em>modelViewTransform</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="classStelCore.html#ae7a591a79245086278e00c2c7076ba1f">ProjectionType</a>&#160;</td>
+          <td class="paramname"><em>projType</em> = <code>(<a class="el" href="classStelCore.html#ae7a591a79245086278e00c2c7076ba1f">ProjectionType</a>)&#160;1000</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Get a new instance of projector using the given modelview transformation. </p>
+<p>If not specified the projection used is the one currently used as default. </p>
+
+</div>
+</div>
+<a class="anchor" id="ab8177bf3e6c521325b535f911f64c5a2"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="StelProjectorType_8hpp.html#a286221a2d4640bbeec2090cfbfadb0ff">StelProjectorP</a> StelCore::getProjection2d </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Get a new instance of a simple 2d projection. </p>
+<p>This projection cannot be used to project or unproject but only for 2d painting </p>
+
+</div>
+</div>
 <a class="anchor" id="a99306a4aafac9cba391a4c2fd978d4ae"></a>
 <div class="memitem">
 <div class="memproto">
@@ -1611,6 +2596,58 @@ Use this only if needed, prefer calling <a class="el" href="classStelCore.html#a
 </div><div class="memdoc">
 
 <p>Get whether it is real time speed, i.e. 1 sec/sec. </p>
+
+</div>
+</div>
+<a class="anchor" id="adaebda05c696b721edbbf7bfcc44227d"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classStelSkyDrawer.html">StelSkyDrawer</a>* StelCore::getSkyDrawer </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Get the current <a class="el" href="classStelSkyDrawer.html" title="Provide a set of methods used to draw sky objects taking into account eyes adaptation, zoom level, instrument model and artificially set magnitude limits. ">StelSkyDrawer</a> used in the core. </p>
+
+</div>
+</div>
+<a class="anchor" id="acf15d91313d3a60c13d8f8b4da956453"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const <a class="el" href="classStelSkyDrawer.html">StelSkyDrawer</a>* StelCore::getSkyDrawer </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Get the current <a class="el" href="classStelSkyDrawer.html" title="Provide a set of methods used to draw sky objects taking into account eyes adaptation, zoom level, instrument model and artificially set magnitude limits. ">StelSkyDrawer</a> used in the core. </p>
+
+</div>
+</div>
+<a class="anchor" id="ac7b5687dbaaf1e7a582523173248f786"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">QString StelCore::getStartupTimeMode </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Return the startup mode, can be "actual" (i.e. </p>
+<p>take current time from system), "today" (take some time e.g. on the evening of today) or "preset" (completely preconfigured). </p>
 
 </div>
 </div>
@@ -1639,6 +2676,40 @@ Use this only if needed, prefer calling <a class="el" href="classStelCore.html#a
 
 </div>
 </div>
+<a class="anchor" id="a8f35e326d36252be7cab4b3a828ecdbc"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classStelToneReproducer.html">StelToneReproducer</a>* StelCore::getToneReproducer </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Get the current tone reproducer used in the core. </p>
+
+</div>
+</div>
+<a class="anchor" id="acf560181e2988f5115e6841472e9abe6"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const <a class="el" href="classStelToneReproducer.html">StelToneReproducer</a>* StelCore::getToneReproducer </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Get the current tone reproducer used in the core. </p>
+
+</div>
+</div>
 <a class="anchor" id="a28f713159cc94eca8f6498fda4df8f32"></a>
 <div class="memitem">
 <div class="memproto">
@@ -1661,7 +2732,7 @@ Use this only if needed, prefer calling <a class="el" href="classStelCore.html#a
 </div><div class="memdoc">
 <dl class="section return"><dt>Returns</dt><dd>whether nutation is currently used. </dd></dl>
 
-<p>Definition at line <a class="el" href="StelCore_8hpp_source.html#l00400">400</a> of file <a class="el" href="StelCore_8hpp_source.html">StelCore.hpp</a>.</p>
+<p>Definition at line <a class="el" href="StelCore_8hpp_source.html#l00405">405</a> of file <a class="el" href="StelCore_8hpp_source.html">StelCore.hpp</a>.</p>
 
 </div>
 </div>
@@ -1687,7 +2758,53 @@ Use this only if needed, prefer calling <a class="el" href="classStelCore.html#a
 </div><div class="memdoc">
 <dl class="section return"><dt>Returns</dt><dd>whether topocentric coordinates are currently used. </dd></dl>
 
-<p>Definition at line <a class="el" href="StelCore_8hpp_source.html#l00405">405</a> of file <a class="el" href="StelCore_8hpp_source.html">StelCore.hpp</a>.</p>
+<p>Definition at line <a class="el" href="StelCore_8hpp_source.html#l00410">410</a> of file <a class="el" href="StelCore_8hpp_source.html">StelCore.hpp</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a137cfbc60728b6d3a9944481fcd64ffc"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="singletonVector3.html">Vec3d</a> StelCore::heliocentricEclipticToAltAz </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="singletonVector3.html">Vec3d</a> &amp;&#160;</td>
+          <td class="paramname"><em>v</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="classStelCore.html#afddf8e4cf0bbdf1f1ed366152f5488ab">RefractionMode</a>&#160;</td>
+          <td class="paramname"><em>refMode</em> = <code><a class="el" href="classStelCore.html#afddf8e4cf0bbdf1f1ed366152f5488aba93e2d6d3cf22de840dc23c9b7a6a327c">RefractionAuto</a></code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Transform vector from heliocentric ecliptic coordinate to altazimuthal. </p>
+
+</div>
+</div>
+<a class="anchor" id="a52c76be9ac6e80e4eb685b9f2bac2fef"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="singletonVector3.html">Vec3d</a> StelCore::heliocentricEclipticToEquinoxEqu </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="singletonVector3.html">Vec3d</a> &amp;&#160;</td>
+          <td class="paramname"><em>v</em></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Transform from heliocentric coordinate to equatorial at current equinox (for the planet where the observer stands) </p>
 
 </div>
 </div>
@@ -1741,6 +2858,23 @@ Use this only if needed, prefer calling <a class="el" href="classStelCore.html#a
 
 </div>
 </div>
+<a class="anchor" id="a85f2569001fcd08ddeb5924275bd26c4"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void StelCore::init </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Init and load all main core components. </p>
+
+</div>
+</div>
 <a class="anchor" id="abd8319d685b039c9de8ba8bbe5a4d9b0"></a>
 <div class="memitem">
 <div class="memproto">
@@ -1763,6 +2897,25 @@ Use this only if needed, prefer calling <a class="el" href="classStelCore.html#a
 </div><div class="memdoc">
 
 <p>initialize ephemerides calculation functions </p>
+
+</div>
+</div>
+<a class="anchor" id="a419592d928b131a0e8f4cbb1022d104c"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool StelCore::isBrightDaylight </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Checks for altitude of the Sun - is it night or day? </p>
+<dl class="section return"><dt>Returns</dt><dd>true if sun higher than about -6 degrees, i.e. "day" includes civil twilight. </dd></dl>
+<dl class="section note"><dt>Note</dt><dd>Useful mostly for brightness-controlled GUI decisions like font colors. </dd></dl>
 
 </div>
 </div>
@@ -1792,6 +2945,76 @@ Use this only if needed, prefer calling <a class="el" href="classStelCore.html#a
 
 </div>
 </div>
+<a class="anchor" id="a63b9c829c7ab0af04c794d295962a8e6"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void StelCore::lookAtJ2000 </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="singletonVector3.html">Vec3d</a> &amp;&#160;</td>
+          <td class="paramname"><em>pos</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="singletonVector3.html">Vec3d</a> &amp;&#160;</td>
+          <td class="paramname"><em>up</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Set vision direction. </p>
+
+</div>
+</div>
+<a class="anchor" id="a580c6a530e4fd606a2a63777747d2933"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void StelCore::moveObserverTo </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classStelLocation.html">StelLocation</a> &amp;&#160;</td>
+          <td class="paramname"><em>target</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>duration</em> = <code>1.</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>durationIfPlanetChange</em> = <code>1.</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Smoothly move the observer to the given location. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">target</td><td>the target location </td></tr>
+    <tr><td class="paramname">duration</td><td>direction of view move duration in s </td></tr>
+    <tr><td class="paramname">durationIfPlanetChange</td><td>direction of view + planet travel move duration in s. This is used only if the destination planet is different from the starting one. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
 <a class="anchor" id="a3ee29fd6194f779bdc2100fd0188c4bc"></a>
 <div class="memitem">
 <div class="memproto">
@@ -1815,6 +3038,76 @@ Use this only if needed, prefer calling <a class="el" href="classStelCore.html#a
 
 <p>Move the observer to the selected object. </p>
 <p>This will only do something if the selected object is of the correct type - i.e. a planet. </p>
+
+</div>
+</div>
+<a class="anchor" id="a400c51da392571ed233b715435b6bef8"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void StelCore::postDraw </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Update core state after drawing modules. </p>
+
+</div>
+</div>
+<a class="anchor" id="aa52e2d5c1ef4a6794320bf105d9a97a2"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void StelCore::preDraw </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Update core state before drawing modules. </p>
+
+</div>
+</div>
+<a class="anchor" id="aff7b2ff8633408607ab4de6669d74484"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">QString StelCore::projectionNameI18nToTypeKey </td>
+          <td>(</td>
+          <td class="paramtype">const QString &amp;&#160;</td>
+          <td class="paramname"><em>nameI18n</em></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Get the projection TypeKey from its translated name for the current locale. </p>
+
+</div>
+</div>
+<a class="anchor" id="a4210c22dca827c77b4657b691470654c"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">QString StelCore::projectionTypeKeyToNameI18n </td>
+          <td>(</td>
+          <td class="paramtype">const QString &amp;&#160;</td>
+          <td class="paramname"><em>key</em></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Get the translated projection name from its TypeKey for the current locale. </p>
 
 </div>
 </div>
@@ -1868,6 +3161,34 @@ Use this only if needed, prefer calling <a class="el" href="classStelCore.html#a
 
 </div>
 </div>
+<a class="anchor" id="a60e7fdf7ff6753f419e37d72af9343b3"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void StelCore::setClippingPlanes </td>
+          <td>(</td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>znear</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>zfar</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Set the near and far clipping planes. </p>
+
+</div>
+</div>
 <a class="anchor" id="ae4ec950ae0da48dcd7745512152ca0ca"></a>
 <div class="memitem">
 <div class="memproto">
@@ -1878,7 +3199,7 @@ Use this only if needed, prefer calling <a class="el" href="classStelCore.html#a
         <tr>
           <td class="memname">void StelCore::setCurrentDeltaTAlgorithm </td>
           <td>(</td>
-          <td class="paramtype">DeltaTAlgorithm&#160;</td>
+          <td class="paramtype"><a class="el" href="classStelCore.html#ae3fcc2b5a1eac3e07986ffa817030700">DeltaTAlgorithm</a>&#160;</td>
           <td class="paramname"><em>algorithm</em></td><td>)</td>
           <td></td>
         </tr>
@@ -1892,7 +3213,7 @@ Use this only if needed, prefer calling <a class="el" href="classStelCore.html#a
 
 <p>Set the current algorithm for time correction (DeltaT) </p>
 
-<p>Definition at line <a class="el" href="StelCore_8hpp_source.html#l00325">325</a> of file <a class="el" href="StelCore_8hpp_source.html">StelCore.hpp</a>.</p>
+<p>Definition at line <a class="el" href="StelCore_8hpp_source.html#l00330">330</a> of file <a class="el" href="StelCore_8hpp_source.html">StelCore.hpp</a>.</p>
 
 </div>
 </div>
@@ -1932,7 +3253,7 @@ Use this only if needed, prefer calling <a class="el" href="classStelCore.html#a
         <tr>
           <td class="memname">void StelCore::setCurrentProjectionType </td>
           <td>(</td>
-          <td class="paramtype">ProjectionType&#160;</td>
+          <td class="paramtype"><a class="el" href="classStelCore.html#ae7a591a79245086278e00c2c7076ba1f">ProjectionType</a>&#160;</td>
           <td class="paramname"><em>type</em></td><td>)</td>
           <td></td>
         </tr>
@@ -1971,6 +3292,24 @@ Use this only if needed, prefer calling <a class="el" href="classStelCore.html#a
 </div><div class="memdoc">
 
 <p>Set the current ProjectionType to use from its key. </p>
+
+</div>
+</div>
+<a class="anchor" id="a81f64c06db94437cb24237f82699e83e"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void StelCore::setCurrentStelProjectorParams </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="structStelProjector_1_1StelProjectorParams.html">StelProjector::StelProjectorParams</a> &amp;&#160;</td>
+          <td class="paramname"><em>newParams</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Set the set of parameters to use when creating a new <a class="el" href="classStelProjector.html" title="Provide the main interface to all operations of projecting coordinates from sky to screen...">StelProjector</a>. </p>
 
 </div>
 </div>
@@ -2120,7 +3459,7 @@ Use this only if needed, prefer calling <a class="el" href="classStelCore.html#a
   </dd>
 </dl>
 
-<p>Definition at line <a class="el" href="StelCore_8hpp_source.html#l00573">573</a> of file <a class="el" href="StelCore_8hpp_source.html">StelCore.hpp</a>.</p>
+<p>Definition at line <a class="el" href="StelCore_8hpp_source.html#l00578">578</a> of file <a class="el" href="StelCore_8hpp_source.html">StelCore.hpp</a>.</p>
 
 </div>
 </div>
@@ -2154,7 +3493,7 @@ Use this only if needed, prefer calling <a class="el" href="classStelCore.html#a
   </dd>
 </dl>
 
-<p>Definition at line <a class="el" href="StelCore_8hpp_source.html#l00570">570</a> of file <a class="el" href="StelCore_8hpp_source.html">StelCore.hpp</a>.</p>
+<p>Definition at line <a class="el" href="StelCore_8hpp_source.html#l00575">575</a> of file <a class="el" href="StelCore_8hpp_source.html">StelCore.hpp</a>.</p>
 
 </div>
 </div>
@@ -2188,7 +3527,7 @@ Use this only if needed, prefer calling <a class="el" href="classStelCore.html#a
   </dd>
 </dl>
 
-<p>Definition at line <a class="el" href="StelCore_8hpp_source.html#l00567">567</a> of file <a class="el" href="StelCore_8hpp_source.html">StelCore.hpp</a>.</p>
+<p>Definition at line <a class="el" href="StelCore_8hpp_source.html#l00572">572</a> of file <a class="el" href="StelCore_8hpp_source.html">StelCore.hpp</a>.</p>
 
 </div>
 </div>
@@ -2592,7 +3931,7 @@ Use this only if needed, prefer calling <a class="el" href="classStelCore.html#a
 
 <p>Set whether you want computation and simulation of nutation (a slight wobble of Earth's axis, just a few arcseconds). </p>
 
-<p>Definition at line <a class="el" href="StelCore_8hpp_source.html#l00402">402</a> of file <a class="el" href="StelCore_8hpp_source.html">StelCore.hpp</a>.</p>
+<p>Definition at line <a class="el" href="StelCore_8hpp_source.html#l00407">407</a> of file <a class="el" href="StelCore_8hpp_source.html">StelCore.hpp</a>.</p>
 
 </div>
 </div>
@@ -2620,7 +3959,7 @@ Use this only if needed, prefer calling <a class="el" href="classStelCore.html#a
 
 <p>Set whether you want computation and simulation of nutation (a slight wobble of Earth's axis, just a few arcseconds). </p>
 
-<p>Definition at line <a class="el" href="StelCore_8hpp_source.html#l00407">407</a> of file <a class="el" href="StelCore_8hpp_source.html">StelCore.hpp</a>.</p>
+<p>Definition at line <a class="el" href="StelCore_8hpp_source.html#l00412">412</a> of file <a class="el" href="StelCore_8hpp_source.html">StelCore.hpp</a>.</p>
 
 </div>
 </div>
@@ -3182,13 +4521,174 @@ Use this only if needed, prefer calling <a class="el" href="classStelCore.html#a
 
 </div>
 </div>
+<a class="anchor" id="a769642085383336310fdb213a249e68e"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void StelCore::update </td>
+          <td>(</td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>deltaTime</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Update all the objects with respect to the time. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">deltaTime</td><td>the time increment in sec. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a class="anchor" id="a6d13893c8b1b0ab7cdf12d838474329d"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void StelCore::windowHasBeenResized </td>
+          <td>(</td>
+          <td class="paramtype">float&#160;</td>
+          <td class="paramname"><em>x</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float&#160;</td>
+          <td class="paramname"><em>y</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float&#160;</td>
+          <td class="paramname"><em>width</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float&#160;</td>
+          <td class="paramname"><em>height</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Handle the resizing of the window. </p>
+
+</div>
+</div>
+<h2 class="groupheader">Member Data Documentation</h2>
+<a class="anchor" id="a263b7d2403c498befbea2d93cd977177"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">const <a class="el" href="singletonMatrix4.html">Mat4d</a> StelCore::matGalacticToJ2000</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Rotation matrix from J2000 to Galactic reference frame, using FITS convention. </p>
+
+<p>Definition at line <a class="el" href="StelCore_8hpp_source.html#l00253">253</a> of file <a class="el" href="StelCore_8hpp_source.html">StelCore.hpp</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="ac218290d7f6ed6f20e65787b504393f3"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">const <a class="el" href="singletonMatrix4.html">Mat4d</a> StelCore::matJ2000ToGalactic</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Rotation matrix from J2000 to Galactic reference frame, using FITS convention. </p>
+
+<p>Definition at line <a class="el" href="StelCore_8hpp_source.html#l00251">251</a> of file <a class="el" href="StelCore_8hpp_source.html">StelCore.hpp</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="aec8a93e12eed04f527082f9edfc5806e"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">const <a class="el" href="singletonMatrix4.html">Mat4d</a> StelCore::matJ2000ToVsop87</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Rotation matrix from equatorial J2000 to ecliptic (VSOP87A). </p>
+
+<p>Definition at line <a class="el" href="StelCore_8hpp_source.html#l00247">247</a> of file <a class="el" href="StelCore_8hpp_source.html">StelCore.hpp</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a0b3b0981fbcf0b985cdbadddbb4a68b7"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">const <a class="el" href="singletonMatrix4.html">Mat4d</a> StelCore::matVsop87ToJ2000</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Rotation matrix from ecliptic (VSOP87A) to equatorial J2000. </p>
+
+<p>Definition at line <a class="el" href="StelCore_8hpp_source.html#l00249">249</a> of file <a class="el" href="StelCore_8hpp_source.html">StelCore.hpp</a>.</p>
+
+</div>
+</div>
 <hr/>The documentation for this class was generated from the following file:<ul>
 <li><a class="el" href="StelCore_8hpp_source.html">StelCore.hpp</a></li>
 </ul>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Sat Feb 27 2016 22:03:11 for Stellarium by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Sat Feb 27 2016 23:13:24 for Stellarium by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.8
 </small></address>

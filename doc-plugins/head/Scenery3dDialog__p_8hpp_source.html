@@ -113,11 +113,11 @@
 <div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;        {</div>
 <div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;            <span class="keywordflow">switch</span> (index.row())</div>
 <div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;            {</div>
-<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;                <span class="keywordflow">case</span> S3DEnum::CM_TEXTURES:</div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;                <span class="keywordflow">case</span> <a class="code" href="structS3DEnum.html#a4289dccf6a570229bf775f9ef971487da7a2de97b836c86ba995c87b3d7b99fd3">S3DEnum::CM_TEXTURES</a>:</div>
 <div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;                    <span class="keywordflow">return</span> QVariant(QString(<a class="codeRef" doxygen="/home/aw/devel/stellarium/trunk/builds/gcc/stellarium.tag:../../doc/head/" href="../../doc/head/StelTranslator_8hpp.html#a70ee7d3ff903c868378e7f0647e99de2">q_</a>(<span class="stringliteral">&quot;6 Textures&quot;</span>)));</div>
-<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;                <span class="keywordflow">case</span> S3DEnum::CM_CUBEMAP:</div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;                <span class="keywordflow">case</span> <a class="code" href="structS3DEnum.html#a4289dccf6a570229bf775f9ef971487da43684c7b8002a653ae03b026dc2a8caa">S3DEnum::CM_CUBEMAP</a>:</div>
 <div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;                    <span class="keywordflow">return</span> QVariant(QString(<a class="codeRef" doxygen="/home/aw/devel/stellarium/trunk/builds/gcc/stellarium.tag:../../doc/head/" href="../../doc/head/StelTranslator_8hpp.html#a70ee7d3ff903c868378e7f0647e99de2">q_</a>(<span class="stringliteral">&quot;Cubemap&quot;</span>)));</div>
-<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;                <span class="keywordflow">case</span> S3DEnum::CM_CUBEMAP_GSACCEL:</div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;                <span class="keywordflow">case</span> <a class="code" href="structS3DEnum.html#a4289dccf6a570229bf775f9ef971487da1c314085401de3b0b1ce0054cc302431">S3DEnum::CM_CUBEMAP_GSACCEL</a>:</div>
 <div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;                    <span class="keywordflow">return</span> QVariant(QString(<a class="codeRef" doxygen="/home/aw/devel/stellarium/trunk/builds/gcc/stellarium.tag:../../doc/head/" href="../../doc/head/StelTranslator_8hpp.html#a70ee7d3ff903c868378e7f0647e99de2">q_</a>(<span class="stringliteral">&quot;Geometry shader&quot;</span>)));</div>
 <div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;            }</div>
 <div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;        }</div>
@@ -127,14 +127,17 @@
 <div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;</div>
 <div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;</div>
 <div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="ttc" id="structS3DEnum_html_a4289dccf6a570229bf775f9ef971487da7a2de97b836c86ba995c87b3d7b99fd3"><div class="ttname"><a href="structS3DEnum.html#a4289dccf6a570229bf775f9ef971487da7a2de97b836c86ba995c87b3d7b99fd3">S3DEnum::CM_TEXTURES</a></div><div class="ttdoc">Uses 6 textures, one for each side of the cube. Seems to be the best for old Intel drivers...</div><div class="ttdef"><b>Definition:</b> <a href="S3DEnum_8hpp_source.html#l00038">S3DEnum.hpp:38</a></div></div>
+<div class="ttc" id="structS3DEnum_html_a4289dccf6a570229bf775f9ef971487da43684c7b8002a653ae03b026dc2a8caa"><div class="ttname"><a href="structS3DEnum.html#a4289dccf6a570229bf775f9ef971487da43684c7b8002a653ae03b026dc2a8caa">S3DEnum::CM_CUBEMAP</a></div><div class="ttdoc">Uses a single GL_TEXTURE_CUBEMAP, seems to work a bit better on "modern" GPUs. </div><div class="ttdef"><b>Definition:</b> <a href="S3DEnum_8hpp_source.html#l00040">S3DEnum.hpp:40</a></div></div>
 <div class="ttc" id="StelTranslator_8hpp_html_a70ee7d3ff903c868378e7f0647e99de2"><div class="ttname"><a href="../../doc/head/StelTranslator_8hpp.html#a70ee7d3ff903c868378e7f0647e99de2">q_</a></div><div class="ttdeci">#define q_(str)</div></div>
+<div class="ttc" id="structS3DEnum_html_a4289dccf6a570229bf775f9ef971487da1c314085401de3b0b1ce0054cc302431"><div class="ttname"><a href="structS3DEnum.html#a4289dccf6a570229bf775f9ef971487da1c314085401de3b0b1ce0054cc302431">S3DEnum::CM_CUBEMAP_GSACCEL</a></div><div class="ttdoc">Uses a single GL_TEXTURE_CUBEMAP and a geometry shader to render all 6 sides in one pass...</div><div class="ttdef"><b>Definition:</b> <a href="S3DEnum_8hpp_source.html#l00042">S3DEnum.hpp:42</a></div></div>
 <div class="ttc" id="classScenery3dMgr_html"><div class="ttname"><a href="classScenery3dMgr.html">Scenery3dMgr</a></div><div class="ttdoc">Main class of the module, inherits from StelModule. </div><div class="ttdef"><b>Definition:</b> <a href="Scenery3dMgr_8hpp_source.html#l00048">Scenery3dMgr.hpp:48</a></div></div>
 <div class="ttc" id="StelTranslator_8hpp_html"><div class="ttname"><a href="../../doc/head/StelTranslator_8hpp.html">StelTranslator.hpp</a></div></div>
 <div class="ttc" id="classCubemapModeListModel_html"><div class="ttname"><a href="classCubemapModeListModel.html">CubemapModeListModel</a></div><div class="ttdef"><b>Definition:</b> <a href="Scenery3dDialog__p_8hpp_source.html#l00033">Scenery3dDialog_p.hpp:33</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Sat Feb 27 2016 22:02:13 for Stellarium by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Sat Feb 27 2016 23:13:16 for Stellarium by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.8
 </small></address>

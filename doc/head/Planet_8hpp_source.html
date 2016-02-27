@@ -128,12 +128,12 @@
 <div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;<span class="keyword">public</span>:</div>
 <div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;    <span class="keyword">friend</span> <span class="keyword">class </span><a class="code" href="classSolarSystem.html">SolarSystem</a>;</div>
 <div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;</div>
-<div class="line"><a name="l00078"></a><span class="lineno"><a class="line" href="classPlanet.html#ad0906ed41a660575cf3d2d6461d18f76">   78</a></span>&#160;    <a class="code" href="classPlanet.html#ad0906ed41a660575cf3d2d6461d18f76">Q_ENUMS</a>(PlanetType)</div>
-<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;    <a class="code" href="classPlanet.html#ad0906ed41a660575cf3d2d6461d18f76">Q_ENUMS</a>(ApparentMagnitudeAlgorithm)</div>
+<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;    Q_ENUMS(<a class="code" href="classPlanet.html#a17e4791dd977209187facc29820272f3">PlanetType</a>)</div>
+<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;    Q_ENUMS(ApparentMagnitudeAlgorithm)</div>
 <div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;    <span class="comment">// GZ: Until 0.13 QStrings were used for types.</span></div>
 <div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;    <span class="comment">// GZ: Enums are slightly faster than string comparisons in time-critical comparisons.</span></div>
 <div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;    <span class="comment">// GZ: If other types are introduced, add here and the string in init().</span></div>
-<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;    enum PlanetType</div>
+<div class="line"><a name="l00084"></a><span class="lineno"><a class="line" href="classPlanet.html#a17e4791dd977209187facc29820272f3">   84</a></span>&#160;    enum <a class="code" href="classPlanet.html#a17e4791dd977209187facc29820272f3">PlanetType</a></div>
 <div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;    {</div>
 <div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;        isStar,                   <span class="comment">// ssystem.ini: type=&quot;star&quot;</span></div>
 <div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;        isPlanet,                 <span class="comment">// ssystem.ini: type=&quot;planet&quot;</span></div>
@@ -212,7 +212,7 @@
 <div class="line"><a name="l00184"></a><span class="lineno">  184</span>&#160;</div>
 <div class="line"><a name="l00185"></a><span class="lineno">  185</span>&#160;    <span class="keyword">const</span> QString&amp; getTextMapName()<span class="keyword"> const </span>{<span class="keywordflow">return</span> texMapName;}  </div>
 <div class="line"><a name="l00186"></a><span class="lineno">  186</span>&#160;    <span class="keyword">const</span> QString getPlanetTypeString()<span class="keyword"> const </span>{<span class="keywordflow">return</span> pTypeMap.value(pType);}</div>
-<div class="line"><a name="l00187"></a><span class="lineno">  187</span>&#160;    PlanetType <a class="code" href="classSolarSystem.html#a72095b72180b5a1f6b1086ec52f4e843">getPlanetType</a>()<span class="keyword"> const </span>{<span class="keywordflow">return</span> pType;}</div>
+<div class="line"><a name="l00187"></a><span class="lineno">  187</span>&#160;    <a class="code" href="classPlanet.html#a17e4791dd977209187facc29820272f3">PlanetType</a> <a class="code" href="classSolarSystem.html#a72095b72180b5a1f6b1086ec52f4e843">getPlanetType</a>()<span class="keyword"> const </span>{<span class="keywordflow">return</span> pType;}</div>
 <div class="line"><a name="l00188"></a><span class="lineno">  188</span>&#160;</div>
 <div class="line"><a name="l00189"></a><span class="lineno">  189</span>&#160;    <span class="keywordtype">void</span> setNativeName(QString planet) { nativeName = planet; }</div>
 <div class="line"><a name="l00190"></a><span class="lineno">  190</span>&#160;</div>
@@ -375,7 +375,7 @@
 <div class="line"><a name="l00354"></a><span class="lineno">  354</span>&#160;    <span class="keywordtype">bool</span> hidden;                     <span class="comment">// useful for fake planets used as observation positions - not drawn or labeled</span></div>
 <div class="line"><a name="l00355"></a><span class="lineno">  355</span>&#160;    <span class="keywordtype">bool</span> atmosphere;                 <span class="comment">// Does the planet have an atmosphere?</span></div>
 <div class="line"><a name="l00356"></a><span class="lineno">  356</span>&#160;    <span class="keywordtype">bool</span> halo;                       <span class="comment">// Does the planet have a halo?    </span></div>
-<div class="line"><a name="l00357"></a><span class="lineno">  357</span>&#160;    PlanetType pType;                <span class="comment">// Type of body</span></div>
+<div class="line"><a name="l00357"></a><span class="lineno">  357</span>&#160;    <a class="code" href="classPlanet.html#a17e4791dd977209187facc29820272f3">PlanetType</a> pType;                <span class="comment">// Type of body</span></div>
 <div class="line"><a name="l00358"></a><span class="lineno">  358</span>&#160;</div>
 <div class="line"><a name="l00359"></a><span class="lineno">  359</span>&#160;    ApparentMagnitudeAlgorithm vMagAlgorithm;</div>
 <div class="line"><a name="l00360"></a><span class="lineno">  360</span>&#160;</div>
@@ -431,7 +431,6 @@
 <div class="line"><a name="l00410"></a><span class="lineno">  410</span>&#160;</div>
 <div class="line"><a name="l00411"></a><span class="lineno">  411</span>&#160;<span class="preprocessor">#endif // _PLANET_HPP_</span></div>
 <div class="line"><a name="l00412"></a><span class="lineno">  412</span>&#160;</div>
-<div class="ttc" id="classPlanet_html_ad0906ed41a660575cf3d2d6461d18f76"><div class="ttname"><a href="classPlanet.html#ad0906ed41a660575cf3d2d6461d18f76">Planet::Q_ENUMS</a></div><div class="ttdeci">Q_ENUMS(PlanetType) Q_ENUMS(ApparentMagnitudeAlgorithm) enum PlanetType</div><div class="ttdoc">numeric typecodes for the type descriptions in ssystem.ini </div><div class="ttdef"><b>Definition:</b> <a href="Planet_8hpp_source.html#l00078">Planet.hpp:78</a></div></div>
 <div class="ttc" id="classPlanet_html_a2abfbdc917502317f98fd34d6bef481c"><div class="ttname"><a href="classPlanet.html#a2abfbdc917502317f98fd34d6bef481c">Planet::getCandidatesForShadow</a></div><div class="ttdeci">QVector&lt; const Planet * &gt; getCandidatesForShadow() const </div><div class="ttdoc">Return the list of planets which project some shadow on this planet. </div></div>
 <div class="ttc" id="classSolarSystem_html_a0680ac6cc833f0238a52a1cceb9542ab"><div class="ttname"><a href="classSolarSystem.html#a0680ac6cc833f0238a52a1cceb9542ab">SolarSystem::update</a></div><div class="ttdeci">virtual void update(double deltaTime)</div><div class="ttdoc">Update time-varying components. </div></div>
 <div class="ttc" id="classSolarSystem_html_ada02300f99322f928b5b726fa6d14be6"><div class="ttname"><a href="classSolarSystem.html#ada02300f99322f928b5b726fa6d14be6">SolarSystem::setFlagOrbits</a></div><div class="ttdeci">void setFlagOrbits(bool b)</div><div class="ttdoc">Set flag which determines if planet orbits are drawn or hidden. </div></div>
@@ -443,6 +442,7 @@
 <div class="ttc" id="classPlanet_html_a5d4a12ac26bb3f8870cc8a0bf62b8583"><div class="ttname"><a href="classPlanet.html#a5d4a12ac26bb3f8870cc8a0bf62b8583">Planet::getNameI18n</a></div><div class="ttdeci">virtual QString getNameI18n(void) const </div><div class="ttdoc">Return translated object&#39;s name. </div></div>
 <div class="ttc" id="singletonVector3_html"><div class="ttname"><a href="singletonVector3.html">Vector3&lt; float &gt;</a></div></div>
 <div class="ttc" id="StelTextureTypes_8hpp_html"><div class="ttname"><a href="StelTextureTypes_8hpp.html">StelTextureTypes.hpp</a></div><div class="ttdoc">Define the StelTextureSP type. </div></div>
+<div class="ttc" id="classPlanet_html_a17e4791dd977209187facc29820272f3"><div class="ttname"><a href="classPlanet.html#a17e4791dd977209187facc29820272f3">Planet::PlanetType</a></div><div class="ttdeci">PlanetType</div><div class="ttdoc">numeric typecodes for the type descriptions in ssystem.ini </div><div class="ttdef"><b>Definition:</b> <a href="Planet_8hpp_source.html#l00084">Planet.hpp:84</a></div></div>
 <div class="ttc" id="classPlanet_html"><div class="ttname"><a href="classPlanet.html">Planet</a></div><div class="ttdef"><b>Definition:</b> <a href="Planet_8hpp_source.html#l00073">Planet.hpp:73</a></div></div>
 <div class="ttc" id="classPlanet_html_a95728c97e3d44de8c3c13d58b10bf3fa"><div class="ttname"><a href="classPlanet.html#a95728c97e3d44de8c3c13d58b10bf3fa">Planet::getAngularSize</a></div><div class="ttdeci">virtual double getAngularSize(const StelCore *core) const </div><div class="ttdoc">Return the angular radius of a circle containing the object as seen from the observer with the circle...</div></div>
 <div class="ttc" id="classPlanet_html_abc84a3cd305ceed6fef2163d2082346b"><div class="ttname"><a href="classPlanet.html#abc84a3cd305ceed6fef2163d2082346b">Planet::getInfoColor</a></div><div class="ttdeci">virtual Vec3f getInfoColor(void) const </div><div class="ttdoc">Get a color used to display info about the object. </div></div>
@@ -483,7 +483,7 @@
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Sat Feb 27 2016 22:03:10 for Stellarium by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Sat Feb 27 2016 23:13:23 for Stellarium by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.8
 </small></address>

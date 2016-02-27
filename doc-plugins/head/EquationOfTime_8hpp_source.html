@@ -178,8 +178,8 @@
 <div class="line"><a name="l00175"></a><span class="lineno">  175</span>&#160;    Q_PLUGIN_METADATA(IID StelPluginInterface_iid)</div>
 <div class="line"><a name="l00176"></a><span class="lineno">  176</span>&#160;    Q_INTERFACES(<a class="codeRef" doxygen="/home/aw/devel/stellarium/trunk/builds/gcc/stellarium.tag:../../doc/head/" href="../../doc/head/classStelPluginInterface.html">StelPluginInterface</a>)</div>
 <div class="line"><a name="l00177"></a><span class="lineno">  177</span>&#160;<span class="keyword">public</span>:</div>
-<div class="line"><a name="l00178"></a><span class="lineno">  178</span>&#160;    <span class="keyword">virtual</span> <a class="codeRef" doxygen="/home/aw/devel/stellarium/trunk/builds/gcc/stellarium.tag:../../doc/head/" href="../../doc/head/classStelModule.html">StelModule</a>* <a class="codeRef" doxygen="/home/aw/devel/stellarium/trunk/builds/gcc/stellarium.tag:../../doc/head/" href="../../doc/head/classStelPluginInterface.html#afa2dc49ee2c01039a28e1764f334330c">getStelModule</a>() <span class="keyword">const</span>;</div>
-<div class="line"><a name="l00179"></a><span class="lineno">  179</span>&#160;    <span class="keyword">virtual</span> <a class="codeRef" doxygen="/home/aw/devel/stellarium/trunk/builds/gcc/stellarium.tag:../../doc/head/" href="../../doc/head/structStelPluginInfo.html">StelPluginInfo</a> <a class="codeRef" doxygen="/home/aw/devel/stellarium/trunk/builds/gcc/stellarium.tag:../../doc/head/" href="../../doc/head/classStelPluginInterface.html#a1708440c0e5754bfaecbd1b2bbde8afa">getPluginInfo</a>() <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00178"></a><span class="lineno">  178</span>&#160;    <span class="keyword">virtual</span> <a class="codeRef" doxygen="/home/aw/devel/stellarium/trunk/builds/gcc/stellarium.tag:../../doc/head/" href="../../doc/head/classStelModule.html">StelModule</a>* getStelModule() <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00179"></a><span class="lineno">  179</span>&#160;    <span class="keyword">virtual</span> <a class="codeRef" doxygen="/home/aw/devel/stellarium/trunk/builds/gcc/stellarium.tag:../../doc/head/" href="../../doc/head/structStelPluginInfo.html">StelPluginInfo</a> getPluginInfo() <span class="keyword">const</span>;</div>
 <div class="line"><a name="l00180"></a><span class="lineno">  180</span>&#160;};</div>
 <div class="line"><a name="l00181"></a><span class="lineno">  181</span>&#160;</div>
 <div class="line"><a name="l00182"></a><span class="lineno">  182</span>&#160;<span class="preprocessor">#endif </span><span class="comment">/* _EQUATIONOFTIME_HPP_ */</span><span class="preprocessor"></span></div>
@@ -196,9 +196,7 @@
 <div class="ttc" id="classStelCore_html"><div class="ttname"><a href="../../doc/head/classStelCore.html">StelCore</a></div></div>
 <div class="ttc" id="classEquationOfTime_html_a0917101342442900617ba45d45755043"><div class="ttname"><a href="classEquationOfTime.html#a0917101342442900617ba45d45755043">EquationOfTime::setFlagEnableAtStartup</a></div><div class="ttdeci">void setFlagEnableAtStartup(bool b)</div><div class="ttdoc">Enable plugin usage at startup. </div></div>
 <div class="ttc" id="classEquationOfTimeWindow_html"><div class="ttname"><a href="classEquationOfTimeWindow.html">EquationOfTimeWindow</a></div><div class="ttdoc">Main window of the Equation of Time plug-in. </div><div class="ttdef"><b>Definition:</b> <a href="EquationOfTimeWindow_8hpp_source.html#l00033">EquationOfTimeWindow.hpp:33</a></div></div>
-<div class="ttc" id="classStelPluginInterface_html_a1708440c0e5754bfaecbd1b2bbde8afa"><div class="ttname"><a href="../../doc/head/classStelPluginInterface.html#a1708440c0e5754bfaecbd1b2bbde8afa">StelPluginInterface::getPluginInfo</a></div><div class="ttdeci">virtual StelPluginInfo getPluginInfo() const =0</div></div>
 <div class="ttc" id="classStelButton_html"><div class="ttname"><a href="../../doc/head/classStelButton.html">StelButton</a></div></div>
-<div class="ttc" id="classStelPluginInterface_html_afa2dc49ee2c01039a28e1764f334330c"><div class="ttname"><a href="../../doc/head/classStelPluginInterface.html#afa2dc49ee2c01039a28e1764f334330c">StelPluginInterface::getStelModule</a></div><div class="ttdeci">virtual class StelModule * getStelModule() const =0</div></div>
 <div class="ttc" id="classEquationOfTime_html"><div class="ttname"><a href="classEquationOfTime.html">EquationOfTime</a></div><div class="ttdoc">Main class of the Equation of Time plugin. </div><div class="ttdef"><b>Definition:</b> <a href="EquationOfTime_8hpp_source.html#l00059">EquationOfTime.hpp:59</a></div></div>
 <div class="ttc" id="classEquationOfTimeStelPluginInterface_html"><div class="ttname"><a href="classEquationOfTimeStelPluginInterface.html">EquationOfTimeStelPluginInterface</a></div><div class="ttdoc">This class is used by Qt to manage a plug-in interface. </div><div class="ttdef"><b>Definition:</b> <a href="EquationOfTime_8hpp_source.html#l00172">EquationOfTime.hpp:172</a></div></div>
 <div class="ttc" id="classEquationOfTime_html_aeb50f452feabde7a4aa6aec8a6da935e"><div class="ttname"><a href="classEquationOfTime.html#aeb50f452feabde7a4aa6aec8a6da935e">EquationOfTime::setFlagInvertedValue</a></div><div class="ttdeci">void setFlagInvertedValue(bool b)</div><div class="ttdoc">Enable usage inverted value for equation of time (switch sign of equation) </div></div>
@@ -211,7 +209,7 @@
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Sat Feb 27 2016 22:02:13 for Stellarium by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Sat Feb 27 2016 23:13:15 for Stellarium by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.8
 </small></address>
