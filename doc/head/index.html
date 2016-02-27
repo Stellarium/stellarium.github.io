@@ -33,7 +33,6 @@
       <li><a href="scripting.html"><span>Scripting</span></a></li>
       <li><a href="plugins.html"><span>Plugins</span></a></li>
       <li><a href="fileStructure.html"><span>File&#160;Structure</span></a></li>
-      <li><a href="examples.html"><span>Examples</span></a></li>
     </ul>
   </div>
 </div><!-- top -->
@@ -49,7 +48,7 @@ Introduction</h1>
 Program Architecture</h1>
 <p>The code of Stellarium is split into several main blocks: </p><ul>
 <li>
-the main loop and main widget classes <em>StelMainWindow</em> and <em>StelMainGraphicsView</em>. Those classes have a single instance which is created at startup by the ::main() function. They perform various tasks such as the creation of the main program window and openGL context, the creation of the stellarium core, the creation of the GUI. After initialization, they manage user's input event propagation and event loop. There are heavily based on Qt features. </li>
+the main loop and main widget classes <em>StelMainWindow</em> and <em>StelMainGraphicsView</em>. Those classes have a single instance which is created at startup by the main() function. They perform various tasks such as the creation of the main program window and openGL context, the creation of the stellarium core, the creation of the GUI. After initialization, they manage user's input event propagation and event loop. There are heavily based on Qt features. </li>
 <li>
 the core which provides a number of generic services and features to the other components. The main class is the <a class="el" href="classStelApp.html" title="Singleton main Stellarium application class. ">StelApp</a> singleton class which is used everywhere in the code to access other elements. It is the <a class="el" href="classStelApp.html" title="Singleton main Stellarium application class. ">StelApp</a> instance which creates all the main core services and modules at initialization. Example services are OpenGL textures management with the <a class="el" href="classStelTextureMgr.html" title="Manage textures loading. ">StelTextureMgr</a>, font management with the StelFontMgr, sky images management (images which have a fixed position in the sky) with the StelSkyImageMgr etc.. Two especially important manager classes (the ones with the "Mgr" suffix) are the <a class="el" href="classStelModuleMgr.html" title="Manage a collection of StelModules including both core and plugin modules. ">StelModuleMgr</a> and <a class="el" href="classStelCore.html" title="Main class for Stellarium core processing. ">StelCore</a> classes: the first one manages the collection of <a class="el" href="classStelModule.html" title="This is the common base class for all the main components of stellarium. ">StelModule</a> instances which are registered in the program (see next point for more info on what a <a class="el" href="classStelModule.html" title="This is the common base class for all the main components of stellarium. ">StelModule</a> is). The second one provides performance critical features for rendering various elements using openGL, or for computing coordinate transformation and other mathematical services. </li>
 <li>
@@ -68,7 +67,7 @@ the script engine (<a class="el" href="classStelScriptMgr.html" title="Manage sc
  </div></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Thu Feb 25 2016 14:16:09 for Stellarium by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Sat Feb 27 2016 22:03:11 for Stellarium by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.8
 </small></address>

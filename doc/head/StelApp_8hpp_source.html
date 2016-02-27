@@ -33,7 +33,6 @@
       <li><a href="scripting.html"><span>Scripting</span></a></li>
       <li><a href="plugins.html"><span>Plugins</span></a></li>
       <li><a href="fileStructure.html"><span>File&#160;Structure</span></a></li>
-      <li><a href="examples.html"><span>Examples</span></a></li>
     </ul>
   </div>
   <div id="navrow2" class="tabs2">
@@ -93,7 +92,7 @@
 <div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;<span class="keyword">class </span><a class="code" href="classStelLocationMgr.html">StelLocationMgr</a>;</div>
 <div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;<span class="keyword">class </span><a class="code" href="classStelSkyLayerMgr.html">StelSkyLayerMgr</a>;</div>
 <div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;<span class="keyword">class </span><a class="code" href="classStelAudioMgr.html">StelAudioMgr</a>;</div>
-<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;<span class="keyword">class </span>StelVideoMgr;</div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;<span class="keyword">class </span><a class="code" href="classStelVideoMgr.html">StelVideoMgr</a>;</div>
 <div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;<span class="keyword">class </span><a class="code" href="classStelGuiBase.html">StelGuiBase</a>;</div>
 <div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;<span class="keyword">class </span><a class="code" href="classStelMainScriptAPIProxy.html">StelMainScriptAPIProxy</a>;</div>
 <div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;<span class="keyword">class </span><a class="code" href="classStelScriptMgr.html">StelScriptMgr</a>;</div>
@@ -140,7 +139,7 @@
 <div class="line"><a name="l00122"></a><span class="lineno">  122</span>&#160;</div>
 <div class="line"><a name="l00124"></a><span class="lineno"><a class="line" href="classStelApp.html#a51dacbdef4a1d3d3039bb03f0c23313a">  124</a></span>&#160;    <a class="code" href="classStelActionMgr.html">StelActionMgr</a>* <a class="code" href="classStelApp.html#a51dacbdef4a1d3d3039bb03f0c23313a">getStelActionManager</a>() {<span class="keywordflow">return</span> actionMgr;}</div>
 <div class="line"><a name="l00125"></a><span class="lineno">  125</span>&#160;</div>
-<div class="line"><a name="l00127"></a><span class="lineno"><a class="line" href="classStelApp.html#aabdee5e65034bb0f741285570713f14e">  127</a></span>&#160;    StelVideoMgr* <a class="code" href="classStelApp.html#aabdee5e65034bb0f741285570713f14e">getStelVideoMgr</a>() {<span class="keywordflow">return</span> videoMgr;}</div>
+<div class="line"><a name="l00127"></a><span class="lineno"><a class="line" href="classStelApp.html#aabdee5e65034bb0f741285570713f14e">  127</a></span>&#160;    <a class="code" href="classStelVideoMgr.html">StelVideoMgr</a>* <a class="code" href="classStelApp.html#aabdee5e65034bb0f741285570713f14e">getStelVideoMgr</a>() {<span class="keywordflow">return</span> videoMgr;}</div>
 <div class="line"><a name="l00128"></a><span class="lineno">  128</span>&#160;</div>
 <div class="line"><a name="l00132"></a><span class="lineno"><a class="line" href="classStelApp.html#abd6f84eab64f4dbd54f2893f82d65ee7">  132</a></span>&#160;    <a class="code" href="classStelCore.html">StelCore</a>* <a class="code" href="classStelApp.html#abd6f84eab64f4dbd54f2893f82d65ee7">getCore</a>() {<span class="keywordflow">return</span> core;}</div>
 <div class="line"><a name="l00133"></a><span class="lineno">  133</span>&#160;</div>
@@ -197,155 +196,162 @@
 <div class="line"><a name="l00213"></a><span class="lineno">  213</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classStelApp.html#ab53b34815ab00961af0982eeea936280">setFlagShowDecimalDegrees</a>(<span class="keywordtype">bool</span> b);</div>
 <div class="line"><a name="l00215"></a><span class="lineno"><a class="line" href="classStelApp.html#a77d8216917b53cf1f75a8592c6497b86">  215</a></span>&#160;    <span class="keywordtype">bool</span> <a class="code" href="classStelApp.html#a77d8216917b53cf1f75a8592c6497b86">getFlagShowDecimalDegrees</a>()<span class="keyword"> const </span>{<span class="keywordflow">return</span> flagShowDecimalDegrees;}</div>
 <div class="line"><a name="l00216"></a><span class="lineno">  216</span>&#160;</div>
-<div class="line"><a name="l00218"></a><span class="lineno"><a class="line" href="classStelApp.html#a0fa1459a00f27f6a689bf48eba389d4f">  218</a></span>&#160;    <span class="keywordtype">bool</span> <a class="code" href="classStelApp.html#a0fa1459a00f27f6a689bf48eba389d4f">getFlagOldAzimuthUsage</a>()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> flagUseAzimuthFromSouth; }</div>
-<div class="line"><a name="l00220"></a><span class="lineno"><a class="line" href="classStelApp.html#aba8893c9b0a6e1349aa1e290af43ed51">  220</a></span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classStelApp.html#aba8893c9b0a6e1349aa1e290af43ed51">setFlagOldAzimuthUsage</a>(<span class="keywordtype">bool</span> use) { flagUseAzimuthFromSouth=use; }</div>
+<div class="line"><a name="l00218"></a><span class="lineno"><a class="line" href="classStelApp.html#ae60f01638def3931c588f1cdf05f1cc7">  218</a></span>&#160;    <span class="keywordtype">bool</span> <a class="code" href="classStelApp.html#ae60f01638def3931c588f1cdf05f1cc7">getFlagSouthAzimuthUsage</a>()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> flagUseAzimuthFromSouth; }</div>
+<div class="line"><a name="l00220"></a><span class="lineno"><a class="line" href="classStelApp.html#a9c9c9422b35dd10185bb0538882f11ee">  220</a></span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classStelApp.html#a9c9c9422b35dd10185bb0538882f11ee">setFlagSouthAzimuthUsage</a>(<span class="keywordtype">bool</span> use) { flagUseAzimuthFromSouth=use; }</div>
 <div class="line"><a name="l00221"></a><span class="lineno">  221</span>&#160;    </div>
-<div class="line"><a name="l00224"></a><span class="lineno"><a class="line" href="classStelApp.html#ae5146fd7f30499436c6ccc8fabfed328">  224</a></span>&#160;    <span class="keywordtype">float</span> <a class="code" href="classStelApp.html#ae5146fd7f30499436c6ccc8fabfed328">getFps</a>()<span class="keyword"> const </span>{<span class="keywordflow">return</span> fps;}</div>
-<div class="line"><a name="l00225"></a><span class="lineno">  225</span>&#160;</div>
-<div class="line"><a name="l00227"></a><span class="lineno">  227</span>&#160;    <span class="keyword">static</span> <span class="keywordtype">double</span> <a class="code" href="classStelApp.html#ab8a4e3c56ca766f04623f804d73c3b84">getTotalRunTime</a>();</div>
+<div class="line"><a name="l00224"></a><span class="lineno"><a class="line" href="classStelApp.html#a0fa1459a00f27f6a689bf48eba389d4f">  224</a></span>&#160;    <span class="keywordtype">bool</span> <a class="code" href="classStelApp.html#a0fa1459a00f27f6a689bf48eba389d4f">getFlagOldAzimuthUsage</a>()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> <a class="code" href="classStelApp.html#ae60f01638def3931c588f1cdf05f1cc7">getFlagSouthAzimuthUsage</a>(); }</div>
+<div class="line"><a name="l00227"></a><span class="lineno"><a class="line" href="classStelApp.html#aba8893c9b0a6e1349aa1e290af43ed51">  227</a></span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classStelApp.html#aba8893c9b0a6e1349aa1e290af43ed51">setFlagOldAzimuthUsage</a>(<span class="keywordtype">bool</span> use) { <a class="code" href="classStelApp.html#a9c9c9422b35dd10185bb0538882f11ee">setFlagSouthAzimuthUsage</a>(use); }</div>
 <div class="line"><a name="l00228"></a><span class="lineno">  228</span>&#160;</div>
-<div class="line"><a name="l00230"></a><span class="lineno">  230</span>&#160;    <span class="keyword">static</span> <span class="keywordtype">double</span> <a class="code" href="classStelApp.html#adaea1274c468cb06aa90deedbfc961df">getAnimationTime</a>();</div>
-<div class="line"><a name="l00231"></a><span class="lineno">  231</span>&#160;</div>
-<div class="line"><a name="l00234"></a><span class="lineno">  234</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classStelApp.html#ad50a11d9faf8e114b234dd781f2ad34c">reportFileDownloadFinished</a>(QNetworkReply* reply);</div>
-<div class="line"><a name="l00235"></a><span class="lineno">  235</span>&#160;</div>
-<div class="line"><a name="l00237"></a><span class="lineno">  237</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classStelApp.html#a011fe02bdd5a175027ab5d6eb73c5f81">quit</a>();</div>
-<div class="line"><a name="l00238"></a><span class="lineno">  238</span>&#160;signals:</div>
-<div class="line"><a name="l00239"></a><span class="lineno">  239</span>&#160;    <span class="keywordtype">void</span> visionNightModeChanged(<span class="keywordtype">bool</span>);</div>
-<div class="line"><a name="l00240"></a><span class="lineno">  240</span>&#160;    <span class="keywordtype">void</span> colorSchemeChanged(<span class="keyword">const</span> QString&amp;);</div>
-<div class="line"><a name="l00241"></a><span class="lineno">  241</span>&#160;    <span class="keywordtype">void</span> languageChanged();</div>
-<div class="line"><a name="l00242"></a><span class="lineno">  242</span>&#160;    <span class="keywordtype">void</span> skyCultureChanged(<span class="keyword">const</span> QString&amp;);</div>
+<div class="line"><a name="l00229"></a><span class="lineno">  229</span>&#160;</div>
+<div class="line"><a name="l00232"></a><span class="lineno"><a class="line" href="classStelApp.html#ae5146fd7f30499436c6ccc8fabfed328">  232</a></span>&#160;    <span class="keywordtype">float</span> <a class="code" href="classStelApp.html#ae5146fd7f30499436c6ccc8fabfed328">getFps</a>()<span class="keyword"> const </span>{<span class="keywordflow">return</span> fps;}</div>
+<div class="line"><a name="l00233"></a><span class="lineno">  233</span>&#160;</div>
+<div class="line"><a name="l00235"></a><span class="lineno">  235</span>&#160;    <span class="keyword">static</span> <span class="keywordtype">double</span> <a class="code" href="classStelApp.html#ab8a4e3c56ca766f04623f804d73c3b84">getTotalRunTime</a>();</div>
+<div class="line"><a name="l00236"></a><span class="lineno">  236</span>&#160;</div>
+<div class="line"><a name="l00238"></a><span class="lineno">  238</span>&#160;    <span class="keyword">static</span> <span class="keywordtype">double</span> <a class="code" href="classStelApp.html#adaea1274c468cb06aa90deedbfc961df">getAnimationTime</a>();</div>
+<div class="line"><a name="l00239"></a><span class="lineno">  239</span>&#160;</div>
+<div class="line"><a name="l00242"></a><span class="lineno">  242</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classStelApp.html#ad50a11d9faf8e114b234dd781f2ad34c">reportFileDownloadFinished</a>(QNetworkReply* reply);</div>
 <div class="line"><a name="l00243"></a><span class="lineno">  243</span>&#160;</div>
-<div class="line"><a name="l00245"></a><span class="lineno">  245</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classStelApp.html#af18c53dc40327aa10ae296c8f7d44ea3">progressBarAdded</a>(<span class="keyword">const</span> <a class="code" href="classStelProgressController.html">StelProgressController</a>*);</div>
-<div class="line"><a name="l00247"></a><span class="lineno">  247</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classStelApp.html#aa59882d68d2212faa542a62ac79b6873">progressBarRemoved</a>(<span class="keyword">const</span> <a class="code" href="classStelProgressController.html">StelProgressController</a>*);</div>
-<div class="line"><a name="l00249"></a><span class="lineno">  249</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classStelApp.html#adff6c70bedce07c7d6c4df51d2875849">aboutToQuit</a>();</div>
-<div class="line"><a name="l00250"></a><span class="lineno">  250</span>&#160;</div>
-<div class="line"><a name="l00251"></a><span class="lineno">  251</span>&#160;<span class="keyword">private</span>:</div>
-<div class="line"><a name="l00252"></a><span class="lineno">  252</span>&#160;</div>
-<div class="line"><a name="l00254"></a><span class="lineno">  254</span>&#160;    <span class="keywordtype">void</span> handleClick(<span class="keyword">class</span> QMouseEvent* event);</div>
-<div class="line"><a name="l00256"></a><span class="lineno">  256</span>&#160;    <span class="keywordtype">void</span> handleWheel(<span class="keyword">class</span> QWheelEvent* event);</div>
-<div class="line"><a name="l00258"></a><span class="lineno">  258</span>&#160;    <span class="keywordtype">void</span> handleMove(<span class="keywordtype">float</span> x, <span class="keywordtype">float</span> y, Qt::MouseButtons b);</div>
-<div class="line"><a name="l00260"></a><span class="lineno">  260</span>&#160;    <span class="keywordtype">void</span> handleKeys(<span class="keyword">class</span> QKeyEvent* event);</div>
-<div class="line"><a name="l00262"></a><span class="lineno">  262</span>&#160;    <span class="keywordtype">void</span> handlePinch(qreal scale, <span class="keywordtype">bool</span> started);</div>
-<div class="line"><a name="l00263"></a><span class="lineno">  263</span>&#160;</div>
-<div class="line"><a name="l00264"></a><span class="lineno">  264</span>&#160;    <span class="keywordtype">void</span> prepareRenderBuffer();</div>
-<div class="line"><a name="l00265"></a><span class="lineno">  265</span>&#160;    <span class="keywordtype">void</span> applyRenderBuffer();</div>
-<div class="line"><a name="l00266"></a><span class="lineno">  266</span>&#160;</div>
-<div class="line"><a name="l00267"></a><span class="lineno">  267</span>&#160;    <span class="comment">// The StelApp singleton</span></div>
-<div class="line"><a name="l00268"></a><span class="lineno">  268</span>&#160;    <span class="keyword">static</span> <a class="code" href="classStelApp.html">StelApp</a>* singleton;</div>
-<div class="line"><a name="l00269"></a><span class="lineno">  269</span>&#160;</div>
-<div class="line"><a name="l00270"></a><span class="lineno">  270</span>&#160;    <span class="comment">// The associated StelCore instance</span></div>
-<div class="line"><a name="l00271"></a><span class="lineno">  271</span>&#160;    <a class="code" href="classStelCore.html">StelCore</a>* core;</div>
-<div class="line"><a name="l00272"></a><span class="lineno">  272</span>&#160;</div>
-<div class="line"><a name="l00273"></a><span class="lineno">  273</span>&#160;    <span class="comment">// Module manager for the application</span></div>
-<div class="line"><a name="l00274"></a><span class="lineno">  274</span>&#160;    <a class="code" href="classStelModuleMgr.html">StelModuleMgr</a>* moduleMgr;</div>
-<div class="line"><a name="l00275"></a><span class="lineno">  275</span>&#160;</div>
-<div class="line"><a name="l00276"></a><span class="lineno">  276</span>&#160;    <span class="comment">// Locale manager for the application</span></div>
-<div class="line"><a name="l00277"></a><span class="lineno">  277</span>&#160;    <a class="code" href="classStelLocaleMgr.html">StelLocaleMgr</a>* localeMgr;</div>
-<div class="line"><a name="l00278"></a><span class="lineno">  278</span>&#160;</div>
-<div class="line"><a name="l00279"></a><span class="lineno">  279</span>&#160;    <span class="comment">// Sky cultures manager for the application</span></div>
-<div class="line"><a name="l00280"></a><span class="lineno">  280</span>&#160;    <a class="code" href="classStelSkyCultureMgr.html">StelSkyCultureMgr</a>* skyCultureMgr;</div>
-<div class="line"><a name="l00281"></a><span class="lineno">  281</span>&#160;</div>
-<div class="line"><a name="l00282"></a><span class="lineno">  282</span>&#160;    <span class="comment">//Actions manager fot the application.  Will replace shortcutMgr.</span></div>
-<div class="line"><a name="l00283"></a><span class="lineno">  283</span>&#160;    <a class="code" href="classStelActionMgr.html">StelActionMgr</a>* actionMgr;</div>
-<div class="line"><a name="l00284"></a><span class="lineno">  284</span>&#160;</div>
-<div class="line"><a name="l00285"></a><span class="lineno">  285</span>&#160;    <span class="comment">// Textures manager for the application</span></div>
-<div class="line"><a name="l00286"></a><span class="lineno">  286</span>&#160;    <a class="code" href="classStelTextureMgr.html">StelTextureMgr</a>* textureMgr;</div>
-<div class="line"><a name="l00287"></a><span class="lineno">  287</span>&#160;</div>
-<div class="line"><a name="l00288"></a><span class="lineno">  288</span>&#160;    <span class="comment">// Manager for all the StelObjects of the program</span></div>
-<div class="line"><a name="l00289"></a><span class="lineno">  289</span>&#160;    <a class="code" href="classStelObjectMgr.html">StelObjectMgr</a>* stelObjectMgr;</div>
-<div class="line"><a name="l00290"></a><span class="lineno">  290</span>&#160;</div>
-<div class="line"><a name="l00291"></a><span class="lineno">  291</span>&#160;    <span class="comment">// Manager for the list of observer locations on planets</span></div>
-<div class="line"><a name="l00292"></a><span class="lineno">  292</span>&#160;    <a class="code" href="classStelLocationMgr.html">StelLocationMgr</a>* planetLocationMgr;</div>
-<div class="line"><a name="l00293"></a><span class="lineno">  293</span>&#160;</div>
-<div class="line"><a name="l00294"></a><span class="lineno">  294</span>&#160;    <span class="comment">// Main network manager used for the program</span></div>
-<div class="line"><a name="l00295"></a><span class="lineno">  295</span>&#160;    QNetworkAccessManager* networkAccessManager;</div>
-<div class="line"><a name="l00296"></a><span class="lineno">  296</span>&#160;</div>
-<div class="line"><a name="l00298"></a><span class="lineno">  298</span>&#160;    <span class="keywordtype">void</span> setupNetworkProxy();</div>
-<div class="line"><a name="l00299"></a><span class="lineno">  299</span>&#160;</div>
-<div class="line"><a name="l00300"></a><span class="lineno">  300</span>&#160;    <span class="comment">// The audio manager.  Must execute in the main thread.</span></div>
-<div class="line"><a name="l00301"></a><span class="lineno">  301</span>&#160;    <a class="code" href="classStelAudioMgr.html">StelAudioMgr</a>* audioMgr;</div>
-<div class="line"><a name="l00302"></a><span class="lineno">  302</span>&#160;</div>
-<div class="line"><a name="l00303"></a><span class="lineno">  303</span>&#160;    <span class="comment">// The video manager.  Must execute in the main thread.</span></div>
-<div class="line"><a name="l00304"></a><span class="lineno">  304</span>&#160;    StelVideoMgr* videoMgr;</div>
-<div class="line"><a name="l00305"></a><span class="lineno">  305</span>&#160;</div>
-<div class="line"><a name="l00306"></a><span class="lineno">  306</span>&#160;    <a class="code" href="classStelSkyLayerMgr.html">StelSkyLayerMgr</a>* skyImageMgr;</div>
+<div class="line"><a name="l00245"></a><span class="lineno">  245</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classStelApp.html#a011fe02bdd5a175027ab5d6eb73c5f81">quit</a>();</div>
+<div class="line"><a name="l00246"></a><span class="lineno">  246</span>&#160;signals:</div>
+<div class="line"><a name="l00247"></a><span class="lineno">  247</span>&#160;    <span class="keywordtype">void</span> visionNightModeChanged(<span class="keywordtype">bool</span>);</div>
+<div class="line"><a name="l00248"></a><span class="lineno">  248</span>&#160;    <span class="keywordtype">void</span> colorSchemeChanged(<span class="keyword">const</span> QString&amp;);</div>
+<div class="line"><a name="l00249"></a><span class="lineno">  249</span>&#160;    <span class="keywordtype">void</span> languageChanged();</div>
+<div class="line"><a name="l00250"></a><span class="lineno">  250</span>&#160;    <span class="keywordtype">void</span> skyCultureChanged(<span class="keyword">const</span> QString&amp;);</div>
+<div class="line"><a name="l00251"></a><span class="lineno">  251</span>&#160;</div>
+<div class="line"><a name="l00253"></a><span class="lineno">  253</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classStelApp.html#af18c53dc40327aa10ae296c8f7d44ea3">progressBarAdded</a>(<span class="keyword">const</span> <a class="code" href="classStelProgressController.html">StelProgressController</a>*);</div>
+<div class="line"><a name="l00255"></a><span class="lineno">  255</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classStelApp.html#aa59882d68d2212faa542a62ac79b6873">progressBarRemoved</a>(<span class="keyword">const</span> <a class="code" href="classStelProgressController.html">StelProgressController</a>*);</div>
+<div class="line"><a name="l00257"></a><span class="lineno">  257</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classStelApp.html#adff6c70bedce07c7d6c4df51d2875849">aboutToQuit</a>();</div>
+<div class="line"><a name="l00258"></a><span class="lineno">  258</span>&#160;</div>
+<div class="line"><a name="l00259"></a><span class="lineno">  259</span>&#160;<span class="keyword">private</span>:</div>
+<div class="line"><a name="l00260"></a><span class="lineno">  260</span>&#160;</div>
+<div class="line"><a name="l00262"></a><span class="lineno">  262</span>&#160;    <span class="keywordtype">void</span> handleClick(<span class="keyword">class</span> QMouseEvent* event);</div>
+<div class="line"><a name="l00264"></a><span class="lineno">  264</span>&#160;    <span class="keywordtype">void</span> handleWheel(<span class="keyword">class</span> QWheelEvent* event);</div>
+<div class="line"><a name="l00266"></a><span class="lineno">  266</span>&#160;    <span class="keywordtype">void</span> handleMove(<span class="keywordtype">float</span> x, <span class="keywordtype">float</span> y, Qt::MouseButtons b);</div>
+<div class="line"><a name="l00268"></a><span class="lineno">  268</span>&#160;    <span class="keywordtype">void</span> handleKeys(<span class="keyword">class</span> QKeyEvent* event);</div>
+<div class="line"><a name="l00270"></a><span class="lineno">  270</span>&#160;    <span class="keywordtype">void</span> handlePinch(qreal scale, <span class="keywordtype">bool</span> started);</div>
+<div class="line"><a name="l00271"></a><span class="lineno">  271</span>&#160;</div>
+<div class="line"><a name="l00272"></a><span class="lineno">  272</span>&#160;    <span class="keywordtype">void</span> prepareRenderBuffer();</div>
+<div class="line"><a name="l00273"></a><span class="lineno">  273</span>&#160;    <span class="keywordtype">void</span> applyRenderBuffer();</div>
+<div class="line"><a name="l00274"></a><span class="lineno">  274</span>&#160;</div>
+<div class="line"><a name="l00275"></a><span class="lineno">  275</span>&#160;    <span class="comment">// The StelApp singleton</span></div>
+<div class="line"><a name="l00276"></a><span class="lineno">  276</span>&#160;    <span class="keyword">static</span> <a class="code" href="classStelApp.html">StelApp</a>* singleton;</div>
+<div class="line"><a name="l00277"></a><span class="lineno">  277</span>&#160;</div>
+<div class="line"><a name="l00278"></a><span class="lineno">  278</span>&#160;    <span class="comment">// The associated StelCore instance</span></div>
+<div class="line"><a name="l00279"></a><span class="lineno">  279</span>&#160;    <a class="code" href="classStelCore.html">StelCore</a>* core;</div>
+<div class="line"><a name="l00280"></a><span class="lineno">  280</span>&#160;</div>
+<div class="line"><a name="l00281"></a><span class="lineno">  281</span>&#160;    <span class="comment">// Module manager for the application</span></div>
+<div class="line"><a name="l00282"></a><span class="lineno">  282</span>&#160;    <a class="code" href="classStelModuleMgr.html">StelModuleMgr</a>* moduleMgr;</div>
+<div class="line"><a name="l00283"></a><span class="lineno">  283</span>&#160;</div>
+<div class="line"><a name="l00284"></a><span class="lineno">  284</span>&#160;    <span class="comment">// Locale manager for the application</span></div>
+<div class="line"><a name="l00285"></a><span class="lineno">  285</span>&#160;    <a class="code" href="classStelLocaleMgr.html">StelLocaleMgr</a>* localeMgr;</div>
+<div class="line"><a name="l00286"></a><span class="lineno">  286</span>&#160;</div>
+<div class="line"><a name="l00287"></a><span class="lineno">  287</span>&#160;    <span class="comment">// Sky cultures manager for the application</span></div>
+<div class="line"><a name="l00288"></a><span class="lineno">  288</span>&#160;    <a class="code" href="classStelSkyCultureMgr.html">StelSkyCultureMgr</a>* skyCultureMgr;</div>
+<div class="line"><a name="l00289"></a><span class="lineno">  289</span>&#160;</div>
+<div class="line"><a name="l00290"></a><span class="lineno">  290</span>&#160;    <span class="comment">//Actions manager fot the application.  Will replace shortcutMgr.</span></div>
+<div class="line"><a name="l00291"></a><span class="lineno">  291</span>&#160;    <a class="code" href="classStelActionMgr.html">StelActionMgr</a>* actionMgr;</div>
+<div class="line"><a name="l00292"></a><span class="lineno">  292</span>&#160;</div>
+<div class="line"><a name="l00293"></a><span class="lineno">  293</span>&#160;    <span class="comment">// Textures manager for the application</span></div>
+<div class="line"><a name="l00294"></a><span class="lineno">  294</span>&#160;    <a class="code" href="classStelTextureMgr.html">StelTextureMgr</a>* textureMgr;</div>
+<div class="line"><a name="l00295"></a><span class="lineno">  295</span>&#160;</div>
+<div class="line"><a name="l00296"></a><span class="lineno">  296</span>&#160;    <span class="comment">// Manager for all the StelObjects of the program</span></div>
+<div class="line"><a name="l00297"></a><span class="lineno">  297</span>&#160;    <a class="code" href="classStelObjectMgr.html">StelObjectMgr</a>* stelObjectMgr;</div>
+<div class="line"><a name="l00298"></a><span class="lineno">  298</span>&#160;</div>
+<div class="line"><a name="l00299"></a><span class="lineno">  299</span>&#160;    <span class="comment">// Manager for the list of observer locations on planets</span></div>
+<div class="line"><a name="l00300"></a><span class="lineno">  300</span>&#160;    <a class="code" href="classStelLocationMgr.html">StelLocationMgr</a>* planetLocationMgr;</div>
+<div class="line"><a name="l00301"></a><span class="lineno">  301</span>&#160;</div>
+<div class="line"><a name="l00302"></a><span class="lineno">  302</span>&#160;    <span class="comment">// Main network manager used for the program</span></div>
+<div class="line"><a name="l00303"></a><span class="lineno">  303</span>&#160;    QNetworkAccessManager* networkAccessManager;</div>
+<div class="line"><a name="l00304"></a><span class="lineno">  304</span>&#160;</div>
+<div class="line"><a name="l00306"></a><span class="lineno">  306</span>&#160;    <span class="keywordtype">void</span> setupNetworkProxy();</div>
 <div class="line"><a name="l00307"></a><span class="lineno">  307</span>&#160;</div>
-<div class="line"><a name="l00308"></a><span class="lineno">  308</span>&#160;<span class="preprocessor">#ifndef DISABLE_SCRIPTING</span></div>
-<div class="line"><a name="l00309"></a><span class="lineno">  309</span>&#160;    <span class="comment">// The script API proxy object (for bridging threads)</span></div>
-<div class="line"><a name="l00310"></a><span class="lineno">  310</span>&#160;    <a class="code" href="classStelMainScriptAPIProxy.html">StelMainScriptAPIProxy</a>* scriptAPIProxy;</div>
-<div class="line"><a name="l00311"></a><span class="lineno">  311</span>&#160;</div>
-<div class="line"><a name="l00312"></a><span class="lineno">  312</span>&#160;    <span class="comment">// The script manager based on Qt script engine</span></div>
-<div class="line"><a name="l00313"></a><span class="lineno">  313</span>&#160;    <a class="code" href="classStelScriptMgr.html">StelScriptMgr</a>* scriptMgr;</div>
-<div class="line"><a name="l00314"></a><span class="lineno">  314</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="line"><a name="l00308"></a><span class="lineno">  308</span>&#160;    <span class="comment">// The audio manager.  Must execute in the main thread.</span></div>
+<div class="line"><a name="l00309"></a><span class="lineno">  309</span>&#160;    <a class="code" href="classStelAudioMgr.html">StelAudioMgr</a>* audioMgr;</div>
+<div class="line"><a name="l00310"></a><span class="lineno">  310</span>&#160;</div>
+<div class="line"><a name="l00311"></a><span class="lineno">  311</span>&#160;    <span class="comment">// The video manager.  Must execute in the main thread.</span></div>
+<div class="line"><a name="l00312"></a><span class="lineno">  312</span>&#160;    <a class="code" href="classStelVideoMgr.html">StelVideoMgr</a>* videoMgr;</div>
+<div class="line"><a name="l00313"></a><span class="lineno">  313</span>&#160;</div>
+<div class="line"><a name="l00314"></a><span class="lineno">  314</span>&#160;    <a class="code" href="classStelSkyLayerMgr.html">StelSkyLayerMgr</a>* skyImageMgr;</div>
 <div class="line"><a name="l00315"></a><span class="lineno">  315</span>&#160;</div>
-<div class="line"><a name="l00316"></a><span class="lineno">  316</span>&#160;</div>
-<div class="line"><a name="l00317"></a><span class="lineno">  317</span>&#160;</div>
-<div class="line"><a name="l00318"></a><span class="lineno">  318</span>&#160;    <a class="code" href="classStelGuiBase.html">StelGuiBase</a>* stelGui;</div>
-<div class="line"><a name="l00319"></a><span class="lineno">  319</span>&#160;    </div>
-<div class="line"><a name="l00320"></a><span class="lineno">  320</span>&#160;    <span class="comment">// Store the ratio between real device pixel in &quot;Device Independent Pixel&quot;</span></div>
-<div class="line"><a name="l00321"></a><span class="lineno">  321</span>&#160;    <span class="comment">// Usually this value is 1, but for a mac with retina screen this will be value 2.</span></div>
-<div class="line"><a name="l00322"></a><span class="lineno">  322</span>&#160;    <span class="keywordtype">float</span> devicePixelsPerPixel;</div>
+<div class="line"><a name="l00316"></a><span class="lineno">  316</span>&#160;<span class="preprocessor">#ifndef DISABLE_SCRIPTING</span></div>
+<div class="line"><a name="l00317"></a><span class="lineno">  317</span>&#160;    <span class="comment">// The script API proxy object (for bridging threads)</span></div>
+<div class="line"><a name="l00318"></a><span class="lineno">  318</span>&#160;    <a class="code" href="classStelMainScriptAPIProxy.html">StelMainScriptAPIProxy</a>* scriptAPIProxy;</div>
+<div class="line"><a name="l00319"></a><span class="lineno">  319</span>&#160;</div>
+<div class="line"><a name="l00320"></a><span class="lineno">  320</span>&#160;    <span class="comment">// The script manager based on Qt script engine</span></div>
+<div class="line"><a name="l00321"></a><span class="lineno">  321</span>&#160;    <a class="code" href="classStelScriptMgr.html">StelScriptMgr</a>* scriptMgr;</div>
+<div class="line"><a name="l00322"></a><span class="lineno">  322</span>&#160;<span class="preprocessor">#endif</span></div>
 <div class="line"><a name="l00323"></a><span class="lineno">  323</span>&#160;</div>
-<div class="line"><a name="l00324"></a><span class="lineno">  324</span>&#160;    <span class="comment">// The scaling ratio to apply on all display elements, like GUI, text etc..</span></div>
-<div class="line"><a name="l00325"></a><span class="lineno">  325</span>&#160;    <span class="keywordtype">float</span> globalScalingRatio;</div>
-<div class="line"><a name="l00326"></a><span class="lineno">  326</span>&#160;    </div>
-<div class="line"><a name="l00327"></a><span class="lineno">  327</span>&#160;    <span class="comment">// Used to collect wheel events</span></div>
-<div class="line"><a name="l00328"></a><span class="lineno">  328</span>&#160;    QTimer * wheelEventTimer;</div>
-<div class="line"><a name="l00329"></a><span class="lineno">  329</span>&#160;</div>
-<div class="line"><a name="l00330"></a><span class="lineno">  330</span>&#160;    <span class="comment">// Accumulated horizontal and vertical wheel event deltas</span></div>
-<div class="line"><a name="l00331"></a><span class="lineno">  331</span>&#160;    <span class="keywordtype">int</span> wheelEventDelta[2];</div>
-<div class="line"><a name="l00332"></a><span class="lineno">  332</span>&#160;</div>
-<div class="line"><a name="l00333"></a><span class="lineno">  333</span>&#160;    <span class="keywordtype">float</span> fps;</div>
-<div class="line"><a name="l00334"></a><span class="lineno">  334</span>&#160;    <span class="keywordtype">int</span> frame;</div>
-<div class="line"><a name="l00335"></a><span class="lineno">  335</span>&#160;    <span class="keywordtype">double</span> timefr, timeBase;        <span class="comment">// Used for fps counter</span></div>
-<div class="line"><a name="l00336"></a><span class="lineno">  336</span>&#160;</div>
-<div class="line"><a name="l00338"></a><span class="lineno">  338</span>&#160;    <span class="keywordtype">bool</span> flagNightVision;</div>
-<div class="line"><a name="l00339"></a><span class="lineno">  339</span>&#160;</div>
-<div class="line"><a name="l00340"></a><span class="lineno">  340</span>&#160;    QSettings* confSettings;</div>
-<div class="line"><a name="l00341"></a><span class="lineno">  341</span>&#160;</div>
-<div class="line"><a name="l00342"></a><span class="lineno">  342</span>&#160;    <span class="comment">// Define whether the StelApp instance has completed initialization</span></div>
-<div class="line"><a name="l00343"></a><span class="lineno">  343</span>&#160;    <span class="keywordtype">bool</span> initialized;</div>
+<div class="line"><a name="l00324"></a><span class="lineno">  324</span>&#160;</div>
+<div class="line"><a name="l00325"></a><span class="lineno">  325</span>&#160;</div>
+<div class="line"><a name="l00326"></a><span class="lineno">  326</span>&#160;    <a class="code" href="classStelGuiBase.html">StelGuiBase</a>* stelGui;</div>
+<div class="line"><a name="l00327"></a><span class="lineno">  327</span>&#160;    </div>
+<div class="line"><a name="l00328"></a><span class="lineno">  328</span>&#160;    <span class="comment">// Store the ratio between real device pixel in &quot;Device Independent Pixel&quot;</span></div>
+<div class="line"><a name="l00329"></a><span class="lineno">  329</span>&#160;    <span class="comment">// Usually this value is 1, but for a mac with retina screen this will be value 2.</span></div>
+<div class="line"><a name="l00330"></a><span class="lineno">  330</span>&#160;    <span class="keywordtype">float</span> devicePixelsPerPixel;</div>
+<div class="line"><a name="l00331"></a><span class="lineno">  331</span>&#160;</div>
+<div class="line"><a name="l00332"></a><span class="lineno">  332</span>&#160;    <span class="comment">// The scaling ratio to apply on all display elements, like GUI, text etc..</span></div>
+<div class="line"><a name="l00333"></a><span class="lineno">  333</span>&#160;    <span class="keywordtype">float</span> globalScalingRatio;</div>
+<div class="line"><a name="l00334"></a><span class="lineno">  334</span>&#160;    </div>
+<div class="line"><a name="l00335"></a><span class="lineno">  335</span>&#160;    <span class="comment">// Used to collect wheel events</span></div>
+<div class="line"><a name="l00336"></a><span class="lineno">  336</span>&#160;    QTimer * wheelEventTimer;</div>
+<div class="line"><a name="l00337"></a><span class="lineno">  337</span>&#160;</div>
+<div class="line"><a name="l00338"></a><span class="lineno">  338</span>&#160;    <span class="comment">// Accumulated horizontal and vertical wheel event deltas</span></div>
+<div class="line"><a name="l00339"></a><span class="lineno">  339</span>&#160;    <span class="keywordtype">int</span> wheelEventDelta[2];</div>
+<div class="line"><a name="l00340"></a><span class="lineno">  340</span>&#160;</div>
+<div class="line"><a name="l00341"></a><span class="lineno">  341</span>&#160;    <span class="keywordtype">float</span> fps;</div>
+<div class="line"><a name="l00342"></a><span class="lineno">  342</span>&#160;    <span class="keywordtype">int</span> frame;</div>
+<div class="line"><a name="l00343"></a><span class="lineno">  343</span>&#160;    <span class="keywordtype">double</span> timefr, timeBase;        <span class="comment">// Used for fps counter</span></div>
 <div class="line"><a name="l00344"></a><span class="lineno">  344</span>&#160;</div>
-<div class="line"><a name="l00345"></a><span class="lineno">  345</span>&#160;    <span class="keyword">static</span> qint64 startMSecs;</div>
-<div class="line"><a name="l00346"></a><span class="lineno">  346</span>&#160;    <span class="keyword">static</span> <span class="keywordtype">float</span> animationScale;</div>
+<div class="line"><a name="l00346"></a><span class="lineno">  346</span>&#160;    <span class="keywordtype">bool</span> flagNightVision;</div>
 <div class="line"><a name="l00347"></a><span class="lineno">  347</span>&#160;</div>
-<div class="line"><a name="l00348"></a><span class="lineno">  348</span>&#160;    <span class="comment">// Temporary variables used to store the last gl window resize</span></div>
-<div class="line"><a name="l00349"></a><span class="lineno">  349</span>&#160;    <span class="comment">// if the core was not yet initialized</span></div>
-<div class="line"><a name="l00350"></a><span class="lineno">  350</span>&#160;    <span class="keywordtype">int</span> saveProjW;</div>
-<div class="line"><a name="l00351"></a><span class="lineno">  351</span>&#160;    <span class="keywordtype">int</span> saveProjH;</div>
+<div class="line"><a name="l00348"></a><span class="lineno">  348</span>&#160;    QSettings* confSettings;</div>
+<div class="line"><a name="l00349"></a><span class="lineno">  349</span>&#160;</div>
+<div class="line"><a name="l00350"></a><span class="lineno">  350</span>&#160;    <span class="comment">// Define whether the StelApp instance has completed initialization</span></div>
+<div class="line"><a name="l00351"></a><span class="lineno">  351</span>&#160;    <span class="keywordtype">bool</span> initialized;</div>
 <div class="line"><a name="l00352"></a><span class="lineno">  352</span>&#160;</div>
-<div class="line"><a name="l00354"></a><span class="lineno">  354</span>&#160;    <span class="keywordtype">int</span> nbDownloadedFiles;</div>
-<div class="line"><a name="l00356"></a><span class="lineno">  356</span>&#160;    qint64 totalDownloadedSize;</div>
-<div class="line"><a name="l00357"></a><span class="lineno">  357</span>&#160;</div>
-<div class="line"><a name="l00359"></a><span class="lineno">  359</span>&#160;    <span class="keywordtype">int</span> nbUsedCache;</div>
-<div class="line"><a name="l00361"></a><span class="lineno">  361</span>&#160;    qint64 totalUsedCacheSize;</div>
-<div class="line"><a name="l00362"></a><span class="lineno">  362</span>&#160;</div>
-<div class="line"><a name="l00363"></a><span class="lineno">  363</span>&#160;    QList&lt;StelProgressController*&gt; progressControllers;</div>
-<div class="line"><a name="l00364"></a><span class="lineno">  364</span>&#160;</div>
-<div class="line"><a name="l00365"></a><span class="lineno">  365</span>&#160;    <span class="keywordtype">int</span> baseFontSize;</div>
-<div class="line"><a name="l00366"></a><span class="lineno">  366</span>&#160;</div>
-<div class="line"><a name="l00367"></a><span class="lineno">  367</span>&#160;    <span class="comment">// Framebuffer object used for viewport effects.</span></div>
-<div class="line"><a name="l00368"></a><span class="lineno">  368</span>&#160;    QOpenGLFramebufferObject* renderBuffer;</div>
-<div class="line"><a name="l00369"></a><span class="lineno">  369</span>&#160;</div>
-<div class="line"><a name="l00370"></a><span class="lineno">  370</span>&#160;    <a class="code" href="classStelViewportEffect.html">StelViewportEffect</a>* viewportEffect;</div>
-<div class="line"><a name="l00371"></a><span class="lineno">  371</span>&#160;    </div>
-<div class="line"><a name="l00372"></a><span class="lineno">  372</span>&#160;    <span class="keywordtype">bool</span> flagShowDecimalDegrees;</div>
-<div class="line"><a name="l00373"></a><span class="lineno">  373</span>&#160;    <span class="comment">// flag to indicate we want calculate azimuth from south towards west (as in old astronomical literature)</span></div>
-<div class="line"><a name="l00374"></a><span class="lineno">  374</span>&#160;    <span class="keywordtype">bool</span> flagUseAzimuthFromSouth;</div>
-<div class="line"><a name="l00375"></a><span class="lineno">  375</span>&#160;</div>
-<div class="line"><a name="l00376"></a><span class="lineno">  376</span>&#160;};</div>
+<div class="line"><a name="l00353"></a><span class="lineno">  353</span>&#160;    <span class="keyword">static</span> qint64 startMSecs;</div>
+<div class="line"><a name="l00354"></a><span class="lineno">  354</span>&#160;    <span class="keyword">static</span> <span class="keywordtype">float</span> animationScale;</div>
+<div class="line"><a name="l00355"></a><span class="lineno">  355</span>&#160;</div>
+<div class="line"><a name="l00356"></a><span class="lineno">  356</span>&#160;    <span class="comment">// Temporary variables used to store the last gl window resize</span></div>
+<div class="line"><a name="l00357"></a><span class="lineno">  357</span>&#160;    <span class="comment">// if the core was not yet initialized</span></div>
+<div class="line"><a name="l00358"></a><span class="lineno">  358</span>&#160;    <span class="keywordtype">int</span> saveProjW;</div>
+<div class="line"><a name="l00359"></a><span class="lineno">  359</span>&#160;    <span class="keywordtype">int</span> saveProjH;</div>
+<div class="line"><a name="l00360"></a><span class="lineno">  360</span>&#160;</div>
+<div class="line"><a name="l00362"></a><span class="lineno">  362</span>&#160;    <span class="keywordtype">int</span> nbDownloadedFiles;</div>
+<div class="line"><a name="l00364"></a><span class="lineno">  364</span>&#160;    qint64 totalDownloadedSize;</div>
+<div class="line"><a name="l00365"></a><span class="lineno">  365</span>&#160;</div>
+<div class="line"><a name="l00367"></a><span class="lineno">  367</span>&#160;    <span class="keywordtype">int</span> nbUsedCache;</div>
+<div class="line"><a name="l00369"></a><span class="lineno">  369</span>&#160;    qint64 totalUsedCacheSize;</div>
+<div class="line"><a name="l00370"></a><span class="lineno">  370</span>&#160;</div>
+<div class="line"><a name="l00371"></a><span class="lineno">  371</span>&#160;    QList&lt;StelProgressController*&gt; progressControllers;</div>
+<div class="line"><a name="l00372"></a><span class="lineno">  372</span>&#160;</div>
+<div class="line"><a name="l00373"></a><span class="lineno">  373</span>&#160;    <span class="keywordtype">int</span> baseFontSize;</div>
+<div class="line"><a name="l00374"></a><span class="lineno">  374</span>&#160;</div>
+<div class="line"><a name="l00375"></a><span class="lineno">  375</span>&#160;    <span class="comment">// Framebuffer object used for viewport effects.</span></div>
+<div class="line"><a name="l00376"></a><span class="lineno">  376</span>&#160;    QOpenGLFramebufferObject* renderBuffer;</div>
 <div class="line"><a name="l00377"></a><span class="lineno">  377</span>&#160;</div>
-<div class="line"><a name="l00378"></a><span class="lineno">  378</span>&#160;<span class="preprocessor">#endif // _STELAPP_HPP_</span></div>
+<div class="line"><a name="l00378"></a><span class="lineno">  378</span>&#160;    <a class="code" href="classStelViewportEffect.html">StelViewportEffect</a>* viewportEffect;</div>
+<div class="line"><a name="l00379"></a><span class="lineno">  379</span>&#160;    </div>
+<div class="line"><a name="l00380"></a><span class="lineno">  380</span>&#160;    <span class="keywordtype">bool</span> flagShowDecimalDegrees;</div>
+<div class="line"><a name="l00381"></a><span class="lineno">  381</span>&#160;    <span class="comment">// flag to indicate we want calculate azimuth from south towards west (as in old astronomical literature)</span></div>
+<div class="line"><a name="l00382"></a><span class="lineno">  382</span>&#160;    <span class="keywordtype">bool</span> flagUseAzimuthFromSouth;</div>
+<div class="line"><a name="l00383"></a><span class="lineno">  383</span>&#160;</div>
+<div class="line"><a name="l00384"></a><span class="lineno">  384</span>&#160;};</div>
+<div class="line"><a name="l00385"></a><span class="lineno">  385</span>&#160;</div>
+<div class="line"><a name="l00386"></a><span class="lineno">  386</span>&#160;<span class="preprocessor">#endif // _STELAPP_HPP_</span></div>
 <div class="ttc" id="classStelSkyLayerMgr_html"><div class="ttname"><a href="classStelSkyLayerMgr.html">StelSkyLayerMgr</a></div><div class="ttdoc">Manage the sky background images, including DSS and deep sky objects images. </div><div class="ttdef"><b>Definition:</b> <a href="StelSkyLayerMgr_8hpp_source.html#l00033">StelSkyLayerMgr.hpp:33</a></div></div>
+<div class="ttc" id="classStelApp_html_a9c9c9422b35dd10185bb0538882f11ee"><div class="ttname"><a href="classStelApp.html#a9c9c9422b35dd10185bb0538882f11ee">StelApp::setFlagSouthAzimuthUsage</a></div><div class="ttdeci">void setFlagSouthAzimuthUsage(bool use)</div><div class="ttdoc">Get flag for using calculation of azimuth from south towards west (instead north towards east) ...</div><div class="ttdef"><b>Definition:</b> <a href="StelApp_8hpp_source.html#l00220">StelApp.hpp:220</a></div></div>
 <div class="ttc" id="classStelApp_html_abd2dd9d5a13790de767c3d9e2a956d7d"><div class="ttname"><a href="classStelApp.html#abd2dd9d5a13790de767c3d9e2a956d7d">StelApp::getScriptMgr</a></div><div class="ttdeci">StelScriptMgr &amp; getScriptMgr()</div><div class="ttdoc">Get the script manager. </div><div class="ttdef"><b>Definition:</b> <a href="StelApp_8hpp_source.html#l00185">StelApp.hpp:185</a></div></div>
 <div class="ttc" id="classStelApp_html_a0fb6f51087b1b0e527da8ba32a416809"><div class="ttname"><a href="classStelApp.html#a0fb6f51087b1b0e527da8ba32a416809">StelApp::getLocationMgr</a></div><div class="ttdeci">StelLocationMgr &amp; getLocationMgr()</div><div class="ttdoc">Get the Location manager to use for managing stored locations. </div><div class="ttdef"><b>Definition:</b> <a href="StelApp_8hpp_source.html#l00112">StelApp.hpp:112</a></div></div>
 <div class="ttc" id="classStelApp_html_aabdee5e65034bb0f741285570713f14e"><div class="ttname"><a href="classStelApp.html#aabdee5e65034bb0f741285570713f14e">StelApp::getStelVideoMgr</a></div><div class="ttdeci">StelVideoMgr * getStelVideoMgr()</div><div class="ttdoc">Get the video manager. </div><div class="ttdef"><b>Definition:</b> <a href="StelApp_8hpp_source.html#l00127">StelApp.hpp:127</a></div></div>
 <div class="ttc" id="classStelApp_html_a77d8216917b53cf1f75a8592c6497b86"><div class="ttname"><a href="classStelApp.html#a77d8216917b53cf1f75a8592c6497b86">StelApp::getFlagShowDecimalDegrees</a></div><div class="ttdeci">bool getFlagShowDecimalDegrees() const </div><div class="ttdoc">Get flag for showing decimal degree in various places. </div><div class="ttdef"><b>Definition:</b> <a href="StelApp_8hpp_source.html#l00215">StelApp.hpp:215</a></div></div>
+<div class="ttc" id="classStelVideoMgr_html"><div class="ttname"><a href="classStelVideoMgr.html">StelVideoMgr</a></div><div class="ttdoc">A scriptable way to show videos embedded in the screen. </div><div class="ttdef"><b>Definition:</b> <a href="StelVideoMgr_8hpp_source.html#l00096">StelVideoMgr.hpp:96</a></div></div>
 <div class="ttc" id="classStelApp_html_ad50a11d9faf8e114b234dd781f2ad34c"><div class="ttname"><a href="classStelApp.html#ad50a11d9faf8e114b234dd781f2ad34c">StelApp::reportFileDownloadFinished</a></div><div class="ttdeci">void reportFileDownloadFinished(QNetworkReply *reply)</div><div class="ttdoc">Report that a download occured. </div></div>
-<div class="ttc" id="classStelApp_html_a0fa1459a00f27f6a689bf48eba389d4f"><div class="ttname"><a href="classStelApp.html#a0fa1459a00f27f6a689bf48eba389d4f">StelApp::getFlagOldAzimuthUsage</a></div><div class="ttdeci">bool getFlagOldAzimuthUsage() const </div><div class="ttdoc">Set flag for using calculation of azimuth from south towards west (as in old astronomical literature)...</div><div class="ttdef"><b>Definition:</b> <a href="StelApp_8hpp_source.html#l00218">StelApp.hpp:218</a></div></div>
+<div class="ttc" id="classStelApp_html_ae60f01638def3931c588f1cdf05f1cc7"><div class="ttname"><a href="classStelApp.html#ae60f01638def3931c588f1cdf05f1cc7">StelApp::getFlagSouthAzimuthUsage</a></div><div class="ttdeci">bool getFlagSouthAzimuthUsage() const </div><div class="ttdoc">Set flag for using calculation of azimuth from south towards west (instead north towards east) ...</div><div class="ttdef"><b>Definition:</b> <a href="StelApp_8hpp_source.html#l00218">StelApp.hpp:218</a></div></div>
+<div class="ttc" id="classStelApp_html_a0fa1459a00f27f6a689bf48eba389d4f"><div class="ttname"><a href="classStelApp.html#a0fa1459a00f27f6a689bf48eba389d4f">StelApp::getFlagOldAzimuthUsage</a></div><div class="ttdeci">bool getFlagOldAzimuthUsage() const </div><div class="ttdoc">Set flag for using calculation of azimuth from south towards west (as in older astronomical literatur...</div><div class="ttdef"><b>Definition:</b> <a href="StelApp_8hpp_source.html#l00224">StelApp.hpp:224</a></div></div>
 <div class="ttc" id="classStelApp_html_a0696bf2e90feb6e62e63848433ad50e9"><div class="ttname"><a href="classStelApp.html#a0696bf2e90feb6e62e63848433ad50e9">StelApp::getBaseFontSize</a></div><div class="ttdeci">int getBaseFontSize() const </div><div class="ttdoc">Get the size of font. </div><div class="ttdef"><b>Definition:</b> <a href="StelApp_8hpp_source.html#l00172">StelApp.hpp:172</a></div></div>
-<div class="ttc" id="classStelApp_html_aba8893c9b0a6e1349aa1e290af43ed51"><div class="ttname"><a href="classStelApp.html#aba8893c9b0a6e1349aa1e290af43ed51">StelApp::setFlagOldAzimuthUsage</a></div><div class="ttdeci">void setFlagOldAzimuthUsage(bool use)</div><div class="ttdoc">Get flag for using calculation of azimuth from south towards west (as in old astronomical literature)...</div><div class="ttdef"><b>Definition:</b> <a href="StelApp_8hpp_source.html#l00220">StelApp.hpp:220</a></div></div>
-<div class="ttc" id="classStelApp_html_ae5146fd7f30499436c6ccc8fabfed328"><div class="ttname"><a href="classStelApp.html#ae5146fd7f30499436c6ccc8fabfed328">StelApp::getFps</a></div><div class="ttdeci">float getFps() const </div><div class="ttdoc">Get the current number of frame per second. </div><div class="ttdef"><b>Definition:</b> <a href="StelApp_8hpp_source.html#l00224">StelApp.hpp:224</a></div></div>
+<div class="ttc" id="classStelApp_html_aba8893c9b0a6e1349aa1e290af43ed51"><div class="ttname"><a href="classStelApp.html#aba8893c9b0a6e1349aa1e290af43ed51">StelApp::setFlagOldAzimuthUsage</a></div><div class="ttdeci">void setFlagOldAzimuthUsage(bool use)</div><div class="ttdoc">Get flag for using calculation of azimuth from south towards west (as in older astronomical literatur...</div><div class="ttdef"><b>Definition:</b> <a href="StelApp_8hpp_source.html#l00227">StelApp.hpp:227</a></div></div>
+<div class="ttc" id="classStelApp_html_ae5146fd7f30499436c6ccc8fabfed328"><div class="ttname"><a href="classStelApp.html#ae5146fd7f30499436c6ccc8fabfed328">StelApp::getFps</a></div><div class="ttdeci">float getFps() const </div><div class="ttdoc">Get the current number of frame per second. </div><div class="ttdef"><b>Definition:</b> <a href="StelApp_8hpp_source.html#l00232">StelApp.hpp:232</a></div></div>
 <div class="ttc" id="classStelApp_html_aa59882d68d2212faa542a62ac79b6873"><div class="ttname"><a href="classStelApp.html#aa59882d68d2212faa542a62ac79b6873">StelApp::progressBarRemoved</a></div><div class="ttdeci">void progressBarRemoved(const StelProgressController *)</div><div class="ttdoc">Called just before a progress bar is removed. </div></div>
 <div class="ttc" id="classStelApp_html_a7b56a22e175a447b3e5af0d79dc81fd3"><div class="ttname"><a href="classStelApp.html#a7b56a22e175a447b3e5af0d79dc81fd3">StelApp::initScriptMgr</a></div><div class="ttdeci">void initScriptMgr()</div><div class="ttdoc">Registers all loaded StelModules with the ScriptMgr, and queues starting of the startup script...</div></div>
 <div class="ttc" id="classStelApp_html_a34b06ad4a51824cc677a3b67dcfd848b"><div class="ttname"><a href="classStelApp.html#a34b06ad4a51824cc677a3b67dcfd848b">StelApp::updateSkyCulture</a></div><div class="ttdeci">void updateSkyCulture()</div><div class="ttdoc">Update and reload sky culture informations everywhere in the program. </div></div>
@@ -404,7 +410,7 @@
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Thu Feb 25 2016 14:16:07 for Stellarium by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Sat Feb 27 2016 22:03:10 for Stellarium by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.8
 </small></address>

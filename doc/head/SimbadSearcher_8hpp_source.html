@@ -33,7 +33,6 @@
       <li><a href="scripting.html"><span>Scripting</span></a></li>
       <li><a href="plugins.html"><span>Plugins</span></a></li>
       <li><a href="fileStructure.html"><span>File&#160;Structure</span></a></li>
-      <li><a href="examples.html"><span>Examples</span></a></li>
     </ul>
   </div>
   <div id="navrow2" class="tabs2">
@@ -83,27 +82,27 @@
 <div class="line"><a name="l00032"></a><span class="lineno"><a class="line" href="classSimbadLookupReply.html">   32</a></span>&#160;<span class="keyword">class </span><a class="code" href="classSimbadLookupReply.html">SimbadLookupReply</a> : <span class="keyword">public</span> QObject</div>
 <div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;{</div>
 <div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;    Q_OBJECT</div>
-<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;    Q_ENUMS(SimbadLookupStatus)</div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;    Q_ENUMS(<a class="code" href="classSimbadLookupReply.html#a10dcaaf795c7f5be51941c3d3c8cf95d">SimbadLookupStatus</a>)</div>
 <div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;</div>
-<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;<span class="keyword">public</span>:</div>
-<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;    <span class="keyword">friend</span> <span class="keyword">class </span><a class="code" href="classSimbadSearcher.html">SimbadSearcher</a>;</div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;    <span class="keyword">friend</span> <span class="keyword">class </span><a class="code" href="classSimbadSearcher.html">SimbadSearcher</a>;</div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;<span class="keyword">public</span>:</div>
 <div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;</div>
-<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;    <span class="keyword">enum</span> SimbadLookupStatus</div>
+<div class="line"><a name="l00041"></a><span class="lineno"><a class="line" href="classSimbadLookupReply.html#a10dcaaf795c7f5be51941c3d3c8cf95d">   41</a></span>&#160;    <span class="keyword">enum</span> <a class="code" href="classSimbadLookupReply.html#a10dcaaf795c7f5be51941c3d3c8cf95d">SimbadLookupStatus</a></div>
 <div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;    {</div>
-<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;        SimbadLookupQuerying,       </div>
-<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;        SimbadLookupErrorOccured,   </div>
-<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;        SimbadLookupFinished        </div>
+<div class="line"><a name="l00043"></a><span class="lineno"><a class="line" href="classSimbadLookupReply.html#a10dcaaf795c7f5be51941c3d3c8cf95da78cf7729a195758cd6e3c300ce08f3cf">   43</a></span>&#160;        <a class="code" href="classSimbadLookupReply.html#a10dcaaf795c7f5be51941c3d3c8cf95da78cf7729a195758cd6e3c300ce08f3cf">SimbadLookupQuerying</a>,       </div>
+<div class="line"><a name="l00044"></a><span class="lineno"><a class="line" href="classSimbadLookupReply.html#a10dcaaf795c7f5be51941c3d3c8cf95da0db97d98254422ef8fbd82674ab2e187">   44</a></span>&#160;        <a class="code" href="classSimbadLookupReply.html#a10dcaaf795c7f5be51941c3d3c8cf95da0db97d98254422ef8fbd82674ab2e187">SimbadLookupErrorOccured</a>,   </div>
+<div class="line"><a name="l00045"></a><span class="lineno"><a class="line" href="classSimbadLookupReply.html#a10dcaaf795c7f5be51941c3d3c8cf95daf8c5871017a2440200b27763227113da">   45</a></span>&#160;        <a class="code" href="classSimbadLookupReply.html#a10dcaaf795c7f5be51941c3d3c8cf95daf8c5871017a2440200b27763227113da">SimbadLookupFinished</a>        </div>
 <div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;    };</div>
 <div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;</div>
 <div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;    ~<a class="code" href="classSimbadLookupReply.html">SimbadLookupReply</a>();</div>
 <div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;</div>
-<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;    QMap&lt;QString, Vec3d&gt; getResults()<span class="keyword"> const </span>{<span class="keywordflow">return</span> resultPositions;}</div>
+<div class="line"><a name="l00051"></a><span class="lineno"><a class="line" href="classSimbadLookupReply.html#a91e9a835c974052b5059347cfa4c0f11">   51</a></span>&#160;    QMap&lt;QString, Vec3d&gt; <a class="code" href="classSimbadLookupReply.html#a91e9a835c974052b5059347cfa4c0f11">getResults</a>()<span class="keyword"> const </span>{<span class="keywordflow">return</span> resultPositions;}</div>
 <div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;</div>
-<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;    SimbadLookupStatus getCurrentStatus()<span class="keyword"> const </span>{<span class="keywordflow">return</span> currentStatus;}</div>
+<div class="line"><a name="l00054"></a><span class="lineno"><a class="line" href="classSimbadLookupReply.html#ad1123432424cf3ad42016a0f33298e04">   54</a></span>&#160;    <a class="code" href="classSimbadLookupReply.html#a10dcaaf795c7f5be51941c3d3c8cf95d">SimbadLookupStatus</a> <a class="code" href="classSimbadLookupReply.html#ad1123432424cf3ad42016a0f33298e04">getCurrentStatus</a>()<span class="keyword"> const </span>{<span class="keywordflow">return</span> currentStatus;}</div>
 <div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;</div>
-<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;    QString getCurrentStatusString() <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;    QString <a class="code" href="classSimbadLookupReply.html#ab7b3fd2d0e3d6614112faece395c1bd7">getCurrentStatusString</a>() <span class="keyword">const</span>;</div>
 <div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;</div>
-<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;    QString getErrorString()<span class="keyword"> const </span>{<span class="keywordflow">return</span> errorString;}</div>
+<div class="line"><a name="l00060"></a><span class="lineno"><a class="line" href="classSimbadLookupReply.html#ad800abaae7eded4b53cf5448c19246c1">   60</a></span>&#160;    QString <a class="code" href="classSimbadLookupReply.html#ad800abaae7eded4b53cf5448c19246c1">getErrorString</a>()<span class="keyword"> const </span>{<span class="keywordflow">return</span> errorString;}</div>
 <div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;</div>
 <div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;signals:</div>
 <div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classSimbadLookupReply.html#a8ad43ac32879e6a8d6f5cd6caa15dcc0">statusChanged</a>();</div>
@@ -122,7 +121,7 @@
 <div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;</div>
 <div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;    QMap&lt;QString, Vec3d&gt; resultPositions;</div>
 <div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;</div>
-<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;    SimbadLookupStatus currentStatus;</div>
+<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;    <a class="code" href="classSimbadLookupReply.html#a10dcaaf795c7f5be51941c3d3c8cf95d">SimbadLookupStatus</a> currentStatus;</div>
 <div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;</div>
 <div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;    QString errorString;</div>
 <div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;};</div>
@@ -142,14 +141,22 @@
 <div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160;};</div>
 <div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160;</div>
 <div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160;<span class="preprocessor">#endif </span><span class="comment">/*SIMBADSEARCHER_HPP_*/</span><span class="preprocessor"></span></div>
+<div class="ttc" id="classSimbadLookupReply_html_a10dcaaf795c7f5be51941c3d3c8cf95da78cf7729a195758cd6e3c300ce08f3cf"><div class="ttname"><a href="classSimbadLookupReply.html#a10dcaaf795c7f5be51941c3d3c8cf95da78cf7729a195758cd6e3c300ce08f3cf">SimbadLookupReply::SimbadLookupQuerying</a></div><div class="ttdoc">Simbad is still being queried. </div><div class="ttdef"><b>Definition:</b> <a href="SimbadSearcher_8hpp_source.html#l00043">SimbadSearcher.hpp:43</a></div></div>
+<div class="ttc" id="classSimbadLookupReply_html_ad800abaae7eded4b53cf5448c19246c1"><div class="ttname"><a href="classSimbadLookupReply.html#ad800abaae7eded4b53cf5448c19246c1">SimbadLookupReply::getErrorString</a></div><div class="ttdeci">QString getErrorString() const </div><div class="ttdoc">Get the error descrition string. Return empty string if no error occured. </div><div class="ttdef"><b>Definition:</b> <a href="SimbadSearcher_8hpp_source.html#l00060">SimbadSearcher.hpp:60</a></div></div>
 <div class="ttc" id="classSimbadLookupReply_html_a8ad43ac32879e6a8d6f5cd6caa15dcc0"><div class="ttname"><a href="classSimbadLookupReply.html#a8ad43ac32879e6a8d6f5cd6caa15dcc0">SimbadLookupReply::statusChanged</a></div><div class="ttdeci">void statusChanged()</div><div class="ttdoc">Triggered when the lookup status change. </div></div>
+<div class="ttc" id="classSimbadLookupReply_html_a10dcaaf795c7f5be51941c3d3c8cf95daf8c5871017a2440200b27763227113da"><div class="ttname"><a href="classSimbadLookupReply.html#a10dcaaf795c7f5be51941c3d3c8cf95daf8c5871017a2440200b27763227113da">SimbadLookupReply::SimbadLookupFinished</a></div><div class="ttdoc">The query is over. The reply can be deleted. </div><div class="ttdef"><b>Definition:</b> <a href="SimbadSearcher_8hpp_source.html#l00045">SimbadSearcher.hpp:45</a></div></div>
 <div class="ttc" id="classSimbadLookupReply_html"><div class="ttname"><a href="classSimbadLookupReply.html">SimbadLookupReply</a></div><div class="ttdoc">Contains all the information about a current simbad lookup query. </div><div class="ttdef"><b>Definition:</b> <a href="SimbadSearcher_8hpp_source.html#l00032">SimbadSearcher.hpp:32</a></div></div>
+<div class="ttc" id="classSimbadLookupReply_html_a10dcaaf795c7f5be51941c3d3c8cf95da0db97d98254422ef8fbd82674ab2e187"><div class="ttname"><a href="classSimbadLookupReply.html#a10dcaaf795c7f5be51941c3d3c8cf95da0db97d98254422ef8fbd82674ab2e187">SimbadLookupReply::SimbadLookupErrorOccured</a></div><div class="ttdoc">An error occured while looking up Simbad. Call getErrorString() for a description of the error...</div><div class="ttdef"><b>Definition:</b> <a href="SimbadSearcher_8hpp_source.html#l00044">SimbadSearcher.hpp:44</a></div></div>
+<div class="ttc" id="classSimbadLookupReply_html_ad1123432424cf3ad42016a0f33298e04"><div class="ttname"><a href="classSimbadLookupReply.html#ad1123432424cf3ad42016a0f33298e04">SimbadLookupReply::getCurrentStatus</a></div><div class="ttdeci">SimbadLookupStatus getCurrentStatus() const </div><div class="ttdoc">Get the current status. </div><div class="ttdef"><b>Definition:</b> <a href="SimbadSearcher_8hpp_source.html#l00054">SimbadSearcher.hpp:54</a></div></div>
+<div class="ttc" id="classSimbadLookupReply_html_ab7b3fd2d0e3d6614112faece395c1bd7"><div class="ttname"><a href="classSimbadLookupReply.html#ab7b3fd2d0e3d6614112faece395c1bd7">SimbadLookupReply::getCurrentStatusString</a></div><div class="ttdeci">QString getCurrentStatusString() const </div><div class="ttdoc">Get a I18n string describing the current status. It can be used e.g for reporting in widgets...</div></div>
 <div class="ttc" id="classSimbadSearcher_html"><div class="ttname"><a href="classSimbadSearcher.html">SimbadSearcher</a></div><div class="ttdoc">Provides lookup features into the online Simbad service from CDS. </div><div class="ttdef"><b>Definition:</b> <a href="SimbadSearcher_8hpp_source.html#l00094">SimbadSearcher.hpp:94</a></div></div>
+<div class="ttc" id="classSimbadLookupReply_html_a91e9a835c974052b5059347cfa4c0f11"><div class="ttname"><a href="classSimbadLookupReply.html#a91e9a835c974052b5059347cfa4c0f11">SimbadLookupReply::getResults</a></div><div class="ttdeci">QMap&lt; QString, Vec3d &gt; getResults() const </div><div class="ttdoc">Get the result list of matching objectName/position. </div><div class="ttdef"><b>Definition:</b> <a href="SimbadSearcher_8hpp_source.html#l00051">SimbadSearcher.hpp:51</a></div></div>
+<div class="ttc" id="classSimbadLookupReply_html_a10dcaaf795c7f5be51941c3d3c8cf95d"><div class="ttname"><a href="classSimbadLookupReply.html#a10dcaaf795c7f5be51941c3d3c8cf95d">SimbadLookupReply::SimbadLookupStatus</a></div><div class="ttdeci">SimbadLookupStatus</div><div class="ttdoc">Possible status for a simbad query. </div><div class="ttdef"><b>Definition:</b> <a href="SimbadSearcher_8hpp_source.html#l00041">SimbadSearcher.hpp:41</a></div></div>
 <div class="ttc" id="classSimbadSearcher_html_a3e01b2910aebc675bdf6cd4a182aa945"><div class="ttname"><a href="classSimbadSearcher.html#a3e01b2910aebc675bdf6cd4a182aa945">SimbadSearcher::lookup</a></div><div class="ttdeci">SimbadLookupReply * lookup(const QString &amp;serverUrl, const QString &amp;objectName, int maxNbResult=1, int delayMs=500)</div><div class="ttdoc">Lookup in Simbad for object which have a name starting with objectName. </div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Thu Feb 25 2016 14:16:07 for Stellarium by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Sat Feb 27 2016 22:03:10 for Stellarium by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.8
 </small></address>

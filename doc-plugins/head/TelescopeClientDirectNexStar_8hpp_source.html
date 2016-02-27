@@ -28,6 +28,7 @@
     <ul class="tablist">
       <li><a href="index.html"><span>Main&#160;Page</span></a></li>
       <li><a href="modules.html"><span>Modules</span></a></li>
+      <li><a href="annotated.html"><span>Classes</span></a></li>
       <li><a href="../../doc/"><span>Core&#160;API</span></a></li>
     </ul>
   </div>
@@ -85,14 +86,14 @@
 <div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;<span class="preprocessor">#include &quot;TelescopeClient.hpp&quot;</span> <span class="comment">//from the plug-in&#39;s source tree</span></div>
 <div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;<span class="preprocessor">#include &quot;InterpolatedPosition.hpp&quot;</span></div>
 <div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;</div>
-<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;<span class="keyword">class </span><a class="codeRef" doxygen="/home/aw/devel/stellarium/trunk/builds/gcc/stellariumPlugins.tag:../../doc-plugins/head" href="../../doc-plugins/head/classNexStarConnection.html">NexStarConnection</a>;</div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;<span class="keyword">class </span><a class="code" href="classNexStarConnection.html">NexStarConnection</a>;</div>
 <div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;</div>
-<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;<span class="keyword">class </span><a class="codeRef" doxygen="/home/aw/devel/stellarium/trunk/builds/gcc/stellariumPlugins.tag:../../doc-plugins/head" href="../../doc-plugins/head/classTelescopeClientDirectNexStar.html">TelescopeClientDirectNexStar</a> : <span class="keyword">public</span> <a class="codeRef" doxygen="/home/aw/devel/stellarium/trunk/builds/gcc/stellariumPlugins.tag:../../doc-plugins/head" href="../../doc-plugins/head/classTelescopeClient.html">TelescopeClient</a>, <span class="keyword">public</span> <a class="codeRef" doxygen="/home/aw/devel/stellarium/trunk/builds/gcc/stellariumPlugins.tag:../../doc-plugins/head" href="../../doc-plugins/head/classServer.html">Server</a></div>
+<div class="line"><a name="l00044"></a><span class="lineno"><a class="line" href="classTelescopeClientDirectNexStar.html">   44</a></span>&#160;<span class="keyword">class </span><a class="code" href="classTelescopeClientDirectNexStar.html">TelescopeClientDirectNexStar</a> : <span class="keyword">public</span> <a class="code" href="classTelescopeClient.html">TelescopeClient</a>, <span class="keyword">public</span> <a class="code" href="classServer.html">Server</a></div>
 <div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;{</div>
 <div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;    Q_OBJECT</div>
 <div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;<span class="keyword">public</span>:</div>
-<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;    <a class="codeRef" doxygen="/home/aw/devel/stellarium/trunk/builds/gcc/stellariumPlugins.tag:../../doc-plugins/head" href="../../doc-plugins/head/classTelescopeClientDirectNexStar.html">TelescopeClientDirectNexStar</a>(<span class="keyword">const</span> QString &amp;name, <span class="keyword">const</span> QString &amp;parameters, Equinox eq = EquinoxJ2000);</div>
-<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;    ~<a class="codeRef" doxygen="/home/aw/devel/stellarium/trunk/builds/gcc/stellariumPlugins.tag:../../doc-plugins/head" href="../../doc-plugins/head/classTelescopeClientDirectNexStar.html">TelescopeClientDirectNexStar</a>(<span class="keywordtype">void</span>)</div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;    <a class="code" href="classTelescopeClientDirectNexStar.html">TelescopeClientDirectNexStar</a>(<span class="keyword">const</span> QString &amp;name, <span class="keyword">const</span> QString &amp;parameters, Equinox eq = EquinoxJ2000);</div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;    ~<a class="code" href="classTelescopeClientDirectNexStar.html">TelescopeClientDirectNexStar</a>(<span class="keywordtype">void</span>)</div>
 <div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;    {</div>
 <div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;        <span class="comment">//hangup();</span></div>
 <div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;    }</div>
@@ -127,7 +128,7 @@
 <div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;    <span class="keywordtype">void</span> hangup(<span class="keywordtype">void</span>);</div>
 <div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;    <span class="keywordtype">int</span> time_delay;</div>
 <div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;    </div>
-<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;    <a class="codeRef" doxygen="/home/aw/devel/stellarium/trunk/builds/gcc/stellariumPlugins.tag:../../doc-plugins/head" href="../../doc-plugins/head/classInterpolatedPosition.html">InterpolatedPosition</a> interpolatedPosition;</div>
+<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;    <a class="code" href="classInterpolatedPosition.html">InterpolatedPosition</a> interpolatedPosition;</div>
 <div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;    <span class="keyword">virtual</span> <span class="keywordtype">bool</span> hasKnownPosition(<span class="keywordtype">void</span>)<span class="keyword"> const</span></div>
 <div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;<span class="keyword">    </span>{</div>
 <div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;        <span class="keywordflow">return</span> interpolatedPosition.isKnown();</div>
@@ -137,7 +138,7 @@
 <div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;    </div>
 <div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;    <span class="comment">//======================================================================</span></div>
 <div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;    <span class="comment">// Members taken from ServerNexStar</span></div>
-<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;    <a class="codeRef" doxygen="/home/aw/devel/stellarium/trunk/builds/gcc/stellariumPlugins.tag:../../doc-plugins/head" href="../../doc-plugins/head/classNexStarConnection.html">NexStarConnection</a> *nexstar;</div>
+<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;    <a class="code" href="classNexStarConnection.html">NexStarConnection</a> *nexstar;</div>
 <div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;    </div>
 <div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;    <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> last_ra;</div>
 <div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;    <span class="keywordtype">bool</span> queue_get_position;</div>
@@ -145,16 +146,16 @@
 <div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;};</div>
 <div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;</div>
 <div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;<span class="preprocessor">#endif //_TELESCOPE_CLIENT_DIRECT_LX200_</span></div>
-<div class="ttc" id="classServer_html"><div class="ttname"><a href="../../doc-plugins/head/classServer.html">Server</a></div><div class="ttdoc">Base class for telescope server classes. </div><div class="ttdef"><b>Definition:</b> <a href="Server_8hpp_source.html#l00045">Server.hpp:45</a></div></div>
-<div class="ttc" id="classTelescopeClientDirectNexStar_html"><div class="ttname"><a href="../../doc-plugins/head/classTelescopeClientDirectNexStar.html">TelescopeClientDirectNexStar</a></div><div class="ttdoc">Telescope client that connects directly to a Celestron NexStar through a serial port. </div><div class="ttdef"><b>Definition:</b> <a href="TelescopeClientDirectNexStar_8hpp_source.html#l00044">TelescopeClientDirectNexStar.hpp:44</a></div></div>
-<div class="ttc" id="classTelescopeClient_html"><div class="ttname"><a href="../../doc-plugins/head/classTelescopeClient.html">TelescopeClient</a></div><div class="ttdoc">An abstract base class that should never be used directly, only inherited. </div><div class="ttdef"><b>Definition:</b> <a href="TelescopeClient_8hpp_source.html#l00053">TelescopeClient.hpp:53</a></div></div>
+<div class="ttc" id="classServer_html"><div class="ttname"><a href="classServer.html">Server</a></div><div class="ttdoc">Base class for telescope server classes. </div><div class="ttdef"><b>Definition:</b> <a href="Server_8hpp_source.html#l00045">Server.hpp:45</a></div></div>
+<div class="ttc" id="classTelescopeClientDirectNexStar_html"><div class="ttname"><a href="classTelescopeClientDirectNexStar.html">TelescopeClientDirectNexStar</a></div><div class="ttdoc">Telescope client that connects directly to a Celestron NexStar through a serial port. </div><div class="ttdef"><b>Definition:</b> <a href="TelescopeClientDirectNexStar_8hpp_source.html#l00044">TelescopeClientDirectNexStar.hpp:44</a></div></div>
+<div class="ttc" id="classTelescopeClient_html"><div class="ttname"><a href="classTelescopeClient.html">TelescopeClient</a></div><div class="ttdoc">An abstract base class that should never be used directly, only inherited. </div><div class="ttdef"><b>Definition:</b> <a href="TelescopeClient_8hpp_source.html#l00053">TelescopeClient.hpp:53</a></div></div>
 <div class="ttc" id="classStelCore_html"><div class="ttname"><a href="../../doc/head/classStelCore.html">StelCore</a></div></div>
-<div class="ttc" id="classInterpolatedPosition_html"><div class="ttname"><a href="../../doc-plugins/head/classInterpolatedPosition.html">InterpolatedPosition</a></div><div class="ttdef"><b>Definition:</b> <a href="InterpolatedPosition_8hpp_source.html#l00045">InterpolatedPosition.hpp:45</a></div></div>
-<div class="ttc" id="classNexStarConnection_html"><div class="ttname"><a href="../../doc-plugins/head/classNexStarConnection.html">NexStarConnection</a></div><div class="ttdoc">Serial port connection to a Celestron NexStar or a compatible telescope. </div><div class="ttdef"><b>Definition:</b> <a href="NexStarConnection_8hpp_source.html#l00036">NexStarConnection.hpp:36</a></div></div>
+<div class="ttc" id="classInterpolatedPosition_html"><div class="ttname"><a href="classInterpolatedPosition.html">InterpolatedPosition</a></div><div class="ttdef"><b>Definition:</b> <a href="InterpolatedPosition_8hpp_source.html#l00045">InterpolatedPosition.hpp:45</a></div></div>
+<div class="ttc" id="classNexStarConnection_html"><div class="ttname"><a href="classNexStarConnection.html">NexStarConnection</a></div><div class="ttdoc">Serial port connection to a Celestron NexStar or a compatible telescope. </div><div class="ttdef"><b>Definition:</b> <a href="NexStarConnection_8hpp_source.html#l00036">NexStarConnection.hpp:36</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Thu Feb 25 2016 10:24:59 for Stellarium by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Sat Feb 27 2016 22:02:13 for Stellarium by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.8
 </small></address>

@@ -33,7 +33,6 @@
       <li><a href="scripting.html"><span>Scripting</span></a></li>
       <li><a href="plugins.html"><span>Plugins</span></a></li>
       <li><a href="fileStructure.html"><span>File&#160;Structure</span></a></li>
-      <li><a href="examples.html"><span>Examples</span></a></li>
     </ul>
   </div>
   <div id="navrow2" class="tabs2">
@@ -246,6 +245,9 @@ Public Slots</h2></td></tr>
 <tr class="memitem:a62ff9880d931c77c95028f0cd3b91fe0"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classStelMainScriptAPI.html#a62ff9880d931c77c95028f0cd3b91fe0">removeSkyImage</a> (const QString &amp;id)</td></tr>
 <tr class="memdesc:a62ff9880d931c77c95028f0cd3b91fe0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Remove a SkyImage.  <a href="#a62ff9880d931c77c95028f0cd3b91fe0">More...</a><br /></td></tr>
 <tr class="separator:a62ff9880d931c77c95028f0cd3b91fe0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa154ae38dbfc1bdac5d511bf93907689"><td class="memItemLeft" align="right" valign="top">QVariantMap&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classStelMainScriptAPI.html#aa154ae38dbfc1bdac5d511bf93907689">getScreenXYFromAltAzi</a> (const QString &amp;alt, const QString &amp;azi)</td></tr>
+<tr class="memdesc:aa154ae38dbfc1bdac5d511bf93907689"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get screen coordinates from some specified altitude and azimuth angles may be specified in a format recognised by <a class="el" href="namespaceStelUtils.html#acd88f8194549c7d46656952428720427" title="Convert a string longitude, latitude, RA or Declination angle to radians. ">StelUtils::getDecAngle()</a>  <a href="#aa154ae38dbfc1bdac5d511bf93907689">More...</a><br /></td></tr>
+<tr class="separator:aa154ae38dbfc1bdac5d511bf93907689"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a4f6444ccc86ecec0a40d888d95f3ff03"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classStelMainScriptAPI.html#a4f6444ccc86ecec0a40d888d95f3ff03">loadSound</a> (const QString &amp;filename, const QString &amp;id)</td></tr>
 <tr class="memdesc:a4f6444ccc86ecec0a40d888d95f3ff03"><td class="mdescLeft">&#160;</td><td class="mdescRight">Load a sound from a file.  <a href="#a4f6444ccc86ecec0a40d888d95f3ff03">More...</a><br /></td></tr>
 <tr class="separator:a4f6444ccc86ecec0a40d888d95f3ff03"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -1104,7 +1106,7 @@ Public Member Functions</h2></td></tr>
 <li>decJ2000 : declination angle in (J2000 frame) decimal degrees </li>
 </ul>
 </dd></dl>
-<dl class="deprecated"><dt><b><a class="el" href="deprecated.html#_deprecated000009">Deprecated:</a></b></dt><dd>Use <a class="el" href="classStelMainScriptAPI.html#ad831d70086a1ad8f64d8377672fd143c" title="Fetch a map with data about an object&#39;s position, magnitude and so on. ">getObjectInfo()</a> </dd></dl>
+<dl class="deprecated"><dt><b><a class="el" href="deprecated.html#_deprecated000011">Deprecated:</a></b></dt><dd>Use <a class="el" href="classStelMainScriptAPI.html#ad831d70086a1ad8f64d8377672fd143c" title="Fetch a map with data about an object&#39;s position, magnitude and so on. ">getObjectInfo()</a> </dd></dl>
 
 </div>
 </div>
@@ -1246,6 +1248,54 @@ Public Member Functions</h2></td></tr>
 
 <p>Get the screen width in pixels. </p>
 <dl class="section return"><dt>Returns</dt><dd>The screen width (actually, width of Stellarium main view) in pixels </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="aa154ae38dbfc1bdac5d511bf93907689"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">QVariantMap StelMainScriptAPI::getScreenXYFromAltAzi </td>
+          <td>(</td>
+          <td class="paramtype">const QString &amp;&#160;</td>
+          <td class="paramname"><em>alt</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const QString &amp;&#160;</td>
+          <td class="paramname"><em>azi</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">slot</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Get screen coordinates from some specified altitude and azimuth angles may be specified in a format recognised by <a class="el" href="namespaceStelUtils.html#acd88f8194549c7d46656952428720427" title="Convert a string longitude, latitude, RA or Declination angle to radians. ">StelUtils::getDecAngle()</a> </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">alt</td><td>the altitude angle </td></tr>
+    <tr><td class="paramname">azi</td><td>the azimuth angle </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>a map of object data. Keys:<ul>
+<li>x : x coordinate on the screen</li>
+<li>y : y coordinate on the screen </li>
+</ul>
+</dd></dl>
 
 </div>
 </div>
@@ -2939,23 +2989,15 @@ Public Member Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Play a video which has previously been loaded with loadVideo with a complex effect. </p>
-<p>The video appears out of </p><dl class="params"><dt>Parameters</dt><dd>
+<p>The video appears out of fromX/fromY, grows within popupDuration to size finalSizeX/finalSizeY, and shrinks back towards fromX/fromY at the end during popdownDuration. </p><dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">fromX/</td><td></td></tr>
-    <tr><td class="paramname">fromY,grows</td><td>within </td></tr>
-    <tr><td class="paramname">popupDuration</td><td>to size </td></tr>
-    <tr><td class="paramname">finalSizeX/</td><td>param finalSizeY, and shrinks back towards </td></tr>
-    <tr><td class="paramname">fromX/</td><td>param fromY at the end during </td></tr>
-    <tr><td class="paramname">popdownDuration.</td><td></td></tr>
     <tr><td class="paramname">id</td><td>the identifier used when loadVideo was called </td></tr>
     <tr><td class="paramname">fromX</td><td>X position of starting point, counted from left of window. May be absolute (if &gt;1) or relative (0&lt;X&lt;1) </td></tr>
     <tr><td class="paramname">fromY</td><td>Y position of starting point, counted from top of window. May be absolute (if &gt;1) or relative (0&lt;Y&lt;1) </td></tr>
     <tr><td class="paramname">atCenterX</td><td>X position of center of final video frame, counted from left of window. May be absolute (if &gt;1) or relative (0&lt;X&lt;1) </td></tr>
     <tr><td class="paramname">atCenterY</td><td>Y position of center of final video frame, counted from top of window. May be absolute (if &gt;1) or relative (0&lt;Y&lt;1) </td></tr>
-    <tr><td class="paramname">finalSizeX</td><td>X size of final video frame. May be absolute (if &gt;1) or relative to window size (0&lt;X&lt;1). If -1, scale proportional from </td></tr>
-    <tr><td class="paramname">finalSizeY.</td><td></td></tr>
-    <tr><td class="paramname">finalSizeY</td><td>Y size of final video frame. May be absolute (if &gt;1) or relative to window size (0&lt;Y&lt;1). If -1, scale proportional from </td></tr>
-    <tr><td class="paramname">finalSizeX.</td><td></td></tr>
+    <tr><td class="paramname">finalSizeX</td><td>X size of final video frame. May be absolute (if &gt;1) or relative to window size (0&lt;X&lt;1). If -1, scale proportional from finalSizeY. </td></tr>
+    <tr><td class="paramname">finalSizeY</td><td>Y size of final video frame. May be absolute (if &gt;1) or relative to window size (0&lt;Y&lt;1). If -1, scale proportional from finalSizeX. </td></tr>
     <tr><td class="paramname">popupDuration</td><td>duration of growing start transition (seconds) </td></tr>
     <tr><td class="paramname">frozenInTransition</td><td>true if video should be paused during growing/shrinking transition. </td></tr>
   </table>
@@ -4490,7 +4532,7 @@ starting with version 0.14.0 the final optional Boolean argument has a different
 </dl>
 <dl class="section note"><dt>Note</dt><dd>This method is pure JavaScript implementation. </dd></dl>
 
-<p>Definition at line <a class="el" href="StelMainScriptAPI_8hpp_source.html#l00766">766</a> of file <a class="el" href="StelMainScriptAPI_8hpp_source.html">StelMainScriptAPI.hpp</a>.</p>
+<p>Definition at line <a class="el" href="StelMainScriptAPI_8hpp_source.html#l00775">775</a> of file <a class="el" href="StelMainScriptAPI_8hpp_source.html">StelMainScriptAPI.hpp</a>.</p>
 
 </div>
 </div>
@@ -4536,7 +4578,7 @@ starting with version 0.14.0 the final optional Boolean argument has a different
 </dl>
 <dl class="section note"><dt>Note</dt><dd>This method is pure JavaScript implementation. </dd></dl>
 
-<p>Definition at line <a class="el" href="StelMainScriptAPI_8hpp_source.html#l00777">777</a> of file <a class="el" href="StelMainScriptAPI_8hpp_source.html">StelMainScriptAPI.hpp</a>.</p>
+<p>Definition at line <a class="el" href="StelMainScriptAPI_8hpp_source.html#l00786">786</a> of file <a class="el" href="StelMainScriptAPI_8hpp_source.html">StelMainScriptAPI.hpp</a>.</p>
 
 </div>
 </div>
@@ -4546,7 +4588,7 @@ starting with version 0.14.0 the final optional Boolean argument has a different
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Thu Feb 25 2016 10:44:16 for Stellarium by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Sat Feb 27 2016 22:03:11 for Stellarium by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.8
 </small></address>
