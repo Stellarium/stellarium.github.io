@@ -76,7 +76,7 @@ if (($locale == "ar") or ($locale == "fa")) {
     $langdir = "ltr";
 }
 
-$version	= "0.14.2";
+$version	= "0.14.3";
 $next_version	= "0.15.0";
 $osx_version 	= "10.7+";
 $OpenGL		= 0x00001000;
