@@ -41,7 +41,137 @@
   <table border="0" cellpadding="0" cellspacing="0"> 
   <tr bgcolor="orange"><th></th><th>&nbsp;Scenery3d.cpp&nbsp;</th><th> </th><th>&nbsp;Scenery3d.cpp&nbsp;</th><th></th></tr> 
       <tr><td class="lineno"></td><td class="left"></td><td> </td><td class="right"></td><td class="lineno"></td></tr>
-      <tr bgcolor="gray" ><td></td><th><a name="part-l1" /><small>skipping to change at</small><em> line 387</em></th><th> </th><th><a name="part-r1" /><small>skipping to change at</small><em> line 387</em></th><td></td></tr>
+      <tr bgcolor="gray" ><td></td><th><a name="part-l1" /><small>skipping to change at</small><em> line 324</em></th><th> </th><th><a name="part-r1" /><small>skipping to change at</small><em> line 324</em></th><td></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="left">       }</td><td> </td><td class="right">       }</td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="left"></td><td> </td><td class="right"></td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="left">       //reset the cubemap time so that is ensured it is immediately rerend
+ered</td><td> </td><td class="right">       //reset the cubemap time so that is ensured it is immediately rerend
+ered</td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="left">       invalidateCubemap();</td><td> </td><td class="right">       invalidateCubemap();</td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="left">}</td><td> </td><td class="right">}</td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="left"></td><td> </td><td class="right"></td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="left">void Scenery3d::handleKeys(QKeyEvent* e)</td><td> </td><td class="right">void Scenery3d::handleKeys(QKeyEvent* e)</td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="left">{</td><td> </td><td class="right">{</td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="left">       //TODO FS maybe move this to Mgr, so that input is separate from ren
+dering and scene management?</td><td> </td><td class="right">       //TODO FS maybe move this to Mgr, so that input is separate from ren
+dering and scene management?</td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="left"></td><td> </td><td class="right"></td><td class="lineno" valign="top"></td></tr>
+      <tr><td><a name="diff0001" /></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="lblock">       if ((e-&gt;type() == QKeyEvent::KeyPress) &amp;&amp; (e-&gt;modifiers() &amp; <span class="delete">Qt::Cont</span></td><td> </td><td class="rblock">       <span class="insert">static const Qt::KeyboardModifier S3D_SPEEDBASE_MODIFIER = Qt::Shift</span></td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="lblock"><span class="delete">rolModifier))</span></td><td> </td><td class="rblock"><span class="insert">Modifier;</span></td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="lblock"></td><td> </td><td class="rblock"><span class="insert"></span></td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="lblock"></td><td> </td><td class="rblock"><span class="insert">       //on OSX, there is a still-unfixed bug which prevents the command ke</span></td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="lblock"></td><td> </td><td class="rblock"><span class="insert">y (=Qt's Control key) to be used here</span></td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="lblock"></td><td> </td><td class="rblock"><span class="insert">       //see https://bugreports.qt.io/browse/QTBUG-36839</span></td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="lblock"></td><td> </td><td class="rblock"><span class="insert">       //we have to use the option/ALT key instead to activate walking arou</span></td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="lblock"></td><td> </td><td class="rblock"><span class="insert">nd, and CMD is used as multiplier.</span></td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="lblock"></td><td> </td><td class="rblock"><span class="insert">#ifdef Q_OS_OSX</span></td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="lblock"></td><td> </td><td class="rblock"><span class="insert">       static const Qt::KeyboardModifier S3D_CTRL_MODIFIER = Qt::AltModifie</span></td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="lblock"></td><td> </td><td class="rblock"><span class="insert">r;</span></td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="lblock"></td><td> </td><td class="rblock"><span class="insert">       static const Qt::KeyboardModifier S3D_SPEEDMUL_MODIFIER = Qt::Contro</span></td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="lblock"></td><td> </td><td class="rblock"><span class="insert">lModifier;</span></td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="lblock"></td><td> </td><td class="rblock"><span class="insert">#else</span></td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="lblock"></td><td> </td><td class="rblock"><span class="insert">       static const Qt::KeyboardModifier S3D_CTRL_MODIFIER = Qt::ControlMod</span></td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="lblock"></td><td> </td><td class="rblock"><span class="insert">ifier;</span></td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="lblock"></td><td> </td><td class="rblock"><span class="insert">       static const Qt::KeyboardModifier S3D_SPEEDMUL_MODIFIER = Qt::AltMod</span></td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="lblock"></td><td> </td><td class="rblock"><span class="insert">ifier;</span></td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="lblock"></td><td> </td><td class="rblock"><span class="insert">#endif</span></td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="lblock"></td><td> </td><td class="rblock">                                                                           </td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="lblock"></td><td> </td><td class="rblock">       if ((e-&gt;type() == QKeyEvent::KeyPress) &amp;&amp; (e-&gt;modifiers() &amp; <span class="insert">S3D_CTRL</span></td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="lblock"></td><td> </td><td class="rblock"><span class="insert">_MODIFIER))</span></td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="left">       {</td><td> </td><td class="right">       {</td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="left">               // Pressing CTRL+ALT: 5x, CTRL+SHIFT: 10x speedup; CTRL+SHIF
+T+ALT: 50x!</td><td> </td><td class="right">               // Pressing CTRL+ALT: 5x, CTRL+SHIFT: 10x speedup; CTRL+SHIF
+T+ALT: 50x!</td><td class="lineno" valign="top"></td></tr>
+      <tr><td><a name="diff0002" /></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="lblock">               float speedup=((e-&gt;modifiers() &amp; <span class="delete">Qt::ShiftModifier)? 10.0f</span> :</td><td> </td><td class="rblock">               float speedup=((e-&gt;modifiers() &amp; <span class="insert">S3D_SPEEDBASE_MODIFIER)? 10</span></td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="lblock"> 1.0f);</td><td> </td><td class="rblock"><span class="insert">.0f</span> : 1.0f);</td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="lblock">               speedup *= ((e-&gt;modifiers() &amp; <span class="delete">Qt::AltModifier)?</span> 5.0f : <span class="delete">1.0f)</span></td><td> </td><td class="rblock">               speedup *= ((e-&gt;modifiers() &amp; <span class="insert">S3D_SPEEDMUL_MODIFIER)?</span> 5.0f :</td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="lblock"><span class="delete">;</span></td><td> </td><td class="rblock"> <span class="insert">1.0f);</span></td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="lblock"></td><td> </td><td class="rblock">                                                                           </td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="left">               switch (e-&gt;key())</td><td> </td><td class="right">               switch (e-&gt;key())</td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="left">               {</td><td> </td><td class="right">               {</td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="left">                       case Qt::Key_PageUp:    movement[2] = -1.0f * speedu
+p; e-&gt;accept(); break;</td><td> </td><td class="right">                       case Qt::Key_PageUp:    movement[2] = -1.0f * speedu
+p; e-&gt;accept(); break;</td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="left">                       case Qt::Key_PageDown:  movement[2] =  1.0f * speedu
+p; e-&gt;accept(); break;</td><td> </td><td class="right">                       case Qt::Key_PageDown:  movement[2] =  1.0f * speedu
+p; e-&gt;accept(); break;</td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="left">                       case Qt::Key_Up:        movement[1] = -1.0f * speedu
+p; e-&gt;accept(); break;</td><td> </td><td class="right">                       case Qt::Key_Up:        movement[1] = -1.0f * speedu
+p; e-&gt;accept(); break;</td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="left">                       case Qt::Key_Down:      movement[1] =  1.0f * speedu
+p; e-&gt;accept(); break;</td><td> </td><td class="right">                       case Qt::Key_Down:      movement[1] =  1.0f * speedu
+p; e-&gt;accept(); break;</td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="left">                       case Qt::Key_Right:     movement[0] =  1.0f * speedu
+p; e-&gt;accept(); break;</td><td> </td><td class="right">                       case Qt::Key_Right:     movement[0] =  1.0f * speedu
+p; e-&gt;accept(); break;</td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="left">                       case Qt::Key_Left:      movement[0] = -1.0f * speedu
+p; e-&gt;accept(); break;</td><td> </td><td class="right">                       case Qt::Key_Left:      movement[0] = -1.0f * speedu
+p; e-&gt;accept(); break;</td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="left">#ifdef QT_DEBUG</td><td> </td><td class="right">#ifdef QT_DEBUG</td><td class="lineno" valign="top"></td></tr>
+      <tr><td><a name="diff0003" /></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="lblock">                       <span class="delete">        //leave this out on non-debug builds to redu
+ce confl</span>ict chance</td><td> </td><td class="rblock">                       <span class="insert">//leave this out on non-debug builds to reduce confl
+</span>ict chance</td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="left">                       case Qt::Key_P:         saveFrusts(); e-&gt;accept(); b
+reak;</td><td> </td><td class="right">                       case Qt::Key_P:         saveFrusts(); e-&gt;accept(); b
+reak;</td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="left">#endif</td><td> </td><td class="right">#endif</td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="left">               }</td><td> </td><td class="right">               }</td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="left">       }</td><td> </td><td class="right">       }</td><td class="lineno" valign="top"></td></tr>
+      <tr><td><a name="diff0004" /></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="lblock">       else if ((e-&gt;type() == QKeyEvent::KeyRelease) &amp;&amp; (e-&gt;modifiers() &amp; <span class="delete">Q</span></td><td> </td><td class="rblock">       <span class="insert">// FS: No modifier here!? GZ: I want the lock feature. If this does </span></td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="lblock"><span class="delete">t::ControlModifier))</span></td><td> </td><td class="rblock"><span class="insert">not work for MacOS, it is not there, but only on that platform...</span></td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="lblock"></td><td> </td><td class="rblock"><span class="insert">#ifdef Q_OS_OSX</span></td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="lblock"></td><td> </td><td class="rblock"><span class="insert">       else if ((e-&gt;type() == QKeyEvent::KeyRelease) )</span></td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="lblock"></td><td> </td><td class="rblock"><span class="insert">#else</span></td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="lblock"></td><td> </td><td class="rblock">       else if ((e-&gt;type() == QKeyEvent::KeyRelease) &amp;&amp; (e-&gt;modifiers() &amp; <span class="insert">S</span></td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="lblock"></td><td> </td><td class="rblock"><span class="insert">3D_CTRL_MODIFIER))</span></td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="lblock"></td><td> </td><td class="rblock"><span class="insert">#endif</span></td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="left">       {</td><td> </td><td class="right">       {</td><td class="lineno" valign="top"></td></tr>
+      <tr><td><a name="diff0005" /></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="lblock">               <span class="delete">if (e-&gt;key() == Qt::Key_PageUp || e-&gt;key() == Qt::Key_PageDo</span></td><td> </td><td class="rblock">               <span class="insert">//if a movement key is released, stop moving in that directi</span></td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="lblock"><span class="delete">wn ||</span></td><td> </td><td class="rblock"><span class="insert">on</span></td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="lblock"><span class="delete">                               e-&gt;key() == Qt::Key_Up     || e-&gt;key() == Qt</span></td><td> </td><td class="rblock"><span class="insert">               //we do not accept the event on MacOS to allow further handl</span></td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="lblock"><span class="delete">::Key_Down     ||</span></td><td> </td><td class="rblock"><span class="insert">ing the event in other modules. (Else the regular view motion stop does not</span></td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="lblock"><span class="delete">                               e-&gt;key() == Qt::Key_Left   || e-&gt;key() == Qt</span></td><td> </td><td class="rblock"><span class="insert"> work!)</span></td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="lblock"><span class="delete">::Key_Right     )</span></td><td> </td><td class="rblock"><span class="insert">               switch (e-&gt;key())</span></td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="left">               {</td><td> </td><td class="right">               {</td><td class="lineno" valign="top"></td></tr>
+      <tr><td><a name="diff0006" /></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="lblock">                       <span class="delete">movement[0]</span> = movement[1] = <span class="delete">movement[2]</span> = 0.0f;</td><td> </td><td class="rblock">                       <span class="insert">case Qt::Key_PageUp:</span></td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="lblock">                       e-&gt;accept();</td><td> </td><td class="rblock"><span class="insert">                       case Qt::Key_PageDown:</span></td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="lblock"></td><td> </td><td class="rblock"><span class="insert">                               movement[2]</span> = <span class="insert">0.0f;</span></td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="lblock"></td><td> </td><td class="rblock"><span class="insert">#ifndef Q_OS_OSX</span></td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="lblock"></td><td> </td><td class="rblock"><span class="insert">                               e-&gt;accept();</span></td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="lblock"></td><td> </td><td class="rblock"><span class="insert">#endif</span></td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="lblock"></td><td> </td><td class="rblock"><span class="insert">                               break;</span></td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="lblock"></td><td> </td><td class="rblock"><span class="insert">                       case Qt::Key_Up:</span></td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="lblock"></td><td> </td><td class="rblock"><span class="insert">                       case Qt::Key_Down:</span></td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="lblock"></td><td> </td><td class="rblock">                               movement[1] = <span class="insert">0.0f;</span></td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="lblock"></td><td> </td><td class="rblock"><span class="insert">#ifndef Q_OS_OSX</span></td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="lblock"></td><td> </td><td class="rblock"><span class="insert">                               e-&gt;accept();</span></td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="lblock"></td><td> </td><td class="rblock"><span class="insert">#endif</span></td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="lblock"></td><td> </td><td class="rblock"><span class="insert">                               break;</span></td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="lblock"></td><td> </td><td class="rblock"><span class="insert">                       case Qt::Key_Right:</span></td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="lblock"></td><td> </td><td class="rblock"><span class="insert">                       case Qt::Key_Left:</span></td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="lblock"></td><td> </td><td class="rblock"><span class="insert">                               movement[0]</span> = 0.0f;</td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="lblock"></td><td> </td><td class="rblock"><span class="insert">#ifndef Q_OS_OSX</span></td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="lblock"></td><td> </td><td class="rblock">                               e-&gt;accept();</td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="lblock"></td><td> </td><td class="rblock"><span class="insert">#endif</span></td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="lblock"></td><td> </td><td class="rblock"><span class="insert">                               break;</span></td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="left">               }</td><td> </td><td class="right">               }</td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="left">       }</td><td> </td><td class="right">       }</td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="left">}</td><td> </td><td class="right">}</td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="left"></td><td> </td><td class="right"></td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="left">void Scenery3d::saveFrusts()</td><td> </td><td class="right">void Scenery3d::saveFrusts()</td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="left">{</td><td> </td><td class="right">{</td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="left">       fixShadowData = !fixShadowData;</td><td> </td><td class="right">       fixShadowData = !fixShadowData;</td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="left"></td><td> </td><td class="right"></td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="left">       camFrustShadow.saveDrawingCorners();</td><td> </td><td class="right">       camFrustShadow.saveDrawingCorners();</td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno" valign="top"></td><td class="left"></td><td> </td><td class="right"></td><td class="lineno" valign="top"></td></tr>
+      <tr><td class="lineno"></td><td class="left"></td><td> </td><td class="right"></td><td class="lineno"></td></tr>
+      <tr bgcolor="gray" ><td></td><th><a name="part-l2" /><small>skipping to change at</small><em> line 387</em></th><th> </th><th><a name="part-r2" /><small>skipping to change at</small><em> line 425</em></th><td></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="left">               StelMovementMgr *stelMovementMgr = GETSTELMODULE(StelMovemen
 tMgr);</td><td> </td><td class="right">               StelMovementMgr *stelMovementMgr = GETSTELMODULE(StelMovemen
 tMgr);</td><td class="lineno" valign="top"></td></tr>
@@ -56,7 +186,7 @@ onJ2000();</td><td class="lineno" valign="top"></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="left">               //if we were moving in the last update</td><td> </td><td class="right">               //if we were moving in the last update</td><td class="lineno" valign="top"></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="left">               bool wasMoving = moveVector.lengthSquared()&gt;0.0;</td><td> </td><td class="right">               bool wasMoving = moveVector.lengthSquared()&gt;0.0;</td><td class="lineno" valign="top"></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="left"></td><td> </td><td class="right"></td><td class="lineno" valign="top"></td></tr>
-      <tr><td><a name="diff0001" /></td></tr>
+      <tr><td><a name="diff0007" /></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="lblock">               <span class="delete">moveVector</span> = Vec3d(( movement[0] * std::cos(az) + <span class="delete">movement[1</span></td><td> </td><td class="rblock">               <span class="insert">//moveVector</span> = Vec3d(( movement[0] * std::cos(az) + <span class="insert">movement</span></td><td class="lineno" valign="top"></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="lblock"><span class="delete">]</span> * std::sin(az)),</td><td> </td><td class="rblock"><span class="insert">[1]</span> * std::sin(az)),</td><td class="lineno" valign="top"></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="lblock">                               ( movement[0] * std::sin(az) - movement[1] *</td><td> </td><td class="rblock">               <span class="insert">//</span>              ( movement[0] * std::sin(az) - movement[1] *</td><td class="lineno" valign="top"></td></tr>
@@ -86,7 +216,7 @@ onJ2000();</td><td class="lineno" valign="top"></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="left"></td><td> </td><td class="right"></td><td class="lineno" valign="top"></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="left">                       //check if cubemap requires redraw</td><td> </td><td class="right">                       //check if cubemap requires redraw</td><td class="lineno" valign="top"></td></tr>
       <tr><td class="lineno"></td><td class="left"></td><td> </td><td class="right"></td><td class="lineno"></td></tr>
-      <tr bgcolor="gray" ><td></td><th><a name="part-l2" /><small>skipping to change at</small><em> line 440</em></th><th> </th><th><a name="part-r2" /><small>skipping to change at</small><em> line 449</em></th><td></td></tr>
+      <tr bgcolor="gray" ><td></td><th><a name="part-l3" /><small>skipping to change at</small><em> line 440</em></th><th> </th><th><a name="part-r3" /><small>skipping to change at</small><em> line 487</em></th><td></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="left">                                       needsCubemapUpdate = false;</td><td> </td><td class="right">                                       needsCubemapUpdate = false;</td><td class="lineno" valign="top"></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="left">                       }</td><td> </td><td class="right">                       }</td><td class="lineno" valign="top"></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="left">               }</td><td> </td><td class="right">               }</td><td class="lineno" valign="top"></td></tr>
@@ -99,7 +229,7 @@ onJ2000();</td><td class="lineno" valign="top"></td></tr>
 getCurrentFov());</td><td> </td><td class="right">               moveVector *= deltaTime * 0.01 * qMax(5.0, stelMovementMgr-&gt;
 getCurrentFov());</td><td class="lineno" valign="top"></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="left"></td><td> </td><td class="right"></td><td class="lineno" valign="top"></td></tr>
-      <tr><td><a name="diff0002" /></td></tr>
+      <tr><td><a name="diff0008" /></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="lblock">               <span class="delete">//Bring move into world-grid space</span></td><td> </td><td class="rblock"></td><td class="lineno" valign="top"></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="lblock"><span class="delete">               currentScene.zRotateMatrix.transfo(moveVector);</span></td><td> </td><td class="rblock"></td><td class="lineno" valign="top"></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="lblock">                                                                           </td><td> </td><td class="rblock"></td><td class="lineno" valign="top"></td></tr>
@@ -114,7 +244,7 @@ getCurrentFov());</td><td class="lineno" valign="top"></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="left">               mainViewUp.v[2] = 1;</td><td> </td><td class="right">               mainViewUp.v[2] = 1;</td><td class="lineno" valign="top"></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="left"></td><td> </td><td class="right"></td><td class="lineno" valign="top"></td></tr>
       <tr><td class="lineno"></td><td class="left"></td><td> </td><td class="right"></td><td class="lineno"></td></tr>
-      <tr bgcolor="gray" ><td></td><th><a name="part-l3" /><small>skipping to change at</small><em> line 1824</em></th><th> </th><th><a name="part-r3" /><small>skipping to change at</small><em> line 1830</em></th><td></td></tr>
+      <tr bgcolor="gray" ><td></td><th><a name="part-l4" /><small>skipping to change at</small><em> line 1824</em></th><th> </th><th><a name="part-r4" /><small>skipping to change at</small><em> line 1868</em></th><td></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="left">               }</td><td> </td><td class="right">               }</td><td class="lineno" valign="top"></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="left">               else</td><td> </td><td class="right">               else</td><td class="lineno" valign="top"></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="left">               {</td><td> </td><td class="right">               {</td><td class="lineno" valign="top"></td></tr>
@@ -127,7 +257,7 @@ obably on OpenGL ES context";</td><td class="lineno" valign="top"></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="left"></td><td> </td><td class="right"></td><td class="lineno" valign="top"></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="left">    StelPainter painter(altAzProjector);</td><td> </td><td class="right">    StelPainter painter(altAzProjector);</td><td class="lineno" valign="top"></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="left">    painter.setFont(debugTextFont);</td><td> </td><td class="right">    painter.setFont(debugTextFont);</td><td class="lineno" valign="top"></td></tr>
-      <tr><td><a name="diff0003" /></td></tr>
+      <tr><td><a name="diff0009" /></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="lblock">    painter.setColor(1<span class="delete">,0,1,1</span>);</td><td> </td><td class="rblock">    painter.setColor(1<span class="insert">.f,0.f,1.f,1.f</span>);</td><td class="lineno" valign="top"></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="left">    // For now, these messages print light mixture values.</td><td> </td><td class="right">    // For now, these messages print light mixture values.</td><td class="lineno" valign="top"></td></tr>
       <tr><td class="lineno" valign="top"></td><td class="left">    painter.drawText(20, 160, lightMessage);</td><td> </td><td class="right">    painter.drawText(20, 160, lightMessage);</td><td class="lineno" valign="top"></td></tr>
@@ -151,8 +281,8 @@ dingBox.max.v[1], 7, 'f', 2).arg(sceneBoundingBox.max.v[2], 7, 'f', 2);</td><td 
       <tr><td class="lineno" valign="top"></td><td class="left"></td><td> </td><td class="right"></td><td class="lineno" valign="top"></td></tr>
 
      <tr><td></td><td class="left"></td><td> </td><td class="right"></td><td></td></tr>
-     <tr bgcolor="gray"><th colspan="5" align="center"><a name="end">&nbsp;End of changes. 3 change blocks.&nbsp;</a></th></tr>
-     <tr class="stats"><td></td><th><i>8 lines changed or deleted</i></th><th><i> </i></th><th><i>19 lines changed or added</i></th><td></td></tr>
+     <tr bgcolor="gray"><th colspan="5" align="center"><a name="end">&nbsp;End of changes. 9 change blocks.&nbsp;</a></th></tr>
+     <tr class="stats"><td></td><th><i>25 lines changed or deleted</i></th><th><i> </i></th><th><i>82 lines changed or added</i></th><td></td></tr>
      <tr><td colspan="5" align="center" class="small"><br/>This html diff was produced by rfcdiff 1.41. The latest version is available from <a href="http://www.tools.ietf.org/tools/rfcdiff/" >http://tools.ietf.org/tools/rfcdiff/</a> </td></tr>
    </table>
    </body>
