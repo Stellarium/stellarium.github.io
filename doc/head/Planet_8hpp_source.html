@@ -27,6 +27,7 @@
   <div id="navrow1" class="tabs">
     <ul class="tablist">
       <li><a href="index.html"><span>Main&#160;Page</span></a></li>
+      <li><a href="modules.html"><span>Modules</span></a></li>
       <li><a href="namespaces.html"><span>Namespaces</span></a></li>
       <li><a href="annotated.html"><span>Classes</span></a></li>
       <li><a href="codingStyle.html"><span>Coding&#160;Style</span></a></li>
@@ -255,7 +256,7 @@
 <div class="line"><a name="l00231"></a><span class="lineno">  231</span>&#160;    <a class="code" href="singletonVector3.html">Vec3d</a> <a class="code" href="classPlanet.html#a4f738e354018c9829293512c009c7427">getEclipticPos</a>() <span class="keyword">const</span>;</div>
 <div class="line"><a name="l00232"></a><span class="lineno">  232</span>&#160;</div>
 <div class="line"><a name="l00233"></a><span class="lineno">  233</span>&#160;    <span class="comment">// Return the heliocentric ecliptical position</span></div>
-<div class="line"><a name="l00234"></a><span class="lineno">  234</span>&#160;    <a class="code" href="singletonVector3.html">Vec3d</a> getHeliocentricEclipticPos() <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00234"></a><span class="lineno">  234</span>&#160;    <a class="code" href="singletonVector3.html">Vec3d</a> getHeliocentricEclipticPos()<span class="keyword"> const </span>{<span class="keywordflow">return</span> getHeliocentricPos(eclipticPos);}</div>
 <div class="line"><a name="l00235"></a><span class="lineno">  235</span>&#160;</div>
 <div class="line"><a name="l00236"></a><span class="lineno">  236</span>&#160;    <span class="comment">// Return the heliocentric transformation for local coordinate</span></div>
 <div class="line"><a name="l00237"></a><span class="lineno">  237</span>&#160;    <a class="code" href="singletonVector3.html">Vec3d</a> getHeliocentricPos(<a class="code" href="singletonVector3.html">Vec3d</a>) <span class="keyword">const</span>;</div>
@@ -383,54 +384,59 @@
 <div class="line"><a name="l00362"></a><span class="lineno">  362</span>&#160;    <span class="keyword">static</span> <a class="code" href="StelTextureTypes_8hpp.html#a085a86bd020a5f6d1240e02d596eb4bb">StelTextureSP</a> hintCircleTex; </div>
 <div class="line"><a name="l00363"></a><span class="lineno">  363</span>&#160;    <span class="keyword">static</span> QMap&lt;PlanetType, QString&gt; pTypeMap; <span class="comment">// Maps fast type to english name.</span></div>
 <div class="line"><a name="l00364"></a><span class="lineno">  364</span>&#160;    <span class="keyword">static</span> QMap&lt;ApparentMagnitudeAlgorithm, QString&gt; vMagAlgorithmMap;</div>
-<div class="line"><a name="l00365"></a><span class="lineno">  365</span>&#160;    </div>
-<div class="line"><a name="l00366"></a><span class="lineno">  366</span>&#160;    <span class="comment">// Shader-related variables</span></div>
-<div class="line"><a name="l00367"></a><span class="lineno"><a class="line" href="structPlanet_1_1PlanetShaderVars.html">  367</a></span>&#160;    <span class="keyword">struct </span><a class="code" href="structPlanet_1_1PlanetShaderVars.html">PlanetShaderVars</a> {</div>
-<div class="line"><a name="l00368"></a><span class="lineno">  368</span>&#160;        <span class="keywordtype">int</span> projectionMatrix;</div>
-<div class="line"><a name="l00369"></a><span class="lineno">  369</span>&#160;        <span class="keywordtype">int</span> texCoord;</div>
-<div class="line"><a name="l00370"></a><span class="lineno">  370</span>&#160;        <span class="keywordtype">int</span> unprojectedVertex;</div>
-<div class="line"><a name="l00371"></a><span class="lineno">  371</span>&#160;        <span class="keywordtype">int</span> vertex;</div>
-<div class="line"><a name="l00372"></a><span class="lineno">  372</span>&#160;        <span class="keywordtype">int</span> texture;</div>
-<div class="line"><a name="l00373"></a><span class="lineno">  373</span>&#160;        <span class="keywordtype">int</span> lightDirection;</div>
-<div class="line"><a name="l00374"></a><span class="lineno">  374</span>&#160;        <span class="keywordtype">int</span> eyeDirection;</div>
-<div class="line"><a name="l00375"></a><span class="lineno">  375</span>&#160;        <span class="keywordtype">int</span> diffuseLight;</div>
-<div class="line"><a name="l00376"></a><span class="lineno">  376</span>&#160;        <span class="keywordtype">int</span> ambientLight;</div>
-<div class="line"><a name="l00377"></a><span class="lineno">  377</span>&#160;        <span class="keywordtype">int</span> shadowCount;</div>
-<div class="line"><a name="l00378"></a><span class="lineno">  378</span>&#160;        <span class="keywordtype">int</span> shadowData;</div>
-<div class="line"><a name="l00379"></a><span class="lineno">  379</span>&#160;        <span class="keywordtype">int</span> sunInfo;</div>
-<div class="line"><a name="l00380"></a><span class="lineno">  380</span>&#160;        <span class="keywordtype">int</span> skyBrightness;</div>
-<div class="line"><a name="l00381"></a><span class="lineno">  381</span>&#160;        </div>
-<div class="line"><a name="l00382"></a><span class="lineno">  382</span>&#160;        <span class="keywordtype">void</span> initLocations(QOpenGLShaderProgram*);</div>
-<div class="line"><a name="l00383"></a><span class="lineno">  383</span>&#160;    };</div>
-<div class="line"><a name="l00384"></a><span class="lineno">  384</span>&#160;    <span class="keyword">static</span> <a class="code" href="structPlanet_1_1PlanetShaderVars.html">PlanetShaderVars</a> planetShaderVars;</div>
-<div class="line"><a name="l00385"></a><span class="lineno">  385</span>&#160;    <span class="keyword">static</span> QOpenGLShaderProgram* planetShaderProgram;</div>
-<div class="line"><a name="l00386"></a><span class="lineno">  386</span>&#160;</div>
-<div class="line"><a name="l00387"></a><span class="lineno">  387</span>&#160;    <span class="comment">// Shader-related variables</span></div>
-<div class="line"><a name="l00388"></a><span class="lineno"><a class="line" href="structPlanet_1_1RingPlanetShaderVars.html">  388</a></span>&#160;    <span class="keyword">struct </span><a class="code" href="structPlanet_1_1RingPlanetShaderVars.html">RingPlanetShaderVars</a> : <span class="keyword">public</span> <a class="code" href="structPlanet_1_1PlanetShaderVars.html">PlanetShaderVars</a> {</div>
-<div class="line"><a name="l00389"></a><span class="lineno">  389</span>&#160;        <span class="comment">// Rings-specific variables</span></div>
-<div class="line"><a name="l00390"></a><span class="lineno">  390</span>&#160;        <span class="keywordtype">int</span> isRing;</div>
-<div class="line"><a name="l00391"></a><span class="lineno">  391</span>&#160;        <span class="keywordtype">int</span> ring;</div>
-<div class="line"><a name="l00392"></a><span class="lineno">  392</span>&#160;        <span class="keywordtype">int</span> outerRadius;</div>
-<div class="line"><a name="l00393"></a><span class="lineno">  393</span>&#160;        <span class="keywordtype">int</span> innerRadius;</div>
-<div class="line"><a name="l00394"></a><span class="lineno">  394</span>&#160;        <span class="keywordtype">int</span> ringS;</div>
-<div class="line"><a name="l00395"></a><span class="lineno">  395</span>&#160;    };</div>
-<div class="line"><a name="l00396"></a><span class="lineno">  396</span>&#160;    <span class="keyword">static</span> <a class="code" href="structPlanet_1_1RingPlanetShaderVars.html">RingPlanetShaderVars</a> ringPlanetShaderVars;</div>
-<div class="line"><a name="l00397"></a><span class="lineno">  397</span>&#160;    <span class="keyword">static</span> QOpenGLShaderProgram* ringPlanetShaderProgram;</div>
-<div class="line"><a name="l00398"></a><span class="lineno">  398</span>&#160;    </div>
-<div class="line"><a name="l00399"></a><span class="lineno"><a class="line" href="structPlanet_1_1MoonShaderVars.html">  399</a></span>&#160;    <span class="keyword">struct </span><a class="code" href="structPlanet_1_1MoonShaderVars.html">MoonShaderVars</a> : <span class="keyword">public</span> <a class="code" href="structPlanet_1_1PlanetShaderVars.html">PlanetShaderVars</a> {</div>
-<div class="line"><a name="l00400"></a><span class="lineno">  400</span>&#160;        <span class="comment">// Moon-specific variables</span></div>
-<div class="line"><a name="l00401"></a><span class="lineno">  401</span>&#160;        <span class="keywordtype">int</span> earthShadow;</div>
-<div class="line"><a name="l00402"></a><span class="lineno">  402</span>&#160;        <span class="keywordtype">int</span> normalMap;</div>
-<div class="line"><a name="l00403"></a><span class="lineno">  403</span>&#160;    };</div>
-<div class="line"><a name="l00404"></a><span class="lineno">  404</span>&#160;    <span class="keyword">static</span> <a class="code" href="structPlanet_1_1MoonShaderVars.html">MoonShaderVars</a> moonShaderVars;</div>
-<div class="line"><a name="l00405"></a><span class="lineno">  405</span>&#160;    <span class="keyword">static</span> QOpenGLShaderProgram* moonShaderProgram;</div>
-<div class="line"><a name="l00406"></a><span class="lineno">  406</span>&#160;    </div>
-<div class="line"><a name="l00407"></a><span class="lineno">  407</span>&#160;    <span class="keyword">static</span> <span class="keywordtype">void</span> initShader();</div>
-<div class="line"><a name="l00408"></a><span class="lineno">  408</span>&#160;    <span class="keyword">static</span> <span class="keywordtype">void</span> deinitShader();</div>
-<div class="line"><a name="l00409"></a><span class="lineno">  409</span>&#160;};</div>
-<div class="line"><a name="l00410"></a><span class="lineno">  410</span>&#160;</div>
-<div class="line"><a name="l00411"></a><span class="lineno">  411</span>&#160;<span class="preprocessor">#endif // _PLANET_HPP_</span></div>
-<div class="line"><a name="l00412"></a><span class="lineno">  412</span>&#160;</div>
+<div class="line"><a name="l00365"></a><span class="lineno">  365</span>&#160;</div>
+<div class="line"><a name="l00366"></a><span class="lineno">  366</span>&#160;    <span class="keyword">static</span> <span class="keywordtype">bool</span> flagCustomGrsSettings;  <span class="comment">// Is enabled usage of custom settings for calculation of position of Great Red Spot?</span></div>
+<div class="line"><a name="l00367"></a><span class="lineno">  367</span>&#160;    <span class="keyword">static</span> <span class="keywordtype">double</span> customGrsJD;      <span class="comment">// Initial JD for calculation of position of Great Red Spot</span></div>
+<div class="line"><a name="l00368"></a><span class="lineno">  368</span>&#160;    <span class="keyword">static</span> <span class="keywordtype">int</span> customGrsLongitude;      <span class="comment">// Longitude of Great Red Spot (System II, degrees)</span></div>
+<div class="line"><a name="l00369"></a><span class="lineno">  369</span>&#160;    <span class="keyword">static</span> <span class="keywordtype">double</span> customGrsDrift;       <span class="comment">// Annual drift of Great Red Spot position (degrees)</span></div>
+<div class="line"><a name="l00370"></a><span class="lineno">  370</span>&#160;    </div>
+<div class="line"><a name="l00371"></a><span class="lineno">  371</span>&#160;    <span class="comment">// Shader-related variables</span></div>
+<div class="line"><a name="l00372"></a><span class="lineno"><a class="line" href="structPlanet_1_1PlanetShaderVars.html">  372</a></span>&#160;    <span class="keyword">struct </span><a class="code" href="structPlanet_1_1PlanetShaderVars.html">PlanetShaderVars</a> {</div>
+<div class="line"><a name="l00373"></a><span class="lineno">  373</span>&#160;        <span class="keywordtype">int</span> projectionMatrix;</div>
+<div class="line"><a name="l00374"></a><span class="lineno">  374</span>&#160;        <span class="keywordtype">int</span> texCoord;</div>
+<div class="line"><a name="l00375"></a><span class="lineno">  375</span>&#160;        <span class="keywordtype">int</span> unprojectedVertex;</div>
+<div class="line"><a name="l00376"></a><span class="lineno">  376</span>&#160;        <span class="keywordtype">int</span> vertex;</div>
+<div class="line"><a name="l00377"></a><span class="lineno">  377</span>&#160;        <span class="keywordtype">int</span> texture;</div>
+<div class="line"><a name="l00378"></a><span class="lineno">  378</span>&#160;        <span class="keywordtype">int</span> lightDirection;</div>
+<div class="line"><a name="l00379"></a><span class="lineno">  379</span>&#160;        <span class="keywordtype">int</span> eyeDirection;</div>
+<div class="line"><a name="l00380"></a><span class="lineno">  380</span>&#160;        <span class="keywordtype">int</span> diffuseLight;</div>
+<div class="line"><a name="l00381"></a><span class="lineno">  381</span>&#160;        <span class="keywordtype">int</span> ambientLight;</div>
+<div class="line"><a name="l00382"></a><span class="lineno">  382</span>&#160;        <span class="keywordtype">int</span> shadowCount;</div>
+<div class="line"><a name="l00383"></a><span class="lineno">  383</span>&#160;        <span class="keywordtype">int</span> shadowData;</div>
+<div class="line"><a name="l00384"></a><span class="lineno">  384</span>&#160;        <span class="keywordtype">int</span> sunInfo;</div>
+<div class="line"><a name="l00385"></a><span class="lineno">  385</span>&#160;        <span class="keywordtype">int</span> skyBrightness;</div>
+<div class="line"><a name="l00386"></a><span class="lineno">  386</span>&#160;        </div>
+<div class="line"><a name="l00387"></a><span class="lineno">  387</span>&#160;        <span class="keywordtype">void</span> initLocations(QOpenGLShaderProgram*);</div>
+<div class="line"><a name="l00388"></a><span class="lineno">  388</span>&#160;    };</div>
+<div class="line"><a name="l00389"></a><span class="lineno">  389</span>&#160;    <span class="keyword">static</span> <a class="code" href="structPlanet_1_1PlanetShaderVars.html">PlanetShaderVars</a> planetShaderVars;</div>
+<div class="line"><a name="l00390"></a><span class="lineno">  390</span>&#160;    <span class="keyword">static</span> QOpenGLShaderProgram* planetShaderProgram;</div>
+<div class="line"><a name="l00391"></a><span class="lineno">  391</span>&#160;</div>
+<div class="line"><a name="l00392"></a><span class="lineno">  392</span>&#160;    <span class="comment">// Shader-related variables</span></div>
+<div class="line"><a name="l00393"></a><span class="lineno"><a class="line" href="structPlanet_1_1RingPlanetShaderVars.html">  393</a></span>&#160;    <span class="keyword">struct </span><a class="code" href="structPlanet_1_1RingPlanetShaderVars.html">RingPlanetShaderVars</a> : <span class="keyword">public</span> <a class="code" href="structPlanet_1_1PlanetShaderVars.html">PlanetShaderVars</a> {</div>
+<div class="line"><a name="l00394"></a><span class="lineno">  394</span>&#160;        <span class="comment">// Rings-specific variables</span></div>
+<div class="line"><a name="l00395"></a><span class="lineno">  395</span>&#160;        <span class="keywordtype">int</span> isRing;</div>
+<div class="line"><a name="l00396"></a><span class="lineno">  396</span>&#160;        <span class="keywordtype">int</span> ring;</div>
+<div class="line"><a name="l00397"></a><span class="lineno">  397</span>&#160;        <span class="keywordtype">int</span> outerRadius;</div>
+<div class="line"><a name="l00398"></a><span class="lineno">  398</span>&#160;        <span class="keywordtype">int</span> innerRadius;</div>
+<div class="line"><a name="l00399"></a><span class="lineno">  399</span>&#160;        <span class="keywordtype">int</span> ringS;</div>
+<div class="line"><a name="l00400"></a><span class="lineno">  400</span>&#160;    };</div>
+<div class="line"><a name="l00401"></a><span class="lineno">  401</span>&#160;    <span class="keyword">static</span> <a class="code" href="structPlanet_1_1RingPlanetShaderVars.html">RingPlanetShaderVars</a> ringPlanetShaderVars;</div>
+<div class="line"><a name="l00402"></a><span class="lineno">  402</span>&#160;    <span class="keyword">static</span> QOpenGLShaderProgram* ringPlanetShaderProgram;</div>
+<div class="line"><a name="l00403"></a><span class="lineno">  403</span>&#160;    </div>
+<div class="line"><a name="l00404"></a><span class="lineno"><a class="line" href="structPlanet_1_1MoonShaderVars.html">  404</a></span>&#160;    <span class="keyword">struct </span><a class="code" href="structPlanet_1_1MoonShaderVars.html">MoonShaderVars</a> : <span class="keyword">public</span> <a class="code" href="structPlanet_1_1PlanetShaderVars.html">PlanetShaderVars</a> {</div>
+<div class="line"><a name="l00405"></a><span class="lineno">  405</span>&#160;        <span class="comment">// Moon-specific variables</span></div>
+<div class="line"><a name="l00406"></a><span class="lineno">  406</span>&#160;        <span class="keywordtype">int</span> earthShadow;</div>
+<div class="line"><a name="l00407"></a><span class="lineno">  407</span>&#160;        <span class="keywordtype">int</span> normalMap;</div>
+<div class="line"><a name="l00408"></a><span class="lineno">  408</span>&#160;    };</div>
+<div class="line"><a name="l00409"></a><span class="lineno">  409</span>&#160;    <span class="keyword">static</span> <a class="code" href="structPlanet_1_1MoonShaderVars.html">MoonShaderVars</a> moonShaderVars;</div>
+<div class="line"><a name="l00410"></a><span class="lineno">  410</span>&#160;    <span class="keyword">static</span> QOpenGLShaderProgram* moonShaderProgram;</div>
+<div class="line"><a name="l00411"></a><span class="lineno">  411</span>&#160;    </div>
+<div class="line"><a name="l00412"></a><span class="lineno">  412</span>&#160;    <span class="keyword">static</span> <span class="keywordtype">void</span> initShader();</div>
+<div class="line"><a name="l00413"></a><span class="lineno">  413</span>&#160;    <span class="keyword">static</span> <span class="keywordtype">void</span> deinitShader();</div>
+<div class="line"><a name="l00414"></a><span class="lineno">  414</span>&#160;};</div>
+<div class="line"><a name="l00415"></a><span class="lineno">  415</span>&#160;</div>
+<div class="line"><a name="l00416"></a><span class="lineno">  416</span>&#160;<span class="preprocessor">#endif // _PLANET_HPP_</span></div>
+<div class="line"><a name="l00417"></a><span class="lineno">  417</span>&#160;</div>
 <div class="ttc" id="classPlanet_html_a2abfbdc917502317f98fd34d6bef481c"><div class="ttname"><a href="classPlanet.html#a2abfbdc917502317f98fd34d6bef481c">Planet::getCandidatesForShadow</a></div><div class="ttdeci">QVector&lt; const Planet * &gt; getCandidatesForShadow() const </div><div class="ttdoc">Return the list of planets which project some shadow on this planet. </div></div>
 <div class="ttc" id="classSolarSystem_html_a0680ac6cc833f0238a52a1cceb9542ab"><div class="ttname"><a href="classSolarSystem.html#a0680ac6cc833f0238a52a1cceb9542ab">SolarSystem::update</a></div><div class="ttdeci">virtual void update(double deltaTime)</div><div class="ttdoc">Update time-varying components. </div></div>
 <div class="ttc" id="classSolarSystem_html_ada02300f99322f928b5b726fa6d14be6"><div class="ttname"><a href="classSolarSystem.html#ada02300f99322f928b5b726fa6d14be6">SolarSystem::setFlagOrbits</a></div><div class="ttdeci">void setFlagOrbits(bool b)</div><div class="ttdoc">Set flag which determines if planet orbits are drawn or hidden. </div></div>
@@ -464,15 +470,15 @@
 <div class="ttc" id="classPlanet_html_ae55bc952d1d4b8e331b3749a51b2c1a5"><div class="ttname"><a href="classPlanet.html#ae55bc952d1d4b8e331b3749a51b2c1a5">Planet::getSiderealTime</a></div><div class="ttdeci">double getSiderealTime(double JD, double JDE) const </div><div class="ttdoc">Compute the z rotation to use from equatorial to geographic coordinates. </div></div>
 <div class="ttc" id="classPlanet_html_afb3d99bed9522c8a8bfc08665d8a0009"><div class="ttname"><a href="classPlanet.html#afb3d99bed9522c8a8bfc08665d8a0009">Planet::getVMagnitude</a></div><div class="ttdeci">virtual float getVMagnitude(const StelCore *core) const </div><div class="ttdoc">Return object&#39;s apparent V magnitude as seen from observer, without including extinction. </div></div>
 <div class="ttc" id="classRotationElements_html"><div class="ttname"><a href="classRotationElements.html">RotationElements</a></div><div class="ttdef"><b>Definition:</b> <a href="Planet_8hpp_source.html#l00048">Planet.hpp:48</a></div></div>
-<div class="ttc" id="structPlanet_1_1RingPlanetShaderVars_html"><div class="ttname"><a href="structPlanet_1_1RingPlanetShaderVars.html">Planet::RingPlanetShaderVars</a></div><div class="ttdef"><b>Definition:</b> <a href="Planet_8hpp_source.html#l00388">Planet.hpp:388</a></div></div>
+<div class="ttc" id="structPlanet_1_1RingPlanetShaderVars_html"><div class="ttname"><a href="structPlanet_1_1RingPlanetShaderVars.html">Planet::RingPlanetShaderVars</a></div><div class="ttdef"><b>Definition:</b> <a href="Planet_8hpp_source.html#l00393">Planet.hpp:393</a></div></div>
 <div class="ttc" id="classStelProjector_html_ae6b42a6973558f855691b91701edf0dc"><div class="ttname"><a href="classStelProjector.html#ae6b42a6973558f855691b91701edf0dc">StelProjector::ModelViewTranformP</a></div><div class="ttdeci">QSharedPointer&lt; ModelViewTranform &gt; ModelViewTranformP</div><div class="ttdoc">Shared pointer on a ModelViewTranform instance (implement reference counting) </div><div class="ttdef"><b>Definition:</b> <a href="StelProjector_8hpp_source.html#l00046">StelProjector.hpp:46</a></div></div>
-<div class="ttc" id="structPlanet_1_1MoonShaderVars_html"><div class="ttname"><a href="structPlanet_1_1MoonShaderVars.html">Planet::MoonShaderVars</a></div><div class="ttdef"><b>Definition:</b> <a href="Planet_8hpp_source.html#l00399">Planet.hpp:399</a></div></div>
+<div class="ttc" id="structPlanet_1_1MoonShaderVars_html"><div class="ttname"><a href="structPlanet_1_1MoonShaderVars.html">Planet::MoonShaderVars</a></div><div class="ttdef"><b>Definition:</b> <a href="Planet_8hpp_source.html#l00404">Planet.hpp:404</a></div></div>
 <div class="ttc" id="classPlanet_html_a47dc86ef02efdc18d5f5dc5349194782"><div class="ttname"><a href="classPlanet.html#a47dc86ef02efdc18d5f5dc5349194782">Planet::getOneMinusOblateness</a></div><div class="ttdeci">double getOneMinusOblateness(void) const </div><div class="ttdoc">Get the value (1-f) for oblateness f. </div><div class="ttdef"><b>Definition:</b> <a href="Planet_8hpp_source.html#l00176">Planet.hpp:176</a></div></div>
 <div class="ttc" id="classSolarSystem_html_a312acfa554ca72f05331ea18009ba59f"><div class="ttname"><a href="classSolarSystem.html#a312acfa554ca72f05331ea18009ba59f">SolarSystem::getFlagOrbits</a></div><div class="ttdeci">bool getFlagOrbits() const </div><div class="ttdoc">Get the current value of the flag which determines if planet orbits are drawn or hidden. </div><div class="ttdef"><b>Definition:</b> <a href="SolarSystem_8hpp_source.html#l00168">SolarSystem.hpp:168</a></div></div>
 <div class="ttc" id="classPlanet_html_ac2f55ef00e367118954730336a231f8f"><div class="ttname"><a href="classPlanet.html#ac2f55ef00e367118954730336a231f8f">Planet::init</a></div><div class="ttdeci">static void init()</div><div class="ttdoc">Initializes static vars. Must be called before creating first planet. </div></div>
 <div class="ttc" id="StelProjectorType_8hpp_html"><div class="ttname"><a href="StelProjectorType_8hpp.html">StelProjectorType.hpp</a></div><div class="ttdoc">Define the StelProjectorP type. </div></div>
 <div class="ttc" id="classPlanet_html_a8930cd45f43363aa0f1cc3c9b2045592"><div class="ttname"><a href="classPlanet.html#a8930cd45f43363aa0f1cc3c9b2045592">Planet::getType</a></div><div class="ttdeci">virtual QString getType(void) const </div><div class="ttdoc">Return object&#39;s type. It should be the name of the class. </div><div class="ttdef"><b>Definition:</b> <a href="Planet_8hpp_source.html#l00153">Planet.hpp:153</a></div></div>
-<div class="ttc" id="structPlanet_1_1PlanetShaderVars_html"><div class="ttname"><a href="structPlanet_1_1PlanetShaderVars.html">Planet::PlanetShaderVars</a></div><div class="ttdef"><b>Definition:</b> <a href="Planet_8hpp_source.html#l00367">Planet.hpp:367</a></div></div>
+<div class="ttc" id="structPlanet_1_1PlanetShaderVars_html"><div class="ttname"><a href="structPlanet_1_1PlanetShaderVars.html">Planet::PlanetShaderVars</a></div><div class="ttdef"><b>Definition:</b> <a href="Planet_8hpp_source.html#l00372">Planet.hpp:372</a></div></div>
 <div class="ttc" id="classPlanet_html_a4f738e354018c9829293512c009c7427"><div class="ttname"><a href="classPlanet.html#a4f738e354018c9829293512c009c7427">Planet::getEclipticPos</a></div><div class="ttdeci">Vec3d getEclipticPos() const </div><div class="ttdoc">Get the Planet position in the parent Planet ecliptic coordinate in AU. </div></div>
 <div class="ttc" id="StelTextureTypes_8hpp_html_a085a86bd020a5f6d1240e02d596eb4bb"><div class="ttname"><a href="StelTextureTypes_8hpp.html#a085a86bd020a5f6d1240e02d596eb4bb">StelTextureSP</a></div><div class="ttdeci">QSharedPointer&lt; StelTexture &gt; StelTextureSP</div><div class="ttdoc">Use shared pointer to simplify memory managment. </div><div class="ttdef"><b>Definition:</b> <a href="StelTextureTypes_8hpp_source.html#l00032">StelTextureTypes.hpp:32</a></div></div>
 <div class="ttc" id="classSolarSystem_html_afe9e235e340ac7c8e5af44d655b62aaa"><div class="ttname"><a href="classSolarSystem.html#afe9e235e340ac7c8e5af44d655b62aaa">SolarSystem::getFlagHints</a></div><div class="ttdeci">bool getFlagHints() const </div><div class="ttdoc">Get the current value of the flag which determines if planet hints are drawn or hidden along labels...</div></div>
@@ -483,7 +489,7 @@
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Sat Feb 27 2016 23:13:23 for Stellarium by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Thu Apr 21 2016 13:47:03 for Stellarium by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.8
 </small></address>

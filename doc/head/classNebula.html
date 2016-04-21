@@ -27,6 +27,7 @@
   <div id="navrow1" class="tabs">
     <ul class="tablist">
       <li><a href="index.html"><span>Main&#160;Page</span></a></li>
+      <li><a href="modules.html"><span>Modules</span></a></li>
       <li><a href="namespaces.html"><span>Namespaces</span></a></li>
       <li class="current"><a href="annotated.html"><span>Classes</span></a></li>
       <li><a href="codingStyle.html"><span>Coding&#160;Style</span></a></li>
@@ -143,7 +144,7 @@ Public Member Functions</h2></td></tr>
 <tr class="memdesc:a3ba01b6c6aa1f0732e1c7a274ec017e1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get observer-centered equatorial coordinates at equinox J2000.  <a href="#a3ba01b6c6aa1f0732e1c7a274ec017e1">More...</a><br /></td></tr>
 <tr class="separator:a3ba01b6c6aa1f0732e1c7a274ec017e1"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:abe15fa6f556ab663eec3c1918641421b"><td class="memItemLeft" align="right" valign="top">virtual double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classNebula.html#abe15fa6f556ab663eec3c1918641421b">getCloseViewFov</a> (const <a class="el" href="classStelCore.html">StelCore</a> *core=NULL) const </td></tr>
-<tr class="memdesc:abe15fa6f556ab663eec3c1918641421b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return the best <a class="elRef" doxygen="/home/aw/devel/stellarium/trunk/builds/gcc/stellariumPlugins.tag:../../doc-plugins/head" href="../../doc-plugins/head/classFOV.html">FOV</a> in degree to use for a close view of the object.  <a href="#abe15fa6f556ab663eec3c1918641421b">More...</a><br /></td></tr>
+<tr class="memdesc:abe15fa6f556ab663eec3c1918641421b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return the best <a class="el" href="classFOV.html" title="Main class of the Field of View plugin. ">FOV</a> in degree to use for a close view of the object.  <a href="#abe15fa6f556ab663eec3c1918641421b">More...</a><br /></td></tr>
 <tr class="separator:abe15fa6f556ab663eec3c1918641421b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aea9dab68cacead39b5e91b6c1e46304d"><td class="memItemLeft" align="right" valign="top">virtual float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classNebula.html#aea9dab68cacead39b5e91b6c1e46304d">getVMagnitude</a> (const <a class="el" href="classStelCore.html">StelCore</a> *core) const </td></tr>
 <tr class="memdesc:aea9dab68cacead39b5e91b6c1e46304d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return object's apparent V magnitude as seen from observer, without including extinction.  <a href="#aea9dab68cacead39b5e91b6c1e46304d">More...</a><br /></td></tr>
@@ -190,6 +191,9 @@ float&#160;</td><td class="memItemRight" valign="bottom"><b>getSurfaceBrightness
 <tr class="memitem:af633522537e4a34c2aff7a5618b25b49"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="af633522537e4a34c2aff7a5618b25b49"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><b>setProperName</b> (QString name)</td></tr>
 <tr class="separator:af633522537e4a34c2aff7a5618b25b49"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4d75e9fc669e5119c2cdd295963c1048"><td class="memItemLeft" align="right" valign="top">QString&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classNebula.html#a4d75e9fc669e5119c2cdd295963c1048">getDSODesignation</a> ()</td></tr>
+<tr class="memdesc:a4d75e9fc669e5119c2cdd295963c1048"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get designation for DSO (with priority: M, C, NGC, IC, B, Sh2, VdB, RCW, LDN, LBN, Cr, Mel, PGC, UGC, Ced)  <a href="#a4d75e9fc669e5119c2cdd295963c1048">More...</a><br /></td></tr>
+<tr class="separator:a4d75e9fc669e5119c2cdd295963c1048"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pub_methods_classStelObject"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_classStelObject')"><img src="closed.png" alt="-"/>&#160;Public Member Functions inherited from <a class="el" href="classStelObject.html">StelObject</a></td></tr>
 <tr class="memitem:ae816425b2f91439c4c4cbe970a8cc4b6 inherit pub_methods_classStelObject"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="singletonVector3.html">Vec3d</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classStelObject.html#ae816425b2f91439c4c4cbe970a8cc4b6">getPointInRegion</a> () const </td></tr>
 <tr class="memdesc:ae816425b2f91439c4c4cbe970a8cc4b6 inherit pub_methods_classStelObject"><td class="mdescLeft">&#160;</td><td class="mdescRight">Default implementation of the getPointInRegion method.  <a href="#ae816425b2f91439c4c4cbe970a8cc4b6">More...</a><br /></td></tr>
@@ -219,7 +223,7 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>setProperName</b> (QS
 <tr class="memdesc:a9207438e21954ed8331a798d631292e4 inherit pub_methods_classStelObject"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return object's apparent V magnitude as seen from observer including extinction.  <a href="#a9207438e21954ed8331a798d631292e4">More...</a><br /></td></tr>
 <tr class="separator:a9207438e21954ed8331a798d631292e4 inherit pub_methods_classStelObject"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a7a65617cf25417e4f480ca10794e2599 inherit pub_methods_classStelObject"><td class="memItemLeft" align="right" valign="top">virtual double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classStelObject.html#a7a65617cf25417e4f480ca10794e2599">getSatellitesFov</a> (const <a class="el" href="classStelCore.html">StelCore</a> *) const </td></tr>
-<tr class="memdesc:a7a65617cf25417e4f480ca10794e2599 inherit pub_methods_classStelObject"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return the best <a class="elRef" doxygen="/home/aw/devel/stellarium/trunk/builds/gcc/stellariumPlugins.tag:../../doc-plugins/head" href="../../doc-plugins/head/classFOV.html">FOV</a> in degree to use for a global view of the object satellite system (if there are satellites)  <a href="#a7a65617cf25417e4f480ca10794e2599">More...</a><br /></td></tr>
+<tr class="memdesc:a7a65617cf25417e4f480ca10794e2599 inherit pub_methods_classStelObject"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return the best <a class="el" href="classFOV.html" title="Main class of the Field of View plugin. ">FOV</a> in degree to use for a global view of the object satellite system (if there are satellites)  <a href="#a7a65617cf25417e4f480ca10794e2599">More...</a><br /></td></tr>
 <tr class="separator:a7a65617cf25417e4f480ca10794e2599 inherit pub_methods_classStelObject"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:adda6548b315129179e2b311cf92d6ff1 inherit pub_methods_classStelObject"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="adda6548b315129179e2b311cf92d6ff1"></a>
 virtual double&#160;</td><td class="memItemRight" valign="bottom"><b>getParentSatellitesFov</b> (const <a class="el" href="classStelCore.html">StelCore</a> *) const </td></tr>
@@ -395,7 +399,7 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Return the angular radius of a circle containing the object as seen from the observer with the circle center assumed to be at <a class="el" href="classNebula.html#a3ba01b6c6aa1f0732e1c7a274ec017e1" title="Get observer-centered equatorial coordinates at equinox J2000. ">getJ2000EquatorialPos()</a>. </p>
-<dl class="section return"><dt>Returns</dt><dd>radius in degree. This value is the apparent angular size of the object, and is independent of the current <a class="elRef" doxygen="/home/aw/devel/stellarium/trunk/builds/gcc/stellariumPlugins.tag:../../doc-plugins/head" href="../../doc-plugins/head/classFOV.html">FOV</a>. </dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>radius in degree. This value is the apparent angular size of the object, and is independent of the current <a class="el" href="classFOV.html" title="Main class of the Field of View plugin. ">FOV</a>. </dd></dl>
 
 <p>Implements <a class="el" href="classStelObject.html#ae3fbe7c86ed77e2599419de3519a3dad">StelObject</a>.</p>
 
@@ -423,9 +427,27 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Return the best <a class="elRef" doxygen="/home/aw/devel/stellarium/trunk/builds/gcc/stellariumPlugins.tag:../../doc-plugins/head" href="../../doc-plugins/head/classFOV.html">FOV</a> in degree to use for a close view of the object. </p>
+<p>Return the best <a class="el" href="classFOV.html" title="Main class of the Field of View plugin. ">FOV</a> in degree to use for a close view of the object. </p>
 
 <p>Reimplemented from <a class="el" href="classStelObject.html#a33d342a81d05901435624f1cb1480c44">StelObject</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a4d75e9fc669e5119c2cdd295963c1048"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">QString Nebula::getDSODesignation </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Get designation for DSO (with priority: M, C, NGC, IC, B, Sh2, VdB, RCW, LDN, LBN, Cr, Mel, PGC, UGC, Ced) </p>
+<dl class="section return"><dt>Returns</dt><dd>a designation </dd></dl>
 
 </div>
 </div>
@@ -803,7 +825,7 @@ Additional Inherited Members</h2></td></tr>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Sat Feb 27 2016 23:13:24 for Stellarium by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Thu Apr 21 2016 13:47:04 for Stellarium by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.8
 </small></address>

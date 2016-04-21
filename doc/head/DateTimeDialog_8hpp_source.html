@@ -27,6 +27,7 @@
   <div id="navrow1" class="tabs">
     <ul class="tablist">
       <li><a href="index.html"><span>Main&#160;Page</span></a></li>
+      <li><a href="modules.html"><span>Modules</span></a></li>
       <li><a href="namespaces.html"><span>Namespaces</span></a></li>
       <li><a href="annotated.html"><span>Classes</span></a></li>
       <li><a href="codingStyle.html"><span>Coding&#160;Style</span></a></li>
@@ -120,11 +121,12 @@
 <div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;    <span class="keywordtype">int</span> minute;</div>
 <div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;    <span class="keywordtype">int</span> second;</div>
 <div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;    <span class="keywordtype">double</span> jd;</div>
-<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;    <span class="keywordtype">double</span> mjd;</div>
-<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;    <span class="keywordtype">void</span> pushToWidgets();</div>
-<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;};</div>
-<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;</div>
-<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;<span class="preprocessor">#endif // _DATETIMEDIALOG_HPP_</span></div>
+<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;    <span class="keywordtype">void</span> pushToWidgets();</div>
+<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;    <span class="keywordtype">void</span> setMjd(<span class="keywordtype">double</span> mjd) { jd = 2400000.5 + mjd; }</div>
+<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;    <span class="keywordtype">double</span> getMjd() { <span class="keywordflow">return</span> jd - 2400000.5 ; }</div>
+<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;};</div>
+<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;</div>
+<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;<span class="preprocessor">#endif // _DATETIMEDIALOG_HPP_</span></div>
 <div class="ttc" id="classDateTimeDialog_html_a9c65842bfa4288ec599ae40f86cfe276"><div class="ttname"><a href="classDateTimeDialog.html#a9c65842bfa4288ec599ae40f86cfe276">DateTimeDialog::createDialogContent</a></div><div class="ttdeci">virtual void createDialogContent()</div><div class="ttdoc">Initialize the dialog widgets and connect the signals/slots. </div></div>
 <div class="ttc" id="classDateTimeDialog_html_af23892e1ebb9c4120cbe488d30c3c487"><div class="ttname"><a href="classDateTimeDialog.html#af23892e1ebb9c4120cbe488d30c3c487">DateTimeDialog::setDateTime</a></div><div class="ttdeci">void setDateTime(double newJd)</div><div class="ttdoc">update the editing display with new JD. </div></div>
 <div class="ttc" id="classStelDialog_html"><div class="ttname"><a href="classStelDialog.html">StelDialog</a></div><div class="ttdoc">Base class for all the GUI windows in Stellarium. </div><div class="ttdef"><b>Definition:</b> <a href="StelDialog_8hpp_source.html#l00052">StelDialog.hpp:52</a></div></div>
@@ -133,7 +135,7 @@
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Sat Feb 27 2016 23:13:23 for Stellarium by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Thu Apr 21 2016 13:47:03 for Stellarium by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.8
 </small></address>
