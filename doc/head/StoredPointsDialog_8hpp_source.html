@@ -116,33 +116,36 @@
 <div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;<span class="keyword">private</span> slots:</div>
 <div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;    <span class="keywordtype">void</span> buttonAddPressed();</div>
 <div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;    <span class="keywordtype">void</span> buttonRemovePressed();</div>
-<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;</div>
-<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;    <span class="keywordtype">void</span> getCurrentObjectInfo();</div>
-<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;    <span class="keywordtype">void</span> getCenterInfo();</div>
-<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;</div>
-<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;signals:</div>
-<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;    <span class="keywordtype">void</span> addStoredPoint(<span class="keywordtype">int</span> number, QString name, <span class="keywordtype">double</span> radiansRA, <span class="keywordtype">double</span> radiansDec);</div>
-<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;    <span class="keywordtype">void</span> removeStoredPoint(<span class="keywordtype">int</span> number);</div>
-<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;<span class="keyword">protected</span>:</div>
-<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;    <span class="keyword">virtual</span> <span class="keywordtype">void</span> createDialogContent();</div>
-<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;    Ui_StoredPoints *ui;</div>
-<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;<span class="keyword">private</span>:</div>
-<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;</div>
-<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;    <span class="keyword">enum</span> ModelColumns</div>
-<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;    {</div>
-<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;        ColumnSlot = 0, </div>
-<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;        ColumnName, </div>
-<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;        ColumnRA,   </div>
-<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;        ColumnDec,  </div>
-<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;        ColumnCount,    </div>
-<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;    };</div>
-<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;    QStandardItemModel * storedPointsListModel;</div>
-<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;</div>
-<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;    <span class="keywordtype">void</span> setHeaderNames();</div>
-<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;    <span class="keywordtype">void</span> addModelRow(<span class="keywordtype">int</span> number, QString name, QString RA, QString Dec);</div>
-<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;};</div>
-<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;</div>
-<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;<span class="preprocessor">#endif // STOREDPOINTS_HPP</span></div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;    <span class="keywordtype">void</span> buttonClearPressed();</div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;</div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;    <span class="keywordtype">void</span> getCurrentObjectInfo();</div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;    <span class="keywordtype">void</span> getCenterInfo();</div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;</div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;signals:</div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;    <span class="keywordtype">void</span> addStoredPoint(<span class="keywordtype">int</span> number, QString name, <span class="keywordtype">double</span> radiansRA, <span class="keywordtype">double</span> radiansDec);</div>
+<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;    <span class="keywordtype">void</span> removeStoredPoint(<span class="keywordtype">int</span> number);</div>
+<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;    <span class="keywordtype">void</span> clearStoredPoints();</div>
+<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;</div>
+<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;<span class="keyword">protected</span>:</div>
+<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;    <span class="keyword">virtual</span> <span class="keywordtype">void</span> createDialogContent();</div>
+<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;    Ui_StoredPoints *ui;</div>
+<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;<span class="keyword">private</span>:</div>
+<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;</div>
+<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;    <span class="keyword">enum</span> ModelColumns</div>
+<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;    {</div>
+<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;        ColumnSlot = 0, </div>
+<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;        ColumnName, </div>
+<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;        ColumnRA,   </div>
+<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;        ColumnDec,  </div>
+<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;        ColumnCount,    </div>
+<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;    };</div>
+<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;    QStandardItemModel * storedPointsListModel;</div>
+<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;</div>
+<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;    <span class="keywordtype">void</span> setHeaderNames();</div>
+<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;    <span class="keywordtype">void</span> addModelRow(<span class="keywordtype">int</span> number, QString name, QString RA, QString Dec);</div>
+<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;};</div>
+<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;</div>
+<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;<span class="preprocessor">#endif // STOREDPOINTS_HPP</span></div>
 <div class="ttc" id="classStelDialog_html"><div class="ttname"><a href="classStelDialog.html">StelDialog</a></div><div class="ttdoc">Base class for all the GUI windows in Stellarium. </div><div class="ttdef"><b>Definition:</b> <a href="StelDialog_8hpp_source.html#l00052">StelDialog.hpp:52</a></div></div>
 <div class="ttc" id="StelTranslator_8hpp_html"><div class="ttname"><a href="StelTranslator_8hpp.html">StelTranslator.hpp</a></div><div class="ttdoc">Define some translation macros. </div></div>
 <div class="ttc" id="classStoredPointsDialog_html"><div class="ttname"><a href="classStoredPointsDialog.html">StoredPointsDialog</a></div><div class="ttdef"><b>Definition:</b> <a href="StoredPointsDialog_8hpp_source.html#l00049">StoredPointsDialog.hpp:49</a></div></div>
@@ -150,7 +153,7 @@
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Sat Apr 23 2016 20:54:16 for Stellarium by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Fri Apr 29 2016 10:24:23 for Stellarium by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.8
 </small></address>

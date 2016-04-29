@@ -205,99 +205,98 @@
 <div class="line"><a name="l00288"></a><span class="lineno">  288</span>&#160;    <span class="keywordtype">bool</span> <a class="code" href="classStarMgr.html#ac13fe05c5b5e93deff94cd09fe58d48e">checkAndLoadCatalog</a>(<span class="keyword">const</span> QVariantMap&amp; m);</div>
 <div class="line"><a name="l00289"></a><span class="lineno">  289</span>&#160;</div>
 <div class="line"><a name="l00290"></a><span class="lineno">  290</span>&#160;<span class="keyword">private</span> slots:</div>
-<div class="line"><a name="l00291"></a><span class="lineno">  291</span>&#160;    <span class="keywordtype">void</span> setStelStyle(<span class="keyword">const</span> QString&amp; section);</div>
-<div class="line"><a name="l00293"></a><span class="lineno">  293</span>&#160;    <span class="keywordtype">void</span> updateI18n();</div>
-<div class="line"><a name="l00294"></a><span class="lineno">  294</span>&#160;</div>
-<div class="line"><a name="l00298"></a><span class="lineno">  298</span>&#160;    <span class="keywordtype">void</span> updateSkyCulture(<span class="keyword">const</span> QString&amp; skyCultureDir);</div>
-<div class="line"><a name="l00299"></a><span class="lineno">  299</span>&#160;</div>
-<div class="line"><a name="l00300"></a><span class="lineno">  300</span>&#160;signals:</div>
-<div class="line"><a name="l00301"></a><span class="lineno">  301</span>&#160;    <span class="keywordtype">void</span> starLabelsDisplayedChanged(<span class="keyword">const</span> <span class="keywordtype">bool</span> displayed);</div>
-<div class="line"><a name="l00302"></a><span class="lineno">  302</span>&#160;    <span class="keywordtype">void</span> starsDisplayedChanged(<span class="keyword">const</span> <span class="keywordtype">bool</span> displayed);</div>
-<div class="line"><a name="l00303"></a><span class="lineno">  303</span>&#160;</div>
-<div class="line"><a name="l00304"></a><span class="lineno">  304</span>&#160;<span class="keyword">private</span>:</div>
-<div class="line"><a name="l00305"></a><span class="lineno">  305</span>&#160;</div>
-<div class="line"><a name="l00306"></a><span class="lineno">  306</span>&#160;    <span class="keywordtype">void</span> setCheckFlag(<span class="keyword">const</span> QString&amp; catalogId, <span class="keywordtype">bool</span> b);</div>
-<div class="line"><a name="l00307"></a><span class="lineno">  307</span>&#160;</div>
-<div class="line"><a name="l00308"></a><span class="lineno">  308</span>&#160;    <span class="keywordtype">void</span> copyDefaultConfigFile();</div>
-<div class="line"><a name="l00309"></a><span class="lineno">  309</span>&#160;</div>
-<div class="line"><a name="l00314"></a><span class="lineno">  314</span>&#160;    <span class="keywordtype">int</span> loadCommonNames(<span class="keyword">const</span> QString&amp; commonNameFile);</div>
-<div class="line"><a name="l00315"></a><span class="lineno">  315</span>&#160;</div>
-<div class="line"><a name="l00319"></a><span class="lineno">  319</span>&#160;    <span class="keywordtype">void</span> loadSciNames(<span class="keyword">const</span> QString&amp; sciNameFile);</div>
-<div class="line"><a name="l00320"></a><span class="lineno">  320</span>&#160;</div>
-<div class="line"><a name="l00323"></a><span class="lineno">  323</span>&#160;    <span class="keywordtype">void</span> loadGcvs(<span class="keyword">const</span> QString&amp; GcvsFile);</div>
-<div class="line"><a name="l00324"></a><span class="lineno">  324</span>&#160;</div>
-<div class="line"><a name="l00327"></a><span class="lineno">  327</span>&#160;    <span class="keywordtype">void</span> loadCrossIndex(<span class="keyword">const</span> QString&amp; crossIndexFile);</div>
-<div class="line"><a name="l00328"></a><span class="lineno">  328</span>&#160;</div>
-<div class="line"><a name="l00330"></a><span class="lineno">  330</span>&#160;    <span class="comment">// TODO: add a non-lame description - what is the purpose of the max search level?</span></div>
-<div class="line"><a name="l00331"></a><span class="lineno">  331</span>&#160;    <span class="keywordtype">int</span> getMaxSearchLevel() <span class="keyword">const</span>;</div>
-<div class="line"><a name="l00332"></a><span class="lineno">  332</span>&#160;</div>
-<div class="line"><a name="l00334"></a><span class="lineno">  334</span>&#160;    <span class="keywordtype">void</span> loadData(QVariantMap starsConfigFile);</div>
-<div class="line"><a name="l00335"></a><span class="lineno">  335</span>&#160;</div>
-<div class="line"><a name="l00337"></a><span class="lineno">  337</span>&#160;    <span class="keywordtype">void</span> drawPointer(<a class="code" href="classStelPainter.html">StelPainter</a>&amp; sPainter, <span class="keyword">const</span> <a class="code" href="classStelCore.html">StelCore</a>* core);</div>
-<div class="line"><a name="l00338"></a><span class="lineno">  338</span>&#160;</div>
-<div class="line"><a name="l00339"></a><span class="lineno">  339</span>&#160;    <a class="code" href="classLinearFader.html">LinearFader</a> labelsFader;</div>
-<div class="line"><a name="l00340"></a><span class="lineno">  340</span>&#160;    <a class="code" href="classLinearFader.html">LinearFader</a> starsFader;</div>
-<div class="line"><a name="l00341"></a><span class="lineno">  341</span>&#160;</div>
-<div class="line"><a name="l00342"></a><span class="lineno">  342</span>&#160;    <span class="keywordtype">bool</span> flagStarName;</div>
-<div class="line"><a name="l00343"></a><span class="lineno">  343</span>&#160;    <span class="keywordtype">float</span> labelsAmount;</div>
-<div class="line"><a name="l00344"></a><span class="lineno">  344</span>&#160;    <span class="keywordtype">bool</span> gravityLabel;</div>
-<div class="line"><a name="l00345"></a><span class="lineno">  345</span>&#160;</div>
-<div class="line"><a name="l00346"></a><span class="lineno">  346</span>&#160;    <span class="keywordtype">int</span> maxGeodesicGridLevel;</div>
-<div class="line"><a name="l00347"></a><span class="lineno">  347</span>&#160;    <span class="keywordtype">int</span> lastMaxSearchLevel;</div>
-<div class="line"><a name="l00348"></a><span class="lineno">  348</span>&#160;    </div>
-<div class="line"><a name="l00349"></a><span class="lineno">  349</span>&#160;    <span class="comment">// A ZoneArray per grid level</span></div>
-<div class="line"><a name="l00350"></a><span class="lineno">  350</span>&#160;    QVector&lt;ZoneArray*&gt; gridLevels;</div>
-<div class="line"><a name="l00351"></a><span class="lineno">  351</span>&#160;    <span class="keyword">static</span> <span class="keywordtype">void</span> initTriangleFunc(<span class="keywordtype">int</span> lev, <span class="keywordtype">int</span> index,</div>
-<div class="line"><a name="l00352"></a><span class="lineno">  352</span>&#160;                                 <span class="keyword">const</span> <a class="code" href="singletonVector3.html">Vec3f</a> &amp;c0,</div>
-<div class="line"><a name="l00353"></a><span class="lineno">  353</span>&#160;                                 <span class="keyword">const</span> <a class="code" href="singletonVector3.html">Vec3f</a> &amp;c1,</div>
-<div class="line"><a name="l00354"></a><span class="lineno">  354</span>&#160;                                 <span class="keyword">const</span> <a class="code" href="singletonVector3.html">Vec3f</a> &amp;c2,</div>
-<div class="line"><a name="l00355"></a><span class="lineno">  355</span>&#160;                                 <span class="keywordtype">void</span> *context)</div>
-<div class="line"><a name="l00356"></a><span class="lineno">  356</span>&#160;    {</div>
-<div class="line"><a name="l00357"></a><span class="lineno">  357</span>&#160;        <span class="keyword">reinterpret_cast&lt;</span><a class="code" href="classStarMgr.html">StarMgr</a>*<span class="keyword">&gt;</span>(context)-&gt;initTriangle(lev, index, c0, c1, c2);</div>
-<div class="line"><a name="l00358"></a><span class="lineno">  358</span>&#160;    }</div>
-<div class="line"><a name="l00359"></a><span class="lineno">  359</span>&#160;</div>
-<div class="line"><a name="l00360"></a><span class="lineno">  360</span>&#160;    <span class="keywordtype">void</span> initTriangle(<span class="keywordtype">int</span> lev, <span class="keywordtype">int</span> index,</div>
-<div class="line"><a name="l00361"></a><span class="lineno">  361</span>&#160;                      <span class="keyword">const</span> <a class="code" href="singletonVector3.html">Vec3f</a> &amp;c0,</div>
-<div class="line"><a name="l00362"></a><span class="lineno">  362</span>&#160;                      <span class="keyword">const</span> <a class="code" href="singletonVector3.html">Vec3f</a> &amp;c1,</div>
-<div class="line"><a name="l00363"></a><span class="lineno">  363</span>&#160;                      <span class="keyword">const</span> <a class="code" href="singletonVector3.html">Vec3f</a> &amp;c2);</div>
-<div class="line"><a name="l00364"></a><span class="lineno">  364</span>&#160;</div>
-<div class="line"><a name="l00365"></a><span class="lineno">  365</span>&#160;    <a class="code" href="structHipIndexStruct.html">HipIndexStruct</a> *hipIndex; <span class="comment">// array of Hipparcos stars</span></div>
-<div class="line"><a name="l00366"></a><span class="lineno">  366</span>&#160;</div>
-<div class="line"><a name="l00367"></a><span class="lineno">  367</span>&#160;    <span class="keyword">static</span> QHash&lt;int, QString&gt; commonNamesMap;     <span class="comment">// the original names from skyculture (star_names.fab)</span></div>
-<div class="line"><a name="l00368"></a><span class="lineno">  368</span>&#160;    <span class="keyword">static</span> QHash&lt;int, QString&gt; commonNamesMapI18n; <span class="comment">// translated names</span></div>
-<div class="line"><a name="l00369"></a><span class="lineno">  369</span>&#160;    <span class="keyword">static</span> QMap&lt;QString, int&gt; commonNamesIndexI18n;</div>
-<div class="line"><a name="l00370"></a><span class="lineno">  370</span>&#160;    <span class="keyword">static</span> QMap&lt;QString, int&gt; commonNamesIndex;</div>
-<div class="line"><a name="l00371"></a><span class="lineno">  371</span>&#160;</div>
-<div class="line"><a name="l00372"></a><span class="lineno">  372</span>&#160;    <span class="keyword">static</span> QHash&lt;int, QString&gt; sciNamesMapI18n; </div>
-<div class="line"><a name="l00373"></a><span class="lineno">  373</span>&#160;    <span class="keyword">static</span> QMap&lt;QString, int&gt; sciNamesIndexI18n;</div>
-<div class="line"><a name="l00374"></a><span class="lineno">  374</span>&#160;</div>
-<div class="line"><a name="l00375"></a><span class="lineno">  375</span>&#160;    <span class="keyword">static</span> QHash&lt;int, QString&gt; sciAdditionalNamesMapI18n;</div>
-<div class="line"><a name="l00376"></a><span class="lineno">  376</span>&#160;    <span class="keyword">static</span> QMap&lt;QString, int&gt; sciAdditionalNamesIndexI18n;</div>
-<div class="line"><a name="l00377"></a><span class="lineno">  377</span>&#160;</div>
-<div class="line"><a name="l00378"></a><span class="lineno">  378</span>&#160;    <span class="keyword">static</span> QHash&lt;int, varstar&gt; varStarsMapI18n;</div>
-<div class="line"><a name="l00379"></a><span class="lineno">  379</span>&#160;    <span class="keyword">static</span> QMap&lt;QString, int&gt; varStarsIndexI18n;</div>
-<div class="line"><a name="l00380"></a><span class="lineno">  380</span>&#160;</div>
-<div class="line"><a name="l00381"></a><span class="lineno">  381</span>&#160;    <span class="keyword">static</span> QHash&lt;int, int&gt; saoStarsMap;</div>
-<div class="line"><a name="l00382"></a><span class="lineno">  382</span>&#160;    <span class="keyword">static</span> QMap&lt;int, int&gt; saoStarsIndex;</div>
-<div class="line"><a name="l00383"></a><span class="lineno">  383</span>&#160;    <span class="keyword">static</span> QHash&lt;int, int&gt; hdStarsMap;</div>
-<div class="line"><a name="l00384"></a><span class="lineno">  384</span>&#160;    <span class="keyword">static</span> QMap&lt;int, int&gt; hdStarsIndex;</div>
-<div class="line"><a name="l00385"></a><span class="lineno">  385</span>&#160;</div>
-<div class="line"><a name="l00386"></a><span class="lineno">  386</span>&#160;    QFont starFont;</div>
-<div class="line"><a name="l00387"></a><span class="lineno">  387</span>&#160;    <span class="keyword">static</span> <span class="keywordtype">bool</span> flagSciNames;</div>
-<div class="line"><a name="l00388"></a><span class="lineno">  388</span>&#160;    <a class="code" href="singletonVector3.html">Vec3f</a> labelColor;</div>
-<div class="line"><a name="l00389"></a><span class="lineno">  389</span>&#160;</div>
-<div class="line"><a name="l00390"></a><span class="lineno">  390</span>&#160;    <a class="code" href="StelTextureTypes_8hpp.html#a085a86bd020a5f6d1240e02d596eb4bb">StelTextureSP</a> texPointer;       <span class="comment">// The selection pointer texture</span></div>
-<div class="line"><a name="l00391"></a><span class="lineno">  391</span>&#160;</div>
-<div class="line"><a name="l00392"></a><span class="lineno">  392</span>&#160;    <span class="keyword">class </span><a class="code" href="classStelObjectMgr.html">StelObjectMgr</a>* objectMgr;</div>
-<div class="line"><a name="l00393"></a><span class="lineno">  393</span>&#160;</div>
-<div class="line"><a name="l00394"></a><span class="lineno">  394</span>&#160;    QString starConfigFileFullPath;</div>
-<div class="line"><a name="l00395"></a><span class="lineno">  395</span>&#160;    QVariantMap starSettings;</div>
-<div class="line"><a name="l00396"></a><span class="lineno">  396</span>&#160;    QVariantList catalogsDescription;</div>
-<div class="line"><a name="l00397"></a><span class="lineno">  397</span>&#160;};</div>
+<div class="line"><a name="l00292"></a><span class="lineno">  292</span>&#160;    <span class="keywordtype">void</span> updateI18n();</div>
+<div class="line"><a name="l00293"></a><span class="lineno">  293</span>&#160;</div>
+<div class="line"><a name="l00297"></a><span class="lineno">  297</span>&#160;    <span class="keywordtype">void</span> updateSkyCulture(<span class="keyword">const</span> QString&amp; skyCultureDir);</div>
+<div class="line"><a name="l00298"></a><span class="lineno">  298</span>&#160;</div>
+<div class="line"><a name="l00299"></a><span class="lineno">  299</span>&#160;signals:</div>
+<div class="line"><a name="l00300"></a><span class="lineno">  300</span>&#160;    <span class="keywordtype">void</span> starLabelsDisplayedChanged(<span class="keyword">const</span> <span class="keywordtype">bool</span> displayed);</div>
+<div class="line"><a name="l00301"></a><span class="lineno">  301</span>&#160;    <span class="keywordtype">void</span> starsDisplayedChanged(<span class="keyword">const</span> <span class="keywordtype">bool</span> displayed);</div>
+<div class="line"><a name="l00302"></a><span class="lineno">  302</span>&#160;</div>
+<div class="line"><a name="l00303"></a><span class="lineno">  303</span>&#160;<span class="keyword">private</span>:</div>
+<div class="line"><a name="l00304"></a><span class="lineno">  304</span>&#160;</div>
+<div class="line"><a name="l00305"></a><span class="lineno">  305</span>&#160;    <span class="keywordtype">void</span> setCheckFlag(<span class="keyword">const</span> QString&amp; catalogId, <span class="keywordtype">bool</span> b);</div>
+<div class="line"><a name="l00306"></a><span class="lineno">  306</span>&#160;</div>
+<div class="line"><a name="l00307"></a><span class="lineno">  307</span>&#160;    <span class="keywordtype">void</span> copyDefaultConfigFile();</div>
+<div class="line"><a name="l00308"></a><span class="lineno">  308</span>&#160;</div>
+<div class="line"><a name="l00313"></a><span class="lineno">  313</span>&#160;    <span class="keywordtype">int</span> loadCommonNames(<span class="keyword">const</span> QString&amp; commonNameFile);</div>
+<div class="line"><a name="l00314"></a><span class="lineno">  314</span>&#160;</div>
+<div class="line"><a name="l00318"></a><span class="lineno">  318</span>&#160;    <span class="keywordtype">void</span> loadSciNames(<span class="keyword">const</span> QString&amp; sciNameFile);</div>
+<div class="line"><a name="l00319"></a><span class="lineno">  319</span>&#160;</div>
+<div class="line"><a name="l00322"></a><span class="lineno">  322</span>&#160;    <span class="keywordtype">void</span> loadGcvs(<span class="keyword">const</span> QString&amp; GcvsFile);</div>
+<div class="line"><a name="l00323"></a><span class="lineno">  323</span>&#160;</div>
+<div class="line"><a name="l00326"></a><span class="lineno">  326</span>&#160;    <span class="keywordtype">void</span> loadCrossIndex(<span class="keyword">const</span> QString&amp; crossIndexFile);</div>
+<div class="line"><a name="l00327"></a><span class="lineno">  327</span>&#160;</div>
+<div class="line"><a name="l00329"></a><span class="lineno">  329</span>&#160;    <span class="comment">// TODO: add a non-lame description - what is the purpose of the max search level?</span></div>
+<div class="line"><a name="l00330"></a><span class="lineno">  330</span>&#160;    <span class="keywordtype">int</span> getMaxSearchLevel() <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00331"></a><span class="lineno">  331</span>&#160;</div>
+<div class="line"><a name="l00333"></a><span class="lineno">  333</span>&#160;    <span class="keywordtype">void</span> loadData(QVariantMap starsConfigFile);</div>
+<div class="line"><a name="l00334"></a><span class="lineno">  334</span>&#160;</div>
+<div class="line"><a name="l00336"></a><span class="lineno">  336</span>&#160;    <span class="keywordtype">void</span> drawPointer(<a class="code" href="classStelPainter.html">StelPainter</a>&amp; sPainter, <span class="keyword">const</span> <a class="code" href="classStelCore.html">StelCore</a>* core);</div>
+<div class="line"><a name="l00337"></a><span class="lineno">  337</span>&#160;</div>
+<div class="line"><a name="l00338"></a><span class="lineno">  338</span>&#160;    <a class="code" href="classLinearFader.html">LinearFader</a> labelsFader;</div>
+<div class="line"><a name="l00339"></a><span class="lineno">  339</span>&#160;    <a class="code" href="classLinearFader.html">LinearFader</a> starsFader;</div>
+<div class="line"><a name="l00340"></a><span class="lineno">  340</span>&#160;</div>
+<div class="line"><a name="l00341"></a><span class="lineno">  341</span>&#160;    <span class="keywordtype">bool</span> flagStarName;</div>
+<div class="line"><a name="l00342"></a><span class="lineno">  342</span>&#160;    <span class="keywordtype">float</span> labelsAmount;</div>
+<div class="line"><a name="l00343"></a><span class="lineno">  343</span>&#160;    <span class="keywordtype">bool</span> gravityLabel;</div>
+<div class="line"><a name="l00344"></a><span class="lineno">  344</span>&#160;</div>
+<div class="line"><a name="l00345"></a><span class="lineno">  345</span>&#160;    <span class="keywordtype">int</span> maxGeodesicGridLevel;</div>
+<div class="line"><a name="l00346"></a><span class="lineno">  346</span>&#160;    <span class="keywordtype">int</span> lastMaxSearchLevel;</div>
+<div class="line"><a name="l00347"></a><span class="lineno">  347</span>&#160;    </div>
+<div class="line"><a name="l00348"></a><span class="lineno">  348</span>&#160;    <span class="comment">// A ZoneArray per grid level</span></div>
+<div class="line"><a name="l00349"></a><span class="lineno">  349</span>&#160;    QVector&lt;ZoneArray*&gt; gridLevels;</div>
+<div class="line"><a name="l00350"></a><span class="lineno">  350</span>&#160;    <span class="keyword">static</span> <span class="keywordtype">void</span> initTriangleFunc(<span class="keywordtype">int</span> lev, <span class="keywordtype">int</span> index,</div>
+<div class="line"><a name="l00351"></a><span class="lineno">  351</span>&#160;                                 <span class="keyword">const</span> <a class="code" href="singletonVector3.html">Vec3f</a> &amp;c0,</div>
+<div class="line"><a name="l00352"></a><span class="lineno">  352</span>&#160;                                 <span class="keyword">const</span> <a class="code" href="singletonVector3.html">Vec3f</a> &amp;c1,</div>
+<div class="line"><a name="l00353"></a><span class="lineno">  353</span>&#160;                                 <span class="keyword">const</span> <a class="code" href="singletonVector3.html">Vec3f</a> &amp;c2,</div>
+<div class="line"><a name="l00354"></a><span class="lineno">  354</span>&#160;                                 <span class="keywordtype">void</span> *context)</div>
+<div class="line"><a name="l00355"></a><span class="lineno">  355</span>&#160;    {</div>
+<div class="line"><a name="l00356"></a><span class="lineno">  356</span>&#160;        <span class="keyword">reinterpret_cast&lt;</span><a class="code" href="classStarMgr.html">StarMgr</a>*<span class="keyword">&gt;</span>(context)-&gt;initTriangle(lev, index, c0, c1, c2);</div>
+<div class="line"><a name="l00357"></a><span class="lineno">  357</span>&#160;    }</div>
+<div class="line"><a name="l00358"></a><span class="lineno">  358</span>&#160;</div>
+<div class="line"><a name="l00359"></a><span class="lineno">  359</span>&#160;    <span class="keywordtype">void</span> initTriangle(<span class="keywordtype">int</span> lev, <span class="keywordtype">int</span> index,</div>
+<div class="line"><a name="l00360"></a><span class="lineno">  360</span>&#160;                      <span class="keyword">const</span> <a class="code" href="singletonVector3.html">Vec3f</a> &amp;c0,</div>
+<div class="line"><a name="l00361"></a><span class="lineno">  361</span>&#160;                      <span class="keyword">const</span> <a class="code" href="singletonVector3.html">Vec3f</a> &amp;c1,</div>
+<div class="line"><a name="l00362"></a><span class="lineno">  362</span>&#160;                      <span class="keyword">const</span> <a class="code" href="singletonVector3.html">Vec3f</a> &amp;c2);</div>
+<div class="line"><a name="l00363"></a><span class="lineno">  363</span>&#160;</div>
+<div class="line"><a name="l00364"></a><span class="lineno">  364</span>&#160;    <a class="code" href="structHipIndexStruct.html">HipIndexStruct</a> *hipIndex; <span class="comment">// array of Hipparcos stars</span></div>
+<div class="line"><a name="l00365"></a><span class="lineno">  365</span>&#160;</div>
+<div class="line"><a name="l00366"></a><span class="lineno">  366</span>&#160;    <span class="keyword">static</span> QHash&lt;int, QString&gt; commonNamesMap;     <span class="comment">// the original names from skyculture (star_names.fab)</span></div>
+<div class="line"><a name="l00367"></a><span class="lineno">  367</span>&#160;    <span class="keyword">static</span> QHash&lt;int, QString&gt; commonNamesMapI18n; <span class="comment">// translated names</span></div>
+<div class="line"><a name="l00368"></a><span class="lineno">  368</span>&#160;    <span class="keyword">static</span> QMap&lt;QString, int&gt; commonNamesIndexI18n;</div>
+<div class="line"><a name="l00369"></a><span class="lineno">  369</span>&#160;    <span class="keyword">static</span> QMap&lt;QString, int&gt; commonNamesIndex;</div>
+<div class="line"><a name="l00370"></a><span class="lineno">  370</span>&#160;</div>
+<div class="line"><a name="l00371"></a><span class="lineno">  371</span>&#160;    <span class="keyword">static</span> QHash&lt;int, QString&gt; sciNamesMapI18n; </div>
+<div class="line"><a name="l00372"></a><span class="lineno">  372</span>&#160;    <span class="keyword">static</span> QMap&lt;QString, int&gt; sciNamesIndexI18n;</div>
+<div class="line"><a name="l00373"></a><span class="lineno">  373</span>&#160;</div>
+<div class="line"><a name="l00374"></a><span class="lineno">  374</span>&#160;    <span class="keyword">static</span> QHash&lt;int, QString&gt; sciAdditionalNamesMapI18n;</div>
+<div class="line"><a name="l00375"></a><span class="lineno">  375</span>&#160;    <span class="keyword">static</span> QMap&lt;QString, int&gt; sciAdditionalNamesIndexI18n;</div>
+<div class="line"><a name="l00376"></a><span class="lineno">  376</span>&#160;</div>
+<div class="line"><a name="l00377"></a><span class="lineno">  377</span>&#160;    <span class="keyword">static</span> QHash&lt;int, varstar&gt; varStarsMapI18n;</div>
+<div class="line"><a name="l00378"></a><span class="lineno">  378</span>&#160;    <span class="keyword">static</span> QMap&lt;QString, int&gt; varStarsIndexI18n;</div>
+<div class="line"><a name="l00379"></a><span class="lineno">  379</span>&#160;</div>
+<div class="line"><a name="l00380"></a><span class="lineno">  380</span>&#160;    <span class="keyword">static</span> QHash&lt;int, int&gt; saoStarsMap;</div>
+<div class="line"><a name="l00381"></a><span class="lineno">  381</span>&#160;    <span class="keyword">static</span> QMap&lt;int, int&gt; saoStarsIndex;</div>
+<div class="line"><a name="l00382"></a><span class="lineno">  382</span>&#160;    <span class="keyword">static</span> QHash&lt;int, int&gt; hdStarsMap;</div>
+<div class="line"><a name="l00383"></a><span class="lineno">  383</span>&#160;    <span class="keyword">static</span> QMap&lt;int, int&gt; hdStarsIndex;</div>
+<div class="line"><a name="l00384"></a><span class="lineno">  384</span>&#160;</div>
+<div class="line"><a name="l00385"></a><span class="lineno">  385</span>&#160;    QFont starFont;</div>
+<div class="line"><a name="l00386"></a><span class="lineno">  386</span>&#160;    <span class="keyword">static</span> <span class="keywordtype">bool</span> flagSciNames;</div>
+<div class="line"><a name="l00387"></a><span class="lineno">  387</span>&#160;    <a class="code" href="singletonVector3.html">Vec3f</a> labelColor;</div>
+<div class="line"><a name="l00388"></a><span class="lineno">  388</span>&#160;</div>
+<div class="line"><a name="l00389"></a><span class="lineno">  389</span>&#160;    <a class="code" href="StelTextureTypes_8hpp.html#a085a86bd020a5f6d1240e02d596eb4bb">StelTextureSP</a> texPointer;       <span class="comment">// The selection pointer texture</span></div>
+<div class="line"><a name="l00390"></a><span class="lineno">  390</span>&#160;</div>
+<div class="line"><a name="l00391"></a><span class="lineno">  391</span>&#160;    <span class="keyword">class </span><a class="code" href="classStelObjectMgr.html">StelObjectMgr</a>* objectMgr;</div>
+<div class="line"><a name="l00392"></a><span class="lineno">  392</span>&#160;</div>
+<div class="line"><a name="l00393"></a><span class="lineno">  393</span>&#160;    QString starConfigFileFullPath;</div>
+<div class="line"><a name="l00394"></a><span class="lineno">  394</span>&#160;    QVariantMap starSettings;</div>
+<div class="line"><a name="l00395"></a><span class="lineno">  395</span>&#160;    QVariantList catalogsDescription;</div>
+<div class="line"><a name="l00396"></a><span class="lineno">  396</span>&#160;};</div>
+<div class="line"><a name="l00397"></a><span class="lineno">  397</span>&#160;</div>
 <div class="line"><a name="l00398"></a><span class="lineno">  398</span>&#160;</div>
-<div class="line"><a name="l00399"></a><span class="lineno">  399</span>&#160;</div>
-<div class="line"><a name="l00400"></a><span class="lineno">  400</span>&#160;<span class="preprocessor">#endif // _STARMGR_HPP_</span></div>
-<div class="line"><a name="l00401"></a><span class="lineno">  401</span>&#160;</div>
+<div class="line"><a name="l00399"></a><span class="lineno">  399</span>&#160;<span class="preprocessor">#endif // _STARMGR_HPP_</span></div>
+<div class="line"><a name="l00400"></a><span class="lineno">  400</span>&#160;</div>
 <div class="ttc" id="classStarMgr_html_a2681915d018dce2b75e5830cf2a8ace9"><div class="ttname"><a href="classStarMgr.html#a2681915d018dce2b75e5830cf2a8ace9">StarMgr::getSciName</a></div><div class="ttdeci">static QString getSciName(int hip)</div><div class="ttdoc">Get the (translated) scientific name for a star with a specified Hipparcos catalogue number...</div></div>
 <div class="ttc" id="classStarMgr_html_a28c601fd166a16abd6ef039f1aa67cad"><div class="ttname"><a href="classStarMgr.html#a28c601fd166a16abd6ef039f1aa67cad">StarMgr::getGcvsEpoch</a></div><div class="ttdeci">static double getGcvsEpoch(int hip)</div><div class="ttdoc">Get Epoch for maximum light for a variable star with a specified Hipparcos catalogue number...</div></div>
 <div class="ttc" id="classStarMgr_html_a6a5f68e8bce606ea4ec7686eaf65a4ff"><div class="ttname"><a href="classStarMgr.html#a6a5f68e8bce606ea4ec7686eaf65a4ff">StarMgr::getFlagStars</a></div><div class="ttdeci">bool getFlagStars(void) const </div><div class="ttdoc">Get display flag for Stars. </div><div class="ttdef"><b>Definition:</b> <a href="StarMgr_8hpp_source.html#l00164">StarMgr.hpp:164</a></div></div>
@@ -365,7 +364,7 @@
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Sat Apr 23 2016 20:54:16 for Stellarium by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Fri Apr 29 2016 10:24:22 for Stellarium by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.8
 </small></address>

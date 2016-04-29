@@ -258,49 +258,47 @@
 <div class="line"><a name="l00396"></a><span class="lineno">  396</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classLandscapeMgr.html#a4e8f43bfe5d8506facb6c807c5ac8e25">errorRemoveManually</a>(QString path);</div>
 <div class="line"><a name="l00397"></a><span class="lineno">  397</span>&#160;</div>
 <div class="line"><a name="l00398"></a><span class="lineno">  398</span>&#160;<span class="keyword">private</span> slots:</div>
-<div class="line"><a name="l00400"></a><span class="lineno">  400</span>&#160;    <span class="keywordtype">void</span> setStelStyle(<span class="keyword">const</span> QString&amp; section);</div>
+<div class="line"><a name="l00400"></a><span class="lineno">  400</span>&#160;    <span class="keywordtype">void</span> updateI18n();  </div>
 <div class="line"><a name="l00401"></a><span class="lineno">  401</span>&#160;</div>
-<div class="line"><a name="l00403"></a><span class="lineno">  403</span>&#160;    <span class="keywordtype">void</span> updateI18n();  </div>
-<div class="line"><a name="l00404"></a><span class="lineno">  404</span>&#160;</div>
-<div class="line"><a name="l00405"></a><span class="lineno">  405</span>&#160;<span class="keyword">private</span>:</div>
-<div class="line"><a name="l00407"></a><span class="lineno">  407</span>&#160;    <span class="keywordtype">float</span> getAtmosphereLightPollutionLuminance() <span class="keyword">const</span>;</div>
-<div class="line"><a name="l00409"></a><span class="lineno">  409</span>&#160;    <span class="keywordtype">void</span> setAtmosphereLightPollutionLuminance(<span class="keyword">const</span> <span class="keywordtype">float</span> f);</div>
-<div class="line"><a name="l00410"></a><span class="lineno">  410</span>&#160;</div>
-<div class="line"><a name="l00411"></a><span class="lineno">  411</span>&#160;</div>
-<div class="line"><a name="l00415"></a><span class="lineno">  415</span>&#160;    QString nameToID(<span class="keyword">const</span> QString&amp; name) <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00402"></a><span class="lineno">  402</span>&#160;<span class="keyword">private</span>:</div>
+<div class="line"><a name="l00404"></a><span class="lineno">  404</span>&#160;    <span class="keywordtype">float</span> getAtmosphereLightPollutionLuminance() <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00406"></a><span class="lineno">  406</span>&#160;    <span class="keywordtype">void</span> setAtmosphereLightPollutionLuminance(<span class="keyword">const</span> <span class="keywordtype">float</span> f);</div>
+<div class="line"><a name="l00407"></a><span class="lineno">  407</span>&#160;</div>
+<div class="line"><a name="l00408"></a><span class="lineno">  408</span>&#160;</div>
+<div class="line"><a name="l00412"></a><span class="lineno">  412</span>&#160;    QString nameToID(<span class="keyword">const</span> QString&amp; name) <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00413"></a><span class="lineno">  413</span>&#160;</div>
+<div class="line"><a name="l00415"></a><span class="lineno">  415</span>&#160;    QMap&lt;QString,QString&gt; getNameToDirMap() <span class="keyword">const</span>;</div>
 <div class="line"><a name="l00416"></a><span class="lineno">  416</span>&#160;</div>
-<div class="line"><a name="l00418"></a><span class="lineno">  418</span>&#160;    QMap&lt;QString,QString&gt; getNameToDirMap() <span class="keyword">const</span>;</div>
-<div class="line"><a name="l00419"></a><span class="lineno">  419</span>&#160;</div>
-<div class="line"><a name="l00424"></a><span class="lineno">  424</span>&#160;    QString getLandscapePath(<span class="keyword">const</span> QString landscapeID) <span class="keyword">const</span>;</div>
-<div class="line"><a name="l00425"></a><span class="lineno">  425</span>&#160;</div>
-<div class="line"><a name="l00426"></a><span class="lineno">  426</span>&#160;    <a class="code" href="classAtmosphere.html">Atmosphere</a>* atmosphere;         <span class="comment">// Atmosphere</span></div>
-<div class="line"><a name="l00427"></a><span class="lineno">  427</span>&#160;    Cardinals* cardinalsPoints;     <span class="comment">// Cardinals points</span></div>
-<div class="line"><a name="l00428"></a><span class="lineno">  428</span>&#160;    <a class="code" href="classLandscape.html">Landscape</a>* landscape;           <span class="comment">// The landscape i.e. the fog, the ground and &quot;decor&quot;</span></div>
-<div class="line"><a name="l00429"></a><span class="lineno">  429</span>&#160;    <a class="code" href="classLandscape.html">Landscape</a>* oldLandscape;        <span class="comment">// Used only during transitions to newly loaded landscape.</span></div>
+<div class="line"><a name="l00421"></a><span class="lineno">  421</span>&#160;    QString getLandscapePath(<span class="keyword">const</span> QString landscapeID) <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00422"></a><span class="lineno">  422</span>&#160;</div>
+<div class="line"><a name="l00423"></a><span class="lineno">  423</span>&#160;    <a class="code" href="classAtmosphere.html">Atmosphere</a>* atmosphere;         <span class="comment">// Atmosphere</span></div>
+<div class="line"><a name="l00424"></a><span class="lineno">  424</span>&#160;    Cardinals* cardinalsPoints;     <span class="comment">// Cardinals points</span></div>
+<div class="line"><a name="l00425"></a><span class="lineno">  425</span>&#160;    <a class="code" href="classLandscape.html">Landscape</a>* landscape;           <span class="comment">// The landscape i.e. the fog, the ground and &quot;decor&quot;</span></div>
+<div class="line"><a name="l00426"></a><span class="lineno">  426</span>&#160;    <a class="code" href="classLandscape.html">Landscape</a>* oldLandscape;        <span class="comment">// Used only during transitions to newly loaded landscape.</span></div>
+<div class="line"><a name="l00427"></a><span class="lineno">  427</span>&#160;</div>
+<div class="line"><a name="l00428"></a><span class="lineno">  428</span>&#160;    <span class="comment">// Define whether the observer location is to be updated when the landscape is updated.</span></div>
+<div class="line"><a name="l00429"></a><span class="lineno">  429</span>&#160;    <span class="keywordtype">bool</span> flagLandscapeSetsLocation;</div>
 <div class="line"><a name="l00430"></a><span class="lineno">  430</span>&#160;</div>
-<div class="line"><a name="l00431"></a><span class="lineno">  431</span>&#160;    <span class="comment">// Define whether the observer location is to be updated when the landscape is updated.</span></div>
-<div class="line"><a name="l00432"></a><span class="lineno">  432</span>&#160;    <span class="keywordtype">bool</span> flagLandscapeSetsLocation;</div>
-<div class="line"><a name="l00433"></a><span class="lineno">  433</span>&#160;</div>
-<div class="line"><a name="l00434"></a><span class="lineno">  434</span>&#160;    <span class="keywordtype">bool</span> flagLandscapeAutoSelection;</div>
-<div class="line"><a name="l00435"></a><span class="lineno">  435</span>&#160;</div>
-<div class="line"><a name="l00436"></a><span class="lineno">  436</span>&#160;    <span class="keywordtype">bool</span> flagLightPollutionFromDatabase;</div>
-<div class="line"><a name="l00437"></a><span class="lineno">  437</span>&#160;</div>
-<div class="line"><a name="l00439"></a><span class="lineno">  439</span>&#160;    <span class="keywordtype">bool</span> flagLandscapeUseMinimalBrightness;</div>
-<div class="line"><a name="l00441"></a><span class="lineno">  441</span>&#160;    <span class="keywordtype">float</span> defaultMinimalBrightness;</div>
-<div class="line"><a name="l00443"></a><span class="lineno">  443</span>&#160;    <span class="keywordtype">bool</span> flagLandscapeSetsMinimalBrightness;</div>
-<div class="line"><a name="l00445"></a><span class="lineno">  445</span>&#160;    <span class="keywordtype">bool</span> flagAtmosphereAutoEnabling;</div>
+<div class="line"><a name="l00431"></a><span class="lineno">  431</span>&#160;    <span class="keywordtype">bool</span> flagLandscapeAutoSelection;</div>
+<div class="line"><a name="l00432"></a><span class="lineno">  432</span>&#160;</div>
+<div class="line"><a name="l00433"></a><span class="lineno">  433</span>&#160;    <span class="keywordtype">bool</span> flagLightPollutionFromDatabase;</div>
+<div class="line"><a name="l00434"></a><span class="lineno">  434</span>&#160;</div>
+<div class="line"><a name="l00436"></a><span class="lineno">  436</span>&#160;    <span class="keywordtype">bool</span> flagLandscapeUseMinimalBrightness;</div>
+<div class="line"><a name="l00438"></a><span class="lineno">  438</span>&#160;    <span class="keywordtype">float</span> defaultMinimalBrightness;</div>
+<div class="line"><a name="l00440"></a><span class="lineno">  440</span>&#160;    <span class="keywordtype">bool</span> flagLandscapeSetsMinimalBrightness;</div>
+<div class="line"><a name="l00442"></a><span class="lineno">  442</span>&#160;    <span class="keywordtype">bool</span> flagAtmosphereAutoEnabling;</div>
+<div class="line"><a name="l00443"></a><span class="lineno">  443</span>&#160;</div>
+<div class="line"><a name="l00444"></a><span class="lineno">  444</span>&#160;    <span class="comment">// The ID of the currently loaded landscape</span></div>
+<div class="line"><a name="l00445"></a><span class="lineno">  445</span>&#160;    QString currentLandscapeID;</div>
 <div class="line"><a name="l00446"></a><span class="lineno">  446</span>&#160;</div>
-<div class="line"><a name="l00447"></a><span class="lineno">  447</span>&#160;    <span class="comment">// The ID of the currently loaded landscape</span></div>
-<div class="line"><a name="l00448"></a><span class="lineno">  448</span>&#160;    QString currentLandscapeID;</div>
+<div class="line"><a name="l00447"></a><span class="lineno">  447</span>&#160;    <span class="comment">// The ID of the default landscape</span></div>
+<div class="line"><a name="l00448"></a><span class="lineno">  448</span>&#160;    QString defaultLandscapeID;</div>
 <div class="line"><a name="l00449"></a><span class="lineno">  449</span>&#160;</div>
-<div class="line"><a name="l00450"></a><span class="lineno">  450</span>&#160;    <span class="comment">// The ID of the default landscape</span></div>
-<div class="line"><a name="l00451"></a><span class="lineno">  451</span>&#160;    QString defaultLandscapeID;</div>
-<div class="line"><a name="l00452"></a><span class="lineno">  452</span>&#160;</div>
-<div class="line"><a name="l00455"></a><span class="lineno">  455</span>&#160;    QStringList packagedLandscapeIDs;</div>
-<div class="line"><a name="l00456"></a><span class="lineno">  456</span>&#160;</div>
-<div class="line"><a name="l00457"></a><span class="lineno">  457</span>&#160;};</div>
-<div class="line"><a name="l00458"></a><span class="lineno">  458</span>&#160;</div>
-<div class="line"><a name="l00459"></a><span class="lineno">  459</span>&#160;<span class="preprocessor">#endif // _LANDSCAPEMGR_HPP_</span></div>
+<div class="line"><a name="l00452"></a><span class="lineno">  452</span>&#160;    QStringList packagedLandscapeIDs;</div>
+<div class="line"><a name="l00453"></a><span class="lineno">  453</span>&#160;</div>
+<div class="line"><a name="l00454"></a><span class="lineno">  454</span>&#160;};</div>
+<div class="line"><a name="l00455"></a><span class="lineno">  455</span>&#160;</div>
+<div class="line"><a name="l00456"></a><span class="lineno">  456</span>&#160;<span class="preprocessor">#endif // _LANDSCAPEMGR_HPP_</span></div>
 <div class="ttc" id="classLandscapeMgr_html_abdd4427d66e7dd5ee15bd5d23344452d"><div class="ttname"><a href="classLandscapeMgr.html#abdd4427d66e7dd5ee15bd5d23344452d">LandscapeMgr::setFlagUseLightPollutionFromDatabase</a></div><div class="ttdeci">void setFlagUseLightPollutionFromDatabase(const bool usage)</div><div class="ttdoc">Sets the value of the flag usage light pollution (and bortle index) from locations database...</div></div>
 <div class="ttc" id="classLandscapeMgr_html_acf8ed76c3c54942450c7af185a451fca"><div class="ttname"><a href="classLandscapeMgr.html#acf8ed76c3c54942450c7af185a451fca">LandscapeMgr::setZRotation</a></div><div class="ttdeci">void setZRotation(const float d)</div><div class="ttdoc">Set the rotation of the landscape about the z-axis. </div></div>
 <div class="ttc" id="classLandscapeMgr_html_ae149c6c7778a41096f9328e57a783c56"><div class="ttname"><a href="classLandscapeMgr.html#ae149c6c7778a41096f9328e57a783c56">LandscapeMgr::setFlagLandscape</a></div><div class="ttdeci">void setFlagLandscape(const bool displayed)</div><div class="ttdoc">Set flag for displaying Landscape. </div></div>
@@ -381,7 +379,7 @@
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Sat Apr 23 2016 20:54:16 for Stellarium by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Fri Apr 29 2016 10:24:22 for Stellarium by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.8
 </small></address>

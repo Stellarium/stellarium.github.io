@@ -299,21 +299,23 @@
 <div class="line"><a name="l00651"></a><span class="lineno">  651</span>&#160;</div>
 <div class="line"><a name="l00657"></a><span class="lineno">  657</span>&#160;    <span class="keywordtype">double</span> <a class="code" href="namespaceStelUtils.html#ab0f80d02ebc40f3306450503e3c16705">getDecYear</a>(<span class="keyword">const</span> <span class="keywordtype">int</span> year, <span class="keyword">const</span> <span class="keywordtype">int</span> month, <span class="keyword">const</span> <span class="keywordtype">int</span> day);</div>
 <div class="line"><a name="l00658"></a><span class="lineno">  658</span>&#160;</div>
-<div class="line"><a name="l00660"></a><span class="lineno">  660</span>&#160;    QByteArray <a class="code" href="namespaceStelUtils.html#a01f024a97d18ae982b01840d41e8e4be">uncompress</a>(<span class="keyword">const</span> QByteArray&amp; data);</div>
-<div class="line"><a name="l00661"></a><span class="lineno">  661</span>&#160;</div>
-<div class="line"><a name="l00667"></a><span class="lineno">  667</span>&#160;    QByteArray <a class="code" href="namespaceStelUtils.html#a01f024a97d18ae982b01840d41e8e4be">uncompress</a>(QIODevice &amp;device, qint64 maxBytes=-1);</div>
-<div class="line"><a name="l00668"></a><span class="lineno">  668</span>&#160;</div>
-<div class="line"><a name="l00669"></a><span class="lineno">  669</span>&#160;<span class="preprocessor">#ifdef _MSC_BUILD</span></div>
-<div class="line"><a name="l00670"></a><span class="lineno">  670</span>&#160;    <span class="keyword">inline</span> <span class="keywordtype">double</span> trunc(<span class="keywordtype">double</span> x)</div>
-<div class="line"><a name="l00671"></a><span class="lineno">  671</span>&#160;    {</div>
-<div class="line"><a name="l00672"></a><span class="lineno">  672</span>&#160;        <span class="keywordflow">return</span> (x &lt; 0 ? std::ceil(x) : std::floor(x));</div>
-<div class="line"><a name="l00673"></a><span class="lineno">  673</span>&#160;    }</div>
-<div class="line"><a name="l00674"></a><span class="lineno">  674</span>&#160;<span class="preprocessor">#else</span></div>
-<div class="line"><a name="l00675"></a><span class="lineno">  675</span>&#160;    <span class="keyword">inline</span> <span class="keywordtype">double</span> trunc(<span class="keywordtype">double</span> x) { return ::trunc(x); }</div>
-<div class="line"><a name="l00676"></a><span class="lineno">  676</span>&#160;<span class="preprocessor">#endif</span></div>
-<div class="line"><a name="l00677"></a><span class="lineno">  677</span>&#160;}</div>
-<div class="line"><a name="l00678"></a><span class="lineno">  678</span>&#160;</div>
-<div class="line"><a name="l00679"></a><span class="lineno">  679</span>&#160;<span class="preprocessor">#endif // _STELUTILS_HPP_</span></div>
+<div class="line"><a name="l00663"></a><span class="lineno">  663</span>&#160;    <span class="keywordtype">int</span> <a class="code" href="namespaceStelUtils.html#aae7cce0f56e3276d36e7051764be3cd6">compareVersions</a>(<span class="keyword">const</span> QString v1, <span class="keyword">const</span> QString v2);</div>
+<div class="line"><a name="l00664"></a><span class="lineno">  664</span>&#160;</div>
+<div class="line"><a name="l00666"></a><span class="lineno">  666</span>&#160;    QByteArray <a class="code" href="namespaceStelUtils.html#a01f024a97d18ae982b01840d41e8e4be">uncompress</a>(<span class="keyword">const</span> QByteArray&amp; data);</div>
+<div class="line"><a name="l00667"></a><span class="lineno">  667</span>&#160;</div>
+<div class="line"><a name="l00673"></a><span class="lineno">  673</span>&#160;    QByteArray <a class="code" href="namespaceStelUtils.html#a01f024a97d18ae982b01840d41e8e4be">uncompress</a>(QIODevice &amp;device, qint64 maxBytes=-1);</div>
+<div class="line"><a name="l00674"></a><span class="lineno">  674</span>&#160;</div>
+<div class="line"><a name="l00675"></a><span class="lineno">  675</span>&#160;<span class="preprocessor">#ifdef _MSC_BUILD</span></div>
+<div class="line"><a name="l00676"></a><span class="lineno">  676</span>&#160;    <span class="keyword">inline</span> <span class="keywordtype">double</span> trunc(<span class="keywordtype">double</span> x)</div>
+<div class="line"><a name="l00677"></a><span class="lineno">  677</span>&#160;    {</div>
+<div class="line"><a name="l00678"></a><span class="lineno">  678</span>&#160;        <span class="keywordflow">return</span> (x &lt; 0 ? std::ceil(x) : std::floor(x));</div>
+<div class="line"><a name="l00679"></a><span class="lineno">  679</span>&#160;    }</div>
+<div class="line"><a name="l00680"></a><span class="lineno">  680</span>&#160;<span class="preprocessor">#else</span></div>
+<div class="line"><a name="l00681"></a><span class="lineno">  681</span>&#160;    <span class="keyword">inline</span> <span class="keywordtype">double</span> trunc(<span class="keywordtype">double</span> x) { return ::trunc(x); }</div>
+<div class="line"><a name="l00682"></a><span class="lineno">  682</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="line"><a name="l00683"></a><span class="lineno">  683</span>&#160;}</div>
+<div class="line"><a name="l00684"></a><span class="lineno">  684</span>&#160;</div>
+<div class="line"><a name="l00685"></a><span class="lineno">  685</span>&#160;<span class="preprocessor">#endif // _STELUTILS_HPP_</span></div>
 <div class="ttc" id="namespaceStelUtils_html_a3639b7081aa653cfc0e547280dfb1ae1"><div class="ttname"><a href="namespaceStelUtils.html#a3639b7081aa653cfc0e547280dfb1ae1">StelUtils::getDeltaTByMontenbruckPfleger</a></div><div class="ttdeci">double getDeltaTByMontenbruckPfleger(const double jDay)</div><div class="ttdoc">Get Delta-T estimation for a given date. </div></div>
 <div class="ttc" id="singletonVector4_html"><div class="ttname"><a href="singletonVector4.html">Vector4</a></div><div class="ttdoc">A templatized 4d vector compatible with openGL. </div><div class="ttdef"><b>Definition:</b> <a href="VecMath_8hpp_source.html#l00034">VecMath.hpp:34</a></div></div>
 <div class="ttc" id="namespaceStelUtils_html_ae3a60bbbb1c42cef99c630397166f4de"><div class="ttname"><a href="namespaceStelUtils.html#ae3a60bbbb1c42cef99c630397166f4de">StelUtils::decDegToDmsStr</a></div><div class="ttdeci">QString decDegToDmsStr(const double angle)</div><div class="ttdoc">Convert an angle in decimal degrees to a dms formatted string. </div></div>
@@ -394,6 +396,7 @@
 <div class="ttc" id="namespaceStelUtils_html_a01f024a97d18ae982b01840d41e8e4be"><div class="ttname"><a href="namespaceStelUtils.html#a01f024a97d18ae982b01840d41e8e4be">StelUtils::uncompress</a></div><div class="ttdeci">QByteArray uncompress(const QByteArray &amp;data)</div><div class="ttdoc">Uncompress gzip or zlib compressed data. </div></div>
 <div class="ttc" id="namespaceStelUtils_html_a0a076b60191a870c63f6388e490b67af"><div class="ttname"><a href="namespaceStelUtils.html#a0a076b60191a870c63f6388e490b67af">StelUtils::sign</a></div><div class="ttdeci">int sign(T val)</div><div class="ttdoc">Sign function from http://stackoverflow.com/questions/1903954/is-there-a-standard-sign-function-signu...</div><div class="ttdef"><b>Definition:</b> <a href="StelUtils_8hpp_source.html#l00626">StelUtils.hpp:626</a></div></div>
 <div class="ttc" id="namespaceStelUtils_html_abdb1e9c64fd3705edc7bd1e786b172bc"><div class="ttname"><a href="namespaceStelUtils.html#abdb1e9c64fd3705edc7bd1e786b172bc">StelUtils::qTimeToJDFraction</a></div><div class="ttdeci">double qTimeToJDFraction(const QTime &amp;time)</div><div class="ttdoc">Convert a time of day to the fraction of a Julian Day. </div></div>
+<div class="ttc" id="namespaceStelUtils_html_aae7cce0f56e3276d36e7051764be3cd6"><div class="ttname"><a href="namespaceStelUtils.html#aae7cce0f56e3276d36e7051764be3cd6">StelUtils::compareVersions</a></div><div class="ttdeci">int compareVersions(const QString v1, const QString v2)</div><div class="ttdoc">Comparison two string versions and return a result in range -1,0,1. </div></div>
 <div class="ttc" id="namespaceStelUtils_html_a28dfa42befd350f7eae005864f4ed9cc"><div class="ttname"><a href="namespaceStelUtils.html#a28dfa42befd350f7eae005864f4ed9cc">StelUtils::getJDFromDate</a></div><div class="ttdeci">bool getJDFromDate(double *newjd, const int y, const int m, const int d, const int h, const int min, const int s)</div><div class="ttdoc">Compute Julian day number from calendar date. </div></div>
 <div class="ttc" id="namespaceStelUtils_html_abea18d15b31a8d508890c21d121db4bc"><div class="ttname"><a href="namespaceStelUtils.html#abea18d15b31a8d508890c21d121db4bc">StelUtils::getDateFromJulianDay</a></div><div class="ttdeci">void getDateFromJulianDay(const double julianDay, int *year, int *month, int *day)</div><div class="ttdoc">Make from julianDay a year, month, day for the Julian Date julianDay represents. </div></div>
 <div class="ttc" id="namespaceStelUtils_html_afb657c757069457aad6ad6373724afb9"><div class="ttname"><a href="namespaceStelUtils.html#afb657c757069457aad6ad6373724afb9">StelUtils::getDeltaTStandardError</a></div><div class="ttdeci">double getDeltaTStandardError(const double jDay)</div><div class="ttdoc">Get the standard error (sigma) for the value of DeltaT. </div></div>
@@ -407,7 +410,7 @@
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Sat Apr 23 2016 20:54:16 for Stellarium by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Fri Apr 29 2016 10:24:23 for Stellarium by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.8
 </small></address>

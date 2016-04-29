@@ -98,7 +98,7 @@
 <div class="line"><a name="l00069"></a><span class="lineno"><a class="line" href="classQuasars.html">   69</a></span>&#160;<span class="keyword">class </span><a class="code" href="classQuasars.html">Quasars</a> : <span class="keyword">public</span> <a class="code" href="classStelObjectModule.html">StelObjectModule</a></div>
 <div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;{</div>
 <div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;    Q_OBJECT</div>
-<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;    Q_PROPERTY(<span class="keywordtype">bool</span> quasarsVisible READ getFlagShowQuasars WRITE setFlagShowQuasars)</div>
+<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;    Q_PROPERTY(<span class="keywordtype">bool</span> quasarsVisible READ <a class="code" href="classQuasars.html#aaf5899edb87fba246cfa80aec9fe4d9e">getFlagShowQuasars</a> WRITE <a class="code" href="classQuasars.html#a2c40e6bac3f00a855b7769f7fe9d5886">setFlagShowQuasars</a>)</div>
 <div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;<span class="keyword">public</span>:</div>
 <div class="line"><a name="l00076"></a><span class="lineno"><a class="line" href="classQuasars.html#ab5dc915514ba435e62326b0f1ea2eaf8">   76</a></span>&#160;    <span class="keyword">enum</span> <a class="code" href="classQuasars.html#ab5dc915514ba435e62326b0f1ea2eaf8">UpdateState</a> {</div>
 <div class="line"><a name="l00077"></a><span class="lineno"><a class="line" href="classQuasars.html#ab5dc915514ba435e62326b0f1ea2eaf8aa84493b0858fed720beca0745b751d37">   77</a></span>&#160;        <a class="code" href="classQuasars.html#ab5dc915514ba435e62326b0f1ea2eaf8aa84493b0858fed720beca0745b751d37">Updating</a>,       </div>
@@ -148,127 +148,129 @@
 <div class="line"><a name="l00153"></a><span class="lineno"><a class="line" href="classQuasars.html#afaeebfb0fb08a46aa56f63ada29daefb">  153</a></span>&#160;    <span class="keywordtype">bool</span> <a class="code" href="classQuasars.html#afaeebfb0fb08a46aa56f63ada29daefb">getUpdatesEnabled</a>(<span class="keywordtype">void</span>) {<span class="keywordflow">return</span> updatesEnabled;}</div>
 <div class="line"><a name="l00156"></a><span class="lineno"><a class="line" href="classQuasars.html#a142cb2b54b48bd76c76d029348ec4b6c">  156</a></span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classQuasars.html#a142cb2b54b48bd76c76d029348ec4b6c">setUpdatesEnabled</a>(<span class="keywordtype">bool</span> b) {updatesEnabled=b;}</div>
 <div class="line"><a name="l00157"></a><span class="lineno">  157</span>&#160;</div>
-<div class="line"><a name="l00158"></a><span class="lineno">  158</span>&#160;    <span class="keywordtype">bool</span> getDisplayMode(<span class="keywordtype">void</span>);</div>
-<div class="line"><a name="l00159"></a><span class="lineno">  159</span>&#160;    <span class="keywordtype">void</span> setDisplayMode(<span class="keywordtype">bool</span> b);</div>
-<div class="line"><a name="l00160"></a><span class="lineno">  160</span>&#160;    QString getMarkerColor(<span class="keywordtype">void</span>);</div>
-<div class="line"><a name="l00161"></a><span class="lineno">  161</span>&#160;    <span class="keywordtype">void</span> setMarkerColor(QString c);</div>
-<div class="line"><a name="l00162"></a><span class="lineno">  162</span>&#160;    <span class="keywordtype">void</span> setEnableAtStartup(<span class="keywordtype">bool</span> b) { enableAtStartup=b; }</div>
-<div class="line"><a name="l00163"></a><span class="lineno">  163</span>&#160;    <span class="keywordtype">bool</span> getEnableAtStartup(<span class="keywordtype">void</span>) { <span class="keywordflow">return</span> enableAtStartup; }</div>
-<div class="line"><a name="l00164"></a><span class="lineno">  164</span>&#160;</div>
-<div class="line"><a name="l00166"></a><span class="lineno"><a class="line" href="classQuasars.html#ad99a90e10181eb8a0c2825c47fba5f5e">  166</a></span>&#160;    QDateTime <a class="code" href="classQuasars.html#ad99a90e10181eb8a0c2825c47fba5f5e">getLastUpdate</a>(<span class="keywordtype">void</span>) {<span class="keywordflow">return</span> lastUpdate;}</div>
+<div class="line"><a name="l00158"></a><span class="lineno">  158</span>&#160;    <span class="keywordtype">void</span> setEnableAtStartup(<span class="keywordtype">bool</span> b) { enableAtStartup=b; }</div>
+<div class="line"><a name="l00159"></a><span class="lineno">  159</span>&#160;    <span class="keywordtype">bool</span> getEnableAtStartup(<span class="keywordtype">void</span>) { <span class="keywordflow">return</span> enableAtStartup; }</div>
+<div class="line"><a name="l00160"></a><span class="lineno">  160</span>&#160;</div>
+<div class="line"><a name="l00162"></a><span class="lineno"><a class="line" href="classQuasars.html#ad99a90e10181eb8a0c2825c47fba5f5e">  162</a></span>&#160;    QDateTime <a class="code" href="classQuasars.html#ad99a90e10181eb8a0c2825c47fba5f5e">getLastUpdate</a>(<span class="keywordtype">void</span>) {<span class="keywordflow">return</span> lastUpdate;}</div>
+<div class="line"><a name="l00163"></a><span class="lineno">  163</span>&#160;</div>
+<div class="line"><a name="l00165"></a><span class="lineno"><a class="line" href="classQuasars.html#ab4351468ceee27e08483a2aca311f5e9">  165</a></span>&#160;    <span class="keywordtype">int</span> <a class="code" href="classQuasars.html#ab4351468ceee27e08483a2aca311f5e9">getUpdateFrequencyDays</a>(<span class="keywordtype">void</span>) {<span class="keywordflow">return</span> updateFrequencyDays;}</div>
+<div class="line"><a name="l00166"></a><span class="lineno">  166</span>&#160;    <span class="keywordtype">void</span> setUpdateFrequencyDays(<span class="keywordtype">int</span> days) {updateFrequencyDays = days;}</div>
 <div class="line"><a name="l00167"></a><span class="lineno">  167</span>&#160;</div>
-<div class="line"><a name="l00169"></a><span class="lineno"><a class="line" href="classQuasars.html#ab4351468ceee27e08483a2aca311f5e9">  169</a></span>&#160;    <span class="keywordtype">int</span> <a class="code" href="classQuasars.html#ab4351468ceee27e08483a2aca311f5e9">getUpdateFrequencyDays</a>(<span class="keywordtype">void</span>) {<span class="keywordflow">return</span> updateFrequencyDays;}</div>
-<div class="line"><a name="l00170"></a><span class="lineno">  170</span>&#160;    <span class="keywordtype">void</span> setUpdateFrequencyDays(<span class="keywordtype">int</span> days) {updateFrequencyDays = days;}</div>
-<div class="line"><a name="l00171"></a><span class="lineno">  171</span>&#160;</div>
-<div class="line"><a name="l00173"></a><span class="lineno">  173</span>&#160;    <span class="keywordtype">int</span> <a class="code" href="classQuasars.html#a04cb584dc28b98c5141eb69db96402fd">getSecondsToUpdate</a>(<span class="keywordtype">void</span>);</div>
-<div class="line"><a name="l00174"></a><span class="lineno">  174</span>&#160;</div>
-<div class="line"><a name="l00176"></a><span class="lineno"><a class="line" href="classQuasars.html#ae9ca056ddbe110098519ead054942414">  176</a></span>&#160;    <a class="code" href="classQuasars.html#ab5dc915514ba435e62326b0f1ea2eaf8">UpdateState</a> <a class="code" href="classQuasars.html#ae9ca056ddbe110098519ead054942414">getUpdateState</a>(<span class="keywordtype">void</span>) {<span class="keywordflow">return</span> updateState;}</div>
+<div class="line"><a name="l00169"></a><span class="lineno">  169</span>&#160;    <span class="keywordtype">int</span> <a class="code" href="classQuasars.html#a04cb584dc28b98c5141eb69db96402fd">getSecondsToUpdate</a>(<span class="keywordtype">void</span>);</div>
+<div class="line"><a name="l00170"></a><span class="lineno">  170</span>&#160;</div>
+<div class="line"><a name="l00172"></a><span class="lineno"><a class="line" href="classQuasars.html#ae9ca056ddbe110098519ead054942414">  172</a></span>&#160;    <a class="code" href="classQuasars.html#ab5dc915514ba435e62326b0f1ea2eaf8">UpdateState</a> <a class="code" href="classQuasars.html#ae9ca056ddbe110098519ead054942414">getUpdateState</a>(<span class="keywordtype">void</span>) {<span class="keywordflow">return</span> updateState;}</div>
+<div class="line"><a name="l00173"></a><span class="lineno">  173</span>&#160;</div>
+<div class="line"><a name="l00174"></a><span class="lineno">  174</span>&#160;signals:</div>
+<div class="line"><a name="l00176"></a><span class="lineno">  176</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classQuasars.html#acb09da570bf547d0400f1b3621ad38a7">updateStateChanged</a>(<a class="code" href="classQuasars.html#ab5dc915514ba435e62326b0f1ea2eaf8">Quasars::UpdateState</a> state);</div>
 <div class="line"><a name="l00177"></a><span class="lineno">  177</span>&#160;</div>
-<div class="line"><a name="l00179"></a><span class="lineno"><a class="line" href="classQuasars.html#ad700e51ac8a16950855dcf356ff79471">  179</a></span>&#160;    <span class="keywordtype">int</span> <a class="code" href="classQuasars.html#ad700e51ac8a16950855dcf356ff79471">getCountQuasars</a>(<span class="keywordtype">void</span>) {<span class="keywordflow">return</span> QsrCount;}</div>
+<div class="line"><a name="l00179"></a><span class="lineno">  179</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classQuasars.html#af554ea1211f9ab6df4d93baf0666dab4">jsonUpdateComplete</a>(<span class="keywordtype">void</span>);</div>
 <div class="line"><a name="l00180"></a><span class="lineno">  180</span>&#160;</div>
-<div class="line"><a name="l00181"></a><span class="lineno">  181</span>&#160;signals:</div>
-<div class="line"><a name="l00183"></a><span class="lineno">  183</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classQuasars.html#acb09da570bf547d0400f1b3621ad38a7">updateStateChanged</a>(<a class="code" href="classQuasars.html#ab5dc915514ba435e62326b0f1ea2eaf8">Quasars::UpdateState</a> state);</div>
-<div class="line"><a name="l00184"></a><span class="lineno">  184</span>&#160;</div>
-<div class="line"><a name="l00186"></a><span class="lineno">  186</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classQuasars.html#af554ea1211f9ab6df4d93baf0666dab4">jsonUpdateComplete</a>(<span class="keywordtype">void</span>);</div>
-<div class="line"><a name="l00187"></a><span class="lineno">  187</span>&#160;</div>
-<div class="line"><a name="l00188"></a><span class="lineno">  188</span>&#160;<span class="keyword">public</span> slots:</div>
-<div class="line"><a name="l00191"></a><span class="lineno">  191</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classQuasars.html#a64cdfdd4189173da7168026e70db89bb">updateJSON</a>(<span class="keywordtype">void</span>);</div>
+<div class="line"><a name="l00181"></a><span class="lineno">  181</span>&#160;<span class="keyword">public</span> slots:</div>
+<div class="line"><a name="l00184"></a><span class="lineno">  184</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classQuasars.html#a64cdfdd4189173da7168026e70db89bb">updateJSON</a>(<span class="keywordtype">void</span>);</div>
+<div class="line"><a name="l00185"></a><span class="lineno">  185</span>&#160;</div>
+<div class="line"><a name="l00188"></a><span class="lineno"><a class="line" href="classQuasars.html#a2c40e6bac3f00a855b7769f7fe9d5886">  188</a></span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classQuasars.html#a2c40e6bac3f00a855b7769f7fe9d5886">setFlagShowQuasars</a>(<span class="keywordtype">bool</span> b) { flagShowQuasars=b; }</div>
+<div class="line"><a name="l00191"></a><span class="lineno"><a class="line" href="classQuasars.html#aaf5899edb87fba246cfa80aec9fe4d9e">  191</a></span>&#160;    <span class="keywordtype">bool</span> <a class="code" href="classQuasars.html#aaf5899edb87fba246cfa80aec9fe4d9e">getFlagShowQuasars</a>(<span class="keywordtype">void</span>) { <span class="keywordflow">return</span> flagShowQuasars; }</div>
 <div class="line"><a name="l00192"></a><span class="lineno">  192</span>&#160;</div>
-<div class="line"><a name="l00193"></a><span class="lineno">  193</span>&#160;    <span class="keywordtype">void</span> setFlagShowQuasars(<span class="keywordtype">bool</span> b) { flagShowQuasars=b; }</div>
-<div class="line"><a name="l00194"></a><span class="lineno">  194</span>&#160;    <span class="keywordtype">bool</span> getFlagShowQuasars(<span class="keywordtype">void</span>) { <span class="keywordflow">return</span> flagShowQuasars; }</div>
-<div class="line"><a name="l00195"></a><span class="lineno">  195</span>&#160;</div>
-<div class="line"><a name="l00197"></a><span class="lineno">  197</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classQuasars.html#ac9bba14469c41a62c824572b34b17ce1">setFlagShowQuasarsButton</a>(<span class="keywordtype">bool</span> b);</div>
-<div class="line"><a name="l00198"></a><span class="lineno">  198</span>&#160;    <span class="keywordtype">bool</span> getFlagShowQuasarsButton(<span class="keywordtype">void</span>) { <span class="keywordflow">return</span> flagShowQuasarsButton; }</div>
-<div class="line"><a name="l00199"></a><span class="lineno">  199</span>&#160;</div>
-<div class="line"><a name="l00201"></a><span class="lineno">  201</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classQuasars.html#af162dcb406705327e7d24b29f03bc31c">displayMessage</a>(<span class="keyword">const</span> QString&amp; message, <span class="keyword">const</span> QString hexColor=<span class="stringliteral">&quot;#999999&quot;</span>);</div>
-<div class="line"><a name="l00202"></a><span class="lineno">  202</span>&#160;    <span class="keywordtype">void</span> messageTimeout(<span class="keywordtype">void</span>);</div>
-<div class="line"><a name="l00203"></a><span class="lineno">  203</span>&#160;</div>
-<div class="line"><a name="l00204"></a><span class="lineno">  204</span>&#160;    <span class="keywordtype">void</span> reloadCatalog(<span class="keywordtype">void</span>);</div>
-<div class="line"><a name="l00205"></a><span class="lineno">  205</span>&#160;</div>
-<div class="line"><a name="l00206"></a><span class="lineno">  206</span>&#160;<span class="keyword">private</span>:</div>
-<div class="line"><a name="l00207"></a><span class="lineno">  207</span>&#160;    <span class="comment">// Font used for displaying our text</span></div>
-<div class="line"><a name="l00208"></a><span class="lineno">  208</span>&#160;    QFont font;</div>
-<div class="line"><a name="l00209"></a><span class="lineno">  209</span>&#160;</div>
-<div class="line"><a name="l00210"></a><span class="lineno">  210</span>&#160;    <span class="comment">// if existing, delete Satellites section in main config.ini, then create with default values</span></div>
-<div class="line"><a name="l00211"></a><span class="lineno">  211</span>&#160;    <span class="keywordtype">void</span> restoreDefaultConfigIni(<span class="keywordtype">void</span>);</div>
-<div class="line"><a name="l00212"></a><span class="lineno">  212</span>&#160;</div>
-<div class="line"><a name="l00213"></a><span class="lineno">  213</span>&#160;    <span class="comment">// Upgrade config.ini: rename old key settings to new</span></div>
-<div class="line"><a name="l00214"></a><span class="lineno">  214</span>&#160;    <span class="keywordtype">void</span> upgradeConfigIni(<span class="keywordtype">void</span>);</div>
-<div class="line"><a name="l00215"></a><span class="lineno">  215</span>&#160;</div>
-<div class="line"><a name="l00217"></a><span class="lineno">  217</span>&#160;    <span class="keywordtype">void</span> restoreDefaultJsonFile(<span class="keywordtype">void</span>);</div>
+<div class="line"><a name="l00194"></a><span class="lineno">  194</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classQuasars.html#ac9bba14469c41a62c824572b34b17ce1">setFlagShowQuasarsButton</a>(<span class="keywordtype">bool</span> b);</div>
+<div class="line"><a name="l00195"></a><span class="lineno">  195</span>&#160;    <span class="keywordtype">bool</span> getFlagShowQuasarsButton(<span class="keywordtype">void</span>) { <span class="keywordflow">return</span> flagShowQuasarsButton; }</div>
+<div class="line"><a name="l00196"></a><span class="lineno">  196</span>&#160;</div>
+<div class="line"><a name="l00199"></a><span class="lineno"><a class="line" href="classQuasars.html#ad700e51ac8a16950855dcf356ff79471">  199</a></span>&#160;    <span class="keywordtype">int</span> <a class="code" href="classQuasars.html#ad700e51ac8a16950855dcf356ff79471">getCountQuasars</a>(<span class="keywordtype">void</span>) {<span class="keywordflow">return</span> QsrCount;}</div>
+<div class="line"><a name="l00200"></a><span class="lineno">  200</span>&#160;</div>
+<div class="line"><a name="l00203"></a><span class="lineno">  203</span>&#160;    <span class="keywordtype">bool</span> <a class="code" href="classQuasars.html#ae24d392f2b397cdeeb6d993718c4a0db">getDisplayMode</a>(<span class="keywordtype">void</span>);</div>
+<div class="line"><a name="l00206"></a><span class="lineno">  206</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classQuasars.html#a9f2edad8cb4489dbe7ea8f6870d9d566">setDisplayMode</a>(<span class="keywordtype">bool</span> b);</div>
+<div class="line"><a name="l00207"></a><span class="lineno">  207</span>&#160;</div>
+<div class="line"><a name="l00210"></a><span class="lineno">  210</span>&#160;    <a class="code" href="singletonVector3.html">Vec3f</a> <a class="code" href="classQuasars.html#a28d1847624be8a27a2e3bb2ec3dfd4c2">getMarkerColor</a>(<span class="keywordtype">void</span>);</div>
+<div class="line"><a name="l00217"></a><span class="lineno">  217</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classQuasars.html#adc724655614fc58cce65f66fe282bfc1">setMarkerColor</a>(<span class="keyword">const</span> <a class="code" href="singletonVector3.html">Vec3f</a>&amp; c);</div>
 <div class="line"><a name="l00218"></a><span class="lineno">  218</span>&#160;</div>
-<div class="line"><a name="l00220"></a><span class="lineno">  220</span>&#160;    <span class="keywordtype">void</span> readJsonFile(<span class="keywordtype">void</span>);</div>
-<div class="line"><a name="l00221"></a><span class="lineno">  221</span>&#160;</div>
-<div class="line"><a name="l00225"></a><span class="lineno">  225</span>&#160;    <span class="keywordtype">bool</span> backupJsonFile(<span class="keywordtype">bool</span> deleteOriginal=<span class="keyword">false</span>);</div>
-<div class="line"><a name="l00226"></a><span class="lineno">  226</span>&#160;</div>
-<div class="line"><a name="l00229"></a><span class="lineno">  229</span>&#160;    <span class="keywordtype">int</span> getJsonFileFormatVersion(<span class="keywordtype">void</span>);</div>
-<div class="line"><a name="l00230"></a><span class="lineno">  230</span>&#160;</div>
-<div class="line"><a name="l00233"></a><span class="lineno">  233</span>&#160;    <span class="keywordtype">bool</span> checkJsonFileFormat(<span class="keywordtype">void</span>);</div>
+<div class="line"><a name="l00219"></a><span class="lineno">  219</span>&#160;<span class="keyword">private</span>:</div>
+<div class="line"><a name="l00220"></a><span class="lineno">  220</span>&#160;    <span class="comment">// Font used for displaying our text</span></div>
+<div class="line"><a name="l00221"></a><span class="lineno">  221</span>&#160;    QFont font;</div>
+<div class="line"><a name="l00222"></a><span class="lineno">  222</span>&#160;</div>
+<div class="line"><a name="l00223"></a><span class="lineno">  223</span>&#160;    <span class="comment">// if existing, delete Satellites section in main config.ini, then create with default values</span></div>
+<div class="line"><a name="l00224"></a><span class="lineno">  224</span>&#160;    <span class="keywordtype">void</span> restoreDefaultConfigIni(<span class="keywordtype">void</span>);</div>
+<div class="line"><a name="l00225"></a><span class="lineno">  225</span>&#160;</div>
+<div class="line"><a name="l00226"></a><span class="lineno">  226</span>&#160;    <span class="comment">// Upgrade config.ini: rename old key settings to new</span></div>
+<div class="line"><a name="l00227"></a><span class="lineno">  227</span>&#160;    <span class="keywordtype">void</span> upgradeConfigIni(<span class="keywordtype">void</span>);</div>
+<div class="line"><a name="l00228"></a><span class="lineno">  228</span>&#160;</div>
+<div class="line"><a name="l00230"></a><span class="lineno">  230</span>&#160;    <span class="keywordtype">void</span> restoreDefaultJsonFile(<span class="keywordtype">void</span>);</div>
+<div class="line"><a name="l00231"></a><span class="lineno">  231</span>&#160;</div>
+<div class="line"><a name="l00233"></a><span class="lineno">  233</span>&#160;    <span class="keywordtype">void</span> readJsonFile(<span class="keywordtype">void</span>);</div>
 <div class="line"><a name="l00234"></a><span class="lineno">  234</span>&#160;</div>
-<div class="line"><a name="l00236"></a><span class="lineno">  236</span>&#160;    QVariantMap loadQSOMap(QString path=QString());</div>
-<div class="line"><a name="l00237"></a><span class="lineno">  237</span>&#160;</div>
-<div class="line"><a name="l00239"></a><span class="lineno">  239</span>&#160;    <span class="keywordtype">void</span> setQSOMap(<span class="keyword">const</span> QVariantMap&amp; map);</div>
-<div class="line"><a name="l00240"></a><span class="lineno">  240</span>&#160;</div>
-<div class="line"><a name="l00241"></a><span class="lineno">  241</span>&#160;    QString catalogJsonPath;</div>
-<div class="line"><a name="l00242"></a><span class="lineno">  242</span>&#160;</div>
-<div class="line"><a name="l00243"></a><span class="lineno">  243</span>&#160;    <span class="keywordtype">int</span> QsrCount;</div>
-<div class="line"><a name="l00244"></a><span class="lineno">  244</span>&#160;</div>
-<div class="line"><a name="l00245"></a><span class="lineno">  245</span>&#160;    <a class="code" href="StelTextureTypes_8hpp.html#a085a86bd020a5f6d1240e02d596eb4bb">StelTextureSP</a> texPointer;</div>
-<div class="line"><a name="l00246"></a><span class="lineno">  246</span>&#160;    QList&lt;QuasarP&gt; QSO;</div>
+<div class="line"><a name="l00238"></a><span class="lineno">  238</span>&#160;    <span class="keywordtype">bool</span> backupJsonFile(<span class="keywordtype">bool</span> deleteOriginal=<span class="keyword">false</span>);</div>
+<div class="line"><a name="l00239"></a><span class="lineno">  239</span>&#160;</div>
+<div class="line"><a name="l00242"></a><span class="lineno">  242</span>&#160;    <span class="keywordtype">int</span> getJsonFileFormatVersion(<span class="keywordtype">void</span>);</div>
+<div class="line"><a name="l00243"></a><span class="lineno">  243</span>&#160;</div>
+<div class="line"><a name="l00246"></a><span class="lineno">  246</span>&#160;    <span class="keywordtype">bool</span> checkJsonFileFormat(<span class="keywordtype">void</span>);</div>
 <div class="line"><a name="l00247"></a><span class="lineno">  247</span>&#160;</div>
-<div class="line"><a name="l00248"></a><span class="lineno">  248</span>&#160;    <span class="comment">// variables and functions for the updater</span></div>
-<div class="line"><a name="l00249"></a><span class="lineno">  249</span>&#160;    <a class="code" href="classQuasars.html#ab5dc915514ba435e62326b0f1ea2eaf8">UpdateState</a> updateState;</div>
-<div class="line"><a name="l00250"></a><span class="lineno">  250</span>&#160;    QNetworkAccessManager* downloadMgr;</div>
-<div class="line"><a name="l00251"></a><span class="lineno">  251</span>&#160;    QString updateUrl;  </div>
-<div class="line"><a name="l00252"></a><span class="lineno">  252</span>&#160;    QTimer* updateTimer;</div>
-<div class="line"><a name="l00253"></a><span class="lineno">  253</span>&#160;    QTimer* messageTimer;</div>
-<div class="line"><a name="l00254"></a><span class="lineno">  254</span>&#160;    QList&lt;int&gt; messageIDs;</div>
-<div class="line"><a name="l00255"></a><span class="lineno">  255</span>&#160;    <span class="keywordtype">bool</span> updatesEnabled;</div>
-<div class="line"><a name="l00256"></a><span class="lineno">  256</span>&#160;    QDateTime lastUpdate;</div>
-<div class="line"><a name="l00257"></a><span class="lineno">  257</span>&#160;    <span class="keywordtype">int</span> updateFrequencyDays;    </div>
-<div class="line"><a name="l00258"></a><span class="lineno">  258</span>&#160;    <span class="keywordtype">bool</span> enableAtStartup;</div>
-<div class="line"><a name="l00259"></a><span class="lineno">  259</span>&#160;</div>
-<div class="line"><a name="l00260"></a><span class="lineno">  260</span>&#160;    QSettings* conf;</div>
-<div class="line"><a name="l00261"></a><span class="lineno">  261</span>&#160;</div>
-<div class="line"><a name="l00262"></a><span class="lineno">  262</span>&#160;    <span class="comment">// GUI</span></div>
-<div class="line"><a name="l00263"></a><span class="lineno">  263</span>&#160;    <a class="code" href="classQuasarsDialog.html">QuasarsDialog</a>* configDialog;</div>
-<div class="line"><a name="l00264"></a><span class="lineno">  264</span>&#160;    <span class="keywordtype">bool</span> flagShowQuasars;</div>
-<div class="line"><a name="l00265"></a><span class="lineno">  265</span>&#160;    <span class="keywordtype">bool</span> flagShowQuasarsButton;</div>
-<div class="line"><a name="l00266"></a><span class="lineno">  266</span>&#160;    QPixmap* OnIcon;</div>
-<div class="line"><a name="l00267"></a><span class="lineno">  267</span>&#160;    QPixmap* OffIcon;</div>
-<div class="line"><a name="l00268"></a><span class="lineno">  268</span>&#160;    QPixmap* GlowIcon;</div>
-<div class="line"><a name="l00269"></a><span class="lineno">  269</span>&#160;    <a class="code" href="classStelButton.html">StelButton</a>* toolbarButton;</div>
-<div class="line"><a name="l00270"></a><span class="lineno">  270</span>&#160;    <span class="keyword">class </span><a class="code" href="classStelProgressController.html">StelProgressController</a>* progressBar;</div>
-<div class="line"><a name="l00271"></a><span class="lineno">  271</span>&#160;</div>
-<div class="line"><a name="l00272"></a><span class="lineno">  272</span>&#160;<span class="keyword">private</span> slots:</div>
-<div class="line"><a name="l00276"></a><span class="lineno">  276</span>&#160;    <span class="keywordtype">void</span> checkForUpdate(<span class="keywordtype">void</span>);</div>
-<div class="line"><a name="l00277"></a><span class="lineno">  277</span>&#160;    <span class="keywordtype">void</span> updateDownloadComplete(QNetworkReply* reply);</div>
-<div class="line"><a name="l00278"></a><span class="lineno">  278</span>&#160;</div>
-<div class="line"><a name="l00279"></a><span class="lineno">  279</span>&#160;};</div>
-<div class="line"><a name="l00280"></a><span class="lineno">  280</span>&#160;</div>
-<div class="line"><a name="l00281"></a><span class="lineno">  281</span>&#160;</div>
-<div class="line"><a name="l00282"></a><span class="lineno">  282</span>&#160;</div>
-<div class="line"><a name="l00283"></a><span class="lineno">  283</span>&#160;<span class="preprocessor">#include &lt;QObject&gt;</span></div>
-<div class="line"><a name="l00284"></a><span class="lineno">  284</span>&#160;<span class="preprocessor">#include &quot;StelPluginInterface.hpp&quot;</span></div>
-<div class="line"><a name="l00285"></a><span class="lineno">  285</span>&#160;</div>
-<div class="line"><a name="l00287"></a><span class="lineno"><a class="line" href="classQuasarsStelPluginInterface.html">  287</a></span>&#160;<span class="keyword">class </span><a class="code" href="classQuasarsStelPluginInterface.html">QuasarsStelPluginInterface</a> : <span class="keyword">public</span> QObject, <span class="keyword">public</span> <a class="code" href="classStelPluginInterface.html">StelPluginInterface</a></div>
-<div class="line"><a name="l00288"></a><span class="lineno">  288</span>&#160;{</div>
-<div class="line"><a name="l00289"></a><span class="lineno">  289</span>&#160;    Q_OBJECT</div>
-<div class="line"><a name="l00290"></a><span class="lineno">  290</span>&#160;    Q_PLUGIN_METADATA(IID StelPluginInterface_iid)</div>
-<div class="line"><a name="l00291"></a><span class="lineno">  291</span>&#160;    Q_INTERFACES(<a class="code" href="classStelPluginInterface.html">StelPluginInterface</a>)</div>
-<div class="line"><a name="l00292"></a><span class="lineno">  292</span>&#160;<span class="keyword">public</span>:</div>
-<div class="line"><a name="l00293"></a><span class="lineno">  293</span>&#160;    <span class="keyword">virtual</span> <a class="code" href="classStelModule.html">StelModule</a>* getStelModule() <span class="keyword">const</span>;</div>
-<div class="line"><a name="l00294"></a><span class="lineno">  294</span>&#160;    <span class="keyword">virtual</span> <a class="code" href="structStelPluginInfo.html">StelPluginInfo</a> getPluginInfo() <span class="keyword">const</span>;</div>
-<div class="line"><a name="l00295"></a><span class="lineno">  295</span>&#160;};</div>
-<div class="line"><a name="l00296"></a><span class="lineno">  296</span>&#160;</div>
-<div class="line"><a name="l00297"></a><span class="lineno">  297</span>&#160;<span class="preprocessor">#endif </span><span class="comment">/*_QUASARS_HPP_*/</span><span class="preprocessor"></span></div>
+<div class="line"><a name="l00249"></a><span class="lineno">  249</span>&#160;    QVariantMap loadQSOMap(QString path=QString());</div>
+<div class="line"><a name="l00250"></a><span class="lineno">  250</span>&#160;</div>
+<div class="line"><a name="l00252"></a><span class="lineno">  252</span>&#160;    <span class="keywordtype">void</span> setQSOMap(<span class="keyword">const</span> QVariantMap&amp; map);</div>
+<div class="line"><a name="l00253"></a><span class="lineno">  253</span>&#160;</div>
+<div class="line"><a name="l00254"></a><span class="lineno">  254</span>&#160;    QString catalogJsonPath;</div>
+<div class="line"><a name="l00255"></a><span class="lineno">  255</span>&#160;</div>
+<div class="line"><a name="l00256"></a><span class="lineno">  256</span>&#160;    <span class="keywordtype">int</span> QsrCount;</div>
+<div class="line"><a name="l00257"></a><span class="lineno">  257</span>&#160;</div>
+<div class="line"><a name="l00258"></a><span class="lineno">  258</span>&#160;    <a class="code" href="StelTextureTypes_8hpp.html#a085a86bd020a5f6d1240e02d596eb4bb">StelTextureSP</a> texPointer;</div>
+<div class="line"><a name="l00259"></a><span class="lineno">  259</span>&#160;    QList&lt;QuasarP&gt; QSO;</div>
+<div class="line"><a name="l00260"></a><span class="lineno">  260</span>&#160;</div>
+<div class="line"><a name="l00261"></a><span class="lineno">  261</span>&#160;    <span class="comment">// variables and functions for the updater</span></div>
+<div class="line"><a name="l00262"></a><span class="lineno">  262</span>&#160;    <a class="code" href="classQuasars.html#ab5dc915514ba435e62326b0f1ea2eaf8">UpdateState</a> updateState;</div>
+<div class="line"><a name="l00263"></a><span class="lineno">  263</span>&#160;    QNetworkAccessManager* downloadMgr;</div>
+<div class="line"><a name="l00264"></a><span class="lineno">  264</span>&#160;    QString updateUrl;  </div>
+<div class="line"><a name="l00265"></a><span class="lineno">  265</span>&#160;    QTimer* updateTimer;</div>
+<div class="line"><a name="l00266"></a><span class="lineno">  266</span>&#160;    QTimer* messageTimer;</div>
+<div class="line"><a name="l00267"></a><span class="lineno">  267</span>&#160;    QList&lt;int&gt; messageIDs;</div>
+<div class="line"><a name="l00268"></a><span class="lineno">  268</span>&#160;    <span class="keywordtype">bool</span> updatesEnabled;</div>
+<div class="line"><a name="l00269"></a><span class="lineno">  269</span>&#160;    QDateTime lastUpdate;</div>
+<div class="line"><a name="l00270"></a><span class="lineno">  270</span>&#160;    <span class="keywordtype">int</span> updateFrequencyDays;    </div>
+<div class="line"><a name="l00271"></a><span class="lineno">  271</span>&#160;    <span class="keywordtype">bool</span> enableAtStartup;</div>
+<div class="line"><a name="l00272"></a><span class="lineno">  272</span>&#160;</div>
+<div class="line"><a name="l00273"></a><span class="lineno">  273</span>&#160;    QSettings* conf;</div>
+<div class="line"><a name="l00274"></a><span class="lineno">  274</span>&#160;</div>
+<div class="line"><a name="l00275"></a><span class="lineno">  275</span>&#160;    <span class="comment">// GUI</span></div>
+<div class="line"><a name="l00276"></a><span class="lineno">  276</span>&#160;    <a class="code" href="classQuasarsDialog.html">QuasarsDialog</a>* configDialog;</div>
+<div class="line"><a name="l00277"></a><span class="lineno">  277</span>&#160;    <span class="keywordtype">bool</span> flagShowQuasars;</div>
+<div class="line"><a name="l00278"></a><span class="lineno">  278</span>&#160;    <span class="keywordtype">bool</span> flagShowQuasarsButton;</div>
+<div class="line"><a name="l00279"></a><span class="lineno">  279</span>&#160;    QPixmap* OnIcon;</div>
+<div class="line"><a name="l00280"></a><span class="lineno">  280</span>&#160;    QPixmap* OffIcon;</div>
+<div class="line"><a name="l00281"></a><span class="lineno">  281</span>&#160;    QPixmap* GlowIcon;</div>
+<div class="line"><a name="l00282"></a><span class="lineno">  282</span>&#160;    <a class="code" href="classStelButton.html">StelButton</a>* toolbarButton;</div>
+<div class="line"><a name="l00283"></a><span class="lineno">  283</span>&#160;    <span class="keyword">class </span><a class="code" href="classStelProgressController.html">StelProgressController</a>* progressBar;</div>
+<div class="line"><a name="l00284"></a><span class="lineno">  284</span>&#160;</div>
+<div class="line"><a name="l00285"></a><span class="lineno">  285</span>&#160;<span class="keyword">private</span> slots:</div>
+<div class="line"><a name="l00289"></a><span class="lineno">  289</span>&#160;    <span class="keywordtype">void</span> checkForUpdate(<span class="keywordtype">void</span>);</div>
+<div class="line"><a name="l00290"></a><span class="lineno">  290</span>&#160;    <span class="keywordtype">void</span> updateDownloadComplete(QNetworkReply* reply);</div>
+<div class="line"><a name="l00291"></a><span class="lineno">  291</span>&#160;</div>
+<div class="line"><a name="l00293"></a><span class="lineno">  293</span>&#160;    <span class="keywordtype">void</span> displayMessage(<span class="keyword">const</span> QString&amp; message, <span class="keyword">const</span> QString hexColor=<span class="stringliteral">&quot;#999999&quot;</span>);</div>
+<div class="line"><a name="l00294"></a><span class="lineno">  294</span>&#160;    <span class="keywordtype">void</span> messageTimeout(<span class="keywordtype">void</span>);</div>
+<div class="line"><a name="l00295"></a><span class="lineno">  295</span>&#160;</div>
+<div class="line"><a name="l00296"></a><span class="lineno">  296</span>&#160;    <span class="keywordtype">void</span> reloadCatalog(<span class="keywordtype">void</span>);</div>
+<div class="line"><a name="l00297"></a><span class="lineno">  297</span>&#160;};</div>
+<div class="line"><a name="l00298"></a><span class="lineno">  298</span>&#160;</div>
+<div class="line"><a name="l00299"></a><span class="lineno">  299</span>&#160;</div>
+<div class="line"><a name="l00300"></a><span class="lineno">  300</span>&#160;</div>
+<div class="line"><a name="l00301"></a><span class="lineno">  301</span>&#160;<span class="preprocessor">#include &lt;QObject&gt;</span></div>
+<div class="line"><a name="l00302"></a><span class="lineno">  302</span>&#160;<span class="preprocessor">#include &quot;StelPluginInterface.hpp&quot;</span></div>
+<div class="line"><a name="l00303"></a><span class="lineno">  303</span>&#160;</div>
+<div class="line"><a name="l00305"></a><span class="lineno"><a class="line" href="classQuasarsStelPluginInterface.html">  305</a></span>&#160;<span class="keyword">class </span><a class="code" href="classQuasarsStelPluginInterface.html">QuasarsStelPluginInterface</a> : <span class="keyword">public</span> QObject, <span class="keyword">public</span> <a class="code" href="classStelPluginInterface.html">StelPluginInterface</a></div>
+<div class="line"><a name="l00306"></a><span class="lineno">  306</span>&#160;{</div>
+<div class="line"><a name="l00307"></a><span class="lineno">  307</span>&#160;    Q_OBJECT</div>
+<div class="line"><a name="l00308"></a><span class="lineno">  308</span>&#160;    Q_PLUGIN_METADATA(IID StelPluginInterface_iid)</div>
+<div class="line"><a name="l00309"></a><span class="lineno">  309</span>&#160;    Q_INTERFACES(<a class="code" href="classStelPluginInterface.html">StelPluginInterface</a>)</div>
+<div class="line"><a name="l00310"></a><span class="lineno">  310</span>&#160;<span class="keyword">public</span>:</div>
+<div class="line"><a name="l00311"></a><span class="lineno">  311</span>&#160;    <span class="keyword">virtual</span> <a class="code" href="classStelModule.html">StelModule</a>* getStelModule() <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00312"></a><span class="lineno">  312</span>&#160;    <span class="keyword">virtual</span> <a class="code" href="structStelPluginInfo.html">StelPluginInfo</a> getPluginInfo() <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00313"></a><span class="lineno">  313</span>&#160;};</div>
+<div class="line"><a name="l00314"></a><span class="lineno">  314</span>&#160;</div>
+<div class="line"><a name="l00315"></a><span class="lineno">  315</span>&#160;<span class="preprocessor">#endif </span><span class="comment">/*_QUASARS_HPP_*/</span><span class="preprocessor"></span></div>
 <div class="ttc" id="classQuasars_html_a84384bed4bf1bf752222f7f14e6ccba9"><div class="ttname"><a href="classQuasars.html#a84384bed4bf1bf752222f7f14e6ccba9">Quasars::readSettingsFromConfig</a></div><div class="ttdeci">void readSettingsFromConfig(void)</div><div class="ttdoc">Read (or re-read) settings from the main config file. </div></div>
+<div class="ttc" id="classQuasars_html_a28d1847624be8a27a2e3bb2ec3dfd4c2"><div class="ttname"><a href="classQuasars.html#a28d1847624be8a27a2e3bb2ec3dfd4c2">Quasars::getMarkerColor</a></div><div class="ttdeci">Vec3f getMarkerColor(void)</div><div class="ttdoc">Get color for quasars markers. </div></div>
 <div class="ttc" id="classQuasars_html_ab5dc915514ba435e62326b0f1ea2eaf8"><div class="ttname"><a href="classQuasars.html#ab5dc915514ba435e62326b0f1ea2eaf8">Quasars::UpdateState</a></div><div class="ttdeci">UpdateState</div><div class="ttdoc">Used for keeping for track of the download/update status. </div><div class="ttdef"><b>Definition:</b> <a href="Quasars_8hpp_source.html#l00076">Quasars.hpp:76</a></div></div>
 <div class="ttc" id="classQuasars_html_ac9bba14469c41a62c824572b34b17ce1"><div class="ttname"><a href="classQuasars.html#ac9bba14469c41a62c824572b34b17ce1">Quasars::setFlagShowQuasarsButton</a></div><div class="ttdeci">void setFlagShowQuasarsButton(bool b)</div><div class="ttdoc">Define whether the button toggling quasars should be visible. </div></div>
 <div class="ttc" id="classQuasarsDialog_html"><div class="ttname"><a href="classQuasarsDialog.html">QuasarsDialog</a></div><div class="ttdef"><b>Definition:</b> <a href="QuasarsDialog_8hpp_source.html#l00033">QuasarsDialog.hpp:33</a></div></div>
 <div class="ttc" id="classQuasars_html_acb82a4e17aefb78bc09e1d7e5470cf05"><div class="ttname"><a href="classQuasars.html#acb82a4e17aefb78bc09e1d7e5470cf05">Quasars::draw</a></div><div class="ttdeci">virtual void draw(StelCore *core)</div><div class="ttdoc">Execute all the drawing functions for this module. </div></div>
 <div class="ttc" id="classQuasars_html_a2d48b02e7f783a6bccf563a7859eb780"><div class="ttname"><a href="classQuasars.html#a2d48b02e7f783a6bccf563a7859eb780">Quasars::getByID</a></div><div class="ttdeci">QuasarP getByID(const QString &amp;id)</div><div class="ttdoc">get a Quasar object by identifier </div></div>
-<div class="ttc" id="classQuasars_html_ad700e51ac8a16950855dcf356ff79471"><div class="ttname"><a href="classQuasars.html#ad700e51ac8a16950855dcf356ff79471">Quasars::getCountQuasars</a></div><div class="ttdeci">int getCountQuasars(void)</div><div class="ttdoc">Get count of quasars from catalog. </div><div class="ttdef"><b>Definition:</b> <a href="Quasars_8hpp_source.html#l00179">Quasars.hpp:179</a></div></div>
+<div class="ttc" id="classQuasars_html_ad700e51ac8a16950855dcf356ff79471"><div class="ttname"><a href="classQuasars.html#ad700e51ac8a16950855dcf356ff79471">Quasars::getCountQuasars</a></div><div class="ttdeci">int getCountQuasars(void)</div><div class="ttdoc">Get count of quasars from catalog. </div><div class="ttdef"><b>Definition:</b> <a href="Quasars_8hpp_source.html#l00199">Quasars.hpp:199</a></div></div>
 <div class="ttc" id="classStelPluginInterface_html"><div class="ttname"><a href="classStelPluginInterface.html">StelPluginInterface</a></div><div class="ttdoc">Define the interface to implement when creating a plugin. </div><div class="ttdef"><b>Definition:</b> <a href="StelPluginInterface_8hpp_source.html#l00054">StelPluginInterface.hpp:54</a></div></div>
 <div class="ttc" id="classQuasars_html_aa96da8f47ff7093d7bf71d0aa9ab2846"><div class="ttname"><a href="classQuasars.html#aa96da8f47ff7093d7bf71d0aa9ab2846">Quasars::getCallOrder</a></div><div class="ttdeci">virtual double getCallOrder(StelModuleActionName actionName) const </div><div class="ttdoc">Return the value defining the order of call for the given action For example if stars.callOrder[ActionDraw] == 10 and constellation.callOrder[ActionDraw] == 11, the stars module will be drawn before the constellations. </div></div>
 <div class="ttc" id="classQuasars_html_acd9b048412fca219e9f9de6a9751eba5"><div class="ttname"><a href="classQuasars.html#acd9b048412fca219e9f9de6a9751eba5">Quasars::configureGui</a></div><div class="ttdeci">virtual bool configureGui(bool show=true)</div><div class="ttdoc">Implement this to tell the main Stellarium GUI that there is a GUI element to configure this plugin...</div></div>
@@ -279,7 +281,6 @@
 <div class="ttc" id="classQuasars_html_ab5dc915514ba435e62326b0f1ea2eaf8aa33e8d5993e691c20fccbb8c7096ed37"><div class="ttname"><a href="classQuasars.html#ab5dc915514ba435e62326b0f1ea2eaf8aa33e8d5993e691c20fccbb8c7096ed37">Quasars::CompleteNoUpdates</a></div><div class="ttdoc">Update completed, there we no updates. </div><div class="ttdef"><b>Definition:</b> <a href="Quasars_8hpp_source.html#l00078">Quasars.hpp:78</a></div></div>
 <div class="ttc" id="singletonVector3_html"><div class="ttname"><a href="singletonVector3.html">Vector3</a></div><div class="ttdoc">A templatized 3d vector compatible with openGL. </div><div class="ttdef"><b>Definition:</b> <a href="VecMath_8hpp_source.html#l00033">VecMath.hpp:33</a></div></div>
 <div class="ttc" id="StelTextureTypes_8hpp_html"><div class="ttname"><a href="StelTextureTypes_8hpp.html">StelTextureTypes.hpp</a></div><div class="ttdoc">Define the StelTextureSP type. </div></div>
-<div class="ttc" id="classQuasars_html_af162dcb406705327e7d24b29f03bc31c"><div class="ttname"><a href="classQuasars.html#af162dcb406705327e7d24b29f03bc31c">Quasars::displayMessage</a></div><div class="ttdeci">void displayMessage(const QString &amp;message, const QString hexColor=&quot;#999999&quot;)</div><div class="ttdoc">Display a message. This is used for plugin-specific warnings and such. </div></div>
 <div class="ttc" id="classQSharedPointerNoDelete_html"><div class="ttname"><a href="classQSharedPointerNoDelete.html">QSharedPointerNoDelete&lt; StelObject &gt;</a></div></div>
 <div class="ttc" id="classQuasars_html_a04cb584dc28b98c5141eb69db96402fd"><div class="ttname"><a href="classQuasars.html#a04cb584dc28b98c5141eb69db96402fd">Quasars::getSecondsToUpdate</a></div><div class="ttdeci">int getSecondsToUpdate(void)</div><div class="ttdoc">get the number of seconds till the next update </div></div>
 <div class="ttc" id="classStelCore_html"><div class="ttname"><a href="classStelCore.html">StelCore</a></div><div class="ttdoc">Main class for Stellarium core processing. </div><div class="ttdef"><b>Definition:</b> <a href="StelCore_8hpp_source.html#l00048">StelCore.hpp:48</a></div></div>
@@ -288,7 +289,9 @@
 <div class="ttc" id="classQuasars_html_a985de884ee64b827f646cd979f20e21b"><div class="ttname"><a href="classQuasars.html#a985de884ee64b827f646cd979f20e21b">Quasars::searchAround</a></div><div class="ttdeci">virtual QList&lt; StelObjectP &gt; searchAround(const Vec3d &amp;v, double limitFov, const StelCore *core) const </div><div class="ttdoc">Used to get a list of objects which are near to some position. </div></div>
 <div class="ttc" id="classQuasars_html_ab5dc915514ba435e62326b0f1ea2eaf8ac600ae6c3f5a4698acb9c5f2be8b9abf"><div class="ttname"><a href="classQuasars.html#ab5dc915514ba435e62326b0f1ea2eaf8ac600ae6c3f5a4698acb9c5f2be8b9abf">Quasars::OtherError</a></div><div class="ttdoc">Other error. </div><div class="ttdef"><b>Definition:</b> <a href="Quasars_8hpp_source.html#l00081">Quasars.hpp:81</a></div></div>
 <div class="ttc" id="classQuasars_html_a9ff62e96682346b10a4596c5842e89fa"><div class="ttname"><a href="classQuasars.html#a9ff62e96682346b10a4596c5842e89fa">Quasars::restoreDefaults</a></div><div class="ttdeci">void restoreDefaults(void)</div><div class="ttdoc">Set up the plugin with default values. </div></div>
+<div class="ttc" id="classQuasars_html_ae24d392f2b397cdeeb6d993718c4a0db"><div class="ttname"><a href="classQuasars.html#ae24d392f2b397cdeeb6d993718c4a0db">Quasars::getDisplayMode</a></div><div class="ttdeci">bool getDisplayMode(void)</div><div class="ttdoc">Get status to display of distribution of pulsars. </div></div>
 <div class="ttc" id="classQuasars_html_ab5dc915514ba435e62326b0f1ea2eaf8aa2d20aff6777885bb09a0b9310d59bf3"><div class="ttname"><a href="classQuasars.html#ab5dc915514ba435e62326b0f1ea2eaf8aa2d20aff6777885bb09a0b9310d59bf3">Quasars::CompleteUpdates</a></div><div class="ttdoc">Update completed, there were updates. </div><div class="ttdef"><b>Definition:</b> <a href="Quasars_8hpp_source.html#l00079">Quasars.hpp:79</a></div></div>
+<div class="ttc" id="classQuasars_html_aaf5899edb87fba246cfa80aec9fe4d9e"><div class="ttname"><a href="classQuasars.html#aaf5899edb87fba246cfa80aec9fe4d9e">Quasars::getFlagShowQuasars</a></div><div class="ttdeci">bool getFlagShowQuasars(void)</div><div class="ttdoc">Get status to display of markers of quasars. </div><div class="ttdef"><b>Definition:</b> <a href="Quasars_8hpp_source.html#l00191">Quasars.hpp:191</a></div></div>
 <div class="ttc" id="classStelPainter_html"><div class="ttname"><a href="classStelPainter.html">StelPainter</a></div><div class="ttdoc">Provides functions for performing openGL drawing operations. </div><div class="ttdef"><b>Definition:</b> <a href="StelPainter_8hpp_source.html#l00040">StelPainter.hpp:40</a></div></div>
 <div class="ttc" id="classQuasars_html_acb09da570bf547d0400f1b3621ad38a7"><div class="ttname"><a href="classQuasars.html#acb09da570bf547d0400f1b3621ad38a7">Quasars::updateStateChanged</a></div><div class="ttdeci">void updateStateChanged(Quasars::UpdateState state)</div></div>
 <div class="ttc" id="classQuasars_html"><div class="ttname"><a href="classQuasars.html">Quasars</a></div><div class="ttdoc">Main class of the Quasars plugin. </div><div class="ttdef"><b>Definition:</b> <a href="Quasars_8hpp_source.html#l00069">Quasars.hpp:69</a></div></div>
@@ -296,25 +299,28 @@
 <div class="ttc" id="classStelButton_html"><div class="ttname"><a href="classStelButton.html">StelButton</a></div><div class="ttdoc">A Button Graphicsitem for use in Stellarium&#39;s graphic widgets. </div><div class="ttdef"><b>Definition:</b> <a href="StelGuiItems_8hpp_source.html#l00065">StelGuiItems.hpp:65</a></div></div>
 <div class="ttc" id="classQuasars_html_a14d3b86332e21e38d1824d51bf739013"><div class="ttname"><a href="classQuasars.html#a14d3b86332e21e38d1824d51bf739013">Quasars::listMatchingObjects</a></div><div class="ttdeci">virtual QStringList listMatchingObjects(const QString &amp;objPrefix, int maxNbItem=5, bool useStartOfWords=false) const </div><div class="ttdoc">Find and return the list of at most maxNbItem objects auto-completing the passed object English name...</div></div>
 <div class="ttc" id="classQuasars_html_afaeebfb0fb08a46aa56f63ada29daefb"><div class="ttname"><a href="classQuasars.html#afaeebfb0fb08a46aa56f63ada29daefb">Quasars::getUpdatesEnabled</a></div><div class="ttdeci">bool getUpdatesEnabled(void)</div><div class="ttdoc">get whether or not the plugin will try to update catalog data from the internet </div><div class="ttdef"><b>Definition:</b> <a href="Quasars_8hpp_source.html#l00153">Quasars.hpp:153</a></div></div>
-<div class="ttc" id="classQuasars_html_ae9ca056ddbe110098519ead054942414"><div class="ttname"><a href="classQuasars.html#ae9ca056ddbe110098519ead054942414">Quasars::getUpdateState</a></div><div class="ttdeci">UpdateState getUpdateState(void)</div><div class="ttdoc">Get the current updateState. </div><div class="ttdef"><b>Definition:</b> <a href="Quasars_8hpp_source.html#l00176">Quasars.hpp:176</a></div></div>
+<div class="ttc" id="classQuasars_html_ae9ca056ddbe110098519ead054942414"><div class="ttname"><a href="classQuasars.html#ae9ca056ddbe110098519ead054942414">Quasars::getUpdateState</a></div><div class="ttdeci">UpdateState getUpdateState(void)</div><div class="ttdoc">Get the current updateState. </div><div class="ttdef"><b>Definition:</b> <a href="Quasars_8hpp_source.html#l00172">Quasars.hpp:172</a></div></div>
 <div class="ttc" id="classQuasars_html_ae03f00bbc8646b23edf64cae28a7d940"><div class="ttname"><a href="classQuasars.html#ae03f00bbc8646b23edf64cae28a7d940">Quasars::listMatchingObjectsI18n</a></div><div class="ttdeci">virtual QStringList listMatchingObjectsI18n(const QString &amp;objPrefix, int maxNbItem=5, bool useStartOfWords=false) const </div><div class="ttdoc">Find and return the list of at most maxNbItem objects auto-completing the passed object I18n name...</div></div>
 <div class="ttc" id="classQuasars_html_a02107897c666a97821fd58613b61ccb2"><div class="ttname"><a href="classQuasars.html#a02107897c666a97821fd58613b61ccb2">Quasars::init</a></div><div class="ttdeci">virtual void init()</div><div class="ttdoc">Initialize itself. </div></div>
+<div class="ttc" id="classQuasars_html_a2c40e6bac3f00a855b7769f7fe9d5886"><div class="ttname"><a href="classQuasars.html#a2c40e6bac3f00a855b7769f7fe9d5886">Quasars::setFlagShowQuasars</a></div><div class="ttdeci">void setFlagShowQuasars(bool b)</div><div class="ttdoc">Enable/disable display of markers of quasars. </div><div class="ttdef"><b>Definition:</b> <a href="Quasars_8hpp_source.html#l00188">Quasars.hpp:188</a></div></div>
 <div class="ttc" id="classStelModule_html_a11b61d014b51cf6424cd89b1ccd3d768"><div class="ttname"><a href="classStelModule.html#a11b61d014b51cf6424cd89b1ccd3d768">StelModule::StelModuleActionName</a></div><div class="ttdeci">StelModuleActionName</div><div class="ttdoc">Define the possible action for which an order is defined. </div><div class="ttdef"><b>Definition:</b> <a href="StelModule_8hpp_source.html#l00117">StelModule.hpp:117</a></div></div>
 <div class="ttc" id="classStelProgressController_html"><div class="ttname"><a href="classStelProgressController.html">StelProgressController</a></div><div class="ttdoc">Maintain the state of a progress bar. </div><div class="ttdef"><b>Definition:</b> <a href="StelProgressController_8hpp_source.html#l00027">StelProgressController.hpp:27</a></div></div>
 <div class="ttc" id="classQuasars_html_a34d1c4f3ecbe5b6ab9d15b7c4e810580"><div class="ttname"><a href="classQuasars.html#a34d1c4f3ecbe5b6ab9d15b7c4e810580">Quasars::deinit</a></div><div class="ttdeci">virtual void deinit()</div><div class="ttdoc">Called before the module will be delete, and before the openGL context is suppressed. </div></div>
 <div class="ttc" id="classQuasars_html_a64cdfdd4189173da7168026e70db89bb"><div class="ttname"><a href="classQuasars.html#a64cdfdd4189173da7168026e70db89bb">Quasars::updateJSON</a></div><div class="ttdeci">void updateJSON(void)</div><div class="ttdoc">Download JSON from web recources described in the module section of the module.ini file and update th...</div></div>
 <div class="ttc" id="StelTextureTypes_8hpp_html_a085a86bd020a5f6d1240e02d596eb4bb"><div class="ttname"><a href="StelTextureTypes_8hpp.html#a085a86bd020a5f6d1240e02d596eb4bb">StelTextureSP</a></div><div class="ttdeci">QSharedPointer&lt; StelTexture &gt; StelTextureSP</div><div class="ttdoc">Use shared pointer to simplify memory managment. </div><div class="ttdef"><b>Definition:</b> <a href="StelTextureTypes_8hpp_source.html#l00032">StelTextureTypes.hpp:32</a></div></div>
 <div class="ttc" id="classQuasars_html_ab5dc915514ba435e62326b0f1ea2eaf8a36dd56dd4fa0332e40232e4298ec3e32"><div class="ttname"><a href="classQuasars.html#ab5dc915514ba435e62326b0f1ea2eaf8a36dd56dd4fa0332e40232e4298ec3e32">Quasars::DownloadError</a></div><div class="ttdoc">Error during download phase. </div><div class="ttdef"><b>Definition:</b> <a href="Quasars_8hpp_source.html#l00080">Quasars.hpp:80</a></div></div>
-<div class="ttc" id="classQuasarsStelPluginInterface_html"><div class="ttname"><a href="classQuasarsStelPluginInterface.html">QuasarsStelPluginInterface</a></div><div class="ttdoc">This class is used by Qt to manage a plug-in interface. </div><div class="ttdef"><b>Definition:</b> <a href="Quasars_8hpp_source.html#l00287">Quasars.hpp:287</a></div></div>
+<div class="ttc" id="classQuasars_html_a9f2edad8cb4489dbe7ea8f6870d9d566"><div class="ttname"><a href="classQuasars.html#a9f2edad8cb4489dbe7ea8f6870d9d566">Quasars::setDisplayMode</a></div><div class="ttdeci">void setDisplayMode(bool b)</div><div class="ttdoc">Enable/disable display of distribution of pulsars. </div></div>
+<div class="ttc" id="classQuasarsStelPluginInterface_html"><div class="ttname"><a href="classQuasarsStelPluginInterface.html">QuasarsStelPluginInterface</a></div><div class="ttdoc">This class is used by Qt to manage a plug-in interface. </div><div class="ttdef"><b>Definition:</b> <a href="Quasars_8hpp_source.html#l00305">Quasars.hpp:305</a></div></div>
 <div class="ttc" id="classStelModule_html"><div class="ttname"><a href="classStelModule.html">StelModule</a></div><div class="ttdoc">This is the common base class for all the main components of stellarium. </div><div class="ttdef"><b>Definition:</b> <a href="StelModule_8hpp_source.html#l00049">StelModule.hpp:49</a></div></div>
-<div class="ttc" id="classQuasars_html_ad99a90e10181eb8a0c2825c47fba5f5e"><div class="ttname"><a href="classQuasars.html#ad99a90e10181eb8a0c2825c47fba5f5e">Quasars::getLastUpdate</a></div><div class="ttdeci">QDateTime getLastUpdate(void)</div><div class="ttdoc">get the date and time the TLE elements were updated </div><div class="ttdef"><b>Definition:</b> <a href="Quasars_8hpp_source.html#l00166">Quasars.hpp:166</a></div></div>
-<div class="ttc" id="classQuasars_html_ab4351468ceee27e08483a2aca311f5e9"><div class="ttname"><a href="classQuasars.html#ab4351468ceee27e08483a2aca311f5e9">Quasars::getUpdateFrequencyDays</a></div><div class="ttdeci">int getUpdateFrequencyDays(void)</div><div class="ttdoc">get the update frequency in days </div><div class="ttdef"><b>Definition:</b> <a href="Quasars_8hpp_source.html#l00169">Quasars.hpp:169</a></div></div>
+<div class="ttc" id="classQuasars_html_ad99a90e10181eb8a0c2825c47fba5f5e"><div class="ttname"><a href="classQuasars.html#ad99a90e10181eb8a0c2825c47fba5f5e">Quasars::getLastUpdate</a></div><div class="ttdeci">QDateTime getLastUpdate(void)</div><div class="ttdoc">get the date and time the TLE elements were updated </div><div class="ttdef"><b>Definition:</b> <a href="Quasars_8hpp_source.html#l00162">Quasars.hpp:162</a></div></div>
+<div class="ttc" id="classQuasars_html_adc724655614fc58cce65f66fe282bfc1"><div class="ttname"><a href="classQuasars.html#adc724655614fc58cce65f66fe282bfc1">Quasars::setMarkerColor</a></div><div class="ttdeci">void setMarkerColor(const Vec3f &amp;c)</div><div class="ttdoc">Set color for quasars markers. </div></div>
+<div class="ttc" id="classQuasars_html_ab4351468ceee27e08483a2aca311f5e9"><div class="ttname"><a href="classQuasars.html#ab4351468ceee27e08483a2aca311f5e9">Quasars::getUpdateFrequencyDays</a></div><div class="ttdeci">int getUpdateFrequencyDays(void)</div><div class="ttdoc">get the update frequency in days </div><div class="ttdef"><b>Definition:</b> <a href="Quasars_8hpp_source.html#l00165">Quasars.hpp:165</a></div></div>
 <div class="ttc" id="structStelPluginInfo_html"><div class="ttname"><a href="structStelPluginInfo.html">StelPluginInfo</a></div><div class="ttdoc">Contains information about a Stellarium plugin. </div><div class="ttdef"><b>Definition:</b> <a href="StelPluginInterface_8hpp_source.html#l00028">StelPluginInterface.hpp:28</a></div></div>
 <div class="ttc" id="classQuasars_html_ab5dc915514ba435e62326b0f1ea2eaf8aa84493b0858fed720beca0745b751d37"><div class="ttname"><a href="classQuasars.html#ab5dc915514ba435e62326b0f1ea2eaf8aa84493b0858fed720beca0745b751d37">Quasars::Updating</a></div><div class="ttdoc">Update in progress. </div><div class="ttdef"><b>Definition:</b> <a href="Quasars_8hpp_source.html#l00077">Quasars.hpp:77</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Sat Apr 23 2016 20:54:16 for Stellarium by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Fri Apr 29 2016 10:24:22 for Stellarium by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.8
 </small></address>
