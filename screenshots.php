@@ -56,11 +56,8 @@ printf('
 		<div class="download linux">
 		    <a href="%s">Linux<span>(%s)</span></a>
 		</div>
-		<div class="download linux">
-		    <a href="%s">Linux<span>(%s)</span></a>
-		</div>
 		<div class="download macosx">
-		    <a href="%s">Mac OS X<span>%s</span></a>
+		    <a href="%s">OS X<span>%s; %s</span></a>
 		</div>
 		<div class="download windows">
 		    <a href="%s">Windows<span>%s</span></a>
@@ -71,10 +68,11 @@ printf('
 		<div class="download ubuntu">
 		    <a href="%s">Ubuntu<span>%s</span></a>
 		</div>
-	    </div>
-	    <div id="additional" class="block">
-		<div class="download nopdf">
-		    <a href="http://www.stellarium.org/wiki/index.php/Stellarium_User_Guide">%s</a>
+		<div class="download beta">
+		    <a href="%s">%s <span>%s</span></a>
+		</div>
+		<div class="download pdf guide">
+		    <a href="%s">%s <span>%s</span></a>
 		</div>
 	    </div>
 	</div>
@@ -84,17 +82,21 @@ q_('latest version is'),
 $version,
 $download_link_source,
 q_('source'),
-$download_link_linux,
-q_('binary'),
 $download_link_osx_u,
 $osx_version,
+q_('64 bit'),
 $download_link_win32,
 q_('32 bit'),
 $download_link_win64,
 q_('64 bit'),
 $download_link_ppa,
 q_('latest stable release'),
-q_('User guide'));
+$download_link_beta,
+q_('Beta'),
+$next_version,
+$download_link_guide,
+q_('User Guide'),
+$guide_version);
 
 printf('  
 <div id="home">

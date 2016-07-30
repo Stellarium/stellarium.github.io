@@ -70,8 +70,8 @@ printf('
 		<div class="download beta">
 		    <a href="%s">%s <span>%s</span></a>
 		</div>
-		<div class="download nopdf guide">
-		    <a href="http://www.stellarium.org/wiki/index.php/Stellarium_User_Guide">%s <span>%s</span></a>
+		<div class="download pdf guide">
+		    <a href="%s">%s <span>%s</span></a>
 		</div>
 	    </div>
 	</div>
@@ -93,8 +93,9 @@ q_('latest stable release'),
 $download_link_beta,
 q_('Beta'),
 $next_version,
-q_('User guide'),
-q_('wiki'));
+$download_link_guide,
+q_('User Guide'),
+$guide_version);
 
 printf('  
 <div id="home">
