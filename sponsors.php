@@ -136,15 +136,21 @@ printf('
 	<h2>%s</h2>
 	<p>%s:</p>
 	<ul>
-		<li>Johan Meuris (%s)</li>
+		<li>Matthew Gates (%s)</li>
 		<li>Johannes Gajdosik (%s)</li>
 		<li>Rob Spearman (%s)</li>		
+		<li>Ferdinand Majerech (%s)</li>
+		<li>Jörg Müller (%s)</li>
+		<li>Barry Gerdes (%s)</li>
 	</ul>',
 q_("former developers"),
 q_("Several people have made significant contributions but are no longer active. Their work has made a big difference to the project"),
-q_("graphic designer"),
+q_("doc author/developer"),
 q_("developer"),
-q_("developer"));
+q_("developer"),
+q_("developer"),
+q_("developer"),
+q_("tester"));
 
 printf('
 	<h2>%s</h2>		

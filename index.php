@@ -261,10 +261,10 @@ printf('<h2>%s</h2><p>
 	</p>',
 	q_('developers'),
 	q_('Project coordinator:'),     '<a href="http://f4bien.blogspot.com/">Fabien Ch&eacute;reau</a>',
-	q_('Doc author/developer:'),    '<a href="http://porpoisehead.net/">Matthew Gates</a>',
-	q_('Developer:'),               '<a href="http://badlyhonedbytes.wordpress.com/">Bogdan Marinov</a>, <a href="http://astro.altspu.ru/~aw/">Alexander Wolf</a>, <a href="mailto:treaves%20(at)%20silverfieldstech.com">Timothy Reaves</a>, <a href="http://blog.noctua-software.com/">Guillaume Ch&eacute;reau</a>, <a href="http://homepage.univie.ac.at/Georg.Zotti/">Georg Zotti</a>, Ferdinand Majerech, Jörg Müller, Marcos Cardinot, Florian Schaukowitsch',
+	q_('Graphic designer:'),    	'Johan Meuris',
+	q_('Developer:'),               '<a href="http://badlyhonedbytes.wordpress.com/">Bogdan Marinov</a>, <a href="http://astro.altspu.ru/~aw/">Alexander Wolf</a>, <a href="mailto:treaves%20(at)%20silverfieldstech.com">Timothy Reaves</a>, <a href="http://blog.noctua-software.com/">Guillaume Ch&eacute;reau</a>, <a href="http://homepage.univie.ac.at/Georg.Zotti/">Georg Zotti</a>, Marcos Cardinot, Florian Schaukowitsch',
 	q_('Continuous Integration:'),  '<a href="http://lambermont.dyndns.org/">Hans Lambermont</a>',
-	q_('Tester:'),                  'Barry Gerdes, Khalid AlAjaji',
+	q_('Tester:'),                  'Khalid AlAjaji',
 	q_('and everyone else in the community.') );
 
 printf('</div>
