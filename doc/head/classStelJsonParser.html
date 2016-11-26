@@ -62,9 +62,6 @@
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-static-methods"></a>
 Static Public Member Functions</h2></td></tr>
-<tr class="memitem:a66f705fbd2f22cc83aa28738b1eee869"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="classJsonListIterator.html">JsonListIterator</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classStelJsonParser.html#a66f705fbd2f22cc83aa28738b1eee869">initListIterator</a> (QIODevice *in)</td></tr>
-<tr class="memdesc:a66f705fbd2f22cc83aa28738b1eee869"><td class="mdescLeft">&#160;</td><td class="mdescRight">Create a <a class="el" href="classJsonListIterator.html" title="Qt-style iterator over a JSON array. ">JsonListIterator</a> from the given input device.  <a href="#a66f705fbd2f22cc83aa28738b1eee869">More...</a><br /></td></tr>
-<tr class="separator:a66f705fbd2f22cc83aa28738b1eee869"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a7a98c38330d8e4f6d008e9e86e88b8ff"><td class="memItemLeft" align="right" valign="top">static QVariant&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classStelJsonParser.html#a7a98c38330d8e4f6d008e9e86e88b8ff">parse</a> (QIODevice *input)</td></tr>
 <tr class="memdesc:a7a98c38330d8e4f6d008e9e86e88b8ff"><td class="mdescLeft">&#160;</td><td class="mdescRight">Parse the given input stream.  <a href="#a7a98c38330d8e4f6d008e9e86e88b8ff">More...</a><br /></td></tr>
 <tr class="separator:a7a98c38330d8e4f6d008e9e86e88b8ff"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -77,9 +74,6 @@ static QVariant&#160;</td><td class="memItemRight" valign="bottom"><b>parse</b> 
 <tr class="memitem:aa813b1c29f793a2256e1367cad6b22fe"><td class="memItemLeft" align="right" valign="top">static QByteArray&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classStelJsonParser.html#aa813b1c29f793a2256e1367cad6b22fe">write</a> (const QVariant &amp;jsonObject, int indentLevel=0)</td></tr>
 <tr class="memdesc:aa813b1c29f793a2256e1367cad6b22fe"><td class="mdescLeft">&#160;</td><td class="mdescRight">Serialize the passed QVariant as JSON in a QByteArray.  <a href="#aa813b1c29f793a2256e1367cad6b22fe">More...</a><br /></td></tr>
 <tr class="separator:aa813b1c29f793a2256e1367cad6b22fe"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a3f625082903403dc10a4a9044f52bee4"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a3f625082903403dc10a4a9044f52bee4"></a>
-static void&#160;</td><td class="memItemRight" valign="bottom"><b>registerSerializerForType</b> (int t, void(*func)(const QVariant &amp;, QIODevice *, int))</td></tr>
-<tr class="separator:a3f625082903403dc10a4a9044f52bee4"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Qt-based simple JSON reader inspired by the one from <a href="http://zoolib.sourceforge.net/">Zoolib</a>. </p>
@@ -93,36 +87,8 @@ string        QVariant::String
 number        QVariant::Int or QVariant::Double
 </pre><p>JSON is JavaScript Object Notation. See <a href="http://www.json.org/">http://www.json.org/</a> </p>
 
-<p>Definition at line <a class="el" href="StelJsonParser_8hpp_source.html#l00069">69</a> of file <a class="el" href="StelJsonParser_8hpp_source.html">StelJsonParser.hpp</a>.</p>
+<p>Definition at line <a class="el" href="StelJsonParser_8hpp_source.html#l00041">41</a> of file <a class="el" href="StelJsonParser_8hpp_source.html">StelJsonParser.hpp</a>.</p>
 </div><h2 class="groupheader">Member Function Documentation</h2>
-<a class="anchor" id="a66f705fbd2f22cc83aa28738b1eee869"></a>
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">static <a class="el" href="classJsonListIterator.html">JsonListIterator</a> StelJsonParser::initListIterator </td>
-          <td>(</td>
-          <td class="paramtype">QIODevice *&#160;</td>
-          <td class="paramname"><em>in</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Create a <a class="el" href="classJsonListIterator.html" title="Qt-style iterator over a JSON array. ">JsonListIterator</a> from the given input device. </p>
-
-<p>Definition at line <a class="el" href="StelJsonParser_8hpp_source.html#l00073">73</a> of file <a class="el" href="StelJsonParser_8hpp_source.html">StelJsonParser.hpp</a>.</p>
-
-</div>
-</div>
 <a class="anchor" id="a7a98c38330d8e4f6d008e9e86e88b8ff"></a>
 <div class="memitem">
 <div class="memproto">
@@ -233,7 +199,7 @@ number        QVariant::Int or QVariant::Double
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Sun Oct 16 2016 21:37:27 for Stellarium by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Sat Nov 26 2016 13:20:22 for Stellarium by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.11
 </small></address>

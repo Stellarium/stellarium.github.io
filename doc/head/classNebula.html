@@ -179,12 +179,13 @@ Public Types</h2></td></tr>
 <a class="el" href="classStelObject.html#acf243e7987796a3a44e409140ecea8c6a19948f98c49dd3f1327c440358194688">AbsoluteMagnitude</a> = 0x00000400, 
 <a class="el" href="classStelObject.html#acf243e7987796a3a44e409140ecea8c6a24d50180f90932013c35bfb51a4726c8">GalacticCoord</a> = 0x00000800, 
 <br />
-&#160;&#160;<a class="el" href="classStelObject.html#acf243e7987796a3a44e409140ecea8c6a06c3c53f2370753e8b1b088dd31909a9">ObjectType</a> = 0x00001000, 
-<a class="el" href="classStelObject.html#acf243e7987796a3a44e409140ecea8c6abd747356c16ad505411c0755d655e458">EclipticCoord</a> = 0x00002000, 
-<a class="el" href="classStelObject.html#acf243e7987796a3a44e409140ecea8c6a3d3de1493867fe630c7acfefafcb6ef9">EclipticCoordXYZ</a> = 0x00004000, 
-<b>NoFont</b> = 0x00008000, 
+&#160;&#160;<a class="el" href="classStelObject.html#acf243e7987796a3a44e409140ecea8c6a78e2f84bcdbb984213db9c7c4dd169a2">SupergalacticCoord</a> = 0x00001000, 
+<a class="el" href="classStelObject.html#acf243e7987796a3a44e409140ecea8c6a06c3c53f2370753e8b1b088dd31909a9">ObjectType</a> = 0x00002000, 
+<a class="el" href="classStelObject.html#acf243e7987796a3a44e409140ecea8c6ac3f35973b913dd7614c824a311d6980b">EclipticCoordJ2000</a> = 0x00004000, 
+<a class="el" href="classStelObject.html#acf243e7987796a3a44e409140ecea8c6aa9490c2d0bae26d11a36a7b6f9f8720e">EclipticCoordOfDate</a> = 0x00008000, 
 <br />
-&#160;&#160;<a class="el" href="classStelObject.html#acf243e7987796a3a44e409140ecea8c6aa651fd9d370fc652c77c663cd41a18ce">PlainText</a> = 0x00010000
+&#160;&#160;<b>NoFont</b> = 0x00010000, 
+<a class="el" href="classStelObject.html#acf243e7987796a3a44e409140ecea8c6aa651fd9d370fc652c77c663cd41a18ce">PlainText</a> = 0x00020000
 <br />
  }<tr class="memdesc:acf243e7987796a3a44e409140ecea8c6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Used as named bitfield flags as specifiers to filter results of getInfoString.  <a href="classStelObject.html#acf243e7987796a3a44e409140ecea8c6">More...</a><br /></td></tr>
 </td></tr>
@@ -219,6 +220,12 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:af6e081b109bb82d381514392f40365e5"><td class="memItemLeft" align="right" valign="top">virtual QString&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classNebula.html#af6e081b109bb82d381514392f40365e5">getEnglishName</a> () const </td></tr>
 <tr class="memdesc:af6e081b109bb82d381514392f40365e5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return object's name in english.  <a href="#af6e081b109bb82d381514392f40365e5">More...</a><br /></td></tr>
 <tr class="separator:af6e081b109bb82d381514392f40365e5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a498f41fd9d8912e7cef00bb1c48fe3da"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a498f41fd9d8912e7cef00bb1c48fe3da"></a>
+QString&#160;</td><td class="memItemRight" valign="bottom"><b>getEnglishAliases</b> () const </td></tr>
+<tr class="separator:a498f41fd9d8912e7cef00bb1c48fe3da"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab52ef5117d6828688f090a9aceaebac8"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ab52ef5117d6828688f090a9aceaebac8"></a>
+QString&#160;</td><td class="memItemRight" valign="bottom"><b>getI18nAliases</b> () const </td></tr>
+<tr class="separator:ab52ef5117d6828688f090a9aceaebac8"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:add1dca26fc1da44d632006e2e3c1458d"><td class="memItemLeft" align="right" valign="top">virtual double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classNebula.html#add1dca26fc1da44d632006e2e3c1458d">getAngularSize</a> (const <a class="el" href="classStelCore.html">StelCore</a> *) const </td></tr>
 <tr class="memdesc:add1dca26fc1da44d632006e2e3c1458d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return the angular radius of a circle containing the object as seen from the observer with the circle center assumed to be at <a class="el" href="classNebula.html#a3ba01b6c6aa1f0732e1c7a274ec017e1" title="Get observer-centered equatorial coordinates at equinox J2000. ">getJ2000EquatorialPos()</a>.  <a href="#add1dca26fc1da44d632006e2e3c1458d">More...</a><br /></td></tr>
 <tr class="separator:add1dca26fc1da44d632006e2e3c1458d"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -252,6 +259,12 @@ float&#160;</td><td class="memItemRight" valign="bottom"><b>getSurfaceBrightness
 <tr class="memitem:af633522537e4a34c2aff7a5618b25b49"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="af633522537e4a34c2aff7a5618b25b49"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><b>setProperName</b> (QString name)</td></tr>
 <tr class="separator:af633522537e4a34c2aff7a5618b25b49"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab2b2ef13f534d67e162c032323d903f6"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ab2b2ef13f534d67e162c032323d903f6"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>addNameAlias</b> (QString name)</td></tr>
+<tr class="separator:ab2b2ef13f534d67e162c032323d903f6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a45fc9469785ad31baf255f6a8307c9de"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a45fc9469785ad31baf255f6a8307c9de"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>removeAllNames</b> ()</td></tr>
+<tr class="separator:a45fc9469785ad31baf255f6a8307c9de"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a4d75e9fc669e5119c2cdd295963c1048"><td class="memItemLeft" align="right" valign="top">QString&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classNebula.html#a4d75e9fc669e5119c2cdd295963c1048">getDSODesignation</a> ()</td></tr>
 <tr class="memdesc:a4d75e9fc669e5119c2cdd295963c1048"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get designation for DSO (with priority: M, C, NGC, IC, B, Sh2, VdB, RCW, LDN, LBN, Cr, Mel, PGC, UGC, Ced)  <a href="#a4d75e9fc669e5119c2cdd295963c1048">More...</a><br /></td></tr>
 <tr class="separator:a4d75e9fc669e5119c2cdd295963c1048"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -840,7 +853,7 @@ Additional Inherited Members</h2></td></tr>
 
 <p>Reimplemented from <a class="el" href="classStelObject.html#a900191d6bb5e88dfece40d89acc4b72e">StelObject</a>.</p>
 
-<p>Definition at line <a class="el" href="Nebula_8hpp_source.html#l00145">145</a> of file <a class="el" href="Nebula_8hpp_source.html">Nebula.hpp</a>.</p>
+<p>Definition at line <a class="el" href="Nebula_8hpp_source.html#l00147">147</a> of file <a class="el" href="Nebula_8hpp_source.html">Nebula.hpp</a>.</p>
 
 </div>
 </div>
@@ -997,7 +1010,7 @@ Additional Inherited Members</h2></td></tr>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Sun Oct 16 2016 21:37:26 for Stellarium by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Sat Nov 26 2016 13:20:18 for Stellarium by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.11
 </small></address>
