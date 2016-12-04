@@ -267,10 +267,10 @@ printf('<h2>%s</h2><p>
 	q_('Tester:'),                  'Khalid AlAjaji',
 	q_('and everyone else in the community.') );
 
-printf('<h2>%s</h2><p>
-	<a href="https://twitter.com/StellariumDev">Twitter</a><br />
-	<a href="https://plus.google.com/u/0/communities/117170563856412195340">Google+</a>
-	</p>',
+printf('<h2>%s</h2><ul class="smalllist">
+	<li><a href="https://twitter.com/StellariumDev">Twitter</a></li>
+	<li><a href="https://plus.google.com/u/0/communities/117170563856412195340">Google+</a></li>
+	</ul>',
 	q_('social media') );
 
 
