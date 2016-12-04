@@ -267,6 +267,13 @@ printf('<h2>%s</h2><p>
 	q_('Tester:'),                  'Khalid AlAjaji',
 	q_('and everyone else in the community.') );
 
+printf('<h2>%s</h2><p>
+	<a href="https://twitter.com/StellariumDev">Twitter</a><br />
+	<a href="https://plus.google.com/u/0/communities/117170563856412195340">Google+</a>
+	</p>',
+	q_('social media') );
+
+
 printf('</div>
 	<div id="development" class="block">
 	<h2>%s</h2>
