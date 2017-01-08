@@ -291,7 +291,7 @@ printf('</div>
 		<li><a href="/wiki/index.php/Textures">%s</a></li>
 		<li><a href="/wiki/index.php/Category:User\'s_Guide">%s</a></li>
 		<li><a href="./docs.php">%s</a></li>
-		<li><a href="/doc/head/scripting.html">%s</a></li>
+		<li><a href="/doc/%s/scripting.html">%s</a></li>
 		<li><a href="https://answers.launchpad.net/stellarium">%s</a></li>
 		<li><a href="http://bugs.launchpad.net/stellarium">%s</a></li>
 		<li><a href="http://www.ohloh.net/p/stellarium">%s</a></li>
@@ -318,6 +318,7 @@ q_("plugins"),
 q_("textures"),
 q_("user's guides"),
 q_("developers documentation"),
+$version,
 q_("scripting"),
 q_("get support"),
 q_("report bugs, request new features"),
