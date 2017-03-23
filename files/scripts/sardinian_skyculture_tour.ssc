@@ -1,0 +1,67 @@
+//
+// Name: Sardinian Sky Culture Tour - V. 1.0
+// License: Public Domain
+// Author: Giuseppe Putzolu
+// Description: Look at the sardinian sky culture.
+//
+
+LabelMgr.deleteAllLabels();
+
+core.clear("starchart");
+GridLinesMgr.setFlagEquatorGrid(false);
+ConstellationMgr.setFlagArt(false);
+ConstellationMgr.setFlagBoundaries(false);
+ConstellationMgr.setFlagLines(false);
+ConstellationMgr.setFlagLabels(false);
+LandscapeMgr.setFlagLandscape(false);
+
+core.wait(3);
+ConstellationMgr.setFlagLines(true);
+ConstellationMgr.setFlagLabels(true);
+core.setSkyCulture("sardinian");
+core.setSkyLanguage("sc");
+
+var constellations = new Array("001","002","003","004","005","006","007","008","009","010","011");
+
+y = core.getScreenHeight()/768;
+x = core.getScreenWidth()/1024;
+
+core.clear("starchart");
+GridLinesMgr.setFlagEquatorGrid(false);
+ConstellationMgr.setFlagArt(false);
+ConstellationMgr.setFlagBoundaries(false);
+ConstellationMgr.setFlagLines(false);
+ConstellationMgr.setFlagLabels(false);
+LandscapeMgr.setFlagLandscape(false);
+
+core.wait(3);
+ConstellationMgr.setFlagBoundaries(true);
+ConstellationMgr.setFlagLines(true);
+ConstellationMgr.setFlagLabels(true);
+ConstellationMgr.setFlagIsolateSelected(true);
+
+for (i=0; i<constellations.length; i++)
+{
+        objName = constellations[i];
+        core.selectObjectByName(objName, true);
+        StelMovementMgr.autoZoomIn();
+        core.wait(3);
+        StelMovementMgr.autoZoomOut();
+        core.wait(5);
+}
+
+var objects = new Array("Steel Star","Twin Stars","The Seven Brother's Driver", "Polar Star", "The Bunch's Driver");
+
+for (i=0; i<objects.length; i++)
+{
+
+        mName = objects[i];
+        var mInfo = core.getObjectPosition(mName);
+
+        core.moveToRaDec(mInfo['ra'], mInfo['dec'], 3);
+        core.wait(3);
+        StelMovementMgr.zoomTo(2.30, 3);
+        core.wait(5);
+        StelMovementMgr.zoomTo(20.0, 3);
+        core.wait(3);
+}
