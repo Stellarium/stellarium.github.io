@@ -16,6 +16,7 @@ function q_($msgid) {
 }
 
 $language = array(
+    'af'=>'Afrikaans',
     'ar'=>'‫العربية‬', 
     'az'=>'Azərbaycan dili',
     'eu'=>'euskara',
