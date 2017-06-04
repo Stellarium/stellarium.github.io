@@ -187,11 +187,13 @@ printf('
 	<div id="features" class="block">
 		<h2>%s</h2>
 		<h3>%s</h3>
-			<ul class="smalllist"><li>%s</li><li>%s</li><li>%s</li><li>%s</li><li>%s</li><li>%s</li><li>%s</li><li>%s</li></ul>',
+			<ul class="smalllist"><li>%s</li><li>%s</li><li>%s</li><li>%s</li><li>%s</li><li>%s</li><li>%s</li><li>%s</li><li>%s</li><li>%s</li></ul>',
 q_("features"),
 q_("sky"),
 q_("default catalogue of over 600,000 stars"),
-q_("extra catalogues with more than 210 million stars"),
+q_("extra catalogues with more than 177 million stars"),
+q_("default catalogue of over 80,000 deep-sky objects"),
+q_("extra catalogue with more than 1 million deep-sky objects"),
 q_("asterisms and illustrations of the constellations"),
 q_("constellations for 20+ different cultures"),
 q_("images of nebulae (full Messier catalogue)"),
@@ -211,13 +213,16 @@ q_("all new graphical interface and extensive keyboard control"),
 q_("telescope control"));
 printf('
 		<h3>%s</h3>
-			<ul class="smalllist"><li>%s</li><li>%s</li><li>%s</li><li>%s</li><li>%s</li><li>%s</li></ul>',
+			<ul class="smalllist"><li>%s</li><li>%s</li><li>%s</li><li>%s</li><li>%s</li><li>%s</li><li>%s</li><li>%s</li><li>%s</li></ul>',
 q_("visualisation"),
 q_("equatorial and azimuthal grids"),
 q_("star twinkling"),
 q_("shooting stars"),
+q_("tails of comets"),
+q_("iridium flares simulation"),
 q_("eclipse simulation"),
-q_("supernovae simulation"),
+q_("supernovae and novae simulation"),
+q_("3D sceneries"),
 q_("skinnable landscapes, now with spheric panorama projection"));
 printf('
 		<h3>%s</h3>
