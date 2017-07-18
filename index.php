@@ -307,6 +307,7 @@ printf('</div>
 			<li><a href="https://sourceforge.net/projects/stellarium/files/Stellarium-win32/">%s (%s)</a></li>
 			<li><a href="https://sourceforge.net/projects/stellarium/files/Stellarium-win64/">%s (%s)</a></li>
 		</ul>
+		<li><a href="https://launchpad.net/stellarium/+download">%s</a>
 		</li>
 	</ul>',
 q_("collaborate"),
@@ -334,7 +335,8 @@ q_("for Mac OS X"),
 q_("for Windows"),
 q_("32 bit"),
 q_("for Windows"),
-q_("64 bit"));
+q_("64 bit"),
+q_("mirror of releases"));
 
 printf('
 	<h2>%s</h2>
