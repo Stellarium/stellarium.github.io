@@ -358,7 +358,7 @@ q_("The latest development snapshot of Stellarium is kept in Bazaar, a distribut
 q_("browse Bazaar"),
 q_("instructions (wiki)"),
 q_("git"),
-q_("The official Git-mirror of latest source code of Stellarium."),
+q_("The official Git-mirrors of latest source code of Stellarium."),
 q_("browse Git"),
 q_("browse GitHub"),
 q_("irc"),
