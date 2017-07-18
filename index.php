@@ -346,11 +346,19 @@ printf('
 			<li><a href="http://stellarium.org/wiki/index.php/Bzr_checkout">%s</a></li>
 		</ul>
 	<h2>%s</h2>
+		<p>%s</p>
+		<ul class="largelist">
+			<li><a href="https://git.launchpad.net/stellarium?h=master">%s</a></li>
+		</ul>
+	<h2>%s</h2>
 	<p>%s</p>',
 q_("bzr"),
 q_("The latest development snapshot of Stellarium is kept in Bazaar, a distributed revision control system. If you want to compile development versions of Stellarium, this is the place to get the source code."),
 q_("browse Bazaar"),
 q_("instructions (wiki)"),
+q_("git"),
+q_("The official Git-mirror of latest source code of Stellarium."),
+q_("browse Git"),
 q_("irc"),
 sprintf(q_("Real time chat about Stellarium can be had in the %s#stellarium%s IRC channel on the %sfreenode%s IRC network. Use your favorite IRC client to connect to %schat.freenode.net%s or try the %sweb-based interface%s."),
 		"<a href='irc://irc.freenode.org/stellarium'>", "</a>", "<a href='http://freenode.net'>", "</a>", "<a href='irc://irc.freenode.org/stellarium'>", "</a>", "<a href='http://webchat.freenode.net/?channels=stellarium&uio=MTE9MjQ255'>", "</a>")
