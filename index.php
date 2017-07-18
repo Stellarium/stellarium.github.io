@@ -349,6 +349,7 @@ printf('
 		<p>%s</p>
 		<ul class="largelist">
 			<li><a href="https://git.launchpad.net/stellarium?h=master">%s</a></li>
+			<li><a href="https://github.com/Stellarium/stellarium">%s</a></li>
 		</ul>
 	<h2>%s</h2>
 	<p>%s</p>',
@@ -359,6 +360,7 @@ q_("instructions (wiki)"),
 q_("git"),
 q_("The official Git-mirror of latest source code of Stellarium."),
 q_("browse Git"),
+q_("browse GitHub"),
 q_("irc"),
 sprintf(q_("Real time chat about Stellarium can be had in the %s#stellarium%s IRC channel on the %sfreenode%s IRC network. Use your favorite IRC client to connect to %schat.freenode.net%s or try the %sweb-based interface%s."),
 		"<a href='irc://irc.freenode.org/stellarium'>", "</a>", "<a href='http://freenode.net'>", "</a>", "<a href='irc://irc.freenode.org/stellarium'>", "</a>", "<a href='http://webchat.freenode.net/?channels=stellarium&uio=MTE9MjQ255'>", "</a>")
