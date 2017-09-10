@@ -124,6 +124,7 @@ closedir($dir);
 $indexCount	= count($dirArray);
 rsort($dirArray);
 print("<ul>\n");
+print("<li><em><a href=\"/doc/head/\">head</a></em></li>");
 for($index=0; $index < $indexCount; $index++) {
 	if (substr("$dirArray[$index]", 0, 1) != "." && $dirArray[$index] != "index.php"){ // don't list hidden files
 		print("<li><a href=\"/doc/$dirArray[$index]/\">$dirArray[$index]</a></li>");
