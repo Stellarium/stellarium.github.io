@@ -115,7 +115,9 @@ q_("api documentation"));
 
 $dir = opendir("./doc/");
 while($entryName = readdir($dir)) {
-	$dirArray[] = $entryName;
+	if ($entryName!="head") {
+		$dirArray[] = $entryName;
+	}
 }
 closedir($dir);
 

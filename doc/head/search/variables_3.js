@@ -1,0 +1,19 @@
+var searchData=
+[
+  ['d',['d',['../structStelOBJ_1_1Material.html#a26a4fa58ea8580d4a9aa042e8275ae4d',1,'StelOBJ::Material::d()'],['../classSphericalCap.html#acf5d0a04709bf521b18d2a9c2879fbe3',1,'SphericalCap::d()']]],
+  ['datasetcredits',['dataSetCredits',['../classStelSkyImageTile.html#ab6b688320ee6db9443ed22b9e8271891',1,'StelSkyImageTile::dataSetCredits()'],['../classStelSkyPolygon.html#aa7041c64cceb0bacb742f2ce57fc1f56',1,'StelSkyPolygon::dataSetCredits()']]],
+  ['def_5fsimbad_5furl',['DEF_SIMBAD_URL',['../classSearchDialog.html#add1b84b00b7b2a80e3813ccf416a28cc',1,'SearchDialog']]],
+  ['defaultangleforgravitytext',['defaultAngleForGravityText',['../structStelProjector_1_1StelProjectorParams.html#a2582e0fe604a56680a11ce3dfb6e8e54',1,'StelProjector::StelProjectorParams']]],
+  ['defaultbortleindex',['defaultBortleIndex',['../classLandscape.html#ade210865ac20b39f01a9019857a81b68',1,'Landscape']]],
+  ['defaultextinctioncoefficient',['defaultExtinctionCoefficient',['../classLandscape.html#a6c7893dbd500f7e8d0097e3a32c1cd54',1,'Landscape']]],
+  ['defaultfogsetting',['defaultFogSetting',['../classLandscape.html#a71f9f926b2784d5e52c5bd8c2863b34b',1,'Landscape']]],
+  ['defaultpressure',['defaultPressure',['../classLandscape.html#a02ad888a5e2f0e4f3050e698e8d66152',1,'Landscape']]],
+  ['defaulttemperature',['defaultTemperature',['../classLandscape.html#a1f5a3882bb5241234eb71e5f70bf96df',1,'Landscape']]],
+  ['description',['description',['../classLandscape.html#a5801cbb202fc75666dad7c88f3c13077',1,'Landscape::description()'],['../structStelPluginInfo.html#ae9fb22e2ce94155cb5d552b3c2ac53d5',1,'StelPluginInfo::description()'],['../structCommLink.html#ac057b139ba27c0e01585c4f74e5aadbf',1,'CommLink::description()'],['../structSceneInfo.html#a7c74cc8d89cdbe59a959f6e91d7074a0',1,'SceneInfo::description()'],['../structStoredView.html#a7e69970bb3a215aeac9984d3f19e29b1',1,'StoredView::description()']]],
+  ['devicepixelsperpixel',['devicePixelsPerPixel',['../structStelProjector_1_1StelProjectorParams.html#a0c55fc6e21b9569790444920605171cf',1,'StelProjector::StelProjectorParams']]],
+  ['dialog',['dialog',['../classStelDialog.html#a0184f75f2bf1cf7dbb22c342ed59420e',1,'StelDialog::dialog()'],['../classStelDialogLogBook.html#aa95fc6a1bd66556a25da724b028246c6',1,'StelDialogLogBook::dialog()']]],
+  ['dialogname',['dialogName',['../classStelDialog.html#a8d198d65468e9423a8ddff818bfd8949',1,'StelDialog']]],
+  ['discovered',['discovered',['../structexoplanetData.html#a064f2074cc2062a798850e6d51f1fe18',1,'exoplanetData']]],
+  ['displayedname',['displayedName',['../structStelPluginInfo.html#a8e4a39cb7b3ae696e537d9b4023b4fdd',1,'StelPluginInfo']]],
+  ['downloading',['downloading',['../classMultiLevelJsonBase.html#afd1a52e1490e1f88af9cfda3991497a4',1,'MultiLevelJsonBase']]]
+];
