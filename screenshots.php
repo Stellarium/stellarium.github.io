@@ -115,7 +115,7 @@ printf('
 		<a href="/img/screenshots/0.10-search.jpg" title="%s"><img src="/img/screenshots/0.10-search.png" width="100" height="75" border="0" class="thumb"></a>
 	</div>',
 q_("Since version 0.10 Stellarium has new graphical user interface. The vertical bar links to windows, the horizontal bar shows toggle buttons, just like it used to."),
-q_("The location window.  The first thing you have to do is set your observing position and save it. The landscape is a panorama from the ESO facilities in Garching, near Munich, Germany. ESO is the European Organisation for Astronomical Research in the Southern Hemisphere."),
+q_("The location window. The first thing you have to do is set your observing position and save it. The landscape is a panorama from the facility of European Organisation for Astronomical Research in the Southern Hemisphere in Garching, near Munich, Germany."),
 q_("The sun is down, the stars are visible.  Since version 0.10.0 Stellarium has extensive star catalogs.  600,000 are included by default, but you can even download extra catalogues to see up to 210 million stars. This work was done by our team member Johannes."),
 q_("Full sky view of the constellations, their boundaries, the Milky Way."),
 q_("A shooting star flashes past the Jupiter. You can select different intensities in the View window."),
