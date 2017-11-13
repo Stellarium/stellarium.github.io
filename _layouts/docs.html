@@ -1,0 +1,41 @@
+---
+layout: default
+title: Documentation for developers of scripts, plugins and main program
+---
+{% include i18n.html %}
+<div id="home">
+  <div id="apidocs-describe" class="block">
+    <p>{% include tr.html s="Here you can find API documentation for various version of Stellarium." %} <em>head</em> {% include tr.html s="refers to the latest version from development (although this may lag behind a little as the documentation is only uploaded every so often)." %} {% include tr.html s="Here you can find changes between packages also." %}</p>
+  </div>
+</div>
+
+<div id="content">
+  <div id="apidoc" class="block">
+    <h2>{% include tr.html s="api documentation" %}</h2>
+    <ul>
+      <li><em><a href="/doc/head/">head</a></em></li>
+      {% for l in site.doc_versions %}
+      <li><a href="/doc/{{ l }}/">{{ l }}</a></li>
+      {% endfor %}
+    </ul>
+  </div>
+  <div id="apipluginsdoc" class="block">
+    <h2>{% include tr.html s="plugins api documentation" %}</h2>
+    <ul>
+      {% for l in site.doc_plugin_versions %}
+      <li><a href="/doc-plugins/{{ l }}/">{{ l }}</a></li>
+      {% endfor %}
+    </ul>
+  </div>
+  <div id="pkgdiff" class="block">
+    <h2>{% include tr.html s="changes between packages" %}</h2>
+    <ul>
+      {% for i in site.doc_versions %}
+      {% if site.doc_versions[forloop.index] %}
+      <li><a href="/pkgdiff/{{ i }}_to_{{ site.doc_versions[forloop.index] }}/changes_report.html">{{ i }}_to_{{ site.doc_versions[forloop.index] }}</a></li>
+      {% endif %}
+      {% endfor %}
+    </ul>
+  </div>
+</div>
+<div>
