@@ -4,6 +4,9 @@
   {% include head.html %}
   <body>
     <div id="wrapper">
+     {% if page.nolangbar %}
+     <div id="langbar"></div>
+     {% else %}
       <div id="langbar">{% include tr.html s="Other languages:" %}
         <select id="language" onchange="changelang(this.value)">
           {% for l in site.langnames %}
@@ -15,6 +18,7 @@
           {% endfor %}
         </select>
       </div>
+      {% endif %}
       {% include header.html %}
       <main class="page-content" aria-label="Content">
         <div class="wrapper">

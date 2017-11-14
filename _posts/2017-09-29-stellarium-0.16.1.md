@@ -4,6 +4,7 @@ title: Stellarium 0.16.1
 date: 2017-09-29 12:58:12 +0200
 categories: release
 github_user: alex-w
+nolangbar: true
 ---
 Version 0.16.1 is based on Qt 5.6.2, but it can still be built from sources with Qt 5.4.
 
