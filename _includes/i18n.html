@@ -1,5 +1,9 @@
 {% assign patharr = page.relative_path | split: "/" %}
 {% assign lang = patharr[1] | default: "en" %}
+{% if langnames[lang] %}
+{% else %}
+{% assign lang = "en" %}
+{% endif %}
 {% assign tr = site.data.i18n[lang] %}
 {% if lang == "ar" or lang == "fa" %}
 {% assign langdir = "rtl" %}

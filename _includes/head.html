@@ -18,8 +18,8 @@
       if (window.location.pathname === '/') {
         window.location = '/' + val + '/';
       } else {
-        var newPath = window.location.pathname.replace(/^\/.+\//, '')
-        window.location = '/' + val + '/' + newPath;
+        var newPath = window.location.pathname.replace(/^\/[^\/]+/, '')
+        window.location = '/' + val + newPath;
       }
     }
   </script>
