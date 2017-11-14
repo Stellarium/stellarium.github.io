@@ -1,0 +1,146 @@
+---
+layout: post
+title: Stellarium 0.16.0
+date: 2017-06-21 10:58:12 +0200
+categories: release
+author: alex-w
+nolangbar: true
+---
+Stellarium 0.16.0 is a stable version (based on Qt5.6 but it can still be built from sources with Qt5.4) that introduces some new features and closes 38 bug and wishlist reports.
+
+New features include
+  - RemoteSync plugin, which allows running several connected instances of Stellarium.
+  - Non-spherical models for solar system objects like asteroids and small moons.
+  - Solar system config file is now split into two parts.
+  - AstroCalc feature extension: What's Up Tonight, graphs, ...
+  - DSO: Addition of catalogs of peculiar galaxies
+  - New Skycultures: Belarusian, Hawaiian Star Lines
+  - Telescope plugin: support for the RTS2 telescope system.
+  - Location can now be read from a GPS device.
+
+A huge thanks to the people who helped us a lot by reporting bugs!
+
+Full list of changes:
+  - Added support of irregular solar system objects (3D models of minor bodies) (LP: #1153171)
+  - Added Remote Sync plugin
+  - Added GPS devices support (LP: #1448673)
+  - Added splitting ssystem.ini data - now have separate ssystem_major.ini and ssystem_minor.ini. Only the latter shall be editable for the users.
+  - Added a few more timezone replacements.
+  - Added support an asterisms for the sky cultures
+  - Added better identification for existing serial ports for GPS
+  - Added context support for constellations and asterisms names
+  - Added support RTS2 for Telescope Control Plugin
+  - Added a new option in config.ini file esp. for the planetariums (astro/flag_forced_meteor_activity=(false|true) - to show a sporadic meteors activity without atmosphere).
+  - Added support of date and time formatting settings from main app to AstroCalc tool.
+  - Added a line for the approximate time of the meridian passing in AstroCalc tool (LP: #1652523)
+  - Added TLE tracking to RTS2 telescopes
+  - Added different star scales in the Oculars plugin, even separately for ocular and CCD views (LP: #1656940)
+  - Added information on magnification of the combination of eyepiece/lens/telescope in proportions of the telescope diameters.
+  - Added configurable options to AstroCalc tool
+  - Added support Catalan (Valencian) language
+  - Added support Kabyle language
+  - Added 'What's Up Tonight' tool - AstroCalc subsystem (LP: #1080408)
+  - Added Dark Doodad Nebula to DSO catalog
+  - Added more data for analysis to the Exoplanets plugin.
+  - Added calculation of list of visible object for current location (AstroCalc)
+  - Added tool to remove custom markers by coordinates
+  - Added support double and variable stars for AstroCalc tool
+  - Added support translation novae names (parse nova name to extract constellation name and year of flash)
+  - Added lists of bright double and bright variable stars to Search Tool
+  - Added customized buttons for toggle ICRS/Galactic/Ecliptic grids (LP: #730689)
+  - Added customized buttons for toggle constellation boundaries (LP: #1249239)
+  - Added import/export bookmarks (LP: #1675078)
+  - Added confirmation before deleting landscape (LP: #1635137)
+  - Added guessing for name of location and use it when spaceship is landing (LP: #1220561)
+  - Added an 'Additional settings' block for selected object info
+  - Added showing a proper motions for some stars
+  - Added an optional indication of mount mode (LP: #1172860)
+  - Added option to toggle the usage the buttons background on bottom bar (LP: #1589702)
+  - Added config option for planet apparent magnitude configuration
+  - Added description to the planets magnitude algorithm
+  - Added contrast index for DSO
+  - Added AstroCalc/Graphs feature
+  - Added new option to configure behaviour of Satellites (Satellites/time_rate_limit = 1.0)
+  - Added a scripting function to retrieve property names (helpful for configuring RemoteSync).
+  - Added 3 additional catalogs to our DSO catalog (Arp, VV, PK)
+  - Added packing of DSO catalog
+  - Added the showing the groups of the artificial satellites
+  - Added Belarusian sky culture
+  - Adding Hawaiian Starlines sky culture
+  - Added list of bright stars with high proper motion to the Search Tool/Lists and AstroCalc/Positions features
+  - Added lunar magnitude to sky brightness computation (brightness variation during lunar eclipses!) (LP: #1471546)
+  - Added property handling for the labels for ArchaeoLines plugin.
+  - Added Ukrainian translation for Belarusian skyculture
+  - Added Ukrainian translation for Hawaiian Starlines skyculture
+  - Added context and improve English phrase (AstroCalc)
+  - Added missed zh_HK zh_TW zh_CN descriptions for western sky-culture (LP: #1698473)
+  - Added Belarusian description for Belarusian sky culture (LP: #1698535)
+  - Added Bengali description for Belarusian sky culture (LP: #1698608)
+  - Added 'simulation speed' for tooltip of time (LP: #1698510)
+  - Added saving an angular separation option for phenomena
+  - Fixed crash when tried use of SIMBAD for offline mode (LP: #1674836)
+  - Fixed build scripts to update Index once more just before final run.
+  - Fixed COSPAR designation parser.
+  - Fixed wrong extinction coordinate frame of Zodiacal Light (LP: #1675699)
+  - Fixed a missing initialisation (avoids crash at program end)
+  - Fixed bug for loading default scenery on non-Englush locale in Scenery3D plugin
+  - Fixed typo in name of dark nebula LDN 935 (LP: #1679066)
+  - Fixed Scripting Engine: avoiding broken script when calling waitFor() after the point in time to wait.
+  - Fixed infoMap data for comets.
+  - Fixed issue of reloading of DSO names when filter of catalogs is updated.
+  - Fixed small cosmetic bug for SIMBAD status line.
+  - Fixed the opposition/conjunction longitude line: the line follows the ecliptic pole on date now (LP: #1687307)
+  - Fixed very stupid bug for Date & Time dialog.
+  - Fixed translation on-the-fly issue for AstroCalc tool.
+  - Fixed IAU constellation label for stars with high proper motion (LP: #1690615)
+  - Fixed crash when AstroCalc tool is active and we are on the spaceship
+  - Fixed several Coverity issues
+  - Fixed bug which disabled the bright flare-type Iridium point source drawing
+  - Fixed fullscreen behaviour on switching tasks (Alt+Tab) (LP: #550337)
+  - Fixed dynamic eye adaptation behaviour when persistent orbits are enabled
+  - Fixed switching horizontal/equatorial coordinates for Solar system objects (AstroCalc/Positions)
+  - Fixed crash when observer is flying on spaceship
+  - Fixed storing torchlight and coordinate display flag to config (Scenery3D) (LP: #1502245)
+  - Fixed placing a custom markers on HighDPI devices (LP: #1688985)
+  - Fixed infostring for ecliptical coordinates data (Nutation)
+  - Fixed strings consistency for Solar System Editor plug-in (LP: #1698783)
+  - Fixed string overlap with FOV and FPS labels (LP: #1698789)
+  - Restore searchable for telescope names (LP: #1686857)
+  - Updated Scenery3D plugin
+  - Updated Satellites plugin: refactoring the source code and speed-up rendering of satellites
+  - Updated rule to create a directory for screenshots (LP: #1626686)
+  - Updated GUI: refactoring blocks
+  - Updated a GUI behaviour: a map in LocationDialog resizable is now.
+  - Updated a GUI behaviour: enabled low resolution for High DPI devices.
+  - Updated a GUI: added a few GUI text improvements
+  - Updated InnoSetup script
+  - Updated and revised stars names
+  - Updated Historical Supernovae catalog (Added SN 2017cbv)
+  - Updated meteor showers catalog (Added data for year 2017)
+  - Updated AstroCalc tool: increased an accuracy of 'Altitude vs. Time' diagram
+  - Updated AstroCalc tool: speed-up calculations for some types of phenomena
+  - Updated AstroCalc tool: extension of features for Ephemeris Tool
+  - Updated AstroCalc tool: improve WUT
+  - Updated filters for DSO objects in AstroCalc/WUT tool
+  - Updated sorting rules for AstroCalc/Positions tool
+  - Updated filters for Solar system bodies (AstroCalc/Positions)
+  - Updated tab rules for Search Tool
+  - Updated list of locations
+  - Updated scripts and scripting engine
+  - Updated list of DSO's names
+  - Updated headers for AstroCalc tools
+  - Updated 'Go to home' feature.
+  - Updated Bookmarks tool.
+  - Updated API documentation
+  - Updated Exoplanets plugin: improve placing of the exoplanet systems
+  - Updated Oculars plugin: the limit for diameter of binoculars aperture upped to 200mm
+  - Updated calculation for boundaries of IAU constellations
+  - Updated default supernovae catalog
+  - Updated Belarusian translation for skycultures
+  - Updated cmake variable names
+  - Updated Ocean landscape
+  - Updated RemoteControl panels with new functionality
+  - Updated rules for TLE updated: never update TLE's for any date before Oct 4, 1957, 19:28:34GMT ;-)
+  - Removed script 'Analemma'
+  - Removed useless vertex color data from asteroid models.
+  - Removed Polynesian sky culture (replaced by Hawaiian starlines)

@@ -122,7 +122,9 @@ layout: default
   <div id="requirements" class="block">
     <h2>{% include tr.html s="news" %}</h2>
     <ul class="smalllist">
-      {% for post in site.posts %}
+      {% assign sorted = site.posts | sort: 'date' %}
+      {% assign sorted2 = sorted | reverse %}
+      {% for post in sorted2 %}
         {% if forloop.index < 11 %}
         <li><a href="{{ post.url }}">{{ post.title }}</a></li>
         {% endif %}
