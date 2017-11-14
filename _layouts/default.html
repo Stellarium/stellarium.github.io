@@ -1,35 +1,29 @@
 {% include i18n.html %}
 <!DOCTYPE html>
 <html lang="{{ lang }}" dir="{{ langdir }}">
-
   {% include head.html %}
-
   <body>
     <div id="wrapper">
-    <div id="langbar">{% include tr.html s="Other languages:" %}
-      <select id="language" onchange="changelang(this.value)">
-        {% for l in site.langnames %}
-          {%- if l[0] == lang -%}
-            <option value="{{ l[0] }}" selected="selected">{{ l[1] | append: " (" | append: l[0] | append: ")" }}</option>
-          {%- else -%}
-            <option value="{{ l[0] }}">{{ l[1] | append: " (" | append: l[0] | append: ")" }}</option>
-          {%- endif -%}
-        {% endfor %}
-      </select>
-    </div>
-
-    {% include header.html %}
-
-    <main class="page-content" aria-label="Content">
-      <div class="wrapper">
-        <div id="home">
-        {{ content }}
-        {% include footer.html %}
-        </div>
+      <div id="langbar">{% include tr.html s="Other languages:" %}
+        <select id="language" onchange="changelang(this.value)">
+          {% for l in site.langnames %}
+            {%- if l[0] == lang -%}
+              <option value="{{ l[0] }}" selected="selected">{{ l[1] | append: " (" | append: l[0] | append: ")" }}</option>
+            {%- else -%}
+              <option value="{{ l[0] }}">{{ l[1] | append: " (" | append: l[0] | append: ")" }}</option>
+            {%- endif -%}
+          {% endfor %}
+        </select>
       </div>
-    </main>
-
-  </div>
+      {% include header.html %}
+      <main class="page-content" aria-label="Content">
+        <div class="wrapper">
+          {{ content }}
+          <div>
+          {% include footer.html %}
+          </div>
+        </div>
+      </main>
+    </div>
   </body>
-
 </html>

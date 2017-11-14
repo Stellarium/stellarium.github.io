@@ -2,66 +2,69 @@
 layout: default
 ---
 {% include i18n.html %}
-<div id="home-describe" class="block">
-  <p>{% include tr.html s="Stellarium is a free open source planetarium for your computer. It shows a realistic sky in 3D, just like what you see with the naked eye, binoculars or a telescope." %}</p>
-  <p>{% include tr.html s="It is being used in planetarium projectors. Just set your coordinates and go." %}</p>
-</div>
+<div id="home">
+  <div id="home-describe" class="block">
+    <p>{% include tr.html s="Stellarium is a free open source planetarium for your computer. It shows a realistic sky in 3D, just like what you see with the naked eye, binoculars or a telescope." %}</p>
+    <p>{% include tr.html s="It is being used in planetarium projectors. Just set your coordinates and go." %}</p>
+  </div>
 
-<div class="block">
-  <div id="home-media">
-    <div class="slide-item first">
-      <img src="/img/slideshow/slide-1.jpg" class="photo" alt='{% include tr.html s="A shooting star flashes past the Jupiter. You can select different intensities in the View window." %}' />
-      <h2></h2>
-      <div class="slide-desc">
-        <p>{% include tr.html s="A shooting star flashes past the Jupiter. You can select different intensities in the View window." %}</p>
-        <a href="screenshots.html" class="read-more">{% include tr.html s="view screenshots" %} &raquo;</a>
+  <script type="text/javascript" src="/js/jq-ui-flplayer-sw-aggregated.js"></script>
+  <div class="block">
+    <div id="home-media">
+      <div class="slide-item first">
+        <img src="/img/slideshow/slide-1.jpg" class="photo" alt='{% include tr.html s="A shooting star flashes past the Jupiter. You can select different intensities in the View window." %}' />
+        <h2></h2>
+        <div class="slide-desc">
+          <p>{% include tr.html s="A shooting star flashes past the Jupiter. You can select different intensities in the View window." %}</p>
+          <a href="screenshots.html" class="read-more">{% include tr.html s="view screenshots" %} &raquo;</a>
+        </div>
       </div>
-    </div>
 
-    <div class="slide-item">
-      <img src="/img/slideshow/slide-2.jpg" class="photo" alt='{% include tr.html s="The great nebula in Orion. Press N to bring up the nebula labels. Also shown are constellation lines, press C to show or hide them." %}'/>
-      <h2></h2>
-      <div class="slide-desc">
-        <p>{% include tr.html s="The great nebula in Orion. Press N to bring up the nebula labels." %}</p>
-        <a href="screenshots.html" class="read-more">{% include tr.html s="view screenshots" %} &raquo;</a>
+      <div class="slide-item">
+        <img src="/img/slideshow/slide-2.jpg" class="photo" alt='{% include tr.html s="The great nebula in Orion. Press N to bring up the nebula labels. Also shown are constellation lines, press C to show or hide them." %}'/>
+        <h2></h2>
+        <div class="slide-desc">
+          <p>{% include tr.html s="The great nebula in Orion. Press N to bring up the nebula labels." %}</p>
+          <a href="screenshots.html" class="read-more">{% include tr.html s="view screenshots" %} &raquo;</a>
+        </div>
       </div>
-    </div>
-    <div class="slide-item">
-      <img src="/img/slideshow/slide-3.jpg" class="photo" alt='{% include tr.html s="The dance of the planets above ESO headquarters, near Munich." %}'/>
-      <h2></h2>
-      <div class="slide-desc">
-        <p>{% include tr.html s="The dance of the planets above ESO headquarters, near Munich." %}</p>
-        <a href="screenshots.html" class="read-more">{% include tr.html s="view screenshots" %} &raquo;</a>
+      <div class="slide-item">
+        <img src="/img/slideshow/slide-3.jpg" class="photo" alt='{% include tr.html s="The dance of the planets above ESO headquarters, near Munich." %}'/>
+        <h2></h2>
+        <div class="slide-desc">
+          <p>{% include tr.html s="The dance of the planets above ESO headquarters, near Munich." %}</p>
+          <a href="screenshots.html" class="read-more">{% include tr.html s="view screenshots" %} &raquo;</a>
+        </div>
       </div>
-    </div>
 
-    <div class="slide-item">
-      <img src="/img/slideshow/slide-4.jpg" class="photo" alt='{% include tr.html s="Full sky view of the constellations, their boundaries, the Milky Way." %}'/>
-      <h2></h2>
-      <div class="slide-desc">
-        <p>{% include tr.html s="Full sky view of the constellations, their boundaries, the Milky Way." %}</p>
-        <a href="screenshots.html" class="read-more">{% include tr.html s="view screenshots" %} &raquo;</a>
+      <div class="slide-item">
+        <img src="/img/slideshow/slide-4.jpg" class="photo" alt='{% include tr.html s="Full sky view of the constellations, their boundaries, the Milky Way." %}'/>
+        <h2></h2>
+        <div class="slide-desc">
+          <p>{% include tr.html s="Full sky view of the constellations, their boundaries, the Milky Way." %}</p>
+          <a href="screenshots.html" class="read-more">{% include tr.html s="view screenshots" %} &raquo;</a>
+        </div>
       </div>
-    </div>
 
-    <div class="slide-item">
-      <img src="/img/slideshow/slide-5.jpg" class="photo" alt='{% include tr.html s="Constellation art turned on." %}'/>
-      <h2></h2>
-      <div class="slide-desc">
-        <p>{% include tr.html s="Constellation art turned on." %}</p>
-        <a href="screenshots.html" class="read-more">{% include tr.html s="view screenshots" %} &raquo;</a>
+      <div class="slide-item">
+        <img src="/img/slideshow/slide-5.jpg" class="photo" alt='{% include tr.html s="Constellation art turned on." %}'/>
+        <h2></h2>
+        <div class="slide-desc">
+          <p>{% include tr.html s="Constellation art turned on." %}</p>
+          <a href="screenshots.html" class="read-more">{% include tr.html s="view screenshots" %} &raquo;</a>
+        </div>
+      </div>',
+
+      <div id="thumbs">
+        <div id="description"><p>{% include tr.html s="Click on the picture to the left for details." %}</p></div>
+        <ul>
+          <li><a href="screenshots.html"><img src="/img/slideshow/thumbs/thumb-1.jpg" width="40" height="40" alt="Slide 1" title="Slide 1"/></a></li>
+          <li><a href="screenshots.html"><img src="/img/slideshow/thumbs/thumb-2.jpg" width="40" height="40" alt="Slide 2" title="Slide 2"/></a></li>
+          <li><a href="screenshots.html"><img src="/img/slideshow/thumbs/thumb-3.jpg" width="40" height="40" alt="Slide 3" title="Slide 3"/></a></li>
+          <li><a href="screenshots.html" ><img src="/img/slideshow/thumbs/thumb-4.jpg" width="40" height="40" alt="Slide 4" title="Slide 4"/></a></li>
+          <li class="last"><a href="screenshots.html"><img src="/img/slideshow/thumbs/thumb-5.jpg" width="40" height="40" alt="Slide 5" title="Slide 5"/></a></li>
+        </ul>
       </div>
-    </div>',
-
-    <div id="thumbs">
-      <div id="description"><p>{% include tr.html s="Click on the picture to the left for details." %}</p></div>
-      <ul>
-        <li><a href="screenshots.html"><img src="/img/slideshow/thumbs/thumb-1.jpg" width="40" height="40" alt="Slide 1" title="Slide 1"/></a></li>
-        <li><a href="screenshots.html"><img src="/img/slideshow/thumbs/thumb-2.jpg" width="40" height="40" alt="Slide 2" title="Slide 2"/></a></li>
-        <li><a href="screenshots.html"><img src="/img/slideshow/thumbs/thumb-3.jpg" width="40" height="40" alt="Slide 3" title="Slide 3"/></a></li>
-        <li><a href="screenshots.html" ><img src="/img/slideshow/thumbs/thumb-4.jpg" width="40" height="40" alt="Slide 4" title="Slide 4"/></a></li>
-        <li class="last"><a href="screenshots.html"><img src="/img/slideshow/thumbs/thumb-5.jpg" width="40" height="40" alt="Slide 5" title="Slide 5"/></a></li>
-      </ul>
     </div>
   </div>
 </div>
@@ -119,7 +122,11 @@ layout: default
   <div id="requirements" class="block">
     <h2>{% include tr.html s="news" %}</h2>
     <ul class="smalllist">
-      include("rss2html/rss2html.php");
+      {% for post in site.posts %}
+        {% if forloop.index < 11 %}
+        <li><a href="{{ post.url }}">{{ post.title }}</a></li>
+        {% endif %}
+      {% endfor %}
     </ul>
 
     <h2>{% include tr.html s="system requirements" %}</h2>
@@ -172,7 +179,7 @@ layout: default
       <li><a href="/wiki/index.php/Plugins">{% include tr.html s="plugins" %}</a></li>
       <li><a href="/wiki/index.php/Textures">{% include tr.html s="textures" %}</a></li>
       <li><a href="/wiki/index.php/Category:User\'s_Guide">{% include tr.html s="user's guides" %}</a></li>
-      <li><a href="./docs.html">{% include tr.html s="developers documentation" %}</a></li>
+      <li><a href="/{{ lang }}/docs.html">{% include tr.html s="developers documentation" %}</a></li>
       <li><a href="/doc/{{ version }}/scripting.html">{% include tr.html s="scripting" %}</a></li>
       <li><a href="https://answers.launchpad.net/stellarium">{% include tr.html s="get support" %}</a></li>
       <li><a href="http://bugs.launchpad.net/stellarium">{% include tr.html s="report bugs, request new features" %}</a></li>
@@ -203,6 +210,9 @@ layout: default
     <p>{% include tr.html s="Real time chat about Stellarium can be had in the <a href='irc://irc.freenode.org/stellarium'>#stellarium</a> IRC channel on the <a href='http://freenode.net'>freenode</a> IRC network. Use your favorite IRC client to connect to <a href='irc://irc.freenode.org/stellarium'>chat.freenode.net</a> or try the <a href='http://webchat.freenode.net/?channels=stellarium&uio=MTE9MjQ255'>web-based interface</a>." %}</p>
 
     <h2>{% include tr.html s="supporters and friends" %}</h2>
-    <p>{% include tr.html s="Stellarium is produced by the efforts of the developer team, with the help and support of the <a href='sponsors.html'>following people and organisations</a>" %}.</p>
+    {% capture tmpstr %}
+    {% include tr.html s="Stellarium is produced by the efforts of the developer team, with the help and support of the <a href='/%lang%/sponsors.html'>following people and organisations</a>" %}
+    {% endcapture %}
+    <p>{{ tmpstr | replace: '%lang%', lang }}.</p>
   </div>
 </div>
