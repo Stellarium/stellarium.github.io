@@ -13,10 +13,14 @@
   <link rel="canonical" href="{{ page.url | replace:'index.html','' | absolute_url }}">
   <link rel="alternate" type="application/rss+xml" title="{{ site.title | escape }}" href="{{ "/feed.xml" | relative_url }}">
   
-  <script type="text/javascript" src="/js/jq-ui-flplayer-sw-aggregated.js"></script>
   <script>
     function changelang(val) {
-      window.location = "/" + val + "/";
+      if (window.location.pathname === '/') {
+        window.location = '/' + val + '/';
+      } else {
+        var newPath = window.location.pathname.replace(/^\/.+\//, '')
+        window.location = '/' + val + '/' + newPath;
+      }
     }
   </script>
 
