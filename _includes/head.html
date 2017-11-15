@@ -4,7 +4,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>{% if layout.title %}{{ layout.title | escape }}{% else %}{% if page.title %}{{ page.title | escape }}{% else %}{{ site.title | escape }}{% endif %}{% endif %}</title>
   <meta name="description" content="{{ page.excerpt | default: site.description | strip_html | normalize_whitespace | truncate: 160 | escape }}">
-  <meta name="Keywords" content="site.keywords" />
+  <meta name="Keywords" content="{{ site.keywords }}" />
 
   <link rel="stylesheet" href="{{ "/css/all.css" | relative_url }}"  type="text/css" media="screen" />
   <link rel="stylesheet" href="/css/{{ langdir }}.css" type="text/css" media="screen" />
