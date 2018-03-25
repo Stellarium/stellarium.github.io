@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Stellarium 0.18.0
-date: 2018-03-25 22:00:00 +0700
+date: 2018-03-25 18:44:00 +0700
 categories: release
 author: alex-w
 nolangbar: true
