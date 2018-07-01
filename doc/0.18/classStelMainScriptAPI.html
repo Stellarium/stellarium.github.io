@@ -20,7 +20,7 @@
   <td id="projectlogo"><img alt="Logo" src="stellarium-logo.png"/></td>
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">Stellarium
-   &#160;<span id="projectnumber">0.18.0</span>
+   &#160;<span id="projectnumber">0.18.1</span>
    </div>
   </td>
  </tr>
@@ -418,6 +418,9 @@ void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="clas
 <tr class="memitem:ab678ee0454a8ea6c233d3c948ee29733"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classStelMainScriptAPI.html#ab678ee0454a8ea6c233d3c948ee29733">waitFor</a> (const QString &amp;dt, const QString &amp;spec=&quot;utc&quot;)</td></tr>
 <tr class="memdesc:ab678ee0454a8ea6c233d3c948ee29733"><td class="mdescLeft">&#160;</td><td class="mdescRight">Waits until a specified simulation date/time.  <a href="#ab678ee0454a8ea6c233d3c948ee29733">More...</a><br /></td></tr>
 <tr class="separator:ab678ee0454a8ea6c233d3c948ee29733"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aaedc4416171bc0143d7fbfcfa7060f0f"><td class="memItemLeft" align="right" valign="top">QString&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classStelMainScriptAPI.html#aaedc4416171bc0143d7fbfcfa7060f0f">getEnv</a> (const QString &amp;var)</td></tr>
+<tr class="memdesc:aaedc4416171bc0143d7fbfcfa7060f0f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Retrieve value of environment variable.  <a href="#aaedc4416171bc0143d7fbfcfa7060f0f">More...</a><br /></td></tr>
+<tr class="separator:aaedc4416171bc0143d7fbfcfa7060f0f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="signals"></a>
 Signals</h2></td></tr>
@@ -813,6 +816,36 @@ double&#160;</td><td class="memItemRight" valign="bottom"><b>timeSpeed</b></td><
 </table>
 </div><div class="memdoc">
 <dl class="section return"><dt>Returns</dt><dd>true if the disk view port is currently enabled </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="aaedc4416171bc0143d7fbfcfa7060f0f"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">QString StelMainScriptAPI::getEnv </td>
+          <td>(</td>
+          <td class="paramtype">const QString &amp;&#160;</td>
+          <td class="paramname"><em>var</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">slot</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">name.</td><td>On desktop Windows and Qt before 5.10, this call may result in data loss if the original string contains Unicode characters not representable in the ANSI encoding. </td></tr>
+  </table>
+  </dd>
+</dl>
 
 </div>
 </div>
@@ -4590,7 +4623,7 @@ starting with version 0.14.0 the final optional Boolean argument has a different
 </div><div class="memdoc">
 <p>This function will take into account the rate (and direction) in which simulation time is passing. e.g. if a future date is specified and the time is moving backwards, the function will return immediately. If the time rate is 0, the function will not wait. This is to prevent infinite wait time. </p><dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">dt</td><td>the date string to use </td></tr>
+    <tr><td class="paramname">dt</td><td>the date string to use, format like "2012-06-06T4:44:00" or "-1428-03-04T22:23:45" </td></tr>
     <tr><td class="paramname">spec</td><td>"local" or "utc" </td></tr>
   </table>
   </dd>
@@ -4601,7 +4634,7 @@ starting with version 0.14.0 the final optional Boolean argument has a different
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Sun Mar 25 2018 15:38:05 for Stellarium by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Sun Jul 1 2018 13:29:00 for Stellarium by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.11
 </small></address>

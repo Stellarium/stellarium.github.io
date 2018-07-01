@@ -20,7 +20,7 @@
   <td id="projectlogo"><img alt="Logo" src="stellarium-logo.png"/></td>
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">Stellarium
-   &#160;<span id="projectnumber">0.18.0</span>
+   &#160;<span id="projectnumber">0.18.1</span>
    </div>
   </td>
  </tr>
@@ -87,6 +87,16 @@ Public Types</h2></td></tr>
  }<tr class="memdesc:aade260a345287ad650d65c73ed6670e6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Define the drawing mode when drawing vertex.  <a href="classStelPainter.html#aade260a345287ad650d65c73ed6670e6">More...</a><br /></td></tr>
 </td></tr>
 <tr class="separator:aade260a345287ad650d65c73ed6670e6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac82156c7aff5ebec86499e3c72851da1"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classStelPainter.html#ac82156c7aff5ebec86499e3c72851da1">DitheringMode</a> { <br />
+&#160;&#160;<a class="el" href="classStelPainter.html#ac82156c7aff5ebec86499e3c72851da1ab9f5c797ebbf55adccdd8539a65a0241">DitheringMode::Disabled</a>, 
+<a class="el" href="classStelPainter.html#ac82156c7aff5ebec86499e3c72851da1a3b46ca5455fcdb9725cd179748232751">DitheringMode::Color565</a>, 
+<a class="el" href="classStelPainter.html#ac82156c7aff5ebec86499e3c72851da1aeaded393f386d701c9dd7f1591235a27">DitheringMode::Color666</a>, 
+<a class="el" href="classStelPainter.html#ac82156c7aff5ebec86499e3c72851da1a98385617f6b90b36db20cb2df813be3e">DitheringMode::Color888</a>, 
+<br />
+&#160;&#160;<a class="el" href="classStelPainter.html#ac82156c7aff5ebec86499e3c72851da1ae5ea58407e93fd42586da84dcdfcc9bf">DitheringMode::Color101010</a>
+<br />
+ }</td></tr>
+<tr class="separator:ac82156c7aff5ebec86499e3c72851da1"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
@@ -237,6 +247,9 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>setArrays</b> (const 
 <tr class="memitem:a0880222b1b55411b47adfade6d72504b"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classStelPainter.html#a0880222b1b55411b47adfade6d72504b">drawStelVertexArray</a> (const <a class="el" href="structStelVertexArray.html">StelVertexArray</a> &amp;arr, bool checkDiscontinuity=true)</td></tr>
 <tr class="memdesc:a0880222b1b55411b47adfade6d72504b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Draws the primitives defined in the <a class="el" href="structStelVertexArray.html">StelVertexArray</a>.  <a href="#a0880222b1b55411b47adfade6d72504b">More...</a><br /></td></tr>
 <tr class="separator:a0880222b1b55411b47adfade6d72504b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa8e744ae4f63d9ee1c89cd2814806584"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aa8e744ae4f63d9ee1c89cd2814806584"></a>
+<a class="el" href="classStelPainter.html#ac82156c7aff5ebec86499e3c72851da1">DitheringMode</a>&#160;</td><td class="memItemRight" valign="bottom"><b>getDitheringMode</b> () const </td></tr>
+<tr class="separator:aa8e744ae4f63d9ee1c89cd2814806584"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-static-methods"></a>
 Static Public Member Functions</h2></td></tr>
@@ -271,6 +284,43 @@ class&#160;</td><td class="memItemRight" valign="bottom"><b>StelTexture</b></td>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>All coordinates are converted using the <a class="el" href="classStelProjector.html" title="Provide the main interface to all operations of projecting coordinates from sky to screen...">StelProjector</a> instance passed at construction. Because openGL is not thread safe, only one instance of <a class="el" href="classStelPainter.html" title="Provides functions for performing openGL drawing operations. ">StelPainter</a> can exist at a time, enforcing thread safety. As a coding rule, no openGL calls should be performed when no instance of <a class="el" href="classStelPainter.html" title="Provides functions for performing openGL drawing operations. ">StelPainter</a> exist. Typical usage is to create a local instance of <a class="el" href="classStelPainter.html" title="Provides functions for performing openGL drawing operations. ">StelPainter</a> where drawing operations are needed. </p>
 </div><h2 class="groupheader">Member Enumeration Documentation</h2>
+<a class="anchor" id="ac82156c7aff5ebec86499e3c72851da1"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">enum <a class="el" href="classStelPainter.html#ac82156c7aff5ebec86499e3c72851da1">StelPainter::DitheringMode</a></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">strong</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<table class="fieldtable">
+<tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a class="anchor" id="ac82156c7aff5ebec86499e3c72851da1ab9f5c797ebbf55adccdd8539a65a0241"></a>Disabled&#160;</td><td class="fielddoc">
+<p>Dithering disabled, will leave the infamous color bands. </p>
+</td></tr>
+<tr><td class="fieldname"><a class="anchor" id="ac82156c7aff5ebec86499e3c72851da1a3b46ca5455fcdb9725cd179748232751"></a>Color565&#160;</td><td class="fielddoc">
+<p>16-bit color (AKA High color) with R5_G6_B5 layout </p>
+</td></tr>
+<tr><td class="fieldname"><a class="anchor" id="ac82156c7aff5ebec86499e3c72851da1aeaded393f386d701c9dd7f1591235a27"></a>Color666&#160;</td><td class="fielddoc">
+<p>TN+film typical color depth in TrueColor mode. </p>
+</td></tr>
+<tr><td class="fieldname"><a class="anchor" id="ac82156c7aff5ebec86499e3c72851da1a98385617f6b90b36db20cb2df813be3e"></a>Color888&#160;</td><td class="fielddoc">
+<p>24-bit color (AKA True color) </p>
+</td></tr>
+<tr><td class="fieldname"><a class="anchor" id="ac82156c7aff5ebec86499e3c72851da1ae5ea58407e93fd42586da84dcdfcc9bf"></a>Color101010&#160;</td><td class="fielddoc">
+<p>30-bit color (AKA Deep color) </p>
+</td></tr>
+</table>
+
+</div>
+</div>
 <a class="anchor" id="aade260a345287ad650d65c73ed6670e6"></a>
 <div class="memitem">
 <div class="memproto">
@@ -470,8 +520,8 @@ class&#160;</td><td class="memItemRight" valign="bottom"><b>StelTexture</b></td>
     <tr><td class="paramname">stacks</td><td>number of horizontal segments ("latitude zones") </td></tr>
     <tr><td class="paramname">orientInside</td><td>1 to have normals point inside, e.g. for Milky Way, Zodiacal Light, etc. </td></tr>
     <tr><td class="paramname">flipTexture</td><td>if texture should be mapped to inside of sphere, e.g. Milky Way. </td></tr>
-    <tr><td class="paramname">topAngle</td><td>GZ: new parameter. An opening angle [radians] at top of the sphere. Useful if there is an empty region around the top pole, like North Galactic Pole. </td></tr>
-    <tr><td class="paramname">bottomAngle</td><td>GZ: new parameter. An opening angle [radians] at bottom of the sphere. Useful if there is an empty region around the bottom pole, like South Galactic Pole. </td></tr>
+    <tr><td class="paramname">topAngle</td><td>An opening angle [radians] at top of the sphere. Useful if there is an empty region around the top pole, like North Galactic Pole. </td></tr>
+    <tr><td class="paramname">bottomAngle</td><td>An opening angle [radians] at bottom of the sphere. Useful if there is an empty region around the bottom pole, like South Galactic Pole. </td></tr>
   </table>
   </dd>
 </dl>
@@ -1214,7 +1264,7 @@ class&#160;</td><td class="memItemRight" valign="bottom"><b>StelTexture</b></td>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Sun Mar 25 2018 15:38:05 for Stellarium by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Sun Jul 1 2018 13:29:00 for Stellarium by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.11
 </small></address>

@@ -20,7 +20,7 @@
   <td id="projectlogo"><img alt="Logo" src="stellarium-logo.png"/></td>
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">Stellarium
-   &#160;<span id="projectnumber">0.18.0</span>
+   &#160;<span id="projectnumber">0.18.1</span>
    </div>
   </td>
  </tr>
@@ -90,10 +90,12 @@ Public Types</h2></td></tr>
 <br />
 &#160;&#160;<b>CustomDeclination1</b>, 
 <b>CustomDeclination2</b>, 
-<b>GeographicLocation1</b>, 
-<b>GeographicLocation2</b>, 
+<b>SelectedObjectHourAngle</b>, 
+<b>SelectedObjectAzimuth</b>, 
 <br />
-&#160;&#160;<b>CustomAzimuth1</b>, 
+&#160;&#160;<b>GeographicLocation1</b>, 
+<b>GeographicLocation2</b>, 
+<b>CustomAzimuth1</b>, 
 <b>CustomAzimuth2</b>
 <br />
  }</td></tr>
@@ -104,22 +106,22 @@ Public Slots</h2></td></tr>
 <tr class="memitem:a667ee3fe31a8bb6c62a21248bf5dbb18"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a667ee3fe31a8bb6c62a21248bf5dbb18"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><b>setColor</b> (const <a class="el" href="classVector3.html">Vec3f</a> &amp;c)</td></tr>
 <tr class="separator:a667ee3fe31a8bb6c62a21248bf5dbb18"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aeb1f47e2abbcfaf000e1ef35308b4959"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aeb1f47e2abbcfaf000e1ef35308b4959"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>update</b> (double deltaTime)</td></tr>
-<tr class="separator:aeb1f47e2abbcfaf000e1ef35308b4959"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ae878f94ad48867e9ccac4bf4f47807ca"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ae878f94ad48867e9ccac4bf4f47807ca"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>setFadeDuration</b> (float duration)</td></tr>
-<tr class="separator:ae878f94ad48867e9ccac4bf4f47807ca"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a82ab28591395cb4f7135e78e125c5fc3"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a82ab28591395cb4f7135e78e125c5fc3"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>update</b> (const double deltaTime)</td></tr>
+<tr class="separator:a82ab28591395cb4f7135e78e125c5fc3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af73c3dcb57aa6ed920922367bdb2a8df"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="af73c3dcb57aa6ed920922367bdb2a8df"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>setFadeDuration</b> (const float duration)</td></tr>
+<tr class="separator:af73c3dcb57aa6ed920922367bdb2a8df"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af7be6d5cfd15717c5baefa2f60c84468"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="af7be6d5cfd15717c5baefa2f60c84468"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><b>setDisplayed</b> (const bool displayed)</td></tr>
 <tr class="separator:af7be6d5cfd15717c5baefa2f60c84468"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a60131689a1084325479f293b89c75f8e"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a60131689a1084325479f293b89c75f8e"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>setFontSize</b> (double newSize)</td></tr>
-<tr class="separator:a60131689a1084325479f293b89c75f8e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aef4667269a8d242b2766862a4caf0954"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aef4667269a8d242b2766862a4caf0954"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classArchaeoLine.html#aef4667269a8d242b2766862a4caf0954">setDefiningAngle</a> (double angle)</td></tr>
-<tr class="memdesc:aef4667269a8d242b2766862a4caf0954"><td class="mdescLeft">&#160;</td><td class="mdescRight">reset declination/azimuth angle (degrees) of this arc. <br /></td></tr>
-<tr class="separator:aef4667269a8d242b2766862a4caf0954"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1381bee6108f84c243bc37260fbf931d"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a1381bee6108f84c243bc37260fbf931d"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>setFontSize</b> (const double newSize)</td></tr>
+<tr class="separator:a1381bee6108f84c243bc37260fbf931d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a32a33f52d8ca2e1aa5225c41c8961f62"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a32a33f52d8ca2e1aa5225c41c8961f62"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classArchaeoLine.html#a32a33f52d8ca2e1aa5225c41c8961f62">setDefiningAngle</a> (const double angle)</td></tr>
+<tr class="memdesc:a32a33f52d8ca2e1aa5225c41c8961f62"><td class="mdescLeft">&#160;</td><td class="mdescRight">reset declination/azimuth angle (degrees) of this arc. <br /></td></tr>
+<tr class="separator:a32a33f52d8ca2e1aa5225c41c8961f62"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:afafdcf42d2919e90d6c91fe3bcbfe77a"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="afafdcf42d2919e90d6c91fe3bcbfe77a"></a>
 double&#160;</td><td class="memItemRight" valign="bottom"><b>getDefiningAngle</b> (void) const </td></tr>
 <tr class="separator:afafdcf42d2919e90d6c91fe3bcbfe77a"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -127,15 +129,15 @@ double&#160;</td><td class="memItemRight" valign="bottom"><b>getDefiningAngle</b
 void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classArchaeoLine.html#a6f5c1ae17c187becaef39fe361f01f61">updateLabel</a> ()</td></tr>
 <tr class="memdesc:a6f5c1ae17c187becaef39fe361f01f61"><td class="mdescLeft">&#160;</td><td class="mdescRight">Re-translates the label. <br /></td></tr>
 <tr class="separator:a6f5c1ae17c187becaef39fe361f01f61"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a8d12216650f31bc485cdd03b8d19e4fd"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a8d12216650f31bc485cdd03b8d19e4fd"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>setLabelVisible</b> (bool b)</td></tr>
-<tr class="separator:a8d12216650f31bc485cdd03b8d19e4fd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8fd0bc9732044b7232ba64641e0f6d55"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a8fd0bc9732044b7232ba64641e0f6d55"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>setLabelVisible</b> (const bool b)</td></tr>
+<tr class="separator:a8fd0bc9732044b7232ba64641e0f6d55"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a7226ad3892fcf70ec852100d05231b6c"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a7226ad3892fcf70ec852100d05231b6c"></a>
 bool&#160;</td><td class="memItemRight" valign="bottom"><b>isLabelVisible</b> () const </td></tr>
 <tr class="separator:a7226ad3892fcf70ec852100d05231b6c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a03219878d81f58b4ba7502f6a5a97d97"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a03219878d81f58b4ba7502f6a5a97d97"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>setLineType</b> (ArchaeoLine::Line line)</td></tr>
-<tr class="separator:a03219878d81f58b4ba7502f6a5a97d97"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2b2e588ac60cb5d7b85c72ebe100e0ae"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a2b2e588ac60cb5d7b85c72ebe100e0ae"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>setLineType</b> (const ArchaeoLine::Line line)</td></tr>
+<tr class="separator:a2b2e588ac60cb5d7b85c72ebe100e0ae"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a63955cfd0d2c5f2c4a97e5793e778e30"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a63955cfd0d2c5f2c4a97e5793e778e30"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classArchaeoLine.html#a63955cfd0d2c5f2c4a97e5793e778e30">setLabel</a> (const QString newLabel)</td></tr>
 <tr class="memdesc:a63955cfd0d2c5f2c4a97e5793e778e30"><td class="mdescLeft">&#160;</td><td class="mdescRight">change label. Used only for selected-object line - the other labels should not be changed! <br /></td></tr>
@@ -188,7 +190,7 @@ double&#160;</td><td class="memItemRight" valign="bottom"><b>definingAngle</b></
 </div></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Sun Mar 25 2018 15:38:04 for Stellarium by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Sun Jul 1 2018 13:29:00 for Stellarium by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.11
 </small></address>

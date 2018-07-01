@@ -20,7 +20,7 @@
   <td id="projectlogo"><img alt="Logo" src="stellarium-logo.png"/></td>
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">Stellarium
-   &#160;<span id="projectnumber">0.18.0</span>
+   &#160;<span id="projectnumber">0.18.1</span>
    </div>
   </td>
  </tr>
@@ -206,6 +206,10 @@ void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="clas
 <tr class="memitem:ab7864c96fd1303bacd44483a291f0be8"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classStelCore.html#ab7864c96fd1303bacd44483a291f0be8">setFlagGravityLabels</a> (bool gravity)</td></tr>
 <tr class="memdesc:ab7864c96fd1303bacd44483a291f0be8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the flag with decides whether to arrage labels so that they are aligned with the bottom of a 2d screen, or a 3d dome.  <a href="#ab7864c96fd1303bacd44483a291f0be8">More...</a><br /></td></tr>
 <tr class="separator:ab7864c96fd1303bacd44483a291f0be8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a22034950e484525e87c15d68f95f7813"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a22034950e484525e87c15d68f95f7813"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classStelCore.html#a22034950e484525e87c15d68f95f7813">getFlagGravityLabels</a> ()</td></tr>
+<tr class="memdesc:a22034950e484525e87c15d68f95f7813"><td class="mdescLeft">&#160;</td><td class="mdescRight">return whether dome-aligned labels are in use <br /></td></tr>
+<tr class="separator:a22034950e484525e87c15d68f95f7813"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a19033d8349aa15a4000f70b4d4ca9f82"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a19033d8349aa15a4000f70b4d4ca9f82"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classStelCore.html#a19033d8349aa15a4000f70b4d4ca9f82">setDefaultAngleForGravityText</a> (float a)</td></tr>
 <tr class="memdesc:a19033d8349aa15a4000f70b4d4ca9f82"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the offset rotation angle in degree to apply to gravity text (only if gravityLabels is set to false). <br /></td></tr>
@@ -687,6 +691,10 @@ void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="clas
 void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classStelCore.html#a867d521c302854cb3789199ab11950c5">currentProjectionNameI18nChanged</a> (const QString &amp;newValue)</td></tr>
 <tr class="memdesc:a867d521c302854cb3789199ab11950c5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Emitted whenever the projection type changes. <br /></td></tr>
 <tr class="separator:a867d521c302854cb3789199ab11950c5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afdea98dffa83bbc9598a8956c6ce5685"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="afdea98dffa83bbc9598a8956c6ce5685"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classStelCore.html#afdea98dffa83bbc9598a8956c6ce5685">flagGravityLabelsChanged</a> (bool gravity)</td></tr>
+<tr class="memdesc:afdea98dffa83bbc9598a8956c6ce5685"><td class="mdescLeft">&#160;</td><td class="mdescRight">Emitted when gravity label use is changed. <br /></td></tr>
+<tr class="separator:afdea98dffa83bbc9598a8956c6ce5685"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
@@ -987,6 +995,9 @@ QString&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="c
 QString&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classStelCore.html#ab7844c104a0c686106a7fba68896cccb">currentProjectionNameI18n</a></td></tr>
 <tr class="memdesc:ab7844c104a0c686106a7fba68896cccb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Read-only property returning the localized projection name. <br /></td></tr>
 <tr class="separator:ab7844c104a0c686106a7fba68896cccb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0e49c2091002521c69e7e7b25e5aa63f"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a0e49c2091002521c69e7e7b25e5aa63f"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><b>flagGravityLabels</b></td></tr>
+<tr class="separator:a0e49c2091002521c69e7e7b25e5aa63f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>This class provides services like management of sky projections, tone conversion, or reference frame conversion. It is used by the various StelModules to update and display themselves. There is currently only one <a class="el" href="classStelCore.html" title="Main class for Stellarium core processing. ">StelCore</a> instance in Stellarium, but in the future they may be more, allowing for example to display several independent views of the sky at the same time. </p><dl class="section author"><dt>Author</dt><dd>Fabien Chereau, Matthew Gates, Georg Zotti </dd></dl>
@@ -2444,7 +2455,7 @@ Up to V0.15.1, if the requested year was outside validity range, we returned zer
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Sun Mar 25 2018 15:38:04 for Stellarium by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Sun Jul 1 2018 13:29:00 for Stellarium by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.11
 </small></address>

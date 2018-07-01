@@ -20,7 +20,7 @@
   <td id="projectlogo"><img alt="Logo" src="stellarium-logo.png"/></td>
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">Stellarium
-   &#160;<span id="projectnumber">0.18.0</span>
+   &#160;<span id="projectnumber">0.18.1</span>
    </div>
   </td>
  </tr>
@@ -428,6 +428,9 @@ static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" hre
 static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classStelDialog.html#a69a084a79abfc8f377eb3050438303ff">connectCheckBox</a> (QAbstractButton *checkBox, <a class="el" href="classStelAction.html">StelAction</a> *action)</td></tr>
 <tr class="memdesc:a69a084a79abfc8f377eb3050438303ff inherit pro_static_methods_classStelDialog"><td class="mdescLeft">&#160;</td><td class="mdescRight">Helper function to connect a checkbox to the given <a class="el" href="classStelAction.html" title="Wrapper around an argumentless QObject slot or a bool Q_PROPERTY with WRITE method, allowing the slot to be called/property to be toggled using this action object. ">StelAction</a>. <br /></td></tr>
 <tr class="separator:a69a084a79abfc8f377eb3050438303ff inherit pro_static_methods_classStelDialog"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9d05e4b57336be569ec532325850a3ef inherit pro_static_methods_classStelDialog"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classStelDialog.html#a9d05e4b57336be569ec532325850a3ef">connectIntProperty</a> (QLineEdit *lineEdit, const QString &amp;propName)</td></tr>
+<tr class="memdesc:a9d05e4b57336be569ec532325850a3ef inherit pro_static_methods_classStelDialog"><td class="mdescLeft">&#160;</td><td class="mdescRight">Helper function to connect a QLineEdit to an integer <a class="el" href="classStelProperty.html" title="Wrapper around a Q_PROPERTY (see the Qt property system for more information) of a specific object...">StelProperty</a>.  <a href="#a9d05e4b57336be569ec532325850a3ef">More...</a><br /></td></tr>
+<tr class="separator:a9d05e4b57336be569ec532325850a3ef inherit pro_static_methods_classStelDialog"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa67eafba199edc160bf239803b63f1b6 inherit pro_static_methods_classStelDialog"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classStelDialog.html#aa67eafba199edc160bf239803b63f1b6">connectIntProperty</a> (QSpinBox *spinBox, const QString &amp;propName)</td></tr>
 <tr class="memdesc:aa67eafba199edc160bf239803b63f1b6 inherit pro_static_methods_classStelDialog"><td class="mdescLeft">&#160;</td><td class="mdescRight">Helper function to connect a QSpinBox to an integer <a class="el" href="classStelProperty.html" title="Wrapper around a Q_PROPERTY (see the Qt property system for more information) of a specific object...">StelProperty</a>.  <a href="#aa67eafba199edc160bf239803b63f1b6">More...</a><br /></td></tr>
 <tr class="separator:aa67eafba199edc160bf239803b63f1b6 inherit pro_static_methods_classStelDialog"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -978,6 +981,12 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>setFlagAutosetMountFo
 <tr class="memitem:ad5f58887db61d97f99456d0898dd9a67"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ad5f58887db61d97f99456d0898dd9a67"></a>
 bool&#160;</td><td class="memItemRight" valign="bottom"><b>getFlagAutosetMountForCCD</b> (void) const </td></tr>
 <tr class="separator:ad5f58887db61d97f99456d0898dd9a67"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad5cfeaa6d361cec34e29243ede39008a"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ad5cfeaa6d361cec34e29243ede39008a"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>setFlagScalingFOVForTelrad</b> (const bool b)</td></tr>
+<tr class="separator:ad5cfeaa6d361cec34e29243ede39008a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa80503d7ac7ad0edc50b14ee6dcc6124"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aa80503d7ac7ad0edc50b14ee6dcc6124"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><b>getFlagScalingFOVForTelrad</b> (void) const </td></tr>
+<tr class="separator:aa80503d7ac7ad0edc50b14ee6dcc6124"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad4a57addc81e332d96771fa39e85a8db"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ad4a57addc81e332d96771fa39e85a8db"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><b>setFlagUseSemiTransparency</b> (const bool b)</td></tr>
 <tr class="separator:ad4a57addc81e332d96771fa39e85a8db"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -1045,6 +1054,9 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>flagHideGridsLinesCha
 <tr class="memitem:aa8eaa7f0be24b4385e56eaf61b7b8755"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aa8eaa7f0be24b4385e56eaf61b7b8755"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><b>flagAutosetMountForCCDChanged</b> (bool value)</td></tr>
 <tr class="separator:aa8eaa7f0be24b4385e56eaf61b7b8755"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1d48273c80e631b86d676ae1189e9e0e"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a1d48273c80e631b86d676ae1189e9e0e"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>flagScalingFOVForTelradChanged</b> (bool value)</td></tr>
+<tr class="separator:a1d48273c80e631b86d676ae1189e9e0e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a78eb18116bf5eab8dbbb5d2465010e3b"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a78eb18116bf5eab8dbbb5d2465010e3b"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><b>flagUseSemiTransparencyChanged</b> (bool value)</td></tr>
 <tr class="separator:a78eb18116bf5eab8dbbb5d2465010e3b"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -1205,6 +1217,10 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="grou
 bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__oculars.html#ae8d4ba18fee9cf76179aeb32e9f7ea62">flagAutosetMountForCCD</a></td></tr>
 <tr class="memdesc:ae8d4ba18fee9cf76179aeb32e9f7ea62"><td class="mdescLeft">&#160;</td><td class="mdescRight">Flag used to track if we use automatic switch to type of mount for <a class="el" href="group__oculars.html#classCCD">CCD</a> frame. <br /></td></tr>
 <tr class="separator:ae8d4ba18fee9cf76179aeb32e9f7ea62"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a41f9ef3a6d7bdca9f05b2fc6d5802a96"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a41f9ef3a6d7bdca9f05b2fc6d5802a96"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__oculars.html#a41f9ef3a6d7bdca9f05b2fc6d5802a96">flagScalingFOVForTelrad</a></td></tr>
+<tr class="memdesc:a41f9ef3a6d7bdca9f05b2fc6d5802a96"><td class="mdescLeft">&#160;</td><td class="mdescRight">Flag used to track if we use automatic scaling <a class="el" href="group__fieldOfView.html#classFOV" title="Main class of the Field of View plugin. ">FOV</a> for Telrad. <br /></td></tr>
+<tr class="separator:a41f9ef3a6d7bdca9f05b2fc6d5802a96"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:afe59652e29b1c487e3593912c208d4b9"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="afe59652e29b1c487e3593912c208d4b9"></a>
 double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__oculars.html#afe59652e29b1c487e3593912c208d4b9">arrowButtonScale</a></td></tr>
 <tr class="memdesc:afe59652e29b1c487e3593912c208d4b9"><td class="mdescLeft">&#160;</td><td class="mdescRight">allows scaling of the GUI "previous/next" Ocular/CCD/Telescope etc. buttons <br /></td></tr>
@@ -1534,7 +1550,7 @@ Additional Inherited Members</h2></td></tr>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Sun Mar 25 2018 15:38:04 for Stellarium by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Sun Jul 1 2018 13:28:59 for Stellarium by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.11
 </small></address>
