@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Stellarium 0.18.1
-date: 2018-03-25 18:44:00 +0700
+date: 2018-07-01 17:10:00 +0700
 categories: release
 author: alex-w
 nolangbar: true
