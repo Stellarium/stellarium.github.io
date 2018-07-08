@@ -8,4 +8,3 @@ image_url: /img/scripts/stellarium-script-01.jpg
 categories: repository
 ---
 Script to demonstrate a partial lunar eclipse.
-

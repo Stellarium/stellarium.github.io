@@ -23,14 +23,16 @@ title: Stellarium Scripts
     {% for item in site.scripts %}
     <table class="guidetable" width="590" style="margin: 5px 0;">
     <tr>
-      <td rowspan="2" width="200" align="center" valign="top"><img src="{{ item.image_url }}"></td>
-      <td><a href="{{ item.script_url }}">{{ item.title }}</a></td>
+      <td rowspan="3" width="200" align="center" valign="top"><img src="{{ item.image_url }}"></td>
+      <td colspan="3"><a href="{{ item.script_url }}">{{ item.title }}</a></td>
+    </tr>
+    <td>
       <td width="130">{{ item.author }}</td>
       <td align="center" width="50">{{ item.license }}</td>
       <td align="center" width="50">{{ item.compat }}</td>
     </tr>
     <tr>
-      <td colspan="4">{{ item.content }}</td>
+      <td colspan="3">{{ item.content }}</td>
     </tr>
     </table>
     {% endfor %}
