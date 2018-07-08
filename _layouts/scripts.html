@@ -19,8 +19,9 @@ title: Stellarium Scripts
 
   <div id="scripts-data" class="block">
     <h2>{% include tr.html s="scripts" %}</h2>
+    <h3>{% include tr.html s="from the stellarium repository" %}</h3>
 
-    {% for item in site.scripts %}
+    {% for item in site.scripts[repository] %}
     <table class="guidetable" width="590" style="margin: 5px 0;">
     <tr>
       <td rowspan="3" width="200" align="center" valign="top"><img src="{{ item.image_url }}"></td>
@@ -36,5 +37,25 @@ title: Stellarium Scripts
     </tr>
     </table>
     {% endfor %}
+
+    <h3>{% include tr.html s="user contributed" %}</h3>
+
+    {% for item in site.scripts[community] %}
+    <table class="guidetable" width="590" style="margin: 5px 0;">
+    <tr>
+      <td rowspan="3" width="200" align="center" valign="top"><img src="{{ item.image_url }}"></td>
+      <td colspan="3"><a href="{{ item.script_url }}">{{ item.title }}</a></td>
+    </tr>
+    <tr>
+      <td width="210">{{ item.author }}</td>
+      <td align="center" width="130">{{ item.license }}</td>
+      <td align="center" width="50">{{ item.compat }}</td>
+    </tr>
+    <tr>
+      <td colspan="3">{{ item.content }}</td>
+    </tr>
+    </table>
+    {% endfor %}
+
   </div>
 </div>
