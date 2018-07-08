@@ -1,5 +1,5 @@
 ---
-title: Binosky: Deep Sky Objects for Binoculars
+title: Binosky\: Deep Sky Objects for Binoculars
 author: Alexander Wolf
 license: Public Domain
 compat: 0.15+

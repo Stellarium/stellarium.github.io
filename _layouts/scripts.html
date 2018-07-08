@@ -23,20 +23,20 @@ title: Stellarium Scripts
     {% for item in site.scripts %}
     <table class="guidetable" width="590" style="margin: 5px 0;">
     <tr>
-      <td rowspan="4" width="200" align="center" valign="top"><img src="{{ item.image_url }}"></td>
+      <td rowspan="4" width="200" align="center" valign="top">{% if item.image_url %}<img src="{{ item.image_url }}">{% else %}Screenshot not available{% endif %}</td>
       <td colspan="3"><a href="{{ item.script_url }}">{{ item.title }}</a></td>
     </tr>
     <tr>
       <td width="210">{{ item.author }}</td>
-      <td align="center" width="130">{{ item.license }}</td>
-      <td align="center" width="50">{{ item.version }}</td>
+      <td align="center" width="130">{% if item.license %}{{ item.license }}{% else %}N/A{% endif %}</td>
+      <td align="center" width="50">{% if item.version %}{{ item.version }}{% else %}N/A{% endif %}</td>
     </tr>
     <tr>
       <td colspan="3">{{ item.content }}</td>
     </tr>
     <tr>
       <td colspan="2">Categories: {{ item.categories }}</td>
-      <td align="center" width="50">{{ item.compat }}</td>
+      <td align="center" width="50">{% if item.compat %}{{ item.compat }}{% else %}N/A{% endif %}</td>
     </tr>
     </table>
     {% endfor %}
