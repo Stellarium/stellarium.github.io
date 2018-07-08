@@ -3,6 +3,7 @@ title: 3 Transits and 2 Eclipses from Deimos 2027
 author: Qam1
 license: Public Domain
 compat: 0.10+
+version: 5.0
 script_url: https://raw.githubusercontent.com/Stellarium/stellarium/master/scripts/phobos_phun_5.ssc
 image_url: /img/scripts/stellarium-script-19.jpg
 categories: repository

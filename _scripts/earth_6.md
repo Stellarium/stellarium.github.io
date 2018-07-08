@@ -2,7 +2,8 @@
 title: Earth and Mars Greatest Elongations and Transits from Callisto
 author: Qam1
 license: Public Domain
-compat: 0.12+
+compat: 0.16.1+
+version: 10.0
 script_url: https://raw.githubusercontent.com/Stellarium/stellarium/master/scripts/earth_6.ssc
 image_url: /img/scripts/stellarium-script-14.jpg
 categories: repository

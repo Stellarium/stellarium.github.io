@@ -3,6 +3,7 @@ title: Occultation of Earth and Jupiter 2048
 author: Qam1
 license: Public Domain
 compat: 0.10+
+version: 5.0
 script_url: https://raw.githubusercontent.com/Stellarium/stellarium/master/scripts/phobos_phun_4.ssc
 image_url: /img/scripts/stellarium-script-18.jpg
 categories: repository
