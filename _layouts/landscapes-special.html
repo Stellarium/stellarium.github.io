@@ -1,0 +1,47 @@
+---
+layout: default
+title: Stellarium Landscapes (Special)
+---
+{% include i18n.html %}
+{% include home.html %}
+
+<div id="content">
+  <div id="landscapes-intro" class="block">
+    <h2>{% include tr.html s="User contributed landscapes (by continent)" %}</h2>
+    <p>{% include tr.html s="We have landscapes for the seven continents (in the seven continent model) - all, including from Antarctica!" %}</p>
+    <ul class="smalllist">
+      <li><a href="./landscapes-interplanetary.html">{% include tr.html s="Interplanetary" %}</a></li>
+      <li><a href="./landscapes-africa.html">{% include tr.html s="Africa" %}</a></li>
+      <li><a href="./landscapes-asia.html">{% include tr.html s="Asia" %}</a></li>  
+      <li><a href="./landscapes-australasia.html">{% include tr.html s="Australasia" %}</a></li>
+      <li><a href="./landscapes-europe.html">{% include tr.html s="Europe" %}</a></li>
+      <li><a href="./landscapes-north-america.html">{% include tr.html s="North America" %}</a></li>
+      <li><a href="./landscapes-south-america.html">{% include tr.html s="South America" %}</a></li>
+      <li><a href="./landscapes-polar.html">{% include tr.html s="Polar regions" %}</a></li>
+      <li><strong>{% include tr.html s="Special" %}</strong></li>
+    </ul>
+  </div>
+
+  <div id="landscapes-data" class="block">
+    <h2>{% include tr.html s="landscapes" %}: {% include tr.html s="Special" %}</h2>
+
+    {% for item in site.landscapes-special %}
+    <table class="guidetable" width="590" style="margin: 5px 0;">
+    <tr>
+      <td rowspan="3" width="200" align="center" valign="top">{% if item.image_url %}<img src="{{ item.image_url }}">{% else %}Screenshot not available{% endif %}</td>
+      <td colspan="2"><a href="{{ item.landscape_url }}">{{ item.title }}</a></td>
+      <td align="center" width="50">{% if item.compat %}{{ item.compat }}{% else %}N/A{% endif %}</td>
+    </tr>
+    <tr>
+      <td width="210">{{ item.author }}</td>
+      <td align="center" width="130">{% if item.license %}{{ item.license }}{% else %}N/A{% endif %}</td>
+      <td align="center" width="100">{% if item.language %}{{ item.language }}{% else %}English{% endif %}</td>
+    </tr>
+    <tr>
+      <td colspan="3">{{ item.content }}</td>
+    </tr>
+    </table>
+    {% endfor %}
+
+  </div>
+</div>
