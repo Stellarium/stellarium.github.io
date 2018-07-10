@@ -1,8 +1,8 @@
 ---
 title: Frantoio Rodiano, Italy
 author: Christian Waldvogel
-license: CC BY-NC-ND 3.0
-compat: 0.10+
+compat: 0.9+
+license: GFDL
 landscape_url: http://www.waldvogel.com/stellarium/landscape_rodiano.zip
 image_url: http://www.waldvogel.com/stellarium/landscape_rodiano_tmb.png
 ---
