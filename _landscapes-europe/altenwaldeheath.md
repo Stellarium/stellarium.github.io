@@ -1,5 +1,5 @@
 ---
-title: Hildesheim Panoramaweg, Germany
+title: Altenwalde Heath, Cuxhaven, Germany
 author: <a href="http://www.narjesia.de/">Torsten Narjes</a>
 compat: 0.12+
 language: English, German
