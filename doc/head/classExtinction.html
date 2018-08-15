@@ -74,13 +74,13 @@ Public Types</h2></td></tr>
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
 <tr class="memitem:a32e051c7b7081a3dd5e46dc3aebe3d45"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classExtinction.html#a32e051c7b7081a3dd5e46dc3aebe3d45">forward</a> (const <a class="el" href="classVector3.html">Vec3d</a> &amp;altAzPos, float *mag) const </td></tr>
-<tr class="memdesc:a32e051c7b7081a3dd5e46dc3aebe3d45"><td class="mdescLeft">&#160;</td><td class="mdescRight">Compute extinction effect for arrays of size num position vectors and magnitudes.  <a href="#a32e051c7b7081a3dd5e46dc3aebe3d45">More...</a><br /></td></tr>
+<tr class="memdesc:a32e051c7b7081a3dd5e46dc3aebe3d45"><td class="mdescLeft">&#160;</td><td class="mdescRight">Compute extinction effect for given position vector and magnitude.  <a href="#a32e051c7b7081a3dd5e46dc3aebe3d45">More...</a><br /></td></tr>
 <tr class="separator:a32e051c7b7081a3dd5e46dc3aebe3d45"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a0afe2b19f99feccb7884a92e57e8f23d"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a0afe2b19f99feccb7884a92e57e8f23d"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><b>forward</b> (const <a class="el" href="classVector3.html">Vec3f</a> &amp;altAzPos, float *mag) const </td></tr>
 <tr class="separator:a0afe2b19f99feccb7884a92e57e8f23d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a7365cef2867511d28feed138dc5bce76"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classExtinction.html#a7365cef2867511d28feed138dc5bce76">backward</a> (const <a class="el" href="classVector3.html">Vec3d</a> &amp;altAzPos, float *mag) const </td></tr>
-<tr class="memdesc:a7365cef2867511d28feed138dc5bce76"><td class="mdescLeft">&#160;</td><td class="mdescRight">Compute inverse extinction effect for arrays of size num position vectors and magnitudes.  <a href="#a7365cef2867511d28feed138dc5bce76">More...</a><br /></td></tr>
+<tr class="memdesc:a7365cef2867511d28feed138dc5bce76"><td class="mdescLeft">&#160;</td><td class="mdescRight">Compute inverse extinction effect for given position vector and magnitude.  <a href="#a7365cef2867511d28feed138dc5bce76">More...</a><br /></td></tr>
 <tr class="separator:a7365cef2867511d28feed138dc5bce76"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af0ad195210eb5faa31208f1774dc4b11"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="af0ad195210eb5faa31208f1774dc4b11"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><b>backward</b> (const <a class="el" href="classVector3.html">Vec3f</a> &amp;altAzPos, float *mag) const </td></tr>
@@ -158,7 +158,7 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>setUndergroundExtinct
 </div><div class="memdoc">
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">altAzPos</td><td>are the NORMALIZED (!!) (geometrical) star position vectors, and their z components sin(geometric_altitude). Note that forward/backward are no absolute reverse operations! </td></tr>
+    <tr><td class="paramname">altAzPos</td><td>is the NORMALIZED (!!) (geometrical) star position vector, and its z component is therefore sin(geometric_altitude). This call must therefore be done after application of <a class="el" href="classRefraction.html" title="This class performs refraction computations, following literature from atmospheric optics and astrono...">Refraction</a> effects if atmospheric effects are on. Note that forward/backward are no absolute reverse operations! </td></tr>
   </table>
   </dd>
 </dl>
@@ -198,7 +198,7 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>setUndergroundExtinct
 </div><div class="memdoc">
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">altAzPos</td><td>are the NORMALIZED (!!) (geometrical) star position vectors, and their z components sin(geometric_altitude). This call must therefore be done before application of <a class="el" href="classRefraction.html" title="This class performs refraction computations, following literature from atmospheric optics and astrono...">Refraction</a> if atmospheric effects are on. Note that forward/backward are no absolute reverse operations! </td></tr>
+    <tr><td class="paramname">altAzPos</td><td>is the NORMALIZED (!!) (geometrical) star position vectors, and its z component is therefore sin(geometric_altitude). This call must therefore be done before application of <a class="el" href="classRefraction.html" title="This class performs refraction computations, following literature from atmospheric optics and astrono...">Refraction</a> if atmospheric effects are on. Note that forward/backward are no absolute reverse operations! </td></tr>
   </table>
   </dd>
 </dl>
@@ -238,7 +238,7 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>setUndergroundExtinct
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Sun Mar 25 2018 18:43:00 for Stellarium by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Wed Aug 15 2018 18:36:55 for Stellarium by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.11
 </small></address>

@@ -71,6 +71,8 @@ Data Structures</h2></td></tr>
 <li>Current declination of the sun</li>
 <li>Current declination of the moon</li>
 <li>Current declination of a naked-eye planet</li>
+<li>Azimuth of currently selected object</li>
+<li>Hour Angle of currently selected object</li>
 </ol>
 <p>Some religions, most notably Islam, adhere to a practice of observing a prayer direction towards a particular location. Azimuth lines (vertical semicircles from zenith to nadir) for two locations can be shown. Default locations are Mecca (Kaaba) and Jerusalem. The directions are computed based on spherical trigonometry on a spherical Earth. In addition, up to 2 custom azimuth lines, and up to 2 custom declination lines can be drawn, also with customized labels.</p>
 <p>The lunar lines include horizon parallax effects. There are two lines each drawn, for maximum and minimum distance of the moon. Note that declination of the moon at the major standstill can exceed the indicated limits if it is high in the sky due to parallax effects.</p>
@@ -124,6 +126,12 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>setCurrentPlanetColor
 <tr class="memitem:a8f03d47be4d16fde28b97045d76b793b"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a8f03d47be4d16fde28b97045d76b793b"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><b>setSelectedObjectColor</b> (QColor color)</td></tr>
 <tr class="separator:a8f03d47be4d16fde28b97045d76b793b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4fbb7a1d9fef8d9a7148cce3d21092af"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a4fbb7a1d9fef8d9a7148cce3d21092af"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>setSelectedObjectAzimuthColor</b> (QColor color)</td></tr>
+<tr class="separator:a4fbb7a1d9fef8d9a7148cce3d21092af"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a97b3634a262072b3a0db19b43146d88e"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a97b3634a262072b3a0db19b43146d88e"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>setSelectedObjectHourAngleColor</b> (QColor color)</td></tr>
+<tr class="separator:a97b3634a262072b3a0db19b43146d88e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a1640aff46b68381a745f6f8f8e4c2325"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a1640aff46b68381a745f6f8f8e4c2325"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><b>setGeographicLocation1Color</b> (QColor color)</td></tr>
 <tr class="separator:a1640aff46b68381a745f6f8f8e4c2325"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -175,6 +183,12 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>askCurrentPlanetColor
 <tr class="memitem:a08ec5542e907628454baf4ac5aa8f301"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a08ec5542e907628454baf4ac5aa8f301"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><b>askSelectedObjectColor</b> ()</td></tr>
 <tr class="separator:a08ec5542e907628454baf4ac5aa8f301"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acfe85f7d6cae0c3c6ec56c611d713339"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="acfe85f7d6cae0c3c6ec56c611d713339"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>askSelectedObjectAzimuthColor</b> ()</td></tr>
+<tr class="separator:acfe85f7d6cae0c3c6ec56c611d713339"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9a3847b31f84e4c6c18656ffae56b82f"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a9a3847b31f84e4c6c18656ffae56b82f"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>askSelectedObjectHourAngleColor</b> ()</td></tr>
+<tr class="separator:a9a3847b31f84e4c6c18656ffae56b82f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa6207bb954a127663b6c5be142c781a5"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aa6207bb954a127663b6c5be142c781a5"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><b>askGeographicLocation1Color</b> ()</td></tr>
 <tr class="separator:aa6207bb954a127663b6c5be142c781a5"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -244,6 +258,9 @@ static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" hre
 static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classStelDialog.html#a69a084a79abfc8f377eb3050438303ff">connectCheckBox</a> (QAbstractButton *checkBox, <a class="el" href="classStelAction.html">StelAction</a> *action)</td></tr>
 <tr class="memdesc:a69a084a79abfc8f377eb3050438303ff inherit pro_static_methods_classStelDialog"><td class="mdescLeft">&#160;</td><td class="mdescRight">Helper function to connect a checkbox to the given <a class="el" href="classStelAction.html" title="Wrapper around an argumentless QObject slot or a bool Q_PROPERTY with WRITE method, allowing the slot to be called/property to be toggled using this action object. ">StelAction</a>. <br /></td></tr>
 <tr class="separator:a69a084a79abfc8f377eb3050438303ff inherit pro_static_methods_classStelDialog"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9d05e4b57336be569ec532325850a3ef inherit pro_static_methods_classStelDialog"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classStelDialog.html#a9d05e4b57336be569ec532325850a3ef">connectIntProperty</a> (QLineEdit *lineEdit, const QString &amp;propName)</td></tr>
+<tr class="memdesc:a9d05e4b57336be569ec532325850a3ef inherit pro_static_methods_classStelDialog"><td class="mdescLeft">&#160;</td><td class="mdescRight">Helper function to connect a QLineEdit to an integer <a class="el" href="classStelProperty.html" title="Wrapper around a Q_PROPERTY (see the Qt property system for more information) of a specific object...">StelProperty</a>.  <a href="#a9d05e4b57336be569ec532325850a3ef">More...</a><br /></td></tr>
+<tr class="separator:a9d05e4b57336be569ec532325850a3ef inherit pro_static_methods_classStelDialog"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa67eafba199edc160bf239803b63f1b6 inherit pro_static_methods_classStelDialog"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classStelDialog.html#aa67eafba199edc160bf239803b63f1b6">connectIntProperty</a> (QSpinBox *spinBox, const QString &amp;propName)</td></tr>
 <tr class="memdesc:aa67eafba199edc160bf239803b63f1b6 inherit pro_static_methods_classStelDialog"><td class="mdescLeft">&#160;</td><td class="mdescRight">Helper function to connect a QSpinBox to an integer <a class="el" href="classStelProperty.html" title="Wrapper around a Q_PROPERTY (see the Qt property system for more information) of a specific object...">StelProperty</a>.  <a href="#aa67eafba199edc160bf239803b63f1b6">More...</a><br /></td></tr>
 <tr class="separator:aa67eafba199edc160bf239803b63f1b6 inherit pro_static_methods_classStelDialog"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -298,7 +315,7 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><b>visible</b></td></tr>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Sun Mar 25 2018 18:43:00 for Stellarium by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Wed Aug 15 2018 18:36:55 for Stellarium by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.11
 </small></address>

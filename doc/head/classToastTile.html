@@ -77,18 +77,18 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:af62e763485296001dd1fc12c491a4c3f"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="af62e763485296001dd1fc12c491a4c3f"></a>
 <a class="el" href="structToastTile_1_1Coord.html">Coord</a>&#160;</td><td class="memItemRight" valign="bottom"><b>getCoord</b> () const </td></tr>
 <tr class="separator:af62e763485296001dd1fc12c491a4c3f"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a8af5579bfcdb4331246806fc2807b16d"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a8af5579bfcdb4331246806fc2807b16d"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>draw</b> (<a class="el" href="classStelPainter.html">StelPainter</a> *painter, const <a class="el" href="classSphericalCap.html">SphericalCap</a> &amp;viewportShape, int maxVisibleLevel)</td></tr>
-<tr class="separator:a8af5579bfcdb4331246806fc2807b16d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a517778a2991059b78cee60c4db76c4af"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a517778a2991059b78cee60c4db76c4af"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>draw</b> (<a class="el" href="classStelPainter.html">StelPainter</a> *painter, const <a class="el" href="classSphericalCap.html">SphericalCap</a> &amp;viewportShape, int maxVisibleLevel, <a class="el" href="classVector3.html">Vec3f</a> color)</td></tr>
+<tr class="separator:a517778a2991059b78cee60c4db76c4af"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab111956c2faa0188212a217ec5e67876"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ab111956c2faa0188212a217ec5e67876"></a>
 bool&#160;</td><td class="memItemRight" valign="bottom"><b>isTransparent</b> ()</td></tr>
 <tr class="separator:ab111956c2faa0188212a217ec5e67876"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-methods"></a>
 Protected Member Functions</h2></td></tr>
-<tr class="memitem:a560d01980c4f83baba4d154df1e02344"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a560d01980c4f83baba4d154df1e02344"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>drawTile</b> (<a class="el" href="classStelPainter.html">StelPainter</a> *painter)</td></tr>
-<tr class="separator:a560d01980c4f83baba4d154df1e02344"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6b6011d3436e1e812e1352684eb6846d"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a6b6011d3436e1e812e1352684eb6846d"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>drawTile</b> (<a class="el" href="classStelPainter.html">StelPainter</a> *painter, <a class="el" href="classVector3.html">Vec3f</a> color)</td></tr>
+<tr class="separator:a6b6011d3436e1e812e1352684eb6846d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a9e9d561e6a543189053f7373dbb3fa3f"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a9e9d561e6a543189053f7373dbb3fa3f"></a>
 const <a class="el" href="classToastSurvey.html">ToastSurvey</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classToastTile.html#a9e9d561e6a543189053f7373dbb3fa3f">getSurvey</a> () const </td></tr>
 <tr class="memdesc:a9e9d561e6a543189053f7373dbb3fa3f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return the survey the tile belongs to. <br /></td></tr>
@@ -105,16 +105,17 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="clas
 bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classToastTile.html#a9a0b412b2702299398d64dd9c1024986">isCovered</a> (const <a class="el" href="classSphericalCap.html">SphericalCap</a> &amp;viewportShape) const </td></tr>
 <tr class="memdesc:a9a0b412b2702299398d64dd9c1024986"><td class="mdescLeft">&#160;</td><td class="mdescRight">return whether the tile is covered by its children tiles This is used to avoid drawing tiles that will be covered anyway <br /></td></tr>
 <tr class="separator:a9a0b412b2702299398d64dd9c1024986"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a9d751cfe5954f3a9dc7cc9ebff445f68"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a9d751cfe5954f3a9dc7cc9ebff445f68"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>prepareDraw</b> ()</td></tr>
-<tr class="separator:a9d751cfe5954f3a9dc7cc9ebff445f68"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a70fa000de8fb10a5921cf80344ca8913"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a70fa000de8fb10a5921cf80344ca8913"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classToastTile.html#a70fa000de8fb10a5921cf80344ca8913">prepareDraw</a> (<a class="el" href="classVector3.html">Vec3f</a> color)</td></tr>
+<tr class="memdesc:a70fa000de8fb10a5921cf80344ca8913"><td class="mdescLeft">&#160;</td><td class="mdescRight">prepare arrays. color is set for a global brightness scaling. With atmosphere on, this will also set extinction effects. <br /></td></tr>
+<tr class="separator:a70fa000de8fb10a5921cf80344ca8913"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>The tiles are stored in a tree structure </p>
 </div></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Sun Mar 25 2018 18:43:01 for Stellarium by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Wed Aug 15 2018 18:36:56 for Stellarium by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.11
 </small></address>

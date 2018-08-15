@@ -119,7 +119,7 @@ void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="clas
 <tr class="memdesc:a3f82e776255ce7e28191f08de3d545b6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Reset output file and cause the emission of an (empty) scriptOutput signal. <br /></td></tr>
 <tr class="separator:a3f82e776255ce7e28191f08de3d545b6"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a65324d83c83add3ba5a9e07ef0a32b48"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classStelScriptMgr.html#a65324d83c83add3ba5a9e07ef0a32b48">saveOutputAs</a> (const QString &amp;filename)</td></tr>
-<tr class="memdesc:a65324d83c83add3ba5a9e07ef0a32b48"><td class="mdescLeft">&#160;</td><td class="mdescRight">Save output file to new file (in same directory as output.txt).  <a href="#a65324d83c83add3ba5a9e07ef0a32b48">More...</a><br /></td></tr>
+<tr class="memdesc:a65324d83c83add3ba5a9e07ef0a32b48"><td class="mdescLeft">&#160;</td><td class="mdescRight">Save output file to new file.  <a href="#a65324d83c83add3ba5a9e07ef0a32b48">More...</a><br /></td></tr>
 <tr class="separator:a65324d83c83add3ba5a9e07ef0a32b48"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae548729ca1af31a55a920913d0e9448c"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ae548729ca1af31a55a920913d0e9448c"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classStelScriptMgr.html#ae548729ca1af31a55a920913d0e9448c">pauseScript</a> ()</td></tr>
@@ -733,7 +733,13 @@ QString&#160;</td><td class="memItemRight" valign="bottom"><b>runningScriptId</b
   </tr>
 </table>
 </div><div class="memdoc">
-<p>This is required to allow reading with other program on Windows while output.txt is still open. </p>
+<p>This is required to allow reading with other program on Windows while output.txt is still open. </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">filename</td><td>new filename. If this is not an absolute path, it will be created in the same directory as output.txt </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section note"><dt>Note</dt><dd>For storing to absolute path names, set [scripts]/flag_script_allow_write_absolute_path=true. </dd></dl>
 
 </div>
 </div>
@@ -810,7 +816,7 @@ QString&#160;</td><td class="memItemRight" valign="bottom"><b>runningScriptId</b
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Sun Mar 25 2018 18:43:01 for Stellarium by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Wed Aug 15 2018 18:36:56 for Stellarium by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.11
 </small></address>

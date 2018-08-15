@@ -95,9 +95,9 @@ void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="clas
 <tr class="memitem:a78dce95e756474d70ba57738929a2a16"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a78dce95e756474d70ba57738929a2a16"></a>
 float&#160;</td><td class="memItemRight" valign="bottom"><b>getInterstate</b> () const </td></tr>
 <tr class="separator:a78dce95e756474d70ba57738929a2a16"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab28e1c15fc7a8142740c897511709054"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classHipsSurvey.html#ab28e1c15fc7a8142740c897511709054">draw</a> (<a class="el" href="classStelPainter.html">StelPainter</a> *sPainter, double angle=2 *M_PI, DrawCallback callback=NULL)</td></tr>
-<tr class="memdesc:ab28e1c15fc7a8142740c897511709054"><td class="mdescLeft">&#160;</td><td class="mdescRight">Render the survey.  <a href="#ab28e1c15fc7a8142740c897511709054">More...</a><br /></td></tr>
-<tr class="separator:ab28e1c15fc7a8142740c897511709054"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3c98ea85f868b30c4583f48f6bccd74e"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classHipsSurvey.html#a3c98ea85f868b30c4583f48f6bccd74e">draw</a> (<a class="el" href="classStelPainter.html">StelPainter</a> *sPainter, double angle=2.0 *M_PI, DrawCallback callback=Q_NULLPTR)</td></tr>
+<tr class="memdesc:a3c98ea85f868b30c4583f48f6bccd74e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Render the survey.  <a href="#a3c98ea85f868b30c4583f48f6bccd74e">More...</a><br /></td></tr>
+<tr class="separator:a3c98ea85f868b30c4583f48f6bccd74e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae833070c7181bc3803dca25b45f6f3ad"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ae833070c7181bc3803dca25b45f6f3ad"></a>
 const QString &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classHipsSurvey.html#ae833070c7181bc3803dca25b45f6f3ad">getUrl</a> () const </td></tr>
 <tr class="memdesc:ae833070c7181bc3803dca25b45f6f3ad"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return the source URL of the survey. <br /></td></tr>
@@ -181,7 +181,7 @@ class&#160;</td><td class="memItemRight" valign="bottom"><b>HipsMgr</b></td></tr
 </div>
 </div>
 <h2 class="groupheader">Member Function Documentation</h2>
-<a class="anchor" id="ab28e1c15fc7a8142740c897511709054"></a>
+<a class="anchor" id="a3c98ea85f868b30c4583f48f6bccd74e"></a>
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
@@ -195,13 +195,13 @@ class&#160;</td><td class="memItemRight" valign="bottom"><b>HipsMgr</b></td></tr
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">double&#160;</td>
-          <td class="paramname"><em>angle</em> = <code>2&#160;*M_PI</code>, </td>
+          <td class="paramname"><em>angle</em> = <code>2.0&#160;*M_PI</code>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">DrawCallback&#160;</td>
-          <td class="paramname"><em>callback</em> = <code>NULL</code>&#160;</td>
+          <td class="paramname"><em>callback</em> = <code>Q_NULLPTR</code>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -213,8 +213,8 @@ class&#160;</td><td class="memItemRight" valign="bottom"><b>HipsMgr</b></td></tr
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">sPainter</td><td>the painter to use. </td></tr>
-    <tr><td class="paramname">angle</td><td>total visible angle of the survey in radians. This is used to optimize the rendering of planet </td></tr>
-    <tr><td class="paramname">callback</td><td>if set this will be called for each visible tile, and the callback should do it rendering </td></tr>
+    <tr><td class="paramname">angle</td><td>total visible angle of the survey in radians. This is used to optimize the rendering of planet surveys. Should be set to 2 pi for sky surveys. </td></tr>
+    <tr><td class="paramname">callback</td><td>if set this will be called for each visible tile, and the callback should do it rendering itself. If set to Q_NULLPTR, the function will draw the tiles using the default shader. </td></tr>
   </table>
   </dd>
 </dl>
@@ -224,7 +224,7 @@ class&#160;</td><td class="memItemRight" valign="bottom"><b>HipsMgr</b></td></tr
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Sun Mar 25 2018 18:43:00 for Stellarium by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Wed Aug 15 2018 18:36:55 for Stellarium by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.11
 </small></address>

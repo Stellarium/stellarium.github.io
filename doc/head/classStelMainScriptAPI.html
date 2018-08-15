@@ -106,6 +106,13 @@ Public Slots</h2></td></tr>
 void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classStelMainScriptAPI.html#ade89a49c2bbe5460ddbfbea3e8bffb99">setRealTime</a> ()</td></tr>
 <tr class="memdesc:ade89a49c2bbe5460ddbfbea3e8bffb99"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the simulation time to the current system time, and the time rate to 1. <br /></td></tr>
 <tr class="separator:ade89a49c2bbe5460ddbfbea3e8bffb99"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad4a6f0d2b7b564d76cfee9818832e73e"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classStelMainScriptAPI.html#ad4a6f0d2b7b564d76cfee9818832e73e">isPlanetocentricCalculations</a> ()</td></tr>
+<tr class="memdesc:ad4a6f0d2b7b564d76cfee9818832e73e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the type of calculations in the simulation - is it "planetocentric calculations" or not.  <a href="#ad4a6f0d2b7b564d76cfee9818832e73e">More...</a><br /></td></tr>
+<tr class="separator:ad4a6f0d2b7b564d76cfee9818832e73e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab41a7cd03d8fa9693bb65df1a5397464"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ab41a7cd03d8fa9693bb65df1a5397464"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classStelMainScriptAPI.html#ab41a7cd03d8fa9693bb65df1a5397464">setPlanetocentricCalculations</a> (bool f)</td></tr>
+<tr class="memdesc:ab41a7cd03d8fa9693bb65df1a5397464"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the flag for use planetocentric calculations. <br /></td></tr>
+<tr class="separator:ab41a7cd03d8fa9693bb65df1a5397464"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa587b96719cd7c342e1b2fbf9f37bc03"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classStelMainScriptAPI.html#aa587b96719cd7c342e1b2fbf9f37bc03">selectObjectByName</a> (const QString &amp;name, bool pointer=false)</td></tr>
 <tr class="memdesc:aa587b96719cd7c342e1b2fbf9f37bc03"><td class="mdescLeft">&#160;</td><td class="mdescRight">Select an object by name.  <a href="#aa587b96719cd7c342e1b2fbf9f37bc03">More...</a><br /></td></tr>
 <tr class="separator:aa587b96719cd7c342e1b2fbf9f37bc03"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -418,6 +425,9 @@ void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="clas
 <tr class="memitem:ab678ee0454a8ea6c233d3c948ee29733"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classStelMainScriptAPI.html#ab678ee0454a8ea6c233d3c948ee29733">waitFor</a> (const QString &amp;dt, const QString &amp;spec=&quot;utc&quot;)</td></tr>
 <tr class="memdesc:ab678ee0454a8ea6c233d3c948ee29733"><td class="mdescLeft">&#160;</td><td class="mdescRight">Waits until a specified simulation date/time.  <a href="#ab678ee0454a8ea6c233d3c948ee29733">More...</a><br /></td></tr>
 <tr class="separator:ab678ee0454a8ea6c233d3c948ee29733"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aaedc4416171bc0143d7fbfcfa7060f0f"><td class="memItemLeft" align="right" valign="top">QString&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classStelMainScriptAPI.html#aaedc4416171bc0143d7fbfcfa7060f0f">getEnv</a> (const QString &amp;var)</td></tr>
+<tr class="memdesc:aaedc4416171bc0143d7fbfcfa7060f0f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Retrieve value of environment variable.  <a href="#aaedc4416171bc0143d7fbfcfa7060f0f">More...</a><br /></td></tr>
+<tr class="separator:aaedc4416171bc0143d7fbfcfa7060f0f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="signals"></a>
 Signals</h2></td></tr>
@@ -816,6 +826,36 @@ double&#160;</td><td class="memItemRight" valign="bottom"><b>timeSpeed</b></td><
 
 </div>
 </div>
+<a class="anchor" id="aaedc4416171bc0143d7fbfcfa7060f0f"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">QString StelMainScriptAPI::getEnv </td>
+          <td>(</td>
+          <td class="paramtype">const QString &amp;&#160;</td>
+          <td class="paramname"><em>var</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">slot</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">name.</td><td>On desktop Windows and Qt before 5.10, this call may result in data loss if the original string contains Unicode characters not representable in the ANSI encoding. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
 <a class="anchor" id="aae4e89a5edc61c60eccb403bb087b87f"></a>
 <div class="memitem">
 <div class="memproto">
@@ -1102,7 +1142,7 @@ double&#160;</td><td class="memItemRight" valign="bottom"><b>timeSpeed</b></td><
   </dd>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>a map of object data, exactly like <a class="el" href="classStelMainScriptAPI.html#ad831d70086a1ad8f64d8377672fd143c" title="Fetch a map with data about an object&#39;s position, magnitude and so on. ">getObjectInfo()</a>. </dd></dl>
-<dl class="deprecated"><dt><b><a class="el" href="deprecated.html#_deprecated000008">Deprecated:</a></b></dt><dd>Use <a class="el" href="classStelMainScriptAPI.html#ad831d70086a1ad8f64d8377672fd143c" title="Fetch a map with data about an object&#39;s position, magnitude and so on. ">getObjectInfo()</a> </dd></dl>
+<dl class="deprecated"><dt><b><a class="el" href="deprecated.html#_deprecated000010">Deprecated:</a></b></dt><dd>Use <a class="el" href="classStelMainScriptAPI.html#ad831d70086a1ad8f64d8377672fd143c" title="Fetch a map with data about an object&#39;s position, magnitude and so on. ">getObjectInfo()</a> </dd></dl>
 
 </div>
 </div>
@@ -1742,6 +1782,30 @@ double&#160;</td><td class="memItemRight" valign="bottom"><b>timeSpeed</b></td><
 
 </div>
 </div>
+<a class="anchor" id="ad4a6f0d2b7b564d76cfee9818832e73e"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool StelMainScriptAPI::isPlanetocentricCalculations </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">slot</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<dl class="section return"><dt>Returns</dt><dd>true if the calculations is planetocentric (geocentric on Earth), else return false </dd></dl>
+
+</div>
+</div>
 <a class="anchor" id="a0f0964356916acc4b48bb061ab3b41c2"></a>
 <div class="memitem">
 <div class="memproto">
@@ -2334,7 +2398,7 @@ Images in AzAlt frame are not affected by atmosphere effects like refraction or 
   </table>
   </dd>
 </dl>
-<dl class="deprecated"><dt><b><a class="el" href="deprecated.html#_deprecated000010">Deprecated:</a></b></dt><dd>since 2017-02 because of inconsistent name. Use loadSkyImage(,,,, "AzAlt") instead! </dd></dl>
+<dl class="deprecated"><dt><b><a class="el" href="deprecated.html#_deprecated000012">Deprecated:</a></b></dt><dd>since 2017-02 because of inconsistent name. Use loadSkyImage(,,,, "AzAlt") instead! </dd></dl>
 
 </div>
 </div>
@@ -2425,7 +2489,7 @@ Images in AzAlt frame are not affected by atmosphere effects like refraction or 
   </table>
   </dd>
 </dl>
-<dl class="deprecated"><dt><b><a class="el" href="deprecated.html#_deprecated000011">Deprecated:</a></b></dt><dd>since 2017-03. Use loadSkyImage(,,,, "AzAlt") instead! </dd></dl>
+<dl class="deprecated"><dt><b><a class="el" href="deprecated.html#_deprecated000013">Deprecated:</a></b></dt><dd>since 2017-03. Use loadSkyImage(,,,, "AzAlt") instead! </dd></dl>
 
 </div>
 </div>
@@ -3117,7 +3181,7 @@ More complicated value types like lists are only indicated by their type name. Y
   </tr>
 </table>
 </div><div class="memdoc">
-<dl class="deprecated"><dt><b><a class="el" href="deprecated.html#_deprecated000012">Deprecated:</a></b></dt><dd>! USE requestLoadSkyImage() with frameType=AzAlt! </dd></dl>
+<dl class="deprecated"><dt><b><a class="el" href="deprecated.html#_deprecated000014">Deprecated:</a></b></dt><dd>! USE requestLoadSkyImage() with frameType=AzAlt! </dd></dl>
 
 </div>
 </div>
@@ -3498,7 +3562,7 @@ starting with version 0.14.0 the final optional Boolean argument has a different
   </table>
   </dd>
 </dl>
-<dl class="section note"><dt>Note</dt><dd>list of possible names of equation for DeltaT: WithoutCorrection, Schoch, Clemence, IAU, AstronomicalEphemeris, TuckermanGoldstine, MullerStephenson, Stephenson1978, SchmadelZech1979, MorrisonStephenson1982, StephensonMorrison1984, StephensonHoulden, Espenak, Borkowski, SchmadelZech1988, ChaprontTouze, StephensonMorrison1995, Stephenson1997, ChaprontMeeus, JPLHorizons, MeeusSimons, MontenbruckPfleger, ReingoldDershowitz, MorrisonStephenson2004, EspenakMeeus, Reijs, Banjevic, IslamSadiqQureshi, Custom. </dd></dl>
+<dl class="section note"><dt>Note</dt><dd>list of possible names of equation for DeltaT: WithoutCorrection, Schoch, Clemence, IAU, AstronomicalEphemeris, TuckermanGoldstine, MullerStephenson, Stephenson1978, SchmadelZech1979, MorrisonStephenson1982, StephensonMorrison1984, StephensonHoulden, Espenak, Borkowski, SchmadelZech1988, ChaprontTouze, StephensonMorrison1995, Stephenson1997, ChaprontMeeus, JPLHorizons, MeeusSimons, MontenbruckPfleger, ReingoldDershowitz, MorrisonStephenson2004, EspenakMeeus, Reijs, Banjevic, IslamSadiqQureshi, Henriksson2017, Custom. </dd></dl>
 
 </div>
 </div>
@@ -4330,7 +4394,7 @@ starting with version 0.14.0 the final optional Boolean argument has a different
   </table>
   </dd>
 </dl>
-<dl class="deprecated"><dt><b><a class="el" href="deprecated.html#_deprecated000009">Deprecated:</a></b></dt><dd>Use <a class="el" href="classStelMovementMgr.html#a10f347f1cd12a4a319918fdbae90a730" title="start animated move of the viewport offset. ">StelMovementMgr::moveViewport</a> instead </dd></dl>
+<dl class="deprecated"><dt><b><a class="el" href="deprecated.html#_deprecated000011">Deprecated:</a></b></dt><dd>Use <a class="el" href="classStelMovementMgr.html#a10f347f1cd12a4a319918fdbae90a730" title="start animated move of the viewport offset. ">StelMovementMgr::moveViewport</a> instead </dd></dl>
 
 </div>
 </div>
@@ -4590,7 +4654,7 @@ starting with version 0.14.0 the final optional Boolean argument has a different
 </div><div class="memdoc">
 <p>This function will take into account the rate (and direction) in which simulation time is passing. e.g. if a future date is specified and the time is moving backwards, the function will return immediately. If the time rate is 0, the function will not wait. This is to prevent infinite wait time. </p><dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">dt</td><td>the date string to use </td></tr>
+    <tr><td class="paramname">dt</td><td>the date string to use, format like "2012-06-06T4:44:00" or "-1428-03-04T22:23:45" </td></tr>
     <tr><td class="paramname">spec</td><td>"local" or "utc" </td></tr>
   </table>
   </dd>
@@ -4601,7 +4665,7 @@ starting with version 0.14.0 the final optional Boolean argument has a different
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Sun Mar 25 2018 18:43:01 for Stellarium by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Wed Aug 15 2018 18:36:56 for Stellarium by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.11
 </small></address>

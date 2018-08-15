@@ -20,7 +20,7 @@
   <td id="projectlogo"><img alt="Logo" src="stellarium-logo.png"/></td>
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">Stellarium
-   &#160;<span id="projectnumber">0.18.1</span>
+   &#160;<span id="projectnumber">0.18.2</span>
    </div>
   </td>
  </tr>
@@ -88,7 +88,9 @@ Public Types</h2></td></tr>
 <a class="el" href="classNebula.html#a22c3e31bc6f07b0a31b64823eb1a96b6a5ee7a7fce49474077bdfe5ad8a7d129e">CatSNRG</a> = 0x00080000, 
 <br />
 &#160;&#160;<a class="el" href="classNebula.html#a22c3e31bc6f07b0a31b64823eb1a96b6ac26ca5734ccec68c00b53107ab31d531">CatACO</a> = 0x00100000, 
-<a class="el" href="classNebula.html#a22c3e31bc6f07b0a31b64823eb1a96b6a62501fa76565a394bf0f1bd494c88ef0">CatHCG</a> = 0x00200000
+<a class="el" href="classNebula.html#a22c3e31bc6f07b0a31b64823eb1a96b6a62501fa76565a394bf0f1bd494c88ef0">CatHCG</a> = 0x00200000, 
+<a class="el" href="classNebula.html#a22c3e31bc6f07b0a31b64823eb1a96b6a2e355d0e4bdee32c26de4c5c366c2a40">CatAbell</a> = 0x00400000, 
+<a class="el" href="classNebula.html#a22c3e31bc6f07b0a31b64823eb1a96b6a5d65bd7aa2878e4ed13b824d209f9cb8">CatESO</a> = 0x00800000
 <br />
  }</td></tr>
 <tr class="separator:a22c3e31bc6f07b0a31b64823eb1a96b6"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -284,7 +286,7 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>addNameAlias</b> (QSt
 void&#160;</td><td class="memItemRight" valign="bottom"><b>removeAllNames</b> ()</td></tr>
 <tr class="separator:a45fc9469785ad31baf255f6a8307c9de"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a0a357697c807b66cd873b70761fbc3e2"><td class="memItemLeft" align="right" valign="top">QString&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classNebula.html#a0a357697c807b66cd873b70761fbc3e2">getDSODesignation</a> () const </td></tr>
-<tr class="memdesc:a0a357697c807b66cd873b70761fbc3e2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get designation for DSO (with priority: M, C, NGC, IC, B, Sh2, VdB, RCW, LDN, LBN, Cr, Mel, PGC, UGC, Ced, Arp, VV, PK, PN G, SNR G, ACO, HCG)  <a href="#a0a357697c807b66cd873b70761fbc3e2">More...</a><br /></td></tr>
+<tr class="memdesc:a0a357697c807b66cd873b70761fbc3e2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get designation for DSO (with priority: M, C, NGC, IC, B, Sh2, VdB, RCW, LDN, LBN, Cr, Mel, PGC, UGC, Ced, Arp, VV, PK, PN G, SNR G, ACO, HCG, Abell, ESO)  <a href="#a0a357697c807b66cd873b70761fbc3e2">More...</a><br /></td></tr>
 <tr class="separator:a0a357697c807b66cd873b70761fbc3e2"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a8770060f8281281b133d17782ff17738"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a8770060f8281281b133d17782ff17738"></a>
 bool&#160;</td><td class="memItemRight" valign="bottom"><b>objectInDisplayedCatalog</b> () const </td></tr>
@@ -465,10 +467,16 @@ void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="clas
 <p>A catalogue of Galactic supernova remnants (Green, 2014) (SNR G) </p>
 </td></tr>
 <tr><td class="fieldname"><a class="anchor" id="a22c3e31bc6f07b0a31b64823eb1a96b6ac26ca5734ccec68c00b53107ab31d531"></a>CatACO&#160;</td><td class="fielddoc">
-<p>A Catalog of Rich Clusters of Galaxies (Abell+ 1989) (ACO) </p>
+<p>A Catalog of Rich Clusters of Galaxies (Abell+, 1989) (ACO) </p>
 </td></tr>
 <tr><td class="fieldname"><a class="anchor" id="a22c3e31bc6f07b0a31b64823eb1a96b6a62501fa76565a394bf0f1bd494c88ef0"></a>CatHCG&#160;</td><td class="fielddoc">
 <p>Hickson, Compact Group (Hickson+ 1982) (HCG) </p>
+</td></tr>
+<tr><td class="fieldname"><a class="anchor" id="a22c3e31bc6f07b0a31b64823eb1a96b6a2e355d0e4bdee32c26de4c5c366c2a40"></a>CatAbell&#160;</td><td class="fielddoc">
+<p>Abell Catalog of Planetary Nebulae (Abell, 1966) (Abell; PN A66) </p>
+</td></tr>
+<tr><td class="fieldname"><a class="anchor" id="a22c3e31bc6f07b0a31b64823eb1a96b6a5d65bd7aa2878e4ed13b824d209f9cb8"></a>CatESO&#160;</td><td class="fielddoc">
+<p>ESO/Uppsala Survey of the ESO(B) Atlas (Lauberts, 1982) (ESO) </p>
 </td></tr>
 </table>
 
@@ -878,7 +886,7 @@ void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="clas
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Sun Jul 1 2018 13:29:00 for Stellarium by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Wed Aug 15 2018 15:15:43 for Stellarium by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.11
 </small></address>

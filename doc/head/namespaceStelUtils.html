@@ -105,6 +105,9 @@ QString&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="n
 <tr class="memitem:a4825d47acfeb8be5177c966bac1f31f9"><td class="memItemLeft" align="right" valign="top">QString&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceStelUtils.html#a4825d47acfeb8be5177c966bac1f31f9">radToDmsStr</a> (const double angle, const bool decimal=false, const bool useD=false)</td></tr>
 <tr class="memdesc:a4825d47acfeb8be5177c966bac1f31f9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Convert an angle in radian to a dms formatted string.  <a href="#a4825d47acfeb8be5177c966bac1f31f9">More...</a><br /></td></tr>
 <tr class="separator:a4825d47acfeb8be5177c966bac1f31f9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:added64c67b9340ca19795ebce2643843"><td class="memItemLeft" align="right" valign="top">QString&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceStelUtils.html#added64c67b9340ca19795ebce2643843">radToDmsPStr</a> (const double angle, const int precision=0, const bool useD=false)</td></tr>
+<tr class="memdesc:added64c67b9340ca19795ebce2643843"><td class="mdescLeft">&#160;</td><td class="mdescRight">Convert an angle in radian to a dms formatted string.  <a href="#added64c67b9340ca19795ebce2643843">More...</a><br /></td></tr>
+<tr class="separator:added64c67b9340ca19795ebce2643843"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a6315eaf51b80d7d5590303a161ec946b"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceStelUtils.html#a6315eaf51b80d7d5590303a161ec946b">decDegToDms</a> (double angle, bool &amp;<a class="el" href="namespaceStelUtils.html#a0a076b60191a870c63f6388e490b67af">sign</a>, unsigned int &amp;d, unsigned int &amp;m, double &amp;s)</td></tr>
 <tr class="memdesc:a6315eaf51b80d7d5590303a161ec946b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Convert an angle in decimal degree to +-dms format.  <a href="#a6315eaf51b80d7d5590303a161ec946b">More...</a><br /></td></tr>
 <tr class="separator:a6315eaf51b80d7d5590303a161ec946b"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -196,6 +199,14 @@ double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="na
 int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceStelUtils.html#aae25c251c9270ce926ecc12d287ddb1b">imod</a> (const int a, const int b)</td></tr>
 <tr class="memdesc:aae25c251c9270ce926ecc12d287ddb1b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Integer modulo where the result is always positive. <br /></td></tr>
 <tr class="separator:aae25c251c9270ce926ecc12d287ddb1b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a56e9341bcdd06618b08067982246d0b7"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a56e9341bcdd06618b08067982246d0b7"></a>
+double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceStelUtils.html#a56e9341bcdd06618b08067982246d0b7">fmodpos</a> (const double a, const double b)</td></tr>
+<tr class="memdesc:a56e9341bcdd06618b08067982246d0b7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Double modulo where the result is always positive. <br /></td></tr>
+<tr class="separator:a56e9341bcdd06618b08067982246d0b7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac8b735224742bac9e170dc9958e301f3"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ac8b735224742bac9e170dc9958e301f3"></a>
+float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceStelUtils.html#ac8b735224742bac9e170dc9958e301f3">fmodpos</a> (const float a, const float b)</td></tr>
+<tr class="memdesc:ac8b735224742bac9e170dc9958e301f3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Float modulo where the result is always positive. <br /></td></tr>
+<tr class="separator:ac8b735224742bac9e170dc9958e301f3"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:abea18d15b31a8d508890c21d121db4bc"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="abea18d15b31a8d508890c21d121db4bc"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceStelUtils.html#abea18d15b31a8d508890c21d121db4bc">getDateFromJulianDay</a> (const double julianDay, int *year, int *month, int *day)</td></tr>
 <tr class="memdesc:abea18d15b31a8d508890c21d121db4bc"><td class="mdescLeft">&#160;</td><td class="mdescRight">Make from julianDay a year, month, day for the Julian Date julianDay represents. <br /></td></tr>
@@ -275,10 +286,18 @@ float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="nam
 double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceStelUtils.html#a7f959d5efad01b6b8cc640b6ef3c4537">calculateSiderealPeriod</a> (const double SemiMajorAxis)</td></tr>
 <tr class="memdesc:a7f959d5efad01b6b8cc640b6ef3c4537"><td class="mdescLeft">&#160;</td><td class="mdescRight">Calculate and return sidereal period in days from semi-major axis (in AU) <br /></td></tr>
 <tr class="separator:a7f959d5efad01b6b8cc640b6ef3c4537"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a3c33b4e8aae6e3e6b1f42f226ed7f431"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a3c33b4e8aae6e3e6b1f42f226ed7f431"></a>
-QString&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceStelUtils.html#a3c33b4e8aae6e3e6b1f42f226ed7f431">hoursToHmsStr</a> (const double hours)</td></tr>
-<tr class="memdesc:a3c33b4e8aae6e3e6b1f42f226ed7f431"><td class="mdescLeft">&#160;</td><td class="mdescRight">Convert decimal hours to hours, minutes, seconds. <br /></td></tr>
-<tr class="separator:a3c33b4e8aae6e3e6b1f42f226ed7f431"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aae3cb334af9afba8750fb1f46576ab39"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aae3cb334af9afba8750fb1f46576ab39"></a>
+QString&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceStelUtils.html#aae3cb334af9afba8750fb1f46576ab39">hoursToHmsStr</a> (const double hours, const bool lowprecision=false)</td></tr>
+<tr class="memdesc:aae3cb334af9afba8750fb1f46576ab39"><td class="mdescLeft">&#160;</td><td class="mdescRight">Convert decimal hours to hours, minutes, seconds. <br /></td></tr>
+<tr class="separator:aae3cb334af9afba8750fb1f46576ab39"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a692b2a88b2fdd610a30bb4d589f50879"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a692b2a88b2fdd610a30bb4d589f50879"></a>
+double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceStelUtils.html#a692b2a88b2fdd610a30bb4d589f50879">hmsToHours</a> (const int h, const int m, const double s)</td></tr>
+<tr class="memdesc:a692b2a88b2fdd610a30bb4d589f50879"><td class="mdescLeft">&#160;</td><td class="mdescRight">Convert hours, minutes, seconds to decimal hours. <br /></td></tr>
+<tr class="separator:a692b2a88b2fdd610a30bb4d589f50879"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a578e930df92040f18b0f2dfbd57df78c"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a578e930df92040f18b0f2dfbd57df78c"></a>
+double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceStelUtils.html#a578e930df92040f18b0f2dfbd57df78c">hmsStrToHours</a> (const QString &amp;s)</td></tr>
+<tr class="memdesc:a578e930df92040f18b0f2dfbd57df78c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Convert a hms formatted string to decimal hours. <br /></td></tr>
+<tr class="separator:a578e930df92040f18b0f2dfbd57df78c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:abb0f71fd5a5d37e30415bdc6d8b6e014"><td class="memItemLeft" align="right" valign="top">long double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceStelUtils.html#abb0f71fd5a5d37e30415bdc6d8b6e014">secondsSinceStart</a> ()</td></tr>
 <tr class="memdesc:abb0f71fd5a5d37e30415bdc6d8b6e014"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the number of seconds since program start.  <a href="#abb0f71fd5a5d37e30415bdc6d8b6e014">More...</a><br /></td></tr>
 <tr class="separator:abb0f71fd5a5d37e30415bdc6d8b6e014"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -411,6 +430,14 @@ QByteArray&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href
 <tr class="memitem:a6e848c498dced7c5c2318c3c9b31f1ab"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceStelUtils.html#a6e848c498dced7c5c2318c3c9b31f1ab">gcd</a> (int a, int b)</td></tr>
 <tr class="memdesc:a6e848c498dced7c5c2318c3c9b31f1ab"><td class="mdescLeft">&#160;</td><td class="mdescRight">Greatest Common Divisor (Euclid's algorithm)  <a href="#a6e848c498dced7c5c2318c3c9b31f1ab">More...</a><br /></td></tr>
 <tr class="separator:a6e848c498dced7c5c2318c3c9b31f1ab"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac5583d4ff68b00c0c016f766d9874729"><td class="memTemplParams" colspan="2">template&lt;class T &gt; </td></tr>
+<tr class="memitem:ac5583d4ff68b00c0c016f766d9874729"><td class="memTemplItemLeft" align="right" valign="top">T&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespaceStelUtils.html#ac5583d4ff68b00c0c016f766d9874729">interpolate3</a> (T n, T y1, T y2, T y3)</td></tr>
+<tr class="memdesc:ac5583d4ff68b00c0c016f766d9874729"><td class="mdescLeft">&#160;</td><td class="mdescRight">Given regularly spaced steps x1, x2, x3 and curve values y1, y2, y3, calculate an intermediate value of the 3 arguments for the given interpolation point n.  <a href="#ac5583d4ff68b00c0c016f766d9874729">More...</a><br /></td></tr>
+<tr class="separator:ac5583d4ff68b00c0c016f766d9874729"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3c091056ff67dba311b5ae26c05b51fc"><td class="memTemplParams" colspan="2">template&lt;class T &gt; </td></tr>
+<tr class="memitem:a3c091056ff67dba311b5ae26c05b51fc"><td class="memTemplItemLeft" align="right" valign="top">T&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespaceStelUtils.html#a3c091056ff67dba311b5ae26c05b51fc">interpolate5</a> (T n, T y1, T y2, T y3, T y4, T y5)</td></tr>
+<tr class="memdesc:a3c091056ff67dba311b5ae26c05b51fc"><td class="mdescLeft">&#160;</td><td class="mdescRight">Given regularly spaced steps x1, x2, x3, x4, x5 and curve values y1, y2, y3, y4, y5, calculate an intermediate value of the 5 arguments for the given interpolation point n.  <a href="#a3c091056ff67dba311b5ae26c05b51fc">More...</a><br /></td></tr>
+<tr class="separator:a3c091056ff67dba311b5ae26c05b51fc"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a080b7ae39c7abfaad02aee8c6464df26"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a080b7ae39c7abfaad02aee8c6464df26"></a>
 double&#160;</td><td class="memItemRight" valign="bottom"><b>trunc</b> (double x)</td></tr>
 <tr class="separator:a080b7ae39c7abfaad02aee8c6464df26"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -1093,7 +1120,7 @@ double&#160;</td><td class="memItemRight" valign="bottom"><b>trunc</b> (double x
         </tr>
       </table>
 </div><div class="memdoc">
-<p>Implementation of algorithm by Islam, Sadiq &amp; Qureshi (2008 + revisited 2013) for DeltaT computation. Source: Error Minimization of Polynomial Approximation of DeltaT Islam, S. &amp; Sadiq, M. &amp; Qureshi, M. S. Journal of Astrophysics &amp; Astronomy, Vol. 29, p. 363–366 (2008) <a href="http://www.ias.ac.in/jaa/dec2008/JAA610.pdf">http://www.ias.ac.in/jaa/dec2008/JAA610.pdf</a> Note: These polynomials are based on the uncorrected deltaT table from the Astronomical Almanac, thus ndot = -26.0 arcsec/cy^2. Meeus &amp; Simons (2000) corrected the deltaT table for years before 1955.5 using ndot = -25.7376 arcsec/cy^2. Therefore the accuracies stated by Meeus &amp; Simons are correct and cannot be compared with accuracies from Islam &amp; Sadiq &amp; Qureshi. </p><dl class="params"><dt>Parameters</dt><dd>
+<p>Implementation of algorithm by Islam, Sadiq &amp; Qureshi (2008 + revisited 2013) for DeltaT computation. Source: Error Minimization of Polynomial Approximation of DeltaT Islam, S. &amp; Sadiq, M. &amp; Qureshi, M. S. Journal of Astrophysics &amp; Astronomy, Vol. 29, p. 363-366 (2008) <a href="http://www.ias.ac.in/jaa/dec2008/JAA610.pdf">http://www.ias.ac.in/jaa/dec2008/JAA610.pdf</a> Note: These polynomials are based on the uncorrected deltaT table from the Astronomical Almanac, thus ndot = -26.0 arcsec/cy^2. Meeus &amp; Simons (2000) corrected the deltaT table for years before 1955.5 using ndot = -25.7376 arcsec/cy^2. Therefore the accuracies stated by Meeus &amp; Simons are correct and cannot be compared with accuracies from Islam &amp; Sadiq &amp; Qureshi. </p><dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">jDay</td><td>the date and time expressed as a Julian day </td></tr>
   </table>
@@ -1870,6 +1897,120 @@ double&#160;</td><td class="memItemRight" valign="bottom"><b>trunc</b> (double x
 
 </div>
 </div>
+<a class="anchor" id="ac5583d4ff68b00c0c016f766d9874729"></a>
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class T &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">T StelUtils::interpolate3 </td>
+          <td>(</td>
+          <td class="paramtype">T&#160;</td>
+          <td class="paramname"><em>n</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">T&#160;</td>
+          <td class="paramname"><em>y1</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">T&#160;</td>
+          <td class="paramname"><em>y2</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">T&#160;</td>
+          <td class="paramname"><em>y3</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">n</td><td>Interpolation factor: steps from x2 </td></tr>
+    <tr><td class="paramname">y1</td><td>Argument 1 </td></tr>
+    <tr><td class="paramname">y2</td><td>Argument 2 </td></tr>
+    <tr><td class="paramname">y3</td><td>Argument 3 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>interpolation value </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a3c091056ff67dba311b5ae26c05b51fc"></a>
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class T &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">T StelUtils::interpolate5 </td>
+          <td>(</td>
+          <td class="paramtype">T&#160;</td>
+          <td class="paramname"><em>n</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">T&#160;</td>
+          <td class="paramname"><em>y1</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">T&#160;</td>
+          <td class="paramname"><em>y2</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">T&#160;</td>
+          <td class="paramname"><em>y3</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">T&#160;</td>
+          <td class="paramname"><em>y4</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">T&#160;</td>
+          <td class="paramname"><em>y5</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">n</td><td>Interpolation factor: steps from x3 </td></tr>
+    <tr><td class="paramname">y1</td><td>Argument 1 </td></tr>
+    <tr><td class="paramname">y2</td><td>Argument 2 </td></tr>
+    <tr><td class="paramname">y3</td><td>Argument 3 </td></tr>
+    <tr><td class="paramname">y3</td><td>Argument 4 </td></tr>
+    <tr><td class="paramname">y3</td><td>Argument 5 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>interpolation value </dd></dl>
+
+</div>
+</div>
 <a class="anchor" id="a9e6ed385251d174bc19ffcd1f2b8b1d3"></a>
 <div class="memitem">
 <div class="memproto">
@@ -2202,6 +2343,46 @@ double&#160;</td><td class="memItemRight" valign="bottom"><b>trunc</b> (double x
 
 </div>
 </div>
+<a class="anchor" id="added64c67b9340ca19795ebce2643843"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">QString StelUtils::radToDmsPStr </td>
+          <td>(</td>
+          <td class="paramtype">const double&#160;</td>
+          <td class="paramname"><em>angle</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const int&#160;</td>
+          <td class="paramname"><em>precision</em> = <code>0</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const bool&#160;</td>
+          <td class="paramname"><em>useD</em> = <code>false</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">angle</td><td>input angle in radian </td></tr>
+    <tr><td class="paramname">precision</td><td></td></tr>
+    <tr><td class="paramname">useD</td><td>Define if letter "d" must be used instead of deg sign </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
 <a class="anchor" id="a4825d47acfeb8be5177c966bac1f31f9"></a>
 <div class="memitem">
 <div class="memproto">
@@ -2234,8 +2415,8 @@ double&#160;</td><td class="memItemRight" valign="bottom"><b>trunc</b> (double x
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">angle</td><td>input angle in radian </td></tr>
-    <tr><td class="paramname">useD</td><td>Define if letter "d" must be used instead of deg sign </td></tr>
     <tr><td class="paramname">decimal</td><td>output decimal second value </td></tr>
+    <tr><td class="paramname">useD</td><td>Define if letter "d" must be used instead of deg sign </td></tr>
   </table>
   </dd>
 </dl>
@@ -2613,7 +2794,7 @@ double&#160;</td><td class="memItemRight" valign="bottom"><b>trunc</b> (double x
   </dd>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>The corresponding vector </dd></dl>
-<dl class="deprecated"><dt><b><a class="el" href="deprecated.html#_deprecated000007">Deprecated:</a></b></dt><dd>Use the &gt;&gt; operator from Vec3f class </dd></dl>
+<dl class="deprecated"><dt><b><a class="el" href="deprecated.html#_deprecated000009">Deprecated:</a></b></dt><dd>Use the &gt;&gt; operator from Vec3f class </dd></dl>
 
 </div>
 </div>
@@ -2676,7 +2857,7 @@ double&#160;</td><td class="memItemRight" valign="bottom"><b>trunc</b> (double x
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Sun Mar 25 2018 18:43:01 for Stellarium by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Wed Aug 15 2018 18:36:56 for Stellarium by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.11
 </small></address>
