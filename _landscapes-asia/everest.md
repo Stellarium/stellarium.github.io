@@ -1,7 +1,7 @@
 ---
 title: Mount Everest
 author: Makc
-license: ©
+license: (c)
 compat: 0.9+
 landscape_url: https://github.com/Stellarium/stellarium-data/releases/download/landscapes/everest.zip
 ---
