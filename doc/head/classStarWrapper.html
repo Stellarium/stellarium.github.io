@@ -84,9 +84,6 @@ QString&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="c
 QString&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classStarWrapperBase.html#aa03b03301ff926832e644f64701c7862">getType</a> (void) const</td></tr>
 <tr class="memdesc:aa03b03301ff926832e644f64701c7862 inherit pro_methods_classStarWrapperBase"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return object's type. It should be the name of the class. <br /></td></tr>
 <tr class="separator:aa03b03301ff926832e644f64701c7862 inherit pro_methods_classStarWrapperBase"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a27f919b6e6f00f46294b5393cbf45046 inherit pro_methods_classStarWrapperBase"><td class="memItemLeft" align="right" valign="top">QString&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classStarWrapperBase.html#a27f919b6e6f00f46294b5393cbf45046">getID</a> (void) const</td></tr>
-<tr class="memdesc:a27f919b6e6f00f46294b5393cbf45046 inherit pro_methods_classStarWrapperBase"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns a unique identifier for this object.  <a href="classStarWrapperBase.html#a27f919b6e6f00f46294b5393cbf45046">More...</a><br /></td></tr>
-<tr class="separator:a27f919b6e6f00f46294b5393cbf45046 inherit pro_methods_classStarWrapperBase"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a9279fcd5276a3cad0623bd927ce02b7d inherit pro_methods_classStarWrapperBase"><td class="memItemLeft" align="right" valign="top">QString&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classStarWrapperBase.html#a9279fcd5276a3cad0623bd927ce02b7d">getInfoString</a> (const <a class="el" href="classStelCore.html">StelCore</a> *core, const InfoStringGroup &amp;flags) const</td></tr>
 <tr class="memdesc:a9279fcd5276a3cad0623bd927ce02b7d inherit pro_methods_classStarWrapperBase"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="classStarWrapperBase.html" title="A Star (Star1,Star2,Star3,...) cannot be a StelObject. ">StarWrapperBase</a> supports the following InfoStringGroup flags.  <a href="classStarWrapperBase.html#a9279fcd5276a3cad0623bd927ce02b7d">More...</a><br /></td></tr>
 <tr class="separator:a9279fcd5276a3cad0623bd927ce02b7d inherit pro_methods_classStarWrapperBase"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -160,6 +157,9 @@ Additional Inherited Members</h2></td></tr>
 <tr class="memitem:a16e447c2dc2cbbe6e4e308376ae0c5ca inherit pub_methods_classStelObject"><td class="memItemLeft" align="right" valign="top">virtual QVariantMap&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classStelObject.html#a16e447c2dc2cbbe6e4e308376ae0c5ca">getInfoMap</a> (const <a class="el" href="classStelCore.html">StelCore</a> *core) const</td></tr>
 <tr class="memdesc:a16e447c2dc2cbbe6e4e308376ae0c5ca inherit pub_methods_classStelObject"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return a key/value map with data about an object's position, magnitude and so on.  <a href="classStelObject.html#a16e447c2dc2cbbe6e4e308376ae0c5ca">More...</a><br /></td></tr>
 <tr class="separator:a16e447c2dc2cbbe6e4e308376ae0c5ca inherit pub_methods_classStelObject"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab11e911fb1974d75b8a9b629a57f243b inherit pub_methods_classStelObject"><td class="memItemLeft" align="right" valign="top">virtual QString&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classStelObject.html#ab11e911fb1974d75b8a9b629a57f243b">getID</a> () const =0</td></tr>
+<tr class="memdesc:ab11e911fb1974d75b8a9b629a57f243b inherit pub_methods_classStelObject"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns a unique identifier for this object.  <a href="classStelObject.html#ab11e911fb1974d75b8a9b629a57f243b">More...</a><br /></td></tr>
+<tr class="separator:ab11e911fb1974d75b8a9b629a57f243b inherit pub_methods_classStelObject"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a0307144a6bd5b85e5c69eac7d0337b86 inherit pub_methods_classStelObject"><td class="memItemLeft" align="right" valign="top"><a id="a0307144a6bd5b85e5c69eac7d0337b86"></a>
 <a class="el" href="classVector3.html">Vec3d</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classStelObject.html#a0307144a6bd5b85e5c69eac7d0337b86">getEquinoxEquatorialPos</a> (const <a class="el" href="classStelCore.html">StelCore</a> *core) const</td></tr>
 <tr class="memdesc:a0307144a6bd5b85e5c69eac7d0337b86 inherit pub_methods_classStelObject"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get observer-centered equatorial coordinate at the current equinox The frame has its Z axis at the planet's current rotation axis At time 2000-01-01 this frame is almost the same as J2000, but ONLY if the observer is on earth. <br /></td></tr>
@@ -266,7 +266,7 @@ template&lt;class Star&gt; </div>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Sun Dec 23 2018 19:59:52 for Stellarium by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Mon Jan 14 2019 02:15:34 for Stellarium by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.13
 </small></address>

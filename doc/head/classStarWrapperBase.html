@@ -58,9 +58,6 @@ Protected Member Functions</h2></td></tr>
 QString&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classStarWrapperBase.html#aa03b03301ff926832e644f64701c7862">getType</a> (void) const</td></tr>
 <tr class="memdesc:aa03b03301ff926832e644f64701c7862"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return object's type. It should be the name of the class. <br /></td></tr>
 <tr class="separator:aa03b03301ff926832e644f64701c7862"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a27f919b6e6f00f46294b5393cbf45046"><td class="memItemLeft" align="right" valign="top">QString&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classStarWrapperBase.html#a27f919b6e6f00f46294b5393cbf45046">getID</a> (void) const</td></tr>
-<tr class="memdesc:a27f919b6e6f00f46294b5393cbf45046"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns a unique identifier for this object.  <a href="#a27f919b6e6f00f46294b5393cbf45046">More...</a><br /></td></tr>
-<tr class="separator:a27f919b6e6f00f46294b5393cbf45046"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aef34ca22cc8923f6038609dcefa935e1"><td class="memItemLeft" align="right" valign="top"><a id="aef34ca22cc8923f6038609dcefa935e1"></a>
 QString&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classStarWrapperBase.html#aef34ca22cc8923f6038609dcefa935e1">getEnglishName</a> (void) const</td></tr>
 <tr class="memdesc:aef34ca22cc8923f6038609dcefa935e1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return object's name in english. <br /></td></tr>
@@ -133,6 +130,9 @@ Additional Inherited Members</h2></td></tr>
 <tr class="memitem:a16e447c2dc2cbbe6e4e308376ae0c5ca inherit pub_methods_classStelObject"><td class="memItemLeft" align="right" valign="top">virtual QVariantMap&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classStelObject.html#a16e447c2dc2cbbe6e4e308376ae0c5ca">getInfoMap</a> (const <a class="el" href="classStelCore.html">StelCore</a> *core) const</td></tr>
 <tr class="memdesc:a16e447c2dc2cbbe6e4e308376ae0c5ca inherit pub_methods_classStelObject"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return a key/value map with data about an object's position, magnitude and so on.  <a href="classStelObject.html#a16e447c2dc2cbbe6e4e308376ae0c5ca">More...</a><br /></td></tr>
 <tr class="separator:a16e447c2dc2cbbe6e4e308376ae0c5ca inherit pub_methods_classStelObject"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab11e911fb1974d75b8a9b629a57f243b inherit pub_methods_classStelObject"><td class="memItemLeft" align="right" valign="top">virtual QString&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classStelObject.html#ab11e911fb1974d75b8a9b629a57f243b">getID</a> () const =0</td></tr>
+<tr class="memdesc:ab11e911fb1974d75b8a9b629a57f243b inherit pub_methods_classStelObject"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns a unique identifier for this object.  <a href="classStelObject.html#ab11e911fb1974d75b8a9b629a57f243b">More...</a><br /></td></tr>
+<tr class="separator:ab11e911fb1974d75b8a9b629a57f243b inherit pub_methods_classStelObject"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a50ac8b2a9be97d2cf58987c58af6b740 inherit pub_methods_classStelObject"><td class="memItemLeft" align="right" valign="top"><a id="a50ac8b2a9be97d2cf58987c58af6b740"></a>
 virtual <a class="el" href="classVector3.html">Vec3d</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classStelObject.html#a50ac8b2a9be97d2cf58987c58af6b740">getJ2000EquatorialPos</a> (const <a class="el" href="classStelCore.html">StelCore</a> *core) const =0</td></tr>
 <tr class="memdesc:a50ac8b2a9be97d2cf58987c58af6b740 inherit pub_methods_classStelObject"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get observer-centered equatorial coordinates at equinox J2000. <br /></td></tr>
@@ -222,37 +222,6 @@ static const <a class="el" href="classStelObject.html#acf243e7987796a3a44e409140
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>The additional overhead of having a dynamic type would simply be too much. Therefore the <a class="el" href="classStarWrapper.html">StarWrapper</a> is needed when returning Stars as StelObjects, e.g. for searching, and for constellations. The <a class="el" href="classStarWrapper.html">StarWrapper</a> is destroyed when it is not needed anymore, by utilizing reference counting. So there is no chance that more than a few hundreds of StarWrappers are alive simultanousely. Another reason for having the <a class="el" href="classStarWrapper.html">StarWrapper</a> is to encapsulate the differences between the different kinds of Stars (<a class="el" href="structStar1.html">Star1</a>,<a class="el" href="structStar2.html">Star2</a>,<a class="el" href="structStar3.html">Star3</a>). </p>
 </div><h2 class="groupheader">Member Function Documentation</h2>
-<a id="a27f919b6e6f00f46294b5393cbf45046"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a27f919b6e6f00f46294b5393cbf45046">&#9670;&nbsp;</a></span>getID()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">QString StarWrapperBase::getID </td>
-          <td>(</td>
-          <td class="paramtype">void&#160;</td>
-          <td class="paramname"></td><td>)</td>
-          <td> const</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">protected</span><span class="mlabel">virtual</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-<p>The ID should be unique for all objects of the same type, but may freely conflict with IDs of other types, so <a class="el" href="classStarWrapperBase.html#aa03b03301ff926832e644f64701c7862" title="Return object&#39;s type. It should be the name of the class. ">getType()</a> must also be tested.</p>
-<p>With this it should be possible to at least identify the same object in a different instance of Stellarium running the same version, but it would even be better if the ID provides some degree of forward-compatibility. For some object types (e.g. planets) this may simply return <a class="el" href="classStarWrapperBase.html#aef34ca22cc8923f6038609dcefa935e1" title="Return object&#39;s name in english. ">getEnglishName()</a>, but better candidates may be official designations or at least (stable) internal IDs.</p>
-<p>An object may have multiple IDs (different catalog numbers, etc). <a class="el" href="classStelObjectMgr.html#af0a33f6ff1448db085288eea46937399" title="Find an object of the given type and ID. ">StelObjectMgr::searchByID()</a> should search through all ID variants, but this method only returns one of them. </p>
-
-<p>Implements <a class="el" href="classStelObject.html#ab11e911fb1974d75b8a9b629a57f243b">StelObject</a>.</p>
-
-</div>
-</div>
 <a id="a9279fcd5276a3cad0623bd927ce02b7d"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a9279fcd5276a3cad0623bd927ce02b7d">&#9670;&nbsp;</a></span>getInfoString()</h2>
 
@@ -318,7 +287,7 @@ PlainText </li>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Sun Dec 23 2018 19:59:52 for Stellarium by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Mon Jan 14 2019 02:15:34 for Stellarium by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.13
 </small></address>

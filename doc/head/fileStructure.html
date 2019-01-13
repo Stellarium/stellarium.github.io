@@ -72,12 +72,12 @@ User and Installation directory separation</h1>
 <tr class="stel">
 <td>Windows 2000 / XP</td><td>This is the <code>Stellarium</code> sub-directory of your users application data directory (usually something like <code>C:\Documents and Settings\YOURUSERNAME\Application Data\Stellarium</code> </td></tr>
 <tr class="stel">
-<td>Windows Vista / 7 / 8</td><td>This is the <code>Stellarium</code> sub-directory of your users application data directory (usually something like <code>C:\Users\YOURUSERNAME\AppData\Roaming\Stellarium</code> </td></tr>
+<td>Windows Vista / 7 / 8 / 10</td><td>This is the <code>Stellarium</code> sub-directory of your users application data directory (usually something like <code>C:\Users\YOURUSERNAME\AppData\Roaming\Stellarium</code> </td></tr>
 <tr class="stel">
-<td>MacOS X</td><td><code>$HOME/Library/Preferences/Stellarium</code> where <code>$HOME</code> is your home directory. Note that you may have to change explorer's settings so you can view hidden files before you can navigate to this directory. </td></tr>
+<td>MacOS X</td><td><code>$HOME/Library/Application Support/Stellarium</code> where <code>$HOME</code> is your home directory. Note that you may have to change explorer's settings so you can view hidden files before you can navigate to this directory. </td></tr>
 </table>
 <p>The directory tree structure within the <em>User Data Directory</em> is the same as the <em>Installation Data Directory</em>. Any file which exists in the <em>User Data Directory</em> will over-ride that in the <em>Installation Data Directory</em>.</p>
-<p>For example, to modify the position of a nebula texture, the user may copy the <code>nebulae/default/nebula_textures.fab</code> file from the <em>Installation Data Directory</em> to the <code>nebulae/default</code> sub-directory of the <em>User Data Directory</em> and modify it there. In this manner, each user on a multi-user system may have their own customized Stellarium data files. </p>
+<p>For example, to modify the position of a nebula texture, the user may copy the <code>nebulae/default/textures.json</code> file from the <em>Installation Data Directory</em> to the <code>nebulae/default</code> sub-directory of the <em>User Data Directory</em> and modify it there. In this manner, each user on a multi-user system may have their own customized Stellarium data files. </p>
 <p class="endli"></p>
 </li>
 <li>
@@ -94,7 +94,9 @@ User and Installation directory separation</h1>
 </table>
 <p>Important data files which may be found in the <em>Installation Data Directory</em> include: </p><ul>
 <li>
-<code>data/ssystem.ini</code>: the solar system bodies description file </li>
+<code>data/ssystem_major.ini</code>: the solar system bodies description file (major planets and moons) </li>
+<li>
+<code>data/ssystem_minor.ini</code>: the solar system bodies description file (minor planets and comets) </li>
 <li>
 <code>stars/default/</code>: star catalogues </li>
 <li>
@@ -147,7 +149,7 @@ stars/default/stars_3_1v0_1.cat
 </div></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Sun Dec 23 2018 19:59:51 for Stellarium by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Mon Jan 14 2019 02:15:33 for Stellarium by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.13
 </small></address>
