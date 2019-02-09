@@ -3,6 +3,7 @@ title: Sa Calobra Serpentinen, Mallorca, Spain
 author: <a href="http://www.panodino.com/cms/stellarium/">Andreas</a>
 compat: 0.12+
 license: CC BY-NC-ND 4.0
+language: English, German
 landscape_url: http://panodino.com/astro/stellarium/sa-calobra/sacalobra.zip
 image_url: /img/landscapes/sa-calobra.jpg
 ---
