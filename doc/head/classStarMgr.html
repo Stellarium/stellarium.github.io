@@ -147,8 +147,9 @@ virtual QList&lt; <a class="el" href="classQSharedPointerNoDelete.html">StelObje
 <tr class="memitem:a602295a36851ed217d4c233ccdbefabe"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="classQSharedPointerNoDelete.html">StelObjectP</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classStarMgr.html#a602295a36851ed217d4c233ccdbefabe">searchByName</a> (const QString &amp;name) const</td></tr>
 <tr class="memdesc:a602295a36851ed217d4c233ccdbefabe"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return the matching star if exists or Q_NULLPTR.  <a href="#a602295a36851ed217d4c233ccdbefabe">More...</a><br /></td></tr>
 <tr class="separator:a602295a36851ed217d4c233ccdbefabe"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a6bd14c38232fe1a03a6d95df59f3c5eb"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="classQSharedPointerNoDelete.html">StelObjectP</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classStarMgr.html#a6bd14c38232fe1a03a6d95df59f3c5eb">searchByID</a> (const QString &amp;id) const</td></tr>
-<tr class="memdesc:a6bd14c38232fe1a03a6d95df59f3c5eb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return the <a class="el" href="classStelObject.html" title="The base abstract class for sky objects used in Stellarium like Stars, Planets, Constellations etc...">StelObject</a> with the given ID if exists or the empty <a class="el" href="classStelObject.html" title="The base abstract class for sky objects used in Stellarium like Stars, Planets, Constellations etc...">StelObject</a> if not found.  <a href="#a6bd14c38232fe1a03a6d95df59f3c5eb">More...</a><br /></td></tr>
+<tr class="memitem:a6bd14c38232fe1a03a6d95df59f3c5eb"><td class="memItemLeft" align="right" valign="top"><a id="a6bd14c38232fe1a03a6d95df59f3c5eb"></a>
+virtual <a class="el" href="classQSharedPointerNoDelete.html">StelObjectP</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classStarMgr.html#a6bd14c38232fe1a03a6d95df59f3c5eb">searchByID</a> (const QString &amp;id) const</td></tr>
+<tr class="memdesc:a6bd14c38232fe1a03a6d95df59f3c5eb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Same as searchByName(id);. <br /></td></tr>
 <tr class="separator:a6bd14c38232fe1a03a6d95df59f3c5eb"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a8016ac77240e1b028cb56bfb182c068a"><td class="memItemLeft" align="right" valign="top">virtual QStringList&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classStarMgr.html#a8016ac77240e1b028cb56bfb182c068a">listMatchingObjects</a> (const QString &amp;objPrefix, int maxNbItem=5, bool useStartOfWords=false, bool inEnglish=false) const</td></tr>
 <tr class="memdesc:a8016ac77240e1b028cb56bfb182c068a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Find and return the list of at most maxNbItem objects auto-completing the passed object English name.  <a href="#a8016ac77240e1b028cb56bfb182c068a">More...</a><br /></td></tr>
@@ -1232,40 +1233,6 @@ Additional Inherited Members</h2></td></tr>
 
 </div>
 </div>
-<a id="a6bd14c38232fe1a03a6d95df59f3c5eb"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a6bd14c38232fe1a03a6d95df59f3c5eb">&#9670;&nbsp;</a></span>searchByID()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">virtual <a class="el" href="classQSharedPointerNoDelete.html">StelObjectP</a> StarMgr::searchByID </td>
-          <td>(</td>
-          <td class="paramtype">const QString &amp;&#160;</td>
-          <td class="paramname"><em>id</em></td><td>)</td>
-          <td> const</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">virtual</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">name</td><td>the english object name </td></tr>
-  </table>
-  </dd>
-</dl>
-
-<p>Implements <a class="el" href="classStelObjectModule.html#aa545a69bb13edf03ef5ef1be0b804fed">StelObjectModule</a>.</p>
-
-</div>
-</div>
 <a id="a602295a36851ed217d4c233ccdbefabe"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a602295a36851ed217d4c233ccdbefabe">&#9670;&nbsp;</a></span>searchByName()</h2>
 
@@ -1291,7 +1258,7 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">name</td><td>The case in-sensistive standard program planet name </td></tr>
+    <tr><td class="paramname">name</td><td>The case in-sensitive english star name </td></tr>
   </table>
   </dd>
 </dl>
@@ -1325,7 +1292,7 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">nameI18n</td><td>The case in-sensistive star common name or HP catalog name (format can be HP1234 or HP 1234 or HIP 1234) or sci name </td></tr>
+    <tr><td class="paramname">nameI18n</td><td>The case in-sensitive localized star common name or HIP/HP, SAO, HD, HR, GCVS or WDS number catalog name (format can be HP1234 or HP 1234 or HIP 1234) or sci name </td></tr>
   </table>
   </dd>
 </dl>
@@ -1455,7 +1422,7 @@ Additional Inherited Members</h2></td></tr>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Mon Jan 14 2019 02:15:34 for Stellarium by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Sat Feb 23 2019 21:51:07 for Stellarium by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.13
 </small></address>

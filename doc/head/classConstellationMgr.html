@@ -288,13 +288,11 @@ virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" hr
 <tr class="memdesc:a74506b4c94c481de276e810d74e749cc"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return the value defining the order of call for the given action.  <a href="#a74506b4c94c481de276e810d74e749cc">More...</a><br /></td></tr>
 <tr class="separator:a74506b4c94c481de276e810d74e749cc"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a4e74be02bae5b40e08c68f66240d2bc5"><td class="memItemLeft" align="right" valign="top">virtual QList&lt; <a class="el" href="classQSharedPointerNoDelete.html">StelObjectP</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classConstellationMgr.html#a4e74be02bae5b40e08c68f66240d2bc5">searchAround</a> (const <a class="el" href="classVector3.html">Vec3d</a> &amp;v, double limitFov, const <a class="el" href="classStelCore.html">StelCore</a> *core) const</td></tr>
-<tr class="memdesc:a4e74be02bae5b40e08c68f66240d2bc5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Search for <a class="el" href="classStelObject.html" title="The base abstract class for sky objects used in Stellarium like Stars, Planets, Constellations etc...">StelObject</a> in an area around a specifid point.  <a href="#a4e74be02bae5b40e08c68f66240d2bc5">More...</a><br /></td></tr>
+<tr class="memdesc:a4e74be02bae5b40e08c68f66240d2bc5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Search for <a class="el" href="classStelObject.html" title="The base abstract class for sky objects used in Stellarium like Stars, Planets, Constellations etc...">StelObject</a> in an area around a specified point.  <a href="#a4e74be02bae5b40e08c68f66240d2bc5">More...</a><br /></td></tr>
 <tr class="separator:a4e74be02bae5b40e08c68f66240d2bc5"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae65c48713b0feef9acc3d8cb66f7c66c"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="classQSharedPointerNoDelete.html">StelObjectP</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classConstellationMgr.html#ae65c48713b0feef9acc3d8cb66f7c66c">searchByNameI18n</a> (const QString &amp;nameI18n) const</td></tr>
-<tr class="memdesc:ae65c48713b0feef9acc3d8cb66f7c66c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return the matching constellation object's pointer if exists or Q_NULLPTR.  <a href="#ae65c48713b0feef9acc3d8cb66f7c66c">More...</a><br /></td></tr>
 <tr class="separator:ae65c48713b0feef9acc3d8cb66f7c66c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a3142eb5bde1afe73a134d0ee7ebb9963"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="classQSharedPointerNoDelete.html">StelObjectP</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classConstellationMgr.html#a3142eb5bde1afe73a134d0ee7ebb9963">searchByName</a> (const QString &amp;name) const</td></tr>
-<tr class="memdesc:a3142eb5bde1afe73a134d0ee7ebb9963"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return the matching constellation if exists or Q_NULLPTR.  <a href="#a3142eb5bde1afe73a134d0ee7ebb9963">More...</a><br /></td></tr>
 <tr class="separator:a3142eb5bde1afe73a134d0ee7ebb9963"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a2e9916af27f71aebfd2e3da4b2eac7fe"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="classQSharedPointerNoDelete.html">StelObjectP</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classConstellationMgr.html#a2e9916af27f71aebfd2e3da4b2eac7fe">searchByID</a> (const QString &amp;id) const</td></tr>
 <tr class="memdesc:a2e9916af27f71aebfd2e3da4b2eac7fe"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return the <a class="el" href="classStelObject.html" title="The base abstract class for sky objects used in Stellarium like Stars, Planets, Constellations etc...">StelObject</a> with the given ID if exists or the empty <a class="el" href="classStelObject.html" title="The base abstract class for sky objects used in Stellarium like Stars, Planets, Constellations etc...">StelObject</a> if not found.  <a href="#a2e9916af27f71aebfd2e3da4b2eac7fe">More...</a><br /></td></tr>
@@ -706,7 +704,7 @@ Additional Inherited Members</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
-<p>The function searches in a disk of diameter limitFov centered on v. Only visible objects (i.e curretly displayed on screen) should be returned. </p><dl class="params"><dt>Parameters</dt><dd>
+<p>The function searches in a disk of diameter limitFov centered on v. Only visible objects (i.e. currently displayed on screen) should be returned. </p><dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">v</td><td>equatorial position at epoch J2000. </td></tr>
     <tr><td class="paramname">limitFov</td><td>angular diameter of the searching zone in degree. </td></tr>
@@ -777,6 +775,7 @@ Additional Inherited Members</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+<dl class="section return"><dt>Returns</dt><dd>the matching constellation if exists or Q_NULLPTR </dd></dl>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">name</td><td>The case in-sensitive standard program name (three letter abbreviation) </td></tr>
@@ -811,9 +810,10 @@ Additional Inherited Members</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+<dl class="section return"><dt>Returns</dt><dd>the matching constellation object's pointer if exists or Q_NULLPTR </dd></dl>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">nameI18n</td><td>The case in-sensistive constellation name </td></tr>
+    <tr><td class="paramname">nameI18n</td><td>The case in-sensitive constellation name </td></tr>
   </table>
   </dd>
 </dl>
@@ -1039,7 +1039,7 @@ Additional Inherited Members</h2></td></tr>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Mon Jan 14 2019 02:15:33 for Stellarium by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Sat Feb 23 2019 21:51:07 for Stellarium by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.13
 </small></address>

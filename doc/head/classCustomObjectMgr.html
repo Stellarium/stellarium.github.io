@@ -117,10 +117,8 @@ virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>drawPointer</
 <tr class="memdesc:a4e612afe8f78c667d3d03bfbb9ebc883"><td class="mdescLeft">&#160;</td><td class="mdescRight">Used to get a list of objects which are near to some position.  <a href="#a4e612afe8f78c667d3d03bfbb9ebc883">More...</a><br /></td></tr>
 <tr class="separator:a4e612afe8f78c667d3d03bfbb9ebc883"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a5d965c704d15ca6d32cbe3006b2815e9"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="classQSharedPointerNoDelete.html">StelObjectP</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classCustomObjectMgr.html#a5d965c704d15ca6d32cbe3006b2815e9">searchByNameI18n</a> (const QString &amp;nameI18n) const</td></tr>
-<tr class="memdesc:a5d965c704d15ca6d32cbe3006b2815e9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return the matching satellite object's pointer if exists or Q_NULLPTR.  <a href="#a5d965c704d15ca6d32cbe3006b2815e9">More...</a><br /></td></tr>
 <tr class="separator:a5d965c704d15ca6d32cbe3006b2815e9"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:afcb50c6e06540d50d81ca0a96a13c11d"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="classQSharedPointerNoDelete.html">StelObjectP</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classCustomObjectMgr.html#afcb50c6e06540d50d81ca0a96a13c11d">searchByName</a> (const QString &amp;name) const</td></tr>
-<tr class="memdesc:afcb50c6e06540d50d81ca0a96a13c11d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return the matching satellite if exists or Q_NULLPTR.  <a href="#afcb50c6e06540d50d81ca0a96a13c11d">More...</a><br /></td></tr>
 <tr class="separator:afcb50c6e06540d50d81ca0a96a13c11d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a81a7a660f4796c087821f8a6e8438f13"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="classQSharedPointerNoDelete.html">StelObjectP</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classCustomObjectMgr.html#a81a7a660f4796c087821f8a6e8438f13">searchByID</a> (const QString &amp;id) const</td></tr>
 <tr class="memdesc:a81a7a660f4796c087821f8a6e8438f13"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return the <a class="el" href="classStelObject.html" title="The base abstract class for sky objects used in Stellarium like Stars, Planets, Constellations etc...">StelObject</a> with the given ID if exists or the empty <a class="el" href="classStelObject.html" title="The base abstract class for sky objects used in Stellarium like Stars, Planets, Constellations etc...">StelObject</a> if not found.  <a href="#a81a7a660f4796c087821f8a6e8438f13">More...</a><br /></td></tr>
@@ -771,13 +769,13 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">v</td><td>a vector representing the position in th sky around which to search for nebulae. </td></tr>
-    <tr><td class="paramname">limitFov</td><td>the field of view around the position v in which to search for satellites. </td></tr>
+    <tr><td class="paramname">v</td><td>a vector representing the position in the sky around which to search for objects. </td></tr>
+    <tr><td class="paramname">limitFov</td><td>the field of view around the position v in which to search for objects. </td></tr>
     <tr><td class="paramname">core</td><td>the <a class="el" href="classStelCore.html" title="Main class for Stellarium core processing. ">StelCore</a> to use for computations. </td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd>an list containing the satellites located inside the limitFov circle around position v. </dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>a list containing the objects located inside the limitFov circle around position v. </dd></dl>
 
 <p>Implements <a class="el" href="classStelObjectModule.html#a5d392cea83cf29a67254dfb558d5f56a">StelObjectModule</a>.</p>
 
@@ -873,9 +871,10 @@ Additional Inherited Members</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+<dl class="section return"><dt>Returns</dt><dd>the matching object if exists or Q_NULLPTR. </dd></dl>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">name</td><td>The case in-sensistive standard program name </td></tr>
+    <tr><td class="paramname">name</td><td>The case in-sensitive english name </td></tr>
   </table>
   </dd>
 </dl>
@@ -907,9 +906,10 @@ Additional Inherited Members</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+<dl class="section return"><dt>Returns</dt><dd>the matching object's pointer if exists or Q_NULLPTR. </dd></dl>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">nameI18n</td><td>The case in-sensistive satellite name </td></tr>
+    <tr><td class="paramname">nameI18n</td><td>The case in-sensitive localized name </td></tr>
   </table>
   </dd>
 </dl>
@@ -1051,7 +1051,7 @@ Additional Inherited Members</h2></td></tr>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Mon Jan 14 2019 02:15:33 for Stellarium by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Sat Feb 23 2019 21:51:07 for Stellarium by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.13
 </small></address>

@@ -632,6 +632,9 @@ virtual double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" 
 <tr class="memitem:ad7428be4360661fedc9d19adddd69c96"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="classQSharedPointerNoDelete.html">StelObjectP</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classNebulaMgr.html#ad7428be4360661fedc9d19adddd69c96">searchByName</a> (const QString &amp;name) const</td></tr>
 <tr class="memdesc:ad7428be4360661fedc9d19adddd69c96"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return the matching nebula if exists or Q_NULLPTR.  <a href="#ad7428be4360661fedc9d19adddd69c96">More...</a><br /></td></tr>
 <tr class="separator:ad7428be4360661fedc9d19adddd69c96"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a38f9cf2624bd0250338e4e925d5e63d3"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="classQSharedPointerNoDelete.html">StelObjectP</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classNebulaMgr.html#a38f9cf2624bd0250338e4e925d5e63d3">searchByDesignation</a> (const QString &amp;designation) const</td></tr>
+<tr class="memdesc:a38f9cf2624bd0250338e4e925d5e63d3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return the matching nebula if exists or Q_NULLPTR.  <a href="#a38f9cf2624bd0250338e4e925d5e63d3">More...</a><br /></td></tr>
+<tr class="separator:a38f9cf2624bd0250338e4e925d5e63d3"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:afb21c2eba95f627732ee920d26473141"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="classQSharedPointerNoDelete.html">StelObjectP</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classNebulaMgr.html#afb21c2eba95f627732ee920d26473141">searchByID</a> (const QString &amp;id) const</td></tr>
 <tr class="memdesc:afb21c2eba95f627732ee920d26473141"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return the <a class="el" href="classStelObject.html" title="The base abstract class for sky objects used in Stellarium like Stars, Planets, Constellations etc...">StelObject</a> with the given ID if exists or the empty <a class="el" href="classStelObject.html" title="The base abstract class for sky objects used in Stellarium like Stars, Planets, Constellations etc...">StelObject</a> if not found.  <a href="#afb21c2eba95f627732ee920d26473141">More...</a><br /></td></tr>
 <tr class="separator:afb21c2eba95f627732ee920d26473141"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -1266,9 +1269,41 @@ Additional Inherited Members</h2></td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd>an list containing the nebulae located inside the limitFov circle around position v. </dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>a list containing the nebulae located inside the limitFov circle around position v. </dd></dl>
 
 <p>Implements <a class="el" href="classStelObjectModule.html#a5d392cea83cf29a67254dfb558d5f56a">StelObjectModule</a>.</p>
+
+</div>
+</div>
+<a id="a38f9cf2624bd0250338e4e925d5e63d3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a38f9cf2624bd0250338e4e925d5e63d3">&#9670;&nbsp;</a></span>searchByDesignation()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual <a class="el" href="classQSharedPointerNoDelete.html">StelObjectP</a> NebulaMgr::searchByDesignation </td>
+          <td>(</td>
+          <td class="paramtype">const QString &amp;&#160;</td>
+          <td class="paramname"><em>designation</em></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">name</td><td>The case in-sensitive designation of deep-sky object </td></tr>
+  </table>
+  </dd>
+</dl>
 
 </div>
 </div>
@@ -1331,7 +1366,7 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">name</td><td>The case in-sensistive standard program name </td></tr>
+    <tr><td class="paramname">name</td><td>The case in-sensitive standard program name </td></tr>
   </table>
   </dd>
 </dl>
@@ -1365,7 +1400,7 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">nameI18n</td><td>The case in-sensistive nebula name or NGC M catalog name : format can be M31, M 31, NGC31, NGC 31 </td></tr>
+    <tr><td class="paramname">nameI18n</td><td>The case in-sensitive nebula name or NGC M catalog name : format can be M31, M 31, NGC31, NGC 31 </td></tr>
   </table>
   </dd>
 </dl>
@@ -2722,7 +2757,7 @@ Additional Inherited Members</h2></td></tr>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Mon Jan 14 2019 02:15:34 for Stellarium by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Sat Feb 23 2019 21:51:07 for Stellarium by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.13
 </small></address>

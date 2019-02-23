@@ -78,6 +78,11 @@ void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="clas
 <tr class="memitem:ae151421a7b1e0f06282609b46e12adf2"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classStelMainView.html#ae151421a7b1e0f06282609b46e12adf2">saveScreenShot</a> (const QString &amp;filePrefix=&quot;stellarium-&quot;, const QString &amp;saveDir=&quot;&quot;, const bool overwrite=false)</td></tr>
 <tr class="memdesc:ae151421a7b1e0f06282609b46e12adf2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Save a screen shot.  <a href="#ae151421a7b1e0f06282609b46e12adf2">More...</a><br /></td></tr>
 <tr class="separator:ae151421a7b1e0f06282609b46e12adf2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a636be6f73f8ffbd1d23cc4d99f36d346"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classStelMainView.html#a636be6f73f8ffbd1d23cc4d99f36d346">setScreenshotFormat</a> (const QString filetype)</td></tr>
+<tr class="separator:a636be6f73f8ffbd1d23cc4d99f36d346"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8f732096d876504990a52229cc093b8e"><td class="memItemLeft" align="right" valign="top"><a id="a8f732096d876504990a52229cc093b8e"></a>
+QString&#160;</td><td class="memItemRight" valign="bottom"><b>getScreenshotFormat</b> () const</td></tr>
+<tr class="separator:a8f732096d876504990a52229cc093b8e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac0c9174b4caff9bd2b55f5781223b821"><td class="memItemLeft" align="right" valign="top"><a id="ac0c9174b4caff9bd2b55f5781223b821"></a>
 bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classStelMainView.html#ac0c9174b4caff9bd2b55f5781223b821">getFlagInvertScreenShotColors</a> () const</td></tr>
 <tr class="memdesc:ac0c9174b4caff9bd2b55f5781223b821"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get whether colors are inverted when saving screenshot. <br /></td></tr>
@@ -196,6 +201,9 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>customScreenshotWidth
 <tr class="memitem:aae6aaf1cc37bbfd4d2829be1a2ed10f6"><td class="memItemLeft" align="right" valign="top"><a id="aae6aaf1cc37bbfd4d2829be1a2ed10f6"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><b>customScreenshotHeightChanged</b> (int height)</td></tr>
 <tr class="separator:aae6aaf1cc37bbfd4d2829be1a2ed10f6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8b1ddfa458599bb1678d5c882cb7a7a9"><td class="memItemLeft" align="right" valign="top"><a id="a8b1ddfa458599bb1678d5c882cb7a7a9"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>screenshotFormatChanged</b> (QString format)</td></tr>
+<tr class="separator:a8b1ddfa458599bb1678d5c882cb7a7a9"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ada57f15b89cc0bb6c9a897edd0ca6426"><td class="memItemLeft" align="right" valign="top"><a id="ada57f15b89cc0bb6c9a897edd0ca6426"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><b>skyBackgroundColorChanged</b> (<a class="el" href="classVector3.html">Vec3f</a> color)</td></tr>
 <tr class="separator:ada57f15b89cc0bb6c9a897edd0ca6426"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -296,6 +304,9 @@ int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class
 int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classStelMainView.html#a2ff8d76cd36a788c64426d48bbc06271">customScreenshotHeight</a></td></tr>
 <tr class="memdesc:a2ff8d76cd36a788c64426d48bbc06271"><td class="mdescLeft">&#160;</td><td class="mdescRight">used when flagCustomResolutionScreenshots==true <br /></td></tr>
 <tr class="separator:a2ff8d76cd36a788c64426d48bbc06271"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a814ddd11ae9cd0d5534dc559d3c3d80a"><td class="memItemLeft" align="right" valign="top"><a id="a814ddd11ae9cd0d5534dc559d3c3d80a"></a>
+QString&#160;</td><td class="memItemRight" valign="bottom"><b>screenShotFormat</b></td></tr>
+<tr class="separator:a814ddd11ae9cd0d5534dc559d3c3d80a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a57651be30d281e136656541b37c859fb"><td class="memItemLeft" align="right" valign="top"><a id="a57651be30d281e136656541b37c859fb"></a>
 bool&#160;</td><td class="memItemRight" valign="bottom"><b>flagCursorTimeout</b></td></tr>
 <tr class="separator:a57651be30d281e136656541b37c859fb"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -550,7 +561,8 @@ vendor</td>
 <li>filePrefix changes the beginning of the file name </li>
 <li>saveDir changes the directory where the screenshot is saved If saveDir is "" then <a class="el" href="classStelFileMgr.html#a4db41fbfc7af0253a718c3f9e250a9f4" title="This is the directory into which screenshots will be saved. ">StelFileMgr::getScreenshotDir()</a> will be used </li>
 <li>overwrite if true, </li>
-<li>filePrefix is used as filename, and existing file will be overwritten. </li>
+<li>filePrefix is used as filename, and existing file will be overwritten. <dl class="section note"><dt>Note</dt><dd>To set file type, use <a class="el" href="classStelMainView.html#a636be6f73f8ffbd1d23cc4d99f36d346">setScreenshotFormat()</a> first. </dd></dl>
+</li>
 </ul>
 
 </div>
@@ -647,6 +659,35 @@ vendor</td>
 
 </div>
 </div>
+<a id="a636be6f73f8ffbd1d23cc4d99f36d346"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a636be6f73f8ffbd1d23cc4d99f36d346">&#9670;&nbsp;</a></span>setScreenshotFormat</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void StelMainView::setScreenshotFormat </td>
+          <td>(</td>
+          <td class="paramtype">const QString&#160;</td>
+          <td class="paramname"><em>filetype</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">slot</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<ul>
+<li>filetype is the preferred file type (ending) like "png", "jpg", "bmp" etc. The supported filetypes depend on the underlying Qt version. The most popular may be PNG, JPG/JPEG, BMP, TIF (LZW compressed), TIFF (uncompressed), WEBP, but as of Qt5.12, we also have ICO (for thumbnails), PBM (Portable Bitmap), PGM (Portable Graymap), PPM (Portable Pixmap), XBM (X Bitmap) and XPM (X Pixmap). </li>
+</ul>
+
+</div>
+</div>
 <a id="a28740c8bd56ffe89d389849e4c71d69d"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a28740c8bd56ffe89d389849e4c71d69d">&#9670;&nbsp;</a></span>thereWasAnEvent</h2>
 
@@ -675,7 +716,7 @@ vendor</td>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Mon Jan 14 2019 02:15:34 for Stellarium by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Sat Feb 23 2019 21:51:07 for Stellarium by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.13
 </small></address>
