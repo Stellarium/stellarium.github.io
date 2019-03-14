@@ -1,3 +1,0 @@
----
-layout: landscapes-australasia
----
