@@ -21,7 +21,7 @@
   <td id="projectlogo"><img alt="Logo" src="stellarium-logo.png"/></td>
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">Stellarium
-   &#160;<span id="projectnumber">HEAD</span>
+   &#160;<span id="projectnumber">0.19.0</span>
    </div>
   </td>
  </tr>
@@ -70,6 +70,7 @@ Scripting API</h1>
 <li><a class="el" href="classHighlightMgr.html" title="A simple StelObjectModule to draw markers. ">HighlightMgr</a></li>
 <li><a class="el" href="classGridLinesMgr.html" title="The GridLinesMgr controls the drawing of the Azimuthal, Equatorial, Ecliptical and Galactic Grids...">GridLinesMgr</a></li>
 <li><a class="el" href="classLabelMgr.html" title="Allows for creation of custom labels on objects or coordinates. ">LabelMgr</a></li>
+<li><a class="el" href="classMarkerMgr.html" title="Allows for creation of custom markers on objects or coordinates. ">MarkerMgr</a></li>
 <li><a class="el" href="classLandscapeMgr.html" title="Manages all the rendering at the level of the observer&#39;s surroundings. ">LandscapeMgr</a></li>
 <li><a class="el" href="classSporadicMeteorMgr.html" title="Simulates a sporadic meteor shower, with a random color and a random radiant. ">SporadicMeteorMgr</a></li>
 <li><a class="el" href="classNebulaMgr.html" title="Manage a collection of nebulae. ">NebulaMgr</a></li>
@@ -106,14 +107,14 @@ For example, to access <a class="el" href="classLandscapeMgr.html#a9692b777a833b
 </ul>
 <h1><a class="anchor" id="include_scripts"></a>
 Includes</h1>
-<p>Stellarium provides mechanism for splitting scripts on different files. Typical functions or list of variables can be stored in separate <b></b>.inc file and used within script through <b>include()</b> command: </p><div class="fragment"><div class="line">include(<span class="stringliteral">&quot;common_objects.inc&quot;</span>);</div></div><!-- fragment --> <dl class="section note"><dt>Note</dt><dd>Detailed example can be found <a href="https://github.com/Stellarium/stellarium/blob/HEAD/scripts/constellations_tour.ssc">in Constellations Tour script</a>.</dd></dl>
+<p>Stellarium provides mechanism for splitting scripts on different files. Typical functions or list of variables can be stored in separate <b></b>.inc file and used within script through <b>include()</b> command: </p><div class="fragment"><div class="line">include(<span class="stringliteral">&quot;common_objects.inc&quot;</span>);</div></div><!-- fragment --> <dl class="section note"><dt>Note</dt><dd>Detailed example can be found <a href="https://github.com/Stellarium/stellarium/blob/master/scripts/constellations_tour.ssc">in Constellations Tour script</a>.</dd></dl>
 <h1><a class="anchor" id="script_console"></a>
 Script Console</h1>
 <p>It is possible to open, edit run and save scripts using the script console window. To toggle the script console, press F12. The script console also provides an output window in which script debugging output is visible.</p>
 <dl class="section note"><dt>Note</dt><dd>The Script Console is a build-time option. It has been enabled by default since version 0.10.5. To enable or disable this feature, use the ENABLE_SCRIPT_CONSOLE=1 or =0 option to cmake.</dd></dl>
 <h1><a class="anchor" id="example_scripts"></a>
 Examples</h1>
-<p>The best source of examples is the <b>scripts</b> sub-directory of the main Stellarium source tree. This directory contains a sub-directory called <b>tests</b> which are not installed with Stellarium, but are nontheless useful sources of example code for various scripting features. (The directory can be <a href="https://github.com/Stellarium/stellarium/tree/HEAD/scripts">browsed online</a>. Script files end in <code>.ssc</code> and <code>.inc</code>. Download links are to the right.)</p>
+<p>The best source of examples is the <b>scripts</b> sub-directory of the main Stellarium source tree. This directory contains a sub-directory called <b>tests</b> which are not installed with Stellarium, but are nontheless useful sources of example code for various scripting features. (The directory can be <a href="https://github.com/Stellarium/stellarium/tree/master/scripts">browsed online</a>. Script files end in <code>.ssc</code> and <code>.inc</code>. Download links are to the right.)</p>
 <h2><a class="anchor" id="minimal_script"></a>
 Minimal Script</h2>
 <p>This script prints "Hello Universe" in the <a class="el" href="scripting.html#script_console">Script Console</a> output window.</p>
@@ -123,7 +124,7 @@ Using a StelModule</h2>
 <div class="fragment"><div class="line"><a class="code" href="classLabelMgr.html" title="Allows for creation of custom labels on objects or coordinates. ">LabelMgr</a>.<a class="code" href="classLabelMgr.html#a6f7b5454760c1140b215d0f4066e7d31" title="Create a label at fixed screen coordinates. ">labelScreen</a>(<span class="stringliteral">&quot;Hello Universe&quot;</span>, 200, 200, <span class="keyword">true</span>, 20, <span class="stringliteral">&quot;#ff0000&quot;</span>);</div><div class="line">core.wait(3);</div><div class="line"><a class="code" href="classLabelMgr.html" title="Allows for creation of custom labels on objects or coordinates. ">LabelMgr</a>.<a class="code" href="classLabelMgr.html#a82add88d689bcb1d491cd61017082014" title="Delete all labels. ">deleteAllLabels</a>();</div></div><!-- fragment --> </div></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Sat Feb 23 2019 21:51:06 for Stellarium by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Sun Mar 24 2019 18:07:50 for Stellarium by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.13
 </small></address>

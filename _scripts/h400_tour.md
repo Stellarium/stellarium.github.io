@@ -2,8 +2,8 @@
 title: Herschel 400 Tour
 author: Alexander Wolf
 license: Public Domain
-compat: 0.15+
-version: 1.1
+compat: 0.19+
+version: 1.2
 script_url: https://raw.githubusercontent.com/Stellarium/stellarium/master/scripts/h400_tour.ssc
 categories: repository
 ---

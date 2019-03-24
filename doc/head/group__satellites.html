@@ -21,7 +21,7 @@
   <td id="projectlogo"><img alt="Logo" src="stellarium-logo.png"/></td>
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">Stellarium
-   &#160;<span id="projectnumber">HEAD</span>
+   &#160;<span id="projectnumber">0.19.0</span>
    </div>
   </td>
  </tr>
@@ -2150,9 +2150,13 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>setFlagHideInvisibleS
 <tr class="memitem:afb84defa2f2fe986c62c7f5db8939df5"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__satellites.html#afb84defa2f2fe986c62c7f5db8939df5">updateFromOnlineSources</a> ()</td></tr>
 <tr class="memdesc:afb84defa2f2fe986c62c7f5db8939df5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Start an Internet update.  <a href="#afb84defa2f2fe986c62c7f5db8939df5">More...</a><br /></td></tr>
 <tr class="separator:afb84defa2f2fe986c62c7f5db8939df5"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aa1056fd111b5057df70154b8768e1dff"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__satellites.html#aa1056fd111b5057df70154b8768e1dff">setOrbitLinesFlag</a> (bool b)</td></tr>
-<tr class="memdesc:aa1056fd111b5057df70154b8768e1dff"><td class="mdescLeft">&#160;</td><td class="mdescRight">Choose whether or not to draw orbit lines.  <a href="#aa1056fd111b5057df70154b8768e1dff">More...</a><br /></td></tr>
-<tr class="separator:aa1056fd111b5057df70154b8768e1dff"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3e94ce60436c89766db6e5735b67df7c"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__satellites.html#a3e94ce60436c89766db6e5735b67df7c">setFlagOrbitLines</a> (bool b)</td></tr>
+<tr class="memdesc:a3e94ce60436c89766db6e5735b67df7c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Choose whether or not to draw orbit lines.  <a href="#a3e94ce60436c89766db6e5735b67df7c">More...</a><br /></td></tr>
+<tr class="separator:a3e94ce60436c89766db6e5735b67df7c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9d6f3c14adae07fa068ecceae80af11e"><td class="memItemLeft" align="right" valign="top"><a id="a9d6f3c14adae07fa068ecceae80af11e"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__satellites.html#a9d6f3c14adae07fa068ecceae80af11e">getFlagOrbitLines</a> () const</td></tr>
+<tr class="memdesc:a9d6f3c14adae07fa068ecceae80af11e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the current status of the orbit line rendering flag. <br /></td></tr>
+<tr class="separator:a9d6f3c14adae07fa068ecceae80af11e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:abd560306dcd9e33097a1794fc255f544"><td class="memItemLeft" align="right" valign="top"><a id="abd560306dcd9e33097a1794fc255f544"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><b>recalculateOrbitLines</b> (void)</td></tr>
 <tr class="separator:abd560306dcd9e33097a1794fc255f544"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -2173,6 +2177,9 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>hintsVisibleChanged</
 <tr class="memitem:a59d376cf6d80e4e2233a427e19685c89"><td class="memItemLeft" align="right" valign="top"><a id="a59d376cf6d80e4e2233a427e19685c89"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><b>labelsVisibleChanged</b> (bool b)</td></tr>
 <tr class="separator:a59d376cf6d80e4e2233a427e19685c89"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af03a211af1dc39839e637bc1abe74502"><td class="memItemLeft" align="right" valign="top"><a id="af03a211af1dc39839e637bc1abe74502"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>flagOrbitLinesChanged</b> (bool b)</td></tr>
+<tr class="separator:af03a211af1dc39839e637bc1abe74502"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac44a49242b0a5953a8b3fcc11ac18f39"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__satellites.html#ac44a49242b0a5953a8b3fcc11ac18f39">settingsChanged</a> ()</td></tr>
 <tr class="memdesc:ac44a49242b0a5953a8b3fcc11ac18f39"><td class="mdescLeft">&#160;</td><td class="mdescRight">Emitted when some of the plugin settings have been changed.  <a href="#ac44a49242b0a5953a8b3fcc11ac18f39">More...</a><br /></td></tr>
 <tr class="separator:ac44a49242b0a5953a8b3fcc11ac18f39"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -2326,10 +2333,6 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><b>getFlagRealisticMode<
 <tr class="memitem:ad633b3d58ddac2837490449f26fe570f"><td class="memItemLeft" align="right" valign="top"><a id="ad633b3d58ddac2837490449f26fe570f"></a>
 bool&#160;</td><td class="memItemRight" valign="bottom"><b>getFlagHideInvisibleSatellites</b> () const</td></tr>
 <tr class="separator:ad633b3d58ddac2837490449f26fe570f"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab0c52407f4c9ce2b70031ca647aa697f"><td class="memItemLeft" align="right" valign="top"><a id="ab0c52407f4c9ce2b70031ca647aa697f"></a>
-bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__satellites.html#ab0c52407f4c9ce2b70031ca647aa697f">getOrbitLinesFlag</a> () const</td></tr>
-<tr class="memdesc:ab0c52407f4c9ce2b70031ca647aa697f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the current status of the orbit line rendering flag. <br /></td></tr>
-<tr class="separator:ab0c52407f4c9ce2b70031ca647aa697f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a9e2fc7c81bcabfbfbca7b2bad28a1dd5"><td class="memItemLeft" align="right" valign="top"><a id="a9e2fc7c81bcabfbfbca7b2bad28a1dd5"></a>
 bool&#160;</td><td class="memItemRight" valign="bottom"><b>isAutoAddEnabled</b> () const</td></tr>
 <tr class="separator:a9e2fc7c81bcabfbfbca7b2bad28a1dd5"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -2392,6 +2395,9 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><b>labelsVisible</b></td
 <tr class="memitem:a0acafe3ae29fbdb556574abf144d79d9"><td class="memItemLeft" align="right" valign="top"><a id="a0acafe3ae29fbdb556574abf144d79d9"></a>
 bool&#160;</td><td class="memItemRight" valign="bottom"><b>realisticMode</b></td></tr>
 <tr class="separator:a0acafe3ae29fbdb556574abf144d79d9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a265528d2f792da60328b7540352a3907"><td class="memItemLeft" align="right" valign="top"><a id="a265528d2f792da60328b7540352a3907"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><b>flagOrbitLines</b></td></tr>
+<tr class="separator:a265528d2f792da60328b7540352a3907"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr><td colspan="2"><h3>Updater module</h3></td></tr>
 <tr class="memitem:af66fc89f84fce15712ba639aa9fff997"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__satellites.html#af66fc89f84fce15712ba639aa9fff997">autoAddEnabled</a></td></tr>
 <tr class="memdesc:af66fc89f84fce15712ba639aa9fff997"><td class="mdescLeft">&#160;</td><td class="mdescRight">Flag enabling the automatic addition of new satellites on update.  <a href="#af66fc89f84fce15712ba639aa9fff997">More...</a><br /></td></tr>
@@ -3311,6 +3317,38 @@ Additional Inherited Members</h2></td></tr>
 
 </div>
 </div>
+<a id="a3e94ce60436c89766db6e5735b67df7c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3e94ce60436c89766db6e5735b67df7c">&#9670;&nbsp;</a></span>setFlagOrbitLines</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Satellites::setFlagOrbitLines </td>
+          <td>(</td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>b</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">slot</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Each satellite has its own setting as well, but this can be used to turn on/off all those satellites which elect to have orbit lines all in one go. </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">b</td><td>- true to turn on orbit lines, false to turn off </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
 <a id="a4455710cd482a935c57595a67850478d"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a4455710cd482a935c57595a67850478d">&#9670;&nbsp;</a></span>setIridiumFlaresPredictionDepth</h2>
 
@@ -3369,38 +3407,6 @@ Additional Inherited Members</h2></td></tr>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">size</td><td>the pixel size of the font Emits <a class="el" href="group__satellites.html#ac44a49242b0a5953a8b3fcc11ac18f39" title="Emitted when some of the plugin settings have been changed. ">settingsChanged()</a> if the value changes. </td></tr>
-  </table>
-  </dd>
-</dl>
-
-</div>
-</div>
-<a id="aa1056fd111b5057df70154b8768e1dff"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aa1056fd111b5057df70154b8768e1dff">&#9670;&nbsp;</a></span>setOrbitLinesFlag</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">void Satellites::setOrbitLinesFlag </td>
-          <td>(</td>
-          <td class="paramtype">bool&#160;</td>
-          <td class="paramname"><em>b</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">slot</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-<p>Each satellite has its own setting as well, but this can be used to turn on/off all those satellites which elect to have orbit lines all in one go. </p><dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">b</td><td>- true to turn on orbit lines, false to turn off </td></tr>
   </table>
   </dd>
 </dl>
@@ -3724,7 +3730,7 @@ Additional Inherited Members</h2></td></tr>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Sat Feb 23 2019 21:51:06 for Stellarium by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Sun Mar 24 2019 18:07:50 for Stellarium by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.13
 </small></address>

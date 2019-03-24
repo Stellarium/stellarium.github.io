@@ -21,7 +21,7 @@
   <td id="projectlogo"><img alt="Logo" src="stellarium-logo.png"/></td>
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">Stellarium
-   &#160;<span id="projectnumber">HEAD</span>
+   &#160;<span id="projectnumber">0.19.0</span>
    </div>
   </td>
  </tr>
@@ -259,9 +259,9 @@ void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="clas
 double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classStelCore.html#ac0d34d24ee46218754c3a78116b3326e">getJDOfLastJDUpdate</a> () const</td></tr>
 <tr class="memdesc:ac0d34d24ee46218754c3a78116b3326e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the JD of the last time resetSync() was called. <br /></td></tr>
 <tr class="separator:ac0d34d24ee46218754c3a78116b3326e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab3ea780c232ff341HEAD4abcc24805"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classStelCore.html#ab3ea780c232ff341HEAD4abcc24805">setMilliSecondsOfLastJDUpdate</a> (qint64 millis)</td></tr>
-<tr class="memdesc:ab3ea780c232ff341HEAD4abcc24805"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the system date which corresponds to the jdOfLastJDUpdate.  <a href="#ab3ea780c232ff341HEAD4abcc24805">More...</a><br /></td></tr>
-<tr class="separator:ab3ea780c232ff341HEAD4abcc24805"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab3ea780c232ff3410c18f34abcc24805"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classStelCore.html#ab3ea780c232ff3410c18f34abcc24805">setMilliSecondsOfLastJDUpdate</a> (qint64 millis)</td></tr>
+<tr class="memdesc:ab3ea780c232ff3410c18f34abcc24805"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the system date which corresponds to the jdOfLastJDUpdate.  <a href="#ab3ea780c232ff3410c18f34abcc24805">More...</a><br /></td></tr>
+<tr class="separator:ab3ea780c232ff3410c18f34abcc24805"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a14d5a405e2a54c5347272ac40c301193"><td class="memItemLeft" align="right" valign="top"><a id="a14d5a405e2a54c5347272ac40c301193"></a>
 qint64&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classStelCore.html#a14d5a405e2a54c5347272ac40c301193">getMilliSecondsOfLastJDUpdate</a> () const</td></tr>
 <tr class="memdesc:a14d5a405e2a54c5347272ac40c301193"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the system date of the last time resetSync() was called. <br /></td></tr>
@@ -649,6 +649,14 @@ void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="clas
 void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classStelCore.html#ab1392f517dab13e939b0dadf0aad6007">currentTimeZoneChanged</a> (const QString &amp;tz)</td></tr>
 <tr class="memdesc:ab1392f517dab13e939b0dadf0aad6007"><td class="mdescLeft">&#160;</td><td class="mdescRight">This signal is emitted when the current timezone name is changed. <br /></td></tr>
 <tr class="separator:ab1392f517dab13e939b0dadf0aad6007"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abdea8ec41ff585d8c7a221e45e788c5c"><td class="memItemLeft" align="right" valign="top"><a id="abdea8ec41ff585d8c7a221e45e788c5c"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classStelCore.html#abdea8ec41ff585d8c7a221e45e788c5c">useCustomTimeZoneChanged</a> (const bool b)</td></tr>
+<tr class="memdesc:abdea8ec41ff585d8c7a221e45e788c5c"><td class="mdescLeft">&#160;</td><td class="mdescRight">This signal is emitted when custom timezone use is activated (true) or deactivated (false). <br /></td></tr>
+<tr class="separator:abdea8ec41ff585d8c7a221e45e788c5c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6f07f60b5f1f5bbabc8261526a044133"><td class="memItemLeft" align="right" valign="top"><a id="a6f07f60b5f1f5bbabc8261526a044133"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classStelCore.html#a6f07f60b5f1f5bbabc8261526a044133">flagUseDSTChanged</a> (const bool b)</td></tr>
+<tr class="memdesc:a6f07f60b5f1f5bbabc8261526a044133"><td class="mdescLeft">&#160;</td><td class="mdescRight">This signal is emitted when daylight saving time is enabled or disabled. <br /></td></tr>
+<tr class="separator:a6f07f60b5f1f5bbabc8261526a044133"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a819a8213233be96f43a2a612a0ab3485"><td class="memItemLeft" align="right" valign="top"><a id="a819a8213233be96f43a2a612a0ab3485"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classStelCore.html#a819a8213233be96f43a2a612a0ab3485">timeRateChanged</a> (double rate)</td></tr>
 <tr class="memdesc:a819a8213233be96f43a2a612a0ab3485"><td class="mdescLeft">&#160;</td><td class="mdescRight">This signal is emitted when the time rate has changed. <br /></td></tr>
@@ -1006,6 +1014,12 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><b>flagGravityLabels</b>
 <tr class="memitem:a08838e12b276a2a0d0a729fcb01cf621"><td class="memItemLeft" align="right" valign="top"><a id="a08838e12b276a2a0d0a729fcb01cf621"></a>
 QString&#160;</td><td class="memItemRight" valign="bottom"><b>currentTimeZone</b></td></tr>
 <tr class="separator:a08838e12b276a2a0d0a729fcb01cf621"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7864ada27e83246e6703451a0cb133b0"><td class="memItemLeft" align="right" valign="top"><a id="a7864ada27e83246e6703451a0cb133b0"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><b>flagUseCTZ</b></td></tr>
+<tr class="separator:a7864ada27e83246e6703451a0cb133b0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af25eb4c037a3afb3372e9609261d3bb4"><td class="memItemLeft" align="right" valign="top"><a id="af25eb4c037a3afb3372e9609261d3bb4"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><b>flagUseDST</b></td></tr>
+<tr class="separator:af25eb4c037a3afb3372e9609261d3bb4"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>This class provides services like management of sky projections, tone conversion, or reference frame conversion. It is used by the various StelModules to update and display themselves. There is currently only one <a class="el" href="classStelCore.html" title="Main class for Stellarium core processing. ">StelCore</a> instance in Stellarium, but in the future they may be more, allowing for example to display several independent views of the sky at the same time. </p><dl class="section author"><dt>Author</dt><dd>Fabien Chereau, Matthew Gates, Georg Zotti </dd></dl>
@@ -2213,8 +2227,8 @@ Up to V0.15.1, if the requested year was outside validity range, we returned zer
 
 </div>
 </div>
-<a id="ab3ea780c232ff341HEAD4abcc24805"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ab3ea780c232ff341HEAD4abcc24805">&#9670;&nbsp;</a></span>setMilliSecondsOfLastJDUpdate</h2>
+<a id="ab3ea780c232ff3410c18f34abcc24805"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab3ea780c232ff3410c18f34abcc24805">&#9670;&nbsp;</a></span>setMilliSecondsOfLastJDUpdate</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -2290,7 +2304,7 @@ Up to V0.15.1, if the requested year was outside validity range, we returned zer
   </tr>
 </table>
 </div><div class="memdoc">
-<p>Argument will be clamped to be inside [-50...50] An offset of 50 percent means projective image center is on the right screen border Animation is available via <a class="el" href="classStelMovementMgr.html#a10f347f1cd12a4a319918fdbae90a730" title="start animated move of the viewport offset. ">StelMovementMgr::moveViewport()</a> </p>
+<p>Argument will be clamped to be inside [-50...50] An offset of 50 percent means projective image center is on the right screen border Animation is available via <a class="el" href="classStelMovementMgr.html#a10f347f1cd12a4a319918fdbae90a730" title="set or start animated move of the viewport offset. ">StelMovementMgr::moveViewport()</a> </p>
 
 </div>
 </div>
@@ -2350,7 +2364,7 @@ Up to V0.15.1, if the requested year was outside validity range, we returned zer
   </tr>
 </table>
 </div><div class="memdoc">
-<p>Argument will be clamped to be inside [-50...50] An offset of 50 percent means projective image center is on the upper screen border Setting to a negative value will move the visible horizon down, this may be desired esp. in cylindrical projection. Animation is available via <a class="el" href="classStelMovementMgr.html#a10f347f1cd12a4a319918fdbae90a730" title="start animated move of the viewport offset. ">StelMovementMgr::moveViewport()</a> </p>
+<p>Argument will be clamped to be inside [-50...50] An offset of 50 percent means projective image center is on the upper screen border Setting to a negative value will move the visible horizon down, this may be desired esp. in cylindrical projection. Animation is available via <a class="el" href="classStelMovementMgr.html#a10f347f1cd12a4a319918fdbae90a730" title="set or start animated move of the viewport offset. ">StelMovementMgr::moveViewport()</a> </p>
 
 </div>
 </div>
@@ -2513,7 +2527,7 @@ Up to V0.15.1, if the requested year was outside validity range, we returned zer
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Sat Feb 23 2019 21:51:07 for Stellarium by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Sun Mar 24 2019 18:07:51 for Stellarium by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.13
 </small></address>

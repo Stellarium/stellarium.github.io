@@ -2,8 +2,8 @@
 title: List of largest known stars
 author: Alexander Wolf
 license: Public Domain
-compat: 0.10+
-version: 1.0
+compat: 0.19+
+version: 1.1
 script_url: https://raw.githubusercontent.com/Stellarium/stellarium/master/scripts/largest_known_stars.ssc
 image_url: http://astro.altspu.ru/~aw/stellarium/thumbs/largest_known_stars.jpg
 categories: repository

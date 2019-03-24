@@ -2,8 +2,8 @@
 title: Jupiter and triple shadow phenomena
 author: Alexander Wolf
 license: Public Domain
-compat: 0.18.2+
-version: 1.0
+compat: 0.19+
+version: 1.1
 script_url: https://raw.githubusercontent.com/Stellarium/stellarium/master/scripts/morsels_1.ssc
 image_url: /img/scripts/morsels-01.jpg
 categories: repository

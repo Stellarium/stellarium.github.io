@@ -21,7 +21,7 @@
   <td id="projectlogo"><img alt="Logo" src="stellarium-logo.png"/></td>
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">Stellarium
-   &#160;<span id="projectnumber">HEAD</span>
+   &#160;<span id="projectnumber">0.19.0</span>
    </div>
   </td>
  </tr>
@@ -284,12 +284,6 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="clas
 void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classLandscapeMgr.html#a58940cccdd107671138daf8b1e5a7abf">setFlagEnvironmentAutoEnable</a> (bool b)</td></tr>
 <tr class="memdesc:a58940cccdd107671138daf8b1e5a7abf"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set flag for auto-enable atmosphere and landscape for planets with atmospheres in location window. <br /></td></tr>
 <tr class="separator:a58940cccdd107671138daf8b1e5a7abf"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a66cf00a0b799ef051582ac88e400d6f6"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classLandscapeMgr.html#a66cf00a0b799ef051582ac88e400d6f6">getFlagAtmosphereAutoEnable</a> () const</td></tr>
-<tr class="memdesc:a66cf00a0b799ef051582ac88e400d6f6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get flag for auto-enable of atmospheres for planets.  <a href="#a66cf00a0b799ef051582ac88e400d6f6">More...</a><br /></td></tr>
-<tr class="separator:a66cf00a0b799ef051582ac88e400d6f6"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aa6cdb2c723feee3c6928081b180fe87a"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classLandscapeMgr.html#aa6cdb2c723feee3c6928081b180fe87a">setFlagAtmosphereAutoEnable</a> (bool b)</td></tr>
-<tr class="memdesc:aa6cdb2c723feee3c6928081b180fe87a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set flag for auto-enable atmosphere for planets with atmospheres in location window.  <a href="#aa6cdb2c723feee3c6928081b180fe87a">More...</a><br /></td></tr>
-<tr class="separator:aa6cdb2c723feee3c6928081b180fe87a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:acdddf1b5035cc7b7cd1c4b0bda1b85ce"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classLandscapeMgr.html#acdddf1b5035cc7b7cd1c4b0bda1b85ce">getLandscapeOpacity</a> (<a class="el" href="classVector3.html">Vec3d</a> azalt) const</td></tr>
 <tr class="memdesc:acdddf1b5035cc7b7cd1c4b0bda1b85ce"><td class="mdescLeft">&#160;</td><td class="mdescRight">Forward opacity query to current landscape.  <a href="#acdddf1b5035cc7b7cd1c4b0bda1b85ce">More...</a><br /></td></tr>
 <tr class="separator:acdddf1b5035cc7b7cd1c4b0bda1b85ce"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -515,7 +509,7 @@ Additional Inherited Members</h2></td></tr>
 <tr class="separator:acc51b40ad88636ba5e48e6f29a49505b inherit pro_methods_classStelModule"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><p>This includes landscape textures, fog, atmosphere and cardinal points. I decided to put all these elements together in a single class because they are inherently linked, especially when we start moving the observer in altitude. </p><dl class="section note"><dt>Note</dt><dd>The Bortle scale index setting was removed from this class, because it was duplicated from <a class="el" href="classStelSkyDrawer.html" title="Provide a set of methods used to draw sky objects taking into account eyes adaptation, zoom level, instrument model and artificially set magnitude limits. ">StelSkyDrawer</a>, complicating code that changes it. It is now only in <a class="el" href="classStelSkyDrawer.html" title="Provide a set of methods used to draw sky objects taking into account eyes adaptation, zoom level, instrument model and artificially set magnitude limits. ">StelSkyDrawer</a> and can be accessed with <a class="el" href="classStelSkyDrawer.html#aee4cc450b20c1eb1a0fdcb7101921a03">getBortleScaleIndex </a> and <a class="el" href="classStelSkyDrawer.html#a45f6dc32af8d32de8ceda691f13ca53d">setBortleScaleIndex </a>. Slots setAtmosphereBortleLightPollution and getAtmosphereBortleLightPollution in this class have been removed/made private. If script access is desired, use <a class="el" href="classStelMainScriptAPI.html#a8ad7e93a58cfcc1d60e85516f16dea9a">StelMainScriptAPI::get </a>/<a class="el" href="classStelMainScriptAPI.html#abf481a95571d3d12c25f99b3a709f8e4">setBortleScaleIndex </a> </dd></dl>
+<div class="textblock"><p>This includes landscape textures, fog, atmosphere and cardinal points. I decided to put all these elements together in a single class because they are inherently linked, especially when we start moving the observer in altitude. </p><dl class="section note"><dt>Note</dt><dd>The Bortle scale index setting was removed from this class, because it was duplicated from <a class="el" href="classStelSkyDrawer.html" title="Provide a set of methods used to draw sky objects taking into account eyes adaptation, zoom level, instrument model and artificially set magnitude limits. ">StelSkyDrawer</a>, complicating code that changes it. It is now only in <a class="el" href="classStelSkyDrawer.html" title="Provide a set of methods used to draw sky objects taking into account eyes adaptation, zoom level, instrument model and artificially set magnitude limits. ">StelSkyDrawer</a> and can be accessed with <a class="el" href="classStelSkyDrawer.html#aee4cc450b20c1eb1a0fdcb7101921a03">getBortleScaleIndex </a> and <a class="el" href="classStelSkyDrawer.html#a45f6dc32af8d32de8ceda691f13ca53d">setBortleScaleIndex </a>. Slots setAtmosphereBortleLightPollution and getAtmosphereBortleLightPollution in this class have been removed/made private. If script access is desired, use <a class="el" href="classStelMainScriptAPI.html#a9b943774d7b36dad83025b195898d524">StelMainScriptAPI::get </a>/<a class="el" href="classStelMainScriptAPI.html#a035523cd6e1a51d779594657092de03c">setBortleScaleIndex </a> </dd></dl>
 </div><h2 class="groupheader">Member Function Documentation</h2>
 <a id="aeecc72b67d6005cd5cc3a6669d829780"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#aeecc72b67d6005cd5cc3a6669d829780">&#9670;&nbsp;</a></span>createFromFile()</h2>
@@ -831,33 +825,6 @@ Additional Inherited Members</h2></td></tr>
   </table>
   </dd>
 </dl>
-
-</div>
-</div>
-<a id="a66cf00a0b799ef051582ac88e400d6f6"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a66cf00a0b799ef051582ac88e400d6f6">&#9670;&nbsp;</a></span>getFlagAtmosphereAutoEnable</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">bool LandscapeMgr::getFlagAtmosphereAutoEnable </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td> const</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">slot</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-<dl class="section note"><dt>Note</dt><dd>this function is enabled for backward compatibility </dd></dl>
-<dl class="deprecated"><dt><b><a class="el" href="deprecated.html#_deprecated000003">Deprecated:</a></b></dt><dd></dd></dl>
 
 </div>
 </div>
@@ -1454,34 +1421,6 @@ Additional Inherited Members</h2></td></tr>
 
 </div>
 </div>
-<a id="aa6cdb2c723feee3c6928081b180fe87a"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aa6cdb2c723feee3c6928081b180fe87a">&#9670;&nbsp;</a></span>setFlagAtmosphereAutoEnable</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">void LandscapeMgr::setFlagAtmosphereAutoEnable </td>
-          <td>(</td>
-          <td class="paramtype">bool&#160;</td>
-          <td class="paramname"><em>b</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">slot</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-<dl class="section note"><dt>Note</dt><dd>this function is enabled for backward compatibility </dd></dl>
-<dl class="deprecated"><dt><b><a class="el" href="deprecated.html#_deprecated000004">Deprecated:</a></b></dt><dd></dd></dl>
-
-</div>
-</div>
 <a id="acf8ed76c3c54942450c7af185a451fca"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#acf8ed76c3c54942450c7af185a451fca">&#9670;&nbsp;</a></span>setZRotation</h2>
 
@@ -1551,7 +1490,7 @@ Additional Inherited Members</h2></td></tr>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Mon Jan 14 2019 02:15:34 for Stellarium by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Sun Mar 24 2019 18:07:51 for Stellarium by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.13
 </small></address>

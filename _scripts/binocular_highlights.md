@@ -2,8 +2,8 @@
 title: Binocular Highlights
 author: Alexander Wolf
 license: Public Domain
-compat: 0.13+
-version: 1.0
+compat: 0.19+
+version: 1.1
 script_url: https://raw.githubusercontent.com/Stellarium/stellarium/master/scripts/binocular_highlights.ssc
 image_url: http://astro.altspu.ru/~aw/stellarium/thumbs/binocular_highlights.jpg
 categories: repository

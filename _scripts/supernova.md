@@ -2,8 +2,8 @@
 title: Tycho's Supernova
 author: Alexander Wolf
 license: Public Domain
-compat: 0.11+
-version: 1.1
+compat: 0.19+
+version: 1.2
 script_url: https://raw.githubusercontent.com/Stellarium/stellarium/master/scripts/supernova.ssc
 image_url: /img/scripts/stellarium-script-23.jpg
 categories: repository

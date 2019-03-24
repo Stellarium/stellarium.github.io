@@ -21,7 +21,7 @@
   <td id="projectlogo"><img alt="Logo" src="stellarium-logo.png"/></td>
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">Stellarium
-   &#160;<span id="projectnumber">HEAD</span>
+   &#160;<span id="projectnumber">0.19.0</span>
    </div>
   </td>
  </tr>
@@ -59,12 +59,24 @@ $(function() {
 Public Slots</h2></td></tr>
 <tr class="memitem:a711cc81f4ccf442ba000ec24e2600a4b"><td class="memItemLeft" align="right" valign="top"><a id="a711cc81f4ccf442ba000ec24e2600a4b"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classGridLinesMgr.html#a711cc81f4ccf442ba000ec24e2600a4b">setFlagGridlines</a> (const bool displayed)</td></tr>
-<tr class="memdesc:a711cc81f4ccf442ba000ec24e2600a4b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Setter ("HEAD switch") for displaying any grid/line. <br /></td></tr>
+<tr class="memdesc:a711cc81f4ccf442ba000ec24e2600a4b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Setter ("master switch") for displaying any grid/line. <br /></td></tr>
 <tr class="separator:a711cc81f4ccf442ba000ec24e2600a4b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a59e066a25e48524bb4d45181fce6ef64"><td class="memItemLeft" align="right" valign="top"><a id="a59e066a25e48524bb4d45181fce6ef64"></a>
 bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classGridLinesMgr.html#a59e066a25e48524bb4d45181fce6ef64">getFlagGridlines</a> (void) const</td></tr>
-<tr class="memdesc:a59e066a25e48524bb4d45181fce6ef64"><td class="mdescLeft">&#160;</td><td class="mdescRight">Accessor ("HEAD switch") for displaying any grid/line. <br /></td></tr>
+<tr class="memdesc:a59e066a25e48524bb4d45181fce6ef64"><td class="mdescLeft">&#160;</td><td class="mdescRight">Accessor ("master switch") for displaying any grid/line. <br /></td></tr>
 <tr class="separator:a59e066a25e48524bb4d45181fce6ef64"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa008d14c1159c51f2f49db76c65f4769"><td class="memItemLeft" align="right" valign="top"><a id="aa008d14c1159c51f2f49db76c65f4769"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classGridLinesMgr.html#aa008d14c1159c51f2f49db76c65f4769">setFlagAllGrids</a> (const bool displayed)</td></tr>
+<tr class="memdesc:aa008d14c1159c51f2f49db76c65f4769"><td class="mdescLeft">&#160;</td><td class="mdescRight">Setter ("master switch by type") for displaying all grids. <br /></td></tr>
+<tr class="separator:aa008d14c1159c51f2f49db76c65f4769"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0bbdb4550186c52b3f37d35a37a974eb"><td class="memItemLeft" align="right" valign="top"><a id="a0bbdb4550186c52b3f37d35a37a974eb"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classGridLinesMgr.html#a0bbdb4550186c52b3f37d35a37a974eb">setFlagAllLines</a> (const bool displayed)</td></tr>
+<tr class="memdesc:a0bbdb4550186c52b3f37d35a37a974eb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Setter ("master switch by type") for displaying all lines. <br /></td></tr>
+<tr class="separator:a0bbdb4550186c52b3f37d35a37a974eb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a19b64c0b45746474f77f200c435de272"><td class="memItemLeft" align="right" valign="top"><a id="a19b64c0b45746474f77f200c435de272"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classGridLinesMgr.html#a19b64c0b45746474f77f200c435de272">setFlagAllPoints</a> (const bool displayed)</td></tr>
+<tr class="memdesc:a19b64c0b45746474f77f200c435de272"><td class="mdescLeft">&#160;</td><td class="mdescRight">Setter ("master switch by type") for displaying all points. <br /></td></tr>
+<tr class="separator:a19b64c0b45746474f77f200c435de272"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab3c2f51db399a5d1ae3acf3cee775841"><td class="memItemLeft" align="right" valign="top"><a id="ab3c2f51db399a5d1ae3acf3cee775841"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classGridLinesMgr.html#ab3c2f51db399a5d1ae3acf3cee775841">setFlagAzimuthalGrid</a> (const bool displayed)</td></tr>
 <tr class="memdesc:ab3c2f51db399a5d1ae3acf3cee775841"><td class="mdescLeft">&#160;</td><td class="mdescRight">Setter for displaying Azimuthal Grid. <br /></td></tr>
@@ -294,14 +306,10 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="clas
 void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classGridLinesMgr.html#a9ecf9e5a266cd5506ab9234ed68269e3">setFlagGalacticEquatorLine</a> (const bool displayed)</td></tr>
 <tr class="memdesc:a9ecf9e5a266cd5506ab9234ed68269e3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Setter for displaying Galactic Equator <a class="el" href="classLine.html" title="A simple line class, identified by a point and a direction vector. ">Line</a>. <br /></td></tr>
 <tr class="separator:a9ecf9e5a266cd5506ab9234ed68269e3"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a6b511382e4f52a2ca219997fcc17150e"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classGridLinesMgr.html#a6b511382e4f52a2ca219997fcc17150e">setFlagGalacticPlaneLine</a> (const bool displayed)</td></tr>
-<tr class="separator:a6b511382e4f52a2ca219997fcc17150e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a0e4e4637d03ce19a74886e784bbead0c"><td class="memItemLeft" align="right" valign="top"><a id="a0e4e4637d03ce19a74886e784bbead0c"></a>
 bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classGridLinesMgr.html#a0e4e4637d03ce19a74886e784bbead0c">getFlagGalacticEquatorLine</a> (void) const</td></tr>
 <tr class="memdesc:a0e4e4637d03ce19a74886e784bbead0c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Accessor for displaying Galactic Equator <a class="el" href="classLine.html" title="A simple line class, identified by a point and a direction vector. ">Line</a>. <br /></td></tr>
 <tr class="separator:a0e4e4637d03ce19a74886e784bbead0c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a15ef19fedde01fa5b9226cdaa981c614"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classGridLinesMgr.html#a15ef19fedde01fa5b9226cdaa981c614">getFlagGalacticPlaneLine</a> (void) const</td></tr>
-<tr class="separator:a15ef19fedde01fa5b9226cdaa981c614"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a0023a9be80556b9a6a9e7c9b95baab76"><td class="memItemLeft" align="right" valign="top"><a id="a0023a9be80556b9a6a9e7c9b95baab76"></a>
 <a class="el" href="classVector3.html">Vec3f</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classGridLinesMgr.html#a0023a9be80556b9a6a9e7c9b95baab76">getColorGalacticEquatorLine</a> (void) const</td></tr>
 <tr class="memdesc:a0023a9be80556b9a6a9e7c9b95baab76"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the current color of the Galactic Equator <a class="el" href="classLine.html" title="A simple line class, identified by a point and a direction vector. ">Line</a>. <br /></td></tr>
@@ -1056,34 +1064,6 @@ Additional Inherited Members</h2></td></tr>
 <p>Draws the Equatorial Grids, Ecliptical Grids, Azimuthal Grid, Meridian <a class="el" href="classLine.html" title="A simple line class, identified by a point and a direction vector. ">Line</a>, Equator <a class="el" href="classLine.html" title="A simple line class, identified by a point and a direction vector. ">Line</a>, Ecliptic Lines, Precession Circles, Conjunction-Opposition <a class="el" href="classLine.html" title="A simple line class, identified by a point and a direction vector. ">Line</a>, east-west vertical and colures according to the various flags which control their visibility. </p>
 
 <p>Reimplemented from <a class="el" href="classStelModule.html#a18fde2820af998395aea9e30bb1138b2">StelModule</a>.</p>
-
-</div>
-</div>
-<a id="a15ef19fedde01fa5b9226cdaa981c614"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a15ef19fedde01fa5b9226cdaa981c614">&#9670;&nbsp;</a></span>getFlagGalacticPlaneLine</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">bool GridLinesMgr::getFlagGalacticPlaneLine </td>
-          <td>(</td>
-          <td class="paramtype">void&#160;</td>
-          <td class="paramname"></td><td>)</td>
-          <td> const</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">slot</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-<dl class="deprecated"><dt><b><a class="el" href="deprecated.html#_deprecated000002">Deprecated:</a></b></dt><dd>Accessor for displaying Galactic "Plane" (i.e., Equator) <a class="el" href="classLine.html" title="A simple line class, identified by a point and a direction vector. ">Line</a>.</dd></dl>
-<p>Left here for compatibility with older scripts. </p><dl class="section note"><dt>Note</dt><dd>will be deleted in version 0.14 </dd></dl>
 
 </div>
 </div>
@@ -2139,34 +2119,6 @@ Additional Inherited Members</h2></td></tr>
 
 </div>
 </div>
-<a id="a6b511382e4f52a2ca219997fcc17150e"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a6b511382e4f52a2ca219997fcc17150e">&#9670;&nbsp;</a></span>setFlagGalacticPlaneLine</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">void GridLinesMgr::setFlagGalacticPlaneLine </td>
-          <td>(</td>
-          <td class="paramtype">const bool&#160;</td>
-          <td class="paramname"><em>displayed</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">slot</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-<dl class="deprecated"><dt><b><a class="el" href="deprecated.html#_deprecated000001">Deprecated:</a></b></dt><dd>Setter for displaying Galactic "Plane" (i.e., Equator) <a class="el" href="classLine.html" title="A simple line class, identified by a point and a direction vector. ">Line</a>.</dd></dl>
-<p>Left here for compatibility with older scripts. </p><dl class="section note"><dt>Note</dt><dd>will be deleted in version 0.14 </dd></dl>
-
-</div>
-</div>
 <a id="aa587c55fb7afca8a71c8991bcb97f557"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#aa587c55fb7afca8a71c8991bcb97f557">&#9670;&nbsp;</a></span>update()</h2>
 
@@ -2199,7 +2151,7 @@ Additional Inherited Members</h2></td></tr>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Mon Jan 14 2019 02:15:34 for Stellarium by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Sun Mar 24 2019 18:07:51 for Stellarium by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.13
 </small></address>
