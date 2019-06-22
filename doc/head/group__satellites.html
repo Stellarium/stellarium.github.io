@@ -21,7 +21,7 @@
   <td id="projectlogo"><img alt="Logo" src="stellarium-logo.png"/></td>
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">Stellarium
-   &#160;<span id="projectnumber">0.19.0</span>
+   &#160;<span id="projectnumber">0.19.1</span>
    </div>
   </td>
  </tr>
@@ -399,6 +399,10 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><b>operator&gt;=</b> (<a
 <tr class="memitem:aa661b738a14231c9243fee67517ade36"><td class="memItemLeft" align="right" valign="top"><a id="aa661b738a14231c9243fee67517ade36"></a>
 double&#160;</td><td class="memItemRight" valign="bottom"><b>getPhaseAngle</b> () const</td></tr>
 <tr class="separator:aa661b738a14231c9243fee67517ade36"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3c84a8228739b94222023ccfa791194f"><td class="memItemLeft" align="right" valign="top"><a id="a3c84a8228739b94222023ccfa791194f"></a>
+double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__satellites.html#a3c84a8228739b94222023ccfa791194f">getOrbitalPeriod</a> () const</td></tr>
+<tr class="memdesc:a3c84a8228739b94222023ccfa791194f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get orbital period in minutes. <br /></td></tr>
+<tr class="separator:a3c84a8228739b94222023ccfa791194f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr><td colspan="2"><h3>Static Public Member Functions</h3></td></tr>
 <tr class="memitem:aee866c17da385514af82f3a156a5ba08"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="classVector3.html">Vec3d</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__satellites.html#aee866c17da385514af82f3a156a5ba08">getSunECIPos</a> ()</td></tr>
 <tr class="memdesc:aee866c17da385514af82f3a156a5ba08"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get Sun positions in ECI system.  <a href="#aee866c17da385514af82f3a156a5ba08">More...</a><br /></td></tr>
@@ -1300,6 +1304,9 @@ int&#160;</td><td class="memItemRight" valign="bottom"><b>columnCount</b> (const
 <tr class="memitem:ad9f5fe56d22b0a5f84cd8fb9cd172a0d"><td class="memItemLeft" align="right" valign="top"><a id="ad9f5fe56d22b0a5f84cd8fb9cd172a0d"></a>
 int&#160;</td><td class="memItemRight" valign="bottom"><b>getErrorCode</b> () const</td></tr>
 <tr class="separator:ad9f5fe56d22b0a5f84cd8fb9cd172a0d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6c86919de98644969534d0aa5cdd4443"><td class="memItemLeft" align="right" valign="top"><a id="a6c86919de98644969534d0aa5cdd4443"></a>
+double&#160;</td><td class="memItemRight" valign="bottom"><b>getPeriod</b> () const</td></tr>
+<tr class="separator:a6c86919de98644969534d0aa5cdd4443"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h4 class="groupheader">Constructor &amp; Destructor Documentation</h4>
 <a id="afe8733854e2774cec160e876d5977499"></a>
@@ -1707,6 +1714,10 @@ QString&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="g
 <tr class="memitem:a1dd85ec84c4501812cf22bd4b5283d23 inherit pub_methods_classStelObject"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classVector3.html">Vec3d</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classStelObject.html#a1dd85ec84c4501812cf22bd4b5283d23">getAltAzPosAuto</a> (const <a class="el" href="classStelCore.html">StelCore</a> *core) const</td></tr>
 <tr class="memdesc:a1dd85ec84c4501812cf22bd4b5283d23 inherit pub_methods_classStelObject"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get observer-centered alt/az position It is the automatic position, i.e.  <a href="classStelObject.html#a1dd85ec84c4501812cf22bd4b5283d23">More...</a><br /></td></tr>
 <tr class="separator:a1dd85ec84c4501812cf22bd4b5283d23 inherit pub_methods_classStelObject"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a95f50d2cb85e160e274453c1b8ad642d inherit pub_methods_classStelObject"><td class="memItemLeft" align="right" valign="top"><a id="a95f50d2cb85e160e274453c1b8ad642d"></a>
+float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classStelObject.html#a95f50d2cb85e160e274453c1b8ad642d">getParallacticAngle</a> (const <a class="el" href="classStelCore.html">StelCore</a> *core) const</td></tr>
+<tr class="memdesc:a95f50d2cb85e160e274453c1b8ad642d inherit pub_methods_classStelObject"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get parallactic angle, which is the deviation between zenith angle and north angle. [radians]. <br /></td></tr>
+<tr class="separator:a95f50d2cb85e160e274453c1b8ad642d inherit pub_methods_classStelObject"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a4898ae60a9dc80d361747314fe65854a inherit pub_methods_classStelObject"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classStelObject.html#a4898ae60a9dc80d361747314fe65854a">isAboveHorizon</a> (const <a class="el" href="classStelCore.html">StelCore</a> *core) const</td></tr>
 <tr class="memdesc:a4898ae60a9dc80d361747314fe65854a inherit pub_methods_classStelObject"><td class="mdescLeft">&#160;</td><td class="mdescRight">Checking position an object above mathematical horizon for current location.  <a href="classStelObject.html#a4898ae60a9dc80d361747314fe65854a">More...</a><br /></td></tr>
 <tr class="separator:a4898ae60a9dc80d361747314fe65854a inherit pub_methods_classStelObject"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -3730,7 +3741,7 @@ Additional Inherited Members</h2></td></tr>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Sun Mar 24 2019 18:07:50 for Stellarium by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Sat Jun 22 2019 15:34:30 for Stellarium by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.13
 </small></address>

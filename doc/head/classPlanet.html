@@ -21,7 +21,7 @@
   <td id="projectlogo"><img alt="Logo" src="stellarium-logo.png"/></td>
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">Stellarium
-   &#160;<span id="projectnumber">0.19.0</span>
+   &#160;<span id="projectnumber">0.19.1</span>
    </div>
   </td>
  </tr>
@@ -138,9 +138,9 @@ Public Types</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:aaeea0bbade489b64a6f2206045decb6f"><td class="memItemLeft" align="right" valign="top"><a id="aaeea0bbade489b64a6f2206045decb6f"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><b>Planet</b> (const QString &amp;englishName, double radius, double oblateness, <a class="el" href="classVector3.html">Vec3f</a> halocolor, float albedo, float roughness, const QString &amp;texMapName, const QString &amp;normalMapName, const QString &amp;objModelName, posFuncType _coordFunc, void *anOrbitPtr, OsculatingFunctType *osculatingFunc, bool closeOrbit, bool hidden, bool hasAtmosphere, bool hasHalo, const QString &amp;pTypeStr)</td></tr>
-<tr class="separator:aaeea0bbade489b64a6f2206045decb6f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a25a49124b430ab879798d7c8ad48db69"><td class="memItemLeft" align="right" valign="top"><a id="a25a49124b430ab879798d7c8ad48db69"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><b>Planet</b> (const QString &amp;englishName, double equatorialRadius, double oblateness, <a class="el" href="classVector3.html">Vec3f</a> halocolor, float albedo, float roughness, const QString &amp;texMapName, const QString &amp;normalMapName, const QString &amp;objModelName, posFuncType _coordFunc, void *anOrbitPtr, OsculatingFunctType *osculatingFunc, bool closeOrbit, bool hidden, bool hasAtmosphere, bool hasHalo, const QString &amp;pTypeStr)</td></tr>
+<tr class="separator:a25a49124b430ab879798d7c8ad48db69"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af8fab3571b5a60e143fe1d322a040a0e"><td class="memItemLeft" align="right" valign="top">virtual QString&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPlanet.html#af8fab3571b5a60e143fe1d322a040a0e">getInfoString</a> (const <a class="el" href="classStelCore.html">StelCore</a> *core, const InfoStringGroup &amp;flags) const</td></tr>
 <tr class="memdesc:af8fab3571b5a60e143fe1d322a040a0e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get a string with data about the <a class="el" href="classPlanet.html">Planet</a>.  <a href="#af8fab3571b5a60e143fe1d322a040a0e">More...</a><br /></td></tr>
 <tr class="separator:af8fab3571b5a60e143fe1d322a040a0e"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -214,13 +214,16 @@ float&#160;</td><td class="memItemRight" valign="bottom"><b>getAxisRotation</b> 
 <tr class="memitem:ab0fb37c89bba0844810ab3dd4413c794"><td class="memItemLeft" align="right" valign="top"><a id="ab0fb37c89bba0844810ab3dd4413c794"></a>
 virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>draw</b> (<a class="el" href="classStelCore.html">StelCore</a> *core, float maxMagLabels, const QFont &amp;planetNameFont)</td></tr>
 <tr class="separator:ab0fb37c89bba0844810ab3dd4413c794"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a88badbb4992efa9510343f9ed2d90d79"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPlanet.html#a88badbb4992efa9510343f9ed2d90d79">getRadius</a> (void) const</td></tr>
-<tr class="memdesc:a88badbb4992efa9510343f9ed2d90d79"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the equator radius of the planet in AU.  <a href="#a88badbb4992efa9510343f9ed2d90d79">More...</a><br /></td></tr>
-<tr class="separator:a88badbb4992efa9510343f9ed2d90d79"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a623d0e7ef3510b09fda4704ca3e98d73"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPlanet.html#a623d0e7ef3510b09fda4704ca3e98d73">getEquatorialRadius</a> (void) const</td></tr>
+<tr class="memdesc:a623d0e7ef3510b09fda4704ca3e98d73"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the equator radius of the planet in AU.  <a href="#a623d0e7ef3510b09fda4704ca3e98d73">More...</a><br /></td></tr>
+<tr class="separator:a623d0e7ef3510b09fda4704ca3e98d73"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a81d661821c5b3a95e4202bb56854de9b"><td class="memItemLeft" align="right" valign="top"><a id="a81d661821c5b3a95e4202bb56854de9b"></a>
 double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPlanet.html#a81d661821c5b3a95e4202bb56854de9b">getOneMinusOblateness</a> (void) const</td></tr>
 <tr class="memdesc:a81d661821c5b3a95e4202bb56854de9b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the value (1-f) for oblateness f. <br /></td></tr>
 <tr class="separator:a81d661821c5b3a95e4202bb56854de9b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af293495ebe7011d280839a5578a173a9"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPlanet.html#af293495ebe7011d280839a5578a173a9">getPolarRadius</a> (void) const</td></tr>
+<tr class="memdesc:af293495ebe7011d280839a5578a173a9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the polar radius of the planet in AU.  <a href="#af293495ebe7011d280839a5578a173a9">More...</a><br /></td></tr>
+<tr class="separator:af293495ebe7011d280839a5578a173a9"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a9b19077f207fc93ba780524403df1008"><td class="memItemLeft" align="right" valign="top"><a id="a9b19077f207fc93ba780524403df1008"></a>
 double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPlanet.html#a9b19077f207fc93ba780524403df1008">getSiderealDay</a> (void) const</td></tr>
 <tr class="memdesc:a9b19077f207fc93ba780524403df1008"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get duration of sidereal day. <br /></td></tr>
@@ -431,6 +434,10 @@ QVector&lt; const <a class="el" href="classPlanet.html">Planet</a> * &gt;&#160;<
 <tr class="memitem:a1dd85ec84c4501812cf22bd4b5283d23 inherit pub_methods_classStelObject"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classVector3.html">Vec3d</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classStelObject.html#a1dd85ec84c4501812cf22bd4b5283d23">getAltAzPosAuto</a> (const <a class="el" href="classStelCore.html">StelCore</a> *core) const</td></tr>
 <tr class="memdesc:a1dd85ec84c4501812cf22bd4b5283d23 inherit pub_methods_classStelObject"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get observer-centered alt/az position It is the automatic position, i.e.  <a href="classStelObject.html#a1dd85ec84c4501812cf22bd4b5283d23">More...</a><br /></td></tr>
 <tr class="separator:a1dd85ec84c4501812cf22bd4b5283d23 inherit pub_methods_classStelObject"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a95f50d2cb85e160e274453c1b8ad642d inherit pub_methods_classStelObject"><td class="memItemLeft" align="right" valign="top"><a id="a95f50d2cb85e160e274453c1b8ad642d"></a>
+float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classStelObject.html#a95f50d2cb85e160e274453c1b8ad642d">getParallacticAngle</a> (const <a class="el" href="classStelCore.html">StelCore</a> *core) const</td></tr>
+<tr class="memdesc:a95f50d2cb85e160e274453c1b8ad642d inherit pub_methods_classStelObject"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get parallactic angle, which is the deviation between zenith angle and north angle. [radians]. <br /></td></tr>
+<tr class="separator:a95f50d2cb85e160e274453c1b8ad642d inherit pub_methods_classStelObject"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a4898ae60a9dc80d361747314fe65854a inherit pub_methods_classStelObject"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classStelObject.html#a4898ae60a9dc80d361747314fe65854a">isAboveHorizon</a> (const <a class="el" href="classStelCore.html">StelCore</a> *core) const</td></tr>
 <tr class="memdesc:a4898ae60a9dc80d361747314fe65854a inherit pub_methods_classStelObject"><td class="mdescLeft">&#160;</td><td class="mdescRight">Checking position an object above mathematical horizon for current location.  <a href="classStelObject.html#a4898ae60a9dc80d361747314fe65854a">More...</a><br /></td></tr>
 <tr class="separator:a4898ae60a9dc80d361747314fe65854a inherit pub_methods_classStelObject"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -770,9 +777,9 @@ QString&#160;</td><td class="memItemRight" valign="bottom"><b>normalMapName</b><
 <tr class="memitem:ab85d02f8510a69457f8ec65e43fcf8a4"><td class="memItemLeft" align="right" valign="top"><a id="ab85d02f8510a69457f8ec65e43fcf8a4"></a>
 <a class="el" href="classRotationElements.html">RotationElements</a>&#160;</td><td class="memItemRight" valign="bottom"><b>re</b></td></tr>
 <tr class="separator:ab85d02f8510a69457f8ec65e43fcf8a4"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a51ed15cdc715084c8a098e9d9586caa4"><td class="memItemLeft" align="right" valign="top"><a id="a51ed15cdc715084c8a098e9d9586caa4"></a>
-double&#160;</td><td class="memItemRight" valign="bottom"><b>radius</b></td></tr>
-<tr class="separator:a51ed15cdc715084c8a098e9d9586caa4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4b8a6a1aafb97bb2094cc5024200a4df"><td class="memItemLeft" align="right" valign="top"><a id="a4b8a6a1aafb97bb2094cc5024200a4df"></a>
+double&#160;</td><td class="memItemRight" valign="bottom"><b>equatorialRadius</b></td></tr>
+<tr class="separator:a4b8a6a1aafb97bb2094cc5024200a4df"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a47bda10f2607b504daf782d274a7991a"><td class="memItemLeft" align="right" valign="top"><a id="a47bda10f2607b504daf782d274a7991a"></a>
 double&#160;</td><td class="memItemRight" valign="bottom"><b>oneMinusOblateness</b></td></tr>
 <tr class="separator:a47bda10f2607b504daf782d274a7991a"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -977,6 +984,33 @@ class&#160;</td><td class="memItemRight" valign="bottom"><b>SolarSystem</b></td>
 
 </div>
 </div>
+<a id="a623d0e7ef3510b09fda4704ca3e98d73"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a623d0e7ef3510b09fda4704ca3e98d73">&#9670;&nbsp;</a></span>getEquatorialRadius()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">double Planet::getEquatorialRadius </td>
+          <td>(</td>
+          <td class="paramtype">void&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<dl class="section return"><dt>Returns</dt><dd>the equator radius of the planet in astronomical units. </dd></dl>
+
+</div>
+</div>
 <a id="ad69bb63f21e9df760d7232f163f5b844"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#ad69bb63f21e9df760d7232f163f5b844">&#9670;&nbsp;</a></span>getID()</h2>
 
@@ -1125,8 +1159,8 @@ class&#160;</td><td class="memItemRight" valign="bottom"><b>SolarSystem</b></td>
 
 </div>
 </div>
-<a id="a88badbb4992efa9510343f9ed2d90d79"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a88badbb4992efa9510343f9ed2d90d79">&#9670;&nbsp;</a></span>getRadius()</h2>
+<a id="af293495ebe7011d280839a5578a173a9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af293495ebe7011d280839a5578a173a9">&#9670;&nbsp;</a></span>getPolarRadius()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -1135,7 +1169,7 @@ class&#160;</td><td class="memItemRight" valign="bottom"><b>SolarSystem</b></td>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">double Planet::getRadius </td>
+          <td class="memname">double Planet::getPolarRadius </td>
           <td>(</td>
           <td class="paramtype">void&#160;</td>
           <td class="paramname"></td><td>)</td>
@@ -1148,7 +1182,7 @@ class&#160;</td><td class="memItemRight" valign="bottom"><b>SolarSystem</b></td>
   </tr>
 </table>
 </div><div class="memdoc">
-<dl class="section return"><dt>Returns</dt><dd>the equator radius of the planet in astronomical units. </dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>the polar radius of the planet in astronomical units. </dd></dl>
 
 </div>
 </div>
@@ -1219,7 +1253,7 @@ class&#160;</td><td class="memItemRight" valign="bottom"><b>SolarSystem</b></td>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Sun Mar 24 2019 18:07:51 for Stellarium by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Sat Jun 22 2019 15:34:30 for Stellarium by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.13
 </small></address>

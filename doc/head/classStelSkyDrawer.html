@@ -21,7 +21,7 @@
   <td id="projectlogo"><img alt="Logo" src="stellarium-logo.png"/></td>
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">Stellarium
-   &#160;<span id="projectnumber">0.19.0</span>
+   &#160;<span id="projectnumber">0.19.1</span>
    </div>
   </td>
  </tr>
@@ -323,9 +323,9 @@ void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="clas
 <tr class="memitem:a1830431be9cc99c8e0b879038f50b0ff"><td class="memItemLeft" align="right" valign="top"><a id="a1830431be9cc99c8e0b879038f50b0ff"></a>
 bool&#160;</td><td class="memItemRight" valign="bottom"><b>drawPointSource</b> (<a class="el" href="classStelPainter.html">StelPainter</a> *sPainter, const <a class="el" href="classVector3.html">Vec3f</a> &amp;v, const <a class="el" href="structRCMag.html">RCMag</a> &amp;rcMag, const <a class="el" href="classVector3.html">Vec3f</a> &amp;bcolor, bool checkInScreen=false, float twinkleFactor=1.0f)</td></tr>
 <tr class="separator:a1830431be9cc99c8e0b879038f50b0ff"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a3d058d9a2a15732299c0babc5bbe365c"><td class="memItemLeft" align="right" valign="top"><a id="a3d058d9a2a15732299c0babc5bbe365c"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>drawSunCorona</b> (<a class="el" href="classStelPainter.html">StelPainter</a> *painter, const <a class="el" href="classVector3.html">Vec3f</a> &amp;v, float radius, const <a class="el" href="classVector3.html">Vec3f</a> &amp;color, const float alpha)</td></tr>
-<tr class="separator:a3d058d9a2a15732299c0babc5bbe365c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8c9200622a73da75698168c2654fc4f5"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classStelSkyDrawer.html#a8c9200622a73da75698168c2654fc4f5">drawSunCorona</a> (<a class="el" href="classStelPainter.html">StelPainter</a> *painter, const <a class="el" href="classVector3.html">Vec3f</a> &amp;v, float radius, const <a class="el" href="classVector3.html">Vec3f</a> &amp;color, const float alpha, const float angle)</td></tr>
+<tr class="memdesc:a8c9200622a73da75698168c2654fc4f5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Draw an image of the solar corona onto the screen at position v.  <a href="#a8c9200622a73da75698168c2654fc4f5">More...</a><br /></td></tr>
+<tr class="separator:a8c9200622a73da75698168c2654fc4f5"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a0bf424ef69b27bfa35706c517609e7e2"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classStelSkyDrawer.html#a0bf424ef69b27bfa35706c517609e7e2">postDrawSky3dModel</a> (<a class="el" href="classStelPainter.html">StelPainter</a> *p, const <a class="el" href="classVector3.html">Vec3f</a> &amp;v, float illuminatedArea, float mag, const <a class="el" href="classVector3.html">Vec3f</a> &amp;color=<a class="el" href="classVector3.html">Vec3f</a>(1.f, 1.f, 1.f))</td></tr>
 <tr class="memdesc:a0bf424ef69b27bfa35706c517609e7e2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Terminate drawing of a 3D model, draw the halo.  <a href="#a0bf424ef69b27bfa35706c517609e7e2">More...</a><br /></td></tr>
 <tr class="separator:a0bf424ef69b27bfa35706c517609e7e2"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -522,6 +522,66 @@ double&#160;</td><td class="memItemRight" valign="bottom"><b>atmospherePressure<
   </dd>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>true if the source was actually visible and drawn </dd></dl>
+
+</div>
+</div>
+<a id="a8c9200622a73da75698168c2654fc4f5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8c9200622a73da75698168c2654fc4f5">&#9670;&nbsp;</a></span>drawSunCorona()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void StelSkyDrawer::drawSunCorona </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classStelPainter.html">StelPainter</a> *&#160;</td>
+          <td class="paramname"><em>painter</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="classVector3.html">Vec3f</a> &amp;&#160;</td>
+          <td class="paramname"><em>v</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float&#160;</td>
+          <td class="paramname"><em>radius</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="classVector3.html">Vec3f</a> &amp;&#160;</td>
+          <td class="paramname"><em>color</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const float&#160;</td>
+          <td class="paramname"><em>alpha</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const float&#160;</td>
+          <td class="paramname"><em>angle</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">radius</td><td>depends on the actually used texture and current disk size of the sun. </td></tr>
+    <tr><td class="paramname">alpha</td><td>opacity value. Set 1 for full visibility, but usually keep close to 0 except during solar eclipses. </td></tr>
+    <tr><td class="paramname">angle</td><td>includes parallactic angle (if alt/azimuth frame) and angle between solar polar axis and celestial equator. </td></tr>
+  </table>
+  </dd>
+</dl>
 
 </div>
 </div>
@@ -1297,7 +1357,7 @@ double&#160;</td><td class="memItemRight" valign="bottom"><b>atmospherePressure<
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Sun Mar 24 2019 18:07:51 for Stellarium by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Sat Jun 22 2019 15:34:31 for Stellarium by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.13
 </small></address>
