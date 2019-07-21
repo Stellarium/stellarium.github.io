@@ -2,7 +2,7 @@
 title: All in one
 author: Edouardo
 license: Public Domain
-compat: 0.10+
+compat: 0.10.x-0.18.x
 script_url: https://sites.google.com/site/tdsmub/Home/AllinOne1-4.ssc
 categories: community
 ---
