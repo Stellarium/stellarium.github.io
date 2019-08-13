@@ -2,7 +2,7 @@
 title: Cologne, Barbarossaplatz, Rooftop, Germany
 author: Frank Hell
 compat: 0.10+
-license: &copy;
+license: ©
 landscape_url: http://massagefromhell.com/private/cologne_skyline.zip
 image_url: http://massagefromhell.com/private/stellarium-027_th_mix.png
 ---
