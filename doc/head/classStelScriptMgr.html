@@ -21,7 +21,7 @@
   <td id="projectlogo"><img alt="Logo" src="stellarium-logo.png"/></td>
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">Stellarium
-   &#160;<span id="projectnumber">0.19.1</span>
+   &#160;<span id="projectnumber">HEAD</span>
    </div>
   </td>
  </tr>
@@ -93,9 +93,9 @@ Public Slots</h2></td></tr>
 <tr class="memitem:a42b01fcc7175a1aa52c506f38e42e309"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classStelScriptMgr.html#a42b01fcc7175a1aa52c506f38e42e309">stopScript</a> ()</td></tr>
 <tr class="memdesc:a42b01fcc7175a1aa52c506f38e42e309"><td class="mdescLeft">&#160;</td><td class="mdescRight">Stops any running script.  <a href="#a42b01fcc7175a1aa52c506f38e42e309">More...</a><br /></td></tr>
 <tr class="separator:a42b01fcc7175a1aa52c506f38e42e309"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aeea51aa0d866d1dcd1daf8e4a6e132a7"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classStelScriptMgr.html#aeea51aa0d866d1dcd1daf8e4a6e132a7">setScriptRate</a> (float r)</td></tr>
-<tr class="memdesc:aeea51aa0d866d1dcd1daf8e4a6e132a7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Changes the rate at which the script executes as a multiple of real time.  <a href="#aeea51aa0d866d1dcd1daf8e4a6e132a7">More...</a><br /></td></tr>
-<tr class="separator:aeea51aa0d866d1dcd1daf8e4a6e132a7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6ca12775588ad358b1fb1be68e965765"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classStelScriptMgr.html#a6ca12775588ad358b1fb1be68e965765">setScriptRate</a> (double r)</td></tr>
+<tr class="memdesc:a6ca12775588ad358b1fb1be68e965765"><td class="mdescLeft">&#160;</td><td class="mdescRight">Changes the rate at which the script executes as a multiple of real time.  <a href="#a6ca12775588ad358b1fb1be68e965765">More...</a><br /></td></tr>
+<tr class="separator:a6ca12775588ad358b1fb1be68e965765"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a70cfdce69a2c0083fe3c60872dada583"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classStelScriptMgr.html#a70cfdce69a2c0083fe3c60872dada583">getScriptRate</a> () const</td></tr>
 <tr class="memdesc:a70cfdce69a2c0083fe3c60872dada583"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the rate at which the script is running as a multiple of the normal execution rate.  <a href="#a70cfdce69a2c0083fe3c60872dada583">More...</a><br /></td></tr>
 <tr class="separator:a70cfdce69a2c0083fe3c60872dada583"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -131,6 +131,10 @@ void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="clas
 void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classStelScriptMgr.html#a2cf34cd52cbcdc182bd409172432f8e8">scriptRunning</a> ()</td></tr>
 <tr class="memdesc:a2cf34cd52cbcdc182bd409172432f8e8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Notification when a script starts running. <br /></td></tr>
 <tr class="separator:a2cf34cd52cbcdc182bd409172432f8e8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa370933e729cfb46edc44d7bbeae66a3"><td class="memItemLeft" align="right" valign="top"><a id="aa370933e729cfb46edc44d7bbeae66a3"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classStelScriptMgr.html#aa370933e729cfb46edc44d7bbeae66a3">scriptPaused</a> ()</td></tr>
+<tr class="memdesc:aa370933e729cfb46edc44d7bbeae66a3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Notification when a script has paused running. <br /></td></tr>
+<tr class="separator:aa370933e729cfb46edc44d7bbeae66a3"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:adba6f2792b07c7a74dc68209617d70ef"><td class="memItemLeft" align="right" valign="top"><a id="adba6f2792b07c7a74dc68209617d70ef"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classStelScriptMgr.html#adba6f2792b07c7a74dc68209617d70ef">scriptStopped</a> ()</td></tr>
 <tr class="memdesc:adba6f2792b07c7a74dc68209617d70ef"><td class="mdescLeft">&#160;</td><td class="mdescRight">Notification when a script has stopped running. <br /></td></tr>
@@ -786,8 +790,8 @@ QString&#160;</td><td class="memItemRight" valign="bottom"><b>runningScriptId</b
 
 </div>
 </div>
-<a id="aeea51aa0d866d1dcd1daf8e4a6e132a7"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aeea51aa0d866d1dcd1daf8e4a6e132a7">&#9670;&nbsp;</a></span>setScriptRate</h2>
+<a id="a6ca12775588ad358b1fb1be68e965765"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6ca12775588ad358b1fb1be68e965765">&#9670;&nbsp;</a></span>setScriptRate</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -798,7 +802,7 @@ QString&#160;</td><td class="memItemRight" valign="bottom"><b>runningScriptId</b
         <tr>
           <td class="memname">void StelScriptMgr::setScriptRate </td>
           <td>(</td>
-          <td class="paramtype">float&#160;</td>
+          <td class="paramtype">double&#160;</td>
           <td class="paramname"><em>r</em></td><td>)</td>
           <td></td>
         </tr>
@@ -847,7 +851,7 @@ QString&#160;</td><td class="memItemRight" valign="bottom"><b>runningScriptId</b
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Sat Jun 22 2019 15:34:31 for Stellarium by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Fri Aug 30 2019 14:58:03 for Stellarium by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.13
 </small></address>

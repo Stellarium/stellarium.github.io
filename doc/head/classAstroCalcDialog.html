@@ -21,7 +21,7 @@
   <td id="projectlogo"><img alt="Logo" src="stellarium-logo.png"/></td>
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">Stellarium
-   &#160;<span id="projectnumber">0.19.1</span>
+   &#160;<span id="projectnumber">HEAD</span>
    </div>
   </td>
  </tr>
@@ -72,8 +72,8 @@ Public Types</h2></td></tr>
 </td></tr>
 <tr class="separator:adbe21dab8fa8a0aaa9729ce900982f1b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad63a53493fa6607ac9bacc5b8926da5a"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAstroCalcDialog.html#ad63a53493fa6607ac9bacc5b8926da5a">EphemerisColumns</a> { <br />
-&#160;&#160;<b>EphemerisDate</b>, 
-<a class="el" href="classAstroCalcDialog.html#ad63a53493fa6607ac9bacc5b8926da5aa47aaaabd7ffdc7ac066b54cd617ff77f">EphemerisJD</a>, 
+&#160;&#160;<b>EphemerisCOName</b>, 
+<a class="el" href="classAstroCalcDialog.html#ad63a53493fa6607ac9bacc5b8926da5aae304a486bcaf64415491aade74675e87">EphemerisDate</a>, 
 <a class="el" href="classAstroCalcDialog.html#ad63a53493fa6607ac9bacc5b8926da5aa4d44a5bd2c68dd2dacd2c94d6907955d">EphemerisRA</a>, 
 <a class="el" href="classAstroCalcDialog.html#ad63a53493fa6607ac9bacc5b8926da5aaf4d5e17b17d8228cc055530259c3217b">EphemerisDec</a>, 
 <br />
@@ -188,15 +188,9 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="clas
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-static-attribs"></a>
 Static Public Attributes</h2></td></tr>
-<tr class="memitem:af9465dfb78975ec7ca20df404be647c6"><td class="memItemLeft" align="right" valign="top"><a id="af9465dfb78975ec7ca20df404be647c6"></a>
-static QVector&lt; <a class="el" href="classVector3.html">Vec3d</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>EphemerisListCoords</b></td></tr>
-<tr class="separator:af9465dfb78975ec7ca20df404be647c6"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:adebe2dedb6be336402482cb5e49123d2"><td class="memItemLeft" align="right" valign="top"><a id="adebe2dedb6be336402482cb5e49123d2"></a>
-static QVector&lt; QString &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>EphemerisListDates</b></td></tr>
-<tr class="separator:adebe2dedb6be336402482cb5e49123d2"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a0c7cabc9ce920469ea2b74a7cc28e903"><td class="memItemLeft" align="right" valign="top"><a id="a0c7cabc9ce920469ea2b74a7cc28e903"></a>
-static QVector&lt; float &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>EphemerisListMagnitudes</b></td></tr>
-<tr class="separator:a0c7cabc9ce920469ea2b74a7cc28e903"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab1e7fa44a068618b70e6990f128746a0"><td class="memItemLeft" align="right" valign="top"><a id="ab1e7fa44a068618b70e6990f128746a0"></a>
+static QVector&lt; <a class="el" href="structEphemeris.html">Ephemeris</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>EphemerisList</b></td></tr>
+<tr class="separator:ab1e7fa44a068618b70e6990f128746a0"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a33db20db4ba20d047674fda551bad5b6"><td class="memItemLeft" align="right" valign="top"><a id="a33db20db4ba20d047674fda551bad5b6"></a>
 static int&#160;</td><td class="memItemRight" valign="bottom"><b>DisplayedPositionIndex</b></td></tr>
 <tr class="separator:a33db20db4ba20d047674fda551bad5b6"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -331,9 +325,9 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><b>visible</b></td></tr>
       </table>
 </div><div class="memdoc">
 <table class="fieldtable">
-<tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a id="ad63a53493fa6607ac9bacc5b8926da5aa47aaaabd7ffdc7ac066b54cd617ff77f"></a>EphemerisJD&#160;</td><td class="fielddoc"><p>date and time of ephemeris </p>
+<tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a id="ad63a53493fa6607ac9bacc5b8926da5aae304a486bcaf64415491aade74675e87"></a>EphemerisDate&#160;</td><td class="fielddoc"><p>name of celestial object </p>
 </td></tr>
-<tr><td class="fieldname"><a id="ad63a53493fa6607ac9bacc5b8926da5aa4d44a5bd2c68dd2dacd2c94d6907955d"></a>EphemerisRA&#160;</td><td class="fielddoc"><p>JD. </p>
+<tr><td class="fieldname"><a id="ad63a53493fa6607ac9bacc5b8926da5aa4d44a5bd2c68dd2dacd2c94d6907955d"></a>EphemerisRA&#160;</td><td class="fielddoc"><p>date and time of ephemeris </p>
 </td></tr>
 <tr><td class="fieldname"><a id="ad63a53493fa6607ac9bacc5b8926da5aaf4d5e17b17d8228cc055530259c3217b"></a>EphemerisDec&#160;</td><td class="fielddoc"><p>right ascension </p>
 </td></tr>
@@ -415,7 +409,7 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><b>visible</b></td></tr>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Sat Jun 22 2019 15:34:30 for Stellarium by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Fri Aug 30 2019 14:58:03 for Stellarium by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.13
 </small></address>

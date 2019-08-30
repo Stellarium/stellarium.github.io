@@ -21,7 +21,7 @@
   <td id="projectlogo"><img alt="Logo" src="stellarium-logo.png"/></td>
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">Stellarium
-   &#160;<span id="projectnumber">0.19.1</span>
+   &#160;<span id="projectnumber">HEAD</span>
    </div>
   </td>
  </tr>
@@ -82,7 +82,10 @@ Public Types</h2></td></tr>
 &#160;&#160;<a class="el" href="classNebula.html#a22c3e31bc6f07b0a31b64823eb1a96b6ac26ca5734ccec68c00b53107ab31d531">CatACO</a> = 0x00100000, 
 <a class="el" href="classNebula.html#a22c3e31bc6f07b0a31b64823eb1a96b6a62501fa76565a394bf0f1bd494c88ef0">CatHCG</a> = 0x00200000, 
 <a class="el" href="classNebula.html#a22c3e31bc6f07b0a31b64823eb1a96b6a2e355d0e4bdee32c26de4c5c366c2a40">CatAbell</a> = 0x00400000, 
-<a class="el" href="classNebula.html#a22c3e31bc6f07b0a31b64823eb1a96b6a5d65bd7aa2878e4ed13b824d209f9cb8">CatESO</a> = 0x00800000
+<a class="el" href="classNebula.html#a22c3e31bc6f07b0a31b64823eb1a96b6a5d65bd7aa2878e4ed13b824d209f9cb8">CatESO</a> = 0x00800000, 
+<br />
+&#160;&#160;<a class="el" href="classNebula.html#a22c3e31bc6f07b0a31b64823eb1a96b6ada685f3e3b1912d997f001ef968e00ee">CatVdBH</a> = 0x01000000, 
+<a class="el" href="classNebula.html#a22c3e31bc6f07b0a31b64823eb1a96b6ad6bf0eb8232d4da3ebf94ef9c8b3fcb7">CatDWB</a> = 0x02000000
 <br />
  }</td></tr>
 <tr class="separator:a22c3e31bc6f07b0a31b64823eb1a96b6"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -206,7 +209,7 @@ virtual <a class="el" href="classVector3.html">Vec3d</a>&#160;</td><td class="me
 <tr class="separator:ac72f9f0a927199d6fef028fd2fc34453"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a865a07b84c967cec4d910531317add08"><td class="memItemLeft" align="right" valign="top"><a id="a865a07b84c967cec4d910531317add08"></a>
 virtual double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classNebula.html#a865a07b84c967cec4d910531317add08">getCloseViewFov</a> (const <a class="el" href="classStelCore.html">StelCore</a> *core=Q_NULLPTR) const</td></tr>
-<tr class="memdesc:a865a07b84c967cec4d910531317add08"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return the best <a class="el" href="group__fieldOfView.html#classFOV" title="Main class of the Field of View plugin. ">FOV</a> in degree to use for a close view of the object. <br /></td></tr>
+<tr class="memdesc:a865a07b84c967cec4d910531317add08"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return the best FOV in degree to use for a close view of the object. <br /></td></tr>
 <tr class="separator:a865a07b84c967cec4d910531317add08"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a3a9f1b41caf6aee9abf48754a35fac6d"><td class="memItemLeft" align="right" valign="top"><a id="a3a9f1b41caf6aee9abf48754a35fac6d"></a>
 virtual float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classNebula.html#a3a9f1b41caf6aee9abf48754a35fac6d">getVMagnitude</a> (const <a class="el" href="classStelCore.html">StelCore</a> *core) const</td></tr>
@@ -343,7 +346,7 @@ float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="cla
 <tr class="separator:a85e2cc30d876cd5afacb3fe199dbad95 inherit pub_methods_classStelObject"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a4150fd712e05cb5f14894fe70e5705f8 inherit pub_methods_classStelObject"><td class="memItemLeft" align="right" valign="top"><a id="a4150fd712e05cb5f14894fe70e5705f8"></a>
 virtual double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classStelObject.html#a4150fd712e05cb5f14894fe70e5705f8">getSatellitesFov</a> (const <a class="el" href="classStelCore.html">StelCore</a> *) const</td></tr>
-<tr class="memdesc:a4150fd712e05cb5f14894fe70e5705f8 inherit pub_methods_classStelObject"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return the best <a class="el" href="group__fieldOfView.html#classFOV" title="Main class of the Field of View plugin. ">FOV</a> in degree to use for a global view of the object satellite system (if there are satellites) <br /></td></tr>
+<tr class="memdesc:a4150fd712e05cb5f14894fe70e5705f8 inherit pub_methods_classStelObject"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return the best FOV in degree to use for a global view of the object satellite system (if there are satellites) <br /></td></tr>
 <tr class="separator:a4150fd712e05cb5f14894fe70e5705f8 inherit pub_methods_classStelObject"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aea761082356a00fefa9073891381b4fa inherit pub_methods_classStelObject"><td class="memItemLeft" align="right" valign="top"><a id="aea761082356a00fefa9073891381b4fa"></a>
 virtual double&#160;</td><td class="memItemRight" valign="bottom"><b>getParentSatellitesFov</b> (const <a class="el" href="classStelCore.html">StelCore</a> *) const</td></tr>
@@ -355,7 +358,7 @@ Static Public Attributes</h2></td></tr>
 static const QString&#160;</td><td class="memItemRight" valign="bottom"><b>NEBULA_TYPE</b></td></tr>
 <tr class="separator:a59dcd5d7ba358deb7c3bfedb54f5ca89"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac2e08a3aace62f7ec3fe2d3d78657370"><td class="memItemLeft" align="right" valign="top"><a id="ac2e08a3aace62f7ec3fe2d3d78657370"></a>
-static const <a class="el" href="classNebula.html#a22c3e31bc6f07b0a31b64823eb1a96b6">CatalogGroupFlags</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classNebula.html#ac2e08a3aace62f7ec3fe2d3d78657370">AllCatalogs</a> = static_cast&lt;<a class="el" href="classNebula.html#a22c3e31bc6f07b0a31b64823eb1a96b6">CatalogGroupFlags</a>&gt;(<a class="el" href="classNebula.html#a22c3e31bc6f07b0a31b64823eb1a96b6a8b7281b1b61a19d1fab7894bd847f010">CatNGC</a>|<a class="el" href="classNebula.html#a22c3e31bc6f07b0a31b64823eb1a96b6a3bd4a8bdf5b510fcc9d5944d68161b1d">CatIC</a>|<a class="el" href="classNebula.html#a22c3e31bc6f07b0a31b64823eb1a96b6af740b435047690d8fa9b922abad785ec">CatM</a>|<a class="el" href="classNebula.html#a22c3e31bc6f07b0a31b64823eb1a96b6a634ee4b00032f0c164e1007e772a77c8">CatC</a>|<a class="el" href="classNebula.html#a22c3e31bc6f07b0a31b64823eb1a96b6a0c428f7697e811d900f0ede34ada6363">CatB</a>|<a class="el" href="classNebula.html#a22c3e31bc6f07b0a31b64823eb1a96b6a79daee692f9758fadcd9aa2130935f5f">CatSh2</a>|<a class="el" href="classNebula.html#a22c3e31bc6f07b0a31b64823eb1a96b6a8250b48b51b50e6eb20f31f9b91cb27d">CatLBN</a>|<a class="el" href="classNebula.html#a22c3e31bc6f07b0a31b64823eb1a96b6ac7e23f32229459dc99c034454dd1ce73">CatLDN</a>|<a class="el" href="classNebula.html#a22c3e31bc6f07b0a31b64823eb1a96b6a46e4b394d3191c31f717f44f129e6873">CatRCW</a>|<a class="el" href="classNebula.html#a22c3e31bc6f07b0a31b64823eb1a96b6a1b8e2577ae83a93eceadbeff928239fd">CatVdB</a>|<a class="el" href="classNebula.html#a22c3e31bc6f07b0a31b64823eb1a96b6a5fdb698d329690e22646883382d3d56b">CatCr</a>|<a class="el" href="classNebula.html#a22c3e31bc6f07b0a31b64823eb1a96b6ad73f6ca86fd1fcd34ef2d3259325b0ea">CatMel</a>|<a class="el" href="classNebula.html#a22c3e31bc6f07b0a31b64823eb1a96b6accca04dba8179ec4f3e13ab2655eb5d2">CatPGC</a>|<a class="el" href="classNebula.html#a22c3e31bc6f07b0a31b64823eb1a96b6a2bed7ba82b8250ab8966f71d5bcc1766">CatUGC</a>|<a class="el" href="classNebula.html#a22c3e31bc6f07b0a31b64823eb1a96b6af8572b4856add84839a11ff81bf56a60">CatCed</a>|<a class="el" href="classNebula.html#a22c3e31bc6f07b0a31b64823eb1a96b6a7450a004b2aa298298c91d2bf0bd0587">CatArp</a>|<a class="el" href="classNebula.html#a22c3e31bc6f07b0a31b64823eb1a96b6a8dccd456987a04a8e6f5cb6ad2cbf9be">CatVV</a>|<a class="el" href="classNebula.html#a22c3e31bc6f07b0a31b64823eb1a96b6a7ceaff52cad12ecfebbbf1febbe1071a">CatPK</a>|<a class="el" href="classNebula.html#a22c3e31bc6f07b0a31b64823eb1a96b6a651132e70c9104a341f53bc95ccd594c">CatPNG</a>|<a class="el" href="classNebula.html#a22c3e31bc6f07b0a31b64823eb1a96b6a5ee7a7fce49474077bdfe5ad8a7d129e">CatSNRG</a>|<a class="el" href="classNebula.html#a22c3e31bc6f07b0a31b64823eb1a96b6ac26ca5734ccec68c00b53107ab31d531">CatACO</a>|<a class="el" href="classNebula.html#a22c3e31bc6f07b0a31b64823eb1a96b6a62501fa76565a394bf0f1bd494c88ef0">CatHCG</a>)</td></tr>
+static const <a class="el" href="classNebula.html#a22c3e31bc6f07b0a31b64823eb1a96b6">CatalogGroupFlags</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classNebula.html#ac2e08a3aace62f7ec3fe2d3d78657370">AllCatalogs</a> = static_cast&lt;<a class="el" href="classNebula.html#a22c3e31bc6f07b0a31b64823eb1a96b6">CatalogGroupFlags</a>&gt;(<a class="el" href="classNebula.html#a22c3e31bc6f07b0a31b64823eb1a96b6a8b7281b1b61a19d1fab7894bd847f010">CatNGC</a>|<a class="el" href="classNebula.html#a22c3e31bc6f07b0a31b64823eb1a96b6a3bd4a8bdf5b510fcc9d5944d68161b1d">CatIC</a>|<a class="el" href="classNebula.html#a22c3e31bc6f07b0a31b64823eb1a96b6af740b435047690d8fa9b922abad785ec">CatM</a>|<a class="el" href="classNebula.html#a22c3e31bc6f07b0a31b64823eb1a96b6a634ee4b00032f0c164e1007e772a77c8">CatC</a>|<a class="el" href="classNebula.html#a22c3e31bc6f07b0a31b64823eb1a96b6a0c428f7697e811d900f0ede34ada6363">CatB</a>|<a class="el" href="classNebula.html#a22c3e31bc6f07b0a31b64823eb1a96b6a79daee692f9758fadcd9aa2130935f5f">CatSh2</a>|<a class="el" href="classNebula.html#a22c3e31bc6f07b0a31b64823eb1a96b6a8250b48b51b50e6eb20f31f9b91cb27d">CatLBN</a>|<a class="el" href="classNebula.html#a22c3e31bc6f07b0a31b64823eb1a96b6ac7e23f32229459dc99c034454dd1ce73">CatLDN</a>|<a class="el" href="classNebula.html#a22c3e31bc6f07b0a31b64823eb1a96b6a46e4b394d3191c31f717f44f129e6873">CatRCW</a>|<a class="el" href="classNebula.html#a22c3e31bc6f07b0a31b64823eb1a96b6a1b8e2577ae83a93eceadbeff928239fd">CatVdB</a>|<a class="el" href="classNebula.html#a22c3e31bc6f07b0a31b64823eb1a96b6a5fdb698d329690e22646883382d3d56b">CatCr</a>|<a class="el" href="classNebula.html#a22c3e31bc6f07b0a31b64823eb1a96b6ad73f6ca86fd1fcd34ef2d3259325b0ea">CatMel</a>|<a class="el" href="classNebula.html#a22c3e31bc6f07b0a31b64823eb1a96b6accca04dba8179ec4f3e13ab2655eb5d2">CatPGC</a>|<a class="el" href="classNebula.html#a22c3e31bc6f07b0a31b64823eb1a96b6a2bed7ba82b8250ab8966f71d5bcc1766">CatUGC</a>|<a class="el" href="classNebula.html#a22c3e31bc6f07b0a31b64823eb1a96b6af8572b4856add84839a11ff81bf56a60">CatCed</a>|<a class="el" href="classNebula.html#a22c3e31bc6f07b0a31b64823eb1a96b6a7450a004b2aa298298c91d2bf0bd0587">CatArp</a>|<a class="el" href="classNebula.html#a22c3e31bc6f07b0a31b64823eb1a96b6a8dccd456987a04a8e6f5cb6ad2cbf9be">CatVV</a>|<a class="el" href="classNebula.html#a22c3e31bc6f07b0a31b64823eb1a96b6a7ceaff52cad12ecfebbbf1febbe1071a">CatPK</a>|<a class="el" href="classNebula.html#a22c3e31bc6f07b0a31b64823eb1a96b6a651132e70c9104a341f53bc95ccd594c">CatPNG</a>|<a class="el" href="classNebula.html#a22c3e31bc6f07b0a31b64823eb1a96b6a5ee7a7fce49474077bdfe5ad8a7d129e">CatSNRG</a>|<a class="el" href="classNebula.html#a22c3e31bc6f07b0a31b64823eb1a96b6ac26ca5734ccec68c00b53107ab31d531">CatACO</a>|<a class="el" href="classNebula.html#a22c3e31bc6f07b0a31b64823eb1a96b6a62501fa76565a394bf0f1bd494c88ef0">CatHCG</a>|<a class="el" href="classNebula.html#a22c3e31bc6f07b0a31b64823eb1a96b6a2e355d0e4bdee32c26de4c5c366c2a40">CatAbell</a>|<a class="el" href="classNebula.html#a22c3e31bc6f07b0a31b64823eb1a96b6a5d65bd7aa2878e4ed13b824d209f9cb8">CatESO</a>|<a class="el" href="classNebula.html#a22c3e31bc6f07b0a31b64823eb1a96b6ada685f3e3b1912d997f001ef968e00ee">CatVdBH</a>|<a class="el" href="classNebula.html#a22c3e31bc6f07b0a31b64823eb1a96b6ad6bf0eb8232d4da3ebf94ef9c8b3fcb7">CatDWB</a>)</td></tr>
 <tr class="memdesc:ac2e08a3aace62f7ec3fe2d3d78657370"><td class="mdescLeft">&#160;</td><td class="mdescRight">A pre-defined set of specifiers for the catalogs filter. <br /></td></tr>
 <tr class="separator:ac2e08a3aace62f7ec3fe2d3d78657370"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab02208c73c96d822f3144dea9a9d0e93"><td class="memItemLeft" align="right" valign="top"><a id="ab02208c73c96d822f3144dea9a9d0e93"></a>
@@ -366,7 +369,7 @@ static const <a class="el" href="classNebula.html#a6e15a2298f534055d06dfbc082bb4
 <tr class="memdesc:aff8b9cd662b044e33c39577b1ec2501f inherit pub_static_attribs_classStelObject"><td class="mdescLeft">&#160;</td><td class="mdescRight">A pre-defined set of specifiers for the getInfoString flags argument to getInfoString.  <a href="classStelObject.html#aff8b9cd662b044e33c39577b1ec2501f">More...</a><br /></td></tr>
 <tr class="separator:aff8b9cd662b044e33c39577b1ec2501f inherit pub_static_attribs_classStelObject"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a82e64755dc156e071733350e83a6826c inherit pub_static_attribs_classStelObject"><td class="memItemLeft" align="right" valign="top"><a id="a82e64755dc156e071733350e83a6826c"></a>
-static const <a class="el" href="classStelObject.html#acf243e7987796a3a44e409140ecea8c6">InfoStringGroupFlags</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classStelObject.html#a82e64755dc156e071733350e83a6826c">ShortInfo</a> = (<a class="el" href="classStelObject.html#acf243e7987796a3a44e409140ecea8c6">InfoStringGroupFlags</a>)(<a class="el" href="classStelObject.html#acf243e7987796a3a44e409140ecea8c6ab14de19b496f04e198a835899cefd934">Name</a>|<a class="el" href="classStelObject.html#acf243e7987796a3a44e409140ecea8c6a57d62b46f2f2849da8e3e234c7d27b0e">CatalogNumber</a>|<a class="el" href="classStelObject.html#acf243e7987796a3a44e409140ecea8c6a04e5ef1bf85944db7b25b57f2663c79d">Magnitude</a>|<a class="el" href="classStelObject.html#acf243e7987796a3a44e409140ecea8c6aefb86264a540d299b32c5931ca302ced">RaDecJ2000</a>)</td></tr>
+static const <a class="el" href="classStelObject.html#acf243e7987796a3a44e409140ecea8c6">InfoStringGroupFlags</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classStelObject.html#a82e64755dc156e071733350e83a6826c">ShortInfo</a> = static_cast&lt;<a class="el" href="classStelObject.html#acf243e7987796a3a44e409140ecea8c6">InfoStringGroupFlags</a>&gt;(<a class="el" href="classStelObject.html#acf243e7987796a3a44e409140ecea8c6ab14de19b496f04e198a835899cefd934">Name</a>|<a class="el" href="classStelObject.html#acf243e7987796a3a44e409140ecea8c6a57d62b46f2f2849da8e3e234c7d27b0e">CatalogNumber</a>|<a class="el" href="classStelObject.html#acf243e7987796a3a44e409140ecea8c6a04e5ef1bf85944db7b25b57f2663c79d">Magnitude</a>|<a class="el" href="classStelObject.html#acf243e7987796a3a44e409140ecea8c6aefb86264a540d299b32c5931ca302ced">RaDecJ2000</a>)</td></tr>
 <tr class="memdesc:a82e64755dc156e071733350e83a6826c inherit pub_static_attribs_classStelObject"><td class="mdescLeft">&#160;</td><td class="mdescRight">A pre-defined set of specifiers for the getInfoString flags argument to getInfoString. <br /></td></tr>
 <tr class="separator:a82e64755dc156e071733350e83a6826c inherit pub_static_attribs_classStelObject"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
@@ -394,6 +397,17 @@ class&#160;</td><td class="memItemRight" valign="bottom"><b>NebulaMgr</b></td></
 <tr class="memitem:aefce8edb665e51bd2052e69e856dab1f"><td class="memItemLeft" align="right" valign="top"><a id="aefce8edb665e51bd2052e69e856dab1f"></a>
 struct&#160;</td><td class="memItemRight" valign="bottom"><b>DrawNebulaFuncObject</b></td></tr>
 <tr class="separator:aefce8edb665e51bd2052e69e856dab1f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="inherited"></a>
+Additional Inherited Members</h2></td></tr>
+<tr class="inherit_header pub_slots_classStelObject"><td colspan="2" onclick="javascript:toggleInherit('pub_slots_classStelObject')"><img src="closed.png" alt="-"/>&#160;Public Slots inherited from <a class="el" href="classStelObject.html">StelObject</a></td></tr>
+<tr class="memitem:a7b315a4ea6cc7b50b1ba956aa5cc1183 inherit pub_slots_classStelObject"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classStelObject.html#a7b315a4ea6cc7b50b1ba956aa5cc1183">setExtraInfoString</a> (const QString &amp;str)</td></tr>
+<tr class="memdesc:a7b315a4ea6cc7b50b1ba956aa5cc1183 inherit pub_slots_classStelObject"><td class="mdescLeft">&#160;</td><td class="mdescRight">Allow additions to the Info String.  <a href="classStelObject.html#a7b315a4ea6cc7b50b1ba956aa5cc1183">More...</a><br /></td></tr>
+<tr class="separator:a7b315a4ea6cc7b50b1ba956aa5cc1183 inherit pub_slots_classStelObject"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa85ca7ad2c4a209faa276a714bc178cf inherit pub_slots_classStelObject"><td class="memItemLeft" align="right" valign="top"><a id="aa85ca7ad2c4a209faa276a714bc178cf"></a>
+virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classStelObject.html#aa85ca7ad2c4a209faa276a714bc178cf">addToExtraInfoString</a> (const QString &amp;str)</td></tr>
+<tr class="memdesc:aa85ca7ad2c4a209faa276a714bc178cf inherit pub_slots_classStelObject"><td class="mdescLeft">&#160;</td><td class="mdescRight">Add str to the extra string. This should be preferrable over hard setting. <br /></td></tr>
+<tr class="separator:aa85ca7ad2c4a209faa276a714bc178cf inherit pub_slots_classStelObject"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Member Enumeration Documentation</h2>
 <a id="a22c3e31bc6f07b0a31b64823eb1a96b6"></a>
@@ -455,6 +469,10 @@ struct&#160;</td><td class="memItemRight" valign="bottom"><b>DrawNebulaFuncObjec
 <tr><td class="fieldname"><a id="a22c3e31bc6f07b0a31b64823eb1a96b6a2e355d0e4bdee32c26de4c5c366c2a40"></a>CatAbell&#160;</td><td class="fielddoc"><p>Abell Catalog of Planetary Nebulae (Abell, 1966) (Abell; PN A66) </p>
 </td></tr>
 <tr><td class="fieldname"><a id="a22c3e31bc6f07b0a31b64823eb1a96b6a5d65bd7aa2878e4ed13b824d209f9cb8"></a>CatESO&#160;</td><td class="fielddoc"><p>ESO/Uppsala Survey of the ESO(B) Atlas (Lauberts, 1982) (ESO) </p>
+</td></tr>
+<tr><td class="fieldname"><a id="a22c3e31bc6f07b0a31b64823eb1a96b6ada685f3e3b1912d997f001ef968e00ee"></a>CatVdBH&#160;</td><td class="fielddoc"><p>Catalogue of southern stars embedded in nebulosity (van den Bergh+, 1975) (VdBH) </p>
+</td></tr>
+<tr><td class="fieldname"><a id="a22c3e31bc6f07b0a31b64823eb1a96b6ad6bf0eb8232d4da3ebf94ef9c8b3fcb7"></a>CatDWB&#160;</td><td class="fielddoc"><p>Catalogue and distances of optically visible H II regions (Dickel+, 1969) (DWB) </p>
 </td></tr>
 </table>
 
@@ -608,7 +626,7 @@ struct&#160;</td><td class="memItemRight" valign="bottom"><b>DrawNebulaFuncObjec
   </tr>
 </table>
 </div><div class="memdoc">
-<dl class="section return"><dt>Returns</dt><dd>radius in degree. This value is the apparent angular size of the object, and is independent of the current <a class="el" href="group__fieldOfView.html#classFOV" title="Main class of the Field of View plugin. ">FOV</a>. </dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>radius in degree. This value is the apparent angular size of the object, and is independent of the current FOV. </dd></dl>
 
 <p>Implements <a class="el" href="classStelObject.html#ae3fbe7c86ed77e2599419de3519a3dad">StelObject</a>.</p>
 
@@ -840,7 +858,7 @@ struct&#160;</td><td class="memItemRight" valign="bottom"><b>DrawNebulaFuncObjec
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Sat Jun 22 2019 15:34:30 for Stellarium by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Fri Aug 30 2019 14:58:03 for Stellarium by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.13
 </small></address>
