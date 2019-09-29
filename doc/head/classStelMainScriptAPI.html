@@ -21,7 +21,7 @@
   <td id="projectlogo"><img alt="Logo" src="stellarium-logo.png"/></td>
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">Stellarium
-   &#160;<span id="projectnumber">HEAD</span>
+   &#160;<span id="projectnumber">0.19.2</span>
    </div>
   </td>
  </tr>
@@ -397,6 +397,9 @@ void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="clas
 <tr class="memitem:a035523cd6e1a51d779594657092de03c"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classStelMainScriptAPI.html#a035523cd6e1a51d779594657092de03c">setBortleScaleIndex</a> (int index)</td></tr>
 <tr class="memdesc:a035523cd6e1a51d779594657092de03c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Changes the Bortle scale index, which is used to simulate light pollution.  <a href="#a035523cd6e1a51d779594657092de03c">More...</a><br /></td></tr>
 <tr class="separator:a035523cd6e1a51d779594657092de03c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3afc62f423bda7902ed64ed2907e19bc"><td class="memItemLeft" align="right" valign="top">static double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classStelMainScriptAPI.html#a3afc62f423bda7902ed64ed2907e19bc">refraction</a> (double altitude, bool apparent=false)</td></tr>
+<tr class="memdesc:a3afc62f423bda7902ed64ed2907e19bc"><td class="mdescLeft">&#160;</td><td class="mdescRight">Apply refraction with current atmospheric parameters to altitude.  <a href="#a3afc62f423bda7902ed64ed2907e19bc">More...</a><br /></td></tr>
+<tr class="separator:a3afc62f423bda7902ed64ed2907e19bc"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:abba6b727e3c443f1c8725f6372d75090"><td class="memItemLeft" align="right" valign="top">static double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classStelMainScriptAPI.html#abba6b727e3c443f1c8725f6372d75090">jdFromDateString</a> (const QString &amp;dt, const QString &amp;spec)</td></tr>
 <tr class="memdesc:abba6b727e3c443f1c8725f6372d75090"><td class="mdescLeft">&#160;</td><td class="mdescRight">For use in setDate and waitFor For parameter descriptions see <a class="el" href="classStelMainScriptAPI.html#a6cec7c42e6b4675a5c3ac6f921012dc5" title="set the date in ISO format, e.g. ">setDate()</a>.  <a href="#abba6b727e3c443f1c8725f6372d75090">More...</a><br /></td></tr>
 <tr class="separator:abba6b727e3c443f1c8725f6372d75090"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -3221,6 +3224,49 @@ More complicated value types like lists are only indicated by their type name. Y
 
 </div>
 </div>
+<a id="a3afc62f423bda7902ed64ed2907e19bc"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3afc62f423bda7902ed64ed2907e19bc">&#9670;&nbsp;</a></span>refraction</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static double StelMainScriptAPI::refraction </td>
+          <td>(</td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>altitude</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>apparent</em> = <code>false</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span><span class="mlabel">slot</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">altitude</td><td>degrees </td></tr>
+    <tr><td class="paramname">apparent</td><td>true to remove refraction from an apparent (observed) altitude </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
 <a id="a62ff9880d931c77c95028f0cd3b91fe0"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a62ff9880d931c77c95028f0cd3b91fe0">&#9670;&nbsp;</a></span>removeSkyImage</h2>
 
@@ -4894,7 +4940,7 @@ starting with version 0.14.0 the final optional Boolean argument has a different
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Fri Aug 30 2019 14:58:03 for Stellarium by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Sun Sep 29 2019 16:13:47 for Stellarium by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.13
 </small></address>

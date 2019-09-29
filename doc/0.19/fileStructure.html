@@ -21,7 +21,7 @@
   <td id="projectlogo"><img alt="Logo" src="stellarium-logo.png"/></td>
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">Stellarium
-   &#160;<span id="projectnumber">0.19.1</span>
+   &#160;<span id="projectnumber">0.19.2</span>
    </div>
   </td>
  </tr>
@@ -124,7 +124,7 @@ Users who mess up a customisation attempt need only remove the <em>User Data Dir
 </ul>
 <h1><a class="anchor" id="findingFile"></a>
 Finding files with the StelFileMgr class</h1>
-<p>Whenever a file is needed in Stellarium, it should be located using the <a class="el" href="classStelFileMgr.html" title="Provides utilities for locating and handling files. ">StelFileMgr</a> class. This class will find the file in the first location in the search path. An instance of this class is maintained by the <a class="el" href="classStelApp.html" title="Singleton main Stellarium application class. ">StelApp</a> singleton. <a class="el" href="classStelFileMgr.html#ad3e9e9f0300a1d961235ad400579358f" title="Search for a path within the search paths, for example &quot;textures/fog.png&quot;. ">StelFileMgr::findFile()</a> will throw exceptions when a problem is encountered, so it is important to always use <code>try ... catch ...</code> exception handling when using it.</p>
+<p>Whenever a file is needed in Stellarium, it should be located using the <a class="el" href="classStelFileMgr.html" title="Provides utilities for locating and handling files. ">StelFileMgr</a> class. This class will find the file in the first location in the search path. An instance of this class is maintained by the <a class="el" href="classStelApp.html" title="Singleton main Stellarium application class. ">StelApp</a> singleton. <a class="el" href="classStelFileMgr.html#a246035057fe810af5bd20f20d94eca4e" title="Search for a path within the search paths, for example &quot;textures/fog.png&quot;. ">StelFileMgr::findFile()</a> will throw exceptions when a problem is encountered, so it is important to always use <code>try ... catch ...</code> exception handling when using it.</p>
 <p>For example. You are writing a class called <a class="el" href="classComet.html">Comet</a>, and wish to search for a data file called <code>comets.dat</code> located in the <code>data</code> directory, you would go about it like this:</p>
 <div class="fragment"><div class="line">QString path;</div><div class="line"><span class="keywordflow">try</span></div><div class="line">{</div><div class="line">    path = <a class="code" href="classStelApp.html#a1737cdc7266e4ecc8f2f259048e6f1b6" title="Get the StelApp singleton instance. ">StelApp::getInstance</a>().getFileMgr().findFile(<span class="stringliteral">&quot;data/comets.dat&quot;</span>);</div><div class="line">}</div><div class="line"><span class="keywordflow">catch</span>(std::runtime_error&amp; e)</div><div class="line">{</div><div class="line">    qWarning() &lt;&lt; <span class="stringliteral">&quot;Could not locate file: data/comets.dat : &quot;</span> &lt;&lt; e.what();</div><div class="line">}</div><div class="line">...</div></div><!-- fragment --><p>As you can see, the file is specified only by the partial path. This partial path is appended first to the <em>User Data Directory</em>. If, and only if the file is not found there, it is searched for in the <em>Installation Data Directory</em>. Thus if the user has a customised copy at: <code>&lt;User Data Directory&gt;/data/comets.dat</code> it will be used, else the version in the <em>Installation Data Directory</em> will be used.</p>
 <h1><a class="anchor" id="exampleStarCatalogTool"></a>
@@ -149,7 +149,7 @@ stars/default/stars_3_1v0_1.cat
 </div></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Sat Jun 22 2019 15:34:30 for Stellarium by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Sun Sep 29 2019 16:13:47 for Stellarium by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.13
 </small></address>

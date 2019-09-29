@@ -21,7 +21,7 @@
   <td id="projectlogo"><img alt="Logo" src="stellarium-logo.png"/></td>
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">Stellarium
-   &#160;<span id="projectnumber">HEAD</span>
+   &#160;<span id="projectnumber">0.19.2</span>
    </div>
   </td>
  </tr>
@@ -422,6 +422,13 @@ QString&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="c
 <tr class="memitem:a1ec3b8a770c45b8fd50bb3306178ad85"><td class="memItemLeft" align="right" valign="top">QStringList&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSolarSystem.html#a1ec3b8a770c45b8fd50bb3306178ad85">getObjectsList</a> (QString objType=&quot;all&quot;) const</td></tr>
 <tr class="memdesc:a1ec3b8a770c45b8fd50bb3306178ad85"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get list of objects by type.  <a href="#a1ec3b8a770c45b8fd50bb3306178ad85">More...</a><br /></td></tr>
 <tr class="separator:a1ec3b8a770c45b8fd50bb3306178ad85"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a53580953af31a43053a28fcbf0cde458"><td class="memItemLeft" align="right" valign="top"><a id="a53580953af31a43053a28fcbf0cde458"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSolarSystem.html#a53580953af31a43053a28fcbf0cde458">setFlagPermanentOrbits</a> (bool b)</td></tr>
+<tr class="memdesc:a53580953af31a43053a28fcbf0cde458"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set flag which enables display of orbits for planets even if they are off screen. <br /></td></tr>
+<tr class="separator:a53580953af31a43053a28fcbf0cde458"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae8c05a88f8f8a43c6012246dba934dd7"><td class="memItemLeft" align="right" valign="top"><a id="ae8c05a88f8f8a43c6012246dba934dd7"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><b>getFlagPermanentOrbits</b> () const</td></tr>
+<tr class="separator:ae8c05a88f8f8a43c6012246dba934dd7"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="signals"></a>
 Signals</h2></td></tr>
@@ -455,6 +462,9 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>flagPlanetsDisplayedC
 <tr class="memitem:a9cf579a41b7cc69256b1afb5c7c7d7bf"><td class="memItemLeft" align="right" valign="top"><a id="a9cf579a41b7cc69256b1afb5c7c7d7bf"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><b>flagPlanetsOrbitsOnlyChanged</b> (bool b)</td></tr>
 <tr class="separator:a9cf579a41b7cc69256b1afb5c7c7d7bf"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a285235a0f88a22e26c36290adb34b943"><td class="memItemLeft" align="right" valign="top"><a id="a285235a0f88a22e26c36290adb34b943"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>flagPermanentOrbitsChanged</b> (bool b)</td></tr>
+<tr class="separator:a285235a0f88a22e26c36290adb34b943"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a44820ce59021a3cc08e9eb429f54bb03"><td class="memItemLeft" align="right" valign="top"><a id="a44820ce59021a3cc08e9eb429f54bb03"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><b>flagIsolatedOrbitsChanged</b> (bool b)</td></tr>
 <tr class="separator:a44820ce59021a3cc08e9eb429f54bb03"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -789,6 +799,9 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><b>planetsDisplayed</b><
 <tr class="memitem:a6241db5ced0fd4f53fc5e1b80557cebd"><td class="memItemLeft" align="right" valign="top"><a id="a6241db5ced0fd4f53fc5e1b80557cebd"></a>
 bool&#160;</td><td class="memItemRight" valign="bottom"><b>flagPlanetsOrbitsOnly</b></td></tr>
 <tr class="separator:a6241db5ced0fd4f53fc5e1b80557cebd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5e7d266a0b48f63c379206b63faa8f0e"><td class="memItemLeft" align="right" valign="top"><a id="a5e7d266a0b48f63c379206b63faa8f0e"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><b>flagPermanentOrbits</b></td></tr>
+<tr class="separator:a5e7d266a0b48f63c379206b63faa8f0e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a6e5ded53d38eb7a23ab8f0aed83845c1"><td class="memItemLeft" align="right" valign="top"><a id="a6e5ded53d38eb7a23ab8f0aed83845c1"></a>
 bool&#160;</td><td class="memItemRight" valign="bottom"><b>flagIsolatedOrbits</b></td></tr>
 <tr class="separator:a6e5ded53d38eb7a23ab8f0aed83845c1"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -1773,7 +1786,7 @@ Additional Inherited Members</h2></td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd>a type of planet (planet, moon, asteroid, comet, plutoid) </dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>a type of planet (star, planet, moon, observer, artificial, asteroid, plutino, comet, dwarf planet, cubewano, scattered disc object, Oort cloud object, sednoid, interstellar object) </dd></dl>
 
 </div>
 </div>
@@ -3297,7 +3310,7 @@ Additional Inherited Members</h2></td></tr>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Fri Aug 30 2019 14:58:03 for Stellarium by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Sun Sep 29 2019 16:13:47 for Stellarium by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.13
 </small></address>

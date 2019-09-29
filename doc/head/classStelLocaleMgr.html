@@ -21,7 +21,7 @@
   <td id="projectlogo"><img alt="Logo" src="stellarium-logo.png"/></td>
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">Stellarium
-   &#160;<span id="projectnumber">HEAD</span>
+   &#160;<span id="projectnumber">0.19.2</span>
    </div>
   </td>
  </tr>
@@ -62,10 +62,16 @@ Public Types</h2></td></tr>
  }<tr class="memdesc:a94b6a5fa08b839abd9d4cffccaf9d8c9"><td class="mdescLeft">&#160;</td><td class="mdescRight">The time display format.  <a href="classStelLocaleMgr.html#a94b6a5fa08b839abd9d4cffccaf9d8c9">More...</a><br /></td></tr>
 </td></tr>
 <tr class="separator:a94b6a5fa08b839abd9d4cffccaf9d8c9"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a7e9a1868e66054ee0ec85b9988259eec"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classStelLocaleMgr.html#a7e9a1868e66054ee0ec85b9988259eec">SDateFormat</a> { <a class="el" href="classStelLocaleMgr.html#a7e9a1868e66054ee0ec85b9988259eecade0d6c4597bca6f455140eae8b1312bb">SDateMMDDYYYY</a>, 
+<tr class="memitem:a7e9a1868e66054ee0ec85b9988259eec"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classStelLocaleMgr.html#a7e9a1868e66054ee0ec85b9988259eec">SDateFormat</a> { <br />
+&#160;&#160;<a class="el" href="classStelLocaleMgr.html#a7e9a1868e66054ee0ec85b9988259eecade0d6c4597bca6f455140eae8b1312bb">SDateMMDDYYYY</a>, 
 <a class="el" href="classStelLocaleMgr.html#a7e9a1868e66054ee0ec85b9988259eeca9d2e965a106d75ad3978047fa14da7f3">SDateDDMMYYYY</a>, 
 <a class="el" href="classStelLocaleMgr.html#a7e9a1868e66054ee0ec85b9988259eeca5c28ac3211b4c5412e87dd74a5945b4e">SDateSystemDefault</a>, 
-<a class="el" href="classStelLocaleMgr.html#a7e9a1868e66054ee0ec85b9988259eeca8e463b5b8fbb756333a568dbd079ca21">SDateYYYYMMDD</a>
+<a class="el" href="classStelLocaleMgr.html#a7e9a1868e66054ee0ec85b9988259eeca8e463b5b8fbb756333a568dbd079ca21">SDateYYYYMMDD</a>, 
+<br />
+&#160;&#160;<a class="el" href="classStelLocaleMgr.html#a7e9a1868e66054ee0ec85b9988259eeca891894d9f2d68db8a062df1eeeeb336f">SDateWWMMDDYYYY</a>, 
+<a class="el" href="classStelLocaleMgr.html#a7e9a1868e66054ee0ec85b9988259eecaf8c4e755306634926ff8059361e8fb98">SDateWWDDMMYYYY</a>, 
+<a class="el" href="classStelLocaleMgr.html#a7e9a1868e66054ee0ec85b9988259eeca11da3b45a1edf95fc9bbf25d446dd6eb">SDateWWYYYYMMDD</a>
+<br />
  }<tr class="memdesc:a7e9a1868e66054ee0ec85b9988259eec"><td class="mdescLeft">&#160;</td><td class="mdescRight">The date display format.  <a href="classStelLocaleMgr.html#a7e9a1868e66054ee0ec85b9988259eec">More...</a><br /></td></tr>
 </td></tr>
 <tr class="separator:a7e9a1868e66054ee0ec85b9988259eec"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -203,6 +209,12 @@ static QString&#160;</td><td class="memItemRight" valign="bottom"><a class="el" 
 <tr><td class="fieldname"><a id="a7e9a1868e66054ee0ec85b9988259eeca5c28ac3211b4c5412e87dd74a5945b4e"></a>SDateSystemDefault&#160;</td><td class="fielddoc"><p>Use the system default date format. </p>
 </td></tr>
 <tr><td class="fieldname"><a id="a7e9a1868e66054ee0ec85b9988259eeca8e463b5b8fbb756333a568dbd079ca21"></a>SDateYYYYMMDD&#160;</td><td class="fielddoc"><p>e.g. "1998-07-05" for July 5th 1998 </p>
+</td></tr>
+<tr><td class="fieldname"><a id="a7e9a1868e66054ee0ec85b9988259eeca891894d9f2d68db8a062df1eeeeb336f"></a>SDateWWMMDDYYYY&#160;</td><td class="fielddoc"><p>e.g. "Sun, 07-05-1998" for Sunday, July 5th 1998 </p>
+</td></tr>
+<tr><td class="fieldname"><a id="a7e9a1868e66054ee0ec85b9988259eecaf8c4e755306634926ff8059361e8fb98"></a>SDateWWDDMMYYYY&#160;</td><td class="fielddoc"><p>e.g. "Sun, 05-07-1998" for Sunday, July 5th 1998 </p>
+</td></tr>
+<tr><td class="fieldname"><a id="a7e9a1868e66054ee0ec85b9988259eeca11da3b45a1edf95fc9bbf25d446dd6eb"></a>SDateWWYYYYMMDD&#160;</td><td class="fielddoc"><p>e.g. "Sun, 1998-07-05" for Sunday, July 5th 1998 </p>
 </td></tr>
 </table>
 
@@ -524,7 +536,7 @@ static QString&#160;</td><td class="memItemRight" valign="bottom"><a class="el" 
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Fri Aug 30 2019 14:58:03 for Stellarium by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Sun Sep 29 2019 16:13:47 for Stellarium by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.13
 </small></address>
