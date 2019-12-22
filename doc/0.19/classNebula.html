@@ -21,7 +21,7 @@
   <td id="projectlogo"><img alt="Logo" src="stellarium-logo.png"/></td>
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">Stellarium
-   &#160;<span id="projectnumber">0.19.2</span>
+   &#160;<span id="projectnumber">0.19.3</span>
    </div>
   </td>
  </tr>
@@ -43,6 +43,7 @@ $(function() {
   <div class="summary">
 <a href="#pub-types">Public Types</a> &#124;
 <a href="#pub-methods">Public Member Functions</a> &#124;
+<a href="#pub-static-methods">Static Public Member Functions</a> &#124;
 <a href="#pub-static-attribs">Static Public Attributes</a> &#124;
 <a href="#pro-methods">Protected Member Functions</a> &#124;
 <a href="#friends">Friends</a>  </div>
@@ -93,16 +94,17 @@ Public Types</h2></td></tr>
 &#160;&#160;<a class="el" href="classNebula.html#a6e15a2298f534055d06dfbc082bb446ba11903c79f9cb360dc1dbca6b91b56385">TypeGalaxies</a> = 0x00000001, 
 <a class="el" href="classNebula.html#a6e15a2298f534055d06dfbc082bb446babd2a56d47fe0e53b077f8cc85d4971f1">TypeActiveGalaxies</a> = 0x00000002, 
 <a class="el" href="classNebula.html#a6e15a2298f534055d06dfbc082bb446baa3bf7c805aead77061c107940e1eedb1">TypeInteractingGalaxies</a> = 0x00000004, 
-<a class="el" href="classNebula.html#a6e15a2298f534055d06dfbc082bb446ba259ace7b10499712c353ddd594e80c1b">TypeStarClusters</a> = 0x00000008, 
+<a class="el" href="classNebula.html#a6e15a2298f534055d06dfbc082bb446baa622291252e4ec7c4099d842ed1a5123">TypeOpenStarClusters</a> = 0x00000008, 
 <br />
-&#160;&#160;<a class="el" href="classNebula.html#a6e15a2298f534055d06dfbc082bb446ba35d6055af1e0bf5b6d3fd411099386a9">TypeHydrogenRegions</a> = 0x00000010, 
-<a class="el" href="classNebula.html#a6e15a2298f534055d06dfbc082bb446ba87e0c55583681438c323f41c62a5b2bf">TypeBrightNebulae</a> = 0x00000020, 
-<a class="el" href="classNebula.html#a6e15a2298f534055d06dfbc082bb446bad8539ad8380a880a6a2c5f5f35123823">TypeDarkNebulae</a> = 0x00000040, 
-<a class="el" href="classNebula.html#a6e15a2298f534055d06dfbc082bb446ba2899c8f5ad00b4c7c9bcf8b75f35f5c0">TypePlanetaryNebulae</a> = 0x00000080, 
+&#160;&#160;<a class="el" href="classNebula.html#a6e15a2298f534055d06dfbc082bb446bab49e6b4afb0faef86c985997557cb45b">TypeGlobularStarClusters</a> = 0x00000010, 
+<a class="el" href="classNebula.html#a6e15a2298f534055d06dfbc082bb446ba35d6055af1e0bf5b6d3fd411099386a9">TypeHydrogenRegions</a> = 0x00000020, 
+<a class="el" href="classNebula.html#a6e15a2298f534055d06dfbc082bb446ba87e0c55583681438c323f41c62a5b2bf">TypeBrightNebulae</a> = 0x00000040, 
+<a class="el" href="classNebula.html#a6e15a2298f534055d06dfbc082bb446bad8539ad8380a880a6a2c5f5f35123823">TypeDarkNebulae</a> = 0x00000080, 
 <br />
-&#160;&#160;<a class="el" href="classNebula.html#a6e15a2298f534055d06dfbc082bb446ba406ed086500a80bebc3e9b0692197bc0">TypeSupernovaRemnants</a> = 0x00000100, 
-<a class="el" href="classNebula.html#a6e15a2298f534055d06dfbc082bb446bacb9e6bf2cc5408c7ce0db9cceca4e333">TypeGalaxyClusters</a> = 0x00000200, 
-<a class="el" href="classNebula.html#a6e15a2298f534055d06dfbc082bb446ba3ba5d7d2711e88f24e47729ca20edc2b">TypeOther</a> = 0x00000400
+&#160;&#160;<a class="el" href="classNebula.html#a6e15a2298f534055d06dfbc082bb446ba2899c8f5ad00b4c7c9bcf8b75f35f5c0">TypePlanetaryNebulae</a> = 0x00000100, 
+<a class="el" href="classNebula.html#a6e15a2298f534055d06dfbc082bb446ba406ed086500a80bebc3e9b0692197bc0">TypeSupernovaRemnants</a> = 0x00000200, 
+<a class="el" href="classNebula.html#a6e15a2298f534055d06dfbc082bb446bacb9e6bf2cc5408c7ce0db9cceca4e333">TypeGalaxyClusters</a> = 0x00000400, 
+<a class="el" href="classNebula.html#a6e15a2298f534055d06dfbc082bb446ba3ba5d7d2711e88f24e47729ca20edc2b">TypeOther</a> = 0x00000800
 <br />
  }</td></tr>
 <tr class="separator:a6e15a2298f534055d06dfbc082bb446b"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -246,9 +248,6 @@ QString&#160;</td><td class="memItemRight" valign="bottom"><b>getI18nAliases</b>
 <tr class="memitem:a808a15f523dd2515de082ee00707b75a"><td class="memItemLeft" align="right" valign="top"><a id="a808a15f523dd2515de082ee00707b75a"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><b>setLabelColor</b> (const <a class="el" href="classVector3.html">Vec3f</a> &amp;v)</td></tr>
 <tr class="separator:a808a15f523dd2515de082ee00707b75a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a80dc1639326b8ffc3557524ff653204e"><td class="memItemLeft" align="right" valign="top"><a id="a80dc1639326b8ffc3557524ff653204e"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>setCircleColor</b> (const <a class="el" href="classVector3.html">Vec3f</a> &amp;v)</td></tr>
-<tr class="separator:a80dc1639326b8ffc3557524ff653204e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae419707ca26d16a249f341c1aecadbcc"><td class="memItemLeft" align="right" valign="top">QString&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classNebula.html#ae419707ca26d16a249f341c1aecadbcc">getTypeString</a> () const</td></tr>
 <tr class="memdesc:ae419707ca26d16a249f341c1aecadbcc"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the printable nebula Type.  <a href="#ae419707ca26d16a249f341c1aecadbcc">More...</a><br /></td></tr>
 <tr class="separator:ae419707ca26d16a249f341c1aecadbcc"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -352,6 +351,12 @@ virtual double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" 
 virtual double&#160;</td><td class="memItemRight" valign="bottom"><b>getParentSatellitesFov</b> (const <a class="el" href="classStelCore.html">StelCore</a> *) const</td></tr>
 <tr class="separator:aea761082356a00fefa9073891381b4fa inherit pub_methods_classStelObject"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-static-methods"></a>
+Static Public Member Functions</h2></td></tr>
+<tr class="memitem:a088326883ddb91dbdc3855543182c6f5"><td class="memItemLeft" align="right" valign="top"><a id="a088326883ddb91dbdc3855543182c6f5"></a>
+static QString&#160;</td><td class="memItemRight" valign="bottom"><b>getTypeString</b> (<a class="el" href="classNebula.html#a6c0cabb55de1182c6489b99259844f79">Nebula::NebulaType</a> nType)</td></tr>
+<tr class="separator:a088326883ddb91dbdc3855543182c6f5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-static-attribs"></a>
 Static Public Attributes</h2></td></tr>
 <tr class="memitem:a59dcd5d7ba358deb7c3bfedb54f5ca89"><td class="memItemLeft" align="right" valign="top"><a id="a59dcd5d7ba358deb7c3bfedb54f5ca89"></a>
@@ -362,7 +367,7 @@ static const <a class="el" href="classNebula.html#a22c3e31bc6f07b0a31b64823eb1a9
 <tr class="memdesc:ac2e08a3aace62f7ec3fe2d3d78657370"><td class="mdescLeft">&#160;</td><td class="mdescRight">A pre-defined set of specifiers for the catalogs filter. <br /></td></tr>
 <tr class="separator:ac2e08a3aace62f7ec3fe2d3d78657370"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab02208c73c96d822f3144dea9a9d0e93"><td class="memItemLeft" align="right" valign="top"><a id="ab02208c73c96d822f3144dea9a9d0e93"></a>
-static const <a class="el" href="classNebula.html#a6e15a2298f534055d06dfbc082bb446b">TypeGroupFlags</a>&#160;</td><td class="memItemRight" valign="bottom"><b>AllTypes</b> = static_cast&lt;<a class="el" href="classNebula.html#a6e15a2298f534055d06dfbc082bb446b">TypeGroupFlags</a>&gt;(<a class="el" href="classNebula.html#a6e15a2298f534055d06dfbc082bb446ba11903c79f9cb360dc1dbca6b91b56385">TypeGalaxies</a>|<a class="el" href="classNebula.html#a6e15a2298f534055d06dfbc082bb446babd2a56d47fe0e53b077f8cc85d4971f1">TypeActiveGalaxies</a>|<a class="el" href="classNebula.html#a6e15a2298f534055d06dfbc082bb446baa3bf7c805aead77061c107940e1eedb1">TypeInteractingGalaxies</a>|<a class="el" href="classNebula.html#a6e15a2298f534055d06dfbc082bb446ba259ace7b10499712c353ddd594e80c1b">TypeStarClusters</a>|<a class="el" href="classNebula.html#a6e15a2298f534055d06dfbc082bb446ba35d6055af1e0bf5b6d3fd411099386a9">TypeHydrogenRegions</a>|<a class="el" href="classNebula.html#a6e15a2298f534055d06dfbc082bb446ba87e0c55583681438c323f41c62a5b2bf">TypeBrightNebulae</a>|<a class="el" href="classNebula.html#a6e15a2298f534055d06dfbc082bb446bad8539ad8380a880a6a2c5f5f35123823">TypeDarkNebulae</a>|<a class="el" href="classNebula.html#a6e15a2298f534055d06dfbc082bb446ba2899c8f5ad00b4c7c9bcf8b75f35f5c0">TypePlanetaryNebulae</a>|<a class="el" href="classNebula.html#a6e15a2298f534055d06dfbc082bb446ba406ed086500a80bebc3e9b0692197bc0">TypeSupernovaRemnants</a>|<a class="el" href="classNebula.html#a6e15a2298f534055d06dfbc082bb446bacb9e6bf2cc5408c7ce0db9cceca4e333">TypeGalaxyClusters</a>|<a class="el" href="classNebula.html#a6e15a2298f534055d06dfbc082bb446ba3ba5d7d2711e88f24e47729ca20edc2b">TypeOther</a>)</td></tr>
+static const <a class="el" href="classNebula.html#a6e15a2298f534055d06dfbc082bb446b">TypeGroupFlags</a>&#160;</td><td class="memItemRight" valign="bottom"><b>AllTypes</b> = static_cast&lt;<a class="el" href="classNebula.html#a6e15a2298f534055d06dfbc082bb446b">TypeGroupFlags</a>&gt;(<a class="el" href="classNebula.html#a6e15a2298f534055d06dfbc082bb446ba11903c79f9cb360dc1dbca6b91b56385">TypeGalaxies</a>|<a class="el" href="classNebula.html#a6e15a2298f534055d06dfbc082bb446babd2a56d47fe0e53b077f8cc85d4971f1">TypeActiveGalaxies</a>|<a class="el" href="classNebula.html#a6e15a2298f534055d06dfbc082bb446baa3bf7c805aead77061c107940e1eedb1">TypeInteractingGalaxies</a>|<a class="el" href="classNebula.html#a6e15a2298f534055d06dfbc082bb446baa622291252e4ec7c4099d842ed1a5123">TypeOpenStarClusters</a>|<a class="el" href="classNebula.html#a6e15a2298f534055d06dfbc082bb446bab49e6b4afb0faef86c985997557cb45b">TypeGlobularStarClusters</a>|<a class="el" href="classNebula.html#a6e15a2298f534055d06dfbc082bb446ba35d6055af1e0bf5b6d3fd411099386a9">TypeHydrogenRegions</a>|<a class="el" href="classNebula.html#a6e15a2298f534055d06dfbc082bb446ba87e0c55583681438c323f41c62a5b2bf">TypeBrightNebulae</a>|<a class="el" href="classNebula.html#a6e15a2298f534055d06dfbc082bb446bad8539ad8380a880a6a2c5f5f35123823">TypeDarkNebulae</a>|<a class="el" href="classNebula.html#a6e15a2298f534055d06dfbc082bb446ba2899c8f5ad00b4c7c9bcf8b75f35f5c0">TypePlanetaryNebulae</a>|<a class="el" href="classNebula.html#a6e15a2298f534055d06dfbc082bb446ba406ed086500a80bebc3e9b0692197bc0">TypeSupernovaRemnants</a>|<a class="el" href="classNebula.html#a6e15a2298f534055d06dfbc082bb446bacb9e6bf2cc5408c7ce0db9cceca4e333">TypeGalaxyClusters</a>|<a class="el" href="classNebula.html#a6e15a2298f534055d06dfbc082bb446ba3ba5d7d2711e88f24e47729ca20edc2b">TypeOther</a>)</td></tr>
 <tr class="separator:ab02208c73c96d822f3144dea9a9d0e93"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pub_static_attribs_classStelObject"><td colspan="2" onclick="javascript:toggleInherit('pub_static_attribs_classStelObject')"><img src="closed.png" alt="-"/>&#160;Static Public Attributes inherited from <a class="el" href="classStelObject.html">StelObject</a></td></tr>
 <tr class="memitem:aff8b9cd662b044e33c39577b1ec2501f inherit pub_static_attribs_classStelObject"><td class="memItemLeft" align="right" valign="top">static const <a class="el" href="classStelObject.html#acf243e7987796a3a44e409140ecea8c6">InfoStringGroupFlags</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classStelObject.html#aff8b9cd662b044e33c39577b1ec2501f">AllInfo</a></td></tr>
@@ -490,11 +495,11 @@ virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" hr
       </table>
 </div><div class="memdoc">
 <table class="fieldtable">
-<tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a id="a6c0cabb55de1182c6489b99259844f79a6536980a020e40dea7cef8532ddf6942"></a>NebGx&#160;</td><td class="fielddoc"><p>Galaxy. </p>
+<tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a id="a6c0cabb55de1182c6489b99259844f79a6536980a020e40dea7cef8532ddf6942"></a>NebGx&#160;</td><td class="fielddoc"><p>m Galaxy </p>
 </td></tr>
 <tr><td class="fieldname"><a id="a6c0cabb55de1182c6489b99259844f79a61e534a6497e3aee59fe21db3b97bf49"></a>NebAGx&#160;</td><td class="fielddoc"><p>Active galaxy. </p>
 </td></tr>
-<tr><td class="fieldname"><a id="a6c0cabb55de1182c6489b99259844f79ac0739cc122eb842acf347e56711e6ce6"></a>NebRGx&#160;</td><td class="fielddoc"><p>Radio galaxy. </p>
+<tr><td class="fieldname"><a id="a6c0cabb55de1182c6489b99259844f79ac0739cc122eb842acf347e56711e6ce6"></a>NebRGx&#160;</td><td class="fielddoc"><p>m Radio galaxy </p>
 </td></tr>
 <tr><td class="fieldname"><a id="a6c0cabb55de1182c6489b99259844f79ab5f74a7d915ee3331e9f8cdf8b6d5deb"></a>NebIGx&#160;</td><td class="fielddoc"><p>Interacting galaxy. </p>
 </td></tr>
@@ -558,7 +563,7 @@ virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" hr
 </td></tr>
 <tr><td class="fieldname"><a id="a6c0cabb55de1182c6489b99259844f79ada1b8d19480f8dad12877ef03509653d"></a>NebGxCl&#160;</td><td class="fielddoc"><p>Cluster of Galaxies. </p>
 </td></tr>
-<tr><td class="fieldname"><a id="a6c0cabb55de1182c6489b99259844f79af246ab9014fc3039d89ac91b654edbd4"></a>NebUnknown&#160;</td><td class="fielddoc"><p>Unknown type, catalog errors, "Unidentified Southern Objects" etc. </p>
+<tr><td class="fieldname"><a id="a6c0cabb55de1182c6489b99259844f79af246ab9014fc3039d89ac91b654edbd4"></a>NebUnknown&#160;</td><td class="fielddoc"><p>m Unknown type, catalog errors, "Unidentified Southern Objects" etc. </p>
 </td></tr>
 </table>
 
@@ -582,7 +587,9 @@ virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" hr
 </td></tr>
 <tr><td class="fieldname"><a id="a6e15a2298f534055d06dfbc082bb446baa3bf7c805aead77061c107940e1eedb1"></a>TypeInteractingGalaxies&#160;</td><td class="fielddoc"><p>Interacting Galaxies. </p>
 </td></tr>
-<tr><td class="fieldname"><a id="a6e15a2298f534055d06dfbc082bb446ba259ace7b10499712c353ddd594e80c1b"></a>TypeStarClusters&#160;</td><td class="fielddoc"><p>Star Clusters. </p>
+<tr><td class="fieldname"><a id="a6e15a2298f534055d06dfbc082bb446baa622291252e4ec7c4099d842ed1a5123"></a>TypeOpenStarClusters&#160;</td><td class="fielddoc"><p>Open Star Clusters. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="a6e15a2298f534055d06dfbc082bb446bab49e6b4afb0faef86c985997557cb45b"></a>TypeGlobularStarClusters&#160;</td><td class="fielddoc"><p>Globular Star Clusters. </p>
 </td></tr>
 <tr><td class="fieldname"><a id="a6e15a2298f534055d06dfbc082bb446ba35d6055af1e0bf5b6d3fd411099386a9"></a>TypeHydrogenRegions&#160;</td><td class="fielddoc"><p>Hydrogen Regions. </p>
 </td></tr>
@@ -842,6 +849,9 @@ virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" hr
 
 <div class="memitem">
 <div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
       <table class="memname">
         <tr>
           <td class="memname">QString Nebula::getTypeString </td>
@@ -850,6 +860,11 @@ virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" hr
           <td> const</td>
         </tr>
       </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
 </div><div class="memdoc">
 <dl class="section return"><dt>Returns</dt><dd>the nebula type code. </dd></dl>
 
@@ -858,7 +873,7 @@ virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" hr
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Sun Sep 29 2019 16:13:47 for Stellarium by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Sun Dec 22 2019 18:00:53 for Stellarium by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.13
 </small></address>

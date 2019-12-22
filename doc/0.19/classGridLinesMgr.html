@@ -21,7 +21,7 @@
   <td id="projectlogo"><img alt="Logo" src="stellarium-logo.png"/></td>
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">Stellarium
-   &#160;<span id="projectnumber">0.19.2</span>
+   &#160;<span id="projectnumber">0.19.3</span>
    </div>
   </td>
  </tr>
@@ -572,12 +572,22 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="clas
 <tr class="memitem:a8de6b9acc92e2dbc5f1131f74cf9fbe0"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classGridLinesMgr.html#a8de6b9acc92e2dbc5f1131f74cf9fbe0">setColorApexPoints</a> (const <a class="el" href="classVector3.html">Vec3f</a> &amp;newColor)</td></tr>
 <tr class="memdesc:a8de6b9acc92e2dbc5f1131f74cf9fbe0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the color of the Apex/Antapex points.  <a href="#a8de6b9acc92e2dbc5f1131f74cf9fbe0">More...</a><br /></td></tr>
 <tr class="separator:a8de6b9acc92e2dbc5f1131f74cf9fbe0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac3b60d31b8c9855b97ea5b862029d03b"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classGridLinesMgr.html#ac3b60d31b8c9855b97ea5b862029d03b">setLineThickness</a> (const int thickness)</td></tr>
+<tr class="memdesc:ac3b60d31b8c9855b97ea5b862029d03b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the thickness of lines.  <a href="#ac3b60d31b8c9855b97ea5b862029d03b">More...</a><br /></td></tr>
+<tr class="separator:ac3b60d31b8c9855b97ea5b862029d03b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a65e62b2295d92542673ac61007d03f24"><td class="memItemLeft" align="right" valign="top"><a id="a65e62b2295d92542673ac61007d03f24"></a>
+int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classGridLinesMgr.html#a65e62b2295d92542673ac61007d03f24">getLineThickness</a> () const</td></tr>
+<tr class="memdesc:a65e62b2295d92542673ac61007d03f24"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the thickness of lines. <br /></td></tr>
+<tr class="separator:a65e62b2295d92542673ac61007d03f24"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="signals"></a>
 Signals</h2></td></tr>
 <tr class="memitem:a9e32bd3297fa57aeea5952f15e66caba"><td class="memItemLeft" align="right" valign="top"><a id="a9e32bd3297fa57aeea5952f15e66caba"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><b>gridlinesDisplayedChanged</b> (const bool) const</td></tr>
 <tr class="separator:a9e32bd3297fa57aeea5952f15e66caba"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6db1595867232ca42b44683aed794ad5"><td class="memItemLeft" align="right" valign="top"><a id="a6db1595867232ca42b44683aed794ad5"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>lineThicknessChanged</b> (const int) const</td></tr>
+<tr class="separator:a6db1595867232ca42b44683aed794ad5"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a17403e9b7ceba8932f98b47f1c14d330"><td class="memItemLeft" align="right" valign="top"><a id="a17403e9b7ceba8932f98b47f1c14d330"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><b>azimuthalGridDisplayedChanged</b> (const bool) const</td></tr>
 <tr class="separator:a17403e9b7ceba8932f98b47f1c14d330"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -1034,6 +1044,9 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><b>apexPointsDisplayed</
 <tr class="memitem:a4566ab623108ec2101964ae9c9f61e63"><td class="memItemLeft" align="right" valign="top"><a id="a4566ab623108ec2101964ae9c9f61e63"></a>
 <a class="el" href="classVector3.html">Vec3f</a>&#160;</td><td class="memItemRight" valign="bottom"><b>apexPointsColor</b></td></tr>
 <tr class="separator:a4566ab623108ec2101964ae9c9f61e63"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3bdfcd5fcf4031709de8830ccb4dc283"><td class="memItemLeft" align="right" valign="top"><a id="a3bdfcd5fcf4031709de8830ccb4dc283"></a>
+int&#160;</td><td class="memItemRight" valign="bottom"><b>lineThickness</b></td></tr>
+<tr class="separator:a3bdfcd5fcf4031709de8830ccb4dc283"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="inherited"></a>
 Additional Inherited Members</h2></td></tr>
@@ -2178,6 +2191,38 @@ Additional Inherited Members</h2></td></tr>
 
 </div>
 </div>
+<a id="ac3b60d31b8c9855b97ea5b862029d03b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac3b60d31b8c9855b97ea5b862029d03b">&#9670;&nbsp;</a></span>setLineThickness</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void GridLinesMgr::setLineThickness </td>
+          <td>(</td>
+          <td class="paramtype">const int&#160;</td>
+          <td class="paramname"><em>thickness</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">slot</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">thickness</td><td>of line in pixels </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
 <a id="aa587c55fb7afca8a71c8991bcb97f557"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#aa587c55fb7afca8a71c8991bcb97f557">&#9670;&nbsp;</a></span>update()</h2>
 
@@ -2210,7 +2255,7 @@ Additional Inherited Members</h2></td></tr>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Sun Sep 29 2019 16:13:47 for Stellarium by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Sun Dec 22 2019 18:00:53 for Stellarium by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.13
 </small></address>

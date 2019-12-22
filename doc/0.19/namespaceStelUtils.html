@@ -21,7 +21,7 @@
   <td id="projectlogo"><img alt="Logo" src="stellarium-logo.png"/></td>
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">Stellarium
-   &#160;<span id="projectnumber">0.19.2</span>
+   &#160;<span id="projectnumber">0.19.3</span>
    </div>
   </td>
  </tr>
@@ -298,6 +298,9 @@ float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="nam
 QString&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceStelUtils.html#aae3cb334af9afba8750fb1f46576ab39">hoursToHmsStr</a> (const double hours, const bool lowprecision=false)</td></tr>
 <tr class="memdesc:aae3cb334af9afba8750fb1f46576ab39"><td class="mdescLeft">&#160;</td><td class="mdescRight">Convert decimal hours to hours, minutes, seconds. <br /></td></tr>
 <tr class="separator:aae3cb334af9afba8750fb1f46576ab39"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acf046df0effd9118b89a98ae208e4e2c"><td class="memItemLeft" align="right" valign="top"><a id="acf046df0effd9118b89a98ae208e4e2c"></a>
+QString&#160;</td><td class="memItemRight" valign="bottom"><b>hoursToHmsStr</b> (const float hours, const bool lowprecision=false)</td></tr>
+<tr class="separator:acf046df0effd9118b89a98ae208e4e2c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a578e930df92040f18b0f2dfbd57df78c"><td class="memItemLeft" align="right" valign="top"><a id="a578e930df92040f18b0f2dfbd57df78c"></a>
 double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceStelUtils.html#a578e930df92040f18b0f2dfbd57df78c">hmsStrToHours</a> (const QString &amp;s)</td></tr>
 <tr class="memdesc:a578e930df92040f18b0f2dfbd57df78c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Convert a hms formatted string to decimal hours. <br /></td></tr>
@@ -442,6 +445,10 @@ QByteArray&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href
 <tr class="memitem:a3c091056ff67dba311b5ae26c05b51fc"><td class="memTemplItemLeft" align="right" valign="top">T&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespaceStelUtils.html#a3c091056ff67dba311b5ae26c05b51fc">interpolate5</a> (T n, T y1, T y2, T y3, T y4, T y5)</td></tr>
 <tr class="memdesc:a3c091056ff67dba311b5ae26c05b51fc"><td class="mdescLeft">&#160;</td><td class="mdescRight">Given regularly spaced steps x1, x2, x3, x4, x5 and curve values y1, y2, y3, y4, y5, calculate an intermediate value of the 5 arguments for the given interpolation point n.  <a href="#a3c091056ff67dba311b5ae26c05b51fc">More...</a><br /></td></tr>
 <tr class="separator:a3c091056ff67dba311b5ae26c05b51fc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a94fe65f7906282a73c2067270ed5b39b"><td class="memTemplParams" colspan="2">template&lt;typename T &gt; </td></tr>
+<tr class="memitem:a94fe65f7906282a73c2067270ed5b39b"><td class="memTemplItemLeft" align="right" valign="top">bool&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespaceStelUtils.html#a94fe65f7906282a73c2067270ed5b39b">isWithin</a> (const T &amp;value, const T &amp;low, const T &amp;high)</td></tr>
+<tr class="memdesc:a94fe65f7906282a73c2067270ed5b39b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Interval test. This checks whether.  <a href="#a94fe65f7906282a73c2067270ed5b39b">More...</a><br /></td></tr>
+<tr class="separator:a94fe65f7906282a73c2067270ed5b39b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a080b7ae39c7abfaad02aee8c6464df26"><td class="memItemLeft" align="right" valign="top"><a id="a080b7ae39c7abfaad02aee8c6464df26"></a>
 double&#160;</td><td class="memItemRight" valign="bottom"><b>trunc</b> (double x)</td></tr>
 <tr class="separator:a080b7ae39c7abfaad02aee8c6464df26"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -2233,6 +2240,49 @@ template&lt;class T &gt; </div>
 
 </div>
 </div>
+<a id="a94fe65f7906282a73c2067270ed5b39b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a94fe65f7906282a73c2067270ed5b39b">&#9670;&nbsp;</a></span>isWithin()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">bool StelUtils::isWithin </td>
+          <td>(</td>
+          <td class="paramtype">const T &amp;&#160;</td>
+          <td class="paramname"><em>value</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const T &amp;&#160;</td>
+          <td class="paramname"><em>low</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const T &amp;&#160;</td>
+          <td class="paramname"><em>high</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">value</td><td>is within [</td></tr>
+    <tr><td class="paramname">low</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
 <a id="a4fd9811d5fc5fcf0ec600eafd0af5426"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a4fd9811d5fc5fcf0ec600eafd0af5426">&#9670;&nbsp;</a></span>jdToQDateTime()</h2>
 
@@ -3290,7 +3340,7 @@ template&lt;class T &gt; </div>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Sun Sep 29 2019 16:13:47 for Stellarium by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Sun Dec 22 2019 18:00:54 for Stellarium by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.13
 </small></address>

@@ -21,7 +21,7 @@
   <td id="projectlogo"><img alt="Logo" src="stellarium-logo.png"/></td>
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">Stellarium
-   &#160;<span id="projectnumber">0.19.2</span>
+   &#160;<span id="projectnumber">0.19.3</span>
    </div>
   </td>
  </tr>
@@ -259,9 +259,9 @@ Static Public Member Functions</h2></td></tr>
 <tr class="memitem:aee3098eff9f5400caee5825994783535"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="structStelVertexArray.html">StelVertexArray</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classStelPainter.html#aee3098eff9f5400caee5825994783535">computeSphereNoLight</a> (double radius, double oneMinusOblateness, unsigned int slices, unsigned int stacks, int orientInside=0, bool flipTexture=false, float topAngle=0.0f, float bottomAngle=static_cast&lt; float &gt;(M_PI))</td></tr>
 <tr class="memdesc:aee3098eff9f5400caee5825994783535"><td class="mdescLeft">&#160;</td><td class="mdescRight">Generate a <a class="el" href="structStelVertexArray.html">StelVertexArray</a> for a sphere.  <a href="#aee3098eff9f5400caee5825994783535">More...</a><br /></td></tr>
 <tr class="separator:aee3098eff9f5400caee5825994783535"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a0bc514db98de0b58bcee229b1b02f148"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classStelPainter.html#a0bc514db98de0b58bcee229b1b02f148">computeFanDisk</a> (float radius, int innerFanSlices, int level, QVector&lt; double &gt; &amp;vertexArr, QVector&lt; float &gt; &amp;texCoordArr)</td></tr>
-<tr class="memdesc:a0bc514db98de0b58bcee229b1b02f148"><td class="mdescLeft">&#160;</td><td class="mdescRight">Draw a disk with a special texturing mode having texture center at center of disk.  <a href="#a0bc514db98de0b58bcee229b1b02f148">More...</a><br /></td></tr>
-<tr class="separator:a0bc514db98de0b58bcee229b1b02f148"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a64bd91a4c4d75bc3c1bf2f012c0b3436"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classStelPainter.html#a64bd91a4c4d75bc3c1bf2f012c0b3436">computeFanDisk</a> (float radius, uint innerFanSlices, uint level, QVector&lt; <a class="el" href="classVector3.html">Vec3d</a> &gt; &amp;vertexArr, QVector&lt; <a class="el" href="classVector2.html">Vec2f</a> &gt; &amp;texCoordArr)</td></tr>
+<tr class="memdesc:a64bd91a4c4d75bc3c1bf2f012c0b3436"><td class="mdescLeft">&#160;</td><td class="mdescRight">Draw a disk with a special texturing mode having texture center at center of disk.  <a href="#a64bd91a4c4d75bc3c1bf2f012c0b3436">More...</a><br /></td></tr>
+<tr class="separator:a64bd91a4c4d75bc3c1bf2f012c0b3436"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a6c7329941b9d452b3fc135d2420269dd"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classStelPainter.html#a6c7329941b9d452b3fc135d2420269dd">initGLShaders</a> ()</td></tr>
 <tr class="memdesc:a6c7329941b9d452b3fc135d2420269dd"><td class="mdescLeft">&#160;</td><td class="mdescRight">Create the OpenGL shaders programs used by the <a class="el" href="classStelPainter.html" title="Provides functions for performing openGL drawing operations. ">StelPainter</a>.  <a href="#a6c7329941b9d452b3fc135d2420269dd">More...</a><br /></td></tr>
 <tr class="separator:a6c7329941b9d452b3fc135d2420269dd"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -376,8 +376,8 @@ class&#160;</td><td class="memItemRight" valign="bottom"><b>StelTexture</b></td>
 </div>
 </div>
 <h2 class="groupheader">Member Function Documentation</h2>
-<a id="a0bc514db98de0b58bcee229b1b02f148"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a0bc514db98de0b58bcee229b1b02f148">&#9670;&nbsp;</a></span>computeFanDisk()</h2>
+<a id="a64bd91a4c4d75bc3c1bf2f012c0b3436"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a64bd91a4c4d75bc3c1bf2f012c0b3436">&#9670;&nbsp;</a></span>computeFanDisk()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -394,25 +394,25 @@ class&#160;</td><td class="memItemRight" valign="bottom"><b>StelTexture</b></td>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">int&#160;</td>
+          <td class="paramtype">uint&#160;</td>
           <td class="paramname"><em>innerFanSlices</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">int&#160;</td>
+          <td class="paramtype">uint&#160;</td>
           <td class="paramname"><em>level</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">QVector&lt; double &gt; &amp;&#160;</td>
+          <td class="paramtype">QVector&lt; <a class="el" href="classVector3.html">Vec3d</a> &gt; &amp;&#160;</td>
           <td class="paramname"><em>vertexArr</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">QVector&lt; float &gt; &amp;&#160;</td>
+          <td class="paramtype">QVector&lt; <a class="el" href="classVector2.html">Vec2f</a> &gt; &amp;&#160;</td>
           <td class="paramname"><em>texCoordArr</em>&#160;</td>
         </tr>
         <tr>
@@ -602,7 +602,7 @@ class&#160;</td><td class="memItemRight" valign="bottom"><b>StelTexture</b></td>
     <tr><td class="paramname">offset.</td><td>Else it will consume </td></tr>
     <tr><td class="paramname">count</td><td>elements of </td></tr>
     <tr><td class="paramname">indices,starting</td><td>at </td></tr>
-    <tr><td class="paramname">offset,which</td><td>are used to index into the enabled arrays. </td></tr>
+    <tr><td class="paramname">offset,which</td><td>are used to index into the enabled arrays. NOTE: Prefer to use drawStelVertexArray, else there are wrap-around rendering artifacts in a few projections. </td></tr>
   </table>
   </dd>
 </dl>
@@ -1297,7 +1297,7 @@ class&#160;</td><td class="memItemRight" valign="bottom"><b>StelTexture</b></td>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Sun Sep 29 2019 16:13:47 for Stellarium by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Sun Dec 22 2019 18:00:54 for Stellarium by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.13
 </small></address>

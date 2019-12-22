@@ -21,7 +21,7 @@
   <td id="projectlogo"><img alt="Logo" src="stellarium-logo.png"/></td>
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">Stellarium
-   &#160;<span id="projectnumber">0.19.2</span>
+   &#160;<span id="projectnumber">0.19.3</span>
    </div>
   </td>
  </tr>
@@ -113,9 +113,15 @@ Data Structures</h2></td></tr>
 <tr class="memitem:aa8e31ef92aae9dbc5e42745e3c87ae36"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__telescopeControl.html#aa8e31ef92aae9dbc5e42745e3c87ae36">slewTelescopeToSelectedObject</a> (const int idx)</td></tr>
 <tr class="memdesc:aa8e31ef92aae9dbc5e42745e3c87ae36"><td class="mdescLeft">&#160;</td><td class="mdescRight">slews a telescope at slot idx to the selected object.  <a href="#aa8e31ef92aae9dbc5e42745e3c87ae36">More...</a><br /></td></tr>
 <tr class="separator:aa8e31ef92aae9dbc5e42745e3c87ae36"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3d72874e51b84d22e95dd76caca58c57"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__telescopeControl.html#a3d72874e51b84d22e95dd76caca58c57">syncTelescopeWithSelectedObject</a> (const int idx)</td></tr>
+<tr class="memdesc:a3d72874e51b84d22e95dd76caca58c57"><td class="mdescLeft">&#160;</td><td class="mdescRight">sync a telescope at slot idx to the selected object.  <a href="#a3d72874e51b84d22e95dd76caca58c57">More...</a><br /></td></tr>
+<tr class="separator:a3d72874e51b84d22e95dd76caca58c57"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a9e8ca7e2b3f27aaaf17b41d6720999b0"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__telescopeControl.html#a9e8ca7e2b3f27aaaf17b41d6720999b0">slewTelescopeToViewDirection</a> (const int idx)</td></tr>
 <tr class="memdesc:a9e8ca7e2b3f27aaaf17b41d6720999b0"><td class="mdescLeft">&#160;</td><td class="mdescRight">slews a telescope at slot idx to the point of the celestial sphere currently in the center of the screen.  <a href="#a9e8ca7e2b3f27aaaf17b41d6720999b0">More...</a><br /></td></tr>
 <tr class="separator:a9e8ca7e2b3f27aaaf17b41d6720999b0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a576faa42dd96374ae825ed06a340c423"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__telescopeControl.html#a576faa42dd96374ae825ed06a340c423">abortTelescopeSlew</a> (const int idx)</td></tr>
+<tr class="memdesc:a576faa42dd96374ae825ed06a340c423"><td class="mdescLeft">&#160;</td><td class="mdescRight">abort the current slew command of a telescope at slot idx.  <a href="#a576faa42dd96374ae825ed06a340c423">More...</a><br /></td></tr>
+<tr class="separator:a576faa42dd96374ae825ed06a340c423"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad0932c820c4cef6e8ed6d32599b8ce39"><td class="memItemLeft" align="right" valign="top"><a id="ad0932c820c4cef6e8ed6d32599b8ce39"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__telescopeControl.html#ad0932c820c4cef6e8ed6d32599b8ce39">setFlagUseTelescopeServerLogs</a> (bool b)</td></tr>
 <tr class="memdesc:ad0932c820c4cef6e8ed6d32599b8ce39"><td class="mdescLeft">&#160;</td><td class="mdescRight">Used in the GUI. <br /></td></tr>
@@ -195,36 +201,31 @@ void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="grou
 void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__telescopeControl.html#a85489140b610ed46d9025e166bb03d4e">saveTelescopes</a> ()</td></tr>
 <tr class="memdesc:a85489140b610ed46d9025e166bb03d4e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Saves to telescopes.json a list of the parameters of the active telescope clients. <br /></td></tr>
 <tr class="separator:a85489140b610ed46d9025e166bb03d4e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a38f42e3112d4a2e324fe556bc351bd91"><td class="memItemLeft" align="right" valign="top"><a id="a38f42e3112d4a2e324fe556bc351bd91"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__telescopeControl.html#a38f42e3112d4a2e324fe556bc351bd91">loadTelescopes</a> ()</td></tr>
-<tr class="memdesc:a38f42e3112d4a2e324fe556bc351bd91"><td class="mdescLeft">&#160;</td><td class="mdescRight">Loads from telescopes.json the parameters of telescope clients and initializes them. If there are already any initialized telescope clients, they are removed. <br /></td></tr>
+<tr class="memitem:a38f42e3112d4a2e324fe556bc351bd91"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__telescopeControl.html#a38f42e3112d4a2e324fe556bc351bd91">loadTelescopes</a> ()</td></tr>
+<tr class="memdesc:a38f42e3112d4a2e324fe556bc351bd91"><td class="mdescLeft">&#160;</td><td class="mdescRight">Loads from telescopes.json the parameters of telescope clients and initializes them.  <a href="#a38f42e3112d4a2e324fe556bc351bd91">More...</a><br /></td></tr>
 <tr class="separator:a38f42e3112d4a2e324fe556bc351bd91"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a82c56652084e750bbec668d6f2aa97b4"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__telescopeControl.html#a82c56652084e750bbec668d6f2aa97b4">addTelescopeAtSlot</a> (int slot, ConnectionType connectionType, QString name, QString equinox, QString host=QString(&quot;localhost&quot;), int portTCP=DEFAULT_TCP_PORT, int delay=DEFAULT_DELAY, bool connectAtStartup=false, QList&lt; double &gt; circles=QList&lt; double &gt;(), QString serverName=QString(), QString portSerial=QString(), QString rts2Url=QString(), QString rts2Username=QString(), QString rts2Password=QString(), int rts2Refresh=-1)</td></tr>
-<tr class="memdesc:a82c56652084e750bbec668d6f2aa97b4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Adds a telescope description containing the given properties.  <a href="#a82c56652084e750bbec668d6f2aa97b4">More...</a><br /></td></tr>
-<tr class="separator:a82c56652084e750bbec668d6f2aa97b4"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aece52ec9953b40b741b14261a1e1bdd7"><td class="memItemLeft" align="right" valign="top"><a id="aece52ec9953b40b741b14261a1e1bdd7"></a>
-bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__telescopeControl.html#aece52ec9953b40b741b14261a1e1bdd7">getTelescopeAtSlot</a> (int slot, ConnectionType &amp;connectionType, QString &amp;name, QString &amp;equinox, QString &amp;host, int &amp;portTCP, int &amp;delay, bool &amp;connectAtStartup, QList&lt; double &gt; &amp;circles, QString &amp;serverName, QString &amp;portSerial, QString &amp;rts2Url, QString &amp;rts2Username, QString &amp;rts2Password, int &amp;rts2Refresh)</td></tr>
-<tr class="memdesc:aece52ec9953b40b741b14261a1e1bdd7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Retrieves a telescope description. Returns false if the slot is empty. Returns empty serverName and portSerial if the description contains no server. <br /></td></tr>
-<tr class="separator:aece52ec9953b40b741b14261a1e1bdd7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac27089bd7a3e84c010e7c061d6e8eb90"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__telescopeControl.html#ac27089bd7a3e84c010e7c061d6e8eb90">addTelescopeAtSlot</a> (int slot, ConnectionType connectionType, QString name, QString equinox, QString host=QString(&quot;localhost&quot;), int portTCP=DEFAULT_TCP_PORT, int delay=DEFAULT_DELAY, bool connectAtStartup=false, QList&lt; double &gt; circles=QList&lt; double &gt;(), QString serverName=QString(), QString portSerial=QString(), QString rts2Url=QString(), QString rts2Username=QString(), QString rts2Password=QString(), int rts2Refresh=-1, QString ascomDeviceId=QString(&quot;&quot;), bool ascomUseDeviceEqCoordType=true)</td></tr>
+<tr class="memdesc:ac27089bd7a3e84c010e7c061d6e8eb90"><td class="mdescLeft">&#160;</td><td class="mdescRight">Adds a telescope description containing the given properties.  <a href="#ac27089bd7a3e84c010e7c061d6e8eb90">More...</a><br /></td></tr>
+<tr class="separator:ac27089bd7a3e84c010e7c061d6e8eb90"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac366ce4f68479ce523fda0fc19c43ceb"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__telescopeControl.html#ac366ce4f68479ce523fda0fc19c43ceb">getTelescopeAtSlot</a> (int slot, ConnectionType &amp;connectionType, QString &amp;name, QString &amp;equinox, QString &amp;host, int &amp;portTCP, int &amp;delay, bool &amp;connectAtStartup, QList&lt; double &gt; &amp;circles, QString &amp;serverName, QString &amp;portSerial, QString &amp;rts2Url, QString &amp;rts2Username, QString &amp;rts2Password, int &amp;rts2Refresh, QString &amp;ascomDeviceId, bool &amp;ascomUseDeviceEqCoordType)</td></tr>
+<tr class="memdesc:ac366ce4f68479ce523fda0fc19c43ceb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Retrieves a telescope description.  <a href="#ac366ce4f68479ce523fda0fc19c43ceb">More...</a><br /></td></tr>
+<tr class="separator:ac366ce4f68479ce523fda0fc19c43ceb"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a86591fd721e69744db9f63fd78c3b0bb"><td class="memItemLeft" align="right" valign="top"><a id="a86591fd721e69744db9f63fd78c3b0bb"></a>
 bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__telescopeControl.html#a86591fd721e69744db9f63fd78c3b0bb">removeTelescopeAtSlot</a> (int slot)</td></tr>
-<tr class="memdesc:a86591fd721e69744db9f63fd78c3b0bb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Removes info from the tree. Should it include <a class="el" href="group__telescopeControl.html#a4f7a968e8f4acf3a7d0406904afbe94f" title="Stops the telescope at the given slot. Destroys the TelescopeClient object and terminates the server ...">stopTelescopeAtSlot()</a>? <br /></td></tr>
+<tr class="memdesc:a86591fd721e69744db9f63fd78c3b0bb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Removes info from the tree. Should it include <a class="el" href="group__telescopeControl.html#a4f7a968e8f4acf3a7d0406904afbe94f" title="Stops the telescope at the given slot. ">stopTelescopeAtSlot()</a>? <br /></td></tr>
 <tr class="separator:a86591fd721e69744db9f63fd78c3b0bb"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a5d043f25fb294dae83692d272d2c9c51"><td class="memItemLeft" align="right" valign="top"><a id="a5d043f25fb294dae83692d272d2c9c51"></a>
-bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__telescopeControl.html#a5d043f25fb294dae83692d272d2c9c51">startTelescopeAtSlot</a> (int slot)</td></tr>
-<tr class="memdesc:a5d043f25fb294dae83692d272d2c9c51"><td class="mdescLeft">&#160;</td><td class="mdescRight">Starts a telescope at the given slot, getting its description with <a class="el" href="group__telescopeControl.html#aece52ec9953b40b741b14261a1e1bdd7" title="Retrieves a telescope description. Returns false if the slot is empty. Returns empty serverName and p...">getTelescopeAtSlot()</a>. Creates a <a class="el" href="classTelescopeClient.html" title="An abstract base class that should never be used directly, only inherited. ">TelescopeClient</a> object and starts a server process if necessary. <br /></td></tr>
+<tr class="memitem:a5d043f25fb294dae83692d272d2c9c51"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__telescopeControl.html#a5d043f25fb294dae83692d272d2c9c51">startTelescopeAtSlot</a> (int slot)</td></tr>
+<tr class="memdesc:a5d043f25fb294dae83692d272d2c9c51"><td class="mdescLeft">&#160;</td><td class="mdescRight">Starts a telescope at the given slot, getting its description with <a class="el" href="group__telescopeControl.html#ac366ce4f68479ce523fda0fc19c43ceb" title="Retrieves a telescope description. ">getTelescopeAtSlot()</a>.  <a href="#a5d043f25fb294dae83692d272d2c9c51">More...</a><br /></td></tr>
 <tr class="separator:a5d043f25fb294dae83692d272d2c9c51"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a4f7a968e8f4acf3a7d0406904afbe94f"><td class="memItemLeft" align="right" valign="top"><a id="a4f7a968e8f4acf3a7d0406904afbe94f"></a>
-bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__telescopeControl.html#a4f7a968e8f4acf3a7d0406904afbe94f">stopTelescopeAtSlot</a> (int slot)</td></tr>
-<tr class="memdesc:a4f7a968e8f4acf3a7d0406904afbe94f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Stops the telescope at the given slot. Destroys the <a class="el" href="classTelescopeClient.html" title="An abstract base class that should never be used directly, only inherited. ">TelescopeClient</a> object and terminates the server process if necessary. <br /></td></tr>
+<tr class="memitem:a4f7a968e8f4acf3a7d0406904afbe94f"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__telescopeControl.html#a4f7a968e8f4acf3a7d0406904afbe94f">stopTelescopeAtSlot</a> (int slot)</td></tr>
+<tr class="memdesc:a4f7a968e8f4acf3a7d0406904afbe94f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Stops the telescope at the given slot.  <a href="#a4f7a968e8f4acf3a7d0406904afbe94f">More...</a><br /></td></tr>
 <tr class="separator:a4f7a968e8f4acf3a7d0406904afbe94f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aab58495e1457d0c74eb2bd03a2f340db"><td class="memItemLeft" align="right" valign="top"><a id="aab58495e1457d0c74eb2bd03a2f340db"></a>
 bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__telescopeControl.html#aab58495e1457d0c74eb2bd03a2f340db">stopAllTelescopes</a> ()</td></tr>
 <tr class="memdesc:aab58495e1457d0c74eb2bd03a2f340db"><td class="mdescLeft">&#160;</td><td class="mdescRight">Stops all telescopes, but without removing them like <a class="el" href="group__telescopeControl.html#aaf25828430ac034ca3f254594c4258c5" title="Remove all currently registered telescopes. ">deleteAllTelescopes()</a>. <br /></td></tr>
 <tr class="separator:aab58495e1457d0c74eb2bd03a2f340db"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a9626641f59869d0af41cd31ff557a539"><td class="memItemLeft" align="right" valign="top"><a id="a9626641f59869d0af41cd31ff557a539"></a>
-bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__telescopeControl.html#a9626641f59869d0af41cd31ff557a539">isExistingClientAtSlot</a> (int slot)</td></tr>
-<tr class="memdesc:a9626641f59869d0af41cd31ff557a539"><td class="mdescLeft">&#160;</td><td class="mdescRight">Checks if there's a <a class="el" href="classTelescopeClient.html" title="An abstract base class that should never be used directly, only inherited. ">TelescopeClient</a> object at a given slot, i.e. if there's an active telescope at that slot. <br /></td></tr>
+<tr class="memitem:a9626641f59869d0af41cd31ff557a539"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__telescopeControl.html#a9626641f59869d0af41cd31ff557a539">isExistingClientAtSlot</a> (int slot)</td></tr>
+<tr class="memdesc:a9626641f59869d0af41cd31ff557a539"><td class="mdescLeft">&#160;</td><td class="mdescRight">Checks if there's a <a class="el" href="classTelescopeClient.html" title="An abstract base class that should never be used directly, only inherited. ">TelescopeClient</a> object at a given slot, i.e.  <a href="#a9626641f59869d0af41cd31ff557a539">More...</a><br /></td></tr>
 <tr class="separator:a9626641f59869d0af41cd31ff557a539"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa9947ef234962692a65c901afc64cb3c"><td class="memItemLeft" align="right" valign="top"><a id="aa9947ef234962692a65c901afc64cb3c"></a>
 bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__telescopeControl.html#aa9947ef234962692a65c901afc64cb3c">isConnectedClientAtSlot</a> (int slot)</td></tr>
@@ -316,8 +317,34 @@ Additional Inherited Members</h2></td></tr>
 <tr class="separator:acc51b40ad88636ba5e48e6f29a49505b inherit pro_methods_classStelModule"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h4 class="groupheader">Member Function Documentation</h4>
-<a id="a82c56652084e750bbec668d6f2aa97b4"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a82c56652084e750bbec668d6f2aa97b4">&#9670;&nbsp;</a></span>addTelescopeAtSlot()</h2>
+<a id="a576faa42dd96374ae825ed06a340c423"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a576faa42dd96374ae825ed06a340c423">&#9670;&nbsp;</a></span>abortTelescopeSlew</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void TelescopeControl::abortTelescopeSlew </td>
+          <td>(</td>
+          <td class="paramtype">const int&#160;</td>
+          <td class="paramname"><em>idx</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">slot</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<div class="fragment"><div class="line"><span class="comment">// example of usage in scripts</span></div><div class="line"><a class="code" href="group__telescopeControl.html#classTelescopeControl" title="This class manages the controlling of one or more telescopes by one instance of the stellarium progra...">TelescopeControl</a>.syncTelescopeToSelectedObject(1);</div></div><!-- fragment --> 
+</div>
+</div>
+<a id="ac27089bd7a3e84c010e7c061d6e8eb90"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac27089bd7a3e84c010e7c061d6e8eb90">&#9670;&nbsp;</a></span>addTelescopeAtSlot()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -410,7 +437,19 @@ Additional Inherited Members</h2></td></tr>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">int&#160;</td>
-          <td class="paramname"><em>rts2Refresh</em> = <code>-1</code>&#160;</td>
+          <td class="paramname"><em>rts2Refresh</em> = <code>-1</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">QString&#160;</td>
+          <td class="paramname"><em>ascomDeviceId</em> = <code>QString(&quot;&quot;)</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>ascomUseDeviceEqCoordType</em> = <code>true</code>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -419,7 +458,7 @@ Additional Inherited Members</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<p>DOES NOT VALIDATE its parameters. If serverName is specified, portSerial should be specified too. Call <a class="el" href="group__telescopeControl.html#a85489140b610ed46d9025e166bb03d4e" title="Saves to telescopes.json a list of the parameters of the active telescope clients. ">saveTelescopes()</a> to write the modified configuration to disc. Call <a class="el" href="group__telescopeControl.html#a5d043f25fb294dae83692d272d2c9c51" title="Starts a telescope at the given slot, getting its description with getTelescopeAtSlot(). Creates a TelescopeClient object and starts a server process if necessary. ">startTelescopeAtSlot()</a> to start this telescope. </p><dl class="params"><dt>Parameters</dt><dd>
+<p>DOES NOT VALIDATE its parameters. If serverName is specified, portSerial should be specified too. Call <a class="el" href="group__telescopeControl.html#a85489140b610ed46d9025e166bb03d4e" title="Saves to telescopes.json a list of the parameters of the active telescope clients. ">saveTelescopes()</a> to write the modified configuration to disc. Call <a class="el" href="group__telescopeControl.html#a5d043f25fb294dae83692d272d2c9c51" title="Starts a telescope at the given slot, getting its description with getTelescopeAtSlot(). ">startTelescopeAtSlot()</a> to start this telescope. </p><dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">portSerial</td><td>must be a valid serial port name for the particular platform, e.g. "COM1" for Microsoft Windows of "/dev/ttyS0" for Linux </td></tr>
   </table>
@@ -716,6 +755,125 @@ Additional Inherited Members</h2></td></tr>
 
 </div>
 </div>
+<a id="ac366ce4f68479ce523fda0fc19c43ceb"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac366ce4f68479ce523fda0fc19c43ceb">&#9670;&nbsp;</a></span>getTelescopeAtSlot()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool TelescopeControl::getTelescopeAtSlot </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>slot</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">ConnectionType &amp;&#160;</td>
+          <td class="paramname"><em>connectionType</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">QString &amp;&#160;</td>
+          <td class="paramname"><em>name</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">QString &amp;&#160;</td>
+          <td class="paramname"><em>equinox</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">QString &amp;&#160;</td>
+          <td class="paramname"><em>host</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int &amp;&#160;</td>
+          <td class="paramname"><em>portTCP</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int &amp;&#160;</td>
+          <td class="paramname"><em>delay</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool &amp;&#160;</td>
+          <td class="paramname"><em>connectAtStartup</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">QList&lt; double &gt; &amp;&#160;</td>
+          <td class="paramname"><em>circles</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">QString &amp;&#160;</td>
+          <td class="paramname"><em>serverName</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">QString &amp;&#160;</td>
+          <td class="paramname"><em>portSerial</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">QString &amp;&#160;</td>
+          <td class="paramname"><em>rts2Url</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">QString &amp;&#160;</td>
+          <td class="paramname"><em>rts2Username</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">QString &amp;&#160;</td>
+          <td class="paramname"><em>rts2Password</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int &amp;&#160;</td>
+          <td class="paramname"><em>rts2Refresh</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">QString &amp;&#160;</td>
+          <td class="paramname"><em>ascomDeviceId</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool &amp;&#160;</td>
+          <td class="paramname"><em>ascomUseDeviceEqCoordType</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Returns false if the slot is empty. Returns empty serverName and portSerial if the description contains no server. </p>
+
+</div>
+</div>
 <a id="adf5356bb5d74521937a10f5464e63331"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#adf5356bb5d74521937a10f5464e63331">&#9670;&nbsp;</a></span>init()</h2>
 
@@ -741,6 +899,25 @@ Additional Inherited Members</h2></td></tr>
 <p>If the initialization takes significant time, the progress should be displayed on the loading bar. </p>
 
 <p>Implements <a class="el" href="classStelModule.html#a32818e53cc8d640f15f84c38c454eab9">StelModule</a>.</p>
+
+</div>
+</div>
+<a id="a9626641f59869d0af41cd31ff557a539"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9626641f59869d0af41cd31ff557a539">&#9670;&nbsp;</a></span>isExistingClientAtSlot()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool TelescopeControl::isExistingClientAtSlot </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>slot</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>if there's an active telescope at that slot. </p>
 
 </div>
 </div>
@@ -835,6 +1012,24 @@ Additional Inherited Members</h2></td></tr>
 <dl class="section return"><dt>Returns</dt><dd>a list of matching object name by order of relevance, or an empty list if nothing match </dd></dl>
 
 <p>Reimplemented from <a class="el" href="classStelObjectModule.html#a976ba7eb082c09fcb7f3c1c44899acc6">StelObjectModule</a>.</p>
+
+</div>
+</div>
+<a id="a38f42e3112d4a2e324fe556bc351bd91"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a38f42e3112d4a2e324fe556bc351bd91">&#9670;&nbsp;</a></span>loadTelescopes()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void TelescopeControl::loadTelescopes </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>If there are already any initialized telescope clients, they are removed. </p>
 
 </div>
 </div>
@@ -1252,6 +1447,70 @@ Additional Inherited Members</h2></td></tr>
 <div class="fragment"><div class="line"><span class="comment">// example of usage in scripts</span></div><div class="line"><a class="code" href="group__telescopeControl.html#classTelescopeControl" title="This class manages the controlling of one or more telescopes by one instance of the stellarium progra...">TelescopeControl</a>.<a class="code" href="group__telescopeControl.html#a9e8ca7e2b3f27aaaf17b41d6720999b0" title="slews a telescope at slot idx to the point of the celestial sphere currently in the center of the scr...">slewTelescopeToViewDirection</a>(1);</div></div><!-- fragment --> 
 </div>
 </div>
+<a id="a5d043f25fb294dae83692d272d2c9c51"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5d043f25fb294dae83692d272d2c9c51">&#9670;&nbsp;</a></span>startTelescopeAtSlot()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool TelescopeControl::startTelescopeAtSlot </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>slot</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Creates a <a class="el" href="classTelescopeClient.html" title="An abstract base class that should never be used directly, only inherited. ">TelescopeClient</a> object and starts a server process if necessary. </p>
+
+</div>
+</div>
+<a id="a4f7a968e8f4acf3a7d0406904afbe94f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4f7a968e8f4acf3a7d0406904afbe94f">&#9670;&nbsp;</a></span>stopTelescopeAtSlot()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool TelescopeControl::stopTelescopeAtSlot </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>slot</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Destroys the <a class="el" href="classTelescopeClient.html" title="An abstract base class that should never be used directly, only inherited. ">TelescopeClient</a> object and terminates the server process if necessary. </p>
+
+</div>
+</div>
+<a id="a3d72874e51b84d22e95dd76caca58c57"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3d72874e51b84d22e95dd76caca58c57">&#9670;&nbsp;</a></span>syncTelescopeWithSelectedObject</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void TelescopeControl::syncTelescopeWithSelectedObject </td>
+          <td>(</td>
+          <td class="paramtype">const int&#160;</td>
+          <td class="paramname"><em>idx</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">slot</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>The telescope client can decide what syncing means but usually its used to update the internal pointing model. </p><div class="fragment"><div class="line"><span class="comment">// example of usage in scripts</span></div><div class="line"><a class="code" href="group__telescopeControl.html#classTelescopeControl" title="This class manages the controlling of one or more telescopes by one instance of the stellarium progra...">TelescopeControl</a>.syncTelescopeToSelectedObject(1);</div></div><!-- fragment --> 
+</div>
+</div>
 <a id="a3feae3486aaddd5d9e5ca69e8edf7aab"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a3feae3486aaddd5d9e5ca69e8edf7aab">&#9670;&nbsp;</a></span>update()</h2>
 
@@ -1292,7 +1551,7 @@ Additional Inherited Members</h2></td></tr>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Sun Sep 29 2019 16:13:47 for Stellarium by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Sun Dec 22 2019 18:00:53 for Stellarium by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.13
 </small></address>

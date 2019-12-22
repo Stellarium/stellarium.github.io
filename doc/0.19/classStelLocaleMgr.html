@@ -21,7 +21,7 @@
   <td id="projectlogo"><img alt="Logo" src="stellarium-logo.png"/></td>
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">Stellarium
-   &#160;<span id="projectnumber">0.19.2</span>
+   &#160;<span id="projectnumber">0.19.3</span>
    </div>
   </td>
  </tr>
@@ -56,16 +56,16 @@ $(function() {
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-types"></a>
 Public Types</h2></td></tr>
-<tr class="memitem:a94b6a5fa08b839abd9d4cffccaf9d8c9"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classStelLocaleMgr.html#a94b6a5fa08b839abd9d4cffccaf9d8c9">STimeFormat</a> { <a class="el" href="classStelLocaleMgr.html#a94b6a5fa08b839abd9d4cffccaf9d8c9add504e7193c3e10730ad84a420c5b650">STime24h</a>, 
-<a class="el" href="classStelLocaleMgr.html#a94b6a5fa08b839abd9d4cffccaf9d8c9aea730cdd8f7ca96c548944c500411fbd">STime12h</a>, 
-<a class="el" href="classStelLocaleMgr.html#a94b6a5fa08b839abd9d4cffccaf9d8c9a3b31829d745670c50f79a0187c733075">STimeSystemDefault</a>
+<tr class="memitem:a94b6a5fa08b839abd9d4cffccaf9d8c9"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classStelLocaleMgr.html#a94b6a5fa08b839abd9d4cffccaf9d8c9">STimeFormat</a> { <a class="el" href="classStelLocaleMgr.html#a94b6a5fa08b839abd9d4cffccaf9d8c9a3b31829d745670c50f79a0187c733075">STimeSystemDefault</a>, 
+<a class="el" href="classStelLocaleMgr.html#a94b6a5fa08b839abd9d4cffccaf9d8c9add504e7193c3e10730ad84a420c5b650">STime24h</a>, 
+<a class="el" href="classStelLocaleMgr.html#a94b6a5fa08b839abd9d4cffccaf9d8c9aea730cdd8f7ca96c548944c500411fbd">STime12h</a>
  }<tr class="memdesc:a94b6a5fa08b839abd9d4cffccaf9d8c9"><td class="mdescLeft">&#160;</td><td class="mdescRight">The time display format.  <a href="classStelLocaleMgr.html#a94b6a5fa08b839abd9d4cffccaf9d8c9">More...</a><br /></td></tr>
 </td></tr>
 <tr class="separator:a94b6a5fa08b839abd9d4cffccaf9d8c9"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a7e9a1868e66054ee0ec85b9988259eec"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classStelLocaleMgr.html#a7e9a1868e66054ee0ec85b9988259eec">SDateFormat</a> { <br />
-&#160;&#160;<a class="el" href="classStelLocaleMgr.html#a7e9a1868e66054ee0ec85b9988259eecade0d6c4597bca6f455140eae8b1312bb">SDateMMDDYYYY</a>, 
+&#160;&#160;<a class="el" href="classStelLocaleMgr.html#a7e9a1868e66054ee0ec85b9988259eeca5c28ac3211b4c5412e87dd74a5945b4e">SDateSystemDefault</a>, 
+<a class="el" href="classStelLocaleMgr.html#a7e9a1868e66054ee0ec85b9988259eecade0d6c4597bca6f455140eae8b1312bb">SDateMMDDYYYY</a>, 
 <a class="el" href="classStelLocaleMgr.html#a7e9a1868e66054ee0ec85b9988259eeca9d2e965a106d75ad3978047fa14da7f3">SDateDDMMYYYY</a>, 
-<a class="el" href="classStelLocaleMgr.html#a7e9a1868e66054ee0ec85b9988259eeca5c28ac3211b4c5412e87dd74a5945b4e">SDateSystemDefault</a>, 
 <a class="el" href="classStelLocaleMgr.html#a7e9a1868e66054ee0ec85b9988259eeca8e463b5b8fbb756333a568dbd079ca21">SDateYYYYMMDD</a>, 
 <br />
 &#160;&#160;<a class="el" href="classStelLocaleMgr.html#a7e9a1868e66054ee0ec85b9988259eeca891894d9f2d68db8a062df1eeeeb336f">SDateWWMMDDYYYY</a>, 
@@ -168,24 +168,28 @@ static QStringList&#160;</td><td class="memItemRight" valign="bottom"><a class="
 <tr class="separator:a2b6df164ff98f570cbc42a0c3cb6f55c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a039064f484d8a118562f2c1a269a5a8e"><td class="memItemLeft" align="right" valign="top"><a id="a039064f484d8a118562f2c1a269a5a8e"></a>
 static QString&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classStelLocaleMgr.html#a039064f484d8a118562f2c1a269a5a8e">shortDayName</a> (int weekday)</td></tr>
-<tr class="memdesc:a039064f484d8a118562f2c1a269a5a8e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the short name of the <em>weekday</em>. <br /></td></tr>
+<tr class="memdesc:a039064f484d8a118562f2c1a269a5a8e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the short name of the <em>weekday</em> [0=Sunday, 1=Monday..6]; weekday mod 7) <br /></td></tr>
 <tr class="separator:a039064f484d8a118562f2c1a269a5a8e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:abdfc0723a7ebc5d70fdaf762759cf57f"><td class="memItemLeft" align="right" valign="top"><a id="abdfc0723a7ebc5d70fdaf762759cf57f"></a>
 static QString&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classStelLocaleMgr.html#abdfc0723a7ebc5d70fdaf762759cf57f">longDayName</a> (int weekday)</td></tr>
-<tr class="memdesc:abdfc0723a7ebc5d70fdaf762759cf57f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the long name of the <em>weekday</em>. <br /></td></tr>
+<tr class="memdesc:abdfc0723a7ebc5d70fdaf762759cf57f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the long name of the <em>weekday</em> ([0..6]; weekday mod 7) <br /></td></tr>
 <tr class="separator:abdfc0723a7ebc5d70fdaf762759cf57f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a0ccb76d82b56b047720bca83ba6324d9"><td class="memItemLeft" align="right" valign="top"><a id="a0ccb76d82b56b047720bca83ba6324d9"></a>
 static QString&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classStelLocaleMgr.html#a0ccb76d82b56b047720bca83ba6324d9">shortMonthName</a> (int month)</td></tr>
-<tr class="memdesc:a0ccb76d82b56b047720bca83ba6324d9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the short name of the <em>month</em>. <br /></td></tr>
+<tr class="memdesc:a0ccb76d82b56b047720bca83ba6324d9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the short name of the <em>month</em> [1..12]. <br /></td></tr>
 <tr class="separator:a0ccb76d82b56b047720bca83ba6324d9"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a5af13742f2ad398991104c29955606de"><td class="memItemLeft" align="right" valign="top"><a id="a5af13742f2ad398991104c29955606de"></a>
 static QString&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classStelLocaleMgr.html#a5af13742f2ad398991104c29955606de">longMonthName</a> (int month)</td></tr>
-<tr class="memdesc:a5af13742f2ad398991104c29955606de"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the long name of the <em>month</em>. <br /></td></tr>
+<tr class="memdesc:a5af13742f2ad398991104c29955606de"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the long name of the <em>month</em> [1..12]. <br /></td></tr>
 <tr class="separator:a5af13742f2ad398991104c29955606de"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a8ea48800940d1202e5d4781ff2b7eaa9"><td class="memItemLeft" align="right" valign="top"><a id="a8ea48800940d1202e5d4781ff2b7eaa9"></a>
 static QString&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classStelLocaleMgr.html#a8ea48800940d1202e5d4781ff2b7eaa9">longGenitiveMonthName</a> (int month)</td></tr>
-<tr class="memdesc:a8ea48800940d1202e5d4781ff2b7eaa9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the genitive long name of the <em>month</em>. <br /></td></tr>
+<tr class="memdesc:a8ea48800940d1202e5d4781ff2b7eaa9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the genitive long name of the <em>month</em> [1..12]. <br /></td></tr>
 <tr class="separator:a8ea48800940d1202e5d4781ff2b7eaa9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae6ef62273b40532f454ebb42cd04e7b0"><td class="memItemLeft" align="right" valign="top"><a id="ae6ef62273b40532f454ebb42cd04e7b0"></a>
+static QString&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classStelLocaleMgr.html#ae6ef62273b40532f454ebb42cd04e7b0">romanMonthName</a> (int month)</td></tr>
+<tr class="memdesc:ae6ef62273b40532f454ebb42cd04e7b0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the Roman name (a number) of the <em>month</em> [1..12]. <br /></td></tr>
+<tr class="separator:ae6ef62273b40532f454ebb42cd04e7b0"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><dl class="section author"><dt>Author</dt><dd>Fabien Chereau </dd></dl>
@@ -202,11 +206,11 @@ static QString&#160;</td><td class="memItemRight" valign="bottom"><a class="el" 
       </table>
 </div><div class="memdoc">
 <table class="fieldtable">
-<tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a id="a7e9a1868e66054ee0ec85b9988259eecade0d6c4597bca6f455140eae8b1312bb"></a>SDateMMDDYYYY&#160;</td><td class="fielddoc"><p>e.g. "07-05-1998" for July 5th 1998 </p>
+<tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a id="a7e9a1868e66054ee0ec85b9988259eeca5c28ac3211b4c5412e87dd74a5945b4e"></a>SDateSystemDefault&#160;</td><td class="fielddoc"><p>Use the system default date format. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="a7e9a1868e66054ee0ec85b9988259eecade0d6c4597bca6f455140eae8b1312bb"></a>SDateMMDDYYYY&#160;</td><td class="fielddoc"><p>e.g. "07-05-1998" for July 5th 1998 </p>
 </td></tr>
 <tr><td class="fieldname"><a id="a7e9a1868e66054ee0ec85b9988259eeca9d2e965a106d75ad3978047fa14da7f3"></a>SDateDDMMYYYY&#160;</td><td class="fielddoc"><p>e.g. "05-07-1998" for July 5th 1998 </p>
-</td></tr>
-<tr><td class="fieldname"><a id="a7e9a1868e66054ee0ec85b9988259eeca5c28ac3211b4c5412e87dd74a5945b4e"></a>SDateSystemDefault&#160;</td><td class="fielddoc"><p>Use the system default date format. </p>
 </td></tr>
 <tr><td class="fieldname"><a id="a7e9a1868e66054ee0ec85b9988259eeca8e463b5b8fbb756333a568dbd079ca21"></a>SDateYYYYMMDD&#160;</td><td class="fielddoc"><p>e.g. "1998-07-05" for July 5th 1998 </p>
 </td></tr>
@@ -232,11 +236,11 @@ static QString&#160;</td><td class="memItemRight" valign="bottom"><a class="el" 
       </table>
 </div><div class="memdoc">
 <table class="fieldtable">
-<tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a id="a94b6a5fa08b839abd9d4cffccaf9d8c9add504e7193c3e10730ad84a420c5b650"></a>STime24h&#160;</td><td class="fielddoc"><p>24 hour clock, e.g. "18:22:00" </p>
+<tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a id="a94b6a5fa08b839abd9d4cffccaf9d8c9a3b31829d745670c50f79a0187c733075"></a>STimeSystemDefault&#160;</td><td class="fielddoc"><p>use the system default format. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="a94b6a5fa08b839abd9d4cffccaf9d8c9add504e7193c3e10730ad84a420c5b650"></a>STime24h&#160;</td><td class="fielddoc"><p>24 hour clock, e.g. "18:22:00" </p>
 </td></tr>
 <tr><td class="fieldname"><a id="a94b6a5fa08b839abd9d4cffccaf9d8c9aea730cdd8f7ca96c548944c500411fbd"></a>STime12h&#160;</td><td class="fielddoc"><p>12 hour clock, e.g. "06:22:00 pm" </p>
-</td></tr>
-<tr><td class="fieldname"><a id="a94b6a5fa08b839abd9d4cffccaf9d8c9a3b31829d745670c50f79a0187c733075"></a>STimeSystemDefault&#160;</td><td class="fielddoc"><p>use the system default format. </p>
 </td></tr>
 </table>
 
@@ -536,7 +540,7 @@ static QString&#160;</td><td class="memItemRight" valign="bottom"><a class="el" 
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Sun Sep 29 2019 16:13:47 for Stellarium by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Sun Dec 22 2019 18:00:54 for Stellarium by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.13
 </small></address>

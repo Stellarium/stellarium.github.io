@@ -21,7 +21,7 @@
   <td id="projectlogo"><img alt="Logo" src="stellarium-logo.png"/></td>
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">Stellarium
-   &#160;<span id="projectnumber">0.19.2</span>
+   &#160;<span id="projectnumber">0.19.3</span>
    </div>
   </td>
  </tr>
@@ -1208,7 +1208,14 @@ double&#160;</td><td class="memItemRight" valign="bottom"><b>timeSpeed</b></td><
 <li>phase-angle-deg : phase angle of object in decimal degrees (for Solar system objects only!)</li>
 <li>elongation : elongation of object in radians (for Solar system objects only!)</li>
 <li>elongation-dms : elongation of object in DMS (for Solar system objects only!)</li>
-<li>elongation-deg : elongation of object in decimal degrees (for Solar system objects only!) Other <a class="el" href="classStelObject.html" title="The base abstract class for sky objects used in Stellarium like Stars, Planets, Constellations etc...">StelObject</a> derivates, also those defined in plugins, may add more, these fields are documented in the respective classes, or simply try what you get: You can print a complete set of entries into output with the following commands: <div class="fragment"><div class="line">map=core.getSelectedObjectInfo();</div><div class="line">core.output(core.mapToString(map));</div></div><!-- fragment --> </li>
+<li>elongation-deg : elongation of object in decimal degrees (for Solar system objects only!)</li>
+<li>velocity: the planet velocity around the parent planet in ecliptical coordinates in AU/d (for Solar system objects only!)</li>
+<li>velocity-kms: the planet velocity around the parent planet in km/s (for Solar system objects only!)</li>
+<li>heliocentric-velocity: the planet's heliocentric velocity in the solar system in ecliptical coordinates in AU/d (for Solar system objects only!)</li>
+<li>heliocentric-velocity-kms: the planet heliocentric velocity in the solar system in km/s (for Solar system objects only!)</li>
+<li>scale: scale factor for Solar system bodies (for Solar system objects only!)</li>
+<li>eclipse-obscuration: value of obscuration for solar eclipse (for Sun only!)</li>
+<li>eclipse-magnitude: value of magnitude for solar eclipse (for Sun only!) Other <a class="el" href="classStelObject.html" title="The base abstract class for sky objects used in Stellarium like Stars, Planets, Constellations etc...">StelObject</a> derivates, also those defined in plugins, may add more, these fields are documented in the respective classes, or simply try what you get: You can print a complete set of entries into output with the following commands: <div class="fragment"><div class="line">map=core.getSelectedObjectInfo();</div><div class="line">core.output(core.mapToString(map));</div></div><!-- fragment --> </li>
 </ul>
 </dd></dl>
 
@@ -4940,7 +4947,7 @@ starting with version 0.14.0 the final optional Boolean argument has a different
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Sun Sep 29 2019 16:13:47 for Stellarium by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Sun Dec 22 2019 18:00:54 for Stellarium by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.13
 </small></address>

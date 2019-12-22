@@ -1,0 +1,127 @@
+---
+layout: post
+title: Stellarium v0.19.3 has been released!
+date: 2019-12-22 18:25:00 +0700
+categories: release
+author: alex-w
+nolangbar: true
+---
+The major changes of this version:
+- Direct ASCOM support for Telescope Control plugin on Windows
+- Refactoring the GUI
+- Many improvements in the code
+- Added many DSO textures
+- Improvements in DSO catalog
+- Many improvements in AstroCalc tool
+
+Thank you very much to community for bug reports, feature requests and contributions!
+
+Full list of changes:
+- Added Vts plugin (GH: #880)
+- Added Chinese translation for skycultures (GH: #788)
+- Added support superior and inferior conjunctions for inner planets in AstroCalc/Phenomena tool (GH: #789)
+- Added support greatest elongations for inner planets in AstroCalc/Phenomena tool (GH: #789)
+- Added compute stationary points in AstroCalc/Phenomena tool (GH: #789)
+- Added new groups of objects for AstroCalc/Phenomena tool
+- Added magnitudes for AstroCalc/Phenomena tool
+- Added brightness limit for planetary nebulae (speed-up for AstroCalc/Phenomena tool)
+- Added 2 new functions for AstroCalc/Graphs tool
+- Added support of connecting line between the ephemeris markers (GH: #758, #805)
+- Added support skipping of labels for visualization of data into AstroCalc/Ephemeris tool (GH: #758)
+- Added acknowledgements entry for plugins
+- Added some more references and acknowledgements for few plugins
+- Added some DSO textures (GH: #798, #824, #878)
+- Added new GUI options and tooltips for AstroCalc/Ephemeris and AstroCalc/Phenomena tools
+- Added parallax accuracy info for the stars (GH: #87)
+- Added new planetary nomenclature
+- Added selected dwarf and minot planets for AstroCalc/Phenomena tool
+- Added error info for distance (taken from parallax)
+- Added heliocentric speed to Apex markers
+- Added support of SYNC command for LX200 and NexStar protocols (Telescope Control Plugin) (GH: #667, #727)
+- Added asteroid (162173) Ryugu and moon Puck (Uranus XV)
+- Added filters for open/globular star clusters in DSO tab (GH: #841)
+- Added categories "open star clusters" and "globular star clusters" into AstroCalc/WUT tool (GH: #841)
+- Added new type of shape for markers (MarkerMgr/scripting)
+- Added new option for visualization of ephemeris markers (AstroCalc/Ephemeris tool)
+- Added tool for smart format dates of ephemeris on the sky (AstroCalc/Ephemeris tool)
+- Added new option for CCD (switching scaling FOV) in Oculars plugin (GH: #834)
+- Added option to allow drawing FOV outline for ocular (Oculars plugin)
+- Added an optional cardinal points to the ocular view (GH: #421)
+- Added some stars to Chinese skyculture and Chinese contemporary skyculture (GH: #848)
+- Added option to enable align the crosshair in equatorial coordinate system (GH: #852)
+- Added option to use one color for info text (overwrite color mode) for all objects
+- Added ASCOM telescope client into Telescope Control plugin (Windows only) (GH: #761, #406)
+- Added 2 new config options for developers to build Stellarium package
+- Added Pinyin transliteration to Chinese sky culture (GH: #867)
+- Added support display of asterisms and ray helpers for Western (Rey) starlore (GH: #855)
+- Added tool with keyboard shortcut for deselect the selected object (GH: #857)
+- Added new tool (AstroCalc/Transits) info AstroCalc window (GH: #872)
+- Added new option (duration) into AstroCalc/Graphs [Graphs] tool (GH: #874)
+- Added an optional calculations for perihelion and aphelion of the planets into AstroCalc/Ephemeris tool (GH: #874)
+- Added tool to adjustable line thickness of celestial grids and lines (GH: #828)
+- Added line thickness setting into ArchaeoLines plugin
+- Added new stars and exoplanets names according to IAU NameExoWorlds
+- Fixed coordinates for Taldykorgan (Kazakhstan) (GH: #782)
+- Fixed drawing of Off-Axis Guider (GH: #784)
+- Fixed wrong rendering FOV through eyepiece when telescope is changed (GH: #211)
+- Fixed parsing the designation of interstellar objects for MPC online search tool
+- Fixed compute minutes in low precision case from deciman hours (GH: #792)
+- Fixed double (mirrored) ephemeris lines in perspective projection (GH: #811, #813)
+- Fixed exclude moons from compute of greatest elongations and stationary points on non-terrestrial locations (AstroCalc/Phenomena tool)
+- Fixed compute behaviour for "Sun, planets and moons" option on non-terrestrial locations (AstroCalc/Phenomena tool)
+- Fixed cache problem for compute Moon's age in some cases
+- Fixed crash in AstroCalc/Ephemeris tool in specific cases (GH: #822)
+- Fixed displaying obvious wrong distance for stars (GH: #402, #404)
+- Fixed wrong rendering the screen in night mode with fractional scaling (GH: #827)
+- Fixed getting revision number for non-release builds when git is not installed or using source tarball
+- Fixed wrong distances of the clusters in the Large Magellanic Cloud (GH: #840)
+- Fixed crash when star catalogs description is updated
+- Fixed abbreviation of asterism Sudor Ophiuchi
+- Fixed wrong zooming in Telrad (GH: #832)
+- Fixed about data for Oculars plugin and updated the version of plugin
+- Fixed support mirrored cardinals for ocular view
+- Fixed crash when "gravity labels" is enabled (GH: #847)
+- Fixed the space char problem for gravity labels
+- Fixed work scripting functions saveState and restoreState (GH: #849)
+- Fixed font scaling for text around CCD frame for HiDPI screens
+- Fixed translation errors in Danish (GH: #865)
+- Fixed saving of stars twinkle setting (GH: #862)
+- Fixed crash for saving file in AstroCalc/WUT tool when category of objects is not selected
+- Fixed obtaining some data for plot graphs in Exoplanets plugin
+- Fixed DSO catalog (unexsist objects)
+- Fixed object information text color in eyepiece view at daytime (GH: #858)
+- Fixed plot for culmination height jumps at daylight saving time (GH: #876)
+- Fixed crash with negative JDs
+- Fixed setting the minimum data step for labels in AstroCalc/Ephemeris tool (GH: #871)
+- Fixed translation issues for Nomenclature
+- Fixed translation issues for Nebulae
+- Fixed translation months of activity for the meteor showers
+- Fixed solar halo drawing issue (GH: #879)
+- Fixed ASCOM settings translation issue (GH: #881)
+- Fixed for paths render with orthographic projection (GH: #811)
+- Fixed wrap-around rendering artefacts for Comet tails in Cylindrical and similar projections
+- Fixed artefacts in some projections for old-style landscapes (GH: #366)
+- Fixed Date and Time dialog: set focus on day spinner by default (GH: #886)
+- Updated outlines for DSO (the data taken from OpenNGC catalog)
+- Updated TelescopeControl plugin: Attempt to fix protocol mismatches for LX200 (GH: #818)
+- Updated some DSO textures (GH: #783, #798, #815, #817, #824, #878)
+- Updated scripting engine documentation
+- Updated Stellarium User Guide
+- Updated options for Windows installer (GH: #819)
+- Updated AstroCalc/PC tool
+- Updated parallax info string: let's use milliarcseconds for parallax for whole planetarium
+- Updated default bookmarks for asteroids in Solar System Editor plugin
+- Updated default bookmarks for comets in Solar System Editor plugin
+- Updated the initial steps for newly added minor and dwarf planets into AstroCalc/Phenomena tool
+- Updated rules for including OpenSSL libraries into Windows package (GH: #786)
+- Updated GUI for Sky and viewing options window
+- Updated attributes for HDPI support
+- Updated lunar terminator visibility
+- Updated ephemeris marker style: it was switched to use new type of shape to balancing the visual style
+- Updated spectral data for HIP stars from SIMBAD/Gaia data
+- Updated variable stars data (HIP subset from GCVS 5.1 catalog)
+- Updated behaviour: hide zodiacal light when whole Solar system bodies are hidden
+- Updating StelProperty behaviour: allow suppression of a warning when a StelProperty cannot be found - should be used when requesting plugin properties!
+- Updated AstroCalc/Ephemeris tool: excluding moons from list of celestial bodies (except the moons of current planet) to simplificate.
+- Removed filter for star clusters from DSO tab (GH: #841)
+- Removed "star clusters" category from AstroCalc/WUT tool (GH: #841)
