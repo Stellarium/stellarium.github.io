@@ -1,0 +1,134 @@
+---
+layout: post
+title: Stellarium v0.20.0 has been released!
+date: 2020-03-29 21:00:00 +0700
+categories: release
+author: alex-w
+nolangbar: true
+---
+The major changes of this version:
+- Refactoring and updating the GUI
+- Deep refactoring code, related to Solar system
+- Many improvements in the code of plugins
+
+Thank you very much to community for bug reports, feature requests and contributions!
+
+Full list of changes:
+- Added Almagest skyculture (GH: #1017)
+- Added missing Ukrainian translations for landscapes (GH: #891)
+- Added show an altitude of perigee/apogee for satellites (GH: #910)
+- Added show an orbit inclination info for satellites (GH: #910)
+- Added support INDIGO for Telescope Control plugin
+- Added tool for extract dates of releases with their versions from ChangeLog and update list of these releases in stellarium.appdata.xml file
+- Added particular refresh method for Oculars plugin to see immediate changes of CCD properties
+- Added displaying last updated TLE for users
+- Added a SIMBAD lookup name query to the Search Dialog (GH: #831)
+- Added the configuration file and shell scripts to translate skyculture and landscape descriptions with po4a (GH: #908)
+- Added new config and GUI option to change behaviour of focusing on day spinner in Date and Time dialog (GH: #939)
+- Added context for name an asteroid (849) Ara to resolve translation issue
+- Added a failure warning for Solar System Editor plugin (GH: #932)
+- Added Cross-origin (CORS) support to Remote Control plugin (GH: #942)
+- Added support for CORS preflight request to the Remote Control plugin (GH: #944)
+- Added a minimum near clipping plane distance: slightly improves rendering of Saturn viewed from Pan (GH: #435)
+- Added a GimbalOrbit for the "Observer" planets: allows arbitrary viewpoints by keyboard action (GH: #946)
+- Added new nomenclature items
+- Added new type of planetary feature
+- Added automatize for creating Windows installers and signing them (GH: #969)
+- Added configuring colors for ocular circles, sensor frames and text output in Oculars plugin (GH: #967)
+- Added a toggle action to switch visibility of Ocular GUI button bar (GH: #964)
+- Added allowing for assign shortcut for opening the config dialogues of plugins (GH: #964)
+- Added display references for proper names of celestial object in description of skyculture
+- Added texlive-fonts-recommended to apt-get install doc (GH: #959)
+- Added hourly proper motion for planets, minor planets and comets (GH: #957)
+- Added shortcuts to change GimbalOrbit distance
+- Added actions for rotate reticles into Oculars plugin
+- Added modern rotational elements for Solar system objects (GH: #950)
+- Added linear model in the first approximation for smooth reduce the brightness of Jovian moons for get more realistic look (GH: #979)
+- Added partitions to the Great Circles (GH: #993)
+- Added properties for control of line partitions (GH: #993)
+- Added fixed distinct length for 30, 10, 5, 1 degree marks for partitions (GH: #993)
+- Added configurable thickness for partitions (GH: #993)
+- Added German set of navigational stars
+- Added nautical navigation data for navigation stars (GH: #955, #408)
+- Added special name for landing location (translatable string "landing site") to avoid using "-" as name and good look
+- Added comet C/2019 Y4 (ATLAS) as potential superbright comet (a Great Comet)
+- Added asteroid (101955) Bennu (provisional designation 1999 RQ36) with texture (and nomenclature some time early)
+- Added option to hide Scripts Console at script running
+- Fixed script for installing asterisms data in Western: Rey skyculture
+- Fixed typos in sky culture and landscape descriptions (GH: #892, #896, #899, #929, #927, #926, #905)
+- Fixed restoring star labels state to default value after disabling displaying the Navigational stars data (GH: #898)
+- Fixed work AstroCalc/Transits tool for pulsars
+- Fixed displaying proper name and designation of pulsars (the output format was unificate with other objects)
+- Fixed scaling FOV for CCD with OAG (Oculars plugin)
+- Fixed resetting zoom level in Oculars plugin when CCD frame is rotation (GH: #895)
+- Fixed name for M48 (GH: #902)
+- Fixed CCD rotation issue (GH: #934)
+- Fixed wrong text placement on center of screen, when vertical offset is defined (GH: #904)
+- Fixed potential bug for updating standard magnitudes for satellites
+- Fixed a spurious bad answer in Search Tool (GH: #831)
+- Fixed location manager for API changes to GPSd 3.20 (GH: #925)
+- Fixed updating TLE for satellites with leading zeros in ID (GH: #920, #897)
+- Fixed data formatting for Meteor Showers Search Tool
+- Fixed selection the meteor shower from Meteor Showers Search Tool
+- Fixed Corona size on HiDPI screens (GH: #911)
+- Fixed caching of precession values not being used (GH: #915)
+- Fixed color conversion for markers of meteor showers from old format
+- Fixed setting thickness of lines for constellations and boundaries
+- Fixed jittering labels and moons hints
+- Fixed the flawed 2013 brightness model for Venus
+- Fixed manage slider by keyboard in AstroCalc/Graphs[Monthly Elevation] tool (GH: #936)
+- Fixed crash when observer is on spaceship
+- Fixed behaviour of draw the trails of planets
+- Fixed opening User Directory in Script Console if scripts directory into User Directory does not exist (GH: #963)
+- Fixed crash with the extrainfostrings
+- Fixed behaviour of Bookmarks highlights: fool protection is enabled (GH: #917)
+- Fixed enabling a reticle for eyepieces in Oculars plugin
+- Fixed getting weird data for eclipse magnitude value during transits of inner planets
+- Fixed viewing Phobos from Mars
+- Fixed velocity value for KeplerOrbit around planets (GH: #950)
+- Fixed a few potential problems (CWE-476)
+- Fixed constellation lines for Babylonian (Seleucid) sky culture
+- Fixed crash Stellarium, when meteor shower selected and you tried set date to outside the activity range of selected shower (Fix #975)
+- Fixed crash Stellarium on trying select inactive meteor shower in Search Tool/Lists (Fix #975)
+- Fixed displaying info for inactive meteor showers
+- Fixed missing translatable strings for nomenclature data
+- Fixed the time rate when Solar system body is selected: adjust time resetting for planet proper motion display (GH: #1006)
+- Fixed GUI issue: switch off true time indicator when scene is paused
+- Fixed false comet in orthographic projection (GH: #389)
+- Fixed black rendering of lunar pole (GH: #992)
+- Fixed hiding the cardinal points on "planetary observers"
+- Fixed weird axis orientation of the Moon (GH: #974)
+- Fixed name of a script
+- Fixed hides data in Ocular plugin: changed the priority level of drawing for Equation of Time and Pointer Coordinates plugins (GH: #987)
+- Fixed crash when observer is on spaceship and target planet is Solar system minor body
+- Fixed location info string on bottom bar when observer is on spaceship
+- Fixed compilation Stellarium on Solaris (Clang 9.0; SunOS 5.11)
+- Updated set of GUI icons (GH: #804)
+- Updated list of countries (ISO 3166-1 alpha-2) and list of locations (GH: #894)
+- Updated list of contributors
+- Updated Ukrainian translation of the sky culture descriptions (GH: #900, #907, #912)
+- Updated GUI of the Satellites plugin: the color picker button was split into 3 buttons to define separate colors for info, orbit and marker of satellite (GH: #910)
+- Updated "Save settings" button behaviour: when button "Save settings" are pressed, then emitted signal configurationDataSaved() and all plugins are saved the config data too (GH: #906)
+- Updated scripts
+- Updated Scripting Console (GH: #995)
+- Updated code for Orbit class: combined EllipticalOrbit and CometOrbit classes to KeplerOrbit
+- Updated list of MSVC versions for StelLogger class
+- Updated GUI for Oculars plugin and changed focus policy for Oculars GUI buttons (GH: #956)
+- Updated GUI for Information tab: define new ProperMotion InfoStringGroup flag, and adapt GUI, settings and StarWrapper (GH: #957)
+- Updated InfoString: improved readability (HTML symbol syntax instead of Unicode char numbers)
+- Updated GUI and shortcuts info for Oculars plugin
+- Updated GUI for Script Console
+- Updated Moon phases info: Restore/sanitize handling of named moon phases (GH: #950)
+- Updated trails behaviour: when planet is changed the trails should be recreated
+- Updated trails behaviour: include moons of current planet into planet trails
+- Updated trails behaviour: allow limitation (early cutoff) of trail length
+- Updated behaviour for selection of meteor showers in Search Dialog (Ctrl+Alt+M) of the Meteor Shower plugin
+- Updated default list of TLE sources in Satellites plugin
+- Updated Korean translations for Windows Installer (GH: #980)
+- Updated DSO names: synced few names from SIMBAD
+- Updated the pulsars catalog and tool for generate of JSON catalog from the original data (GH: #989)
+- Updated SSD: synced the data by JPL HORIZON for some Solar system minor bodies
+- Removed outdated and abandoned code
+- Removed code for separate handling hotkeys from Oculars plugin
+- Removed unnecessary orbit data from Comets and MinorPlanets (GH: #950)
+- Removed of code repetition (GH: #950)
