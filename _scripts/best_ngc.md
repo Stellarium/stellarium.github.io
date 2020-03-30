@@ -3,7 +3,7 @@ title: Best objects in the New General Catalog
 author: Alexander Wolf
 license: Public Domain
 compat: 0.19+
-version: 1.2
+version: 1.3
 script_url: https://raw.githubusercontent.com/Stellarium/stellarium/master/scripts/best_ngc.ssc
 categories: repository
 ---

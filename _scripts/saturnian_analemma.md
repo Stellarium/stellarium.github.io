@@ -3,7 +3,7 @@ title: Saturnian analemma
 author: Alexander Wolf
 license: Public Domain
 compat: 0.19+
-version: 1.0
+version: 1.1
 script_url: https://raw.githubusercontent.com/Stellarium/stellarium/master/scripts/saturnian_analemma.ssc
 categories: repository
 ---
