@@ -21,7 +21,7 @@
   <td id="projectlogo"><img alt="Logo" src="stellarium-logo.png"/></td>
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">Stellarium
-   &#160;<span id="projectnumber">0.20.0</span>
+   &#160;<span id="projectnumber">0.20.1</span>
    </div>
   </td>
  </tr>
@@ -118,6 +118,14 @@ void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="clas
 bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classStelSkyDrawer.html#a0d0964665b6041a73db97c0c01841c1a">getFlagDrawBigStarHalo</a> () const</td></tr>
 <tr class="memdesc:a0d0964665b6041a73db97c0c01841c1a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get flag for drawing a halo around bright stars. <br /></td></tr>
 <tr class="separator:a0d0964665b6041a73db97c0c01841c1a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a83c606d05d48b941d8490b1f7a550a82"><td class="memItemLeft" align="right" valign="top"><a id="a83c606d05d48b941d8490b1f7a550a82"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classStelSkyDrawer.html#a83c606d05d48b941d8490b1f7a550a82">setFlagStarSpiky</a> (bool b)</td></tr>
+<tr class="memdesc:a83c606d05d48b941d8490b1f7a550a82"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set flag to draw stars with rays. <br /></td></tr>
+<tr class="separator:a83c606d05d48b941d8490b1f7a550a82"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abb1025947167eb9619b78dc5c423d453"><td class="memItemLeft" align="right" valign="top"><a id="abb1025947167eb9619b78dc5c423d453"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classStelSkyDrawer.html#abb1025947167eb9619b78dc5c423d453">getFlagStarSpiky</a> () const</td></tr>
+<tr class="memdesc:abb1025947167eb9619b78dc5c423d453"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get whether to draw stars with rays. <br /></td></tr>
+<tr class="separator:abb1025947167eb9619b78dc5c423d453"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a9bce4a757f50b72c927f6ec7a8c90a96"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classStelSkyDrawer.html#a9bce4a757f50b72c927f6ec7a8c90a96">getLimitMagnitude</a> () const</td></tr>
 <tr class="memdesc:a9bce4a757f50b72c927f6ec7a8c90a96"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the magnitude of the currently faintest visible point source It depends on the zoom level, on the eye adapation and on the point source rendering parameters.  <a href="#a9bce4a757f50b72c927f6ec7a8c90a96">More...</a><br /></td></tr>
 <tr class="separator:a9bce4a757f50b72c927f6ec7a8c90a96"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -254,6 +262,10 @@ void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="clas
 void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classStelSkyDrawer.html#a7f9a6f3ddc5693fe131cdb264ebd39a0">flagDrawBigStarHaloChanged</a> (bool b)</td></tr>
 <tr class="memdesc:a7f9a6f3ddc5693fe131cdb264ebd39a0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Emitted when flag to draw big halo around stars changed. <br /></td></tr>
 <tr class="separator:a7f9a6f3ddc5693fe131cdb264ebd39a0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a024239602153a907c880c7cd2d04e0ed"><td class="memItemLeft" align="right" valign="top"><a id="a024239602153a907c880c7cd2d04e0ed"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classStelSkyDrawer.html#a024239602153a907c880c7cd2d04e0ed">flagStarSpikyChanged</a> (bool b)</td></tr>
+<tr class="memdesc:a024239602153a907c880c7cd2d04e0ed"><td class="mdescLeft">&#160;</td><td class="mdescRight">Emitted on change of star texture. <br /></td></tr>
+<tr class="separator:a024239602153a907c880c7cd2d04e0ed"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a014ee17a0dbd31b61d3bba56e9afd054"><td class="memItemLeft" align="right" valign="top"><a id="a014ee17a0dbd31b61d3bba56e9afd054"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classStelSkyDrawer.html#a014ee17a0dbd31b61d3bba56e9afd054">flagStarMagnitudeLimitChanged</a> (bool b)</td></tr>
 <tr class="memdesc:a014ee17a0dbd31b61d3bba56e9afd054"><td class="mdescLeft">&#160;</td><td class="mdescRight">Emitted whenever the star magnitude limit flag is toggled. <br /></td></tr>
@@ -383,6 +395,9 @@ int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class
 <tr class="memitem:a0fae7e07310c2511b27251c1ccdff6c7"><td class="memItemLeft" align="right" valign="top"><a id="a0fae7e07310c2511b27251c1ccdff6c7"></a>
 bool&#160;</td><td class="memItemRight" valign="bottom"><b>flagDrawBigStarHalo</b></td></tr>
 <tr class="separator:a0fae7e07310c2511b27251c1ccdff6c7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acced70394c73fea3d86934b5938f9623"><td class="memItemLeft" align="right" valign="top"><a id="acced70394c73fea3d86934b5938f9623"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><b>flagStarSpiky</b></td></tr>
+<tr class="separator:acced70394c73fea3d86934b5938f9623"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a2f19e4989634b31430b117fa1c6cb1c4"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classStelSkyDrawer.html#a2f19e4989634b31430b117fa1c6cb1c4">flagStarMagnitudeLimit</a></td></tr>
 <tr class="memdesc:a2f19e4989634b31430b117fa1c6cb1c4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Controls the application of the user-defined star magnitude limit.  <a href="#a2f19e4989634b31430b117fa1c6cb1c4">More...</a><br /></td></tr>
 <tr class="separator:a2f19e4989634b31430b117fa1c6cb1c4"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -1389,7 +1404,7 @@ double&#160;</td><td class="memItemRight" valign="bottom"><b>atmospherePressure<
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Sun Mar 29 2020 17:55:52 for Stellarium by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Mon Apr 20 2020 20:25:56 for Stellarium by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.13
 </small></address>

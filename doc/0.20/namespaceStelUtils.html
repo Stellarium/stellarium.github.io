@@ -21,7 +21,7 @@
   <td id="projectlogo"><img alt="Logo" src="stellarium-logo.png"/></td>
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">Stellarium
-   &#160;<span id="projectnumber">0.20.0</span>
+   &#160;<span id="projectnumber">0.20.1</span>
    </div>
   </td>
  </tr>
@@ -191,7 +191,7 @@ void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="name
 <tr class="memdesc:a9e5a632badc072f6c5aac1c9b5503e51"><td class="mdescLeft">&#160;</td><td class="mdescRight">Coordinate Transformation from ecliptical to equatorial. <br /></td></tr>
 <tr class="separator:a9e5a632badc072f6c5aac1c9b5503e51"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:acd88f8194549c7d46656952428720427"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceStelUtils.html#acd88f8194549c7d46656952428720427">getDecAngle</a> (const QString &amp;str)</td></tr>
-<tr class="memdesc:acd88f8194549c7d46656952428720427"><td class="mdescLeft">&#160;</td><td class="mdescRight">Convert a string longitude, latitude, RA or Declination angle to radians.  <a href="#acd88f8194549c7d46656952428720427">More...</a><br /></td></tr>
+<tr class="memdesc:acd88f8194549c7d46656952428720427"><td class="mdescLeft">&#160;</td><td class="mdescRight">Convert a string longitude, latitude, RA or declination angle to radians.  <a href="#acd88f8194549c7d46656952428720427">More...</a><br /></td></tr>
 <tr class="separator:acd88f8194549c7d46656952428720427"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a9e3143529cf3d2b03780f2219fe7b948"><td class="memItemLeft" align="right" valign="top"><a id="a9e3143529cf3d2b03780f2219fe7b948"></a>
 bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceStelUtils.html#a9e3143529cf3d2b03780f2219fe7b948">isPowerOfTwo</a> (const int value)</td></tr>
@@ -918,23 +918,11 @@ float&#160;</td><td class="memItemRight" valign="bottom"><b>trunc</b> (float x)<
 </div><div class="memdoc">
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">str</td><td>the angle in format something like these:<ul>
-<li>+53d 51'21.6"
-- +53d51'21.6"</li>
-<li>-1d 10'31.8"
-- +46d6'31"</li>
-<li>50D46'0"N
-- 123D47'59"W</li>
-<li>123.567 N</li>
-<li>123.567W</li>
-<li>-123.567</li>
-<li>12h 14m 6s The degree separator may be a degree symbol (\xBA) in addition to a 'd' or 'D'. </li>
-</ul>
-</td></tr>
+    <tr><td class="paramname">str</td><td>the angle in a format according to: angle ::= [sign¹] ( real [degs | mins | secs] | [integer degs] ( [integer mins] real secs | real mins ) ) [cardinal¹] sign ::= + | - digit := 0 | 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 integer ::= digit [digits] real ::= integer [. integer] degs ::= d | h² | U+00B0 | U+00BA³ mins ::= m | ' secs ::= s | " cardinal ::= N² | S² | E | W ¹) A cardinal point overrides any sign. N and E result in a positive, W and S in a negative angle. ²) The use of the cardinal points N and S together with the hour sign 'H' or 'h' is forbidden. ³) The MASCULINE ORDINAL INDICATOR U+00BA is accepted, considering Spanish QWERTY keyboards. The string is parsed without regarding to case, except that, after a single real, a solitary 's' indicates seconds whereas an 'S' indicates South. It is highly recommended to use lower case for hdms and upper case for NSEW. Latitude: North is positive, South is negative. Longitude: East is positive, West is negative. </td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd>the angle in radians. Latitude: North are positive, South are negative. Longitude: East is positive, West is negative. Note: if there is a N, S, E or W suffix, any leading + or - characters are ignored. </dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>the angle in radians. </dd></dl>
 
 </div>
 </div>
@@ -3276,7 +3264,7 @@ template&lt;typename T &gt; </div>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Sun Mar 29 2020 17:55:53 for Stellarium by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Mon Apr 20 2020 20:25:56 for Stellarium by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.13
 </small></address>
