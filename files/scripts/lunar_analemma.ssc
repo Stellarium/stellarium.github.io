@@ -1,0 +1,58 @@
+//
+// Name: Lunar analemma
+// License: Public Domain
+// Author: excentrisitet
+// Version: 1.0
+// Description: A demonstration of the lunar analemma - the path of the Moon across the sky during the lunar month on Earth.
+// Due to the Earth rotation and the Moon orbital motion; time interval isn't equal 24 hours.
+// It can be calculated by using the formula for synodic period: 
+// 1/S = 1/E - 1/M,
+// where the corresponding periods are the sidereal day on Earth (1/E) and the sidereal lunar month (1/M).
+
+include("i18n.inc");
+
+var JD = core.getJDay();
+var timestep = 1 + (((28.33/60+50)/60)+0)/24   // step = days + (((seconds/60+minutes)/60)+Hours)/24
+var color = "#aa0000";
+core.setGuiVisible(false);
+core.setTimeRate(1);
+label = LabelMgr.labelScreen(tr("Lunar Analemma"), 20, 20, false, 30, color);
+LabelMgr.setLabelShow(label, true);
+core.wait(1);
+core.clear("natural");
+core.selectObjectByName("Moon", false);
+StelMovementMgr.setFlagTracking(false);
+StelMovementMgr.autoZoomIn(3);
+core.wait(4);
+StelMovementMgr.zoomTo(40, 1);
+core.wait(2);
+GridLinesMgr.setFlagAzimuthalGrid(true);
+GridLinesMgr.setFlagMeridianLine(true);
+StelMovementMgr.zoomTo(70, 3);
+core.wait(5);
+
+for (i=0; i<28; i++)
+{
+    var day = i + 1;
+    core.setJDay(JD+timestep*i);
+    var info = core.getObjectInfo("Moon");
+    var az = info.azimuth;
+    var alt = info.altitude;
+    MarkerMgr.markerHorizon(az, alt, true, "gear", color, 5);    
+    labelDay = LabelMgr.labelScreen(tr("Day") + " " + day, 20, 60, true, 20, color);
+    LabelMgr.setLabelShow(labelDay, true);
+    core.wait(.25);    
+    LabelMgr.setLabelShow(labelDay, false);
+}
+
+labelFinal = LabelMgr.labelScreen(tr("Monthly path of the Moon"), 20, 60, false, 20, color);
+LabelMgr.setLabelShow(labelFinal, true);
+//SolarSystem.setFlagPlanets(false);
+core.wait(8);
+SolarSystem.setFlagPlanets(true);
+LabelMgr.setLabelShow(labelFinal, false);
+core.clear("natural");
+LabelMgr.deleteAllLabels();
+MarkerMgr.deleteAllMarkers();
+core.setGuiVisible(true);
+
