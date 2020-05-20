@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.13"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>Stellarium: LogBook Class Reference</title>
+<title>Stellarium: Oculus Class Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -21,7 +21,7 @@
   <td id="projectlogo"><img alt="Logo" src="stellarium-logo.png"/></td>
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">Stellarium
-   &#160;<span id="projectnumber">HEAD</span>
+   &#160;<span id="projectnumber">0.20.1</span>
    </div>
   </td>
  </tr>
@@ -44,54 +44,37 @@ $(function() {
 <a href="#pub-slots">Public Slots</a> &#124;
 <a href="#pub-methods">Public Member Functions</a>  </div>
   <div class="headertitle">
-<div class="title">LogBook Class Reference</div>  </div>
+<div class="title">Oculus Class Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
-
-<p>This is an example of a plug-in which can be dynamically loaded into stellarium.  
-</p>
-
-<p><code>#include &lt;LogBook.hpp&gt;</code></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-slots"></a>
 Public Slots</h2></td></tr>
-<tr class="memitem:ad54dd403614a1583b9c9f10a4dd4aa34"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classLogBook.html#ad54dd403614a1583b9c9f10a4dd4aa34">enableLogBook</a> (bool b)</td></tr>
-<tr class="memdesc:ad54dd403614a1583b9c9f10a4dd4aa34"><td class="mdescLeft">&#160;</td><td class="mdescRight">This method is called with we detect that our hot key is pressed.  <a href="#ad54dd403614a1583b9c9f10a4dd4aa34">More...</a><br /></td></tr>
-<tr class="separator:ad54dd403614a1583b9c9f10a4dd4aa34"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a3528b75a0c7cb5472b49ff83d960ff86"><td class="memItemLeft" align="right" valign="top"><a id="a3528b75a0c7cb5472b49ff83d960ff86"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>setConfigDialogVisible</b> (bool b)</td></tr>
-<tr class="separator:a3528b75a0c7cb5472b49ff83d960ff86"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a078b7befac03a6233fb67c15e1bf6805"><td class="memItemLeft" align="right" valign="top"><a id="a078b7befac03a6233fb67c15e1bf6805"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>setTargetsDialogVisible</b> (bool b)</td></tr>
-<tr class="separator:a078b7befac03a6233fb67c15e1bf6805"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2a19299dccfda826ce534cc97c607cdb"><td class="memItemLeft" align="right" valign="top"><a id="a2a19299dccfda826ce534cc97c607cdb"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>recenter</b> ()</td></tr>
+<tr class="separator:a2a19299dccfda826ce534cc97c607cdb"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:a0985f214fb96042f763dcc71de170633"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classLogBook.html#a0985f214fb96042f763dcc71de170633">configureGui</a> (bool show=true)</td></tr>
-<tr class="memdesc:a0985f214fb96042f763dcc71de170633"><td class="mdescLeft">&#160;</td><td class="mdescRight">Detect or show the configuration GUI elements for the module.  <a href="#a0985f214fb96042f763dcc71de170633">More...</a><br /></td></tr>
-<tr class="separator:a0985f214fb96042f763dcc71de170633"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a85b4999b97444f6ef2e8e51b1134858e"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classLogBook.html#a85b4999b97444f6ef2e8e51b1134858e">draw</a> (<a class="el" href="classStelCore.html">StelCore</a> *core)</td></tr>
-<tr class="memdesc:a85b4999b97444f6ef2e8e51b1134858e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Execute all the drawing functions for this module.  <a href="#a85b4999b97444f6ef2e8e51b1134858e">More...</a><br /></td></tr>
-<tr class="separator:a85b4999b97444f6ef2e8e51b1134858e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ace747b911fcfaf24ed032f5398deff9f"><td class="memItemLeft" align="right" valign="top">virtual double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classLogBook.html#ace747b911fcfaf24ed032f5398deff9f">getCallOrder</a> (<a class="el" href="classStelModule.html#a11b61d014b51cf6424cd89b1ccd3d768">StelModuleActionName</a> actionName) const</td></tr>
-<tr class="memdesc:ace747b911fcfaf24ed032f5398deff9f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return the value defining the order of call for the given action For example if stars.callOrder[ActionDraw] == 10 and constellation.callOrder[ActionDraw] == 11, the stars module will be drawn before the constellations.  <a href="#ace747b911fcfaf24ed032f5398deff9f">More...</a><br /></td></tr>
-<tr class="separator:ace747b911fcfaf24ed032f5398deff9f"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a5a1ca6e53559128f9600a40289f9a232"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="classStelStyle.html">StelStyle</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classLogBook.html#a5a1ca6e53559128f9600a40289f9a232">getModuleStyleSheet</a> (const <a class="el" href="classStelStyle.html">StelStyle</a> &amp;style)</td></tr>
-<tr class="memdesc:a5a1ca6e53559128f9600a40289f9a232"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the module-specific style sheet.  <a href="#a5a1ca6e53559128f9600a40289f9a232">More...</a><br /></td></tr>
-<tr class="separator:a5a1ca6e53559128f9600a40289f9a232"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab8bbeb1818e588d7f61e8719d3febed5"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classLogBook.html#ab8bbeb1818e588d7f61e8719d3febed5">init</a> ()</td></tr>
-<tr class="memdesc:ab8bbeb1818e588d7f61e8719d3febed5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Initialize itself.  <a href="#ab8bbeb1818e588d7f61e8719d3febed5">More...</a><br /></td></tr>
-<tr class="separator:ab8bbeb1818e588d7f61e8719d3febed5"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a916f2dca1b6e7df26caae55544dcbaa9"><td class="memItemLeft" align="right" valign="top"><a id="a916f2dca1b6e7df26caae55544dcbaa9"></a>
-virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>setStelStyle</b> (const QString &amp;section)</td></tr>
-<tr class="separator:a916f2dca1b6e7df26caae55544dcbaa9"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:afb182d64a65fb485a8e1f647eee755a5"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classLogBook.html#afb182d64a65fb485a8e1f647eee755a5">update</a> (double)</td></tr>
-<tr class="memdesc:afb182d64a65fb485a8e1f647eee755a5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Update the module with respect to the time.  <a href="#afb182d64a65fb485a8e1f647eee755a5">More...</a><br /></td></tr>
-<tr class="separator:afb182d64a65fb485a8e1f647eee755a5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7a42cd4b1b10ce0b06ac6f7d1f8b1ed6"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classOculus.html#a7a42cd4b1b10ce0b06ac6f7d1f8b1ed6">init</a> () Q_DECL_OVERRIDE</td></tr>
+<tr class="memdesc:a7a42cd4b1b10ce0b06ac6f7d1f8b1ed6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Initialize itself.  <a href="#a7a42cd4b1b10ce0b06ac6f7d1f8b1ed6">More...</a><br /></td></tr>
+<tr class="separator:a7a42cd4b1b10ce0b06ac6f7d1f8b1ed6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9860f102852f32d551488d7694f83141"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classOculus.html#a9860f102852f32d551488d7694f83141">deinit</a> () Q_DECL_OVERRIDE</td></tr>
+<tr class="memdesc:a9860f102852f32d551488d7694f83141"><td class="mdescLeft">&#160;</td><td class="mdescRight">Called before the module will be delete, and before the openGL context is suppressed.  <a href="#a9860f102852f32d551488d7694f83141">More...</a><br /></td></tr>
+<tr class="separator:a9860f102852f32d551488d7694f83141"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a84c8ac6977698ef23ba57e57f313104e"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classOculus.html#a84c8ac6977698ef23ba57e57f313104e">update</a> (double deltaTime) Q_DECL_OVERRIDE</td></tr>
+<tr class="memdesc:a84c8ac6977698ef23ba57e57f313104e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Update the module with respect to the time.  <a href="#a84c8ac6977698ef23ba57e57f313104e">More...</a><br /></td></tr>
+<tr class="separator:a84c8ac6977698ef23ba57e57f313104e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa13339b50b587504ed1b56ce675efa9c"><td class="memItemLeft" align="right" valign="top">virtual double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classOculus.html#aa13339b50b587504ed1b56ce675efa9c">getCallOrder</a> (<a class="el" href="classStelModule.html#a11b61d014b51cf6424cd89b1ccd3d768">StelModuleActionName</a> actionName) const Q_DECL_OVERRIDE</td></tr>
+<tr class="memdesc:aa13339b50b587504ed1b56ce675efa9c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return the value defining the order of call for the given action For example if stars.callOrder[ActionDraw] == 10 and constellation.callOrder[ActionDraw] == 11, the stars module will be drawn before the constellations.  <a href="#aa13339b50b587504ed1b56ce675efa9c">More...</a><br /></td></tr>
+<tr class="separator:aa13339b50b587504ed1b56ce675efa9c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pub_methods_classStelModule"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_classStelModule')"><img src="closed.png" alt="-"/>&#160;Public Member Functions inherited from <a class="el" href="classStelModule.html">StelModule</a></td></tr>
-<tr class="memitem:ad2655f22c4eb31d09f1a826ac4c7611f inherit pub_methods_classStelModule"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classStelModule.html#ad2655f22c4eb31d09f1a826ac4c7611f">deinit</a> ()</td></tr>
-<tr class="memdesc:ad2655f22c4eb31d09f1a826ac4c7611f inherit pub_methods_classStelModule"><td class="mdescLeft">&#160;</td><td class="mdescRight">Called before the module will be delete, and before the openGL context is suppressed.  <a href="classStelModule.html#ad2655f22c4eb31d09f1a826ac4c7611f">More...</a><br /></td></tr>
-<tr class="separator:ad2655f22c4eb31d09f1a826ac4c7611f inherit pub_methods_classStelModule"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5c024983a5f851d62560c4d64fc1d8f1 inherit pub_methods_classStelModule"><td class="memItemLeft" align="right" valign="top">virtual QSettings *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classStelModule.html#a5c024983a5f851d62560c4d64fc1d8f1">getSettings</a> ()</td></tr>
+<tr class="memdesc:a5c024983a5f851d62560c4d64fc1d8f1 inherit pub_methods_classStelModule"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return module-specific settings.  <a href="classStelModule.html#a5c024983a5f851d62560c4d64fc1d8f1">More...</a><br /></td></tr>
+<tr class="separator:a5c024983a5f851d62560c4d64fc1d8f1 inherit pub_methods_classStelModule"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a18fde2820af998395aea9e30bb1138b2 inherit pub_methods_classStelModule"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classStelModule.html#a18fde2820af998395aea9e30bb1138b2">draw</a> (<a class="el" href="classStelCore.html">StelCore</a> *core)</td></tr>
+<tr class="memdesc:a18fde2820af998395aea9e30bb1138b2 inherit pub_methods_classStelModule"><td class="mdescLeft">&#160;</td><td class="mdescRight">Execute all the drawing functions for this module.  <a href="classStelModule.html#a18fde2820af998395aea9e30bb1138b2">More...</a><br /></td></tr>
+<tr class="separator:a18fde2820af998395aea9e30bb1138b2 inherit pub_methods_classStelModule"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a77a84896bdac138781068c42b2058e35 inherit pub_methods_classStelModule"><td class="memItemLeft" align="right" valign="top"><a id="a77a84896bdac138781068c42b2058e35"></a>
 virtual QString&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classStelModule.html#a77a84896bdac138781068c42b2058e35">getModuleVersion</a> () const</td></tr>
 <tr class="memdesc:a77a84896bdac138781068c42b2058e35 inherit pub_methods_classStelModule"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the version of the module, default is stellarium main version. <br /></td></tr>
@@ -119,6 +102,9 @@ virtual QString&#160;</td><td class="memItemRight" valign="bottom"><a class="el"
 <tr class="memitem:a372fd47ff9580f1e776c35877ef5af6f inherit pub_methods_classStelModule"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classStelModule.html#a372fd47ff9580f1e776c35877ef5af6f">handlePinch</a> (qreal scale, bool started)</td></tr>
 <tr class="memdesc:a372fd47ff9580f1e776c35877ef5af6f inherit pub_methods_classStelModule"><td class="mdescLeft">&#160;</td><td class="mdescRight">Handle pinch gesture events.  <a href="classStelModule.html#a372fd47ff9580f1e776c35877ef5af6f">More...</a><br /></td></tr>
 <tr class="separator:a372fd47ff9580f1e776c35877ef5af6f inherit pub_methods_classStelModule"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a361f28660ec3002520924cd5cee08ccd inherit pub_methods_classStelModule"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classStelModule.html#a361f28660ec3002520924cd5cee08ccd">configureGui</a> (bool show=true)</td></tr>
+<tr class="memdesc:a361f28660ec3002520924cd5cee08ccd inherit pub_methods_classStelModule"><td class="mdescLeft">&#160;</td><td class="mdescRight">Detect or show the configuration GUI elements for the module.  <a href="classStelModule.html#a361f28660ec3002520924cd5cee08ccd">More...</a><br /></td></tr>
+<tr class="separator:a361f28660ec3002520924cd5cee08ccd inherit pub_methods_classStelModule"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="inherited"></a>
 Additional Inherited Members</h2></td></tr>
@@ -149,8 +135,8 @@ Additional Inherited Members</h2></td></tr>
 <tr class="separator:acc51b40ad88636ba5e48e6f29a49505b inherit pro_methods_classStelModule"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Member Function Documentation</h2>
-<a id="a0985f214fb96042f763dcc71de170633"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a0985f214fb96042f763dcc71de170633">&#9670;&nbsp;</a></span>configureGui()</h2>
+<a id="a9860f102852f32d551488d7694f83141"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9860f102852f32d551488d7694f83141">&#9670;&nbsp;</a></span>deinit()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -159,10 +145,9 @@ Additional Inherited Members</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">virtual bool LogBook::configureGui </td>
+          <td class="memname">virtual void Oculus::deinit </td>
           <td>(</td>
-          <td class="paramtype">bool&#160;</td>
-          <td class="paramname"><em>show</em> = <code>true</code></td><td>)</td>
+          <td class="paramname"></td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -172,20 +157,14 @@ Additional Inherited Members</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
-<p>This is to be used with plugins to display a configuration dialog from the plugin list window. </p><dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">show</td><td>if true, make the configuration GUI visible. If false, hide the config GUI if there is one. </td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="section return"><dt>Returns</dt><dd>true if the module has a configuration GUI, else false. </dd></dl>
+<p>Deinitialize all openGL texture in this method. </p>
 
-<p>Reimplemented from <a class="el" href="classStelModule.html#a361f28660ec3002520924cd5cee08ccd">StelModule</a>.</p>
+<p>Reimplemented from <a class="el" href="classStelModule.html#ad2655f22c4eb31d09f1a826ac4c7611f">StelModule</a>.</p>
 
 </div>
 </div>
-<a id="a85b4999b97444f6ef2e8e51b1134858e"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a85b4999b97444f6ef2e8e51b1134858e">&#9670;&nbsp;</a></span>draw()</h2>
+<a id="aa13339b50b587504ed1b56ce675efa9c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa13339b50b587504ed1b56ce675efa9c">&#9670;&nbsp;</a></span>getCallOrder()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -194,68 +173,7 @@ Additional Inherited Members</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">virtual void LogBook::draw </td>
-          <td>(</td>
-          <td class="paramtype"><a class="el" href="classStelCore.html">StelCore</a> *&#160;</td>
-          <td class="paramname"><em>core</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">virtual</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">core</td><td>the core to use for the drawing </td></tr>
-  </table>
-  </dd>
-</dl>
-
-<p>Reimplemented from <a class="el" href="classStelModule.html#a18fde2820af998395aea9e30bb1138b2">StelModule</a>.</p>
-
-</div>
-</div>
-<a id="ad54dd403614a1583b9c9f10a4dd4aa34"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ad54dd403614a1583b9c9f10a4dd4aa34">&#9670;&nbsp;</a></span>enableLogBook</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">void LogBook::enableLogBook </td>
-          <td>(</td>
-          <td class="paramtype">bool&#160;</td>
-          <td class="paramname"><em>b</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">slot</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-<p>It handles determining if we should do anything - based on a selected object - and painting labes to the screen. </p>
-
-</div>
-</div>
-<a id="ace747b911fcfaf24ed032f5398deff9f"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ace747b911fcfaf24ed032f5398deff9f">&#9670;&nbsp;</a></span>getCallOrder()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">virtual double LogBook::getCallOrder </td>
+          <td class="memname">virtual double Oculus::getCallOrder </td>
           <td>(</td>
           <td class="paramtype"><a class="el" href="classStelModule.html#a11b61d014b51cf6424cd89b1ccd3d768">StelModuleActionName</a>&#160;</td>
           <td class="paramname"><em>actionName</em></td><td>)</td>
@@ -264,7 +182,7 @@ Additional Inherited Members</h2></td></tr>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">virtual</span></span>  </td>
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">virtual</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
@@ -280,27 +198,8 @@ Additional Inherited Members</h2></td></tr>
 
 </div>
 </div>
-<a id="a5a1ca6e53559128f9600a40289f9a232"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a5a1ca6e53559128f9600a40289f9a232">&#9670;&nbsp;</a></span>getModuleStyleSheet()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">const <a class="el" href="classStelStyle.html">StelStyle</a> LogBook::getModuleStyleSheet </td>
-          <td>(</td>
-          <td class="paramtype">const <a class="el" href="classStelStyle.html">StelStyle</a> &amp;&#160;</td>
-          <td class="paramname"><em>style</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-<p>The main <a class="el" href="classStelStyle.html" title="Holds the information related to a color style for GUI and modules of Stellarium. ...">StelStyle</a> instance should be passed. </p>
-
-</div>
-</div>
-<a id="ab8bbeb1818e588d7f61e8719d3febed5"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ab8bbeb1818e588d7f61e8719d3febed5">&#9670;&nbsp;</a></span>init()</h2>
+<a id="a7a42cd4b1b10ce0b06ac6f7d1f8b1ed6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7a42cd4b1b10ce0b06ac6f7d1f8b1ed6">&#9670;&nbsp;</a></span>init()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -309,7 +208,7 @@ Additional Inherited Members</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">virtual void LogBook::init </td>
+          <td class="memname">virtual void Oculus::init </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
@@ -327,8 +226,8 @@ Additional Inherited Members</h2></td></tr>
 
 </div>
 </div>
-<a id="afb182d64a65fb485a8e1f647eee755a5"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#afb182d64a65fb485a8e1f647eee755a5">&#9670;&nbsp;</a></span>update()</h2>
+<a id="a84c8ac6977698ef23ba57e57f313104e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a84c8ac6977698ef23ba57e57f313104e">&#9670;&nbsp;</a></span>update()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -337,7 +236,7 @@ Additional Inherited Members</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">virtual void LogBook::update </td>
+          <td class="memname">virtual void Oculus::update </td>
           <td>(</td>
           <td class="paramtype">double&#160;</td>
           <td class="paramname"><em>deltaTime</em></td><td>)</td>
@@ -346,7 +245,7 @@ Additional Inherited Members</h2></td></tr>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">virtual</span></span>  </td>
+<span class="mlabels"><span class="mlabel">virtual</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
@@ -364,7 +263,7 @@ Additional Inherited Members</h2></td></tr>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Mon Jan 14 2019 02:15:34 for Stellarium by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Wed May 20 2020 15:45:42 for Stellarium by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.13
 </small></address>

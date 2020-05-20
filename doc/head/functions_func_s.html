@@ -21,7 +21,7 @@
   <td id="projectlogo"><img alt="Logo" src="stellarium-logo.png"/></td>
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">Stellarium
-   &#160;<span id="projectnumber">0.20.0</span>
+   &#160;<span id="projectnumber">0.20.1</span>
    </div>
   </td>
  </tr>
@@ -378,6 +378,9 @@ $(function() {
 <li>setAtmosphereTemperature()
 : <a class="el" href="classStelSkyDrawer.html#a4370d20898a75a7710a2eab0bd7dd74c">StelSkyDrawer</a>
 </li>
+<li>setAutoAddEnabled()
+: <a class="el" href="group__satellites.html#afa65ea3c419089aea6146af8caf5c254">Satellites</a>
+</li>
 <li>setAutoHideHorizontalButtonBar()
 : <a class="el" href="classStelGui.html#aed6774073403b8d3e62f3d9b8a29b1b7">StelGui</a>
 </li>
@@ -386,6 +389,9 @@ $(function() {
 </li>
 <li>setAutoMoveDuration()
 : <a class="el" href="classStelMovementMgr.html#a6640de4502400866ab0b8787382e0740">StelMovementMgr</a>
+</li>
+<li>setAutoRemoveEnabled()
+: <a class="el" href="group__satellites.html#aa4a79475ee04e1c5f5aa459a9018a941">Satellites</a>
 </li>
 <li>setAverageLuminance()
 : <a class="el" href="classAtmosphere.html#aced822581173499b066c621b4547ce4c">Atmosphere</a>
@@ -523,6 +529,12 @@ $(function() {
 </li>
 <li>setColorEquinoxPoints()
 : <a class="el" href="classGridLinesMgr.html#a954558df808f4592c16b9d0e0f9388ef">GridLinesMgr</a>
+</li>
+<li>setColorFOVCenterMarker()
+: <a class="el" href="classSpecialMarkersMgr.html#af3dc78ad122bb9b59c40c9d42127da29">SpecialMarkersMgr</a>
+</li>
+<li>setColorFOVCircleMarker()
+: <a class="el" href="classSpecialMarkersMgr.html#ae72067e5bbb3be7cc858ddb6719f9f9c">SpecialMarkersMgr</a>
 </li>
 <li>setColorGalacticEquatorLine()
 : <a class="el" href="classGridLinesMgr.html#aba6c1760ae856a7c71770201c94fa738">GridLinesMgr</a>
@@ -1042,6 +1054,12 @@ $(function() {
 <li>setFlagForcedTwinkle()
 : <a class="el" href="classStelSkyDrawer.html#a398d9e69dd18c54f1cdca729134e0ec1">StelSkyDrawer</a>
 </li>
+<li>setFlagFOVCenterMarker()
+: <a class="el" href="classSpecialMarkersMgr.html#a91f24a60924e44ee28ee355cbeb7d5b0">SpecialMarkersMgr</a>
+</li>
+<li>setFlagFOVCircleMarker()
+: <a class="el" href="classSpecialMarkersMgr.html#a863ec7a1f765b325d48bd6c93d99fc14">SpecialMarkersMgr</a>
+</li>
 <li>setFlagFovDms()
 : <a class="el" href="classBottomStelBar.html#afce1ac7ac82368c9cc4d1fe870a4051b">BottomStelBar</a>
 </li>
@@ -1075,8 +1093,10 @@ $(function() {
 </li>
 <li>setFlagHints()
 : <a class="el" href="classNebulaMgr.html#a1a30f248405985d7172f7cc2c3d5aae2">NebulaMgr</a>
-, <a class="el" href="group__satellites.html#a4b8f62073baf6e1638c7415234946217">Satellites</a>
 , <a class="el" href="classSolarSystem.html#a4cdab17763de5a241042e475e20f8247">SolarSystem</a>
+</li>
+<li>setFlagHintsVisible()
+: <a class="el" href="group__satellites.html#abae2eff2c523c353e356ded8c50e3a4a">Satellites</a>
 </li>
 <li>setFlagHorizonLabeled()
 : <a class="el" href="classGridLinesMgr.html#a21a94a039e327f04cf379c7507a45ef8">GridLinesMgr</a>
@@ -1086,6 +1106,9 @@ $(function() {
 </li>
 <li>setFlagHorizonParts()
 : <a class="el" href="classGridLinesMgr.html#a097a30f61462086558676d205121b4d3">GridLinesMgr</a>
+</li>
+<li>setFlagIconicMode()
+: <a class="el" href="group__satellites.html#a03c3c20c723687928de058b77f60176d">Satellites</a>
 </li>
 <li>setFlagIllumination()
 : <a class="el" href="classLandscapeMgr.html#a39cd3f228ea5def6c9a8a76d06a103a4">LandscapeMgr</a>
@@ -1113,9 +1136,11 @@ $(function() {
 , <a class="el" href="classConstellationMgr.html#ab20790d12a67ad5a02019acd2263569c">ConstellationMgr</a>
 , <a class="el" href="classLandscapeMgr.html#a7cf61922e5f163e0c5d984d2af0140c5">LandscapeMgr</a>
 , <a class="el" href="classNomenclatureMgr.html#ad6c6a766aef139c7bab3e0d4840ce800">NomenclatureMgr</a>
-, <a class="el" href="group__satellites.html#a9a836553185e9c515f61970cd06b5cd6">Satellites</a>
 , <a class="el" href="classSolarSystem.html#a0dde6a49f707cf993b4a9e643d3e9491">SolarSystem</a>
 , <a class="el" href="classStarMgr.html#ac0c9dc1169840fe21f57c1d8762e180f">StarMgr</a>
+</li>
+<li>setFlagLabelsVisible()
+: <a class="el" href="group__satellites.html#accae3eb4c1e1035d5277fb07aa7f9f60">Satellites</a>
 </li>
 <li>setFlagLandscape()
 : <a class="el" href="classLandscapeMgr.html#ae149c6c7778a41096f9328e57a783c56">LandscapeMgr</a>
@@ -1228,9 +1253,6 @@ $(function() {
 </li>
 <li>setFlagRayHelpers()
 : <a class="el" href="classAsterismMgr.html#a20bd126e1b739bbd7228c89b3fb11305">AsterismMgr</a>
-</li>
-<li>setFlagRelisticMode()
-: <a class="el" href="group__satellites.html#af221bbceba9f79e618e2fa24bdf3575e">Satellites</a>
 </li>
 <li>setFlags()
 : <a class="el" href="group__satellites.html#a62a0e693aeb6f8f80bcb169596bd4d90">Satellite</a>
@@ -1372,6 +1394,9 @@ $(function() {
 <li>setFlagStars()
 : <a class="el" href="classStarMgr.html#a935616a52459de80c9a32ff789eab7b9">StarMgr</a>
 </li>
+<li>setFlagStarSpiky()
+: <a class="el" href="classStelSkyDrawer.html#a83c606d05d48b941d8490b1f7a550a82">StelSkyDrawer</a>
+</li>
 <li>setFlagSupergalacticEquatorLabeled()
 : <a class="el" href="classGridLinesMgr.html#aabeb421d3190e5d954a7485f861572d2">GridLinesMgr</a>
 </li>
@@ -1497,8 +1522,14 @@ $(function() {
 <li>setFormat()
 : <a class="el" href="classStelProgressController.html#ae347f561bea40bf0cf804441f816df9a">StelProgressController</a>
 </li>
+<li>setFOVCircleMarkerSize()
+: <a class="el" href="classSpecialMarkersMgr.html#a0ff1e1d885fd825b819385375eb03c5c">SpecialMarkersMgr</a>
+</li>
 <li>setFrameType()
 : <a class="el" href="classStelSkyLayer.html#a336b1b85b7c93ad827e57880562babf3">StelSkyLayer</a>
+</li>
+<li>setFromHtmlColor()
+: <a class="el" href="classVector3.html#a8395984c32a9fc6d1eafdaceb8c8eb4c">Vector3&lt; T &gt;</a>
 </li>
 <li>setFullScreen()
 : <a class="el" href="classStelMainView.html#ac4da605bc3be5948008ca51549037e59">StelMainView</a>
@@ -1542,7 +1573,7 @@ $(function() {
 </li>
 <li>setHeader()
 : <a class="el" href="group__remoteControl.html#a3b2f5fef9e3d53a878b199f1c8c60be3">APIServiceResponse</a>
-, <a class="el" href="group__qtWebApp.html#ae725069b38ab629f33c9bb6391b4c064">HttpResponse</a>
+, <a class="el" href="group__qtWebApp.html#a41029ee24e05e419e6da7ea970bc3724">HttpResponse</a>
 </li>
 <li>setHeliocentricEclipticPos()
 : <a class="el" href="classPlanet.html#a3b3e0906e1e72ada8384c7d210a2382a">Planet</a>
@@ -1625,8 +1656,7 @@ $(function() {
 : <a class="el" href="classArchaeoLine.html#a63955cfd0d2c5f2c4a97e5793e778e30">ArchaeoLine</a>
 </li>
 <li>setLabelColor()
-: <a class="el" href="classStarMgr.html#a42274a6851f8a6e31f98d24dda17def6">StarMgr</a>
-, <a class="el" href="group__telescopeControl.html#a52c3e646e3e19845b387e61fcbe87b70">TelescopeControl</a>
+: <a class="el" href="group__telescopeControl.html#a52c3e646e3e19845b387e61fcbe87b70">TelescopeControl</a>
 </li>
 <li>setLabelFontSize()
 : <a class="el" href="classLandscape.html#afb5d1c330f3d7ce57c9782e647bdcd63">Landscape</a>
@@ -1808,7 +1838,7 @@ $(function() {
 : <a class="el" href="classStelCore.html#aa0ab1bc50fa3b987020809050d02dac0">StelCore</a>
 </li>
 <li>setObserverLocation()
-: <a class="el" href="classStelMainScriptAPI.html#a26deef112e92246b64b0c03506d6d36b">StelMainScriptAPI</a>
+: <a class="el" href="classStelMainScriptAPI.html#aa6655a5dc00083085c3fc12646536231">StelMainScriptAPI</a>
 </li>
 <li>setOnlyDominantFaceWhenMoving()
 : <a class="el" href="group__scenery3D.html#a3516eabbe4fde4d6cebad954c0897bb8">Scenery3d</a>
@@ -1824,6 +1854,15 @@ $(function() {
 </li>
 <li>setOrbitColorStyle()
 : <a class="el" href="classSolarSystem.html#aafa14e0fddbdb65241fc5765ca18b02a">SolarSystem</a>
+</li>
+<li>setOrbitLineFadeSegments()
+: <a class="el" href="group__satellites.html#ae889bc7bca2a38e6d6951dbed621ff75">Satellites</a>
+</li>
+<li>setOrbitLineSegmentDuration()
+: <a class="el" href="group__satellites.html#a1044d21d5aa3ca005925b84bae461872">Satellites</a>
+</li>
+<li>setOrbitLineSegments()
+: <a class="el" href="group__satellites.html#a0d5acd2839d668e2e9ddac03f4124307">Satellites</a>
 </li>
 <li>setOrbitsColor()
 : <a class="el" href="classSolarSystem.html#ad410b2741a6d1373f137e7bc69740fb6">SolarSystem</a>
@@ -1872,7 +1911,7 @@ $(function() {
 : <a class="el" href="classAngleSpinBox.html#a133fb7b909e6f5d94ceac7b3afa62606">AngleSpinBox</a>
 </li>
 <li>setPresetSkyTime()
-: <a class="el" href="classStelCore.html#ab47b286f9cb216f81572628b1b5db11d">StelCore</a>
+: <a class="el" href="classStelCore.html#a02a5be3219ff823176a01a2512ba01f0">StelCore</a>
 </li>
 <li>setPressure()
 : <a class="el" href="classRefraction.html#a4b1c67b2f568d10a3be9603cf8327d29">Refraction</a>
@@ -1912,6 +1951,9 @@ $(function() {
 </li>
 <li>setReflectionNebulaColor()
 : <a class="el" href="classNebulaMgr.html#abce32d09638fc757e3c2a0c469eba664">NebulaMgr</a>
+</li>
+<li>setRegionsColor()
+: <a class="el" href="classNebulaMgr.html#a52a2e0a01a588030412e276ea926ce54">NebulaMgr</a>
 </li>
 <li>setRelativeStarScale()
 : <a class="el" href="classStelSkyDrawer.html#ab1dc7f6ba9e34c9a043864887756effa">StelSkyDrawer</a>
@@ -1961,7 +2003,7 @@ $(function() {
 : <a class="el" href="group__oculars.html#a0d9253bac7169cfacd160895e20e7d4f">Oculars</a>
 </li>
 <li>setSelectedObject()
-: <a class="el" href="classStelObjectMgr.html#ae56eae8f4c3258d03fd936279eeac00c">StelObjectMgr</a>
+: <a class="el" href="classStelObjectMgr.html#ac936352c4ac8e0ce782f0e863a855d03">StelObjectMgr</a>
 </li>
 <li>setSelectedObjectInfo()
 : <a class="el" href="classStelMainScriptAPI.html#a4b78fc9ca284442c7c298ea1ab82b4b4">StelMainScriptAPI</a>
@@ -2087,6 +2129,9 @@ $(function() {
 <li>setTrailsColor()
 : <a class="el" href="classSolarSystem.html#a1ac6ae621b2d02cb86ed4ca5ac402daa">SolarSystem</a>
 </li>
+<li>setTrailsThickness()
+: <a class="el" href="classSolarSystem.html#a3850da07acbcf60ad24c43b7a067ec05">SolarSystem</a>
+</li>
 <li>setTriggerOnRelease()
 : <a class="el" href="classStelButton.html#a2720c216a70a435cf7ec83ca06dd8ffb">StelButton</a>
 </li>
@@ -2117,6 +2162,7 @@ $(function() {
 , <a class="el" href="group__brightNovae.html#aceec85680402181b3d9a36d7b85b0a58">Novae</a>
 , <a class="el" href="group__pulsars.html#a1b93562dc54627ac8f089dde83e84f5f">Pulsars</a>
 , <a class="el" href="group__quasars.html#a142cb2b54b48bd76c76d029348ec4b6c">Quasars</a>
+, <a class="el" href="group__satellites.html#abf3eb051865326cb7ebfe55598eb428f">Satellites</a>
 , <a class="el" href="group__historicalSupernovae.html#aa3bf0f85bb3276a3210a013f88df5092">Supernovae</a>
 </li>
 <li>setUranusOrbitColor()
@@ -2271,13 +2317,13 @@ $(function() {
 : <a class="el" href="classSphericalConvexPolygon.html#acabc582644d83fa6c4cced0322c373b7">SphericalConvexPolygon</a>
 </li>
 <li>SphericalPolygon()
-: <a class="el" href="classSphericalPolygon.html#a0def0a190f994bb7a76b856a4de3a985">SphericalPolygon</a>
+: <a class="el" href="classSphericalPolygon.html#acbbedf2e9133c0ebfc38260d7be5538f">SphericalPolygon</a>
 </li>
 <li>SphericalTexturedConvexPolygon()
 : <a class="el" href="classSphericalTexturedConvexPolygon.html#aa9bfa0c2376f6ca13c7d54f45a910819">SphericalTexturedConvexPolygon</a>
 </li>
 <li>SphericalTexturedPolygon()
-: <a class="el" href="classSphericalTexturedPolygon.html#a4fd7ac95c7fdab98b32faef4859dc10b">SphericalTexturedPolygon</a>
+: <a class="el" href="classSphericalTexturedPolygon.html#abbfef5804e0fec4d2d8f124b29b5e38e">SphericalTexturedPolygon</a>
 </li>
 <li>splitCSV()
 : <a class="el" href="group__qtWebApp.html#a7c386a7e39a4bcf801c1c83954632f92">HttpCookie</a>
@@ -2490,7 +2536,7 @@ $(function() {
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Sun Mar 29 2020 17:55:53 for Stellarium by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Wed May 20 2020 15:45:43 for Stellarium by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.13
 </small></address>

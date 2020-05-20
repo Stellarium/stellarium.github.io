@@ -21,7 +21,7 @@
   <td id="projectlogo"><img alt="Logo" src="stellarium-logo.png"/></td>
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">Stellarium
-   &#160;<span id="projectnumber">0.20.0</span>
+   &#160;<span id="projectnumber">0.20.1</span>
    </div>
   </td>
  </tr>
@@ -59,7 +59,9 @@ Data Structures</h2></td></tr>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <p>The Angle Measure plugin is a small tool which is used to measure the angular distance between two points on the sky.</p>
 <p>goes misty eyed* I recall measuring the size of the Cassini Division when I was a student. It was not the high academic glamor one might expect... It was cloudy... It was rainy... The observatory lab had some old scopes set up at one end, pointing at a photograph of Saturn at the other end of the lab. We measured. We calculated. We wished we were in Hawaii.</p>
-<dl class="section note"><dt>Note</dt><dd>Georg Zotti extended in 2014-09, enough to call it V4.0</dd></dl>
+<dl class="section note"><dt>Note</dt><dd>Georg Zotti extended in 2014-09, enough to call it V4.0 </dd>
+<dd>
+Georg Zotti added properties in 2020-04, enough to call it V4.6</dd></dl>
 <p><b>Modes</b></p>
 <p>Equatorial Mode (original): mark start,end: distance/position angle in the sky, line rotates with sky, spherical angles influenced by refraction (numbers given on celestial sphere).</p>
 <p>Horizontal Mode: mark start,end: distance/position angle in alt/azimuthal coordinates, line stays fixed in alt-az system. Angle may be different near to horizon because of refraction!</p>
@@ -216,18 +218,55 @@ Alexander Wolf </dd>
 Georg Zotti </dd></dl>
 </div><table class="memberdecls">
 <tr><td colspan="2"><h3>Public Slots</h3></td></tr>
+<tr class="memitem:a59c28fd5c542fb96700a97ae912fa64c"><td class="memItemLeft" align="right" valign="top"><a id="a59c28fd5c542fb96700a97ae912fa64c"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><b>isEnabled</b> () const</td></tr>
+<tr class="separator:a59c28fd5c542fb96700a97ae912fa64c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abf4f00e6442d53d3e5fb67f0e743b0bf"><td class="memItemLeft" align="right" valign="top"><a id="abf4f00e6442d53d3e5fb67f0e743b0bf"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><b>isDmsFormat</b> () const</td></tr>
+<tr class="separator:abf4f00e6442d53d3e5fb67f0e743b0bf"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad9ac648d935cf7138cda142a58b90b35"><td class="memItemLeft" align="right" valign="top"><a id="ad9ac648d935cf7138cda142a58b90b35"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><b>isEquatorial</b> () const</td></tr>
+<tr class="separator:ad9ac648d935cf7138cda142a58b90b35"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a92b06b19f1713eaa3f50a2402667c518"><td class="memItemLeft" align="right" valign="top"><a id="a92b06b19f1713eaa3f50a2402667c518"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><b>isHorizontal</b> () const</td></tr>
+<tr class="separator:a92b06b19f1713eaa3f50a2402667c518"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6da4acc38669aa0d6e9f69077b8e5a96"><td class="memItemLeft" align="right" valign="top"><a id="a6da4acc38669aa0d6e9f69077b8e5a96"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><b>isEquatorialPADisplayed</b> () const</td></tr>
+<tr class="separator:a6da4acc38669aa0d6e9f69077b8e5a96"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2744a83e27a1550bdd59d18823ad4637"><td class="memItemLeft" align="right" valign="top"><a id="a2744a83e27a1550bdd59d18823ad4637"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><b>isHorizontalPADisplayed</b> () const</td></tr>
+<tr class="separator:a2744a83e27a1550bdd59d18823ad4637"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a52b55df7a78ee0cc6772b334aa20ba93"><td class="memItemLeft" align="right" valign="top"><a id="a52b55df7a78ee0cc6772b334aa20ba93"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><b>isHorizontalStartSkylinked</b> () const</td></tr>
+<tr class="separator:a52b55df7a78ee0cc6772b334aa20ba93"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a338abd8306b5f18ee42c81f57191371e"><td class="memItemLeft" align="right" valign="top"><a id="a338abd8306b5f18ee42c81f57191371e"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><b>isHorizontalEndSkylinked</b> () const</td></tr>
+<tr class="separator:a338abd8306b5f18ee42c81f57191371e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8e4fd00d3bd5a506d037f878dd79d6d2"><td class="memItemLeft" align="right" valign="top"><a id="a8e4fd00d3bd5a506d037f878dd79d6d2"></a>
+<a class="el" href="classVector3.html">Vec3f</a>&#160;</td><td class="memItemRight" valign="bottom"><b>getEquatorialTextColor</b> () const</td></tr>
+<tr class="separator:a8e4fd00d3bd5a506d037f878dd79d6d2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a23ce71bd2160181523f5c40f50fbc30c"><td class="memItemLeft" align="right" valign="top"><a id="a23ce71bd2160181523f5c40f50fbc30c"></a>
+<a class="el" href="classVector3.html">Vec3f</a>&#160;</td><td class="memItemRight" valign="bottom"><b>getEquatorialLineColor</b> () const</td></tr>
+<tr class="separator:a23ce71bd2160181523f5c40f50fbc30c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ace37ebad57dd2827032458deb8eaeb3d"><td class="memItemLeft" align="right" valign="top"><a id="ace37ebad57dd2827032458deb8eaeb3d"></a>
+<a class="el" href="classVector3.html">Vec3f</a>&#160;</td><td class="memItemRight" valign="bottom"><b>getHorizontalTextColor</b> () const</td></tr>
+<tr class="separator:ace37ebad57dd2827032458deb8eaeb3d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac5479fe8ff06a344b75c64e44b7f8a8e"><td class="memItemLeft" align="right" valign="top"><a id="ac5479fe8ff06a344b75c64e44b7f8a8e"></a>
+<a class="el" href="classVector3.html">Vec3f</a>&#160;</td><td class="memItemRight" valign="bottom"><b>getHorizontalLineColor</b> () const</td></tr>
+<tr class="separator:ac5479fe8ff06a344b75c64e44b7f8a8e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a70c4ef69ae13c01e9dc7194d99a50c05"><td class="memItemLeft" align="right" valign="top"><a id="a70c4ef69ae13c01e9dc7194d99a50c05"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><b>enableAngleMeasure</b> (bool b)</td></tr>
 <tr class="separator:a70c4ef69ae13c01e9dc7194d99a50c05"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a0b6b34d039eb12bf529d018711bc2d72"><td class="memItemLeft" align="right" valign="top"><a id="a0b6b34d039eb12bf529d018711bc2d72"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>useDmsFormat</b> (bool b)</td></tr>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__angleMeasure.html#a0b6b34d039eb12bf529d018711bc2d72">useDmsFormat</a> (bool b)</td></tr>
+<tr class="memdesc:a0b6b34d039eb12bf529d018711bc2d72"><td class="mdescLeft">&#160;</td><td class="mdescRight">Use d/m/s instead of degree/minute/second symbols. <br /></td></tr>
 <tr class="separator:a0b6b34d039eb12bf529d018711bc2d72"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac143b7adc6183c643b196fa909be2262"><td class="memItemLeft" align="right" valign="top"><a id="ac143b7adc6183c643b196fa909be2262"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>showPositionAngle</b> (bool b)</td></tr>
-<tr class="separator:ac143b7adc6183c643b196fa909be2262"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a8069f797590d2589ba75c3686108d61d"><td class="memItemLeft" align="right" valign="top"><a id="a8069f797590d2589ba75c3686108d61d"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>showPositionAngleHor</b> (bool b)</td></tr>
-<tr class="separator:a8069f797590d2589ba75c3686108d61d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a046588b01cf351dde87ffa9276c958ac"><td class="memItemLeft" align="right" valign="top"><a id="a046588b01cf351dde87ffa9276c958ac"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>showEquatorialPA</b> (bool b)</td></tr>
+<tr class="separator:a046588b01cf351dde87ffa9276c958ac"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af3782c0af7a1a5ee2e5ec22b4cb5dd27"><td class="memItemLeft" align="right" valign="top"><a id="af3782c0af7a1a5ee2e5ec22b4cb5dd27"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>showHorizontalPA</b> (bool b)</td></tr>
+<tr class="separator:af3782c0af7a1a5ee2e5ec22b4cb5dd27"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a7f0cc7120877eab0db2a898942457d66"><td class="memItemLeft" align="right" valign="top"><a id="a7f0cc7120877eab0db2a898942457d66"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><b>showEquatorial</b> (bool b)</td></tr>
 <tr class="separator:a7f0cc7120877eab0db2a898942457d66"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -240,10 +279,55 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>showHorizontalStartSk
 <tr class="memitem:aa61d0ec679a51c1759c6f7d87c6aecd6"><td class="memItemLeft" align="right" valign="top"><a id="aa61d0ec679a51c1759c6f7d87c6aecd6"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><b>showHorizontalEndSkylinked</b> (bool b)</td></tr>
 <tr class="separator:aa61d0ec679a51c1759c6f7d87c6aecd6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0f6b34698b93696d20d9025f6b518e85"><td class="memItemLeft" align="right" valign="top"><a id="a0f6b34698b93696d20d9025f6b518e85"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>setEquatorialTextColor</b> (<a class="el" href="classVector3.html">Vec3f</a> color)</td></tr>
+<tr class="separator:a0f6b34698b93696d20d9025f6b518e85"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af758b83792b59f7320f80d6627f0971e"><td class="memItemLeft" align="right" valign="top"><a id="af758b83792b59f7320f80d6627f0971e"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>setEquatorialLineColor</b> (<a class="el" href="classVector3.html">Vec3f</a> color)</td></tr>
+<tr class="separator:af758b83792b59f7320f80d6627f0971e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a369e09785f210428b253427b5f6beb7d"><td class="memItemLeft" align="right" valign="top"><a id="a369e09785f210428b253427b5f6beb7d"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>setHorizontalTextColor</b> (<a class="el" href="classVector3.html">Vec3f</a> color)</td></tr>
+<tr class="separator:a369e09785f210428b253427b5f6beb7d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a370b0a66dbd117f2c0801bb9c0b549cf"><td class="memItemLeft" align="right" valign="top"><a id="a370b0a66dbd117f2c0801bb9c0b549cf"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>setHorizontalLineColor</b> (<a class="el" href="classVector3.html">Vec3f</a> color)</td></tr>
+<tr class="separator:a370b0a66dbd117f2c0801bb9c0b549cf"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr><td colspan="2"><h3>Signals</h3></td></tr>
 <tr class="memitem:aa4aac1a04a74f8046c58be63de6d1165"><td class="memItemLeft" align="right" valign="top"><a id="aa4aac1a04a74f8046c58be63de6d1165"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><b>flagAngleMeasureChanged</b> (bool b)</td></tr>
 <tr class="separator:aa4aac1a04a74f8046c58be63de6d1165"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7b6d64613954ca3fa9e4776467b2d3fd"><td class="memItemLeft" align="right" valign="top"><a id="a7b6d64613954ca3fa9e4776467b2d3fd"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>dmsFormatChanged</b> (bool b)</td></tr>
+<tr class="separator:a7b6d64613954ca3fa9e4776467b2d3fd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af2f3fa76b5177b4439c27139d85866f3"><td class="memItemLeft" align="right" valign="top"><a id="af2f3fa76b5177b4439c27139d85866f3"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>flagShowEquatorialChanged</b> (bool b)</td></tr>
+<tr class="separator:af2f3fa76b5177b4439c27139d85866f3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4fcafee2b0bafb94dad950a41a32b7c6"><td class="memItemLeft" align="right" valign="top"><a id="a4fcafee2b0bafb94dad950a41a32b7c6"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>flagShowHorizontalChanged</b> (bool b)</td></tr>
+<tr class="separator:a4fcafee2b0bafb94dad950a41a32b7c6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acb729244712566754ace607bb3a36569"><td class="memItemLeft" align="right" valign="top"><a id="acb729244712566754ace607bb3a36569"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>flagShowEquatorialPAChanged</b> (bool b)</td></tr>
+<tr class="separator:acb729244712566754ace607bb3a36569"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae083987f05f0262000dcbd488d9518ad"><td class="memItemLeft" align="right" valign="top"><a id="ae083987f05f0262000dcbd488d9518ad"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>flagShowHorizontalPAChanged</b> (bool b)</td></tr>
+<tr class="separator:ae083987f05f0262000dcbd488d9518ad"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab0be080477cd1262f4feed6e55da2e9a"><td class="memItemLeft" align="right" valign="top"><a id="ab0be080477cd1262f4feed6e55da2e9a"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>flagShowHorizontalStartSkylinkedChanged</b> (bool b)</td></tr>
+<tr class="separator:ab0be080477cd1262f4feed6e55da2e9a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac26d03c1d8ea772ea0d5c879e794173e"><td class="memItemLeft" align="right" valign="top"><a id="ac26d03c1d8ea772ea0d5c879e794173e"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>flagShowHorizontalEndSkylinkedChanged</b> (bool b)</td></tr>
+<tr class="separator:ac26d03c1d8ea772ea0d5c879e794173e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a679fdb230d8b05a570c3eb022391b371"><td class="memItemLeft" align="right" valign="top"><a id="a679fdb230d8b05a570c3eb022391b371"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>equatorialTextColorChanged</b> (<a class="el" href="classVector3.html">Vec3f</a> c)</td></tr>
+<tr class="separator:a679fdb230d8b05a570c3eb022391b371"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1a612ecd763705eaceb70fc1906018d9"><td class="memItemLeft" align="right" valign="top"><a id="a1a612ecd763705eaceb70fc1906018d9"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>equatorialLineColorChanged</b> (<a class="el" href="classVector3.html">Vec3f</a> c)</td></tr>
+<tr class="separator:a1a612ecd763705eaceb70fc1906018d9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2ec44ded937cb8174bebedd119b16e6f"><td class="memItemLeft" align="right" valign="top"><a id="a2ec44ded937cb8174bebedd119b16e6f"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>horizontalTextColorChanged</b> (<a class="el" href="classVector3.html">Vec3f</a> c)</td></tr>
+<tr class="separator:a2ec44ded937cb8174bebedd119b16e6f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8566bcfcb846b76d7135f6f0712259fe"><td class="memItemLeft" align="right" valign="top"><a id="a8566bcfcb846b76d7135f6f0712259fe"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>horizontalLineColorChanged</b> (<a class="el" href="classVector3.html">Vec3f</a> c)</td></tr>
+<tr class="separator:a8566bcfcb846b76d7135f6f0712259fe"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr><td colspan="2"><h3>Public Member Functions</h3></td></tr>
 <tr class="memitem:ac1e59318e9378aabf12d12f62ef10d66"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__angleMeasure.html#ac1e59318e9378aabf12d12f62ef10d66">init</a> ()</td></tr>
 <tr class="memdesc:ac1e59318e9378aabf12d12f62ef10d66"><td class="mdescLeft">&#160;</td><td class="mdescRight">Initialize itself.  <a href="#ac1e59318e9378aabf12d12f62ef10d66">More...</a><br /></td></tr>
@@ -269,30 +353,6 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>flagAngleMeasureChang
 <tr class="memitem:af84fcf91ea8ca9d3ba1da1f94cfb5d8f"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__angleMeasure.html#af84fcf91ea8ca9d3ba1da1f94cfb5d8f">configureGui</a> (bool show=true)</td></tr>
 <tr class="memdesc:af84fcf91ea8ca9d3ba1da1f94cfb5d8f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Detect or show the configuration GUI elements for the module.  <a href="#af84fcf91ea8ca9d3ba1da1f94cfb5d8f">More...</a><br /></td></tr>
 <tr class="separator:af84fcf91ea8ca9d3ba1da1f94cfb5d8f"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a59c28fd5c542fb96700a97ae912fa64c"><td class="memItemLeft" align="right" valign="top"><a id="a59c28fd5c542fb96700a97ae912fa64c"></a>
-bool&#160;</td><td class="memItemRight" valign="bottom"><b>isEnabled</b> () const</td></tr>
-<tr class="separator:a59c28fd5c542fb96700a97ae912fa64c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:abf4f00e6442d53d3e5fb67f0e743b0bf"><td class="memItemLeft" align="right" valign="top"><a id="abf4f00e6442d53d3e5fb67f0e743b0bf"></a>
-bool&#160;</td><td class="memItemRight" valign="bottom"><b>isDmsFormat</b> () const</td></tr>
-<tr class="separator:abf4f00e6442d53d3e5fb67f0e743b0bf"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac151d4f5af4e80734cb6fbf1565111f2"><td class="memItemLeft" align="right" valign="top"><a id="ac151d4f5af4e80734cb6fbf1565111f2"></a>
-bool&#160;</td><td class="memItemRight" valign="bottom"><b>isPaDisplayed</b> () const</td></tr>
-<tr class="separator:ac151d4f5af4e80734cb6fbf1565111f2"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad9ac648d935cf7138cda142a58b90b35"><td class="memItemLeft" align="right" valign="top"><a id="ad9ac648d935cf7138cda142a58b90b35"></a>
-bool&#160;</td><td class="memItemRight" valign="bottom"><b>isEquatorial</b> () const</td></tr>
-<tr class="separator:ad9ac648d935cf7138cda142a58b90b35"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a92b06b19f1713eaa3f50a2402667c518"><td class="memItemLeft" align="right" valign="top"><a id="a92b06b19f1713eaa3f50a2402667c518"></a>
-bool&#160;</td><td class="memItemRight" valign="bottom"><b>isHorizontal</b> () const</td></tr>
-<tr class="separator:a92b06b19f1713eaa3f50a2402667c518"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a52b55df7a78ee0cc6772b334aa20ba93"><td class="memItemLeft" align="right" valign="top"><a id="a52b55df7a78ee0cc6772b334aa20ba93"></a>
-bool&#160;</td><td class="memItemRight" valign="bottom"><b>isHorizontalStartSkylinked</b> () const</td></tr>
-<tr class="separator:a52b55df7a78ee0cc6772b334aa20ba93"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a338abd8306b5f18ee42c81f57191371e"><td class="memItemLeft" align="right" valign="top"><a id="a338abd8306b5f18ee42c81f57191371e"></a>
-bool&#160;</td><td class="memItemRight" valign="bottom"><b>isHorizontalEndSkylinked</b> () const</td></tr>
-<tr class="separator:a338abd8306b5f18ee42c81f57191371e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad3c266b4378824015fbf2811c96d2835"><td class="memItemLeft" align="right" valign="top"><a id="ad3c266b4378824015fbf2811c96d2835"></a>
-bool&#160;</td><td class="memItemRight" valign="bottom"><b>isHorPaDisplayed</b> () const</td></tr>
-<tr class="separator:ad3c266b4378824015fbf2811c96d2835"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a3ad17b707947d267a4f8a26713f6a40e"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__angleMeasure.html#a3ad17b707947d267a4f8a26713f6a40e">restoreDefaultSettings</a> ()</td></tr>
 <tr class="memdesc:a3ad17b707947d267a4f8a26713f6a40e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Restore the plug-in's settings to the default state.  <a href="#a3ad17b707947d267a4f8a26713f6a40e">More...</a><br /></td></tr>
 <tr class="separator:a3ad17b707947d267a4f8a26713f6a40e"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -331,9 +391,36 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><b>enabled</b></td></tr>
 <tr class="memitem:a89db9d643e3a4f074c2f8b3c55fd57ee"><td class="memItemLeft" align="right" valign="top"><a id="a89db9d643e3a4f074c2f8b3c55fd57ee"></a>
 bool&#160;</td><td class="memItemRight" valign="bottom"><b>dmsFormat</b></td></tr>
 <tr class="separator:a89db9d643e3a4f074c2f8b3c55fd57ee"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a8eab5d631d74484cea038026e422f6c3"><td class="memItemLeft" align="right" valign="top"><a id="a8eab5d631d74484cea038026e422f6c3"></a>
-bool&#160;</td><td class="memItemRight" valign="bottom"><b>paDisplayed</b></td></tr>
-<tr class="separator:a8eab5d631d74484cea038026e422f6c3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a496fd2e072fc828c38cf55d4d4e55c0f"><td class="memItemLeft" align="right" valign="top"><a id="a496fd2e072fc828c38cf55d4d4e55c0f"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><b>flagShowEquatorial</b></td></tr>
+<tr class="separator:a496fd2e072fc828c38cf55d4d4e55c0f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6bbc4eb4f958d11e4da81d51d3fd17c5"><td class="memItemLeft" align="right" valign="top"><a id="a6bbc4eb4f958d11e4da81d51d3fd17c5"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><b>flagShowHorizontal</b></td></tr>
+<tr class="separator:a6bbc4eb4f958d11e4da81d51d3fd17c5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a486b0b0f1d9acedc5cd0729405b068af"><td class="memItemLeft" align="right" valign="top"><a id="a486b0b0f1d9acedc5cd0729405b068af"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><b>flagShowHorizontalStartSkylinked</b></td></tr>
+<tr class="separator:a486b0b0f1d9acedc5cd0729405b068af"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a27e3ccd7d20dd63a1011b1710d7bf974"><td class="memItemLeft" align="right" valign="top"><a id="a27e3ccd7d20dd63a1011b1710d7bf974"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><b>flagShowHorizontalEndSkylinked</b></td></tr>
+<tr class="separator:a27e3ccd7d20dd63a1011b1710d7bf974"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad49e7665712a17be708363317bc016c0"><td class="memItemLeft" align="right" valign="top"><a id="ad49e7665712a17be708363317bc016c0"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><b>flagShowEquatorialPA</b></td></tr>
+<tr class="separator:ad49e7665712a17be708363317bc016c0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7a588daf69adda55cc40af7a50032a98"><td class="memItemLeft" align="right" valign="top"><a id="a7a588daf69adda55cc40af7a50032a98"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><b>flagShowHorizontalPA</b></td></tr>
+<tr class="separator:a7a588daf69adda55cc40af7a50032a98"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aca84928cfaedfd03046b40ff207773ec"><td class="memItemLeft" align="right" valign="top"><a id="aca84928cfaedfd03046b40ff207773ec"></a>
+<a class="el" href="classVector3.html">Vec3f</a>&#160;</td><td class="memItemRight" valign="bottom"><b>equatorialTextColor</b></td></tr>
+<tr class="separator:aca84928cfaedfd03046b40ff207773ec"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab952dfa8744dcf2662388df3e8a721f7"><td class="memItemLeft" align="right" valign="top"><a id="ab952dfa8744dcf2662388df3e8a721f7"></a>
+<a class="el" href="classVector3.html">Vec3f</a>&#160;</td><td class="memItemRight" valign="bottom"><b>equatorialLineColor</b></td></tr>
+<tr class="separator:ab952dfa8744dcf2662388df3e8a721f7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad51481771f226d4578e8d614ea51cdec"><td class="memItemLeft" align="right" valign="top"><a id="ad51481771f226d4578e8d614ea51cdec"></a>
+<a class="el" href="classVector3.html">Vec3f</a>&#160;</td><td class="memItemRight" valign="bottom"><b>horizontalTextColor</b></td></tr>
+<tr class="separator:ad51481771f226d4578e8d614ea51cdec"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae0dc4a814bfb6ffae05d613ba71428a6"><td class="memItemLeft" align="right" valign="top"><a id="ae0dc4a814bfb6ffae05d613ba71428a6"></a>
+<a class="el" href="classVector3.html">Vec3f</a>&#160;</td><td class="memItemRight" valign="bottom"><b>horizontalLineColor</b></td></tr>
+<tr class="separator:ae0dc4a814bfb6ffae05d613ba71428a6"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="inherited"></a>
 Additional Inherited Members</h2></td></tr>
@@ -681,7 +768,7 @@ Additional Inherited Members</h2></td></tr>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Sun Mar 29 2020 17:55:52 for Stellarium by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Wed May 20 2020 15:45:42 for Stellarium by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.13
 </small></address>
