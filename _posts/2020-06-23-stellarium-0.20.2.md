@@ -1,0 +1,152 @@
+---
+layout: post
+title: Stellarium v0.20.2 has been released!
+date: 2020-06-22 23:30:00 +0700
+categories: release
+author: alex-w
+nolangbar: true
+---
+The major changes of this version:
+- Many changes in AstroCalc tool and core of Stellarium
+- Many changes in scripting engline and Script Console
+- Many changes in Oculars and Satellites plugins
+- Updated DSO catalog
+
+Thank you very much to community for bug reports, feature requests and contributions!
+
+Full list of changes:
+- Added rectangular sensor crop overlay support [Oculars] (GH: #1069)
+- Added support newly marker in Search Tool (Position and Settings tabs) [Search Tool]
+- Added new features for scripting engine: extend the JavaScript classes corresponding to Vec3f and Vec3d [Scripting]
+- Added options to be able to define and use custom FOV circles for Telrad [Oculars] (GH: #1057)
+- Added VecMath tests for the new functions (GH: #1055)
+- Added VecMath feature: Vector/QColor conversions (GH: #1055)
+- Added feature to set current date and time as initial data when AstroCalc/Ephemeris is open [AstroCalc]
+- Added notification for user when version of DSO catalog is mismatched
+- Added support Trumpler Catalogue (Tr or Trumpler) [DSO Catalog, v3.10] (GH: #965)
+- Added support Stock Catalogue (St or Stock) [DSO Catalog, v3.10] (GH: #965)
+- Added support Ruprecht Catalogue (Ru or Ruprecht) [DSO Catalog, v3.10] (GH: #965)
+- Added support "van den Bergh-Hagen Catalogue" (VdB-Ha) [DSO Catalog, v3.10] (GH: #965)
+- Added support search by long name for Trumpler, Stock, Ruprecht, Collinder and Melotte catalogues [DSO Catalog, v3.10]
+- Added new type of DSO objects: region of the sky [DSO Catalog, v3.10] (GH: #1067)
+- Added special case for improve DSO regions visibility [DSO Catalog, v3.10] (GH: #1067)
+- Added outlines for DSO regions [DSO Catalog, v3.10] (GH: #1067)
+- Added marker of center of FOV on the sky [Special Markers]
+- Added circular marker of FOV on the sky [Special Markers]
+- Added rectangular marker of FOV on the sky [Special Markers]
+- Added tool for adjustable thickness of the planetary trails (GH: #1087)
+- Added tool for adjustable line thickness for ephemeris lines (GH: #1087)
+- Added tool for adjustable thickness of the planetary orbits
+- Added a column, showing the elevation of the object at transit times into AstroCalc/WUT tool [AstroCalc] (GH: #1089)
+- Added new category into AstroCalc/WUT tool: regions of the sky [AstroCalc]
+- Added new category into AstroCalc/WUT tool: pulsars (the category available if Pulsars plugin is loaded and pulsars are enabled to display) [AstroCalc]
+- Added new category into AstroCalc/WUT tool: bright nova stars (the category available if Bright Novae plugin is loaded) [AstroCalc]
+- Added new category into AstroCalc/WUT tool: bright supernova stars (the category available if Historical Supernovae plugin is loaded) [AstroCalc]
+- Added new category into AstroCalc/WUT tool: exoplanetary systems (the category available if Exoplanets plugin is loaded and exoplanets are enabled to display) [AstroCalc]
+- Added new category into AstroCalc/WUT tool: active galaxies (this category may include additional quasars if Quasars plugin is loaded and quasars are enabled to display) [AstroCalc]
+- Added new category into AstroCalc/WUT tool: interacting galaxies [AstroCalc]
+- Added new unit tests for DeltaT
+- Added tool to guess the group of satellites by their names [Satellites]
+- Added new groups of satellites [Satellites]
+- Added method to check state of loading for the plugins
+- Added column Elevation for AstroCalc/Phenomena tool [AstroCalc]
+- Added default groups for some satellites from default JSON catalog [Satellites]
+- Added missing tool for define color of regions of the sky
+- Added regions of the sky into Lists of Search Tool [Search Tool]
+- Added tool to export version of Stellarium through StelProperty and Remote Control plugin
+- Added display of epoch of the TLE for artificial satellites [Satellites] (GH: #1096)
+- Added new flag for InfoString of planets, comets and minor planets
+- Added better arrangement of InfoString entries for planets, comets and minor planets
+- Added highlighting for string literals between apostrophes for Script Console [Scripting] (GH: #1101, #1107)
+- Added highlighting for regular expressions for Script Console [Scripting] (GH: #1101, #1107)
+- Added highlighting for multiline comments for Script Console [Scripting] (GH: #1101, #1107)
+- Added highlighting for exponential numeric format for Script Console [Scripting] (GH: #1101, #1107)
+- Added highlighting for hexadecimal numeric literals for Script Console [Scripting] (GH: #1101, #1107)
+- Added separate highlighting of predefined names from that of keywords for Script Console [Scripting] (GH: #1101, #1107)
+- Added red highlighting for unknown methods of Stellarium modules for Script Console [Scripting] (GH: #1101, #1107)
+- Added highlighting for methods of StelSkyDrawer and core for Script Console [Scripting] (GH: #1101, #1107)
+- Added penumbral and umbral magnitudes during lunar eclipse (GH: #1113)
+- Added comments for scripters [Scripting]
+- Added radar cross-section (RCS) data for satellites [Satellites]
+- Added calculate approximaged visual magnitude for satellites from their RCS value [Satellites]
+- Added special case for set RCS value for Starlink satellites [Satellites]
+- Added option to allow drawing of landscape polygon only, if a polygon is defined [Landscapes]
+- Added option to allow a polygon to be drawn in the foreground (out of regular call sequence) [Landscapes]
+- Added option to allow landscape polygon overdrawn onto the 3D scenery [Scenery3D]
+- Fixed GUI and minor redesign of remaining icons [GUI] (GH: #752, #951)
+- Added computation an approximated angular size of satellites (the linear size is obtained from RCS value and we use spherical shape for satellites) [Satellites]
+- Added special case for computation an approximated angular size of ISS (we are defined linear size of ISS by "hands") [Satellites]
+- Added tool to display a focuser overlay in the sensor view [Oculars] (GH: #1110)
+- Added checking conflicts for keyboard shortcuts with informing user if conflicts are exist (GH: #1025)
+- Added tool to rescale oversize textures on-the-fly (GH: #1121)
+- Added show a fuchsia-colored replacement texture for wrong filename (GH: #1121)
+- Added NORAD numbers in addition to name of artificial satellite in Satellites Import Dialog for available for search [Satellites]
+- Added function to compute distance between locations, on a flattened planet, in km
+- Added geographic coordinates of center line for total and annular solar eclipse (GH: #1116)
+- Fixed security issue for jquery (CVE-2020-11022; GH: #1073)
+- Fixed magnitudes for planetary nebulae [DSO Catalog, v3.10] (GH: #913)
+- Fixed data for "Part of a Galaxy" objects [DSO Catalog, v3.10] (GH: #996)
+- Fixed work for clipboard in Script Console tool: avoid effects caused by QTextEdit after copy-paste from HTML pages. [Scripting] (GH: #1070)
+- Fixed telescope syncing for INDI [Telescope Control] (GH: #1065)
+- Fixed “Uninitialized members” issue in Script Console [Scripting]
+- Fixed VecMath features: moved vector/string conversion previously in StelUtils to the VecMath classes (GH: #1055)
+- Fixed VecMath feature:  moved un-inlineable definitions to separate cpp file (GH: #1055)
+- Fixed proper motion output (GH: #1006, #1041)
+- Fixed time delay with planet movement information (GH: #1006, #1103)
+- Fixed cross-id data for open clusters [DSO Catalog, v3.10] 
+- Fixed designations for van den Bergh catalogues [DSO Catalog, v3.10] (GH: #965)
+- Fixed descriptions for van den Bergh catalogues [DSO Catalog, v3.10] (GH: #965)
+- Fixed crash in scripting method core.setObserverLocation() when planet is not defined or not exist [Scripting]
+- Fixed core.setObserverLocation() behaviour: avoid duplicating a country if script programmer provides one [Scripting] (GH: #1076)
+- Fixed object type info for meteor showers [Meteor Showers]
+- Fixed crash when lens are deleted in Oculars plugin [Oculars] (GH: #1078)
+- Fixed (a temporary fix) crash Stellarium when autoconnect is enabled for ASCOM device, but device is not attached [Telescope Control] (GH: #928)
+- Fixed wrong approximated visual magnitude of satellites [Satellites]
+- Fixed guessing groups of satellites [Satellites]
+- Fixed possible cache problem for magnitudes
+- Fixed casting warnings
+- Fixed topocentric/geocentric corrections for ArchaeoLines plugin [ArchaeoLines]
+- Fixed crash AstroCalc/WUT tool when required plugin is not loaded [AstroCalc]
+- Fixed docs and tooltips
+- Fixed visibility of deep-sky regions of the sky
+- Fixed work of regions of the sky in AstroCalc/Positions tool [AstroCalc]
+- Fixed missing object in Bennett's list of deep-sky objects (switched to synonym of missed object) [Search Tool]
+- Fixed missing object in Dunlop's list of deep-sky objects (switched to synonym of missed object) [Search Tool]
+- Fixed visual style for dialog to define custom equation of DeltaT
+- Fixed crossquarter declinations in ArchaeoLines plugin [ArchaeoLines]
+- Fixed updating timezones when loading landscapes/sceneries
+- Fixed updating location panel when off-screen
+- Fixed a deprecation warning for InfoString of planets, comets and minor planets
+- Fixed broken highlighting for quoted string literals for Script Console [Scripting] (GH: #1101, #1107)
+- Fixed broken highlighting for line comment for Script Console [Scripting] (GH: #1101, #1107)
+- Fixed indentation problems in the code
+- Fixed crash when removing already removed selection of constellations (GH: #1104)
+- Fixed jumping of the Moon
+- Fixed visibility for telescope selector when image sensor frame enabled after binocular [Oculars] (GH: #1108)
+- Fixed saving thickness of the planetary trails and orbits
+- Fixed context data for unit measure in Satellites plugin [Satellites]
+- Fixed a stupid bug in ArchaeoLines [ArchaeoLines]
+- Fixed sign of one element in the matrix sequence for nutation
+- Fixed Scripting Engine bug: a script isn't terminated properly via the stop script button [Scripting] (GH: #1118)
+- Fixed crash when texture isn't found (GH: #1121)
+- Fixed the maximum size of CCD: increased limit of sensor size to 100000 pixels [Oculars] (GH: #1123)
+- Fixed visual artifacts on the sky (GH: #475, #1126)
+- Fixed bug in Vec3d constructor for scripting engine [Scripting]
+- Fixed shader bug visible during Total Solar Eclipses only
+- Updated default settings for InnoSetup Script (.iss) file
+- Updated Stellarium User Guide
+- Updated morphological classification of open clusters [DSO Catalog, v3.10]
+- Updated subsystem to obtain the standard magnitudes of artificial satellites [Satellites]
+- Updated method for load standard magnitudes and RCS data for satellites [Satellites]
+- Updated size of window resize border to reduce difficulties to their resize (GH: #937, #1099)
+- Updated InfoString block for artificial satellites [Satellites]
+- Updated minimum height of artificial satellite to check the valid orbit [Satellites]
+- Updated default source of Starlink TLE's [Satellites]
+- Changed behaviour of GUI in Satellites tab in Satellites plugin [Satellites]
+- Changed AstroCalc/WUT tool behaviour: radiogalaxies, active galaxies, quasars, blazars and BL Lac objects was moved from 'Galaxies' category into 'Active galaxies' category [AstroCalc]
+- Changed behaviour of AstroCalc/WUT tool: let's use visual magnitude for all objects without extinction data [AstroCalc]
+- Changed "Arguments" to "arguments" for highlighter in Script Console [Scripting] (GH: #1101, #1107)
+- Removed obsolete scripting methods from StarMgr class [Scripting]
+- Removed duplicate code for InfoString of planets, comets and minor planets
+- Removed "Global" from highlighter in Script Console [Scripting] (GH: #1101, #1107)
+- Removed unused variables

@@ -21,7 +21,7 @@
   <td id="projectlogo"><img alt="Logo" src="stellarium-logo.png"/></td>
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">Stellarium
-   &#160;<span id="projectnumber">0.20.1</span>
+   &#160;<span id="projectnumber">0.20.2</span>
    </div>
   </td>
  </tr>
@@ -57,18 +57,16 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a16cdbef530ec728ceeec575035031905"><td class="memItemLeft" align="right" valign="top"><a id="a16cdbef530ec728ceeec575035031905"></a>
 &#160;</td><td class="memItemRight" valign="bottom"><b>LandscapeFisheye</b> (float radius=1.f)</td></tr>
 <tr class="separator:a16cdbef530ec728ceeec575035031905"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ae79bced5cf0e4438c42dd85281b30175"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classLandscapeFisheye.html#ae79bced5cf0e4438c42dd85281b30175">load</a> (const QSettings &amp;landscapeIni, const QString &amp;landscapeId)</td></tr>
-<tr class="memdesc:ae79bced5cf0e4438c42dd85281b30175"><td class="mdescLeft">&#160;</td><td class="mdescRight">Load landscape.  <a href="#ae79bced5cf0e4438c42dd85281b30175">More...</a><br /></td></tr>
-<tr class="separator:ae79bced5cf0e4438c42dd85281b30175"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad8d92cbf1f566f6a487afe8f65cfc50e"><td class="memItemLeft" align="right" valign="top">virtual unsigned int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classLandscapeFisheye.html#ad8d92cbf1f566f6a487afe8f65cfc50e">getMemorySize</a> () const</td></tr>
-<tr class="memdesc:ad8d92cbf1f566f6a487afe8f65cfc50e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return approximate memory footprint in bytes (required for cache cost estimate in <a class="el" href="classLandscapeMgr.html" title="Manages all the rendering at the level of the observer&#39;s surroundings. ">LandscapeMgr</a>) The returned value is only approximate, content of QStrings and other small containers like the horizon polygon are not put in in detail.  <a href="#ad8d92cbf1f566f6a487afe8f65cfc50e">More...</a><br /></td></tr>
-<tr class="separator:ad8d92cbf1f566f6a487afe8f65cfc50e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a04f73c2ab8a7c18e9a1a209c05a88641"><td class="memItemLeft" align="right" valign="top"><a id="a04f73c2ab8a7c18e9a1a209c05a88641"></a>
-virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>draw</b> (<a class="el" href="classStelCore.html">StelCore</a> *core)</td></tr>
-<tr class="separator:a04f73c2ab8a7c18e9a1a209c05a88641"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a7a36a17b50573dd0a11c9327719f62ec"><td class="memItemLeft" align="right" valign="top">virtual float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classLandscapeFisheye.html#a7a36a17b50573dd0a11c9327719f62ec">getOpacity</a> (<a class="el" href="classVector3.html">Vec3d</a> azalt) const</td></tr>
-<tr class="memdesc:a7a36a17b50573dd0a11c9327719f62ec"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sample landscape texture for transparency/opacity.  <a href="#a7a36a17b50573dd0a11c9327719f62ec">More...</a><br /></td></tr>
-<tr class="separator:a7a36a17b50573dd0a11c9327719f62ec"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa56f04eb8138c07c7fc099ed640c34f5"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classLandscapeFisheye.html#aa56f04eb8138c07c7fc099ed640c34f5">load</a> (const QSettings &amp;landscapeIni, const QString &amp;landscapeId) Q_DECL_OVERRIDE</td></tr>
+<tr class="memdesc:aa56f04eb8138c07c7fc099ed640c34f5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Load landscape.  <a href="#aa56f04eb8138c07c7fc099ed640c34f5">More...</a><br /></td></tr>
+<tr class="separator:aa56f04eb8138c07c7fc099ed640c34f5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab6f0d14741e6cc352d4f2e2fc6a84c7f"><td class="memItemLeft" align="right" valign="top"><a id="ab6f0d14741e6cc352d4f2e2fc6a84c7f"></a>
+virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classLandscapeFisheye.html#ab6f0d14741e6cc352d4f2e2fc6a84c7f">draw</a> (<a class="el" href="classStelCore.html">StelCore</a> *core, bool onlyPolygon) Q_DECL_OVERRIDE</td></tr>
+<tr class="memdesc:ab6f0d14741e6cc352d4f2e2fc6a84c7f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Draw the landscape. If onlyPolygon, only draw the landscape polygon, if one is defined. If no polygon is defined, the. <br /></td></tr>
+<tr class="separator:ab6f0d14741e6cc352d4f2e2fc6a84c7f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adfe91e578508662793011c634b91e5a1"><td class="memItemLeft" align="right" valign="top">virtual float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classLandscapeFisheye.html#adfe91e578508662793011c634b91e5a1">getOpacity</a> (<a class="el" href="classVector3.html">Vec3d</a> azalt) const Q_DECL_OVERRIDE</td></tr>
+<tr class="memdesc:adfe91e578508662793011c634b91e5a1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sample landscape texture for transparency/opacity.  <a href="#adfe91e578508662793011c634b91e5a1">More...</a><br /></td></tr>
+<tr class="separator:adfe91e578508662793011c634b91e5a1"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa0aad493cb2174eb09d60398904a114d"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classLandscapeFisheye.html#aa0aad493cb2174eb09d60398904a114d">create</a> (const QString name, const QString &amp;maptex, float texturefov, float <a class="el" href="classLandscape.html#ac40c7bac9e1f7b22c8dbf0652c75aa81">angleRotateZ</a>)</td></tr>
 <tr class="memdesc:aa0aad493cb2174eb09d60398904a114d"><td class="mdescLeft">&#160;</td><td class="mdescRight">create a fisheye landscape from basic parameters (no ini file needed).  <a href="#aa0aad493cb2174eb09d60398904a114d">More...</a><br /></td></tr>
 <tr class="separator:aa0aad493cb2174eb09d60398904a114d"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -79,6 +77,9 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>create</b> (const QSt
 <tr class="memitem:aff60359e763c7521726de77ff9679858 inherit pub_methods_classLandscape"><td class="memItemLeft" align="right" valign="top"><a id="aff60359e763c7521726de77ff9679858"></a>
 &#160;</td><td class="memItemRight" valign="bottom"><b>Landscape</b> (float _radius=2.f)</td></tr>
 <tr class="separator:aff60359e763c7521726de77ff9679858 inherit pub_methods_classLandscape"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a100a0e5d59c057c288d1bb3ce8abfec3 inherit pub_methods_classLandscape"><td class="memItemLeft" align="right" valign="top">unsigned int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classLandscape.html#a100a0e5d59c057c288d1bb3ce8abfec3">getMemorySize</a> () const</td></tr>
+<tr class="memdesc:a100a0e5d59c057c288d1bb3ce8abfec3 inherit pub_methods_classLandscape"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return approximate memory footprint in bytes (required for cache cost estimate in <a class="el" href="classLandscapeMgr.html" title="Manages all the rendering at the level of the observer&#39;s surroundings. ">LandscapeMgr</a>) The returned value is only approximate, content of QStrings and other small containers like the horizon polygon are not put in in detail.  <a href="classLandscape.html#a100a0e5d59c057c288d1bb3ce8abfec3">More...</a><br /></td></tr>
+<tr class="separator:a100a0e5d59c057c288d1bb3ce8abfec3 inherit pub_methods_classLandscape"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a5744619f50358e92ac0fee8298995621 inherit pub_methods_classLandscape"><td class="memItemLeft" align="right" valign="top"><a id="a5744619f50358e92ac0fee8298995621"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><b>update</b> (double deltaTime)</td></tr>
 <tr class="separator:a5744619f50358e92ac0fee8298995621 inherit pub_methods_classLandscape"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -203,6 +204,9 @@ double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="cl
 void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classLandscape.html#a509a640fe6c64830a50a4c8cf0c893c7">loadLabels</a> (const QString &amp;landscapeId)</td></tr>
 <tr class="memdesc:a509a640fe6c64830a50a4c8cf0c893c7 inherit pub_methods_classLandscape"><td class="mdescLeft">&#160;</td><td class="mdescRight">Load descriptive labels from optional file gazetteer.LANG.utf8. <br /></td></tr>
 <tr class="separator:a509a640fe6c64830a50a4c8cf0c893c7 inherit pub_methods_classLandscape"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa0669f8bd810d0f9d0bdd6c45bbc8b7a inherit pub_methods_classLandscape"><td class="memItemLeft" align="right" valign="top"><a id="aa0669f8bd810d0f9d0bdd6c45bbc8b7a"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><b>hasLandscapePolygon</b> () const</td></tr>
+<tr class="separator:aa0669f8bd810d0f9d0bdd6c45bbc8b7a inherit pub_methods_classLandscape"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="inherited"></a>
 Additional Inherited Members</h2></td></tr>
@@ -345,6 +349,9 @@ int&#160;</td><td class="memItemRight" valign="bottom"><b>fontSize</b></td></tr>
 <a class="el" href="classVector3.html">Vec3f</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classLandscape.html#a1413c6bfa6d07fae4feaaeae59cb877e">labelColor</a></td></tr>
 <tr class="memdesc:a1413c6bfa6d07fae4feaaeae59cb877e inherit pro_attribs_classLandscape"><td class="mdescLeft">&#160;</td><td class="mdescRight">Used for landscape labels (optionally indicating landscape features) <br /></td></tr>
 <tr class="separator:a1413c6bfa6d07fae4feaaeae59cb877e inherit pro_attribs_classLandscape"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a43e1b6c6b3ee561c2d7fbf40e634d21c inherit pro_attribs_classLandscape"><td class="memItemLeft" align="right" valign="top">unsigned int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classLandscape.html#a43e1b6c6b3ee561c2d7fbf40e634d21c">memorySize</a></td></tr>
+<tr class="memdesc:a43e1b6c6b3ee561c2d7fbf40e634d21c inherit pro_attribs_classLandscape"><td class="mdescLeft">&#160;</td><td class="mdescRight">Color for the landscape labels.  <a href="classLandscape.html#a43e1b6c6b3ee561c2d7fbf40e634d21c">More...</a><br /></td></tr>
+<tr class="separator:a43e1b6c6b3ee561c2d7fbf40e634d21c inherit pro_attribs_classLandscape"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>The image is typically square, ... </p><dl class="params"><dt>Parameters</dt><dd>
@@ -405,36 +412,8 @@ int&#160;</td><td class="memItemRight" valign="bottom"><b>fontSize</b></td></tr>
 
 </div>
 </div>
-<a id="ad8d92cbf1f566f6a487afe8f65cfc50e"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ad8d92cbf1f566f6a487afe8f65cfc50e">&#9670;&nbsp;</a></span>getMemorySize()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">virtual unsigned int LandscapeFisheye::getMemorySize </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td> const</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">virtual</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-<p>However, texture image sizes must be computed in subclasses. The value returned is a sum of RAM and texture memory requirements. </p>
-
-<p>Reimplemented from <a class="el" href="classLandscape.html#a92d7a8b3dd5598dc21efe2736f06c106">Landscape</a>.</p>
-
-</div>
-</div>
-<a id="a7a36a17b50573dd0a11c9327719f62ec"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a7a36a17b50573dd0a11c9327719f62ec">&#9670;&nbsp;</a></span>getOpacity()</h2>
+<a id="adfe91e578508662793011c634b91e5a1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#adfe91e578508662793011c634b91e5a1">&#9670;&nbsp;</a></span>getOpacity()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -467,8 +446,8 @@ int&#160;</td><td class="memItemRight" valign="bottom"><b>fontSize</b></td></tr>
 
 </div>
 </div>
-<a id="ae79bced5cf0e4438c42dd85281b30175"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ae79bced5cf0e4438c42dd85281b30175">&#9670;&nbsp;</a></span>load()</h2>
+<a id="aa56f04eb8138c07c7fc099ed640c34f5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa56f04eb8138c07c7fc099ed640c34f5">&#9670;&nbsp;</a></span>load()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -515,7 +494,7 @@ int&#160;</td><td class="memItemRight" valign="bottom"><b>fontSize</b></td></tr>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Mon Apr 20 2020 20:25:56 for Stellarium by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Tue Jun 23 2020 01:35:11 for Stellarium by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.13
 </small></address>

@@ -21,7 +21,7 @@
   <td id="projectlogo"><img alt="Logo" src="stellarium-logo.png"/></td>
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">Stellarium
-   &#160;<span id="projectnumber">0.20.1</span>
+   &#160;<span id="projectnumber">0.20.2</span>
    </div>
   </td>
  </tr>
@@ -48,7 +48,7 @@ $(function() {
 </div><!--header-->
 <div class="contents">
 
-<p>A templatized 2d vector compatible with openGL.  
+<p>A templatized 2d vector compatible with OpenGL.  
  <a href="classVector2.html#details">More...</a></p>
 
 <p><code>#include &lt;VecMath.hpp&gt;</code></p>
@@ -73,6 +73,14 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:ac9c58a9e14c95827d4472317ca4ffc05"><td class="memItemLeft" align="right" valign="top"><a id="ac9c58a9e14c95827d4472317ca4ffc05"></a>
 &#160;</td><td class="memItemRight" valign="bottom"><b>Vector2</b> (T, T)</td></tr>
 <tr class="separator:ac9c58a9e14c95827d4472317ca4ffc05"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3e80e1f71f197bcddbd1fbe99028aa32"><td class="memItemLeft" align="right" valign="top"><a id="a3e80e1f71f197bcddbd1fbe99028aa32"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classVector2.html#a3e80e1f71f197bcddbd1fbe99028aa32">Vector2</a> (QString s)</td></tr>
+<tr class="memdesc:a3e80e1f71f197bcddbd1fbe99028aa32"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructor from a comma-separated QString like "2,4" or "2.1,4.2". <br /></td></tr>
+<tr class="separator:a3e80e1f71f197bcddbd1fbe99028aa32"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ade52d4ba73f43d98e028fc8d85eaef27"><td class="memItemLeft" align="right" valign="top"><a id="ade52d4ba73f43d98e028fc8d85eaef27"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classVector2.html#ade52d4ba73f43d98e028fc8d85eaef27">Vector2</a> (QStringList s)</td></tr>
+<tr class="memdesc:ade52d4ba73f43d98e028fc8d85eaef27"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructor from a QStringList like { "2", "4" } or { "2.1", "4.2", "6.3" }. <br /></td></tr>
+<tr class="separator:ade52d4ba73f43d98e028fc8d85eaef27"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a875f29ec0ce414016c8d97f0cc61b12d"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classVector2.html">Vector2</a>&lt; T &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classVector2.html#a875f29ec0ce414016c8d97f0cc61b12d">operator=</a> (const T *)</td></tr>
 <tr class="memdesc:a875f29ec0ce414016c8d97f0cc61b12d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Assignment from array.  <a href="#a875f29ec0ce414016c8d97f0cc61b12d">More...</a><br /></td></tr>
 <tr class="separator:a875f29ec0ce414016c8d97f0cc61b12d"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -172,8 +180,12 @@ T&#160;</td><td class="memItemRight" valign="bottom"><b>lengthSquared</b> () con
 void&#160;</td><td class="memItemRight" valign="bottom"><b>normalize</b> ()</td></tr>
 <tr class="separator:ace2a626eaa79412e2946216e9c3e63c6"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a34428c2039ee647a20abc776485c3904"><td class="memItemLeft" align="right" valign="top"><a id="a34428c2039ee647a20abc776485c3904"></a>
-QString&#160;</td><td class="memItemRight" valign="bottom"><b>toString</b> () const</td></tr>
+QString&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classVector2.html#a34428c2039ee647a20abc776485c3904">toString</a> () const</td></tr>
+<tr class="memdesc:a34428c2039ee647a20abc776485c3904"><td class="mdescLeft">&#160;</td><td class="mdescRight">Formatted string with brackets. <br /></td></tr>
 <tr class="separator:a34428c2039ee647a20abc776485c3904"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad51ed1a8faa937ce20662110feefcdc3"><td class="memItemLeft" align="right" valign="top">QString&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classVector2.html#ad51ed1a8faa937ce20662110feefcdc3">toStr</a> () const</td></tr>
+<tr class="memdesc:ad51ed1a8faa937ce20662110feefcdc3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Compact comma-separated string without brackets and spaces.  <a href="#ad51ed1a8faa937ce20662110feefcdc3">More...</a><br /></td></tr>
+<tr class="separator:ad51ed1a8faa937ce20662110feefcdc3"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-attribs"></a>
 Data Fields</h2></td></tr>
@@ -185,7 +197,7 @@ T&#160;</td><td class="memItemRight" valign="bottom"><b>v</b> [2]</td></tr>
 <div class="textblock"><h3>template&lt;class T&gt;<br />
 class Vector2&lt; T &gt;</h3>
 
-<p>Use Vec2d or Vec2f typdef for vectors of double and float respectively. </p>
+<p>Use Vec2i for integer and Vec2d or Vec2f typedef for vectors of double and float respectively. </p>
 </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="aaf6015624fb1c6c2a52dc18d741794ae"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#aaf6015624fb1c6c2a52dc18d741794ae">&#9670;&nbsp;</a></span>Vector2() <span class="overload">[1/2]</span></h2>
@@ -277,10 +289,30 @@ template&lt;class T&gt; </div>
 
 </div>
 </div>
+<a id="ad51ed1a8faa937ce20662110feefcdc3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad51ed1a8faa937ce20662110feefcdc3">&#9670;&nbsp;</a></span>toStr()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class T&gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">QString <a class="el" href="classVector2.html">Vector2</a>&lt; T &gt;::toStr </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>The result can be restored into a <a class="el" href="classVector2.html" title="A templatized 2d vector compatible with OpenGL. ">Vector2</a> by the <a class="el" href="classVector2.html#a3e80e1f71f197bcddbd1fbe99028aa32" title="Constructor from a comma-separated QString like &quot;2,4&quot; or &quot;2.1,4.2&quot;. ">Vector2(QString s)</a> constructors. </p>
+
+</div>
+</div>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Mon Apr 20 2020 20:25:56 for Stellarium by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Tue Jun 23 2020 01:35:11 for Stellarium by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.13
 </small></address>

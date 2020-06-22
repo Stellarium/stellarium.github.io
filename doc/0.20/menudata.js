@@ -142,6 +142,7 @@ var menudata={children:[
 {text:"s",url:"functions_prop.html#index_s"},
 {text:"u",url:"functions_prop.html#index_u"}]}]}]},
 {text:"Coding Style",url:"codingStyle.html"},
+{text:"GUI",url:"gui.html"},
 {text:"Scripting",url:"scripting.html"},
 {text:"Plugins",url:"plugins.html"},
 {text:"File Structure",url:"fileStructure.html"}]}
