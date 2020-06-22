@@ -12,6 +12,8 @@ The major changes of this version:
 - Many changes in Oculars and Satellites plugins
 - Updated DSO catalog
 
+This is the anniversary version of Stellarium - the project is 20 years old now.
+
 Thank you very much to community for bug reports, feature requests and contributions!
 
 Full list of changes:
