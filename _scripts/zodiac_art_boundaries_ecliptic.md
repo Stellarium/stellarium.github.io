@@ -4,7 +4,7 @@ author: Daniel Cummings
 license: Public Domain
 compat: 0.10+
 version: 1.0
-script_url: https://stellarium.org/files/scripts/zodiac_art_boundaries_ecliptic.ssc
+script_url: /files/scripts/zodiac_art_boundaries_ecliptic.ssc
 image_url: /img/scripts/stellarium-script-05.jpg
 categories: community
 ---
