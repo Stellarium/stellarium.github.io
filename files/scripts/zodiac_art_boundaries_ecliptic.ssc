@@ -1,0 +1,27 @@
+// Name: Zodiac Art Boundaries Ecliptic
+// Author: Daniel Cummings https://starinastar.com
+// License: Public Domain
+// Version: 1.0
+// Shortcut: Ctrl+D,z
+// Description: This script displays the constellations of the Zodiac.
+//              The Zodiac constellations lie along the line which
+//              the solar system objects follow on the celestial sphere.
+//              It uses a "sequence" key command: first control/command-D, then z
+
+var constellations = new Array("Aries", "Taurus", "Gemini", "Cancer", "Leo", "Virgo", "Libra", "Scorpius", "Ophiuchus", "Sagittarius", "Capricornus", "Aquarius", "Pisces");
+
+ConstellationMgr.setFlagIsolateSelected(true);
+ConstellationMgr.setFlagArt(true);
+ConstellationMgr.setFlagLabels(true);
+ConstellationMgr.setArtIntensity(0.6);
+
+for(i=0; i<constellations.length; i++)
+{
+	core.selectObjectByName(constellations[i], false);
+	core.wait(0.2);
+}
+
+core.wait(0.5);
+ConstellationMgr.setFlagBoundaries(true);
+core.wait(0.5);
+GridLinesMgr.setFlagEclipticLine(true);
