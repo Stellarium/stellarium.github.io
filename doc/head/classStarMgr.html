@@ -21,7 +21,7 @@
   <td id="projectlogo"><img alt="Logo" src="stellarium-logo.png"/></td>
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">Stellarium
-   &#160;<span id="projectnumber">HEAD</span>
+   &#160;<span id="projectnumber">0.20.2</span>
    </div>
   </td>
  </tr>
@@ -91,6 +91,14 @@ static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" hre
 <tr class="memitem:a6a7db45583d4b4fc4bd133ccebe31f52"><td class="memItemLeft" align="right" valign="top"><a id="a6a7db45583d4b4fc4bd133ccebe31f52"></a>
 static bool&#160;</td><td class="memItemRight" valign="bottom"><b>getFlagSciNames</b> (void)</td></tr>
 <tr class="separator:a6a7db45583d4b4fc4bd133ccebe31f52"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abc50b3a0a8097fcba661a80dc169e485"><td class="memItemLeft" align="right" valign="top"><a id="abc50b3a0a8097fcba661a80dc169e485"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classStarMgr.html#abc50b3a0a8097fcba661a80dc169e485">setDesignationUsage</a> (const bool flag)</td></tr>
+<tr class="memdesc:abc50b3a0a8097fcba661a80dc169e485"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set flag for usage designations of stars for their labels instead common names. <br /></td></tr>
+<tr class="separator:abc50b3a0a8097fcba661a80dc169e485"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a76cdd81e2ef8714e84aa168d8f0ec1f8"><td class="memItemLeft" align="right" valign="top"><a id="a76cdd81e2ef8714e84aa168d8f0ec1f8"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classStarMgr.html#a76cdd81e2ef8714e84aa168d8f0ec1f8">getDesignationUsage</a> (void)</td></tr>
+<tr class="memdesc:a76cdd81e2ef8714e84aa168d8f0ec1f8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get flag for usage designations of stars for their labels instead common names. <br /></td></tr>
+<tr class="separator:a76cdd81e2ef8714e84aa168d8f0ec1f8"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a996519f40a99d9a4d6e09cf046c1f16f"><td class="memItemLeft" align="right" valign="top"><a id="a996519f40a99d9a4d6e09cf046c1f16f"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classStarMgr.html#a996519f40a99d9a4d6e09cf046c1f16f">setFlagAdditionalNames</a> (bool flag)</td></tr>
 <tr class="memdesc:a996519f40a99d9a4d6e09cf046c1f16f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Show additional star names. <br /></td></tr>
@@ -107,6 +115,9 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>starLabelsDisplayedCh
 <tr class="memitem:a16347f2bb96fd4c07cb54bfe81032487"><td class="memItemLeft" align="right" valign="top"><a id="a16347f2bb96fd4c07cb54bfe81032487"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><b>starsDisplayedChanged</b> (const bool displayed)</td></tr>
 <tr class="separator:a16347f2bb96fd4c07cb54bfe81032487"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a641bf4b9b3f50ca40e2beb98d7635b01"><td class="memItemLeft" align="right" valign="top"><a id="a641bf4b9b3f50ca40e2beb98d7635b01"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>designationUsageChanged</b> (const bool flag)</td></tr>
+<tr class="separator:a641bf4b9b3f50ca40e2beb98d7635b01"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac50fc00ee22c10267c69be0061e9e961"><td class="memItemLeft" align="right" valign="top"><a id="ac50fc00ee22c10267c69be0061e9e961"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><b>flagAdditionalNamesDisplayedChanged</b> (const bool displayed)</td></tr>
 <tr class="separator:ac50fc00ee22c10267c69be0061e9e961"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -310,6 +321,9 @@ double&#160;</td><td class="memItemRight" valign="bottom"><b>labelsAmount</b></t
 <tr class="memitem:a402a0f40f584325ef9d3cc1d8c3920bb"><td class="memItemLeft" align="right" valign="top"><a id="a402a0f40f584325ef9d3cc1d8c3920bb"></a>
 bool&#160;</td><td class="memItemRight" valign="bottom"><b>flagAdditionalNamesDisplayed</b></td></tr>
 <tr class="separator:a402a0f40f584325ef9d3cc1d8c3920bb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7ed4098808f1cedc42152a20632d86ba"><td class="memItemLeft" align="right" valign="top"><a id="a7ed4098808f1cedc42152a20632d86ba"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><b>flagDesignationLabels</b></td></tr>
+<tr class="separator:a7ed4098808f1cedc42152a20632d86ba"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="inherited"></a>
 Additional Inherited Members</h2></td></tr>
@@ -1422,7 +1436,7 @@ Additional Inherited Members</h2></td></tr>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Wed May 20 2020 15:45:42 for Stellarium by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Sun Jul 26 2020 12:15:39 for Stellarium by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.13
 </small></address>

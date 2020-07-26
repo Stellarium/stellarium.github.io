@@ -21,7 +21,7 @@
   <td id="projectlogo"><img alt="Logo" src="stellarium-logo.png"/></td>
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">Stellarium
-   &#160;<span id="projectnumber">HEAD</span>
+   &#160;<span id="projectnumber">0.20.2</span>
    </div>
   </td>
  </tr>
@@ -65,12 +65,13 @@ Data Structures</h2></td></tr>
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-types"></a>
 Public Types</h2></td></tr>
 <tr class="memitem:ad669cc932a8770face3267bd600192e9"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classLandscape.html#ad669cc932a8770face3267bd600192e9">horizonListMode</a> { <br />
-&#160;&#160;<b>azDeg_altDeg</b> = 0, 
+&#160;&#160;<b>invalid</b> =-1, 
+<b>azDeg_altDeg</b> = 0, 
 <a class="el" href="classLandscape.html#ad669cc932a8770face3267bd600192e9a0a55b5bb9480013a741e2435cbf4def5">azDeg_zdDeg</a> = 1, 
 <a class="el" href="classLandscape.html#ad669cc932a8770face3267bd600192e9a12374cb3b25185a4ad53141806d79494">azRad_altRad</a> = 2, 
-<a class="el" href="classLandscape.html#ad669cc932a8770face3267bd600192e9a4c2617671f1b9a3686660af5d8b562b2">azRad_zdRad</a> = 3, 
 <br />
-&#160;&#160;<a class="el" href="classLandscape.html#ad669cc932a8770face3267bd600192e9a03168c1dd7c35d80de7f307a106461ef">azGrad_altGrad</a> = 4, 
+&#160;&#160;<a class="el" href="classLandscape.html#ad669cc932a8770face3267bd600192e9a4c2617671f1b9a3686660af5d8b562b2">azRad_zdRad</a> = 3, 
+<a class="el" href="classLandscape.html#ad669cc932a8770face3267bd600192e9a03168c1dd7c35d80de7f307a106461ef">azGrad_altGrad</a> = 4, 
 <a class="el" href="classLandscape.html#ad669cc932a8770face3267bd600192e9af4fa3c4769aa20c24ba63c42c33dc8a2">azGrad_zdGrad</a> = 5
 <br />
  }<tr class="memdesc:ad669cc932a8770face3267bd600192e9"><td class="mdescLeft">&#160;</td><td class="mdescRight">The list of azimuths (counted from True North towards East) and altitudes can come in various formats. We read the first two elements, which can be of formats:  <a href="classLandscape.html#ad669cc932a8770face3267bd600192e9">More...</a><br /></td></tr>
@@ -85,12 +86,13 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a8a453b63c41a52ad79a9954810313779"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classLandscape.html#a8a453b63c41a52ad79a9954810313779">load</a> (const QSettings &amp;landscapeIni, const QString &amp;landscapeId)=0</td></tr>
 <tr class="memdesc:a8a453b63c41a52ad79a9954810313779"><td class="mdescLeft">&#160;</td><td class="mdescRight">Load landscape.  <a href="#a8a453b63c41a52ad79a9954810313779">More...</a><br /></td></tr>
 <tr class="separator:a8a453b63c41a52ad79a9954810313779"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a92d7a8b3dd5598dc21efe2736f06c106"><td class="memItemLeft" align="right" valign="top">virtual unsigned int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classLandscape.html#a92d7a8b3dd5598dc21efe2736f06c106">getMemorySize</a> () const</td></tr>
-<tr class="memdesc:a92d7a8b3dd5598dc21efe2736f06c106"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return approximate memory footprint in bytes (required for cache cost estimate in <a class="el" href="classLandscapeMgr.html" title="Manages all the rendering at the level of the observer&#39;s surroundings. ">LandscapeMgr</a>) The returned value is only approximate, content of QStrings and other small containers like the horizon polygon are not put in in detail.  <a href="#a92d7a8b3dd5598dc21efe2736f06c106">More...</a><br /></td></tr>
-<tr class="separator:a92d7a8b3dd5598dc21efe2736f06c106"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a66bb644883d4a2842c7d7b41ba8de9c9"><td class="memItemLeft" align="right" valign="top"><a id="a66bb644883d4a2842c7d7b41ba8de9c9"></a>
-virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>draw</b> (<a class="el" href="classStelCore.html">StelCore</a> *core)=0</td></tr>
-<tr class="separator:a66bb644883d4a2842c7d7b41ba8de9c9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a100a0e5d59c057c288d1bb3ce8abfec3"><td class="memItemLeft" align="right" valign="top">unsigned int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classLandscape.html#a100a0e5d59c057c288d1bb3ce8abfec3">getMemorySize</a> () const</td></tr>
+<tr class="memdesc:a100a0e5d59c057c288d1bb3ce8abfec3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return approximate memory footprint in bytes (required for cache cost estimate in <a class="el" href="classLandscapeMgr.html" title="Manages all the rendering at the level of the observer&#39;s surroundings. ">LandscapeMgr</a>) The returned value is only approximate, content of QStrings and other small containers like the horizon polygon are not put in in detail.  <a href="#a100a0e5d59c057c288d1bb3ce8abfec3">More...</a><br /></td></tr>
+<tr class="separator:a100a0e5d59c057c288d1bb3ce8abfec3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a93cd08d5c353ee3b2d77f6643fd6243f"><td class="memItemLeft" align="right" valign="top"><a id="a93cd08d5c353ee3b2d77f6643fd6243f"></a>
+virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classLandscape.html#a93cd08d5c353ee3b2d77f6643fd6243f">draw</a> (<a class="el" href="classStelCore.html">StelCore</a> *core, bool onlyPolygon)=0</td></tr>
+<tr class="memdesc:a93cd08d5c353ee3b2d77f6643fd6243f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Draw the landscape. If onlyPolygon, only draw the landscape polygon, if one is defined. If no polygon is defined, the. <br /></td></tr>
+<tr class="separator:a93cd08d5c353ee3b2d77f6643fd6243f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a5744619f50358e92ac0fee8298995621"><td class="memItemLeft" align="right" valign="top"><a id="a5744619f50358e92ac0fee8298995621"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><b>update</b> (double deltaTime)</td></tr>
 <tr class="separator:a5744619f50358e92ac0fee8298995621"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -218,6 +220,9 @@ double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="cl
 void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classLandscape.html#a509a640fe6c64830a50a4c8cf0c893c7">loadLabels</a> (const QString &amp;landscapeId)</td></tr>
 <tr class="memdesc:a509a640fe6c64830a50a4c8cf0c893c7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Load descriptive labels from optional file gazetteer.LANG.utf8. <br /></td></tr>
 <tr class="separator:a509a640fe6c64830a50a4c8cf0c893c7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa0669f8bd810d0f9d0bdd6c45bbc8b7a"><td class="memItemLeft" align="right" valign="top"><a id="aa0669f8bd810d0f9d0bdd6c45bbc8b7a"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><b>hasLandscapePolygon</b> () const</td></tr>
+<tr class="separator:aa0669f8bd810d0f9d0bdd6c45bbc8b7a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-methods"></a>
 Protected Member Functions</h2></td></tr>
@@ -350,6 +355,9 @@ int&#160;</td><td class="memItemRight" valign="bottom"><b>fontSize</b></td></tr>
 <a class="el" href="classVector3.html">Vec3f</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classLandscape.html#a1413c6bfa6d07fae4feaaeae59cb877e">labelColor</a></td></tr>
 <tr class="memdesc:a1413c6bfa6d07fae4feaaeae59cb877e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Used for landscape labels (optionally indicating landscape features) <br /></td></tr>
 <tr class="separator:a1413c6bfa6d07fae4feaaeae59cb877e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a43e1b6c6b3ee561c2d7fbf40e634d21c"><td class="memItemLeft" align="right" valign="top">unsigned int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classLandscape.html#a43e1b6c6b3ee561c2d7fbf40e634d21c">memorySize</a></td></tr>
+<tr class="memdesc:a43e1b6c6b3ee561c2d7fbf40e634d21c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Color for the landscape labels.  <a href="#a43e1b6c6b3ee561c2d7fbf40e634d21c">More...</a><br /></td></tr>
+<tr class="separator:a43e1b6c6b3ee561c2d7fbf40e634d21c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Don't use this class directly, use the <a class="el" href="classLandscapeMgr.html" title="Manages all the rendering at the level of the observer&#39;s surroundings. ">LandscapeMgr</a>. A landscape's most important element is a photo panorama, or at least a polygon that describes the true horizon visible from your observing location. Optional components include:</p><ul>
@@ -515,8 +523,8 @@ name</td>
 
 </div>
 </div>
-<a id="a92d7a8b3dd5598dc21efe2736f06c106"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a92d7a8b3dd5598dc21efe2736f06c106">&#9670;&nbsp;</a></span>getMemorySize()</h2>
+<a id="a100a0e5d59c057c288d1bb3ce8abfec3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a100a0e5d59c057c288d1bb3ce8abfec3">&#9670;&nbsp;</a></span>getMemorySize()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -525,7 +533,7 @@ name</td>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">virtual unsigned int Landscape::getMemorySize </td>
+          <td class="memname">unsigned int Landscape::getMemorySize </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td> const</td>
@@ -533,13 +541,11 @@ name</td>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">virtual</span></span>  </td>
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
-<p>However, texture image sizes must be computed in subclasses. The value returned is a sum of RAM and texture memory requirements. </p>
-
-<p>Reimplemented in <a class="el" href="classLandscapeSpherical.html#ab785c36656ea3832a603f36ef4cd9e0d">LandscapeSpherical</a>, <a class="el" href="classLandscapeFisheye.html#ad8d92cbf1f566f6a487afe8f65cfc50e">LandscapeFisheye</a>, <a class="el" href="classLandscapePolygonal.html#a9c0d4ca182f425a9d7ebb294545bcada">LandscapePolygonal</a>, and <a class="el" href="classLandscapeOldStyle.html#a1404beece7aa72a0cc4298407814d2e7">LandscapeOldStyle</a>.</p>
+<p>However, texture image sizes must be computed and added in subclasses. The value returned is a sum of RAM and texture memory requirements. </p>
 
 </div>
 </div>
@@ -568,7 +574,7 @@ name</td>
 </div><div class="memdoc">
 <p>(New in V0.13 series) can be used to find sunrise or visibility questions on the real-world landscape horizon. Default implementation indicates the horizon equals math horizon. </p>
 
-<p>Reimplemented in <a class="el" href="classLandscapeSpherical.html#ad20b15d4d21c8c82f930fed9bc241fab">LandscapeSpherical</a>, <a class="el" href="classLandscapeFisheye.html#a7a36a17b50573dd0a11c9327719f62ec">LandscapeFisheye</a>, <a class="el" href="classLandscapePolygonal.html#a350c25fd473472a9115c0e0182f79d6b">LandscapePolygonal</a>, and <a class="el" href="classLandscapeOldStyle.html#ab20ea1598feab86e5e219db1de62b305">LandscapeOldStyle</a>.</p>
+<p>Reimplemented in <a class="el" href="classLandscapeSpherical.html#ac9d64335e865d6f6f4646463614f4a75">LandscapeSpherical</a>, <a class="el" href="classLandscapeFisheye.html#adfe91e578508662793011c634b91e5a1">LandscapeFisheye</a>, <a class="el" href="classLandscapePolygonal.html#a471644c79ee59cd748191f21d45a0828">LandscapePolygonal</a>, and <a class="el" href="classLandscapeOldStyle.html#aaaaff7ba500d383fb08130634d10ac0e">LandscapeOldStyle</a>.</p>
 
 </div>
 </div>
@@ -612,12 +618,7 @@ name</td>
   </table>
   </dd>
 </dl>
-<dl class="exception"><dt>Exceptions</dt><dd>
-  <table class="exception">
-    <tr><td class="paramname">misc</td><td>possibility of throwing "file not found" exceptions </td></tr>
-  </table>
-  </dd>
-</dl>
+<dl class="section note"><dt>Note</dt><dd>returns an empty string if file not found. </dd></dl>
 
 </div>
 </div>
@@ -662,7 +663,7 @@ name</td>
   </dd>
 </dl>
 
-<p>Implemented in <a class="el" href="classLandscapeSpherical.html#aea0a8b67c73f2a115f2edf8ac85bb7f2">LandscapeSpherical</a>, <a class="el" href="classLandscapeFisheye.html#ae79bced5cf0e4438c42dd85281b30175">LandscapeFisheye</a>, <a class="el" href="classLandscapePolygonal.html#a75848f815af9edc08206da27b7b6fc97">LandscapePolygonal</a>, and <a class="el" href="classLandscapeOldStyle.html#a7fa297e4213e9b201b1aef8b6541da40">LandscapeOldStyle</a>.</p>
+<p>Implemented in <a class="el" href="classLandscapeSpherical.html#a8e93d09c7fdc093f5f96974499455259">LandscapeSpherical</a>, <a class="el" href="classLandscapeFisheye.html#aa56f04eb8138c07c7fc099ed640c34f5">LandscapeFisheye</a>, <a class="el" href="classLandscapePolygonal.html#a6e4ff06803a8ed43014c3c4557fb510a">LandscapePolygonal</a>, and <a class="el" href="classLandscapeOldStyle.html#affb0a0efadb25cdfe62bcce71512da07">LandscapeOldStyle</a>.</p>
 
 </div>
 </div>
@@ -742,7 +743,7 @@ name</td>
   </tr>
 </table>
 </div><div class="memdoc">
-<p>This is called in each draw(). </p>
+<p>This is called in each <a class="el" href="classLandscape.html#a93cd08d5c353ee3b2d77f6643fd6243f" title="Draw the landscape. If onlyPolygon, only draw the landscape polygon, if one is defined. If no polygon is defined, the. ">draw()</a>. </p>
 
 </div>
 </div>
@@ -825,6 +826,29 @@ name</td>
 
 </div>
 </div>
+<a id="a43e1b6c6b3ee561c2d7fbf40e634d21c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a43e1b6c6b3ee561c2d7fbf40e634d21c">&#9670;&nbsp;</a></span>memorySize</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">unsigned int Landscape::memorySize</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>holds an approximate value of memory consumption (for cache cost estimate) </p>
+
+</div>
+</div>
 <a id="aad1281f81f9d525ab9722bdc7a873398"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#aad1281f81f9d525ab9722bdc7a873398">&#9670;&nbsp;</a></span>sinMinAltitudeLimit</h2>
 
@@ -851,7 +875,7 @@ name</td>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Wed May 20 2020 15:45:42 for Stellarium by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Sun Jul 26 2020 12:15:38 for Stellarium by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.13
 </small></address>

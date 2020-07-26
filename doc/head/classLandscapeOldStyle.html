@@ -21,7 +21,7 @@
   <td id="projectlogo"><img alt="Logo" src="stellarium-logo.png"/></td>
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">Stellarium
-   &#160;<span id="projectnumber">HEAD</span>
+   &#160;<span id="projectnumber">0.20.2</span>
    </div>
   </td>
  </tr>
@@ -63,22 +63,23 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a9cf9a2a76792d490750f74bfcf2799f6"><td class="memItemLeft" align="right" valign="top"><a id="a9cf9a2a76792d490750f74bfcf2799f6"></a>
 &#160;</td><td class="memItemRight" valign="bottom"><b>LandscapeOldStyle</b> (float radius=2.0f)</td></tr>
 <tr class="separator:a9cf9a2a76792d490750f74bfcf2799f6"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a7fa297e4213e9b201b1aef8b6541da40"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classLandscapeOldStyle.html#a7fa297e4213e9b201b1aef8b6541da40">load</a> (const QSettings &amp;landscapeIni, const QString &amp;landscapeId)</td></tr>
-<tr class="memdesc:a7fa297e4213e9b201b1aef8b6541da40"><td class="mdescLeft">&#160;</td><td class="mdescRight">Load landscape.  <a href="#a7fa297e4213e9b201b1aef8b6541da40">More...</a><br /></td></tr>
-<tr class="separator:a7fa297e4213e9b201b1aef8b6541da40"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a1404beece7aa72a0cc4298407814d2e7"><td class="memItemLeft" align="right" valign="top">virtual unsigned int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classLandscapeOldStyle.html#a1404beece7aa72a0cc4298407814d2e7">getMemorySize</a> () const</td></tr>
-<tr class="memdesc:a1404beece7aa72a0cc4298407814d2e7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return approximate memory footprint in bytes (required for cache cost estimate in <a class="el" href="classLandscapeMgr.html" title="Manages all the rendering at the level of the observer&#39;s surroundings. ">LandscapeMgr</a>) The returned value is only approximate, content of QStrings and other small containers like the horizon polygon are not put in in detail.  <a href="#a1404beece7aa72a0cc4298407814d2e7">More...</a><br /></td></tr>
-<tr class="separator:a1404beece7aa72a0cc4298407814d2e7"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ae2c480470c8fc06f52c8aafdc816bc0d"><td class="memItemLeft" align="right" valign="top"><a id="ae2c480470c8fc06f52c8aafdc816bc0d"></a>
-virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>draw</b> (<a class="el" href="classStelCore.html">StelCore</a> *core)</td></tr>
-<tr class="separator:ae2c480470c8fc06f52c8aafdc816bc0d"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab20ea1598feab86e5e219db1de62b305"><td class="memItemLeft" align="right" valign="top">virtual float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classLandscapeOldStyle.html#ab20ea1598feab86e5e219db1de62b305">getOpacity</a> (<a class="el" href="classVector3.html">Vec3d</a> azalt) const</td></tr>
-<tr class="memdesc:ab20ea1598feab86e5e219db1de62b305"><td class="mdescLeft">&#160;</td><td class="mdescRight">Find opacity in a certain direction.  <a href="#ab20ea1598feab86e5e219db1de62b305">More...</a><br /></td></tr>
-<tr class="separator:ab20ea1598feab86e5e219db1de62b305"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:affb0a0efadb25cdfe62bcce71512da07"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classLandscapeOldStyle.html#affb0a0efadb25cdfe62bcce71512da07">load</a> (const QSettings &amp;landscapeIni, const QString &amp;landscapeId) Q_DECL_OVERRIDE</td></tr>
+<tr class="memdesc:affb0a0efadb25cdfe62bcce71512da07"><td class="mdescLeft">&#160;</td><td class="mdescRight">Load landscape.  <a href="#affb0a0efadb25cdfe62bcce71512da07">More...</a><br /></td></tr>
+<tr class="separator:affb0a0efadb25cdfe62bcce71512da07"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acafac76c97a76cc70a70cc58e9ebf0c3"><td class="memItemLeft" align="right" valign="top"><a id="acafac76c97a76cc70a70cc58e9ebf0c3"></a>
+virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classLandscapeOldStyle.html#acafac76c97a76cc70a70cc58e9ebf0c3">draw</a> (<a class="el" href="classStelCore.html">StelCore</a> *core, bool onlyPolygon) Q_DECL_OVERRIDE</td></tr>
+<tr class="memdesc:acafac76c97a76cc70a70cc58e9ebf0c3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Draw the landscape. If onlyPolygon, only draw the landscape polygon, if one is defined. If no polygon is defined, the. <br /></td></tr>
+<tr class="separator:acafac76c97a76cc70a70cc58e9ebf0c3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aaaaff7ba500d383fb08130634d10ac0e"><td class="memItemLeft" align="right" valign="top">virtual float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classLandscapeOldStyle.html#aaaaff7ba500d383fb08130634d10ac0e">getOpacity</a> (<a class="el" href="classVector3.html">Vec3d</a> azalt) const Q_DECL_OVERRIDE</td></tr>
+<tr class="memdesc:aaaaff7ba500d383fb08130634d10ac0e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Find opacity in a certain direction.  <a href="#aaaaff7ba500d383fb08130634d10ac0e">More...</a><br /></td></tr>
+<tr class="separator:aaaaff7ba500d383fb08130634d10ac0e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pub_methods_classLandscape"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_classLandscape')"><img src="closed.png" alt="-"/>&#160;Public Member Functions inherited from <a class="el" href="classLandscape.html">Landscape</a></td></tr>
 <tr class="memitem:aff60359e763c7521726de77ff9679858 inherit pub_methods_classLandscape"><td class="memItemLeft" align="right" valign="top"><a id="aff60359e763c7521726de77ff9679858"></a>
 &#160;</td><td class="memItemRight" valign="bottom"><b>Landscape</b> (float _radius=2.f)</td></tr>
 <tr class="separator:aff60359e763c7521726de77ff9679858 inherit pub_methods_classLandscape"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a100a0e5d59c057c288d1bb3ce8abfec3 inherit pub_methods_classLandscape"><td class="memItemLeft" align="right" valign="top">unsigned int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classLandscape.html#a100a0e5d59c057c288d1bb3ce8abfec3">getMemorySize</a> () const</td></tr>
+<tr class="memdesc:a100a0e5d59c057c288d1bb3ce8abfec3 inherit pub_methods_classLandscape"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return approximate memory footprint in bytes (required for cache cost estimate in <a class="el" href="classLandscapeMgr.html" title="Manages all the rendering at the level of the observer&#39;s surroundings. ">LandscapeMgr</a>) The returned value is only approximate, content of QStrings and other small containers like the horizon polygon are not put in in detail.  <a href="classLandscape.html#a100a0e5d59c057c288d1bb3ce8abfec3">More...</a><br /></td></tr>
+<tr class="separator:a100a0e5d59c057c288d1bb3ce8abfec3 inherit pub_methods_classLandscape"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a5744619f50358e92ac0fee8298995621 inherit pub_methods_classLandscape"><td class="memItemLeft" align="right" valign="top"><a id="a5744619f50358e92ac0fee8298995621"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><b>update</b> (double deltaTime)</td></tr>
 <tr class="separator:a5744619f50358e92ac0fee8298995621 inherit pub_methods_classLandscape"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -203,17 +204,21 @@ double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="cl
 void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classLandscape.html#a509a640fe6c64830a50a4c8cf0c893c7">loadLabels</a> (const QString &amp;landscapeId)</td></tr>
 <tr class="memdesc:a509a640fe6c64830a50a4c8cf0c893c7 inherit pub_methods_classLandscape"><td class="mdescLeft">&#160;</td><td class="mdescRight">Load descriptive labels from optional file gazetteer.LANG.utf8. <br /></td></tr>
 <tr class="separator:a509a640fe6c64830a50a4c8cf0c893c7 inherit pub_methods_classLandscape"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa0669f8bd810d0f9d0bdd6c45bbc8b7a inherit pub_methods_classLandscape"><td class="memItemLeft" align="right" valign="top"><a id="aa0669f8bd810d0f9d0bdd6c45bbc8b7a"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><b>hasLandscapePolygon</b> () const</td></tr>
+<tr class="separator:aa0669f8bd810d0f9d0bdd6c45bbc8b7a inherit pub_methods_classLandscape"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="inherited"></a>
 Additional Inherited Members</h2></td></tr>
 <tr class="inherit_header pub_types_classLandscape"><td colspan="2" onclick="javascript:toggleInherit('pub_types_classLandscape')"><img src="closed.png" alt="-"/>&#160;Public Types inherited from <a class="el" href="classLandscape.html">Landscape</a></td></tr>
 <tr class="memitem:ad669cc932a8770face3267bd600192e9 inherit pub_types_classLandscape"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classLandscape.html#ad669cc932a8770face3267bd600192e9">horizonListMode</a> { <br />
-&#160;&#160;<b>azDeg_altDeg</b> = 0, 
+&#160;&#160;<b>invalid</b> =-1, 
+<b>azDeg_altDeg</b> = 0, 
 <a class="el" href="classLandscape.html#ad669cc932a8770face3267bd600192e9a0a55b5bb9480013a741e2435cbf4def5">azDeg_zdDeg</a> = 1, 
 <a class="el" href="classLandscape.html#ad669cc932a8770face3267bd600192e9a12374cb3b25185a4ad53141806d79494">azRad_altRad</a> = 2, 
-<a class="el" href="classLandscape.html#ad669cc932a8770face3267bd600192e9a4c2617671f1b9a3686660af5d8b562b2">azRad_zdRad</a> = 3, 
 <br />
-&#160;&#160;<a class="el" href="classLandscape.html#ad669cc932a8770face3267bd600192e9a03168c1dd7c35d80de7f307a106461ef">azGrad_altGrad</a> = 4, 
+&#160;&#160;<a class="el" href="classLandscape.html#ad669cc932a8770face3267bd600192e9a4c2617671f1b9a3686660af5d8b562b2">azRad_zdRad</a> = 3, 
+<a class="el" href="classLandscape.html#ad669cc932a8770face3267bd600192e9a03168c1dd7c35d80de7f307a106461ef">azGrad_altGrad</a> = 4, 
 <a class="el" href="classLandscape.html#ad669cc932a8770face3267bd600192e9af4fa3c4769aa20c24ba63c42c33dc8a2">azGrad_zdGrad</a> = 5
 <br />
  }<tr class="memdesc:ad669cc932a8770face3267bd600192e9"><td class="mdescLeft">&#160;</td><td class="mdescRight">The list of azimuths (counted from True North towards East) and altitudes can come in various formats. We read the first two elements, which can be of formats:  <a href="classLandscape.html#ad669cc932a8770face3267bd600192e9">More...</a><br /></td></tr>
@@ -345,6 +350,9 @@ int&#160;</td><td class="memItemRight" valign="bottom"><b>fontSize</b></td></tr>
 <a class="el" href="classVector3.html">Vec3f</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classLandscape.html#a1413c6bfa6d07fae4feaaeae59cb877e">labelColor</a></td></tr>
 <tr class="memdesc:a1413c6bfa6d07fae4feaaeae59cb877e inherit pro_attribs_classLandscape"><td class="mdescLeft">&#160;</td><td class="mdescRight">Used for landscape labels (optionally indicating landscape features) <br /></td></tr>
 <tr class="separator:a1413c6bfa6d07fae4feaaeae59cb877e inherit pro_attribs_classLandscape"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a43e1b6c6b3ee561c2d7fbf40e634d21c inherit pro_attribs_classLandscape"><td class="memItemLeft" align="right" valign="top">unsigned int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classLandscape.html#a43e1b6c6b3ee561c2d7fbf40e634d21c">memorySize</a></td></tr>
+<tr class="memdesc:a43e1b6c6b3ee561c2d7fbf40e634d21c inherit pro_attribs_classLandscape"><td class="mdescLeft">&#160;</td><td class="mdescRight">Color for the landscape labels.  <a href="classLandscape.html#a43e1b6c6b3ee561c2d7fbf40e634d21c">More...</a><br /></td></tr>
+<tr class="separator:a43e1b6c6b3ee561c2d7fbf40e634d21c inherit pro_attribs_classLandscape"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>It segments the horizon in several tiles (usually 4 or 8), therefore allowing very high resolution horizons also on limited hardware, and closes the ground with a separate bottom piece. (You may want to configure a map with pointers to surrounding mountains or a compass rose instead!) You can use panoramas created in equirectangular or cylindrical coordinates, for the latter case set [landscape]tan_mode=true. Until V0.10.5 there was an undetected bug involving vertical positioning. For historical reasons (many landscapes were already configured and published), it was decided to keep this bug as feature, but a fix for new landscapes is available: [landscape]calibrated=true. As of 0.10.6, the fix is only valid for equirectangular panoramas. As of V0.13, [landscape]calibrated=true and [landscape]tan_mode=true go together for cylindrical panoramas. It is more involved to configure, but may still be preferred if you require the resolution, e.g. for alignment studies for archaeoastronomy. In this case, don't forget to set calibrated=true in landscape.ini. Since V0.13.1, also this landscape has a self-luminous (light pollution) option: Configure light&lt;n&gt; entries with textures overlaid the tex&lt;n&gt; textures. Only textures with light are necessary! Can be easily made using layers with e.g. Photoshop or Gimp. </p>
@@ -385,36 +393,8 @@ texCoords[4]</td>
 </div>
 </div>
 <h2 class="groupheader">Member Function Documentation</h2>
-<a id="a1404beece7aa72a0cc4298407814d2e7"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a1404beece7aa72a0cc4298407814d2e7">&#9670;&nbsp;</a></span>getMemorySize()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">virtual unsigned int LandscapeOldStyle::getMemorySize </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td> const</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">virtual</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-<p>However, texture image sizes must be computed in subclasses. The value returned is a sum of RAM and texture memory requirements. </p>
-
-<p>Reimplemented from <a class="el" href="classLandscape.html#a92d7a8b3dd5598dc21efe2736f06c106">Landscape</a>.</p>
-
-</div>
-</div>
-<a id="ab20ea1598feab86e5e219db1de62b305"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ab20ea1598feab86e5e219db1de62b305">&#9670;&nbsp;</a></span>getOpacity()</h2>
+<a id="aaaaff7ba500d383fb08130634d10ac0e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aaaaff7ba500d383fb08130634d10ac0e">&#9670;&nbsp;</a></span>getOpacity()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -442,8 +422,8 @@ texCoords[4]</td>
 
 </div>
 </div>
-<a id="a7fa297e4213e9b201b1aef8b6541da40"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a7fa297e4213e9b201b1aef8b6541da40">&#9670;&nbsp;</a></span>load()</h2>
+<a id="affb0a0efadb25cdfe62bcce71512da07"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#affb0a0efadb25cdfe62bcce71512da07">&#9670;&nbsp;</a></span>load()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -490,7 +470,7 @@ texCoords[4]</td>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Wed May 20 2020 15:45:42 for Stellarium by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Sun Jul 26 2020 12:15:38 for Stellarium by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.13
 </small></address>

@@ -21,7 +21,7 @@
   <td id="projectlogo"><img alt="Logo" src="stellarium-logo.png"/></td>
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">Stellarium
-   &#160;<span id="projectnumber">HEAD</span>
+   &#160;<span id="projectnumber">0.20.2</span>
    </div>
   </td>
  </tr>
@@ -68,6 +68,15 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><b>isValid</b> () const<
 QString&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classStelLocation.html#a822acbb644828b5d8e0d74ec5d2e54fc">serializeToLine</a> () const</td></tr>
 <tr class="memdesc:a822acbb644828b5d8e0d74ec5d2e54fc"><td class="mdescLeft">&#160;</td><td class="mdescRight">Output the location as a string ready to be stored in the user_location file. <br /></td></tr>
 <tr class="separator:a822acbb644828b5d8e0d74ec5d2e54fc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4b1c35ff6bb661a3cf1de7b6859be3c8"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classStelLocation.html#a4b1c35ff6bb661a3cf1de7b6859be3c8">distanceDegrees</a> (const float otherLong, const float otherLat) const</td></tr>
+<tr class="memdesc:a4b1c35ff6bb661a3cf1de7b6859be3c8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Compute great-circle distance from other location.  <a href="#a4b1c35ff6bb661a3cf1de7b6859be3c8">More...</a><br /></td></tr>
+<tr class="separator:a4b1c35ff6bb661a3cf1de7b6859be3c8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abb1c0eb19b15137770dc101f936f1a16"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classStelLocation.html#abb1c0eb19b15137770dc101f936f1a16">distanceKm</a> (const double otherLong, const double otherLat) const</td></tr>
+<tr class="memdesc:abb1c0eb19b15137770dc101f936f1a16"><td class="mdescLeft">&#160;</td><td class="mdescRight">Compute great-circle distance from other location.  <a href="#abb1c0eb19b15137770dc101f936f1a16">More...</a><br /></td></tr>
+<tr class="separator:abb1c0eb19b15137770dc101f936f1a16"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5ff741729e6d767eba06c392a770b0c2"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classStelLocation.html#a5ff741729e6d767eba06c392a770b0c2">getAzimuthForLocation</a> (double longTarget, double latTarget) const</td></tr>
+<tr class="memdesc:a5ff741729e6d767eba06c392a770b0c2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Compute azimuth towards Target.  <a href="#a5ff741729e6d767eba06c392a770b0c2">More...</a><br /></td></tr>
+<tr class="separator:a5ff741729e6d767eba06c392a770b0c2"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-static-methods"></a>
 Static Public Member Functions</h2></td></tr>
@@ -77,8 +86,14 @@ static <a class="el" href="classStelLocation.html">StelLocation</a>&#160;</td><t
 <tr class="separator:a958821f3ab9b5d9548aa78118671d185"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad22387194b961d549b245639559d8c42"><td class="memItemLeft" align="right" valign="top"><a id="ad22387194b961d549b245639559d8c42"></a>
 static float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classStelLocation.html#ad22387194b961d549b245639559d8c42">distanceDegrees</a> (const float long1, const float lat1, const float long2, const float lat2)</td></tr>
-<tr class="memdesc:ad22387194b961d549b245639559d8c42"><td class="mdescLeft">&#160;</td><td class="mdescRight">Compute great-circle distance between two locations. <br /></td></tr>
+<tr class="memdesc:ad22387194b961d549b245639559d8c42"><td class="mdescLeft">&#160;</td><td class="mdescRight">Compute great-circle distance between two locations on a spherical body arguments given in decimal degrees. <br /></td></tr>
 <tr class="separator:ad22387194b961d549b245639559d8c42"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1caa6f78a80d7580523e2fd6aa69bc15"><td class="memItemLeft" align="right" valign="top">static double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classStelLocation.html#a1caa6f78a80d7580523e2fd6aa69bc15">distanceKm</a> (<a class="el" href="classPlanet.html">Planet</a> *planet, const double long1, const double lat1, const double long2, const double lat2)</td></tr>
+<tr class="memdesc:a1caa6f78a80d7580523e2fd6aa69bc15"><td class="mdescLeft">&#160;</td><td class="mdescRight">Compute great-circle distance between two locations on the current planet (takes flattening into account) arguments given in decimal degrees Source: Jean Meeus, Astronomical Algorithms, 2nd edition, ch.11.  <a href="#a1caa6f78a80d7580523e2fd6aa69bc15">More...</a><br /></td></tr>
+<tr class="separator:a1caa6f78a80d7580523e2fd6aa69bc15"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a620274c3135455954c0fd983ebaaceee"><td class="memItemLeft" align="right" valign="top">static double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classStelLocation.html#a620274c3135455954c0fd983ebaaceee">getAzimuthForLocation</a> (double longObs, double latObs, double longTarget, double latTarget)</td></tr>
+<tr class="memdesc:a620274c3135455954c0fd983ebaaceee"><td class="mdescLeft">&#160;</td><td class="mdescRight">Compute azimuth from Obs towards Target.  <a href="#a620274c3135455954c0fd983ebaaceee">More...</a><br /></td></tr>
+<tr class="separator:a620274c3135455954c0fd983ebaaceee"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-attribs"></a>
 Data Fields</h2></td></tr>
@@ -139,6 +154,205 @@ Static Public Attributes</h2></td></tr>
 static const int&#160;</td><td class="memItemRight" valign="bottom"><b>DEFAULT_BORTLE_SCALE_INDEX</b></td></tr>
 <tr class="separator:ae125c85f9757995aafe36fab11f35f4c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
+<h2 class="groupheader">Member Function Documentation</h2>
+<a id="a4b1c35ff6bb661a3cf1de7b6859be3c8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4b1c35ff6bb661a3cf1de7b6859be3c8">&#9670;&nbsp;</a></span>distanceDegrees()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">float StelLocation::distanceDegrees </td>
+          <td>(</td>
+          <td class="paramtype">const float&#160;</td>
+          <td class="paramname"><em>otherLong</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const float&#160;</td>
+          <td class="paramname"><em>otherLat</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>arguments given in decimal degrees </p>
+
+</div>
+</div>
+<a id="abb1c0eb19b15137770dc101f936f1a16"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abb1c0eb19b15137770dc101f936f1a16">&#9670;&nbsp;</a></span>distanceKm() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">double StelLocation::distanceKm </td>
+          <td>(</td>
+          <td class="paramtype">const double&#160;</td>
+          <td class="paramname"><em>otherLong</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const double&#160;</td>
+          <td class="paramname"><em>otherLat</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>arguments given in decimal degrees </p>
+
+</div>
+</div>
+<a id="a1caa6f78a80d7580523e2fd6aa69bc15"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1caa6f78a80d7580523e2fd6aa69bc15">&#9670;&nbsp;</a></span>distanceKm() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static double StelLocation::distanceKm </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classPlanet.html">Planet</a> *&#160;</td>
+          <td class="paramname"><em>planet</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const double&#160;</td>
+          <td class="paramname"><em>long1</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const double&#160;</td>
+          <td class="paramname"><em>lat1</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const double&#160;</td>
+          <td class="paramname"><em>long2</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const double&#160;</td>
+          <td class="paramname"><em>lat2</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a5ff741729e6d767eba06c392a770b0c2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5ff741729e6d767eba06c392a770b0c2">&#9670;&nbsp;</a></span>getAzimuthForLocation() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">double StelLocation::getAzimuthForLocation </td>
+          <td>(</td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>longTarget</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>latTarget</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>All angles (args and result) are in degrees. </p><dl class="section return"><dt>Returns</dt><dd>azimuth counted from north or south as set in the <a class="el" href="classStelApp.html" title="Singleton main Stellarium application class. ">StelApp</a> preferences, in [0...360]. </dd></dl>
+
+</div>
+</div>
+<a id="a620274c3135455954c0fd983ebaaceee"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a620274c3135455954c0fd983ebaaceee">&#9670;&nbsp;</a></span>getAzimuthForLocation() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static double StelLocation::getAzimuthForLocation </td>
+          <td>(</td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>longObs</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>latObs</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>longTarget</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>latTarget</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>All angles (args and result) are in degrees. </p><dl class="section return"><dt>Returns</dt><dd>azimuth counted from north or south as set in the <a class="el" href="classStelApp.html" title="Singleton main Stellarium application class. ">StelApp</a> preferences, in [0...360]. </dd></dl>
+
+</div>
+</div>
 <h2 class="groupheader">Field Documentation</h2>
 <a id="a354f87bb129a48fe6295de1050fc2736"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a354f87bb129a48fe6295de1050fc2736">&#9670;&nbsp;</a></span>ianaTimeZone</h2>
@@ -183,7 +397,7 @@ static const int&#160;</td><td class="memItemRight" valign="bottom"><b>DEFAULT_B
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Wed May 20 2020 15:45:42 for Stellarium by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Sun Jul 26 2020 12:15:39 for Stellarium by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.13
 </small></address>
