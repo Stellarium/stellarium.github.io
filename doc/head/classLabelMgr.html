@@ -21,7 +21,7 @@
   <td id="projectlogo"><img alt="Logo" src="stellarium-logo.png"/></td>
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">Stellarium
-   &#160;<span id="projectnumber">0.20.2</span>
+   &#160;<span id="projectnumber">HEAD</span>
    </div>
   </td>
  </tr>
@@ -67,6 +67,12 @@ int&#160;</td><td class="memItemRight" valign="bottom"><b>labelObject</b> (const
 <tr class="memitem:a549a3e6f3dc9c99c0d197e68353b57fe"><td class="memItemLeft" align="right" valign="top"><a id="a549a3e6f3dc9c99c0d197e68353b57fe"></a>
 int&#160;</td><td class="memItemRight" valign="bottom"><b>labelHorizon</b> (const QString &amp;text, float az, float alt, bool visible, float fontSize, const <a class="el" href="classVector3.html">Vec3f</a> &amp;fontColor, bool autoDelete=false, int autoDeleteTimeoutMs=0)</td></tr>
 <tr class="separator:a549a3e6f3dc9c99c0d197e68353b57fe"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa3db5e65c8f240b265565b996df7bbf3"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classLabelMgr.html#aa3db5e65c8f240b265565b996df7bbf3">labelEquatorial</a> (const QString &amp;text, const QString &amp;ra, const QString &amp;dec, bool visible=true, float fontSize=14, const QString &amp;fontColor=&quot;#999999&quot;, const QString &amp;side=&quot;&quot;, double labelDistance=-1.0, bool autoDelete=false, int autoDeleteTimeoutMs=0, bool j2000epoch=true)</td></tr>
+<tr class="memdesc:aa3db5e65c8f240b265565b996df7bbf3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Create a label in equatorial coordinate system.  <a href="#aa3db5e65c8f240b265565b996df7bbf3">More...</a><br /></td></tr>
+<tr class="separator:aa3db5e65c8f240b265565b996df7bbf3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:affe233d5a00fc2d7c297667b042ca4cb"><td class="memItemLeft" align="right" valign="top"><a id="affe233d5a00fc2d7c297667b042ca4cb"></a>
+int&#160;</td><td class="memItemRight" valign="bottom"><b>labelEquatorial</b> (const QString &amp;text, const QString &amp;ra, const QString &amp;dec, bool visible, float fontSize, const <a class="el" href="classVector3.html">Vec3f</a> &amp;fontColor, const QString &amp;side=&quot;&quot;, double labelDistance=-1.0, bool autoDelete=false, int autoDeleteTimeoutMs=0, bool j2000epoch=true)</td></tr>
+<tr class="separator:affe233d5a00fc2d7c297667b042ca4cb"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a6f7b5454760c1140b215d0f4066e7d31"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classLabelMgr.html#a6f7b5454760c1140b215d0f4066e7d31">labelScreen</a> (const QString &amp;text, int x, int y, bool visible=true, float fontSize=14, const QString &amp;fontColor=&quot;#999999&quot;, bool autoDelete=false, int autoDeleteTimeoutMs=0)</td></tr>
 <tr class="memdesc:a6f7b5454760c1140b215d0f4066e7d31"><td class="mdescLeft">&#160;</td><td class="mdescRight">Create a label at fixed screen coordinates.  <a href="#a6f7b5454760c1140b215d0f4066e7d31">More...</a><br /></td></tr>
 <tr class="separator:a6f7b5454760c1140b215d0f4066e7d31"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -179,6 +185,9 @@ Additional Inherited Members</h2></td></tr>
 <tr class="memitem:acc51b40ad88636ba5e48e6f29a49505b inherit pro_methods_classStelModule"><td class="memItemLeft" align="right" valign="top">class <a class="el" href="classStelAction.html">StelAction</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classStelModule.html#acc51b40ad88636ba5e48e6f29a49505b">addAction</a> (const QString &amp;id, const QString &amp;groupId, const QString &amp;text, const char *slot, const QString &amp;shortcut=&quot;&quot;, const QString &amp;altShortcut=&quot;&quot;)</td></tr>
 <tr class="memdesc:acc51b40ad88636ba5e48e6f29a49505b inherit pro_methods_classStelModule"><td class="mdescLeft">&#160;</td><td class="mdescRight">convenience methods to add an action (call to own slot) to the <a class="el" href="classStelActionMgr.html" title="Manager for StelAction instances. Allows registration of new actions, and finding an existing one by ...">StelActionMgr</a> object.  <a href="classStelModule.html#acc51b40ad88636ba5e48e6f29a49505b">More...</a><br /></td></tr>
 <tr class="separator:acc51b40ad88636ba5e48e6f29a49505b inherit pro_methods_classStelModule"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a19ec6a7bd1d6dc98d6030cadb8956b3c inherit pro_methods_classStelModule"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classStelAction.html">StelAction</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classStelModule.html#a19ec6a7bd1d6dc98d6030cadb8956b3c">addAction</a> (const QString &amp;id, const QString &amp;groupId, const QString &amp;text, QObject *contextObject, std::function&lt; void()&gt; lambda, const QString &amp;shortcut=&quot;&quot;, const QString &amp;altShortcut=&quot;&quot;)</td></tr>
+<tr class="memdesc:a19ec6a7bd1d6dc98d6030cadb8956b3c inherit pro_methods_classStelModule"><td class="mdescLeft">&#160;</td><td class="mdescRight">convenience methods to add an action (call to Lambda functor) to the <a class="el" href="classStelActionMgr.html" title="Manager for StelAction instances. Allows registration of new actions, and finding an existing one by ...">StelActionMgr</a> object.  <a href="classStelModule.html#a19ec6a7bd1d6dc98d6030cadb8956b3c">More...</a><br /></td></tr>
+<tr class="separator:a19ec6a7bd1d6dc98d6030cadb8956b3c inherit pro_methods_classStelModule"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Because this class is intended for use in scripting (although other uses are also fine), all label types and so on are specified by QString descriptions. The labels are painted very late, i.e. also sky object labels will be written over the landscape. </p>
@@ -234,6 +243,118 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 <dl class="section return"><dt>Returns</dt><dd>true if the id existed and was deleted, else false </dd></dl>
+
+</div>
+</div>
+<a id="aa3db5e65c8f240b265565b996df7bbf3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa3db5e65c8f240b265565b996df7bbf3">&#9670;&nbsp;</a></span>labelEquatorial</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int LabelMgr::labelEquatorial </td>
+          <td>(</td>
+          <td class="paramtype">const QString &amp;&#160;</td>
+          <td class="paramname"><em>text</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const QString &amp;&#160;</td>
+          <td class="paramname"><em>ra</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const QString &amp;&#160;</td>
+          <td class="paramname"><em>dec</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>visible</em> = <code>true</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float&#160;</td>
+          <td class="paramname"><em>fontSize</em> = <code>14</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const QString &amp;&#160;</td>
+          <td class="paramname"><em>fontColor</em> = <code>&quot;#999999&quot;</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const QString &amp;&#160;</td>
+          <td class="paramname"><em>side</em> = <code>&quot;&quot;</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>labelDistance</em> = <code>-1.0</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>autoDelete</em> = <code>false</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>autoDeleteTimeoutMs</em> = <code>0</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>j2000epoch</em> = <code>true</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">slot</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">text</td><td>the text to display </td></tr>
+    <tr><td class="paramname">RA</td><td>right ascension (e.g. 5h10m31s) </td></tr>
+    <tr><td class="paramname">Dec</td><td>declination (e.g. 25d30m30s) </td></tr>
+    <tr><td class="paramname">visible</td><td>if true, the label starts displayed, else it starts hidden </td></tr>
+    <tr><td class="paramname">fontSize</td><td>size of the font to use </td></tr>
+    <tr><td class="paramname">fontColor</td><td>either HTML-like color spec, e.g. "#ffff00", or 3-part float vector like Vec3f(1.0f,1.0f,0.0f) for yellow </td></tr>
+    <tr><td class="paramname">side</td><td>where the label appears in relation to coordinates:<ul>
+<li>"N" = above object on screen</li>
+<li>"S" = below object on screen</li>
+<li>"E" = to the right of the object on screen</li>
+<li>"W" = to the left of the object on screen</li>
+<li>"NE", "NW", "SE", "SW" work too. </li>
+</ul>
+</td></tr>
+    <tr><td class="paramname">autoDelete</td><td>the label will be automatically deleted after it is displayed once </td></tr>
+    <tr><td class="paramname">autoDeleteTimeoutMs</td><td>if not zero, the label will be automatically deleted after autoDeleteTimeoutMs ms </td></tr>
+    <tr><td class="paramname">j2000epoch</td><td>if true, the label starts displayed in equatorial coordinates for epoch J2000.0 </td></tr>
+  </table>
+  </dd>
+</dl>
 
 </div>
 </div>
@@ -520,7 +641,7 @@ Additional Inherited Members</h2></td></tr>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Sun Jul 26 2020 12:15:38 for Stellarium by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Sat Sep 12 2020 16:02:14 for Stellarium by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.13
 </small></address>

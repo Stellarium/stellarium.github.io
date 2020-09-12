@@ -21,7 +21,7 @@
   <td id="projectlogo"><img alt="Logo" src="stellarium-logo.png"/></td>
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">Stellarium
-   &#160;<span id="projectnumber">0.20.2</span>
+   &#160;<span id="projectnumber">HEAD</span>
    </div>
   </td>
  </tr>
@@ -120,18 +120,24 @@ Enumerations</h2></td></tr>
 </td></tr>
 <tr class="separator:gac9eb22e1e81155872f36b79a505e5042"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:gab831fdf9d777df775761e20aeda068df"><td class="memItemLeft" align="right" valign="top"><a id="gab831fdf9d777df775761e20aeda068df"></a>enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__satellites.html#gab831fdf9d777df775761e20aeda068df">SatFlag</a> { <br />
-&#160;&#160;<b>SatNoFlags</b> = 0x000, 
-<b>SatDisplayed</b> = 0x001, 
-<b>SatNotDisplayed</b> = 0x002, 
-<b>SatUser</b> = 0x004, 
+&#160;&#160;<b>SatNoFlags</b> = 0x0000, 
+<b>SatDisplayed</b> = 0x0001, 
+<b>SatNotDisplayed</b> = 0x0002, 
+<b>SatUser</b> = 0x0004, 
 <br />
-&#160;&#160;<b>SatOrbit</b> = 0x008, 
-<b>SatNew</b> = 0x010, 
-<b>SatError</b> = 0x020, 
-<b>SatSmallSize</b> = 0x040, 
+&#160;&#160;<b>SatOrbit</b> = 0x0008, 
+<b>SatNew</b> = 0x0010, 
+<b>SatError</b> = 0x0020, 
+<b>SatSmallSize</b> = 0x0040, 
 <br />
-&#160;&#160;<b>SatMediumSize</b> = 0x080, 
-<b>SatLargeSize</b> = 0x100
+&#160;&#160;<b>SatMediumSize</b> = 0x0080, 
+<b>SatLargeSize</b> = 0x0100, 
+<b>SatLEO</b> = 0x0200, 
+<b>SatMEO</b> = 0x0400, 
+<br />
+&#160;&#160;<b>SatGSO</b> = 0x0800, 
+<b>SatHEO</b> = 0x1000, 
+<b>SatHGSO</b> = 0x2000
 <br />
  }<tr class="memdesc:gab831fdf9d777df775761e20aeda068df"><td class="mdescLeft">&#160;</td><td class="mdescRight">Flag type reflecting internal flags of <a class="el" href="group__satellites.html#classSatellite" title="A representation of a satellite in Earth orbit. ">Satellite</a>. <br /></td></tr>
 </td></tr>
@@ -2478,6 +2484,9 @@ Additional Inherited Members</h2></td></tr>
 <tr class="memitem:acc51b40ad88636ba5e48e6f29a49505b inherit pro_methods_classStelModule"><td class="memItemLeft" align="right" valign="top">class <a class="el" href="classStelAction.html">StelAction</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classStelModule.html#acc51b40ad88636ba5e48e6f29a49505b">addAction</a> (const QString &amp;id, const QString &amp;groupId, const QString &amp;text, const char *slot, const QString &amp;shortcut=&quot;&quot;, const QString &amp;altShortcut=&quot;&quot;)</td></tr>
 <tr class="memdesc:acc51b40ad88636ba5e48e6f29a49505b inherit pro_methods_classStelModule"><td class="mdescLeft">&#160;</td><td class="mdescRight">convenience methods to add an action (call to own slot) to the <a class="el" href="classStelActionMgr.html" title="Manager for StelAction instances. Allows registration of new actions, and finding an existing one by ...">StelActionMgr</a> object.  <a href="classStelModule.html#acc51b40ad88636ba5e48e6f29a49505b">More...</a><br /></td></tr>
 <tr class="separator:acc51b40ad88636ba5e48e6f29a49505b inherit pro_methods_classStelModule"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a19ec6a7bd1d6dc98d6030cadb8956b3c inherit pro_methods_classStelModule"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classStelAction.html">StelAction</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classStelModule.html#a19ec6a7bd1d6dc98d6030cadb8956b3c">addAction</a> (const QString &amp;id, const QString &amp;groupId, const QString &amp;text, QObject *contextObject, std::function&lt; void()&gt; lambda, const QString &amp;shortcut=&quot;&quot;, const QString &amp;altShortcut=&quot;&quot;)</td></tr>
+<tr class="memdesc:a19ec6a7bd1d6dc98d6030cadb8956b3c inherit pro_methods_classStelModule"><td class="mdescLeft">&#160;</td><td class="mdescRight">convenience methods to add an action (call to Lambda functor) to the <a class="el" href="classStelActionMgr.html" title="Manager for StelAction instances. Allows registration of new actions, and finding an existing one by ...">StelActionMgr</a> object.  <a href="classStelModule.html#a19ec6a7bd1d6dc98d6030cadb8956b3c">More...</a><br /></td></tr>
+<tr class="separator:a19ec6a7bd1d6dc98d6030cadb8956b3c inherit pro_methods_classStelModule"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h4 class="groupheader">Member Enumeration Documentation</h4>
 <a id="a28bd5d5b95663366055aeaeb4000a6b7"></a>
@@ -3785,7 +3794,7 @@ Additional Inherited Members</h2></td></tr>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Sun Jul 26 2020 12:15:38 for Stellarium by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Sat Sep 12 2020 16:02:13 for Stellarium by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.13
 </small></address>

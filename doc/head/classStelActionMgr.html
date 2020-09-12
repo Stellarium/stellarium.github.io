@@ -21,7 +21,7 @@
   <td id="projectlogo"><img alt="Logo" src="stellarium-logo.png"/></td>
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">Stellarium
-   &#160;<span id="projectnumber">0.20.2</span>
+   &#160;<span id="projectnumber">HEAD</span>
    </div>
   </td>
  </tr>
@@ -74,6 +74,9 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a716444f0794da5410f0abaf6069f9ca6"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classStelAction.html">StelAction</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classStelActionMgr.html#a716444f0794da5410f0abaf6069f9ca6">addAction</a> (const QString &amp;id, const QString &amp;groupId, const QString &amp;text, QObject *target, const char *slot, const QString &amp;shortcut=&quot;&quot;, const QString &amp;altShortcut=&quot;&quot;, bool global=false)</td></tr>
 <tr class="memdesc:a716444f0794da5410f0abaf6069f9ca6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Create and add a new <a class="el" href="classStelAction.html" title="Wrapper around an argumentless QObject slot or a bool Q_PROPERTY with WRITE method, allowing the slot to be called/property to be toggled using this action object. ">StelAction</a>, connected to an object property or slot.  <a href="#a716444f0794da5410f0abaf6069f9ca6">More...</a><br /></td></tr>
 <tr class="separator:a716444f0794da5410f0abaf6069f9ca6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1c5454b11e1b9970a3c58c3b2972aa51"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classStelAction.html">StelAction</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classStelActionMgr.html#a1c5454b11e1b9970a3c58c3b2972aa51">addAction</a> (const QString &amp;id, const QString &amp;groupId, const QString &amp;text, QObject *context, std::function&lt; void()&gt; lambda, const QString &amp;shortcut=&quot;&quot;, const QString &amp;altShortcut=&quot;&quot;, bool global=false)</td></tr>
+<tr class="memdesc:a1c5454b11e1b9970a3c58c3b2972aa51"><td class="mdescLeft">&#160;</td><td class="mdescRight">Create and add a new <a class="el" href="classStelAction.html" title="Wrapper around an argumentless QObject slot or a bool Q_PROPERTY with WRITE method, allowing the slot to be called/property to be toggled using this action object. ">StelAction</a>, connected to an object slot.  <a href="#a1c5454b11e1b9970a3c58c3b2972aa51">More...</a><br /></td></tr>
+<tr class="separator:a1c5454b11e1b9970a3c58c3b2972aa51"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a9d447a48c8ce03c1ea087e5546da43af"><td class="memItemLeft" align="right" valign="top"><a id="a9d447a48c8ce03c1ea087e5546da43af"></a>
 <a class="el" href="classStelAction.html">StelAction</a> *&#160;</td><td class="memItemRight" valign="bottom"><b>findAction</b> (const QString &amp;id)</td></tr>
 <tr class="separator:a9d447a48c8ce03c1ea087e5546da43af"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -155,7 +158,7 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>restoreDefaultShortcu
 </div>
 </div>
 <a id="a716444f0794da5410f0abaf6069f9ca6"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a716444f0794da5410f0abaf6069f9ca6">&#9670;&nbsp;</a></span>addAction()</h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a716444f0794da5410f0abaf6069f9ca6">&#9670;&nbsp;</a></span>addAction() <span class="overload">[1/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -231,6 +234,83 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>restoreDefaultShortcu
 
 </div>
 </div>
+<a id="a1c5454b11e1b9970a3c58c3b2972aa51"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1c5454b11e1b9970a3c58c3b2972aa51">&#9670;&nbsp;</a></span>addAction() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classStelAction.html">StelAction</a>* StelActionMgr::addAction </td>
+          <td>(</td>
+          <td class="paramtype">const QString &amp;&#160;</td>
+          <td class="paramname"><em>id</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const QString &amp;&#160;</td>
+          <td class="paramname"><em>groupId</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const QString &amp;&#160;</td>
+          <td class="paramname"><em>text</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">QObject *&#160;</td>
+          <td class="paramname"><em>context</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::function&lt; void()&gt;&#160;</td>
+          <td class="paramname"><em>lambda</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const QString &amp;&#160;</td>
+          <td class="paramname"><em>shortcut</em> = <code>&quot;&quot;</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const QString &amp;&#160;</td>
+          <td class="paramname"><em>altShortcut</em> = <code>&quot;&quot;</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>global</em> = <code>false</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">id</td><td>Global identifier. </td></tr>
+    <tr><td class="paramname">groupId</td><td>Group identifier. </td></tr>
+    <tr><td class="paramname">text</td><td>Short human-readable description in English. </td></tr>
+    <tr><td class="paramname">context</td><td>a reference object. When this is deleted, the Lambda function will not be called. </td></tr>
+    <tr><td class="paramname">lambda</td><td>a void function (Lambda). This can call slots and other functions. </td></tr>
+    <tr><td class="paramname">shortcut</td><td>Default shortcut/key combination for this action </td></tr>
+    <tr><td class="paramname">altShortcut</td><td>Alternative shortcut </td></tr>
+    <tr><td class="paramname">global</td><td>determines QAction shortcut context (not necessary anymore?) </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
 <a id="aee6d6685c2efafb7c498643a0941063e"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#aee6d6685c2efafb7c498643a0941063e">&#9670;&nbsp;</a></span>setAllActionsEnabled</h2>
 
@@ -261,7 +341,7 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>restoreDefaultShortcu
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Sun Jul 26 2020 12:15:39 for Stellarium by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Sat Sep 12 2020 16:02:14 for Stellarium by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.13
 </small></address>

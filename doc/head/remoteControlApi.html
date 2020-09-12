@@ -21,7 +21,7 @@
   <td id="projectlogo"><img alt="Logo" src="stellarium-logo.png"/></td>
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">Stellarium
-   &#160;<span id="projectnumber">0.20.2</span>
+   &#160;<span id="projectnumber">HEAD</span>
    </div>
   </td>
  </tr>
@@ -183,24 +183,20 @@ view</h4>
 <p>Parameters: <code>[coord (j2000|jNow|altAz) ] [ ref (on|off|auto) ]</code><br />
 Returns the current view direction, as a JSON object of format: </p><div class="fragment"><div class="line">{</div><div class="line">    //list of view directions, in format:</div><div class="line">    &quot;j2000&quot; : &quot;[x,y,z]&quot;,</div><div class="line">    &quot;jNow&quot;  : &quot;[x,y,z]&quot;,</div><div class="line">    &quot;altAz&quot; : &quot;[x,y,z]&quot;</div><div class="line">}</div></div><!-- fragment --><p>Without the optional <code>coord</code>, all versions are returned. The returned values are 3D vectors. </p><table class="doxtable">
 <tr>
-<td>x=</td><td>cos(&delta;)*cos(&alpha;)</td></tr>
+<td>x=</td><td>cos(&delta;)*cos(&alpha;) </td></tr>
 <tr>
-</tr>
+<td>y=</td><td>cos(&delta;)*sin(&alpha;) </td></tr>
+<tr>
+<td>z=</td><td>sin(&delta;)  </td></tr>
 </table>
-<p>y=</p>
-<p>cos(&delta;)*sin(&alpha;)</p>
-<p>z=</p>
-<p>sin(&delta;) </p>
 <p>For the vector in <code>altAz</code> system, the actually returned values are based on an azimuth Az' counted from South (x=1) towards East (y=1), Az'=180-Az. </p><table class="doxtable">
 <tr>
-<td>x=</td><td>cos(alt)*cos(Az')</td></tr>
+<td>x=</td><td>cos(alt)*cos(Az') </td></tr>
 <tr>
-</tr>
+<td>y=</td><td>cos(alt)*sin(Az') </td></tr>
+<tr>
+<td>z=</td><td>sin(alt)  </td></tr>
 </table>
-<p>y=</p>
-<p>cos(alt)*sin(Az')</p>
-<p>z=</p>
-<p>sin(alt) </p>
 <p>If the optional parameter <code>ref</code> is given, it governs refraction setting and it applies to the <code>jNow</code> output only. "On" applies refraction, "off" does not apply, and "auto" (or any other value) applies it when atmosphere setting is active.</p>
 <h3><a class="anchor" id="rcMainServicePOST"></a>
 POST operations</h3>
@@ -373,7 +369,7 @@ projectiondescription</h4>
 </div></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Sun Jul 26 2020 12:15:38 for Stellarium by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Sat Sep 12 2020 16:02:13 for Stellarium by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.13
 </small></address>
