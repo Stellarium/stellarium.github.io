@@ -8,7 +8,7 @@ nolangbar: true
 ---
 The major changes of this version:
 - Many changes in AstroCalc tool and core of Stellarium
-- Many changes in scripting engline and Script Console
+- Many changes in scripting engine and Script Console
 - Many changes in Oculars and Satellites plugins
 - Updated DSO catalog
 

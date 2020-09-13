@@ -8,7 +8,7 @@ nolangbar: true
 ---
 The major changes of this version:
 - Restore working Stellarium in ANGLE mode on Window
-- Many changes in scripting engline and Script Console
+- Many changes in scripting engine and Script Console
 - Fixes in GUI and plugins
 - Updated DSO catalog
 
@@ -31,7 +31,7 @@ Full list of changes:
 - Added dirty flag, set by signal from QTextEdit (Script Console)
 - Added code to set TAB stop width at 4 characters (Script Console)
 - Added code to avoid losing names after Cancel in some QFileDialog (Script Console)
-- Added implementation of FSM to tranfer properly between dirty/filename states on load, save, clear, edit, expand actions (Script Console)
+- Added implementation of FSM to transfer properly between dirty/filename states on load, save, clear, edit, expand actions (Script Console)
 - Added special case Catalogs/Other in GUI for objects without identifier (DSO Catalog v3.9)
 - Added Oculus plugin (disabled by default; GH: #1056)
 - Fixed ANGLE support for Windows package (GH: #1035, #1034)
@@ -52,7 +52,7 @@ Full list of changes:
 - Fixed filter properly objects by catalogs (DSO Catalog v3.9; GH: #1052) 
 - Fixed few wrong objects in DSO catalog (DSO Catalog v3.9)
 - Fixed WUI of Remote Control plugin
-- Updated fix for ghost comet in ortographic projection issue (GH: #389)
+- Updated fix for ghost comet in orthographic projection issue (GH: #389)
 - Updated list of contributors
 - Updated code: simplified RegExp results handling
 - Changed Vec3f& to Vec3f asreturn type for functions called from scripts in some classes (Scripting Engine)
