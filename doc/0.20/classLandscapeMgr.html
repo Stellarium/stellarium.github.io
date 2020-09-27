@@ -21,7 +21,7 @@
   <td id="projectlogo"><img alt="Logo" src="stellarium-logo.png"/></td>
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">Stellarium
-   &#160;<span id="projectnumber">0.20.2</span>
+   &#160;<span id="projectnumber">0.20.3</span>
    </div>
   </td>
  </tr>
@@ -543,6 +543,9 @@ Additional Inherited Members</h2></td></tr>
 <tr class="memitem:acc51b40ad88636ba5e48e6f29a49505b inherit pro_methods_classStelModule"><td class="memItemLeft" align="right" valign="top">class <a class="el" href="classStelAction.html">StelAction</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classStelModule.html#acc51b40ad88636ba5e48e6f29a49505b">addAction</a> (const QString &amp;id, const QString &amp;groupId, const QString &amp;text, const char *slot, const QString &amp;shortcut=&quot;&quot;, const QString &amp;altShortcut=&quot;&quot;)</td></tr>
 <tr class="memdesc:acc51b40ad88636ba5e48e6f29a49505b inherit pro_methods_classStelModule"><td class="mdescLeft">&#160;</td><td class="mdescRight">convenience methods to add an action (call to own slot) to the <a class="el" href="classStelActionMgr.html" title="Manager for StelAction instances. Allows registration of new actions, and finding an existing one by ...">StelActionMgr</a> object.  <a href="classStelModule.html#acc51b40ad88636ba5e48e6f29a49505b">More...</a><br /></td></tr>
 <tr class="separator:acc51b40ad88636ba5e48e6f29a49505b inherit pro_methods_classStelModule"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a19ec6a7bd1d6dc98d6030cadb8956b3c inherit pro_methods_classStelModule"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classStelAction.html">StelAction</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classStelModule.html#a19ec6a7bd1d6dc98d6030cadb8956b3c">addAction</a> (const QString &amp;id, const QString &amp;groupId, const QString &amp;text, QObject *contextObject, std::function&lt; void()&gt; lambda, const QString &amp;shortcut=&quot;&quot;, const QString &amp;altShortcut=&quot;&quot;)</td></tr>
+<tr class="memdesc:a19ec6a7bd1d6dc98d6030cadb8956b3c inherit pro_methods_classStelModule"><td class="mdescLeft">&#160;</td><td class="mdescRight">convenience methods to add an action (call to Lambda functor) to the <a class="el" href="classStelActionMgr.html" title="Manager for StelAction instances. Allows registration of new actions, and finding an existing one by ...">StelActionMgr</a> object.  <a href="classStelModule.html#a19ec6a7bd1d6dc98d6030cadb8956b3c">More...</a><br /></td></tr>
+<tr class="separator:a19ec6a7bd1d6dc98d6030cadb8956b3c inherit pro_methods_classStelModule"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>This includes landscape textures, fog, atmosphere and cardinal points. I decided to put all these elements together in a single class because they are inherently linked, especially when we start moving the observer in altitude. </p><dl class="section note"><dt>Note</dt><dd>The Bortle scale index setting was removed from this class, because it was duplicated from <a class="el" href="classStelSkyDrawer.html" title="Provide a set of methods used to draw sky objects taking into account eyes adaptation, zoom level, instrument model and artificially set magnitude limits. ">StelSkyDrawer</a>, complicating code that changes it. It is now only in <a class="el" href="classStelSkyDrawer.html" title="Provide a set of methods used to draw sky objects taking into account eyes adaptation, zoom level, instrument model and artificially set magnitude limits. ">StelSkyDrawer</a> and can be accessed with <a class="el" href="classStelSkyDrawer.html#aee4cc450b20c1eb1a0fdcb7101921a03">getBortleScaleIndex </a> and <a class="el" href="classStelSkyDrawer.html#a45f6dc32af8d32de8ceda691f13ca53d">setBortleScaleIndex </a>. Slots setAtmosphereBortleLightPollution and getAtmosphereBortleLightPollution in this class have been removed/made private. If script access is desired, use <a class="el" href="classStelMainScriptAPI.html#a9b943774d7b36dad83025b195898d524">StelMainScriptAPI::get </a>/<a class="el" href="classStelMainScriptAPI.html#a035523cd6e1a51d779594657092de03c">setBortleScaleIndex </a> </dd></dl>
@@ -1545,7 +1548,7 @@ Additional Inherited Members</h2></td></tr>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Tue Jun 23 2020 01:35:11 for Stellarium by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Sun Sep 27 2020 15:10:40 for Stellarium by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.13
 </small></address>

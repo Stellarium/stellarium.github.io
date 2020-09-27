@@ -21,7 +21,7 @@
   <td id="projectlogo"><img alt="Logo" src="stellarium-logo.png"/></td>
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">Stellarium
-   &#160;<span id="projectnumber">0.20.2</span>
+   &#160;<span id="projectnumber">0.20.3</span>
    </div>
   </td>
  </tr>
@@ -282,6 +282,13 @@ float&#160;</td><td class="memItemRight" valign="bottom"><b>getSurfaceBrightness
 float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classNebula.html#a2d80dca585cbdfb147369d9e206ea993">getContrastIndex</a> (const <a class="el" href="classStelCore.html">StelCore</a> *core) const</td></tr>
 <tr class="memdesc:a2d80dca585cbdfb147369d9e206ea993"><td class="mdescLeft">&#160;</td><td class="mdescRight">Compute an extended object's contrast index. <br /></td></tr>
 <tr class="separator:a2d80dca585cbdfb147369d9e206ea993"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a44cb358488e734da91fa5b4ee56bac67"><td class="memItemLeft" align="right" valign="top"><a id="a44cb358488e734da91fa5b4ee56bac67"></a>
+virtual float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classNebula.html#a44cb358488e734da91fa5b4ee56bac67">getBMagnitude</a> (const <a class="el" href="classStelCore.html">StelCore</a> *core) const</td></tr>
+<tr class="memdesc:a44cb358488e734da91fa5b4ee56bac67"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return object's B magnitude as seen from observer, without including extinction. <br /></td></tr>
+<tr class="separator:a44cb358488e734da91fa5b4ee56bac67"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abee9075092dc783397031db5a2ccdae2"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classNebula.html#abee9075092dc783397031db5a2ccdae2">getBMagnitudeWithExtinction</a> (const <a class="el" href="classStelCore.html">StelCore</a> *core) const</td></tr>
+<tr class="memdesc:abee9075092dc783397031db5a2ccdae2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return object's B magnitude as seen from observer including extinction.  <a href="#abee9075092dc783397031db5a2ccdae2">More...</a><br /></td></tr>
+<tr class="separator:abee9075092dc783397031db5a2ccdae2"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:afce62ffb3cd6e7e63c7ffbd9fea93d13"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classNebula.html#afce62ffb3cd6e7e63c7ffbd9fea93d13">getSurfaceArea</a> (void) const</td></tr>
 <tr class="memdesc:afce62ffb3cd6e7e63c7ffbd9fea93d13"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the surface area.  <a href="#afce62ffb3cd6e7e63c7ffbd9fea93d13">More...</a><br /></td></tr>
 <tr class="separator:afce62ffb3cd6e7e63c7ffbd9fea93d13"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -297,6 +304,9 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>removeAllNames</b> ()
 <tr class="memitem:a084625fc3d3f050fd472f0d936297dec"><td class="memItemLeft" align="right" valign="top">QString&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classNebula.html#a084625fc3d3f050fd472f0d936297dec">getDSODesignation</a> () const</td></tr>
 <tr class="memdesc:a084625fc3d3f050fd472f0d936297dec"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get designation for DSO (with priority: M, C, NGC, IC, B, Sh2, vdB, RCW, LDN, LBN, Cr, Mel, PGC, UGC, Ced, Arp, VV, PK, PN G, SNR G, ACO, HCG, ESO, vdBH, DWB, Tr, St, Ru, vdB-Ha)  <a href="#a084625fc3d3f050fd472f0d936297dec">More...</a><br /></td></tr>
 <tr class="separator:a084625fc3d3f050fd472f0d936297dec"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0f20e9e16eed8f9bf1c3b70eaa915e1f"><td class="memItemLeft" align="right" valign="top">QString&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classNebula.html#a0f20e9e16eed8f9bf1c3b70eaa915e1f">getDSODesignationWIC</a> () const</td></tr>
+<tr class="memdesc:a0f20e9e16eed8f9bf1c3b70eaa915e1f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get designation for DSO with priority and ignorance of availability of catalogs.  <a href="#a0f20e9e16eed8f9bf1c3b70eaa915e1f">More...</a><br /></td></tr>
+<tr class="separator:a0f20e9e16eed8f9bf1c3b70eaa915e1f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab67c624b2ffc24818b26ab85db0b7c4d"><td class="memItemLeft" align="right" valign="top"><a id="ab67c624b2ffc24818b26ab85db0b7c4d"></a>
 bool&#160;</td><td class="memItemRight" valign="bottom"><b>objectInDisplayedCatalog</b> () const</td></tr>
 <tr class="separator:ab67c624b2ffc24818b26ab85db0b7c4d"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -669,6 +679,25 @@ Additional Inherited Members</h2></td></tr>
 
 </div>
 </div>
+<a id="abee9075092dc783397031db5a2ccdae2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abee9075092dc783397031db5a2ccdae2">&#9670;&nbsp;</a></span>getBMagnitudeWithExtinction()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">float Nebula::getBMagnitudeWithExtinction </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classStelCore.html">StelCore</a> *&#160;</td>
+          <td class="paramname"><em>core</em></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p><a class="el" href="classExtinction.html" title="This class performs extinction computations, following literature from atmospheric optics and astrono...">Extinction</a> obviously only if atmosphere=on. </p>
+
+</div>
+</div>
 <a id="a084625fc3d3f050fd472f0d936297dec"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a084625fc3d3f050fd472f0d936297dec">&#9670;&nbsp;</a></span>getDSODesignation()</h2>
 
@@ -677,6 +706,24 @@ Additional Inherited Members</h2></td></tr>
       <table class="memname">
         <tr>
           <td class="memname">QString Nebula::getDSODesignation </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<dl class="section return"><dt>Returns</dt><dd>a designation </dd></dl>
+
+</div>
+</div>
+<a id="a0f20e9e16eed8f9bf1c3b70eaa915e1f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0f20e9e16eed8f9bf1c3b70eaa915e1f">&#9670;&nbsp;</a></span>getDSODesignationWIC()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">QString Nebula::getDSODesignationWIC </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td> const</td>
@@ -903,7 +950,7 @@ Additional Inherited Members</h2></td></tr>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Tue Jun 23 2020 01:35:11 for Stellarium by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Sun Sep 27 2020 15:10:40 for Stellarium by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.13
 </small></address>

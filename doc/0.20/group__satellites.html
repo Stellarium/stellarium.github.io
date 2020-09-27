@@ -21,7 +21,7 @@
   <td id="projectlogo"><img alt="Logo" src="stellarium-logo.png"/></td>
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">Stellarium
-   &#160;<span id="projectnumber">0.20.2</span>
+   &#160;<span id="projectnumber">0.20.3</span>
    </div>
   </td>
  </tr>
@@ -107,7 +107,12 @@ typedef QList&lt; <a class="el" href="group__satellites.html#structTleSource">Tl
 Enumerations</h2></td></tr>
 <tr class="memitem:gac9eb22e1e81155872f36b79a505e5042"><td class="memItemLeft" align="right" valign="top"><a id="gac9eb22e1e81155872f36b79a505e5042"></a>enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__satellites.html#gac9eb22e1e81155872f36b79a505e5042">SatelliteDataRole</a> { <br />
 &#160;&#160;<b>SatIdRole</b> = Qt::UserRole, 
+<b>SatCosparIDRole</b>, 
 <b>SatDescriptionRole</b>, 
+<b>SatStdMagnitudeRole</b>, 
+<br />
+&#160;&#160;<b>SatRCSRole</b>, 
+<b>SatTLEEpochRole</b>, 
 <b>SatFlagsRole</b>, 
 <b>SatGroupsRole</b>, 
 <br />
@@ -118,14 +123,24 @@ Enumerations</h2></td></tr>
 </td></tr>
 <tr class="separator:gac9eb22e1e81155872f36b79a505e5042"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:gab831fdf9d777df775761e20aeda068df"><td class="memItemLeft" align="right" valign="top"><a id="gab831fdf9d777df775761e20aeda068df"></a>enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__satellites.html#gab831fdf9d777df775761e20aeda068df">SatFlag</a> { <br />
-&#160;&#160;<b>SatNoFlags</b> = 0x0, 
-<b>SatDisplayed</b> = 0x1, 
-<b>SatNotDisplayed</b> = 0x2, 
-<b>SatUser</b> = 0x4, 
+&#160;&#160;<b>SatNoFlags</b> = 0x0000, 
+<b>SatDisplayed</b> = 0x0001, 
+<b>SatNotDisplayed</b> = 0x0002, 
+<b>SatUser</b> = 0x0004, 
 <br />
-&#160;&#160;<b>SatOrbit</b> = 0x8, 
-<b>SatNew</b> = 0x10, 
-<b>SatError</b> = 0x20
+&#160;&#160;<b>SatOrbit</b> = 0x0008, 
+<b>SatNew</b> = 0x0010, 
+<b>SatError</b> = 0x0020, 
+<b>SatSmallSize</b> = 0x0040, 
+<br />
+&#160;&#160;<b>SatMediumSize</b> = 0x0080, 
+<b>SatLargeSize</b> = 0x0100, 
+<b>SatLEO</b> = 0x0200, 
+<b>SatMEO</b> = 0x0400, 
+<br />
+&#160;&#160;<b>SatGSO</b> = 0x0800, 
+<b>SatHEO</b> = 0x1000, 
+<b>SatHGSO</b> = 0x2000
 <br />
  }<tr class="memdesc:gab831fdf9d777df775761e20aeda068df"><td class="mdescLeft">&#160;</td><td class="mdescRight">Flag type reflecting internal flags of <a class="el" href="group__satellites.html#classSatellite" title="A representation of a satellite in Earth orbit. ">Satellite</a>. <br /></td></tr>
 </td></tr>
@@ -143,19 +158,19 @@ double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="gr
 <tr class="separator:ga45b077912cf5f0e781dc43647d60c80b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<p>The Satellites plugin displays the positions of artifical satellites in Earth orbit based on a catalog of orbital data.</p>
-<p>The <a class="el" href="group__satellites.html#classSatellites" title="Main class of the Satellites plugin. ">Satellites</a> class is the main class of the plug-in. It manages a collection of <a class="el" href="group__satellites.html#classSatellite" title="A representation of a satellite in Earth orbit. ">Satellite</a> objects and takes care of loading, saving and updating the satellite catalog. It allows automatic updates from online sources and manages a list of update file URLs.</p>
+<p>The Satellites plugin displays the positions of artificial satellites in Earth orbit based on a catalogue of orbital data.</p>
+<p>The <a class="el" href="group__satellites.html#classSatellites" title="Main class of the Satellites plugin. ">Satellites</a> class is the main class of the plug-in. It manages a collection of <a class="el" href="group__satellites.html#classSatellite" title="A representation of a satellite in Earth orbit. ">Satellite</a> objects and takes care of loading, saving and updating the satellite catalogue. It allows automatic updates from online sources and manages a list of update file URLs.</p>
 <p>To calculate satellite positions, the plugin uses an implementation of the SGP4/SDP4 algorithms (J.L. Canales' gsat library).</p>
 <p><b><a class="el" href="group__satellites.html#classSatellite" title="A representation of a satellite in Earth orbit. ">Satellite</a> Properties</b></p>
 <p><em>Name and identifiers</em></p>
 <p>Each satellite has a name. It's displayed as a label of the satellite hint and in the list of satellites. Names are not unique though, so they are used only for presentation purposes.</p>
-<p>In the <b><a class="el" href="group__satellites.html#classSatellite" title="A representation of a satellite in Earth orbit. ">Satellite</a> Catalog</b> satellites are uniquely identified by their NORAD number, which is encoded in TLEs.</p>
+<p>In the <b><a class="el" href="group__satellites.html#classSatellite" title="A representation of a satellite in Earth orbit. ">Satellite</a> Catalogue</b> satellites are uniquely identified by their NORAD number, which is encoded in TLEs.</p>
 <p><em>Grouping</em></p>
 <p>A satellite can belong to one or more groups such as "amateur", "geostationary" or "navigation". They have no other function but to help the user organize the satellite collection.</p>
-<p>Group names are arbitrary strings defined in the <b><a class="el" href="group__satellites.html#classSatellite" title="A representation of a satellite in Earth orbit. ">Satellite</a> Catalog</b> for each satellite and are more similar to the concept of "tags" than a hierarchical grouping. A satellite may not belong to any group at all.</p>
-<p>By convention, group names are in lowercase. The GUI translates some of the groups used in the default catalog.</p>
-<p><b><a class="el" href="group__satellites.html#classSatellite" title="A representation of a satellite in Earth orbit. ">Satellite</a> Catalog</b></p>
-<p>The satellite catalog is stored on the disk in <a href="http://www.json.org/">JSON</a> format, in a file named "satellites.json". A default copy is embedded in the plug-in at compile time. A working copy is kept in the user data directory.</p>
+<p>Group names are arbitrary strings defined in the <b><a class="el" href="group__satellites.html#classSatellite" title="A representation of a satellite in Earth orbit. ">Satellite</a> Catalogue</b> for each satellite and are more similar to the concept of "tags" than a hierarchical grouping. A satellite may not belong to any group at all.</p>
+<p>By convention, group names are in lowercase. The GUI translates some of the groups used in the default catalogue.</p>
+<p><b><a class="el" href="group__satellites.html#classSatellite" title="A representation of a satellite in Earth orbit. ">Satellite</a> Catalogue</b></p>
+<p>The satellite catalogue is stored on the disk in <a href="http://www.json.org/">JSON</a> format, in a file named "satellites.json". A default copy is embedded in the plug-in at compile time. A working copy is kept in the user data directory.</p>
 <p><b>Configuration</b></p>
 <p>The plug-ins' configuration data is stored in Stellarium's main configuration file. </p>
 <hr/><h2 class="groupheader">Data Structure Documentation</h2>
@@ -693,6 +708,9 @@ void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="grou
 <tr class="memitem:abb879a830a7111140f239abd32349730 inherit pro_methods_classStelDialog"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classStelDialog.html#abb879a830a7111140f239abd32349730">connectColorButton</a> (QToolButton *button, QString propertyName, QString iniName, QString moduleName=&quot;&quot;)</td></tr>
 <tr class="memdesc:abb879a830a7111140f239abd32349730 inherit pro_methods_classStelDialog"><td class="mdescLeft">&#160;</td><td class="mdescRight">Prepare a QToolButton so that it can receive and handle <a class="el" href="classStelDialog.html#a5ef9b994a4c7565bcc6d8a9ccaa85f0b" title="To be called by a connected QToolButton with a color background. ">askColor()</a> connections properly.  <a href="classStelDialog.html#abb879a830a7111140f239abd32349730">More...</a><br /></td></tr>
 <tr class="separator:abb879a830a7111140f239abd32349730 inherit pro_methods_classStelDialog"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afe2c8c8cc3538de9bcb99205fb248b67 inherit pro_methods_classStelDialog"><td class="memItemLeft" align="right" valign="top"><a id="afe2c8c8cc3538de9bcb99205fb248b67"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><b>askConfirmation</b> ()</td></tr>
+<tr class="separator:afe2c8c8cc3538de9bcb99205fb248b67 inherit pro_methods_classStelDialog"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="inherited"></a>
 Additional Inherited Members</h2></td></tr>
@@ -855,6 +873,9 @@ void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="clas
 <tr class="memitem:abb879a830a7111140f239abd32349730 inherit pro_methods_classStelDialog"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classStelDialog.html#abb879a830a7111140f239abd32349730">connectColorButton</a> (QToolButton *button, QString propertyName, QString iniName, QString moduleName=&quot;&quot;)</td></tr>
 <tr class="memdesc:abb879a830a7111140f239abd32349730 inherit pro_methods_classStelDialog"><td class="mdescLeft">&#160;</td><td class="mdescRight">Prepare a QToolButton so that it can receive and handle <a class="el" href="classStelDialog.html#a5ef9b994a4c7565bcc6d8a9ccaa85f0b" title="To be called by a connected QToolButton with a color background. ">askColor()</a> connections properly.  <a href="classStelDialog.html#abb879a830a7111140f239abd32349730">More...</a><br /></td></tr>
 <tr class="separator:abb879a830a7111140f239abd32349730 inherit pro_methods_classStelDialog"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afe2c8c8cc3538de9bcb99205fb248b67 inherit pro_methods_classStelDialog"><td class="memItemLeft" align="right" valign="top"><a id="afe2c8c8cc3538de9bcb99205fb248b67"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><b>askConfirmation</b> ()</td></tr>
+<tr class="separator:afe2c8c8cc3538de9bcb99205fb248b67 inherit pro_methods_classStelDialog"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pro_static_methods_classStelDialog"><td colspan="2" onclick="javascript:toggleInherit('pro_static_methods_classStelDialog')"><img src="closed.png" alt="-"/>&#160;Static Protected Member Functions inherited from <a class="el" href="classStelDialog.html">StelDialog</a></td></tr>
 <tr class="memitem:affed9a4db21c26a7f584048a46b3008e inherit pro_static_methods_classStelDialog"><td class="memItemLeft" align="right" valign="top"><a id="affed9a4db21c26a7f584048a46b3008e"></a>
 static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classStelDialog.html#affed9a4db21c26a7f584048a46b3008e">connectCheckBox</a> (QAbstractButton *checkBox, const QString &amp;actionName)</td></tr>
@@ -980,7 +1001,7 @@ first</td>
 <td class="fieldname">
 id</td>
 <td class="fielddoc">
-NORAD catalog number, as extracted from the TLE set. </td></tr>
+NORAD catalogue number, as extracted from the TLE set. </td></tr>
 <tr><td class="fieldtype">
 <a id="a90fe78f06ae5ce8f46563ee8e04369a0"></a>QString</td>
 <td class="fieldname">
@@ -1511,7 +1532,7 @@ double&#160;</td><td class="memItemRight" valign="bottom"><b>getInclination</b> 
       </table>
 </div><div class="memdoc">
 <div class="textblock"><p>Details about the satellite are passed with a JSON-representation structure that contains a <b><a class="el" href="group__satellites.html#classSatellite" title="A representation of a satellite in Earth orbit. ">Satellite</a> Catalog</b> entry.</p>
-<p>Thanks to <a class="el" href="group__satellites.html#aba5b0ca05b8c107295a51fd6ff389192" title="Needed for sorting lists (if this ever happens...). ">operator&lt;()</a> overloading, container classes (QList, QMap, etc) with <a class="el" href="group__satellites.html#classSatellite" title="A representation of a satellite in Earth orbit. ">Satellite</a> or SatelliteP objects can be sorted by satellite name/ID. </p>
+<p>Thanks to <a class="el" href="group__satellites.html#aba5b0ca05b8c107295a51fd6ff389192" title="Needed for sorting lists (if this ever happens...). ">operator&lt;()</a> overloading, container classes (QList, QMap, etc.) with <a class="el" href="group__satellites.html#classSatellite" title="A representation of a satellite in Earth orbit. ">Satellite</a> or SatelliteP objects can be sorted by satellite name/ID. </p>
 </div><table class="memberdecls">
 <tr><td colspan="2"><h3>Public Types</h3></td></tr>
 <tr class="memitem:a8bdd1ce2c5729056bbca5449373092ac"><td class="memItemLeft" align="right" valign="top"><a id="a8bdd1ce2c5729056bbca5449373092ac"></a>enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__satellites.html#a8bdd1ce2c5729056bbca5449373092ac">OptStatus</a> { <br />
@@ -1645,9 +1666,6 @@ SatFlags&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="
 void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__satellites.html#a62a0e693aeb6f8f80bcb169596bd4d90">setFlags</a> (const SatFlags &amp;flags)</td></tr>
 <tr class="memdesc:a62a0e693aeb6f8f80bcb169596bd4d90"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the internal flags in one operation (only display flags)! <br /></td></tr>
 <tr class="separator:a62a0e693aeb6f8f80bcb169596bd4d90"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:af592a4ed1b6f7e9be4d8539c1fb749e3"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__satellites.html#af592a4ed1b6f7e9be4d8539c1fb749e3">parseInternationalDesignator</a> (const QString &amp;tle1)</td></tr>
-<tr class="memdesc:af592a4ed1b6f7e9be4d8539c1fb749e3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Parse TLE line to extract International Designator and launch year.  <a href="#af592a4ed1b6f7e9be4d8539c1fb749e3">More...</a><br /></td></tr>
-<tr class="separator:af592a4ed1b6f7e9be4d8539c1fb749e3"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aba5b0ca05b8c107295a51fd6ff389192"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__satellites.html#aba5b0ca05b8c107295a51fd6ff389192">operator&lt;</a> (const <a class="el" href="group__satellites.html#classSatellite">Satellite</a> &amp;another) const</td></tr>
 <tr class="memdesc:aba5b0ca05b8c107295a51fd6ff389192"><td class="mdescLeft">&#160;</td><td class="mdescRight">Needed for sorting lists (if this ever happens...).  <a href="#aba5b0ca05b8c107295a51fd6ff389192">More...</a><br /></td></tr>
 <tr class="separator:aba5b0ca05b8c107295a51fd6ff389192"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -1659,6 +1677,9 @@ float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="gro
 QString&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__satellites.html#afa44d8b51e3e059485b5f7e354e0aba0">getOperationalStatus</a> () const</td></tr>
 <tr class="memdesc:afa44d8b51e3e059485b5f7e354e0aba0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get operational status of satellite. <br /></td></tr>
 <tr class="separator:afa44d8b51e3e059485b5f7e354e0aba0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acd578058ba5f1205677381c11ec02183"><td class="memItemLeft" align="right" valign="top"><a id="acd578058ba5f1205677381c11ec02183"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>recomputeEpochTLE</b> ()</td></tr>
+<tr class="separator:acd578058ba5f1205677381c11ec02183"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pub_methods_classStelObject"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_classStelObject')"><img src="closed.png" alt="-"/>&#160;Public Member Functions inherited from <a class="el" href="classStelObject.html">StelObject</a></td></tr>
 <tr class="memitem:ac33309144473a522eb6e274a7430f0ba inherit pub_methods_classStelObject"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="classSphericalRegionP.html">SphericalRegionP</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classStelObject.html#ac33309144473a522eb6e274a7430f0ba">getRegion</a> () const</td></tr>
 <tr class="memdesc:ac33309144473a522eb6e274a7430f0ba inherit pub_methods_classStelObject"><td class="mdescLeft">&#160;</td><td class="mdescRight">Default implementation of the getRegion method.  <a href="classStelObject.html#ac33309144473a522eb6e274a7430f0ba">More...</a><br /></td></tr>
@@ -1993,25 +2014,6 @@ Additional Inherited Members</h2></td></tr>
 
 </div>
 </div>
-<a id="af592a4ed1b6f7e9be4d8539c1fb749e3"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#af592a4ed1b6f7e9be4d8539c1fb749e3">&#9670;&nbsp;</a></span>parseInternationalDesignator()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">void Satellite::parseInternationalDesignator </td>
-          <td>(</td>
-          <td class="paramtype">const QString &amp;&#160;</td>
-          <td class="paramname"><em>tle1</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-<p>Sets #internationalDesignator and #jdLaunchYearJan1. </p>
-
-</div>
-</div>
 <a id="ad0fb80968b7df246a529e3e9d572af62"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#ad0fb80968b7df246a529e3e9d572af62">&#9670;&nbsp;</a></span>setNewTleElements()</h2>
 
@@ -2146,6 +2148,20 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><b>getFlagHideInvisible<
 <tr class="memitem:a82457612f6bfa33cd1b841b684f8af17"><td class="memItemLeft" align="right" valign="top"><a id="a82457612f6bfa33cd1b841b684f8af17"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><b>setFlagHideInvisible</b> (bool b)</td></tr>
 <tr class="separator:a82457612f6bfa33cd1b841b684f8af17"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4329ea9d26feb161bd3e6be8be5f91ac"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classVector3.html">Vec3f</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__satellites.html#a4329ea9d26feb161bd3e6be8be5f91ac">getInvisibleSatelliteColor</a> () const</td></tr>
+<tr class="memdesc:a4329ea9d26feb161bd3e6be8be5f91ac"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get color for invisible satellites.  <a href="#a4329ea9d26feb161bd3e6be8be5f91ac">More...</a><br /></td></tr>
+<tr class="separator:a4329ea9d26feb161bd3e6be8be5f91ac"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2c6ba9a6712a0f7653aba0cd1ed40395"><td class="memItemLeft" align="right" valign="top"><a id="a2c6ba9a6712a0f7653aba0cd1ed40395"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__satellites.html#a2c6ba9a6712a0f7653aba0cd1ed40395">setInvisibleSatelliteColor</a> (const <a class="el" href="classVector3.html">Vec3f</a> &amp;c)</td></tr>
+<tr class="memdesc:a2c6ba9a6712a0f7653aba0cd1ed40395"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set color for invisible satellites. <br /></td></tr>
+<tr class="separator:a2c6ba9a6712a0f7653aba0cd1ed40395"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a38b1ef29eb862e72c13bd1628275401c"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classVector3.html">Vec3f</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__satellites.html#a38b1ef29eb862e72c13bd1628275401c">getTransitSatelliteColor</a> () const</td></tr>
+<tr class="memdesc:a38b1ef29eb862e72c13bd1628275401c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get color for satellites in transit through the Sun or the Moon (color of markers)  <a href="#a38b1ef29eb862e72c13bd1628275401c">More...</a><br /></td></tr>
+<tr class="separator:a38b1ef29eb862e72c13bd1628275401c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa4f38ed1cfd4e993bc68ba421a678a99"><td class="memItemLeft" align="right" valign="top"><a id="aa4f38ed1cfd4e993bc68ba421a678a99"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__satellites.html#aa4f38ed1cfd4e993bc68ba421a678a99">setTransitSatelliteColor</a> (const <a class="el" href="classVector3.html">Vec3f</a> &amp;c)</td></tr>
+<tr class="memdesc:aa4f38ed1cfd4e993bc68ba421a678a99"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set color for satellites in transit through the Sun or the Moon (color of markers) <br /></td></tr>
+<tr class="separator:aa4f38ed1cfd4e993bc68ba421a678a99"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a8c39e8a1a4acd8602dba106412bea59c"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__satellites.html#a8c39e8a1a4acd8602dba106412bea59c">getLabelFontSize</a> () const</td></tr>
 <tr class="memdesc:a8c39e8a1a4acd8602dba106412bea59c"><td class="mdescLeft">&#160;</td><td class="mdescRight">get the label font size.  <a href="#a8c39e8a1a4acd8602dba106412bea59c">More...</a><br /></td></tr>
 <tr class="separator:a8c39e8a1a4acd8602dba106412bea59c"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -2239,6 +2255,12 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>orbitLineFadeSegments
 <tr class="memitem:afd562993835780e813fb938ff70e19d6"><td class="memItemLeft" align="right" valign="top"><a id="afd562993835780e813fb938ff70e19d6"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><b>orbitLineSegmentDurationChanged</b> (int i)</td></tr>
 <tr class="separator:afd562993835780e813fb938ff70e19d6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa86bed266bc50e594f97f68eded2ee41"><td class="memItemLeft" align="right" valign="top"><a id="aa86bed266bc50e594f97f68eded2ee41"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>invisibleSatelliteColorChanged</b> (<a class="el" href="classVector3.html">Vec3f</a>)</td></tr>
+<tr class="separator:aa86bed266bc50e594f97f68eded2ee41"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a80d67ea358352dcc480eac5870e09d73"><td class="memItemLeft" align="right" valign="top"><a id="a80d67ea358352dcc480eac5870e09d73"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>transitSatelliteColorChanged</b> (<a class="el" href="classVector3.html">Vec3f</a>)</td></tr>
+<tr class="separator:a80d67ea358352dcc480eac5870e09d73"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac44a49242b0a5953a8b3fcc11ac18f39"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__satellites.html#ac44a49242b0a5953a8b3fcc11ac18f39">settingsChanged</a> ()</td></tr>
 <tr class="memdesc:ac44a49242b0a5953a8b3fcc11ac18f39"><td class="mdescLeft">&#160;</td><td class="mdescRight">Emitted when some of the plugin settings have been changed.  <a href="#ac44a49242b0a5953a8b3fcc11ac18f39">More...</a><br /></td></tr>
 <tr class="separator:ac44a49242b0a5953a8b3fcc11ac18f39"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -2297,7 +2319,7 @@ virtual QString&#160;</td><td class="memItemRight" valign="bottom"><a class="el"
 <tr class="memdesc:a4154cc2794de96710b0087c548e697fc"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the name that will be returned by <a class="el" href="classStelObject.html#acf26bf2f7442e0317cc44597a984f54d" title="Return object&#39;s type. It should be the name of the class. ">StelObject::getType()</a> for the objects this module manages. <br /></td></tr>
 <tr class="separator:a4154cc2794de96710b0087c548e697fc"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae7d35499406dad1265892734b7be3835"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__satellites.html#ae7d35499406dad1265892734b7be3835">configureGui</a> (bool show=true)</td></tr>
-<tr class="memdesc:ae7d35499406dad1265892734b7be3835"><td class="mdescLeft">&#160;</td><td class="mdescRight">Implment this to tell the main Stellarium GUi that there is a GUI element to configure this plugin.  <a href="#ae7d35499406dad1265892734b7be3835">More...</a><br /></td></tr>
+<tr class="memdesc:ae7d35499406dad1265892734b7be3835"><td class="mdescLeft">&#160;</td><td class="mdescRight">Implement this to tell the main Stellarium GUI that there is a GUI element to configure this plugin.  <a href="#ae7d35499406dad1265892734b7be3835">More...</a><br /></td></tr>
 <tr class="separator:ae7d35499406dad1265892734b7be3835"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a8952c394c0cdcb2875404b63ac318f1c"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__satellites.html#a8952c394c0cdcb2875404b63ac318f1c">restoreDefaults</a> (void)</td></tr>
 <tr class="memdesc:a8952c394c0cdcb2875404b63ac318f1c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set up the plugin with default values.  <a href="#a8952c394c0cdcb2875404b63ac318f1c">More...</a><br /></td></tr>
@@ -2366,7 +2388,7 @@ void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="grou
 <tr class="memdesc:a82b0a535b1d8b77410616ff21d103a3f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Saves the current list of update URLs to the configuration file. <br /></td></tr>
 <tr class="separator:a82b0a535b1d8b77410616ff21d103a3f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a458695ca33ff5040318c9816d86419bb"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__satellites.html#a458695ca33ff5040318c9816d86419bb">updateFromFiles</a> (QStringList paths, bool deleteFiles=false)</td></tr>
-<tr class="memdesc:a458695ca33ff5040318c9816d86419bb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Reads update file(s) in celestrak's .txt format, and updates the TLE elements for exisiting satellites from them.  <a href="#a458695ca33ff5040318c9816d86419bb">More...</a><br /></td></tr>
+<tr class="memdesc:a458695ca33ff5040318c9816d86419bb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Reads update file(s) in celestrak's .txt format, and updates the TLE elements for existing satellites from them.  <a href="#a458695ca33ff5040318c9816d86419bb">More...</a><br /></td></tr>
 <tr class="separator:a458695ca33ff5040318c9816d86419bb"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a420742e9762c50fc8b33fb92b5cf7592"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__satellites.html#a420742e9762c50fc8b33fb92b5cf7592">updateSatellites</a> (TleDataHash &amp;newTleSets)</td></tr>
 <tr class="memdesc:a420742e9762c50fc8b33fb92b5cf7592"><td class="mdescLeft">&#160;</td><td class="mdescRight">Updates the loaded satellite collection from the provided data.  <a href="#a420742e9762c50fc8b33fb92b5cf7592">More...</a><br /></td></tr>
@@ -2447,6 +2469,12 @@ int&#160;</td><td class="memItemRight" valign="bottom"><b>orbitLineFadeSegments<
 <tr class="memitem:a3d89f08608578a98bef11c811c1b08d6"><td class="memItemLeft" align="right" valign="top"><a id="a3d89f08608578a98bef11c811c1b08d6"></a>
 int&#160;</td><td class="memItemRight" valign="bottom"><b>orbitLineSegmentDuration</b></td></tr>
 <tr class="separator:a3d89f08608578a98bef11c811c1b08d6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2daed6ee357efa7093224b69f559546a"><td class="memItemLeft" align="right" valign="top"><a id="a2daed6ee357efa7093224b69f559546a"></a>
+<a class="el" href="classVector3.html">Vec3f</a>&#160;</td><td class="memItemRight" valign="bottom"><b>invisibleSatelliteColor</b></td></tr>
+<tr class="separator:a2daed6ee357efa7093224b69f559546a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aefb15a644344e778bdcbe5a0bee15801"><td class="memItemLeft" align="right" valign="top"><a id="aefb15a644344e778bdcbe5a0bee15801"></a>
+<a class="el" href="classVector3.html">Vec3f</a>&#160;</td><td class="memItemRight" valign="bottom"><b>transitSatelliteColor</b></td></tr>
+<tr class="separator:aefb15a644344e778bdcbe5a0bee15801"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr><td colspan="2"><h3>Updater module</h3></td></tr>
 <tr class="memitem:af66fc89f84fce15712ba639aa9fff997"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__satellites.html#af66fc89f84fce15712ba639aa9fff997">autoAddEnabled</a></td></tr>
 <tr class="memdesc:af66fc89f84fce15712ba639aa9fff997"><td class="mdescLeft">&#160;</td><td class="mdescRight">Flag enabling the automatic addition of new satellites on update.  <a href="#af66fc89f84fce15712ba639aa9fff997">More...</a><br /></td></tr>
@@ -2472,6 +2500,9 @@ Additional Inherited Members</h2></td></tr>
 <tr class="memitem:acc51b40ad88636ba5e48e6f29a49505b inherit pro_methods_classStelModule"><td class="memItemLeft" align="right" valign="top">class <a class="el" href="classStelAction.html">StelAction</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classStelModule.html#acc51b40ad88636ba5e48e6f29a49505b">addAction</a> (const QString &amp;id, const QString &amp;groupId, const QString &amp;text, const char *slot, const QString &amp;shortcut=&quot;&quot;, const QString &amp;altShortcut=&quot;&quot;)</td></tr>
 <tr class="memdesc:acc51b40ad88636ba5e48e6f29a49505b inherit pro_methods_classStelModule"><td class="mdescLeft">&#160;</td><td class="mdescRight">convenience methods to add an action (call to own slot) to the <a class="el" href="classStelActionMgr.html" title="Manager for StelAction instances. Allows registration of new actions, and finding an existing one by ...">StelActionMgr</a> object.  <a href="classStelModule.html#acc51b40ad88636ba5e48e6f29a49505b">More...</a><br /></td></tr>
 <tr class="separator:acc51b40ad88636ba5e48e6f29a49505b inherit pro_methods_classStelModule"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a19ec6a7bd1d6dc98d6030cadb8956b3c inherit pro_methods_classStelModule"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classStelAction.html">StelAction</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classStelModule.html#a19ec6a7bd1d6dc98d6030cadb8956b3c">addAction</a> (const QString &amp;id, const QString &amp;groupId, const QString &amp;text, QObject *contextObject, std::function&lt; void()&gt; lambda, const QString &amp;shortcut=&quot;&quot;, const QString &amp;altShortcut=&quot;&quot;)</td></tr>
+<tr class="memdesc:a19ec6a7bd1d6dc98d6030cadb8956b3c inherit pro_methods_classStelModule"><td class="mdescLeft">&#160;</td><td class="mdescRight">convenience methods to add an action (call to Lambda functor) to the <a class="el" href="classStelActionMgr.html" title="Manager for StelAction instances. Allows registration of new actions, and finding an existing one by ...">StelActionMgr</a> object.  <a href="classStelModule.html#a19ec6a7bd1d6dc98d6030cadb8956b3c">More...</a><br /></td></tr>
+<tr class="separator:a19ec6a7bd1d6dc98d6030cadb8956b3c inherit pro_methods_classStelModule"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h4 class="groupheader">Member Enumeration Documentation</h4>
 <a id="a28bd5d5b95663366055aeaeb4000a6b7"></a>
@@ -2718,6 +2749,32 @@ Additional Inherited Members</h2></td></tr>
 
 </div>
 </div>
+<a id="a4329ea9d26feb161bd3e6be8be5f91ac"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4329ea9d26feb161bd3e6be8be5f91ac">&#9670;&nbsp;</a></span>getInvisibleSatelliteColor</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classVector3.html">Vec3f</a> Satellites::getInvisibleSatelliteColor </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">slot</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<dl class="section return"><dt>Returns</dt><dd>color </dd></dl>
+
+</div>
+</div>
 <a id="a8c39e8a1a4acd8602dba106412bea59c"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a8c39e8a1a4acd8602dba106412bea59c">&#9670;&nbsp;</a></span>getLabelFontSize</h2>
 
@@ -2829,6 +2886,32 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 <dl class="section return"><dt>Returns</dt><dd>a list of URL strings, some with prefixes - see #updateUrls for details. </dd></dl>
+
+</div>
+</div>
+<a id="a38b1ef29eb862e72c13bd1628275401c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a38b1ef29eb862e72c13bd1628275401c">&#9670;&nbsp;</a></span>getTransitSatelliteColor</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classVector3.html">Vec3f</a> Satellites::getTransitSatelliteColor </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">slot</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<dl class="section return"><dt>Returns</dt><dd>color </dd></dl>
 
 </div>
 </div>
@@ -3688,7 +3771,7 @@ Additional Inherited Members</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
-<p>This method starts the process of an Internet update: it tries to download TLE lists from online recources and then use them to update the orbital data (and names, etc.) of the included satellites. This only initialized the download. The rest of the work is done by saveDownloadedUpdate() and <a class="el" href="group__satellites.html#a420742e9762c50fc8b33fb92b5cf7592" title="Updates the loaded satellite collection from the provided data. ">updateSatellites()</a>. Update sources are described in updateUrls (see for accessor details). If autoAddEnabled is true when this function is called, new satellites in the chosen update sources will be added during the update. If autoRemoveEnabled is true when this function is called, any existing satellite that can't be found in the downloaded update lists will be removed. See <a class="el" href="group__satellites.html#a458695ca33ff5040318c9816d86419bb" title="Reads update file(s) in celestrak&#39;s .txt format, and updates the TLE elements for exisiting satellite...">updateFromFiles()</a> for the other type of update operation. </p>
+<p>This method starts the process of an Internet update: it tries to download TLE lists from online resources and then use them to update the orbital data (and names, etc.) of the included satellites. This only initialized the download. The rest of the work is done by saveDownloadedUpdate() and <a class="el" href="group__satellites.html#a420742e9762c50fc8b33fb92b5cf7592" title="Updates the loaded satellite collection from the provided data. ">updateSatellites()</a>. Update sources are described in updateUrls (see for accessors details). If autoAddEnabled is true when this function is called, new satellites in the chosen update sources will be added during the update. If autoRemoveEnabled is true when this function is called, any existing satellite that can't be found in the downloaded update lists will be removed. See <a class="el" href="group__satellites.html#a458695ca33ff5040318c9816d86419bb" title="Reads update file(s) in celestrak&#39;s .txt format, and updates the TLE elements for existing satellites...">updateFromFiles()</a> for the other type of update operation. </p>
 
 </div>
 </div>
@@ -3707,7 +3790,7 @@ Additional Inherited Members</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<p>Worker function called by <a class="el" href="group__satellites.html#a458695ca33ff5040318c9816d86419bb" title="Reads update file(s) in celestrak&#39;s .txt format, and updates the TLE elements for exisiting satellite...">updateFromFiles()</a> and saveDownloadedUpdate(). (Respecitvely, user-initiated update from file(s) and user- or auto- initiated update from online source(s).) Emits <a class="el" href="group__satellites.html#a966164bfca685b47e36a0106c1b2a377" title="emitted when the update status changes, e.g. ">updateStateChanged()</a> and <a class="el" href="group__satellites.html#ad55a399effe79f15064cec717be18270" title="Emitted after an update has run. ">tleUpdateComplete()</a>. </p><dl class="section note"><dt>Note</dt><dd>Instead of splitting this method off <a class="el" href="group__satellites.html#a458695ca33ff5040318c9816d86419bb" title="Reads update file(s) in celestrak&#39;s .txt format, and updates the TLE elements for exisiting satellite...">updateFromFiles()</a> and passing the auto-add flag through data structures, another possiblity was to modify updateFromFiles to use the same prefix trick (adding "1," to file paths). I decided against it because I thought it would be more complex. :) &ndash;BM </dd></dl>
+<p>Worker function called by <a class="el" href="group__satellites.html#a458695ca33ff5040318c9816d86419bb" title="Reads update file(s) in celestrak&#39;s .txt format, and updates the TLE elements for existing satellites...">updateFromFiles()</a> and saveDownloadedUpdate(). (Respectively, user-initiated update from file(s) and user- or auto- initiated update from online source(s).) Emits <a class="el" href="group__satellites.html#a966164bfca685b47e36a0106c1b2a377" title="emitted when the update status changes, e.g. ">updateStateChanged()</a> and <a class="el" href="group__satellites.html#ad55a399effe79f15064cec717be18270" title="Emitted after an update has run. ">tleUpdateComplete()</a>. </p><dl class="section note"><dt>Note</dt><dd>Instead of splitting this method off <a class="el" href="group__satellites.html#a458695ca33ff5040318c9816d86419bb" title="Reads update file(s) in celestrak&#39;s .txt format, and updates the TLE elements for existing satellites...">updateFromFiles()</a> and passing the auto-add flag through data structures, another possibility was to modify updateFromFiles to use the same prefix trick (adding "1," to file paths). I decided against it because I thought it would be more complex. :) &ndash;BM </dd></dl>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramdir">[in,out]</td><td class="paramname">newTleSets</td><td>a hash with satellite IDs as keys; it's modified by the method! </td></tr>
@@ -3779,7 +3862,7 @@ Additional Inherited Members</h2></td></tr>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Tue Jun 23 2020 01:35:10 for Stellarium by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Sun Sep 27 2020 15:10:40 for Stellarium by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.13
 </small></address>

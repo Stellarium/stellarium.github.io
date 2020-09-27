@@ -21,7 +21,7 @@
   <td id="projectlogo"><img alt="Logo" src="stellarium-logo.png"/></td>
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">Stellarium
-   &#160;<span id="projectnumber">0.20.2</span>
+   &#160;<span id="projectnumber">0.20.3</span>
    </div>
   </td>
  </tr>
@@ -91,6 +91,9 @@ $(function() {
 <li>fixup()
 : <a class="el" href="structS3DScene_1_1Material.html#a8f4e8c35824903dc84dc8d81e728bf4f">S3DScene::Material</a>
 </li>
+<li>flagAutoLimitMagnitude
+: <a class="el" href="group__oculars.html#a06b6d9615245288f1c901d323dd84259">Oculars</a>
+</li>
 <li>flagAutosetMountForCCD
 : <a class="el" href="group__oculars.html#ae8d4ba18fee9cf76179aeb32e9f7ea62">Oculars</a>
 </li>
@@ -126,9 +129,6 @@ $(function() {
 </li>
 <li>flagLandscapeUseMinimalBrightness
 : <a class="el" href="classLandscapeMgr.html#a701ea4a414996a272a014ebde57baaf5">LandscapeMgr</a>
-</li>
-<li>flagLimitMagnitude
-: <a class="el" href="group__oculars.html#a3c777bc92189e5f51e2d5d1bcda020f4">Oculars</a>
 </li>
 <li>flagLuminanceAdaptation
 : <a class="el" href="classStelSkyDrawer.html#a85b9dfa135c83fd64a1b3f35f52cb16f">StelSkyDrawer</a>
@@ -169,8 +169,17 @@ $(function() {
 <li>flagSemiTransparency
 : <a class="el" href="group__oculars.html#aca5ae96272b28bce08dd71d738ed153b">Oculars</a>
 </li>
+<li>flagShowCcdCropOverlay
+: <a class="el" href="group__oculars.html#af691588f10ada83df674c9c1ae3b87d1">Oculars</a>
+</li>
+<li>flagShowCcdCropOverlayPixelGrid
+: <a class="el" href="group__oculars.html#ac4845717b7df10def9248313c0fdc88e">Oculars</a>
+</li>
 <li>flagShowFocuserOverlay
 : <a class="el" href="group__oculars.html#a76ccbd776c2676f2c76c177e6d24396e">Oculars</a>
+</li>
+<li>flagShowResolutionCriteria
+: <a class="el" href="group__oculars.html#a35162710a129dff030859c9d64f5799a">Oculars</a>
 </li>
 <li>flagStarMagnitudeLimit
 : <a class="el" href="classStelSkyDrawer.html#a2f19e4989634b31430b117fa1c6cb1c4">StelSkyDrawer</a>
@@ -253,33 +262,33 @@ $(function() {
 <li>forward()
 : <a class="el" href="classExtinction.html#a9c054b734f052f20a20fa1fee02d6190">Extinction</a>
 , <a class="el" href="classRefraction.html#ae6b3821a62a4e3acf00254b4f78c6ccd">Refraction</a>
-, <a class="el" href="classStelProjector2d.html#a27686dd2b2886d306806126960bf6f4f">StelProjector2d</a>
+, <a class="el" href="classStelProjector2d.html#aedd6ba0f9f7ab0aabdc759c798923770">StelProjector2d</a>
 , <a class="el" href="classStelProjector.html#abd6860a25765a570691ead7786e47a2a">StelProjector</a>
-, <a class="el" href="classStelProjectorCylinder.html#a6ce8404a64c6b5ef881cfeb5f61ef0d3">StelProjectorCylinder</a>
-, <a class="el" href="classStelProjectorEqualArea.html#ae3856a18aeab8e0b80053625feca6fc8">StelProjectorEqualArea</a>
-, <a class="el" href="classStelProjectorFisheye.html#ac014b4b52515ac9d7f4fcc2df306a529">StelProjectorFisheye</a>
-, <a class="el" href="classStelProjectorHammer.html#a48261bd023ef35f41b371b770a99fda2">StelProjectorHammer</a>
-, <a class="el" href="classStelProjectorMercator.html#ae704205edcf6b027d0171c673b142fab">StelProjectorMercator</a>
-, <a class="el" href="classStelProjectorMiller.html#aed0b668fad6dee50feecfaef72ebdc7a">StelProjectorMiller</a>
-, <a class="el" href="classStelProjectorOrthographic.html#a53e5215018bea7a7592e0ab7463f1654">StelProjectorOrthographic</a>
-, <a class="el" href="classStelProjectorPerspective.html#aa0f8d1339eff8ac14c1d1067ac1b3896">StelProjectorPerspective</a>
-, <a class="el" href="classStelProjectorSinusoidal.html#a3ef7699190dfaaa373810ea1347f037a">StelProjectorSinusoidal</a>
-, <a class="el" href="classStelProjectorStereographic.html#a8584268f2524e54eccb626b1101ca834">StelProjectorStereographic</a>
+, <a class="el" href="classStelProjectorCylinder.html#a1ee29a30540fcc1e0be36fd63d9a4be9">StelProjectorCylinder</a>
+, <a class="el" href="classStelProjectorEqualArea.html#ac0075bf2812791449c092a67f4af00d6">StelProjectorEqualArea</a>
+, <a class="el" href="classStelProjectorFisheye.html#a18444b3ab2079e9a0ffaca509fa7cc7e">StelProjectorFisheye</a>
+, <a class="el" href="classStelProjectorHammer.html#ababb34960acb4e6265abac1f0a58d3cf">StelProjectorHammer</a>
+, <a class="el" href="classStelProjectorMercator.html#a6ef9dea0769342e2721529f3e0230c0d">StelProjectorMercator</a>
+, <a class="el" href="classStelProjectorMiller.html#af665473e7dd2b4ae6bcb7b93c6ded8b0">StelProjectorMiller</a>
+, <a class="el" href="classStelProjectorOrthographic.html#ac38be4c77046761ce5c77437c22edf81">StelProjectorOrthographic</a>
+, <a class="el" href="classStelProjectorPerspective.html#a2d034863b9f8c0a84b8e05ffa93d2d26">StelProjectorPerspective</a>
+, <a class="el" href="classStelProjectorSinusoidal.html#accf0c51e1f5073c8c8f28b21fa50dda6">StelProjectorSinusoidal</a>
+, <a class="el" href="classStelProjectorStereographic.html#ade51d457d363b19511c06e156ec65294">StelProjectorStereographic</a>
 </li>
 <li>fov
 : <a class="el" href="structStelProjector_1_1StelProjectorParams.html#adf0373c362c8da664dd061022e26afd2">StelProjector::StelProjectorParams</a>
 </li>
 <li>fovToViewScalingFactor()
-: <a class="el" href="classStelProjector2d.html#a7944afbb98e0faf80f57509d51f56bd2">StelProjector2d</a>
+: <a class="el" href="classStelProjector2d.html#a7928dc3af37b7f3f47738331c1a44b9a">StelProjector2d</a>
 , <a class="el" href="classStelProjector.html#a38798529a28b69aa2bda1740e4009f05">StelProjector</a>
-, <a class="el" href="classStelProjectorCylinder.html#a22c85c6a7a248d68c1c6cd0d89289ef6">StelProjectorCylinder</a>
-, <a class="el" href="classStelProjectorEqualArea.html#ae72c114747a6a71b97c29b98f2b6273b">StelProjectorEqualArea</a>
-, <a class="el" href="classStelProjectorFisheye.html#a2a4f17b93bca8430f07e25015ae93890">StelProjectorFisheye</a>
-, <a class="el" href="classStelProjectorHammer.html#a839d2d0b699e759037ba56d2565ee72b">StelProjectorHammer</a>
-, <a class="el" href="classStelProjectorMercator.html#a85bfeb171aa2f90c98c5adb7bb135443">StelProjectorMercator</a>
-, <a class="el" href="classStelProjectorOrthographic.html#aa3772888f8210bb7cdbcdb2e009e492d">StelProjectorOrthographic</a>
-, <a class="el" href="classStelProjectorPerspective.html#a06da171176e6ac402d12f2e0f026ed4e">StelProjectorPerspective</a>
-, <a class="el" href="classStelProjectorStereographic.html#a56d6f576a72aed7dfa56785079b22e7c">StelProjectorStereographic</a>
+, <a class="el" href="classStelProjectorCylinder.html#ac35a25bd1133c31c549d806480ee0c77">StelProjectorCylinder</a>
+, <a class="el" href="classStelProjectorEqualArea.html#a16743490749722769fde3d6d6916f603">StelProjectorEqualArea</a>
+, <a class="el" href="classStelProjectorFisheye.html#ad2fd5b6b17b768d22da16391cc542880">StelProjectorFisheye</a>
+, <a class="el" href="classStelProjectorHammer.html#a1c2451771cdde8c87bb0433e10310c27">StelProjectorHammer</a>
+, <a class="el" href="classStelProjectorMercator.html#a79558f18b1eb51e5e166e8461107ed96">StelProjectorMercator</a>
+, <a class="el" href="classStelProjectorOrthographic.html#ac6534ff2bb24cae44bfc31e68f2b2f5e">StelProjectorOrthographic</a>
+, <a class="el" href="classStelProjectorPerspective.html#a69c7ad3e536e2a605168ed71c8733614">StelProjectorPerspective</a>
+, <a class="el" href="classStelProjectorStereographic.html#a23eeef6eb424fd06cfc57aa42a4ed7ca">StelProjectorStereographic</a>
 </li>
 <li>FrameAltAz
 : <a class="el" href="classStelCore.html#af18f0c34c957103a7fa3008e2aa4aec1aafae2ea8dbf9f73c83b646ba5d57801c">StelCore</a>
@@ -331,7 +340,7 @@ $(function() {
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Tue Jun 23 2020 01:35:11 for Stellarium by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Sun Sep 27 2020 15:10:41 for Stellarium by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.13
 </small></address>

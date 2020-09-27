@@ -1,0 +1,184 @@
+---
+layout: post
+title: Stellarium v0.20.3 has been released!
+date: 2020-09-27 16:20:00 +0700
+categories: release
+author: alex-w
+nolangbar: true
+---
+The major changes of this version:
+- Fixed nutation and, with it, season beginning times
+- Many changes in AstroCalc tool and core of Stellarium
+- Many changes in Oculars and Satellites plugins
+- Updated DSO catalog
+
+Important note: We discontinued support an AppImage builds since version 0.20.3 due 
+technical problems of AppImage architecture! Please use snap packages instead.
+
+Thank you very much to community for bug reports, feature requests and contributions!
+
+Full list of changes:
+- Added sorting for Bookmark dialog (GH: #1144)
+- Added B pass band for compute photometric values of nebulae
+- Added missing QPushButton:checked style matching 'pressed' (GH: #1150)
+- Added show standard magnitude and RCS info for satellites in the GUI of Satellites plugin
+- Added new filters for satellites
+- Added GUI buttons to define object information font color at daylight and for overwrite mode (GH: #1156)
+- Added 2 new columns for AstroCalc/Positions tool (Elevation and Elongation)
+- Added editable keyboard shortcut for buttons in AstroCalc tools (GH: #1165, #1166)
+- Added allowance to loading bookmark without date/location change (GH: #882)
+- Added new initial time steps in AstroCalc/Phenomena tool (GH: #1162)
+- Added option to use on the screen star designations only (GH: #1169)
+- Added option in the GUI to define color of text in Equation of Time plugin
+- Added new button into Shortcut Editor and added new tool to restoring defaults
+- Added action to restart trails (GH: #1030)
+- Added "current vertical" line (GH: #1175)
+- Added support custom time steps for ephemeris in AstroCalc/Ephemeris tool (GH: #1176)
+- Added ability to show several objects' ephemerides in AstroCalc/Ephemeris tool (GH: #1177)
+- Added using texture for satellite, when he crossing of the Moon or the Sun
+- Added automatic saving changes of satellites properties in Satellites plugin (GH: #1066)
+- Added instructions for building Stellarium from source code
+- Added new groups of satellites: all new groups of satellites based on their orbital properties
+- Added info about altitude classifications for geocentric orbits in Satellites plugin
+- Added pixel grid for sensors to Ocular plugin (GH: #1198)
+- Added keyboard shortcut for toggle focuser overlay to Oculars plugin
+- Added keyboard shortcuts to toggle sensor crop overlay to Oculars plugin
+- Added keyboard shortcuts to toggle sensor pixel grid to Oculars plugin
+- Added show a binning info for CCD to Oculars GUI Panel
+- Added option into GUI to toggle drawing halo around the Moon (GH: #914)
+- Added keep selection of ephemeris item when coordinate system is changed in AstroCalc/Ephemeris tool (GH: #1199)
+- Added keyboard handling in additional to mouse selection for visualization of selected marker in AstroCalc/Ephemeris tool (GH: #1200)
+- Added new way to select ocular elements to Oculars plugin: You can now switch between various ocular elements through double-click on the items (eyepieces/lenses/telescopes/sensors) in the main menu of the Oculars plugin (GH: #1193)
+- Added small improvement for sensor view mode to Oculars plugin: the cross in the center was modify: it rotating by 45° now and has  a permanent size in 10 px (GH: #1206)
+- Added small improvement for sensor view mode to Oculars plugin: the text about the crop size now may be marked by [*] for 2 reasons: the crop size is larger than sensor size or when crop size is not multiple of binning (GH: #1206)
+- Added fix for better handling of comet orbit visualisation
+- Added planet name for nomenclature item as context data: better in search dialog and makes unique strings
+- Added new names for planetary features
+- Added tool to remember last entered objects in Search tool (GH: #1050, #1168)
+- Added enforce updates for Lists in Search tool to get an variable parts of list (GH: #1226)
+- Added star names for Western (O. Hlad) sky culture (GH: #1170)
+- Added key binding for toggle visibility of groups of satellites (GH: #982)
+- Added new categories for AstroCalc/WUT tool (GH: #1230)
+- Added new category for AstroCalc/Positions tool (GH: #1230)
+- Added methods to search DSO when they have coordinates in disabled catalogs (esp. for the Bookmark tool and some AstroCalc tools)
+- Added CLI option to start Stellarium in scaling GUI mode
+- Added new group of objects "Solar system bodies: minor bodies" to predict opposition of asteroids into AstroCalc/Phenomena tool
+- Added note to S&T sky culture (GH: #1244)
+- Added including name of a bookmarked Marker object for highlights (GH: #1260)
+- Added including designation of a bookmarked object without common name for highlights
+- Added support of new type of labels (labelEquatorial) for scripting engine
+- Added 3 new groups of satellites
+- Added tool to disable an inherited options in Oculars plugin
+- Added tool to define value of transparency of the semi-transparent mask in eyepiece mode in Oculars plugin
+- Added buttons to define special colors for satellites in Satellites plugin
+- Added International Designator info into the GUI of Satellites plugin
+- Added epoch of the TLE info into GUI of Satellites plugin
+- Added tooltips for both identifiers of satellites (Satellites plugin)
+- Added full names of groups as tooltips for wrapped names of groups (Satellites plugin)
+- Added a confirmation dialog for "Restore defaults" buttons (GH: #1277)
+- Fixed nutation and, with it, season beginning times
+- Fixed behaviour of AstroCalc/WUT tool
+- Fixed list of locations: remove duplicates of observatories
+- Fixed possible error in calculating the Contrast Index of nebulae (GH: #1145)
+- Fixed activity of button to switch in sources tab of Satellites plugin
+- Fixed small GUI issue when satellite tracking is enabled
+- Fixed crash for landscapes with added polygon (GH: #1143, #1179)
+- Fixed drawing satellite orbits
+- Fixed buttons background in Solar System Editor plugin
+- Fixed documents for enabling custom HiPS (GH: #1159)
+- Fixed display date format in main GUI
+- Fixed automatic setting of size for columns in shortcuts editor
+- Fixed trails related properties in SolarSystem (GH: #1030)
+- Fixed spurious recreation of trails (GH: #1030)
+- Fixed fade out for trails (GH: #1030)
+- Fixed behaviour of GUI options for planetary orbits and trails
+- Fixed changes in trails when time stopped (GH: #1174)
+- Fixed main GUI issue
+- Fixed AstroCalc GUI issue
+- Fixed few tooltips
+- Fixed few translatable lines in the standard GUI
+- Fixed remember customized object informations settings (GH: #1184)
+- Fixed translation special groups after change the language in Satellites plugin
+- Fixed size of buttons in the GUI of the Satellites plugin
+- Fixed availability of "Remove satellites" button in the GUI of the Satellites plugin
+- Fixed linguistic issue in the GUI of main application and plugins
+- Fixed switch to native planet names when skyculture is changed in AstroCalc tools (GH: #1203)
+- Fixed keyboard jumps for GUI of the Oculars plugin
+- Fixed saving properties of Special Markers (GH: #1201)
+- Fixed errors in DSO catalog (SNR G subsystem; GH: #1208)
+- Fixed calculation an approximate visual magnitude for Starlink DarkSat 
+- Fixed find an initial step for AstroCalc/Phenomena tool (GH: #1219)
+- Fixed handling of keyboard shortcuts: saving an empty keyboard shortcuts allow to stay primary and alternative shortcuts as they was defined by user (GH: #1222)
+- Fixed translation of key binding description for "Field of View" feature when language is changed
+- Fixed saving keyboard shortcuts
+- Fixed rounding issue (GH: #1153)
+- Fixed security issue in RemoteControl plugin (GH: #1233)
+- Fixed load of location from landscape at startup (GH: #1237)
+- Fixed the Reticulum system object designation (GH: #1250)
+- Fixed restore scaling for minor bodies in Oculars plugin (GH: #1258)
+- Fixed GUI behaviour for AstroCalc tool (GH: #1230)
+- Fixed misprints and typos in Chinese sky cultures (GH: #1266, #1268)
+- Fixed issue an including regions (or DSO without designations) as bookmarks (GH: #1267)
+- Fixed parser of COSPAR ID data (International Designator) in Satellites plugin
+- Fixed apply transit color for satellites in the iconic mode (GH: #1279)
+- Fixed star magnitude limits in Oculars plugin: better handling of auto-computed or manually set limiting magnitudes (GH: #400, #1285)
+- Changed default value for flag "displayed" of satellites
+- Changed limits of properties for orbital lines of satellites (GH: #1148)
+- Changed button labels in Bookmarks tool (GH: #916)
+- Changed trails behaviour: don't reset trails when just adapting thickness (GH: #1030)
+- Changed trails behaviour: disable trails for "observer" planets (GH: #1030)
+- Changed trails behaviour: handle removal of trails with time moving backwards (GH: #1030)
+- Changed trails behaviour: reset trails when time jumps too far (GH: #1030)
+- Changed limits for focal length of eyepices and magnification of binoculars (GH: #1178)
+- Changed upper limit for angular filter of DSO
+- Changed GUI for manage sources of TLE in the Satellites plugin (GH: #738)
+- Changed behaviour: re-enabled scrolling to newly added locations
+- Changed behaviour: disabled button to toggle crosshairs for eyepieces with permanent crosshairs (GH: #1247)
+- Changed upper limit for FOV markers (special + Telrad/Oculars): the limits was increased up to 28 degrees for circular/Telrad FOV and up to 180 degrees for rectangular FOV (GH: #1196)
+- Changed the priority level of drawing for Observability Analysis plugin (GH: #1194)
+- Changed modeling Starlink magnitudes: calculation of approx. visual magnitude for Starlink satellites based on Anthony Mallama's paper
+- Changed text of warning for mismatch of version of DSO catalog: improved an error message for the user
+- Changed behaviour of dialog rendering: disable dialog render cache (GH: #830, #393, #1007)
+- Changed behaviour of polygonal landscapes: get rid of a configuration flag (GH: #1239)
+- Changed limits for allow separation input field (up to 20 degrees) in AstroCalc/Phenomena tool
+- Changed initial time steps for some type of objects in AstroCalc/Phenomena tool
+- Changed selection of celestial bodies behaviour for oppositions in AstroCalc/Phenomena tool
+- Changed behaviour of Telescope Control plugin: re-enabled the option to autoconnect ASCOM-based mounts (GH: #1269, #1243, #1164)
+- Changed behaviour of Oculars plugin: the input box to define the scale factor of arrows was changed to use percentage
+- Changed distance between buttons "Restore defaults" and "Save settings" in the GUI of plugins (GH: #1277)
+- Updated minimum required Qt version to 5.7.0 (GH: #1138)
+- Updated Indian Vedic sky culture: Nakshatras and Rashis as stars, asterisms and constellations. (GH: #930)
+- Updated URL of main website to use HTTPS (GH: #1139)
+- Updated tool to check version of satellites.json file (reducing a number of upgrading the file)
+- Updated code for search stars by designations (code refactoring)
+- Updated HiPS tool: switched to retrieve of HiPS properties from MocServer
+- Updated code: solve a few casting warnings
+- Updated code: sanitize type mismatches
+- Updated code: removed obsolete QSignalMapper
+- Updated GUI of the Satellites plugin
+- Updated list of contributors of Oculars plugin
+- Updated Milky Way texture: deleted Spica's glow
+- Updated translations (GH: #1210, #1211)
+- Updated the technical notes to the Satellites plugin
+- Updated translations of landscapes description
+- Updated translations of sky cultures description
+- Updated 3D scenery: increase brightness of Sterngarten model materials
+- Updated default list of satellites
+- Updated three DSO textures (GH: #1271)
+- Updated GUI for updating data for Meteor showers plugin
+- Updated GUI for updating data for Historical supernovae plugin
+- Updated GUI for updating data for Bright novae plugin
+- Updated GUI for updating data for Pulsars plugin
+- Updated GUI for updating data for Quasars plugin
+- Updated GUI for updating data for Satellites plugin
+- Updated GUI for updating data for Exoplanets plugin
+- Removed the observers from calculations in AstroCalc/Phenomena tool
+- Removed limits for declination of objects in AstroCalc/Phenomena tool (GH: #1162)
+- Removed sort rules from AstroCalc/WUT tool (GH: #1229)
+- Removed unused pixel size in Oculars plugin (GH: #432)
+- Removed unused data and code (code refactoring)
+- Removed orbit_visualisation_period parameter for comets in Solar System Editor plugin
+- Removed "Save changes" button from the GUI of the Satellites plugin
+- Removed the step "remove data from previous installation" from Windows installer
+- Removed outdated documents
+- Removed outdated code
