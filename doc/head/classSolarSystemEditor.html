@@ -155,7 +155,7 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="clas
 <tr class="memdesc:ad0a1d9c73e9a711035d941c432350502"><td class="mdescLeft">&#160;</td><td class="mdescRight">Replace current minor bodies file in the user data directory.  <a href="#ad0a1d9c73e9a711035d941c432350502">More...</a><br /></td></tr>
 <tr class="separator:ad0a1d9c73e9a711035d941c432350502"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae016c67ab9bba4e83917fd35e954fd9f"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSolarSystemEditor.html#ae016c67ab9bba4e83917fd35e954fd9f">addFromSolarSystemConfigurationFile</a> (QString filePath)</td></tr>
-<tr class="memdesc:ae016c67ab9bba4e83917fd35e954fd9f"><td class="mdescLeft">&#160;</td><td class="mdescRight">(new 0.16) Loads all new objects from filePath (an .ini file).  <a href="#ae016c67ab9bba4e83917fd35e954fd9f">More...</a><br /></td></tr>
+<tr class="memdesc:ae016c67ab9bba4e83917fd35e954fd9f"><td class="mdescLeft">&#160;</td><td class="mdescRight">(new 0.16) Loads all new objects from filePath (an .ini file), and updates existing objects Default proposal is ssystem_1000comets.ini in the installation dir.  <a href="#ae016c67ab9bba4e83917fd35e954fd9f">More...</a><br /></td></tr>
 <tr class="separator:ae016c67ab9bba4e83917fd35e954fd9f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aee84b2454aef9940c4f025b2ffd4a4f2"><td class="memItemLeft" align="right" valign="top"><a id="aee84b2454aef9940c4f025b2ffd4a4f2"></a>
 QString&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSolarSystemEditor.html#aee84b2454aef9940c4f025b2ffd4a4f2">getCustomSolarSystemFilePath</a> () const</td></tr>
@@ -250,7 +250,6 @@ Additional Inherited Members</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<p>Default proposal is ssystem_1000comsts.ini in the installation dir. </p>
 
 </div>
 </div>
@@ -288,9 +287,9 @@ Additional Inherited Members</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<p>This function writes directly to the file. QSettings was not used, as:</p><ul>
+<p>XXX Also updates existing objects (by removing and then appending) This function writes directly to the file. QSettings was not used, as:</p><ul>
 <li>Using QSettings with QSettings::IniFormat causes the list in the "color" field (e.g. "1.0, 1.0, 1.0") to be wrapped in double quotation marks (Stellarium requires no quotation marks). (Has been fixed by using StelIniFormat)</li>
-<li>Using QSettings with StelIniFormat causes unaccepptable append times when the file grows (&gt;~40 entries). This most probably happens because StelIniParser uses QMap internally for the entry list. QMap orders its keys (in the case of strings - alphabetically) and it has to find the appropriate place in the ordering for every new key, which takes more and more time as the list grows. (0.16pre: This problem seems to have been solved: I (GZ) have changed this plugin to use StelIniParser, and loading 1000comets takes about 4 seconds. This is very acceptable, and avoids tons of problems with the default QSettings::IniFormat)</li>
+<li>Using QSettings with StelIniFormat causes unacceptable append times when the file grows (&gt;~40 entries). This most probably happens because StelIniParser uses QMap internally for the entry list. QMap orders its keys (in the case of strings - alphabetically) and it has to find the appropriate place in the ordering for every new key, which takes more and more time as the list grows. (0.16pre: This problem seems to have been solved: I (GZ) have changed this plugin to use StelIniParser, and loading 1000comets takes about 4 seconds. This is very acceptable, and avoids tons of problems with the default QSettings::IniFormat)</li>
 </ul>
 <p>Duplicates are removed: If any section in the file matches the "section_name" value of a new entry, it is removed. Invalid entries in the list (that don't contain a value for "section_name" or it is an empty string) are skipped and the processing continues from the next entry.  </p>
 
@@ -636,14 +635,14 @@ false if there was an error </dd></dl>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd>false if the operation has failed completely for some reason. </dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>false if the operation has failed for some reason. </dd></dl>
 
 </div>
 </div>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Sun Oct 4 2020 13:22:03 for Stellarium by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Sat Nov 14 2020 20:19:03 for Stellarium by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.13
 </small></address>

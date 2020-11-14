@@ -84,7 +84,7 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><b>objectDateValid</b> (
 <tr class="separator:a9f42f2e32cd21fb8c043a580b71038d1"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a1449a45845ac1e18b276b195aa84208b"><td class="memItemLeft" align="right" valign="top"><a id="a1449a45845ac1e18b276b195aa84208b"></a>
 double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classKeplerOrbit.html#a1449a45845ac1e18b276b195aa84208b">calculateSiderealPeriod</a> () const</td></tr>
-<tr class="memdesc:a1449a45845ac1e18b276b195aa84208b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Calculate sidereal period in days from semi-major axis and central mass. If SMA&lt;=0 (hyperbolic orbit), return max double. <br /></td></tr>
+<tr class="memdesc:a1449a45845ac1e18b276b195aa84208b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Calculate sidereal period in days from semi-major axis and central mass. If SMA&lt;=0 (hyperbolic orbit), return 0. <br /></td></tr>
 <tr class="separator:a1449a45845ac1e18b276b195aa84208b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pub_methods_classOrbit"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_classOrbit')"><img src="closed.png" alt="-"/>&#160;Public Member Functions inherited from <a class="el" href="classOrbit.html">Orbit</a></td></tr>
 <tr class="memitem:adcb6318c888469097e0e8d33eab2f22f inherit pub_methods_classOrbit"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classOrbit.html#adcb6318c888469097e0e8d33eab2f22f">setParentOrientation</a> (const double parentRotObliquity, const double parentRotAscendingNode, const double parentRotJ2000Longitude)</td></tr>
@@ -139,7 +139,7 @@ double&#160;</td><td class="memItemRight" valign="bottom"><b>rotateToVsop87</b> 
 </div><div class="memdoc">
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">semiMajorAxis</td><td>in AU </td></tr>
+    <tr><td class="paramname">semiMajorAxis</td><td>in AU. If SMA&lt;=0 (hyperbolic orbit), return 0. </td></tr>
     <tr><td class="paramname">centralMass</td><td>in units of Solar masses </td></tr>
   </table>
   </dd>
@@ -195,7 +195,7 @@ double&#160;</td><td class="memItemRight" valign="bottom"><b>rotateToVsop87</b> 
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Sun Oct 4 2020 13:22:03 for Stellarium by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Sat Nov 14 2020 20:19:03 for Stellarium by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.13
 </small></address>
