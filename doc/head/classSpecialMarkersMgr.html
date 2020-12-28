@@ -21,7 +21,7 @@
   <td id="projectlogo"><img alt="Logo" src="stellarium-logo.png"/></td>
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">Stellarium
-   &#160;<span id="projectnumber">HEAD</span>
+   &#160;<span id="projectnumber">0.20.4</span>
    </div>
   </td>
  </tr>
@@ -49,6 +49,11 @@ $(function() {
 <div class="title">SpecialMarkersMgr Class Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
+
+<p>The <a class="el" href="classSpecialMarkersMgr.html" title="The SpecialMarkersMgr controls the drawing of the special markers, such a rectangular FOV marker...">SpecialMarkersMgr</a> controls the drawing of the special markers, such a rectangular FOV marker.  
+</p>
+
+<p><code>#include &lt;SpecialMarkersMgr.hpp&gt;</code></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-slots"></a>
 Public Slots</h2></td></tr>
@@ -129,6 +134,21 @@ double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="cl
 <tr class="memitem:a50a111115f8d9d47ad09ab209af3ac5f"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSpecialMarkersMgr.html#a50a111115f8d9d47ad09ab209af3ac5f">setColorFOVRectangularMarker</a> (const <a class="el" href="classVector3.html">Vec3f</a> &amp;newColor)</td></tr>
 <tr class="memdesc:a50a111115f8d9d47ad09ab209af3ac5f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the color of the rectangular FOV marker.  <a href="#a50a111115f8d9d47ad09ab209af3ac5f">More...</a><br /></td></tr>
 <tr class="separator:a50a111115f8d9d47ad09ab209af3ac5f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae28f4982d6a27aefd4e8337c5ba728a9"><td class="memItemLeft" align="right" valign="top"><a id="ae28f4982d6a27aefd4e8337c5ba728a9"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSpecialMarkersMgr.html#ae28f4982d6a27aefd4e8337c5ba728a9">setFlagCompassMarks</a> (const bool displayed)</td></tr>
+<tr class="memdesc:ae28f4982d6a27aefd4e8337c5ba728a9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Setter for displaying the compass marks. <br /></td></tr>
+<tr class="separator:ae28f4982d6a27aefd4e8337c5ba728a9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aaac20da51dccae95f079e5571c0dd73c"><td class="memItemLeft" align="right" valign="top"><a id="aaac20da51dccae95f079e5571c0dd73c"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSpecialMarkersMgr.html#aaac20da51dccae95f079e5571c0dd73c">getFlagCompassMarks</a> () const</td></tr>
+<tr class="memdesc:aaac20da51dccae95f079e5571c0dd73c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Accessor for displaying compass marks. <br /></td></tr>
+<tr class="separator:aaac20da51dccae95f079e5571c0dd73c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a939b537fc42b9afa20fffd09602c3baa"><td class="memItemLeft" align="right" valign="top"><a id="a939b537fc42b9afa20fffd09602c3baa"></a>
+<a class="el" href="classVector3.html">Vec3f</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSpecialMarkersMgr.html#a939b537fc42b9afa20fffd09602c3baa">getColorCompassMarks</a> () const</td></tr>
+<tr class="memdesc:a939b537fc42b9afa20fffd09602c3baa"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the current color of the compass marks. <br /></td></tr>
+<tr class="separator:a939b537fc42b9afa20fffd09602c3baa"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa9f7dabcfae8a2f65f99fc9242e3a1d4"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSpecialMarkersMgr.html#aa9f7dabcfae8a2f65f99fc9242e3a1d4">setColorCompassMarks</a> (const <a class="el" href="classVector3.html">Vec3f</a> &amp;newColor)</td></tr>
+<tr class="memdesc:aa9f7dabcfae8a2f65f99fc9242e3a1d4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the color of the compass marks.  <a href="#aa9f7dabcfae8a2f65f99fc9242e3a1d4">More...</a><br /></td></tr>
+<tr class="separator:aa9f7dabcfae8a2f65f99fc9242e3a1d4"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="signals"></a>
 Signals</h2></td></tr>
@@ -162,18 +182,25 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>fovRectangularMarkerR
 <tr class="memitem:a74b705dbd52ef720e89dde5a92a354b2"><td class="memItemLeft" align="right" valign="top"><a id="a74b705dbd52ef720e89dde5a92a354b2"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><b>fovRectangularMarkerColorChanged</b> (const <a class="el" href="classVector3.html">Vec3f</a> &amp;newColor) const</td></tr>
 <tr class="separator:a74b705dbd52ef720e89dde5a92a354b2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a78e38a0d927f49b5a6d663ff1e231fd5"><td class="memItemLeft" align="right" valign="top"><a id="a78e38a0d927f49b5a6d663ff1e231fd5"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>compassMarksDisplayedChanged</b> (const bool displayed) const</td></tr>
+<tr class="separator:a78e38a0d927f49b5a6d663ff1e231fd5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3efbd151fc5101ea5c4857a8964bd99f"><td class="memItemLeft" align="right" valign="top"><a id="a3efbd151fc5101ea5c4857a8964bd99f"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>compassMarksColorChanged</b> (const <a class="el" href="classVector3.html">Vec3f</a> &amp;newColor) const</td></tr>
+<tr class="separator:a3efbd151fc5101ea5c4857a8964bd99f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
 <tr class="memitem:a7afc579a4613d655df4f86499a3b8875"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSpecialMarkersMgr.html#a7afc579a4613d655df4f86499a3b8875">init</a> ()</td></tr>
-<tr class="memdesc:a7afc579a4613d655df4f86499a3b8875"><td class="mdescLeft">&#160;</td><td class="mdescRight">Initialize the <a class="el" href="classGridLinesMgr.html" title="The GridLinesMgr controls the drawing of the Azimuthal, Equatorial, Ecliptical and Galactic Grids...">GridLinesMgr</a>.  <a href="#a7afc579a4613d655df4f86499a3b8875">More...</a><br /></td></tr>
+<tr class="memdesc:a7afc579a4613d655df4f86499a3b8875"><td class="mdescLeft">&#160;</td><td class="mdescRight">Initialize the <a class="el" href="classSpecialMarkersMgr.html" title="The SpecialMarkersMgr controls the drawing of the special markers, such a rectangular FOV marker...">SpecialMarkersMgr</a>.  <a href="#a7afc579a4613d655df4f86499a3b8875">More...</a><br /></td></tr>
 <tr class="separator:a7afc579a4613d655df4f86499a3b8875"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a2e439116abfc9297eb46a9c14ca78f00"><td class="memItemLeft" align="right" valign="top"><a id="a2e439116abfc9297eb46a9c14ca78f00"></a>
 virtual QString&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSpecialMarkersMgr.html#a2e439116abfc9297eb46a9c14ca78f00">getModuleID</a> () const</td></tr>
 <tr class="memdesc:a2e439116abfc9297eb46a9c14ca78f00"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the module ID, returns "SpecialMarkersMgr". <br /></td></tr>
 <tr class="separator:a2e439116abfc9297eb46a9c14ca78f00"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a1e493fa1a7fc6ecb3a99131ae47fcc6f"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSpecialMarkersMgr.html#a1e493fa1a7fc6ecb3a99131ae47fcc6f">draw</a> (<a class="el" href="classStelCore.html">StelCore</a> *core)</td></tr>
-<tr class="memdesc:a1e493fa1a7fc6ecb3a99131ae47fcc6f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Draw the grids and great circle lines.  <a href="#a1e493fa1a7fc6ecb3a99131ae47fcc6f">More...</a><br /></td></tr>
+<tr class="memitem:a1e493fa1a7fc6ecb3a99131ae47fcc6f"><td class="memItemLeft" align="right" valign="top"><a id="a1e493fa1a7fc6ecb3a99131ae47fcc6f"></a>
+virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSpecialMarkersMgr.html#a1e493fa1a7fc6ecb3a99131ae47fcc6f">draw</a> (<a class="el" href="classStelCore.html">StelCore</a> *core)</td></tr>
+<tr class="memdesc:a1e493fa1a7fc6ecb3a99131ae47fcc6f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Draw the special markers. <br /></td></tr>
 <tr class="separator:a1e493fa1a7fc6ecb3a99131ae47fcc6f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae590c8ad60016a9d1da8cd6cc4b32ae6"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSpecialMarkersMgr.html#ae590c8ad60016a9d1da8cd6cc4b32ae6">update</a> (double deltaTime)</td></tr>
 <tr class="memdesc:ae590c8ad60016a9d1da8cd6cc4b32ae6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Update time-dependent features.  <a href="#ae590c8ad60016a9d1da8cd6cc4b32ae6">More...</a><br /></td></tr>
@@ -252,6 +279,12 @@ double&#160;</td><td class="memItemRight" valign="bottom"><b>fovRectangularMarke
 <tr class="memitem:a5f934a2db9de1dcf87b9d8504347f0b6"><td class="memItemLeft" align="right" valign="top"><a id="a5f934a2db9de1dcf87b9d8504347f0b6"></a>
 <a class="el" href="classVector3.html">Vec3f</a>&#160;</td><td class="memItemRight" valign="bottom"><b>fovRectangularMarkerColor</b></td></tr>
 <tr class="separator:a5f934a2db9de1dcf87b9d8504347f0b6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a447c68e5a838a0e9a82eabc1fd8dcb55"><td class="memItemLeft" align="right" valign="top"><a id="a447c68e5a838a0e9a82eabc1fd8dcb55"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><b>compassMarksDisplayed</b></td></tr>
+<tr class="separator:a447c68e5a838a0e9a82eabc1fd8dcb55"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a008a216db2c81ce1377358790467ef8e"><td class="memItemLeft" align="right" valign="top"><a id="a008a216db2c81ce1377358790467ef8e"></a>
+<a class="el" href="classVector3.html">Vec3f</a>&#160;</td><td class="memItemRight" valign="bottom"><b>compassMarksColor</b></td></tr>
+<tr class="separator:a008a216db2c81ce1377358790467ef8e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="inherited"></a>
 Additional Inherited Members</h2></td></tr>
@@ -285,35 +318,6 @@ Additional Inherited Members</h2></td></tr>
 <tr class="separator:a19ec6a7bd1d6dc98d6030cadb8956b3c inherit pro_methods_classStelModule"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Member Function Documentation</h2>
-<a id="a1e493fa1a7fc6ecb3a99131ae47fcc6f"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a1e493fa1a7fc6ecb3a99131ae47fcc6f">&#9670;&nbsp;</a></span>draw()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">virtual void SpecialMarkersMgr::draw </td>
-          <td>(</td>
-          <td class="paramtype"><a class="el" href="classStelCore.html">StelCore</a> *&#160;</td>
-          <td class="paramname"><em>core</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">virtual</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-<p>Draws the Equatorial Grids, Ecliptical Grids, Azimuthal Grid, Meridian <a class="el" href="classLine.html" title="A simple line class, identified by a point and a direction vector. ">Line</a>, Equator <a class="el" href="classLine.html" title="A simple line class, identified by a point and a direction vector. ">Line</a>, Ecliptic Lines, Precession Circles, Conjunction-Opposition <a class="el" href="classLine.html" title="A simple line class, identified by a point and a direction vector. ">Line</a>, east-west vertical and colures according to the various flags which control their visibility. </p>
-
-<p>Reimplemented from <a class="el" href="classStelModule.html#a18fde2820af998395aea9e30bb1138b2">StelModule</a>.</p>
-
-</div>
-</div>
 <a id="a7afc579a4613d655df4f86499a3b8875"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a7afc579a4613d655df4f86499a3b8875">&#9670;&nbsp;</a></span>init()</h2>
 
@@ -336,9 +340,41 @@ Additional Inherited Members</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
-<p>This process checks the values in the application settings, and according to the settings there sets the visibility of the Equatorial Grids, Ecliptical Grids, Azimuthal Grid, Meridian <a class="el" href="classLine.html" title="A simple line class, identified by a point and a direction vector. ">Line</a>, Equator <a class="el" href="classLine.html" title="A simple line class, identified by a point and a direction vector. ">Line</a> and Ecliptic Lines. </p>
+<p>This process checks the values in the application settings, and according to the settings there sets the visibility of type of the special markers. </p>
 
 <p>Implements <a class="el" href="classStelModule.html#a32818e53cc8d640f15f84c38c454eab9">StelModule</a>.</p>
+
+</div>
+</div>
+<a id="aa9f7dabcfae8a2f65f99fc9242e3a1d4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa9f7dabcfae8a2f65f99fc9242e3a1d4">&#9670;&nbsp;</a></span>setColorCompassMarks</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void SpecialMarkersMgr::setColorCompassMarks </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classVector3.html">Vec3f</a> &amp;&#160;</td>
+          <td class="paramname"><em>newColor</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">slot</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">newColor</td><td>The color of compass marks. <div class="fragment"><div class="line"><span class="comment">// example of usage in scripts</span></div><div class="line"><a class="code" href="classSpecialMarkersMgr.html" title="The SpecialMarkersMgr controls the drawing of the special markers, such a rectangular FOV marker...">SpecialMarkersMgr</a>.<a class="code" href="classSpecialMarkersMgr.html#aa9f7dabcfae8a2f65f99fc9242e3a1d4" title="Set the color of the compass marks. ">setColorCompassMarks</a>(<a class="code" href="classVector3.html">Vec3f</a>(1.0,0.0,0.0));</div></div><!-- fragment --> </td></tr>
+  </table>
+  </dd>
+</dl>
 
 </div>
 </div>
@@ -367,7 +403,7 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">newColor</td><td>The color of FOV center marker. <div class="fragment"><div class="line"><span class="comment">// example of usage in scripts</span></div><div class="line"><a class="code" href="classGridLinesMgr.html" title="The GridLinesMgr controls the drawing of the Azimuthal, Equatorial, Ecliptical and Galactic Grids...">GridLinesMgr</a>.setColorFOVCenterMarker(<a class="code" href="classVector3.html">Vec3f</a>(1.0,0.0,0.0));</div></div><!-- fragment --> </td></tr>
+    <tr><td class="paramname">newColor</td><td>The color of FOV center marker. <div class="fragment"><div class="line"><span class="comment">// example of usage in scripts</span></div><div class="line"><a class="code" href="classSpecialMarkersMgr.html" title="The SpecialMarkersMgr controls the drawing of the special markers, such a rectangular FOV marker...">SpecialMarkersMgr</a>.<a class="code" href="classSpecialMarkersMgr.html#af3dc78ad122bb9b59c40c9d42127da29" title="Set the color of the FOV center marker. ">setColorFOVCenterMarker</a>(<a class="code" href="classVector3.html">Vec3f</a>(1.0,0.0,0.0));</div></div><!-- fragment --> </td></tr>
   </table>
   </dd>
 </dl>
@@ -399,7 +435,7 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">newColor</td><td>The color of circular FOV marker. <div class="fragment"><div class="line"><span class="comment">// example of usage in scripts</span></div><div class="line"><a class="code" href="classGridLinesMgr.html" title="The GridLinesMgr controls the drawing of the Azimuthal, Equatorial, Ecliptical and Galactic Grids...">GridLinesMgr</a>.setColorFOVCircularMarker(<a class="code" href="classVector3.html">Vec3f</a>(1.0,0.0,0.0));</div></div><!-- fragment --> </td></tr>
+    <tr><td class="paramname">newColor</td><td>The color of circular FOV marker. <div class="fragment"><div class="line"><span class="comment">// example of usage in scripts</span></div><div class="line"><a class="code" href="classSpecialMarkersMgr.html" title="The SpecialMarkersMgr controls the drawing of the special markers, such a rectangular FOV marker...">SpecialMarkersMgr</a>.<a class="code" href="classSpecialMarkersMgr.html#ac14210414d5f7ce8ecc6fea6d6832082" title="Set the color of the circular FOV marker. ">setColorFOVCircularMarker</a>(<a class="code" href="classVector3.html">Vec3f</a>(1.0,0.0,0.0));</div></div><!-- fragment --> </td></tr>
   </table>
   </dd>
 </dl>
@@ -431,7 +467,7 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">newColor</td><td>The color of rectangular FOV marker. <div class="fragment"><div class="line"><span class="comment">// example of usage in scripts</span></div><div class="line"><a class="code" href="classGridLinesMgr.html" title="The GridLinesMgr controls the drawing of the Azimuthal, Equatorial, Ecliptical and Galactic Grids...">GridLinesMgr</a>.setColorFOVRectangularMarker(<a class="code" href="classVector3.html">Vec3f</a>(1.0,0.0,0.0));</div></div><!-- fragment --> </td></tr>
+    <tr><td class="paramname">newColor</td><td>The color of rectangular FOV marker. <div class="fragment"><div class="line"><span class="comment">// example of usage in scripts</span></div><div class="line"><a class="code" href="classSpecialMarkersMgr.html" title="The SpecialMarkersMgr controls the drawing of the special markers, such a rectangular FOV marker...">SpecialMarkersMgr</a>.<a class="code" href="classSpecialMarkersMgr.html#a50a111115f8d9d47ad09ab209af3ac5f" title="Set the color of the rectangular FOV marker. ">setColorFOVRectangularMarker</a>(<a class="code" href="classVector3.html">Vec3f</a>(1.0,0.0,0.0));</div></div><!-- fragment --> </td></tr>
   </table>
   </dd>
 </dl>
@@ -461,7 +497,7 @@ Additional Inherited Members</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
-<p>Used to control fading when turning on and off the grid lines and great circles. </p>
+<p>Used to control fading when turning on and off the special markers. </p>
 
 <p>Implements <a class="el" href="classStelModule.html#a029f960090bf001e4e9eff0d95c4f706">StelModule</a>.</p>
 
@@ -470,7 +506,7 @@ Additional Inherited Members</h2></td></tr>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Sat Nov 14 2020 20:19:03 for Stellarium by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Mon Dec 28 2020 18:00:41 for Stellarium by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.13
 </small></address>

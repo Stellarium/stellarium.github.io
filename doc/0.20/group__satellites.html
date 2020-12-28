@@ -21,7 +21,7 @@
   <td id="projectlogo"><img alt="Logo" src="stellarium-logo.png"/></td>
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">Stellarium
-   &#160;<span id="projectnumber">0.20.3</span>
+   &#160;<span id="projectnumber">0.20.4</span>
    </div>
   </td>
  </tr>
@@ -158,19 +158,19 @@ double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="gr
 <tr class="separator:ga45b077912cf5f0e781dc43647d60c80b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<p>The Satellites plugin displays the positions of artificial satellites in Earth orbit based on a catalogue of orbital data.</p>
-<p>The <a class="el" href="group__satellites.html#classSatellites" title="Main class of the Satellites plugin. ">Satellites</a> class is the main class of the plug-in. It manages a collection of <a class="el" href="group__satellites.html#classSatellite" title="A representation of a satellite in Earth orbit. ">Satellite</a> objects and takes care of loading, saving and updating the satellite catalogue. It allows automatic updates from online sources and manages a list of update file URLs.</p>
+<p>The Satellites plugin displays the positions of artificial satellites in Earth orbit based on a catalog of orbital data.</p>
+<p>The <a class="el" href="group__satellites.html#classSatellites" title="Main class of the Satellites plugin. ">Satellites</a> class is the main class of the plug-in. It manages a collection of <a class="el" href="group__satellites.html#classSatellite" title="A representation of a satellite in Earth orbit. ">Satellite</a> objects and takes care of loading, saving and updating the satellite catalog. It allows automatic updates from online sources and manages a list of update file URLs.</p>
 <p>To calculate satellite positions, the plugin uses an implementation of the SGP4/SDP4 algorithms (J.L. Canales' gsat library).</p>
 <p><b><a class="el" href="group__satellites.html#classSatellite" title="A representation of a satellite in Earth orbit. ">Satellite</a> Properties</b></p>
 <p><em>Name and identifiers</em></p>
 <p>Each satellite has a name. It's displayed as a label of the satellite hint and in the list of satellites. Names are not unique though, so they are used only for presentation purposes.</p>
-<p>In the <b><a class="el" href="group__satellites.html#classSatellite" title="A representation of a satellite in Earth orbit. ">Satellite</a> Catalogue</b> satellites are uniquely identified by their NORAD number, which is encoded in TLEs.</p>
+<p>In the <b><a class="el" href="group__satellites.html#classSatellite" title="A representation of a satellite in Earth orbit. ">Satellite</a> Catalog</b> satellites are uniquely identified by their NORAD number, which is encoded in TLEs.</p>
 <p><em>Grouping</em></p>
 <p>A satellite can belong to one or more groups such as "amateur", "geostationary" or "navigation". They have no other function but to help the user organize the satellite collection.</p>
-<p>Group names are arbitrary strings defined in the <b><a class="el" href="group__satellites.html#classSatellite" title="A representation of a satellite in Earth orbit. ">Satellite</a> Catalogue</b> for each satellite and are more similar to the concept of "tags" than a hierarchical grouping. A satellite may not belong to any group at all.</p>
-<p>By convention, group names are in lowercase. The GUI translates some of the groups used in the default catalogue.</p>
-<p><b><a class="el" href="group__satellites.html#classSatellite" title="A representation of a satellite in Earth orbit. ">Satellite</a> Catalogue</b></p>
-<p>The satellite catalogue is stored on the disk in <a href="http://www.json.org/">JSON</a> format, in a file named "satellites.json". A default copy is embedded in the plug-in at compile time. A working copy is kept in the user data directory.</p>
+<p>Group names are arbitrary strings defined in the <b><a class="el" href="group__satellites.html#classSatellite" title="A representation of a satellite in Earth orbit. ">Satellite</a> Catalog</b> for each satellite and are more similar to the concept of "tags" than a hierarchical grouping. A satellite may not belong to any group at all.</p>
+<p>By convention, group names are in lowercase. The GUI translates some of the groups used in the default catalog.</p>
+<p><b><a class="el" href="group__satellites.html#classSatellite" title="A representation of a satellite in Earth orbit. ">Satellite</a> Catalog</b></p>
+<p>The satellite catalog is stored on the disk in <a href="http://www.json.org/">JSON</a> format, in a file named "satellites.json". A default copy is embedded in the plug-in at compile time. A working copy is kept in the user data directory.</p>
 <p><b>Configuration</b></p>
 <p>The plug-ins' configuration data is stored in Stellarium's main configuration file. </p>
 <hr/><h2 class="groupheader">Data Structure Documentation</h2>
@@ -685,10 +685,10 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>retranslate</b> ()</t
 virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classStelDialog.html#ada663a86b43a0d0c161eb7ba638c093a">setVisible</a> (bool)</td></tr>
 <tr class="memdesc:ada663a86b43a0d0c161eb7ba638c093a inherit pub_slots_classStelDialog"><td class="mdescLeft">&#160;</td><td class="mdescRight">On the first call with "true" populates the window contents. <br /></td></tr>
 <tr class="separator:ada663a86b43a0d0c161eb7ba638c093a inherit pub_slots_classStelDialog"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a1e94b05a3f7a37ae19825ade63707ba2 inherit pub_slots_classStelDialog"><td class="memItemLeft" align="right" valign="top"><a id="a1e94b05a3f7a37ae19825ade63707ba2"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classStelDialog.html#a1e94b05a3f7a37ae19825ade63707ba2">close</a> ()</td></tr>
-<tr class="memdesc:a1e94b05a3f7a37ae19825ade63707ba2 inherit pub_slots_classStelDialog"><td class="mdescLeft">&#160;</td><td class="mdescRight">Closes the window (the window widget is not deleted, just not visible). <br /></td></tr>
-<tr class="separator:a1e94b05a3f7a37ae19825ade63707ba2 inherit pub_slots_classStelDialog"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a31d47e5062a7b2a5ee54cd8e5f564440 inherit pub_slots_classStelDialog"><td class="memItemLeft" align="right" valign="top"><a id="a31d47e5062a7b2a5ee54cd8e5f564440"></a>
+virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classStelDialog.html#a31d47e5062a7b2a5ee54cd8e5f564440">close</a> ()</td></tr>
+<tr class="memdesc:a31d47e5062a7b2a5ee54cd8e5f564440 inherit pub_slots_classStelDialog"><td class="mdescLeft">&#160;</td><td class="mdescRight">Closes the window (the window widget is not deleted, just not visible). <br /></td></tr>
+<tr class="separator:a31d47e5062a7b2a5ee54cd8e5f564440 inherit pub_slots_classStelDialog"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab153b9a212384d5722c2964c865a380f inherit pub_slots_classStelDialog"><td class="memItemLeft" align="right" valign="top"><a id="ab153b9a212384d5722c2964c865a380f"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classStelDialog.html#ab153b9a212384d5722c2964c865a380f">handleMovedTo</a> (QPoint newPos)</td></tr>
 <tr class="memdesc:ab153b9a212384d5722c2964c865a380f inherit pub_slots_classStelDialog"><td class="mdescLeft">&#160;</td><td class="mdescRight">Adds dialog location to config.ini; should be connected in <a class="el" href="classStelDialog.html#a0a6823b263934eb74b013ad0738235bd" title="Initialize the dialog widgets and connect the signals/slots. ">createDialogContent()</a> <br /></td></tr>
@@ -722,6 +722,10 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>visibleChanged</b> (b
 <tr class="memitem:a99197055c58facca70bf297da2e0a4c0 inherit pub_methods_classStelDialog"><td class="memItemLeft" align="right" valign="top"><a id="a99197055c58facca70bf297da2e0a4c0"></a>
 &#160;</td><td class="memItemRight" valign="bottom"><b>StelDialog</b> (QString <a class="el" href="classStelDialog.html#a8d198d65468e9423a8ddff818bfd8949">dialogName</a>=&quot;Default&quot;, QObject *parent=Q_NULLPTR)</td></tr>
 <tr class="separator:a99197055c58facca70bf297da2e0a4c0 inherit pub_methods_classStelDialog"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5850bff921ea770a9de0bdc13b7d6f61 inherit pub_methods_classStelDialog"><td class="memItemLeft" align="right" valign="top"><a id="a5850bff921ea770a9de0bdc13b7d6f61"></a>
+virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classStelDialog.html#a5850bff921ea770a9de0bdc13b7d6f61">styleChanged</a> ()</td></tr>
+<tr class="memdesc:a5850bff921ea770a9de0bdc13b7d6f61 inherit pub_methods_classStelDialog"><td class="mdescLeft">&#160;</td><td class="mdescRight">Notify that the application style changed. <br /></td></tr>
+<tr class="separator:a5850bff921ea770a9de0bdc13b7d6f61 inherit pub_methods_classStelDialog"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a79afd80975c2c45f60435b319e6b100a inherit pub_methods_classStelDialog"><td class="memItemLeft" align="right" valign="top"><a id="a79afd80975c2c45f60435b319e6b100a"></a>
 bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classStelDialog.html#a79afd80975c2c45f60435b319e6b100a">visible</a> () const</td></tr>
 <tr class="memdesc:a79afd80975c2c45f60435b319e6b100a inherit pub_methods_classStelDialog"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns true if the dialog contents have been constructed and are currently shown. <br /></td></tr>
@@ -824,10 +828,10 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>setVisible</b> (bool 
 virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classStelDialog.html#ada663a86b43a0d0c161eb7ba638c093a">setVisible</a> (bool)</td></tr>
 <tr class="memdesc:ada663a86b43a0d0c161eb7ba638c093a inherit pub_slots_classStelDialog"><td class="mdescLeft">&#160;</td><td class="mdescRight">On the first call with "true" populates the window contents. <br /></td></tr>
 <tr class="separator:ada663a86b43a0d0c161eb7ba638c093a inherit pub_slots_classStelDialog"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a1e94b05a3f7a37ae19825ade63707ba2 inherit pub_slots_classStelDialog"><td class="memItemLeft" align="right" valign="top"><a id="a1e94b05a3f7a37ae19825ade63707ba2"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classStelDialog.html#a1e94b05a3f7a37ae19825ade63707ba2">close</a> ()</td></tr>
-<tr class="memdesc:a1e94b05a3f7a37ae19825ade63707ba2 inherit pub_slots_classStelDialog"><td class="mdescLeft">&#160;</td><td class="mdescRight">Closes the window (the window widget is not deleted, just not visible). <br /></td></tr>
-<tr class="separator:a1e94b05a3f7a37ae19825ade63707ba2 inherit pub_slots_classStelDialog"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a31d47e5062a7b2a5ee54cd8e5f564440 inherit pub_slots_classStelDialog"><td class="memItemLeft" align="right" valign="top"><a id="a31d47e5062a7b2a5ee54cd8e5f564440"></a>
+virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classStelDialog.html#a31d47e5062a7b2a5ee54cd8e5f564440">close</a> ()</td></tr>
+<tr class="memdesc:a31d47e5062a7b2a5ee54cd8e5f564440 inherit pub_slots_classStelDialog"><td class="mdescLeft">&#160;</td><td class="mdescRight">Closes the window (the window widget is not deleted, just not visible). <br /></td></tr>
+<tr class="separator:a31d47e5062a7b2a5ee54cd8e5f564440 inherit pub_slots_classStelDialog"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab153b9a212384d5722c2964c865a380f inherit pub_slots_classStelDialog"><td class="memItemLeft" align="right" valign="top"><a id="ab153b9a212384d5722c2964c865a380f"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classStelDialog.html#ab153b9a212384d5722c2964c865a380f">handleMovedTo</a> (QPoint newPos)</td></tr>
 <tr class="memdesc:ab153b9a212384d5722c2964c865a380f inherit pub_slots_classStelDialog"><td class="mdescLeft">&#160;</td><td class="mdescRight">Adds dialog location to config.ini; should be connected in <a class="el" href="classStelDialog.html#a0a6823b263934eb74b013ad0738235bd" title="Initialize the dialog widgets and connect the signals/slots. ">createDialogContent()</a> <br /></td></tr>
@@ -853,6 +857,10 @@ Additional Inherited Members</h2></td></tr>
 <tr class="memitem:a99197055c58facca70bf297da2e0a4c0 inherit pub_methods_classStelDialog"><td class="memItemLeft" align="right" valign="top"><a id="a99197055c58facca70bf297da2e0a4c0"></a>
 &#160;</td><td class="memItemRight" valign="bottom"><b>StelDialog</b> (QString <a class="el" href="classStelDialog.html#a8d198d65468e9423a8ddff818bfd8949">dialogName</a>=&quot;Default&quot;, QObject *parent=Q_NULLPTR)</td></tr>
 <tr class="separator:a99197055c58facca70bf297da2e0a4c0 inherit pub_methods_classStelDialog"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5850bff921ea770a9de0bdc13b7d6f61 inherit pub_methods_classStelDialog"><td class="memItemLeft" align="right" valign="top"><a id="a5850bff921ea770a9de0bdc13b7d6f61"></a>
+virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classStelDialog.html#a5850bff921ea770a9de0bdc13b7d6f61">styleChanged</a> ()</td></tr>
+<tr class="memdesc:a5850bff921ea770a9de0bdc13b7d6f61 inherit pub_methods_classStelDialog"><td class="mdescLeft">&#160;</td><td class="mdescRight">Notify that the application style changed. <br /></td></tr>
+<tr class="separator:a5850bff921ea770a9de0bdc13b7d6f61 inherit pub_methods_classStelDialog"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a79afd80975c2c45f60435b319e6b100a inherit pub_methods_classStelDialog"><td class="memItemLeft" align="right" valign="top"><a id="a79afd80975c2c45f60435b319e6b100a"></a>
 bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classStelDialog.html#a79afd80975c2c45f60435b319e6b100a">visible</a> () const</td></tr>
 <tr class="memdesc:a79afd80975c2c45f60435b319e6b100a inherit pub_methods_classStelDialog"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns true if the dialog contents have been constructed and are currently shown. <br /></td></tr>
@@ -1001,7 +1009,7 @@ first</td>
 <td class="fieldname">
 id</td>
 <td class="fielddoc">
-NORAD catalogue number, as extracted from the TLE set. </td></tr>
+NORAD catalog number, as extracted from the TLE set. </td></tr>
 <tr><td class="fieldtype">
 <a id="a90fe78f06ae5ce8f46563ee8e04369a0"></a>QString</td>
 <td class="fieldname">
@@ -2270,6 +2278,9 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>transitSatelliteColor
 <tr class="memitem:ad55a399effe79f15064cec717be18270"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__satellites.html#ad55a399effe79f15064cec717be18270">tleUpdateComplete</a> (int updated, int total, int added, int missing)</td></tr>
 <tr class="memdesc:ad55a399effe79f15064cec717be18270"><td class="mdescLeft">&#160;</td><td class="mdescRight">Emitted after an update has run.  <a href="#ad55a399effe79f15064cec717be18270">More...</a><br /></td></tr>
 <tr class="separator:ad55a399effe79f15064cec717be18270"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a72422080e012908ea546b1436ec4270a"><td class="memItemLeft" align="right" valign="top"><a id="a72422080e012908ea546b1436ec4270a"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>satGroupVisibleChanged</b> ()</td></tr>
+<tr class="separator:a72422080e012908ea546b1436ec4270a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr><td colspan="2"><h3>Public Member Functions</h3></td></tr>
 <tr class="memitem:a521c33867fa36e074708ef5948bfeaad"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__satellites.html#a521c33867fa36e074708ef5948bfeaad">init</a> ()</td></tr>
 <tr class="memdesc:a521c33867fa36e074708ef5948bfeaad"><td class="mdescLeft">&#160;</td><td class="mdescRight">Initialize itself.  <a href="#a521c33867fa36e074708ef5948bfeaad">More...</a><br /></td></tr>
@@ -3862,7 +3873,7 @@ Additional Inherited Members</h2></td></tr>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Sun Sep 27 2020 15:10:40 for Stellarium by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Mon Dec 28 2020 18:00:41 for Stellarium by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.13
 </small></address>

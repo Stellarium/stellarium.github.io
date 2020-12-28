@@ -21,7 +21,7 @@
   <td id="projectlogo"><img alt="Logo" src="stellarium-logo.png"/></td>
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">Stellarium
-   &#160;<span id="projectnumber">HEAD</span>
+   &#160;<span id="projectnumber">0.20.4</span>
    </div>
   </td>
  </tr>
@@ -311,6 +311,9 @@ $(function() {
 : <a class="el" href="classStelMainScriptAPI.html#a9b943774d7b36dad83025b195898d524">StelMainScriptAPI</a>
 , <a class="el" href="classStelSkyDrawer.html#aee4cc450b20c1eb1a0fdcb7101921a03">StelSkyDrawer</a>
 </li>
+<li>getBottomBarHeight()
+: <a class="el" href="classSkyGui.html#a7c0f83704a4e1b7ff113ef5911f1c7d1">SkyGui</a>
+</li>
 <li>getBoundariesColor()
 : <a class="el" href="classConstellationMgr.html#a4dec7307578843116c9f6e6d23efd9cd">ConstellationMgr</a>
 </li>
@@ -364,11 +367,14 @@ $(function() {
 <li>getCacheSize()
 : <a class="el" href="classLandscapeMgr.html#a55b3cb4975a356b636f5a94243023638">LandscapeMgr</a>
 </li>
+<li>getCal()
+: <a class="el" href="classCalendars.html#a8100e879727447e5fa941e1807e5f6b4">Calendars</a>
+</li>
 <li>getCallOrder()
 : <a class="el" href="group__angleMeasure.html#aac4fdcd7242e06ab41a9672068e83998">AngleMeasure</a>
 , <a class="el" href="classArchaeoLines.html#a496d79d03c301c78ea67b38e1423c2e9">ArchaeoLines</a>
 , <a class="el" href="classAsterismMgr.html#ae5c743b31deb5b3ee6ce16c22140b308">AsterismMgr</a>
-, <a class="el" href="group__compassMarks.html#ae17a1b8f22626178c398314dafdd9e6e">CompassMarks</a>
+, <a class="el" href="classCalendars.html#ab4367004923dc8316c9c6fb31d22a40e">Calendars</a>
 , <a class="el" href="classConstellationMgr.html#a74506b4c94c481de276e810d74e749cc">ConstellationMgr</a>
 , <a class="el" href="classCustomObjectMgr.html#a21bed1bbdecec7de298a893222cd656e">CustomObjectMgr</a>
 , <a class="el" href="group__equationOfTime.html#a6dfa59d0f36493af8a0473d0ea1fe955">EquationOfTime</a>
@@ -490,6 +496,9 @@ $(function() {
 <li>getColorColureLines()
 : <a class="el" href="classGridLinesMgr.html#ac8456582adeac08933d2cbd24fea148e">GridLinesMgr</a>
 </li>
+<li>getColorCompassMarks()
+: <a class="el" href="classSpecialMarkersMgr.html#a939b537fc42b9afa20fffd09602c3baa">SpecialMarkersMgr</a>
+</li>
 <li>getColorCurrentVerticalLine()
 : <a class="el" href="classGridLinesMgr.html#a368cb1145b43f5b2bf367e88256e8f37">GridLinesMgr</a>
 </li>
@@ -537,6 +546,9 @@ $(function() {
 </li>
 <li>getColorFOVRectangularMarker()
 : <a class="el" href="classSpecialMarkersMgr.html#a891763cac20790e06568e229ae36c07b">SpecialMarkersMgr</a>
+</li>
+<li>getColorGalacticCenter()
+: <a class="el" href="classGridLinesMgr.html#ab56bc0737db64f829f0472d0d156d387">GridLinesMgr</a>
 </li>
 <li>getColorGalacticEquatorLine()
 : <a class="el" href="classGridLinesMgr.html#a0166f6c68a86b20e0097f7248811141c">GridLinesMgr</a>
@@ -600,9 +612,6 @@ $(function() {
 </li>
 <li>getCommonName()
 : <a class="el" href="classStarMgr.html#a046c308994bde1549930c9928cd29c2e">StarMgr</a>
-</li>
-<li>getCompassMarks()
-: <a class="el" href="group__compassMarks.html#a0ed2331a7618f6640c1d24783bbc6c6a">CompassMarks</a>
 </li>
 <li>getConnectedClientsNames()
 : <a class="el" href="group__telescopeControl.html#a33dc51812380871180a973f33df68ef2">TelescopeControl</a>
@@ -840,10 +849,30 @@ $(function() {
 , <a class="el" href="classStelSkyPolygon.html#ac5a614d74d5bfb469bd46bc6d1a62fbd">StelSkyPolygon</a>
 </li>
 <li>getDate()
-: <a class="el" href="classStelMainScriptAPI.html#a151cb4f959256cd6bf4de5fd0d709462">StelMainScriptAPI</a>
+: <a class="el" href="classCalendar.html#adb5113ad188c7977cb4f1f1b67308072">Calendar</a>
+, <a class="el" href="classStelMainScriptAPI.html#a151cb4f959256cd6bf4de5fd0d709462">StelMainScriptAPI</a>
 </li>
 <li>getDateFormatStr()
 : <a class="el" href="classStelLocaleMgr.html#a21aaeafe852632e67705c1764ee5f664">StelLocaleMgr</a>
+</li>
+<li>getDateStrings()
+: <a class="el" href="classArmenianCalendar.html#a1350a4aee2c8312627a6dc948ad58727">ArmenianCalendar</a>
+, <a class="el" href="classAztecTonalpohualliCalendar.html#a68a743f78cb7c020d76b28c904975202">AztecTonalpohualliCalendar</a>
+, <a class="el" href="classAztecXihuitlCalendar.html#ad59120d49c71ce16c007c43ecff45bff">AztecXihuitlCalendar</a>
+, <a class="el" href="classBalinesePawukonCalendar.html#a2be1c8747cd7de8d2c962efa46b74cf1">BalinesePawukonCalendar</a>
+, <a class="el" href="classCalendar.html#a460bfce2fb23a9fea183cbbc3880c758">Calendar</a>
+, <a class="el" href="classCopticCalendar.html#a689db462d0a69ba051eb6e76b39b96cc">CopticCalendar</a>
+, <a class="el" href="classEgyptianCalendar.html#a11a9c6881e94ad9aad0109459af9ab91">EgyptianCalendar</a>
+, <a class="el" href="classEthiopicCalendar.html#a23b6e6afc3b6558c970e21e8700f0b0d">EthiopicCalendar</a>
+, <a class="el" href="classGregorianCalendar.html#a9e521894cff92429528aae19aa6360ca">GregorianCalendar</a>
+, <a class="el" href="classIcelandicCalendar.html#aed22618f88de13f0c6321fb58c27f944">IcelandicCalendar</a>
+, <a class="el" href="classJulianCalendar.html#a5c0ae4d6b0de2e0c8109ef1f3f5ad16e">JulianCalendar</a>
+, <a class="el" href="classMayaHaabCalendar.html#a8840138e29f73895534711050b6aab86">MayaHaabCalendar</a>
+, <a class="el" href="classMayaLongCountCalendar.html#a08c55587e39caa672b12cdabaac26983">MayaLongCountCalendar</a>
+, <a class="el" href="classMayaTzolkinCalendar.html#afc6323491ad91d606426799517080222">MayaTzolkinCalendar</a>
+, <a class="el" href="classOlympicCalendar.html#ad2daaf25e6fe4a0d2e271e4402b1c6bc">OlympicCalendar</a>
+, <a class="el" href="classRomanCalendar.html#ab26dc7885e11374e2cf3431d2409a15c">RomanCalendar</a>
+, <a class="el" href="classZoroastrianCalendar.html#ae74998d7695987ab2123dae009967a16">ZoroastrianCalendar</a>
 </li>
 <li>getDaylightInfoColor()
 : <a class="el" href="classStelApp.html#aa53f83b7686a806227b74e2a7ed008e5">StelApp</a>
@@ -1101,7 +1130,7 @@ $(function() {
 <li>getExtensionList()
 : <a class="el" href="classAngleMeasureStelPluginInterface.html#aeea83fe2ee5ff66e9aee6319a4b1a9ed">AngleMeasureStelPluginInterface</a>
 , <a class="el" href="classArchaeoLinesStelPluginInterface.html#a60642eda2b0d26648139d754d7faccb3">ArchaeoLinesStelPluginInterface</a>
-, <a class="el" href="classCompassMarksStelPluginInterface.html#a9908ded5b101be3c61d18ec6b5042399">CompassMarksStelPluginInterface</a>
+, <a class="el" href="classCalendarsStelPluginInterface.html#a932ef98aa62c9888a4b0d065f72a480b">CalendarsStelPluginInterface</a>
 , <a class="el" href="classEquationOfTimeStelPluginInterface.html#abe3372b0b1d0a0fc950633a21cd845b1">EquationOfTimeStelPluginInterface</a>
 , <a class="el" href="classExoplanetsStelPluginInterface.html#af6a6d613afdd9fa32e350e9c4bb4f32c">ExoplanetsStelPluginInterface</a>
 , <a class="el" href="classHelloStelModuleStelPluginInterface.html#a36c9b337fe0d9a5e377e01eb5fe2487d">HelloStelModuleStelPluginInterface</a>
@@ -1202,6 +1231,9 @@ $(function() {
 </li>
 <li>getFlagColureParts()
 : <a class="el" href="classGridLinesMgr.html#af12dd206098af2b2c5d4cd8911fac773">GridLinesMgr</a>
+</li>
+<li>getFlagCompassMarks()
+: <a class="el" href="classSpecialMarkersMgr.html#aaac20da51dccae95f079e5571c0dd73c">SpecialMarkersMgr</a>
 </li>
 <li>getFlagConstellationPick()
 : <a class="el" href="classConstellationMgr.html#afb681e72c380be9513da34ac8e3a52ea">ConstellationMgr</a>
@@ -1319,6 +1351,9 @@ $(function() {
 </li>
 <li>getFlagFOVRectangularMarker()
 : <a class="el" href="classSpecialMarkersMgr.html#a081d33b811bf39f9dcc3cbe2a61ffaf0">SpecialMarkersMgr</a>
+</li>
+<li>getFlagGalacticCenter()
+: <a class="el" href="classGridLinesMgr.html#ae3070b7cb3c000cbecbd4dbbc073f15c">GridLinesMgr</a>
 </li>
 <li>getFlagGalacticEquatorLabeled()
 : <a class="el" href="classGridLinesMgr.html#a4c05103a655d513daa5c60c8c68be064">GridLinesMgr</a>
@@ -1529,6 +1564,12 @@ $(function() {
 <li>getFlagShowBookmarksButton()
 : <a class="el" href="classStelGui.html#a5a55e11b29ceb4f15454fa41c32c2762">StelGui</a>
 </li>
+<li>getFlagShowCardinalButton()
+: <a class="el" href="classStelGui.html#a2b4520ffc117e4f39d95cbc981f4afce">StelGui</a>
+</li>
+<li>getFlagShowCompassButton()
+: <a class="el" href="classStelGui.html#a7521f161a17a8f5f7cfc3ee45ec2acbd">StelGui</a>
+</li>
 <li>getFlagShowConstellationBoundariesButton()
 : <a class="el" href="classStelGui.html#abd9efb6446108bd0e6ee127d3ed7e41e">StelGui</a>
 </li>
@@ -1715,6 +1756,30 @@ $(function() {
 , <a class="el" href="group__meteorShowers.html#a4a655accaf23be81109a63ea0006caea">MeteorShowersMgr</a>
 , <a class="el" href="group__observability.html#a171f027ffd8a05158d10e6bb0647a7cd">Observability</a>
 , <a class="el" href="group__pointerCoordinates.html#a883d2f13439be3ea42bc39e96859440f">PointerCoordinates</a>
+</li>
+<li>getFormattedDateString()
+: <a class="el" href="classArmenianCalendar.html#adcdc071f6c7a584866e529ce791c7331">ArmenianCalendar</a>
+, <a class="el" href="classAztecXihuitlCalendar.html#ae9fbd8f10b90bdf61aec727a6073895c">AztecXihuitlCalendar</a>
+, <a class="el" href="classBalinesePawukonCalendar.html#ae15224a8e5e832d85c703a8c6e736241">BalinesePawukonCalendar</a>
+, <a class="el" href="classCalendar.html#a548a4fb37a2151647de52523f54b9e27">Calendar</a>
+, <a class="el" href="classCopticCalendar.html#a44abe336f8c2f0c3c66511ea962123e6">CopticCalendar</a>
+, <a class="el" href="classEgyptianCalendar.html#a418646d4b0282fdc371c232a816c4489">EgyptianCalendar</a>
+, <a class="el" href="classEthiopicCalendar.html#a7d30446201fe42df0445c64ca2b132a6">EthiopicCalendar</a>
+, <a class="el" href="classGregorianCalendar.html#ab6e2889fea1dff8cb47cd5d0167b94be">GregorianCalendar</a>
+, <a class="el" href="classIcelandicCalendar.html#ae126cb89ea331379dcbb906c61f29f1b">IcelandicCalendar</a>
+, <a class="el" href="classISOCalendar.html#a379e3b900ef1dc137d0a0a2c4364c6dd">ISOCalendar</a>
+, <a class="el" href="classJulianCalendar.html#a84cab39d419187c1ec29b5a0860f24d0">JulianCalendar</a>
+, <a class="el" href="classMayaHaabCalendar.html#a380474f7a0d4ecb283fa572fbbe41d1a">MayaHaabCalendar</a>
+, <a class="el" href="classMayaLongCountCalendar.html#ac2d5b4fc33e15013b8895cdfb8e94271">MayaLongCountCalendar</a>
+, <a class="el" href="classOlympicCalendar.html#a04fcee1b72df96acf1254892288718db">OlympicCalendar</a>
+, <a class="el" href="classRomanCalendar.html#ae7edeef0e614f5d58fdebfce7d4f9ac8">RomanCalendar</a>
+, <a class="el" href="classZoroastrianCalendar.html#a6ecec47471ad56121f67ec3f77599c54">ZoroastrianCalendar</a>
+</li>
+<li>getFormattedDateString1to5()
+: <a class="el" href="classBalinesePawukonCalendar.html#a5dab12dbeca9952c8f75729d8c18900a">BalinesePawukonCalendar</a>
+</li>
+<li>getFormattedDateString6to10()
+: <a class="el" href="classBalinesePawukonCalendar.html#a599bc41b3932b05ff2645756c767b32d">BalinesePawukonCalendar</a>
 </li>
 <li>getFov()
 : <a class="el" href="classStelProjector.html#a35f49b5a14df48aa992ff024150ddddb">StelProjector</a>
@@ -2097,7 +2162,8 @@ $(function() {
 : <a class="el" href="classStelCore.html#abc025534b6d4b117d725e58b9e78aaa3">StelCore</a>
 </li>
 <li>getJD()
-: <a class="el" href="classStelCore.html#ad805d8f18446e8ce9a79c2cbf0c7f466">StelCore</a>
+: <a class="el" href="classCalendar.html#ad76760bc68bf9f01f8113968521ee620">Calendar</a>
+, <a class="el" href="classStelCore.html#ad805d8f18446e8ce9a79c2cbf0c7f466">StelCore</a>
 </li>
 <li>getJDay()
 : <a class="el" href="classStelMainScriptAPI.html#a6876ec58b50c518473a3d21421f5e3c5">StelMainScriptAPI</a>
@@ -2166,6 +2232,9 @@ $(function() {
 <li>getLayerDescriptionHtml()
 : <a class="el" href="classStelSkyImageTile.html#ae6ae01ef761a75c74c03e7a35a9f446b">StelSkyImageTile</a>
 , <a class="el" href="classStelSkyLayer.html#a04ea18e7941970e47364f33ac5184873">StelSkyLayer</a>
+</li>
+<li>getLeftBarWidth()
+: <a class="el" href="classSkyGui.html#ad5b59d76c628416502c95a95d0a09e3e">SkyGui</a>
 </li>
 <li>getLevel()
 : <a class="el" href="classMultiLevelJsonBase.html#a36e49ddfdea16e14c6ec423997ea0e37">MultiLevelJsonBase</a>
@@ -2434,7 +2503,7 @@ $(function() {
 : <a class="el" href="classStelMainView.html#ac8c5170368c73bfa083023165efd2bde">StelMainView</a>
 </li>
 <li>getMovementMgr()
-: <a class="el" href="classStelCore.html#a21da1181abda94193e36fb5cdd5ac2cc">StelCore</a>
+: <a class="el" href="classStelCore.html#ab7419274290fa6fcd186879384c36457">StelCore</a>
 </li>
 <li>getName()
 : <a class="el" href="classAsterismMgr.html#a8ddaa2eeb16f9b3ced0dbe728f296ce0">AsterismMgr</a>
@@ -2700,7 +2769,7 @@ $(function() {
 <li>getPluginInfo()
 : <a class="el" href="classAngleMeasureStelPluginInterface.html#a2c5f580f3dab9dd8c27a578a1e7724a7">AngleMeasureStelPluginInterface</a>
 , <a class="el" href="classArchaeoLinesStelPluginInterface.html#ace8024bd4d6b9c48a9cf510ab29726bd">ArchaeoLinesStelPluginInterface</a>
-, <a class="el" href="classCompassMarksStelPluginInterface.html#aa43d283e76191131f1485b4fd4cb3c55">CompassMarksStelPluginInterface</a>
+, <a class="el" href="classCalendarsStelPluginInterface.html#aa5e8cb738cd6051f6e0225dc5dbf1ccc">CalendarsStelPluginInterface</a>
 , <a class="el" href="classEquationOfTimeStelPluginInterface.html#a94ad6c2bd93fa871b004600e7516eea7">EquationOfTimeStelPluginInterface</a>
 , <a class="el" href="classExoplanetsStelPluginInterface.html#a705133d18dce339d3dca19861c72a459">ExoplanetsStelPluginInterface</a>
 , <a class="el" href="classHelloStelModuleStelPluginInterface.html#a131a56323a3ee5b7a9b90b5b104201af">HelloStelModuleStelPluginInterface</a>
@@ -2786,7 +2855,7 @@ $(function() {
 : <a class="el" href="classStelLocaleMgr.html#aaf32becd4ae4ec2d57fc6116872bdb45">StelLocaleMgr</a>
 </li>
 <li>getProjection()
-: <a class="el" href="classStelCore.html#ab1e1d7a4a0e50a3be40ff3dce10b951d">StelCore</a>
+: <a class="el" href="classStelCore.html#adcfbdd5378ab9fb2e5bc6d16f6691129">StelCore</a>
 </li>
 <li>getProjection2d()
 : <a class="el" href="classStelCore.html#a8b858aead1a5ac59c6f9a07467d0cf4f">StelCore</a>
@@ -2878,6 +2947,9 @@ $(function() {
 <li>getRotAltAzToEquatorial()
 : <a class="el" href="classStelObserver.html#a0a1a75404156f114b4d3c19d7226fcd0">StelObserver</a>
 </li>
+<li>getRoundSize()
+: <a class="el" href="classStelBarsPath.html#acf9bc20824c221c453589b3e475fbadb">StelBarsPath</a>
+</li>
 <li>getRTSTime()
 : <a class="el" href="classStelObject.html#a96365d7580a27e38fb49021d831697f1">StelObject</a>
 </li>
@@ -2957,11 +3029,14 @@ $(function() {
 <li>getSednoidsOrbitsColor()
 : <a class="el" href="classSolarSystem.html#a84288c57f1c4152999e4c63ed87babfe">SolarSystem</a>
 </li>
+<li>getSelectedCCDPrismPositionAngle()
+: <a class="el" href="group__oculars.html#a6f03d049be7d7c79229f8ff84f6300fa">Oculars</a>
+</li>
 <li>getSelectedCCDRotationAngle()
 : <a class="el" href="group__oculars.html#ad345aebb1875030f638606a7a0f5316a">Oculars</a>
 </li>
 <li>getSelectedObject()
-: <a class="el" href="classStelObjectMgr.html#a263fde49460efc266fdf4a9d39420b0c">StelObjectMgr</a>
+: <a class="el" href="classStelObjectMgr.html#a3e084a0a3588298aff5c899bccb99ac6">StelObjectMgr</a>
 </li>
 <li>getSelectedObjectInfo()
 : <a class="el" href="classStelMainScriptAPI.html#a406729acbcd7991262d5bfd1991b1729">StelMainScriptAPI</a>
@@ -3137,7 +3212,7 @@ $(function() {
 <li>getStelModule()
 : <a class="el" href="classAngleMeasureStelPluginInterface.html#ad4862aec33f0a39733d645c4842dec3c">AngleMeasureStelPluginInterface</a>
 , <a class="el" href="classArchaeoLinesStelPluginInterface.html#afe5116a16a780cfa5b6c656e066c6c8a">ArchaeoLinesStelPluginInterface</a>
-, <a class="el" href="classCompassMarksStelPluginInterface.html#a8ae3766d4b66f6eaac703ec97ef700f2">CompassMarksStelPluginInterface</a>
+, <a class="el" href="classCalendarsStelPluginInterface.html#a130ba8c71a99c7039b9705b24e8d64ce">CalendarsStelPluginInterface</a>
 , <a class="el" href="classEquationOfTimeStelPluginInterface.html#a887dc9199647627241ecec7d884f54e3">EquationOfTimeStelPluginInterface</a>
 , <a class="el" href="classExoplanetsStelPluginInterface.html#acc308ce41a429b5097fd046557bb37a6">ExoplanetsStelPluginInterface</a>
 , <a class="el" href="classHelloStelModuleStelPluginInterface.html#a21eacb58432a423ef68613bd1e0091d9">HelloStelModuleStelPluginInterface</a>
@@ -3415,8 +3490,8 @@ $(function() {
 : <a class="el" href="group__satellites.html#abf63531da2bf58b438a4ecb2f4323049">gSatTEME</a>
 </li>
 <li>getVelocity()
-: <a class="el" href="classKeplerOrbit.html#a36c71c5637bfb18c14ace54c51d4a0f3">KeplerOrbit</a>
-, <a class="el" href="classOrbit.html#adfeaefa4ae8704f529e3b649dc677b7e">Orbit</a>
+: <a class="el" href="classKeplerOrbit.html#a10a2058ba54bfd63a5e750892d7e77be">KeplerOrbit</a>
+, <a class="el" href="classOrbit.html#a77c0e42fae5dbfa482f8c47a3bfa04b8">Orbit</a>
 </li>
 <li>getVenusOrbitColor()
 : <a class="el" href="classSolarSystem.html#a9514427a67e001af3789d38911e51670">SolarSystem</a>
@@ -3624,6 +3699,9 @@ $(function() {
 <li>graphDayChanged()
 : <a class="el" href="classAstroCalcDialog.html#abbab9d70a65b9e4bc5d695fbeef34ddd">AstroCalcDialog</a>
 </li>
+<li>gregorianFromFixed()
+: <a class="el" href="classGregorianCalendar.html#a0d3c546760552acbd17c13c1a55fa5c8">GregorianCalendar</a>
+</li>
 <li>gSatTEME()
 : <a class="el" href="group__satellites.html#afe8733854e2774cec160e876d5977499">gSatTEME</a>
 </li>
@@ -3631,7 +3709,7 @@ $(function() {
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Sat Nov 14 2020 20:19:04 for Stellarium by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Mon Dec 28 2020 18:00:41 for Stellarium by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.13
 </small></address>

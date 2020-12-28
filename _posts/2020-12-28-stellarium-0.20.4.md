@@ -1,0 +1,112 @@
+---
+layout: post
+title: Stellarium v0.20.4 has been released!
+date: 2020-12-28 19:30:00 +0700
+categories: release
+author: alex-w
+nolangbar: true
+---
+The major changes of this version:
+- Added Calendars plugin
+- Many changes in AstroCalc tool and core of Stellarium
+- Many changes in plugins
+- Updated DSO catalog
+
+Thank you very much to community for bug reports, feature requests and contributions!
+
+Full list of changes:
+- Added Balinese Pawukon calendar into Calendars plugin
+- Added notes on polygonal landscapes (technical restrictions) (GH: #1397)
+- Added Calendars plugin (GH: #1343)
+- Added configurable values for quick FOV tool (GH: #1391)
+- Added new zoom algorithm (GH: #1415, #529)
+- Added compass marks into core of planetarium
+- Added ability to hide cardinal and compass buttons from the GUI
+- Added missing time zone America/Godthab
+- Added few DSO textures (GH: #1402, #1441)
+- Added Galactic Center and Anticenter points
+- Added a config option to use multisampling for rendering "Planet"s (GH: #1388)
+- Added landers from the Chinese Lunar Exploration Program into list of locations
+- Added on-screen controls for OAG in Oculars plugin (GH: #935)
+- Added table view of exoplanets (GH: #1141)
+- Added show angular distance between the moon and host planet (GH: #1372)
+- Added classical cepheids filter for AstroCalc/WUT tool
+- Added Algol-type eclipsing systems filter for AstroCalc/WUT tool (GH: #1355)
+- Added ability to toggle to using decimal degrees for various navigational data through follow the option "Use decimal degrees" in the main GUI (GH: #1344) 
+- Added script with shortcut, which add ability to jump to random location for celestial navigation game and practice (GH: #1345, #1058)
+- Added support flip commands into Scripting Engine (GH: #1351)
+- Added new language: Central Atlas Tamazight
+- Added comet icon for ephemeris points plotting for AstroCalc/Ephemeris tool (GH: #1332)
+- Added script skybox.ssc into list of translatable scripts (GH: #1335)
+- Added config option to hide selection markers (default: viewing/flag_show_selection_marker = true) (GH: #1321)
+- Added export list of objects as Stellarium bookmarks into AstroCalc/WUT tool
+- Added support capital Greek chars in Search Tool (GH: #1282)
+- Added some discoverer’s original designation for double stars as their scientific designations (GH: #1282)
+- Added option to hide unlabelled ephemeris markers (GH: #1315)
+- Added ability to run the silent uninstall Stellarium in Windows
+- Added ability use decimals value for ephemeris steps in AstroCalc/Ephemeris tool (GH: #1289)
+- Added "No" default for deletion confirmation warning (GH: #1292)
+- Added ability to toggle show extra decimals in the navigational info (GH: #1303)
+- Added tool for build an AppImage package (GH: #1288)
+- Added ability for following an option ''Use decimal degrees" for longitude and latitude in Location dialog to define format of data (GH: #1416)
+- Fixed collision calendars panel with bottom button bar (GH: #1422)
+- Fixed zooming to FOV when duration is zero (GH: #1430)
+- Fixed designations for star HIP 62819 (GH: #1432)
+- Fixed crash when attempting to add a sensor (GH: #1407, #1403)
+- Fixed UMa figure in S&T skyculture (GH: #1414)
+- Fixed typos in Chinese skyculture (GH: #1413)
+- Fixed text for meteor showers plugin (GH: #1387)
+- Fixed the visual style of color chooser (GH: #1395)
+- Fixed GUI of AstroCalc/Positions tool
+- Fixed error in GUI of AstroCalc/WUT tool
+- Fixed errors in documents for scripting engine
+- Fixed typos and errors in various sky cultures
+- Fixed running scripting method core.quitStellarium(); (GH: #1363)
+- Fixed the location of Dunsink Observatory (GH: #1370)
+- Fixed rendering orbits with undefined period
+- Fixed orbital elements for comet Halley (1986) in the default ssystem_minor.ini file
+- Fixed typos in skycultures
+- Fixed odd cyclic behaviour of HiPS (GH: #1323)
+- Fixed odd survey interaction (GH: #1314)
+- Fixed crash when reference.fab file has wrong format
+- Fixed closing various dialogs (fix #1305, #1338)
+- Fixed sorting issue in AstroCalc/Ephemeris tool
+- Fixed search stars by designations (u Her and U Her are different stars!) (GH: #1282)
+- Fixed adding extra designations for stars, who already has Bayer and Flamsteed designations (GH: #1282)
+- Fixed sorting stars by their designations (partially) (GH: #1282)
+- Fixed selecting invisible stars (GH: #1331)
+- Fixed switch to native planet names when skyculture is changed in Location dialog (GH: #1203)
+- Fixed installing star names for Western (O.Hlad) skyculture (GH: #1170)
+- Fixed typecast: avoiding of jumping the markers of exoplanets and pulsars (GH: #1286)
+- Fixed handling custom shortcuts and few spell-check fixes
+- Fixed GUI issue in Observability plugin
+- Fixed inconsistency of NGC/IC list in AstroCalc/WUT tool (GH: #1310)
+- Fixed filling version info for Windows installer
+- Fixed installer for Windows
+- Fixed translatable string for Icelandic calendar
+- Fixed Puppis constellation lines in S&T skyculture (GH: #1438)
+- Fixed Mensa and Microscopium in S&T skyculture (GH: #1440)
+- Changed rendering planets: improve planets' halos size in relation to stars' (GH: #1361, #367)
+- Changed rendering of orbits in Satellites plugin: Hide invisible part of orbits when "hide invisible artificial sats" option is enabled (GH: #1349)
+- Changed GUI behavior: Enlarged maximum dialog size (GH: #1318)
+- Changed versioning scheme of Stellarium
+- Changed few DSO textures: reduce the size of some texture files (GH: #1442)
+- Updated Stellarium User Guide (GH: #1334)
+- Updated DSO catalog (v3.12)
+- Updated GUI of Calendars plugin
+- Updated GUI: refactored block "Additional buttons"
+- Updated description of Chinese skyculture (GH: #1410)
+- Updated Bengali descriptions for landscapes and skycultures (GH: #1380)
+- Updated nomenclature data
+- Updated few DSO outlines (GH: #1368)
+- Updated initial time steps for AstroCalc/Phenomena tool (GH: #372)
+- Updated Solar System Editor pluign: improve docs + added confirmation dialog (GH: #1304)
+- Updated DSO names
+- Updated upper limit for font size
+- Updated GUI of AstroCalc tools
+- Updated Exoplanets plugin: added extra info
+- Updated Satellites plugin: cosmetic improvement the handling the visibility of satellites by their groups
+- Removed Compass Marks plugin
+- Removed the XPM version of the app icon (GH: #1384)
+- Removed dead links from skycultures
+- Removed support of shortcuts from AstroCalc tools (GH: #1293)
