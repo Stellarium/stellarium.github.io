@@ -192,6 +192,9 @@ virtual double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" 
 <tr class="memitem:aea761082356a00fefa9073891381b4fa inherit pub_methods_classStelObject"><td class="memItemLeft" align="right" valign="top"><a id="aea761082356a00fefa9073891381b4fa"></a>
 virtual double&#160;</td><td class="memItemRight" valign="bottom"><b>getParentSatellitesFov</b> (const <a class="el" href="classStelCore.html">StelCore</a> *) const</td></tr>
 <tr class="separator:aea761082356a00fefa9073891381b4fa inherit pub_methods_classStelObject"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a130c03fcbe42dffb19726f0d672dd844 inherit pub_methods_classStelObject"><td class="memItemLeft" align="right" valign="top">virtual float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classStelObject.html#a130c03fcbe42dffb19726f0d672dd844">getAirmass</a> (const <a class="el" href="classStelCore.html">StelCore</a> *core) const</td></tr>
+<tr class="memdesc:a130c03fcbe42dffb19726f0d672dd844 inherit pub_methods_classStelObject"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return airmass value for the object (for atmosphere-dependent calculations)  <a href="classStelObject.html#a130c03fcbe42dffb19726f0d672dd844">More...</a><br /></td></tr>
+<tr class="separator:a130c03fcbe42dffb19726f0d672dd844 inherit pub_methods_classStelObject"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="inherited"></a>
 Additional Inherited Members</h2></td></tr>
@@ -275,9 +278,9 @@ virtual QString&#160;</td><td class="memItemRight" valign="bottom"><b>getTelesco
 <tr class="memitem:aab275c32767521d5cb4618184681d0ce inherit pro_methods_classStelObject"><td class="memItemLeft" align="right" valign="top">QString&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classStelObject.html#aab275c32767521d5cb4618184681d0ce">getCommonInfoString</a> (const <a class="el" href="classStelCore.html">StelCore</a> *core, const InfoStringGroup &amp;flags) const</td></tr>
 <tr class="memdesc:aab275c32767521d5cb4618184681d0ce inherit pro_methods_classStelObject"><td class="mdescLeft">&#160;</td><td class="mdescRight">Format the positional info string containing J2000/of date/altaz/hour angle positions and constellation, sidereal time, etc.  <a href="classStelObject.html#aab275c32767521d5cb4618184681d0ce">More...</a><br /></td></tr>
 <tr class="separator:aab275c32767521d5cb4618184681d0ce inherit pro_methods_classStelObject"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:adf50955c1a8db468b974e868af3f206d inherit pro_methods_classStelObject"><td class="memItemLeft" align="right" valign="top">virtual QString&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classStelObject.html#adf50955c1a8db468b974e868af3f206d">getMagnitudeInfoString</a> (const <a class="el" href="classStelCore.html">StelCore</a> *core, const InfoStringGroup &amp;flags, const double alt_app, const int decimals=1) const</td></tr>
-<tr class="memdesc:adf50955c1a8db468b974e868af3f206d inherit pro_methods_classStelObject"><td class="mdescLeft">&#160;</td><td class="mdescRight">Format the magnitude info string for the object.  <a href="classStelObject.html#adf50955c1a8db468b974e868af3f206d">More...</a><br /></td></tr>
-<tr class="separator:adf50955c1a8db468b974e868af3f206d inherit pro_methods_classStelObject"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a557aa5ab5579eb354ec3164b979c10b5 inherit pro_methods_classStelObject"><td class="memItemLeft" align="right" valign="top">virtual QString&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classStelObject.html#a557aa5ab5579eb354ec3164b979c10b5">getMagnitudeInfoString</a> (const <a class="el" href="classStelCore.html">StelCore</a> *core, const InfoStringGroup &amp;flags, const int decimals=1) const</td></tr>
+<tr class="memdesc:a557aa5ab5579eb354ec3164b979c10b5 inherit pro_methods_classStelObject"><td class="mdescLeft">&#160;</td><td class="mdescRight">Format the magnitude info string for the object.  <a href="classStelObject.html#a557aa5ab5579eb354ec3164b979c10b5">More...</a><br /></td></tr>
+<tr class="separator:a557aa5ab5579eb354ec3164b979c10b5 inherit pro_methods_classStelObject"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a53ece72260ecfe9c4783d740862021f8 inherit pro_methods_classStelObject"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classStelObject.html#a53ece72260ecfe9c4783d740862021f8">postProcessInfoString</a> (QString &amp;str, const InfoStringGroup &amp;flags) const</td></tr>
 <tr class="memdesc:a53ece72260ecfe9c4783d740862021f8 inherit pro_methods_classStelObject"><td class="mdescLeft">&#160;</td><td class="mdescRight">Apply post processing on the info string.  <a href="classStelObject.html#a53ece72260ecfe9c4783d740862021f8">More...</a><br /></td></tr>
 <tr class="separator:a53ece72260ecfe9c4783d740862021f8 inherit pro_methods_classStelObject"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -338,7 +341,7 @@ const QString&#160;</td><td class="memItemRight" valign="bottom"><b>name</b></td
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Mon Mar 8 2021 22:03:10 for Stellarium by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Sat May 8 2021 18:44:10 for Stellarium by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.17
 </small></address>

@@ -224,6 +224,9 @@ virtual double&#160;</td><td class="memItemRight" valign="bottom"><b>getParentSa
 <tr class="memitem:ae3fbe7c86ed77e2599419de3519a3dad"><td class="memItemLeft" align="right" valign="top">virtual double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classStelObject.html#ae3fbe7c86ed77e2599419de3519a3dad">getAngularSize</a> (const <a class="el" href="classStelCore.html">StelCore</a> *core) const =0</td></tr>
 <tr class="memdesc:ae3fbe7c86ed77e2599419de3519a3dad"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return the angular radius of a circle containing the object as seen from the observer with the circle center assumed to be at <a class="el" href="classStelObject.html#a50ac8b2a9be97d2cf58987c58af6b740" title="Get observer-centered equatorial coordinates at equinox J2000.">getJ2000EquatorialPos()</a>.  <a href="classStelObject.html#ae3fbe7c86ed77e2599419de3519a3dad">More...</a><br /></td></tr>
 <tr class="separator:ae3fbe7c86ed77e2599419de3519a3dad"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a130c03fcbe42dffb19726f0d672dd844"><td class="memItemLeft" align="right" valign="top">virtual float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classStelObject.html#a130c03fcbe42dffb19726f0d672dd844">getAirmass</a> (const <a class="el" href="classStelCore.html">StelCore</a> *core) const</td></tr>
+<tr class="memdesc:a130c03fcbe42dffb19726f0d672dd844"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return airmass value for the object (for atmosphere-dependent calculations)  <a href="classStelObject.html#a130c03fcbe42dffb19726f0d672dd844">More...</a><br /></td></tr>
+<tr class="separator:a130c03fcbe42dffb19726f0d672dd844"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-static-attribs"></a>
 Static Public Attributes</h2></td></tr>
@@ -240,9 +243,9 @@ Protected Member Functions</h2></td></tr>
 <tr class="memitem:aab275c32767521d5cb4618184681d0ce"><td class="memItemLeft" align="right" valign="top">QString&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classStelObject.html#aab275c32767521d5cb4618184681d0ce">getCommonInfoString</a> (const <a class="el" href="classStelCore.html">StelCore</a> *core, const InfoStringGroup &amp;flags) const</td></tr>
 <tr class="memdesc:aab275c32767521d5cb4618184681d0ce"><td class="mdescLeft">&#160;</td><td class="mdescRight">Format the positional info string containing J2000/of date/altaz/hour angle positions and constellation, sidereal time, etc.  <a href="classStelObject.html#aab275c32767521d5cb4618184681d0ce">More...</a><br /></td></tr>
 <tr class="separator:aab275c32767521d5cb4618184681d0ce"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:adf50955c1a8db468b974e868af3f206d"><td class="memItemLeft" align="right" valign="top">virtual QString&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classStelObject.html#adf50955c1a8db468b974e868af3f206d">getMagnitudeInfoString</a> (const <a class="el" href="classStelCore.html">StelCore</a> *core, const InfoStringGroup &amp;flags, const double alt_app, const int decimals=1) const</td></tr>
-<tr class="memdesc:adf50955c1a8db468b974e868af3f206d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Format the magnitude info string for the object.  <a href="classStelObject.html#adf50955c1a8db468b974e868af3f206d">More...</a><br /></td></tr>
-<tr class="separator:adf50955c1a8db468b974e868af3f206d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a557aa5ab5579eb354ec3164b979c10b5"><td class="memItemLeft" align="right" valign="top">virtual QString&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classStelObject.html#a557aa5ab5579eb354ec3164b979c10b5">getMagnitudeInfoString</a> (const <a class="el" href="classStelCore.html">StelCore</a> *core, const InfoStringGroup &amp;flags, const int decimals=1) const</td></tr>
+<tr class="memdesc:a557aa5ab5579eb354ec3164b979c10b5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Format the magnitude info string for the object.  <a href="classStelObject.html#a557aa5ab5579eb354ec3164b979c10b5">More...</a><br /></td></tr>
+<tr class="separator:a557aa5ab5579eb354ec3164b979c10b5"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a53ece72260ecfe9c4783d740862021f8"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classStelObject.html#a53ece72260ecfe9c4783d740862021f8">postProcessInfoString</a> (QString &amp;str, const InfoStringGroup &amp;flags) const</td></tr>
 <tr class="memdesc:a53ece72260ecfe9c4783d740862021f8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Apply post processing on the info string.  <a href="classStelObject.html#a53ece72260ecfe9c4783d740862021f8">More...</a><br /></td></tr>
 <tr class="separator:a53ece72260ecfe9c4783d740862021f8"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -356,6 +359,39 @@ Protected Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 <p>This should be preferrable over hard setting. Can be used by plugins to show extra info for the selected object, or for debugging. The strings will be shown in the InfoString for the selected object, below the default fields per-flag. Additional coordinates not fitting into one of the predefined coordinate sets should be flagged with OtherCoords, and must be adapted to table or non-table layout as required. The line ending must be given explicitly, usually just end a line with "&lt;br/&gt;", except when it may end up in a Table or appended to a line. See <a class="el" href="classStelObject.html#aab275c32767521d5cb4618184681d0ce" title="Format the positional info string containing J2000/of date/altaz/hour angle positions and constellati...">getCommonInfoString()</a> or the respective <a class="el" href="classStelObject.html#aba01f4a7783fb557cb28bd8d1319a6b8" title="Write I18n information about the object in QString.">getInfoString()</a> in the subclasses for details of use. </p>
+
+</div>
+</div>
+<a id="a130c03fcbe42dffb19726f0d672dd844"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a130c03fcbe42dffb19726f0d672dd844">&#9670;&nbsp;</a></span>getAirmass()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual float StelObject::getAirmass </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classStelCore.html">StelCore</a> *&#160;</td>
+          <td class="paramname"><em>core</em></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">core</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>airmass value or -1.f if calculations are not applicable or meaningless </dd></dl>
 
 </div>
 </div>
@@ -662,8 +698,8 @@ Protected Member Functions</h2></td></tr>
 
 </div>
 </div>
-<a id="adf50955c1a8db468b974e868af3f206d"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#adf50955c1a8db468b974e868af3f206d">&#9670;&nbsp;</a></span>getMagnitudeInfoString()</h2>
+<a id="a557aa5ab5579eb354ec3164b979c10b5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a557aa5ab5579eb354ec3164b979c10b5">&#9670;&nbsp;</a></span>getMagnitudeInfoString()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -682,12 +718,6 @@ Protected Member Functions</h2></td></tr>
           <td></td>
           <td class="paramtype">const InfoStringGroup &amp;&#160;</td>
           <td class="paramname"><em>flags</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">const double&#160;</td>
-          <td class="paramname"><em>alt_app</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
@@ -711,13 +741,12 @@ Protected Member Functions</h2></td></tr>
   <table class="params">
     <tr><td class="paramname">core</td><td></td></tr>
     <tr><td class="paramname">flags</td><td></td></tr>
-    <tr><td class="paramname">alt_app</td><td>apparent altitude (for atmosphere-dependent calculations) </td></tr>
     <tr><td class="paramname">decimals</td><td>significant digits after the comma. </td></tr>
   </table>
   </dd>
 </dl>
 
-<p>Reimplemented in <a class="el" href="classNebula.html#a09335HEADa42ac428d366fc90b3b72">Nebula</a>, and <a class="el" href="group__historicalSupernovae.html#a7e4fde86cac8c8e1e85dfcefb705d318">Supernova</a>.</p>
+<p>Reimplemented in <a class="el" href="classNebula.html#aefecf07341e8ae252c429f1fa7cd03f6">Nebula</a>, and <a class="el" href="group__historicalSupernovae.html#a2a624d3a3d117128c618e8a4d093186e">Supernova</a>.</p>
 
 </div>
 </div>
@@ -1025,7 +1054,7 @@ Protected Member Functions</h2></td></tr>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Mon Mar 8 2021 22:03:10 for Stellarium by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Sat May 8 2021 18:44:10 for Stellarium by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.17
 </small></address>
