@@ -255,6 +255,9 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>moveSlow</b> (bool b)
 <tr class="memitem:ae3478a5526a445bfa081d7509912f990"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classStelMovementMgr.html#ae3478a5526a445bfa081d7509912f990">zoomOut</a> (bool s)</td></tr>
 <tr class="memdesc:ae3478a5526a445bfa081d7509912f990"><td class="mdescLeft">&#160;</td><td class="mdescRight">With true, starts zooming out, with an unspecified ratio of degrees per second, either until zooming is stopped with a zoomIn call with false (or a zoomOut call).  <a href="classStelMovementMgr.html#ae3478a5526a445bfa081d7509912f990">More...</a><br /></td></tr>
 <tr class="separator:ae3478a5526a445bfa081d7509912f990"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a259b38e2ae3c23c1b2730316f31712a8"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classStelMovementMgr.html#a259b38e2ae3c23c1b2730316f31712a8">smoothPan</a> (double deltaX, double deltaY, double ptime, bool s)</td></tr>
+<tr class="memdesc:a259b38e2ae3c23c1b2730316f31712a8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Smooth panning a predetermined amount.  <a href="classStelMovementMgr.html#a259b38e2ae3c23c1b2730316f31712a8">More...</a><br /></td></tr>
+<tr class="separator:a259b38e2ae3c23c1b2730316f31712a8"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a1639ddcb463ca34666523bb074b20f7e"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classStelMovementMgr.html#a1639ddcb463ca34666523bb074b20f7e">lookEast</a> (bool zero=false)</td></tr>
 <tr class="memdesc:a1639ddcb463ca34666523bb074b20f7e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Look immediately towards East.  <a href="classStelMovementMgr.html#a1639ddcb463ca34666523bb074b20f7e">More...</a><br /></td></tr>
 <tr class="separator:a1639ddcb463ca34666523bb074b20f7e"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -1092,6 +1095,64 @@ Objects of class Vec3d are 3-dimensional vectors in a rectangular coordinate sys
 
 </div>
 </div>
+<a id="a259b38e2ae3c23c1b2730316f31712a8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a259b38e2ae3c23c1b2730316f31712a8">&#9670;&nbsp;</a></span>smoothPan</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void StelMovementMgr::smoothPan </td>
+          <td>(</td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>deltaX</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>deltaY</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>ptime</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>s</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">slot</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<dl class="section note"><dt>Note</dt><dd>a speed (degrees per seconds) is defined for both scales as deltaX/ptime and deltaY/ptime. </dd></dl>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">deltaX</td><td>- delta for scale X, in degrees </td></tr>
+    <tr><td class="paramname">deltaY</td><td>- delta for scale Y, in degrees </td></tr>
+    <tr><td class="paramname">ptime</td><td>- time for doing one step of delta, in seconds </td></tr>
+    <tr><td class="paramname">s</td><td>- flag to enable panning </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
 <a id="af9017f5c0819107435de462fca17883a"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#af9017f5c0819107435de462fca17883a">&#9670;&nbsp;</a></span>turnDown</h2>
 
@@ -1344,7 +1405,7 @@ Objects of class Vec3d are 3-dimensional vectors in a rectangular coordinate sys
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Sun May 30 2021 17:37:57 for Stellarium by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Sun Jun 13 2021 16:08:05 for Stellarium by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.17
 </small></address>
