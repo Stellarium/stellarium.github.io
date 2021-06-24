@@ -21,7 +21,7 @@
   <td id="projectlogo"><img alt="Logo" src="stellarium-logo.png"/></td>
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">Stellarium
-   &#160;<span id="projectnumber">0.21.0</span>
+   &#160;<span id="projectnumber">0.21.1</span>
    </div>
   </td>
  </tr>
@@ -120,6 +120,12 @@ static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" hre
 <tr class="memitem:a12fd45f70f92b6004f64c91e5089e2f5"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classStelMainScriptAPI.html#a12fd45f70f92b6004f64c91e5089e2f5">addToSelectedObjectInfoString</a> (const QString &amp;str, bool replace=false)</td></tr>
 <tr class="memdesc:a12fd45f70f92b6004f64c91e5089e2f5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Add some arbitrary string to the object information of the currently selected object.  <a href="classStelMainScriptAPI.html#a12fd45f70f92b6004f64c91e5089e2f5">More...</a><br /></td></tr>
 <tr class="separator:a12fd45f70f92b6004f64c91e5089e2f5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0a4226570587e908bb2c9fb0fd7e3673"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classStelMainScriptAPI.html#a0a4226570587e908bb2c9fb0fd7e3673">setStelProperty</a> (const QString &amp;propertyName, QVariant propertyValue)</td></tr>
+<tr class="memdesc:a0a4226570587e908bb2c9fb0fd7e3673"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set value for some <a class="el" href="classStelProperty.html" title="Wrapper around a Q_PROPERTY (see the Qt property system for more information) of a specific object,...">StelProperty</a>.  <a href="classStelMainScriptAPI.html#a0a4226570587e908bb2c9fb0fd7e3673">More...</a><br /></td></tr>
+<tr class="separator:a0a4226570587e908bb2c9fb0fd7e3673"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8eef4af0e88066f5fb3460be86153f7a"><td class="memItemLeft" align="right" valign="top">static QVariant&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classStelMainScriptAPI.html#a8eef4af0e88066f5fb3460be86153f7a">getStelProperty</a> (const QString &amp;propertyName)</td></tr>
+<tr class="memdesc:a8eef4af0e88066f5fb3460be86153f7a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get value for some <a class="el" href="classStelProperty.html" title="Wrapper around a Q_PROPERTY (see the Qt property system for more information) of a specific object,...">StelProperty</a>.  <a href="classStelMainScriptAPI.html#a8eef4af0e88066f5fb3460be86153f7a">More...</a><br /></td></tr>
+<tr class="separator:a8eef4af0e88066f5fb3460be86153f7a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a4e882fa0af02133ac70e41c86f471f01"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classStelMainScriptAPI.html#a4e882fa0af02133ac70e41c86f471f01">clear</a> (const QString &amp;state=&quot;natural&quot;)</td></tr>
 <tr class="memdesc:a4e882fa0af02133ac70e41c86f471f01"><td class="mdescLeft">&#160;</td><td class="mdescRight">Clear the display options, setting a "standard" view.  <a href="classStelMainScriptAPI.html#a4e882fa0af02133ac70e41c86f471f01">More...</a><br /></td></tr>
 <tr class="separator:a4e882fa0af02133ac70e41c86f471f01"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -1663,6 +1669,41 @@ double&#160;</td><td class="memItemRight" valign="bottom"><b>timeSpeed</b></td><
 
 </div>
 </div>
+<a id="a8eef4af0e88066f5fb3460be86153f7a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8eef4af0e88066f5fb3460be86153f7a">&#9670;&nbsp;</a></span>getStelProperty</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static QVariant StelMainScriptAPI::getStelProperty </td>
+          <td>(</td>
+          <td class="paramtype">const QString &amp;&#160;</td>
+          <td class="paramname"><em>propertyName</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span><span class="mlabel">slot</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<dl class="section note"><dt>Note</dt><dd>This method may be very helpful for change the values in the plugins to avoid crashes when some plugin is not loaded. </dd>
+<dd>
+See also <a class="el" href="classStelMainScriptAPI.html#ae5dc2cdfd5bd18b0634ec495994ccf0f">isModuleLoaded()</a> method </dd></dl>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">propertyName</td><td>the name of <a class="el" href="classStelProperty.html" title="Wrapper around a Q_PROPERTY (see the Qt property system for more information) of a specific object,...">StelProperty</a>, e.g. "Satellites.flagOrbitLines" </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
 <a id="a7713046f8d5aa1688cf4b9ff2d55e117"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a7713046f8d5aa1688cf4b9ff2d55e117">&#9670;&nbsp;</a></span>getTimeRate</h2>
 
@@ -1959,7 +2000,8 @@ double&#160;</td><td class="memItemRight" valign="bottom"><b>timeSpeed</b></td><
   </tr>
 </table>
 </div><div class="memdoc">
-<p>Mostly useful to check whether a module available as plugin is active. </p><dl class="params"><dt>Parameters</dt><dd>
+<p>Mostly useful to check whether a module available as plugin is active. </p><dl class="section note"><dt>Note</dt><dd>See also <a class="el" href="classStelMainScriptAPI.html#a0a4226570587e908bb2c9fb0fd7e3673">setStelProperty()</a> and <a class="el" href="classStelMainScriptAPI.html#a8eef4af0e88066f5fb3460be86153f7a">getStelProperty()</a> methods </dd></dl>
+<dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">moduleID</td><td>the QObject name of the module instance, by convention it is equal to the class name. </td></tr>
   </table>
@@ -4406,6 +4448,52 @@ Starting with version 0.14.0 the Boolean argument has a different meaning and de
 
 </div>
 </div>
+<a id="a0a4226570587e908bb2c9fb0fd7e3673"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0a4226570587e908bb2c9fb0fd7e3673">&#9670;&nbsp;</a></span>setStelProperty</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static void StelMainScriptAPI::setStelProperty </td>
+          <td>(</td>
+          <td class="paramtype">const QString &amp;&#160;</td>
+          <td class="paramname"><em>propertyName</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">QVariant&#160;</td>
+          <td class="paramname"><em>propertyValue</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span><span class="mlabel">slot</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<dl class="section note"><dt>Note</dt><dd>This method may be very helpful for change the values in the plugins to avoid crashes when some plugin is not loaded. </dd>
+<dd>
+See also <a class="el" href="classStelMainScriptAPI.html#ae5dc2cdfd5bd18b0634ec495994ccf0f">isModuleLoaded()</a> method </dd></dl>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">propertyName</td><td>the name of <a class="el" href="classStelProperty.html" title="Wrapper around a Q_PROPERTY (see the Qt property system for more information) of a specific object,...">StelProperty</a>, e.g. "Satellites.flagOrbitLines" </td></tr>
+    <tr><td class="paramname">propertyValue</td><td>the value of <a class="el" href="classStelProperty.html" title="Wrapper around a Q_PROPERTY (see the Qt property system for more information) of a specific object,...">StelProperty</a> </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
 <a id="a09505d989b398ee0c96f047647826af4"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a09505d989b398ee0c96f047647826af4">&#9670;&nbsp;</a></span>setTimeRate</h2>
 
@@ -4806,7 +4894,7 @@ Starting with version 0.14.0 the Boolean argument has a different meaning and de
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Sun Mar 28 2021 15:15:33 for Stellarium by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Thu Jun 24 2021 19:06:16 for Stellarium by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.17
 </small></address>

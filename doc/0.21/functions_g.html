@@ -21,7 +21,7 @@
   <td id="projectlogo"><img alt="Logo" src="stellarium-logo.png"/></td>
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">Stellarium
-   &#160;<span id="projectnumber">0.21.0</span>
+   &#160;<span id="projectnumber">0.21.1</span>
    </div>
   </td>
  </tr>
@@ -809,10 +809,12 @@ $(function() {
 : <a class="el" href="classStelSkyCultureMgr.html#ad7de391a72a57673d4a6a484c4f0f77f">StelSkyCultureMgr</a>
 </li>
 <li>getCurrentStatus()
-: <a class="el" href="classSimbadLookupReply.html#afb995a2818050b0b093a034c5c164271">SimbadLookupReply</a>
+: <a class="el" href="classHipOnlineReply.html#acf10dee40e68c145d48323414982a760">HipOnlineReply</a>
+, <a class="el" href="classSimbadLookupReply.html#afb995a2818050b0b093a034c5c164271">SimbadLookupReply</a>
 </li>
 <li>getCurrentStatusString()
-: <a class="el" href="classSimbadLookupReply.html#a4b6320914d44ab954df8fd912a4eb517">SimbadLookupReply</a>
+: <a class="el" href="classHipOnlineReply.html#a9fa7402dad7edc48f37ddd07efb1aaf6">HipOnlineReply</a>
+, <a class="el" href="classSimbadLookupReply.html#a4b6320914d44ab954df8fd912a4eb517">SimbadLookupReply</a>
 </li>
 <li>getCurrentStelProjectorParams()
 : <a class="el" href="classStelCore.html#a4f1b5ab893e88bb4f3f9f5eae75c05f2">StelCore</a>
@@ -1158,7 +1160,8 @@ $(function() {
 : <a class="el" href="classStelTexture.html#afffe11a1af4e0ec9e3012bc685ec0f44">StelTexture</a>
 </li>
 <li>getErrorString()
-: <a class="el" href="classSimbadLookupReply.html#a6c0e78f4648789ec7ea52e252ccf38b4">SimbadLookupReply</a>
+: <a class="el" href="classHipOnlineReply.html#a1a770d3ba971430ea2112f139bfd0a35">HipOnlineReply</a>
+, <a class="el" href="classSimbadLookupReply.html#a6c0e78f4648789ec7ea52e252ccf38b4">SimbadLookupReply</a>
 </li>
 <li>getExtensionList()
 : <a class="el" href="classAngleMeasureStelPluginInterface.html#aeea83fe2ee5ff66e9aee6319a4b1a9ed">AngleMeasureStelPluginInterface</a>
@@ -1173,6 +1176,7 @@ $(function() {
 , <a class="el" href="classObservabilityStelPluginInterface.html#a6557583389fac7e4816138af7a047371">ObservabilityStelPluginInterface</a>
 , <a class="el" href="classOcularsStelPluginInterface.html#a6e78539cd6fb2eabd124ab82687f2f8e">OcularsStelPluginInterface</a>
 , <a class="el" href="classOculusStelPluginInterface.html#ace7dce1eaafc8ad928afed5806ad1599">OculusStelPluginInterface</a>
+, <a class="el" href="classOnlineQueriesPluginInterface.html#ab43ff73993d1ff38fb2ecbf17d2fda0b">OnlineQueriesPluginInterface</a>
 , <a class="el" href="classPointerCoordinatesStelPluginInterface.html#a3dea54012987378c2c237fc9f75221c4">PointerCoordinatesStelPluginInterface</a>
 , <a class="el" href="classPulsarsStelPluginInterface.html#a1cbd0f2f5e3f2d63cd34465b9aaf0d93">PulsarsStelPluginInterface</a>
 , <a class="el" href="classQuasarsStelPluginInterface.html#abb3e661a27d9ae3af66ace2fd01d97ce">QuasarsStelPluginInterface</a>
@@ -1448,6 +1452,9 @@ $(function() {
 <li>getFlagInvertScreenShotColors()
 : <a class="el" href="classStelMainView.html#ac0c9174b4caff9bd2b55f5781223b821">StelMainView</a>
 </li>
+<li>getFlagIsolateAsterismSelected()
+: <a class="el" href="classAsterismMgr.html#aa8f6475a00009da038db7e977a8dd394">AsterismMgr</a>
+</li>
 <li>getFlagIsolatedOrbits()
 : <a class="el" href="classSolarSystem.html#acae79d9f3fed962a4f3ac1f709ebe264">SolarSystem</a>
 </li>
@@ -1531,6 +1538,12 @@ $(function() {
 </li>
 <li>getFlagOrbits()
 : <a class="el" href="classSolarSystem.html#a9a4a8fc337e04596d4361e4936cd7c1a">SolarSystem</a>
+</li>
+<li>getFlagOrdinals16WRPoints()
+: <a class="el" href="classLandscapeMgr.html#aa0165844fd2f1bd2051ada4fe04be258">LandscapeMgr</a>
+</li>
+<li>getFlagOrdinalsPoints()
+: <a class="el" href="classLandscapeMgr.html#aed43817b3a1d9275e1c33cded947349d">LandscapeMgr</a>
 </li>
 <li>getFlagOutlines()
 : <a class="el" href="classNebulaMgr.html#a76e39a890b38c0321c544583d09d7227">NebulaMgr</a>
@@ -1750,11 +1763,11 @@ $(function() {
 <li>getFlagTrails()
 : <a class="el" href="classSolarSystem.html#a8953dc881cfb6937e91367352b0d6ebf">SolarSystem</a>
 </li>
-<li>getFlagTranslatedNames()
-: <a class="el" href="classSolarSystem.html#a1a60f5489dc5c67f861d653faf230f73">SolarSystem</a>
-</li>
 <li>getFlagTwinkle()
 : <a class="el" href="classStelSkyDrawer.html#a33e36b095d6eb5caaf34625b8b75a4ae">StelSkyDrawer</a>
+</li>
+<li>getFlagUmbraCenterPoint()
+: <a class="el" href="classGridLinesMgr.html#a10d7074009719331a8344ff2f103b53b">GridLinesMgr</a>
 </li>
 <li>getFlagUmbraCircle()
 : <a class="el" href="classGridLinesMgr.html#a502b21324eb2ce78b2051c1b2ce31b84">GridLinesMgr</a>
@@ -2213,7 +2226,7 @@ $(function() {
 , <a class="el" href="classNomenclatureItem.html#a9e5b831688265d6bd37993429fcb7c61">NomenclatureItem</a>
 , <a class="el" href="group__brightNovae.html#ab4a31083a6690794c83cdb2738743099">Nova</a>
 , <a class="el" href="classPlanet.html#a63adae35734d9faf2c32cc12f5b21939">Planet</a>
-, <a class="el" href="group__pulsars.html#a29d1665cbe8738adc601be217f3f4006">Pulsar</a>
+, <a class="el" href="group__pulsars.html#a33bd946a4707802b0002bc8afb791e79">Pulsar</a>
 , <a class="el" href="group__quasars.html#a17b771f1265bdce8a929aa5aec231097">Quasar</a>
 , <a class="el" href="group__satellites.html#af7662745c0c7f5c16493b761a460ca18">Satellite</a>
 , <a class="el" href="classStarWrapper.html#a71be2b9c6e7446f4b1203345e8fb632e">StarWrapper&lt; Star &gt;</a>
@@ -2853,6 +2866,7 @@ $(function() {
 , <a class="el" href="classObservabilityStelPluginInterface.html#ad13cae9670f3fe2f20b1f3dc670cf3df">ObservabilityStelPluginInterface</a>
 , <a class="el" href="classOcularsStelPluginInterface.html#a23af93fd49b91b7363cf01e14bb32dd2">OcularsStelPluginInterface</a>
 , <a class="el" href="classOculusStelPluginInterface.html#a97be289275567538c24e1764c1301f85">OculusStelPluginInterface</a>
+, <a class="el" href="classOnlineQueriesPluginInterface.html#a47d29f3836eaeca51ae9bb2c545b48a8">OnlineQueriesPluginInterface</a>
 , <a class="el" href="classPointerCoordinatesStelPluginInterface.html#a15533f959d099ba1dd28c765afb2e221">PointerCoordinatesStelPluginInterface</a>
 , <a class="el" href="classPulsarsStelPluginInterface.html#ade9c6bf1f5b4de790dac303b0bc5f8a4">PulsarsStelPluginInterface</a>
 , <a class="el" href="classQuasarsStelPluginInterface.html#a0487604ffd570b3f8bd1be224102b75c">QuasarsStelPluginInterface</a>
@@ -2929,7 +2943,7 @@ $(function() {
 : <a class="el" href="classStelLocaleMgr.html#aaf32becd4ae4ec2d57fc6116872bdb45">StelLocaleMgr</a>
 </li>
 <li>getProjection()
-: <a class="el" href="classStelCore.html#adcfbdd5378ab9fb2e5bc6d16f6691129">StelCore</a>
+: <a class="el" href="classStelCore.html#ab1e1d7a4a0e50a3be40ff3dce10b951d">StelCore</a>
 </li>
 <li>getProjection2d()
 : <a class="el" href="classStelCore.html#a8b858aead1a5ac59c6f9a07467d0cf4f">StelCore</a>
@@ -3010,7 +3024,8 @@ $(function() {
 : <a class="el" href="classSpaceShipObserver.html#a4f2720ce94b6463b3d0277e12790b1c2">SpaceShipObserver</a>
 </li>
 <li>getResult()
-: <a class="el" href="classSimbadLookupReply.html#acb868cc696b7eb9803bb95e863fdc5bb">SimbadLookupReply</a>
+: <a class="el" href="classHipOnlineReply.html#a41e9897827805170acb3d86f77a0b8d9">HipOnlineReply</a>
+, <a class="el" href="classSimbadLookupReply.html#acb868cc696b7eb9803bb95e863fdc5bb">SimbadLookupReply</a>
 </li>
 <li>getResults()
 : <a class="el" href="classSimbadLookupReply.html#a07c1dd1134a78f2c41ffdd59782ea888">SimbadLookupReply</a>
@@ -3057,12 +3072,6 @@ $(function() {
 </li>
 <li>getScatteredDiskObjectsOrbitsColor()
 : <a class="el" href="classSolarSystem.html#a9d9e0678e8cef08168d33a9ea14826b7">SolarSystem</a>
-</li>
-<li>getSciAdditionalDblName()
-: <a class="el" href="classStarMgr.html#a4164dc9b01454cd1944ea561cea91fa5">StarMgr</a>
-</li>
-<li>getSciAdditionalName()
-: <a class="el" href="classStarMgr.html#ad7fe60fcc28116c965ebbf81b1c93fdb">StarMgr</a>
 </li>
 <li>getSciName()
 : <a class="el" href="classStarMgr.html#a2681915d018dce2b75e5830cf2a8ace9">StarMgr</a>
@@ -3305,6 +3314,7 @@ $(function() {
 , <a class="el" href="classObservabilityStelPluginInterface.html#a58fe0dfde403eedfdd4eb801271a1f20">ObservabilityStelPluginInterface</a>
 , <a class="el" href="classOcularsStelPluginInterface.html#a4eb49684d546246141e320a1d45ad719">OcularsStelPluginInterface</a>
 , <a class="el" href="classOculusStelPluginInterface.html#aa1e43b4b23223d5afb0aafa51e210489">OculusStelPluginInterface</a>
+, <a class="el" href="classOnlineQueriesPluginInterface.html#afdad0f30832b13f5c0f5d7d78e37ecac">OnlineQueriesPluginInterface</a>
 , <a class="el" href="classPointerCoordinatesStelPluginInterface.html#a90d6464ad2a96349d6396842173c71ff">PointerCoordinatesStelPluginInterface</a>
 , <a class="el" href="classPulsarsStelPluginInterface.html#a38c4f910450b05d1d7e528f12298dfaf">PulsarsStelPluginInterface</a>
 , <a class="el" href="classQuasarsStelPluginInterface.html#a7887928d0a640b71ad63b6eff09619f5">QuasarsStelPluginInterface</a>
@@ -3341,6 +3351,9 @@ $(function() {
 , <a class="el" href="classStelObjectModule.html#a9da9461b962af1db754eced359fb35ce">StelObjectModule</a>
 , <a class="el" href="group__historicalSupernovae.html#a9a1a2e1514fdb2101f59b35629e9f560">Supernovae</a>
 , <a class="el" href="group__telescopeControl.html#a3fcbd6f352d34032ecf666c02942f34e">TelescopeControl</a>
+</li>
+<li>getStelProperty()
+: <a class="el" href="classStelMainScriptAPI.html#a8eef4af0e88066f5fb3460be86153f7a">StelMainScriptAPI</a>
 </li>
 <li>getStelPropertyManager()
 : <a class="el" href="classStelApp.html#a49362083a71ed4d4e6276865818772d7">StelApp</a>
@@ -3580,7 +3593,7 @@ $(function() {
 </li>
 <li>getVelocity()
 : <a class="el" href="classKeplerOrbit.html#a10a2058ba54bfd63a5e750892d7e77be">KeplerOrbit</a>
-, <a class="el" href="classOrbit.html#adfeaefa4ae8704f529e3b649dc677b7e">Orbit</a>
+, <a class="el" href="classOrbit.html#a77c0e42fae5dbfa482f8c47a3bfa04b8">Orbit</a>
 </li>
 <li>getVenusOrbitColor()
 : <a class="el" href="classSolarSystem.html#a9514427a67e001af3789d38911e51670">SolarSystem</a>
@@ -3825,7 +3838,7 @@ $(function() {
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Sun Mar 28 2021 15:15:33 for Stellarium by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Thu Jun 24 2021 19:06:17 for Stellarium by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.17
 </small></address>

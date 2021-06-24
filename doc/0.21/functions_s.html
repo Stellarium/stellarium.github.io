@@ -21,7 +21,7 @@
   <td id="projectlogo"><img alt="Logo" src="stellarium-logo.png"/></td>
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">Stellarium
-   &#160;<span id="projectnumber">0.21.0</span>
+   &#160;<span id="projectnumber">0.21.1</span>
    </div>
   </td>
  </tr>
@@ -63,6 +63,7 @@ $(function() {
 : <a class="el" href="group__exoplanets.html#a752ae32a1c77f298c5e4dbc1a9d5935a">Exoplanets</a>
 , <a class="el" href="group__navigationalStars.html#aa149c074ebb342d9ebc44a31c95937da">NavStars</a>
 , <a class="el" href="group__observability.html#a08b774413b5080603fa022eabddff682">Observability</a>
+, <a class="el" href="classOnlineQueries.html#a5f8801e4e81e4363329a2b397a246235">OnlineQueries</a>
 , <a class="el" href="group__pointerCoordinates.html#af830018b42cd3a2abf5ee85391bdd4f9">PointerCoordinates</a>
 , <a class="el" href="group__telescopeControl.html#ae5b65d4294d43fd9079bf8fe00904edc">TelescopeControl</a>
 </li>
@@ -289,14 +290,26 @@ $(function() {
 : <a class="el" href="classStelMainScriptAPI.html#a38972a576bb3cad97878057557d8b68f">StelMainScriptAPI</a>
 , <a class="el" href="classStelVideoMgr.html#a1cbb288f34675dc881e68e29067219aa">StelVideoMgr</a>
 </li>
+<li>selectAllAsterisms()
+: <a class="el" href="classAsterismMgr.html#aa94754e131d8977cbd892d240aac8436">AsterismMgr</a>
+</li>
 <li>selectAllConstellations()
 : <a class="el" href="classConstellationMgr.html#a43df6fd7c87256e3d4ab7dcedb3d8463">ConstellationMgr</a>
+</li>
+<li>selectAsterism()
+: <a class="el" href="classAsterismMgr.html#a439e33be114616bab11ff835057f63a6">AsterismMgr</a>
 </li>
 <li>selectCCDAtIndex()
 : <a class="el" href="group__oculars.html#a351c58375eb65df7cb39f736f37e4941">Oculars</a>
 </li>
+<li>selectConstellation()
+: <a class="el" href="classConstellationMgr.html#a04848a11547e7408c727fb35f26a9475">ConstellationMgr</a>
+</li>
 <li>selectConstellationByName()
 : <a class="el" href="classStelMainScriptAPI.html#ae2de9498a7272645f3b387d73c214205">StelMainScriptAPI</a>
+</li>
+<li>selectConstellationByObjectName()
+: <a class="el" href="classConstellationMgr.html#afe60bdc1117ef1a37e985bb8676cbb4b">ConstellationMgr</a>
 </li>
 <li>selectedCCDIndex
 : <a class="el" href="group__oculars.html#a26072def83d984110880571ccd3ff0a1">Oculars</a>
@@ -958,6 +971,9 @@ $(function() {
 <li>setEnableCors()
 : <a class="el" href="group__remoteControl.html#aab43a0add7ad304a3ac15cdf36f6b3e7">RequestHandler</a>
 </li>
+<li>setEnabled()
+: <a class="el" href="classOnlineQueries.html#ae57070671a2f6a85575321953d8e98c8">OnlineQueries</a>
+</li>
 <li>setEnableDebugInfo()
 : <a class="el" href="group__scenery3D.html#a3c4563e6366e48af05b60d1cd68c31b9">Scenery3d</a>
 </li>
@@ -1268,6 +1284,9 @@ $(function() {
 <li>setFlagInvertScreenShotColors()
 : <a class="el" href="classStelMainView.html#a7433d9c6156e2894bcdd1e3729140655">StelMainView</a>
 </li>
+<li>setFlagIsolateAsterismSelected()
+: <a class="el" href="classAsterismMgr.html#a394b7c6463dc0d99aac7fe65a6e970b7">AsterismMgr</a>
+</li>
 <li>setFlagIsolatedOrbits()
 : <a class="el" href="classSolarSystem.html#a4a9bc2d57a6d9b249bcd4e4171d71795">SolarSystem</a>
 </li>
@@ -1354,6 +1373,12 @@ $(function() {
 </li>
 <li>setFlagOrbits()
 : <a class="el" href="classSolarSystem.html#ada02300f99322f928b5b726fa6d14be6">SolarSystem</a>
+</li>
+<li>setFlagOrdinals16WRPoints()
+: <a class="el" href="classLandscapeMgr.html#ae49b8af0f86de5ac957c19ce68004198">LandscapeMgr</a>
+</li>
+<li>setFlagOrdinalsPoints()
+: <a class="el" href="classLandscapeMgr.html#a6b29ad20abec7930f0426cdac34bc6b7">LandscapeMgr</a>
 </li>
 <li>setFlagOutlines()
 : <a class="el" href="classNebulaMgr.html#a5c831815392b877ce510bc99c20e820e">NebulaMgr</a>
@@ -1612,11 +1637,11 @@ $(function() {
 <li>setFlagTrails()
 : <a class="el" href="classSolarSystem.html#af8bc29abd6ab27841aa4007f394c49a6">SolarSystem</a>
 </li>
-<li>setFlagTranslatedNames()
-: <a class="el" href="classSolarSystem.html#af37bd03435981b8c92e070cc14fe8610">SolarSystem</a>
-</li>
 <li>setFlagTwinkle()
 : <a class="el" href="classStelSkyDrawer.html#aae60da58c4ff0623d381305bfa60eb35">StelSkyDrawer</a>
+</li>
+<li>setFlagUmbraCenterPoint()
+: <a class="el" href="classGridLinesMgr.html#aa1a283ec7b05f844afbc5c922e944a44">GridLinesMgr</a>
 </li>
 <li>setFlagUmbraCircle()
 : <a class="el" href="classGridLinesMgr.html#a7cc5e4dcc7205b3b5cbda324a5d43349">GridLinesMgr</a>
@@ -1762,7 +1787,7 @@ $(function() {
 : <a class="el" href="group__exoplanets.html#a4316498cc2733abdd7e34abff9d44562">Exoplanets</a>
 </li>
 <li>setHeader()
-: <a class="el" href="group__remoteControl.html#abfaf462fba9bfbb847d8bb97e31a5c59">APIServiceResponse</a>
+: <a class="el" href="group__remoteControl.html#a3b2f5fef9e3d53a878b199f1c8c60be3">APIServiceResponse</a>
 , <a class="el" href="group__qtWebApp.html#a41029ee24e05e419e6da7ea970bc3724">HttpResponse</a>
 </li>
 <li>setHeliocentricEclipticPos()
@@ -2004,6 +2029,9 @@ $(function() {
 <li>setMJDay()
 : <a class="el" href="classStelCore.html#aa5972efc56b34907cd38eca8c82df3ee">StelCore</a>
 , <a class="el" href="classStelMainScriptAPI.html#a9bfc18fb68708d4e1ba2d87980811550">StelMainScriptAPI</a>
+</li>
+<li>setModalContext()
+: <a class="el" href="group__archaeoLines.html#a4e40528b8b3a4bdfbdf0fedf143dbb88">ArchaeoLinesDialogLocations</a>
 </li>
 <li>setMolecularCloudColor()
 : <a class="el" href="classNebulaMgr.html#aacdbaf04c82fe5e124e868109d9e72ed">NebulaMgr</a>
@@ -2300,6 +2328,9 @@ $(function() {
 <li>setStellarAssociationColor()
 : <a class="el" href="classNebulaMgr.html#ae5ae06eaf71c03f0934b3431aa11c293">NebulaMgr</a>
 </li>
+<li>setStelProperty()
+: <a class="el" href="classStelMainScriptAPI.html#a0a4226570587e908bb2c9fb0fd7e3673">StelMainScriptAPI</a>
+</li>
 <li>setStelPropertyValue()
 : <a class="el" href="classStelPropertyMgr.html#a45b8b91aa586e203f939cd80b7e2b628">StelPropertyMgr</a>
 </li>
@@ -2410,7 +2441,8 @@ $(function() {
 : <a class="el" href="classSolarSystem.html#a3e6928a1b92aa82a4fe9dc9ce92aec95">SolarSystem</a>
 </li>
 <li>setUrl()
-: <a class="el" href="group__meteorShowers.html#a8f8d4630b76792bb65ff622f50c329ae">MeteorShowersMgr</a>
+: <a class="el" href="classHipOnlineQuery.html#a279d7b2850044840a573c3cbe43088db">HipOnlineQuery</a>
+, <a class="el" href="group__meteorShowers.html#a8f8d4630b76792bb65ff622f50c329ae">MeteorShowersMgr</a>
 </li>
 <li>setUseNutation()
 : <a class="el" href="classStelCore.html#a426fd4b8f8b77884326b9bb7588ccc56">StelCore</a>
@@ -2709,6 +2741,9 @@ $(function() {
 <li>slewTelescopeToViewDirection()
 : <a class="el" href="group__telescopeControl.html#a9e8ca7e2b3f27aaaf17b41d6720999b0">TelescopeControl</a>
 </li>
+<li>smoothPan()
+: <a class="el" href="classStelMovementMgr.html#a259b38e2ae3c23c1b2730316f31712a8">StelMovementMgr</a>
+</li>
 <li>SpecialZoneArray()
 : <a class="el" href="classSpecialZoneArray.html#a53148da565642a220d52b6c6f630c934">SpecialZoneArray</a>
 </li>
@@ -2716,7 +2751,7 @@ $(function() {
 : <a class="el" href="classSphericalCap.html#a4cad01940b0698ffcd04a5a4ce73ade0">SphericalCap</a>
 </li>
 <li>SphericalConvexPolygon()
-: <a class="el" href="classSphericalConvexPolygon.html#af1bdb57152f0112afaa8f838f3f51f20">SphericalConvexPolygon</a>
+: <a class="el" href="classSphericalConvexPolygon.html#acabc582644d83fa6c4cced0322c373b7">SphericalConvexPolygon</a>
 </li>
 <li>SphericalPolygon()
 : <a class="el" href="classSphericalPolygon.html#acbbedf2e9133c0ebfc38260d7be5538f">SphericalPolygon</a>
@@ -2743,7 +2778,7 @@ $(function() {
 : <a class="el" href="classSphericalTexturedConvexPolygon.html#a44b79f4022ade70bd62066c645812aae">SphericalTexturedConvexPolygon</a>
 </li>
 <li>SphericalTexturedPolygon()
-: <a class="el" href="classSphericalTexturedPolygon.html#a4fd7ac95c7fdab98b32faef4859dc10b">SphericalTexturedPolygon</a>
+: <a class="el" href="classSphericalTexturedPolygon.html#abbfef5804e0fec4d2d8f124b29b5e38e">SphericalTexturedPolygon</a>
 </li>
 <li>splitCSV()
 : <a class="el" href="group__qtWebApp.html#a7c386a7e39a4bcf801c1c83954632f92">HttpCookie</a>
@@ -2808,7 +2843,8 @@ $(function() {
 : <a class="el" href="group__satellites.html#af99b9fd10f317db6e20e92ce43ef1bc0">Satellites</a>
 </li>
 <li>statusChanged()
-: <a class="el" href="classSimbadLookupReply.html#a8ad43ac32879e6a8d6f5cd6caa15dcc0">SimbadLookupReply</a>
+: <a class="el" href="classHipOnlineReply.html#a956ce5ca71d1caa6b7d3dd25cb40ae70">HipOnlineReply</a>
+, <a class="el" href="classSimbadLookupReply.html#a8ad43ac32879e6a8d6f5cd6caa15dcc0">SimbadLookupReply</a>
 </li>
 <li>StelApp()
 : <a class="el" href="classStelApp.html#a3c63d0c06fa1b6977c4e0e351cd2cdce">StelApp</a>
@@ -2817,7 +2853,7 @@ $(function() {
 : <a class="el" href="classStelButton.html#a8f67a043b0db4e147d829d6391ef4b63">StelButton</a>
 </li>
 <li>StelLocationMgr()
-: <a class="el" href="classStelLocationMgr.html#aabf5e3d9dd25f6738d664887d0b34c13">StelLocationMgr</a>
+: <a class="el" href="classStelLocationMgr.html#ab3b643f69bb814041fe986719d2a3b2a">StelLocationMgr</a>
 </li>
 <li>StelModuleActionName
 : <a class="el" href="classStelModule.html#a11b61d014b51cf6424cd89b1ccd3d768">StelModule</a>
@@ -2850,7 +2886,7 @@ $(function() {
 : <a class="el" href="classStelSkyDrawer.html#a9c898a616844bea6d360281cd682df4f">StelSkyDrawer</a>
 </li>
 <li>StelSkyImageTile()
-: <a class="el" href="classStelSkyImageTile.html#af286450cb154fad5f3d2ed0cd79cb805">StelSkyImageTile</a>
+: <a class="el" href="classStelSkyImageTile.html#a64b9e7ceadf30f35a18c8b6be88132ba">StelSkyImageTile</a>
 </li>
 <li>StelSkyPolygon()
 : <a class="el" href="classStelSkyPolygon.html#a8905d6a1e1f044dc342ace8686b962f4">StelSkyPolygon</a>
@@ -3031,7 +3067,7 @@ $(function() {
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Sun Mar 28 2021 15:15:33 for Stellarium by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Thu Jun 24 2021 19:06:17 for Stellarium by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.17
 </small></address>
