@@ -1,0 +1,47 @@
+---
+layout: default
+title: Stellarium Skycultures
+---
+{% include i18n.html %}
+{% include home.html %}
+
+<div id="content">
+  <div id="skycultures-intro" class="block">
+    <h2>{% include tr.html s="user contributed skycultures" %}</h2>
+    <p>{% include tr.html s="We have few user contributed skycultures which are not included into default package for some reasons." %}</p>
+    <ul class="smalllist">
+      <li><a href="./skycultures-list.html">{% include tr.html s="list of skycultures" %}</a></li>
+    </ul>
+  </div>
+
+  <div id="skycultures-data" class="block">
+    <h2>{% include tr.html s="how to install skycultures" %}</h2>
+    <p>{% include tr.html s="After you have downloaded the .zip file for a skyculture from this page, you need to install it in Stellarium." %}</p>
+    <h3>{% include tr.html s="manual" %}</h3>
+    <p>{% include tr.html s="Please follow this procedure to install a skyculture package:" %}</p>
+    <ul class="stdlist">
+        <li>{% include tr.html s="Browse to your User Data Directory, which varies according to your operating system." %}</li>
+        <li>{% include tr.html s="Create a sub-directory called <em>skycultures</em> in your user directory (if it doesn't exist)." %}</li>
+        <li>{% include tr.html s="Unzip the skyculture .zip file in the <em>skycultures</em> directory (if it's done right, a sub-directory should be created for each skyculture)." %}</li>
+    </ul>
+    <h2>{% include tr.html s="contributions" %}</h2>
+    <p>{% include tr.html s="Please feel free to contribute your own custom skyculture here. Make thumbnails 200x114 pixels to fit with the rest of the page." %}</p>
+    <p>{% include tr.html s="To find out more about how to create a skyculture, see the Stellarium User Guide, and examine existing skycultures. If you are having problems, posting to the forums is a good way to get some advice." %}</p>
+    <h3>{% include tr.html s="important note on image dimensions" %}</h3>
+    <p><strong>{% include tr.html s="IMPORTANT: Make sure all textures have dimensions which are integer powers of 2, i.e. 256, 512, 1024, 2048, 4096, 8192, 16384, ... e.g. 4096 by 1024, 2048 by 2048 and so on." %}</strong></p>
+    <p>{% include tr.html s="This is a limitation of OpenGL. Some video hardware will work OK with images with different image dimensions, but many will not display properly, suffer vastly reduced frame rates, and even crash the computer." %}</p>
+    <p><strong>{% include tr.html s="Please make sure all contributed skycultures conform to these requirements, or your link may be removed." %}</strong></p>
+    <p>{% include tr.html s="Be aware that many people's video hardware cannot handle very large textures. This is hardware and driver dependent. A typical maximum image size is 2048x2048 or 4096x4096." %}</p>
+    <h3>{% include tr.html s="package contents" %}</h3>
+    <p>{% include tr.html s="Please package your skyculture in a .zip file with all files inside a directory in the .zip file. This should be unique to your skyculture, and it would be nice if it was all lower-case with no spaces." %}</p>
+    <p>{% include tr.html s="You should also include a description.en.utf8 file which describes the skyculture and specifies any usage restrictions or licensing terms for the images used in the skyculture." %}</p>
+    <h3>{% include tr.html s="licensing" %}</h3>
+    <p>{% include tr.html s="Before you distribute images as part of a Stellarium skyculture, please ensure you are legally entitled to - you must be the copyright holder for the images, or be able to distribute them for use with Stellarium under the terms of some agreement with the copyright holder (e.g. Creative Commons licensed images found on the web)." %}</p>
+    <p>{% include tr.html s="It is important to explicitly state what use may be made of images for your skyculture. This should be done in the description.en.utf8 file (and value for opton license in info.ini file) inside the .zip file." %}</p>
+    <p>{% include tr.html s="We recommend an open source license compatible with Stellarium itself (i.e. the GNU GPL), or one of the Creative Commons licenses." %}</p>
+    <h3>{% include tr.html s="file encoding" %}</h3>
+    <p>{% include tr.html s="The info.ini and description.en.utf8 files should be UTF-8 encoded text or plain ASCII. It's probably a good idea to adopt the Windows line ending encoding, (i.e. CR LF). Both Windows and *nix style line ending encoding should work OK in Stellarium, but Windows users will have an ugly time reading the description.en.utf8 if it uses *nix-style newlines." %}</p>
+    <h3>{% include tr.html s="need hosting?" %}</h3>
+    <p>{% include tr.html s="If you have a skyculture you would like to share but have no web-space to put it, email to any Stellarium developers and we'll put it on our site." %}</p>
+  </div>
+</div>
