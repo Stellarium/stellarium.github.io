@@ -21,7 +21,7 @@
   <td id="projectlogo"><img alt="Logo" src="stellarium-logo.png"/></td>
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">Stellarium
-   &#160;<span id="projectnumber">0.21.1</span>
+   &#160;<span id="projectnumber">0.21.2</span>
    </div>
   </td>
  </tr>
@@ -49,60 +49,62 @@ $(function() {
 <div class="title">CustomObject Class Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
+
+<p><code>#include &lt;CustomObject.hpp&gt;</code></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:a022efe4c48b22fc1d700b062123aba72"><td class="memItemLeft" align="right" valign="top"><a id="a022efe4c48b22fc1d700b062123aba72"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><b>CustomObject</b> (const QString &amp;codesignation, const <a class="el" href="classVector3.html">Vec3d</a> &amp;coordinates, const bool isVisible)</td></tr>
-<tr class="separator:a022efe4c48b22fc1d700b062123aba72"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a129d352f6387b5c9a3c207a2c7a43fd3"><td class="memItemLeft" align="right" valign="top"><a id="a129d352f6387b5c9a3c207a2c7a43fd3"></a>
-virtual QString&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classCustomObject.html#a129d352f6387b5c9a3c207a2c7a43fd3">getType</a> (void) const</td></tr>
-<tr class="memdesc:a129d352f6387b5c9a3c207a2c7a43fd3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the type of object. <br /></td></tr>
-<tr class="separator:a129d352f6387b5c9a3c207a2c7a43fd3"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aabe04407bc5ea5521c904f938e01fb52"><td class="memItemLeft" align="right" valign="top">virtual QString&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classCustomObject.html#aabe04407bc5ea5521c904f938e01fb52">getID</a> (void) const</td></tr>
-<tr class="memdesc:aabe04407bc5ea5521c904f938e01fb52"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns a unique identifier for this object.  <a href="classCustomObject.html#aabe04407bc5ea5521c904f938e01fb52">More...</a><br /></td></tr>
-<tr class="separator:aabe04407bc5ea5521c904f938e01fb52"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a64c55bf84242d624b792b48cdf32a635"><td class="memItemLeft" align="right" valign="top"><a id="a64c55bf84242d624b792b48cdf32a635"></a>
-virtual float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classCustomObject.html#a64c55bf84242d624b792b48cdf32a635">getSelectPriority</a> (const <a class="el" href="classStelCore.html">StelCore</a> *core) const</td></tr>
-<tr class="memdesc:a64c55bf84242d624b792b48cdf32a635"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return a priority value which is used to discriminate objects by priority As for magnitudes, the lower is the higher priority. <br /></td></tr>
-<tr class="separator:a64c55bf84242d624b792b48cdf32a635"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a06df9c156325897c85d269e802c0acb7"><td class="memItemLeft" align="right" valign="top">virtual QString&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classCustomObject.html#a06df9c156325897c85d269e802c0acb7">getInfoString</a> (const <a class="el" href="classStelCore.html">StelCore</a> *core, const InfoStringGroup &amp;flags) const</td></tr>
-<tr class="memdesc:a06df9c156325897c85d269e802c0acb7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get an HTML string to describe the object.  <a href="classCustomObject.html#a06df9c156325897c85d269e802c0acb7">More...</a><br /></td></tr>
-<tr class="separator:a06df9c156325897c85d269e802c0acb7"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a6cfba30c56770eb9e72dfe3891a246a7"><td class="memItemLeft" align="right" valign="top"><a id="a6cfba30c56770eb9e72dfe3891a246a7"></a>
-virtual <a class="el" href="classVector3.html">Vec3f</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classCustomObject.html#a6cfba30c56770eb9e72dfe3891a246a7">getInfoColor</a> (void) const</td></tr>
-<tr class="memdesc:a6cfba30c56770eb9e72dfe3891a246a7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get a color used to display info about the object. <br /></td></tr>
-<tr class="separator:a6cfba30c56770eb9e72dfe3891a246a7"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad346713f8cbf2ba1c6aa5a789c233ab0"><td class="memItemLeft" align="right" valign="top"><a id="ad346713f8cbf2ba1c6aa5a789c233ab0"></a>
-virtual <a class="el" href="classVector3.html">Vec3d</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classCustomObject.html#ad346713f8cbf2ba1c6aa5a789c233ab0">getJ2000EquatorialPos</a> (const <a class="el" href="classStelCore.html">StelCore</a> *) const</td></tr>
-<tr class="memdesc:ad346713f8cbf2ba1c6aa5a789c233ab0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get observer-centered equatorial coordinates at equinox J2000. <br /></td></tr>
-<tr class="separator:ad346713f8cbf2ba1c6aa5a789c233ab0"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a3847a794c9df75080d4c1b43468cb4f3"><td class="memItemLeft" align="right" valign="top"><a id="a3847a794c9df75080d4c1b43468cb4f3"></a>
-virtual float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classCustomObject.html#a3847a794c9df75080d4c1b43468cb4f3">getVMagnitude</a> (const <a class="el" href="classStelCore.html">StelCore</a> *core) const</td></tr>
-<tr class="memdesc:a3847a794c9df75080d4c1b43468cb4f3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the visual magnitude of custom object. <br /></td></tr>
-<tr class="separator:a3847a794c9df75080d4c1b43468cb4f3"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a5a57bba63283fbbd567178b2a3d2b278"><td class="memItemLeft" align="right" valign="top"><a id="a5a57bba63283fbbd567178b2a3d2b278"></a>
-virtual double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classCustomObject.html#a5a57bba63283fbbd567178b2a3d2b278">getAngularSize</a> (const <a class="el" href="classStelCore.html">StelCore</a> *core) const</td></tr>
-<tr class="memdesc:a5a57bba63283fbbd567178b2a3d2b278"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the angular size of custom object. <br /></td></tr>
-<tr class="separator:a5a57bba63283fbbd567178b2a3d2b278"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a87ba79ad6ade5fde6515351f73c44c58"><td class="memItemLeft" align="right" valign="top"><a id="a87ba79ad6ade5fde6515351f73c44c58"></a>
-virtual QString&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classCustomObject.html#a87ba79ad6ade5fde6515351f73c44c58">getNameI18n</a> (void) const</td></tr>
-<tr class="memdesc:a87ba79ad6ade5fde6515351f73c44c58"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the localized name of custom object. <br /></td></tr>
-<tr class="separator:a87ba79ad6ade5fde6515351f73c44c58"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:afbe627687e4c26c34cdc3c7b6f5e08eb"><td class="memItemLeft" align="right" valign="top"><a id="afbe627687e4c26c34cdc3c7b6f5e08eb"></a>
-virtual QString&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classCustomObject.html#afbe627687e4c26c34cdc3c7b6f5e08eb">getEnglishName</a> (void) const</td></tr>
-<tr class="memdesc:afbe627687e4c26c34cdc3c7b6f5e08eb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the english name of custom object. <br /></td></tr>
-<tr class="separator:afbe627687e4c26c34cdc3c7b6f5e08eb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a61ebd28cffbe4fb844ee80854b25c4d0"><td class="memItemLeft" align="right" valign="top"><a id="a61ebd28cffbe4fb844ee80854b25c4d0"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><b>CustomObject</b> (const QString &amp;codesignation, const <a class="el" href="classVector3.html">Vec3d</a> &amp;coordJ2000, const bool isVisible)</td></tr>
+<tr class="separator:a61ebd28cffbe4fb844ee80854b25c4d0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aace3e73f9e44bd586f5e017b45c083b2"><td class="memItemLeft" align="right" valign="top"><a id="aace3e73f9e44bd586f5e017b45c083b2"></a>
+virtual QString&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classCustomObject.html#aace3e73f9e44bd586f5e017b45c083b2">getType</a> (void) const Q_DECL_OVERRIDE</td></tr>
+<tr class="memdesc:aace3e73f9e44bd586f5e017b45c083b2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the type of object. <br /></td></tr>
+<tr class="separator:aace3e73f9e44bd586f5e017b45c083b2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aae032c0c7b9ab9803ea803687fc34528"><td class="memItemLeft" align="right" valign="top">virtual QString&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classCustomObject.html#aae032c0c7b9ab9803ea803687fc34528">getID</a> (void) const Q_DECL_OVERRIDE</td></tr>
+<tr class="memdesc:aae032c0c7b9ab9803ea803687fc34528"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns a unique identifier for this object.  <a href="classCustomObject.html#aae032c0c7b9ab9803ea803687fc34528">More...</a><br /></td></tr>
+<tr class="separator:aae032c0c7b9ab9803ea803687fc34528"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4d5eb5f813c6cbdcfd15c317e8ec1d0a"><td class="memItemLeft" align="right" valign="top"><a id="a4d5eb5f813c6cbdcfd15c317e8ec1d0a"></a>
+virtual float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classCustomObject.html#a4d5eb5f813c6cbdcfd15c317e8ec1d0a">getSelectPriority</a> (const <a class="el" href="classStelCore.html">StelCore</a> *core) const Q_DECL_OVERRIDE</td></tr>
+<tr class="memdesc:a4d5eb5f813c6cbdcfd15c317e8ec1d0a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return a priority value which is used to discriminate objects by priority As for magnitudes, the lower is the higher priority. <br /></td></tr>
+<tr class="separator:a4d5eb5f813c6cbdcfd15c317e8ec1d0a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a080023f1d6c774d97813cfcbeba4c717"><td class="memItemLeft" align="right" valign="top">virtual QString&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classCustomObject.html#a080023f1d6c774d97813cfcbeba4c717">getInfoString</a> (const <a class="el" href="classStelCore.html">StelCore</a> *core, const InfoStringGroup &amp;flags) const Q_DECL_OVERRIDE</td></tr>
+<tr class="memdesc:a080023f1d6c774d97813cfcbeba4c717"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get an HTML string to describe the object.  <a href="classCustomObject.html#a080023f1d6c774d97813cfcbeba4c717">More...</a><br /></td></tr>
+<tr class="separator:a080023f1d6c774d97813cfcbeba4c717"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adcaf166246b39fee7a8f8d6f44bf3e0b"><td class="memItemLeft" align="right" valign="top"><a id="adcaf166246b39fee7a8f8d6f44bf3e0b"></a>
+virtual <a class="el" href="classVector3.html">Vec3f</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classCustomObject.html#adcaf166246b39fee7a8f8d6f44bf3e0b">getInfoColor</a> (void) const Q_DECL_OVERRIDE</td></tr>
+<tr class="memdesc:adcaf166246b39fee7a8f8d6f44bf3e0b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get a color used to display info about the object. <br /></td></tr>
+<tr class="separator:adcaf166246b39fee7a8f8d6f44bf3e0b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6f348e5e918fdf3d6ae9df6df97e4128"><td class="memItemLeft" align="right" valign="top"><a id="a6f348e5e918fdf3d6ae9df6df97e4128"></a>
+virtual <a class="el" href="classVector3.html">Vec3d</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classCustomObject.html#a6f348e5e918fdf3d6ae9df6df97e4128">getJ2000EquatorialPos</a> (const <a class="el" href="classStelCore.html">StelCore</a> *core) const Q_DECL_OVERRIDE</td></tr>
+<tr class="memdesc:a6f348e5e918fdf3d6ae9df6df97e4128"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get observer-centered equatorial coordinates at equinox J2000. <br /></td></tr>
+<tr class="separator:a6f348e5e918fdf3d6ae9df6df97e4128"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8ef975c4d3a367ad88c9961b1c49b054"><td class="memItemLeft" align="right" valign="top"><a id="a8ef975c4d3a367ad88c9961b1c49b054"></a>
+virtual float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classCustomObject.html#a8ef975c4d3a367ad88c9961b1c49b054">getVMagnitude</a> (const <a class="el" href="classStelCore.html">StelCore</a> *core) const Q_DECL_OVERRIDE</td></tr>
+<tr class="memdesc:a8ef975c4d3a367ad88c9961b1c49b054"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the visual magnitude of custom object. <br /></td></tr>
+<tr class="separator:a8ef975c4d3a367ad88c9961b1c49b054"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac4b6fab78aacd6d5499ea66e429f67d7"><td class="memItemLeft" align="right" valign="top"><a id="ac4b6fab78aacd6d5499ea66e429f67d7"></a>
+virtual double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classCustomObject.html#ac4b6fab78aacd6d5499ea66e429f67d7">getAngularSize</a> (const <a class="el" href="classStelCore.html">StelCore</a> *core) const Q_DECL_OVERRIDE</td></tr>
+<tr class="memdesc:ac4b6fab78aacd6d5499ea66e429f67d7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the angular size of custom object. <br /></td></tr>
+<tr class="separator:ac4b6fab78aacd6d5499ea66e429f67d7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2d04b8170b42e77b41daf7a37a441cf7"><td class="memItemLeft" align="right" valign="top"><a id="a2d04b8170b42e77b41daf7a37a441cf7"></a>
+virtual QString&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classCustomObject.html#a2d04b8170b42e77b41daf7a37a441cf7">getNameI18n</a> (void) const Q_DECL_OVERRIDE</td></tr>
+<tr class="memdesc:a2d04b8170b42e77b41daf7a37a441cf7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the localized name of custom object. <br /></td></tr>
+<tr class="separator:a2d04b8170b42e77b41daf7a37a441cf7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1ce36cbe541045da31aaeeef1629c5aa"><td class="memItemLeft" align="right" valign="top"><a id="a1ce36cbe541045da31aaeeef1629c5aa"></a>
+virtual QString&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classCustomObject.html#a1ce36cbe541045da31aaeeef1629c5aa">getEnglishName</a> (void) const Q_DECL_OVERRIDE</td></tr>
+<tr class="memdesc:a1ce36cbe541045da31aaeeef1629c5aa"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the english name of custom object. <br /></td></tr>
+<tr class="separator:a1ce36cbe541045da31aaeeef1629c5aa"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac254699f040ae130df3a3a9e83764ead"><td class="memItemLeft" align="right" valign="top"><a id="ac254699f040ae130df3a3a9e83764ead"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><b>update</b> (double deltaTime)</td></tr>
 <tr class="separator:ac254699f040ae130df3a3a9e83764ead"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pub_methods_classStelObject"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_classStelObject')"><img src="closed.png" alt="-"/>&#160;Public Member Functions inherited from <a class="el" href="classStelObject.html">StelObject</a></td></tr>
-<tr class="memitem:ac33309144473a522eb6e274a7430f0ba inherit pub_methods_classStelObject"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="classSphericalRegionP.html">SphericalRegionP</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classStelObject.html#ac33309144473a522eb6e274a7430f0ba">getRegion</a> () const</td></tr>
-<tr class="memdesc:ac33309144473a522eb6e274a7430f0ba inherit pub_methods_classStelObject"><td class="mdescLeft">&#160;</td><td class="mdescRight">Default implementation of the getRegion method.  <a href="classStelObject.html#ac33309144473a522eb6e274a7430f0ba">More...</a><br /></td></tr>
-<tr class="separator:ac33309144473a522eb6e274a7430f0ba inherit pub_methods_classStelObject"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac2781950e2eaeea627dcff1458dcebf5 inherit pub_methods_classStelObject"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="classVector3.html">Vec3d</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classStelObject.html#ac2781950e2eaeea627dcff1458dcebf5">getPointInRegion</a> () const</td></tr>
-<tr class="memdesc:ac2781950e2eaeea627dcff1458dcebf5 inherit pub_methods_classStelObject"><td class="mdescLeft">&#160;</td><td class="mdescRight">Default implementation of the getPointInRegion method.  <a href="classStelObject.html#ac2781950e2eaeea627dcff1458dcebf5">More...</a><br /></td></tr>
-<tr class="separator:ac2781950e2eaeea627dcff1458dcebf5 inherit pub_methods_classStelObject"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac875514ac2bf8aff56598a4d1cd868e4 inherit pub_methods_classStelObject"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="classSphericalRegionP.html">SphericalRegionP</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classStelObject.html#ac875514ac2bf8aff56598a4d1cd868e4">getRegion</a> () const Q_DECL_OVERRIDE</td></tr>
+<tr class="memdesc:ac875514ac2bf8aff56598a4d1cd868e4 inherit pub_methods_classStelObject"><td class="mdescLeft">&#160;</td><td class="mdescRight">Default implementation of the getRegion method.  <a href="classStelObject.html#ac875514ac2bf8aff56598a4d1cd868e4">More...</a><br /></td></tr>
+<tr class="separator:ac875514ac2bf8aff56598a4d1cd868e4 inherit pub_methods_classStelObject"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adc7691bc5d4c6c4a854264c817e3b933 inherit pub_methods_classStelObject"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="classVector3.html">Vec3d</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classStelObject.html#adc7691bc5d4c6c4a854264c817e3b933">getPointInRegion</a> () const Q_DECL_OVERRIDE</td></tr>
+<tr class="memdesc:adc7691bc5d4c6c4a854264c817e3b933 inherit pub_methods_classStelObject"><td class="mdescLeft">&#160;</td><td class="mdescRight">Default implementation of the getPointInRegion method.  <a href="classStelObject.html#adc7691bc5d4c6c4a854264c817e3b933">More...</a><br /></td></tr>
+<tr class="separator:adc7691bc5d4c6c4a854264c817e3b933 inherit pub_methods_classStelObject"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a16e447c2dc2cbbe6e4e308376ae0c5ca inherit pub_methods_classStelObject"><td class="memItemLeft" align="right" valign="top">virtual QVariantMap&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classStelObject.html#a16e447c2dc2cbbe6e4e308376ae0c5ca">getInfoMap</a> (const <a class="el" href="classStelCore.html">StelCore</a> *core) const</td></tr>
 <tr class="memdesc:a16e447c2dc2cbbe6e4e308376ae0c5ca inherit pub_methods_classStelObject"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return a key/value map with data about an object's position, magnitude and so on.  <a href="classStelObject.html#a16e447c2dc2cbbe6e4e308376ae0c5ca">More...</a><br /></td></tr>
 <tr class="separator:a16e447c2dc2cbbe6e4e308376ae0c5ca inherit pub_methods_classStelObject"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -151,9 +153,9 @@ float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="cla
 <tr class="memitem:a45ce8995847ddf9f230f924577534568 inherit pub_methods_classStelObject"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classStelObject.html#a45ce8995847ddf9f230f924577534568">isAboveRealHorizon</a> (const <a class="el" href="classStelCore.html">StelCore</a> *core) const</td></tr>
 <tr class="memdesc:a45ce8995847ddf9f230f924577534568 inherit pub_methods_classStelObject"><td class="mdescLeft">&#160;</td><td class="mdescRight">Checking position an object above real horizon for current location.  <a href="classStelObject.html#a45ce8995847ddf9f230f924577534568">More...</a><br /></td></tr>
 <tr class="separator:a45ce8995847ddf9f230f924577534568 inherit pub_methods_classStelObject"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a96365d7580a27e38fb49021d831697f1 inherit pub_methods_classStelObject"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classVector3.html">Vec3f</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classStelObject.html#a96365d7580a27e38fb49021d831697f1">getRTSTime</a> (<a class="el" href="classStelCore.html">StelCore</a> *core) const</td></tr>
-<tr class="memdesc:a96365d7580a27e38fb49021d831697f1 inherit pub_methods_classStelObject"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get today's time of rise, transit and set for celestial object for current location.  <a href="classStelObject.html#a96365d7580a27e38fb49021d831697f1">More...</a><br /></td></tr>
-<tr class="separator:a96365d7580a27e38fb49021d831697f1 inherit pub_methods_classStelObject"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad4711214f065399f7418e0c976946ea3 inherit pub_methods_classStelObject"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="classVector4.html">Vec4d</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classStelObject.html#ad4711214f065399f7418e0c976946ea3">getRTSTime</a> (const <a class="el" href="classStelCore.html">StelCore</a> *core, const double altitude=0.) const</td></tr>
+<tr class="memdesc:ad4711214f065399f7418e0c976946ea3 inherit pub_methods_classStelObject"><td class="mdescLeft">&#160;</td><td class="mdescRight">Compute time of rise, transit and set for celestial object for current location.  <a href="classStelObject.html#ad4711214f065399f7418e0c976946ea3">More...</a><br /></td></tr>
+<tr class="separator:ad4711214f065399f7418e0c976946ea3 inherit pub_methods_classStelObject"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a85e2cc30d876cd5afacb3fe199dbad95 inherit pub_methods_classStelObject"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classStelObject.html#a85e2cc30d876cd5afacb3fe199dbad95">getVMagnitudeWithExtinction</a> (const <a class="el" href="classStelCore.html">StelCore</a> *core) const</td></tr>
 <tr class="memdesc:a85e2cc30d876cd5afacb3fe199dbad95 inherit pub_methods_classStelObject"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return object's apparent V magnitude as seen from observer including extinction.  <a href="classStelObject.html#a85e2cc30d876cd5afacb3fe199dbad95">More...</a><br /></td></tr>
 <tr class="separator:a85e2cc30d876cd5afacb3fe199dbad95 inherit pub_methods_classStelObject"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -258,9 +260,12 @@ Additional Inherited Members</h2></td></tr>
 <tr class="memdesc:a53ece72260ecfe9c4783d740862021f8 inherit pro_methods_classStelObject"><td class="mdescLeft">&#160;</td><td class="mdescRight">Apply post processing on the info string.  <a href="classStelObject.html#a53ece72260ecfe9c4783d740862021f8">More...</a><br /></td></tr>
 <tr class="separator:a53ece72260ecfe9c4783d740862021f8 inherit pro_methods_classStelObject"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
-<h2 class="groupheader">Member Function Documentation</h2>
-<a id="aabe04407bc5ea5521c904f938e01fb52"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aabe04407bc5ea5521c904f938e01fb52">&#9670;&nbsp;</a></span>getID()</h2>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><p>TODO GZ says PLEASE Document this thoroughly! If possible recombine <a class="el" href="classCustomObject.html">CustomObject</a> and StelMarker &amp; derivatives, or remove one of the two. Or describe why we need both.</p>
+<p>The <a class="el" href="classCustomObject.html">CustomObject</a> is currently used for custom Markers which can be set and removed interactively. It is drawn exactly at the coordinates given and is not subject to aberration. </p>
+</div><h2 class="groupheader">Member Function Documentation</h2>
+<a id="aae032c0c7b9ab9803ea803687fc34528"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aae032c0c7b9ab9803ea803687fc34528">&#9670;&nbsp;</a></span>getID()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -282,16 +287,16 @@ Additional Inherited Members</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
-<p>The ID should be unique for all objects of the same type, but may freely conflict with IDs of other types, so <a class="el" href="classCustomObject.html#a129d352f6387b5c9a3c207a2c7a43fd3" title="Get the type of object.">getType()</a> must also be tested.</p>
-<p>With this it should be possible to at least identify the same object in a different instance of Stellarium running the same version, but it would even be better if the ID provides some degree of forward-compatibility. For some object types (e.g. planets) this may simply return <a class="el" href="classCustomObject.html#afbe627687e4c26c34cdc3c7b6f5e08eb" title="Get the english name of custom object.">getEnglishName()</a>, but better candidates may be official designations or at least (stable) internal IDs.</p>
+<p>The ID should be unique for all objects of the same type, but may freely conflict with IDs of other types, so <a class="el" href="classCustomObject.html#aace3e73f9e44bd586f5e017b45c083b2" title="Get the type of object.">getType()</a> must also be tested.</p>
+<p>With this it should be possible to at least identify the same object in a different instance of Stellarium running the same version, but it would even be better if the ID provides some degree of forward-compatibility. For some object types (e.g. planets) this may simply return <a class="el" href="classCustomObject.html#a1ce36cbe541045da31aaeeef1629c5aa" title="Get the english name of custom object.">getEnglishName()</a>, but better candidates may be official designations or at least (stable) internal IDs.</p>
 <p>An object may have multiple IDs (different catalog numbers, etc). <a class="el" href="classStelObjectMgr.html#af0a33f6ff1448db085288eea46937399" title="Find an object of the given type and ID.">StelObjectMgr::searchByID()</a> should search through all ID variants, but this method only returns one of them. </p>
 
 <p>Implements <a class="el" href="classStelObject.html#ab11e911fb1974d75b8a9b629a57f243b">StelObject</a>.</p>
 
 </div>
 </div>
-<a id="a06df9c156325897c85d269e802c0acb7"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a06df9c156325897c85d269e802c0acb7">&#9670;&nbsp;</a></span>getInfoString()</h2>
+<a id="a080023f1d6c774d97813cfcbeba4c717"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a080023f1d6c774d97813cfcbeba4c717">&#9670;&nbsp;</a></span>getInfoString()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -337,7 +342,7 @@ Additional Inherited Members</h2></td></tr>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Thu Jun 24 2021 19:06:16 for Stellarium by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Mon Sep 27 2021 22:59:45 for Stellarium by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.17
 </small></address>

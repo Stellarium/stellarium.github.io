@@ -44,7 +44,8 @@ $(function() {
   <div class="summary">
 <a href="#pub-slots">Public Slots</a> &#124;
 <a href="#signals">Signals</a> &#124;
-<a href="#pub-methods">Public Member Functions</a>  </div>
+<a href="#pub-methods">Public Member Functions</a> &#124;
+<a href="#pub-static-methods">Static Public Member Functions</a>  </div>
   <div class="headertitle">
 <div class="title">StelLocationMgr Class Reference</div>  </div>
 </div><!--header-->
@@ -126,10 +127,29 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="clas
 <tr class="memitem:ac246896fb8b22cfd0a76233801b135f9"><td class="memItemLeft" align="right" valign="top">LocationMap&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classStelLocationMgr.html#ac246896fb8b22cfd0a76233801b135f9">pickLocationsNearby</a> (const QString planetName, const float longitude, const float latitude, const float radiusDegrees)</td></tr>
 <tr class="memdesc:ac246896fb8b22cfd0a76233801b135f9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Find list of locations within.  <a href="classStelLocationMgr.html#ac246896fb8b22cfd0a76233801b135f9">More...</a><br /></td></tr>
 <tr class="separator:ac246896fb8b22cfd0a76233801b135f9"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a19d6b11f0656977ba17bff07318a8df4"><td class="memItemLeft" align="right" valign="top"><a id="a19d6b11f0656977ba17bff07318a8df4"></a>
-LocationMap&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classStelLocationMgr.html#a19d6b11f0656977ba17bff07318a8df4">pickLocationsInCountry</a> (const QString country)</td></tr>
-<tr class="memdesc:a19d6b11f0656977ba17bff07318a8df4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Find list of locations in a particular country only. <br /></td></tr>
-<tr class="separator:a19d6b11f0656977ba17bff07318a8df4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8d74a498222f898288bc3e9f9315de3b"><td class="memItemLeft" align="right" valign="top"><a id="a8d74a498222f898288bc3e9f9315de3b"></a>
+LocationMap&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classStelLocationMgr.html#a8d74a498222f898288bc3e9f9315de3b">pickLocationsInRegion</a> (const QString region)</td></tr>
+<tr class="memdesc:a8d74a498222f898288bc3e9f9315de3b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Find list of locations in a particular region only. <br /></td></tr>
+<tr class="separator:a8d74a498222f898288bc3e9f9315de3b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae5bb48ef0f059a4857d6b25e12dc2617"><td class="memItemLeft" align="right" valign="top"><a id="ae5bb48ef0f059a4857d6b25e12dc2617"></a>
+QStringList&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classStelLocationMgr.html#ae5bb48ef0f059a4857d6b25e12dc2617">getRegionNames</a> (const QString &amp;planet=&quot;&quot;) const</td></tr>
+<tr class="memdesc:ae5bb48ef0f059a4857d6b25e12dc2617"><td class="mdescLeft">&#160;</td><td class="mdescRight">return a QStringList of region names by planet (return all list of regions if planet name is empty) <br /></td></tr>
+<tr class="separator:ae5bb48ef0f059a4857d6b25e12dc2617"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-static-methods"></a>
+Static Public Member Functions</h2></td></tr>
+<tr class="memitem:a2c3b305319e236581188912223488bd3"><td class="memItemLeft" align="right" valign="top"><a id="a2c3b305319e236581188912223488bd3"></a>
+static QString&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classStelLocationMgr.html#a2c3b305319e236581188912223488bd3">pickRegionFromCountryCode</a> (const QString countryCode)</td></tr>
+<tr class="memdesc:a2c3b305319e236581188912223488bd3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Pick region name from ISO 3166-1 two-letter country codes. <br /></td></tr>
+<tr class="separator:a2c3b305319e236581188912223488bd3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a337093af333d115fff94bea529e39bd5"><td class="memItemLeft" align="right" valign="top"><a id="a337093af333d115fff94bea529e39bd5"></a>
+static QString&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classStelLocationMgr.html#a337093af333d115fff94bea529e39bd5">pickRegionFromCountry</a> (const QString country)</td></tr>
+<tr class="memdesc:a337093af333d115fff94bea529e39bd5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Pick region name from country English name. <br /></td></tr>
+<tr class="separator:a337093af333d115fff94bea529e39bd5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a822eee92069a9c7c8e9f67cc24366cad"><td class="memItemLeft" align="right" valign="top"><a id="a822eee92069a9c7c8e9f67cc24366cad"></a>
+static QString&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classStelLocationMgr.html#a822eee92069a9c7c8e9f67cc24366cad">pickRegionFromCode</a> (int regionCode)</td></tr>
+<tr class="memdesc:a822eee92069a9c7c8e9f67cc24366cad"><td class="mdescLeft">&#160;</td><td class="mdescRight">Pick region name from region code. <br /></td></tr>
+<tr class="separator:a822eee92069a9c7c8e9f67cc24366cad"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Manage the list of available location. </p>
@@ -311,7 +331,7 @@ LocationMap&#160;</td><td class="memItemRight" valign="bottom"><a class="el" hre
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Sun Jun 13 2021 16:08:05 for Stellarium by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Mon Sep 27 2021 22:59:46 for Stellarium by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.17
 </small></address>

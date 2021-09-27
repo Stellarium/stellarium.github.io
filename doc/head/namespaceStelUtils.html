@@ -193,6 +193,10 @@ void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="name
 void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceStelUtils.html#a456872148a0df6a29957c50435078b64">getTimeFromJulianDay</a> (const double julianDay, int *hour, int *minute, int *second, int *millis=Q_NULLPTR)</td></tr>
 <tr class="memdesc:a456872148a0df6a29957c50435078b64"><td class="mdescLeft">&#160;</td><td class="mdescRight">Make from julianDay an hour, minute, second. <br /></td></tr>
 <tr class="separator:a456872148a0df6a29957c50435078b64"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8c8fde7d69cdf0c2adf4f76b274ef928"><td class="memItemLeft" align="right" valign="top"><a id="a8c8fde7d69cdf0c2adf4f76b274ef928"></a>
+double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceStelUtils.html#a8c8fde7d69cdf0c2adf4f76b274ef928">getHoursFromJulianDay</a> (const double julianDay)</td></tr>
+<tr class="memdesc:a8c8fde7d69cdf0c2adf4f76b274ef928"><td class="mdescLeft">&#160;</td><td class="mdescRight">Make hours (decimal format) from julianDay. <br /></td></tr>
+<tr class="separator:a8c8fde7d69cdf0c2adf4f76b274ef928"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a4ec966f52354991acecdc114ef9d1f64"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceStelUtils.html#a4ec966f52354991acecdc114ef9d1f64">getDateTimeFromISO8601String</a> (const QString &amp;iso8601Date, int *y, int *m, int *d, int *h, int *min, float *s)</td></tr>
 <tr class="memdesc:a4ec966f52354991acecdc114ef9d1f64"><td class="mdescLeft">&#160;</td><td class="mdescRight">Parse an ISO8601 date string.  <a href="namespaceStelUtils.html#a4ec966f52354991acecdc114ef9d1f64">More...</a><br /></td></tr>
 <tr class="separator:a4ec966f52354991acecdc114ef9d1f64"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -368,9 +372,9 @@ QString&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="n
 <tr class="memitem:a26ef9cd45dcf0a645aef135e01a44dbe"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceStelUtils.html#a26ef9cd45dcf0a645aef135e01a44dbe">getDeltaTByStephensonMorrisonHohenkerk2016</a> (const double jDay)</td></tr>
 <tr class="memdesc:a26ef9cd45dcf0a645aef135e01a44dbe"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get Delta-T estimation for a given date.  <a href="namespaceStelUtils.html#a26ef9cd45dcf0a645aef135e01a44dbe">More...</a><br /></td></tr>
 <tr class="separator:a26ef9cd45dcf0a645aef135e01a44dbe"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a231f3a69dcb5f9a2eec32515ccb21876"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceStelUtils.html#a231f3a69dcb5f9a2eec32515ccb21876">getMoonSecularAcceleration</a> (const double jDay, const double ndot, const bool useDE43x)</td></tr>
-<tr class="memdesc:a231f3a69dcb5f9a2eec32515ccb21876"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get Secular Acceleration estimation for a given year.  <a href="namespaceStelUtils.html#a231f3a69dcb5f9a2eec32515ccb21876">More...</a><br /></td></tr>
-<tr class="separator:a231f3a69dcb5f9a2eec32515ccb21876"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0b41d8f5cef235142b276223229c2958"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceStelUtils.html#a0b41d8f5cef235142b276223229c2958">getMoonSecularAcceleration</a> (const double jDay, const double ndot, const bool useDE4xx)</td></tr>
+<tr class="memdesc:a0b41d8f5cef235142b276223229c2958"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get Secular Acceleration estimation for a given year.  <a href="namespaceStelUtils.html#a0b41d8f5cef235142b276223229c2958">More...</a><br /></td></tr>
+<tr class="separator:a0b41d8f5cef235142b276223229c2958"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:afb657c757069457aad6ad6373724afb9"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceStelUtils.html#afb657c757069457aad6ad6373724afb9">getDeltaTStandardError</a> (const double jDay)</td></tr>
 <tr class="memdesc:afb657c757069457aad6ad6373724afb9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the standard error (sigma) for the value of DeltaT.  <a href="namespaceStelUtils.html#afb657c757069457aad6ad6373724afb9">More...</a><br /></td></tr>
 <tr class="separator:afb657c757069457aad6ad6373724afb9"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -1886,8 +1890,8 @@ float&#160;</td><td class="memItemRight" valign="bottom"><b>trunc</b> (float x)<
 
 </div>
 </div>
-<a id="a231f3a69dcb5f9a2eec32515ccb21876"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a231f3a69dcb5f9a2eec32515ccb21876">&#9670;&nbsp;</a></span>getMoonSecularAcceleration()</h2>
+<a id="a0b41d8f5cef235142b276223229c2958"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0b41d8f5cef235142b276223229c2958">&#9670;&nbsp;</a></span>getMoonSecularAcceleration()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -1908,7 +1912,7 @@ float&#160;</td><td class="memItemRight" valign="bottom"><b>trunc</b> (float x)<
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">const bool&#160;</td>
-          <td class="paramname"><em>useDE43x</em>&#160;</td>
+          <td class="paramname"><em>useDE4xx</em>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -1921,12 +1925,12 @@ float&#160;</td><td class="memItemRight" valign="bottom"><b>trunc</b> (float x)<
   <table class="params">
     <tr><td class="paramname">jDay</td><td>the JD </td></tr>
     <tr><td class="paramname">ndot</td><td>value of n-dot (secular acceleration of the Moon) which should be used in the lunar ephemeris instead of the default values. </td></tr>
-    <tr><td class="paramname">useDE43x</td><td>true if function should adapt calculation of the secular acceleration of the Moon to the DE43x ephemeris </td></tr>
+    <tr><td class="paramname">useDE4xx</td><td>true if function should adapt calculation of the secular acceleration of the Moon to the DE43x/DE44x ephemerides </td></tr>
   </table>
   </dd>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>SecularAcceleration in seconds </dd></dl>
-<dl class="section note"><dt>Note</dt><dd>n-dot for secular acceleration of the Moon in ELP2000-82B is -23.8946 "/cy/cy and for DE43x is -25.8 "/cy/cy </dd></dl>
+<dl class="section note"><dt>Note</dt><dd>n-dot for secular acceleration of the Moon in ELP2000-82B is -23.8946 "/cy/cy and for DE43x/DE44x is -25.8 "/cy/cy </dd></dl>
 
 </div>
 </div>
@@ -2844,7 +2848,7 @@ template&lt;typename T &gt; </div>
 </div><div class="memdoc">
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">lng</td><td>double* to store longitude in radian </td></tr>
+    <tr><td class="paramname">lng</td><td>double* to store longitude in radian [-pi, pi] </td></tr>
     <tr><td class="paramname">lat</td><td>double* to store latitude in radian </td></tr>
     <tr><td class="paramname">v</td><td>the input 3D vector </td></tr>
   </table>
@@ -2894,7 +2898,7 @@ template&lt;typename T &gt; </div>
 </div><div class="memdoc">
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">lng</td><td>double* to store longitude in radian </td></tr>
+    <tr><td class="paramname">lng</td><td>double* to store longitude in radian [-pi, pi] </td></tr>
     <tr><td class="paramname">lat</td><td>double* to store latitude in radian </td></tr>
     <tr><td class="paramname">v</td><td>the input 3D vector </td></tr>
   </table>
@@ -2944,7 +2948,7 @@ template&lt;typename T &gt; </div>
 </div><div class="memdoc">
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">lng</td><td>float* to store longitude in radian </td></tr>
+    <tr><td class="paramname">lng</td><td>float* to store longitude in radian [-pi, pi] </td></tr>
     <tr><td class="paramname">lat</td><td>float* to store latitude in radian </td></tr>
     <tr><td class="paramname">v</td><td>the input 3D vector </td></tr>
   </table>
@@ -2994,7 +2998,7 @@ template&lt;typename T &gt; </div>
 </div><div class="memdoc">
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">lng</td><td>float* to store longitude in radian </td></tr>
+    <tr><td class="paramname">lng</td><td>float* to store longitude in radian [-pi, pi] </td></tr>
     <tr><td class="paramname">lat</td><td>float* to store latitude in radian </td></tr>
     <tr><td class="paramname">v</td><td>the input 3D vector </td></tr>
   </table>
@@ -3241,7 +3245,7 @@ template&lt;typename T &gt; </div>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Sun Jun 13 2021 16:08:06 for Stellarium by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Mon Sep 27 2021 22:59:46 for Stellarium by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.17
 </small></address>

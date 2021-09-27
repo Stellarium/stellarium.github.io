@@ -21,7 +21,7 @@
   <td id="projectlogo"><img alt="Logo" src="stellarium-logo.png"/></td>
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">Stellarium
-   &#160;<span id="projectnumber">0.21.1</span>
+   &#160;<span id="projectnumber">0.21.2</span>
    </div>
   </td>
  </tr>
@@ -98,11 +98,17 @@ virtual QVector&lt; <a class="el" href="classSphericalCap.html">SphericalCap</a>
 <tr class="separator:aaa329438a51e9cc6b1616c5859e5f145"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aee88cf2a2cc8cf0acdf5f9df1cfa411b"><td class="memItemLeft" align="right" valign="top"><a id="aee88cf2a2cc8cf0acdf5f9df1cfa411b"></a>
 virtual <a class="el" href="structStelVertexArray.html">StelVertexArray</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSphericalRegion.html#aee88cf2a2cc8cf0acdf5f9df1cfa411b">getFillVertexArray</a> () const</td></tr>
-<tr class="memdesc:aee88cf2a2cc8cf0acdf5f9df1cfa411b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return an openGL compatible array to be displayed using vertex arrays. <br /></td></tr>
+<tr class="memdesc:aee88cf2a2cc8cf0acdf5f9df1cfa411b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return an OpenGL compatible array to be displayed using vertex arrays. <br /></td></tr>
 <tr class="separator:aee88cf2a2cc8cf0acdf5f9df1cfa411b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aaa220dcc370a6a1d22f99d5856eaea60"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="structStelVertexArray.html">StelVertexArray</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSphericalRegion.html#aaa220dcc370a6a1d22f99d5856eaea60">getFillVertexArray</a> (const <a class="el" href="classVector3.html">Vec3d</a> &amp;observerVelocityForAberration)</td></tr>
+<tr class="memdesc:aaa220dcc370a6a1d22f99d5856eaea60"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return an OpenGL compatible array to be displayed using vertex arrays.  <a href="classSphericalRegion.html#aaa220dcc370a6a1d22f99d5856eaea60">More...</a><br /></td></tr>
+<tr class="separator:aaa220dcc370a6a1d22f99d5856eaea60"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a478cc56f9fc948467c78a54987356f89"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="structStelVertexArray.html">StelVertexArray</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSphericalRegion.html#a478cc56f9fc948467c78a54987356f89">getOutlineVertexArray</a> () const</td></tr>
 <tr class="memdesc:a478cc56f9fc948467c78a54987356f89"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the outline of the contours defining the <a class="el" href="classSphericalPolygon.html">SphericalPolygon</a>.  <a href="classSphericalRegion.html#a478cc56f9fc948467c78a54987356f89">More...</a><br /></td></tr>
 <tr class="separator:a478cc56f9fc948467c78a54987356f89"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af6ff2b55e0b2ad9f9814a7425c1efd0c"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="structStelVertexArray.html">StelVertexArray</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSphericalRegion.html#af6ff2b55e0b2ad9f9814a7425c1efd0c">getOutlineVertexArray</a> (<a class="el" href="classVector3.html">Vec3d</a> observerVelocityForAberration)</td></tr>
+<tr class="memdesc:af6ff2b55e0b2ad9f9814a7425c1efd0c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the outline of the contours defining the <a class="el" href="classSphericalPolygon.html">SphericalPolygon</a>.  <a href="classSphericalRegion.html#af6ff2b55e0b2ad9f9814a7425c1efd0c">More...</a><br /></td></tr>
+<tr class="separator:af6ff2b55e0b2ad9f9814a7425c1efd0c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a5ea4528037aa353f30e6489f943b4f35"><td class="memItemLeft" align="right" valign="top">virtual QVector&lt; QVector&lt; <a class="el" href="classVector3.html">Vec3d</a> &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSphericalRegion.html#a5ea4528037aa353f30e6489f943b4f35">getSimplifiedContours</a> () const</td></tr>
 <tr class="memdesc:a5ea4528037aa353f30e6489f943b4f35"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the contours defining the <a class="el" href="classSphericalPolygon.html">SphericalPolygon</a> when combined using a positive winding rule.  <a href="classSphericalRegion.html#a5ea4528037aa353f30e6489f943b4f35">More...</a><br /></td></tr>
 <tr class="separator:a5ea4528037aa353f30e6489f943b4f35"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -306,7 +312,7 @@ virtual <a class="el" href="classSphericalRegionP.html">SphericalRegionP</a>&#16
 </div><div class="memdoc">
 <p>This method is heavily used and therefore needs to be very fast. The returned <a class="el" href="classSphericalCap.html">SphericalCap</a> doesn't have to be the smallest one, but smaller is better. </p>
 
-<p>Reimplemented in <a class="el" href="classSphericalConvexPolygon.html#a3a83fe0fa6c8c1854d91af2bc0653763">SphericalConvexPolygon</a>, <a class="el" href="classSphericalPolygon.html#a3e3ebb24116684225667d7e959cf5a73">SphericalPolygon</a>, <a class="el" href="classEmptySphericalRegion.html#ae3aedb01765aa1b9fd25960b3845ebdf">EmptySphericalRegion</a>, <a class="el" href="classAllSkySphericalRegion.html#a8f28e8d91a1567b7690e20d8ffb3a805">AllSkySphericalRegion</a>, <a class="el" href="classSphericalPoint.html#a431e6d01b576250c81b4cabb97cddd08">SphericalPoint</a>, and <a class="el" href="classSphericalCap.html#ae0b3b80eebafc7e482c6a7d6ae05db38">SphericalCap</a>.</p>
+<p>Reimplemented in <a class="el" href="classSphericalConvexPolygon.html#a2b98421e84e003bc8fd1934268d33913">SphericalConvexPolygon</a>, <a class="el" href="classSphericalPolygon.html#a8273742599a4ce4e54bef98f5bcee7f3">SphericalPolygon</a>, <a class="el" href="classSphericalCap.html#a736b0bb52a6951643dca570b2bdee32a">SphericalCap</a>, <a class="el" href="classEmptySphericalRegion.html#ae3aedb01765aa1b9fd25960b3845ebdf">EmptySphericalRegion</a>, <a class="el" href="classAllSkySphericalRegion.html#a8f28e8d91a1567b7690e20d8ffb3a805">AllSkySphericalRegion</a>, and <a class="el" href="classSphericalPoint.html#a431e6d01b576250c81b4cabb97cddd08">SphericalPoint</a>.</p>
 
 </div>
 </div>
@@ -339,6 +345,35 @@ virtual <a class="el" href="classSphericalRegionP.html">SphericalRegionP</a>&#16
   </table>
   </dd>
 </dl>
+
+</div>
+</div>
+<a id="aaa220dcc370a6a1d22f99d5856eaea60"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aaa220dcc370a6a1d22f99d5856eaea60">&#9670;&nbsp;</a></span>getFillVertexArray()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual <a class="el" href="structStelVertexArray.html">StelVertexArray</a> SphericalRegion::getFillVertexArray </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classVector3.html">Vec3d</a> &amp;&#160;</td>
+          <td class="paramname"><em>observerVelocityForAberration</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<dl class="section note"><dt>Note</dt><dd>Presumably these general polygons of the base class don't describe geometry that may undergo aberration, so the observerVelocity must be zero. Implementation in derived classes should show aberration correction. </dd></dl>
+
+<p>Reimplemented in <a class="el" href="classSphericalTexturedConvexPolygon.html#ae13883357e423f56eab1c56db4e3d803">SphericalTexturedConvexPolygon</a>, <a class="el" href="classSphericalTexturedPolygon.html#ab5c9fef2ae73dd63a373de2e682e45a3">SphericalTexturedPolygon</a>, and <a class="el" href="classSphericalConvexPolygon.html#a168a89c905e7b3937814a7a0f5ea4297">SphericalConvexPolygon</a>.</p>
 
 </div>
 </div>
@@ -385,12 +420,12 @@ virtual <a class="el" href="classSphericalRegionP.html">SphericalRegionP</a>&#16
 </div><div class="memdoc">
 <p>It can be used for safe computation of intersection/union in the general case. </p>
 
-<p>Implemented in <a class="el" href="classSphericalConvexPolygon.html#a863bcc721a1596a7d21e283f08bc946a">SphericalConvexPolygon</a>, <a class="el" href="classSphericalPolygon.html#af7653f158748489bcc0a1c1d45a92f81">SphericalPolygon</a>, <a class="el" href="classEmptySphericalRegion.html#acc5d353736e988e29056120fe9d429e6">EmptySphericalRegion</a>, <a class="el" href="classAllSkySphericalRegion.html#a091614de374b41bfb809a430b5df4763">AllSkySphericalRegion</a>, <a class="el" href="classSphericalPoint.html#a789269806f0864adab76af6a895507ed">SphericalPoint</a>, and <a class="el" href="classSphericalCap.html#a2731e323e791751406828475788e2221">SphericalCap</a>.</p>
+<p>Implemented in <a class="el" href="classSphericalConvexPolygon.html#a15326b6cf3ba9c9d42d98ee970634074">SphericalConvexPolygon</a>, <a class="el" href="classSphericalPolygon.html#a88a6074dfc1717d622df13dd9f2ded8b">SphericalPolygon</a>, <a class="el" href="classSphericalCap.html#af0f6cf98ea59c9f9b05acfe0ab81e731">SphericalCap</a>, <a class="el" href="classEmptySphericalRegion.html#acc5d353736e988e29056120fe9d429e6">EmptySphericalRegion</a>, <a class="el" href="classAllSkySphericalRegion.html#a091614de374b41bfb809a430b5df4763">AllSkySphericalRegion</a>, and <a class="el" href="classSphericalPoint.html#a789269806f0864adab76af6a895507ed">SphericalPoint</a>.</p>
 
 </div>
 </div>
 <a id="a478cc56f9fc948467c78a54987356f89"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a478cc56f9fc948467c78a54987356f89">&#9670;&nbsp;</a></span>getOutlineVertexArray()</h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a478cc56f9fc948467c78a54987356f89">&#9670;&nbsp;</a></span>getOutlineVertexArray() <span class="overload">[1/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -413,7 +448,36 @@ virtual <a class="el" href="classSphericalRegionP.html">SphericalRegionP</a>&#16
 </div><div class="memdoc">
 <dl class="section return"><dt>Returns</dt><dd>a list of vertex which taken 2 by 2 define the contours of the polygon. </dd></dl>
 
-<p>Reimplemented in <a class="el" href="classSphericalConvexPolygon.html#afe6b097ca717da2b606f073e34b82402">SphericalConvexPolygon</a>.</p>
+<p>Reimplemented in <a class="el" href="classSphericalConvexPolygon.html#a6932dd949bb755d6b7a8295b196baa74">SphericalConvexPolygon</a>.</p>
+
+</div>
+</div>
+<a id="af6ff2b55e0b2ad9f9814a7425c1efd0c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af6ff2b55e0b2ad9f9814a7425c1efd0c">&#9670;&nbsp;</a></span>getOutlineVertexArray() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual <a class="el" href="structStelVertexArray.html">StelVertexArray</a> SphericalRegion::getOutlineVertexArray </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classVector3.html">Vec3d</a>&#160;</td>
+          <td class="paramname"><em>observerVelocityForAberration</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<dl class="section note"><dt>Note</dt><dd>Presumably these general polygons of the base class don't describe geometry that may undergo aberration, so the observerVelocity must be zero. Implementation in derived classes should show aberration correction. </dd></dl>
+
+<p>Reimplemented in <a class="el" href="classSphericalConvexPolygon.html#a536999e9cfa34dab48c6f282701a6d4c">SphericalConvexPolygon</a>.</p>
 
 </div>
 </div>
@@ -439,7 +503,7 @@ virtual <a class="el" href="classSphericalRegionP.html">SphericalRegionP</a>&#16
   </tr>
 </table>
 </div><div class="memdoc">
-<p>The default implementation return a list of tesselated triangles derived from the <a class="el" href="classOctahedronPolygon.html">OctahedronPolygon</a>. </p>
+<p>The default implementation returns a list of tessellated triangles derived from the <a class="el" href="classOctahedronPolygon.html">OctahedronPolygon</a>. </p>
 
 </div>
 </div>
@@ -521,7 +585,7 @@ virtual <a class="el" href="classSphericalRegionP.html">SphericalRegionP</a>&#16
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Thu Jun 24 2021 19:06:16 for Stellarium by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Mon Sep 27 2021 22:59:46 for Stellarium by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.17
 </small></address>
