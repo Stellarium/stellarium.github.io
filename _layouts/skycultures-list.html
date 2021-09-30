@@ -1,24 +1,24 @@
 ---
 layout: default
-title: Stellarium Skycultures
+title: Stellarium Sky Cultures
 ---
 {% include i18n.html %}
 {% include home.html %}
 
 <div id="content">
   <div id="skycultures-intro" class="block">
-    <h2>{% include tr.html s="user contributed skycultures" %}</h2>
-    <p>{% include tr.html s="We have few user contributed skycultures which are not included into default package for some reasons." %}</p>
+    <h2>{% include tr.html s="user contributed sky cultures" %}</h2>
+    <p>{% include tr.html s="We have few user contributed sky cultures which are not included into default package for some reasons." %}</p>
     <ul class="smalllist">
-      <li><strong>{% include tr.html s="list of skycultures" %}</strong></li>
+      <li><strong>{% include tr.html s="list of sky cultures" %}</strong></li>
     </ul>
     <ul class="smalllist">
-      <li><a href="./skycultures.html"><em>{% include tr.html s="skycultures" %}</em></a></li>
+      <li><a href="./skycultures.html"><em>{% include tr.html s="sky cultures" %}</em></a></li>
     </ul>
   </div>
 
   <div id="skycultures-data" class="block">
-    <h2>{% include tr.html s="skycultures" %}: 
+    <h2>{% include tr.html s="sky cultures" %}: 
         {% include tr.html s="list" %}</h2>
 
     {% for item in site.skycultures %}
@@ -34,7 +34,7 @@ title: Stellarium Skycultures
       <td align="center" width="60">{% if item.classification %}{{ item.classification }}{% else %}personal{% endif %}</td>
     </tr>
     <tr>
-      <td colspan="3"><a href="{{ item.description_source }}">A full description of skyculture.</a></td>
+      <td colspan="3">{% if item.classification %}<a href="{{ item.description_source }}">A full description of sky culture.</a>{% else %}{{ item.content }}{% endif %}</td>
     </tr>
     </table>
     {% endfor %}
