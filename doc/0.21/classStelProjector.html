@@ -21,7 +21,7 @@
   <td id="projectlogo"><img alt="Logo" src="stellarium-logo.png"/></td>
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">Stellarium
-   &#160;<span id="projectnumber">0.21.2</span>
+   &#160;<span id="projectnumber">0.21.3</span>
    </div>
   </td>
  </tr>
@@ -191,6 +191,9 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="clas
 <tr class="memitem:a8db575f474f0f77f0e5b882d06d09b7b"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classStelProjector.html#a8db575f474f0f77f0e5b882d06d09b7b">project</a> (const <a class="el" href="classVector3.html">Vec3f</a> &amp;v, <a class="el" href="classVector3.html">Vec3f</a> &amp;win) const</td></tr>
 <tr class="memdesc:a8db575f474f0f77f0e5b882d06d09b7b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Project the vector v from the current frame into the viewport.  <a href="classStelProjector.html#a8db575f474f0f77f0e5b882d06d09b7b">More...</a><br /></td></tr>
 <tr class="separator:a8db575f474f0f77f0e5b882d06d09b7b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad9e4600358d19e19309b354deb8d9363"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classStelProjector.html#ad9e4600358d19e19309b354deb8d9363">project</a> (const <a class="el" href="classVector3.html">Vec3d</a> &amp;v, <a class="el" href="classVector3.html">Vec3f</a> &amp;win) const</td></tr>
+<tr class="memdesc:ad9e4600358d19e19309b354deb8d9363"><td class="mdescLeft">&#160;</td><td class="mdescRight">Project the vector v from the current frame into the viewport.  <a href="classStelProjector.html#ad9e4600358d19e19309b354deb8d9363">More...</a><br /></td></tr>
+<tr class="separator:ad9e4600358d19e19309b354deb8d9363"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a16ac5f21e80c820914af034490411d79"><td class="memItemLeft" align="right" valign="top"><a id="a16ac5f21e80c820914af034490411d79"></a>
 virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>project</b> (int n, const <a class="el" href="classVector3.html">Vec3d</a> *in, <a class="el" href="classVector3.html">Vec3f</a> *out)</td></tr>
 <tr class="separator:a16ac5f21e80c820914af034490411d79"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -537,7 +540,7 @@ class&#160;</td><td class="memItemRight" valign="bottom"><b>StelCore</b></td></t
 </div>
 </div>
 <a id="a98231811ba0fff6b7488ec6821603d8e"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a98231811ba0fff6b7488ec6821603d8e">&#9670;&nbsp;</a></span>project() <span class="overload">[1/2]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a98231811ba0fff6b7488ec6821603d8e">&#9670;&nbsp;</a></span>project() <span class="overload">[1/3]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -572,8 +575,44 @@ class&#160;</td><td class="memItemRight" valign="bottom"><b>StelCore</b></td></t
 
 </div>
 </div>
+<a id="ad9e4600358d19e19309b354deb8d9363"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad9e4600358d19e19309b354deb8d9363">&#9670;&nbsp;</a></span>project() <span class="overload">[2/3]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool StelProjector::project </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classVector3.html">Vec3d</a> &amp;&#160;</td>
+          <td class="paramname"><em>v</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="classVector3.html">Vec3f</a> &amp;&#160;</td>
+          <td class="paramname"><em>win</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">v</td><td>the vector in the current frame. </td></tr>
+    <tr><td class="paramname">win</td><td>the projected vector in the viewport 2D frame. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>true if the projected coordinate is valid. </dd></dl>
+
+</div>
+</div>
 <a id="a8db575f474f0f77f0e5b882d06d09b7b"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a8db575f474f0f77f0e5b882d06d09b7b">&#9670;&nbsp;</a></span>project() <span class="overload">[2/2]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a8db575f474f0f77f0e5b882d06d09b7b">&#9670;&nbsp;</a></span>project() <span class="overload">[3/3]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -819,7 +858,7 @@ class&#160;</td><td class="memItemRight" valign="bottom"><b>StelCore</b></td></t
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Mon Sep 27 2021 22:59:46 for Stellarium by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Sat Dec 25 2021 16:56:51 for Stellarium by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.17
 </small></address>

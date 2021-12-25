@@ -21,7 +21,7 @@
   <td id="projectlogo"><img alt="Logo" src="stellarium-logo.png"/></td>
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">Stellarium
-   &#160;<span id="projectnumber">0.21.2</span>
+   &#160;<span id="projectnumber">0.21.3</span>
    </div>
   </td>
  </tr>
@@ -52,12 +52,12 @@ $(function() {
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-slots"></a>
 Public Slots</h2></td></tr>
-<tr class="memitem:aa80b9ca03beab16a058a6efa0ae591c6"><td class="memItemLeft" align="right" valign="top"><a id="aa80b9ca03beab16a058a6efa0ae591c6"></a>
-virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>init</b> ()</td></tr>
-<tr class="separator:aa80b9ca03beab16a058a6efa0ae591c6"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a346b443a15535b1afbcf07406450fba7"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classStelVideoMgr.html#a346b443a15535b1afbcf07406450fba7">update</a> (double deltaTime)</td></tr>
-<tr class="memdesc:a346b443a15535b1afbcf07406450fba7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Update the module with respect to the time.  <a href="classStelVideoMgr.html#a346b443a15535b1afbcf07406450fba7">More...</a><br /></td></tr>
-<tr class="separator:a346b443a15535b1afbcf07406450fba7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3f680d75a2b6a7b0891bacdee3d6e529"><td class="memItemLeft" align="right" valign="top"><a id="a3f680d75a2b6a7b0891bacdee3d6e529"></a>
+virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>init</b> () Q_DECL_OVERRIDE</td></tr>
+<tr class="separator:a3f680d75a2b6a7b0891bacdee3d6e529"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a43fcf25995ff3d1d3f114c3b8d1358d5"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classStelVideoMgr.html#a43fcf25995ff3d1d3f114c3b8d1358d5">update</a> (double deltaTime) Q_DECL_OVERRIDE</td></tr>
+<tr class="memdesc:a43fcf25995ff3d1d3f114c3b8d1358d5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Update the module with respect to the time.  <a href="classStelVideoMgr.html#a43fcf25995ff3d1d3f114c3b8d1358d5">More...</a><br /></td></tr>
+<tr class="separator:a43fcf25995ff3d1d3f114c3b8d1358d5"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad59987744493f168fb3ad7202affa18c"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classStelVideoMgr.html#ad59987744493f168fb3ad7202affa18c">loadVideo</a> (const QString &amp;filename, const QString &amp;id, const float x, const float y, const bool show, const float alpha)</td></tr>
 <tr class="memdesc:ad59987744493f168fb3ad7202affa18c"><td class="mdescLeft">&#160;</td><td class="mdescRight">load a video from filename, assign an id for it for later reference.  <a href="classStelVideoMgr.html#ad59987744493f168fb3ad7202affa18c">More...</a><br /></td></tr>
 <tr class="separator:ad59987744493f168fb3ad7202affa18c"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -592,7 +592,7 @@ WEBM (invalid media)  </li>
   </tr>
 </table>
 </div><div class="memdoc">
-<p>Use w=-1 or h=-1 for autoscale from the other dimension, or use w=h=-1 for native size of video. if w or h are &lt;=1, the size is relative to screen dimensions. This should be the preferred use, because it allows the development of device-independent scripts. When native resolution is unknown at the time you call this, it will be evaluated at the next <a class="el" href="classStelVideoMgr.html#a346b443a15535b1afbcf07406450fba7" title="Update the module with respect to the time.">update()</a> after resolution becomes known. Autoscaling uses viewport dimensions at the time of calling, so resizing the Stellarium window will not resize the video frame during replay. </p>
+<p>Use w=-1 or h=-1 for autoscale from the other dimension, or use w=h=-1 for native size of video. if w or h are &lt;=1, the size is relative to screen dimensions. This should be the preferred use, because it allows the development of device-independent scripts. When native resolution is unknown at the time you call this, it will be evaluated at the next <a class="el" href="classStelVideoMgr.html#a43fcf25995ff3d1d3f114c3b8d1358d5" title="Update the module with respect to the time.">update()</a> after resolution becomes known. Autoscaling uses viewport dimensions at the time of calling, so resizing the Stellarium window will not resize the video frame during replay. </p>
 
 </div>
 </div>
@@ -774,8 +774,8 @@ WEBM (invalid media)  </li>
 
 </div>
 </div>
-<a id="a346b443a15535b1afbcf07406450fba7"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a346b443a15535b1afbcf07406450fba7">&#9670;&nbsp;</a></span>update</h2>
+<a id="a43fcf25995ff3d1d3f114c3b8d1358d5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a43fcf25995ff3d1d3f114c3b8d1358d5">&#9670;&nbsp;</a></span>update</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -809,7 +809,7 @@ WEBM (invalid media)  </li>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Mon Sep 27 2021 22:59:46 for Stellarium by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Sat Dec 25 2021 16:56:51 for Stellarium by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.17
 </small></address>

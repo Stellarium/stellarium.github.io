@@ -139,6 +139,12 @@ double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="na
 <tr class="memitem:af3899a450c2229df398e015fba309034"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceStelUtils.html#af3899a450c2229df398e015fba309034">rectToSphe</a> (double *lng, double *lat, const <a class="el" href="classVector3.html">Vec3f</a> &amp;v)</td></tr>
 <tr class="memdesc:af3899a450c2229df398e015fba309034"><td class="mdescLeft">&#160;</td><td class="mdescRight">Convert from Rectangular direction to spherical coordinate components.  <a href="namespaceStelUtils.html#af3899a450c2229df398e015fba309034">More...</a><br /></td></tr>
 <tr class="separator:af3899a450c2229df398e015fba309034"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8b2a98c8df0f7d9697a95358bf4f665a"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceStelUtils.html#a8b2a98c8df0f7d9697a95358bf4f665a">spheToRect</a> (const double lng, const double lat, const double r, <a class="el" href="classVector3.html">Vec3d</a> &amp;v)</td></tr>
+<tr class="memdesc:a8b2a98c8df0f7d9697a95358bf4f665a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Convert from spherical coordinates (including distance) to Rectangular direction.  <a href="namespaceStelUtils.html#a8b2a98c8df0f7d9697a95358bf4f665a">More...</a><br /></td></tr>
+<tr class="separator:a8b2a98c8df0f7d9697a95358bf4f665a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa470b841ddfae585913c643e14c9dd47"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceStelUtils.html#aa470b841ddfae585913c643e14c9dd47">rectToSphe</a> (double *lng, double *lat, double *r, const <a class="el" href="classVector3.html">Vec3d</a> &amp;v)</td></tr>
+<tr class="memdesc:aa470b841ddfae585913c643e14c9dd47"><td class="mdescLeft">&#160;</td><td class="mdescRight">Convert from Rectangular direction to spherical coordinate components (including distance).  <a href="namespaceStelUtils.html#aa470b841ddfae585913c643e14c9dd47">More...</a><br /></td></tr>
+<tr class="separator:aa470b841ddfae585913c643e14c9dd47"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a9f2ce4bf6c3d610e3de69c1f4d9e7f59"><td class="memItemLeft" align="right" valign="top"><a id="a9f2ce4bf6c3d610e3de69c1f4d9e7f59"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceStelUtils.html#a9f2ce4bf6c3d610e3de69c1f4d9e7f59">equToEcl</a> (const double raRad, const double decRad, const double eclRad, double *lambdaRad, double *betaRad)</td></tr>
 <tr class="memdesc:a9f2ce4bf6c3d610e3de69c1f4d9e7f59"><td class="mdescLeft">&#160;</td><td class="mdescRight">Coordinate Transformation from equatorial to ecliptical. <br /></td></tr>
@@ -2808,7 +2814,7 @@ template&lt;typename T &gt; </div>
 </div>
 </div>
 <a id="a199474b7df3ed57733eff4408bce3ef3"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a199474b7df3ed57733eff4408bce3ef3">&#9670;&nbsp;</a></span>rectToSphe() <span class="overload">[1/4]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a199474b7df3ed57733eff4408bce3ef3">&#9670;&nbsp;</a></span>rectToSphe() <span class="overload">[1/5]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -2858,7 +2864,7 @@ template&lt;typename T &gt; </div>
 </div>
 </div>
 <a id="af3899a450c2229df398e015fba309034"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#af3899a450c2229df398e015fba309034">&#9670;&nbsp;</a></span>rectToSphe() <span class="overload">[2/4]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#af3899a450c2229df398e015fba309034">&#9670;&nbsp;</a></span>rectToSphe() <span class="overload">[2/5]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -2907,8 +2913,65 @@ template&lt;typename T &gt; </div>
 
 </div>
 </div>
+<a id="aa470b841ddfae585913c643e14c9dd47"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa470b841ddfae585913c643e14c9dd47">&#9670;&nbsp;</a></span>rectToSphe() <span class="overload">[3/5]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void StelUtils::rectToSphe </td>
+          <td>(</td>
+          <td class="paramtype">double *&#160;</td>
+          <td class="paramname"><em>lng</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double *&#160;</td>
+          <td class="paramname"><em>lat</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double *&#160;</td>
+          <td class="paramname"><em>r</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="classVector3.html">Vec3d</a> &amp;&#160;</td>
+          <td class="paramname"><em>v</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">lng</td><td>double* to store longitude in radian [-pi, pi] </td></tr>
+    <tr><td class="paramname">lat</td><td>double* to store latitude in radian </td></tr>
+    <tr><td class="paramname">r</td><td>double* length of radius vector (distance) </td></tr>
+    <tr><td class="paramname">v</td><td>the input 3D vector </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
 <a id="a3bf4a3fccfc3fe20083757aa94f30e3a"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a3bf4a3fccfc3fe20083757aa94f30e3a">&#9670;&nbsp;</a></span>rectToSphe() <span class="overload">[3/4]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a3bf4a3fccfc3fe20083757aa94f30e3a">&#9670;&nbsp;</a></span>rectToSphe() <span class="overload">[4/5]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -2958,7 +3021,7 @@ template&lt;typename T &gt; </div>
 </div>
 </div>
 <a id="ac80a0f2bab049a67fc0659c8df1ddeac"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ac80a0f2bab049a67fc0659c8df1ddeac">&#9670;&nbsp;</a></span>rectToSphe() <span class="overload">[4/4]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#ac80a0f2bab049a67fc0659c8df1ddeac">&#9670;&nbsp;</a></span>rectToSphe() <span class="overload">[5/5]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -3007,8 +3070,65 @@ template&lt;typename T &gt; </div>
 
 </div>
 </div>
+<a id="a8b2a98c8df0f7d9697a95358bf4f665a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8b2a98c8df0f7d9697a95358bf4f665a">&#9670;&nbsp;</a></span>spheToRect() <span class="overload">[1/5]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void StelUtils::spheToRect </td>
+          <td>(</td>
+          <td class="paramtype">const double&#160;</td>
+          <td class="paramname"><em>lng</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const double&#160;</td>
+          <td class="paramname"><em>lat</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const double&#160;</td>
+          <td class="paramname"><em>r</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="classVector3.html">Vec3d</a> &amp;&#160;</td>
+          <td class="paramname"><em>v</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">lng</td><td>longitude in radian </td></tr>
+    <tr><td class="paramname">lat</td><td>latitude in radian </td></tr>
+    <tr><td class="paramname">r</td><td>length of radius vector (distance) </td></tr>
+    <tr><td class="paramname">v</td><td>the resulting 3D unit vector </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
 <a id="a9f49592c90ef36fea1a7bf11033b2382"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a9f49592c90ef36fea1a7bf11033b2382">&#9670;&nbsp;</a></span>spheToRect() <span class="overload">[1/4]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a9f49592c90ef36fea1a7bf11033b2382">&#9670;&nbsp;</a></span>spheToRect() <span class="overload">[2/5]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -3058,7 +3178,7 @@ template&lt;typename T &gt; </div>
 </div>
 </div>
 <a id="a1a90b618f4a4c1753f67e75c0a635588"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a1a90b618f4a4c1753f67e75c0a635588">&#9670;&nbsp;</a></span>spheToRect() <span class="overload">[2/4]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a1a90b618f4a4c1753f67e75c0a635588">&#9670;&nbsp;</a></span>spheToRect() <span class="overload">[3/5]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -3108,7 +3228,7 @@ template&lt;typename T &gt; </div>
 </div>
 </div>
 <a id="a22fd5b670243ec9c8338543627831480"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a22fd5b670243ec9c8338543627831480">&#9670;&nbsp;</a></span>spheToRect() <span class="overload">[3/4]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a22fd5b670243ec9c8338543627831480">&#9670;&nbsp;</a></span>spheToRect() <span class="overload">[4/5]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -3158,7 +3278,7 @@ template&lt;typename T &gt; </div>
 </div>
 </div>
 <a id="a3c635262e142a32daa529dbdc40a19bd"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a3c635262e142a32daa529dbdc40a19bd">&#9670;&nbsp;</a></span>spheToRect() <span class="overload">[4/4]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a3c635262e142a32daa529dbdc40a19bd">&#9670;&nbsp;</a></span>spheToRect() <span class="overload">[5/5]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -3245,7 +3365,7 @@ template&lt;typename T &gt; </div>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Mon Sep 27 2021 22:59:46 for Stellarium by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Sat Dec 25 2021 16:56:51 for Stellarium by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.17
 </small></address>

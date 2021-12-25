@@ -196,10 +196,12 @@ Public Types</h2></td></tr>
 <a class="el" href="classStelObject.html#acf243e7987796a3a44e409140ecea8c6a6b1acde73a84cc7314489ff6c5793264">SiderealTime</a> = 0x00200000, 
 <a class="el" href="classStelObject.html#acf243e7987796a3a44e409140ecea8c6a0a4945c66b17aebfce6b1ef5a681e74e">RTSTime</a> = 0x00400000, 
 <br />
-&#160;&#160;<a class="el" href="classStelObject.html#acf243e7987796a3a44e409140ecea8c6add2bc965197f9ae3b3976f8494e60771">Script</a> = 0x00800000, 
-<a class="el" href="classStelObject.html#acf243e7987796a3a44e409140ecea8c6ace2821b66545f2aa2a8a0a60debf238e">DebugAid</a> = 0x01000000, 
-<b>NoFont</b> = 0x02000000, 
-<a class="el" href="classStelObject.html#acf243e7987796a3a44e409140ecea8c6aa651fd9d370fc652c77c663cd41a18ce">PlainText</a> = 0x04000000
+&#160;&#160;<a class="el" href="classStelObject.html#acf243e7987796a3a44e409140ecea8c6a738f66c455ddb886d805dcaa17cfb7c2">SolarLunarPosition</a> = 0x00800000, 
+<a class="el" href="classStelObject.html#acf243e7987796a3a44e409140ecea8c6add2bc965197f9ae3b3976f8494e60771">Script</a> = 0x01000000, 
+<a class="el" href="classStelObject.html#acf243e7987796a3a44e409140ecea8c6ace2821b66545f2aa2a8a0a60debf238e">DebugAid</a> = 0x02000000, 
+<b>NoFont</b> = 0x04000000, 
+<br />
+&#160;&#160;<a class="el" href="classStelObject.html#acf243e7987796a3a44e409140ecea8c6aa651fd9d370fc652c77c663cd41a18ce">PlainText</a> = 0x08000000
 <br />
  }</td></tr>
 <tr class="memdesc:acf243e7987796a3a44e409140ecea8c6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Used as named bitfield flags as specifiers to filter results of getInfoString.  <a href="classStelObject.html#acf243e7987796a3a44e409140ecea8c6">More...</a><br /></td></tr>
@@ -207,59 +209,59 @@ Public Types</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:a9ed94e1b2c1ac40c5d7ca5853127d70c"><td class="memItemLeft" align="right" valign="top">virtual QString&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classNebula.html#a9ed94e1b2c1ac40c5d7ca5853127d70c">getInfoString</a> (const <a class="el" href="classStelCore.html">StelCore</a> *core, const InfoStringGroup &amp;flags) const</td></tr>
-<tr class="memdesc:a9ed94e1b2c1ac40c5d7ca5853127d70c"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="classNebula.html">Nebula</a> support the following InfoStringGroup flags:  <a href="classNebula.html#a9ed94e1b2c1ac40c5d7ca5853127d70c">More...</a><br /></td></tr>
-<tr class="separator:a9ed94e1b2c1ac40c5d7ca5853127d70c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a273420588d214f60b640d0f0992b61b9"><td class="memItemLeft" align="right" valign="top">virtual QVariantMap&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classNebula.html#a273420588d214f60b640d0f0992b61b9">getInfoMap</a> (const <a class="el" href="classStelCore.html">StelCore</a> *core) const</td></tr>
-<tr class="memdesc:a273420588d214f60b640d0f0992b61b9"><td class="mdescLeft">&#160;</td><td class="mdescRight">In addition to the entries from <a class="el" href="classStelObject.html#a16e447c2dc2cbbe6e4e308376ae0c5ca" title="Return a key/value map with data about an object&#39;s position, magnitude and so on.">StelObject::getInfoMap()</a>, <a class="el" href="classNebula.html">Nebula</a> objects provide.  <a href="classNebula.html#a273420588d214f60b640d0f0992b61b9">More...</a><br /></td></tr>
-<tr class="separator:a273420588d214f60b640d0f0992b61b9"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aa7e672561b341454ca8db890d083dbca"><td class="memItemLeft" align="right" valign="top"><a id="aa7e672561b341454ca8db890d083dbca"></a>
-virtual QString&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classNebula.html#aa7e672561b341454ca8db890d083dbca">getType</a> () const</td></tr>
-<tr class="memdesc:aa7e672561b341454ca8db890d083dbca"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return object's type. It should be the name of the class. <br /></td></tr>
-<tr class="separator:aa7e672561b341454ca8db890d083dbca"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a743d60db904eb79058ecb044d4eb7a03"><td class="memItemLeft" align="right" valign="top">virtual QString&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classNebula.html#a743d60db904eb79058ecb044d4eb7a03">getID</a> () const</td></tr>
-<tr class="memdesc:a743d60db904eb79058ecb044d4eb7a03"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns a unique identifier for this object.  <a href="classNebula.html#a743d60db904eb79058ecb044d4eb7a03">More...</a><br /></td></tr>
-<tr class="separator:a743d60db904eb79058ecb044d4eb7a03"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ae843c09360ceb2cc40626caab44aa92d"><td class="memItemLeft" align="right" valign="top"><a id="ae843c09360ceb2cc40626caab44aa92d"></a>
-virtual <a class="el" href="classVector3.html">Vec3d</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classNebula.html#ae843c09360ceb2cc40626caab44aa92d">getJ2000EquatorialPos</a> (const <a class="el" href="classStelCore.html">StelCore</a> *core) const</td></tr>
-<tr class="memdesc:ae843c09360ceb2cc40626caab44aa92d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get observer-centered equatorial coordinates at equinox J2000. <br /></td></tr>
-<tr class="separator:ae843c09360ceb2cc40626caab44aa92d"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a865a07b84c967cec4d910531317add08"><td class="memItemLeft" align="right" valign="top"><a id="a865a07b84c967cec4d910531317add08"></a>
-virtual double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classNebula.html#a865a07b84c967cec4d910531317add08">getCloseViewFov</a> (const <a class="el" href="classStelCore.html">StelCore</a> *core=Q_NULLPTR) const</td></tr>
-<tr class="memdesc:a865a07b84c967cec4d910531317add08"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return the best FOV in degree to use for a close view of the object. <br /></td></tr>
-<tr class="separator:a865a07b84c967cec4d910531317add08"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a3a9f1b41caf6aee9abf48754a35fac6d"><td class="memItemLeft" align="right" valign="top"><a id="a3a9f1b41caf6aee9abf48754a35fac6d"></a>
-virtual float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classNebula.html#a3a9f1b41caf6aee9abf48754a35fac6d">getVMagnitude</a> (const <a class="el" href="classStelCore.html">StelCore</a> *core) const</td></tr>
-<tr class="memdesc:a3a9f1b41caf6aee9abf48754a35fac6d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return object's apparent V magnitude as seen from observer, without including extinction. <br /></td></tr>
-<tr class="separator:a3a9f1b41caf6aee9abf48754a35fac6d"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a2e6b7549fe752dbe450a4357e3494f0a"><td class="memItemLeft" align="right" valign="top"><a id="a2e6b7549fe752dbe450a4357e3494f0a"></a>
-virtual float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classNebula.html#a2e6b7549fe752dbe450a4357e3494f0a">getSelectPriority</a> (const <a class="el" href="classStelCore.html">StelCore</a> *core) const</td></tr>
-<tr class="memdesc:a2e6b7549fe752dbe450a4357e3494f0a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return a priority value which is used to discriminate objects by priority As for magnitudes, the lower is the higher priority. <br /></td></tr>
-<tr class="separator:a2e6b7549fe752dbe450a4357e3494f0a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a21c21d039a6da3118d6e564123fe5402"><td class="memItemLeft" align="right" valign="top"><a id="a21c21d039a6da3118d6e564123fe5402"></a>
-virtual <a class="el" href="classVector3.html">Vec3f</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classNebula.html#a21c21d039a6da3118d6e564123fe5402">getInfoColor</a> () const</td></tr>
-<tr class="memdesc:a21c21d039a6da3118d6e564123fe5402"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get a color used to display info about the object. <br /></td></tr>
-<tr class="separator:a21c21d039a6da3118d6e564123fe5402"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a2182406a11da12cff5c61abefbe174bb"><td class="memItemLeft" align="right" valign="top"><a id="a2182406a11da12cff5c61abefbe174bb"></a>
-virtual QString&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classNebula.html#a2182406a11da12cff5c61abefbe174bb">getNameI18n</a> () const</td></tr>
-<tr class="memdesc:a2182406a11da12cff5c61abefbe174bb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return translated object's name. <br /></td></tr>
-<tr class="separator:a2182406a11da12cff5c61abefbe174bb"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac31bb9a1eced943fb7d5d4303e6b0587"><td class="memItemLeft" align="right" valign="top"><a id="ac31bb9a1eced943fb7d5d4303e6b0587"></a>
-virtual QString&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classNebula.html#ac31bb9a1eced943fb7d5d4303e6b0587">getEnglishName</a> () const</td></tr>
-<tr class="memdesc:ac31bb9a1eced943fb7d5d4303e6b0587"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return object's name in english. <br /></td></tr>
-<tr class="separator:ac31bb9a1eced943fb7d5d4303e6b0587"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1410deeddca9a146dc11bcf91eb7cb96"><td class="memItemLeft" align="right" valign="top">virtual QString&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classNebula.html#a1410deeddca9a146dc11bcf91eb7cb96">getInfoString</a> (const <a class="el" href="classStelCore.html">StelCore</a> *core, const InfoStringGroup &amp;flags) const Q_DECL_OVERRIDE</td></tr>
+<tr class="memdesc:a1410deeddca9a146dc11bcf91eb7cb96"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="classNebula.html">Nebula</a> support the following InfoStringGroup flags:  <a href="classNebula.html#a1410deeddca9a146dc11bcf91eb7cb96">More...</a><br /></td></tr>
+<tr class="separator:a1410deeddca9a146dc11bcf91eb7cb96"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3098f3de5c9fe1dd949326aac26baeea"><td class="memItemLeft" align="right" valign="top">virtual QVariantMap&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classNebula.html#a3098f3de5c9fe1dd949326aac26baeea">getInfoMap</a> (const <a class="el" href="classStelCore.html">StelCore</a> *core) const Q_DECL_OVERRIDE</td></tr>
+<tr class="memdesc:a3098f3de5c9fe1dd949326aac26baeea"><td class="mdescLeft">&#160;</td><td class="mdescRight">In addition to the entries from <a class="el" href="classStelObject.html#a16e447c2dc2cbbe6e4e308376ae0c5ca" title="Return a key/value map with data about an object&#39;s position, magnitude and so on.">StelObject::getInfoMap()</a>, <a class="el" href="classNebula.html">Nebula</a> objects provide.  <a href="classNebula.html#a3098f3de5c9fe1dd949326aac26baeea">More...</a><br /></td></tr>
+<tr class="separator:a3098f3de5c9fe1dd949326aac26baeea"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab0c4fb87fac60a3b903c025f383ea348"><td class="memItemLeft" align="right" valign="top"><a id="ab0c4fb87fac60a3b903c025f383ea348"></a>
+virtual QString&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classNebula.html#ab0c4fb87fac60a3b903c025f383ea348">getType</a> () const Q_DECL_OVERRIDE</td></tr>
+<tr class="memdesc:ab0c4fb87fac60a3b903c025f383ea348"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return object's type. It should be the name of the class. <br /></td></tr>
+<tr class="separator:ab0c4fb87fac60a3b903c025f383ea348"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6e05b01d1eb000abbaf0b3a246c216b8"><td class="memItemLeft" align="right" valign="top">virtual QString&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classNebula.html#a6e05b01d1eb000abbaf0b3a246c216b8">getID</a> () const Q_DECL_OVERRIDE</td></tr>
+<tr class="memdesc:a6e05b01d1eb000abbaf0b3a246c216b8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns a unique identifier for this object.  <a href="classNebula.html#a6e05b01d1eb000abbaf0b3a246c216b8">More...</a><br /></td></tr>
+<tr class="separator:a6e05b01d1eb000abbaf0b3a246c216b8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abd76cc3c99c6b22cb9bcbc6d2332e33b"><td class="memItemLeft" align="right" valign="top"><a id="abd76cc3c99c6b22cb9bcbc6d2332e33b"></a>
+virtual <a class="el" href="classVector3.html">Vec3d</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classNebula.html#abd76cc3c99c6b22cb9bcbc6d2332e33b">getJ2000EquatorialPos</a> (const <a class="el" href="classStelCore.html">StelCore</a> *core) const Q_DECL_OVERRIDE</td></tr>
+<tr class="memdesc:abd76cc3c99c6b22cb9bcbc6d2332e33b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get observer-centered equatorial coordinates at equinox J2000. <br /></td></tr>
+<tr class="separator:abd76cc3c99c6b22cb9bcbc6d2332e33b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4dc18c3d4a06be2d195cb1eea6d464c3"><td class="memItemLeft" align="right" valign="top"><a id="a4dc18c3d4a06be2d195cb1eea6d464c3"></a>
+virtual double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classNebula.html#a4dc18c3d4a06be2d195cb1eea6d464c3">getCloseViewFov</a> (const <a class="el" href="classStelCore.html">StelCore</a> *core=Q_NULLPTR) const Q_DECL_OVERRIDE</td></tr>
+<tr class="memdesc:a4dc18c3d4a06be2d195cb1eea6d464c3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return the best FOV in degree to use for a close view of the object. <br /></td></tr>
+<tr class="separator:a4dc18c3d4a06be2d195cb1eea6d464c3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acca6d6b15b2f143d119291d9dc2c1459"><td class="memItemLeft" align="right" valign="top"><a id="acca6d6b15b2f143d119291d9dc2c1459"></a>
+virtual float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classNebula.html#acca6d6b15b2f143d119291d9dc2c1459">getVMagnitude</a> (const <a class="el" href="classStelCore.html">StelCore</a> *core) const Q_DECL_OVERRIDE</td></tr>
+<tr class="memdesc:acca6d6b15b2f143d119291d9dc2c1459"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return object's apparent V magnitude as seen from observer, without including extinction. <br /></td></tr>
+<tr class="separator:acca6d6b15b2f143d119291d9dc2c1459"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8f59d4f8aabf1c07812410f5d4fdcbeb"><td class="memItemLeft" align="right" valign="top"><a id="a8f59d4f8aabf1c07812410f5d4fdcbeb"></a>
+virtual float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classNebula.html#a8f59d4f8aabf1c07812410f5d4fdcbeb">getSelectPriority</a> (const <a class="el" href="classStelCore.html">StelCore</a> *core) const Q_DECL_OVERRIDE</td></tr>
+<tr class="memdesc:a8f59d4f8aabf1c07812410f5d4fdcbeb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return a priority value which is used to discriminate objects by priority As for magnitudes, the lower is the higher priority. <br /></td></tr>
+<tr class="separator:a8f59d4f8aabf1c07812410f5d4fdcbeb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad86e29ea413bc3dffd80e9d8c872021a"><td class="memItemLeft" align="right" valign="top"><a id="ad86e29ea413bc3dffd80e9d8c872021a"></a>
+virtual <a class="el" href="classVector3.html">Vec3f</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classNebula.html#ad86e29ea413bc3dffd80e9d8c872021a">getInfoColor</a> () const Q_DECL_OVERRIDE</td></tr>
+<tr class="memdesc:ad86e29ea413bc3dffd80e9d8c872021a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get a color used to display info about the object. <br /></td></tr>
+<tr class="separator:ad86e29ea413bc3dffd80e9d8c872021a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4bce159fcdec66cc3fb5230ee0d5fd60"><td class="memItemLeft" align="right" valign="top"><a id="a4bce159fcdec66cc3fb5230ee0d5fd60"></a>
+virtual QString&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classNebula.html#a4bce159fcdec66cc3fb5230ee0d5fd60">getNameI18n</a> () const Q_DECL_OVERRIDE</td></tr>
+<tr class="memdesc:a4bce159fcdec66cc3fb5230ee0d5fd60"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return translated object's name. <br /></td></tr>
+<tr class="separator:a4bce159fcdec66cc3fb5230ee0d5fd60"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a17ae40213ec17b81dda02def99858795"><td class="memItemLeft" align="right" valign="top"><a id="a17ae40213ec17b81dda02def99858795"></a>
+virtual QString&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classNebula.html#a17ae40213ec17b81dda02def99858795">getEnglishName</a> () const Q_DECL_OVERRIDE</td></tr>
+<tr class="memdesc:a17ae40213ec17b81dda02def99858795"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return object's name in english. <br /></td></tr>
+<tr class="separator:a17ae40213ec17b81dda02def99858795"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aec6e564a6aa7757ce122b38e54392085"><td class="memItemLeft" align="right" valign="top"><a id="aec6e564a6aa7757ce122b38e54392085"></a>
 QString&#160;</td><td class="memItemRight" valign="bottom"><b>getEnglishAliases</b> () const</td></tr>
 <tr class="separator:aec6e564a6aa7757ce122b38e54392085"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a28be80b04111f491fa170c424914dbce"><td class="memItemLeft" align="right" valign="top"><a id="a28be80b04111f491fa170c424914dbce"></a>
 QString&#160;</td><td class="memItemRight" valign="bottom"><b>getI18nAliases</b> () const</td></tr>
 <tr class="separator:a28be80b04111f491fa170c424914dbce"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a377f20bf37d463980277a02f9170c66e"><td class="memItemLeft" align="right" valign="top">virtual double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classNebula.html#a377f20bf37d463980277a02f9170c66e">getAngularSize</a> (const <a class="el" href="classStelCore.html">StelCore</a> *) const</td></tr>
-<tr class="memdesc:a377f20bf37d463980277a02f9170c66e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return the angular radius of a circle containing the object as seen from the observer with the circle center assumed to be at <a class="el" href="classNebula.html#ae843c09360ceb2cc40626caab44aa92d" title="Get observer-centered equatorial coordinates at equinox J2000.">getJ2000EquatorialPos()</a>.  <a href="classNebula.html#a377f20bf37d463980277a02f9170c66e">More...</a><br /></td></tr>
-<tr class="separator:a377f20bf37d463980277a02f9170c66e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a028488ce39e24249242014e05baa2d45"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="classSphericalRegionP.html">SphericalRegionP</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classNebula.html#a028488ce39e24249242014e05baa2d45">getRegion</a> () const</td></tr>
-<tr class="memdesc:a028488ce39e24249242014e05baa2d45"><td class="mdescLeft">&#160;</td><td class="mdescRight">Default implementation of the getRegion method.  <a href="classNebula.html#a028488ce39e24249242014e05baa2d45">More...</a><br /></td></tr>
-<tr class="separator:a028488ce39e24249242014e05baa2d45"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac472ae83681dd0dadedc3d8488fe4e23"><td class="memItemLeft" align="right" valign="top">virtual double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classNebula.html#ac472ae83681dd0dadedc3d8488fe4e23">getAngularSize</a> (const <a class="el" href="classStelCore.html">StelCore</a> *) const Q_DECL_OVERRIDE</td></tr>
+<tr class="memdesc:ac472ae83681dd0dadedc3d8488fe4e23"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return the angular radius of a circle containing the object as seen from the observer with the circle center assumed to be at <a class="el" href="classNebula.html#abd76cc3c99c6b22cb9bcbc6d2332e33b" title="Get observer-centered equatorial coordinates at equinox J2000.">getJ2000EquatorialPos()</a>.  <a href="classNebula.html#ac472ae83681dd0dadedc3d8488fe4e23">More...</a><br /></td></tr>
+<tr class="separator:ac472ae83681dd0dadedc3d8488fe4e23"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a170e1807db49a53cc8aa4202fc58b7c6"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="classSphericalRegionP.html">SphericalRegionP</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classNebula.html#a170e1807db49a53cc8aa4202fc58b7c6">getRegion</a> () const Q_DECL_OVERRIDE</td></tr>
+<tr class="memdesc:a170e1807db49a53cc8aa4202fc58b7c6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Default implementation of the getRegion method.  <a href="classNebula.html#a170e1807db49a53cc8aa4202fc58b7c6">More...</a><br /></td></tr>
+<tr class="separator:a170e1807db49a53cc8aa4202fc58b7c6"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a808a15f523dd2515de082ee00707b75a"><td class="memItemLeft" align="right" valign="top"><a id="a808a15f523dd2515de082ee00707b75a"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><b>setLabelColor</b> (const <a class="el" href="classVector3.html">Vec3f</a> &amp;v)</td></tr>
 <tr class="separator:a808a15f523dd2515de082ee00707b75a"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -399,23 +401,29 @@ static const <a class="el" href="classNebula.html#a6e15a2298f534055d06dfbc082bb4
 <tr class="separator:ab02208c73c96d822f3144dea9a9d0e93"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pub_static_attribs_classStelObject"><td colspan="2" onclick="javascript:toggleInherit('pub_static_attribs_classStelObject')"><img src="closed.png" alt="-"/>&#160;Static Public Attributes inherited from <a class="el" href="classStelObject.html">StelObject</a></td></tr>
 <tr class="memitem:aff8b9cd662b044e33c39577b1ec2501f inherit pub_static_attribs_classStelObject"><td class="memItemLeft" align="right" valign="top">static const <a class="el" href="classStelObject.html#acf243e7987796a3a44e409140ecea8c6">InfoStringGroupFlags</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classStelObject.html#aff8b9cd662b044e33c39577b1ec2501f">AllInfo</a></td></tr>
-<tr class="memdesc:aff8b9cd662b044e33c39577b1ec2501f inherit pub_static_attribs_classStelObject"><td class="mdescLeft">&#160;</td><td class="mdescRight">A pre-defined set of specifiers for the getInfoString flags argument to getInfoString.  <a href="classStelObject.html#aff8b9cd662b044e33c39577b1ec2501f">More...</a><br /></td></tr>
+<tr class="memdesc:aff8b9cd662b044e33c39577b1ec2501f inherit pub_static_attribs_classStelObject"><td class="mdescLeft">&#160;</td><td class="mdescRight">A pre-defined "all available" set of specifiers for the getInfoString flags argument to getInfoString.  <a href="classStelObject.html#aff8b9cd662b044e33c39577b1ec2501f">More...</a><br /></td></tr>
 <tr class="separator:aff8b9cd662b044e33c39577b1ec2501f inherit pub_static_attribs_classStelObject"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3700ff7e7d5f4dc2a57757a0602d6710 inherit pub_static_attribs_classStelObject"><td class="memItemLeft" align="right" valign="top">static const <a class="el" href="classStelObject.html#acf243e7987796a3a44e409140ecea8c6">InfoStringGroupFlags</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classStelObject.html#a3700ff7e7d5f4dc2a57757a0602d6710">DefaultInfo</a></td></tr>
+<tr class="memdesc:a3700ff7e7d5f4dc2a57757a0602d6710 inherit pub_static_attribs_classStelObject"><td class="mdescLeft">&#160;</td><td class="mdescRight">A pre-defined "default" set of specifiers for the getInfoString flags argument to getInfoString It appears useful to propose this set as post-install settings and let users configure more on demand.  <a href="classStelObject.html#a3700ff7e7d5f4dc2a57757a0602d6710">More...</a><br /></td></tr>
+<tr class="separator:a3700ff7e7d5f4dc2a57757a0602d6710 inherit pub_static_attribs_classStelObject"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a82e64755dc156e071733350e83a6826c inherit pub_static_attribs_classStelObject"><td class="memItemLeft" align="right" valign="top"><a id="a82e64755dc156e071733350e83a6826c"></a>
 static const <a class="el" href="classStelObject.html#acf243e7987796a3a44e409140ecea8c6">InfoStringGroupFlags</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classStelObject.html#a82e64755dc156e071733350e83a6826c">ShortInfo</a> = static_cast&lt;<a class="el" href="classStelObject.html#acf243e7987796a3a44e409140ecea8c6">InfoStringGroupFlags</a>&gt;(<a class="el" href="classStelObject.html#acf243e7987796a3a44e409140ecea8c6ab14de19b496f04e198a835899cefd934">Name</a>|<a class="el" href="classStelObject.html#acf243e7987796a3a44e409140ecea8c6a57d62b46f2f2849da8e3e234c7d27b0e">CatalogNumber</a>|<a class="el" href="classStelObject.html#acf243e7987796a3a44e409140ecea8c6a04e5ef1bf85944db7b25b57f2663c79d">Magnitude</a>|<a class="el" href="classStelObject.html#acf243e7987796a3a44e409140ecea8c6aefb86264a540d299b32c5931ca302ced">RaDecJ2000</a>)</td></tr>
-<tr class="memdesc:a82e64755dc156e071733350e83a6826c inherit pub_static_attribs_classStelObject"><td class="mdescLeft">&#160;</td><td class="mdescRight">A pre-defined set of specifiers for the getInfoString flags argument to getInfoString. <br /></td></tr>
+<tr class="memdesc:a82e64755dc156e071733350e83a6826c inherit pub_static_attribs_classStelObject"><td class="mdescLeft">&#160;</td><td class="mdescRight">A pre-defined "shortest useful" set of specifiers for the getInfoString flags argument to getInfoString. <br /></td></tr>
 <tr class="separator:a82e64755dc156e071733350e83a6826c inherit pub_static_attribs_classStelObject"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-methods"></a>
 Protected Member Functions</h2></td></tr>
-<tr class="memitem:aefecf07341e8ae252c429f1fa7cd03f6"><td class="memItemLeft" align="right" valign="top"><a id="aefecf07341e8ae252c429f1fa7cd03f6"></a>
-virtual QString&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classNebula.html#aefecf07341e8ae252c429f1fa7cd03f6">getMagnitudeInfoString</a> (const <a class="el" href="classStelCore.html">StelCore</a> *core, const InfoStringGroup &amp;flags, const int decimals=1) const</td></tr>
-<tr class="memdesc:aefecf07341e8ae252c429f1fa7cd03f6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Format the magnitude info string for the object. <br /></td></tr>
-<tr class="separator:aefecf07341e8ae252c429f1fa7cd03f6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8a0ba5773224abd7d63a7a0a032be590"><td class="memItemLeft" align="right" valign="top"><a id="a8a0ba5773224abd7d63a7a0a032be590"></a>
+virtual QString&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classNebula.html#a8a0ba5773224abd7d63a7a0a032be590">getMagnitudeInfoString</a> (const <a class="el" href="classStelCore.html">StelCore</a> *core, const InfoStringGroup &amp;flags, const int decimals=1) const Q_DECL_OVERRIDE</td></tr>
+<tr class="memdesc:a8a0ba5773224abd7d63a7a0a032be590"><td class="mdescLeft">&#160;</td><td class="mdescRight">Format the magnitude info string for the object. <br /></td></tr>
+<tr class="separator:a8a0ba5773224abd7d63a7a0a032be590"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pro_methods_classStelObject"><td colspan="2" onclick="javascript:toggleInherit('pro_methods_classStelObject')"><img src="closed.png" alt="-"/>&#160;Protected Member Functions inherited from <a class="el" href="classStelObject.html">StelObject</a></td></tr>
 <tr class="memitem:aab275c32767521d5cb4618184681d0ce inherit pro_methods_classStelObject"><td class="memItemLeft" align="right" valign="top">QString&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classStelObject.html#aab275c32767521d5cb4618184681d0ce">getCommonInfoString</a> (const <a class="el" href="classStelCore.html">StelCore</a> *core, const InfoStringGroup &amp;flags) const</td></tr>
 <tr class="memdesc:aab275c32767521d5cb4618184681d0ce inherit pro_methods_classStelObject"><td class="mdescLeft">&#160;</td><td class="mdescRight">Format the positional info string containing J2000/of date/altaz/hour angle positions and constellation, sidereal time, etc.  <a href="classStelObject.html#aab275c32767521d5cb4618184681d0ce">More...</a><br /></td></tr>
 <tr class="separator:aab275c32767521d5cb4618184681d0ce inherit pro_methods_classStelObject"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a89c1c888d273b598a6fa8aed39836a52 inherit pro_methods_classStelObject"><td class="memItemLeft" align="right" valign="top">QString&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classStelObject.html#a89c1c888d273b598a6fa8aed39836a52">getSolarLunarInfoString</a> (const <a class="el" href="classStelCore.html">StelCore</a> *core, const InfoStringGroup &amp;flags) const</td></tr>
+<tr class="memdesc:a89c1c888d273b598a6fa8aed39836a52 inherit pro_methods_classStelObject"><td class="mdescLeft">&#160;</td><td class="mdescRight">Add a section to the InfoString with just horizontal data for the Sun and Moon, when observed from Earth.  <a href="classStelObject.html#a89c1c888d273b598a6fa8aed39836a52">More...</a><br /></td></tr>
+<tr class="separator:a89c1c888d273b598a6fa8aed39836a52 inherit pro_methods_classStelObject"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a53ece72260ecfe9c4783d740862021f8 inherit pro_methods_classStelObject"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classStelObject.html#a53ece72260ecfe9c4783d740862021f8">postProcessInfoString</a> (QString &amp;str, const InfoStringGroup &amp;flags) const</td></tr>
 <tr class="memdesc:a53ece72260ecfe9c4783d740862021f8 inherit pro_methods_classStelObject"><td class="mdescLeft">&#160;</td><td class="mdescRight">Apply post processing on the info string.  <a href="classStelObject.html#a53ece72260ecfe9c4783d740862021f8">More...</a><br /></td></tr>
 <tr class="separator:a53ece72260ecfe9c4783d740862021f8 inherit pro_methods_classStelObject"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -655,8 +663,8 @@ Additional Inherited Members</h2></td></tr>
 </div>
 </div>
 <h2 class="groupheader">Member Function Documentation</h2>
-<a id="a377f20bf37d463980277a02f9170c66e"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a377f20bf37d463980277a02f9170c66e">&#9670;&nbsp;</a></span>getAngularSize()</h2>
+<a id="ac472ae83681dd0dadedc3d8488fe4e23"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac472ae83681dd0dadedc3d8488fe4e23">&#9670;&nbsp;</a></span>getAngularSize()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -739,8 +747,8 @@ Additional Inherited Members</h2></td></tr>
 
 </div>
 </div>
-<a id="a743d60db904eb79058ecb044d4eb7a03"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a743d60db904eb79058ecb044d4eb7a03">&#9670;&nbsp;</a></span>getID()</h2>
+<a id="a6e05b01d1eb000abbaf0b3a246c216b8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6e05b01d1eb000abbaf0b3a246c216b8">&#9670;&nbsp;</a></span>getID()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -761,16 +769,16 @@ Additional Inherited Members</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
-<p>The ID should be unique for all objects of the same type, but may freely conflict with IDs of other types, so <a class="el" href="classNebula.html#aa7e672561b341454ca8db890d083dbca" title="Return object&#39;s type. It should be the name of the class.">getType()</a> must also be tested.</p>
-<p>With this it should be possible to at least identify the same object in a different instance of Stellarium running the same version, but it would even be better if the ID provides some degree of forward-compatibility. For some object types (e.g. planets) this may simply return <a class="el" href="classNebula.html#ac31bb9a1eced943fb7d5d4303e6b0587" title="Return object&#39;s name in english.">getEnglishName()</a>, but better candidates may be official designations or at least (stable) internal IDs.</p>
+<p>The ID should be unique for all objects of the same type, but may freely conflict with IDs of other types, so <a class="el" href="classNebula.html#ab0c4fb87fac60a3b903c025f383ea348" title="Return object&#39;s type. It should be the name of the class.">getType()</a> must also be tested.</p>
+<p>With this it should be possible to at least identify the same object in a different instance of Stellarium running the same version, but it would even be better if the ID provides some degree of forward-compatibility. For some object types (e.g. planets) this may simply return <a class="el" href="classNebula.html#a17ae40213ec17b81dda02def99858795" title="Return object&#39;s name in english.">getEnglishName()</a>, but better candidates may be official designations or at least (stable) internal IDs.</p>
 <p>An object may have multiple IDs (different catalog numbers, etc). <a class="el" href="classStelObjectMgr.html#af0a33f6ff1448db085288eea46937399" title="Find an object of the given type and ID.">StelObjectMgr::searchByID()</a> should search through all ID variants, but this method only returns one of them. </p>
 
 <p>Implements <a class="el" href="classStelObject.html#ab11e911fb1974d75b8a9b629a57f243b">StelObject</a>.</p>
 
 </div>
 </div>
-<a id="a273420588d214f60b640d0f0992b61b9"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a273420588d214f60b640d0f0992b61b9">&#9670;&nbsp;</a></span>getInfoMap()</h2>
+<a id="a3098f3de5c9fe1dd949326aac26baeea"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3098f3de5c9fe1dd949326aac26baeea">&#9670;&nbsp;</a></span>getInfoMap()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -805,8 +813,8 @@ Additional Inherited Members</h2></td></tr>
 
 </div>
 </div>
-<a id="a9ed94e1b2c1ac40c5d7ca5853127d70c"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a9ed94e1b2c1ac40c5d7ca5853127d70c">&#9670;&nbsp;</a></span>getInfoString()</h2>
+<a id="a1410deeddca9a146dc11bcf91eb7cb96"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1410deeddca9a146dc11bcf91eb7cb96">&#9670;&nbsp;</a></span>getInfoString()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -880,8 +888,8 @@ Additional Inherited Members</h2></td></tr>
 
 </div>
 </div>
-<a id="a028488ce39e24249242014e05baa2d45"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a028488ce39e24249242014e05baa2d45">&#9670;&nbsp;</a></span>getRegion()</h2>
+<a id="a170e1807db49a53cc8aa4202fc58b7c6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a170e1807db49a53cc8aa4202fc58b7c6">&#9670;&nbsp;</a></span>getRegion()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -956,7 +964,7 @@ Additional Inherited Members</h2></td></tr>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Mon Sep 27 2021 22:59:45 for Stellarium by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Sat Dec 25 2021 16:56:51 for Stellarium by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.17
 </small></address>

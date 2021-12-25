@@ -442,6 +442,18 @@ void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="clas
 <tr class="memitem:a371da999d086abbb553f03220c0f93c1"><td class="memItemLeft" align="right" valign="top">static bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classStelMainScriptAPI.html#a371da999d086abbb553f03220c0f93c1">isMediaPlaybackSupported</a> (void)</td></tr>
 <tr class="memdesc:a371da999d086abbb553f03220c0f93c1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the current status of media playback support.  <a href="classStelMainScriptAPI.html#a371da999d086abbb553f03220c0f93c1">More...</a><br /></td></tr>
 <tr class="separator:a371da999d086abbb553f03220c0f93c1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aaed25109a29afd730df2b8f7bf9c2a76"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classStelMainScriptAPI.html#aaed25109a29afd730df2b8f7bf9c2a76">setDisplayMaxLuminance</a> (double cdPerSqM)</td></tr>
+<tr class="memdesc:aaed25109a29afd730df2b8f7bf9c2a76"><td class="mdescLeft">&#160;</td><td class="mdescRight">Experimental.  <a href="classStelMainScriptAPI.html#aaed25109a29afd730df2b8f7bf9c2a76">More...</a><br /></td></tr>
+<tr class="separator:aaed25109a29afd730df2b8f7bf9c2a76"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a949081bd56e2278229e6e1ebaf92b607"><td class="memItemLeft" align="right" valign="top">static double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classStelMainScriptAPI.html#a949081bd56e2278229e6e1ebaf92b607">getDisplayMaxLuminance</a> ()</td></tr>
+<tr class="memdesc:a949081bd56e2278229e6e1ebaf92b607"><td class="mdescLeft">&#160;</td><td class="mdescRight">Experimental.  <a href="classStelMainScriptAPI.html#a949081bd56e2278229e6e1ebaf92b607">More...</a><br /></td></tr>
+<tr class="separator:a949081bd56e2278229e6e1ebaf92b607"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac3e5d2dfa60968655715f2b250a23dd0"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classStelMainScriptAPI.html#ac3e5d2dfa60968655715f2b250a23dd0">setDisplayGamma</a> (double gamma)</td></tr>
+<tr class="memdesc:ac3e5d2dfa60968655715f2b250a23dd0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Experimental: Set the display gamma.  <a href="classStelMainScriptAPI.html#ac3e5d2dfa60968655715f2b250a23dd0">More...</a><br /></td></tr>
+<tr class="separator:ac3e5d2dfa60968655715f2b250a23dd0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4780f103e4fd845bf4c4181fa5a190bc"><td class="memItemLeft" align="right" valign="top">static double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classStelMainScriptAPI.html#a4780f103e4fd845bf4c4181fa5a190bc">getDisplayGamma</a> ()</td></tr>
+<tr class="memdesc:a4780f103e4fd845bf4c4181fa5a190bc"><td class="mdescLeft">&#160;</td><td class="mdescRight">Experimental: Get the display gamma.  <a href="classStelMainScriptAPI.html#a4780f103e4fd845bf4c4181fa5a190bc">More...</a><br /></td></tr>
+<tr class="separator:a4780f103e4fd845bf4c4181fa5a190bc"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="signals"></a>
 Signals</h2></td></tr>
@@ -921,6 +933,59 @@ double&#160;</td><td class="memItemRight" valign="bottom"><b>timeSpeed</b></td><
 </table>
 </div><div class="memdoc">
 <dl class="section return"><dt>Returns</dt><dd>true if the disk view port is currently enabled </dd></dl>
+
+</div>
+</div>
+<a id="a4780f103e4fd845bf4c4181fa5a190bc"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4780f103e4fd845bf4c4181fa5a190bc">&#9670;&nbsp;</a></span>getDisplayGamma</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static double StelMainScriptAPI::getDisplayGamma </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span><span class="mlabel">slot</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Initial default value is 2.2222 (for a CRT), and sRGB LCD (and similar modern) panels try to reproduce that. Higher gamma makes the sky brighter. </p><dl class="section note"><dt>Note</dt><dd>This is experimental and may not be available in later versions. </dd></dl>
+
+</div>
+</div>
+<a id="a949081bd56e2278229e6e1ebaf92b607"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a949081bd56e2278229e6e1ebaf92b607">&#9670;&nbsp;</a></span>getDisplayMaxLuminance</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static double StelMainScriptAPI::getDisplayMaxLuminance </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span><span class="mlabel">slot</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<dl class="section return"><dt>Returns</dt><dd>configured physical display luminance for tonemapping. The standard value is 100cd/m^2, appropriate for CRTs. More modern screens often have more. </dd></dl>
+<dl class="section note"><dt>Note</dt><dd>This is experimental and may not be available in later versions. </dd></dl>
 
 </div>
 </div>
@@ -2555,7 +2620,7 @@ See also <a class="el" href="classStelMainScriptAPI.html#ae5dc2cdfd5bd18b0634ec4
 <p>The image is projected like a deep-sky object, with a notion for surface magnitude of the brightest parts. Transparent sections in the image are possibly rendered white, so make your image just RGB with black background. The black background covers the milky way, but is brightened by the Zodiacal light. </p><dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">id</td><td>a string ID to be used when referring to this image (e.g. when changing the displayed status or deleting it. </td></tr>
-    <tr><td class="paramname">filename</td><td>the file name of the image. If a relative path is specified, "scripts/" will be prefixed before the image is searched for using <a class="el" href="classStelFileMgr.html" title="Provides utilities for locating and handling files.">StelFileMgr</a>. </td></tr>
+    <tr><td class="paramname">filename</td><td>the file name of the image. "scripts/" will be prefixed before the image is searched for using <a class="el" href="classStelFileMgr.html" title="Provides utilities for locating and handling files.">StelFileMgr</a>. </td></tr>
     <tr><td class="paramname">lon0</td><td>The right ascension/longitude/azimuth of the first corner of the image in degrees (bottom left) </td></tr>
     <tr><td class="paramname">lat0</td><td>The declination/latitude/altitude of the first corner of the image in degrees (bottom left) </td></tr>
     <tr><td class="paramname">lon1</td><td>The right ascension/longitude/azimuth of the second corner of the image in degrees (bottom right) </td></tr>
@@ -3861,6 +3926,70 @@ Starting with version 0.14.0 the Boolean argument has a different meaning and de
 
 </div>
 </div>
+<a id="ac3e5d2dfa60968655715f2b250a23dd0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac3e5d2dfa60968655715f2b250a23dd0">&#9670;&nbsp;</a></span>setDisplayGamma</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static void StelMainScriptAPI::setDisplayGamma </td>
+          <td>(</td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>gamma</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span><span class="mlabel">slot</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">gamma</td><td>the gamma. Initial default value is 2.2222 (for a CRT), and sRGB LCD (and similar modern) panels try to reproduce that. This method allows overriding for other sky tones. Higher gamma makes the sky brighter. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section note"><dt>Note</dt><dd>It may be technically an error to deviate from the defaults! </dd>
+<dd>
+Only the blue-sky (atmosphere) model is influenced, not the foreground (landscape) </dd>
+<dd>
+This is experimental and may not be available in later versions. </dd></dl>
+
+</div>
+</div>
+<a id="aaed25109a29afd730df2b8f7bf9c2a76"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aaed25109a29afd730df2b8f7bf9c2a76">&#9670;&nbsp;</a></span>setDisplayMaxLuminance</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static void StelMainScriptAPI::setDisplayMaxLuminance </td>
+          <td>(</td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>cdPerSqM</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span><span class="mlabel">slot</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Allow setting physical display properties for tonemapping. The standard value is 100cd/m^2, appropriate for CRTs. More modern screens often have more. Increasing the value makes most of the sky darker, to allow saving the highest tones for the brightest lights (esp. the Sun). </p><dl class="section note"><dt>Note</dt><dd>This is experimental and may not be available in later versions. </dd></dl>
+
+</div>
+</div>
 <a id="aca84afcc3bc3f812c43a19538cb21a4d"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#aca84afcc3bc3f812c43a19538cb21a4d">&#9670;&nbsp;</a></span>setFlagGravityLabels</h2>
 
@@ -4945,7 +5074,7 @@ See also <a class="el" href="classStelMainScriptAPI.html#ae5dc2cdfd5bd18b0634ec4
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Mon Sep 27 2021 22:59:46 for Stellarium by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Sat Dec 25 2021 16:56:51 for Stellarium by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.17
 </small></address>

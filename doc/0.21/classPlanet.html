@@ -21,7 +21,7 @@
   <td id="projectlogo"><img alt="Logo" src="stellarium-logo.png"/></td>
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">Stellarium
-   &#160;<span id="projectnumber">0.21.2</span>
+   &#160;<span id="projectnumber">0.21.3</span>
    </div>
   </td>
  </tr>
@@ -104,6 +104,11 @@ Public Types</h2></td></tr>
 <br />
  }</td></tr>
 <tr class="separator:aecd6e43717bb28b27e1f5885df52cf3a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae68478aeca2ed324f23d4de94cf476a1"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPlanet.html#ae68478aeca2ed324f23d4de94cf476a1">PositionQuality</a> { <b>Position</b>, 
+<b>OrbitPlotting</b>
+ }</td></tr>
+<tr class="memdesc:ae68478aeca2ed324f23d4de94cf476a1"><td class="mdescLeft">&#160;</td><td class="mdescRight">enums to indicate for which purpose we check positional quality.  <a href="classPlanet.html#ae68478aeca2ed324f23d4de94cf476a1">More...</a><br /></td></tr>
+<tr class="separator:ae68478aeca2ed324f23d4de94cf476a1"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pub_types_classStelObject"><td colspan="2" onclick="javascript:toggleInherit('pub_types_classStelObject')"><img src="closed.png" alt="-"/>&#160;Public Types inherited from <a class="el" href="classStelObject.html">StelObject</a></td></tr>
 <tr class="memitem:acf243e7987796a3a44e409140ecea8c6 inherit pub_types_classStelObject"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classStelObject.html#acf243e7987796a3a44e409140ecea8c6">InfoStringGroupFlags</a> { <br />
 &#160;&#160;<a class="el" href="classStelObject.html#acf243e7987796a3a44e409140ecea8c6a9574f41db6e66de0ece6bfb40439dc49">None</a> = 0x00000000, 
@@ -136,10 +141,12 @@ Public Types</h2></td></tr>
 <a class="el" href="classStelObject.html#acf243e7987796a3a44e409140ecea8c6a6b1acde73a84cc7314489ff6c5793264">SiderealTime</a> = 0x00200000, 
 <a class="el" href="classStelObject.html#acf243e7987796a3a44e409140ecea8c6a0a4945c66b17aebfce6b1ef5a681e74e">RTSTime</a> = 0x00400000, 
 <br />
-&#160;&#160;<a class="el" href="classStelObject.html#acf243e7987796a3a44e409140ecea8c6add2bc965197f9ae3b3976f8494e60771">Script</a> = 0x00800000, 
-<a class="el" href="classStelObject.html#acf243e7987796a3a44e409140ecea8c6ace2821b66545f2aa2a8a0a60debf238e">DebugAid</a> = 0x01000000, 
-<b>NoFont</b> = 0x02000000, 
-<a class="el" href="classStelObject.html#acf243e7987796a3a44e409140ecea8c6aa651fd9d370fc652c77c663cd41a18ce">PlainText</a> = 0x04000000
+&#160;&#160;<a class="el" href="classStelObject.html#acf243e7987796a3a44e409140ecea8c6a738f66c455ddb886d805dcaa17cfb7c2">SolarLunarPosition</a> = 0x00800000, 
+<a class="el" href="classStelObject.html#acf243e7987796a3a44e409140ecea8c6add2bc965197f9ae3b3976f8494e60771">Script</a> = 0x01000000, 
+<a class="el" href="classStelObject.html#acf243e7987796a3a44e409140ecea8c6ace2821b66545f2aa2a8a0a60debf238e">DebugAid</a> = 0x02000000, 
+<b>NoFont</b> = 0x04000000, 
+<br />
+&#160;&#160;<a class="el" href="classStelObject.html#acf243e7987796a3a44e409140ecea8c6aa651fd9d370fc652c77c663cd41a18ce">PlainText</a> = 0x08000000
 <br />
  }</td></tr>
 <tr class="memdesc:acf243e7987796a3a44e409140ecea8c6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Used as named bitfield flags as specifiers to filter results of getInfoString.  <a href="classStelObject.html#acf243e7987796a3a44e409140ecea8c6">More...</a><br /></td></tr>
@@ -219,17 +226,17 @@ virtual bool&#160;</td><td class="memItemRight" valign="bottom"><b>hasAtmosphere
 <tr class="memitem:a7d6a06fda16f9dc439a5e535213a5df5"><td class="memItemLeft" align="right" valign="top"><a id="a7d6a06fda16f9dc439a5e535213a5df5"></a>
 virtual bool&#160;</td><td class="memItemRight" valign="bottom"><b>hasHalo</b> (void)</td></tr>
 <tr class="separator:a7d6a06fda16f9dc439a5e535213a5df5"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab2141e70e58ad16bd3ea4ebe5799dfc5"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPlanet.html#ab2141e70e58ad16bd3ea4ebe5799dfc5">hasValidPositionalData</a> (const double JDE)</td></tr>
-<tr class="memdesc:ab2141e70e58ad16bd3ea4ebe5799dfc5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns whether planet positions are valid and useful for the current simulation time.  <a href="classPlanet.html#ab2141e70e58ad16bd3ea4ebe5799dfc5">More...</a><br /></td></tr>
-<tr class="separator:ab2141e70e58ad16bd3ea4ebe5799dfc5"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac336a90c89a3f157139ad451a59786cf"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classVector2.html">Vec2d</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPlanet.html#ac336a90c89a3f157139ad451a59786cf">getValidPositionalDataRange</a> ()</td></tr>
-<tr class="memdesc:ac336a90c89a3f157139ad451a59786cf"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns JDE dates of presumably valid data for positional calculation.  <a href="classPlanet.html#ac336a90c89a3f157139ad451a59786cf">More...</a><br /></td></tr>
-<tr class="separator:ac336a90c89a3f157139ad451a59786cf"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aead14f3e1efc4f4074d05ac411691260"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPlanet.html#aead14f3e1efc4f4074d05ac411691260">hasValidPositionalData</a> (const double JDE, const <a class="el" href="classPlanet.html#ae68478aeca2ed324f23d4de94cf476a1">PositionQuality</a> purpose) const</td></tr>
+<tr class="memdesc:aead14f3e1efc4f4074d05ac411691260"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns whether planet positions are valid and useful for the current simulation time.  <a href="classPlanet.html#aead14f3e1efc4f4074d05ac411691260">More...</a><br /></td></tr>
+<tr class="separator:aead14f3e1efc4f4074d05ac411691260"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab28fe2658757fd545e60502767da10ce"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classVector2.html">Vec2d</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPlanet.html#ab28fe2658757fd545e60502767da10ce">getValidPositionalDataRange</a> (const <a class="el" href="classPlanet.html#ae68478aeca2ed324f23d4de94cf476a1">PositionQuality</a> purpose) const</td></tr>
+<tr class="memdesc:ab28fe2658757fd545e60502767da10ce"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns JDE dates of presumably valid data for positional calculation or acceptable range for graphics.  <a href="classPlanet.html#ab28fe2658757fd545e60502767da10ce">More...</a><br /></td></tr>
+<tr class="separator:ab28fe2658757fd545e60502767da10ce"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a5a0bf8cbb5326e6e992808cb5fcc6964"><td class="memItemLeft" align="right" valign="top"><a id="a5a0bf8cbb5326e6e992808cb5fcc6964"></a>
 float&#160;</td><td class="memItemRight" valign="bottom"><b>getAxisRotation</b> (void)</td></tr>
 <tr class="separator:a5a0bf8cbb5326e6e992808cb5fcc6964"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a8c977bafde42a4d36187db0d92f9532d"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPlanet.html#a8c977bafde42a4d36187db0d92f9532d">translateName</a> (const <a class="el" href="classStelTranslator.html">StelTranslator</a> &amp;trans)</td></tr>
-<tr class="memdesc:a8c977bafde42a4d36187db0d92f9532d"><td class="mdescLeft">&#160;</td><td class="mdescRight">return axisRotation last computed in <a class="el" href="classPlanet.html#a57aa7ad8c4ddeec94de56a28536fa192" title="Compute the transformation matrix from the local Planet coordinate to the parent Planet coordinate.">computeTransMatrix()</a>.  <a href="classPlanet.html#a8c977bafde42a4d36187db0d92f9532d">More...</a><br /></td></tr>
+<tr class="memdesc:a8c977bafde42a4d36187db0d92f9532d"><td class="mdescLeft">&#160;</td><td class="mdescRight">return axisRotation last computed in <a class="el" href="classPlanet.html#a57aa7ad8c4ddeec94de56a28536fa192" title="Compute the transformation matrix from the local Planet coordinate to the parent Planet coordinate.">computeTransMatrix()</a>. [degrees]  <a href="classPlanet.html#a8c977bafde42a4d36187db0d92f9532d">More...</a><br /></td></tr>
 <tr class="separator:a8c977bafde42a4d36187db0d92f9532d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab0fb37c89bba0844810ab3dd4413c794"><td class="memItemLeft" align="right" valign="top"><a id="ab0fb37c89bba0844810ab3dd4413c794"></a>
 virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>draw</b> (<a class="el" href="classStelCore.html">StelCore</a> *core, float maxMagLabels, const QFont &amp;planetNameFont)</td></tr>
@@ -326,6 +333,9 @@ virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" hr
 <tr class="memitem:a57aa7ad8c4ddeec94de56a28536fa192"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPlanet.html#a57aa7ad8c4ddeec94de56a28536fa192">computeTransMatrix</a> (double JD, double JDE)</td></tr>
 <tr class="memdesc:a57aa7ad8c4ddeec94de56a28536fa192"><td class="mdescLeft">&#160;</td><td class="mdescRight">Compute the transformation matrix from the local <a class="el" href="classPlanet.html">Planet</a> coordinate to the parent <a class="el" href="classPlanet.html">Planet</a> coordinate.  <a href="classPlanet.html#a57aa7ad8c4ddeec94de56a28536fa192">More...</a><br /></td></tr>
 <tr class="separator:a57aa7ad8c4ddeec94de56a28536fa192"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab6737c6cda1ae394f662328ccb001414"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classVector4.html">Vec4d</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPlanet.html#ab6737c6cda1ae394f662328ccb001414">getRectangularCoordinates</a> (const double longDeg, const double latDeg, const double altMetres=0.) const</td></tr>
+<tr class="memdesc:ab6737c6cda1ae394f662328ccb001414"><td class="mdescLeft">&#160;</td><td class="mdescRight">Retrieve planetocentric rectangular coordinates of a location on the ellipsoid surface, or with altitude altMetres above the ellipsoid surface.  <a href="classPlanet.html#ab6737c6cda1ae394f662328ccb001414">More...</a><br /></td></tr>
+<tr class="separator:ab6737c6cda1ae394f662328ccb001414"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a433784ed992029715f9a58aba6e95322"><td class="memItemLeft" align="right" valign="top"><a id="a433784ed992029715f9a58aba6e95322"></a>
 double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPlanet.html#a433784ed992029715f9a58aba6e95322">getPhaseAngle</a> (const <a class="el" href="classVector3.html">Vec3d</a> &amp;obsPos) const</td></tr>
 <tr class="memdesc:a433784ed992029715f9a58aba6e95322"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the phase angle (radians) for an observer at pos obsPos in heliocentric coordinates (in AU) <br /></td></tr>
@@ -342,9 +352,9 @@ double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="cl
 float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPlanet.html#a0cce1509a83ffd7ce0fe4e58ee70a9d9">getPhase</a> (const <a class="el" href="classVector3.html">Vec3d</a> &amp;obsPos) const</td></tr>
 <tr class="memdesc:a0cce1509a83ffd7ce0fe4e58ee70a9d9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the planet phase (illuminated fraction of the planet disk, [0=dark..1=full]) for an observer at pos obsPos in heliocentric coordinates (in AU) <br /></td></tr>
 <tr class="separator:a0cce1509a83ffd7ce0fe4e58ee70a9d9"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ae5f89298b49ba98b1d7e9bb6842dbd61"><td class="memItemLeft" align="right" valign="top">QPair&lt; <a class="el" href="classVector4.html">Vec4d</a>, <a class="el" href="classVector3.html">Vec3d</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPlanet.html#ae5f89298b49ba98b1d7e9bb6842dbd61">getSubSolarObserverPoints</a> (const <a class="el" href="classStelCore.html">StelCore</a> *core) const</td></tr>
-<tr class="memdesc:ae5f89298b49ba98b1d7e9bb6842dbd61"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get planetographic coordinates of subsolar and sub-observer points.  <a href="classPlanet.html#ae5f89298b49ba98b1d7e9bb6842dbd61">More...</a><br /></td></tr>
-<tr class="separator:ae5f89298b49ba98b1d7e9bb6842dbd61"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a908ed516d9253018a14331e88c7ced6d"><td class="memItemLeft" align="right" valign="top">QPair&lt; <a class="el" href="classVector4.html">Vec4d</a>, <a class="el" href="classVector3.html">Vec3d</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPlanet.html#a908ed516d9253018a14331e88c7ced6d">getSubSolarObserverPoints</a> (const <a class="el" href="classStelCore.html">StelCore</a> *core, bool jupiterGraphical=false) const</td></tr>
+<tr class="memdesc:a908ed516d9253018a14331e88c7ced6d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get planetographic coordinates of subsolar and sub-observer points.  <a href="classPlanet.html#a908ed516d9253018a14331e88c7ced6d">More...</a><br /></td></tr>
+<tr class="separator:a908ed516d9253018a14331e88c7ced6d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aedabcce7359e607da843836a962ef70a"><td class="memItemLeft" align="right" valign="top"><a id="aedabcce7359e607da843836a962ef70a"></a>
 bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPlanet.html#aedabcce7359e607da843836a962ef70a">isRotatingRetrograde</a> () const</td></tr>
 <tr class="memdesc:aedabcce7359e607da843836a962ef70a"><td class="mdescLeft">&#160;</td><td class="mdescRight">returns if planet has retrograde rotation <br /></td></tr>
@@ -437,6 +447,12 @@ QVector&lt; const <a class="el" href="classPlanet.html">Planet</a> * &gt;&#160;<
 <tr class="memitem:ad9aee3d10c4c97d69086f042b74930eb"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="classVector4.html">Vec4d</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPlanet.html#ad9aee3d10c4c97d69086f042b74930eb">getRTSTime</a> (const <a class="el" href="classStelCore.html">StelCore</a> *core, const double altitude=0.) const Q_DECL_OVERRIDE</td></tr>
 <tr class="memdesc:ad9aee3d10c4c97d69086f042b74930eb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Compute times of nearest rise, transit and set for a solar system object for current location.  <a href="classPlanet.html#ad9aee3d10c4c97d69086f042b74930eb">More...</a><br /></td></tr>
 <tr class="separator:ad9aee3d10c4c97d69086f042b74930eb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a57178c57b6a2fba9d2b1e0f3c4441f6c"><td class="memItemLeft" align="right" valign="top"><a id="a57178c57b6a2fba9d2b1e0f3c4441f6c"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>resetTextures</b> ()</td></tr>
+<tr class="separator:a57178c57b6a2fba9d2b1e0f3c4441f6c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a182e54ccbba75ab2a0cf0029a435e7db"><td class="memItemLeft" align="right" valign="top"><a id="a182e54ccbba75ab2a0cf0029a435e7db"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>replaceTexture</b> (const QString &amp;texName)</td></tr>
+<tr class="separator:a182e54ccbba75ab2a0cf0029a435e7db"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pub_methods_classStelObject"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_classStelObject')"><img src="closed.png" alt="-"/>&#160;Public Member Functions inherited from <a class="el" href="classStelObject.html">StelObject</a></td></tr>
 <tr class="memitem:ac875514ac2bf8aff56598a4d1cd868e4 inherit pub_methods_classStelObject"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="classSphericalRegionP.html">SphericalRegionP</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classStelObject.html#ac875514ac2bf8aff56598a4d1cd868e4">getRegion</a> () const Q_DECL_OVERRIDE</td></tr>
 <tr class="memdesc:ac875514ac2bf8aff56598a4d1cd868e4 inherit pub_methods_classStelObject"><td class="mdescLeft">&#160;</td><td class="mdescRight">Default implementation of the getRegion method.  <a href="classStelObject.html#ac875514ac2bf8aff56598a4d1cd868e4">More...</a><br /></td></tr>
@@ -735,11 +751,14 @@ static PlanetOrbitColorStyle&#160;</td><td class="memItemRight" valign="bottom">
 <tr class="separator:a44971a484fec25a66207b529b0fd5083"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pub_static_attribs_classStelObject"><td colspan="2" onclick="javascript:toggleInherit('pub_static_attribs_classStelObject')"><img src="closed.png" alt="-"/>&#160;Static Public Attributes inherited from <a class="el" href="classStelObject.html">StelObject</a></td></tr>
 <tr class="memitem:aff8b9cd662b044e33c39577b1ec2501f inherit pub_static_attribs_classStelObject"><td class="memItemLeft" align="right" valign="top">static const <a class="el" href="classStelObject.html#acf243e7987796a3a44e409140ecea8c6">InfoStringGroupFlags</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classStelObject.html#aff8b9cd662b044e33c39577b1ec2501f">AllInfo</a></td></tr>
-<tr class="memdesc:aff8b9cd662b044e33c39577b1ec2501f inherit pub_static_attribs_classStelObject"><td class="mdescLeft">&#160;</td><td class="mdescRight">A pre-defined set of specifiers for the getInfoString flags argument to getInfoString.  <a href="classStelObject.html#aff8b9cd662b044e33c39577b1ec2501f">More...</a><br /></td></tr>
+<tr class="memdesc:aff8b9cd662b044e33c39577b1ec2501f inherit pub_static_attribs_classStelObject"><td class="mdescLeft">&#160;</td><td class="mdescRight">A pre-defined "all available" set of specifiers for the getInfoString flags argument to getInfoString.  <a href="classStelObject.html#aff8b9cd662b044e33c39577b1ec2501f">More...</a><br /></td></tr>
 <tr class="separator:aff8b9cd662b044e33c39577b1ec2501f inherit pub_static_attribs_classStelObject"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3700ff7e7d5f4dc2a57757a0602d6710 inherit pub_static_attribs_classStelObject"><td class="memItemLeft" align="right" valign="top">static const <a class="el" href="classStelObject.html#acf243e7987796a3a44e409140ecea8c6">InfoStringGroupFlags</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classStelObject.html#a3700ff7e7d5f4dc2a57757a0602d6710">DefaultInfo</a></td></tr>
+<tr class="memdesc:a3700ff7e7d5f4dc2a57757a0602d6710 inherit pub_static_attribs_classStelObject"><td class="mdescLeft">&#160;</td><td class="mdescRight">A pre-defined "default" set of specifiers for the getInfoString flags argument to getInfoString It appears useful to propose this set as post-install settings and let users configure more on demand.  <a href="classStelObject.html#a3700ff7e7d5f4dc2a57757a0602d6710">More...</a><br /></td></tr>
+<tr class="separator:a3700ff7e7d5f4dc2a57757a0602d6710 inherit pub_static_attribs_classStelObject"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a82e64755dc156e071733350e83a6826c inherit pub_static_attribs_classStelObject"><td class="memItemLeft" align="right" valign="top"><a id="a82e64755dc156e071733350e83a6826c"></a>
 static const <a class="el" href="classStelObject.html#acf243e7987796a3a44e409140ecea8c6">InfoStringGroupFlags</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classStelObject.html#a82e64755dc156e071733350e83a6826c">ShortInfo</a> = static_cast&lt;<a class="el" href="classStelObject.html#acf243e7987796a3a44e409140ecea8c6">InfoStringGroupFlags</a>&gt;(<a class="el" href="classStelObject.html#acf243e7987796a3a44e409140ecea8c6ab14de19b496f04e198a835899cefd934">Name</a>|<a class="el" href="classStelObject.html#acf243e7987796a3a44e409140ecea8c6a57d62b46f2f2849da8e3e234c7d27b0e">CatalogNumber</a>|<a class="el" href="classStelObject.html#acf243e7987796a3a44e409140ecea8c6a04e5ef1bf85944db7b25b57f2663c79d">Magnitude</a>|<a class="el" href="classStelObject.html#acf243e7987796a3a44e409140ecea8c6aefb86264a540d299b32c5931ca302ced">RaDecJ2000</a>)</td></tr>
-<tr class="memdesc:a82e64755dc156e071733350e83a6826c inherit pub_static_attribs_classStelObject"><td class="mdescLeft">&#160;</td><td class="mdescRight">A pre-defined set of specifiers for the getInfoString flags argument to getInfoString. <br /></td></tr>
+<tr class="memdesc:a82e64755dc156e071733350e83a6826c inherit pub_static_attribs_classStelObject"><td class="mdescLeft">&#160;</td><td class="mdescRight">A pre-defined "shortest useful" set of specifiers for the getInfoString flags argument to getInfoString. <br /></td></tr>
 <tr class="separator:a82e64755dc156e071733350e83a6826c inherit pub_static_attribs_classStelObject"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-methods"></a>
@@ -814,6 +833,9 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>drawHints</b> (const 
 <tr class="memitem:a557aa5ab5579eb354ec3164b979c10b5 inherit pro_methods_classStelObject"><td class="memItemLeft" align="right" valign="top">virtual QString&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classStelObject.html#a557aa5ab5579eb354ec3164b979c10b5">getMagnitudeInfoString</a> (const <a class="el" href="classStelCore.html">StelCore</a> *core, const InfoStringGroup &amp;flags, const int decimals=1) const</td></tr>
 <tr class="memdesc:a557aa5ab5579eb354ec3164b979c10b5 inherit pro_methods_classStelObject"><td class="mdescLeft">&#160;</td><td class="mdescRight">Format the magnitude info string for the object.  <a href="classStelObject.html#a557aa5ab5579eb354ec3164b979c10b5">More...</a><br /></td></tr>
 <tr class="separator:a557aa5ab5579eb354ec3164b979c10b5 inherit pro_methods_classStelObject"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a89c1c888d273b598a6fa8aed39836a52 inherit pro_methods_classStelObject"><td class="memItemLeft" align="right" valign="top">QString&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classStelObject.html#a89c1c888d273b598a6fa8aed39836a52">getSolarLunarInfoString</a> (const <a class="el" href="classStelCore.html">StelCore</a> *core, const InfoStringGroup &amp;flags) const</td></tr>
+<tr class="memdesc:a89c1c888d273b598a6fa8aed39836a52 inherit pro_methods_classStelObject"><td class="mdescLeft">&#160;</td><td class="mdescRight">Add a section to the InfoString with just horizontal data for the Sun and Moon, when observed from Earth.  <a href="classStelObject.html#a89c1c888d273b598a6fa8aed39836a52">More...</a><br /></td></tr>
+<tr class="separator:a89c1c888d273b598a6fa8aed39836a52 inherit pro_methods_classStelObject"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a53ece72260ecfe9c4783d740862021f8 inherit pro_methods_classStelObject"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classStelObject.html#a53ece72260ecfe9c4783d740862021f8">postProcessInfoString</a> (QString &amp;str, const InfoStringGroup &amp;flags) const</td></tr>
 <tr class="memdesc:a53ece72260ecfe9c4783d740862021f8 inherit pro_methods_classStelObject"><td class="mdescLeft">&#160;</td><td class="mdescRight">Apply post processing on the info string.  <a href="classStelObject.html#a53ece72260ecfe9c4783d740862021f8">More...</a><br /></td></tr>
 <tr class="separator:a53ece72260ecfe9c4783d740862021f8 inherit pro_methods_classStelObject"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -1018,6 +1040,22 @@ Additional Inherited Members</h2></td></tr>
 <tr class="memdesc:acdd0ac45d7fdb704acb95bbb3f54820f inherit pub_slots_classStelObject"><td class="mdescLeft">&#160;</td><td class="mdescRight">Remove the extraInfoStrings with the given flags.  <a href="classStelObject.html#acdd0ac45d7fdb704acb95bbb3f54820f">More...</a><br /></td></tr>
 <tr class="separator:acdd0ac45d7fdb704acb95bbb3f54820f inherit pub_slots_classStelObject"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
+<h2 class="groupheader">Member Enumeration Documentation</h2>
+<a id="ae68478aeca2ed324f23d4de94cf476a1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae68478aeca2ed324f23d4de94cf476a1">&#9670;&nbsp;</a></span>PositionQuality</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">enum <a class="el" href="classPlanet.html#ae68478aeca2ed324f23d4de94cf476a1">Planet::PositionQuality</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Objects on KeplerOrbits may be too far from their epoch to provide useful data. </p>
+
+</div>
+</div>
 <h2 class="groupheader">Member Function Documentation</h2>
 <a id="ae486912513f24a2301f47ec54f86603a"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#ae486912513f24a2301f47ec54f86603a">&#9670;&nbsp;</a></span>computeDistance()</h2>
@@ -1380,6 +1418,49 @@ Additional Inherited Members</h2></td></tr>
 
 </div>
 </div>
+<a id="ab6737c6cda1ae394f662328ccb001414"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab6737c6cda1ae394f662328ccb001414">&#9670;&nbsp;</a></span>getRectangularCoordinates()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classVector4.html">Vec4d</a> Planet::getRectangularCoordinates </td>
+          <td>(</td>
+          <td class="paramtype">const double&#160;</td>
+          <td class="paramname"><em>longDeg</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const double&#160;</td>
+          <td class="paramname"><em>latDeg</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const double&#160;</td>
+          <td class="paramname"><em>altMetres</em> = <code>0.</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Meeus, Astr. Alg. 2nd ed, Ch.11. </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">longDeg</td><td>longitude of location, degrees. (currently unused. Set to 0.) </td></tr>
+    <tr><td class="paramname">latDeg</td><td>planetographic latitude, degrees. </td></tr>
+    <tr><td class="paramname">altMetres</td><td>altitude above ellipsoid surface (metres) </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>[rhoCosPhiPrime*a, rhoSinPhiPrime*a, phiPrime, rho*a] where a=equatorial radius </dd></dl>
+
+</div>
+</div>
 <a id="afe5629c5226499a8b870dd241389bd19"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#afe5629c5226499a8b870dd241389bd19">&#9670;&nbsp;</a></span>getRotEquatorialToVsop87()</h2>
 
@@ -1509,8 +1590,8 @@ Limitation for efficiency: If this is a planet moon from another planet, we comp
 
 </div>
 </div>
-<a id="ae5f89298b49ba98b1d7e9bb6842dbd61"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ae5f89298b49ba98b1d7e9bb6842dbd61">&#9670;&nbsp;</a></span>getSubSolarObserverPoints()</h2>
+<a id="a908ed516d9253018a14331e88c7ced6d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a908ed516d9253018a14331e88c7ced6d">&#9670;&nbsp;</a></span>getSubSolarObserverPoints()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -1519,17 +1600,32 @@ Limitation for efficiency: If this is a planet moon from another planet, we comp
           <td class="memname">QPair&lt;<a class="el" href="classVector4.html">Vec4d</a>, <a class="el" href="classVector3.html">Vec3d</a>&gt; Planet::getSubSolarObserverPoints </td>
           <td>(</td>
           <td class="paramtype">const <a class="el" href="classStelCore.html">StelCore</a> *&#160;</td>
-          <td class="paramname"><em>core</em></td><td>)</td>
-          <td> const</td>
+          <td class="paramname"><em>core</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>jupiterGraphical</em> = <code>false</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td> const</td>
         </tr>
       </table>
 </div><div class="memdoc">
-<p>Only meaningful for earth-bound observers. Source: Explanatory Supplement 2013, 10.4.1 first[0] = 10.26 phi_e [rad] Planetocentric latitude of sub-earth point first[1] = 10.26 phi'_e [rad] Planetographic latitude of sub-earth point first[2] = 10.26 lambda'_e [rad] Planetographic longitude of sub-earth point (0..2pi) first[3] = 10.29 P_n [rad] <a class="el" href="structPosition.html" title="A telescope&#39;s position at a given time.">Position</a> angle of axis north pole in equatorial coordinates of date second[0] = 10.26 phi_s [rad] Planetocentric latitude of sub-solar point second[1] = 10.26 phi'_s [rad] Planetographic latitude of sub-solar point second[2] = 10.26 lambda'_s [rad] Planetographic longitude of sub-solar point (0..2pi) Note: For the Moon, it is more common to give Libration angles, where L=-lambda'_e, B=phi'_e. Note: For Jupiter, this returns central meridian in L_II. Note: For Saturn, this returns central meridian in L_III (rotation of magnetic field). </p>
+<p>Only meaningful for earth-bound observers. Source: Explanatory Supplement 2013, 10.4.1 </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">jupiterGraphical</td><td>Jupiter requires special treatment because its LII coordinate system does not stay in sync with the texture. (GRS is moving). Set this to true to return the incorrect, graphics-only longitude. first[0] = 10.26 phi_e [rad] Planetocentric latitude of sub-earth point first[1] = 10.26 phi'_e [rad] Planetographic latitude of sub-earth point first[2] = 10.26 lambda'_e [rad] Planetographic longitude of sub-earth point (0..2pi) first[3] = 10.29 P_n [rad] <a class="el" href="structPosition.html" title="A telescope&#39;s position at a given time.">Position</a> angle of axis north pole in equatorial coordinates of date second[0] = 10.26 phi_s [rad] Planetocentric latitude of sub-solar point second[1] = 10.26 phi'_s [rad] Planetographic latitude of sub-solar point second[2] = 10.26 lambda'_s [rad] Planetographic longitude of sub-solar point (0..2pi) Note: For the Moon, it is more common to give Libration angles, where L=-lambda'_e, B=phi'_e. Note: For Jupiter, this returns central meridian in L_II. Note: For Saturn, this returns central meridian in L_III (rotation of magnetic field). </td></tr>
+  </table>
+  </dd>
+</dl>
 
 </div>
 </div>
-<a id="ac336a90c89a3f157139ad451a59786cf"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ac336a90c89a3f157139ad451a59786cf">&#9670;&nbsp;</a></span>getValidPositionalDataRange()</h2>
+<a id="ab28fe2658757fd545e60502767da10ce"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab28fe2658757fd545e60502767da10ce">&#9670;&nbsp;</a></span>getValidPositionalDataRange()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -1537,17 +1633,18 @@ Limitation for efficiency: If this is a planet moon from another planet, we comp
         <tr>
           <td class="memname"><a class="el" href="classVector2.html">Vec2d</a> Planet::getValidPositionalDataRange </td>
           <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td></td>
+          <td class="paramtype">const <a class="el" href="classPlanet.html#ae68478aeca2ed324f23d4de94cf476a1">PositionQuality</a>&#160;</td>
+          <td class="paramname"><em>purpose</em></td><td>)</td>
+          <td> const</td>
         </tr>
       </table>
 </div><div class="memdoc">
-<p>For the major planets and moons, this is always (std::numeric_limits&lt;double&gt;::min(), std::numeric_limits&lt;double&gt;::max()) For planets with Keplerian orbits, this is (epoch-orbit_good, epoch+orbit_good) </p>
+<p>For the major planets and moons, this is always (std::numeric_limits&lt;double&gt;::min(), std::numeric_limits&lt;double&gt;::max()) For planets with Keplerian orbits, this is [epoch-orbit_good, epoch+orbit_good] or, if purpose=<a class="el" href="structPosition.html" title="A telescope&#39;s position at a given time.">Position</a>, [epoch-min(orbit_good, 365), epoch+min(orbit_good, 365)]. This should help to detect and avoid using outdated orbital elements. </p>
 
 </div>
 </div>
-<a id="ab2141e70e58ad16bd3ea4ebe5799dfc5"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ab2141e70e58ad16bd3ea4ebe5799dfc5">&#9670;&nbsp;</a></span>hasValidPositionalData()</h2>
+<a id="aead14f3e1efc4f4074d05ac411691260"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aead14f3e1efc4f4074d05ac411691260">&#9670;&nbsp;</a></span>hasValidPositionalData()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -1556,12 +1653,28 @@ Limitation for efficiency: If this is a planet moon from another planet, we comp
           <td class="memname">bool Planet::hasValidPositionalData </td>
           <td>(</td>
           <td class="paramtype">const double&#160;</td>
-          <td class="paramname"><em>JDE</em></td><td>)</td>
+          <td class="paramname"><em>JDE</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
           <td></td>
+          <td class="paramtype">const <a class="el" href="classPlanet.html#ae68478aeca2ed324f23d4de94cf476a1">PositionQuality</a>&#160;</td>
+          <td class="paramname"><em>purpose</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td> const</td>
         </tr>
       </table>
 </div><div class="memdoc">
-<p>E.g. outdated orbital elements for Kepler orbits (beyond their orbit_good .ini file entries) may lead to invalid positions which should better not be used. </p><dl class="section note"><dt>Note</dt><dd>for major planets and moons this method will always return true </dd></dl>
+<p>E.g. outdated orbital elements for Kepler orbits (beyond their orbit_good .ini file entries) may lead to invalid positions which should better not be used. </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">purpose</td><td>signal whether result should be good enough for observation of just for plotting orbit data. For observation, date should be within the orbit_good value, or within 1 year from epoch of the orbital elements. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section note"><dt>Note</dt><dd>for major planets and moons this method will always return true </dd></dl>
 
 </div>
 </div>
@@ -1745,7 +1858,7 @@ Limitation for efficiency: If this is a planet moon from another planet, we comp
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Mon Sep 27 2021 22:59:46 for Stellarium by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Sat Dec 25 2021 16:56:51 for Stellarium by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.17
 </small></address>

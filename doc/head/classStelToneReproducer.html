@@ -83,6 +83,9 @@ float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="cla
 <tr class="memitem:a0af5a385275dfde92ac40767a70dbc17"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classStelToneReproducer.html#a0af5a385275dfde92ac40767a70dbc17">setMaxDisplayLuminance</a> (float maxdL)</td></tr>
 <tr class="memdesc:a0af5a385275dfde92ac40767a70dbc17"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the maximum luminance of the display (CRT, screen etc..) This value is used to scale the RGB range.  <a href="classStelToneReproducer.html#a0af5a385275dfde92ac40767a70dbc17">More...</a><br /></td></tr>
 <tr class="separator:a0af5a385275dfde92ac40767a70dbc17"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a547073e6517619072f2a0a1c97f11aa5"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classStelToneReproducer.html#a547073e6517619072f2a0a1c97f11aa5">getMaxDisplayLuminance</a> () const</td></tr>
+<tr class="memdesc:a547073e6517619072f2a0a1c97f11aa5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the previously set maximum luminance of the display (CRT, screen etc..) This value is used to scale the RGB range.  <a href="classStelToneReproducer.html#a547073e6517619072f2a0a1c97f11aa5">More...</a><br /></td></tr>
+<tr class="separator:a547073e6517619072f2a0a1c97f11aa5"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad24e7dfb6b3f4d1c4c5539f3ccdb5ba8"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classStelToneReproducer.html#ad24e7dfb6b3f4d1c4c5539f3ccdb5ba8">getDisplayGamma</a> () const</td></tr>
 <tr class="memdesc:ad24e7dfb6b3f4d1c4c5539f3ccdb5ba8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the display gamma.  <a href="classStelToneReproducer.html#ad24e7dfb6b3f4d1c4c5539f3ccdb5ba8">More...</a><br /></td></tr>
 <tr class="separator:ad24e7dfb6b3f4d1c4c5539f3ccdb5ba8"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -253,7 +256,33 @@ Range Scenes", G.W. Larson, H. Rushmeier, C. Piatko </p>
   </tr>
 </table>
 </div><div class="memdoc">
-<dl class="section return"><dt>Returns</dt><dd>the display gamma. Default value is 2.2222 for a CRT </dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>the display gamma. Default value is 2.2222 for a CRT, and sRGB LCD (and similar modern) panels try to reproduce that. </dd></dl>
+
+</div>
+</div>
+<a id="a547073e6517619072f2a0a1c97f11aa5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a547073e6517619072f2a0a1c97f11aa5">&#9670;&nbsp;</a></span>getMaxDisplayLuminance()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">float StelToneReproducer::getMaxDisplayLuminance </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<dl class="section return"><dt>Returns</dt><dd>the maximum display lumiance in cd/m^2. Typical default values for CRT is 120 cd/m^2, LCD panels often have more, which may have been adjusted previously by <a class="el" href="classStelToneReproducer.html#a0af5a385275dfde92ac40767a70dbc17" title="Set the maximum luminance of the display (CRT, screen etc..) This value is used to scale the RGB rang...">setMaxDisplayLuminance()</a>. </dd></dl>
 
 </div>
 </div>
@@ -372,7 +401,7 @@ Range Scenes", G.W. Larson, H. Rushmeier, C. Piatko </p>
 </div><div class="memdoc">
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">gamma</td><td>the gamma. Initial default value is 2.2222 </td></tr>
+    <tr><td class="paramname">gamma</td><td>the gamma. Initial default value is 2.2222 for a CRT, and sRGB LCD (and similar modern) panels try to reproduce that. </td></tr>
   </table>
   </dd>
 </dl>
@@ -428,7 +457,8 @@ Range Scenes", G.W. Larson, H. Rushmeier, C. Piatko </p>
 </div><div class="memdoc">
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">maxdL</td><td>the maximum lumiance in cd/m^2. Initial default value is 120 cd/m^2 </td></tr>
+    <tr><td class="paramname">maxdL</td><td>the maximum lumiance in cd/m^2. Initial default value is 100 cd/m^2. Higher values indicate "This display can faithfully reproduce brighter lights,
+therefore the sky will usually appear darker". </td></tr>
   </table>
   </dd>
 </dl>
@@ -486,7 +516,7 @@ Range Scenes", G.W. Larson, H. Rushmeier, C. Piatko </p>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Mon Sep 27 2021 22:59:46 for Stellarium by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Sat Dec 25 2021 16:56:51 for Stellarium by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.17
 </small></address>

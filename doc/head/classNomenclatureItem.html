@@ -126,7 +126,13 @@ Public Types</h2></td></tr>
 <b>niSatelliteFeature</b> = 55, 
 <br />
 &#160;&#160;<b>niTessera</b> = 56, 
-<b>niSaxum</b> = 57
+<b>niSaxum</b> = 57, 
+<b>niSpecialPointPole</b> = 100, 
+<b>niSpecialPointEast</b> = 101, 
+<br />
+&#160;&#160;<b>niSpecialPointWest</b> = 102, 
+<b>niSpecialPointCenter</b> = 103, 
+<b>niSpecialPointSubSolar</b> = 104
 <br />
  }</td></tr>
 <tr class="separator:a61bf3f5c82c347e726c1c1f7aa5534d2"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -162,10 +168,12 @@ Public Types</h2></td></tr>
 <a class="el" href="classStelObject.html#acf243e7987796a3a44e409140ecea8c6a6b1acde73a84cc7314489ff6c5793264">SiderealTime</a> = 0x00200000, 
 <a class="el" href="classStelObject.html#acf243e7987796a3a44e409140ecea8c6a0a4945c66b17aebfce6b1ef5a681e74e">RTSTime</a> = 0x00400000, 
 <br />
-&#160;&#160;<a class="el" href="classStelObject.html#acf243e7987796a3a44e409140ecea8c6add2bc965197f9ae3b3976f8494e60771">Script</a> = 0x00800000, 
-<a class="el" href="classStelObject.html#acf243e7987796a3a44e409140ecea8c6ace2821b66545f2aa2a8a0a60debf238e">DebugAid</a> = 0x01000000, 
-<b>NoFont</b> = 0x02000000, 
-<a class="el" href="classStelObject.html#acf243e7987796a3a44e409140ecea8c6aa651fd9d370fc652c77c663cd41a18ce">PlainText</a> = 0x04000000
+&#160;&#160;<a class="el" href="classStelObject.html#acf243e7987796a3a44e409140ecea8c6a738f66c455ddb886d805dcaa17cfb7c2">SolarLunarPosition</a> = 0x00800000, 
+<a class="el" href="classStelObject.html#acf243e7987796a3a44e409140ecea8c6add2bc965197f9ae3b3976f8494e60771">Script</a> = 0x01000000, 
+<a class="el" href="classStelObject.html#acf243e7987796a3a44e409140ecea8c6ace2821b66545f2aa2a8a0a60debf238e">DebugAid</a> = 0x02000000, 
+<b>NoFont</b> = 0x04000000, 
+<br />
+&#160;&#160;<a class="el" href="classStelObject.html#acf243e7987796a3a44e409140ecea8c6aa651fd9d370fc652c77c663cd41a18ce">PlainText</a> = 0x08000000
 <br />
  }</td></tr>
 <tr class="memdesc:acf243e7987796a3a44e409140ecea8c6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Used as named bitfield flags as specifiers to filter results of getInfoString.  <a href="classStelObject.html#acf243e7987796a3a44e409140ecea8c6">More...</a><br /></td></tr>
@@ -173,50 +181,50 @@ Public Types</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:a11c22ba412e3016b9741ce1a683e397d"><td class="memItemLeft" align="right" valign="top"><a id="a11c22ba412e3016b9741ce1a683e397d"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><b>NomenclatureItem</b> (PlanetP nPlanet, int nId, const QString &amp;nName, const QString &amp;nContext, NomenclatureItemType nItemType, float nLatitude, float nLongitude, float nSize)</td></tr>
-<tr class="separator:a11c22ba412e3016b9741ce1a683e397d"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a74b6d94df9794d3812aceb0f56a67a13"><td class="memItemLeft" align="right" valign="top"><a id="a74b6d94df9794d3812aceb0f56a67a13"></a>
-virtual QString&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classNomenclatureItem.html#a74b6d94df9794d3812aceb0f56a67a13">getType</a> (void) const</td></tr>
-<tr class="memdesc:a74b6d94df9794d3812aceb0f56a67a13"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the type of object. <br /></td></tr>
-<tr class="separator:a74b6d94df9794d3812aceb0f56a67a13"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a6f2c13b1a198b1eaaa8eb8398e8db021"><td class="memItemLeft" align="right" valign="top">virtual QString&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classNomenclatureItem.html#a6f2c13b1a198b1eaaa8eb8398e8db021">getID</a> (void) const</td></tr>
-<tr class="memdesc:a6f2c13b1a198b1eaaa8eb8398e8db021"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns a unique identifier for this object.  <a href="classNomenclatureItem.html#a6f2c13b1a198b1eaaa8eb8398e8db021">More...</a><br /></td></tr>
-<tr class="separator:a6f2c13b1a198b1eaaa8eb8398e8db021"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aeb7bf51855bcc63cbdffe8618b570146"><td class="memItemLeft" align="right" valign="top"><a id="aeb7bf51855bcc63cbdffe8618b570146"></a>
-virtual float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classNomenclatureItem.html#aeb7bf51855bcc63cbdffe8618b570146">getSelectPriority</a> (const <a class="el" href="classStelCore.html">StelCore</a> *core) const</td></tr>
-<tr class="memdesc:aeb7bf51855bcc63cbdffe8618b570146"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return a priority value which is used to discriminate objects by priority As for magnitudes, the lower is the higher priority. <br /></td></tr>
-<tr class="separator:aeb7bf51855bcc63cbdffe8618b570146"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a6d0e431490ef3de133e622ca44e2b76a"><td class="memItemLeft" align="right" valign="top">virtual QString&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classNomenclatureItem.html#a6d0e431490ef3de133e622ca44e2b76a">getInfoString</a> (const <a class="el" href="classStelCore.html">StelCore</a> *core, const InfoStringGroup &amp;flags) const</td></tr>
-<tr class="memdesc:a6d0e431490ef3de133e622ca44e2b76a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get an HTML string to describe the object.  <a href="classNomenclatureItem.html#a6d0e431490ef3de133e622ca44e2b76a">More...</a><br /></td></tr>
-<tr class="separator:a6d0e431490ef3de133e622ca44e2b76a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab06de7fae4098d96948bc56c4c34a8de"><td class="memItemLeft" align="right" valign="top"><a id="ab06de7fae4098d96948bc56c4c34a8de"></a>
-virtual <a class="el" href="classVector3.html">Vec3f</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classNomenclatureItem.html#ab06de7fae4098d96948bc56c4c34a8de">getInfoColor</a> (void) const</td></tr>
-<tr class="memdesc:ab06de7fae4098d96948bc56c4c34a8de"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get a color used to display info about the object. <br /></td></tr>
-<tr class="separator:ab06de7fae4098d96948bc56c4c34a8de"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a9e5b831688265d6bd37993429fcb7c61"><td class="memItemLeft" align="right" valign="top"><a id="a9e5b831688265d6bd37993429fcb7c61"></a>
-virtual <a class="el" href="classVector3.html">Vec3d</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classNomenclatureItem.html#a9e5b831688265d6bd37993429fcb7c61">getJ2000EquatorialPos</a> (const <a class="el" href="classStelCore.html">StelCore</a> *) const</td></tr>
-<tr class="memdesc:a9e5b831688265d6bd37993429fcb7c61"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get observer-centered equatorial coordinates at equinox J2000. <br /></td></tr>
-<tr class="separator:a9e5b831688265d6bd37993429fcb7c61"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aca4e1d9090d2f6db14f66f0383c1fb1b"><td class="memItemLeft" align="right" valign="top"><a id="aca4e1d9090d2f6db14f66f0383c1fb1b"></a>
-virtual float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classNomenclatureItem.html#aca4e1d9090d2f6db14f66f0383c1fb1b">getVMagnitude</a> (const <a class="el" href="classStelCore.html">StelCore</a> *core) const</td></tr>
-<tr class="memdesc:aca4e1d9090d2f6db14f66f0383c1fb1b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the visual magnitude of a nomenclature item. Dummy method, returns 99. <br /></td></tr>
-<tr class="separator:aca4e1d9090d2f6db14f66f0383c1fb1b"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:abfb411d8ced889ababed386118eef1ca"><td class="memItemLeft" align="right" valign="top"><a id="abfb411d8ced889ababed386118eef1ca"></a>
-virtual double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classNomenclatureItem.html#abfb411d8ced889ababed386118eef1ca">getAngularSize</a> (const <a class="el" href="classStelCore.html">StelCore</a> *core) const</td></tr>
-<tr class="memdesc:abfb411d8ced889ababed386118eef1ca"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the angular size of nomenclature item. <br /></td></tr>
-<tr class="separator:abfb411d8ced889ababed386118eef1ca"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a3f2496a986dcb6973f24b0f0c8c9777e"><td class="memItemLeft" align="right" valign="top"><a id="a3f2496a986dcb6973f24b0f0c8c9777e"></a>
-virtual QString&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classNomenclatureItem.html#a3f2496a986dcb6973f24b0f0c8c9777e">getNameI18n</a> (void) const</td></tr>
-<tr class="memdesc:a3f2496a986dcb6973f24b0f0c8c9777e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the localized name of nomenclature item. <br /></td></tr>
-<tr class="separator:a3f2496a986dcb6973f24b0f0c8c9777e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a66eb29db9ccd5b55ff81450406f1581f"><td class="memItemLeft" align="right" valign="top"><a id="a66eb29db9ccd5b55ff81450406f1581f"></a>
-virtual QString&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classNomenclatureItem.html#a66eb29db9ccd5b55ff81450406f1581f">getEnglishName</a> (void) const</td></tr>
-<tr class="memdesc:a66eb29db9ccd5b55ff81450406f1581f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the english name of nomenclature item. <br /></td></tr>
-<tr class="separator:a66eb29db9ccd5b55ff81450406f1581f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abcd426fa78e2562f0b9228403e3e54ed"><td class="memItemLeft" align="right" valign="top"><a id="abcd426fa78e2562f0b9228403e3e54ed"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><b>NomenclatureItem</b> (PlanetP nPlanet, int nId, const QString &amp;nName, const QString &amp;nContext, NomenclatureItemType nItemType, double nLatitude, double nLongitude, double nSize)</td></tr>
+<tr class="separator:abcd426fa78e2562f0b9228403e3e54ed"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa9700791f8d5822a4e50342ff5419f13"><td class="memItemLeft" align="right" valign="top"><a id="aa9700791f8d5822a4e50342ff5419f13"></a>
+virtual QString&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classNomenclatureItem.html#aa9700791f8d5822a4e50342ff5419f13">getType</a> (void) const Q_DECL_OVERRIDE</td></tr>
+<tr class="memdesc:aa9700791f8d5822a4e50342ff5419f13"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the type of object. <br /></td></tr>
+<tr class="separator:aa9700791f8d5822a4e50342ff5419f13"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a38116bae91a84107de101a0bc02b5a24"><td class="memItemLeft" align="right" valign="top">virtual QString&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classNomenclatureItem.html#a38116bae91a84107de101a0bc02b5a24">getID</a> (void) const Q_DECL_OVERRIDE</td></tr>
+<tr class="memdesc:a38116bae91a84107de101a0bc02b5a24"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns a unique identifier for this object.  <a href="classNomenclatureItem.html#a38116bae91a84107de101a0bc02b5a24">More...</a><br /></td></tr>
+<tr class="separator:a38116bae91a84107de101a0bc02b5a24"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a69b62719531c2f2f482b67c20a17e24c"><td class="memItemLeft" align="right" valign="top"><a id="a69b62719531c2f2f482b67c20a17e24c"></a>
+virtual float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classNomenclatureItem.html#a69b62719531c2f2f482b67c20a17e24c">getSelectPriority</a> (const <a class="el" href="classStelCore.html">StelCore</a> *core) const Q_DECL_OVERRIDE</td></tr>
+<tr class="memdesc:a69b62719531c2f2f482b67c20a17e24c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return a priority value which is used to discriminate objects by priority As for magnitudes, the lower is the higher priority. <br /></td></tr>
+<tr class="separator:a69b62719531c2f2f482b67c20a17e24c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0df9e855291cbfb936209d7112a68a23"><td class="memItemLeft" align="right" valign="top">virtual QString&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classNomenclatureItem.html#a0df9e855291cbfb936209d7112a68a23">getInfoString</a> (const <a class="el" href="classStelCore.html">StelCore</a> *core, const InfoStringGroup &amp;flags) const Q_DECL_OVERRIDE</td></tr>
+<tr class="memdesc:a0df9e855291cbfb936209d7112a68a23"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get an HTML string to describe the object.  <a href="classNomenclatureItem.html#a0df9e855291cbfb936209d7112a68a23">More...</a><br /></td></tr>
+<tr class="separator:a0df9e855291cbfb936209d7112a68a23"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a07b1e0d36f0c6e62ea52e855896bc285"><td class="memItemLeft" align="right" valign="top"><a id="a07b1e0d36f0c6e62ea52e855896bc285"></a>
+virtual <a class="el" href="classVector3.html">Vec3f</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classNomenclatureItem.html#a07b1e0d36f0c6e62ea52e855896bc285">getInfoColor</a> (void) const Q_DECL_OVERRIDE</td></tr>
+<tr class="memdesc:a07b1e0d36f0c6e62ea52e855896bc285"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get a color used to display info about the object. <br /></td></tr>
+<tr class="separator:a07b1e0d36f0c6e62ea52e855896bc285"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8f512d5292ad6a439040d6e978b971a3"><td class="memItemLeft" align="right" valign="top"><a id="a8f512d5292ad6a439040d6e978b971a3"></a>
+virtual <a class="el" href="classVector3.html">Vec3d</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classNomenclatureItem.html#a8f512d5292ad6a439040d6e978b971a3">getJ2000EquatorialPos</a> (const <a class="el" href="classStelCore.html">StelCore</a> *) const Q_DECL_OVERRIDE</td></tr>
+<tr class="memdesc:a8f512d5292ad6a439040d6e978b971a3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get observer-centered equatorial coordinates at equinox J2000. <br /></td></tr>
+<tr class="separator:a8f512d5292ad6a439040d6e978b971a3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a589715dc68aa5aa0d0b31768aa293fef"><td class="memItemLeft" align="right" valign="top"><a id="a589715dc68aa5aa0d0b31768aa293fef"></a>
+virtual float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classNomenclatureItem.html#a589715dc68aa5aa0d0b31768aa293fef">getVMagnitude</a> (const <a class="el" href="classStelCore.html">StelCore</a> *core) const Q_DECL_OVERRIDE</td></tr>
+<tr class="memdesc:a589715dc68aa5aa0d0b31768aa293fef"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the visual magnitude of a nomenclature item. Dummy method, returns 99. <br /></td></tr>
+<tr class="separator:a589715dc68aa5aa0d0b31768aa293fef"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a23b96b604d9046c2c68f5ad62336e5c3"><td class="memItemLeft" align="right" valign="top"><a id="a23b96b604d9046c2c68f5ad62336e5c3"></a>
+virtual double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classNomenclatureItem.html#a23b96b604d9046c2c68f5ad62336e5c3">getAngularSize</a> (const <a class="el" href="classStelCore.html">StelCore</a> *core) const Q_DECL_OVERRIDE</td></tr>
+<tr class="memdesc:a23b96b604d9046c2c68f5ad62336e5c3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the angular size of nomenclature item. <br /></td></tr>
+<tr class="separator:a23b96b604d9046c2c68f5ad62336e5c3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af4d8617c08fbbf21c3f7d75330fab03d"><td class="memItemLeft" align="right" valign="top"><a id="af4d8617c08fbbf21c3f7d75330fab03d"></a>
+virtual QString&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classNomenclatureItem.html#af4d8617c08fbbf21c3f7d75330fab03d">getNameI18n</a> (void) const Q_DECL_OVERRIDE</td></tr>
+<tr class="memdesc:af4d8617c08fbbf21c3f7d75330fab03d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the localized name of nomenclature item. <br /></td></tr>
+<tr class="separator:af4d8617c08fbbf21c3f7d75330fab03d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8f6ac45d68fa30c3edb881a95bf8a427"><td class="memItemLeft" align="right" valign="top"><a id="a8f6ac45d68fa30c3edb881a95bf8a427"></a>
+virtual QString&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classNomenclatureItem.html#a8f6ac45d68fa30c3edb881a95bf8a427">getEnglishName</a> (void) const Q_DECL_OVERRIDE</td></tr>
+<tr class="memdesc:a8f6ac45d68fa30c3edb881a95bf8a427"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the english name of nomenclature item. <br /></td></tr>
+<tr class="separator:a8f6ac45d68fa30c3edb881a95bf8a427"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a3510d0d3537a6d4cb20e925a057cebd4"><td class="memItemLeft" align="right" valign="top"><a id="a3510d0d3537a6d4cb20e925a057cebd4"></a>
 virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classNomenclatureItem.html#a3510d0d3537a6d4cb20e925a057cebd4">translateName</a> (const <a class="el" href="classStelTranslator.html">StelTranslator</a> &amp;trans)</td></tr>
-<tr class="memdesc:a3510d0d3537a6d4cb20e925a057cebd4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Translate planet name using the passed translator. <br /></td></tr>
+<tr class="memdesc:a3510d0d3537a6d4cb20e925a057cebd4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Translate feature name using the passed translator. <br /></td></tr>
 <tr class="separator:a3510d0d3537a6d4cb20e925a057cebd4"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aab125a494ad87616f45530e73f002ac8"><td class="memItemLeft" align="right" valign="top"><a id="aab125a494ad87616f45530e73f002ac8"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><b>draw</b> (<a class="el" href="classStelCore.html">StelCore</a> *core, <a class="el" href="classStelPainter.html">StelPainter</a> *painter)</td></tr>
@@ -337,11 +345,14 @@ static const QString&#160;</td><td class="memItemRight" valign="bottom"><b>NOMEN
 <tr class="separator:a4d67560248d18764f8f8c8cab31cb257"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pub_static_attribs_classStelObject"><td colspan="2" onclick="javascript:toggleInherit('pub_static_attribs_classStelObject')"><img src="closed.png" alt="-"/>&#160;Static Public Attributes inherited from <a class="el" href="classStelObject.html">StelObject</a></td></tr>
 <tr class="memitem:aff8b9cd662b044e33c39577b1ec2501f inherit pub_static_attribs_classStelObject"><td class="memItemLeft" align="right" valign="top">static const <a class="el" href="classStelObject.html#acf243e7987796a3a44e409140ecea8c6">InfoStringGroupFlags</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classStelObject.html#aff8b9cd662b044e33c39577b1ec2501f">AllInfo</a></td></tr>
-<tr class="memdesc:aff8b9cd662b044e33c39577b1ec2501f inherit pub_static_attribs_classStelObject"><td class="mdescLeft">&#160;</td><td class="mdescRight">A pre-defined set of specifiers for the getInfoString flags argument to getInfoString.  <a href="classStelObject.html#aff8b9cd662b044e33c39577b1ec2501f">More...</a><br /></td></tr>
+<tr class="memdesc:aff8b9cd662b044e33c39577b1ec2501f inherit pub_static_attribs_classStelObject"><td class="mdescLeft">&#160;</td><td class="mdescRight">A pre-defined "all available" set of specifiers for the getInfoString flags argument to getInfoString.  <a href="classStelObject.html#aff8b9cd662b044e33c39577b1ec2501f">More...</a><br /></td></tr>
 <tr class="separator:aff8b9cd662b044e33c39577b1ec2501f inherit pub_static_attribs_classStelObject"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3700ff7e7d5f4dc2a57757a0602d6710 inherit pub_static_attribs_classStelObject"><td class="memItemLeft" align="right" valign="top">static const <a class="el" href="classStelObject.html#acf243e7987796a3a44e409140ecea8c6">InfoStringGroupFlags</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classStelObject.html#a3700ff7e7d5f4dc2a57757a0602d6710">DefaultInfo</a></td></tr>
+<tr class="memdesc:a3700ff7e7d5f4dc2a57757a0602d6710 inherit pub_static_attribs_classStelObject"><td class="mdescLeft">&#160;</td><td class="mdescRight">A pre-defined "default" set of specifiers for the getInfoString flags argument to getInfoString It appears useful to propose this set as post-install settings and let users configure more on demand.  <a href="classStelObject.html#a3700ff7e7d5f4dc2a57757a0602d6710">More...</a><br /></td></tr>
+<tr class="separator:a3700ff7e7d5f4dc2a57757a0602d6710 inherit pub_static_attribs_classStelObject"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a82e64755dc156e071733350e83a6826c inherit pub_static_attribs_classStelObject"><td class="memItemLeft" align="right" valign="top"><a id="a82e64755dc156e071733350e83a6826c"></a>
 static const <a class="el" href="classStelObject.html#acf243e7987796a3a44e409140ecea8c6">InfoStringGroupFlags</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classStelObject.html#a82e64755dc156e071733350e83a6826c">ShortInfo</a> = static_cast&lt;<a class="el" href="classStelObject.html#acf243e7987796a3a44e409140ecea8c6">InfoStringGroupFlags</a>&gt;(<a class="el" href="classStelObject.html#acf243e7987796a3a44e409140ecea8c6ab14de19b496f04e198a835899cefd934">Name</a>|<a class="el" href="classStelObject.html#acf243e7987796a3a44e409140ecea8c6a57d62b46f2f2849da8e3e234c7d27b0e">CatalogNumber</a>|<a class="el" href="classStelObject.html#acf243e7987796a3a44e409140ecea8c6a04e5ef1bf85944db7b25b57f2663c79d">Magnitude</a>|<a class="el" href="classStelObject.html#acf243e7987796a3a44e409140ecea8c6aefb86264a540d299b32c5931ca302ced">RaDecJ2000</a>)</td></tr>
-<tr class="memdesc:a82e64755dc156e071733350e83a6826c inherit pub_static_attribs_classStelObject"><td class="mdescLeft">&#160;</td><td class="mdescRight">A pre-defined set of specifiers for the getInfoString flags argument to getInfoString. <br /></td></tr>
+<tr class="memdesc:a82e64755dc156e071733350e83a6826c inherit pub_static_attribs_classStelObject"><td class="mdescLeft">&#160;</td><td class="mdescRight">A pre-defined "shortest useful" set of specifiers for the getInfoString flags argument to getInfoString. <br /></td></tr>
 <tr class="separator:a82e64755dc156e071733350e83a6826c inherit pub_static_attribs_classStelObject"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-static-methods"></a>
@@ -383,13 +394,16 @@ Additional Inherited Members</h2></td></tr>
 <tr class="memitem:a557aa5ab5579eb354ec3164b979c10b5 inherit pro_methods_classStelObject"><td class="memItemLeft" align="right" valign="top">virtual QString&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classStelObject.html#a557aa5ab5579eb354ec3164b979c10b5">getMagnitudeInfoString</a> (const <a class="el" href="classStelCore.html">StelCore</a> *core, const InfoStringGroup &amp;flags, const int decimals=1) const</td></tr>
 <tr class="memdesc:a557aa5ab5579eb354ec3164b979c10b5 inherit pro_methods_classStelObject"><td class="mdescLeft">&#160;</td><td class="mdescRight">Format the magnitude info string for the object.  <a href="classStelObject.html#a557aa5ab5579eb354ec3164b979c10b5">More...</a><br /></td></tr>
 <tr class="separator:a557aa5ab5579eb354ec3164b979c10b5 inherit pro_methods_classStelObject"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a89c1c888d273b598a6fa8aed39836a52 inherit pro_methods_classStelObject"><td class="memItemLeft" align="right" valign="top">QString&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classStelObject.html#a89c1c888d273b598a6fa8aed39836a52">getSolarLunarInfoString</a> (const <a class="el" href="classStelCore.html">StelCore</a> *core, const InfoStringGroup &amp;flags) const</td></tr>
+<tr class="memdesc:a89c1c888d273b598a6fa8aed39836a52 inherit pro_methods_classStelObject"><td class="mdescLeft">&#160;</td><td class="mdescRight">Add a section to the InfoString with just horizontal data for the Sun and Moon, when observed from Earth.  <a href="classStelObject.html#a89c1c888d273b598a6fa8aed39836a52">More...</a><br /></td></tr>
+<tr class="separator:a89c1c888d273b598a6fa8aed39836a52 inherit pro_methods_classStelObject"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a53ece72260ecfe9c4783d740862021f8 inherit pro_methods_classStelObject"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classStelObject.html#a53ece72260ecfe9c4783d740862021f8">postProcessInfoString</a> (QString &amp;str, const InfoStringGroup &amp;flags) const</td></tr>
 <tr class="memdesc:a53ece72260ecfe9c4783d740862021f8 inherit pro_methods_classStelObject"><td class="mdescLeft">&#160;</td><td class="mdescRight">Apply post processing on the info string.  <a href="classStelObject.html#a53ece72260ecfe9c4783d740862021f8">More...</a><br /></td></tr>
 <tr class="separator:a53ece72260ecfe9c4783d740862021f8 inherit pro_methods_classStelObject"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Member Function Documentation</h2>
-<a id="a6f2c13b1a198b1eaaa8eb8398e8db021"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a6f2c13b1a198b1eaaa8eb8398e8db021">&#9670;&nbsp;</a></span>getID()</h2>
+<a id="a38116bae91a84107de101a0bc02b5a24"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a38116bae91a84107de101a0bc02b5a24">&#9670;&nbsp;</a></span>getID()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -411,16 +425,16 @@ Additional Inherited Members</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
-<p>The ID should be unique for all objects of the same type, but may freely conflict with IDs of other types, so <a class="el" href="classNomenclatureItem.html#a74b6d94df9794d3812aceb0f56a67a13" title="Get the type of object.">getType()</a> must also be tested.</p>
-<p>With this it should be possible to at least identify the same object in a different instance of Stellarium running the same version, but it would even be better if the ID provides some degree of forward-compatibility. For some object types (e.g. planets) this may simply return <a class="el" href="classNomenclatureItem.html#a66eb29db9ccd5b55ff81450406f1581f" title="Get the english name of nomenclature item.">getEnglishName()</a>, but better candidates may be official designations or at least (stable) internal IDs.</p>
+<p>The ID should be unique for all objects of the same type, but may freely conflict with IDs of other types, so <a class="el" href="classNomenclatureItem.html#aa9700791f8d5822a4e50342ff5419f13" title="Get the type of object.">getType()</a> must also be tested.</p>
+<p>With this it should be possible to at least identify the same object in a different instance of Stellarium running the same version, but it would even be better if the ID provides some degree of forward-compatibility. For some object types (e.g. planets) this may simply return <a class="el" href="classNomenclatureItem.html#a8f6ac45d68fa30c3edb881a95bf8a427" title="Get the english name of nomenclature item.">getEnglishName()</a>, but better candidates may be official designations or at least (stable) internal IDs.</p>
 <p>An object may have multiple IDs (different catalog numbers, etc). <a class="el" href="classStelObjectMgr.html#af0a33f6ff1448db085288eea46937399" title="Find an object of the given type and ID.">StelObjectMgr::searchByID()</a> should search through all ID variants, but this method only returns one of them. </p>
 
 <p>Implements <a class="el" href="classStelObject.html#ab11e911fb1974d75b8a9b629a57f243b">StelObject</a>.</p>
 
 </div>
 </div>
-<a id="a6d0e431490ef3de133e622ca44e2b76a"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a6d0e431490ef3de133e622ca44e2b76a">&#9670;&nbsp;</a></span>getInfoString()</h2>
+<a id="a0df9e855291cbfb936209d7112a68a23"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0df9e855291cbfb936209d7112a68a23">&#9670;&nbsp;</a></span>getInfoString()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -466,7 +480,7 @@ Additional Inherited Members</h2></td></tr>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Mon Sep 27 2021 22:59:45 for Stellarium by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Sat Dec 25 2021 16:56:51 for Stellarium by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.17
 </small></address>

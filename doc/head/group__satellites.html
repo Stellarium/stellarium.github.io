@@ -146,7 +146,8 @@ Enumerations</h2></td></tr>
 <br />
 &#160;&#160;<b>SatGSO</b> = 0x0800, 
 <b>SatHEO</b> = 0x1000, 
-<b>SatHGSO</b> = 0x2000
+<b>SatHGSO</b> = 0x2000, 
+<b>SatOutdatedTLE</b> = 0x4000
 <br />
  }</td></tr>
 <tr class="memdesc:gab831fdf9d777df775761e20aeda068df"><td class="mdescLeft">&#160;</td><td class="mdescRight">Flag type reflecting internal flags of <a class="el" href="group__satellites.html#classSatellite">Satellite</a>. <br /></td></tr>
@@ -730,6 +731,9 @@ void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="clas
 void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classStelDialog.html#acfa079d204308bf74f36ac00e260560a">handleFontChanged</a> ()</td></tr>
 <tr class="memdesc:acfa079d204308bf74f36ac00e260560a inherit pro_slots_classStelDialog"><td class="mdescLeft">&#160;</td><td class="mdescRight">connect from <a class="el" href="classStelApp.html">StelApp</a> to handle font and font size changes. <br /></td></tr>
 <tr class="separator:acfa079d204308bf74f36ac00e260560a inherit pro_slots_classStelDialog"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ada9ae9c079ed54a950343c92b2d1b715 inherit pro_slots_classStelDialog"><td class="memItemLeft" align="right" valign="top"><a id="ada9ae9c079ed54a950343c92b2d1b715"></a>
+virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>updateNightModeProperty</b> (bool n)</td></tr>
+<tr class="separator:ada9ae9c079ed54a950343c92b2d1b715 inherit pro_slots_classStelDialog"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pro_static_methods_classStelDialog"><td colspan="2" onclick="javascript:toggleInherit('pro_static_methods_classStelDialog')"><img src="closed.png" alt="-"/>&#160;Static Protected Member Functions inherited from <a class="el" href="classStelDialog.html">StelDialog</a></td></tr>
 <tr class="memitem:affed9a4db21c26a7f584048a46b3008e inherit pro_static_methods_classStelDialog"><td class="memItemLeft" align="right" valign="top"><a id="affed9a4db21c26a7f584048a46b3008e"></a>
 static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classStelDialog.html#affed9a4db21c26a7f584048a46b3008e">connectCheckBox</a> (QAbstractButton *checkBox, const QString &amp;actionName)</td></tr>
@@ -874,6 +878,9 @@ void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="clas
 void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classStelDialog.html#acfa079d204308bf74f36ac00e260560a">handleFontChanged</a> ()</td></tr>
 <tr class="memdesc:acfa079d204308bf74f36ac00e260560a inherit pro_slots_classStelDialog"><td class="mdescLeft">&#160;</td><td class="mdescRight">connect from <a class="el" href="classStelApp.html">StelApp</a> to handle font and font size changes. <br /></td></tr>
 <tr class="separator:acfa079d204308bf74f36ac00e260560a inherit pro_slots_classStelDialog"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ada9ae9c079ed54a950343c92b2d1b715 inherit pro_slots_classStelDialog"><td class="memItemLeft" align="right" valign="top"><a id="ada9ae9c079ed54a950343c92b2d1b715"></a>
+virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>updateNightModeProperty</b> (bool n)</td></tr>
+<tr class="separator:ada9ae9c079ed54a950343c92b2d1b715 inherit pro_slots_classStelDialog"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pro_methods_classStelDialog"><td colspan="2" onclick="javascript:toggleInherit('pro_methods_classStelDialog')"><img src="closed.png" alt="-"/>&#160;Protected Member Functions inherited from <a class="el" href="classStelDialog.html">StelDialog</a></td></tr>
 <tr class="memitem:abb879a830a7111140f239abd32349730 inherit pro_methods_classStelDialog"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classStelDialog.html#abb879a830a7111140f239abd32349730">connectColorButton</a> (QToolButton *button, QString propertyName, QString iniName, QString moduleName=&quot;&quot;)</td></tr>
 <tr class="memdesc:abb879a830a7111140f239abd32349730 inherit pro_methods_classStelDialog"><td class="mdescLeft">&#160;</td><td class="mdescRight">Prepare a QToolButton so that it can receive and handle <a class="el" href="classStelDialog.html#a5ef9b994a4c7565bcc6d8a9ccaa85f0b" title="To be called by a connected QToolButton with a color background.">askColor()</a> connections properly.  <a href="classStelDialog.html#abb879a830a7111140f239abd32349730">More...</a><br /></td></tr>
@@ -1022,6 +1029,12 @@ Human readable name, as extracted from the TLE title line. </td></tr>
 second</td>
 <td class="fielddoc">
 </td></tr>
+<tr><td class="fieldtype">
+<a id="a080ce5bc3a4b29a9acbc10299599f80f"></a>QString</td>
+<td class="fieldname">
+sourceURL</td>
+<td class="fielddoc">
+Source of TLE (URL), can be used for assign satellites group. </td></tr>
 <tr><td class="fieldtype">
 <a id="a86629d6956eef117ff0c7c01fe2ab5f1"></a>int</td>
 <td class="fieldname">
@@ -1587,10 +1600,12 @@ double&#160;</td><td class="memItemRight" valign="bottom"><b>getInclination</b> 
 <a class="el" href="classStelObject.html#acf243e7987796a3a44e409140ecea8c6a6b1acde73a84cc7314489ff6c5793264">SiderealTime</a> = 0x00200000, 
 <a class="el" href="classStelObject.html#acf243e7987796a3a44e409140ecea8c6a0a4945c66b17aebfce6b1ef5a681e74e">RTSTime</a> = 0x00400000, 
 <br />
-&#160;&#160;<a class="el" href="classStelObject.html#acf243e7987796a3a44e409140ecea8c6add2bc965197f9ae3b3976f8494e60771">Script</a> = 0x00800000, 
-<a class="el" href="classStelObject.html#acf243e7987796a3a44e409140ecea8c6ace2821b66545f2aa2a8a0a60debf238e">DebugAid</a> = 0x01000000, 
-<b>NoFont</b> = 0x02000000, 
-<a class="el" href="classStelObject.html#acf243e7987796a3a44e409140ecea8c6aa651fd9d370fc652c77c663cd41a18ce">PlainText</a> = 0x04000000
+&#160;&#160;<a class="el" href="classStelObject.html#acf243e7987796a3a44e409140ecea8c6a738f66c455ddb886d805dcaa17cfb7c2">SolarLunarPosition</a> = 0x00800000, 
+<a class="el" href="classStelObject.html#acf243e7987796a3a44e409140ecea8c6add2bc965197f9ae3b3976f8494e60771">Script</a> = 0x01000000, 
+<a class="el" href="classStelObject.html#acf243e7987796a3a44e409140ecea8c6ace2821b66545f2aa2a8a0a60debf238e">DebugAid</a> = 0x02000000, 
+<b>NoFont</b> = 0x04000000, 
+<br />
+&#160;&#160;<a class="el" href="classStelObject.html#acf243e7987796a3a44e409140ecea8c6aa651fd9d370fc652c77c663cd41a18ce">PlainText</a> = 0x08000000
 <br />
  }</td></tr>
 <tr class="memdesc:acf243e7987796a3a44e409140ecea8c6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Used as named bitfield flags as specifiers to filter results of getInfoString.  <a href="classStelObject.html#acf243e7987796a3a44e409140ecea8c6">More...</a><br /></td></tr>
@@ -1771,11 +1786,14 @@ static bool&#160;</td><td class="memItemRight" valign="bottom"><b>showLabels</b>
 <tr class="separator:a61afc14e78a31a6e8985b7c4281e418c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pub_static_attribs_classStelObject"><td colspan="2" onclick="javascript:toggleInherit('pub_static_attribs_classStelObject')"><img src="closed.png" alt="-"/>&#160;Static Public Attributes inherited from <a class="el" href="classStelObject.html">StelObject</a></td></tr>
 <tr class="memitem:aff8b9cd662b044e33c39577b1ec2501f inherit pub_static_attribs_classStelObject"><td class="memItemLeft" align="right" valign="top">static const <a class="el" href="classStelObject.html#acf243e7987796a3a44e409140ecea8c6">InfoStringGroupFlags</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classStelObject.html#aff8b9cd662b044e33c39577b1ec2501f">AllInfo</a></td></tr>
-<tr class="memdesc:aff8b9cd662b044e33c39577b1ec2501f inherit pub_static_attribs_classStelObject"><td class="mdescLeft">&#160;</td><td class="mdescRight">A pre-defined set of specifiers for the getInfoString flags argument to getInfoString.  <a href="classStelObject.html#aff8b9cd662b044e33c39577b1ec2501f">More...</a><br /></td></tr>
+<tr class="memdesc:aff8b9cd662b044e33c39577b1ec2501f inherit pub_static_attribs_classStelObject"><td class="mdescLeft">&#160;</td><td class="mdescRight">A pre-defined "all available" set of specifiers for the getInfoString flags argument to getInfoString.  <a href="classStelObject.html#aff8b9cd662b044e33c39577b1ec2501f">More...</a><br /></td></tr>
 <tr class="separator:aff8b9cd662b044e33c39577b1ec2501f inherit pub_static_attribs_classStelObject"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3700ff7e7d5f4dc2a57757a0602d6710 inherit pub_static_attribs_classStelObject"><td class="memItemLeft" align="right" valign="top">static const <a class="el" href="classStelObject.html#acf243e7987796a3a44e409140ecea8c6">InfoStringGroupFlags</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classStelObject.html#a3700ff7e7d5f4dc2a57757a0602d6710">DefaultInfo</a></td></tr>
+<tr class="memdesc:a3700ff7e7d5f4dc2a57757a0602d6710 inherit pub_static_attribs_classStelObject"><td class="mdescLeft">&#160;</td><td class="mdescRight">A pre-defined "default" set of specifiers for the getInfoString flags argument to getInfoString It appears useful to propose this set as post-install settings and let users configure more on demand.  <a href="classStelObject.html#a3700ff7e7d5f4dc2a57757a0602d6710">More...</a><br /></td></tr>
+<tr class="separator:a3700ff7e7d5f4dc2a57757a0602d6710 inherit pub_static_attribs_classStelObject"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a82e64755dc156e071733350e83a6826c inherit pub_static_attribs_classStelObject"><td class="memItemLeft" align="right" valign="top"><a id="a82e64755dc156e071733350e83a6826c"></a>
 static const <a class="el" href="classStelObject.html#acf243e7987796a3a44e409140ecea8c6">InfoStringGroupFlags</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classStelObject.html#a82e64755dc156e071733350e83a6826c">ShortInfo</a> = static_cast&lt;<a class="el" href="classStelObject.html#acf243e7987796a3a44e409140ecea8c6">InfoStringGroupFlags</a>&gt;(<a class="el" href="classStelObject.html#acf243e7987796a3a44e409140ecea8c6ab14de19b496f04e198a835899cefd934">Name</a>|<a class="el" href="classStelObject.html#acf243e7987796a3a44e409140ecea8c6a57d62b46f2f2849da8e3e234c7d27b0e">CatalogNumber</a>|<a class="el" href="classStelObject.html#acf243e7987796a3a44e409140ecea8c6a04e5ef1bf85944db7b25b57f2663c79d">Magnitude</a>|<a class="el" href="classStelObject.html#acf243e7987796a3a44e409140ecea8c6aefb86264a540d299b32c5931ca302ced">RaDecJ2000</a>)</td></tr>
-<tr class="memdesc:a82e64755dc156e071733350e83a6826c inherit pub_static_attribs_classStelObject"><td class="mdescLeft">&#160;</td><td class="mdescRight">A pre-defined set of specifiers for the getInfoString flags argument to getInfoString. <br /></td></tr>
+<tr class="memdesc:a82e64755dc156e071733350e83a6826c inherit pub_static_attribs_classStelObject"><td class="mdescLeft">&#160;</td><td class="mdescRight">A pre-defined "shortest useful" set of specifiers for the getInfoString flags argument to getInfoString. <br /></td></tr>
 <tr class="separator:a82e64755dc156e071733350e83a6826c inherit pub_static_attribs_classStelObject"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr><td colspan="2"><h3>Friends</h3></td></tr>
 <tr class="memitem:a3ea833c5ba5f4e43d631b848ec692106"><td class="memItemLeft" align="right" valign="top"><a id="a3ea833c5ba5f4e43d631b848ec692106"></a>
@@ -1810,6 +1828,9 @@ Additional Inherited Members</h2></td></tr>
 <tr class="memitem:a557aa5ab5579eb354ec3164b979c10b5 inherit pro_methods_classStelObject"><td class="memItemLeft" align="right" valign="top">virtual QString&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classStelObject.html#a557aa5ab5579eb354ec3164b979c10b5">getMagnitudeInfoString</a> (const <a class="el" href="classStelCore.html">StelCore</a> *core, const InfoStringGroup &amp;flags, const int decimals=1) const</td></tr>
 <tr class="memdesc:a557aa5ab5579eb354ec3164b979c10b5 inherit pro_methods_classStelObject"><td class="mdescLeft">&#160;</td><td class="mdescRight">Format the magnitude info string for the object.  <a href="classStelObject.html#a557aa5ab5579eb354ec3164b979c10b5">More...</a><br /></td></tr>
 <tr class="separator:a557aa5ab5579eb354ec3164b979c10b5 inherit pro_methods_classStelObject"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a89c1c888d273b598a6fa8aed39836a52 inherit pro_methods_classStelObject"><td class="memItemLeft" align="right" valign="top">QString&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classStelObject.html#a89c1c888d273b598a6fa8aed39836a52">getSolarLunarInfoString</a> (const <a class="el" href="classStelCore.html">StelCore</a> *core, const InfoStringGroup &amp;flags) const</td></tr>
+<tr class="memdesc:a89c1c888d273b598a6fa8aed39836a52 inherit pro_methods_classStelObject"><td class="mdescLeft">&#160;</td><td class="mdescRight">Add a section to the InfoString with just horizontal data for the Sun and Moon, when observed from Earth.  <a href="classStelObject.html#a89c1c888d273b598a6fa8aed39836a52">More...</a><br /></td></tr>
+<tr class="separator:a89c1c888d273b598a6fa8aed39836a52 inherit pro_methods_classStelObject"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a53ece72260ecfe9c4783d740862021f8 inherit pro_methods_classStelObject"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classStelObject.html#a53ece72260ecfe9c4783d740862021f8">postProcessInfoString</a> (QString &amp;str, const InfoStringGroup &amp;flags) const</td></tr>
 <tr class="memdesc:a53ece72260ecfe9c4783d740862021f8 inherit pro_methods_classStelObject"><td class="mdescLeft">&#160;</td><td class="mdescRight">Apply post processing on the info string.  <a href="classStelObject.html#a53ece72260ecfe9c4783d740862021f8">More...</a><br /></td></tr>
 <tr class="separator:a53ece72260ecfe9c4783d740862021f8 inherit pro_methods_classStelObject"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -2229,6 +2250,14 @@ int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group
 void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__satellites.html#a1044d21d5aa3ca005925b84bae461872">setOrbitLineSegmentDuration</a> (int s)</td></tr>
 <tr class="memdesc:a1044d21d5aa3ca005925b84bae461872"><td class="mdescLeft">&#160;</td><td class="mdescRight">set duration of a single segments <br /></td></tr>
 <tr class="separator:a1044d21d5aa3ca005925b84bae461872"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afb73900eba420322d23e68832e152523"><td class="memItemLeft" align="right" valign="top"><a id="afb73900eba420322d23e68832e152523"></a>
+int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__satellites.html#afb73900eba420322d23e68832e152523">getTleEpochAgeDays</a> () const</td></tr>
+<tr class="memdesc:afb73900eba420322d23e68832e152523"><td class="mdescLeft">&#160;</td><td class="mdescRight">return the valid age of TLE's epoch <br /></td></tr>
+<tr class="separator:afb73900eba420322d23e68832e152523"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aaa9159d0528164c394a1a0269c8b95e3"><td class="memItemLeft" align="right" valign="top"><a id="aaa9159d0528164c394a1a0269c8b95e3"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__satellites.html#aaa9159d0528164c394a1a0269c8b95e3">setTleEpochAgeDays</a> (int age)</td></tr>
+<tr class="memdesc:aaa9159d0528164c394a1a0269c8b95e3"><td class="mdescLeft">&#160;</td><td class="mdescRight">set the valid age of TLE's epoch <br /></td></tr>
+<tr class="separator:aaa9159d0528164c394a1a0269c8b95e3"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:abd560306dcd9e33097a1794fc255f544"><td class="memItemLeft" align="right" valign="top"><a id="abd560306dcd9e33097a1794fc255f544"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><b>recalculateOrbitLines</b> (void)</td></tr>
 <tr class="separator:abd560306dcd9e33097a1794fc255f544"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -2279,6 +2308,9 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>orbitLineFadeSegments
 <tr class="memitem:afd562993835780e813fb938ff70e19d6"><td class="memItemLeft" align="right" valign="top"><a id="afd562993835780e813fb938ff70e19d6"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><b>orbitLineSegmentDurationChanged</b> (int i)</td></tr>
 <tr class="separator:afd562993835780e813fb938ff70e19d6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3be42ae0e44bbc457d9d2be47f220566"><td class="memItemLeft" align="right" valign="top"><a id="a3be42ae0e44bbc457d9d2be47f220566"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>tleEpochAgeDaysChanged</b> (int i)</td></tr>
+<tr class="separator:a3be42ae0e44bbc457d9d2be47f220566"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa86bed266bc50e594f97f68eded2ee41"><td class="memItemLeft" align="right" valign="top"><a id="aa86bed266bc50e594f97f68eded2ee41"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><b>invisibleSatelliteColorChanged</b> (<a class="el" href="classVector3.html">Vec3f</a>)</td></tr>
 <tr class="separator:aa86bed266bc50e594f97f68eded2ee41"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -2462,9 +2494,9 @@ virtual QString&#160;</td><td class="memItemRight" valign="bottom"><a class="el"
 <tr class="memdesc:a372fd47ff9580f1e776c35877ef5af6f inherit pub_methods_classStelModule"><td class="mdescLeft">&#160;</td><td class="mdescRight">Handle pinch gesture events.  <a href="classStelModule.html#a372fd47ff9580f1e776c35877ef5af6f">More...</a><br /></td></tr>
 <tr class="separator:a372fd47ff9580f1e776c35877ef5af6f inherit pub_methods_classStelModule"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr><td colspan="2"><h3>Static Public Member Functions</h3></td></tr>
-<tr class="memitem:a382e1ff79e0d4ce7b25e0211a3e75d68"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__satellites.html#a382e1ff79e0d4ce7b25e0211a3e75d68">parseTleFile</a> (QFile &amp;openFile, TleDataHash &amp;tleList, bool addFlagValue=false)</td></tr>
-<tr class="memdesc:a382e1ff79e0d4ce7b25e0211a3e75d68"><td class="mdescLeft">&#160;</td><td class="mdescRight">Reads a TLE list from a file to the supplied hash.  <a href="group__satellites.html#a382e1ff79e0d4ce7b25e0211a3e75d68">More...</a><br /></td></tr>
-<tr class="separator:a382e1ff79e0d4ce7b25e0211a3e75d68"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ace2d8206d0b761b75064f4cb24642856"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__satellites.html#ace2d8206d0b761b75064f4cb24642856">parseTleFile</a> (QFile &amp;openFile, TleDataHash &amp;tleList, bool addFlagValue=false, const QString &amp;tleURL=&quot;&quot;)</td></tr>
+<tr class="memdesc:ace2d8206d0b761b75064f4cb24642856"><td class="mdescLeft">&#160;</td><td class="mdescRight">Reads a TLE list from a file to the supplied hash.  <a href="group__satellites.html#ace2d8206d0b761b75064f4cb24642856">More...</a><br /></td></tr>
+<tr class="separator:ace2d8206d0b761b75064f4cb24642856"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad9a819033302a40af69179a85f3791ac"><td class="memItemLeft" align="right" valign="top">static QString&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__satellites.html#ad9a819033302a40af69179a85f3791ac">getSatIdFromLine2</a> (const QString &amp;line)</td></tr>
 <tr class="memdesc:ad9a819033302a40af69179a85f3791ac"><td class="mdescLeft">&#160;</td><td class="mdescRight">Insert a three line TLE into the hash array.  <a href="group__satellites.html#ad9a819033302a40af69179a85f3791ac">More...</a><br /></td></tr>
 <tr class="separator:ad9a819033302a40af69179a85f3791ac"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -2496,6 +2528,9 @@ int&#160;</td><td class="memItemRight" valign="bottom"><b>orbitLineFadeSegments<
 <tr class="memitem:a3d89f08608578a98bef11c811c1b08d6"><td class="memItemLeft" align="right" valign="top"><a id="a3d89f08608578a98bef11c811c1b08d6"></a>
 int&#160;</td><td class="memItemRight" valign="bottom"><b>orbitLineSegmentDuration</b></td></tr>
 <tr class="separator:a3d89f08608578a98bef11c811c1b08d6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a201a0f4bc5ec56314da70ad5533d7452"><td class="memItemLeft" align="right" valign="top"><a id="a201a0f4bc5ec56314da70ad5533d7452"></a>
+int&#160;</td><td class="memItemRight" valign="bottom"><b>tleEpochAgeDays</b></td></tr>
+<tr class="separator:a201a0f4bc5ec56314da70ad5533d7452"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a2daed6ee357efa7093224b69f559546a"><td class="memItemLeft" align="right" valign="top"><a id="a2daed6ee357efa7093224b69f559546a"></a>
 <a class="el" href="classVector3.html">Vec3f</a>&#160;</td><td class="memItemRight" valign="bottom"><b>invisibleSatelliteColor</b></td></tr>
 <tr class="separator:a2daed6ee357efa7093224b69f559546a"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -3152,8 +3187,8 @@ Additional Inherited Members</h2></td></tr>
 
 </div>
 </div>
-<a id="a382e1ff79e0d4ce7b25e0211a3e75d68"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a382e1ff79e0d4ce7b25e0211a3e75d68">&#9670;&nbsp;</a></span>parseTleFile()</h2>
+<a id="ace2d8206d0b761b75064f4cb24642856"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ace2d8206d0b761b75064f4cb24642856">&#9670;&nbsp;</a></span>parseTleFile()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -3177,7 +3212,13 @@ Additional Inherited Members</h2></td></tr>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">bool&#160;</td>
-          <td class="paramname"><em>addFlagValue</em> = <code>false</code>&#160;</td>
+          <td class="paramname"><em>addFlagValue</em> = <code>false</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const QString &amp;&#160;</td>
+          <td class="paramname"><em>tleURL</em> = <code>&quot;&quot;</code>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -3196,6 +3237,7 @@ Additional Inherited Members</h2></td></tr>
     <tr><td class="paramdir"></td><td class="paramname">openFile</td><td>a reference to an <b>open</b> file. </td></tr>
     <tr><td class="paramdir">[in,out]</td><td class="paramname">tleList</td><td>a hash with satellite IDs as keys. </td></tr>
     <tr><td class="paramdir">[in]</td><td class="paramname">addFlagValue</td><td>value to be set to <a class="el" href="group__satellites.html#a2f14c125c0d78b59d499b8ecc40d8d8a" title="Flag indicating whether this satellite should be added.">TleData::addThis</a> for all. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">tleURL</td><td>a URL of TLE's source (e.g. Celestrak URL) </td></tr>
   </table>
   </dd>
 </dl>
@@ -3887,7 +3929,7 @@ Additional Inherited Members</h2></td></tr>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Mon Sep 27 2021 22:59:45 for Stellarium by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Sat Dec 25 2021 16:56:50 for Stellarium by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.17
 </small></address>
