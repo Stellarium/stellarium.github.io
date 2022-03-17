@@ -2,6 +2,7 @@
 title: Bois du Cazier à Marcinelle/Charleroi, Belgium
 author: <a href="https://github.com/alansan2020">Alain Bastin</a>
 compat: 0.10+
+language: English, French
 landscape_url: https://github.com/alansan2020/Stellarium-Landscape/raw/main/boisducasier.zip
 image_url: /img/landscapes/thumbnail-bdc.jpg
 ---
