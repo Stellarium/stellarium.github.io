@@ -1,0 +1,146 @@
+---
+layout: post
+title: Stellarium v0.22.0 has been released!
+date: 2022-03-27 19:30:00 +0700
+categories: release
+author: alex-w
+nolangbar: true
+---
+The Stellarium team is delighted to announce the release of Stellarium 0.22.0.
+
+The major changes of this version:
+- AstroCalc: Eclipse Finder
+- AstroCalc: RTS (Rises, Transits, Settings)
+- Switch from Bortle scale to physical brightness values for light pollution.
+- Allow tweaks for the atmosphere brightness/color model and tone mapping
+- Several new calendars in the Calendars plugin
+- Seasonal polar caps on Mars
+- New and improved sky cultures
+- Larger textures allowed in Scenery3D
+- Improved OnlineQueries and Satellites plugin
+- Many fixes in core and plugins.
+- Technical preparations towards a major upgrade of the internal Qt framework.
+- There has also been a large number of bug fixes and closed feature requests and enhancements (see full list of changes).
+
+Enjoy!
+
+Full list of changes:
+- Added ability to search satellites by COSPAR ID
+- Added ability to support multi supergroups for satellites
+- Added checks for valid UTF-8 sequence for SS [ssystem*] files (GH: #2146)
+- Added 2 startup shortcuts for linux distros (GH: #2129)
+- Added GUIs for tweaking some atmosphere parameters and better understand how these things work together (GH: #2085)
+- Added ability switching between Preetham and Schaefer for sky brightness (CIE Y channel) (GH: #2085)
+- Added ability switching between 2 presets of chromaticity parameters (Preetham/Stellarium) (GH: #2085)
+- Added ability coupling extinction coefficient and atmosphere turbidity (GH: #2085)
+- Added an exponential twilight transition to Preetham zenith luminance (GH: #2085)
+- Added a flag to suppress atmosphere scattering rendering. Just keeps atmosphere refraction and extinction effects (GH: #2085)
+- Added ability tweaking atmosphere: allow solar halo drawing before or after 3d solar sphere (GH: #2085)
+- Added ability tweaking atmosphere: allow rendering the Sun after the atmosphere (avoid overbrightening, but may look too dark) (GH: #2085)
+- Added GUI to fine-tune viewing environment (tone mapping) (GH: #2085)
+- Added scripting functions to modify tone mapping settings (GH: #2085)
+- Added color conversion to AdobeRGB (not only sRGB). This *may* give better screen colors on some systems. (GH: #2085)
+- Added ability moving StelDialogSeparate to a separate screen (GH: #2132)
+- Added human readable format for coordinates of planetary features (GH: #2158)
+- Added support decimal coordinates for planetary features (GH: #2158)
+- Added Akan (ak), Karelian (krl), Montenegrin (cnr) and Serbian (Latin) (sr@latin) languages support
+- Added Lunar Eclipses to Astronomical calculations (GH: #2190, #407)
+- Added actions to centering screen on current telescope position (GH: #1956)
+- Added proper name for LBN 437
+- Added proper name for Stock 2 cluster (GH: #2207)
+- Added actions to quick choose of presets for the selected object information (GH: #2206)
+- Added Modified Espenak & Meeus (2006, 2022) solution for DeltaT (GH: #2340)
+- Added support alternative names (designations) for exoplanets (GH: #2350)
+- Added texture for an interesting distorted galaxy NGC 2146 in Camelopardalis
+- Added setting of screenshot dpi
+- Added New and Astronomical Hindu Calendars (GH: #2284)
+- Added Hindu Panchang (GH: #2284)
+- Added 60-year-cycle to Tibetan calendar (GH: #2284)
+- Added configurable text color (GH: #2284)
+- Added mistakenly removed parentheses to the regex (GH: #2324)
+- Added Egyptian (Dendera) sky culture (GH: #2329)
+- Added Zulu sky culture (GH: #2329)
+- Added 2 asterisms: Medium Bull & Minor Bull
+- Added Persian Astronomical calendar (GH: #2229)
+- Added nowruz to both Persian calendar versions (GH: #2229)
+- Added French Revolution Calendar (astronomical version) (GH: #2229)
+- Added Tibetan Calendar (GH: #2229)
+- Added functions from CC:UE chapter 14 on astronomical functions (GH: #2229)
+- Added proper name for CTB 1 (Abell 85) nebula
+- Added boundaries to Arabic Lunar Stations skycultute (GH: #2222)
+- Added support of seasonal polar caps on the Mars (GH: #2220, #2040)
+- Added Revised Julian Calendar into Calendars plugin (GH: #2214)
+- Added support heliocentric ecliptic positions of the major planets into AstroCalc/Positions tool (GH: #2233)
+- Added Solar Eclipses to Astronomical calculations (GH: #2218, #407)
+- Added missing timezone for Nuuk (GH: #2140)
+- Added column "Visibility conditions" to the lunar eclipses
+- Fixed typos in Satellites plugin
+- Fixed Stephenson, Morrison & Hohenkerk solution for DeltaT
+- Fixed Stephenson & Houlden (1986) algorithm for DeltaT
+- Fixed rendering gravity labels on HiDPI devices
+- Fixed rendering gravity labels of compass
+- Fixed nomenclature longitudes (GH: #2158)
+- Fixed synonyms in DSO names
+- Fixed clazy warnings for plugins and core
+- Fixed translation the column names in AstroCalc/WUT tool when language is changed
+- Fixed jumping to position in search window (GH: #2205)
+- Fixed entering geographical coordinates (GH: #2209, #2210)
+- Fixed crash on exit when Telescopes tab of Oculars is active (GH: #2103)
+- Fixed bug in Meteor showers search dialog (GH: #2356)
+- Fixed list of languages
+- Fixed typos in sky cultures
+- Fixed potential selection bug in AstroCalc/Positions tool
+- Fixed visual properties for AstroCalc/Positions tool
+- Fixed bug in AstroCalc/Eclipses tool for local solar eclipses when total/annular eclipses take place very close to the horizon (GH: #2345)
+- Fixed decimal longitude in AstroCalc/Eclipses tool (GH: #2323)
+- Fixed coordinates of few open clusters (DSO Catalog v3.14)
+- Fixed crash on start when Calendars plugin not loaded. (GH: #2287)
+- Fixed parsing of decimal degrees in AngleSpinBox::stringToDouble() (GH: #2249)
+- Fixed light pollution node in TUI (GH: #2253)
+- Fixed StelLocationMgr.cpp:parseAngle for negative fractional-degree angles (GH: #2255)
+- Fixed reading location from CLI (GH: #2254)
+- Fixed planetocentric rectangular coordinates (GH: #2244)
+- Fixed R&D solution of DeltaT (GH: #2229)
+- Fixed galactic and supergalactic longitudes range in Scripting Engine (GH: #2219)
+- Fixed bug in the Hebrew calendar (GH: #2153)
+- Fixed errors in Arabic sky cultures
+- Fixed computation of rise, transit and set times for the Moon (GH: 2228)
+- Fixed alignment for headers in tables
+- Fixed security issues: updated jQuery and jQuery UI (GH: #2234, #2235, #2236)
+- Fixed bug in AstroCalc/Eclipses where type of local solar eclipses are incorrect (GH: #2237)
+- Fixed wrong range of galactic and supergalactic coordinate systems (GH: #2219)
+- Changed the languages support: refactoring the code for ISO-639 codes support
+- Changed the core: refactoring the code for get angular size of objects (GH: #2180)
+- Changed the GUI: compactification of the GUI (GH: #2199)
+- Changed AstroCalc/Transits tool: The AstroCalc/Transits tool has been converted to AstroCalc/RTS tool, where RTS is meaning "rises, transits and sets" (GH: #2283)
+- Changed regexp in the comets data parser (GH: #2281)
+- Changed core: pass Sun, Moon and current planet objects as well as location directly to Atmosphere::computeColor (GH: #2257)
+- Changed core: enable multisampling for landscape too (GH: #2260)
+- Changed core: switch from Bortle class to luminance as the quantity of light pollution (GH: 2179)
+- Updated Arabic sky cultures: renaming sky cultures (GH: #2212)
+- Updated Babylonian (MUL.APIN) sky culture
+- Updated rules for guessing the groups of satellites
+- Updated GUI of Satellites plugin
+- Updated default list of TLE sources
+- Updated International Designator info for satellites
+- Updated default catalog of pulsars
+- Updated list of known versions MSVC++
+- Updated logger for macOS
+- Updated translations
+- Updated Stellarium User Guide
+- Updated core: replace deprecated QLinkedList by std::list
+- Updated core: refactor cardinals (GH: #2352)
+- Updated core: refactor qflags (GH: #2351)
+- Updated GUI: Improve usability of light pollution display in landscape description (GH: #2296)
+- Updated GUI: Prevent negative length of day (GH: #2332)
+- Updated labels in Calendars plugin
+- Updated defaults for Calendars plugin (GH: #2284)
+- Updated Scenery3D plugin: Extend shadowmap/cubemap resolution options 
+- Updated list of proper names (GH: #2316, #2319, #2320)
+- Updated order of star designations
+- Updated shape of asterism "Taurus Poniatovii"
+- Updated locations database, nomenclature and common names for DSO (GH: #2262, #2268, #2274, #2280, #2282)
+- Updated build instruction
+- Updated GUI for AstroCalc/Eclipses tool: allow years before 1582 (GH: #2224)
+- Removed default GRS solution (GH: #2187)
+- Removed radio frequencies from getInfoMap() method
