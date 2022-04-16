@@ -21,7 +21,7 @@
   <td id="projectlogo"><img alt="Logo" src="stellarium-logo.png"/></td>
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">Stellarium
-   &#160;<span id="projectnumber">0.22.0</span>
+   &#160;<span id="projectnumber">0.22.1</span>
    </div>
   </td>
  </tr>
@@ -542,6 +542,12 @@ $(function() {
 </li>
 <li>getColorEquinoxPoints()
 : <a class="el" href="classGridLinesMgr.html#a7256d8537ad124f12c18b4a6b32dc553">GridLinesMgr</a>
+</li>
+<li>getColorFixedEquatorGrid()
+: <a class="el" href="classGridLinesMgr.html#a17482066e783a6db789b9499197f50d4">GridLinesMgr</a>
+</li>
+<li>getColorFixedEquatorLine()
+: <a class="el" href="classGridLinesMgr.html#a6df29031e7853e122241a422a25927ad">GridLinesMgr</a>
 </li>
 <li>getColorFOVCenterMarker()
 : <a class="el" href="classSpecialMarkersMgr.html#a0f096f850128592615a723ae16c60055">SpecialMarkersMgr</a>
@@ -1223,6 +1229,9 @@ $(function() {
 <li>getFilterValue()
 : <a class="el" href="group__pulsars.html#a5fd8d02afcf50cd51e68fe5d266c5f1b">Pulsars</a>
 </li>
+<li>getFixedEquatorialModelViewTransform()
+: <a class="el" href="classStelCore.html#adc03f18f95423a1b0267dda3c24a2004">StelCore</a>
+</li>
 <li>getFlagAdditionalNames()
 : <a class="el" href="classNebulaMgr.html#afcfa0d08f688ccc5d71473bc3763bb16">NebulaMgr</a>
 </li>
@@ -1378,6 +1387,18 @@ $(function() {
 </li>
 <li>getFlagEquinoxPoints()
 : <a class="el" href="classGridLinesMgr.html#a9dd275c1361995496fecb82cf935ba96">GridLinesMgr</a>
+</li>
+<li>getFlagFixedEquatorGrid()
+: <a class="el" href="classGridLinesMgr.html#a4bcf0e34e3023c06ebb78051784944cf">GridLinesMgr</a>
+</li>
+<li>getFlagFixedEquatorLabeled()
+: <a class="el" href="classGridLinesMgr.html#a717eabdb2eaf1142fdea8fdcac66f13c">GridLinesMgr</a>
+</li>
+<li>getFlagFixedEquatorLine()
+: <a class="el" href="classGridLinesMgr.html#ab1d79f25a1dcec8d76dc357c51501934">GridLinesMgr</a>
+</li>
+<li>getFlagFixedEquatorParts()
+: <a class="el" href="classGridLinesMgr.html#ad796552012940c9fe33e4d7a41a65c75">GridLinesMgr</a>
 </li>
 <li>getFlagFog()
 : <a class="el" href="classLandscapeMgr.html#a4c8448dd5c18f9ada8c5dc46b10aa717">LandscapeMgr</a>
@@ -2322,7 +2343,7 @@ $(function() {
 : <a class="el" href="classLandscape.html#ad66cf496d4fd853637c1a7470d5fc126">Landscape</a>
 </li>
 <li>getLandscapeOpacity()
-: <a class="el" href="classLandscapeMgr.html#a92971e9759c53abb999c3a96fc5b6977">LandscapeMgr</a>
+: <a class="el" href="classLandscapeMgr.html#acdddf1b5035cc7b7cd1c4b0bda1b85ce">LandscapeMgr</a>
 </li>
 <li>getLandscapeSinMinAltitudeLimit()
 : <a class="el" href="classLandscapeMgr.html#a1c80028084bc93fa265a1257618ad12b">LandscapeMgr</a>
@@ -2983,7 +3004,7 @@ $(function() {
 : <a class="el" href="classStelLocaleMgr.html#aaf32becd4ae4ec2d57fc6116872bdb45">StelLocaleMgr</a>
 </li>
 <li>getProjection()
-: <a class="el" href="classStelCore.html#adcfbdd5378ab9fb2e5bc6d16f6691129">StelCore</a>
+: <a class="el" href="classStelCore.html#ab1e1d7a4a0e50a3be40ff3dce10b951d">StelCore</a>
 </li>
 <li>getProjection2d()
 : <a class="el" href="classStelCore.html#a8b858aead1a5ac59c6f9a07467d0cf4f">StelCore</a>
@@ -3534,7 +3555,7 @@ $(function() {
 : <a class="el" href="group__satellites.html#af888c055694a35417f40891cd159f051">Satellites</a>
 </li>
 <li>getToneReproducer()
-: <a class="el" href="classStelCore.html#aca28c810e0c45be4a7f37b13eb571291">StelCore</a>
+: <a class="el" href="classStelCore.html#a8f35e326d36252be7cab4b3a828ecdbc">StelCore</a>
 </li>
 <li>getTopographicOffsetFromCenter()
 : <a class="el" href="classStelObserver.html#ae4c7ee8d418dc4ed85711a41cf4565e3">StelObserver</a>
@@ -3673,8 +3694,8 @@ $(function() {
 : <a class="el" href="group__satellites.html#abf63531da2bf58b438a4ecb2f4323049">gSatTEME</a>
 </li>
 <li>getVelocity()
-: <a class="el" href="classKeplerOrbit.html#a10a2058ba54bfd63a5e750892d7e77be">KeplerOrbit</a>
-, <a class="el" href="classOrbit.html#a77c0e42fae5dbfa482f8c47a3bfa04b8">Orbit</a>
+: <a class="el" href="classKeplerOrbit.html#a36c71c5637bfb18c14ace54c51d4a0f3">KeplerOrbit</a>
+, <a class="el" href="classOrbit.html#adfeaefa4ae8704f529e3b649dc677b7e">Orbit</a>
 </li>
 <li>getVenusOrbitColor()
 : <a class="el" href="classSolarSystem.html#a9514427a67e001af3789d38911e51670">SolarSystem</a>
@@ -3942,7 +3963,7 @@ $(function() {
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Sun Mar 27 2022 19:13:47 for Stellarium by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Sat Apr 16 2022 18:39:27 for Stellarium by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.17
 </small></address>

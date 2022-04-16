@@ -21,7 +21,7 @@
   <td id="projectlogo"><img alt="Logo" src="stellarium-logo.png"/></td>
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">Stellarium
-   &#160;<span id="projectnumber">0.22.0</span>
+   &#160;<span id="projectnumber">0.22.1</span>
    </div>
   </td>
  </tr>
@@ -66,9 +66,10 @@ Public Types</h2></td></tr>
 &#160;&#160;<a class="el" href="classStelCore.html#af18f0c34c957103a7fa3008e2aa4aec1a0b10426494827710dc3c8a6a1ec688e2">FrameObservercentricEclipticOfDate</a>, 
 <a class="el" href="classStelCore.html#af18f0c34c957103a7fa3008e2aa4aec1a916cb23d24a97909552ecb3bd2c53011">FrameEquinoxEqu</a>, 
 <a class="el" href="classStelCore.html#af18f0c34c957103a7fa3008e2aa4aec1a4c25c7bdcf0d5fa956743e0ae0561d32">FrameJ2000</a>, 
-<a class="el" href="classStelCore.html#af18f0c34c957103a7fa3008e2aa4aec1aba391ab2f0ec54e0a72453b5b4bbb43a">FrameGalactic</a>, 
+<a class="el" href="classStelCore.html#af18f0c34c957103a7fa3008e2aa4aec1a5b66c86345de2c40845bc9d9abeb04b9">FrameFixedEquatorial</a>, 
 <br />
-&#160;&#160;<a class="el" href="classStelCore.html#af18f0c34c957103a7fa3008e2aa4aec1a4e9c1231e59ee7c8707c94232bb61c2f">FrameSupergalactic</a>
+&#160;&#160;<a class="el" href="classStelCore.html#af18f0c34c957103a7fa3008e2aa4aec1aba391ab2f0ec54e0a72453b5b4bbb43a">FrameGalactic</a>, 
+<a class="el" href="classStelCore.html#af18f0c34c957103a7fa3008e2aa4aec1a4e9c1231e59ee7c8707c94232bb61c2f">FrameSupergalactic</a>
 <br />
  }</td></tr>
 <tr class="separator:af18f0c34c957103a7fa3008e2aa4aec1"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -942,6 +943,10 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>j2000ToAltAzInPlaceNo
 <a class="el" href="classStelProjector.html#ae6b42a6973558f855691b91701edf0dc">StelProjector::ModelViewTranformP</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classStelCore.html#a06c0ee67cdd83c0337d9b17363cc71e9">getEquinoxEquModelViewTransform</a> (<a class="el" href="classStelCore.html#afddf8e4cf0bbdf1f1ed366152f5488ab">RefractionMode</a> refMode=<a class="el" href="classStelCore.html#afddf8e4cf0bbdf1f1ed366152f5488aba93e2d6d3cf22de840dc23c9b7a6a327c">RefractionAuto</a>) const</td></tr>
 <tr class="memdesc:a06c0ee67cdd83c0337d9b17363cc71e9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the modelview matrix for observer-centric equatorial at equinox drawing. <br /></td></tr>
 <tr class="separator:a06c0ee67cdd83c0337d9b17363cc71e9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adc03f18f95423a1b0267dda3c24a2004"><td class="memItemLeft" align="right" valign="top"><a id="adc03f18f95423a1b0267dda3c24a2004"></a>
+<a class="el" href="classStelProjector.html#ae6b42a6973558f855691b91701edf0dc">StelProjector::ModelViewTranformP</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classStelCore.html#adc03f18f95423a1b0267dda3c24a2004">getFixedEquatorialModelViewTransform</a> (<a class="el" href="classStelCore.html#afddf8e4cf0bbdf1f1ed366152f5488ab">RefractionMode</a> refMode) const</td></tr>
+<tr class="memdesc:adc03f18f95423a1b0267dda3c24a2004"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the modelview matrix for observer-centric fixed equatorial drawing. <br /></td></tr>
+<tr class="separator:adc03f18f95423a1b0267dda3c24a2004"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae3fb984b0de144a3a388ef4c331ddc8e"><td class="memItemLeft" align="right" valign="top"><a id="ae3fb984b0de144a3a388ef4c331ddc8e"></a>
 <a class="el" href="classStelProjector.html#ae6b42a6973558f855691b91701edf0dc">StelProjector::ModelViewTranformP</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classStelCore.html#ae3fb984b0de144a3a388ef4c331ddc8e">getAltAzModelViewTransform</a> (<a class="el" href="classStelCore.html#afddf8e4cf0bbdf1f1ed366152f5488ab">RefractionMode</a> refMode=<a class="el" href="classStelCore.html#afddf8e4cf0bbdf1f1ed366152f5488aba93e2d6d3cf22de840dc23c9b7a6a327c">RefractionAuto</a>) const</td></tr>
 <tr class="memdesc:ae3fb984b0de144a3a388ef4c331ddc8e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the modelview matrix for observer-centric altazimuthal drawing. <br /></td></tr>
@@ -1228,6 +1233,8 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><b>flagUseDST</b></td></
 <p>The north pole follows the precession of the planet on which the observer is located. On Earth, this may include nutation if so configured. Has been corrected for V0.14 to really properly reflect ecliptical motion and precession (Vondrak 2011 model) and nutation. </p>
 </td></tr>
 <tr><td class="fieldname"><a id="af18f0c34c957103a7fa3008e2aa4aec1a4c25c7bdcf0d5fa956743e0ae0561d32"></a>FrameJ2000&#160;</td><td class="fielddoc"><p>Equatorial reference frame at the J2000 equinox centered on the observer. This is also the ICRS reference frame. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="af18f0c34c957103a7fa3008e2aa4aec1a5b66c86345de2c40845bc9d9abeb04b9"></a>FrameFixedEquatorial&#160;</td><td class="fielddoc"><p>Fixed equatorial frame (hour angle/declination). Note that hour angle is counted backwards here and must be treated specially for user I/O. </p>
 </td></tr>
 <tr><td class="fieldname"><a id="af18f0c34c957103a7fa3008e2aa4aec1aba391ab2f0ec54e0a72453b5b4bbb43a"></a>FrameGalactic&#160;</td><td class="fielddoc"><p>Galactic reference frame centered on observer. </p>
 </td></tr>
@@ -2766,7 +2773,7 @@ Up to V0.15.1, if the requested year was outside validity range, we returned zer
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Sun Mar 27 2022 19:13:45 for Stellarium by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Sat Apr 16 2022 18:39:26 for Stellarium by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.17
 </small></address>

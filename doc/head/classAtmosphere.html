@@ -55,10 +55,9 @@ $(function() {
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:ab55c87ce6c43a3f7955411d65a67e88a"><td class="memItemLeft" align="right" valign="top"><a id="ab55c87ce6c43a3f7955411d65a67e88a"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAtmosphere.html#ab55c87ce6c43a3f7955411d65a67e88a">computeColor</a> (double JD, <a class="el" href="classVector3.html">Vec3d</a> _sunPos, <a class="el" href="classVector3.html">Vec3d</a> moonPos, float moonPhase, float moonMagnitude, <a class="el" href="classStelCore.html">StelCore</a> *core, float latitude=45.f, float altitude=200.f, float temperature=15.f, float relativeHumidity=40.f)</td></tr>
-<tr class="memdesc:ab55c87ce6c43a3f7955411d65a67e88a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Compute sky brightness values and average luminance. <br /></td></tr>
-<tr class="separator:ab55c87ce6c43a3f7955411d65a67e88a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a06224dfeba8c770485975db0602467bc"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAtmosphere.html#a06224dfeba8c770485975db0602467bc">computeColor</a> (<a class="el" href="classStelCore.html">StelCore</a> *core, double JD, const <a class="el" href="classPlanet.html">Planet</a> &amp;currentPlanet, const <a class="el" href="classPlanet.html">Planet</a> &amp;sun, const <a class="el" href="classPlanet.html">Planet</a> *moon, const <a class="el" href="classStelLocation.html">StelLocation</a> &amp;location, float temperature, float relativeHumidity, float extinctionCoefficient, bool noScatter)</td></tr>
+<tr class="memdesc:a06224dfeba8c770485975db0602467bc"><td class="mdescLeft">&#160;</td><td class="mdescRight">Compute sky brightness values and average luminance.  <a href="classAtmosphere.html#a06224dfeba8c770485975db0602467bc">More...</a><br /></td></tr>
+<tr class="separator:a06224dfeba8c770485975db0602467bc"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad850356dc30ba5b9d22ba1c6dff5dfbd"><td class="memItemLeft" align="right" valign="top"><a id="ad850356dc30ba5b9d22ba1c6dff5dfbd"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><b>draw</b> (<a class="el" href="classStelCore.html">StelCore</a> *core)</td></tr>
 <tr class="separator:ad850356dc30ba5b9d22ba1c6dff5dfbd"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -101,10 +100,95 @@ void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="clas
 float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAtmosphere.html#a32bc0507eba52889a3f552abd4ec9b58">getLightPollutionLuminance</a> () const</td></tr>
 <tr class="memdesc:a32bc0507eba52889a3f552abd4ec9b58"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the light pollution luminance in cd/m^2. <br /></td></tr>
 <tr class="separator:a32bc0507eba52889a3f552abd4ec9b58"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a12e6ce81b86bc07bce830d34f2c2a818"><td class="memItemLeft" align="right" valign="top"><a id="a12e6ce81b86bc07bce830d34f2c2a818"></a>
+<a class="el" href="classSkylight.html">Skylight</a> *&#160;</td><td class="memItemRight" valign="bottom"><b>getSkyLight</b> (void)</td></tr>
+<tr class="separator:a12e6ce81b86bc07bce830d34f2c2a818"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>The sky brightness is computed with the SkyBright class, the color with the SkyLight. Don't use this class directly but use it through the <a class="el" href="classLandscapeMgr.html">LandscapeMgr</a>. </p>
 </div><h2 class="groupheader">Member Function Documentation</h2>
+<a id="a06224dfeba8c770485975db0602467bc"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a06224dfeba8c770485975db0602467bc">&#9670;&nbsp;</a></span>computeColor()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Atmosphere::computeColor </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classStelCore.html">StelCore</a> *&#160;</td>
+          <td class="paramname"><em>core</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>JD</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="classPlanet.html">Planet</a> &amp;&#160;</td>
+          <td class="paramname"><em>currentPlanet</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="classPlanet.html">Planet</a> &amp;&#160;</td>
+          <td class="paramname"><em>sun</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="classPlanet.html">Planet</a> *&#160;</td>
+          <td class="paramname"><em>moon</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="classStelLocation.html">StelLocation</a> &amp;&#160;</td>
+          <td class="paramname"><em>location</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float&#160;</td>
+          <td class="paramname"><em>temperature</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float&#160;</td>
+          <td class="paramname"><em>relativeHumidity</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float&#160;</td>
+          <td class="paramname"><em>extinctionCoefficient</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>noScatter</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">noScatter</td><td>true to suppress the actual sky brightness modelling. This will keep refraction/extinction working for didactic reasons. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
 <a id="a4c0052283950c8340e5cac58575c6b35"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a4c0052283950c8340e5cac58575c6b35">&#9670;&nbsp;</a></span>getAverageLuminance()</h2>
 
@@ -179,7 +263,7 @@ float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="cla
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Sat Dec 25 2021 16:56:50 for Stellarium by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Sat Apr 16 2022 18:39:25 for Stellarium by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.17
 </small></address>

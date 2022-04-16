@@ -448,6 +448,12 @@ void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="clas
 <tr class="memitem:a949081bd56e2278229e6e1ebaf92b607"><td class="memItemLeft" align="right" valign="top">static double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classStelMainScriptAPI.html#a949081bd56e2278229e6e1ebaf92b607">getDisplayMaxLuminance</a> ()</td></tr>
 <tr class="memdesc:a949081bd56e2278229e6e1ebaf92b607"><td class="mdescLeft">&#160;</td><td class="mdescRight">Experimental.  <a href="classStelMainScriptAPI.html#a949081bd56e2278229e6e1ebaf92b607">More...</a><br /></td></tr>
 <tr class="separator:a949081bd56e2278229e6e1ebaf92b607"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7164ab23f7743ecd552011f0bd41e20c"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classStelMainScriptAPI.html#a7164ab23f7743ecd552011f0bd41e20c">setDisplayAdaptationLuminance</a> (double cdPerSqM)</td></tr>
+<tr class="memdesc:a7164ab23f7743ecd552011f0bd41e20c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Experimental.  <a href="classStelMainScriptAPI.html#a7164ab23f7743ecd552011f0bd41e20c">More...</a><br /></td></tr>
+<tr class="separator:a7164ab23f7743ecd552011f0bd41e20c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2d2de44408d4de0681f2501e6cfc7aa4"><td class="memItemLeft" align="right" valign="top">static double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classStelMainScriptAPI.html#a2d2de44408d4de0681f2501e6cfc7aa4">getDisplayAdaptationLuminance</a> ()</td></tr>
+<tr class="memdesc:a2d2de44408d4de0681f2501e6cfc7aa4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Experimental.  <a href="classStelMainScriptAPI.html#a2d2de44408d4de0681f2501e6cfc7aa4">More...</a><br /></td></tr>
+<tr class="separator:a2d2de44408d4de0681f2501e6cfc7aa4"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac3e5d2dfa60968655715f2b250a23dd0"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classStelMainScriptAPI.html#ac3e5d2dfa60968655715f2b250a23dd0">setDisplayGamma</a> (double gamma)</td></tr>
 <tr class="memdesc:ac3e5d2dfa60968655715f2b250a23dd0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Experimental: Set the display gamma.  <a href="classStelMainScriptAPI.html#ac3e5d2dfa60968655715f2b250a23dd0">More...</a><br /></td></tr>
 <tr class="separator:ac3e5d2dfa60968655715f2b250a23dd0"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -794,7 +800,7 @@ double&#160;</td><td class="memItemRight" valign="bottom"><b>timeSpeed</b></td><
   </tr>
 </table>
 </div><div class="memdoc">
-<p>Wrapper for <a class="el" href="classStelSkyDrawer.html#aee4cc450b20c1eb1a0fdcb7101921a03" title="Get the current Bortle scale index.">StelSkyDrawer::getBortleScaleIndex</a> </p><dl class="section see"><dt>See also</dt><dd><a href="https://en.wikipedia.org/wiki/Bortle_scale">https://en.wikipedia.org/wiki/Bortle_scale</a> </dd></dl>
+<p>Wrapper for StelSkyDrawer::getBortleScaleIndex </p><dl class="section see"><dt>See also</dt><dd><a href="https://en.wikipedia.org/wiki/Bortle_scale">https://en.wikipedia.org/wiki/Bortle_scale</a> </dd></dl>
 <dl class="section return"><dt>Returns</dt><dd>the Bortle scale index in range [1,9] </dd></dl>
 
 </div>
@@ -933,6 +939,33 @@ double&#160;</td><td class="memItemRight" valign="bottom"><b>timeSpeed</b></td><
 </table>
 </div><div class="memdoc">
 <dl class="section return"><dt>Returns</dt><dd>true if the disk view port is currently enabled </dd></dl>
+
+</div>
+</div>
+<a id="a2d2de44408d4de0681f2501e6cfc7aa4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2d2de44408d4de0681f2501e6cfc7aa4">&#9670;&nbsp;</a></span>getDisplayAdaptationLuminance</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static double StelMainScriptAPI::getDisplayAdaptationLuminance </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span><span class="mlabel">slot</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<dl class="section return"><dt>Returns</dt><dd>configured physical display adaptation luminance for tonemapping. The standard value is 50cd/m^2, appropriate for CRTs in dimly lit office environments. </dd></dl>
+<dl class="section note"><dt>Note</dt><dd>This is experimental and may not be available in later versions. </dd></dl>
 
 </div>
 </div>
@@ -3749,7 +3782,7 @@ More complicated value types like lists are only indicated by their type name. Y
   </tr>
 </table>
 </div><div class="memdoc">
-<p>Wrapper for <a class="el" href="classStelSkyDrawer.html#a45f6dc32af8d32de8ceda691f13ca53d" title="Set the parameters so that the stars disappear at about the limit given by the bortle scale The limit...">StelSkyDrawer::setBortleScaleIndex</a> Valid values are in the range [1,9] </p><dl class="section see"><dt>See also</dt><dd><a href="https://en.wikipedia.org/wiki/Bortle_scale">https://en.wikipedia.org/wiki/Bortle_scale</a> </dd></dl>
+<p>Wrapper for StelSkyDrawer::setBortleScaleIndex Valid values are in the range [1,9] </p><dl class="section see"><dt>See also</dt><dd><a href="https://en.wikipedia.org/wiki/Bortle_scale">https://en.wikipedia.org/wiki/Bortle_scale</a> </dd></dl>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">index</td><td>the new Bortle scale index, must be in range [1,9] </td></tr>
@@ -3923,6 +3956,33 @@ Starting with version 0.14.0 the Boolean argument has a different meaning and de
   </table>
   </dd>
 </dl>
+
+</div>
+</div>
+<a id="a7164ab23f7743ecd552011f0bd41e20c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7164ab23f7743ecd552011f0bd41e20c">&#9670;&nbsp;</a></span>setDisplayAdaptationLuminance</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static void StelMainScriptAPI::setDisplayAdaptationLuminance </td>
+          <td>(</td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>cdPerSqM</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span><span class="mlabel">slot</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Allow setting physical display adaptation luminance for tonemapping. The standard value is 50cd/m^2, appropriate for CRTs in dimly lit office environments. TBD true?: Increasing the value makes most of the sky darker, to allow saving the highest tones for the brightest lights (esp. the Sun). </p><dl class="section note"><dt>Note</dt><dd>This is experimental and may not be available in later versions. </dd></dl>
 
 </div>
 </div>
@@ -4525,7 +4585,7 @@ This is experimental and may not be available in later versions. </dd></dl>
 </div><div class="memdoc">
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">level</td><td>can be "AllInfo", "ShortInfo", "None" </td></tr>
+    <tr><td class="paramname">level</td><td>can be "AllInfo", "DefaultInfo", "ShortInfo", "None", "Custom" </td></tr>
   </table>
   </dd>
 </dl>
@@ -5074,7 +5134,7 @@ See also <a class="el" href="classStelMainScriptAPI.html#ae5dc2cdfd5bd18b0634ec4
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Sat Dec 25 2021 16:56:51 for Stellarium by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Sat Apr 16 2022 18:39:26 for Stellarium by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.17
 </small></address>

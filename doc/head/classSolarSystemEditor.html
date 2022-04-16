@@ -101,16 +101,6 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a84ecc5ddc9734fd57e61a9fb84de409a"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSolarSystemEditor.html#a84ecc5ddc9734fd57e61a9fb84de409a">init</a> () Q_DECL_OVERRIDE</td></tr>
 <tr class="memdesc:a84ecc5ddc9734fd57e61a9fb84de409a"><td class="mdescLeft">&#160;</td><td class="mdescRight">called when the plug-in is loaded.  <a href="classSolarSystemEditor.html#a84ecc5ddc9734fd57e61a9fb84de409a">More...</a><br /></td></tr>
 <tr class="separator:a84ecc5ddc9734fd57e61a9fb84de409a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a8c1ae9538211ba5bd3723d7ffe95fb6f"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSolarSystemEditor.html#a8c1ae9538211ba5bd3723d7ffe95fb6f">deinit</a> () Q_DECL_OVERRIDE</td></tr>
-<tr class="memdesc:a8c1ae9538211ba5bd3723d7ffe95fb6f"><td class="mdescLeft">&#160;</td><td class="mdescRight">called before the plug-in is un-loaded.  <a href="classSolarSystemEditor.html#a8c1ae9538211ba5bd3723d7ffe95fb6f">More...</a><br /></td></tr>
-<tr class="separator:a8c1ae9538211ba5bd3723d7ffe95fb6f"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a081022a2b6eeeacc0c72aa75ea1838a3"><td class="memItemLeft" align="right" valign="top"><a id="a081022a2b6eeeacc0c72aa75ea1838a3"></a>
-virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSolarSystemEditor.html#a081022a2b6eeeacc0c72aa75ea1838a3">update</a> (double deltaTime) Q_DECL_OVERRIDE</td></tr>
-<tr class="memdesc:a081022a2b6eeeacc0c72aa75ea1838a3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Does nothing. <br /></td></tr>
-<tr class="separator:a081022a2b6eeeacc0c72aa75ea1838a3"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:abdf9856f58179b326a5a3621f4fd9be1"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSolarSystemEditor.html#abdf9856f58179b326a5a3621f4fd9be1">draw</a> (<a class="el" href="classStelCore.html">StelCore</a> *core) Q_DECL_OVERRIDE</td></tr>
-<tr class="memdesc:abdf9856f58179b326a5a3621f4fd9be1"><td class="mdescLeft">&#160;</td><td class="mdescRight">draws on the view port.  <a href="classSolarSystemEditor.html#abdf9856f58179b326a5a3621f4fd9be1">More...</a><br /></td></tr>
-<tr class="separator:abdf9856f58179b326a5a3621f4fd9be1"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a891562306f4340e1ad47acf377f03f2d"><td class="memItemLeft" align="right" valign="top">virtual double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSolarSystemEditor.html#a891562306f4340e1ad47acf377f03f2d">getCallOrder</a> (<a class="el" href="classStelModule.html#a11b61d014b51cf6424cd89b1ccd3d768">StelModuleActionName</a> actionName) const Q_DECL_OVERRIDE</td></tr>
 <tr class="memdesc:a891562306f4340e1ad47acf377f03f2d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return the value defining the order of call for the given action For example if stars.callOrder[ActionDraw] == 10 and constellation.callOrder[ActionDraw] == 11, the stars module will be drawn before the constellations.  <a href="classSolarSystemEditor.html#a891562306f4340e1ad47acf377f03f2d">More...</a><br /></td></tr>
 <tr class="separator:a891562306f4340e1ad47acf377f03f2d"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -164,9 +154,22 @@ QString&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="c
 <tr class="memdesc:aee84b2454aef9940c4f025b2ffd4a4f2"><td class="mdescLeft">&#160;</td><td class="mdescRight">returns the path <br /></td></tr>
 <tr class="separator:aee84b2454aef9940c4f025b2ffd4a4f2"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pub_methods_classStelModule"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_classStelModule')"><img src="closed.png" alt="-"/>&#160;Public Member Functions inherited from <a class="el" href="classStelModule.html">StelModule</a></td></tr>
+<tr class="memitem:afe8d617047a16139f392b8e732d8beae inherit pub_methods_classStelModule"><td class="memItemLeft" align="right" valign="top"><a id="afe8d617047a16139f392b8e732d8beae"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classStelModule.html#afe8d617047a16139f392b8e732d8beae">StelModule</a> ()</td></tr>
+<tr class="memdesc:afe8d617047a16139f392b8e732d8beae inherit pub_methods_classStelModule"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructor. Every derived class MUST call setObjectName(className) in its constructor. <br /></td></tr>
+<tr class="separator:afe8d617047a16139f392b8e732d8beae inherit pub_methods_classStelModule"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad2655f22c4eb31d09f1a826ac4c7611f inherit pub_methods_classStelModule"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classStelModule.html#ad2655f22c4eb31d09f1a826ac4c7611f">deinit</a> ()</td></tr>
+<tr class="memdesc:ad2655f22c4eb31d09f1a826ac4c7611f inherit pub_methods_classStelModule"><td class="mdescLeft">&#160;</td><td class="mdescRight">Called before the module will be deleted, and before the OpenGL context is suppressed.  <a href="classStelModule.html#ad2655f22c4eb31d09f1a826ac4c7611f">More...</a><br /></td></tr>
+<tr class="separator:ad2655f22c4eb31d09f1a826ac4c7611f inherit pub_methods_classStelModule"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a5c024983a5f851d62560c4d64fc1d8f1 inherit pub_methods_classStelModule"><td class="memItemLeft" align="right" valign="top">virtual QSettings *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classStelModule.html#a5c024983a5f851d62560c4d64fc1d8f1">getSettings</a> ()</td></tr>
 <tr class="memdesc:a5c024983a5f851d62560c4d64fc1d8f1 inherit pub_methods_classStelModule"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return module-specific settings.  <a href="classStelModule.html#a5c024983a5f851d62560c4d64fc1d8f1">More...</a><br /></td></tr>
 <tr class="separator:a5c024983a5f851d62560c4d64fc1d8f1 inherit pub_methods_classStelModule"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a18fde2820af998395aea9e30bb1138b2 inherit pub_methods_classStelModule"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classStelModule.html#a18fde2820af998395aea9e30bb1138b2">draw</a> (<a class="el" href="classStelCore.html">StelCore</a> *core)</td></tr>
+<tr class="memdesc:a18fde2820af998395aea9e30bb1138b2 inherit pub_methods_classStelModule"><td class="mdescLeft">&#160;</td><td class="mdescRight">Execute all the drawing functions for this module.  <a href="classStelModule.html#a18fde2820af998395aea9e30bb1138b2">More...</a><br /></td></tr>
+<tr class="separator:a18fde2820af998395aea9e30bb1138b2 inherit pub_methods_classStelModule"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a955b2acdb02932050b8ff363a5bc3d38 inherit pub_methods_classStelModule"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classStelModule.html#a955b2acdb02932050b8ff363a5bc3d38">update</a> (double deltaTime)</td></tr>
+<tr class="memdesc:a955b2acdb02932050b8ff363a5bc3d38 inherit pub_methods_classStelModule"><td class="mdescLeft">&#160;</td><td class="mdescRight">Update the module with respect to the time.  <a href="classStelModule.html#a955b2acdb02932050b8ff363a5bc3d38">More...</a><br /></td></tr>
+<tr class="separator:a955b2acdb02932050b8ff363a5bc3d38 inherit pub_methods_classStelModule"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a77a84896bdac138781068c42b2058e35 inherit pub_methods_classStelModule"><td class="memItemLeft" align="right" valign="top"><a id="a77a84896bdac138781068c42b2058e35"></a>
 virtual QString&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classStelModule.html#a77a84896bdac138781068c42b2058e35">getModuleVersion</a> () const</td></tr>
 <tr class="memdesc:a77a84896bdac138781068c42b2058e35 inherit pub_methods_classStelModule"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the version of the module, default is stellarium main version. <br /></td></tr>
@@ -276,63 +279,6 @@ Additional Inherited Members</h2></td></tr>
       </table>
 </div><div class="memdoc">
 <p>This function writes directly to the file. See the note on why QSettings was not used in the description of <a class="el" href="classSolarSystemEditor.html#a917cb9876f79986fc142f88b0348fa87" title="Adds new entries at the end of the user solar system configuration file.">appendToSolarSystemConfigurationFile(QList&lt;SsoElements&gt;)</a> Duplicates are removed: If any section in the file matches the "section_name" value of the inserted entry, it is removed. </p>
-
-</div>
-</div>
-<a id="a8c1ae9538211ba5bd3723d7ffe95fb6f"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a8c1ae9538211ba5bd3723d7ffe95fb6f">&#9670;&nbsp;</a></span>deinit()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">virtual void SolarSystemEditor::deinit </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">virtual</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-<p>Useful for stopping processes, unloading textures, etc. </p>
-
-<p>Reimplemented from <a class="el" href="classStelModule.html#ad2655f22c4eb31d09f1a826ac4c7611f">StelModule</a>.</p>
-
-</div>
-</div>
-<a id="abdf9856f58179b326a5a3621f4fd9be1"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#abdf9856f58179b326a5a3621f4fd9be1">&#9670;&nbsp;</a></span>draw()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">virtual void SolarSystemEditor::draw </td>
-          <td>(</td>
-          <td class="paramtype"><a class="el" href="classStelCore.html">StelCore</a> *&#160;</td>
-          <td class="paramname"><em>core</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">virtual</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-<p>Dialog windows don't need explicit drawing, it's done automatically. </p>
-
-<p>Reimplemented from <a class="el" href="classStelModule.html#a18fde2820af998395aea9e30bb1138b2">StelModule</a>.</p>
 
 </div>
 </div>
@@ -626,7 +572,7 @@ false if there was an error </dd></dl>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Sat Dec 25 2021 16:56:51 for Stellarium by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Sat Apr 16 2022 18:39:26 for Stellarium by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.17
 </small></address>

@@ -212,10 +212,10 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a3c63d0c06fa1b6977c4e0e351cd2cdce"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classStelApp.html#a3c63d0c06fa1b6977c4e0e351cd2cdce">StelApp</a> (<a class="el" href="classStelMainView.html">StelMainView</a> *parent)</td></tr>
 <tr class="memdesc:a3c63d0c06fa1b6977c4e0e351cd2cdce"><td class="mdescLeft">&#160;</td><td class="mdescRight">Create and initialize the main Stellarium application.  <a href="classStelApp.html#a3c63d0c06fa1b6977c4e0e351cd2cdce">More...</a><br /></td></tr>
 <tr class="separator:a3c63d0c06fa1b6977c4e0e351cd2cdce"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a9bc3af0334306025b474902562c25402"><td class="memItemLeft" align="right" valign="top"><a id="a9bc3af0334306025b474902562c25402"></a>
-virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classStelApp.html#a9bc3af0334306025b474902562c25402">~StelApp</a> ()</td></tr>
-<tr class="memdesc:a9bc3af0334306025b474902562c25402"><td class="mdescLeft">&#160;</td><td class="mdescRight">Deinitialize and destroy the main Stellarium application. <br /></td></tr>
-<tr class="separator:a9bc3af0334306025b474902562c25402"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1eb0e4c4f5fba4a19bf55c5718b4d7f6"><td class="memItemLeft" align="right" valign="top"><a id="a1eb0e4c4f5fba4a19bf55c5718b4d7f6"></a>
+virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classStelApp.html#a1eb0e4c4f5fba4a19bf55c5718b4d7f6">~StelApp</a> () Q_DECL_OVERRIDE</td></tr>
+<tr class="memdesc:a1eb0e4c4f5fba4a19bf55c5718b4d7f6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Deinitialize and destroy the main Stellarium application. <br /></td></tr>
+<tr class="separator:a1eb0e4c4f5fba4a19bf55c5718b4d7f6"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a9bf1b6b1d25123290b6d5e1db050fb61"><td class="memItemLeft" align="right" valign="top"><a id="a9bf1b6b1d25123290b6d5e1db050fb61"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classStelApp.html#a9bf1b6b1d25123290b6d5e1db050fb61">init</a> (QSettings *conf)</td></tr>
 <tr class="memdesc:a9bf1b6b1d25123290b6d5e1db050fb61"><td class="mdescLeft">&#160;</td><td class="mdescRight">Initialize core and all the modules. <br /></td></tr>
@@ -275,6 +275,20 @@ void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="clas
 <tr class="memitem:a040bc6ca01b8d53b3d209c9864108883"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classStelCore.html">StelCore</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classStelApp.html#a040bc6ca01b8d53b3d209c9864108883">getCore</a> () const</td></tr>
 <tr class="memdesc:a040bc6ca01b8d53b3d209c9864108883"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the core of the program.  <a href="classStelApp.html#a040bc6ca01b8d53b3d209c9864108883">More...</a><br /></td></tr>
 <tr class="separator:a040bc6ca01b8d53b3d209c9864108883"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af5e60408fd2b2ba4d91fcb19ac8a5bce"><td class="memItemLeft" align="right" valign="top"><a id="af5e60408fd2b2ba4d91fcb19ac8a5bce"></a>
+quint32&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classStelApp.html#af5e60408fd2b2ba4d91fcb19ac8a5bce">getRand</a> () const</td></tr>
+<tr class="memdesc:af5e60408fd2b2ba4d91fcb19ac8a5bce"><td class="mdescLeft">&#160;</td><td class="mdescRight">get a pseudo-random integer <br /></td></tr>
+<tr class="separator:af5e60408fd2b2ba4d91fcb19ac8a5bce"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3392730f6ec77ea5b99daf2ee286cb59"><td class="memItemLeft" align="right" valign="top"><a id="a3392730f6ec77ea5b99daf2ee286cb59"></a>
+int&#160;</td><td class="memItemRight" valign="bottom"><b>getRandBounded</b> (int lowest, int highest) const</td></tr>
+<tr class="separator:a3392730f6ec77ea5b99daf2ee286cb59"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac5a3e2724106a12bce778bfbbb3ad2aa"><td class="memItemLeft" align="right" valign="top"><a id="ac5a3e2724106a12bce778bfbbb3ad2aa"></a>
+float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classStelApp.html#ac5a3e2724106a12bce778bfbbb3ad2aa">getRandF</a> () const</td></tr>
+<tr class="memdesc:ac5a3e2724106a12bce778bfbbb3ad2aa"><td class="mdescLeft">&#160;</td><td class="mdescRight">shortcut to retrieve a random float [0...1). <br /></td></tr>
+<tr class="separator:ac5a3e2724106a12bce778bfbbb3ad2aa"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aca268209751e8ca155bec2b5a1d32a4b"><td class="memItemLeft" align="right" valign="top"><a id="aca268209751e8ca155bec2b5a1d32a4b"></a>
+float&#160;</td><td class="memItemRight" valign="bottom"><b>getRandFp1</b> () const</td></tr>
+<tr class="separator:aca268209751e8ca155bec2b5a1d32a4b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a6b6c63b5e61438a29ea1a7ef97471d29"><td class="memItemLeft" align="right" valign="top"><a id="a6b6c63b5e61438a29ea1a7ef97471d29"></a>
 QNetworkAccessManager *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classStelApp.html#a6b6c63b5e61438a29ea1a7ef97471d29">getNetworkAccessManager</a> () const</td></tr>
 <tr class="memdesc:a6b6c63b5e61438a29ea1a7ef97471d29"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the common instance of QNetworkAccessManager used in stellarium. <br /></td></tr>
@@ -950,7 +964,7 @@ class&#160;</td><td class="memItemRight" valign="bottom"><b>StelRootItem</b></td
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Sat Dec 25 2021 16:56:51 for Stellarium by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Sat Apr 16 2022 18:39:26 for Stellarium by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.17
 </small></address>
