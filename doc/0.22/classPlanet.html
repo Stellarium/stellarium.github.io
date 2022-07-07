@@ -21,7 +21,7 @@
   <td id="projectlogo"><img alt="Logo" src="stellarium-logo.png"/></td>
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">Stellarium
-   &#160;<span id="projectnumber">0.22.1</span>
+   &#160;<span id="projectnumber">0.22.2</span>
    </div>
   </td>
  </tr>
@@ -190,6 +190,14 @@ virtual <a class="el" href="classVector3.html">Vec3f</a>&#160;</td><td class="me
 virtual QString&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPlanet.html#a0ea3c68a1cb723b1617ded9735f73281">getType</a> (void) const Q_DECL_OVERRIDE</td></tr>
 <tr class="memdesc:a0ea3c68a1cb723b1617ded9735f73281"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return object's type. It should be the name of the class. <br /></td></tr>
 <tr class="separator:a0ea3c68a1cb723b1617ded9735f73281"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab392f038a37a5ddfbea11ab82a002893"><td class="memItemLeft" align="right" valign="top"><a id="ab392f038a37a5ddfbea11ab82a002893"></a>
+virtual QString&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPlanet.html#ab392f038a37a5ddfbea11ab82a002893">getObjectType</a> (void) const Q_DECL_OVERRIDE</td></tr>
+<tr class="memdesc:ab392f038a37a5ddfbea11ab82a002893"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return object's type. It should be English lowercase name of the type of the object. <br /></td></tr>
+<tr class="separator:ab392f038a37a5ddfbea11ab82a002893"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a794c233f1189cfa3c551c430970ba16e"><td class="memItemLeft" align="right" valign="top"><a id="a794c233f1189cfa3c551c430970ba16e"></a>
+virtual QString&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPlanet.html#a794c233f1189cfa3c551c430970ba16e">getObjectTypeI18n</a> (void) const Q_DECL_OVERRIDE</td></tr>
+<tr class="memdesc:a794c233f1189cfa3c551c430970ba16e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return object's type. It should be translated lowercase name of the type of the object. <br /></td></tr>
+<tr class="separator:a794c233f1189cfa3c551c430970ba16e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad21fe3c55285db18100352a4a2661655"><td class="memItemLeft" align="right" valign="top">virtual QString&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPlanet.html#ad21fe3c55285db18100352a4a2661655">getID</a> (void) const Q_DECL_OVERRIDE</td></tr>
 <tr class="memdesc:ad21fe3c55285db18100352a4a2661655"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns a unique identifier for this object.  <a href="classPlanet.html#ad21fe3c55285db18100352a4a2661655">More...</a><br /></td></tr>
 <tr class="separator:ad21fe3c55285db18100352a4a2661655"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -257,7 +265,7 @@ double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="cl
 <tr class="separator:a9b19077f207fc93ba780524403df1008"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad2855270d0ab2ea18b07f212b45f3f6d"><td class="memItemLeft" align="right" valign="top"><a id="ad2855270d0ab2ea18b07f212b45f3f6d"></a>
 virtual double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPlanet.html#ad2855270d0ab2ea18b07f212b45f3f6d">getSiderealPeriod</a> (void) const</td></tr>
-<tr class="memdesc:ad2855270d0ab2ea18b07f212b45f3f6d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get duration of sidereal year. <br /></td></tr>
+<tr class="memdesc:ad2855270d0ab2ea18b07f212b45f3f6d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get duration of sidereal year [earth days]. <br /></td></tr>
 <tr class="separator:ad2855270d0ab2ea18b07f212b45f3f6d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae1ebf70ea87a390acb5ef86446d379e5"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPlanet.html#ae1ebf70ea87a390acb5ef86446d379e5">setSiderealPeriod</a> (const double siderealPeriod)</td></tr>
 <tr class="memdesc:ae1ebf70ea87a390acb5ef86446d379e5"><td class="mdescLeft">&#160;</td><td class="mdescRight">set duration of sidereal year.  <a href="classPlanet.html#ae1ebf70ea87a390acb5ef86446d379e5">More...</a><br /></td></tr>
@@ -1381,12 +1389,15 @@ Additional Inherited Members</h2></td></tr>
 <li>distance</li>
 <li>phase (result of getPhase)</li>
 <li>illumination (=100*phase)</li>
-<li>phase-angle</li>
-<li>phase-angle-dms (formatted string)</li>
-<li>phase-angle-deg (formatted string)</li>
-<li>elongation</li>
-<li>elongation-dms (formatted string)</li>
-<li>elongation-deg (formatted string)</li>
+<li>phase-angle (radians)</li>
+<li>phase-angle-dms (formatted string; DMS)</li>
+<li>phase-angle-deg (formatted string; degrees)</li>
+<li>elongation (radians)</li>
+<li>elongation-dms (formatted string; DMS)</li>
+<li>elongation-deg (formatted string; degrees)</li>
+<li>ecl-elongation (elongation in ecliptic longitude or Δλ; on Earth only; radians)</li>
+<li>ecl-elongation-dms (elongation in ecliptic longitude or Δλ; on Earth only; formatted string; DMS)</li>
+<li>ecl-elongation-deg (elongation in ecliptic longitude or Δλ; on Earth only; formatted string; degrees)</li>
 <li>type (object type description)</li>
 <li>velocity (formatted string)</li>
 <li>heliocentric-velocity (formatted string)</li>
@@ -2006,7 +2017,7 @@ Limitation for efficiency: If this is a planet moon from another planet, we comp
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Sat Apr 16 2022 18:39:26 for Stellarium by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Thu Jul 7 2022 22:13:55 for Stellarium by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.17
 </small></address>

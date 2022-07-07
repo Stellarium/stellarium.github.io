@@ -21,7 +21,7 @@
   <td id="projectlogo"><img alt="Logo" src="stellarium-logo.png"/></td>
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">Stellarium
-   &#160;<span id="projectnumber">0.22.1</span>
+   &#160;<span id="projectnumber">0.22.2</span>
    </div>
   </td>
  </tr>
@@ -390,7 +390,7 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><b>visible</b></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<div class="textblock"><p>A exoplanet object represents one planetary system on the sky. Details about the exoplanets are passed using a QVariant which contains a map of data from the json file. </p>
+<div class="textblock"><p>An exoplanet object represents one extrasolar planetary system in the sky. Details about the exoplanets are passed using a QVariant which contains a map of data from the json file. </p>
 </div><table class="memberdecls">
 <tr><td colspan="2"><h3>Public Member Functions</h3></td></tr>
 <tr class="memitem:a1b7715b5eda5085e2bd01262e88560e9"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__exoplanets.html#a1b7715b5eda5085e2bd01262e88560e9">Exoplanet</a> (const QVariantMap &amp;map)</td></tr>
@@ -402,6 +402,14 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><b>visible</b></td></tr>
 virtual QString&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__exoplanets.html#ac94d0e08bb16531d829ee8979bec2417">getType</a> (void) const Q_DECL_OVERRIDE</td></tr>
 <tr class="memdesc:ac94d0e08bb16531d829ee8979bec2417"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the type of object. <br /></td></tr>
 <tr class="separator:ac94d0e08bb16531d829ee8979bec2417"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a587150c270006a659f4ef6f28f821fec"><td class="memItemLeft" align="right" valign="top"><a id="a587150c270006a659f4ef6f28f821fec"></a>
+virtual QString&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__exoplanets.html#a587150c270006a659f4ef6f28f821fec">getObjectType</a> (void) const Q_DECL_OVERRIDE</td></tr>
+<tr class="memdesc:a587150c270006a659f4ef6f28f821fec"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the type of object. <br /></td></tr>
+<tr class="separator:a587150c270006a659f4ef6f28f821fec"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acddc66a2fb84d7e23fdc51ba7a58606c"><td class="memItemLeft" align="right" valign="top"><a id="acddc66a2fb84d7e23fdc51ba7a58606c"></a>
+virtual QString&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__exoplanets.html#acddc66a2fb84d7e23fdc51ba7a58606c">getObjectTypeI18n</a> (void) const Q_DECL_OVERRIDE</td></tr>
+<tr class="memdesc:acddc66a2fb84d7e23fdc51ba7a58606c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return object's type. It should be translated lowercase name of the type of the object. <br /></td></tr>
+<tr class="separator:acddc66a2fb84d7e23fdc51ba7a58606c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a4c26550003171839b757346b247a74a7"><td class="memItemLeft" align="right" valign="top">virtual QString&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__exoplanets.html#a4c26550003171839b757346b247a74a7">getID</a> (void) const Q_DECL_OVERRIDE</td></tr>
 <tr class="memdesc:a4c26550003171839b757346b247a74a7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns a unique identifier for this object.  <a href="group__exoplanets.html#a4c26550003171839b757346b247a74a7">More...</a><br /></td></tr>
 <tr class="separator:a4c26550003171839b757346b247a74a7"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -453,8 +461,7 @@ QStringList&#160;</td><td class="memItemRight" valign="bottom"><b>getExoplanetsN
 <tr class="memitem:a6b57ab4184deffff1dde4610bc43893a"><td class="memItemLeft" align="right" valign="top"><a id="a6b57ab4184deffff1dde4610bc43893a"></a>
 QStringList&#160;</td><td class="memItemRight" valign="bottom"><b>getExoplanetsDesignations</b> (void) const</td></tr>
 <tr class="separator:a6b57ab4184deffff1dde4610bc43893a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:acd9f6d94030cdc6ea66f2198e7875dd4"><td class="memItemLeft" align="right" valign="top"><a id="acd9f6d94030cdc6ea66f2198e7875dd4"></a>
-bool&#160;</td><td class="memItemRight" valign="bottom"><b>isDiscovered</b> (const <a class="el" href="classStelCore.html">StelCore</a> *core)</td></tr>
+<tr class="memitem:acd9f6d94030cdc6ea66f2198e7875dd4"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__exoplanets.html#acd9f6d94030cdc6ea66f2198e7875dd4">isDiscovered</a> (const <a class="el" href="classStelCore.html">StelCore</a> *core)</td></tr>
 <tr class="separator:acd9f6d94030cdc6ea66f2198e7875dd4"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab42a51481344a9583a6ec8e0d3c324a3"><td class="memItemLeft" align="right" valign="top"><a id="ab42a51481344a9583a6ec8e0d3c324a3"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><b>update</b> (double deltaTime)</td></tr>
@@ -791,6 +798,25 @@ Additional Inherited Members</h2></td></tr>
 
 </div>
 </div>
+<a id="acd9f6d94030cdc6ea66f2198e7875dd4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#acd9f6d94030cdc6ea66f2198e7875dd4">&#9670;&nbsp;</a></span>isDiscovered()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool Exoplanet::isDiscovered </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classStelCore.html">StelCore</a> *&#160;</td>
+          <td class="paramname"><em>core</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<dl class="section return"><dt>Returns</dt><dd>whether system has been discovered by the current year. </dd></dl>
+
+</div>
+</div>
 
 </div>
 </div>
@@ -946,6 +972,21 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>markerColorChanged</b
 <tr class="memitem:ad6b01fe040270eab688048ab9200d526"><td class="memItemLeft" align="right" valign="top"><a id="ad6b01fe040270eab688048ab9200d526"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><b>habitableColorChanged</b> (<a class="el" href="classVector3.html">Vec3f</a>)</td></tr>
 <tr class="separator:ad6b01fe040270eab688048ab9200d526"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8f224b1a45def36f86a9725fadefd2cb"><td class="memItemLeft" align="right" valign="top"><a id="a8f224b1a45def36f86a9725fadefd2cb"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>displayModeChanged</b> (bool)</td></tr>
+<tr class="separator:a8f224b1a45def36f86a9725fadefd2cb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a286518b093fa90d41375e17b6661959a"><td class="memItemLeft" align="right" valign="top"><a id="a286518b093fa90d41375e17b6661959a"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>timelineModeChanged</b> (bool)</td></tr>
+<tr class="separator:a286518b093fa90d41375e17b6661959a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5260a29cba433210497e6bd7bfee23c2"><td class="memItemLeft" align="right" valign="top"><a id="a5260a29cba433210497e6bd7bfee23c2"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>habitableModeChanged</b> (bool)</td></tr>
+<tr class="separator:a5260a29cba433210497e6bd7bfee23c2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abd75b1475ef443423f741be477de125b"><td class="memItemLeft" align="right" valign="top"><a id="abd75b1475ef443423f741be477de125b"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>flagShowExoplanetsDesignationsChanged</b> (bool)</td></tr>
+<tr class="separator:abd75b1475ef443423f741be477de125b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a61f507a4fc753a9d80a42fd1b0409c34"><td class="memItemLeft" align="right" valign="top"><a id="a61f507a4fc753a9d80a42fd1b0409c34"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>flagShowExoplanetsNumbersChanged</b> (bool)</td></tr>
+<tr class="separator:a61f507a4fc753a9d80a42fd1b0409c34"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr><td colspan="2"><h3>Public Member Functions</h3></td></tr>
 <tr class="memitem:a888f01de862ae4cb32f427aed88451ec"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__exoplanets.html#a888f01de862ae4cb32f427aed88451ec">init</a> () Q_DECL_OVERRIDE</td></tr>
 <tr class="memdesc:a888f01de862ae4cb32f427aed88451ec"><td class="mdescLeft">&#160;</td><td class="mdescRight">Initialize itself.  <a href="group__exoplanets.html#a888f01de862ae4cb32f427aed88451ec">More...</a><br /></td></tr>
@@ -1099,6 +1140,21 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><b>showExoplanets</b></t
 <tr class="memitem:ab829903c43951cd3956dff20534d344e"><td class="memItemLeft" align="right" valign="top"><a id="ab829903c43951cd3956dff20534d344e"></a>
 <a class="el" href="classVector3.html">Vec3f</a>&#160;</td><td class="memItemRight" valign="bottom"><b>habitableColor</b></td></tr>
 <tr class="separator:ab829903c43951cd3956dff20534d344e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a51426fdcc4e893276ca05e602c39a71f"><td class="memItemLeft" align="right" valign="top"><a id="a51426fdcc4e893276ca05e602c39a71f"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><b>flagDisplayMode</b></td></tr>
+<tr class="separator:a51426fdcc4e893276ca05e602c39a71f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0892f1a9731589254e514c5a1130e4b5"><td class="memItemLeft" align="right" valign="top"><a id="a0892f1a9731589254e514c5a1130e4b5"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><b>flagTimelineMode</b></td></tr>
+<tr class="separator:a0892f1a9731589254e514c5a1130e4b5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8b4edb39a19139905019578bd2601f3d"><td class="memItemLeft" align="right" valign="top"><a id="a8b4edb39a19139905019578bd2601f3d"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><b>flagHabitableMode</b></td></tr>
+<tr class="separator:a8b4edb39a19139905019578bd2601f3d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3374d0f6c19f31e977b07ed8cd1c3367"><td class="memItemLeft" align="right" valign="top"><a id="a3374d0f6c19f31e977b07ed8cd1c3367"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><b>flagShowExoplanetsDesignations</b></td></tr>
+<tr class="separator:a3374d0f6c19f31e977b07ed8cd1c3367"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aedaa8868e1d075e4e3a50ad33843e1b9"><td class="memItemLeft" align="right" valign="top"><a id="aedaa8868e1d075e4e3a50ad33843e1b9"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><b>flagShowExoplanetsNumbers</b></td></tr>
+<tr class="separator:aedaa8868e1d075e4e3a50ad33843e1b9"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="inherited"></a>
 Additional Inherited Members</h2></td></tr>
@@ -2263,7 +2319,7 @@ Additional Inherited Members</h2></td></tr>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Sat Apr 16 2022 18:39:25 for Stellarium by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Thu Jul 7 2022 22:13:53 for Stellarium by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.17
 </small></address>
