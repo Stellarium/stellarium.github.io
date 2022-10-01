@@ -1,8 +1,8 @@
 # Translations template for stellarium-website.
-# Copyright (C) 2021 Stellarium's team
+# Copyright (C) 2022 Stellarium's team
 # This file is distributed under the same license as the stellarium-website
 # project.
-# FIRST AUTHOR <EMAIL@ADDRESS>, 2021.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2022.
 # 
 # Translators:
 # Alexander V. Wolf <alex.v.wolf@gmail.com>, 2017
@@ -12,22 +12,23 @@
 # Carlos Roberto Almeida França <crafranca@gmail.com>, 2021
 # Tiago Flach, 2021
 # Isaac Pinheiro <isaacpnh@gmail.com>, 2022
+# Wagner Marques Oliveira <wagnermarques00@gmail.com>, 2022
 # 
 #, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: stellarium-website 1.0\n"
 "Report-Msgid-Bugs-To: stellarium@googlegroups.com\n"
-"POT-Creation-Date: 2021-10-07 22:21+0700\n"
+"POT-Creation-Date: 2022-05-02 17:20+0700\n"
 "PO-Revision-Date: 2017-11-29 10:47+0000\n"
-"Last-Translator: Isaac Pinheiro <isaacpnh@gmail.com>, 2022\n"
+"Last-Translator: Wagner Marques Oliveira <wagnermarques00@gmail.com>, 2022\n"
 "Language-Team: Portuguese (Brazil) (https://www.transifex.com/stellarium/teams/80998/pt_BR/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Generated-By: Babel 2.6.0\n"
 "Language: pt_BR\n"
-"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+"Plural-Forms: nplurals=3; plural=(n == 0 || n == 1) ? 0 : n != 0 && n % 1000000 == 0 ? 1 : 2;\n"
 
 #: _includes/header.html:1
 msgid "latest version is"
@@ -37,17 +38,13 @@ msgstr "a última versão é"
 msgid "source"
 msgstr "código-fonte"
 
-#: _includes/header.html:11 _includes/header.html:14 _includes/header.html:20
-msgid "64 bit"
-msgstr "64 bit"
-
-#: _includes/header.html:17
+#: _includes/header.html:20
 msgid "32 bit"
 msgstr "32 bit"
 
-#: _includes/header.html:26
-msgid "User Guide"
-msgstr "Guia do usuário"
+#: _includes/header.html:23
+msgid "64 bit"
+msgstr "64 bit"
 
 #: _includes/home.html:2
 msgid ""
@@ -59,11 +56,7 @@ msgstr ""
 "computador. Ele mostra um céu realista em três dimensões, da forma como você"
 " o vê a olho nu, com um binóculo ou com um telescópio."
 
-#: _includes/home.html:5
-msgid "Try the Web Version"
-msgstr "Experimente a versão da web"
-
-#: _includes/home.html:13 _includes/home.html:16 _layouts/screenshots.html:12
+#: _includes/home.html:9 _includes/home.html:12 _layouts/screenshots.html:12
 msgid ""
 "A shooting star flashes past the Jupiter. You can select different "
 "intensities in the View window."
@@ -71,12 +64,12 @@ msgstr ""
 "Uma estrela cadente cintila atrás de Júpiter. Você pode selecionar "
 "diferentes intensidades na janela Visualização."
 
-#: _includes/home.html:17 _includes/home.html:26 _includes/home.html:34
-#: _includes/home.html:43 _includes/home.html:52
+#: _includes/home.html:13 _includes/home.html:22 _includes/home.html:30
+#: _includes/home.html:39 _includes/home.html:48
 msgid "view screenshots"
 msgstr "visualizar capturas de tela"
 
-#: _includes/home.html:22 _layouts/screenshots.html:17
+#: _includes/home.html:18 _layouts/screenshots.html:17
 msgid ""
 "The great nebula in Orion. Press N to bring up the nebula labels. Also shown"
 " are constellation lines, press C to show or hide them."
@@ -85,27 +78,27 @@ msgstr ""
 "nebulosas. Aqui são mostradas também as linhas das constelações; pressione C"
 " para exibi-las ou ocultá-las."
 
-#: _includes/home.html:25
+#: _includes/home.html:21
 msgid "The great nebula in Orion. Press N to bring up the nebula labels."
 msgstr ""
 "A grande nebulosa de Órion. Pressione N para exibir as identificações das "
 "nebulosas."
 
-#: _includes/home.html:30 _includes/home.html:33 _layouts/screenshots.html:16
+#: _includes/home.html:26 _includes/home.html:29 _layouts/screenshots.html:16
 msgid "The dance of the planets above ESO headquarters, near Munich."
 msgstr "A dança dos planetas sobre a sede do OES, perto de Munique."
 
-#: _includes/home.html:39 _includes/home.html:42 _layouts/screenshots.html:11
+#: _includes/home.html:35 _includes/home.html:38 _layouts/screenshots.html:11
 msgid "Full sky view of the constellations, their boundaries, the Milky Way."
 msgstr ""
 "Visão plena do céu, em que é possível observar as constelações, os seus "
 "limites e a Via Láctea."
 
-#: _includes/home.html:48 _includes/home.html:51 _layouts/screenshots.html:13
+#: _includes/home.html:44 _includes/home.html:47 _layouts/screenshots.html:13
 msgid "Constellation art turned on."
 msgstr "Imagens das constelações ativadas."
 
-#: _includes/home.html:57
+#: _includes/home.html:53
 msgid "Click on the picture to the left for details."
 msgstr "Clique na imagem à esquerda para obter mais detalhes."
 
@@ -121,10 +114,16 @@ msgid ""
 "has declared the QtScript module deprecated, so the API may change again a "
 "bit. It will remain available in later Qt5 versions, though."
 msgstr ""
+"Como na versão 0.10.1, o Stellarium usa a engine QtScript. A versão anterior"
+" do StratoScript não está mais disponível. Mesmm na versão 0.16, as "
+"capacidades de scripting do Stellarium e de sua API mudaram conforme o "
+"desenvolvimento continuou. Qt5.8 declarou que o módulo QtScript foi "
+"descontinuado, então a API vai mudar um pouco de novo. Mesmo assim, vai "
+"permanecer disponível nas versôes posteriores a Qt5."
 
 #: _layouts/scripts.html:12
 msgid "installing scripts"
-msgstr ""
+msgstr "Instalando scripts"
 
 #: _layouts/scripts.html:13
 msgid ""
@@ -134,6 +133,11 @@ msgid ""
 "older versions of Stellarium, and the instructions provided with the script "
 "may be out of date."
 msgstr ""
+"Para instalar um script, copie o arquivo de script (extensão .ssc) e todos "
+"os arquivos de textura que ele usará para o subdiretório de scripts do "
+"diretório de dados do usuário. As instruções com muitos desses scripts "
+"doados pela comunidade podem datar de versões mais antigas do Stellarium, e "
+"as instruções fornecidas com o script podem estar desatualizadas."
 
 #: _layouts/docs.html:14 _layouts/scripts.html:15
 msgid "api documentation"
@@ -146,8 +150,12 @@ msgid ""
 ".../stellarium/builds/doc/html which contains the API documentation in HTML "
 "format or you follow this link <a href='/doc/head/'>Doxygen-API</a>"
 msgstr ""
+"Depois de construir o próprio Stellarium a partir do código Git, faça 'make "
+"apidoc' (você precisa do Doxygen instalado). Isso criará um diretório: "
+".../stellarium/builds/doc/html que contém a documentação da API em formato "
+"HTML ou clique neste link <a href='/doc/head/'>Doxygen-API</a>"
 
-#: _layouts/index.html:117 _layouts/scripts.html:20
+#: _layouts/index.html:118 _layouts/scripts.html:20
 msgid "scripts"
 msgstr "apresentações"
 
@@ -262,7 +270,7 @@ msgstr "regiões polares"
 msgid "special"
 msgstr "especial"
 
-#: _layouts/index.html:118 _layouts/landscapes-africa.html:23
+#: _layouts/index.html:119 _layouts/landscapes-africa.html:23
 #: _layouts/landscapes-africa.html:28 _layouts/landscapes-asia.html:23
 #: _layouts/landscapes-asia.html:28 _layouts/landscapes-australasia.html:23
 #: _layouts/landscapes-australasia.html:28 _layouts/landscapes-europe.html:23
@@ -359,6 +367,8 @@ msgid ""
 "We have few user contributed sky cultures which are not included into "
 "default package for some reasons."
 msgstr ""
+"Temos poucas culturas celestes contribuídas por usuários que não estão "
+"incluídas no pacote padrão por alguns motivos."
 
 #: _layouts/skycultures-list.html:12 _layouts/skycultures.html:12
 msgid "list of sky cultures"
@@ -373,6 +383,8 @@ msgid ""
 "After you have downloaded the .zip file for a sky culture from this page, "
 "you need to install it in Stellarium."
 msgstr ""
+"Depois de baixar o arquivo .zip para uma cultura celeste nesta página, você "
+"precisa instalá-lo no Stellarium."
 
 #: _layouts/landscapes.html:38 _layouts/skycultures.html:19
 msgid "manual"
@@ -381,24 +393,32 @@ msgstr "manual"
 #: _layouts/skycultures.html:20
 msgid "Please follow this procedure to install a sky culture package:"
 msgstr ""
+"Por favor siga este procedimento para instalar um pacote de cultura celeste."
 
 #: _layouts/landscapes.html:41 _layouts/skycultures.html:22
 msgid ""
 "Browse to your User Data Directory, which varies according to your operating"
 " system."
 msgstr ""
+"Navegue para o seu Diretório de Dados do Usuário, que varia de acordo com o "
+"seu sistema operacional."
 
 #: _layouts/skycultures.html:23
 msgid ""
 "Create a sub-directory called <em>skycultures</em> in your user directory "
 "(if it doesn't exist)."
 msgstr ""
+"Crie um subdiretório chamado <em>skycultures</em> em seu diretório de "
+"usuário (se não existir)."
 
 #: _layouts/skycultures.html:24
 msgid ""
 "Unzip the sky culture .zip file in the <em>skycultures</em> directory (if "
 "it's done right, a sub-directory should be created for each sky culture)."
 msgstr ""
+"Descompacte o arquivo .zip da cultura celeste no diretório "
+"<em>skycultures</em> (se for feito corretamente, um subdiretório deve ser "
+"criado para cada cultura celeste)."
 
 #: _layouts/landscapes.html:45 _layouts/skycultures.html:26
 msgid "contributions"
@@ -409,6 +429,8 @@ msgid ""
 "Please feel free to contribute your own custom sky culture here. Make "
 "thumbnails 300x170 pixels to fit with the rest of the page."
 msgstr ""
+"Por favor sinta-se livre para contribuir com a sua própria cultura celeste "
+"aqui. Crie miniaturas de 300x170 pixels para encaixar com o resto da página."
 
 #: _layouts/skycultures.html:28
 msgid ""
@@ -416,10 +438,14 @@ msgid ""
 "Guide, and examine existing sky cultures. If you are having problems, "
 "posting to the forums is a good way to get some advice."
 msgstr ""
+"Para saber mais sobre como criar uma cultura celeste, consulte o Guia de "
+"Usuário do Stellarium e examine as culturas do céu existentes. Se você "
+"estiver tendo problemas, postar nos fóruns é uma boa maneira de obter alguns"
+" conselhos."
 
 #: _layouts/landscapes.html:48 _layouts/skycultures.html:29
 msgid "important note on image dimensions"
-msgstr ""
+msgstr "nota importante nas dimensões de imagem"
 
 #: _layouts/landscapes.html:49 _layouts/skycultures.html:30
 msgid ""
@@ -427,6 +453,9 @@ msgid ""
 "of 2, i.e. 256, 512, 1024, 2048, 4096, 8192, 16384, ... e.g. 4096 by 1024, "
 "2048 by 2048 and so on."
 msgstr ""
+"IMPORTANTE: Certifique-se de que todas as texturas tenham dimensões que "
+"sejam potências inteiras de 2, ou seja, 256, 512, 1024, 2048, 4096, 8192, "
+"16384, ... ex. 4096 por 1024, 2048 por 2048 e assim por diante."
 
 #: _layouts/landscapes.html:50 _layouts/skycultures.html:31
 msgid ""
@@ -434,12 +463,18 @@ msgid ""
 " with different image dimensions, but many will not display properly, suffer"
 " vastly reduced frame rates, and even crash the computer."
 msgstr ""
+"Isto é uma limitação do OpenGl. Alguns hardwares de vídeo funcionarão bem "
+"com imagens com dimensões de imagem diferentes, mas muitos não serão "
+"exibidos corretamente, sofrerão taxas de quadros muito reduzidas e até "
+"travarão o computador."
 
 #: _layouts/skycultures.html:32
 msgid ""
 "Please make sure all contributed sky cultures conform to these requirements,"
 " or your link may be removed."
 msgstr ""
+"Certifique-se de que todas as culturas do céu contribuídas estejam em "
+"conformidade com esses requisitos, ou seu link poderá ser removido."
 
 #: _layouts/landscapes.html:52 _layouts/skycultures.html:33
 msgid ""
@@ -447,10 +482,13 @@ msgid ""
 "textures. This is hardware and driver dependent. A typical maximum image "
 "size is 2048x2048 or 4096x4096."
 msgstr ""
+"Esteja ciente de que o hardware de vídeo de muitas pessoas não consegue "
+"lidar com texturas muito grandes. Isso depende do hardware e do driver. Um "
+"tamanho de imagem máximo típico é 2048x2048 ou 4096x4096."
 
 #: _layouts/landscapes.html:53 _layouts/skycultures.html:34
 msgid "package contents"
-msgstr ""
+msgstr "conteúdo do pacote"
 
 #: _layouts/skycultures.html:35
 msgid ""
@@ -458,6 +496,9 @@ msgid ""
 "directory in the .zip file. This should be unique to your sky culture, and "
 "it would be nice if it was all lower-case with no spaces."
 msgstr ""
+"Por favor, empacote sua cultura celeste em um arquivo .zip com todos os "
+"arquivos dentro de um diretório no arquivo .zip. Isso deve ser único da sua "
+"cultura celeste, e seria bom se tudo fosse em letras minúsculas sem espaços."
 
 #: _layouts/skycultures.html:36
 msgid ""
@@ -465,10 +506,13 @@ msgid ""
 "culture and specifies any usage restrictions or licensing terms for the "
 "images used in the sky culture."
 msgstr ""
+"Você também deve incluir um arquivo description.en.utf8 que descreva a "
+"cultura celeste e especifique quaisquer restrições de uso ou termos de "
+"licenciamento para as imagens usadas na cultura celeste."
 
 #: _layouts/landscapes.html:56 _layouts/skycultures.html:37
 msgid "licensing"
-msgstr ""
+msgstr "licenciamento"
 
 #: _layouts/skycultures.html:38
 msgid ""
@@ -478,6 +522,12 @@ msgid ""
 "terms of some agreement with the copyright holder (e.g. Creative Commons "
 "licensed images found on the web)."
 msgstr ""
+"Antes de distribuir imagens como parte de uma cultura celeste do Stellarium,"
+" certifique-se de que tem direito legal - você deve ser o detentor dos "
+"direitos autorais das imagens ou poder distribuí-las para uso com o "
+"Stellarium sob os termos de algum contrato com o detentor dos direitos "
+"autorais (por exemplo, imagens licenciadas Creative Commons encontradas na "
+"web)."
 
 #: _layouts/skycultures.html:39
 msgid ""
@@ -485,16 +535,21 @@ msgid ""
 "sky culture. This should be done in the description.en.utf8 file (and value "
 "for option 'license' in info.ini file) inside the .zip file."
 msgstr ""
+"É importante declarar explicitamente que uso pode ser feito das imagens para"
+" sua cultura  celeste. Isso deve ser feito no arquivo description.en.utf8 (e"
+" valor para a opção 'license' no arquivo info.ini) dentro do arquivo .zip."
 
 #: _layouts/landscapes.html:59 _layouts/skycultures.html:40
 msgid ""
 "We recommend an open source license compatible with Stellarium itself (i.e. "
 "the GNU GPL), or one of the Creative Commons licenses."
 msgstr ""
+"Recomendamos uma licença de código aberto compatível com o próprio "
+"Stellarium (ou seja, a GNU GPL), ou uma das licenças Creative Commons."
 
 #: _layouts/landscapes.html:60 _layouts/skycultures.html:41
 msgid "file encoding"
-msgstr ""
+msgstr "codificação de arquivo"
 
 #: _layouts/skycultures.html:42
 msgid ""
@@ -504,16 +559,25 @@ msgid ""
 "should work OK in Stellarium, but Windows users will have an ugly time "
 "reading the description.en.utf8 if it uses *nix-style newlines."
 msgstr ""
+"Os arquivos info.ini e description.en.utf8 devem ser texto codificado em "
+"UTF-8 ou ASCII simples. Provavelmente é uma boa ideia adotar a codificação "
+"de finalização de linha do Windows (ou seja, CR LF). Tanto o Windows quanto "
+"a codificação de finalização de linha no estilo *nix devem funcionar bem no "
+"Stellarium, mas os usuários do Windows terão um tempo ruim lendo o "
+"description.en.utf8 se ele usar novas linhas no estilo *nix."
 
 #: _layouts/landscapes.html:62 _layouts/skycultures.html:43
 msgid "need hosting?"
-msgstr ""
+msgstr "precisa de hospedagem?"
 
 #: _layouts/skycultures.html:44
 msgid ""
 "If you have a sky culture you would like to share but have no web-space to "
 "put it, email to any Stellarium developers and we'll put it on our site."
 msgstr ""
+"Se você tem uma cultura celeste que gostaria de compartilhar, mas não tem "
+"espaço na web para colocá-la, envie um e-mail para qualquer desenvolvedor do"
+" Stellarium e nós a colocaremos em nosso site."
 
 #: _layouts/sponsors.html:7
 msgid ""
@@ -595,7 +659,7 @@ msgstr ""
 
 #: _layouts/sponsors.html:39
 msgid "graphic designer"
-msgstr ""
+msgstr "designer gráfico"
 
 #: _layouts/sponsors.html:40
 msgid "doc author/developer"
@@ -614,7 +678,7 @@ msgstr "testador"
 
 #: _layouts/sponsors.html:50
 msgid "continuous integration"
-msgstr ""
+msgstr "integração contínua"
 
 #: _layouts/sponsors.html:54
 msgid "friends"
@@ -622,13 +686,15 @@ msgstr "amigos"
 
 #: _layouts/landscapes.html:25
 msgid "how to install landscapes"
-msgstr ""
+msgstr "como instalar paisagens"
 
 #: _layouts/landscapes.html:26
 msgid ""
 "After you have downloaded the .zip file for a landscape from this page, you "
 "need to install it in Stellarium."
 msgstr ""
+"Depois de baixar o arquivo .zip para uma paisagem desta página, você precisa"
+" instalá-lo no Stellarium."
 
 #: _layouts/landscapes.html:27
 msgid "automatic"
@@ -639,17 +705,23 @@ msgid ""
 "If you have Stellarium 0.10.6 or later version, you can use the 'Add/remove "
 "landscapes' feature to install landscapes automatically:"
 msgstr ""
+"Se você tiver o Stellarium 0.10.6 ou versão posterior, poderá usar o recurso"
+" \"Adicionar/remover paisagens\" para instalar paisagens automaticamente:"
 
 #: _layouts/landscapes.html:30
 msgid ""
 "Open the 'Sky and viewing options' window by clicking on the appropriate "
 "button in the left button bar (or press the F4 key)."
 msgstr ""
+"Abra a janela \"Céu e opções de visualização\" clicando no botão apropriado "
+"na barra de botões esquerdo (ou pressione a tecla F4)."
 
 #: _layouts/landscapes.html:31
 msgid ""
 "The 'Add/remove landscapes' button is at the bottom of the 'Landscape' tab."
 msgstr ""
+"O botão \"Adicionar/remover paisagens\" está na parte inferior da guia "
+"\"Paisagem\"."
 
 #: _layouts/landscapes.html:32
 msgid ""
@@ -657,36 +729,50 @@ msgid ""
 " you to install .zip files containing landscapes. It also lists the user-"
 "installed landscapes and allows you to remove them."
 msgstr ""
+"Ao pressioná-lo, a janela '\"Adicionar/remover paisagens\" aparecerá. Ele "
+"permite que você instale arquivos .zip contendo paisagens. Ele também lista "
+"as paisagens instaladas pelo usuário e permite removê-las."
 
 #: _layouts/landscapes.html:34
 msgid ""
 "Note that while this makes installing landscapes easier, it may also cause "
 "you to overlook what else is included in the ZIP archive."
 msgstr ""
+"Observe que, embora isso facilite a instalação de paisagens, também pode "
+"fazer com que você ignore o que mais está incluído no arquivo .zip."
 
 #: _layouts/landscapes.html:35
 msgid ""
 "Landscape packages created without this feature in mind may contain other "
 "files, such as alternative textures in different sizes."
 msgstr ""
+"Os pacotes de paisagem criados sem esse recurso em mente podem conter outros"
+" arquivos, como texturas alternativas em tamanhos diferentes."
 
 #: _layouts/landscapes.html:39
 msgid ""
 "If you are using an earlier version of Stellarium, you can follow this "
 "procedure to install a landscape package:"
 msgstr ""
+"Se estiver usando uma versão anterior do Stellarium, você pode seguir este "
+"procedimento para instalar um pacote de paisagem:"
 
 #: _layouts/landscapes.html:42
 msgid ""
 "Create a sub-directory called <em>landscapes</em> in your user directory (if"
 " it doesn't exist)."
 msgstr ""
+"Crie um subdiretório chamado <em>landscapes</em> em seu diretório de usuário"
+" (se não existir)."
 
 #: _layouts/landscapes.html:43
 msgid ""
 "Unzip the landscape .zip file in the <em>landscapes</em> directory (if it's "
 "done right, a sub-directory should be created for each landscape)."
 msgstr ""
+"Descompacte o arquivo .zip de paisagem no diretório de <em>landscapes</em> "
+"(se for feito corretamente, um subdiretório deve ser criado para cada "
+"paisagem)."
 
 #: _layouts/landscapes.html:46
 msgid ""
@@ -696,6 +782,12 @@ msgid ""
 "altitude and planet for the location of the landscape (see one of the pre-"
 "existing landscapes for an example)."
 msgstr ""
+"Sinta-se à vontade para contribuir com suas próprias paisagens "
+"personalizadas aqui. Faça miniaturas de 200x114 pixels para caber no resto "
+"da página. Por favor, inclua uma seção de localização em seu arquivo "
+"landscape.ini com a longitude, latitude, altitude e planeta para a "
+"localização da paisagem (veja uma das paisagens pré-existentes para um "
+"exemplo)."
 
 #: _layouts/landscapes.html:47
 msgid ""
@@ -703,12 +795,17 @@ msgid ""
 "Guide, and examine existing landscapes. If you are having problems, posting "
 "to the forums is a good way to get some advice."
 msgstr ""
+"Para saber mais sobre como criar uma paisagem, consulte o Guia de Usuário do"
+" Stellarium e examine as paisagens existentes. Se você estiver tendo "
+"problemas, postar nos fóruns é uma boa maneira de obter alguns conselhos."
 
 #: _layouts/landscapes.html:51
 msgid ""
 "Please make sure all contributed landscapes conform to these requirements, "
 "or your link may be removed."
 msgstr ""
+"Certifique-se de que todos os cenários contribuídos estejam em conformidade "
+"com esses requisitos, ou seu link poderá ser removido."
 
 #: _layouts/landscapes.html:54
 msgid ""
@@ -716,6 +813,9 @@ msgid ""
 "directory in the .zip file. This should be unique to your landscape, and it "
 "would be nice if it was all lower-case with no spaces."
 msgstr ""
+"Por favor, empacote sua paisagem em um arquivo .zip com todos os arquivos "
+"dentro de um diretório no arquivo .zip. Isso deve ser exclusivo para sua "
+"paisagem, e seria bom se fosse tudo em letras minúsculas, sem espaços."
 
 #: _layouts/landscapes.html:55
 msgid ""
@@ -723,6 +823,9 @@ msgid ""
 "specifies any usage restrictions or licensing terms for the images used in "
 "the landscape."
 msgstr ""
+"Você também deve incluir um arquivo readme.txt que descreva a paisagem e "
+"especifique quaisquer restrições de uso ou termos de licenciamento para as "
+"imagens usadas na paisagem."
 
 #: _layouts/landscapes.html:57
 msgid ""
@@ -732,12 +835,20 @@ msgid ""
 "terms of some agreement with the copyright holder (e.g. Creative Commons "
 "licensed images found on the web)."
 msgstr ""
+"Antes de distribuir imagens como parte de um cenário Stellarium, certifique-"
+"se de que tem direito legal - você deve ser o detentor dos direitos autorais"
+" das imagens ou poder distribuí-las para uso com o Stellarium sob os termos "
+"de algum contrato com o detentor dos direitos autorais ( por exemplo, "
+"imagens licenciadas do Creative Commons encontradas na web)."
 
 #: _layouts/landscapes.html:58
 msgid ""
 "It is important to explicitly state what use may be made of images for your "
 "landscape. This should be done in the readme.txt file inside the .zip file."
 msgstr ""
+"É importante indicar explicitamente que uso pode ser feito de imagens para "
+"sua paisagem. Isso deve ser feito no arquivo readme.txt dentro do arquivo "
+".zip."
 
 #: _layouts/landscapes.html:61
 msgid ""
@@ -747,12 +858,21 @@ msgid ""
 "OK in Stellarium, but Windows users will have an ugly time reading the "
 "readme.txt if it uses *nix-style newlines."
 msgstr ""
+"Os arquivos landscape.ini e readme.txt devem ser texto codificado em UTF-8 "
+"ou ASCII simples. Provavelmente é uma boa ideia adotar a codificação de "
+"finalização de linha do Windows (ou seja, CR LF). Tanto a codificação de "
+"finalização de linha no estilo Windows quanto *nix devem funcionar bem no "
+"Stellarium, mas os usuários do Windows terão um tempo ruim lendo o "
+"readme.txt se ele usar novas linhas no estilo *nix."
 
 #: _layouts/landscapes.html:63
 msgid ""
 "If you have a landscape you would like to share but have no web-space to put"
 " it, email to any Stellarium developers and we'll put it on our site."
 msgstr ""
+"Se você tem uma paisagem que gostaria de compartilhar, mas não tem espaço na"
+" web para colocá-la, envie um e-mail para qualquer desenvolvedor do "
+"Stellarium e nós a colocaremos em nosso site."
 
 #: _layouts/index.html:9
 msgid "features"
@@ -784,7 +904,7 @@ msgstr "asterismos e ilustrações das constelações"
 
 #: _layouts/index.html:18
 msgid "constellations for 40+ different cultures"
-msgstr ""
+msgstr "constelações para mais de 40 culturas diferentes"
 
 #: _layouts/index.html:19
 msgid "images of nebulae (full Messier catalogue)"
@@ -804,7 +924,7 @@ msgstr "os planetas e seus satélites"
 
 #: _layouts/index.html:23
 msgid "all-sky surveys (DSS, HiPS)"
-msgstr ""
+msgstr "pesquisas de todos os céus (DSS, HiPS)"
 
 #: _layouts/index.html:26
 msgid "interface"
@@ -831,8 +951,8 @@ msgid "spheric mirror projection for your own low-cost dome"
 msgstr "projeção de espelho esférico para a sua própria cúpula de baixo custo"
 
 #: _layouts/index.html:33
-msgid "all new graphical interface and extensive keyboard control"
-msgstr "interface gráfica inteiramente nova e amplo controle pelo teclado"
+msgid "graphical interface and extensive keyboard control"
+msgstr "interface gráfica e amplo controle de teclado"
 
 #: _layouts/index.html:34
 msgid "telescope control"
@@ -844,11 +964,11 @@ msgstr "visualização"
 
 #: _layouts/index.html:39
 msgid "several coordinate grids"
-msgstr ""
+msgstr "várias grades de coordenadas"
 
 #: _layouts/index.html:40
 msgid "precession circles"
-msgstr ""
+msgstr "círculos de precessão"
 
 #: _layouts/index.html:41
 msgid "star twinkling"
@@ -872,7 +992,7 @@ msgstr "simulação de novas e supernovas"
 
 #: _layouts/index.html:46
 msgid "exoplanet locations"
-msgstr ""
+msgstr "localizações de exoplanetas"
 
 #: _layouts/index.html:47
 msgid "3D sceneries"
@@ -880,7 +1000,7 @@ msgstr "cenários 3D"
 
 #: _layouts/index.html:48
 msgid "skinnable landscapes with spheric panorama projection"
-msgstr ""
+msgstr "paisagens editáveis com projeção panorâmica esférica"
 
 #: _layouts/index.html:51
 msgid "customizability"
@@ -891,6 +1011,8 @@ msgid ""
 "plugin system adding artifical satellites, ocular simulation, telescope "
 "control and more"
 msgstr ""
+"sistema de plugins adicionando satélites artificiais, simulação ocular, "
+"controle de telescópio e muito mais"
 
 #: _layouts/index.html:54
 msgid "ability to add new solar system objects from online resources..."
@@ -919,20 +1041,20 @@ msgstr "mínimos"
 
 #: _layouts/index.html:75 _layouts/index.html:85
 msgid "Linux/Unix; Windows 7 and above; Mac OS X 10.12.0 and above"
-msgstr ""
+msgstr "Linux/Unix; Windows 7 e superior; Mac OS X 10.12.0 e superior"
 
 #: _layouts/index.html:76
 msgid ""
 "3D graphics card which supports OpenGL 3.0 and GLSL 1.3 or OpenGL ES 2.0"
-msgstr ""
+msgstr "Placa gráfica 3D que suporta OpenGL 3.0 e GLSL 1.3 ou OpenGL ES 2.0"
 
 #: _layouts/index.html:77
 msgid "512 MiB RAM"
 msgstr "512 MiB de RAM"
 
 #: _layouts/index.html:78
-msgid "500 MiB on disk"
-msgstr ""
+msgid "600 MiB on disk"
+msgstr "600 MiB em disco"
 
 #: _layouts/index.html:79 _layouts/index.html:89
 msgid "Keyboard"
@@ -940,7 +1062,7 @@ msgstr "Teclado"
 
 #: _layouts/index.html:80 _layouts/index.html:90
 msgid "Mouse, Touchpad or similar pointing device"
-msgstr ""
+msgstr "Mouse, Touchpad ou dispositivo apontador similar"
 
 #: _layouts/index.html:83
 msgid "recommended"
@@ -958,43 +1080,47 @@ msgstr "1 GiB de memória RAM ou mais"
 msgid "1.5 GiB on disk"
 msgstr "1.5 GiB de disco rígido"
 
-#: _layouts/index.html:93
+#: _layouts/index.html:91
+msgid "Moderately dark environment (deep shadow or indoors)"
+msgstr "Ambiente moderadamente escuro (sombra profunda ou dentro de casa)"
+
+#: _layouts/index.html:94
 msgid "developers"
 msgstr "desenvolvedores"
 
-#: _layouts/index.html:95
+#: _layouts/index.html:96
 msgid "Project coordinator:"
 msgstr "Coordenador do projeto:"
 
-#: _layouts/index.html:96
+#: _layouts/index.html:97
 msgid "Graphic designer:"
 msgstr "Designer gráfico:"
 
-#: _layouts/index.html:97
+#: _layouts/index.html:98
 msgid "Developer:"
 msgstr "Desenvolvedor:"
 
-#: _layouts/index.html:98
-msgid "Sky cultures researcher:"
-msgstr ""
-
 #: _layouts/index.html:99
-msgid "Collaborator:"
-msgstr ""
+msgid "Sky cultures researcher:"
+msgstr "Pesquisador de culturas celestes:"
 
 #: _layouts/index.html:100
-msgid "and everyone else in the community"
-msgstr ""
+msgid "Collaborator:"
+msgstr "Colaborador ou colaboradora:"
 
-#: _layouts/index.html:103
+#: _layouts/index.html:101
+msgid "and everyone else in the community"
+msgstr "e todos os outros da comunidade"
+
+#: _layouts/index.html:104
 msgid "social media"
 msgstr "mídia social"
 
-#: _layouts/index.html:110
+#: _layouts/index.html:111
 msgid "collaborate"
 msgstr "colaborar"
 
-#: _layouts/index.html:111
+#: _layouts/index.html:112
 msgid ""
 "You can learn more about Stellarium, get support and help the project from "
 "these links"
@@ -1002,56 +1128,60 @@ msgstr ""
 "Você pode aprender mais sobre o Stellarium, obter auxílio e ajudar o projeto"
 " acessando estes linques"
 
-#: _layouts/index.html:113
-msgid "discussions"
-msgstr ""
-
 #: _layouts/index.html:114
+msgid "discussions"
+msgstr "discussões"
+
+#: _layouts/index.html:115
 msgid "mailing list"
 msgstr "lista de discussão"
 
-#: _layouts/index.html:115
+#: _layouts/index.html:116
 msgid "wiki"
 msgstr "wiki"
 
-#: _layouts/index.html:116
+#: _layouts/index.html:117
 msgid "FAQ"
 msgstr "perguntas mais frequentes"
 
-#: _layouts/index.html:119 _layouts/skycultures-list.html:15
+#: _layouts/index.html:120 _layouts/skycultures-list.html:15
 #: _layouts/skycultures-list.html:20
 msgid "sky cultures"
-msgstr ""
+msgstr "culturas celestes"
 
-#: _layouts/index.html:120
+#: _layouts/index.html:121
 msgid "developers documentation"
 msgstr "documentação para desenvolvedores"
 
-#: _layouts/index.html:121
+#: _layouts/index.html:122
 msgid "scripting"
 msgstr "apresentações"
 
-#: _layouts/index.html:122
+#: _layouts/index.html:123
 msgid "translations"
 msgstr "traduções"
 
-#: _layouts/index.html:123
+#: _layouts/index.html:124
 msgid "get support, report bugs, request new features"
 msgstr "obter suporte, relatar bugs, solicitar novos recursos"
 
-#: _layouts/index.html:124
+#: _layouts/index.html:125
 msgid "all releases"
 msgstr "todas as versões"
 
-#: _layouts/index.html:125
-msgid "weekly snapshots"
-msgstr ""
+#: _layouts/index.html:126
+msgid "user guide"
+msgstr "guia de usuário"
 
-#: _layouts/index.html:128
+#: _layouts/index.html:127
+msgid "weekly snapshots"
+msgstr "instantâneos semanais"
+
+#: _layouts/index.html:130
 msgid "acknowledgment"
 msgstr "agradecimento"
 
-#: _layouts/index.html:129
+#: _layouts/index.html:131
 msgid ""
 "If the Stellarium planetarium was helpful for your research work, the "
 "following acknowledgment would be appreciated:"
@@ -1059,11 +1189,11 @@ msgstr ""
 "Se o Stellarium planetarium ajudou em seu trabalho de pesquisa, agradecemos "
 "o seguinte reconhecimento:"
 
-#: _layouts/index.html:130
+#: _layouts/index.html:132
 msgid "This research has made use of the Stellarium planetarium"
 msgstr "Esta pesquisa foi feita utilizando o Stellarium planetarium"
 
-#: _layouts/index.html:132
+#: _layouts/index.html:134
 msgid ""
 "Or you may <a href='/files/stellarium.bib'>download the BibTeX file of the "
 "paper</a> to create another citation format."
@@ -1071,11 +1201,11 @@ msgstr ""
 "Ou você pode <a href='/files/stellarium.bib'> baixar o arquivo BibTeX do "
 "artigo </a> para criar outro formato de citação."
 
-#: _layouts/index.html:134
+#: _layouts/index.html:136
 msgid "git"
 msgstr "github"
 
-#: _layouts/index.html:135
+#: _layouts/index.html:137
 msgid ""
 "The latest development snapshot of Stellarium is kept on github. If you want"
 " to compile development versions of Stellarium, this is the place to get the"
@@ -1085,15 +1215,15 @@ msgstr ""
 "você quiser compilar versões de desenvolvimento do Stellarium, este é o "
 "lugar para obter o código-fonte."
 
-#: _layouts/index.html:137
+#: _layouts/index.html:139
 msgid "browse GitHub"
 msgstr "navegue pelo GitHub"
 
-#: _layouts/index.html:141
+#: _layouts/index.html:143
 msgid "irc"
 msgstr "irc"
 
-#: _layouts/index.html:142
+#: _layouts/index.html:144
 msgid ""
 "Real time chat about Stellarium can be had in the <a "
 "href='irc://irc.freenode.org/stellarium'>#stellarium</a> IRC channel on the "
@@ -1108,16 +1238,19 @@ msgstr ""
 "favorito para se conectar ao chat.freenode.net (#3) ou tente a interface "
 "baseada na web(#4)."
 
-#: _layouts/index.html:145
+#: _layouts/index.html:147
 msgid "supporters and friends"
 msgstr "apoiadores e amigos"
 
-#: _layouts/index.html:147
+#: _layouts/index.html:149
 msgid ""
 "Stellarium is produced by the efforts of the developer team, with the help "
 "and support of the <a href='/%lang%/sponsors.html'>following people and "
 "organisations</a>"
 msgstr ""
+"Stellarium é produzido pelos esforços da equipe de desenvolvedores, com a "
+"ajuda e suporte do <a href='/%lang%/sponsors.html'>following people and "
+"organisations</a>"
 
 #: _layouts/docs.html:7
 msgid ""
@@ -1141,7 +1274,7 @@ msgstr "mudanças entre os pacotes"
 
 #: _layouts/skycultures-list.html:21
 msgid "list"
-msgstr ""
+msgstr "lista"
 
 #: _layouts/default.html:11
 msgid "Other languages:"
