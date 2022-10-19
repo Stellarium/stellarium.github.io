@@ -1,8 +1,8 @@
 ---
 layout: post
-title: 2 Skycultures withdrawn
+title: D/L/Nakota and Ojibwe skycultures withdrawn
 date: 2022-10-17 01:00:00 +0200
-categories: release
+categories: skycultures
 author: gzotti
 nolangbar: true
 ---
