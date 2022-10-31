@@ -1,18 +1,18 @@
 ---
 layout: post
 title: Stellarium 1.1
-date: 2022-10-31 20:30:00 +0700
+date: 2022-10-31 21:40:00 +0700
 categories: release
 author: alex-w
 nolangbar: true
 ---
-
 The major changes of this version:
 - Added support OpenGL 3.3 Core profile
 - Changed core: switch to use CalcMySky v0.2.1
 - Changed GUI: allow user CSS
 - Fixed compiling with Qt 6.4
 - Fixed Telescope Control plugin
+- Removed Dakota & Ojibwe sky cultures: this is on request of the original contributors, and following a misunderstanding about licensing.
 
 Full list of changes:
 - Added support OpenGL 3.3 Core profile
@@ -23,6 +23,7 @@ Full list of changes:
 - Added donation link to AppStream Metadata (GH: #2773)
 - Added small tuning for DSO selection without magnitudes (GH: #2701, #2716)
 - Added another vanished timezone
+- Added workaround for QTBUG-105984 in macOS (GH: #2785)
 - Fixed loading of glow texture in OnlineQueries plugin
 - Fixed compiling with Qt 6.4: use QString instead of QByteArray (GH: #2709)
 - Fixed OnlineQueries plugin button: redesigned OnlineQueries icons (GH: #2710, #2714)
@@ -40,6 +41,7 @@ Full list of changes:
 - Fixed bundling latest versions of ShowMySky library (GH: #2761, #2779)
 - Fixed normals map of the Moon, increase its resolution and implement shadows (GH: #2781)
 - Fixed issue in unit testing of scripting engine (GH: #2774)
+- Fixed freezing Stellarium when scripts are running (GH: #2792)
 - Changed core: make Date&Time dialog more usable for typing date
 - Changed core: optional support XLSX files (GH: #2723)
 - Changed core: avoid deprecation warnings on Qt5.14+
@@ -53,9 +55,10 @@ Full list of changes:
 - Changed core: make orbits antialiased
 - Changed core: simplify check for GLES
 - Changed ASCOM client in Telescope Control plugin
-- Changed core: switch to use CalcMySky v0.2.0
+- Changed core: switch to use CalcMySky v0.2.1
 - Changed core: restore current OpenGL context if it got replaced after window resize during StelMainView::init()
 - Changed core: avoid GL_INVALID_OPERATION caused by operating on zero VAO
+- Changed core: move dithering mode management from StelPainter to StelCore
 - Changed rules for packaging Stellarium in Windows
 - Changed rules for packaging Stellarium in Linux
 - Changed license info for Boorong sky culture
