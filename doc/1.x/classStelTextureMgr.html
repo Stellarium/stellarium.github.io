@@ -21,7 +21,7 @@
   <td id="projectlogo"><img alt="Logo" src="stellarium-logo.png"/></td>
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">Stellarium
-   &#160;<span id="projectnumber">1.0</span>
+   &#160;<span id="projectnumber">1.1</span>
    </div>
   </td>
  </tr>
@@ -66,6 +66,9 @@ StelTextureSP&#160;</td><td class="memItemRight" valign="bottom"><a class="el" h
 <tr class="memitem:a4622a8039524795f25a899f80f7948b5"><td class="memItemLeft" align="right" valign="top">StelTextureSP&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classStelTextureMgr.html#a4622a8039524795f25a899f80f7948b5">wrapperForGLTexture</a> (GLuint texId)</td></tr>
 <tr class="memdesc:a4622a8039524795f25a899f80f7948b5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Creates or finds a <a class="el" href="classStelTexture.html">StelTexture</a> wrapper for the specified OpenGL texture object.  <a href="classStelTextureMgr.html#a4622a8039524795f25a899f80f7948b5">More...</a><br /></td></tr>
 <tr class="separator:a4622a8039524795f25a899f80f7948b5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a97e1ed2043d5045e4a67f7b7f75c66c4"><td class="memItemLeft" align="right" valign="top">StelTextureSP&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classStelTextureMgr.html#a97e1ed2043d5045e4a67f7b7f75c66c4">getDitheringTexture</a> (const int samplerToBindTo)</td></tr>
+<tr class="memdesc:a97e1ed2043d5045e4a67f7b7f75c66c4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Creates or gets existing dither pattern texture.  <a href="classStelTextureMgr.html#a97e1ed2043d5045e4a67f7b7f75c66c4">More...</a><br /></td></tr>
+<tr class="separator:a97e1ed2043d5045e4a67f7b7f75c66c4"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="friends"></a>
 Friends</h2></td></tr>
@@ -163,6 +166,30 @@ If image is larger than maximum allowed texture size, it will be automatically r
 
 </div>
 </div>
+<a id="a97e1ed2043d5045e4a67f7b7f75c66c4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a97e1ed2043d5045e4a67f7b7f75c66c4">&#9670;&nbsp;</a></span>getDitheringTexture()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">StelTextureSP StelTextureMgr::getDitheringTexture </td>
+          <td>(</td>
+          <td class="paramtype">const int&#160;</td>
+          <td class="paramname"><em>samplerToBindTo</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">samplerToBindTo</td><td>The sampler unit that the texture will be bound to. E.g. for GL_TEXTURE3 this value should be 3. This parameter is necessary because glTexImage2D needs the texture to be bound to a sampler unit. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
 <a id="a4622a8039524795f25a899f80f7948b5"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a4622a8039524795f25a899f80f7948b5">&#9670;&nbsp;</a></span>wrapperForGLTexture()</h2>
 
@@ -191,7 +218,7 @@ If image is larger than maximum allowed texture size, it will be automatically r
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Sat Oct 1 2022 17:16:03 for Stellarium by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Mon Oct 31 2022 19:25:49 for Stellarium by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.17
 </small></address>

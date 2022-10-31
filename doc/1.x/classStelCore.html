@@ -21,7 +21,7 @@
   <td id="projectlogo"><img alt="Logo" src="stellarium-logo.png"/></td>
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">Stellarium
-   &#160;<span id="projectnumber">1.0</span>
+   &#160;<span id="projectnumber">1.1</span>
    </div>
   </td>
  </tr>
@@ -289,6 +289,15 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><b>getUseDST</b> () cons
 <tr class="memitem:ac5f83316c68af0da5be5053cd7cab6b7"><td class="memItemLeft" align="right" valign="top"><a id="ac5f83316c68af0da5be5053cd7cab6b7"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><b>setUseDST</b> (const bool b)</td></tr>
 <tr class="separator:ac5f83316c68af0da5be5053cd7cab6b7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac4dad00a47abbd053d32927ef2abe191"><td class="memItemLeft" align="right" valign="top"><a id="ac4dad00a47abbd053d32927ef2abe191"></a>
+DitheringMode&#160;</td><td class="memItemRight" valign="bottom"><b>getDitheringMode</b> () const</td></tr>
+<tr class="separator:ac4dad00a47abbd053d32927ef2abe191"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac250d57956bce2f1160bfcffe5e9419c"><td class="memItemLeft" align="right" valign="top"><a id="ac250d57956bce2f1160bfcffe5e9419c"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>setDitheringMode</b> (DitheringMode mode)</td></tr>
+<tr class="separator:ac250d57956bce2f1160bfcffe5e9419c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abdb9f0818ff6bfeb07e55d0dc99156b9"><td class="memItemLeft" align="right" valign="top"><a id="abdb9f0818ff6bfeb07e55d0dc99156b9"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>setDitheringMode</b> (const QString &amp;modeName)</td></tr>
+<tr class="separator:abdb9f0818ff6bfeb07e55d0dc99156b9"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:afbd58b7e14099c3ef9f447fe75ec1081"><td class="memItemLeft" align="right" valign="top"><a id="afbd58b7e14099c3ef9f447fe75ec1081"></a>
 bool&#160;</td><td class="memItemRight" valign="bottom"><b>getUseCustomTimeZone</b> (void) const</td></tr>
 <tr class="separator:afbd58b7e14099c3ef9f447fe75ec1081"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -792,6 +801,9 @@ void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="clas
 <tr class="memitem:ac9b61a7338d940977e90cc7b1a2fb957"><td class="memItemLeft" align="right" valign="top"><a id="ac9b61a7338d940977e90cc7b1a2fb957"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><b>updateSearchLists</b> ()</td></tr>
 <tr class="separator:ac9b61a7338d940977e90cc7b1a2fb957"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a285a2f88c7acbdbacaff7240c3925391"><td class="memItemLeft" align="right" valign="top"><a id="a285a2f88c7acbdbacaff7240c3925391"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>ditheringModeChanged</b> (DitheringMode mode)</td></tr>
+<tr class="separator:a285a2f88c7acbdbacaff7240c3925391"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
@@ -1117,6 +1129,9 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><b>flagUseCTZ</b></td></
 <tr class="memitem:af25eb4c037a3afb3372e9609261d3bb4"><td class="memItemLeft" align="right" valign="top"><a id="af25eb4c037a3afb3372e9609261d3bb4"></a>
 bool&#160;</td><td class="memItemRight" valign="bottom"><b>flagUseDST</b></td></tr>
 <tr class="separator:af25eb4c037a3afb3372e9609261d3bb4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aec8d124bd60d994fa89c9a6f54816f9b"><td class="memItemLeft" align="right" valign="top"><a id="aec8d124bd60d994fa89c9a6f54816f9b"></a>
+DitheringMode&#160;</td><td class="memItemRight" valign="bottom"><b>ditheringMode</b> = DitheringMode::Color888</td></tr>
+<tr class="separator:aec8d124bd60d994fa89c9a6f54816f9b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Main class for Stellarium core processing. This class provides services like management of sky projections, tone conversion, or reference frame conversion. It is used by the various StelModules to update and display themselves. There is currently only one <a class="el" href="classStelCore.html">StelCore</a> instance in Stellarium, but in the future they may be more, allowing for example to display several independent views of the sky at the same time. </p><dl class="section author"><dt>Author</dt><dd>Fabien Chereau, Matthew Gates, Georg Zotti </dd></dl>
@@ -2773,7 +2788,7 @@ Up to V0.15.1, if the requested year was outside validity range, we returned zer
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Sat Oct 1 2022 17:16:03 for Stellarium by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Mon Oct 31 2022 19:25:49 for Stellarium by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.17
 </small></address>

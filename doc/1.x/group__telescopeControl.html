@@ -21,7 +21,7 @@
   <td id="projectlogo"><img alt="Logo" src="stellarium-logo.png"/></td>
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">Stellarium
-   &#160;<span id="projectnumber">1.0</span>
+   &#160;<span id="projectnumber">1.1</span>
    </div>
   </td>
  </tr>
@@ -73,6 +73,55 @@ Data Structures</h2></td></tr>
 <div class="textblock"><p>"Controlling a telescope" means receiving position information from the telescope and sending GOTO commands to the telescope. No esoteric features like motor focus, electric heating and such. The actual controlling of a telescope is left to the implementation of the abstract base class <a class="el" href="classTelescopeClient.html" title="An abstract base class that should never be used directly, only inherited.">TelescopeClient</a>.</p>
 <p>Main class of the <a class="el" href="group__oculars.html#classTelescope">Telescope</a> Control plug-in. </p>
 </div><table class="memberdecls">
+<tr><td colspan="2"><h3>Public Types</h3></td></tr>
+<tr class="memitem:aaa84e5d30276fa326c18f25a9b2b725d"><td class="memItemLeft" align="right" valign="top"><a id="aaa84e5d30276fa326c18f25a9b2b725d"></a>enum &#160;</td><td class="memItemRight" valign="bottom"><b>ConnectionType</b> { <br />
+&#160;&#160;<b>ConnectionNA</b> = 0, 
+<b>ConnectionVirtual</b>, 
+<b>ConnectionInternal</b>, 
+<b>ConnectionLocal</b>, 
+<br />
+&#160;&#160;<b>ConnectionRemote</b>, 
+<b>ConnectionRTS2</b>, 
+<b>ConnectionINDI</b>, 
+<b>ConnectionASCOM</b>, 
+<br />
+&#160;&#160;<b>ConnectionTypeCount</b>
+<br />
+ }</td></tr>
+<tr class="separator:aaa84e5d30276fa326c18f25a9b2b725d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a29fd9062569e158a597c8408bbfd35c1"><td class="memItemLeft" align="right" valign="top"><a id="a29fd9062569e158a597c8408bbfd35c1"></a>enum &#160;</td><td class="memItemRight" valign="bottom"><b>TelescopeStatus</b> { <br />
+&#160;&#160;<b>StatusNA</b> = 0, 
+<b>StatusStarting</b>, 
+<b>StatusConnecting</b>, 
+<b>StatusConnected</b>, 
+<br />
+&#160;&#160;<b>StatusDisconnected</b>, 
+<b>StatusStopped</b>
+<br />
+ }</td></tr>
+<tr class="separator:a29fd9062569e158a597c8408bbfd35c1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6476da847fbe4494cc46f1bf1225a6cc"><td class="memItemLeft" align="right" valign="top"><a id="a6476da847fbe4494cc46f1bf1225a6cc"></a>enum &#160;</td><td class="memItemRight" valign="bottom"><b>Equinox</b> { <b>EquinoxJ2000</b>, 
+<b>EquinoxJNow</b>
+ }</td></tr>
+<tr class="separator:a6476da847fbe4494cc46f1bf1225a6cc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="inherit_header pub_types_classStelModule"><td colspan="2" onclick="javascript:toggleInherit('pub_types_classStelModule')"><img src="closed.png" alt="-"/>&#160;Public Types inherited from <a class="el" href="classStelModule.html">StelModule</a></td></tr>
+<tr class="memitem:a03668e7d4ec822bbf5555d43806607ce inherit pub_types_classStelModule"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classStelModule.html#a03668e7d4ec822bbf5555d43806607ce">StelModuleSelectAction</a> { <a class="el" href="classStelModule.html#a03668e7d4ec822bbf5555d43806607cea759026592ce833935174e2c788f7fc92">AddToSelection</a>, 
+<a class="el" href="classStelModule.html#a03668e7d4ec822bbf5555d43806607cead07fa7954654c2a44eaa20ed4a9c4f16">ReplaceSelection</a>, 
+<a class="el" href="classStelModule.html#a03668e7d4ec822bbf5555d43806607cea3f9299581cdfb85b09a0f66365bd3e4b">RemoveFromSelection</a>
+ }</td></tr>
+<tr class="memdesc:a03668e7d4ec822bbf5555d43806607ce"><td class="mdescLeft">&#160;</td><td class="mdescRight">Enum used when selecting objects to define whether to add to, replace, or remove from the existing selection list.  <a href="classStelModule.html#a03668e7d4ec822bbf5555d43806607ce">More...</a><br /></td></tr>
+<tr class="separator:a03668e7d4ec822bbf5555d43806607ce inherit pub_types_classStelModule"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a11b61d014b51cf6424cd89b1ccd3d768 inherit pub_types_classStelModule"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classStelModule.html#a11b61d014b51cf6424cd89b1ccd3d768">StelModuleActionName</a> { <br />
+&#160;&#160;<a class="el" href="classStelModule.html#a11b61d014b51cf6424cd89b1ccd3d768a067b834c2b146dd9ed4467d97b47ff9a">ActionDraw</a>, 
+<a class="el" href="classStelModule.html#a11b61d014b51cf6424cd89b1ccd3d768a58637dacbe5e976536b6793ffb6a6de7">ActionUpdate</a>, 
+<a class="el" href="classStelModule.html#a11b61d014b51cf6424cd89b1ccd3d768a42db94627be5af2a6ee52f065147203c">ActionHandleMouseClicks</a>, 
+<a class="el" href="classStelModule.html#a11b61d014b51cf6424cd89b1ccd3d768a997f2e83df1e58174635a3133a22e432">ActionHandleMouseMoves</a>, 
+<br />
+&#160;&#160;<a class="el" href="classStelModule.html#a11b61d014b51cf6424cd89b1ccd3d768ab2af5253b4b1fb321f10724def2d44c6">ActionHandleKeys</a>
+<br />
+ }</td></tr>
+<tr class="memdesc:a11b61d014b51cf6424cd89b1ccd3d768"><td class="mdescLeft">&#160;</td><td class="mdescRight">Define the possible action for which an order is defined.  <a href="classStelModule.html#a11b61d014b51cf6424cd89b1ccd3d768">More...</a><br /></td></tr>
+<tr class="separator:a11b61d014b51cf6424cd89b1ccd3d768 inherit pub_types_classStelModule"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr><td colspan="2"><h3>Public Slots</h3></td></tr>
 <tr class="memitem:a11ddd7580b4f91a9e1ca634a1ae14da3"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__telescopeControl.html#a11ddd7580b4f91a9e1ca634a1ae14da3">setFlagTelescopeReticles</a> (bool b)</td></tr>
 <tr class="memdesc:a11ddd7580b4f91a9e1ca634a1ae14da3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set display flag for telescope reticles.  <a href="group__telescopeControl.html#a11ddd7580b4f91a9e1ca634a1ae14da3">More...</a><br /></td></tr>
@@ -139,51 +188,81 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>clientConnected</b> (
 <tr class="memitem:af95d32602fcd21e50636540438571268"><td class="memItemLeft" align="right" valign="top"><a id="af95d32602fcd21e50636540438571268"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><b>clientDisconnected</b> (int slot)</td></tr>
 <tr class="separator:af95d32602fcd21e50636540438571268"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a72cff2b0b01acb43697db3c190676927"><td class="memItemLeft" align="right" valign="top"><a id="a72cff2b0b01acb43697db3c190676927"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>flagTelescopeReticlesChanged</b> (bool b)</td></tr>
+<tr class="separator:a72cff2b0b01acb43697db3c190676927"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a586086eeeb858eb5f3f2e800d2872754"><td class="memItemLeft" align="right" valign="top"><a id="a586086eeeb858eb5f3f2e800d2872754"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>flagTelescopeLabelsChanged</b> (bool b)</td></tr>
+<tr class="separator:a586086eeeb858eb5f3f2e800d2872754"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acee0ec41db55bd9acec7a57d4a6e3503"><td class="memItemLeft" align="right" valign="top"><a id="acee0ec41db55bd9acec7a57d4a6e3503"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>flagTelescopeCirclesChanged</b> (bool b)</td></tr>
+<tr class="separator:acee0ec41db55bd9acec7a57d4a6e3503"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a477e5104315be8672576fa9143d9df74"><td class="memItemLeft" align="right" valign="top"><a id="a477e5104315be8672576fa9143d9df74"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>reticleColorChanged</b> (const <a class="el" href="classVector3.html">Vec3f</a> &amp;c)</td></tr>
+<tr class="separator:a477e5104315be8672576fa9143d9df74"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a81dbcb0852c15e94d3ff28ebfeb2891f"><td class="memItemLeft" align="right" valign="top"><a id="a81dbcb0852c15e94d3ff28ebfeb2891f"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>labelColorChanged</b> (const <a class="el" href="classVector3.html">Vec3f</a> &amp;c)</td></tr>
+<tr class="separator:a81dbcb0852c15e94d3ff28ebfeb2891f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0f8bf50b14b31c3b21b10d4e7b7366dd"><td class="memItemLeft" align="right" valign="top"><a id="a0f8bf50b14b31c3b21b10d4e7b7366dd"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>circleColorChanged</b> (const <a class="el" href="classVector3.html">Vec3f</a> &amp;c)</td></tr>
+<tr class="separator:a0f8bf50b14b31c3b21b10d4e7b7366dd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4b45e099f0d8c86664d7bb354d8b470e"><td class="memItemLeft" align="right" valign="top"><a id="a4b45e099f0d8c86664d7bb354d8b470e"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>flagUseTelescopeServerLogsChanged</b> (bool b)</td></tr>
+<tr class="separator:a4b45e099f0d8c86664d7bb354d8b470e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aaefe90726be8b1527156adf06052f32a"><td class="memItemLeft" align="right" valign="top"><a id="aaefe90726be8b1527156adf06052f32a"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>useTelescopeServerExecutables</b> (bool b)</td></tr>
+<tr class="separator:aaefe90726be8b1527156adf06052f32a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aafa7da30c8f33b79f7e361a9d0163788"><td class="memItemLeft" align="right" valign="top"><a id="aafa7da30c8f33b79f7e361a9d0163788"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>getFlagUseServerExecutablesChanged</b> (bool b)</td></tr>
+<tr class="separator:aafa7da30c8f33b79f7e361a9d0163788"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1d4101146c1f8131a2f1de1d6ffd40de"><td class="memItemLeft" align="right" valign="top"><a id="a1d4101146c1f8131a2f1de1d6ffd40de"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>serverExecutablesDirectoryPathChanged</b> (const QString &amp;s)</td></tr>
+<tr class="separator:a1d4101146c1f8131a2f1de1d6ffd40de"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr><td colspan="2"><h3>Public Member Functions</h3></td></tr>
-<tr class="memitem:a61cc9394a04a0ed0a81dd828409ba80b"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__telescopeControl.html#a61cc9394a04a0ed0a81dd828409ba80b">init</a> () Q_DECL_OVERRIDE</td></tr>
-<tr class="memdesc:a61cc9394a04a0ed0a81dd828409ba80b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Initialize itself.  <a href="group__telescopeControl.html#a61cc9394a04a0ed0a81dd828409ba80b">More...</a><br /></td></tr>
-<tr class="separator:a61cc9394a04a0ed0a81dd828409ba80b"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a279d4190609b3d8afdd313950e3960e8"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__telescopeControl.html#a279d4190609b3d8afdd313950e3960e8">deinit</a> () Q_DECL_OVERRIDE</td></tr>
-<tr class="memdesc:a279d4190609b3d8afdd313950e3960e8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Called before the module will be deleted, and before the OpenGL context is suppressed.  <a href="group__telescopeControl.html#a279d4190609b3d8afdd313950e3960e8">More...</a><br /></td></tr>
-<tr class="separator:a279d4190609b3d8afdd313950e3960e8"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a83b036ba4e5923e1ef410e7dc337a2f1"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__telescopeControl.html#a83b036ba4e5923e1ef410e7dc337a2f1">update</a> (double deltaTime) Q_DECL_OVERRIDE</td></tr>
-<tr class="memdesc:a83b036ba4e5923e1ef410e7dc337a2f1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Update the module with respect to the time.  <a href="group__telescopeControl.html#a83b036ba4e5923e1ef410e7dc337a2f1">More...</a><br /></td></tr>
-<tr class="separator:a83b036ba4e5923e1ef410e7dc337a2f1"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a06f4d292d2fd667a41091d06a0e84e8c"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__telescopeControl.html#a06f4d292d2fd667a41091d06a0e84e8c">draw</a> (<a class="el" href="classStelCore.html">StelCore</a> *core) Q_DECL_OVERRIDE</td></tr>
-<tr class="memdesc:a06f4d292d2fd667a41091d06a0e84e8c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Execute all the drawing functions for this module.  <a href="group__telescopeControl.html#a06f4d292d2fd667a41091d06a0e84e8c">More...</a><br /></td></tr>
-<tr class="separator:a06f4d292d2fd667a41091d06a0e84e8c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a88d04849a55f3921686f4952aafc0ee6"><td class="memItemLeft" align="right" valign="top">virtual double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__telescopeControl.html#a88d04849a55f3921686f4952aafc0ee6">getCallOrder</a> (<a class="el" href="classStelModule.html#a11b61d014b51cf6424cd89b1ccd3d768">StelModuleActionName</a> actionName) const Q_DECL_OVERRIDE</td></tr>
-<tr class="memdesc:a88d04849a55f3921686f4952aafc0ee6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return the value defining the order of call for the given action For example if stars.callOrder[ActionDraw] == 10 and constellation.callOrder[ActionDraw] == 11, the stars module will be drawn before the constellations.  <a href="group__telescopeControl.html#a88d04849a55f3921686f4952aafc0ee6">More...</a><br /></td></tr>
-<tr class="separator:a88d04849a55f3921686f4952aafc0ee6"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a257b9da262ab90349818611c9fbe2b63"><td class="memItemLeft" align="right" valign="top">virtual QList&lt; <a class="el" href="classQSharedPointerNoDelete.html">StelObjectP</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__telescopeControl.html#a257b9da262ab90349818611c9fbe2b63">searchAround</a> (const <a class="el" href="classVector3.html">Vec3d</a> &amp;v, double limitFov, const <a class="el" href="classStelCore.html">StelCore</a> *core) const Q_DECL_OVERRIDE</td></tr>
-<tr class="memdesc:a257b9da262ab90349818611c9fbe2b63"><td class="mdescLeft">&#160;</td><td class="mdescRight">Search for <a class="el" href="classStelObject.html" title="The base abstract class for sky objects used in Stellarium like Stars, Planets, Constellations etc....">StelObject</a> in an area around a specified point.  <a href="group__telescopeControl.html#a257b9da262ab90349818611c9fbe2b63">More...</a><br /></td></tr>
-<tr class="separator:a257b9da262ab90349818611c9fbe2b63"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a1049e9ce49b8b634ddd4edaa65b5273d"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="classQSharedPointerNoDelete.html">StelObjectP</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__telescopeControl.html#a1049e9ce49b8b634ddd4edaa65b5273d">searchByNameI18n</a> (const QString &amp;nameI18n) const Q_DECL_OVERRIDE</td></tr>
-<tr class="memdesc:a1049e9ce49b8b634ddd4edaa65b5273d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Find a <a class="el" href="classStelObject.html" title="The base abstract class for sky objects used in Stellarium like Stars, Planets, Constellations etc....">StelObject</a> by name.  <a href="group__telescopeControl.html#a1049e9ce49b8b634ddd4edaa65b5273d">More...</a><br /></td></tr>
-<tr class="separator:a1049e9ce49b8b634ddd4edaa65b5273d"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a62c93cb0d62198c113e633124890a7ee"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="classQSharedPointerNoDelete.html">StelObjectP</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__telescopeControl.html#a62c93cb0d62198c113e633124890a7ee">searchByName</a> (const QString &amp;name) const Q_DECL_OVERRIDE</td></tr>
-<tr class="memdesc:a62c93cb0d62198c113e633124890a7ee"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return the matching <a class="el" href="classStelObject.html" title="The base abstract class for sky objects used in Stellarium like Stars, Planets, Constellations etc....">StelObject</a> if exists or the empty <a class="el" href="classStelObject.html" title="The base abstract class for sky objects used in Stellarium like Stars, Planets, Constellations etc....">StelObject</a> if not found.  <a href="group__telescopeControl.html#a62c93cb0d62198c113e633124890a7ee">More...</a><br /></td></tr>
-<tr class="separator:a62c93cb0d62198c113e633124890a7ee"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a2a86eca17de4af93b7ce223144c07adc"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="classQSharedPointerNoDelete.html">StelObjectP</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__telescopeControl.html#a2a86eca17de4af93b7ce223144c07adc">searchByID</a> (const QString &amp;id) const Q_DECL_OVERRIDE</td></tr>
-<tr class="memdesc:a2a86eca17de4af93b7ce223144c07adc"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return the <a class="el" href="classStelObject.html" title="The base abstract class for sky objects used in Stellarium like Stars, Planets, Constellations etc....">StelObject</a> with the given ID if exists or the empty <a class="el" href="classStelObject.html" title="The base abstract class for sky objects used in Stellarium like Stars, Planets, Constellations etc....">StelObject</a> if not found.  <a href="group__telescopeControl.html#a2a86eca17de4af93b7ce223144c07adc">More...</a><br /></td></tr>
-<tr class="separator:a2a86eca17de4af93b7ce223144c07adc"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:abda3544ad14fffc31b22cb39eaaceb67"><td class="memItemLeft" align="right" valign="top">virtual QStringList&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__telescopeControl.html#abda3544ad14fffc31b22cb39eaaceb67">listMatchingObjects</a> (const QString &amp;objPrefix, int maxNbItem=5, bool useStartOfWords=false) const Q_DECL_OVERRIDE</td></tr>
-<tr class="memdesc:abda3544ad14fffc31b22cb39eaaceb67"><td class="mdescLeft">&#160;</td><td class="mdescRight">Find and return the list of at most maxNbItem objects auto-completing the passed object name.  <a href="group__telescopeControl.html#abda3544ad14fffc31b22cb39eaaceb67">More...</a><br /></td></tr>
-<tr class="separator:abda3544ad14fffc31b22cb39eaaceb67"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a22fc55e7440c674cebfabf220e5ac511"><td class="memItemLeft" align="right" valign="top">virtual QStringList&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__telescopeControl.html#a22fc55e7440c674cebfabf220e5ac511">listAllObjects</a> (bool) const Q_DECL_OVERRIDE</td></tr>
-<tr class="memdesc:a22fc55e7440c674cebfabf220e5ac511"><td class="mdescLeft">&#160;</td><td class="mdescRight">List all StelObjects.  <a href="group__telescopeControl.html#a22fc55e7440c674cebfabf220e5ac511">More...</a><br /></td></tr>
-<tr class="separator:a22fc55e7440c674cebfabf220e5ac511"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a918ab4a48ae5b4815edbdaa846f56333"><td class="memItemLeft" align="right" valign="top"><a id="a918ab4a48ae5b4815edbdaa846f56333"></a>
-virtual QString&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__telescopeControl.html#a918ab4a48ae5b4815edbdaa846f56333">getName</a> () const Q_DECL_OVERRIDE</td></tr>
-<tr class="memdesc:a918ab4a48ae5b4815edbdaa846f56333"><td class="mdescLeft">&#160;</td><td class="mdescRight">Gets a user-displayable name of the object category. <br /></td></tr>
-<tr class="separator:a918ab4a48ae5b4815edbdaa846f56333"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a3608b0e11f28e2c3f49ea4c870272168"><td class="memItemLeft" align="right" valign="top"><a id="a3608b0e11f28e2c3f49ea4c870272168"></a>
-virtual QString&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__telescopeControl.html#a3608b0e11f28e2c3f49ea4c870272168">getStelObjectType</a> () const Q_DECL_OVERRIDE</td></tr>
-<tr class="memdesc:a3608b0e11f28e2c3f49ea4c870272168"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the name that will be returned by <a class="el" href="classStelObject.html#acf26bf2f7442e0317cc44597a984f54d" title="Return object&#39;s type. It should be the name of the class.">StelObject::getType()</a> for the objects this module manages. <br /></td></tr>
-<tr class="separator:a3608b0e11f28e2c3f49ea4c870272168"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a16287cf43daf0d92ebd30dea5105b2ad"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__telescopeControl.html#a16287cf43daf0d92ebd30dea5105b2ad">configureGui</a> (bool show=true) Q_DECL_OVERRIDE</td></tr>
-<tr class="memdesc:a16287cf43daf0d92ebd30dea5105b2ad"><td class="mdescLeft">&#160;</td><td class="mdescRight">Detect or show the configuration GUI elements for the module.  <a href="group__telescopeControl.html#a16287cf43daf0d92ebd30dea5105b2ad">More...</a><br /></td></tr>
-<tr class="separator:a16287cf43daf0d92ebd30dea5105b2ad"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aee9d845bf026cebf5e05bd69b9d99da4"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__telescopeControl.html#aee9d845bf026cebf5e05bd69b9d99da4">init</a> () override</td></tr>
+<tr class="memdesc:aee9d845bf026cebf5e05bd69b9d99da4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Initialize itself.  <a href="group__telescopeControl.html#aee9d845bf026cebf5e05bd69b9d99da4">More...</a><br /></td></tr>
+<tr class="separator:aee9d845bf026cebf5e05bd69b9d99da4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9913f8f7b0b2cc08d346da9a9a87f519"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__telescopeControl.html#a9913f8f7b0b2cc08d346da9a9a87f519">deinit</a> () override</td></tr>
+<tr class="memdesc:a9913f8f7b0b2cc08d346da9a9a87f519"><td class="mdescLeft">&#160;</td><td class="mdescRight">Called before the module will be deleted, and before the OpenGL context is suppressed.  <a href="group__telescopeControl.html#a9913f8f7b0b2cc08d346da9a9a87f519">More...</a><br /></td></tr>
+<tr class="separator:a9913f8f7b0b2cc08d346da9a9a87f519"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4135197afc03432bc330eeeb97748986"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__telescopeControl.html#a4135197afc03432bc330eeeb97748986">update</a> (double deltaTime) override</td></tr>
+<tr class="memdesc:a4135197afc03432bc330eeeb97748986"><td class="mdescLeft">&#160;</td><td class="mdescRight">Update the module with respect to the time.  <a href="group__telescopeControl.html#a4135197afc03432bc330eeeb97748986">More...</a><br /></td></tr>
+<tr class="separator:a4135197afc03432bc330eeeb97748986"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a084ad4ff3a5fe6b6d4bb159f6ba8d446"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__telescopeControl.html#a084ad4ff3a5fe6b6d4bb159f6ba8d446">draw</a> (<a class="el" href="classStelCore.html">StelCore</a> *core) override</td></tr>
+<tr class="memdesc:a084ad4ff3a5fe6b6d4bb159f6ba8d446"><td class="mdescLeft">&#160;</td><td class="mdescRight">Execute all the drawing functions for this module.  <a href="group__telescopeControl.html#a084ad4ff3a5fe6b6d4bb159f6ba8d446">More...</a><br /></td></tr>
+<tr class="separator:a084ad4ff3a5fe6b6d4bb159f6ba8d446"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3b5ebe139e512e77b847e441236c10cb"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__telescopeControl.html#a3b5ebe139e512e77b847e441236c10cb">getCallOrder</a> (<a class="el" href="classStelModule.html#a11b61d014b51cf6424cd89b1ccd3d768">StelModuleActionName</a> actionName) const override</td></tr>
+<tr class="memdesc:a3b5ebe139e512e77b847e441236c10cb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return the value defining the order of call for the given action For example if stars.callOrder[ActionDraw] == 10 and constellation.callOrder[ActionDraw] == 11, the stars module will be drawn before the constellations.  <a href="group__telescopeControl.html#a3b5ebe139e512e77b847e441236c10cb">More...</a><br /></td></tr>
+<tr class="separator:a3b5ebe139e512e77b847e441236c10cb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4cbb63c39320671ebb4a294426fef2c6"><td class="memItemLeft" align="right" valign="top">QList&lt; <a class="el" href="classQSharedPointerNoDelete.html">StelObjectP</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__telescopeControl.html#a4cbb63c39320671ebb4a294426fef2c6">searchAround</a> (const <a class="el" href="classVector3.html">Vec3d</a> &amp;v, double limitFov, const <a class="el" href="classStelCore.html">StelCore</a> *core) const override</td></tr>
+<tr class="memdesc:a4cbb63c39320671ebb4a294426fef2c6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Search for <a class="el" href="classStelObject.html" title="The base abstract class for sky objects used in Stellarium like Stars, Planets, Constellations etc....">StelObject</a> in an area around a specified point.  <a href="group__telescopeControl.html#a4cbb63c39320671ebb4a294426fef2c6">More...</a><br /></td></tr>
+<tr class="separator:a4cbb63c39320671ebb4a294426fef2c6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acb18d101b6fcf7b07fb74c0271fdd6f7"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classQSharedPointerNoDelete.html">StelObjectP</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__telescopeControl.html#acb18d101b6fcf7b07fb74c0271fdd6f7">searchByNameI18n</a> (const QString &amp;nameI18n) const override</td></tr>
+<tr class="memdesc:acb18d101b6fcf7b07fb74c0271fdd6f7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Find a <a class="el" href="classStelObject.html" title="The base abstract class for sky objects used in Stellarium like Stars, Planets, Constellations etc....">StelObject</a> by name.  <a href="group__telescopeControl.html#acb18d101b6fcf7b07fb74c0271fdd6f7">More...</a><br /></td></tr>
+<tr class="separator:acb18d101b6fcf7b07fb74c0271fdd6f7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9584092feac4d035c5911dead7da60f1"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classQSharedPointerNoDelete.html">StelObjectP</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__telescopeControl.html#a9584092feac4d035c5911dead7da60f1">searchByName</a> (const QString &amp;name) const override</td></tr>
+<tr class="memdesc:a9584092feac4d035c5911dead7da60f1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return the matching <a class="el" href="classStelObject.html" title="The base abstract class for sky objects used in Stellarium like Stars, Planets, Constellations etc....">StelObject</a> if exists or the empty <a class="el" href="classStelObject.html" title="The base abstract class for sky objects used in Stellarium like Stars, Planets, Constellations etc....">StelObject</a> if not found.  <a href="group__telescopeControl.html#a9584092feac4d035c5911dead7da60f1">More...</a><br /></td></tr>
+<tr class="separator:a9584092feac4d035c5911dead7da60f1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a76b06369c60fa59e9e68b26fafe52eb9"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classQSharedPointerNoDelete.html">StelObjectP</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__telescopeControl.html#a76b06369c60fa59e9e68b26fafe52eb9">searchByID</a> (const QString &amp;id) const override</td></tr>
+<tr class="memdesc:a76b06369c60fa59e9e68b26fafe52eb9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return the <a class="el" href="classStelObject.html" title="The base abstract class for sky objects used in Stellarium like Stars, Planets, Constellations etc....">StelObject</a> with the given ID if exists or the empty <a class="el" href="classStelObject.html" title="The base abstract class for sky objects used in Stellarium like Stars, Planets, Constellations etc....">StelObject</a> if not found.  <a href="group__telescopeControl.html#a76b06369c60fa59e9e68b26fafe52eb9">More...</a><br /></td></tr>
+<tr class="separator:a76b06369c60fa59e9e68b26fafe52eb9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5df73e3e415b377888eb3be079fffaed"><td class="memItemLeft" align="right" valign="top">QStringList&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__telescopeControl.html#a5df73e3e415b377888eb3be079fffaed">listMatchingObjects</a> (const QString &amp;objPrefix, const int maxNbItem=5, bool useStartOfWords=false) const override</td></tr>
+<tr class="memdesc:a5df73e3e415b377888eb3be079fffaed"><td class="mdescLeft">&#160;</td><td class="mdescRight">Find and return the list of at most maxNbItem objects auto-completing the passed object name.  <a href="group__telescopeControl.html#a5df73e3e415b377888eb3be079fffaed">More...</a><br /></td></tr>
+<tr class="separator:a5df73e3e415b377888eb3be079fffaed"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9996279526ad1e184e39ab7a96f10e4b"><td class="memItemLeft" align="right" valign="top">QStringList&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__telescopeControl.html#a9996279526ad1e184e39ab7a96f10e4b">listAllObjects</a> (bool) const override</td></tr>
+<tr class="memdesc:a9996279526ad1e184e39ab7a96f10e4b"><td class="mdescLeft">&#160;</td><td class="mdescRight">List all StelObjects.  <a href="group__telescopeControl.html#a9996279526ad1e184e39ab7a96f10e4b">More...</a><br /></td></tr>
+<tr class="separator:a9996279526ad1e184e39ab7a96f10e4b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae91402584aab7114ad92b50816d4648c"><td class="memItemLeft" align="right" valign="top"><a id="ae91402584aab7114ad92b50816d4648c"></a>
+QString&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__telescopeControl.html#ae91402584aab7114ad92b50816d4648c">getName</a> () const override</td></tr>
+<tr class="memdesc:ae91402584aab7114ad92b50816d4648c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Gets a user-displayable name of the object category. <br /></td></tr>
+<tr class="separator:ae91402584aab7114ad92b50816d4648c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a24fd0719afd59ad8b8ad3b54ab340967"><td class="memItemLeft" align="right" valign="top"><a id="a24fd0719afd59ad8b8ad3b54ab340967"></a>
+QString&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__telescopeControl.html#a24fd0719afd59ad8b8ad3b54ab340967">getStelObjectType</a> () const override</td></tr>
+<tr class="memdesc:a24fd0719afd59ad8b8ad3b54ab340967"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the name that will be returned by <a class="el" href="classStelObject.html#acf26bf2f7442e0317cc44597a984f54d" title="Return object&#39;s type. It should be the name of the class.">StelObject::getType()</a> for the objects this module manages. <br /></td></tr>
+<tr class="separator:a24fd0719afd59ad8b8ad3b54ab340967"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aae636a5e552a170b76977a6034868c10"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__telescopeControl.html#aae636a5e552a170b76977a6034868c10">configureGui</a> (bool show=true) override</td></tr>
+<tr class="memdesc:aae636a5e552a170b76977a6034868c10"><td class="mdescLeft">&#160;</td><td class="mdescRight">Detect or show the configuration GUI elements for the module.  <a href="group__telescopeControl.html#aae636a5e552a170b76977a6034868c10">More...</a><br /></td></tr>
+<tr class="separator:aae636a5e552a170b76977a6034868c10"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a0e790a91d8bae3618dd5b34854e90cc7"><td class="memItemLeft" align="right" valign="top"><a id="a0e790a91d8bae3618dd5b34854e90cc7"></a>
 QSharedPointer&lt; <a class="el" href="classTelescopeClient.html">TelescopeClient</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>telescopeClient</b> (int index) const</td></tr>
 <tr class="separator:a0e790a91d8bae3618dd5b34854e90cc7"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -192,7 +271,7 @@ void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="grou
 <tr class="memdesc:aaf25828430ac034ca3f254594c4258c5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Remove all currently registered telescopes. <br /></td></tr>
 <tr class="separator:aaf25828430ac034ca3f254594c4258c5"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:afbf49d8906573543ce2472c469eff1c5"><td class="memItemLeft" align="right" valign="top"><a id="afbf49d8906573543ce2472c469eff1c5"></a>
-const QHash&lt; QString, <a class="el" href="structTelescopeControlGlobals_1_1DeviceModel.html">DeviceModel</a> &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__telescopeControl.html#afbf49d8906573543ce2472c469eff1c5">getDeviceModels</a> ()</td></tr>
+const QHash&lt; QString, <a class="el" href="group__telescopeControl.html#structTelescopeControl_1_1DeviceModel">DeviceModel</a> &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__telescopeControl.html#afbf49d8906573543ce2472c469eff1c5">getDeviceModels</a> ()</td></tr>
 <tr class="memdesc:afbf49d8906573543ce2472c469eff1c5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Safe access to the loaded list of telescope models. <br /></td></tr>
 <tr class="separator:afbf49d8906573543ce2472c469eff1c5"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a61f2a6811caecb731c8b33e20e909664"><td class="memItemLeft" align="right" valign="top"><a id="a61f2a6811caecb731c8b33e20e909664"></a>
@@ -300,27 +379,71 @@ virtual QString&#160;</td><td class="memItemRight" valign="bottom"><a class="el"
 <tr class="memitem:a372fd47ff9580f1e776c35877ef5af6f inherit pub_methods_classStelModule"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classStelModule.html#a372fd47ff9580f1e776c35877ef5af6f">handlePinch</a> (qreal scale, bool started)</td></tr>
 <tr class="memdesc:a372fd47ff9580f1e776c35877ef5af6f inherit pub_methods_classStelModule"><td class="mdescLeft">&#160;</td><td class="mdescRight">Handle pinch gesture events.  <a href="classStelModule.html#a372fd47ff9580f1e776c35877ef5af6f">More...</a><br /></td></tr>
 <tr class="separator:a372fd47ff9580f1e776c35877ef5af6f inherit pub_methods_classStelModule"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr><td colspan="2"><h3>Static Public Attributes</h3></td></tr>
+<tr class="memitem:a187cca2e34ffd0f86426d242872fce2a"><td class="memItemLeft" align="right" valign="top"><a id="a187cca2e34ffd0f86426d242872fce2a"></a>
+static constexpr int&#160;</td><td class="memItemRight" valign="bottom"><b>MIN_SLOT_NUMBER</b> = 1</td></tr>
+<tr class="separator:a187cca2e34ffd0f86426d242872fce2a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adf2df1406d539221b8488104d8f5f519"><td class="memItemLeft" align="right" valign="top"><a id="adf2df1406d539221b8488104d8f5f519"></a>
+static constexpr int&#160;</td><td class="memItemRight" valign="bottom"><b>SLOT_COUNT</b> = 9</td></tr>
+<tr class="separator:adf2df1406d539221b8488104d8f5f519"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0cfe4c2f72d00a5557f7158a93a3fb39"><td class="memItemLeft" align="right" valign="top"><a id="a0cfe4c2f72d00a5557f7158a93a3fb39"></a>
+static constexpr int&#160;</td><td class="memItemRight" valign="bottom"><b>SLOT_NUMBER_LIMIT</b> = MIN_SLOT_NUMBER + SLOT_COUNT</td></tr>
+<tr class="separator:a0cfe4c2f72d00a5557f7158a93a3fb39"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a85e09378959ca79bc200699872804f8f"><td class="memItemLeft" align="right" valign="top"><a id="a85e09378959ca79bc200699872804f8f"></a>
+static constexpr int&#160;</td><td class="memItemRight" valign="bottom"><b>MAX_SLOT_NUMBER</b> = SLOT_NUMBER_LIMIT - 1</td></tr>
+<tr class="separator:a85e09378959ca79bc200699872804f8f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8e5f34144332b8d96a19dbe85f5a798a"><td class="memItemLeft" align="right" valign="top"><a id="a8e5f34144332b8d96a19dbe85f5a798a"></a>
+static constexpr int&#160;</td><td class="memItemRight" valign="bottom"><b>BASE_TCP_PORT</b> = 10000</td></tr>
+<tr class="separator:a8e5f34144332b8d96a19dbe85f5a798a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0fd7b2d3688967c6f95e136afeb708db"><td class="memItemLeft" align="right" valign="top"><a id="a0fd7b2d3688967c6f95e136afeb708db"></a>
+static constexpr int&#160;</td><td class="memItemRight" valign="bottom"><b>DEFAULT_TCP_PORT</b> = DEFAULT_TCP_PORT_FOR_SLOT(MIN_SLOT_NUMBER)</td></tr>
+<tr class="separator:a0fd7b2d3688967c6f95e136afeb708db"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a236d601518a4fe62a086f4ceb78426ec"><td class="memItemLeft" align="right" valign="top"><a id="a236d601518a4fe62a086f4ceb78426ec"></a>
+static constexpr int&#160;</td><td class="memItemRight" valign="bottom"><b>MAX_CIRCLE_COUNT</b> = 10</td></tr>
+<tr class="separator:a236d601518a4fe62a086f4ceb78426ec"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab6e0922c85ec268dedce230a5e3092c8"><td class="memItemLeft" align="right" valign="top"><a id="ab6e0922c85ec268dedce230a5e3092c8"></a>
+static const QString&#160;</td><td class="memItemRight" valign="bottom"><b>TELESCOPE_SERVER_PATH</b></td></tr>
+<tr class="separator:ab6e0922c85ec268dedce230a5e3092c8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a92055b6a8a32d3f9dfc6c3ce443d9726"><td class="memItemLeft" align="right" valign="top"><a id="a92055b6a8a32d3f9dfc6c3ce443d9726"></a>
+static constexpr int&#160;</td><td class="memItemRight" valign="bottom"><b>DEFAULT_DELAY</b> = 500000</td></tr>
+<tr class="separator:a92055b6a8a32d3f9dfc6c3ce443d9726"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae206ca654ac6a8ac1abde7b7fbd1459e"><td class="memItemLeft" align="right" valign="top"><a id="ae206ca654ac6a8ac1abde7b7fbd1459e"></a>
+static const QStringList&#160;</td><td class="memItemRight" valign="bottom"><b>EMBEDDED_TELESCOPE_SERVERS</b></td></tr>
+<tr class="separator:ae206ca654ac6a8ac1abde7b7fbd1459e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr><td colspan="2"><h3>Properties</h3></td></tr>
+<tr class="memitem:ad1d59f290bd5c067dee93c9b6fa5525e"><td class="memItemLeft" align="right" valign="top"><a id="ad1d59f290bd5c067dee93c9b6fa5525e"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><b>flagTelescopeReticles</b></td></tr>
+<tr class="separator:ad1d59f290bd5c067dee93c9b6fa5525e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac33c5ae2a9a2121e1b38f42e4096d80a"><td class="memItemLeft" align="right" valign="top"><a id="ac33c5ae2a9a2121e1b38f42e4096d80a"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><b>flagTelescopeLabels</b></td></tr>
+<tr class="separator:ac33c5ae2a9a2121e1b38f42e4096d80a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2547bb17b51786d97ec386130ad7208d"><td class="memItemLeft" align="right" valign="top"><a id="a2547bb17b51786d97ec386130ad7208d"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><b>flagTelescopeCircles</b></td></tr>
+<tr class="separator:a2547bb17b51786d97ec386130ad7208d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9c0b3518ff971c37063f3e5c3a1a2c9f"><td class="memItemLeft" align="right" valign="top"><a id="a9c0b3518ff971c37063f3e5c3a1a2c9f"></a>
+<a class="el" href="classVector3.html">Vec3f</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__telescopeControl.html#a9c0b3518ff971c37063f3e5c3a1a2c9f">reticleColor</a></td></tr>
+<tr class="memdesc:a9c0b3518ff971c37063f3e5c3a1a2c9f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Colour currently used to draw telescope reticles. <br /></td></tr>
+<tr class="separator:a9c0b3518ff971c37063f3e5c3a1a2c9f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa0479571f1754f048c465486b4ce839e"><td class="memItemLeft" align="right" valign="top"><a id="aa0479571f1754f048c465486b4ce839e"></a>
+<a class="el" href="classVector3.html">Vec3f</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__telescopeControl.html#aa0479571f1754f048c465486b4ce839e">labelColor</a></td></tr>
+<tr class="memdesc:aa0479571f1754f048c465486b4ce839e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Colour currently used to draw telescope text labels. <br /></td></tr>
+<tr class="separator:aa0479571f1754f048c465486b4ce839e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aae56d17131cd772864722976cee8c2e4"><td class="memItemLeft" align="right" valign="top"><a id="aae56d17131cd772864722976cee8c2e4"></a>
+<a class="el" href="classVector3.html">Vec3f</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__telescopeControl.html#aae56d17131cd772864722976cee8c2e4">circleColor</a></td></tr>
+<tr class="memdesc:aae56d17131cd772864722976cee8c2e4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Colour currently used to draw field of view circles. <br /></td></tr>
+<tr class="separator:aae56d17131cd772864722976cee8c2e4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a49e24ad379d87660c50b308778d78f28"><td class="memItemLeft" align="right" valign="top"><a id="a49e24ad379d87660c50b308778d78f28"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><b>useTelescopeServerLogs</b></td></tr>
+<tr class="separator:a49e24ad379d87660c50b308778d78f28"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a08094de8acd1d4e19eda993882e4cc39"><td class="memItemLeft" align="right" valign="top"><a id="a08094de8acd1d4e19eda993882e4cc39"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><b>useTelescopeServerExecutables</b></td></tr>
+<tr class="separator:a08094de8acd1d4e19eda993882e4cc39"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a44630d7fcd72b3cd52090fa4cb803b65"><td class="memItemLeft" align="right" valign="top"><a id="a44630d7fcd72b3cd52090fa4cb803b65"></a>
+QString&#160;</td><td class="memItemRight" valign="bottom"><b>serverExecutablesDirectoryPath</b></td></tr>
+<tr class="separator:a44630d7fcd72b3cd52090fa4cb803b65"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="inherited"></a>
 Additional Inherited Members</h2></td></tr>
-<tr class="inherit_header pub_types_classStelModule"><td colspan="2" onclick="javascript:toggleInherit('pub_types_classStelModule')"><img src="closed.png" alt="-"/>&#160;Public Types inherited from <a class="el" href="classStelModule.html">StelModule</a></td></tr>
-<tr class="memitem:a03668e7d4ec822bbf5555d43806607ce inherit pub_types_classStelModule"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classStelModule.html#a03668e7d4ec822bbf5555d43806607ce">StelModuleSelectAction</a> { <a class="el" href="classStelModule.html#a03668e7d4ec822bbf5555d43806607cea759026592ce833935174e2c788f7fc92">AddToSelection</a>, 
-<a class="el" href="classStelModule.html#a03668e7d4ec822bbf5555d43806607cead07fa7954654c2a44eaa20ed4a9c4f16">ReplaceSelection</a>, 
-<a class="el" href="classStelModule.html#a03668e7d4ec822bbf5555d43806607cea3f9299581cdfb85b09a0f66365bd3e4b">RemoveFromSelection</a>
- }</td></tr>
-<tr class="memdesc:a03668e7d4ec822bbf5555d43806607ce"><td class="mdescLeft">&#160;</td><td class="mdescRight">Enum used when selecting objects to define whether to add to, replace, or remove from the existing selection list.  <a href="classStelModule.html#a03668e7d4ec822bbf5555d43806607ce">More...</a><br /></td></tr>
-<tr class="separator:a03668e7d4ec822bbf5555d43806607ce inherit pub_types_classStelModule"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a11b61d014b51cf6424cd89b1ccd3d768 inherit pub_types_classStelModule"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classStelModule.html#a11b61d014b51cf6424cd89b1ccd3d768">StelModuleActionName</a> { <br />
-&#160;&#160;<a class="el" href="classStelModule.html#a11b61d014b51cf6424cd89b1ccd3d768a067b834c2b146dd9ed4467d97b47ff9a">ActionDraw</a>, 
-<a class="el" href="classStelModule.html#a11b61d014b51cf6424cd89b1ccd3d768a58637dacbe5e976536b6793ffb6a6de7">ActionUpdate</a>, 
-<a class="el" href="classStelModule.html#a11b61d014b51cf6424cd89b1ccd3d768a42db94627be5af2a6ee52f065147203c">ActionHandleMouseClicks</a>, 
-<a class="el" href="classStelModule.html#a11b61d014b51cf6424cd89b1ccd3d768a997f2e83df1e58174635a3133a22e432">ActionHandleMouseMoves</a>, 
-<br />
-&#160;&#160;<a class="el" href="classStelModule.html#a11b61d014b51cf6424cd89b1ccd3d768ab2af5253b4b1fb321f10724def2d44c6">ActionHandleKeys</a>
-<br />
- }</td></tr>
-<tr class="memdesc:a11b61d014b51cf6424cd89b1ccd3d768"><td class="mdescLeft">&#160;</td><td class="mdescRight">Define the possible action for which an order is defined.  <a href="classStelModule.html#a11b61d014b51cf6424cd89b1ccd3d768">More...</a><br /></td></tr>
-<tr class="separator:a11b61d014b51cf6424cd89b1ccd3d768 inherit pub_types_classStelModule"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pro_methods_classStelModule"><td colspan="2" onclick="javascript:toggleInherit('pro_methods_classStelModule')"><img src="closed.png" alt="-"/>&#160;Protected Member Functions inherited from <a class="el" href="classStelModule.html">StelModule</a></td></tr>
 <tr class="memitem:a02dbe3363599c3fe3bb8ff1659d55d85 inherit pro_methods_classStelModule"><td class="memItemLeft" align="right" valign="top">class <a class="el" href="classStelAction.html">StelAction</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classStelModule.html#a02dbe3363599c3fe3bb8ff1659d55d85">addAction</a> (const QString &amp;id, const QString &amp;groupId, const QString &amp;text, QObject *target, const char *slot, const QString &amp;shortcut=&quot;&quot;, const QString &amp;altShortcut=&quot;&quot;)</td></tr>
 <tr class="memdesc:a02dbe3363599c3fe3bb8ff1659d55d85 inherit pro_methods_classStelModule"><td class="mdescLeft">&#160;</td><td class="mdescRight">convenience methods to add an action (call to slot) to the <a class="el" href="classStelActionMgr.html" title="Manager for StelAction instances. Allows registration of new actions, and finding an existing one by ...">StelActionMgr</a> object.  <a href="classStelModule.html#a02dbe3363599c3fe3bb8ff1659d55d85">More...</a><br /></td></tr>
@@ -513,8 +636,8 @@ Additional Inherited Members</h2></td></tr>
 </div><!-- fragment --> 
 </div>
 </div>
-<a id="a16287cf43daf0d92ebd30dea5105b2ad"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a16287cf43daf0d92ebd30dea5105b2ad">&#9670;&nbsp;</a></span>configureGui()</h2>
+<a id="aae636a5e552a170b76977a6034868c10"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aae636a5e552a170b76977a6034868c10">&#9670;&nbsp;</a></span>configureGui()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -523,7 +646,7 @@ Additional Inherited Members</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">virtual bool TelescopeControl::configureGui </td>
+          <td class="memname">bool TelescopeControl::configureGui </td>
           <td>(</td>
           <td class="paramtype">bool&#160;</td>
           <td class="paramname"><em>show</em> = <code>true</code></td><td>)</td>
@@ -532,7 +655,7 @@ Additional Inherited Members</h2></td></tr>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">virtual</span></span>  </td>
+<span class="mlabels"><span class="mlabel">override</span><span class="mlabel">virtual</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
@@ -548,8 +671,8 @@ Additional Inherited Members</h2></td></tr>
 
 </div>
 </div>
-<a id="a279d4190609b3d8afdd313950e3960e8"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a279d4190609b3d8afdd313950e3960e8">&#9670;&nbsp;</a></span>deinit()</h2>
+<a id="a9913f8f7b0b2cc08d346da9a9a87f519"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9913f8f7b0b2cc08d346da9a9a87f519">&#9670;&nbsp;</a></span>deinit()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -558,7 +681,7 @@ Additional Inherited Members</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">virtual void TelescopeControl::deinit </td>
+          <td class="memname">void TelescopeControl::deinit </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
@@ -566,7 +689,7 @@ Additional Inherited Members</h2></td></tr>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">virtual</span></span>  </td>
+<span class="mlabels"><span class="mlabel">override</span><span class="mlabel">virtual</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
@@ -576,8 +699,8 @@ Additional Inherited Members</h2></td></tr>
 
 </div>
 </div>
-<a id="a06f4d292d2fd667a41091d06a0e84e8c"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a06f4d292d2fd667a41091d06a0e84e8c">&#9670;&nbsp;</a></span>draw()</h2>
+<a id="a084ad4ff3a5fe6b6d4bb159f6ba8d446"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a084ad4ff3a5fe6b6d4bb159f6ba8d446">&#9670;&nbsp;</a></span>draw()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -586,7 +709,7 @@ Additional Inherited Members</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">virtual void TelescopeControl::draw </td>
+          <td class="memname">void TelescopeControl::draw </td>
           <td>(</td>
           <td class="paramtype"><a class="el" href="classStelCore.html">StelCore</a> *&#160;</td>
           <td class="paramname"><em>core</em></td><td>)</td>
@@ -595,7 +718,7 @@ Additional Inherited Members</h2></td></tr>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">virtual</span></span>  </td>
+<span class="mlabels"><span class="mlabel">override</span><span class="mlabel">virtual</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
@@ -610,8 +733,8 @@ Additional Inherited Members</h2></td></tr>
 
 </div>
 </div>
-<a id="a88d04849a55f3921686f4952aafc0ee6"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a88d04849a55f3921686f4952aafc0ee6">&#9670;&nbsp;</a></span>getCallOrder()</h2>
+<a id="a3b5ebe139e512e77b847e441236c10cb"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3b5ebe139e512e77b847e441236c10cb">&#9670;&nbsp;</a></span>getCallOrder()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -620,7 +743,7 @@ Additional Inherited Members</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">virtual double TelescopeControl::getCallOrder </td>
+          <td class="memname">double TelescopeControl::getCallOrder </td>
           <td>(</td>
           <td class="paramtype"><a class="el" href="classStelModule.html#a11b61d014b51cf6424cd89b1ccd3d768">StelModuleActionName</a>&#160;</td>
           <td class="paramname"><em>actionName</em></td><td>)</td>
@@ -629,7 +752,7 @@ Additional Inherited Members</h2></td></tr>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">virtual</span></span>  </td>
+<span class="mlabels"><span class="mlabel">override</span><span class="mlabel">virtual</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
@@ -932,8 +1055,8 @@ Additional Inherited Members</h2></td></tr>
 
 </div>
 </div>
-<a id="a61cc9394a04a0ed0a81dd828409ba80b"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a61cc9394a04a0ed0a81dd828409ba80b">&#9670;&nbsp;</a></span>init()</h2>
+<a id="aee9d845bf026cebf5e05bd69b9d99da4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aee9d845bf026cebf5e05bd69b9d99da4">&#9670;&nbsp;</a></span>init()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -942,7 +1065,7 @@ Additional Inherited Members</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">virtual void TelescopeControl::init </td>
+          <td class="memname">void TelescopeControl::init </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
@@ -950,7 +1073,7 @@ Additional Inherited Members</h2></td></tr>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">virtual</span></span>  </td>
+<span class="mlabels"><span class="mlabel">override</span><span class="mlabel">virtual</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
@@ -979,8 +1102,8 @@ Additional Inherited Members</h2></td></tr>
 
 </div>
 </div>
-<a id="a22fc55e7440c674cebfabf220e5ac511"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a22fc55e7440c674cebfabf220e5ac511">&#9670;&nbsp;</a></span>listAllObjects()</h2>
+<a id="a9996279526ad1e184e39ab7a96f10e4b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9996279526ad1e184e39ab7a96f10e4b">&#9670;&nbsp;</a></span>listAllObjects()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -989,7 +1112,7 @@ Additional Inherited Members</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">virtual QStringList TelescopeControl::listAllObjects </td>
+          <td class="memname">QStringList TelescopeControl::listAllObjects </td>
           <td>(</td>
           <td class="paramtype">bool&#160;</td>
           <td class="paramname"><em>inEnglish</em></td><td>)</td>
@@ -998,7 +1121,7 @@ Additional Inherited Members</h2></td></tr>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">virtual</span></span>  </td>
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">override</span><span class="mlabel">virtual</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
@@ -1014,8 +1137,8 @@ Additional Inherited Members</h2></td></tr>
 
 </div>
 </div>
-<a id="abda3544ad14fffc31b22cb39eaaceb67"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#abda3544ad14fffc31b22cb39eaaceb67">&#9670;&nbsp;</a></span>listMatchingObjects()</h2>
+<a id="a5df73e3e415b377888eb3be079fffaed"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5df73e3e415b377888eb3be079fffaed">&#9670;&nbsp;</a></span>listMatchingObjects()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -1024,7 +1147,7 @@ Additional Inherited Members</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">virtual QStringList TelescopeControl::listMatchingObjects </td>
+          <td class="memname">QStringList TelescopeControl::listMatchingObjects </td>
           <td>(</td>
           <td class="paramtype">const QString &amp;&#160;</td>
           <td class="paramname"><em>objPrefix</em>, </td>
@@ -1032,7 +1155,7 @@ Additional Inherited Members</h2></td></tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">int&#160;</td>
+          <td class="paramtype">const int&#160;</td>
           <td class="paramname"><em>maxNbItem</em> = <code>5</code>, </td>
         </tr>
         <tr>
@@ -1049,7 +1172,7 @@ Additional Inherited Members</h2></td></tr>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">virtual</span></span>  </td>
+<span class="mlabels"><span class="mlabel">override</span><span class="mlabel">virtual</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
@@ -1085,8 +1208,8 @@ Additional Inherited Members</h2></td></tr>
 
 </div>
 </div>
-<a id="a257b9da262ab90349818611c9fbe2b63"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a257b9da262ab90349818611c9fbe2b63">&#9670;&nbsp;</a></span>searchAround()</h2>
+<a id="a4cbb63c39320671ebb4a294426fef2c6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4cbb63c39320671ebb4a294426fef2c6">&#9670;&nbsp;</a></span>searchAround()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -1095,7 +1218,7 @@ Additional Inherited Members</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">virtual QList&lt;<a class="el" href="classQSharedPointerNoDelete.html">StelObjectP</a>&gt; TelescopeControl::searchAround </td>
+          <td class="memname">QList&lt;<a class="el" href="classQSharedPointerNoDelete.html">StelObjectP</a>&gt; TelescopeControl::searchAround </td>
           <td>(</td>
           <td class="paramtype">const <a class="el" href="classVector3.html">Vec3d</a> &amp;&#160;</td>
           <td class="paramname"><em>v</em>, </td>
@@ -1120,7 +1243,7 @@ Additional Inherited Members</h2></td></tr>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">virtual</span></span>  </td>
+<span class="mlabels"><span class="mlabel">override</span><span class="mlabel">virtual</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
@@ -1138,8 +1261,8 @@ Additional Inherited Members</h2></td></tr>
 
 </div>
 </div>
-<a id="a2a86eca17de4af93b7ce223144c07adc"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a2a86eca17de4af93b7ce223144c07adc">&#9670;&nbsp;</a></span>searchByID()</h2>
+<a id="a76b06369c60fa59e9e68b26fafe52eb9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a76b06369c60fa59e9e68b26fafe52eb9">&#9670;&nbsp;</a></span>searchByID()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -1148,7 +1271,7 @@ Additional Inherited Members</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">virtual <a class="el" href="classQSharedPointerNoDelete.html">StelObjectP</a> TelescopeControl::searchByID </td>
+          <td class="memname"><a class="el" href="classQSharedPointerNoDelete.html">StelObjectP</a> TelescopeControl::searchByID </td>
           <td>(</td>
           <td class="paramtype">const QString &amp;&#160;</td>
           <td class="paramname"><em>id</em></td><td>)</td>
@@ -1157,7 +1280,7 @@ Additional Inherited Members</h2></td></tr>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">virtual</span></span>  </td>
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">override</span><span class="mlabel">virtual</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
@@ -1172,8 +1295,8 @@ Additional Inherited Members</h2></td></tr>
 
 </div>
 </div>
-<a id="a62c93cb0d62198c113e633124890a7ee"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a62c93cb0d62198c113e633124890a7ee">&#9670;&nbsp;</a></span>searchByName()</h2>
+<a id="a9584092feac4d035c5911dead7da60f1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9584092feac4d035c5911dead7da60f1">&#9670;&nbsp;</a></span>searchByName()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -1182,7 +1305,7 @@ Additional Inherited Members</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">virtual <a class="el" href="classQSharedPointerNoDelete.html">StelObjectP</a> TelescopeControl::searchByName </td>
+          <td class="memname"><a class="el" href="classQSharedPointerNoDelete.html">StelObjectP</a> TelescopeControl::searchByName </td>
           <td>(</td>
           <td class="paramtype">const QString &amp;&#160;</td>
           <td class="paramname"><em>name</em></td><td>)</td>
@@ -1191,7 +1314,7 @@ Additional Inherited Members</h2></td></tr>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">virtual</span></span>  </td>
+<span class="mlabels"><span class="mlabel">override</span><span class="mlabel">virtual</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
@@ -1206,8 +1329,8 @@ Additional Inherited Members</h2></td></tr>
 
 </div>
 </div>
-<a id="a1049e9ce49b8b634ddd4edaa65b5273d"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a1049e9ce49b8b634ddd4edaa65b5273d">&#9670;&nbsp;</a></span>searchByNameI18n()</h2>
+<a id="acb18d101b6fcf7b07fb74c0271fdd6f7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#acb18d101b6fcf7b07fb74c0271fdd6f7">&#9670;&nbsp;</a></span>searchByNameI18n()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -1216,7 +1339,7 @@ Additional Inherited Members</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">virtual <a class="el" href="classQSharedPointerNoDelete.html">StelObjectP</a> TelescopeControl::searchByNameI18n </td>
+          <td class="memname"><a class="el" href="classQSharedPointerNoDelete.html">StelObjectP</a> TelescopeControl::searchByNameI18n </td>
           <td>(</td>
           <td class="paramtype">const QString &amp;&#160;</td>
           <td class="paramname"><em>nameI18n</em></td><td>)</td>
@@ -1225,7 +1348,7 @@ Additional Inherited Members</h2></td></tr>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">virtual</span></span>  </td>
+<span class="mlabels"><span class="mlabel">override</span><span class="mlabel">virtual</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
@@ -1583,8 +1706,8 @@ Additional Inherited Members</h2></td></tr>
 </div><!-- fragment --> 
 </div>
 </div>
-<a id="a83b036ba4e5923e1ef410e7dc337a2f1"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a83b036ba4e5923e1ef410e7dc337a2f1">&#9670;&nbsp;</a></span>update()</h2>
+<a id="a4135197afc03432bc330eeeb97748986"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4135197afc03432bc330eeeb97748986">&#9670;&nbsp;</a></span>update()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -1593,7 +1716,7 @@ Additional Inherited Members</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">virtual void TelescopeControl::update </td>
+          <td class="memname">void TelescopeControl::update </td>
           <td>(</td>
           <td class="paramtype">double&#160;</td>
           <td class="paramname"><em>deltaTime</em></td><td>)</td>
@@ -1602,7 +1725,7 @@ Additional Inherited Members</h2></td></tr>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">virtual</span></span>  </td>
+<span class="mlabels"><span class="mlabel">override</span><span class="mlabel">virtual</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
@@ -1623,7 +1746,7 @@ Additional Inherited Members</h2></td></tr>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Sat Oct 1 2022 17:16:03 for Stellarium by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Mon Oct 31 2022 19:25:49 for Stellarium by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.17
 </small></address>

@@ -21,7 +21,7 @@
   <td id="projectlogo"><img alt="Logo" src="stellarium-logo.png"/></td>
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">Stellarium
-   &#160;<span id="projectnumber">1.0</span>
+   &#160;<span id="projectnumber">1.1</span>
    </div>
   </td>
  </tr>
@@ -297,24 +297,28 @@ Static Public Member Functions</h2></td></tr>
 static <a class="el" href="classStelMainView.html">StelMainView</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classStelMainView.html#ad66302bd97f1b3bee7a5207907212350">getInstance</a> ()</td></tr>
 <tr class="memdesc:ad66302bd97f1b3bee7a5207907212350"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the <a class="el" href="classStelMainView.html">StelMainView</a> singleton instance. <br /></td></tr>
 <tr class="separator:ad66302bd97f1b3bee7a5207907212350"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abc086d5554b2674f9472ef887fd68242"><td class="memItemLeft" align="right" valign="top"><a id="abc086d5554b2674f9472ef887fd68242"></a>
+static QSurfaceFormat&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classStelMainView.html#abc086d5554b2674f9472ef887fd68242">getDesiredGLFormat</a> (QSettings *configuration)</td></tr>
+<tr class="memdesc:abc086d5554b2674f9472ef887fd68242"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the desired OpenGL format settings. <br /></td></tr>
+<tr class="separator:abc086d5554b2674f9472ef887fd68242"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-methods"></a>
 Protected Member Functions</h2></td></tr>
-<tr class="memitem:a7f433f3cd14517b9ce2507281b25116e"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classStelMainView.html#a7f433f3cd14517b9ce2507281b25116e">moveEvent</a> (QMoveEvent *event) Q_DECL_OVERRIDE</td></tr>
-<tr class="memdesc:a7f433f3cd14517b9ce2507281b25116e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Hack to determine current monitor pixel ratio.  <a href="classStelMainView.html#a7f433f3cd14517b9ce2507281b25116e">More...</a><br /></td></tr>
-<tr class="separator:a7f433f3cd14517b9ce2507281b25116e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac64094d4089d9dc83e91ef3eb1d11777"><td class="memItemLeft" align="right" valign="top"><a id="ac64094d4089d9dc83e91ef3eb1d11777"></a>
-virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classStelMainView.html#ac64094d4089d9dc83e91ef3eb1d11777">closeEvent</a> (QCloseEvent *event) Q_DECL_OVERRIDE</td></tr>
-<tr class="memdesc:ac64094d4089d9dc83e91ef3eb1d11777"><td class="mdescLeft">&#160;</td><td class="mdescRight">Handle window closed event, calling <a class="el" href="classStelApp.html#a011fe02bdd5a175027ab5d6eb73c5f81" title="do some cleanup and call QCoreApplication::exit(0)">StelApp::quit()</a> <br /></td></tr>
-<tr class="separator:ac64094d4089d9dc83e91ef3eb1d11777"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a98ea099a5853e2d4293a9c1f8a7b97e8"><td class="memItemLeft" align="right" valign="top"><a id="a98ea099a5853e2d4293a9c1f8a7b97e8"></a>
-virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classStelMainView.html#a98ea099a5853e2d4293a9c1f8a7b97e8">resizeEvent</a> (QResizeEvent *event) Q_DECL_OVERRIDE</td></tr>
-<tr class="memdesc:a98ea099a5853e2d4293a9c1f8a7b97e8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Handle window resized events, and change the size of the underlying QGraphicsScene to be the same. <br /></td></tr>
-<tr class="separator:a98ea099a5853e2d4293a9c1f8a7b97e8"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad3214f2301e353c304ba26d8d301987e"><td class="memItemLeft" align="right" valign="top"><a id="ad3214f2301e353c304ba26d8d301987e"></a>
-virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classStelMainView.html#ad3214f2301e353c304ba26d8d301987e">mouseMoveEvent</a> (QMouseEvent *event) Q_DECL_OVERRIDE</td></tr>
-<tr class="memdesc:ad3214f2301e353c304ba26d8d301987e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Wake up mouse cursor (if it was hidden) <br /></td></tr>
-<tr class="separator:ad3214f2301e353c304ba26d8d301987e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5a67e16586d118f4cb51195ede2e427c"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classStelMainView.html#a5a67e16586d118f4cb51195ede2e427c">moveEvent</a> (QMoveEvent *event) override</td></tr>
+<tr class="memdesc:a5a67e16586d118f4cb51195ede2e427c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Hack to determine current monitor pixel ratio.  <a href="classStelMainView.html#a5a67e16586d118f4cb51195ede2e427c">More...</a><br /></td></tr>
+<tr class="separator:a5a67e16586d118f4cb51195ede2e427c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a245b62f7c520cd9448075c2dccdba069"><td class="memItemLeft" align="right" valign="top"><a id="a245b62f7c520cd9448075c2dccdba069"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classStelMainView.html#a245b62f7c520cd9448075c2dccdba069">closeEvent</a> (QCloseEvent *event) override</td></tr>
+<tr class="memdesc:a245b62f7c520cd9448075c2dccdba069"><td class="mdescLeft">&#160;</td><td class="mdescRight">Handle window closed event, calling <a class="el" href="classStelApp.html#a011fe02bdd5a175027ab5d6eb73c5f81" title="do some cleanup and call QCoreApplication::exit(0)">StelApp::quit()</a> <br /></td></tr>
+<tr class="separator:a245b62f7c520cd9448075c2dccdba069"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afede59291e0f81dbbbfd97de1361c38d"><td class="memItemLeft" align="right" valign="top"><a id="afede59291e0f81dbbbfd97de1361c38d"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classStelMainView.html#afede59291e0f81dbbbfd97de1361c38d">resizeEvent</a> (QResizeEvent *event) override</td></tr>
+<tr class="memdesc:afede59291e0f81dbbbfd97de1361c38d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Handle window resized events, and change the size of the underlying QGraphicsScene to be the same. <br /></td></tr>
+<tr class="separator:afede59291e0f81dbbbfd97de1361c38d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a681b4535d1e9564b67dfe8683f6864dc"><td class="memItemLeft" align="right" valign="top"><a id="a681b4535d1e9564b67dfe8683f6864dc"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classStelMainView.html#a681b4535d1e9564b67dfe8683f6864dc">mouseMoveEvent</a> (QMouseEvent *event) override</td></tr>
+<tr class="memdesc:a681b4535d1e9564b67dfe8683f6864dc"><td class="mdescLeft">&#160;</td><td class="mdescRight">Wake up mouse cursor (if it was hidden) <br /></td></tr>
+<tr class="separator:a681b4535d1e9564b67dfe8683f6864dc"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a66bb484dba1c55db74f09f4f729093ab"><td class="memItemLeft" align="right" valign="top"><a id="a66bb484dba1c55db74f09f4f729093ab"></a>
 bool&#160;</td><td class="memItemRight" valign="bottom"><b>eventFilter</b> (QObject *obj, QEvent *event) override</td></tr>
 <tr class="separator:a66bb484dba1c55db74f09f4f729093ab"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -405,6 +409,12 @@ functions</td>
 <td class="fielddoc">
 </td></tr>
 <tr><td class="fieldtype">
+<a id="a222cd504726863c13800e685fb7fd884"></a>bool</td>
+<td class="fieldname">
+isCoreProfile</td>
+<td class="fielddoc">
+</td></tr>
+<tr><td class="fieldtype">
 <a id="a4351ee058422a436ca2b3013d6791790"></a>QOpenGLContext *</td>
 <td class="fieldname">
 mainContext</td>
@@ -414,6 +424,18 @@ mainContext</td>
 <a id="afdf267542595aeacc42453c84a54ef89"></a>QString</td>
 <td class="fieldname">
 renderer</td>
+<td class="fielddoc">
+</td></tr>
+<tr><td class="fieldtype">
+<a id="ab23cc735c2deee49aecd707a70886edb"></a>bool</td>
+<td class="fieldname">
+supportsLuminanceTextures</td>
+<td class="fielddoc">
+</td></tr>
+<tr><td class="fieldtype">
+<a id="a1fb81daa7312111b5ea36d6c5242afb6"></a>QSurface *</td>
+<td class="fieldname">
+surface</td>
 <td class="fielddoc">
 </td></tr>
 <tr><td class="fieldtype">
@@ -491,8 +513,8 @@ vendor</td>
 
 </div>
 </div>
-<a id="a7f433f3cd14517b9ce2507281b25116e"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a7f433f3cd14517b9ce2507281b25116e">&#9670;&nbsp;</a></span>moveEvent()</h2>
+<a id="a5a67e16586d118f4cb51195ede2e427c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5a67e16586d118f4cb51195ede2e427c">&#9670;&nbsp;</a></span>moveEvent()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -501,7 +523,7 @@ vendor</td>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">virtual void StelMainView::moveEvent </td>
+          <td class="memname">void StelMainView::moveEvent </td>
           <td>(</td>
           <td class="paramtype">QMoveEvent *&#160;</td>
           <td class="paramname"><em>event</em></td><td>)</td>
@@ -510,7 +532,7 @@ vendor</td>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">protected</span><span class="mlabel">virtual</span></span>  </td>
+<span class="mlabels"><span class="mlabel">override</span><span class="mlabel">protected</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
@@ -716,7 +738,7 @@ vendor</td>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Sat Oct 1 2022 17:16:03 for Stellarium by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Mon Oct 31 2022 19:25:49 for Stellarium by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.17
 </small></address>
