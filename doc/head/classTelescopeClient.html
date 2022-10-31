@@ -21,7 +21,7 @@
   <td id="projectlogo"><img alt="Logo" src="stellarium-logo.png"/></td>
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">Stellarium
-   &#160;<span id="projectnumber">1.0</span>
+   &#160;<span id="projectnumber">HEAD</span>
    </div>
   </td>
  </tr>
@@ -46,6 +46,7 @@ $(function() {
 <a href="#pub-static-methods">Static Public Member Functions</a> &#124;
 <a href="#pub-static-attribs">Static Public Attributes</a> &#124;
 <a href="#pro-methods">Protected Member Functions</a> &#124;
+<a href="#pro-static-methods">Static Protected Member Functions</a> &#124;
 <a href="#pro-attribs">Protected Attributes</a>  </div>
   <div class="headertitle">
 <div class="title">TelescopeClient Class Reference<span class="mlabels"><span class="mlabel">abstract</span></span></div>  </div>
@@ -59,36 +60,32 @@ $(function() {
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:aa149c2fcb11ae7120e1c356f68b4fa28"><td class="memItemLeft" align="right" valign="top"><a id="aa149c2fcb11ae7120e1c356f68b4fa28"></a>
-QString&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classTelescopeClient.html#aa149c2fcb11ae7120e1c356f68b4fa28">getEnglishName</a> (void) const Q_DECL_OVERRIDE</td></tr>
-<tr class="memdesc:aa149c2fcb11ae7120e1c356f68b4fa28"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return object's name in english. <br /></td></tr>
-<tr class="separator:aa149c2fcb11ae7120e1c356f68b4fa28"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a6855427862d772015ea64afd64089f44"><td class="memItemLeft" align="right" valign="top"><a id="a6855427862d772015ea64afd64089f44"></a>
-QString&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classTelescopeClient.html#a6855427862d772015ea64afd64089f44">getNameI18n</a> (void) const Q_DECL_OVERRIDE</td></tr>
-<tr class="memdesc:a6855427862d772015ea64afd64089f44"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return translated object's name. <br /></td></tr>
-<tr class="separator:a6855427862d772015ea64afd64089f44"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a1ce9ff0808b9d9f6faa8266d4e166a10"><td class="memItemLeft" align="right" valign="top"><a id="a1ce9ff0808b9d9f6faa8266d4e166a10"></a>
-<a class="el" href="classVector3.html">Vec3f</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classTelescopeClient.html#a1ce9ff0808b9d9f6faa8266d4e166a10">getInfoColor</a> (void) const Q_DECL_OVERRIDE</td></tr>
-<tr class="memdesc:a1ce9ff0808b9d9f6faa8266d4e166a10"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get a color used to display info about the object. <br /></td></tr>
-<tr class="separator:a1ce9ff0808b9d9f6faa8266d4e166a10"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a6ce663c0895d44dfe577b94ab98703ac"><td class="memItemLeft" align="right" valign="top">QString&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classTelescopeClient.html#a6ce663c0895d44dfe577b94ab98703ac">getInfoString</a> (const <a class="el" href="classStelCore.html">StelCore</a> *core, const InfoStringGroup &amp;flags) const Q_DECL_OVERRIDE</td></tr>
-<tr class="memdesc:a6ce663c0895d44dfe577b94ab98703ac"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="classTelescopeClient.html" title="An abstract base class that should never be used directly, only inherited.">TelescopeClient</a> supports the following InfoStringGroup flags:  <a href="classTelescopeClient.html#a6ce663c0895d44dfe577b94ab98703ac">More...</a><br /></td></tr>
-<tr class="separator:a6ce663c0895d44dfe577b94ab98703ac"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a1f9334feef38aabe41df98e6c4d72987"><td class="memItemLeft" align="right" valign="top"><a id="a1f9334feef38aabe41df98e6c4d72987"></a>
-QString&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classTelescopeClient.html#a1f9334feef38aabe41df98e6c4d72987">getType</a> (void) const Q_DECL_OVERRIDE</td></tr>
-<tr class="memdesc:a1f9334feef38aabe41df98e6c4d72987"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return object's type. It should be the name of the class. <br /></td></tr>
-<tr class="separator:a1f9334feef38aabe41df98e6c4d72987"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a1495f010d23278cad696386115f31d21"><td class="memItemLeft" align="right" valign="top"><a id="a1495f010d23278cad696386115f31d21"></a>
-QString&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classTelescopeClient.html#a1495f010d23278cad696386115f31d21">getObjectType</a> (void) const Q_DECL_OVERRIDE</td></tr>
-<tr class="memdesc:a1495f010d23278cad696386115f31d21"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return object's type. It should be English lowercase name of the type of the object. <br /></td></tr>
-<tr class="separator:a1495f010d23278cad696386115f31d21"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a2b8eac74413cc368b3b066751e97b907"><td class="memItemLeft" align="right" valign="top"><a id="a2b8eac74413cc368b3b066751e97b907"></a>
-QString&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classTelescopeClient.html#a2b8eac74413cc368b3b066751e97b907">getObjectTypeI18n</a> (void) const Q_DECL_OVERRIDE</td></tr>
-<tr class="memdesc:a2b8eac74413cc368b3b066751e97b907"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return object's type. It should be translated lowercase name of the type of the object. <br /></td></tr>
-<tr class="separator:a2b8eac74413cc368b3b066751e97b907"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab4c9d11f657556b9e429f69787752351"><td class="memItemLeft" align="right" valign="top">QString&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classTelescopeClient.html#ab4c9d11f657556b9e429f69787752351">getID</a> () const Q_DECL_OVERRIDE</td></tr>
-<tr class="memdesc:ab4c9d11f657556b9e429f69787752351"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns a unique identifier for this object.  <a href="classTelescopeClient.html#ab4c9d11f657556b9e429f69787752351">More...</a><br /></td></tr>
-<tr class="separator:ab4c9d11f657556b9e429f69787752351"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adfe638c42890353ffb5e32e7639d91ad"><td class="memItemLeft" align="right" valign="top"><a id="adfe638c42890353ffb5e32e7639d91ad"></a>
+QString&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classTelescopeClient.html#adfe638c42890353ffb5e32e7639d91ad">getEnglishName</a> (void) const override</td></tr>
+<tr class="memdesc:adfe638c42890353ffb5e32e7639d91ad"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return object's name in english. <br /></td></tr>
+<tr class="separator:adfe638c42890353ffb5e32e7639d91ad"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae17e24d1f79d7a3be50e2681ecb8891f"><td class="memItemLeft" align="right" valign="top"><a id="ae17e24d1f79d7a3be50e2681ecb8891f"></a>
+QString&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classTelescopeClient.html#ae17e24d1f79d7a3be50e2681ecb8891f">getNameI18n</a> (void) const override</td></tr>
+<tr class="memdesc:ae17e24d1f79d7a3be50e2681ecb8891f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return translated object's name. <br /></td></tr>
+<tr class="separator:ae17e24d1f79d7a3be50e2681ecb8891f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac97ed287c8026bdd84d0e9b2dc3a6860"><td class="memItemLeft" align="right" valign="top">QString&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classTelescopeClient.html#ac97ed287c8026bdd84d0e9b2dc3a6860">getInfoString</a> (const <a class="el" href="classStelCore.html">StelCore</a> *core, const InfoStringGroup &amp;flags) const override</td></tr>
+<tr class="memdesc:ac97ed287c8026bdd84d0e9b2dc3a6860"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="classTelescopeClient.html" title="An abstract base class that should never be used directly, only inherited.">TelescopeClient</a> supports the following InfoStringGroup flags:  <a href="classTelescopeClient.html#ac97ed287c8026bdd84d0e9b2dc3a6860">More...</a><br /></td></tr>
+<tr class="separator:ac97ed287c8026bdd84d0e9b2dc3a6860"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aec9cd714ac1ea6eacba30f6462558af6"><td class="memItemLeft" align="right" valign="top"><a id="aec9cd714ac1ea6eacba30f6462558af6"></a>
+QString&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classTelescopeClient.html#aec9cd714ac1ea6eacba30f6462558af6">getType</a> (void) const override</td></tr>
+<tr class="memdesc:aec9cd714ac1ea6eacba30f6462558af6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return object's type. It should be the name of the class. <br /></td></tr>
+<tr class="separator:aec9cd714ac1ea6eacba30f6462558af6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad8178af1708d5a28d69d7b6fe8cf8c4c"><td class="memItemLeft" align="right" valign="top"><a id="ad8178af1708d5a28d69d7b6fe8cf8c4c"></a>
+QString&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classTelescopeClient.html#ad8178af1708d5a28d69d7b6fe8cf8c4c">getObjectType</a> (void) const override</td></tr>
+<tr class="memdesc:ad8178af1708d5a28d69d7b6fe8cf8c4c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return object's type. It should be English lowercase name of the type of the object. <br /></td></tr>
+<tr class="separator:ad8178af1708d5a28d69d7b6fe8cf8c4c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a302a03db841fb5734d1d85860320a8ef"><td class="memItemLeft" align="right" valign="top"><a id="a302a03db841fb5734d1d85860320a8ef"></a>
+QString&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classTelescopeClient.html#a302a03db841fb5734d1d85860320a8ef">getObjectTypeI18n</a> (void) const override</td></tr>
+<tr class="memdesc:a302a03db841fb5734d1d85860320a8ef"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return object's type. It should be translated lowercase name of the type of the object. <br /></td></tr>
+<tr class="separator:a302a03db841fb5734d1d85860320a8ef"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa0c350795e88317e8c0a6414f3f531fe"><td class="memItemLeft" align="right" valign="top">QString&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classTelescopeClient.html#aa0c350795e88317e8c0a6414f3f531fe">getID</a> () const override</td></tr>
+<tr class="memdesc:aa0c350795e88317e8c0a6414f3f531fe"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns a unique identifier for this object.  <a href="classTelescopeClient.html#aa0c350795e88317e8c0a6414f3f531fe">More...</a><br /></td></tr>
+<tr class="separator:aa0c350795e88317e8c0a6414f3f531fe"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a33183ef8aa7afc2a6a94e91a21567c99"><td class="memItemLeft" align="right" valign="top"><a id="a33183ef8aa7afc2a6a94e91a21567c99"></a>
 virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>telescopeGoto</b> (const <a class="el" href="classVector3.html">Vec3d</a> &amp;j2000Pos, <a class="el" href="classQSharedPointerNoDelete.html">StelObjectP</a> selectObject)=0</td></tr>
 <tr class="separator:a33183ef8aa7afc2a6a94e91a21567c99"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -108,10 +105,12 @@ virtual bool&#160;</td><td class="memItemRight" valign="bottom"><b>isConnected</
 virtual bool&#160;</td><td class="memItemRight" valign="bottom"><b>hasKnownPosition</b> (void) const =0</td></tr>
 <tr class="separator:ab9c73159558068582c39546b1026401f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a64a8eeecabbfed154ef8f047811ed55d"><td class="memItemLeft" align="right" valign="top"><a id="a64a8eeecabbfed154ef8f047811ed55d"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>addOcular</b> (double fov)</td></tr>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classTelescopeClient.html#a64a8eeecabbfed154ef8f047811ed55d">addOcular</a> (double fov)</td></tr>
+<tr class="memdesc:a64a8eeecabbfed154ef8f047811ed55d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Store field of view for an ocular circle (unrelated to <a class="el" href="group__oculars.html#classOculars" title="Main class of the Oculars plug-in.">Oculars</a> plugin) <br /></td></tr>
 <tr class="separator:a64a8eeecabbfed154ef8f047811ed55d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae2d5623a17dbd683335cd25c6fe37c40"><td class="memItemLeft" align="right" valign="top"><a id="ae2d5623a17dbd683335cd25c6fe37c40"></a>
-const QList&lt; double &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>getOculars</b> (void) const</td></tr>
+const QList&lt; double &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classTelescopeClient.html#ae2d5623a17dbd683335cd25c6fe37c40">getOculars</a> (void) const</td></tr>
+<tr class="memdesc:ae2d5623a17dbd683335cd25c6fe37c40"><td class="mdescLeft">&#160;</td><td class="mdescRight">Retrieve list of fields of view for this telescope. <br /></td></tr>
 <tr class="separator:ae2d5623a17dbd683335cd25c6fe37c40"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aaab75d0551edfe728c8d705995b04291"><td class="memItemLeft" align="right" valign="top"><a id="aaab75d0551edfe728c8d705995b04291"></a>
 virtual bool&#160;</td><td class="memItemRight" valign="bottom"><b>prepareCommunication</b> ()</td></tr>
@@ -119,9 +118,9 @@ virtual bool&#160;</td><td class="memItemRight" valign="bottom"><b>prepareCommun
 <tr class="memitem:a7fa4536763a6a6b8818ece3868bcfcd6"><td class="memItemLeft" align="right" valign="top"><a id="a7fa4536763a6a6b8818ece3868bcfcd6"></a>
 virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>performCommunication</b> ()</td></tr>
 <tr class="separator:a7fa4536763a6a6b8818ece3868bcfcd6"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a658502fa39c968b460b6364bf35159bf"><td class="memItemLeft" align="right" valign="top"><a id="a658502fa39c968b460b6364bf35159bf"></a>
-virtual QWidget *&#160;</td><td class="memItemRight" valign="bottom"><b>createControlWidget</b> (QSharedPointer&lt; <a class="el" href="classTelescopeClient.html">TelescopeClient</a> &gt; telescope, QWidget *parent=Q_NULLPTR) const</td></tr>
-<tr class="separator:a658502fa39c968b460b6364bf35159bf"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a73c2f6a6045a6a28b5a4f15ac5736b62"><td class="memItemLeft" align="right" valign="top"><a id="a73c2f6a6045a6a28b5a4f15ac5736b62"></a>
+virtual QWidget *&#160;</td><td class="memItemRight" valign="bottom"><b>createControlWidget</b> (QSharedPointer&lt; <a class="el" href="classTelescopeClient.html">TelescopeClient</a> &gt; telescope, QWidget *parent=nullptr) const</td></tr>
+<tr class="separator:a73c2f6a6045a6a28b5a4f15ac5736b62"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pub_methods_classStelObject"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_classStelObject')"><img src="closed.png" alt="-"/>&#160;Public Member Functions inherited from <a class="el" href="classStelObject.html">StelObject</a></td></tr>
 <tr class="memitem:ac875514ac2bf8aff56598a4d1cd868e4 inherit pub_methods_classStelObject"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="classSphericalRegionP.html">SphericalRegionP</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classStelObject.html#ac875514ac2bf8aff56598a4d1cd868e4">getRegion</a> () const Q_DECL_OVERRIDE</td></tr>
 <tr class="memdesc:ac875514ac2bf8aff56598a4d1cd868e4 inherit pub_methods_classStelObject"><td class="mdescLeft">&#160;</td><td class="mdescRight">Default implementation of the getRegion method.  <a href="classStelObject.html#ac875514ac2bf8aff56598a4d1cd868e4">More...</a><br /></td></tr>
@@ -191,6 +190,10 @@ virtual float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" h
 <tr class="memitem:a85e2cc30d876cd5afacb3fe199dbad95 inherit pub_methods_classStelObject"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classStelObject.html#a85e2cc30d876cd5afacb3fe199dbad95">getVMagnitudeWithExtinction</a> (const <a class="el" href="classStelCore.html">StelCore</a> *core) const</td></tr>
 <tr class="memdesc:a85e2cc30d876cd5afacb3fe199dbad95 inherit pub_methods_classStelObject"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return object's apparent V magnitude as seen from observer including extinction.  <a href="classStelObject.html#a85e2cc30d876cd5afacb3fe199dbad95">More...</a><br /></td></tr>
 <tr class="separator:a85e2cc30d876cd5afacb3fe199dbad95 inherit pub_methods_classStelObject"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a05768a80f663fac5389b4547b2994207 inherit pub_methods_classStelObject"><td class="memItemLeft" align="right" valign="top"><a id="a05768a80f663fac5389b4547b2994207"></a>
+virtual <a class="el" href="classVector3.html">Vec3f</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classStelObject.html#a05768a80f663fac5389b4547b2994207">getInfoColor</a> () const</td></tr>
+<tr class="memdesc:a05768a80f663fac5389b4547b2994207 inherit pub_methods_classStelObject"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get a color used to display info about the object. <br /></td></tr>
+<tr class="separator:a05768a80f663fac5389b4547b2994207 inherit pub_methods_classStelObject"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac53c60ca5d6527c6c2e3581f108b69f3 inherit pub_methods_classStelObject"><td class="memItemLeft" align="right" valign="top"><a id="ac53c60ca5d6527c6c2e3581f108b69f3"></a>
 virtual double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classStelObject.html#ac53c60ca5d6527c6c2e3581f108b69f3">getCloseViewFov</a> (const <a class="el" href="classStelCore.html">StelCore</a> *) const</td></tr>
 <tr class="memdesc:ac53c60ca5d6527c6c2e3581f108b69f3 inherit pub_methods_classStelObject"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return the best FOV in degree to use for a close view of the object. <br /></td></tr>
@@ -211,8 +214,8 @@ virtual double&#160;</td><td class="memItemRight" valign="bottom"><b>getParentSa
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-static-methods"></a>
 Static Public Member Functions</h2></td></tr>
-<tr class="memitem:a23fae55ac07de72d283078c54105c749"><td class="memItemLeft" align="right" valign="top"><a id="a23fae55ac07de72d283078c54105c749"></a>
-static <a class="el" href="classTelescopeClient.html">TelescopeClient</a> *&#160;</td><td class="memItemRight" valign="bottom"><b>create</b> (const QString &amp;url)</td></tr>
+<tr class="memitem:a23fae55ac07de72d283078c54105c749"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="classTelescopeClient.html">TelescopeClient</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classTelescopeClient.html#a23fae55ac07de72d283078c54105c749">create</a> (const QString &amp;url)</td></tr>
+<tr class="memdesc:a23fae55ac07de72d283078c54105c749"><td class="mdescLeft">&#160;</td><td class="mdescRight">example url: My_first_telescope:TCP:J2000:localhost:10000:500000 split to: name = My_first_telescope type = TCP equinox = J2000 params = localhost:10000:500000  <a href="classTelescopeClient.html#a23fae55ac07de72d283078c54105c749">More...</a><br /></td></tr>
 <tr class="separator:a23fae55ac07de72d283078c54105c749"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-static-attribs"></a>
@@ -253,6 +256,13 @@ virtual QString&#160;</td><td class="memItemRight" valign="bottom"><b>getTelesco
 <tr class="memitem:a53ece72260ecfe9c4783d740862021f8 inherit pro_methods_classStelObject"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classStelObject.html#a53ece72260ecfe9c4783d740862021f8">postProcessInfoString</a> (QString &amp;str, const InfoStringGroup &amp;flags) const</td></tr>
 <tr class="memdesc:a53ece72260ecfe9c4783d740862021f8 inherit pro_methods_classStelObject"><td class="mdescLeft">&#160;</td><td class="mdescRight">Apply post processing on the info string.  <a href="classStelObject.html#a53ece72260ecfe9c4783d740862021f8">More...</a><br /></td></tr>
 <tr class="separator:a53ece72260ecfe9c4783d740862021f8 inherit pro_methods_classStelObject"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-static-methods"></a>
+Static Protected Member Functions</h2></td></tr>
+<tr class="memitem:afd07d14dac7bc7a05a792cb6626cc079"><td class="memItemLeft" align="right" valign="top"><a id="afd07d14dac7bc7a05a792cb6626cc079"></a>
+static qint64&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classTelescopeClient.html#afd07d14dac7bc7a05a792cb6626cc079">getNow</a> (void)</td></tr>
+<tr class="memdesc:afd07d14dac7bc7a05a792cb6626cc079"><td class="mdescLeft">&#160;</td><td class="mdescRight">returns the current system time in microseconds since the Epoch <br /></td></tr>
+<tr class="separator:afd07d14dac7bc7a05a792cb6626cc079"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-attribs"></a>
 Protected Attributes</h2></td></tr>
@@ -324,8 +334,35 @@ Additional Inherited Members</h2></td></tr>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>This class used to be called <a class="el" href="group__oculars.html#classTelescope">Telescope</a>, but it has been renamed to <a class="el" href="classTelescopeClient.html" title="An abstract base class that should never be used directly, only inherited.">TelescopeClient</a> in order to resolve a compiler/linker conflict with the identically named <a class="el" href="group__oculars.html#classTelescope">Telescope</a> class in Stellarium's main code. </p>
 </div><h2 class="groupheader">Member Function Documentation</h2>
-<a id="ab4c9d11f657556b9e429f69787752351"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ab4c9d11f657556b9e429f69787752351">&#9670;&nbsp;</a></span>getID()</h2>
+<a id="a23fae55ac07de72d283078c54105c749"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a23fae55ac07de72d283078c54105c749">&#9670;&nbsp;</a></span>create()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static <a class="el" href="classTelescopeClient.html">TelescopeClient</a>* TelescopeClient::create </td>
+          <td>(</td>
+          <td class="paramtype">const QString &amp;&#160;</td>
+          <td class="paramname"><em>url</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>The params part is optional. We use QRegularExpression to validate the url and extract the components. </p>
+
+</div>
+</div>
+<a id="aa0c350795e88317e8c0a6414f3f531fe"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa0c350795e88317e8c0a6414f3f531fe">&#9670;&nbsp;</a></span>getID()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -342,20 +379,20 @@ Additional Inherited Members</h2></td></tr>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">virtual</span></span>  </td>
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">override</span><span class="mlabel">virtual</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
-<p>The ID should be unique for all objects of the same type, but may freely conflict with IDs of other types, so <a class="el" href="classTelescopeClient.html#a1f9334feef38aabe41df98e6c4d72987" title="Return object&#39;s type. It should be the name of the class.">getType()</a> must also be tested.</p>
-<p>With this it should be possible to at least identify the same object in a different instance of Stellarium running the same version, but it would even be better if the ID provides some degree of forward-compatibility. For some object types (e.g. planets) this may simply return <a class="el" href="classTelescopeClient.html#aa149c2fcb11ae7120e1c356f68b4fa28" title="Return object&#39;s name in english.">getEnglishName()</a>, but better candidates may be official designations or at least (stable) internal IDs.</p>
+<p>The ID should be unique for all objects of the same type, but may freely conflict with IDs of other types, so <a class="el" href="classTelescopeClient.html#aec9cd714ac1ea6eacba30f6462558af6" title="Return object&#39;s type. It should be the name of the class.">getType()</a> must also be tested.</p>
+<p>With this it should be possible to at least identify the same object in a different instance of Stellarium running the same version, but it would even be better if the ID provides some degree of forward-compatibility. For some object types (e.g. planets) this may simply return <a class="el" href="classTelescopeClient.html#adfe638c42890353ffb5e32e7639d91ad" title="Return object&#39;s name in english.">getEnglishName()</a>, but better candidates may be official designations or at least (stable) internal IDs.</p>
 <p>An object may have multiple IDs (different catalog numbers, etc). <a class="el" href="classStelObjectMgr.html#af0a33f6ff1448db085288eea46937399" title="Find an object of the given type and ID.">StelObjectMgr::searchByID()</a> should search through all ID variants, but this method only returns one of them. </p>
 
 <p>Implements <a class="el" href="classStelObject.html#ab11e911fb1974d75b8a9b629a57f243b">StelObject</a>.</p>
 
 </div>
 </div>
-<a id="a6ce663c0895d44dfe577b94ab98703ac"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a6ce663c0895d44dfe577b94ab98703ac">&#9670;&nbsp;</a></span>getInfoString()</h2>
+<a id="ac97ed287c8026bdd84d0e9b2dc3a6860"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac97ed287c8026bdd84d0e9b2dc3a6860">&#9670;&nbsp;</a></span>getInfoString()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -383,7 +420,7 @@ Additional Inherited Members</h2></td></tr>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">virtual</span></span>  </td>
+<span class="mlabels"><span class="mlabel">override</span><span class="mlabel">virtual</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
@@ -441,7 +478,7 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">angle</td><td>[0,360) </td></tr>
+    <tr><td class="paramname">angle</td><td>[0,360). 0=South, 90=West, 180=North, 270=East </td></tr>
     <tr><td class="paramname">speed</td><td>[0,1] </td></tr>
   </table>
   </dd>
@@ -454,7 +491,7 @@ Additional Inherited Members</h2></td></tr>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Sat Oct 1 2022 17:16:04 for Stellarium by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Mon Oct 31 2022 19:25:50 for Stellarium by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.17
 </small></address>

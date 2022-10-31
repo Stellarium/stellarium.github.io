@@ -21,7 +21,7 @@
   <td id="projectlogo"><img alt="Logo" src="stellarium-logo.png"/></td>
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">Stellarium
-   &#160;<span id="projectnumber">1.0</span>
+   &#160;<span id="projectnumber">HEAD</span>
    </div>
   </td>
  </tr>
@@ -154,9 +154,9 @@ Public Types</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:a7ae84cd9241515492d6aa8cff476da5a"><td class="memItemLeft" align="right" valign="top"><a id="a7ae84cd9241515492d6aa8cff476da5a"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><b>Planet</b> (const QString &amp;englishName, double equatorialRadius, double oblateness, <a class="el" href="classVector3.html">Vec3f</a> halocolor, float albedo, float roughness, const QString &amp;texMapName, const QString &amp;normalMapName, const QString &amp;objModelName, posFuncType _coordFunc, <a class="el" href="classOrbit.html">Orbit</a> *anOrbitPtr, OsculatingFunctType *osculatingFunc, bool closeOrbit, bool hidden, bool hasAtmosphere, bool hasHalo, const QString &amp;pTypeStr)</td></tr>
-<tr class="separator:a7ae84cd9241515492d6aa8cff476da5a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9817c8550bb16f924c786c6034ff5a62"><td class="memItemLeft" align="right" valign="top"><a id="a9817c8550bb16f924c786c6034ff5a62"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><b>Planet</b> (const QString &amp;englishName, double equatorialRadius, double oblateness, <a class="el" href="classVector3.html">Vec3f</a> halocolor, float albedo, float roughness, const QString &amp;texMapName, const QString &amp;normalMapName, const QString &amp;ahorizonMapName, const QString &amp;objModelName, posFuncType _coordFunc, <a class="el" href="classOrbit.html">Orbit</a> *anOrbitPtr, OsculatingFunctType *osculatingFunc, bool closeOrbit, bool hidden, bool hasAtmosphere, bool hasHalo, const QString &amp;pTypeStr)</td></tr>
+<tr class="separator:a9817c8550bb16f924c786c6034ff5a62"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aac51091bc7f5f5b75ba06af1d6474fe0"><td class="memItemLeft" align="right" valign="top">virtual QString&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPlanet.html#aac51091bc7f5f5b75ba06af1d6474fe0">getInfoString</a> (const <a class="el" href="classStelCore.html">StelCore</a> *core, const InfoStringGroup &amp;flags) const Q_DECL_OVERRIDE</td></tr>
 <tr class="memdesc:aac51091bc7f5f5b75ba06af1d6474fe0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get a string with data about the <a class="el" href="classPlanet.html">Planet</a>.  <a href="classPlanet.html#aac51091bc7f5f5b75ba06af1d6474fe0">More...</a><br /></td></tr>
 <tr class="separator:aac51091bc7f5f5b75ba06af1d6474fe0"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -875,6 +875,9 @@ QString&#160;</td><td class="memItemRight" valign="bottom"><b>texMapName</b></td
 <tr class="memitem:a0d8bb41b927645920cccd2f214214b78"><td class="memItemLeft" align="right" valign="top"><a id="a0d8bb41b927645920cccd2f214214b78"></a>
 QString&#160;</td><td class="memItemRight" valign="bottom"><b>normalMapName</b></td></tr>
 <tr class="separator:a0d8bb41b927645920cccd2f214214b78"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa8172f81a0ee1c7e65db78bd0f1142c5"><td class="memItemLeft" align="right" valign="top"><a id="aa8172f81a0ee1c7e65db78bd0f1142c5"></a>
+QString&#160;</td><td class="memItemRight" valign="bottom"><b>horizonMapName</b></td></tr>
+<tr class="separator:aa8172f81a0ee1c7e65db78bd0f1142c5"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab85d02f8510a69457f8ec65e43fcf8a4"><td class="memItemLeft" align="right" valign="top"><a id="ab85d02f8510a69457f8ec65e43fcf8a4"></a>
 <a class="el" href="classRotationElements.html">RotationElements</a>&#160;</td><td class="memItemRight" valign="bottom"><b>re</b></td></tr>
 <tr class="separator:ab85d02f8510a69457f8ec65e43fcf8a4"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -929,6 +932,9 @@ StelTextureSP&#160;</td><td class="memItemRight" valign="bottom"><b>texMap</b></
 <tr class="memitem:a9f317218b29832bd50fc12b9fa11f28b"><td class="memItemLeft" align="right" valign="top"><a id="a9f317218b29832bd50fc12b9fa11f28b"></a>
 StelTextureSP&#160;</td><td class="memItemRight" valign="bottom"><b>normalMap</b></td></tr>
 <tr class="separator:a9f317218b29832bd50fc12b9fa11f28b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afda24af50afb7ad0591211965732f7c4"><td class="memItemLeft" align="right" valign="top"><a id="afda24af50afb7ad0591211965732f7c4"></a>
+StelTextureSP&#160;</td><td class="memItemRight" valign="bottom"><b>horizonMap</b></td></tr>
+<tr class="separator:afda24af50afb7ad0591211965732f7c4"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a48eb92c249f5ec3e7dcb05505947bfb1"><td class="memItemLeft" align="right" valign="top"><a id="a48eb92c249f5ec3e7dcb05505947bfb1"></a>
 <a class="el" href="structPlanet_1_1PlanetOBJModel.html">PlanetOBJModel</a> *&#160;</td><td class="memItemRight" valign="bottom"><b>objModel</b></td></tr>
 <tr class="separator:a48eb92c249f5ec3e7dcb05505947bfb1"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -2017,7 +2023,7 @@ Limitation for efficiency: If this is a planet moon from another planet, we comp
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Sat Oct 1 2022 17:16:03 for Stellarium by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Mon Oct 31 2022 19:25:49 for Stellarium by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.17
 </small></address>

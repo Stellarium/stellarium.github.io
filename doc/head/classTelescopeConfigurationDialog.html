@@ -21,7 +21,7 @@
   <td id="projectlogo"><img alt="Logo" src="stellarium-logo.png"/></td>
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">Stellarium
-   &#160;<span id="projectnumber">1.0</span>
+   &#160;<span id="projectnumber">HEAD</span>
    </div>
   </td>
  </tr>
@@ -54,10 +54,14 @@ $(function() {
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-slots"></a>
 Public Slots</h2></td></tr>
-<tr class="memitem:aae39fb18e8913975bfa43aa1884cb556"><td class="memItemLeft" align="right" valign="top"><a id="aae39fb18e8913975bfa43aa1884cb556"></a>
-virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>retranslate</b> () Q_DECL_OVERRIDE</td></tr>
-<tr class="separator:aae39fb18e8913975bfa43aa1884cb556"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a785c5b24d3db196af7af4e8cc5839164"><td class="memItemLeft" align="right" valign="top"><a id="a785c5b24d3db196af7af4e8cc5839164"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>retranslate</b> () override</td></tr>
+<tr class="separator:a785c5b24d3db196af7af4e8cc5839164"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pub_slots_classStelDialog"><td colspan="2" onclick="javascript:toggleInherit('pub_slots_classStelDialog')"><img src="closed.png" alt="-"/>&#160;Public Slots inherited from <a class="el" href="classStelDialog.html">StelDialog</a></td></tr>
+<tr class="memitem:acb375a6bf4ee31143d417830db068fdb inherit pub_slots_classStelDialog"><td class="memItemLeft" align="right" valign="top"><a id="acb375a6bf4ee31143d417830db068fdb"></a>
+virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classStelDialog.html#acb375a6bf4ee31143d417830db068fdb">styleChanged</a> (const QString &amp;style)</td></tr>
+<tr class="memdesc:acb375a6bf4ee31143d417830db068fdb inherit pub_slots_classStelDialog"><td class="mdescLeft">&#160;</td><td class="mdescRight">Apply application style change. <br /></td></tr>
+<tr class="separator:acb375a6bf4ee31143d417830db068fdb inherit pub_slots_classStelDialog"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a2519f3888c35b55ce1a77dcd2be82a2f inherit pub_slots_classStelDialog"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classStelDialog.html#a2519f3888c35b55ce1a77dcd2be82a2f">retranslate</a> ()=0</td></tr>
 <tr class="memdesc:a2519f3888c35b55ce1a77dcd2be82a2f inherit pub_slots_classStelDialog"><td class="mdescLeft">&#160;</td><td class="mdescRight">Retranslate the content of the dialog.  <a href="classStelDialog.html#a2519f3888c35b55ce1a77dcd2be82a2f">More...</a><br /></td></tr>
 <tr class="separator:a2519f3888c35b55ce1a77dcd2be82a2f inherit pub_slots_classStelDialog"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -79,9 +83,9 @@ void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="clas
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="signals"></a>
 Signals</h2></td></tr>
-<tr class="memitem:a7d92c928f81f4ffa48f0605c233d8214"><td class="memItemLeft" align="right" valign="top"><a id="a7d92c928f81f4ffa48f0605c233d8214"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>changesSaved</b> (QString name, TelescopeControlGlobals::ConnectionType type)</td></tr>
-<tr class="separator:a7d92c928f81f4ffa48f0605c233d8214"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a98d5fd8ae73af97d650b62a8085d3f1c"><td class="memItemLeft" align="right" valign="top"><a id="a98d5fd8ae73af97d650b62a8085d3f1c"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>changesSaved</b> (QString name, TelescopeControl::ConnectionType type)</td></tr>
+<tr class="separator:a98d5fd8ae73af97d650b62a8085d3f1c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a741c17320a7c2d7a59274d358d012a00"><td class="memItemLeft" align="right" valign="top"><a id="a741c17320a7c2d7a59274d358d012a00"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><b>changesDiscarded</b> ()</td></tr>
 <tr class="separator:a741c17320a7c2d7a59274d358d012a00"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -99,13 +103,9 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>initExistingTelescope
 void&#160;</td><td class="memItemRight" valign="bottom"><b>initNewTelescopeConfiguration</b> (int slot)</td></tr>
 <tr class="separator:ac850b73e4e9baddf074af17fb8a6ce9c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pub_methods_classStelDialog"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_classStelDialog')"><img src="closed.png" alt="-"/>&#160;Public Member Functions inherited from <a class="el" href="classStelDialog.html">StelDialog</a></td></tr>
-<tr class="memitem:a99197055c58facca70bf297da2e0a4c0 inherit pub_methods_classStelDialog"><td class="memItemLeft" align="right" valign="top"><a id="a99197055c58facca70bf297da2e0a4c0"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><b>StelDialog</b> (QString <a class="el" href="classStelDialog.html#a8d198d65468e9423a8ddff818bfd8949">dialogName</a>=&quot;Default&quot;, QObject *parent=Q_NULLPTR)</td></tr>
-<tr class="separator:a99197055c58facca70bf297da2e0a4c0 inherit pub_methods_classStelDialog"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a5850bff921ea770a9de0bdc13b7d6f61 inherit pub_methods_classStelDialog"><td class="memItemLeft" align="right" valign="top"><a id="a5850bff921ea770a9de0bdc13b7d6f61"></a>
-virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classStelDialog.html#a5850bff921ea770a9de0bdc13b7d6f61">styleChanged</a> ()</td></tr>
-<tr class="memdesc:a5850bff921ea770a9de0bdc13b7d6f61 inherit pub_methods_classStelDialog"><td class="mdescLeft">&#160;</td><td class="mdescRight">Notify that the application style changed. <br /></td></tr>
-<tr class="separator:a5850bff921ea770a9de0bdc13b7d6f61 inherit pub_methods_classStelDialog"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa8857bf47da9a447c324760d6f4a96a2 inherit pub_methods_classStelDialog"><td class="memItemLeft" align="right" valign="top"><a id="aa8857bf47da9a447c324760d6f4a96a2"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><b>StelDialog</b> (const QString &amp;<a class="el" href="classStelDialog.html#a8d198d65468e9423a8ddff818bfd8949">dialogName</a>=QString(&quot;Default&quot;), QObject *parent=nullptr)</td></tr>
+<tr class="separator:aa8857bf47da9a447c324760d6f4a96a2 inherit pub_methods_classStelDialog"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a79afd80975c2c45f60435b319e6b100a inherit pub_methods_classStelDialog"><td class="memItemLeft" align="right" valign="top"><a id="a79afd80975c2c45f60435b319e6b100a"></a>
 bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classStelDialog.html#a79afd80975c2c45f60435b319e6b100a">visible</a> () const</td></tr>
 <tr class="memdesc:a79afd80975c2c45f60435b319e6b100a inherit pub_methods_classStelDialog"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns true if the dialog contents have been constructed and are currently shown. <br /></td></tr>
@@ -116,10 +116,10 @@ QString&#160;</td><td class="memItemRight" valign="bottom"><b>getDialogName</b> 
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-methods"></a>
 Protected Member Functions</h2></td></tr>
-<tr class="memitem:af3d26389eff84fccabb08718b406ac88"><td class="memItemLeft" align="right" valign="top"><a id="af3d26389eff84fccabb08718b406ac88"></a>
-virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classTelescopeConfigurationDialog.html#af3d26389eff84fccabb08718b406ac88">createDialogContent</a> () Q_DECL_OVERRIDE</td></tr>
-<tr class="memdesc:af3d26389eff84fccabb08718b406ac88"><td class="mdescLeft">&#160;</td><td class="mdescRight">Initialize the dialog widgets and connect the signals/slots. <br /></td></tr>
-<tr class="separator:af3d26389eff84fccabb08718b406ac88"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab8c08530275072af8a71f09a01903b78"><td class="memItemLeft" align="right" valign="top"><a id="ab8c08530275072af8a71f09a01903b78"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classTelescopeConfigurationDialog.html#ab8c08530275072af8a71f09a01903b78">createDialogContent</a> () override</td></tr>
+<tr class="memdesc:ab8c08530275072af8a71f09a01903b78"><td class="mdescLeft">&#160;</td><td class="mdescRight">Initialize the dialog widgets and connect the signals/slots. <br /></td></tr>
+<tr class="separator:ab8c08530275072af8a71f09a01903b78"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pro_methods_classStelDialog"><td colspan="2" onclick="javascript:toggleInherit('pro_methods_classStelDialog')"><img src="closed.png" alt="-"/>&#160;Protected Member Functions inherited from <a class="el" href="classStelDialog.html">StelDialog</a></td></tr>
 <tr class="memitem:abb879a830a7111140f239abd32349730 inherit pro_methods_classStelDialog"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classStelDialog.html#abb879a830a7111140f239abd32349730">connectColorButton</a> (QToolButton *button, QString propertyName, QString iniName, QString moduleName=&quot;&quot;)</td></tr>
 <tr class="memdesc:abb879a830a7111140f239abd32349730 inherit pro_methods_classStelDialog"><td class="mdescLeft">&#160;</td><td class="mdescRight">Prepare a QToolButton so that it can receive and handle <a class="el" href="classStelDialog.html#a5ef9b994a4c7565bcc6d8a9ccaa85f0b" title="To be called by a connected QToolButton with a color background.">askColor()</a> connections properly.  <a href="classStelDialog.html#abb879a830a7111140f239abd32349730">More...</a><br /></td></tr>
@@ -163,6 +163,10 @@ void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="clas
 void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classStelDialog.html#acfa079d204308bf74f36ac00e260560a">handleFontChanged</a> ()</td></tr>
 <tr class="memdesc:acfa079d204308bf74f36ac00e260560a inherit pro_slots_classStelDialog"><td class="mdescLeft">&#160;</td><td class="mdescRight">connect from <a class="el" href="classStelApp.html">StelApp</a> to handle font and font size changes. <br /></td></tr>
 <tr class="separator:acfa079d204308bf74f36ac00e260560a inherit pro_slots_classStelDialog"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a71450516751b407eb7ef60804e172b72 inherit pro_slots_classStelDialog"><td class="memItemLeft" align="right" valign="top"><a id="a71450516751b407eb7ef60804e172b72"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classStelDialog.html#a71450516751b407eb7ef60804e172b72">handleColorSchemeChanged</a> ()</td></tr>
+<tr class="memdesc:a71450516751b407eb7ef60804e172b72 inherit pro_slots_classStelDialog"><td class="mdescLeft">&#160;</td><td class="mdescRight">connect from <a class="el" href="classStelApp.html">StelApp</a> to handle CSS style changes <br /></td></tr>
+<tr class="separator:a71450516751b407eb7ef60804e172b72 inherit pro_slots_classStelDialog"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ada9ae9c079ed54a950343c92b2d1b715 inherit pro_slots_classStelDialog"><td class="memItemLeft" align="right" valign="top"><a id="ada9ae9c079ed54a950343c92b2d1b715"></a>
 virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>updateNightModeProperty</b> (bool n)</td></tr>
 <tr class="separator:ada9ae9c079ed54a950343c92b2d1b715 inherit pro_slots_classStelDialog"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -216,7 +220,7 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><b>visible</b></td></tr>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Sat Oct 1 2022 17:16:04 for Stellarium by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Mon Oct 31 2022 19:25:50 for Stellarium by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.17
 </small></address>

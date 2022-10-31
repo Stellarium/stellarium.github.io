@@ -21,7 +21,7 @@
   <td id="projectlogo"><img alt="Logo" src="stellarium-logo.png"/></td>
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">Stellarium
-   &#160;<span id="projectnumber">1.0</span>
+   &#160;<span id="projectnumber">HEAD</span>
    </div>
   </td>
  </tr>
@@ -62,6 +62,9 @@ Static Public Member Functions</h2></td></tr>
 <tr class="memitem:a89120f1e0b77f05c97c555af17a9c326"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classCLIProcessor.html#a89120f1e0b77f05c97c555af17a9c326">parseCLIArgsPreConfig</a> (const QStringList &amp;argList)</td></tr>
 <tr class="memdesc:a89120f1e0b77f05c97c555af17a9c326"><td class="mdescLeft">&#160;</td><td class="mdescRight">Processing of command line options which is to be done before config file is read.  <a href="classCLIProcessor.html#a89120f1e0b77f05c97c555af17a9c326">More...</a><br /></td></tr>
 <tr class="separator:a89120f1e0b77f05c97c555af17a9c326"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a42d20753f0c3fd51fd851e6b34b8aed0"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classCLIProcessor.html#a42d20753f0c3fd51fd851e6b34b8aed0">parseCLIArgsPreQApp</a> (const QStringList argList)</td></tr>
+<tr class="memdesc:a42d20753f0c3fd51fd851e6b34b8aed0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Processing of command-line options which must be processed before QGuiApplication is created.  <a href="classCLIProcessor.html#a42d20753f0c3fd51fd851e6b34b8aed0">More...</a><br /></td></tr>
+<tr class="separator:a42d20753f0c3fd51fd851e6b34b8aed0"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:afb910c9bf5c1938fb01b4597ef13975a"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classCLIProcessor.html#afb910c9bf5c1938fb01b4597ef13975a">parseCLIArgsPostConfig</a> (const QStringList &amp;argList, QSettings *conf)</td></tr>
 <tr class="memdesc:afb910c9bf5c1938fb01b4597ef13975a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Processing of command line options which is to be done after the config file is read.  <a href="classCLIProcessor.html#afb910c9bf5c1938fb01b4597ef13975a">More...</a><br /></td></tr>
 <tr class="separator:afb910c9bf5c1938fb01b4597ef13975a"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -312,10 +315,37 @@ Static Public Member Functions</h2></td></tr>
 
 </div>
 </div>
+<a id="a42d20753f0c3fd51fd851e6b34b8aed0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a42d20753f0c3fd51fd851e6b34b8aed0">&#9670;&nbsp;</a></span>parseCLIArgsPreQApp()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static void CLIProcessor::parseCLIArgsPreQApp </td>
+          <td>(</td>
+          <td class="paramtype">const QStringList&#160;</td>
+          <td class="paramname"><em>argList</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>This includes the options that set environment variables like QT_OPENGL that are read in the constructor of QGuiApplication. </p>
+
+</div>
+</div>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Sat Oct 1 2022 17:16:03 for Stellarium by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Mon Oct 31 2022 19:25:49 for Stellarium by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.17
 </small></address>
