@@ -21,7 +21,7 @@
   <td id="projectlogo"><img alt="Logo" src="stellarium-logo.png"/></td>
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">Stellarium
-   &#160;<span id="projectnumber">1.1</span>
+   &#160;<span id="projectnumber">1.2</span>
    </div>
   </td>
  </tr>
@@ -85,7 +85,8 @@ Public Types</h2></td></tr>
 <a class="el" href="classStelCore.html#ae7a591a79245086278e00c2c7076ba1fadbc0e44ee4471a1bb9c0746656ff696a">ProjectionMercator</a>, 
 <br />
 &#160;&#160;<a class="el" href="classStelCore.html#ae7a591a79245086278e00c2c7076ba1fa556efb993670c3b05cbd50ce0eed9ffb">ProjectionMiller</a>, 
-<a class="el" href="classStelCore.html#ae7a591a79245086278e00c2c7076ba1fa2934a0c168cf68a7ba204b784dbc5fd5">ProjectionCylinder</a>
+<a class="el" href="classStelCore.html#ae7a591a79245086278e00c2c7076ba1fa2934a0c168cf68a7ba204b784dbc5fd5">ProjectionCylinder</a>, 
+<a class="el" href="classStelCore.html#ae7a591a79245086278e00c2c7076ba1fa216550ed2576e586bc3290814c063c63">ProjectionCylinderFill</a>
 <br />
  }</td></tr>
 <tr class="separator:ae7a591a79245086278e00c2c7076ba1f"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -336,6 +337,12 @@ void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="clas
 void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classStelCore.html#aeb8f6d63920a50c86675e5bf14636700">setAberrationFactor</a> (double factor)</td></tr>
 <tr class="memdesc:aeb8f6d63920a50c86675e5bf14636700"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set aberration factor. Values are clamped to 0...5. (Values above 5 cause graphical problems.) <br /></td></tr>
 <tr class="separator:aeb8f6d63920a50c86675e5bf14636700"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8ed3bef619a40361a8aac31708e0f993"><td class="memItemLeft" align="right" valign="top"><a id="a8ed3bef619a40361a8aac31708e0f993"></a>
+QByteArray&#160;</td><td class="memItemRight" valign="bottom"><b>getAberrationShader</b> () const</td></tr>
+<tr class="separator:a8ed3bef619a40361a8aac31708e0f993"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af033804b9cd6947b68b29e13cc59e40a"><td class="memItemLeft" align="right" valign="top"><a id="af033804b9cd6947b68b29e13cc59e40a"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>setAberrationUniforms</b> (QOpenGLShaderProgram &amp;program) const</td></tr>
+<tr class="separator:af033804b9cd6947b68b29e13cc59e40a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ada4663970d4715fd7a3264a5d43d711b"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classStelCore.html#ada4663970d4715fd7a3264a5d43d711b">getUseTopocentricCoordinates</a> () const</td></tr>
 <tr class="separator:ada4663970d4715fd7a3264a5d43d711b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad110eb5700d4b51936f57baeeda0f8c6"><td class="memItemLeft" align="right" valign="top"><a id="ad110eb5700d4b51936f57baeeda0f8c6"></a>
@@ -718,7 +725,7 @@ void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="clas
 <tr class="separator:ad4d7a45e18cadf7411d4495b322602d6"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a42ad2b89f6a887e3aad22808a4d3f90a"><td class="memItemLeft" align="right" valign="top"><a id="a42ad2b89f6a887e3aad22808a4d3f90a"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classStelCore.html#a42ad2b89f6a887e3aad22808a4d3f90a">targetLocationChanged</a> (const <a class="el" href="classStelLocation.html">StelLocation</a> &amp;)</td></tr>
-<tr class="memdesc:a42ad2b89f6a887e3aad22808a4d3f90a"><td class="mdescLeft">&#160;</td><td class="mdescRight">This signal is emitted whenever the targetted location changes. <br /></td></tr>
+<tr class="memdesc:a42ad2b89f6a887e3aad22808a4d3f90a"><td class="mdescLeft">&#160;</td><td class="mdescRight">This signal is emitted whenever the targeted location changes. <br /></td></tr>
 <tr class="separator:a42ad2b89f6a887e3aad22808a4d3f90a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab1392f517dab13e939b0dadf0aad6007"><td class="memItemLeft" align="right" valign="top"><a id="ab1392f517dab13e939b0dadf0aad6007"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classStelCore.html#ab1392f517dab13e939b0dadf0aad6007">currentTimeZoneChanged</a> (const QString &amp;tz)</td></tr>
@@ -853,7 +860,7 @@ const <a class="el" href="classStelSkyDrawer.html">StelSkyDrawer</a> *&#160;</td
 <tr class="separator:a9587f21815d725d4fd8fb8d1c80308a9"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a009962c25533d57ba0595da16430d239"><td class="memItemLeft" align="right" valign="top"><a id="a009962c25533d57ba0595da16430d239"></a>
 const <a class="el" href="classStelGeodesicGrid.html">StelGeodesicGrid</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classStelCore.html#a009962c25533d57ba0595da16430d239">getGeodesicGrid</a> (int maxLevel) const</td></tr>
-<tr class="memdesc:a009962c25533d57ba0595da16430d239"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get an instance of <a class="el" href="classStelGeodesicGrid.html">StelGeodesicGrid</a> which is garanteed to allow for at least maxLevel levels. <br /></td></tr>
+<tr class="memdesc:a009962c25533d57ba0595da16430d239"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get an instance of <a class="el" href="classStelGeodesicGrid.html">StelGeodesicGrid</a> which is guaranteed to allow for at least maxLevel levels. <br /></td></tr>
 <tr class="separator:a009962c25533d57ba0595da16430d239"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab7419274290fa6fcd186879384c36457"><td class="memItemLeft" align="right" valign="top"><a id="ab7419274290fa6fcd186879384c36457"></a>
 <a class="el" href="classStelMovementMgr.html">StelMovementMgr</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classStelCore.html#ab7419274290fa6fcd186879384c36457">getMovementMgr</a> ()</td></tr>
@@ -1291,6 +1298,8 @@ DitheringMode&#160;</td><td class="memItemRight" valign="bottom"><b>ditheringMod
 <tr><td class="fieldname"><a id="ae7a591a79245086278e00c2c7076ba1fa556efb993670c3b05cbd50ce0eed9ffb"></a>ProjectionMiller&#160;</td><td class="fielddoc"><p>Miller cylindrical projection. </p>
 </td></tr>
 <tr><td class="fieldname"><a id="ae7a591a79245086278e00c2c7076ba1fa2934a0c168cf68a7ba204b784dbc5fd5"></a>ProjectionCylinder&#160;</td><td class="fielddoc"><p>Cylinder projection. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="ae7a591a79245086278e00c2c7076ba1fa216550ed2576e586bc3290814c063c63"></a>ProjectionCylinderFill&#160;</td><td class="fielddoc"><p>Cylinder projection, no zoom or movement allowed. </p>
 </td></tr>
 </table>
 
@@ -2788,7 +2797,7 @@ Up to V0.15.1, if the requested year was outside validity range, we returned zer
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Mon Oct 31 2022 19:25:49 for Stellarium by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Sun Dec 25 2022 21:57:22 for Stellarium by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.17
 </small></address>

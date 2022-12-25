@@ -21,7 +21,7 @@
   <td id="projectlogo"><img alt="Logo" src="stellarium-logo.png"/></td>
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">Stellarium
-   &#160;<span id="projectnumber">1.1</span>
+   &#160;<span id="projectnumber">1.2</span>
    </div>
   </td>
  </tr>
@@ -344,6 +344,9 @@ virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" hr
 <tr class="memitem:ab6737c6cda1ae394f662328ccb001414"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classVector4.html">Vec4d</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPlanet.html#ab6737c6cda1ae394f662328ccb001414">getRectangularCoordinates</a> (const double longDeg, const double latDeg, const double altMetres=0.) const</td></tr>
 <tr class="memdesc:ab6737c6cda1ae394f662328ccb001414"><td class="mdescLeft">&#160;</td><td class="mdescRight">Retrieve planetocentric rectangular coordinates of a location on the ellipsoid surface, or with altitude altMetres above the ellipsoid surface.  <a href="classPlanet.html#ab6737c6cda1ae394f662328ccb001414">More...</a><br /></td></tr>
 <tr class="separator:ab6737c6cda1ae394f662328ccb001414"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4324a5de70f84c5836192ba90e11ead9"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classVector4.html">Vec4d</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPlanet.html#a4324a5de70f84c5836192ba90e11ead9">getHourlyProperMotion</a> (const <a class="el" href="classStelCore.html">StelCore</a> *core) const</td></tr>
+<tr class="memdesc:a4324a5de70f84c5836192ba90e11ead9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Retrieve the hourly proper motion of Solar system bodies.  <a href="classPlanet.html#a4324a5de70f84c5836192ba90e11ead9">More...</a><br /></td></tr>
+<tr class="separator:a4324a5de70f84c5836192ba90e11ead9"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a433784ed992029715f9a58aba6e95322"><td class="memItemLeft" align="right" valign="top"><a id="a433784ed992029715f9a58aba6e95322"></a>
 double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPlanet.html#a433784ed992029715f9a58aba6e95322">getPhaseAngle</a> (const <a class="el" href="classVector3.html">Vec3d</a> &amp;obsPos) const</td></tr>
 <tr class="memdesc:a433784ed992029715f9a58aba6e95322"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the phase angle (radians) for an observer at pos obsPos in heliocentric coordinates (in AU) <br /></td></tr>
@@ -1337,6 +1340,25 @@ Additional Inherited Members</h2></td></tr>
 
 </div>
 </div>
+<a id="a4324a5de70f84c5836192ba90e11ead9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4324a5de70f84c5836192ba90e11ead9">&#9670;&nbsp;</a></span>getHourlyProperMotion()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classVector4.html">Vec4d</a> Planet::getHourlyProperMotion </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classStelCore.html">StelCore</a> *&#160;</td>
+          <td class="paramname"><em>core</em></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<dl class="section return"><dt>Returns</dt><dd>[hourlyMotion, positionAngle, deltaAlpha, deltaDelta] where hourlyMotion = hourly proper motion [radians] positionAngle = position angle (the direction of proper motion) [radians] deltaAlpha = hourly motion in R.A. [radians] deltaDelta = hourly motion in Dec. [radians] </dd></dl>
+
+</div>
+</div>
 <a id="ad21fe3c55285db18100352a4a2661655"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#ad21fe3c55285db18100352a4a2661655">&#9670;&nbsp;</a></span>getID()</h2>
 
@@ -2023,7 +2045,7 @@ Limitation for efficiency: If this is a planet moon from another planet, we comp
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Mon Oct 31 2022 19:25:49 for Stellarium by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Sun Dec 25 2022 21:57:21 for Stellarium by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.17
 </small></address>

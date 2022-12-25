@@ -21,7 +21,7 @@
   <td id="projectlogo"><img alt="Logo" src="stellarium-logo.png"/></td>
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">Stellarium
-   &#160;<span id="projectnumber">1.1</span>
+   &#160;<span id="projectnumber">1.2</span>
    </div>
   </td>
  </tr>
@@ -125,7 +125,7 @@ Doxygen Comments</h1>
 C/C++ Code</h1>
 <p>Use C++ replacement for C functions and Qt replacements for C++ functions/STL wherever possible.</p><ul>
 <li>Use <a href="http://doc.qt.io/qt-5/qstring.html">QString</a> instead of <code>std::string</code> or <code>char *</code></li>
-<li>Use <a href="http://doc.qt.io/qt-5/qiodevice.html">QIODevice</a> instead of C file managment with <code>fopen()</code> </li>
+<li>Use <a href="http://doc.qt.io/qt-5/qiodevice.html">QIODevice</a> instead of C file management with <code>fopen()</code> </li>
 <li>Pass objects as references when needed instead of using pointers.</li>
 <li>Include standard headers the C++ way, it is more portable: <div class="fragment"><div class="line"><span class="preprocessor">#include &lt;stdio.h&gt;</span> <span class="comment">// Bad</span></div>
 <div class="line"><span class="preprocessor">#include &lt;cstdio&gt;</span>  <span class="comment">// Good</span></div>
@@ -136,7 +136,7 @@ C/C++ Code</h1>
 <li>Avoid using C macros, use <code>static const</code> variables instead. It is safer because it is type safe. <div class="fragment"><div class="line"><span class="preprocessor">#define RADIUS 12 // Bad </span></div>
 <div class="line"><span class="preprocessor">static const int RADIUS = 12; // Good</span></div>
 </div><!-- fragment --></li>
-<li>Use stdc++ math functions instead of C ones. There are more portable and are also overrided for float, thus may be faster. <div class="fragment"><div class="line"><span class="keywordtype">double</span> cosLat = cos(lat);     <span class="comment">// Bad </span></div>
+<li>Use stdc++ math functions instead of C ones. They're more portable and are also overridden for float, thus may be faster. <div class="fragment"><div class="line"><span class="keywordtype">double</span> cosLat = cos(lat);     <span class="comment">// Bad </span></div>
 <div class="line"><span class="keywordtype">double</span> cosLat = std::cos(lat); <span class="comment">// Good</span></div>
 </div><!-- fragment --></li>
 </ul>
@@ -149,14 +149,14 @@ Translatable Strings and Console Output</h1>
 </ul>
 <p>Several guidelines:</p><ul>
 <li>Translatable text in sources or data files should be written in English, encoded in ASCII or UTF-8 if needed.</li>
-<li>Translatable strings should be modified only if really necessary. Any modification to one of them means that all the translators for all the langages will have to re-translate the new string. This also means that new strings should be chosen carefully, to avoid the need to modify them later.</li>
+<li>Translatable strings should be modified only if really necessary. Any modification to one of them means that all the translators for all the languages will have to re-translate the new string. This also means that new strings should be chosen carefully, to avoid the need to modify them later.</li>
 <li>Do not concatenate strings, use <code>QString::arg()</code> instead. Concatenated strings are very hard (or even impossible) to translate. <div class="fragment"><div class="line">text &lt;&lt; q_(<span class="stringliteral">&quot;Distance: &quot;</span>) &lt;&lt; distance &lt;&lt; q_(<span class="stringliteral">&quot;AU&quot;</span>);   <span class="comment">// Bad</span></div>
 <div class="line">text = q_(<span class="stringliteral">&quot;Distance: %1AU&quot;</span>).arg(distance);          <span class="comment">// Good</span></div>
 </div><!-- fragment --></li>
 <li>Translatable text should obey English typographic conventions. For example, there should be no space before the colon: <div class="fragment"><div class="line">QString myTranslatedText(q_(<span class="stringliteral">&quot;Distance of the planet :&quot;</span>)); <span class="comment">// Bad</span></div>
 <div class="line">QString myTranslatedText(q_(<span class="stringliteral">&quot;Distance of the planet:&quot;</span>));  <span class="comment">// Good</span></div>
 </div><!-- fragment --></li>
-<li>In general no translated text should be output on the console because there are problems when string and wstring are output on the same console. This means that you should never use wcout, wcerr or wprintf(). Console output should be used for informations, errors and warnings which are not required by the user in nominal use.</li>
+<li>In general no translated text should be output on the console because there are problems when string and wstring are output on the same console. This means that you should never use wcout, wcerr or wprintf(). Console output should be used for information, errors and warnings which are not required by the user in nominal use.</li>
 <li>Errors and warnings should be output in the stderr file, not stdout. [OBSOLETE? We use qDebug() and qWarning() now.] <div class="fragment"><div class="line">std::cout &lt;&lt; <span class="stringliteral">&quot;Error while opening file &quot;</span> &lt;&lt; qPrintable(myFileName) &lt;&lt; <span class="stringliteral">&quot;.&quot;</span> &lt;&lt; std::endl; <span class="comment">// Bad </span></div>
 <div class="line">std::cerr &lt;&lt; <span class="stringliteral">&quot;Error while opening file &quot;</span> &lt;&lt; qPrintable(myFileName) &lt;&lt; <span class="stringliteral">&quot;.&quot;</span> &lt;&lt; std::endl; <span class="comment">// Good</span></div>
 </div><!-- fragment --></li>
@@ -180,7 +180,7 @@ Translatable Strings and Console Output</h1>
 </div><!-- PageDoc -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Mon Oct 31 2022 19:25:48 for Stellarium by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Sun Dec 25 2022 21:57:20 for Stellarium by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.17
 </small></address>

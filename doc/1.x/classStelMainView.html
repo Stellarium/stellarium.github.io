@@ -21,7 +21,7 @@
   <td id="projectlogo"><img alt="Logo" src="stellarium-logo.png"/></td>
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">Stellarium
-   &#160;<span id="projectnumber">1.1</span>
+   &#160;<span id="projectnumber">1.2</span>
    </div>
   </td>
  </tr>
@@ -206,7 +206,7 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>fullScreenChanged</b>
 <tr class="separator:a39a02b1b60b4bda0456f716bce23f3a0"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a96707d8f300c8d5b03df428926ebf634"><td class="memItemLeft" align="right" valign="top"><a id="a96707d8f300c8d5b03df428926ebf634"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classStelMainView.html#a96707d8f300c8d5b03df428926ebf634">reloadShadersRequested</a> ()</td></tr>
-<tr class="memdesc:a96707d8f300c8d5b03df428926ebf634"><td class="mdescLeft">&#160;</td><td class="mdescRight">Emitted when the "Reload shaders" action is perfomed Interested objects should subscribe to this signal and reload their shaders when this is emitted. <br /></td></tr>
+<tr class="memdesc:a96707d8f300c8d5b03df428926ebf634"><td class="mdescLeft">&#160;</td><td class="mdescRight">Emitted when the "Reload shaders" action is performed Interested objects should subscribe to this signal and reload their shaders when this is emitted. <br /></td></tr>
 <tr class="separator:a96707d8f300c8d5b03df428926ebf634"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a683d1911e6d1f94dc25d79989e13383a"><td class="memItemLeft" align="right" valign="top"><a id="a683d1911e6d1f94dc25d79989e13383a"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><b>updateIconsRequested</b> ()</td></tr>
@@ -286,10 +286,10 @@ void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="clas
 void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classStelMainView.html#a276f361e28e789b1ccdc3dfb5d58c87e">glContextDoneCurrent</a> ()</td></tr>
 <tr class="memdesc:a276f361e28e789b1ccdc3dfb5d58c87e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Releases the main GL context. <br /></td></tr>
 <tr class="separator:a276f361e28e789b1ccdc3dfb5d58c87e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ada32126cc0ac28cdc4b56356eb4cfb61"><td class="memItemLeft" align="right" valign="top"><a id="ada32126cc0ac28cdc4b56356eb4cfb61"></a>
-<a class="el" href="classStelMainView.html#structStelMainView_1_1GLInfo">GLInfo</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classStelMainView.html#ada32126cc0ac28cdc4b56356eb4cfb61">getGLInformation</a> () const</td></tr>
-<tr class="memdesc:ada32126cc0ac28cdc4b56356eb4cfb61"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the information about the GL context, this does not require the context to be active. <br /></td></tr>
-<tr class="separator:ada32126cc0ac28cdc4b56356eb4cfb61"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a771501c3040779907ae389e6efb4736a"><td class="memItemLeft" align="right" valign="top"><a id="a771501c3040779907ae389e6efb4736a"></a>
+const <a class="el" href="classStelMainView.html#structStelMainView_1_1GLInfo">GLInfo</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classStelMainView.html#a771501c3040779907ae389e6efb4736a">getGLInformation</a> () const</td></tr>
+<tr class="memdesc:a771501c3040779907ae389e6efb4736a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the information about the GL context, this does not require the context to be active. <br /></td></tr>
+<tr class="separator:a771501c3040779907ae389e6efb4736a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-static-methods"></a>
 Static Public Member Functions</h2></td></tr>
@@ -415,9 +415,21 @@ isCoreProfile</td>
 <td class="fielddoc">
 </td></tr>
 <tr><td class="fieldtype">
+<a id="a642b365336919b2a758fafd570cc034c"></a>bool</td>
+<td class="fieldname">
+isGLES</td>
+<td class="fielddoc">
+</td></tr>
+<tr><td class="fieldtype">
 <a id="a4351ee058422a436ca2b3013d6791790"></a>QOpenGLContext *</td>
 <td class="fieldname">
 mainContext</td>
+<td class="fielddoc">
+</td></tr>
+<tr><td class="fieldtype">
+<a id="a4949595df297b3c61e79d39a05e8f925"></a>GLint</td>
+<td class="fieldname">
+maxAnisotropy</td>
 <td class="fielddoc">
 </td></tr>
 <tr><td class="fieldtype">
@@ -738,7 +750,7 @@ vendor</td>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Mon Oct 31 2022 19:25:49 for Stellarium by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Sun Dec 25 2022 21:57:22 for Stellarium by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.17
 </small></address>
