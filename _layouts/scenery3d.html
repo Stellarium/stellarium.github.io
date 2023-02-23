@@ -1,0 +1,46 @@
+---
+layout: default
+title: Stellarium 3D sceneries
+---
+{% include i18n.html %}
+{% include home.html %}
+
+<div id="content">
+  <div id="scenery3d-intro" class="block">
+    <h2>{% include tr.html s="user contributed 3D sceneries" %}</h2>
+    <p>{% include tr.html s="We are collecting user-contributed 3D sceneries of astronomical interest (not necessarily your garden shack)." %}</p>
+    <ul class="smalllist">
+      <li><a href="./scenery3d-collection.html">{% include tr.html s="Collection" %}</a></li>
+    </ul>
+  </div>
+
+  <div id="landscapes-data" class="block">
+    <h2>{% include tr.html s="how to install 3D sceneries" %}</h2>
+    <p>{% include tr.html s="After you have downloaded the .zip file for a 3D scenery, you need to install it in Stellarium." %}</p>
+    <ul class="stdlist">
+        <li>{% include tr.html s="Browse to your User Data Directory, which varies according to your operating system. (See User Guide)" %}</li>
+        <li>{% include tr.html s="Create a sub-directory called <em>scenery3d</em> in your User Data Directory (if it doesn't exist)." %}</li>
+        <li>{% include tr.html s="Unzip the scenery .zip file in the <em>scenery3d</em> directory (if it's done right, a sub-directory should be created for each scenery)." %}</li>
+		<li>{% include tr.html s="If there is also a landscapes subdirectory in the ZIP file, move its contents to the <em>landscapes</em> subdirectory." %}</li>
+    </ul>
+    <h2>{% include tr.html s="contributions" %}</h2>
+    <p>{% include tr.html s="Please feel free to contribute your own custom 3D sceneries here. Make thumbnails 200x114 pixels to fit with the rest of the page. Please include a location section in your scenery3d.ini file with the longitude, latitude, altitude and planet for the location of the scenery (see one of the pre-existing sceneries for an example)." %}</p>
+    <p>{% include tr.html s="To find out more about how to create a 3D scenery, see the Stellarium User Guide, and examine existing examples. If you are having problems, posting to the forums is a good way to get some advice." %}</p>
+    <h3>{% include tr.html s="important note on image dimensions" %}</h3>
+    <p><strong>{% include tr.html s="IMPORTANT: Try to still use textures with dimensions of integer powers of 2, i.e. 256, 512, 1024, 2048, 4096, 8192, 16384, ... e.g. 4096 by 1024, 2048 by 2048 and so on." %}</strong></p>
+    <p>{% include tr.html s="This is a limitation of older OpenGL hardware. Most video hardware will nowadays work OK with images with different image dimensions, but some will not display properly, suffer vastly reduced frame rates, and even crash the computer." %}</p>
+    <p>{% include tr.html s="Be aware that many people's video hardware cannot handle very large textures. This is hardware and driver dependent. Maximum compatibility is achieved with image size not exceeding 2048x2048." %}</p>
+    <h3>{% include tr.html s="package contents" %}</h3>
+    <p>{% include tr.html s="Please package your 3D scenery in a .zip file with all files inside a subdirectory in the .zip file. This should be unique to your scenery, and must be all lower-case with no spaces." %}</p>
+    <p>{% include tr.html s="If you enclose your scenery with a landscape, provide this in a landscapes/name subdirectory in the ZIP file." %}</p>	
+    <p>{% include tr.html s="You should also include a readme.txt file which describes the landscape and specifies any usage restrictions or licensing terms for the images used in the 3D scenery." %}</p>
+    <h3>{% include tr.html s="licensing" %}</h3>
+    <p>{% include tr.html s="Before you distribute images as part of a Stellarium 3D scenery or landscape, please ensure you are legally entitled to - you must be the copyright holder for the images, or be able to distribute them for use with Stellarium under the terms of some agreement with the copyright holder (e.g. Creative Commons licensed images found on the web)." %}</p>
+    <p>{% include tr.html s="It is important to explicitly state what use may be made of images for your landscape. This should be done in the readme.txt file inside the .zip file." %}</p>
+    <p>{% include tr.html s="We recommend an open source license compatible with Stellarium itself (i.e., the GNU GPL), or one of the Creative Commons licenses." %}</p>
+    <h3>{% include tr.html s="file encoding" %}</h3>
+    <p>{% include tr.html s="The landscape.ini and readme.txt files should be UTF-8 encoded text or plain ASCII. It's probably a good idea to adopt the Windows line ending encoding, (i.e. CR LF). Both Windows and *nix style line ending encoding should work OK in Stellarium, but Windows users will have an ugly time reading the readme.txt if it uses *nix-style newlines." %}</p>
+    <h3>{% include tr.html s="need hosting?" %}</h3>
+    <p>{% include tr.html s="If you have a 3D scenery of culture astronomical interest you would like to share but have no web-space to put it, email to any Stellarium developers and we'll put it on our site." %}</p>
+  </div>
+</div>
