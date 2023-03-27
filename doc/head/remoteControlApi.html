@@ -290,7 +290,7 @@ Sets the current Stellarium simulation time and/or timerate. The <code>time</cod
 <h4><a class="anchor" id="rcMainServiceFocus"></a>
 focus</h4>
 <p>Parameters: <code>[target (String) | position (JSON Number Array of size 3, i.e. Vec3d)] [mode (String)]</code><br  />
-Sets the current app focus/selection. If no parameters are given, the current selection is cleared. If the <code>target</code> parameter was given, the object to be selected is looked up by name (first the localized name is tried, then the english name). If the optional <code>mode</code> parameter is given, it determines how to change the view. The default is <code>'center'</code> which selects the object and moves it into the view's center. If it is set to <code>'zoom'</code>, it automatically zooms in on the object (<a class="el" href="classStelMovementMgr.html#a8a0b18883d5c026da0963f2fff9ff480" title="Go and zoom to the selected object. A later call to autoZoomOut will come back to the previous zoom l...">StelMovementMgr::autoZoomIn</a>) on selection and automatically zooms out when the selection is cleared. If it is set to <code>'mark'</code>, the selection is just marked, but no view adjustment is done. If the <code>position</code> parameter is used, it is interpreted as a coordinate in the J2000 frame, and focused using <a class="el" href="classStelMovementMgr.html#a0218ed67fc1e4d180196eb455c966606" title="Move the view to a specified J2000 position.">StelMovementMgr::moveToJ2000</a>. The <code>mode</code> parameter has no effect here. The <code>target</code> parameter takes precendence over the <code>position</code> parameter, if both are given.</p>
+Sets the current app focus/selection. If no parameters are given, the current selection is cleared. If the <code>target</code> parameter was given, the object to be selected is looked up by name (first the localized name is tried, then the english name). If the optional <code>mode</code> parameter is given, it determines how to change the view. The default is <code>'center'</code> which selects the object and moves it into the view's center. If it is set to <code>'zoom'</code>, it automatically zooms in on the object (<a class="el" href="classStelMovementMgr.html#a8a0b18883d5c026da0963f2fff9ff480" title="Go and zoom to the selected object. A later call to autoZoomOut will come back to the previous zoom l...">StelMovementMgr::autoZoomIn</a>) on selection and automatically zooms out when the selection is cleared. If it is set to <code>'mark'</code>, the selection is just marked, but no view adjustment is done. If the <code>position</code> parameter is used, it is interpreted as a coordinate in the J2000 frame, and focused using <a class="el" href="classStelMovementMgr.html#a0218ed67fc1e4d180196eb455c966606" title="Move the view to a specified J2000 position.">StelMovementMgr::moveToJ2000</a>. The <code>mode</code> parameter has no effect here. The <code>target</code> parameter takes precedence over the <code>position</code> parameter, if both are given.</p>
 <h4><a class="anchor" id="rcMainServiceMove"></a>
 move</h4>
 <p>Parameters: <code>x (Number) y (Number)</code><br  />
@@ -500,7 +500,7 @@ listlandscape</h4>
 </div><!-- fragment --><h4><a class="anchor" id="rcViewServiceLandscapedescription"></a>
 landscapedescription/</h4>
 <p><em>Note that the slash at the end is mandatory!</em><br  />
-Provides virtual filesystem access to the current landscape directory. The operation can take a longer path in the URL. The remainder is used to access files in the landscape directory. If no longer path is given, the current HTML landscape description (as per <a class="el" href="classLandscapeMgr.html#aeb5e455d1653a9ae64bd98284980ae00" title="Return a pseudo HTML formatted string with all informations on the current landscape.">LandscapeMgr::getCurrentLandscapeHtmlDescription</a>) is returned. An example: <code>landscapedescription/image.png</code> returns <code>image.png</code> from the current landscape directory.</p>
+Provides virtual filesystem access to the current landscape directory. The operation can take a longer path in the URL. The remainder is used to access files in the landscape directory. If no longer path is given, the current HTML landscape description (as per <a class="el" href="classLandscapeMgr.html#aeb5e455d1653a9ae64bd98284980ae00" title="Return a pseudo HTML formatted string with all information on the current landscape.">LandscapeMgr::getCurrentLandscapeHtmlDescription</a>) is returned. An example: <code>landscapedescription/image.png</code> returns <code>image.png</code> from the current landscape directory.</p>
 <p>This operation allows to set up an HTML <code>iframe</code> or similar for the landscape description, including all images, etc. embedded in the HTML description.</p>
 <h4><a class="anchor" id="rcViewServiceListskyculture"></a>
 listskyculture</h4>
@@ -526,7 +526,7 @@ projectiondescription</h4>
 </div><!-- PageDoc -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Mon Oct 31 2022 19:25:48 for Stellarium by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Mon Mar 27 2023 11:54:02 for Stellarium by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.17
 </small></address>
