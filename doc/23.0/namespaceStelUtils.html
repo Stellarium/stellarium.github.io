@@ -21,7 +21,7 @@
   <td id="projectlogo"><img alt="Logo" src="stellarium-logo.png"/></td>
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">Stellarium
-   &#160;<span id="projectnumber">23.1</span>
+   &#160;<span id="projectnumber">23.2</span>
    </div>
   </td>
  </tr>
@@ -186,8 +186,12 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="name
 <tr class="separator:a9e3143529cf3d2b03780f2219fe7b948"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad118f6823cb5b253e51c923ba79caa1a"><td class="memItemLeft" align="right" valign="top"><a id="ad118f6823cb5b253e51c923ba79caa1a"></a>
 int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceStelUtils.html#ad118f6823cb5b253e51c923ba79caa1a">getBiggerPowerOfTwo</a> (int value)</td></tr>
-<tr class="memdesc:ad118f6823cb5b253e51c923ba79caa1a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return the first power of two bigger than the given value. <br /></td></tr>
+<tr class="memdesc:ad118f6823cb5b253e51c923ba79caa1a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return the smallest power of two greater than or equal to the given value. <br /></td></tr>
 <tr class="separator:ad118f6823cb5b253e51c923ba79caa1a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5ecf29206d85bc7d1c322e4e5ad3b7de"><td class="memItemLeft" align="right" valign="top"><a id="a5ecf29206d85bc7d1c322e4e5ad3b7de"></a>
+int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceStelUtils.html#a5ecf29206d85bc7d1c322e4e5ad3b7de">getSmallerPowerOfTwo</a> (const int value)</td></tr>
+<tr class="memdesc:a5ecf29206d85bc7d1c322e4e5ad3b7de"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return the largest power of two smaller than or equal to the given value. <br /></td></tr>
+<tr class="separator:a5ecf29206d85bc7d1c322e4e5ad3b7de"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af4ba68e06322751dffc4db51f64d9308"><td class="memItemLeft" align="right" valign="top"><a id="af4ba68e06322751dffc4db51f64d9308"></a>
 double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceStelUtils.html#af4ba68e06322751dffc4db51f64d9308">asinh</a> (const double z)</td></tr>
 <tr class="memdesc:af4ba68e06322751dffc4db51f64d9308"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return the inverse sinus hyperbolic of z. <br /></td></tr>
@@ -253,6 +257,9 @@ double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="na
 <tr class="memitem:a63cbb191f5a09332256042ea4a6834ea"><td class="memItemLeft" align="right" valign="top"><a id="a63cbb191f5a09332256042ea4a6834ea"></a>
 int&#160;</td><td class="memItemRight" valign="bottom"><b>getDayOfWeek</b> (double JD)</td></tr>
 <tr class="separator:a63cbb191f5a09332256042ea4a6834ea"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adbae28c4b9fc0fd5e9cc25c0a1865639"><td class="memItemLeft" align="right" valign="top">QString&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceStelUtils.html#adbae28c4b9fc0fd5e9cc25c0a1865639">localeDiscoveryDateString</a> (const QString &amp;discovery)</td></tr>
+<tr class="memdesc:adbae28c4b9fc0fd5e9cc25c0a1865639"><td class="mdescLeft">&#160;</td><td class="mdescRight">Format the discovery date.  <a href="namespaceStelUtils.html#adbae28c4b9fc0fd5e9cc25c0a1865639">More...</a><br /></td></tr>
+<tr class="separator:adbae28c4b9fc0fd5e9cc25c0a1865639"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae67dd18d39369ca636d91522b11130b0"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceStelUtils.html#ae67dd18d39369ca636d91522b11130b0">getJDFromSystem</a> ()</td></tr>
 <tr class="memdesc:ae67dd18d39369ca636d91522b11130b0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the current Julian Date from system time.  <a href="namespaceStelUtils.html#ae67dd18d39369ca636d91522b11130b0">More...</a><br /></td></tr>
 <tr class="separator:ae67dd18d39369ca636d91522b11130b0"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -2777,6 +2784,25 @@ template&lt;typename T &gt; </div>
 
 </div>
 </div>
+<a id="adbae28c4b9fc0fd5e9cc25c0a1865639"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#adbae28c4b9fc0fd5e9cc25c0a1865639">&#9670;&nbsp;</a></span>localeDiscoveryDateString()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">QString StelUtils::localeDiscoveryDateString </td>
+          <td>(</td>
+          <td class="paramtype">const QString &amp;&#160;</td>
+          <td class="paramname"><em>discovery</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<dl class="section return"><dt>Returns</dt><dd>QString representing the formatted date </dd></dl>
+
+</div>
+</div>
 <a id="a9e58361b93d12035bf2f227a7ff425a5"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a9e58361b93d12035bf2f227a7ff425a5">&#9670;&nbsp;</a></span>qDateTimeToJd()</h2>
 
@@ -3756,7 +3782,7 @@ template&lt;typename T &gt; </div>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Mon Mar 27 2023 11:54:03 for Stellarium by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Sun Jul 2 2023 19:12:12 for Stellarium by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.17
 </small></address>

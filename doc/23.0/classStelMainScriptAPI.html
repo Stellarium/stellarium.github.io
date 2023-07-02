@@ -21,7 +21,7 @@
   <td id="projectlogo"><img alt="Logo" src="stellarium-logo.png"/></td>
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">Stellarium
-   &#160;<span id="projectnumber">23.1</span>
+   &#160;<span id="projectnumber">23.2</span>
    </div>
   </td>
  </tr>
@@ -197,6 +197,12 @@ static QString&#160;</td><td class="memItemRight" valign="bottom"><a class="el" 
 static QStringList&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classStelMainScriptAPI.html#a94b527bec699fecccb0fc4fdfee76db8">getAllTimezoneNames</a> ()</td></tr>
 <tr class="memdesc:a94b527bec699fecccb0fc4fdfee76db8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return an array of all timezone names valid for setTimezone(tzName) <br /></td></tr>
 <tr class="separator:a94b527bec699fecccb0fc4fdfee76db8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ada27e6add9c558d20e453c7517cb6f5a"><td class="memItemLeft" align="right" valign="top">static QList&lt; double &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classStelMainScriptAPI.html#ada27e6add9c558d20e453c7517cb6f5a">geo2utm</a> (const double longitude, const double latitude, const int zone=0)</td></tr>
+<tr class="memdesc:ada27e6add9c558d20e453c7517cb6f5a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Coordinate conversion: geographic (WGS84)--&gt;UTM.  <a href="classStelMainScriptAPI.html#ada27e6add9c558d20e453c7517cb6f5a">More...</a><br /></td></tr>
+<tr class="separator:ada27e6add9c558d20e453c7517cb6f5a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a63540c7da6899ecc1987747cebea6a35"><td class="memItemLeft" align="right" valign="top">static QList&lt; double &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classStelMainScriptAPI.html#a63540c7da6899ecc1987747cebea6a35">utm2geo</a> (const double easting, const double northing, const int zone, const bool north)</td></tr>
+<tr class="memdesc:a63540c7da6899ecc1987747cebea6a35"><td class="mdescLeft">&#160;</td><td class="mdescRight">Coordinate conversion: UTM-&gt;geographic (WGS84)  <a href="classStelMainScriptAPI.html#a63540c7da6899ecc1987747cebea6a35">More...</a><br /></td></tr>
+<tr class="separator:a63540c7da6899ecc1987747cebea6a35"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab4903c3d035c64c316f99cf79b793539"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classStelMainScriptAPI.html#ab4903c3d035c64c316f99cf79b793539">screenshot</a> (const QString &amp;prefix, bool invert=false, const QString &amp;dir=&quot;&quot;, const bool overwrite=false, const QString &amp;format=&quot;&quot;)</td></tr>
 <tr class="memdesc:ab4903c3d035c64c316f99cf79b793539"><td class="mdescLeft">&#160;</td><td class="mdescRight">Save a screenshot.  <a href="classStelMainScriptAPI.html#ab4903c3d035c64c316f99cf79b793539">More...</a><br /></td></tr>
 <tr class="separator:ab4903c3d035c64c316f99cf79b793539"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -735,6 +741,54 @@ double&#160;</td><td class="memItemRight" valign="bottom"><b>timeSpeed</b></td><
   </table>
   </dd>
 </dl>
+
+</div>
+</div>
+<a id="ada27e6add9c558d20e453c7517cb6f5a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ada27e6add9c558d20e453c7517cb6f5a">&#9670;&nbsp;</a></span>geo2utm</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static QList&lt;double&gt; StelMainScriptAPI::geo2utm </td>
+          <td>(</td>
+          <td class="paramtype">const double&#160;</td>
+          <td class="paramname"><em>longitude</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const double&#160;</td>
+          <td class="paramname"><em>latitude</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const int&#160;</td>
+          <td class="paramname"><em>zone</em> = <code>0</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span><span class="mlabel">slot</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<ul>
+<li>longitude geographic longitude from Greenwich, degrees </li>
+<li>latitude geographic latitude from equator, degrees </li>
+<li>zone UTM zone [1...60]. If 0, compute best-fit zone. <dl class="section return"><dt>Returns</dt><dd>{{E[m], N[m], zone, gamma[deg], k}} The returned zone contains the input or, if input was 0 (or missing), the most appropriate zone. North or South is not returned but is trivially fround from latitude. </dd></dl>
+</li>
+</ul>
 
 </div>
 </div>
@@ -5130,6 +5184,61 @@ See also <a class="el" href="classStelMainScriptAPI.html#ae5dc2cdfd5bd18b0634ec4
 
 </div>
 </div>
+<a id="a63540c7da6899ecc1987747cebea6a35"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a63540c7da6899ecc1987747cebea6a35">&#9670;&nbsp;</a></span>utm2geo</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static QList&lt;double&gt; StelMainScriptAPI::utm2geo </td>
+          <td>(</td>
+          <td class="paramtype">const double&#160;</td>
+          <td class="paramname"><em>easting</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const double&#160;</td>
+          <td class="paramname"><em>northing</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const int&#160;</td>
+          <td class="paramname"><em>zone</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const bool&#160;</td>
+          <td class="paramname"><em>north</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span><span class="mlabel">slot</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<ul>
+<li>easting (metres). False Easting of Zone meridian = 500000 </li>
+<li>northing (metres). For southern latitudes, equator = 10000000 </li>
+<li>zone UTM zone (longitudinal) [1...60]. </li>
+<li>north true for N, false for S latitude zones. <dl class="section return"><dt>Returns</dt><dd>{{longitude[deg], latitude[deg], refLong[deg], gamma[deg], k}} </dd></dl>
+</li>
+</ul>
+
+</div>
+</div>
 <a id="adb035489401af04e047490258679deba"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#adb035489401af04e047490258679deba">&#9670;&nbsp;</a></span>vec3d</h2>
 
@@ -5296,7 +5405,7 @@ See also <a class="el" href="classStelMainScriptAPI.html#ae5dc2cdfd5bd18b0634ec4
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Mon Mar 27 2023 11:54:02 for Stellarium by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Sun Jul 2 2023 19:12:12 for Stellarium by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.17
 </small></address>

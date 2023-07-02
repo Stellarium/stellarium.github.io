@@ -21,7 +21,7 @@
   <td id="projectlogo"><img alt="Logo" src="stellarium-logo.png"/></td>
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">Stellarium
-   &#160;<span id="projectnumber">23.1</span>
+   &#160;<span id="projectnumber">23.2</span>
    </div>
   </td>
  </tr>
@@ -290,6 +290,12 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><b>getUseDST</b> () cons
 <tr class="memitem:ac5f83316c68af0da5be5053cd7cab6b7"><td class="memItemLeft" align="right" valign="top"><a id="ac5f83316c68af0da5be5053cd7cab6b7"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><b>setUseDST</b> (const bool b)</td></tr>
 <tr class="separator:ac5f83316c68af0da5be5053cd7cab6b7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0fc22b8703de922db68e92bfe1466a12"><td class="memItemLeft" align="right" valign="top"><a id="a0fc22b8703de922db68e92bfe1466a12"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><b>getStartupTimeStop</b> () const</td></tr>
+<tr class="separator:a0fc22b8703de922db68e92bfe1466a12"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aae4aa35d550e8b21ed0ad34339cd82b5"><td class="memItemLeft" align="right" valign="top"><a id="aae4aa35d550e8b21ed0ad34339cd82b5"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>setStartupTimeStop</b> (const bool b)</td></tr>
+<tr class="separator:aae4aa35d550e8b21ed0ad34339cd82b5"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac4dad00a47abbd053d32927ef2abe191"><td class="memItemLeft" align="right" valign="top"><a id="ac4dad00a47abbd053d32927ef2abe191"></a>
 DitheringMode&#160;</td><td class="memItemRight" valign="bottom"><b>getDitheringMode</b> () const</td></tr>
 <tr class="separator:ac4dad00a47abbd053d32927ef2abe191"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -723,10 +729,9 @@ Signals</h2></td></tr>
 void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classStelCore.html#ad4d7a45e18cadf7411d4495b322602d6">locationChanged</a> (const <a class="el" href="classStelLocation.html">StelLocation</a> &amp;)</td></tr>
 <tr class="memdesc:ad4d7a45e18cadf7411d4495b322602d6"><td class="mdescLeft">&#160;</td><td class="mdescRight">This signal is emitted when the observer location has changed. <br /></td></tr>
 <tr class="separator:ad4d7a45e18cadf7411d4495b322602d6"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ae2411fb68075b9bd3ce9d7296296995f"><td class="memItemLeft" align="right" valign="top"><a id="ae2411fb68075b9bd3ce9d7296296995f"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classStelCore.html#ae2411fb68075b9bd3ce9d7296296995f">targetLocationChanged</a> (const <a class="el" href="classStelLocation.html">StelLocation</a> &amp;, const QString &amp;=QString())</td></tr>
-<tr class="memdesc:ae2411fb68075b9bd3ce9d7296296995f"><td class="mdescLeft">&#160;</td><td class="mdescRight">This signal is emitted whenever the targeted location changes. The second parameter can transmit a landscapeID. <br /></td></tr>
-<tr class="separator:ae2411fb68075b9bd3ce9d7296296995f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a39136dcbac600ff6bdeac25184a3528e"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classStelCore.html#a39136dcbac600ff6bdeac25184a3528e">targetLocationChanged</a> (const <a class="el" href="classStelLocation.html">StelLocation</a> &amp;loc, const QString &amp;id)</td></tr>
+<tr class="memdesc:a39136dcbac600ff6bdeac25184a3528e"><td class="mdescLeft">&#160;</td><td class="mdescRight">This signal is emitted whenever the targeted location changes, i.e., at the onset of location transitions.  <a href="classStelCore.html#a39136dcbac600ff6bdeac25184a3528e">More...</a><br /></td></tr>
+<tr class="separator:a39136dcbac600ff6bdeac25184a3528e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab1392f517dab13e939b0dadf0aad6007"><td class="memItemLeft" align="right" valign="top"><a id="ab1392f517dab13e939b0dadf0aad6007"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classStelCore.html#ab1392f517dab13e939b0dadf0aad6007">currentTimeZoneChanged</a> (const QString &amp;tz)</td></tr>
 <tr class="memdesc:ab1392f517dab13e939b0dadf0aad6007"><td class="mdescLeft">&#160;</td><td class="mdescRight">This signal is emitted when the current timezone name is changed. <br /></td></tr>
@@ -739,6 +744,10 @@ void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="clas
 void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classStelCore.html#a6f07f60b5f1f5bbabc8261526a044133">flagUseDSTChanged</a> (const bool b)</td></tr>
 <tr class="memdesc:a6f07f60b5f1f5bbabc8261526a044133"><td class="mdescLeft">&#160;</td><td class="mdescRight">This signal is emitted when daylight saving time is enabled or disabled. <br /></td></tr>
 <tr class="separator:a6f07f60b5f1f5bbabc8261526a044133"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7ac47dafc3d438a3a3805fa02a00dbae"><td class="memItemLeft" align="right" valign="top"><a id="a7ac47dafc3d438a3a3805fa02a00dbae"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classStelCore.html#a7ac47dafc3d438a3a3805fa02a00dbae">startupTimeStopChanged</a> (const bool b)</td></tr>
+<tr class="memdesc:a7ac47dafc3d438a3a3805fa02a00dbae"><td class="mdescLeft">&#160;</td><td class="mdescRight">This signal is emitted when stop clock at startup is enabled or disabled. <br /></td></tr>
+<tr class="separator:a7ac47dafc3d438a3a3805fa02a00dbae"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a819a8213233be96f43a2a612a0ab3485"><td class="memItemLeft" align="right" valign="top"><a id="a819a8213233be96f43a2a612a0ab3485"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classStelCore.html#a819a8213233be96f43a2a612a0ab3485">timeRateChanged</a> (double rate)</td></tr>
 <tr class="memdesc:a819a8213233be96f43a2a612a0ab3485"><td class="mdescLeft">&#160;</td><td class="mdescRight">This signal is emitted when the time rate has changed. <br /></td></tr>
@@ -1136,6 +1145,9 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><b>flagUseCTZ</b></td></
 <tr class="memitem:af25eb4c037a3afb3372e9609261d3bb4"><td class="memItemLeft" align="right" valign="top"><a id="af25eb4c037a3afb3372e9609261d3bb4"></a>
 bool&#160;</td><td class="memItemRight" valign="bottom"><b>flagUseDST</b></td></tr>
 <tr class="separator:af25eb4c037a3afb3372e9609261d3bb4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a68d7bd7bf53bfe4f86d962a0fa1b0597"><td class="memItemLeft" align="right" valign="top"><a id="a68d7bd7bf53bfe4f86d962a0fa1b0597"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><b>startupTimeStop</b></td></tr>
+<tr class="separator:a68d7bd7bf53bfe4f86d962a0fa1b0597"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aec8d124bd60d994fa89c9a6f54816f9b"><td class="memItemLeft" align="right" valign="top"><a id="aec8d124bd60d994fa89c9a6f54816f9b"></a>
 DitheringMode&#160;</td><td class="memItemRight" valign="bottom"><b>ditheringMode</b> = DitheringMode::Color888</td></tr>
 <tr class="separator:aec8d124bd60d994fa89c9a6f54816f9b"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -2749,6 +2761,43 @@ Up to V0.15.1, if the requested year was outside validity range, we returned zer
 
 </div>
 </div>
+<a id="a39136dcbac600ff6bdeac25184a3528e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a39136dcbac600ff6bdeac25184a3528e">&#9670;&nbsp;</a></span>targetLocationChanged</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void StelCore::targetLocationChanged </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classStelLocation.html">StelLocation</a> &amp;&#160;</td>
+          <td class="paramname"><em>loc</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const QString &amp;&#160;</td>
+          <td class="paramname"><em>id</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">signal</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>The second parameter can transmit a landscapeID or should be QString(). </p>
+
+</div>
+</div>
 <a id="a158667e120495f1c86cd737d1389fff3"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a158667e120495f1c86cd737d1389fff3">&#9670;&nbsp;</a></span>timeSyncOccurred</h2>
 
@@ -2803,7 +2852,7 @@ Up to V0.15.1, if the requested year was outside validity range, we returned zer
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Mon Mar 27 2023 11:54:02 for Stellarium by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Sun Jul 2 2023 19:12:12 for Stellarium by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.17
 </small></address>
