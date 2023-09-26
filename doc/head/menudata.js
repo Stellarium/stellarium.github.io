@@ -163,6 +163,7 @@ var menudata={children:[
 {text:"f",url:"functions_prop.html#index_f"},
 {text:"h",url:"functions_prop.html#index_h"},
 {text:"l",url:"functions_prop.html#index_l"},
+{text:"m",url:"functions_prop.html#index_m"},
 {text:"p",url:"functions_prop.html#index_p"},
 {text:"r",url:"functions_prop.html#index_r"},
 {text:"s",url:"functions_prop.html#index_s"},
