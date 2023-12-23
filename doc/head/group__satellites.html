@@ -132,34 +132,44 @@ Enumerations</h2></td></tr>
 <tr class="memdesc:gac9eb22e1e81155872f36b79a505e5042"><td class="mdescLeft">&#160;</td><td class="mdescRight">Description of the data roles used in <a class="el" href="group__satellites.html#classSatellitesListModel" title="A model encapsulating a satellite list.">SatellitesListModel</a>. <br /></td></tr>
 <tr class="separator:gac9eb22e1e81155872f36b79a505e5042"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:gab831fdf9d777df775761e20aeda068df"><td class="memItemLeft" align="right" valign="top"><a id="gab831fdf9d777df775761e20aeda068df"></a>enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__satellites.html#gab831fdf9d777df775761e20aeda068df">SatFlag</a> { <br />
-&#160;&#160;<b>SatNoFlags</b> = 0x000000
-, <b>SatDisplayed</b> = 0x000001
-, <b>SatNotDisplayed</b> = 0x000002
-, <b>SatUser</b> = 0x000004
+&#160;&#160;<b>SatNoFlags</b> = 0x00000000
+, <b>SatDisplayed</b> = 0x00000001
+, <b>SatNotDisplayed</b> = 0x00000002
+, <b>SatUser</b> = 0x00000004
 , <br />
-&#160;&#160;<b>SatOrbit</b> = 0x000008
-, <b>SatNew</b> = 0x000010
-, <b>SatError</b> = 0x000020
-, <b>SatSmallSize</b> = 0x000040
+&#160;&#160;<b>SatOrbit</b> = 0x00000008
+, <b>SatNew</b> = 0x00000010
+, <b>SatError</b> = 0x00000020
+, <b>SatSmallSize</b> = 0x00000040
 , <br />
-&#160;&#160;<b>SatMediumSize</b> = 0x000080
-, <b>SatLargeSize</b> = 0x000100
-, <b>SatLEO</b> = 0x000200
-, <b>SatMEO</b> = 0x000400
+&#160;&#160;<b>SatMediumSize</b> = 0x00000080
+, <b>SatLargeSize</b> = 0x00000100
+, <b>SatLEO</b> = 0x00000200
+, <b>SatMEO</b> = 0x00000400
 , <br />
-&#160;&#160;<b>SatGSO</b> = 0x000800
-, <b>SatHEO</b> = 0x001000
-, <b>SatHGSO</b> = 0x002000
-, <b>SatPolarOrbit</b> = 0x004000
+&#160;&#160;<b>SatGSO</b> = 0x00000800
+, <b>SatHEO</b> = 0x00001000
+, <b>SatHGSO</b> = 0x00002000
+, <b>SatPolarOrbit</b> = 0x00004000
 , <br />
-&#160;&#160;<b>SatEquatOrbit</b> = 0x008000
-, <b>SatPSSO</b> = 0x010000
-, <b>SatHEarthO</b> = 0x020000
-, <b>SatOutdatedTLE</b> = 0x040000
+&#160;&#160;<b>SatEquatOrbit</b> = 0x00008000
+, <b>SatPSSO</b> = 0x00010000
+, <b>SatHEarthO</b> = 0x00020000
+, <b>SatOutdatedTLE</b> = 0x00040000
 , <br />
-&#160;&#160;<b>SatCustomFilter</b> = 0x080000
-, <b>SatCommunication</b> = 0x100000
-, <b>SatReentry</b> = 0x200000
+&#160;&#160;<b>SatCustomFilter</b> = 0x00080000
+, <b>SatCommunication</b> = 0x00100000
+, <b>SatReentry</b> = 0x00200000
+, <b>SatActiveOS</b> = 0x00400000
+, <br />
+&#160;&#160;<b>SatOperationalOS</b> = 0x00800000
+, <b>SatNonoperationalOS</b> = 0x01000000
+, <b>SatPartiallyOperationalOS</b> = 0x02000000
+, <b>SatStandbyOS</b> = 0x04000000
+, <br />
+&#160;&#160;<b>SatSpareOS</b> = 0x08000000
+, <b>SatExtendedMissionOS</b> = 0x10000000
+, <b>SatDecayedOS</b> = 0x20000000
 <br />
  }</td></tr>
 <tr class="memdesc:gab831fdf9d777df775761e20aeda068df"><td class="mdescLeft">&#160;</td><td class="mdescRight">Flag type reflecting internal flags of <a class="el" href="group__satellites.html#classSatellite" title="A representation of a satellite in Earth orbit.">Satellite</a>. <br /></td></tr>
@@ -747,10 +757,6 @@ void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="clas
 void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__satellites.html#aad1574899b7903220ae1756649605a36">createDialogContent</a> () override</td></tr>
 <tr class="memdesc:aad1574899b7903220ae1756649605a36"><td class="mdescLeft">&#160;</td><td class="mdescRight">Initialize the dialog widgets and connect the signals/slots. <br /></td></tr>
 <tr class="separator:aad1574899b7903220ae1756649605a36"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="inherit_header pro_methods_classStelDialog"><td colspan="2" onclick="javascript:toggleInherit('pro_methods_classStelDialog')"><img src="closed.png" alt="-"/>&#160;Protected Member Functions inherited from <a class="el" href="classStelDialog.html">StelDialog</a></td></tr>
-<tr class="memitem:aeabd2bf2e1dc0228ebfb8d6704173cae inherit pro_methods_classStelDialog"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classStelDialog.html#aeabd2bf2e1dc0228ebfb8d6704173cae">connectColorButton</a> (QToolButton *button, const QString &amp;propertyName, const QString &amp;iniName, const QString &amp;moduleName=&quot;&quot;)</td></tr>
-<tr class="memdesc:aeabd2bf2e1dc0228ebfb8d6704173cae inherit pro_methods_classStelDialog"><td class="mdescLeft">&#160;</td><td class="mdescRight">Prepare a QToolButton so that it can receive and handle <a class="el" href="classStelDialog.html#a5ef9b994a4c7565bcc6d8a9ccaa85f0b" title="To be called by a connected QToolButton with a color background.">askColor()</a> connections properly.  <a href="classStelDialog.html#aeabd2bf2e1dc0228ebfb8d6704173cae">More...</a><br /></td></tr>
-<tr class="separator:aeabd2bf2e1dc0228ebfb8d6704173cae inherit pro_methods_classStelDialog"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr><td colspan="2"><h3>Protected Attributes</h3></td></tr>
 <tr class="memitem:a86ac1e21b1b48d561dbbd87a3b01823a"><td class="memItemLeft" align="right" valign="top"><a id="a86ac1e21b1b48d561dbbd87a3b01823a"></a>
 Ui_satellitesCommDialog *&#160;</td><td class="memItemRight" valign="bottom"><b>ui</b></td></tr>
@@ -795,9 +801,6 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><b>askConfirmation</b> (
 <tr class="memitem:aba69096a162791f2a90639b05c0abaf1 inherit pro_slots_classStelDialog"><td class="memItemLeft" align="right" valign="top"><a id="aba69096a162791f2a90639b05c0abaf1"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><b>messageBox</b> (const QString &amp;title, const QString &amp;message)</td></tr>
 <tr class="separator:aba69096a162791f2a90639b05c0abaf1 inherit pro_slots_classStelDialog"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a5ef9b994a4c7565bcc6d8a9ccaa85f0b inherit pro_slots_classStelDialog"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classStelDialog.html#a5ef9b994a4c7565bcc6d8a9ccaa85f0b">askColor</a> ()</td></tr>
-<tr class="memdesc:a5ef9b994a4c7565bcc6d8a9ccaa85f0b inherit pro_slots_classStelDialog"><td class="mdescLeft">&#160;</td><td class="mdescRight">To be called by a connected QToolButton with a color background.  <a href="classStelDialog.html#a5ef9b994a4c7565bcc6d8a9ccaa85f0b">More...</a><br /></td></tr>
-<tr class="separator:a5ef9b994a4c7565bcc6d8a9ccaa85f0b inherit pro_slots_classStelDialog"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a80fb8e43b2ea5d4a74f815bb0723d1fd inherit pro_slots_classStelDialog"><td class="memItemLeft" align="right" valign="top"><a id="a80fb8e43b2ea5d4a74f815bb0723d1fd"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classStelDialog.html#a80fb8e43b2ea5d4a74f815bb0723d1fd">enableKineticScrolling</a> (bool b)</td></tr>
 <tr class="memdesc:a80fb8e43b2ea5d4a74f815bb0723d1fd inherit pro_slots_classStelDialog"><td class="mdescLeft">&#160;</td><td class="mdescRight">enable kinetic scrolling. This should be connected to <a class="el" href="classStelApp.html" title="Singleton main Stellarium application class.">StelApp</a>'s <a class="el" href="classStelGui.html" title="Main class for the GUI based on QGraphicView.">StelGui</a> signal flagUseKineticScrollingChanged. <br /></td></tr>
@@ -932,10 +935,6 @@ void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="clas
 void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__satellites.html#aaba1c816df61d16219952dd4ef57711b">createDialogContent</a> () override</td></tr>
 <tr class="memdesc:aaba1c816df61d16219952dd4ef57711b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Initialize the dialog widgets and connect the signals/slots. <br /></td></tr>
 <tr class="separator:aaba1c816df61d16219952dd4ef57711b"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="inherit_header pro_methods_classStelDialog"><td colspan="2" onclick="javascript:toggleInherit('pro_methods_classStelDialog')"><img src="closed.png" alt="-"/>&#160;Protected Member Functions inherited from <a class="el" href="classStelDialog.html">StelDialog</a></td></tr>
-<tr class="memitem:aeabd2bf2e1dc0228ebfb8d6704173cae inherit pro_methods_classStelDialog"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classStelDialog.html#aeabd2bf2e1dc0228ebfb8d6704173cae">connectColorButton</a> (QToolButton *button, const QString &amp;propertyName, const QString &amp;iniName, const QString &amp;moduleName=&quot;&quot;)</td></tr>
-<tr class="memdesc:aeabd2bf2e1dc0228ebfb8d6704173cae inherit pro_methods_classStelDialog"><td class="mdescLeft">&#160;</td><td class="mdescRight">Prepare a QToolButton so that it can receive and handle <a class="el" href="classStelDialog.html#a5ef9b994a4c7565bcc6d8a9ccaa85f0b" title="To be called by a connected QToolButton with a color background.">askColor()</a> connections properly.  <a href="classStelDialog.html#aeabd2bf2e1dc0228ebfb8d6704173cae">More...</a><br /></td></tr>
-<tr class="separator:aeabd2bf2e1dc0228ebfb8d6704173cae inherit pro_methods_classStelDialog"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="inherited"></a>
 Additional Inherited Members</h2></td></tr>
@@ -961,9 +960,6 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><b>askConfirmation</b> (
 <tr class="memitem:aba69096a162791f2a90639b05c0abaf1 inherit pro_slots_classStelDialog"><td class="memItemLeft" align="right" valign="top"><a id="aba69096a162791f2a90639b05c0abaf1"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><b>messageBox</b> (const QString &amp;title, const QString &amp;message)</td></tr>
 <tr class="separator:aba69096a162791f2a90639b05c0abaf1 inherit pro_slots_classStelDialog"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a5ef9b994a4c7565bcc6d8a9ccaa85f0b inherit pro_slots_classStelDialog"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classStelDialog.html#a5ef9b994a4c7565bcc6d8a9ccaa85f0b">askColor</a> ()</td></tr>
-<tr class="memdesc:a5ef9b994a4c7565bcc6d8a9ccaa85f0b inherit pro_slots_classStelDialog"><td class="mdescLeft">&#160;</td><td class="mdescRight">To be called by a connected QToolButton with a color background.  <a href="classStelDialog.html#a5ef9b994a4c7565bcc6d8a9ccaa85f0b">More...</a><br /></td></tr>
-<tr class="separator:a5ef9b994a4c7565bcc6d8a9ccaa85f0b inherit pro_slots_classStelDialog"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a80fb8e43b2ea5d4a74f815bb0723d1fd inherit pro_slots_classStelDialog"><td class="memItemLeft" align="right" valign="top"><a id="a80fb8e43b2ea5d4a74f815bb0723d1fd"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classStelDialog.html#a80fb8e43b2ea5d4a74f815bb0723d1fd">enableKineticScrolling</a> (bool b)</td></tr>
 <tr class="memdesc:a80fb8e43b2ea5d4a74f815bb0723d1fd inherit pro_slots_classStelDialog"><td class="mdescLeft">&#160;</td><td class="mdescRight">enable kinetic scrolling. This should be connected to <a class="el" href="classStelApp.html" title="Singleton main Stellarium application class.">StelApp</a>'s <a class="el" href="classStelGui.html" title="Main class for the GUI based on QGraphicView.">StelGui</a> signal flagUseKineticScrollingChanged. <br /></td></tr>
@@ -1111,9 +1107,6 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><b>askConfirmation</b> (
 <tr class="memitem:aba69096a162791f2a90639b05c0abaf1 inherit pro_slots_classStelDialog"><td class="memItemLeft" align="right" valign="top"><a id="aba69096a162791f2a90639b05c0abaf1"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><b>messageBox</b> (const QString &amp;title, const QString &amp;message)</td></tr>
 <tr class="separator:aba69096a162791f2a90639b05c0abaf1 inherit pro_slots_classStelDialog"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a5ef9b994a4c7565bcc6d8a9ccaa85f0b inherit pro_slots_classStelDialog"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classStelDialog.html#a5ef9b994a4c7565bcc6d8a9ccaa85f0b">askColor</a> ()</td></tr>
-<tr class="memdesc:a5ef9b994a4c7565bcc6d8a9ccaa85f0b inherit pro_slots_classStelDialog"><td class="mdescLeft">&#160;</td><td class="mdescRight">To be called by a connected QToolButton with a color background.  <a href="classStelDialog.html#a5ef9b994a4c7565bcc6d8a9ccaa85f0b">More...</a><br /></td></tr>
-<tr class="separator:a5ef9b994a4c7565bcc6d8a9ccaa85f0b inherit pro_slots_classStelDialog"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a80fb8e43b2ea5d4a74f815bb0723d1fd inherit pro_slots_classStelDialog"><td class="memItemLeft" align="right" valign="top"><a id="a80fb8e43b2ea5d4a74f815bb0723d1fd"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classStelDialog.html#a80fb8e43b2ea5d4a74f815bb0723d1fd">enableKineticScrolling</a> (bool b)</td></tr>
 <tr class="memdesc:a80fb8e43b2ea5d4a74f815bb0723d1fd inherit pro_slots_classStelDialog"><td class="mdescLeft">&#160;</td><td class="mdescRight">enable kinetic scrolling. This should be connected to <a class="el" href="classStelApp.html" title="Singleton main Stellarium application class.">StelApp</a>'s <a class="el" href="classStelGui.html" title="Main class for the GUI based on QGraphicView.">StelGui</a> signal flagUseKineticScrollingChanged. <br /></td></tr>
@@ -1129,10 +1122,6 @@ void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="clas
 <tr class="memitem:ada9ae9c079ed54a950343c92b2d1b715 inherit pro_slots_classStelDialog"><td class="memItemLeft" align="right" valign="top"><a id="ada9ae9c079ed54a950343c92b2d1b715"></a>
 virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>updateNightModeProperty</b> (bool n)</td></tr>
 <tr class="separator:ada9ae9c079ed54a950343c92b2d1b715 inherit pro_slots_classStelDialog"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="inherit_header pro_methods_classStelDialog"><td colspan="2" onclick="javascript:toggleInherit('pro_methods_classStelDialog')"><img src="closed.png" alt="-"/>&#160;Protected Member Functions inherited from <a class="el" href="classStelDialog.html">StelDialog</a></td></tr>
-<tr class="memitem:aeabd2bf2e1dc0228ebfb8d6704173cae inherit pro_methods_classStelDialog"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classStelDialog.html#aeabd2bf2e1dc0228ebfb8d6704173cae">connectColorButton</a> (QToolButton *button, const QString &amp;propertyName, const QString &amp;iniName, const QString &amp;moduleName=&quot;&quot;)</td></tr>
-<tr class="memdesc:aeabd2bf2e1dc0228ebfb8d6704173cae inherit pro_methods_classStelDialog"><td class="mdescLeft">&#160;</td><td class="mdescRight">Prepare a QToolButton so that it can receive and handle <a class="el" href="classStelDialog.html#a5ef9b994a4c7565bcc6d8a9ccaa85f0b" title="To be called by a connected QToolButton with a color background.">askColor()</a> connections properly.  <a href="classStelDialog.html#aeabd2bf2e1dc0228ebfb8d6704173cae">More...</a><br /></td></tr>
-<tr class="separator:aeabd2bf2e1dc0228ebfb8d6704173cae inherit pro_methods_classStelDialog"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pro_static_methods_classStelDialog"><td colspan="2" onclick="javascript:toggleInherit('pro_static_methods_classStelDialog')"><img src="closed.png" alt="-"/>&#160;Static Protected Member Functions inherited from <a class="el" href="classStelDialog.html">StelDialog</a></td></tr>
 <tr class="memitem:affed9a4db21c26a7f584048a46b3008e inherit pro_static_methods_classStelDialog"><td class="memItemLeft" align="right" valign="top"><a id="affed9a4db21c26a7f584048a46b3008e"></a>
 static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classStelDialog.html#affed9a4db21c26a7f584048a46b3008e">connectCheckBox</a> (QAbstractButton *checkBox, const QString &amp;actionName)</td></tr>
@@ -1269,9 +1258,6 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><b>askConfirmation</b> (
 <tr class="memitem:aba69096a162791f2a90639b05c0abaf1 inherit pro_slots_classStelDialog"><td class="memItemLeft" align="right" valign="top"><a id="aba69096a162791f2a90639b05c0abaf1"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><b>messageBox</b> (const QString &amp;title, const QString &amp;message)</td></tr>
 <tr class="separator:aba69096a162791f2a90639b05c0abaf1 inherit pro_slots_classStelDialog"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a5ef9b994a4c7565bcc6d8a9ccaa85f0b inherit pro_slots_classStelDialog"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classStelDialog.html#a5ef9b994a4c7565bcc6d8a9ccaa85f0b">askColor</a> ()</td></tr>
-<tr class="memdesc:a5ef9b994a4c7565bcc6d8a9ccaa85f0b inherit pro_slots_classStelDialog"><td class="mdescLeft">&#160;</td><td class="mdescRight">To be called by a connected QToolButton with a color background.  <a href="classStelDialog.html#a5ef9b994a4c7565bcc6d8a9ccaa85f0b">More...</a><br /></td></tr>
-<tr class="separator:a5ef9b994a4c7565bcc6d8a9ccaa85f0b inherit pro_slots_classStelDialog"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a80fb8e43b2ea5d4a74f815bb0723d1fd inherit pro_slots_classStelDialog"><td class="memItemLeft" align="right" valign="top"><a id="a80fb8e43b2ea5d4a74f815bb0723d1fd"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classStelDialog.html#a80fb8e43b2ea5d4a74f815bb0723d1fd">enableKineticScrolling</a> (bool b)</td></tr>
 <tr class="memdesc:a80fb8e43b2ea5d4a74f815bb0723d1fd inherit pro_slots_classStelDialog"><td class="mdescLeft">&#160;</td><td class="mdescRight">enable kinetic scrolling. This should be connected to <a class="el" href="classStelApp.html" title="Singleton main Stellarium application class.">StelApp</a>'s <a class="el" href="classStelGui.html" title="Main class for the GUI based on QGraphicView.">StelGui</a> signal flagUseKineticScrollingChanged. <br /></td></tr>
@@ -1287,10 +1273,6 @@ void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="clas
 <tr class="memitem:ada9ae9c079ed54a950343c92b2d1b715 inherit pro_slots_classStelDialog"><td class="memItemLeft" align="right" valign="top"><a id="ada9ae9c079ed54a950343c92b2d1b715"></a>
 virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>updateNightModeProperty</b> (bool n)</td></tr>
 <tr class="separator:ada9ae9c079ed54a950343c92b2d1b715 inherit pro_slots_classStelDialog"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="inherit_header pro_methods_classStelDialog"><td colspan="2" onclick="javascript:toggleInherit('pro_methods_classStelDialog')"><img src="closed.png" alt="-"/>&#160;Protected Member Functions inherited from <a class="el" href="classStelDialog.html">StelDialog</a></td></tr>
-<tr class="memitem:aeabd2bf2e1dc0228ebfb8d6704173cae inherit pro_methods_classStelDialog"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classStelDialog.html#aeabd2bf2e1dc0228ebfb8d6704173cae">connectColorButton</a> (QToolButton *button, const QString &amp;propertyName, const QString &amp;iniName, const QString &amp;moduleName=&quot;&quot;)</td></tr>
-<tr class="memdesc:aeabd2bf2e1dc0228ebfb8d6704173cae inherit pro_methods_classStelDialog"><td class="mdescLeft">&#160;</td><td class="mdescRight">Prepare a QToolButton so that it can receive and handle <a class="el" href="classStelDialog.html#a5ef9b994a4c7565bcc6d8a9ccaa85f0b" title="To be called by a connected QToolButton with a color background.">askColor()</a> connections properly.  <a href="classStelDialog.html#aeabd2bf2e1dc0228ebfb8d6704173cae">More...</a><br /></td></tr>
-<tr class="separator:aeabd2bf2e1dc0228ebfb8d6704173cae inherit pro_methods_classStelDialog"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pro_static_methods_classStelDialog"><td colspan="2" onclick="javascript:toggleInherit('pro_static_methods_classStelDialog')"><img src="closed.png" alt="-"/>&#160;Static Protected Member Functions inherited from <a class="el" href="classStelDialog.html">StelDialog</a></td></tr>
 <tr class="memitem:affed9a4db21c26a7f584048a46b3008e inherit pro_static_methods_classStelDialog"><td class="memItemLeft" align="right" valign="top"><a id="affed9a4db21c26a7f584048a46b3008e"></a>
 static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classStelDialog.html#affed9a4db21c26a7f584048a46b3008e">connectCheckBox</a> (QAbstractButton *checkBox, const QString &amp;actionName)</td></tr>
@@ -2151,9 +2133,8 @@ void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="grou
 float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__satellites.html#ac56636334efc3337f1f02a14da286156">calculateIlluminatedFraction</a> () const</td></tr>
 <tr class="memdesc:ac56636334efc3337f1f02a14da286156"><td class="mdescLeft">&#160;</td><td class="mdescRight">Calculation of illuminated fraction of the satellite. <br /></td></tr>
 <tr class="separator:ac56636334efc3337f1f02a14da286156"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:acafc911f165affa1349214dfd083938a"><td class="memItemLeft" align="right" valign="top"><a id="acafc911f165affa1349214dfd083938a"></a>
-<a class="el" href="classVector4.html">Vec4d</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__satellites.html#acafc911f165affa1349214dfd083938a">getUmbraData</a> ()</td></tr>
-<tr class="memdesc:acafc911f165affa1349214dfd083938a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get radii and geocentric distances of shadow circles in km Vec4d(umbraDistance, umbraRadius, penumbraDistance, penumbraRadius);. <br /></td></tr>
+<tr class="memitem:acafc911f165affa1349214dfd083938a"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classVector4.html">Vec4d</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__satellites.html#acafc911f165affa1349214dfd083938a">getUmbraData</a> ()</td></tr>
+<tr class="memdesc:acafc911f165affa1349214dfd083938a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get radii and geocentric antisolar distances of shadow circles in km from the geocenter.  <a href="group__satellites.html#acafc911f165affa1349214dfd083938a">More...</a><br /></td></tr>
 <tr class="separator:acafc911f165affa1349214dfd083938a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:afa44d8b51e3e059485b5f7e354e0aba0"><td class="memItemLeft" align="right" valign="top"><a id="afa44d8b51e3e059485b5f7e354e0aba0"></a>
 QString&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__satellites.html#afa44d8b51e3e059485b5f7e354e0aba0">getOperationalStatus</a> () const</td></tr>
@@ -2238,6 +2219,9 @@ virtual double&#160;</td><td class="memItemRight" valign="bottom"><b>getParentSa
 <tr class="memitem:a991926517e120557ef0dd52ba987715b"><td class="memItemLeft" align="right" valign="top"><a id="a991926517e120557ef0dd52ba987715b"></a>
 static double&#160;</td><td class="memItemRight" valign="bottom"><b>roundToDp</b> (float n, int dp)</td></tr>
 <tr class="separator:a991926517e120557ef0dd52ba987715b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af7d34c7f5f43fd99a0672d7ee0972fe7"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="classVector4.html">Vec4d</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__satellites.html#af7d34c7f5f43fd99a0672d7ee0972fe7">getUmbraData</a> (const double rhoE)</td></tr>
+<tr class="memdesc:af7d34c7f5f43fd99a0672d7ee0972fe7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get radii and geocentric antisolar distances of shadow circles in km for a hypothetical object in distance rhoE [km] from the geocenter.  <a href="group__satellites.html#af7d34c7f5f43fd99a0672d7ee0972fe7">More...</a><br /></td></tr>
+<tr class="separator:af7d34c7f5f43fd99a0672d7ee0972fe7"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr><td colspan="2"><h3>Static Public Attributes</h3></td></tr>
 <tr class="memitem:ae53f22415cbd5268a1437efdedaa03b5"><td class="memItemLeft" align="right" valign="top"><a id="ae53f22415cbd5268a1437efdedaa03b5"></a>
 static const QString&#160;</td><td class="memItemRight" valign="bottom"><b>SATELLITE_TYPE</b></td></tr>
@@ -2525,6 +2509,62 @@ Additional Inherited Members</h2></td></tr>
 
 </div>
 </div>
+<a id="acafc911f165affa1349214dfd083938a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#acafc911f165affa1349214dfd083938a">&#9670;&nbsp;</a></span>getUmbraData() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classVector4.html">Vec4d</a> Satellite::getUmbraData </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Get radii and geocentric antisolar distances of shadow circles in km from the geocenter. </p>
+<dl class="section return"><dt>Returns</dt><dd>Vec4d(umbraDistance, umbraRadius, penumbraDistance, penumbraRadius); umbraDistance : geocentric distance (km) of the umbra circle centre in the antisolar direction umbraRadius : radius (km) of the umbra circle penumbraDistance : geocentric distance (km) of the penumbra circle in the antisolar direction penumbraRadius : radius (km) of the penumbra circle </dd></dl>
+
+</div>
+</div>
+<a id="af7d34c7f5f43fd99a0672d7ee0972fe7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af7d34c7f5f43fd99a0672d7ee0972fe7">&#9670;&nbsp;</a></span>getUmbraData() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static <a class="el" href="classVector4.html">Vec4d</a> Satellite::getUmbraData </td>
+          <td>(</td>
+          <td class="paramtype">const double&#160;</td>
+          <td class="paramname"><em>rhoE</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Get radii and geocentric antisolar distances of shadow circles in km for a hypothetical object in distance rhoE [km] from the geocenter. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">rhoE</td><td>distance [km] from the geocenter. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>Vec4d(umbraDistance, umbraRadius, penumbraDistance, penumbraRadius); umbraDistance : geocentric distance (km) of the umbra circle centre in the antisolar direction umbraRadius : radius (km) of the umbra circle penumbraDistance : geocentric distance (km) of the penumbra circle in the antisolar direction penumbraRadius : radius (km) of the penumbra circle </dd></dl>
+<dl class="section note"><dt>Note</dt><dd>To gain data for an object in dist_km above (spherical) earth, use rhoE=earth-&gt;getEquatorialRadius()*AU+dist_km; </dd></dl>
+
+</div>
+</div>
 <a id="aba5b0ca05b8c107295a51fd6ff389192"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#aba5b0ca05b8c107295a51fd6ff389192">&#9670;&nbsp;</a></span>operator&lt;()</h2>
 
@@ -2771,12 +2811,12 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>recalculateOrbitLines
 <tr class="memitem:a2b2cc10d055508857171f27dbfd3d57f"><td class="memItemLeft" align="right" valign="top"><a id="a2b2cc10d055508857171f27dbfd3d57f"></a>
 bool&#160;</td><td class="memItemRight" valign="bottom"><b>getFlagUmbraVisible</b> ()</td></tr>
 <tr class="separator:a2b2cc10d055508857171f27dbfd3d57f"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a8168a1634021b5eaff04afe43b401079"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__satellites.html#a8168a1634021b5eaff04afe43b401079">setFlagUmbraAtFixedDistance</a> (bool b)</td></tr>
-<tr class="memdesc:a8168a1634021b5eaff04afe43b401079"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set whether ring of Earth's umbra should be displayed at fixed distance.  <a href="group__satellites.html#a8168a1634021b5eaff04afe43b401079">More...</a><br /></td></tr>
-<tr class="separator:a8168a1634021b5eaff04afe43b401079"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:af418a7bbdb602991ea562d02d65201c1"><td class="memItemLeft" align="right" valign="top"><a id="af418a7bbdb602991ea562d02d65201c1"></a>
-bool&#160;</td><td class="memItemRight" valign="bottom"><b>getFlagUmbraAtFixedDistance</b> ()</td></tr>
-<tr class="separator:af418a7bbdb602991ea562d02d65201c1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a13c73af48ef238c388cf5f8a276f270b"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__satellites.html#a13c73af48ef238c388cf5f8a276f270b">setFlagUmbraAtFixedAltitude</a> (bool b)</td></tr>
+<tr class="memdesc:a13c73af48ef238c388cf5f8a276f270b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set whether ring of Earth's umbra should be displayed at given satellite altitude.  <a href="group__satellites.html#a13c73af48ef238c388cf5f8a276f270b">More...</a><br /></td></tr>
+<tr class="separator:a13c73af48ef238c388cf5f8a276f270b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa49da8c2a67cd33e890fb9678ff3d770"><td class="memItemLeft" align="right" valign="top"><a id="aa49da8c2a67cd33e890fb9678ff3d770"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><b>getFlagUmbraAtFixedAltitude</b> ()</td></tr>
+<tr class="separator:aa49da8c2a67cd33e890fb9678ff3d770"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a5a4ecfa373ae58e76da1ee49c140d215"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classVector3.html">Vec3f</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__satellites.html#a5a4ecfa373ae58e76da1ee49c140d215">getUmbraColor</a> ()</td></tr>
 <tr class="memdesc:a5a4ecfa373ae58e76da1ee49c140d215"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get color for ring of Earth's umbra.  <a href="group__satellites.html#a5a4ecfa373ae58e76da1ee49c140d215">More...</a><br /></td></tr>
 <tr class="separator:a5a4ecfa373ae58e76da1ee49c140d215"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -2784,13 +2824,13 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><b>getFlagUmbraAtFixedDi
 void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__satellites.html#a8350badb5aefa1c14539ea6a59d298bf">setUmbraColor</a> (const <a class="el" href="classVector3.html">Vec3f</a> &amp;c)</td></tr>
 <tr class="memdesc:a8350badb5aefa1c14539ea6a59d298bf"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set color for ring of Earth's umbra. <br /></td></tr>
 <tr class="separator:a8350badb5aefa1c14539ea6a59d298bf"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a67cdc0420640ab9d553d8f0dbd8e1256"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__satellites.html#a67cdc0420640ab9d553d8f0dbd8e1256">getUmbraDistance</a> ()</td></tr>
-<tr class="memdesc:a67cdc0420640ab9d553d8f0dbd8e1256"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the fixed distance for center of visualized Earth's umbra.  <a href="group__satellites.html#a67cdc0420640ab9d553d8f0dbd8e1256">More...</a><br /></td></tr>
-<tr class="separator:a67cdc0420640ab9d553d8f0dbd8e1256"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac846ad3468afd5076d8582671984ccd4"><td class="memItemLeft" align="right" valign="top"><a id="ac846ad3468afd5076d8582671984ccd4"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__satellites.html#ac846ad3468afd5076d8582671984ccd4">setUmbraDistance</a> (double d)</td></tr>
-<tr class="memdesc:ac846ad3468afd5076d8582671984ccd4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the fixed distance for center of visualized Earth's umbra. <br /></td></tr>
-<tr class="separator:ac846ad3468afd5076d8582671984ccd4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a29354000b51104bf0fed413ea55054b3"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__satellites.html#a29354000b51104bf0fed413ea55054b3">getUmbraAltitude</a> ()</td></tr>
+<tr class="memdesc:a29354000b51104bf0fed413ea55054b3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the fixed distance for center of visualized Earth's umbra.  <a href="group__satellites.html#a29354000b51104bf0fed413ea55054b3">More...</a><br /></td></tr>
+<tr class="separator:a29354000b51104bf0fed413ea55054b3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab9b8fffbf83b2414ebce9964462d592a"><td class="memItemLeft" align="right" valign="top"><a id="ab9b8fffbf83b2414ebce9964462d592a"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__satellites.html#ab9b8fffbf83b2414ebce9964462d592a">setUmbraAltitude</a> (double d)</td></tr>
+<tr class="memdesc:ab9b8fffbf83b2414ebce9964462d592a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the fixed distance for center of visualized Earth's umbra. <br /></td></tr>
+<tr class="separator:ab9b8fffbf83b2414ebce9964462d592a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a3a8220108021ffbcfe083ccd0c82e236"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__satellites.html#a3a8220108021ffbcfe083ccd0c82e236">setFlagPenumbraVisible</a> (bool b)</td></tr>
 <tr class="memdesc:a3a8220108021ffbcfe083ccd0c82e236"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set whether ring of Earth's penumbra should be displayed.  <a href="group__satellites.html#a3a8220108021ffbcfe083ccd0c82e236">More...</a><br /></td></tr>
 <tr class="separator:a3a8220108021ffbcfe083ccd0c82e236"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -3025,15 +3065,15 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>transitSatelliteColor
 <tr class="memitem:aa6eb6b9f1aedf462d63a4a81acb34553"><td class="memItemLeft" align="right" valign="top"><a id="aa6eb6b9f1aedf462d63a4a81acb34553"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><b>flagUmbraVisibleChanged</b> (bool b)</td></tr>
 <tr class="separator:aa6eb6b9f1aedf462d63a4a81acb34553"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab5b69f2cc6f0da04fb7a1a0d40b56f21"><td class="memItemLeft" align="right" valign="top"><a id="ab5b69f2cc6f0da04fb7a1a0d40b56f21"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>flagUmbraAtFixedDistanceChanged</b> (bool b)</td></tr>
-<tr class="separator:ab5b69f2cc6f0da04fb7a1a0d40b56f21"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6316fe7a33430c224d63057a5e3e149f"><td class="memItemLeft" align="right" valign="top"><a id="a6316fe7a33430c224d63057a5e3e149f"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>flagUmbraAtFixedAltitudeChanged</b> (bool b)</td></tr>
+<tr class="separator:a6316fe7a33430c224d63057a5e3e149f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a242a5ef896b18778157cd37dd7d900fe"><td class="memItemLeft" align="right" valign="top"><a id="a242a5ef896b18778157cd37dd7d900fe"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><b>umbraColorChanged</b> (<a class="el" href="classVector3.html">Vec3f</a>)</td></tr>
 <tr class="separator:a242a5ef896b18778157cd37dd7d900fe"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:afb1da9eb13b1ecf9b8684f5aba81ee5a"><td class="memItemLeft" align="right" valign="top"><a id="afb1da9eb13b1ecf9b8684f5aba81ee5a"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>umbraDistanceChanged</b> (double d)</td></tr>
-<tr class="separator:afb1da9eb13b1ecf9b8684f5aba81ee5a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac1c99ea5ed96a822880e00e6bbd9a52c"><td class="memItemLeft" align="right" valign="top"><a id="ac1c99ea5ed96a822880e00e6bbd9a52c"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>umbraAltitudeChanged</b> (double d)</td></tr>
+<tr class="separator:ac1c99ea5ed96a822880e00e6bbd9a52c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a07ce9eacb44a8e29c5a775c79a38d677"><td class="memItemLeft" align="right" valign="top"><a id="a07ce9eacb44a8e29c5a775c79a38d677"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><b>flagPenumbraVisibleChanged</b> (bool b)</td></tr>
 <tr class="separator:a07ce9eacb44a8e29c5a775c79a38d677"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -3364,9 +3404,9 @@ int&#160;</td><td class="memItemRight" valign="bottom"><b>tleEpochAgeDays</b></t
 <tr class="memitem:aefb15a644344e778bdcbe5a0bee15801"><td class="memItemLeft" align="right" valign="top"><a id="aefb15a644344e778bdcbe5a0bee15801"></a>
 <a class="el" href="classVector3.html">Vec3f</a>&#160;</td><td class="memItemRight" valign="bottom"><b>transitSatelliteColor</b></td></tr>
 <tr class="separator:aefb15a644344e778bdcbe5a0bee15801"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a529d58b48e816233a48ad76e1f32653a"><td class="memItemLeft" align="right" valign="top"><a id="a529d58b48e816233a48ad76e1f32653a"></a>
-double&#160;</td><td class="memItemRight" valign="bottom"><b>umbraDistance</b></td></tr>
-<tr class="separator:a529d58b48e816233a48ad76e1f32653a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8061f992b37315f85c0e426b8f2f3cf6"><td class="memItemLeft" align="right" valign="top"><a id="a8061f992b37315f85c0e426b8f2f3cf6"></a>
+double&#160;</td><td class="memItemRight" valign="bottom"><b>umbraAltitude</b></td></tr>
+<tr class="separator:a8061f992b37315f85c0e426b8f2f3cf6"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:afb60fb9c72209c8b25a68cb748064f30"><td class="memItemLeft" align="right" valign="top"><a id="afb60fb9c72209c8b25a68cb748064f30"></a>
 bool&#160;</td><td class="memItemRight" valign="bottom"><b>flagCFKnownStdMagnitude</b></td></tr>
 <tr class="separator:afb60fb9c72209c8b25a68cb748064f30"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -3462,10 +3502,10 @@ int&#160;</td><td class="memItemRight" valign="bottom"><b>updateFrequencyHours</
 bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__satellites.html#a5d09875eb5d3407289e9d1e252b37e2d">flagUmbraVisible</a></td></tr>
 <tr class="memdesc:a5d09875eb5d3407289e9d1e252b37e2d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Flag enabling visualization the Earth's umbra. <br /></td></tr>
 <tr class="separator:a5d09875eb5d3407289e9d1e252b37e2d"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a90a7f6110aa3be1496b6d2692aa904aa"><td class="memItemLeft" align="right" valign="top"><a id="a90a7f6110aa3be1496b6d2692aa904aa"></a>
-bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__satellites.html#a90a7f6110aa3be1496b6d2692aa904aa">flagUmbraAtFixedDistance</a></td></tr>
-<tr class="memdesc:a90a7f6110aa3be1496b6d2692aa904aa"><td class="mdescLeft">&#160;</td><td class="mdescRight">Flag enabling visualization the Earth's umbra at fixed distance V23.1: This had to be disabled until computation will be implemented correctly. <br /></td></tr>
-<tr class="separator:a90a7f6110aa3be1496b6d2692aa904aa"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a53a7bf52234abc9ff2e2b59326ddcef1"><td class="memItemLeft" align="right" valign="top"><a id="a53a7bf52234abc9ff2e2b59326ddcef1"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__satellites.html#a53a7bf52234abc9ff2e2b59326ddcef1">flagUmbraAtFixedAltitude</a></td></tr>
+<tr class="memdesc:a53a7bf52234abc9ff2e2b59326ddcef1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Flag enabling visualization the Earth's umbra at a given altitude above a spherical Earth. <br /></td></tr>
+<tr class="separator:a53a7bf52234abc9ff2e2b59326ddcef1"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a455305b0377d5e377459e3c59427290d"><td class="memItemLeft" align="right" valign="top"><a id="a455305b0377d5e377459e3c59427290d"></a>
 <a class="el" href="classVector3.html">Vec3f</a>&#160;</td><td class="memItemRight" valign="bottom"><b>umbraColor</b></td></tr>
 <tr class="separator:a455305b0377d5e377459e3c59427290d"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -3989,6 +4029,34 @@ Additional Inherited Members</h2></td></tr>
 
 </div>
 </div>
+<a id="a29354000b51104bf0fed413ea55054b3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a29354000b51104bf0fed413ea55054b3">&#9670;&nbsp;</a></span>getUmbraAltitude</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">double Satellites::getUmbraAltitude </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">slot</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Get the fixed distance for center of visualized Earth's umbra. </p>
+<dl class="section return"><dt>Returns</dt><dd>distance, km </dd></dl>
+
+</div>
+</div>
 <a id="a5a4ecfa373ae58e76da1ee49c140d215"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a5a4ecfa373ae58e76da1ee49c140d215">&#9670;&nbsp;</a></span>getUmbraColor</h2>
 
@@ -4014,34 +4082,6 @@ Additional Inherited Members</h2></td></tr>
 
 <p>Get color for ring of Earth's umbra. </p>
 <dl class="section return"><dt>Returns</dt><dd>color </dd></dl>
-
-</div>
-</div>
-<a id="a67cdc0420640ab9d553d8f0dbd8e1256"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a67cdc0420640ab9d553d8f0dbd8e1256">&#9670;&nbsp;</a></span>getUmbraDistance</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">double Satellites::getUmbraDistance </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">slot</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Get the fixed distance for center of visualized Earth's umbra. </p>
-<dl class="section return"><dt>Returns</dt><dd>distance, km </dd></dl>
 
 </div>
 </div>
@@ -4908,8 +4948,8 @@ Additional Inherited Members</h2></td></tr>
 
 </div>
 </div>
-<a id="a8168a1634021b5eaff04afe43b401079"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a8168a1634021b5eaff04afe43b401079">&#9670;&nbsp;</a></span>setFlagUmbraAtFixedDistance</h2>
+<a id="a13c73af48ef238c388cf5f8a276f270b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a13c73af48ef238c388cf5f8a276f270b">&#9670;&nbsp;</a></span>setFlagUmbraAtFixedAltitude</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -4918,7 +4958,7 @@ Additional Inherited Members</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">void Satellites::setFlagUmbraAtFixedDistance </td>
+          <td class="memname">void Satellites::setFlagUmbraAtFixedAltitude </td>
           <td>(</td>
           <td class="paramtype">bool&#160;</td>
           <td class="paramname"><em>b</em></td><td>)</td>
@@ -4932,8 +4972,8 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Set whether ring of Earth's umbra should be displayed at fixed distance. </p>
-<p>Emits <a class="el" href="group__satellites.html#ac44a49242b0a5953a8b3fcc11ac18f39" title="Emitted when some of the plugin settings have been changed.">settingsChanged()</a> if the value changes. V23.1: For now this had to be disabled/set to false. </p>
+<p>Set whether ring of Earth's umbra should be displayed at given satellite altitude. </p>
+<p>Emits <a class="el" href="group__satellites.html#ac44a49242b0a5953a8b3fcc11ac18f39" title="Emitted when some of the plugin settings have been changed.">settingsChanged()</a> if the value changes. </p>
 
 </div>
 </div>
@@ -5719,7 +5759,7 @@ Additional Inherited Members</h2></td></tr>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Mon Sep 25 2023 12:58:54 for Stellarium by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1
+Generated on Sat Dec 23 2023 18:54:34 for Stellarium by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1
 </small></address>
 </body>
 </html>

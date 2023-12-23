@@ -43,7 +43,9 @@ $(function() {
 <div class="header">
   <div class="summary">
 <a href="#pub-slots">Public Slots</a> &#124;
-<a href="#pub-methods">Public Member Functions</a>  </div>
+<a href="#signals">Signals</a> &#124;
+<a href="#pub-methods">Public Member Functions</a> &#124;
+<a href="#properties">Properties</a>  </div>
   <div class="headertitle">
 <div class="title">TextUserInterface Class Reference</div>  </div>
 </div><!--header-->
@@ -64,10 +66,16 @@ void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="clas
 void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classTextUserInterface.html#a179de588aae5199ab20421379b98c484">setTuiDateTime</a> (bool tDateTime)</td></tr>
 <tr class="memdesc:a179de588aae5199ab20421379b98c484"><td class="mdescLeft">&#160;</td><td class="mdescRight">Show/hide the TUI date time display. <br /></td></tr>
 <tr class="separator:a179de588aae5199ab20421379b98c484"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae5b9286dc1b923d7f7ec70a55376244a"><td class="memItemLeft" align="right" valign="top"><a id="ae5b9286dc1b923d7f7ec70a55376244a"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><b>getTuiDateTime</b> ()</td></tr>
+<tr class="separator:ae5b9286dc1b923d7f7ec70a55376244a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a228f4ba2e82124f10f672062f802d421"><td class="memItemLeft" align="right" valign="top"><a id="a228f4ba2e82124f10f672062f802d421"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classTextUserInterface.html#a228f4ba2e82124f10f672062f802d421">setTuiObjInfo</a> (bool tObjInfo)</td></tr>
 <tr class="memdesc:a228f4ba2e82124f10f672062f802d421"><td class="mdescLeft">&#160;</td><td class="mdescRight">Show/hide the selected object's short object information. <br /></td></tr>
 <tr class="separator:a228f4ba2e82124f10f672062f802d421"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abcd1596c2f7a5a3cb7092b8376c42342"><td class="memItemLeft" align="right" valign="top"><a id="abcd1596c2f7a5a3cb7092b8376c42342"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><b>getTuiObjInfo</b> ()</td></tr>
+<tr class="separator:abcd1596c2f7a5a3cb7092b8376c42342"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a10d8a7ea8f9acb784786b6b576e830ee"><td class="memItemLeft" align="right" valign="top"><a id="a10d8a7ea8f9acb784786b6b576e830ee"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classTextUserInterface.html#a10d8a7ea8f9acb784786b6b576e830ee">setTuiGravityUi</a> (bool tGravityUi)</td></tr>
 <tr class="memdesc:a10d8a7ea8f9acb784786b6b576e830ee"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set Gravity text for the TUI text. <br /></td></tr>
@@ -76,6 +84,15 @@ void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="clas
 void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classTextUserInterface.html#a2fb6823254dd56d32b21d0ee6ca854b6">setLightPollutionLevel</a> (int level)</td></tr>
 <tr class="memdesc:a2fb6823254dd56d32b21d0ee6ca854b6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set light pollution level. <br /></td></tr>
 <tr class="separator:a2fb6823254dd56d32b21d0ee6ca854b6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="signals"></a>
+Signals</h2></td></tr>
+<tr class="memitem:adaa39f78fbc069cd38c43880ef0cac1c"><td class="memItemLeft" align="right" valign="top"><a id="adaa39f78fbc069cd38c43880ef0cac1c"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>flagShowDateTimeChanged</b> (bool)</td></tr>
+<tr class="separator:adaa39f78fbc069cd38c43880ef0cac1c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad9db9fb2c046d902b63848d1310cf497"><td class="memItemLeft" align="right" valign="top"><a id="ad9db9fb2c046d902b63848d1310cf497"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>flagShowObjInfoChanged</b> (bool)</td></tr>
+<tr class="separator:ad9db9fb2c046d902b63848d1310cf497"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
@@ -136,6 +153,15 @@ virtual QString&#160;</td><td class="memItemRight" valign="bottom"><a class="el"
 <tr class="memitem:a361f28660ec3002520924cd5cee08ccd inherit pub_methods_classStelModule"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classStelModule.html#a361f28660ec3002520924cd5cee08ccd">configureGui</a> (bool show=true)</td></tr>
 <tr class="memdesc:a361f28660ec3002520924cd5cee08ccd inherit pub_methods_classStelModule"><td class="mdescLeft">&#160;</td><td class="mdescRight">Detect or show the configuration GUI elements for the module.  <a href="classStelModule.html#a361f28660ec3002520924cd5cee08ccd">More...</a><br /></td></tr>
 <tr class="separator:a361f28660ec3002520924cd5cee08ccd inherit pub_methods_classStelModule"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="properties"></a>
+Properties</h2></td></tr>
+<tr class="memitem:aebe311b478ff31580fa03513a59be2db"><td class="memItemLeft" align="right" valign="top"><a id="aebe311b478ff31580fa03513a59be2db"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><b>tuiDateTime</b></td></tr>
+<tr class="separator:aebe311b478ff31580fa03513a59be2db"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad8f61266d10609a9306b8c55f75dbeb4"><td class="memItemLeft" align="right" valign="top"><a id="ad8f61266d10609a9306b8c55f75dbeb4"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><b>tuiObjInfo</b></td></tr>
+<tr class="separator:ad8f61266d10609a9306b8c55f75dbeb4"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="inherited"></a>
 Additional Inherited Members</h2></td></tr>
@@ -315,7 +341,7 @@ Additional Inherited Members</h2></td></tr>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Mon Sep 25 2023 12:58:55 for Stellarium by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1
+Generated on Sat Dec 23 2023 18:54:35 for Stellarium by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1
 </small></address>
 </body>
 </html>

@@ -61,6 +61,7 @@ $(function() {
 <li class="level4"><a href="#rcMainServiceMove">move</a></li>
 <li class="level4"><a href="#rcMainServiceView">view</a></li>
 <li class="level4"><a href="#rcMainServiceFov">fov</a></li>
+<li class="level4"><a href="#rcMainServiceWindow">window</a></li>
 </ul>
 </li>
 </ul>
@@ -156,7 +157,7 @@ Extending the API</h1>
 <p>If you want to expose more complex behaviour, you may need to implement your own <a class="el" href="group__remoteControl.html#classAbstractAPIService" title="Abstract base class for all RemoteControlServiceInterface implementations which are provided by the R...">AbstractAPIService</a> and register it with the <a class="el" href="group__remoteControl.html#classAPIController" title="This class handles the API-specific requests and dispatches them to the correct RemoteControlServiceI...">APIController</a>. </p>
 <h1><a class="anchor" id="rcApiReference"></a>
 API reference</h1>
-<p>The default services are registered in the <a class="el" href="group__remoteControl.html#ae1428c8d3b6fd377aedc093d00617c8d" title="Constructs the request handler.">RequestHandler::RequestHandler()</a> constructor. They are:</p>
+<p>The default services are registered in the <a class="el" href="group__remoteControl.html#a2247533687526fd9be8690d8c07d3efc" title="Constructs the request handler.">RequestHandler::RequestHandler()</a> constructor. They are:</p>
 <table class="markdownTable">
 <tr class="markdownTableHead">
 <th class="markdownTableHeadNone">Service   </th><th class="markdownTableHeadNone">Path   </th><th class="markdownTableHeadNone">Description    </th></tr>
@@ -303,6 +304,10 @@ Sets the view direction. When the <code>j2000</code> parameter is given (interpr
 fov</h4>
 <p>Parameters: <code>fov (Number)</code><br  />
 Sets the current field-of-view using StelCore::setFov</p>
+<h4><a class="anchor" id="rcMainServiceWindow"></a>
+window</h4>
+<p>Parameters: <code>w (int) h (int)</code><br  />
+Sets the window size using <a class="el" href="classStelMainView.html#a875c5793d65f03ab89a7758df5199364" title="Set image size in windowed mode.">StelMainView::setWindowSize()</a> This can be useful e.g. when Stellarium provides image background inserts via spout.</p>
 <h2><a class="anchor" id="rcObjectService"></a>
 ObjectService operations (/api/objects/)</h2>
 <h3><a class="anchor" id="rcObjectServiceGET"></a>
@@ -526,7 +531,7 @@ projectiondescription</h4>
 </div><!-- PageDoc -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Mon Sep 25 2023 12:58:54 for Stellarium by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1
+Generated on Sat Dec 23 2023 18:54:34 for Stellarium by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1
 </small></address>
 </body>
 </html>

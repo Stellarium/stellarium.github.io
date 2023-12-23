@@ -21,7 +21,7 @@
   <td id="projectlogo"><img alt="Logo" src="stellarium-logo.png"/></td>
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">Stellarium
-   &#160;<span id="projectnumber">23.3</span>
+   &#160;<span id="projectnumber">23.4</span>
    </div>
   </td>
  </tr>
@@ -140,6 +140,12 @@ static QString&#160;</td><td class="memItemRight" valign="bottom"><a class="el" 
 <tr class="memitem:aca7f01657c1b484851574aa0a90e7967"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classStelFileMgr.html#aca7f01657c1b484851574aa0a90e7967">setScreenshotDir</a> (const QString &amp;newDir)</td></tr>
 <tr class="memdesc:aca7f01657c1b484851574aa0a90e7967"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the screenshot directory.  <a href="classStelFileMgr.html#aca7f01657c1b484851574aa0a90e7967">More...</a><br /></td></tr>
 <tr class="separator:aca7f01657c1b484851574aa0a90e7967"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8bae46d18db5d87ecb11274a7e5fa6ff"><td class="memItemLeft" align="right" valign="top">static QString&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classStelFileMgr.html#a8bae46d18db5d87ecb11274a7e5fa6ff">getObsListDir</a> ()</td></tr>
+<tr class="memdesc:a8bae46d18db5d87ecb11274a7e5fa6ff"><td class="mdescLeft">&#160;</td><td class="mdescRight">This is the directory into which observing lists will be saved.  <a href="classStelFileMgr.html#a8bae46d18db5d87ecb11274a7e5fa6ff">More...</a><br /></td></tr>
+<tr class="separator:a8bae46d18db5d87ecb11274a7e5fa6ff"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acc52d3b38e7f8089dc05ea2a5d138584"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classStelFileMgr.html#acc52d3b38e7f8089dc05ea2a5d138584">setObsListDir</a> (const QString &amp;newDir)</td></tr>
+<tr class="memdesc:acc52d3b38e7f8089dc05ea2a5d138584"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the observing lists directory.  <a href="classStelFileMgr.html#acc52d3b38e7f8089dc05ea2a5d138584">More...</a><br /></td></tr>
+<tr class="separator:acc52d3b38e7f8089dc05ea2a5d138584"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af7b68868fc5ccaea46c18df8bfd89788"><td class="memItemLeft" align="right" valign="top">static QString&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classStelFileMgr.html#af7b68868fc5ccaea46c18df8bfd89788">getLocaleDir</a> ()</td></tr>
 <tr class="memdesc:af7b68868fc5ccaea46c18df8bfd89788"><td class="mdescLeft">&#160;</td><td class="mdescRight">get the directory for locate files (i18n)  <a href="classStelFileMgr.html#af7b68868fc5ccaea46c18df8bfd89788">More...</a><br /></td></tr>
 <tr class="separator:af7b68868fc5ccaea46c18df8bfd89788"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -449,6 +455,34 @@ Matthew Gates <a href="#" onclick="location.href='mai'+'lto:'+'mat'+'th'+'ewg'+'
 
 <p>get the directory for locate files (i18n) </p>
 <dl class="section return"><dt>Returns</dt><dd>the path to the locale directory or "" if the locale directory could not be found. </dd></dl>
+
+</div>
+</div>
+<a id="a8bae46d18db5d87ecb11274a7e5fa6ff"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8bae46d18db5d87ecb11274a7e5fa6ff">&#9670;&nbsp;</a></span>getObsListDir()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static QString StelFileMgr::getObsListDir </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>This is the directory into which observing lists will be saved. </p>
+<p>It is $HOME on Linux, BSD, Solaris etc. It is the user's Desktop on MacOS X (??? - someone please verify this) It is ??? on Windows </p><dl class="section return"><dt>Returns</dt><dd>the path to the directory where observing lists are saved </dd></dl>
 
 </div>
 </div>
@@ -813,6 +847,40 @@ Matthew Gates <a href="#" onclick="location.href='mai'+'lto:'+'mat'+'th'+'ewg'+'
 
 </div>
 </div>
+<a id="acc52d3b38e7f8089dc05ea2a5d138584"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#acc52d3b38e7f8089dc05ea2a5d138584">&#9670;&nbsp;</a></span>setObsListDir()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static void StelFileMgr::setObsListDir </td>
+          <td>(</td>
+          <td class="paramtype">const QString &amp;&#160;</td>
+          <td class="paramname"><em>newDir</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Sets the observing lists directory. </p>
+<p>This is set to platform-specific values in the <a class="el" href="classStelFileMgr.html" title="Provides utilities for locating and handling files.">StelFileMgr</a> constructor, but it is settable using this function to make it possible to implement the command-line option which specifies where observing lists go. </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">newDir</td><td>the new value of the observing lists directory </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
 <a id="aca7f01657c1b484851574aa0a90e7967"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#aca7f01657c1b484851574aa0a90e7967">&#9670;&nbsp;</a></span>setScreenshotDir()</h2>
 
@@ -958,7 +1026,7 @@ Matthew Gates <a href="#" onclick="location.href='mai'+'lto:'+'mat'+'th'+'ewg'+'
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Mon Sep 25 2023 12:58:55 for Stellarium by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1
+Generated on Sat Dec 23 2023 18:54:35 for Stellarium by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1
 </small></address>
 </body>
 </html>

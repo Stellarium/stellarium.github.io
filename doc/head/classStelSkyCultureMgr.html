@@ -76,9 +76,14 @@ QString&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="c
 <tr class="memitem:a778cd1b637cacad865adb7734f3fc8b1"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classStelSkyCultureMgr.html#a778cd1b637cacad865adb7734f3fc8b1">setCurrentSkyCultureID</a> (const QString &amp;id)</td></tr>
 <tr class="memdesc:a778cd1b637cacad865adb7734f3fc8b1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the current sky culture from the ID.  <a href="classStelSkyCultureMgr.html#a778cd1b637cacad865adb7734f3fc8b1">More...</a><br /></td></tr>
 <tr class="separator:a778cd1b637cacad865adb7734f3fc8b1"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a79fff931a482db66dace44b81cf7d73c"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classStelSkyCultureMgr.html#a79fff931a482db66dace44b81cf7d73c">getCurrentSkyCultureBoundariesIdx</a> () const</td></tr>
-<tr class="memdesc:a79fff931a482db66dace44b81cf7d73c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the type of boundaries of the current sky culture Config option: info/boundaries Keys:  <a href="classStelSkyCultureMgr.html#a79fff931a482db66dace44b81cf7d73c">More...</a><br /></td></tr>
-<tr class="separator:a79fff931a482db66dace44b81cf7d73c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae69b913c49354b7cd6ea3a1b8cc6d11a"><td class="memItemLeft" align="right" valign="top"><a id="ae69b913c49354b7cd6ea3a1b8cc6d11a"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classStelSkyCultureMgr.html#ae69b913c49354b7cd6ea3a1b8cc6d11a">reloadSkyCulture</a> ()</td></tr>
+<tr class="memdesc:ae69b913c49354b7cd6ea3a1b8cc6d11a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Reload the current sky culture. <br /></td></tr>
+<tr class="separator:ae69b913c49354b7cd6ea3a1b8cc6d11a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af849e8290f1d9731da362088964973cb"><td class="memItemLeft" align="right" valign="top"><a id="af849e8290f1d9731da362088964973cb"></a>
+<a class="el" href="classStelSkyCulture.html#a816d29c4b1a8116a1f0a3887c2d76836">StelSkyCulture::BoundariesType</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classStelSkyCultureMgr.html#af849e8290f1d9731da362088964973cb">getCurrentSkyCultureBoundariesType</a> () const</td></tr>
+<tr class="memdesc:af849e8290f1d9731da362088964973cb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the type of boundaries of the current sky culture Config option: info/boundaries. <br /></td></tr>
+<tr class="separator:af849e8290f1d9731da362088964973cb"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:adb9bafc59d3998606218d614fdcfc751"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classStelSkyCultureMgr.html#adb9bafc59d3998606218d614fdcfc751">getCurrentSkyCultureClassificationIdx</a> () const</td></tr>
 <tr class="memdesc:adb9bafc59d3998606218d614fdcfc751"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the classification index for the current sky culture Config option: info/classification Possible values:  <a href="classStelSkyCultureMgr.html#adb9bafc59d3998606218d614fdcfc751">More...</a><br /></td></tr>
 <tr class="separator:adb9bafc59d3998606218d614fdcfc751"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -174,38 +179,6 @@ QString&#160;</td><td class="memItemRight" valign="bottom"><b>defaultSkyCultureI
 
 <p>Emitted whenever the default sky culture changed. </p>
 <dl class="section see"><dt>See also</dt><dd><a class="el" href="classStelSkyCultureMgr.html#ad7145326d607dc4fc31f96b085a4f02c" title="Set the default sky culture from the ID.">setDefaultSkyCultureID</a> </dd></dl>
-
-</div>
-</div>
-<a id="a79fff931a482db66dace44b81cf7d73c"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a79fff931a482db66dace44b81cf7d73c">&#9670;&nbsp;</a></span>getCurrentSkyCultureBoundariesIdx</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">int StelSkyCultureMgr::getCurrentSkyCultureBoundariesIdx </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td> const</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">slot</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Get the type of boundaries of the current sky culture Config option: info/boundaries Keys: </p>
-<ul>
-<li>none (-1; using by default)</li>
-<li>generic (0)</li>
-<li>own (1) </li>
-</ul>
 
 </div>
 </div>
@@ -554,7 +527,7 @@ QString&#160;</td><td class="memItemRight" valign="bottom"><b>defaultSkyCultureI
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Mon Sep 25 2023 12:58:55 for Stellarium by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1
+Generated on Sat Dec 23 2023 18:54:35 for Stellarium by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1
 </small></address>
 </body>
 </html>

@@ -21,7 +21,7 @@
   <td id="projectlogo"><img alt="Logo" src="stellarium-logo.png"/></td>
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">Stellarium
-   &#160;<span id="projectnumber">23.3</span>
+   &#160;<span id="projectnumber">23.4</span>
    </div>
   </td>
  </tr>
@@ -112,9 +112,6 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><b>askConfirmation</b> (
 <tr class="memitem:aba69096a162791f2a90639b05c0abaf1"><td class="memItemLeft" align="right" valign="top"><a id="aba69096a162791f2a90639b05c0abaf1"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><b>messageBox</b> (const QString &amp;title, const QString &amp;message)</td></tr>
 <tr class="separator:aba69096a162791f2a90639b05c0abaf1"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a5ef9b994a4c7565bcc6d8a9ccaa85f0b"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classStelDialog.html#a5ef9b994a4c7565bcc6d8a9ccaa85f0b">askColor</a> ()</td></tr>
-<tr class="memdesc:a5ef9b994a4c7565bcc6d8a9ccaa85f0b"><td class="mdescLeft">&#160;</td><td class="mdescRight">To be called by a connected QToolButton with a color background.  <a href="classStelDialog.html#a5ef9b994a4c7565bcc6d8a9ccaa85f0b">More...</a><br /></td></tr>
-<tr class="separator:a5ef9b994a4c7565bcc6d8a9ccaa85f0b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a80fb8e43b2ea5d4a74f815bb0723d1fd"><td class="memItemLeft" align="right" valign="top"><a id="a80fb8e43b2ea5d4a74f815bb0723d1fd"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classStelDialog.html#a80fb8e43b2ea5d4a74f815bb0723d1fd">enableKineticScrolling</a> (bool b)</td></tr>
 <tr class="memdesc:a80fb8e43b2ea5d4a74f815bb0723d1fd"><td class="mdescLeft">&#160;</td><td class="mdescRight">enable kinetic scrolling. This should be connected to <a class="el" href="classStelApp.html" title="Singleton main Stellarium application class.">StelApp</a>'s <a class="el" href="classStelGui.html" title="Main class for the GUI based on QGraphicView.">StelGui</a> signal flagUseKineticScrollingChanged. <br /></td></tr>
@@ -137,9 +134,6 @@ Protected Member Functions</h2></td></tr>
 virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classStelDialog.html#a0a6823b263934eb74b013ad0738235bd">createDialogContent</a> ()=0</td></tr>
 <tr class="memdesc:a0a6823b263934eb74b013ad0738235bd"><td class="mdescLeft">&#160;</td><td class="mdescRight">Initialize the dialog widgets and connect the signals/slots. <br /></td></tr>
 <tr class="separator:a0a6823b263934eb74b013ad0738235bd"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aeabd2bf2e1dc0228ebfb8d6704173cae"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classStelDialog.html#aeabd2bf2e1dc0228ebfb8d6704173cae">connectColorButton</a> (QToolButton *button, const QString &amp;propertyName, const QString &amp;iniName, const QString &amp;moduleName=&quot;&quot;)</td></tr>
-<tr class="memdesc:aeabd2bf2e1dc0228ebfb8d6704173cae"><td class="mdescLeft">&#160;</td><td class="mdescRight">Prepare a QToolButton so that it can receive and handle <a class="el" href="classStelDialog.html#a5ef9b994a4c7565bcc6d8a9ccaa85f0b" title="To be called by a connected QToolButton with a color background.">askColor()</a> connections properly.  <a href="classStelDialog.html#aeabd2bf2e1dc0228ebfb8d6704173cae">More...</a><br /></td></tr>
-<tr class="separator:aeabd2bf2e1dc0228ebfb8d6704173cae"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-static-methods"></a>
 Static Protected Member Functions</h2></td></tr>
@@ -213,8 +207,8 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><b>visible</b></td></tr>
 <p>Windows in Stellarium are actually basic QWidgets that have to be wrapped in a QGraphicsProxyWidget (<a class="el" href="classCustomProxy.html">CustomProxy</a>) to be displayed by <a class="el" href="classStelMainView.html" title="Reimplement a QGraphicsView for Stellarium.">StelMainView</a> (which is derived from QGraphicsView). See the Qt documentation for details.</p>
 <p>The base widget needs to be populated with controls in the implementation of the <a class="el" href="classStelDialog.html#a0a6823b263934eb74b013ad0738235bd" title="Initialize the dialog widgets and connect the signals/slots.">createDialogContent()</a> function. This can be done either manually, or by using a .ui file. See the Qt documentation on using Qt Designer .ui files for details.</p>
 <p>The <a class="el" href="classStelDialog.html#a0a6823b263934eb74b013ad0738235bd" title="Initialize the dialog widgets and connect the signals/slots.">createDialogContent()</a> function itself is called automatically the first time <a class="el" href="classStelDialog.html#ada663a86b43a0d0c161eb7ba638c093a" title="On the first call with &quot;true&quot; populates the window contents.">setVisible()</a> is called with "true".</p>
-<p>Moving a window is done by dragging its title bar, defined in the <a class="el" href="classBarFrame.html" title="A title bar control used in windows derived from StelDialog.">BarFrame</a> class. Every derived window class needs a <a class="el" href="classBarFrame.html" title="A title bar control used in windows derived from StelDialog.">BarFrame</a> object - it has to be either included in a .ui file, or manually instantiated in <a class="el" href="classStelDialog.html#a0a6823b263934eb74b013ad0738235bd" title="Initialize the dialog widgets and connect the signals/slots.">createDialogContent()</a>.</p>
-<p>The screen location of the <a class="el" href="classStelDialog.html" title="Base class for all the GUI windows in Stellarium.">StelDialog</a> can be stored in config.ini. This requires setting dialogName (must be a unique name, should be set in the constructor), and setting a connect() from the <a class="el" href="classBarFrame.html" title="A title bar control used in windows derived from StelDialog.">BarFrame</a>'s movedTo() signal to <a class="el" href="classStelDialog.html#ab153b9a212384d5722c2964c865a380f" title="Adds dialog location to config.ini; should be connected in createDialogContent()">handleMovedTo()</a> in <a class="el" href="classStelDialog.html#a0a6823b263934eb74b013ad0738235bd" title="Initialize the dialog widgets and connect the signals/slots.">createDialogContent()</a>. If the dialog is called and the stored location is off-screen, the dialog is shifted to become visible.</p>
+<p>Moving a window is done by dragging its title bar, defined in the <a class="el" href="classTitleBar.html" title="A title bar control used in windows derived from StelDialog.">TitleBar</a> class. Every derived window class needs a <a class="el" href="classTitleBar.html" title="A title bar control used in windows derived from StelDialog.">TitleBar</a> object - it has to be either included in a .ui file, or manually instantiated in <a class="el" href="classStelDialog.html#a0a6823b263934eb74b013ad0738235bd" title="Initialize the dialog widgets and connect the signals/slots.">createDialogContent()</a>.</p>
+<p>The screen location of the <a class="el" href="classStelDialog.html" title="Base class for all the GUI windows in Stellarium.">StelDialog</a> can be stored in config.ini. This requires setting dialogName (must be a unique name, should be set in the constructor), and setting a connect() from the <a class="el" href="classTitleBar.html" title="A title bar control used in windows derived from StelDialog.">TitleBar</a>'s movedTo() signal to <a class="el" href="classStelDialog.html#ab153b9a212384d5722c2964c865a380f" title="Adds dialog location to config.ini; should be connected in createDialogContent()">handleMovedTo()</a> in <a class="el" href="classStelDialog.html#a0a6823b263934eb74b013ad0738235bd" title="Initialize the dialog widgets and connect the signals/slots.">createDialogContent()</a>. If the dialog is called and the stored location is off-screen, the dialog is shifted to become visible.</p>
 <h2><a class="anchor" id="autotoc_md0"></a>
 StelProperty and StelAction</h2>
 <p>The <a class="el" href="classStelDialog.html" title="Base class for all the GUI windows in Stellarium.">StelDialog</a> base class provides multiple helper functions that allow easy two-way binding of widgets to specific <a class="el" href="classStelAction.html" title="Wrapper around an argumentless QObject slot or a bool Q_PROPERTY with WRITE method,...">StelAction</a> or <a class="el" href="classStelProperty.html" title="Wrapper around a Q_PROPERTY (see the Qt property system for more information) of a specific object,...">StelProperty</a> instances. These functions are:</p><ul>
@@ -224,34 +218,6 @@ StelProperty and StelAction</h2>
 <li><a class="el" href="classStelDialog.html#ae8e944d7d35840c01b4cdac5fff956a0">connectBoolProperty</a> to connect a <a class="el" href="classStelProperty.html" title="Wrapper around a Q_PROPERTY (see the Qt property system for more information) of a specific object,...">StelProperty</a> to a QAbstractButton (includes QCheckBox) Take care that a valid property name is used and it represents a property that can be converted to the required data type, or the program will crash at runtime when the function is called </li>
 </ul>
 </div><h2 class="groupheader">Member Function Documentation</h2>
-<a id="a5ef9b994a4c7565bcc6d8a9ccaa85f0b"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a5ef9b994a4c7565bcc6d8a9ccaa85f0b">&#9670;&nbsp;</a></span>askColor</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">void StelDialog::askColor </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">protected</span><span class="mlabel">slot</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>To be called by a connected QToolButton with a color background. </p>
-<p>This QToolButton needs properties "propName" and "iniName" which should be prepared using <a class="el" href="classStelDialog.html#aeabd2bf2e1dc0228ebfb8d6704173cae" title="Prepare a QToolButton so that it can receive and handle askColor() connections properly.">connectColorButton()</a>. </p>
-
-</div>
-</div>
 <a id="ae8e944d7d35840c01b4cdac5fff956a0"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#ae8e944d7d35840c01b4cdac5fff956a0">&#9670;&nbsp;</a></span>connectBoolProperty() <span class="overload">[1/2]</span></h2>
 
@@ -326,66 +292,6 @@ StelProperty and StelAction</h2>
 </div><div class="memdoc">
 
 <p>Helper function to connect a groupbox to a bool <a class="el" href="classStelProperty.html" title="Wrapper around a Q_PROPERTY (see the Qt property system for more information) of a specific object,...">StelProperty</a>. </p>
-<dl class="section warning"><dt>Warning</dt><dd>If the action with <code>propName</code> is invalid/unregistered, or cannot be converted to the required datatype, the application will crash </dd></dl>
-
-</div>
-</div>
-<a id="aeabd2bf2e1dc0228ebfb8d6704173cae"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aeabd2bf2e1dc0228ebfb8d6704173cae">&#9670;&nbsp;</a></span>connectColorButton()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">void StelDialog::connectColorButton </td>
-          <td>(</td>
-          <td class="paramtype">QToolButton *&#160;</td>
-          <td class="paramname"><em>button</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">const QString &amp;&#160;</td>
-          <td class="paramname"><em>propertyName</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">const QString &amp;&#160;</td>
-          <td class="paramname"><em>iniName</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">const QString &amp;&#160;</td>
-          <td class="paramname"><em>moduleName</em> = <code>&quot;&quot;</code>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Prepare a QToolButton so that it can receive and handle <a class="el" href="classStelDialog.html#a5ef9b994a4c7565bcc6d8a9ccaa85f0b" title="To be called by a connected QToolButton with a color background.">askColor()</a> connections properly. </p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">toolButton</td><td>the QToolButton which shows the color </td></tr>
-    <tr><td class="paramname">propertyName</td><td>a <a class="el" href="classStelProperty.html" title="Wrapper around a Q_PROPERTY (see the Qt property system for more information) of a specific object,...">StelProperty</a> name which must represent a color (coded as Vec3f) </td></tr>
-    <tr><td class="paramname">iniName</td><td>the associated entry for config.ini, in the form group/name. Usually "color/some_feature_name_color". </td></tr>
-    <tr><td class="paramname">moduleName</td><td>if the iniName is for a module (plugin)-specific ini file, add the module name here. The module needs an implementation of getSettings() </td></tr>
-  </table>
-  </dd>
-</dl>
 <dl class="section warning"><dt>Warning</dt><dd>If the action with <code>propName</code> is invalid/unregistered, or cannot be converted to the required datatype, the application will crash </dd></dl>
 
 </div>
@@ -873,7 +779,7 @@ StelProperty and StelAction</h2>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Mon Sep 25 2023 12:58:55 for Stellarium by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1
+Generated on Sat Dec 23 2023 18:54:35 for Stellarium by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1
 </small></address>
 </body>
 </html>
