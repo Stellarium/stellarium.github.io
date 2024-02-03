@@ -1,5 +1,5 @@
 #!/bin/bash
 
-version="23.4"
+version="24.0"
 
 find ../doc/head/ -type f -name '*.html' -exec  sed -i "s/>$version</>HEAD</g" "{}" \;

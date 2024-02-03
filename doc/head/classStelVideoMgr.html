@@ -55,12 +55,12 @@ $(function() {
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-slots"></a>
 Public Slots</h2></td></tr>
-<tr class="memitem:a3f680d75a2b6a7b0891bacdee3d6e529"><td class="memItemLeft" align="right" valign="top"><a id="a3f680d75a2b6a7b0891bacdee3d6e529"></a>
-virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>init</b> () Q_DECL_OVERRIDE</td></tr>
-<tr class="separator:a3f680d75a2b6a7b0891bacdee3d6e529"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a43fcf25995ff3d1d3f114c3b8d1358d5"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classStelVideoMgr.html#a43fcf25995ff3d1d3f114c3b8d1358d5">update</a> (double deltaTime) Q_DECL_OVERRIDE</td></tr>
-<tr class="memdesc:a43fcf25995ff3d1d3f114c3b8d1358d5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Update the module with respect to the time.  <a href="classStelVideoMgr.html#a43fcf25995ff3d1d3f114c3b8d1358d5">More...</a><br /></td></tr>
-<tr class="separator:a43fcf25995ff3d1d3f114c3b8d1358d5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae9d1a28438bf7d9b4adcdacd93803039"><td class="memItemLeft" align="right" valign="top"><a id="ae9d1a28438bf7d9b4adcdacd93803039"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>init</b> () override</td></tr>
+<tr class="separator:ae9d1a28438bf7d9b4adcdacd93803039"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8d560dbf5cfaf847b088b54207d98d5b"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classStelVideoMgr.html#a8d560dbf5cfaf847b088b54207d98d5b">update</a> (double deltaTime) override</td></tr>
+<tr class="memdesc:a8d560dbf5cfaf847b088b54207d98d5b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Update the module with respect to the time.  <a href="classStelVideoMgr.html#a8d560dbf5cfaf847b088b54207d98d5b">More...</a><br /></td></tr>
+<tr class="separator:a8d560dbf5cfaf847b088b54207d98d5b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad59987744493f168fb3ad7202affa18c"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classStelVideoMgr.html#ad59987744493f168fb3ad7202affa18c">loadVideo</a> (const QString &amp;filename, const QString &amp;id, const float x, const float y, const bool show, const float alpha)</td></tr>
 <tr class="memdesc:ad59987744493f168fb3ad7202affa18c"><td class="mdescLeft">&#160;</td><td class="mdescRight">load a video from filename, assign an id for it for later reference.  <a href="classStelVideoMgr.html#ad59987744493f168fb3ad7202affa18c">More...</a><br /></td></tr>
 <tr class="separator:ad59987744493f168fb3ad7202affa18c"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -630,7 +630,7 @@ WEBM (invalid media)  </li>
 </div><div class="memdoc">
 
 <p>set video size to width w and height h. </p>
-<p>Use w=-1 or h=-1 for autoscale from the other dimension, or use w=h=-1 for native size of video. if w or h are &lt;=1, the size is relative to screen dimensions. This should be the preferred use, because it allows the development of device-independent scripts. When native resolution is unknown at the time you call this, it will be evaluated at the next <a class="el" href="classStelVideoMgr.html#a43fcf25995ff3d1d3f114c3b8d1358d5" title="Update the module with respect to the time.">update()</a> after resolution becomes known. Autoscaling uses viewport dimensions at the time of calling, so resizing the Stellarium window will not resize the video frame during replay. </p>
+<p>Use w=-1 or h=-1 for autoscale from the other dimension, or use w=h=-1 for native size of video. if w or h are &lt;=1, the size is relative to screen dimensions. This should be the preferred use, because it allows the development of device-independent scripts. When native resolution is unknown at the time you call this, it will be evaluated at the next <a class="el" href="classStelVideoMgr.html#a8d560dbf5cfaf847b088b54207d98d5b" title="Update the module with respect to the time.">update()</a> after resolution becomes known. Autoscaling uses viewport dimensions at the time of calling, so resizing the Stellarium window will not resize the video frame during replay. </p>
 
 </div>
 </div>
@@ -820,8 +820,8 @@ WEBM (invalid media)  </li>
 
 </div>
 </div>
-<a id="a43fcf25995ff3d1d3f114c3b8d1358d5"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a43fcf25995ff3d1d3f114c3b8d1358d5">&#9670;&nbsp;</a></span>update</h2>
+<a id="a8d560dbf5cfaf847b088b54207d98d5b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8d560dbf5cfaf847b088b54207d98d5b">&#9670;&nbsp;</a></span>update</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -830,7 +830,7 @@ WEBM (invalid media)  </li>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">virtual void StelVideoMgr::update </td>
+          <td class="memname">void StelVideoMgr::update </td>
           <td>(</td>
           <td class="paramtype">double&#160;</td>
           <td class="paramname"><em>deltaTime</em></td><td>)</td>
@@ -839,7 +839,7 @@ WEBM (invalid media)  </li>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">virtual</span><span class="mlabel">slot</span></span>  </td>
+<span class="mlabels"><span class="mlabel">override</span><span class="mlabel">slot</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
@@ -857,7 +857,7 @@ WEBM (invalid media)  </li>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Sat Dec 23 2023 18:54:35 for Stellarium by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1
+Generated on Sat Feb 3 2024 18:28:21 for Stellarium by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1
 </small></address>
 </body>
 </html>
