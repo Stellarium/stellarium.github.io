@@ -3,8 +3,8 @@ title: Cologne, Barbarossaplatz, Rooftop, Germany
 author: Frank Hell
 compat: 0.10+
 license: ©
-landscape_url: http://massagefromhell.com/private/cologne_skyline.zip
-image_url: http://massagefromhell.com/private/stellarium-027_th_mix.png
+landscape_url: https://massagefromhell.com/private/cologne_skyline.zip
+image_url: https://massagefromhell.com/private/stellarium-027_th_mix.png
 ---
 Panorama taken on 4th of August 2019 at Barbarossaplatz, Cologne, Germany. About 1500 meters 
 away from the Cologne Cathedral at 27 meters above the city's elevation level. The panorama 
