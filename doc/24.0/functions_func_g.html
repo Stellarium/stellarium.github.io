@@ -21,7 +21,7 @@
   <td id="projectlogo"><img alt="Logo" src="stellarium-logo.png"/></td>
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">Stellarium
-   &#160;<span id="projectnumber">24.1</span>
+   &#160;<span id="projectnumber">24.2</span>
    </div>
   </td>
  </tr>
@@ -686,6 +686,9 @@ $(function() {
 <li>getConstellationsEnglishNames()
 : <a class="el" href="classConstellationMgr.html#ac4989f4ed51c8c4c921150d225b92f62">ConstellationMgr</a>
 </li>
+<li>getContactCoordinates()
+: <a class="el" href="classSolarEclipseComputer.html#a36fdd27316d17f863d8dea5569e0f3d1">SolarEclipseComputer</a>
+</li>
 <li>getContentType()
 : <a class="el" href="group__qtWebApp.html#a0439084a848604cb9feecfb2351f26fe">StaticFileController</a>
 </li>
@@ -1017,6 +1020,9 @@ $(function() {
 <li>getDeltaTCustomYear()
 : <a class="el" href="classStelCore.html#a90cc3bcf2c7bca18933d4a2f8ad46e41">StelCore</a>
 </li>
+<li>getDeltaTimeOfContact()
+: <a class="el" href="classSolarEclipseComputer.html#a7e87b735c5287185d5ff35307939d505">SolarEclipseComputer</a>
+</li>
 <li>getDeltaTnDot()
 : <a class="el" href="classStelCore.html#a057ab3e0b4d98e47b27f3224f8c7c373">StelCore</a>
 </li>
@@ -1125,6 +1131,9 @@ $(function() {
 <li>getEccentricity()
 : <a class="el" href="classKeplerOrbit.html#a791abb5b14e8a5522fb30b88d853f753">KeplerOrbit</a>
 , <a class="el" href="classOrbit.html#a28384ccbbc11109db012c6d7597264f1">Orbit</a>
+</li>
+<li>getEclipseCrescentAngle()
+: <a class="el" href="classSolarSystem.html#a0447b7940dd13c41f74f43b3da07b256">SolarSystem</a>
 </li>
 <li>getEclipticPos()
 : <a class="el" href="classPlanet.html#a47b7d4cafa1387a3a70fd68e0e259449">Planet</a>
@@ -1254,8 +1263,8 @@ $(function() {
 : <a class="el" href="classOctahedronPolygon.html#a7c9e023a7c59e176408d0123c0d599f3">OctahedronPolygon</a>
 , <a class="el" href="classSphericalConvexPolygon.html#a67d184bbe76459f6e94d45cc736e87bc">SphericalConvexPolygon</a>
 , <a class="el" href="classSphericalRegion.html#aee88cf2a2cc8cf0acdf5f9df1cfa411b">SphericalRegion</a>
-, <a class="el" href="classSphericalTexturedConvexPolygon.html#a4cadcd8f720b5da06095cd66ded2943f">SphericalTexturedConvexPolygon</a>
-, <a class="el" href="classSphericalTexturedPolygon.html#a91db74c9e1ab35a069ce25058980f2c1">SphericalTexturedPolygon</a>
+, <a class="el" href="classSphericalTexturedConvexPolygon.html#a0a9154facc87e383db9a00968060c18e">SphericalTexturedConvexPolygon</a>
+, <a class="el" href="classSphericalTexturedPolygon.html#aa6e5b6e80461afa5ef35f8716e32ffbd">SphericalTexturedPolygon</a>
 </li>
 <li>getFilteredMode()
 : <a class="el" href="group__pulsars.html#a3683b8265db47c991e139543e6c72441">Pulsars</a>
@@ -2409,8 +2418,14 @@ $(function() {
 <li>getJdFromISO8601TimeLocal()
 : <a class="el" href="classStelLocaleMgr.html#a7d5c7f434d5a4c26fd0da1f56ef6a572">StelLocaleMgr</a>
 </li>
+<li>getJDofContact()
+: <a class="el" href="classSolarEclipseComputer.html#a5c0355ba31e4288d8f2c285108197011">SolarEclipseComputer</a>
+</li>
 <li>getJDOfLastJDUpdate()
 : <a class="el" href="classStelCore.html#ac0d34d24ee46218754c3a78116b3326e">StelCore</a>
+</li>
+<li>getJDofMinimumDistance()
+: <a class="el" href="classSolarEclipseComputer.html#afa9d2ed30b4b9d981788d6635127f2d7">SolarEclipseComputer</a>
 </li>
 <li>getJupiterOrbitColor()
 : <a class="el" href="classSolarSystem.html#adc24c51aec54f1b52c0ca96d534b791d">SolarSystem</a>
@@ -2446,7 +2461,7 @@ $(function() {
 : <a class="el" href="classLandscape.html#ad66cf496d4fd853637c1a7470d5fc126">Landscape</a>
 </li>
 <li>getLandscapeOpacity()
-: <a class="el" href="classLandscapeMgr.html#a92971e9759c53abb999c3a96fc5b6977">LandscapeMgr</a>
+: <a class="el" href="classLandscapeMgr.html#acdddf1b5035cc7b7cd1c4b0bda1b85ce">LandscapeMgr</a>
 </li>
 <li>getLandscapeSinMinAltitudeLimit()
 : <a class="el" href="classLandscapeMgr.html#a1c80028084bc93fa265a1257618ad12b">LandscapeMgr</a>
@@ -2634,6 +2649,9 @@ $(function() {
 </li>
 <li>getMaximum()
 : <a class="el" href="classAngleSpinBox.html#aa88367f90118af6f796f03118716107d">AngleSpinBox</a>
+</li>
+<li>getMaximumEclipseAtRiseSet()
+: <a class="el" href="classSolarEclipseComputer.html#a881318252218ce8c718d91828fb2a036">SolarEclipseComputer</a>
 </li>
 <li>getMaxLevel()
 : <a class="el" href="classToastGrid.html#aec383a380463424be3213ab1184eb890">ToastGrid</a>
@@ -2995,7 +3013,7 @@ $(function() {
 : <a class="el" href="classSolarSystem.html#a0eda394f40245e1a4f52ea0b9f3d601b">SolarSystem</a>
 </li>
 <li>getOutlineVertexArray()
-: <a class="el" href="classSphericalConvexPolygon.html#ae1ddce1b071ea045d9da89769402c896">SphericalConvexPolygon</a>
+: <a class="el" href="classSphericalConvexPolygon.html#a72a1b3af3bdfc89aaee4ff10d746b30e">SphericalConvexPolygon</a>
 , <a class="el" href="classSphericalRegion.html#a478cc56f9fc948467c78a54987356f89">SphericalRegion</a>
 </li>
 <li>getOverwriteInfoColor()
@@ -3285,6 +3303,9 @@ $(function() {
 <li>getReticleColor()
 : <a class="el" href="group__telescopeControl.html#a000b45c14ffcdb38e3be51c5f8cf049f">TelescopeControl</a>
 </li>
+<li>getRiseSetLineCoordinates()
+: <a class="el" href="classSolarEclipseComputer.html#aed7774ca7b72065b78f817a6b482ecf3">SolarEclipseComputer</a>
+</li>
 <li>getRotAltAzToEquatorial()
 : <a class="el" href="classStelObserver.html#a0a1a75404156f114b4d3c19d7226fcd0">StelObserver</a>
 </li>
@@ -3424,6 +3445,9 @@ $(function() {
 </li>
 <li>getShadowFilterQuality()
 : <a class="el" href="group__scenery3D.html#a1d8814400bc2d761a8ae6dcd055d5238">Scenery3d</a>
+</li>
+<li>getShadowOutlineCoordinates()
+: <a class="el" href="classSolarEclipseComputer.html#a819baa2e494fe10249501324d12134e9">SolarEclipseComputer</a>
 </li>
 <li>getShortcut()
 : <a class="el" href="classStelScriptMgr.html#a80283f24524a68c4fd4af362ca6e4cb5">StelScriptMgr</a>
@@ -4147,7 +4171,7 @@ $(function() {
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Tue Mar 26 2024 12:51:04 for Stellarium by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1
+Generated on Sun Jun 23 2024 16:23:10 for Stellarium by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1
 </small></address>
 </body>
 </html>
