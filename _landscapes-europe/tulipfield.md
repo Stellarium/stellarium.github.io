@@ -1,8 +1,9 @@
 ---
 title: Amstelveen, The Netherlands
-author: <a href="http://www.xs4all.nl/~adonet/stellarium/stellarium.html">Jeroen Adolfse</a>
+author: Jeroen Adolfse
 compat: 0.9+
-landscape_url: http://www.xs4all.nl/~adonet/stellarium/tulipfield.zip
-image_url: http://www.xs4all.nl/~adonet/stellarium/tulipfield.jpg
+landscape_url: https://github.com/Stellarium/stellarium-data/releases/download/landscapes/tulipfield.zip
+image_url: /img/landscapes//tulipfield.jpg
 ---
-This landscape shows the tulipfields in spring (may 2008) in Schagerbrug, North Holland. It's an old_style landscape. (file is 4.5 Mb)
+This landscape shows the tulipfields in spring (may 2008) in Schagerbrug, North Holland. It's an old_style landscape. (file is 4.5 Mb). 
+A <a href="https://github.com/Stellarium/stellarium-data/releases/download/landscapes/tulipfield_hires.zip">higher resolution file</a> (20MB) is also available. 
