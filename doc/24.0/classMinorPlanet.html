@@ -21,7 +21,7 @@
   <td id="projectlogo"><img alt="Logo" src="stellarium-logo.png"/></td>
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">Stellarium
-   &#160;<span id="projectnumber">24.2</span>
+   &#160;<span id="projectnumber">24.3</span>
    </div>
   </td>
  </tr>
@@ -57,10 +57,12 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:ab5ce23e72642e46277ce45fce08e2676"><td class="memItemLeft" align="right" valign="top"><a id="ab5ce23e72642e46277ce45fce08e2676"></a>
 &#160;</td><td class="memItemRight" valign="bottom"><b>MinorPlanet</b> (const QString &amp;englishName, double equatorialRadius, double oblateness, <a class="el" href="classVector3.html">Vec3f</a> halocolor, float albedo, float roughness, const QString &amp;texMapName, const QString &amp;normalMapName, const QString &amp;horizonMapName, const QString &amp;objModelName, posFuncType _coordFunc, <a class="el" href="classKeplerOrbit.html">KeplerOrbit</a> *orbitPtr, OsculatingFunctType *osculatingFunc, bool closeOrbit, bool hidden, const QString &amp;pTypeStr)</td></tr>
 <tr class="separator:ab5ce23e72642e46277ce45fce08e2676"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a62bfd8b5bf4728162c993ba68e17ffdd"><td class="memItemLeft" align="right" valign="top"><a id="a62bfd8b5bf4728162c993ba68e17ffdd"></a>
-float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMinorPlanet.html#a62bfd8b5bf4728162c993ba68e17ffdd">getVMagnitude</a> (const <a class="el" href="classStelCore.html">StelCore</a> *core) const override</td></tr>
-<tr class="memdesc:a62bfd8b5bf4728162c993ba68e17ffdd"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return object's apparent V magnitude as seen from observer, without including extinction. <br /></td></tr>
+<tr class="memitem:a62bfd8b5bf4728162c993ba68e17ffdd"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMinorPlanet.html#a62bfd8b5bf4728162c993ba68e17ffdd">getVMagnitude</a> (const <a class="el" href="classStelCore.html">StelCore</a> *core) const override</td></tr>
+<tr class="memdesc:a62bfd8b5bf4728162c993ba68e17ffdd"><td class="mdescLeft">&#160;</td><td class="mdescRight">Override for minor planets.  <a href="classMinorPlanet.html#a62bfd8b5bf4728162c993ba68e17ffdd">More...</a><br /></td></tr>
 <tr class="separator:a62bfd8b5bf4728162c993ba68e17ffdd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a578f7d7b20bf8925b115a93dbaf3f6d7"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMinorPlanet.html#a578f7d7b20bf8925b115a93dbaf3f6d7">getVMagnitude</a> (const <a class="el" href="classStelCore.html">StelCore</a> *core, const double eclipseFactor) const override</td></tr>
+<tr class="memdesc:a578f7d7b20bf8925b115a93dbaf3f6d7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Convenience method, necessary override.  <a href="classMinorPlanet.html#a578f7d7b20bf8925b115a93dbaf3f6d7">More...</a><br /></td></tr>
+<tr class="separator:a578f7d7b20bf8925b115a93dbaf3f6d7"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a1a61292e00f11119e827d6121fb56770"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMinorPlanet.html#a1a61292e00f11119e827d6121fb56770">translateName</a> (const <a class="el" href="classStelTranslator.html">StelTranslator</a> &amp;trans) override</td></tr>
 <tr class="memdesc:a1a61292e00f11119e827d6121fb56770"><td class="mdescLeft">&#160;</td><td class="mdescRight">sets the nameI18 property with the appropriate translation.  <a href="classMinorPlanet.html#a1a61292e00f11119e827d6121fb56770">More...</a><br /></td></tr>
 <tr class="separator:a1a61292e00f11119e827d6121fb56770"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -132,7 +134,7 @@ double&#160;</td><td class="memItemRight" valign="bottom"><b>getParentSatellites
 <tr class="separator:a6296e9a3ce2487239b85bc87b25d9769 inherit pub_methods_classPlanet"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a951b7e94f790e99e2f71b04a7f191245 inherit pub_methods_classPlanet"><td class="memItemLeft" align="right" valign="top"><a id="a951b7e94f790e99e2f71b04a7f191245"></a>
 float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPlanet.html#a951b7e94f790e99e2f71b04a7f191245">getVMagnitude</a> (const <a class="el" href="classStelCore.html">StelCore</a> *core) const override</td></tr>
-<tr class="memdesc:a951b7e94f790e99e2f71b04a7f191245 inherit pub_methods_classPlanet"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return object's apparent V magnitude as seen from observer, without including extinction. <br /></td></tr>
+<tr class="memdesc:a951b7e94f790e99e2f71b04a7f191245 inherit pub_methods_classPlanet"><td class="mdescLeft">&#160;</td><td class="mdescRight">This actually calls getVMagnitude(core, 1.0); If there is danger the object is partly obscured (eclipsed), prefer to use getVMagnitude(core, eclipseFactor). <br /></td></tr>
 <tr class="separator:a951b7e94f790e99e2f71b04a7f191245 inherit pub_methods_classPlanet"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a4635ca6538142e262a72d9715264bd0a inherit pub_methods_classPlanet"><td class="memItemLeft" align="right" valign="top"><a id="a4635ca6538142e262a72d9715264bd0a"></a>
 float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPlanet.html#a4635ca6538142e262a72d9715264bd0a">getSelectPriority</a> (const <a class="el" href="classStelCore.html">StelCore</a> *core) const override</td></tr>
@@ -194,9 +196,9 @@ virtual bool&#160;</td><td class="memItemRight" valign="bottom"><b>hasHalo</b> (
 <tr class="memitem:a5a0bf8cbb5326e6e992808cb5fcc6964 inherit pub_methods_classPlanet"><td class="memItemLeft" align="right" valign="top"><a id="a5a0bf8cbb5326e6e992808cb5fcc6964"></a>
 float&#160;</td><td class="memItemRight" valign="bottom"><b>getAxisRotation</b> (void)</td></tr>
 <tr class="separator:a5a0bf8cbb5326e6e992808cb5fcc6964 inherit pub_methods_classPlanet"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab0fb37c89bba0844810ab3dd4413c794 inherit pub_methods_classPlanet"><td class="memItemLeft" align="right" valign="top"><a id="ab0fb37c89bba0844810ab3dd4413c794"></a>
-virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>draw</b> (<a class="el" href="classStelCore.html">StelCore</a> *core, float maxMagLabels, const QFont &amp;planetNameFont)</td></tr>
-<tr class="separator:ab0fb37c89bba0844810ab3dd4413c794 inherit pub_methods_classPlanet"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7bc43bcaa614d078d128304cca007d3a inherit pub_methods_classPlanet"><td class="memItemLeft" align="right" valign="top"><a id="a7bc43bcaa614d078d128304cca007d3a"></a>
+virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>draw</b> (<a class="el" href="classStelCore.html">StelCore</a> *core, float maxMagLabels, const QFont &amp;planetNameFont, const double eclipseFactor)</td></tr>
+<tr class="separator:a7bc43bcaa614d078d128304cca007d3a inherit pub_methods_classPlanet"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a623d0e7ef3510b09fda4704ca3e98d73 inherit pub_methods_classPlanet"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPlanet.html#a623d0e7ef3510b09fda4704ca3e98d73">getEquatorialRadius</a> (void) const</td></tr>
 <tr class="memdesc:a623d0e7ef3510b09fda4704ca3e98d73 inherit pub_methods_classPlanet"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the equator radius of the planet in AU.  <a href="classPlanet.html#a623d0e7ef3510b09fda4704ca3e98d73">More...</a><br /></td></tr>
 <tr class="separator:a623d0e7ef3510b09fda4704ca3e98d73 inherit pub_methods_classPlanet"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -280,10 +282,10 @@ double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="cl
 <tr class="memitem:aae7f573ee7a5b1d1622b00c347385e24 inherit pub_methods_classPlanet"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPlanet.html#aae7f573ee7a5b1d1622b00c347385e24">getRotObliquity</a> (double JDE) const</td></tr>
 <tr class="memdesc:aae7f573ee7a5b1d1622b00c347385e24 inherit pub_methods_classPlanet"><td class="mdescLeft">&#160;</td><td class="mdescRight">return angle between axis and normal of ecliptic plane (or, for a moon, equatorial/reference plane defined by parent).  <a href="classPlanet.html#aae7f573ee7a5b1d1622b00c347385e24">More...</a><br /></td></tr>
 <tr class="separator:aae7f573ee7a5b1d1622b00c347385e24 inherit pub_methods_classPlanet"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a51a5d64d01c16ab54221ca67a547ed1e inherit pub_methods_classPlanet"><td class="memItemLeft" align="right" valign="top"><a id="a51a5d64d01c16ab54221ca67a547ed1e"></a>
-virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPlanet.html#a51a5d64d01c16ab54221ca67a547ed1e">computePosition</a> (const double dateJDE, const <a class="el" href="classVector3.html">Vec3d</a> &amp;aberrationPush)</td></tr>
-<tr class="memdesc:a51a5d64d01c16ab54221ca67a547ed1e inherit pub_methods_classPlanet"><td class="mdescLeft">&#160;</td><td class="mdescRight">Compute the position and orbital velocity in the parent <a class="el" href="classPlanet.html" title="The Planet class is used for the major planets, moons, &quot;Observer&quot; planets, and artificial objects (&quot;S...">Planet</a> coordinate system You can add the aberrationPush value according to Edot*lightTime in Explanatory Supplement (2013) formula 7.55. <br /></td></tr>
-<tr class="separator:a51a5d64d01c16ab54221ca67a547ed1e inherit pub_methods_classPlanet"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aec03a5e950465f12b257034db9d40445 inherit pub_methods_classPlanet"><td class="memItemLeft" align="right" valign="top"><a id="aec03a5e950465f12b257034db9d40445"></a>
+virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPlanet.html#aec03a5e950465f12b257034db9d40445">computePosition</a> (const <a class="el" href="classStelObserver.html">StelObserver</a> *observer, const double dateJDE, const <a class="el" href="classVector3.html">Vec3d</a> &amp;aberrationPush)</td></tr>
+<tr class="memdesc:aec03a5e950465f12b257034db9d40445 inherit pub_methods_classPlanet"><td class="mdescLeft">&#160;</td><td class="mdescRight">Compute the position and orbital velocity in the parent <a class="el" href="classPlanet.html" title="The Planet class is used for the major planets, moons, &quot;Observer&quot; planets, and artificial objects (&quot;S...">Planet</a> coordinate system and set aberrationPush Does not compute new position when dateJDE is less than deltaJDE away from lastJDE You can add the aberrationPush value according to Edot*lightTime in Explanatory Supplement (2013) formula 7.55. <br /></td></tr>
+<tr class="separator:aec03a5e950465f12b257034db9d40445 inherit pub_methods_classPlanet"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a76a766d2d48207a8c7ec24639432f053 inherit pub_methods_classPlanet"><td class="memItemLeft" align="right" valign="top"><a id="a76a766d2d48207a8c7ec24639432f053"></a>
 virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPlanet.html#a76a766d2d48207a8c7ec24639432f053">computePosition</a> (const double dateJDE, <a class="el" href="classVector3.html">Vec3d</a> &amp;eclPosition, <a class="el" href="classVector3.html">Vec3d</a> &amp;eclVelocity) const</td></tr>
 <tr class="memdesc:a76a766d2d48207a8c7ec24639432f053 inherit pub_methods_classPlanet"><td class="mdescLeft">&#160;</td><td class="mdescRight">Compute the position and orbital velocity in the parent <a class="el" href="classPlanet.html" title="The Planet class is used for the major planets, moons, &quot;Observer&quot; planets, and artificial objects (&quot;S...">Planet</a> coordinate system, and return them in eclPosition and eclVelocity These may be preferred when we want to avoid setting the actual position (e.g., RTS computation) <br /></td></tr>
@@ -473,9 +475,9 @@ float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="cla
 <tr class="memitem:a45ce8995847ddf9f230f924577534568 inherit pub_methods_classStelObject"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classStelObject.html#a45ce8995847ddf9f230f924577534568">isAboveRealHorizon</a> (const <a class="el" href="classStelCore.html">StelCore</a> *core) const</td></tr>
 <tr class="memdesc:a45ce8995847ddf9f230f924577534568 inherit pub_methods_classStelObject"><td class="mdescLeft">&#160;</td><td class="mdescRight">Checking position an object above real horizon for current location.  <a href="classStelObject.html#a45ce8995847ddf9f230f924577534568">More...</a><br /></td></tr>
 <tr class="separator:a45ce8995847ddf9f230f924577534568 inherit pub_methods_classStelObject"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a85e2cc30d876cd5afacb3fe199dbad95 inherit pub_methods_classStelObject"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classStelObject.html#a85e2cc30d876cd5afacb3fe199dbad95">getVMagnitudeWithExtinction</a> (const <a class="el" href="classStelCore.html">StelCore</a> *core) const</td></tr>
-<tr class="memdesc:a85e2cc30d876cd5afacb3fe199dbad95 inherit pub_methods_classStelObject"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return object's apparent V magnitude as seen from observer including extinction.  <a href="classStelObject.html#a85e2cc30d876cd5afacb3fe199dbad95">More...</a><br /></td></tr>
-<tr class="separator:a85e2cc30d876cd5afacb3fe199dbad95 inherit pub_methods_classStelObject"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a53d70a9c0951fbe6e98bbc7690993ce3 inherit pub_methods_classStelObject"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classStelObject.html#a53d70a9c0951fbe6e98bbc7690993ce3">getVMagnitudeWithExtinction</a> (const <a class="el" href="classStelCore.html">StelCore</a> *core, const float knownVMag=-1000.f) const</td></tr>
+<tr class="memdesc:a53d70a9c0951fbe6e98bbc7690993ce3 inherit pub_methods_classStelObject"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return object's apparent V magnitude as seen from observer including extinction.  <a href="classStelObject.html#a53d70a9c0951fbe6e98bbc7690993ce3">More...</a><br /></td></tr>
+<tr class="separator:a53d70a9c0951fbe6e98bbc7690993ce3 inherit pub_methods_classStelObject"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a130c03fcbe42dffb19726f0d672dd844 inherit pub_methods_classStelObject"><td class="memItemLeft" align="right" valign="top">virtual float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classStelObject.html#a130c03fcbe42dffb19726f0d672dd844">getAirmass</a> (const <a class="el" href="classStelCore.html">StelCore</a> *core) const</td></tr>
 <tr class="memdesc:a130c03fcbe42dffb19726f0d672dd844 inherit pub_methods_classStelObject"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return airmass value for the object (for atmosphere-dependent calculations)  <a href="classStelObject.html#a130c03fcbe42dffb19726f0d672dd844">More...</a><br /></td></tr>
 <tr class="separator:a130c03fcbe42dffb19726f0d672dd844 inherit pub_methods_classStelObject"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -679,9 +681,9 @@ void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="clas
 QString&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPlanet.html#a38cc7052473e67bcb6c137bf01a04cc6">getPlanetLabel</a> () const</td></tr>
 <tr class="memdesc:a38cc7052473e67bcb6c137bf01a04cc6 inherit pro_methods_classPlanet"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return the information string "ready to print". <br /></td></tr>
 <tr class="separator:a38cc7052473e67bcb6c137bf01a04cc6 inherit pro_methods_classPlanet"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a000d3b31bca4f268c6e3377842c7f0cb inherit pro_methods_classPlanet"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPlanet.html#a000d3b31bca4f268c6e3377842c7f0cb">draw3dModel</a> (<a class="el" href="classStelCore.html">StelCore</a> *core, <a class="el" href="classStelProjector.html#ae6b42a6973558f855691b91701edf0dc">StelProjector::ModelViewTranformP</a> transfo, float screenRd, bool drawOnlyRing=false)</td></tr>
-<tr class="memdesc:a000d3b31bca4f268c6e3377842c7f0cb inherit pro_methods_classPlanet"><td class="mdescLeft">&#160;</td><td class="mdescRight">Draw the 3d model.  <a href="classPlanet.html#a000d3b31bca4f268c6e3377842c7f0cb">More...</a><br /></td></tr>
-<tr class="separator:a000d3b31bca4f268c6e3377842c7f0cb inherit pro_methods_classPlanet"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a934e5eccad3f7bb7d26ba1e2392807cd inherit pro_methods_classPlanet"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPlanet.html#a934e5eccad3f7bb7d26ba1e2392807cd">draw3dModel</a> (<a class="el" href="classStelCore.html">StelCore</a> *core, <a class="el" href="classStelProjector.html#ae6b42a6973558f855691b91701edf0dc">StelProjector::ModelViewTranformP</a> transfo, float screenRd, double solarEclipseFactor, bool drawOnlyRing=false)</td></tr>
+<tr class="memdesc:a934e5eccad3f7bb7d26ba1e2392807cd inherit pro_methods_classPlanet"><td class="mdescLeft">&#160;</td><td class="mdescRight">Draw the 3d model.  <a href="classPlanet.html#a934e5eccad3f7bb7d26ba1e2392807cd">More...</a><br /></td></tr>
+<tr class="separator:a934e5eccad3f7bb7d26ba1e2392807cd inherit pro_methods_classPlanet"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:abbae8dab56137fad53ba946e94badaf5 inherit pro_methods_classPlanet"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPlanet.html#abbae8dab56137fad53ba946e94badaf5">drawObjModel</a> (<a class="el" href="classStelPainter.html">StelPainter</a> *painter, float screenRd)</td></tr>
 <tr class="memdesc:abbae8dab56137fad53ba946e94badaf5 inherit pro_methods_classPlanet"><td class="mdescLeft">&#160;</td><td class="mdescRight">Draws the OBJ model, assuming it is available.  <a href="classPlanet.html#abbae8dab56137fad53ba946e94badaf5">More...</a><br /></td></tr>
 <tr class="separator:abbae8dab56137fad53ba946e94badaf5 inherit pro_methods_classPlanet"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -699,10 +701,10 @@ void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="clas
 void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPlanet.html#ac2edefeb61e44e5efe2ddfd4390f6d5c">drawSurvey</a> (<a class="el" href="classStelCore.html">StelCore</a> *core, <a class="el" href="classStelPainter.html">StelPainter</a> *painter)</td></tr>
 <tr class="memdesc:ac2edefeb61e44e5efe2ddfd4390f6d5c inherit pro_methods_classPlanet"><td class="mdescLeft">&#160;</td><td class="mdescRight">Draw the Hips survey. <br /></td></tr>
 <tr class="separator:ac2edefeb61e44e5efe2ddfd4390f6d5c inherit pro_methods_classPlanet"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a626ab18f7ee956f68d0b80feba8069ef inherit pro_methods_classPlanet"><td class="memItemLeft" align="right" valign="top"><a id="a626ab18f7ee956f68d0b80feba8069ef"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPlanet.html#a626ab18f7ee956f68d0b80feba8069ef">drawHints</a> (const <a class="el" href="classStelCore.html">StelCore</a> *core, const QFont &amp;planetNameFont)</td></tr>
-<tr class="memdesc:a626ab18f7ee956f68d0b80feba8069ef inherit pro_methods_classPlanet"><td class="mdescLeft">&#160;</td><td class="mdescRight">Draw the circle and name of the <a class="el" href="classPlanet.html" title="The Planet class is used for the major planets, moons, &quot;Observer&quot; planets, and artificial objects (&quot;S...">Planet</a>. <br /></td></tr>
-<tr class="separator:a626ab18f7ee956f68d0b80feba8069ef inherit pro_methods_classPlanet"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a29757f3ab5a0276567371a76e282af0b inherit pro_methods_classPlanet"><td class="memItemLeft" align="right" valign="top"><a id="a29757f3ab5a0276567371a76e282af0b"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPlanet.html#a29757f3ab5a0276567371a76e282af0b">drawHints</a> (const <a class="el" href="classStelCore.html">StelCore</a> *core, <a class="el" href="classStelPainter.html">StelPainter</a> &amp;sPainter, const QFont &amp;planetNameFont)</td></tr>
+<tr class="memdesc:a29757f3ab5a0276567371a76e282af0b inherit pro_methods_classPlanet"><td class="mdescLeft">&#160;</td><td class="mdescRight">Draw the circle and name of the <a class="el" href="classPlanet.html" title="The Planet class is used for the major planets, moons, &quot;Observer&quot; planets, and artificial objects (&quot;S...">Planet</a>. <br /></td></tr>
+<tr class="separator:a29757f3ab5a0276567371a76e282af0b inherit pro_methods_classPlanet"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aba49f3683068d0dfe2b3a2d6cf69c28b inherit pro_methods_classPlanet"><td class="memItemLeft" align="right" valign="top"><a id="aba49f3683068d0dfe2b3a2d6cf69c28b"></a>
 <a class="el" href="structPlanet_1_1PlanetOBJModel.html">PlanetOBJModel</a> *&#160;</td><td class="memItemRight" valign="bottom"><b>loadObjModel</b> () const</td></tr>
 <tr class="separator:aba49f3683068d0dfe2b3a2d6cf69c28b inherit pro_methods_classPlanet"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -749,6 +751,7 @@ Additional Inherited Members</h2></td></tr>
 <tr class="memitem:a3c3188e40d0f6c7d9c191383804b898e inherit pub_types_classPlanet"><td class="memItemLeft" align="right" valign="top"><a id="a3c3188e40d0f6c7d9c191383804b898e"></a>enum &#160;</td><td class="memItemRight" valign="bottom"><b>PlanetOrbitColorStyle</b> { <b>ocsOneColor</b>
 , <b>ocsGroups</b>
 , <b>ocsMajorPlanets</b>
+, <b>ocsMajorPlanetsMinorTypes</b>
  }</td></tr>
 <tr class="separator:a3c3188e40d0f6c7d9c191383804b898e inherit pub_types_classPlanet"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aecd6e43717bb28b27e1f5885df52cf3a inherit pub_types_classPlanet"><td class="memItemLeft" align="right" valign="top"><a id="aecd6e43717bb28b27e1f5885df52cf3a"></a>enum &#160;</td><td class="memItemRight" valign="bottom"><b>ApparentMagnitudeAlgorithm</b> { <br />
@@ -1119,6 +1122,83 @@ static int&#160;</td><td class="memItemRight" valign="bottom"><b>orbitsThickness
 </ul>
 <p>Some of the code in this class is re-used from the parent <a class="el" href="classPlanet.html" title="The Planet class is used for the major planets, moons, &quot;Observer&quot; planets, and artificial objects (&quot;S...">Planet</a> class. </p>
 </div><h2 class="groupheader">Member Function Documentation</h2>
+<a id="a62bfd8b5bf4728162c993ba68e17ffdd"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a62bfd8b5bf4728162c993ba68e17ffdd">&#9670;&nbsp;</a></span>getVMagnitude() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">float MinorPlanet::getVMagnitude </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classStelCore.html">StelCore</a> *&#160;</td>
+          <td class="paramname"><em>core</em></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">override</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Override for minor planets. </p>
+<p>When observer is on an "Observer" planet, the magnitude reported is heliocentric (seen from the Sun). This allows observing the asteroid belt freom the side without nearer objects being obscured by phase angle. </p>
+
+<p>Reimplemented from <a class="el" href="classStelObject.html#ae91334c055ba90cbc808a1433421b67e">StelObject</a>.</p>
+
+</div>
+</div>
+<a id="a578f7d7b20bf8925b115a93dbaf3f6d7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a578f7d7b20bf8925b115a93dbaf3f6d7">&#9670;&nbsp;</a></span>getVMagnitude() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">float MinorPlanet::getVMagnitude </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classStelCore.html">StelCore</a> *&#160;</td>
+          <td class="paramname"><em>core</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const double&#160;</td>
+          <td class="paramname"><em>eclipseFactor</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">override</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Convenience method, necessary override. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">eclipseFactor</td><td>is ignored. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p>Reimplemented from <a class="el" href="classPlanet.html#a0f5ca11a6998d7c234318d3b33de6628">Planet</a>.</p>
+
+</div>
+</div>
 <a id="aa274c3ce18291bed65a711baea7423a7"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#aa274c3ce18291bed65a711baea7423a7">&#9670;&nbsp;</a></span>setAbsoluteMagnitudeAndSlope()</h2>
 
@@ -1256,7 +1336,7 @@ static int&#160;</td><td class="memItemRight" valign="bottom"><b>orbitsThickness
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Sun Jun 23 2024 16:23:10 for Stellarium by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1
+Generated on Sun Sep 22 2024 21:34:55 for Stellarium by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1
 </small></address>
 </body>
 </html>

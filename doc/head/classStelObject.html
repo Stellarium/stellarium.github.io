@@ -208,9 +208,9 @@ float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="cla
 virtual float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classStelObject.html#ae91334c055ba90cbc808a1433421b67e">getVMagnitude</a> (const <a class="el" href="classStelCore.html">StelCore</a> *core) const</td></tr>
 <tr class="memdesc:ae91334c055ba90cbc808a1433421b67e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return object's apparent V magnitude as seen from observer, without including extinction. <br /></td></tr>
 <tr class="separator:ae91334c055ba90cbc808a1433421b67e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a85e2cc30d876cd5afacb3fe199dbad95"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classStelObject.html#a85e2cc30d876cd5afacb3fe199dbad95">getVMagnitudeWithExtinction</a> (const <a class="el" href="classStelCore.html">StelCore</a> *core) const</td></tr>
-<tr class="memdesc:a85e2cc30d876cd5afacb3fe199dbad95"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return object's apparent V magnitude as seen from observer including extinction.  <a href="classStelObject.html#a85e2cc30d876cd5afacb3fe199dbad95">More...</a><br /></td></tr>
-<tr class="separator:a85e2cc30d876cd5afacb3fe199dbad95"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a53d70a9c0951fbe6e98bbc7690993ce3"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classStelObject.html#a53d70a9c0951fbe6e98bbc7690993ce3">getVMagnitudeWithExtinction</a> (const <a class="el" href="classStelCore.html">StelCore</a> *core, const float knownVMag=-1000.f) const</td></tr>
+<tr class="memdesc:a53d70a9c0951fbe6e98bbc7690993ce3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return object's apparent V magnitude as seen from observer including extinction.  <a href="classStelObject.html#a53d70a9c0951fbe6e98bbc7690993ce3">More...</a><br /></td></tr>
+<tr class="separator:a53d70a9c0951fbe6e98bbc7690993ce3"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a2890825555c11860eaabf6155ea2a700"><td class="memItemLeft" align="right" valign="top"><a id="a2890825555c11860eaabf6155ea2a700"></a>
 virtual float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classStelObject.html#a2890825555c11860eaabf6155ea2a700">getSelectPriority</a> (const <a class="el" href="classStelCore.html">StelCore</a> *) const</td></tr>
 <tr class="memdesc:a2890825555c11860eaabf6155ea2a700"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return a priority value which is used to discriminate objects by priority As for magnitudes, the lower is the higher priority. <br /></td></tr>
@@ -1027,8 +1027,8 @@ This is an abbreviated version of the method implemented in the <a class="el" hr
 
 </div>
 </div>
-<a id="a85e2cc30d876cd5afacb3fe199dbad95"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a85e2cc30d876cd5afacb3fe199dbad95">&#9670;&nbsp;</a></span>getVMagnitudeWithExtinction()</h2>
+<a id="a53d70a9c0951fbe6e98bbc7690993ce3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a53d70a9c0951fbe6e98bbc7690993ce3">&#9670;&nbsp;</a></span>getVMagnitudeWithExtinction()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -1037,14 +1037,29 @@ This is an abbreviated version of the method implemented in the <a class="el" hr
           <td class="memname">float StelObject::getVMagnitudeWithExtinction </td>
           <td>(</td>
           <td class="paramtype">const <a class="el" href="classStelCore.html">StelCore</a> *&#160;</td>
-          <td class="paramname"><em>core</em></td><td>)</td>
-          <td> const</td>
+          <td class="paramname"><em>core</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const float&#160;</td>
+          <td class="paramname"><em>knownVMag</em> = <code>-1000.f</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td> const</td>
         </tr>
       </table>
 </div><div class="memdoc">
 
 <p>Return object's apparent V magnitude as seen from observer including extinction. </p>
-<p><a class="el" href="classExtinction.html" title="This class performs extinction computations, following literature from atmospheric optics and astrono...">Extinction</a> obviously only if atmosphere=on. </p>
+<p><a class="el" href="classExtinction.html" title="This class performs extinction computations, following literature from atmospheric optics and astrono...">Extinction</a> obviously only if atmosphere=on. If you already know vMag, it is wise to provide it in the optional</p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">knownVMag.</td><td>Else it is called from <a class="el" href="classStelObject.html#ae91334c055ba90cbc808a1433421b67e" title="Return object&#39;s apparent V magnitude as seen from observer, without including extinction.">getVMagnitude()</a> which may be costly. </td></tr>
+  </table>
+  </dd>
+</dl>
 
 </div>
 </div>
@@ -1257,7 +1272,7 @@ This is an abbreviated version of the method implemented in the <a class="el" hr
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Tue Mar 26 2024 12:51:03 for Stellarium by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1
+Generated on Sun Sep 22 2024 21:34:55 for Stellarium by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1
 </small></address>
 </body>
 </html>

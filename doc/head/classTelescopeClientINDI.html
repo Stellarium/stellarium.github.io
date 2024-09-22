@@ -63,9 +63,12 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a3e142efafeba15da08b273d8f22554de"><td class="memItemLeft" align="right" valign="top"><a id="a3e142efafeba15da08b273d8f22554de"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><b>telescopeGoto</b> (const <a class="el" href="classVector3.html">Vec3d</a> &amp;j2000Pos, <a class="el" href="classQSharedPointerNoDelete.html">StelObjectP</a> selectObject) override</td></tr>
 <tr class="separator:a3e142efafeba15da08b273d8f22554de"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ae39103d7ae40f83f79e7169ae26fb8ca"><td class="memItemLeft" align="right" valign="top"><a id="ae39103d7ae40f83f79e7169ae26fb8ca"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>telescopeSync</b> (const <a class="el" href="classVector3.html">Vec3d</a> &amp;j2000Pos, <a class="el" href="classQSharedPointerNoDelete.html">StelObjectP</a> selectObject) override</td></tr>
+<tr class="memitem:ae39103d7ae40f83f79e7169ae26fb8ca"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classTelescopeClientINDI.html#ae39103d7ae40f83f79e7169ae26fb8ca">telescopeSync</a> (const <a class="el" href="classVector3.html">Vec3d</a> &amp;j2000Pos, <a class="el" href="classQSharedPointerNoDelete.html">StelObjectP</a> selectObject) override</td></tr>
+<tr class="memdesc:ae39103d7ae40f83f79e7169ae26fb8ca"><td class="mdescLeft">&#160;</td><td class="mdescRight">Some telescopes can synchronize the telescope with the given position or object.  <a href="classTelescopeClientINDI.html#ae39103d7ae40f83f79e7169ae26fb8ca">More...</a><br /></td></tr>
 <tr class="separator:ae39103d7ae40f83f79e7169ae26fb8ca"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abcce168082f6b6424f77b7ca5038a09c"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classTelescopeClientINDI.html#abcce168082f6b6424f77b7ca5038a09c">isTelescopeSyncSupported</a> () const override</td></tr>
+<tr class="memdesc:abcce168082f6b6424f77b7ca5038a09c"><td class="mdescLeft">&#160;</td><td class="mdescRight">report whether this client can respond to sync commands.  <a href="classTelescopeClientINDI.html#abcce168082f6b6424f77b7ca5038a09c">More...</a><br /></td></tr>
+<tr class="separator:abcce168082f6b6424f77b7ca5038a09c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a15a8c78336b1e055cc495a266ce0cc5b"><td class="memItemLeft" align="right" valign="top"><a id="a15a8c78336b1e055cc495a266ce0cc5b"></a>
 bool&#160;</td><td class="memItemRight" valign="bottom"><b>isConnected</b> () const override</td></tr>
 <tr class="separator:a15a8c78336b1e055cc495a266ce0cc5b"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -73,7 +76,8 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><b>isConnected</b> () co
 bool&#160;</td><td class="memItemRight" valign="bottom"><b>hasKnownPosition</b> () const override</td></tr>
 <tr class="separator:a6211725d1b5cdf5e0cb9813197c0de87"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a3ba080e039185506a5ab0fc33daa87b0"><td class="memItemLeft" align="right" valign="top"><a id="a3ba080e039185506a5ab0fc33daa87b0"></a>
-QWidget *&#160;</td><td class="memItemRight" valign="bottom"><b>createControlWidget</b> (QSharedPointer&lt; <a class="el" href="classTelescopeClient.html">TelescopeClient</a> &gt; telescope, QWidget *parent=nullptr) const override</td></tr>
+QWidget *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classTelescopeClientINDI.html#a3ba080e039185506a5ab0fc33daa87b0">createControlWidget</a> (QSharedPointer&lt; <a class="el" href="classTelescopeClient.html">TelescopeClient</a> &gt; telescope, QWidget *parent=nullptr) const override</td></tr>
+<tr class="memdesc:a3ba080e039185506a5ab0fc33daa87b0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Some telescope types may override this method to display additional user interface elements. <br /></td></tr>
 <tr class="separator:a3ba080e039185506a5ab0fc33daa87b0"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pub_methods_classTelescopeClient"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_classTelescopeClient')"><img src="closed.png" alt="-"/>&#160;Public Member Functions inherited from <a class="el" href="classTelescopeClient.html">TelescopeClient</a></td></tr>
 <tr class="memitem:adfe638c42890353ffb5e32e7639d91ad inherit pub_methods_classTelescopeClient"><td class="memItemLeft" align="right" valign="top"><a id="adfe638c42890353ffb5e32e7639d91ad"></a>
@@ -101,9 +105,12 @@ QString&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="c
 <tr class="memitem:aa0c350795e88317e8c0a6414f3f531fe inherit pub_methods_classTelescopeClient"><td class="memItemLeft" align="right" valign="top">QString&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classTelescopeClient.html#aa0c350795e88317e8c0a6414f3f531fe">getID</a> () const override</td></tr>
 <tr class="memdesc:aa0c350795e88317e8c0a6414f3f531fe inherit pub_methods_classTelescopeClient"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns a unique identifier for this object.  <a href="classTelescopeClient.html#aa0c350795e88317e8c0a6414f3f531fe">More...</a><br /></td></tr>
 <tr class="separator:aa0c350795e88317e8c0a6414f3f531fe inherit pub_methods_classTelescopeClient"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a9105c9384fbfe4dcb116aa81f27e73d9 inherit pub_methods_classTelescopeClient"><td class="memItemLeft" align="right" valign="top"><a id="a9105c9384fbfe4dcb116aa81f27e73d9"></a>
-virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>telescopeAbortSlew</b> ()</td></tr>
+<tr class="memitem:a9105c9384fbfe4dcb116aa81f27e73d9 inherit pub_methods_classTelescopeClient"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classTelescopeClient.html#a9105c9384fbfe4dcb116aa81f27e73d9">telescopeAbortSlew</a> ()</td></tr>
+<tr class="memdesc:a9105c9384fbfe4dcb116aa81f27e73d9 inherit pub_methods_classTelescopeClient"><td class="mdescLeft">&#160;</td><td class="mdescRight">Send command to abort slew.  <a href="classTelescopeClient.html#a9105c9384fbfe4dcb116aa81f27e73d9">More...</a><br /></td></tr>
 <tr class="separator:a9105c9384fbfe4dcb116aa81f27e73d9 inherit pub_methods_classTelescopeClient"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5a9df3b524171f0d058be2740a556714 inherit pub_methods_classTelescopeClient"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classTelescopeClient.html#a5a9df3b524171f0d058be2740a556714">isAbortSlewSupported</a> () const</td></tr>
+<tr class="memdesc:a5a9df3b524171f0d058be2740a556714 inherit pub_methods_classTelescopeClient"><td class="mdescLeft">&#160;</td><td class="mdescRight">report whether this client can abort a running slew.  <a href="classTelescopeClient.html#a5a9df3b524171f0d058be2740a556714">More...</a><br /></td></tr>
+<tr class="separator:a5a9df3b524171f0d058be2740a556714 inherit pub_methods_classTelescopeClient"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a64a8eeecabbfed154ef8f047811ed55d inherit pub_methods_classTelescopeClient"><td class="memItemLeft" align="right" valign="top"><a id="a64a8eeecabbfed154ef8f047811ed55d"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classTelescopeClient.html#a64a8eeecabbfed154ef8f047811ed55d">addOcular</a> (double fov)</td></tr>
 <tr class="memdesc:a64a8eeecabbfed154ef8f047811ed55d inherit pub_methods_classTelescopeClient"><td class="mdescLeft">&#160;</td><td class="mdescRight">Store field of view for an ocular circle (unrelated to <a class="el" href="group__oculars.html#classOculars" title="Main class of the Oculars plug-in.">Oculars</a> plugin) <br /></td></tr>
@@ -180,9 +187,9 @@ float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="cla
 virtual float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classStelObject.html#ae91334c055ba90cbc808a1433421b67e">getVMagnitude</a> (const <a class="el" href="classStelCore.html">StelCore</a> *core) const</td></tr>
 <tr class="memdesc:ae91334c055ba90cbc808a1433421b67e inherit pub_methods_classStelObject"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return object's apparent V magnitude as seen from observer, without including extinction. <br /></td></tr>
 <tr class="separator:ae91334c055ba90cbc808a1433421b67e inherit pub_methods_classStelObject"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a85e2cc30d876cd5afacb3fe199dbad95 inherit pub_methods_classStelObject"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classStelObject.html#a85e2cc30d876cd5afacb3fe199dbad95">getVMagnitudeWithExtinction</a> (const <a class="el" href="classStelCore.html">StelCore</a> *core) const</td></tr>
-<tr class="memdesc:a85e2cc30d876cd5afacb3fe199dbad95 inherit pub_methods_classStelObject"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return object's apparent V magnitude as seen from observer including extinction.  <a href="classStelObject.html#a85e2cc30d876cd5afacb3fe199dbad95">More...</a><br /></td></tr>
-<tr class="separator:a85e2cc30d876cd5afacb3fe199dbad95 inherit pub_methods_classStelObject"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a53d70a9c0951fbe6e98bbc7690993ce3 inherit pub_methods_classStelObject"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classStelObject.html#a53d70a9c0951fbe6e98bbc7690993ce3">getVMagnitudeWithExtinction</a> (const <a class="el" href="classStelCore.html">StelCore</a> *core, const float knownVMag=-1000.f) const</td></tr>
+<tr class="memdesc:a53d70a9c0951fbe6e98bbc7690993ce3 inherit pub_methods_classStelObject"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return object's apparent V magnitude as seen from observer including extinction.  <a href="classStelObject.html#a53d70a9c0951fbe6e98bbc7690993ce3">More...</a><br /></td></tr>
+<tr class="separator:a53d70a9c0951fbe6e98bbc7690993ce3 inherit pub_methods_classStelObject"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a05768a80f663fac5389b4547b2994207 inherit pub_methods_classStelObject"><td class="memItemLeft" align="right" valign="top"><a id="a05768a80f663fac5389b4547b2994207"></a>
 virtual <a class="el" href="classVector3.html">Vec3f</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classStelObject.html#a05768a80f663fac5389b4547b2994207">getInfoColor</a> () const</td></tr>
 <tr class="memdesc:a05768a80f663fac5389b4547b2994207 inherit pub_methods_classStelObject"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get a color used to display info about the object. <br /></td></tr>
@@ -315,6 +322,36 @@ const QString&#160;</td><td class="memItemRight" valign="bottom"><b>name</b></td
 <tr class="separator:a29b475fac69b5f46e530712a13e6c33b inherit pro_attribs_classTelescopeClient"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Member Function Documentation</h2>
+<a id="abcce168082f6b6424f77b7ca5038a09c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abcce168082f6b6424f77b7ca5038a09c">&#9670;&nbsp;</a></span>isTelescopeSyncSupported()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool TelescopeClientINDI::isTelescopeSyncSupported </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">override</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>report whether this client can respond to sync commands. </p>
+<p>Can be used for GUI tweaks </p>
+
+<p>Reimplemented from <a class="el" href="classTelescopeClient.html#ab178bcbecb68258cc82e975ea4f57e05">TelescopeClient</a>.</p>
+
+</div>
+</div>
 <a id="a71c1743ff5c59ed1b69325ebf3a4e358"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a71c1743ff5c59ed1b69325ebf3a4e358">&#9670;&nbsp;</a></span>move()</h2>
 
@@ -353,7 +390,7 @@ const QString&#160;</td><td class="memItemRight" valign="bottom"><b>name</b></td
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">angle</td><td>[0,360). 0=South, 90=West, 180=North, 270=East </td></tr>
-    <tr><td class="paramname">speed</td><td>[0,1] </td></tr>
+    <tr><td class="paramname">speed</td><td>[0,1] The default implementation does nothing but emit a warning. </td></tr>
   </table>
   </dd>
 </dl>
@@ -362,10 +399,51 @@ const QString&#160;</td><td class="memItemRight" valign="bottom"><b>name</b></td
 
 </div>
 </div>
+<a id="ae39103d7ae40f83f79e7169ae26fb8ca"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae39103d7ae40f83f79e7169ae26fb8ca">&#9670;&nbsp;</a></span>telescopeSync()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void TelescopeClientINDI::telescopeSync </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classVector3.html">Vec3d</a> &amp;&#160;</td>
+          <td class="paramname"><em>j2000Pos</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="classQSharedPointerNoDelete.html">StelObjectP</a>&#160;</td>
+          <td class="paramname"><em>selectObject</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">override</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Some telescopes can synchronize the telescope with the given position or object. </p>
+<p>The base client does nothing. Derived classes may override this command  </p>
+
+<p>Reimplemented from <a class="el" href="classTelescopeClient.html#a090b77f5e9093ce6922ca23a128e8313">TelescopeClient</a>.</p>
+
+</div>
+</div>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Tue Mar 26 2024 12:51:03 for Stellarium by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1
+Generated on Sun Sep 22 2024 21:34:55 for Stellarium by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1
 </small></address>
 </body>
 </html>

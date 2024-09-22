@@ -21,7 +21,7 @@
   <td id="projectlogo"><img alt="Logo" src="stellarium-logo.png"/></td>
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">Stellarium
-   &#160;<span id="projectnumber">24.2</span>
+   &#160;<span id="projectnumber">24.3</span>
    </div>
   </td>
  </tr>
@@ -103,6 +103,10 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>update</b> (double de
 <tr class="memitem:a80efb6b52363d4c58aefe229c7bdfaac"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classLandscape.html#a80efb6b52363d4c58aefe229c7bdfaac">setBrightness</a> (const double b, const double pollutionBrightness=0.0)</td></tr>
 <tr class="memdesc:a80efb6b52363d4c58aefe229c7bdfaac"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the brightness of the landscape plus brightness of optional add-on night lightscape.  <a href="classLandscape.html#a80efb6b52363d4c58aefe229c7bdfaac">More...</a><br /></td></tr>
 <tr class="separator:a80efb6b52363d4c58aefe229c7bdfaac"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9779d7f60281a8a4f8292950bd4a60d2"><td class="memItemLeft" align="right" valign="top"><a id="a9779d7f60281a8a4f8292950bd4a60d2"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classLandscape.html#a9779d7f60281a8a4f8292950bd4a60d2">setTint</a> (<a class="el" href="classVector3.html">Vec3f</a> color)</td></tr>
+<tr class="memdesc:a9779d7f60281a8a4f8292950bd4a60d2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set a tint to render the landscape. Useful for low-sun scenes. <br /></td></tr>
+<tr class="separator:a9779d7f60281a8a4f8292950bd4a60d2"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad2c558df269b134c322c01041d7aaf89"><td class="memItemLeft" align="right" valign="top"><a id="ad2c558df269b134c322c01041d7aaf89"></a>
 double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classLandscape.html#ad2c558df269b134c322c01041d7aaf89">getBrightness</a> () const</td></tr>
 <tr class="memdesc:ad2c558df269b134c322c01041d7aaf89"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the current brightness level. <br /></td></tr>
@@ -314,9 +318,13 @@ float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="cla
 float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classLandscape.html#afae289c38275105e0fff0a544f7c291d">landscapeBrightness</a></td></tr>
 <tr class="memdesc:afae289c38275105e0fff0a544f7c291d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Read from landscape.ini:[landscape]minimal_brightness. Allows minimum visibility that cannot be underpowered. <br /></td></tr>
 <tr class="separator:afae289c38275105e0fff0a544f7c291d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0e4b7fe10460aa13b299a943fe1aa7b7"><td class="memItemLeft" align="right" valign="top"><a id="a0e4b7fe10460aa13b299a943fe1aa7b7"></a>
+<a class="el" href="classVector3.html">Vec3f</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classLandscape.html#a0e4b7fe10460aa13b299a943fe1aa7b7">landscapeTint</a></td></tr>
+<tr class="memdesc:a0e4b7fe10460aa13b299a943fe1aa7b7"><td class="mdescLeft">&#160;</td><td class="mdescRight">brightness [0..1] to draw the landscape. Computed by the <a class="el" href="classLandscapeMgr.html" title="Manages all the rendering at the level of the observer&#39;s surroundings.">LandscapeMgr</a>. <br /></td></tr>
+<tr class="separator:a0e4b7fe10460aa13b299a943fe1aa7b7"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a61f7b7ff53f3909d695218f26dfdd60f"><td class="memItemLeft" align="right" valign="top"><a id="a61f7b7ff53f3909d695218f26dfdd60f"></a>
 float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classLandscape.html#a61f7b7ff53f3909d695218f26dfdd60f">lightScapeBrightness</a></td></tr>
-<tr class="memdesc:a61f7b7ff53f3909d695218f26dfdd60f"><td class="mdescLeft">&#160;</td><td class="mdescRight">brightness [0..1] to draw the landscape. Computed by the <a class="el" href="classLandscapeMgr.html" title="Manages all the rendering at the level of the observer&#39;s surroundings.">LandscapeMgr</a>. <br /></td></tr>
+<tr class="memdesc:a61f7b7ff53f3909d695218f26dfdd60f"><td class="mdescLeft">&#160;</td><td class="mdescRight">color tint to draw the landscape (daylight texture only). Nice for sunrise/sunset. <br /></td></tr>
 <tr class="separator:a61f7b7ff53f3909d695218f26dfdd60f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a681b9adac67b2694a0c5aa78cb96b174"><td class="memItemLeft" align="right" valign="top"><a id="a681b9adac67b2694a0c5aa78cb96b174"></a>
 bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classLandscape.html#a681b9adac67b2694a0c5aa78cb96b174">validLandscape</a></td></tr>
@@ -972,7 +980,7 @@ name</td>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Sun Jun 23 2024 16:23:10 for Stellarium by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1
+Generated on Sun Sep 22 2024 21:34:54 for Stellarium by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1
 </small></address>
 </body>
 </html>
