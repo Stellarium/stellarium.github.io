@@ -135,7 +135,7 @@ void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="clas
 <tr class="separator:aa53f83b7686a806227b74e2a7ed008e5"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa1ac156a2b01796702c0cc2e50156b1f"><td class="memItemLeft" align="right" valign="top"><a id="aa1ac156a2b01796702c0cc2e50156b1f"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classStelApp.html#aa1ac156a2b01796702c0cc2e50156b1f">setFlagImmediateSave</a> (bool b)</td></tr>
-<tr class="memdesc:aa1ac156a2b01796702c0cc2e50156b1f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set flag for storing some settings immediately. <br /></td></tr>
+<tr class="memdesc:aa1ac156a2b01796702c0cc2e50156b1f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set flag for storing some settings immediately To not accidentally activate this mode permanently, you must use the "save settings" button to activate! Switching it off is however stored immediately. <br /></td></tr>
 <tr class="separator:aa1ac156a2b01796702c0cc2e50156b1f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad458a79cba86d3f70f95c23f6c97c968"><td class="memItemLeft" align="right" valign="top"><a id="ad458a79cba86d3f70f95c23f6c97c968"></a>
 bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classStelApp.html#ad458a79cba86d3f70f95c23f6c97c968">getFlagImmediateSave</a> () const</td></tr>
@@ -201,6 +201,9 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>screenFontSizeChanged
 <tr class="memitem:a84352861beba56957e6413872e9f1154"><td class="memItemLeft" align="right" valign="top"><a id="a84352861beba56957e6413872e9f1154"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><b>guiFontSizeChanged</b> (int)</td></tr>
 <tr class="separator:a84352861beba56957e6413872e9f1154"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a90bca0b36c400452f4646495ac389225"><td class="memItemLeft" align="right" valign="top"><a id="a90bca0b36c400452f4646495ac389225"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>screenButtonScaleChanged</b> (double)</td></tr>
+<tr class="separator:a90bca0b36c400452f4646495ac389225"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a13f55a6812fd6cb726a0b348421d7d11"><td class="memItemLeft" align="right" valign="top"><a id="a13f55a6812fd6cb726a0b348421d7d11"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><b>fontChanged</b> (const QFont &amp;)</td></tr>
 <tr class="separator:a13f55a6812fd6cb726a0b348421d7d11"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -346,6 +349,14 @@ int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class
 void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classStelApp.html#add22145008817a05c49a0a11c41fd191">setScreenFontSize</a> (int s)</td></tr>
 <tr class="memdesc:add22145008817a05c49a0a11c41fd191"><td class="mdescLeft">&#160;</td><td class="mdescRight">Change screen font size. <br /></td></tr>
 <tr class="separator:add22145008817a05c49a0a11c41fd191"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac8f13cc1627c904e11293102daef98cb"><td class="memItemLeft" align="right" valign="top"><a id="ac8f13cc1627c904e11293102daef98cb"></a>
+double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classStelApp.html#ac8f13cc1627c904e11293102daef98cb">screenFontSizeRatio</a> () const</td></tr>
+<tr class="memdesc:ac8f13cc1627c904e11293102daef98cb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the ratio of current font size used for screen text to the default value. <br /></td></tr>
+<tr class="separator:ac8f13cc1627c904e11293102daef98cb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afd6fd940a1ffeba1766dc24f68a14e15"><td class="memItemLeft" align="right" valign="top"><a id="afd6fd940a1ffeba1766dc24f68a14e15"></a>
+double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classStelApp.html#afd6fd940a1ffeba1766dc24f68a14e15">guiFontSizeRatio</a> () const</td></tr>
+<tr class="memdesc:afd6fd940a1ffeba1766dc24f68a14e15"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the ratio of current font size used for GUI to the default value. <br /></td></tr>
+<tr class="separator:afd6fd940a1ffeba1766dc24f68a14e15"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a0954a46d3c3016dcda0355aeb7c69f09"><td class="memItemLeft" align="right" valign="top"><a id="a0954a46d3c3016dcda0355aeb7c69f09"></a>
 int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classStelApp.html#a0954a46d3c3016dcda0355aeb7c69f09">getGuiFontSize</a> () const</td></tr>
 <tr class="memdesc:a0954a46d3c3016dcda0355aeb7c69f09"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the principal font size used for GUI panels. <br /></td></tr>
@@ -354,6 +365,18 @@ int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class
 void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classStelApp.html#a741ea64d6ba7e3a585456531f9f70734">setGuiFontSize</a> (int s)</td></tr>
 <tr class="memdesc:a741ea64d6ba7e3a585456531f9f70734"><td class="mdescLeft">&#160;</td><td class="mdescRight">change GUI font size. <br /></td></tr>
 <tr class="separator:a741ea64d6ba7e3a585456531f9f70734"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a95eb90ad837619dd1f183dea4f78f0f4"><td class="memItemLeft" align="right" valign="top"><a id="a95eb90ad837619dd1f183dea4f78f0f4"></a>
+double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classStelApp.html#a95eb90ad837619dd1f183dea4f78f0f4">getScreenButtonScale</a> () const</td></tr>
+<tr class="memdesc:a95eb90ad837619dd1f183dea4f78f0f4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the ratio (in percent) of screen button size to the default screen scale-dependent one. <br /></td></tr>
+<tr class="separator:a95eb90ad837619dd1f183dea4f78f0f4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a120a0a910f2d2a5d346e6224aa0150cd"><td class="memItemLeft" align="right" valign="top"><a id="a120a0a910f2d2a5d346e6224aa0150cd"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classStelApp.html#a120a0a910f2d2a5d346e6224aa0150cd">setScreenButtonScale</a> (double s)</td></tr>
+<tr class="memdesc:a120a0a910f2d2a5d346e6224aa0150cd"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the ratio (in percent) of screen button size to the default screen scale-dependent one. <br /></td></tr>
+<tr class="separator:a120a0a910f2d2a5d346e6224aa0150cd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a64de710886c915bd319dbe854f21d77c"><td class="memItemLeft" align="right" valign="top"><a id="a64de710886c915bd319dbe854f21d77c"></a>
+float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classStelApp.html#a64de710886c915bd319dbe854f21d77c">getScreenScale</a> () const</td></tr>
+<tr class="memdesc:a64de710886c915bd319dbe854f21d77c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Combines <a class="el" href="classStelApp.html#af7374b24c58672a6c922255a8ab10a0c" title="Get the ratio between real device pixel and &quot;Device Independent Pixel&quot;.">getDevicePixelsPerPixel</a> and <a class="el" href="classStelApp.html#aac6d4166b5c4a3a994e4df81dcde7c91" title="Get the fontsize used for screen text.">getScreenFontSize</a>. <br /></td></tr>
+<tr class="separator:a64de710886c915bd319dbe854f21d77c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a1729e50497ac3bd9ca2f1cd845c67ea5"><td class="memItemLeft" align="right" valign="top"><a id="a1729e50497ac3bd9ca2f1cd845c67ea5"></a>
 <a class="el" href="classStelGuiBase.html">StelGuiBase</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classStelApp.html#a1729e50497ac3bd9ca2f1cd845c67ea5">getGui</a> () const</td></tr>
 <tr class="memdesc:a1729e50497ac3bd9ca2f1cd845c67ea5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the GUI instance implementing the abstract GUI interface. <br /></td></tr>
@@ -402,6 +425,9 @@ static void&#160;</td><td class="memItemRight" valign="bottom"><b>deinitStatic</
 <tr class="memitem:a833cc6de9e745d4261604e01aa5ccca4"><td class="memItemLeft" align="right" valign="top"><a id="a833cc6de9e745d4261604e01aa5ccca4"></a>
 static constexpr int&#160;</td><td class="memItemRight" valign="bottom"><b>getDefaultGuiFontSize</b> ()</td></tr>
 <tr class="separator:a833cc6de9e745d4261604e01aa5ccca4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1e7e8ab61c390ec9cc9b0b49654c0393"><td class="memItemLeft" align="right" valign="top"><a id="a1e7e8ab61c390ec9cc9b0b49654c0393"></a>
+static bool&#160;</td><td class="memItemRight" valign="bottom"><b>isInitialized</b> ()</td></tr>
+<tr class="separator:a1e7e8ab61c390ec9cc9b0b49654c0393"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="properties"></a>
 Properties</h2></td></tr>
@@ -435,6 +461,9 @@ int&#160;</td><td class="memItemRight" valign="bottom"><b>screenFontSize</b></td
 <tr class="memitem:a700d0d9660623d6f79ca5ff8f0f54103"><td class="memItemLeft" align="right" valign="top"><a id="a700d0d9660623d6f79ca5ff8f0f54103"></a>
 int&#160;</td><td class="memItemRight" valign="bottom"><b>guiFontSize</b></td></tr>
 <tr class="separator:a700d0d9660623d6f79ca5ff8f0f54103"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a620c4321c45978078ff4e65aab71cdb8"><td class="memItemLeft" align="right" valign="top"><a id="a620c4321c45978078ff4e65aab71cdb8"></a>
+double&#160;</td><td class="memItemRight" valign="bottom"><b>screenButtonScale</b> = 100</td></tr>
+<tr class="separator:a620c4321c45978078ff4e65aab71cdb8"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a35354cd3d73daa9f1732045285d9c6d6"><td class="memItemLeft" align="right" valign="top"><a id="a35354cd3d73daa9f1732045285d9c6d6"></a>
 bool&#160;</td><td class="memItemRight" valign="bottom"><b>flagImmediateSave</b></td></tr>
 <tr class="separator:a35354cd3d73daa9f1732045285d9c6d6"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -1067,7 +1096,7 @@ class&#160;</td><td class="memItemRight" valign="bottom"><b>StelRootItem</b></td
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Sun Sep 22 2024 21:34:55 for Stellarium by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1
+Generated on Sun Mar 23 2025 19:00:02 for Stellarium by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1
 </small></address>
 </body>
 </html>

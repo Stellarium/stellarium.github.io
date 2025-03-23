@@ -51,8 +51,10 @@ $(function() {
 </div><!--header-->
 <div class="contents">
 
-<p>for windows NOT embedded in the graphics scene.  
+<p>Base class for windows NOT embedded in the graphics scene.  
  <a href="classStelDialogSeparate.html#details">More...</a></p>
+
+<p><code>#include &lt;StelDialogSeparate.hpp&gt;</code></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-slots"></a>
 Public Slots</h2></td></tr>
@@ -108,7 +110,7 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>updateNightModeProper
 <tr class="separator:ac7248f0a76304f6f512f2409be9e5840"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pro_slots_classStelDialog"><td colspan="2" onclick="javascript:toggleInherit('pro_slots_classStelDialog')"><img src="closed.png" alt="-"/>&#160;Protected Slots inherited from <a class="el" href="classStelDialog.html">StelDialog</a></td></tr>
 <tr class="memitem:ac5e7d61fd2d9ebbc4b9d9bba68c7701e inherit pro_slots_classStelDialog"><td class="memItemLeft" align="right" valign="top"><a id="ac5e7d61fd2d9ebbc4b9d9bba68c7701e"></a>
-bool&#160;</td><td class="memItemRight" valign="bottom"><b>askConfirmation</b> (const QString &amp;message=q_(&quot;Are you sure? <a class="el" href="classQTextBrowser_1_1This.html">This</a> will delete your customized data.&quot;))</td></tr>
+bool&#160;</td><td class="memItemRight" valign="bottom"><b>askConfirmation</b> (const QString &amp;message=q_(&quot;Are you sure? This will delete your customized data.&quot;))</td></tr>
 <tr class="separator:ac5e7d61fd2d9ebbc4b9d9bba68c7701e inherit pro_slots_classStelDialog"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aba69096a162791f2a90639b05c0abaf1 inherit pro_slots_classStelDialog"><td class="memItemLeft" align="right" valign="top"><a id="aba69096a162791f2a90639b05c0abaf1"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><b>messageBox</b> (const QString &amp;title, const QString &amp;message)</td></tr>
@@ -132,7 +134,7 @@ virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>updateNightMo
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-attribs"></a>
 Protected Attributes</h2></td></tr>
 <tr class="memitem:a1c431dea99ae435e69d3abe46f9b103c"><td class="memItemLeft" align="right" valign="top"><a id="a1c431dea99ae435e69d3abe46f9b103c"></a>
-<a class="el" href="classNightCover.html">NightCover</a> *&#160;</td><td class="memItemRight" valign="bottom"><b>nightCover</b></td></tr>
+NightCover *&#160;</td><td class="memItemRight" valign="bottom"><b>nightCover</b></td></tr>
 <tr class="separator:a1c431dea99ae435e69d3abe46f9b103c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pro_attribs_classStelDialog"><td colspan="2" onclick="javascript:toggleInherit('pro_attribs_classStelDialog')"><img src="closed.png" alt="-"/>&#160;Protected Attributes inherited from <a class="el" href="classStelDialog.html">StelDialog</a></td></tr>
 <tr class="memitem:a0184f75f2bf1cf7dbb22c342ed59420e inherit pro_attribs_classStelDialog"><td class="memItemLeft" align="right" valign="top"><a id="a0184f75f2bf1cf7dbb22c342ed59420e"></a>
@@ -209,13 +211,13 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><b>visible</b></td></tr>
 <tr class="separator:a1eacf7167a5a7116e794bdb29e2516b8 inherit properties_classStelDialog"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><p>for windows NOT embedded in the graphics scene. </p>
+<div class="textblock"><p>Base class for windows NOT embedded in the graphics scene. </p>
 <p>Some GUI elements like QWebEngineView don't like to be embedded into our MainView. Another motivation may be to have windows on another screen.</p>
-<p>The dialog behaves almost like </p>
+<p>The dialog behaves almost like <a class="el" href="classStelDialog.html" title="Base class for all the GUI windows in Stellarium.">StelDialog</a>. However, given how night mode is applied as screen effect, this dialog does not adhere to the global night mode. Therefore a semitransparent <code>QWidget</code> (<code>NightCover</code>) is placed on top. This does not filter away all blue light, but at least dims bright non-red colors. </p>
 </div></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Sun Sep 22 2024 21:34:55 for Stellarium by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1
+Generated on Sun Mar 23 2025 19:00:02 for Stellarium by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1
 </small></address>
 </body>
 </html>

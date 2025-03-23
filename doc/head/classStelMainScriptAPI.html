@@ -132,6 +132,9 @@ static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" hre
 <tr class="memitem:a12fd45f70f92b6004f64c91e5089e2f5"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classStelMainScriptAPI.html#a12fd45f70f92b6004f64c91e5089e2f5">addToSelectedObjectInfoString</a> (const QString &amp;str, bool replace=false)</td></tr>
 <tr class="memdesc:a12fd45f70f92b6004f64c91e5089e2f5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Add some arbitrary string to the object information of the currently selected object.  <a href="classStelMainScriptAPI.html#a12fd45f70f92b6004f64c91e5089e2f5">More...</a><br /></td></tr>
 <tr class="separator:a12fd45f70f92b6004f64c91e5089e2f5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a89a904456f5cb0a4c78aad79dbab7a8b"><td class="memItemLeft" align="right" valign="top">static QVariantMap&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classStelMainScriptAPI.html#a89a904456f5cb0a4c78aad79dbab7a8b">getRTS</a> (const QString &amp;objectName, const double altitude=0.)</td></tr>
+<tr class="memdesc:a89a904456f5cb0a4c78aad79dbab7a8b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Retrieve information about rise, transit and setting time above a given.  <a href="classStelMainScriptAPI.html#a89a904456f5cb0a4c78aad79dbab7a8b">More...</a><br /></td></tr>
+<tr class="separator:a89a904456f5cb0a4c78aad79dbab7a8b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a0a4226570587e908bb2c9fb0fd7e3673"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classStelMainScriptAPI.html#a0a4226570587e908bb2c9fb0fd7e3673">setStelProperty</a> (const QString &amp;propertyName, QVariant propertyValue)</td></tr>
 <tr class="memdesc:a0a4226570587e908bb2c9fb0fd7e3673"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set value for some <a class="el" href="classStelProperty.html" title="Wrapper around a Q_PROPERTY (see the Qt property system for more information) of a specific object,...">StelProperty</a>.  <a href="classStelMainScriptAPI.html#a0a4226570587e908bb2c9fb0fd7e3673">More...</a><br /></td></tr>
 <tr class="separator:a0a4226570587e908bb2c9fb0fd7e3673"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -1587,6 +1590,8 @@ double&#160;</td><td class="memItemRight" valign="bottom"><b>timeSpeed</b></td><
 <li>Linux</li>
 <li>Windows</li>
 <li>macOS</li>
+<li>Haiku</li>
+<li>Solaris</li>
 <li>Unknown </li>
 </ul>
 </dd></dl>
@@ -1618,6 +1623,85 @@ double&#160;</td><td class="memItemRight" valign="bottom"><b>timeSpeed</b></td><
 
 <p>Get the current projection mode ID string. </p>
 <dl class="section return"><dt>Returns</dt><dd>the string which identifies the current projection mode. For a list of possibl results, see <a class="el" href="classStelMainScriptAPI.html#afaf602d641295174948773f464b6636f" title="Set the current projection mode.">setProjectionMode()</a>; </dd></dl>
+
+</div>
+</div>
+<a id="a89a904456f5cb0a4c78aad79dbab7a8b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a89a904456f5cb0a4c78aad79dbab7a8b">&#9670;&nbsp;</a></span>getRTS</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static QVariantMap StelMainScriptAPI::getRTS </td>
+          <td>(</td>
+          <td class="paramtype">const QString &amp;&#160;</td>
+          <td class="paramname"><em>objectName</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const double&#160;</td>
+          <td class="paramname"><em>altitude</em> = <code>0.</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span><span class="mlabel">slot</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Retrieve information about rise, transit and setting time above a given. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">altitude</td><td>for</td></tr>
+    <tr><td class="paramname">objectName.</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>a map with various entries in local time. The times are on the current calendar day, not the "nearest" events, therefore esp. the Moon may return "skipping codes" 20/30/40. The map keys are<ul>
+<li>rise-dhr : rise, decimal hour, zone time</li>
+<li>transit-dhr : transit, decimal hour, zone time</li>
+<li>set-dhr : set, decimal hour, zone time</li>
+<li>rise : string, "HHhMMm" format</li>
+<li>transit : string, "HHhMMm" format</li>
+<li>set : string, "HHhMMm" format</li>
+<li>altitude : decimal degrees, just same as</li>
+</ul>
+</dd></dl>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">altitude,for</td><td>reference<ul>
+<li>name : english name of the object, for reference</li>
+<li>status-code:<ul>
+<li>0. normal result, 3 valid times.</li>
+<li>+100. for circumpolar objects. Rise and set give lower culmination times.</li>
+<li>-100. for objects never rising. Rise and set give transit times.</li>
+<li>-1000. is used as "invalid" value. The result should then not be used. If unexpected, consider reporting a bug.</li>
+<li>+20. (<a class="el" href="classPlanet.html" title="The Planet class is used for the major planets, moons, &quot;Observer&quot; planets, and artificial objects (&quot;S...">Planet</a> objects only) no transit time on current date.</li>
+<li>+30. (<a class="el" href="classPlanet.html" title="The Planet class is used for the major planets, moons, &quot;Observer&quot; planets, and artificial objects (&quot;S...">Planet</a> objects only) no rise time on current date.</li>
+<li>+40. (<a class="el" href="classPlanet.html" title="The Planet class is used for the major planets, moons, &quot;Observer&quot; planets, and artificial objects (&quot;S...">Planet</a> objects only) no set time on current date.</li>
+</ul>
+</li>
+<li>status: An english string explaining the status code If altitude==0, this is just rise/transit/set also included in getObjectInfo(objectName). This function however can be used to retrieve twilight times like <div class="fragment"><div class="line">civilTwilightMap=core.getRTS(<span class="stringliteral">&quot;Sun&quot;</span>, -6.);</div>
+<div class="line">nautTwilightMap=core.getRTS(<span class="stringliteral">&quot;Sun&quot;</span>, -12.);</div>
+<div class="line">astroTwilightMap=core.getRTS(<span class="stringliteral">&quot;Sun&quot;</span>, -18.);</div>
+<div class="line">core.output(<span class="stringliteral">&quot;Twilight &quot;</span> + astroTwilightMap[<span class="stringliteral">&quot;rise&quot;</span>] + <span class="stringliteral">&quot;/&quot;</span> + nautTwilightMap[<span class="stringliteral">&quot;rise&quot;</span>] + <span class="stringliteral">&quot;/&quot;</span> + civilTwilightMap[<span class="stringliteral">&quot;rise&quot;</span>]);</div>
+</div><!-- fragment --> </li>
+</ul>
+</td></tr>
+  </table>
+  </dd>
+</dl>
 
 </div>
 </div>
@@ -5748,7 +5832,7 @@ See also <a class="el" href="classStelMainScriptAPI.html#ae5dc2cdfd5bd18b0634ec4
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Sun Sep 22 2024 21:34:55 for Stellarium by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1
+Generated on Sun Mar 23 2025 19:00:02 for Stellarium by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1
 </small></address>
 </body>
 </html>

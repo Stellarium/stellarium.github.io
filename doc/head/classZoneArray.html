@@ -68,14 +68,20 @@ unsigned int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" hr
 virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classZoneArray.html#ab9f101d753338af82722492656a5ddf2">updateHipIndex</a> (<a class="el" href="structHipIndexStruct.html">HipIndexStruct</a> hipIndex[]) const</td></tr>
 <tr class="memdesc:ab9f101d753338af82722492656a5ddf2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Dummy method that does nothing. See subclass implementation. <br /></td></tr>
 <tr class="separator:ab9f101d753338af82722492656a5ddf2"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a0729436d851698c5f9df782cd5e25c79"><td class="memItemLeft" align="right" valign="top"><a id="a0729436d851698c5f9df782cd5e25c79"></a>
-virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classZoneArray.html#a0729436d851698c5f9df782cd5e25c79">searchAround</a> (const <a class="el" href="classStelCore.html">StelCore</a> *core, int index, const <a class="el" href="classVector3.html">Vec3d</a> &amp;v, double cosLimFov, QList&lt; <a class="el" href="classQSharedPointerNoDelete.html">StelObjectP</a> &gt; &amp;result)=0</td></tr>
-<tr class="memdesc:a0729436d851698c5f9df782cd5e25c79"><td class="mdescLeft">&#160;</td><td class="mdescRight">Pure virtual method. See subclass implementation. <br /></td></tr>
-<tr class="separator:a0729436d851698c5f9df782cd5e25c79"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a4e8321bd348375811c229422c664ce9e"><td class="memItemLeft" align="right" valign="top"><a id="a4e8321bd348375811c229422c664ce9e"></a>
-virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classZoneArray.html#a4e8321bd348375811c229422c664ce9e">draw</a> (<a class="el" href="classStelPainter.html">StelPainter</a> *sPainter, int index, bool is_inside, const <a class="el" href="structRCMag.html">RCMag</a> *rcmag_table, int limitMagIndex, <a class="el" href="classStelCore.html">StelCore</a> *core, int maxMagStarName, float names_brightness, const QVector&lt; <a class="el" href="classSphericalCap.html">SphericalCap</a> &gt; &amp;boundingCaps, const bool withAberration, const <a class="el" href="classVector3.html">Vec3f</a> vel) const =0</td></tr>
-<tr class="memdesc:a4e8321bd348375811c229422c664ce9e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Pure virtual method. See subclass implementation. <br /></td></tr>
-<tr class="separator:a4e8321bd348375811c229422c664ce9e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa725248db89d2586998ac09ae109f9d9"><td class="memItemLeft" align="right" valign="top"><a id="aa725248db89d2586998ac09ae109f9d9"></a>
+virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classZoneArray.html#aa725248db89d2586998ac09ae109f9d9">searchAround</a> (const <a class="el" href="classStelCore.html">StelCore</a> *core, int index, const <a class="el" href="classVector3.html">Vec3d</a> &amp;v, const double withParallax, const <a class="el" href="classVector3.html">Vec3d</a> diffPos, double cosLimFov, QList&lt; <a class="el" href="classQSharedPointerNoDelete.html">StelObjectP</a> &gt; &amp;result)=0</td></tr>
+<tr class="memdesc:aa725248db89d2586998ac09ae109f9d9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Pure virtual method. See subclass implementation. <br /></td></tr>
+<tr class="separator:aa725248db89d2586998ac09ae109f9d9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a58afbaae37edc54f692aa21f0b9fef17"><td class="memItemLeft" align="right" valign="top"><a id="a58afbaae37edc54f692aa21f0b9fef17"></a>
+virtual <a class="el" href="classQSharedPointerNoDelete.html">StelObjectP</a>&#160;</td><td class="memItemRight" valign="bottom"><b>searchGaiaID</b> (int index, const StarId source_id, int &amp;matched) const =0</td></tr>
+<tr class="separator:a58afbaae37edc54f692aa21f0b9fef17"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa38d27dfaf40f7c64fd818c0a1643a5f"><td class="memItemLeft" align="right" valign="top"><a id="aa38d27dfaf40f7c64fd818c0a1643a5f"></a>
+virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>searchGaiaIDepochPos</b> (const StarId source_id, float dyrs, double &amp;RA, double &amp;DEC, double &amp;Plx, double &amp;pmra, double &amp;pmdec, double &amp;RV) const =0</td></tr>
+<tr class="separator:aa38d27dfaf40f7c64fd818c0a1643a5f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa9b95c80bba1dbc982e2bf7e0adcb41c"><td class="memItemLeft" align="right" valign="top"><a id="aa9b95c80bba1dbc982e2bf7e0adcb41c"></a>
+virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classZoneArray.html#aa9b95c80bba1dbc982e2bf7e0adcb41c">draw</a> (<a class="el" href="classStelPainter.html">StelPainter</a> *sPainter, int index, bool is_inside, const <a class="el" href="structRCMag.html">RCMag</a> *rcmag_table, int limitMagIndex, <a class="el" href="classStelCore.html">StelCore</a> *core, int maxMagStarName, float names_brightness, const QVector&lt; <a class="el" href="classSphericalCap.html">SphericalCap</a> &gt; &amp;boundingCaps, const bool withAberration, const <a class="el" href="classVector3.html">Vec3d</a> vel, const double withParallax, const <a class="el" href="classVector3.html">Vec3d</a> diffPos) const =0</td></tr>
+<tr class="memdesc:aa9b95c80bba1dbc982e2bf7e0adcb41c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Pure virtual method. See subclass implementation. <br /></td></tr>
+<tr class="separator:aa9b95c80bba1dbc982e2bf7e0adcb41c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af9fd1763656b93dc07f77c4586b94d89"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classZoneArray.html#af9fd1763656b93dc07f77c4586b94d89">isInitialized</a> (void) const</td></tr>
 <tr class="memdesc:af9fd1763656b93dc07f77c4586b94d89"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get whether or not the catalog was successfully loaded.  <a href="classZoneArray.html#af9fd1763656b93dc07f77c4586b94d89">More...</a><br /></td></tr>
 <tr class="separator:af9fd1763656b93dc07f77c4586b94d89"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -83,9 +89,6 @@ virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" hr
 void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classZoneArray.html#a8dfe941685f01b4391e28e5c5b826209">initTriangle</a> (int index, const <a class="el" href="classVector3.html">Vec3f</a> &amp;c0, const <a class="el" href="classVector3.html">Vec3f</a> &amp;c1, const <a class="el" href="classVector3.html">Vec3f</a> &amp;c2)</td></tr>
 <tr class="memdesc:a8dfe941685f01b4391e28e5c5b826209"><td class="mdescLeft">&#160;</td><td class="mdescRight">Initialize the <a class="el" href="structZoneData.html" title="A single triangle.">ZoneData</a> struct at the given index. <br /></td></tr>
 <tr class="separator:a8dfe941685f01b4391e28e5c5b826209"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a62e4abcab8c0af74189fa218ba7f2538"><td class="memItemLeft" align="right" valign="top"><a id="a62e4abcab8c0af74189fa218ba7f2538"></a>
-virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>scaleAxis</b> ()=0</td></tr>
-<tr class="separator:a62e4abcab8c0af74189fa218ba7f2538"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-static-methods"></a>
 Static Public Member Functions</h2></td></tr>
@@ -103,28 +106,16 @@ const QString&#160;</td><td class="memItemRight" valign="bottom"><a class="el" h
 const int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classZoneArray.html#a4a8a86c032baeaed76d7ef626fc24ff6">level</a></td></tr>
 <tr class="memdesc:a4a8a86c032baeaed76d7ef626fc24ff6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Level in <a class="el" href="classStelGeodesicGrid.html" title="Grid of triangles (zones) on the sphere with radius 1, generated by subdividing the icosahedron.">StelGeodesicGrid</a>. <br /></td></tr>
 <tr class="separator:a4a8a86c032baeaed76d7ef626fc24ff6"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a4dd731b3ba45865d8cfd4f186a4aa667"><td class="memItemLeft" align="right" valign="top"><a id="a4dd731b3ba45865d8cfd4f186a4aa667"></a>
-const int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classZoneArray.html#a4dd731b3ba45865d8cfd4f186a4aa667">mag_min</a></td></tr>
-<tr class="memdesc:a4dd731b3ba45865d8cfd4f186a4aa667"><td class="mdescLeft">&#160;</td><td class="mdescRight">Lower bound of magnitudes in this level. Units: millimag. May be negative for brightest stars. <br /></td></tr>
+<tr class="memitem:a4dd731b3ba45865d8cfd4f186a4aa667"><td class="memItemLeft" align="right" valign="top">const int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classZoneArray.html#a4dd731b3ba45865d8cfd4f186a4aa667">mag_min</a></td></tr>
+<tr class="memdesc:a4dd731b3ba45865d8cfd4f186a4aa667"><td class="mdescLeft">&#160;</td><td class="mdescRight">Lower bound of magnitudes in this level at the catalog epoch.  <a href="classZoneArray.html#a4dd731b3ba45865d8cfd4f186a4aa667">More...</a><br /></td></tr>
 <tr class="separator:a4dd731b3ba45865d8cfd4f186a4aa667"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a7cf7571f710a3371baa494018cdfde0c"><td class="memItemLeft" align="right" valign="top"><a id="a7cf7571f710a3371baa494018cdfde0c"></a>
-const int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classZoneArray.html#a7cf7571f710a3371baa494018cdfde0c">mag_range</a></td></tr>
-<tr class="memdesc:a7cf7571f710a3371baa494018cdfde0c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Range of magnitudes in this level. Units: millimags. <br /></td></tr>
-<tr class="separator:a7cf7571f710a3371baa494018cdfde0c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a92d009b8e2acaa16b2677c9cf040c7f3"><td class="memItemLeft" align="right" valign="top"><a id="a92d009b8e2acaa16b2677c9cf040c7f3"></a>
-const int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classZoneArray.html#a92d009b8e2acaa16b2677c9cf040c7f3">mag_steps</a></td></tr>
-<tr class="memdesc:a92d009b8e2acaa16b2677c9cf040c7f3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Number of steps used to describe values in <em>mag_range</em>. Always positive. Individual stars have their mag entries from 0..mag_steps. <br /></td></tr>
-<tr class="separator:a92d009b8e2acaa16b2677c9cf040c7f3"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a19dcacc021b4261e45bc2482b5ccfa21"><td class="memItemLeft" align="right" valign="top"><a id="a19dcacc021b4261e45bc2482b5ccfa21"></a>
-float&#160;</td><td class="memItemRight" valign="bottom"><b>star_position_scale</b></td></tr>
-<tr class="separator:a19dcacc021b4261e45bc2482b5ccfa21"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-methods"></a>
 Protected Member Functions</h2></td></tr>
-<tr class="memitem:a4de93481b566392dc557b2bec472f963"><td class="memItemLeft" align="right" valign="top"><a id="a4de93481b566392dc557b2bec472f963"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classZoneArray.html#a4de93481b566392dc557b2bec472f963">ZoneArray</a> (const QString &amp;<a class="el" href="classZoneArray.html#ad269b452b00c1ce155bd81d250e32fa0">fname</a>, QFile *file, int <a class="el" href="classZoneArray.html#a4a8a86c032baeaed76d7ef626fc24ff6">level</a>, int <a class="el" href="classZoneArray.html#a4dd731b3ba45865d8cfd4f186a4aa667">mag_min</a>, int <a class="el" href="classZoneArray.html#a7cf7571f710a3371baa494018cdfde0c">mag_range</a>, int <a class="el" href="classZoneArray.html#a92d009b8e2acaa16b2677c9cf040c7f3">mag_steps</a>)</td></tr>
-<tr class="memdesc:a4de93481b566392dc557b2bec472f963"><td class="mdescLeft">&#160;</td><td class="mdescRight">Protected constructor. Initializes fields and does not load anything. <br /></td></tr>
-<tr class="separator:a4de93481b566392dc557b2bec472f963"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6873bee5ea9dce0681f5edadc3c14862"><td class="memItemLeft" align="right" valign="top"><a id="a6873bee5ea9dce0681f5edadc3c14862"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classZoneArray.html#a6873bee5ea9dce0681f5edadc3c14862">ZoneArray</a> (const QString &amp;<a class="el" href="classZoneArray.html#ad269b452b00c1ce155bd81d250e32fa0">fname</a>, QFile *file, int <a class="el" href="classZoneArray.html#a4a8a86c032baeaed76d7ef626fc24ff6">level</a>, int <a class="el" href="classZoneArray.html#a4dd731b3ba45865d8cfd4f186a4aa667">mag_min</a>)</td></tr>
+<tr class="memdesc:a6873bee5ea9dce0681f5edadc3c14862"><td class="mdescLeft">&#160;</td><td class="mdescRight">Protected constructor. Initializes fields and does not load anything. <br /></td></tr>
+<tr class="separator:a6873bee5ea9dce0681f5edadc3c14862"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-static-methods"></a>
 Static Protected Member Functions</h2></td></tr>
@@ -271,10 +262,28 @@ QFile *&#160;</td><td class="memItemRight" valign="bottom"><b>file</b></td></tr>
 
 </div>
 </div>
+<h2 class="groupheader">Field Documentation</h2>
+<a id="a4dd731b3ba45865d8cfd4f186a4aa667"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4dd731b3ba45865d8cfd4f186a4aa667">&#9670;&nbsp;</a></span>mag_min</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const int ZoneArray::mag_min</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Lower bound of magnitudes in this level at the catalog epoch. </p>
+<p>Units: millimag. May be negative for brightest stars and stars might have different magnitudes in the past/future. </p>
+
+</div>
+</div>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Sun Sep 22 2024 21:34:55 for Stellarium by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1
+Generated on Sun Mar 23 2025 19:00:03 for Stellarium by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1
 </small></address>
 </body>
 </html>

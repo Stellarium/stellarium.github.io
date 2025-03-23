@@ -99,7 +99,7 @@ User and Installation directory separation</h1>
 <li>
 <code>data/ssystem_minor.ini</code>: the solar system bodies description file (minor planets and comets) </li>
 <li>
-<code>stars/default/</code>: star catalogues </li>
+<code>stars/hip_gaia3/</code>: star catalogues </li>
 <li>
 <code>nebulae/default/</code>: nebula textures and data files </li>
 <li>
@@ -141,27 +141,27 @@ Finding files with the StelFileMgr class</h1>
 <h1><a class="anchor" id="exampleStarCatalogTool"></a>
 Example: Star Catalogue Download Tool</h1>
 <p>Stellarium ships with the first four star catalogue files of nine files. The implementation of a catalogue downloading tool helps ease the task for users wanting the extra catalogues by automating the download and installation procedure.</p>
-<p>The files which come with Stellarium are found by the partial paths: </p><pre class="fragment">stars/default/stars_0_0v0_1.cat
-stars/default/stars_1_0v0_1.cat
-stars/default/stars_2_0v0_1.cat
-stars/default/stars_3_1v0_1.cat
+<p>The files which come with Stellarium are found by the partial paths: </p><pre class="fragment">stars/hip_gaia3/stars_0_0v0_18.cat
+stars/hip_gaia3/stars_1_0v0_15.cat
+stars/hip_gaia3/stars_2_0v0_16.cat
+stars/hip_gaia3/stars_3_1v0_10.cat
 </pre><p>Naturally, these files are to be located in the <em>Installation Data Directory</em> (because they ship with the installer).</p>
 <p>The catalogue downloader tool runs within Stellarium. When it downloads extra star catalogue files, it should place them in the <em>User Data Directory</em>. After downloading all the catalogues, the paths to the various files should look like this:</p>
-<pre class="fragment">&lt;Installation Data Directory&gt;/stars/default/stars_0_0v0_1.cat
-&lt;Installation Data Directory&gt;/stars/default/stars_1_0v0_1.cat
-&lt;Installation Data Directory&gt;/stars/default/stars_2_0v0_1.cat
-&lt;Installation Data Directory&gt;/stars/default/stars_3_1v0_1.cat
-&lt;User Data Directory&gt;/stars/default/stars_4_1v0_0.cat
-&lt;User Data Directory&gt;/stars/default/stars_5_2v0_0.cat
-&lt;User Data Directory&gt;/stars/default/stars_6_2v0_0.cat
-&lt;User Data Directory&gt;/stars/default/stars_7_2v0_0.cat
-&lt;User Data Directory&gt;/stars/default/stars_8_2v0_0.cat
-</pre><p>It might be that someone makes a customised installer of Stellarium which includes all the star catalogues with the main installation - perhaps on a special edition DVD. In this case, all the files would be in the <em> &lt;Installation Data Directory&gt;/stars/default</em> directory. The downloader tool should be able to cope with this, not re-downloading files into the <em>User Data Directory</em> which already reside in the <em>Installation Data Directory</em>. </p>
+<pre class="fragment">&lt;Installation Data Directory&gt;/stars/hip_gaia3/stars_0_0v0_18.cat
+&lt;Installation Data Directory&gt;/stars/hip_gaia3/stars_1_0v0_15.cat
+&lt;Installation Data Directory&gt;/stars/hip_gaia3/stars_2_0v0_16.cat
+&lt;Installation Data Directory&gt;/stars/hip_gaia3/stars_3_0v0_10.cat
+&lt;User Data Directory&gt;/stars/hip_gaia3/stars_4_1v0_6.cat
+&lt;User Data Directory&gt;/stars/hip_gaia3/stars_5_1v0_6.cat
+&lt;User Data Directory&gt;/stars/hip_gaia3/stars_6_1v0_4.cat
+&lt;User Data Directory&gt;/stars/hip_gaia3/stars_7_1v0_4.cat
+&lt;User Data Directory&gt;/stars/hip_gaia3/stars_8_2v0_3.cat
+</pre><p>It might be that someone makes a customised installer of Stellarium which includes all the star catalogues with the main installation - perhaps on a special edition DVD. In this case, all the files would be in the <em> &lt;Installation Data Directory&gt;/stars/hip_gaia3</em> directory. The downloader tool should be able to cope with this, not re-downloading files into the <em>User Data Directory</em> which already reside in the <em>Installation Data Directory</em>. </p>
 </div></div><!-- contents -->
 </div><!-- PageDoc -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Sun Sep 22 2024 21:34:54 for Stellarium by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1
+Generated on Sun Mar 23 2025 19:00:01 for Stellarium by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1
 </small></address>
 </body>
 </html>

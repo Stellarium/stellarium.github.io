@@ -146,9 +146,10 @@ $(function() {
 <div class="line">          |            |------------------------- API prefix (always /api/)</div>
 <div class="line">          |-------------------------------------- server access (http:<span class="comment">//host:port)</span></div>
 </div><!-- fragment --><p>Instead of the <a class="el" href="remoteControlWeb.html">HTTP remote interface</a> you can also use tools like <a href="https://curl.haxx.se/">cURL</a> to access the API remotely. For POST operations, you would use the flag <code>-d</code> to pass parameters. For GET operations, you should use the additional flag <code>-G</code> if parameters are required. Examples: </p><div class="fragment"><div class="line"># retrieve info about the script &quot;double_stars.ssc&quot; with a GET request</div>
-<div class="line">curl -G -d &#39;id=double_stars.ssc&#39; http://localhost:8090/api/scripts/info</div>
+<div class="line">curl -G -d &quot;id=double_stars.ssc&quot; http://localhost:8090/api/scripts/info</div>
 <div class="line"># run the script &quot;double_stars.ssc&quot; with a POST request</div>
-<div class="line">curl -d &#39;id=double_stars.ssc&#39; http://localhost:8090/api/scripts/run</div>
+<div class="line">curl -d &quot;id=double_stars.ssc&quot; http://localhost:8090/api/scripts/run</div>
+</div><!-- fragment --><p>If there are multiple parameters, they can be chained together with the ampersand sign as in a query string: </p><div class="fragment"><div class="line">curl -d &quot;x=1&amp;y=0.3&quot; http://localhost:8090/api/main/move</div>
 </div><!-- fragment --><p>If authentication is enabled (see <a class="el" href="group__remoteControl.html#classRemoteControl" title="Main class of the RemoteControl plug-in, implementing the StelModule interface.">RemoteControl</a> class), <a href="https://en.wikipedia.org/wiki/Basic_access_authentication">HTTP Basic access authentication</a> is expected, with an empty username. HTTPS configuration is currently not implemented, even if the underlying <a class="el" href="group__qtWebApp.html">QtWebApp library</a> would allow it.</p>
 <p>Most operations return data in the <a href="http://www.json.org/">JSON</a> format, allowing it to be easily used in web applications. The format of the returned JSON data is described for each operation below. Some operations return plain text if only simple data is requested, or to confirm the success of an operation: to indicate success "ok" may be returned, in an error case an HTTP error code may be returned together with a string "error: error message" in the response body. Other operations may return HTML or even image data, you can check the returned Content-Type header if you are not sure what to expect.</p>
 <h1><a class="anchor" id="rcExtendApi"></a>
@@ -516,7 +517,7 @@ listskyculture</h4>
 </div><!-- fragment --><h4><a class="anchor" id="rcViewServiceSkyculturedescription"></a>
 skyculturedescription/</h4>
 <p><em>Note that the slash at the end is mandatory!</em><br  />
-Provides virtual filesystem access to the current skyculture directory. The operation can take a longer path in the URL. The remainder is used to access files in the skyculture directory. If no longer path is given, the current HTML skyculture description (as per <a class="el" href="classStelSkyCultureMgr.html#ac41e37e33bcdfe8820cc0eb23c49eac8" title="Returns a localized HTML description for the current sky culture.">StelSkyCultureMgr::getCurrentSkyCultureHtmlDescription</a>) is returned. An example: <code>skyculturedescription/image.png</code> returns <code>image.png</code> from the current skyculture directory.</p>
+Provides virtual filesystem access to the current skyculture directory. The operation can take a longer path in the URL. The remainder is used to access files in the skyculture directory. If no longer path is given, the current HTML skyculture description (as per <a class="el" href="classStelSkyCultureMgr.html#aac312c78eee8eb47c2f11151c0ddb417" title="Returns a localized HTML description for the current sky culture.">StelSkyCultureMgr::getCurrentSkyCultureHtmlDescription</a>) is returned. An example: <code>skyculturedescription/image.png</code> returns <code>image.png</code> from the current skyculture directory.</p>
 <p>This operation allows to set up an HTML <code>iframe</code> or similar for the skycultures description, including all images, etc. embedded in the HTML description.</p>
 <h4><a class="anchor" id="rcViewServiceListprojection"></a>
 listprojection</h4>
@@ -531,7 +532,7 @@ projectiondescription</h4>
 </div><!-- PageDoc -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Sun Sep 22 2024 21:34:54 for Stellarium by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1
+Generated on Sun Mar 23 2025 19:00:01 for Stellarium by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1
 </small></address>
 </body>
 </html>

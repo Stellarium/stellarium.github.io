@@ -56,9 +56,9 @@ Data Structures</h2></td></tr>
 <tr class="memitem:classArchaeoLinesDialogLocations"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__archaeoLines.html#classArchaeoLinesDialogLocations">ArchaeoLinesDialogLocations</a></td></tr>
 <tr class="memdesc:classArchaeoLinesDialogLocations"><td class="mdescLeft">&#160;</td><td class="mdescRight">Auxiliary window of the <a class="el" href="classArchaeoLines.html" title="Main class of the ArchaeoLines plug-in.">ArchaeoLines</a> plug-in.  <a href="group__archaeoLines.html#classArchaeoLinesDialogLocations">More...</a><br /></td></tr>
 <tr class="separator:classArchaeoLinesDialogLocations"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:classSkyLine"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__archaeoLines.html#classSkyLine">SkyLine</a></td></tr>
-<tr class="memdesc:classSkyLine"><td class="mdescLeft">&#160;</td><td class="mdescRight">GridLinesMgr.cpp at V0.13.2, but with small-circle drawing.  <a href="group__archaeoLines.html#classSkyLine">More...</a><br /></td></tr>
-<tr class="separator:classSkyLine"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:classArchaeoLine"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__archaeoLines.html#classArchaeoLine">ArchaeoLine</a></td></tr>
+<tr class="memdesc:classArchaeoLine"><td class="mdescLeft">&#160;</td><td class="mdescRight">Class which manages a line (small circle) to display around the sky like the solstices line.  <a href="group__archaeoLines.html#classArchaeoLine">More...</a><br /></td></tr>
+<tr class="separator:classArchaeoLine"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <p>A tool for archaeo-/ethnoastronomical alignment studies.</p>
@@ -146,7 +146,7 @@ QString&#160;</td><td class="memItemRight" valign="bottom"><b>getDialogName</b> 
 <tr class="separator:a38a55c5d15946a921ed4847776f23f27 inherit pub_methods_classStelDialog"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pro_slots_classStelDialog"><td colspan="2" onclick="javascript:toggleInherit('pro_slots_classStelDialog')"><img src="closed.png" alt="-"/>&#160;Protected Slots inherited from <a class="el" href="classStelDialog.html">StelDialog</a></td></tr>
 <tr class="memitem:ac5e7d61fd2d9ebbc4b9d9bba68c7701e inherit pro_slots_classStelDialog"><td class="memItemLeft" align="right" valign="top"><a id="ac5e7d61fd2d9ebbc4b9d9bba68c7701e"></a>
-bool&#160;</td><td class="memItemRight" valign="bottom"><b>askConfirmation</b> (const QString &amp;message=q_(&quot;Are you sure? <a class="el" href="classQTextBrowser_1_1This.html">This</a> will delete your customized data.&quot;))</td></tr>
+bool&#160;</td><td class="memItemRight" valign="bottom"><b>askConfirmation</b> (const QString &amp;message=q_(&quot;Are you sure? This will delete your customized data.&quot;))</td></tr>
 <tr class="separator:ac5e7d61fd2d9ebbc4b9d9bba68c7701e inherit pro_slots_classStelDialog"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aba69096a162791f2a90639b05c0abaf1 inherit pro_slots_classStelDialog"><td class="memItemLeft" align="right" valign="top"><a id="aba69096a162791f2a90639b05c0abaf1"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><b>messageBox</b> (const QString &amp;title, const QString &amp;message)</td></tr>
@@ -301,7 +301,7 @@ QString&#160;</td><td class="memItemRight" valign="bottom"><b>getDialogName</b> 
 <tr class="separator:a38a55c5d15946a921ed4847776f23f27 inherit pub_methods_classStelDialog"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pro_slots_classStelDialog"><td colspan="2" onclick="javascript:toggleInherit('pro_slots_classStelDialog')"><img src="closed.png" alt="-"/>&#160;Protected Slots inherited from <a class="el" href="classStelDialog.html">StelDialog</a></td></tr>
 <tr class="memitem:ac5e7d61fd2d9ebbc4b9d9bba68c7701e inherit pro_slots_classStelDialog"><td class="memItemLeft" align="right" valign="top"><a id="ac5e7d61fd2d9ebbc4b9d9bba68c7701e"></a>
-bool&#160;</td><td class="memItemRight" valign="bottom"><b>askConfirmation</b> (const QString &amp;message=q_(&quot;Are you sure? <a class="el" href="classQTextBrowser_1_1This.html">This</a> will delete your customized data.&quot;))</td></tr>
+bool&#160;</td><td class="memItemRight" valign="bottom"><b>askConfirmation</b> (const QString &amp;message=q_(&quot;Are you sure? This will delete your customized data.&quot;))</td></tr>
 <tr class="separator:ac5e7d61fd2d9ebbc4b9d9bba68c7701e inherit pro_slots_classStelDialog"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aba69096a162791f2a90639b05c0abaf1 inherit pro_slots_classStelDialog"><td class="memItemLeft" align="right" valign="top"><a id="aba69096a162791f2a90639b05c0abaf1"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><b>messageBox</b> (const QString &amp;title, const QString &amp;message)</td></tr>
@@ -386,26 +386,146 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><b>visible</b></td></tr>
 
 </div>
 </div>
-<a name="classSkyLine" id="classSkyLine"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#classSkyLine">&#9670;&nbsp;</a></span>SkyLine</h2>
+<a name="classArchaeoLine" id="classArchaeoLine"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#classArchaeoLine">&#9670;&nbsp;</a></span>ArchaeoLine</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">class SkyLine</td>
+          <td class="memname">class ArchaeoLine</td>
         </tr>
       </table>
 </div><div class="memdoc">
-<div class="textblock"><p>GridLinesMgr.cpp at V0.13.2, but with small-circle drawing. </p>
-<dl class="section author"><dt>Author</dt><dd>Georg Zotti </dd></dl>
-</div>
+<div class="textblock"><p>Class which manages a line (small circle) to display around the sky like the solstices line. </p>
+<p>Modelled after <code>SkyLine</code> found in GridLinesMgr.cpp at V0.13.2, but with small-circle drawing. </p><dl class="section author"><dt>Author</dt><dd>Georg Zotti </dd></dl>
+</div><table class="memberdecls">
+<tr><td colspan="2"><h3>Public Types</h3></td></tr>
+<tr class="memitem:a97f963a2950933aa1611e7f5fefb991c"><td class="memItemLeft" align="right" valign="top"><a id="a97f963a2950933aa1611e7f5fefb991c"></a>enum &#160;</td><td class="memItemRight" valign="bottom"><b>Line</b> { <br />
+&#160;&#160;<b>CurrentPlanetNone</b>
+, <b>CurrentPlanetMercury</b>
+, <b>CurrentPlanetVenus</b>
+, <b>CurrentPlanetMars</b>
+, <br />
+&#160;&#160;<b>CurrentPlanetJupiter</b>
+, <b>CurrentPlanetSaturn</b>
+, <b>Equinox</b>
+, <b>Solstices</b>
+, <br />
+&#160;&#160;<b>Crossquarters</b>
+, <b>MajorStandstill</b>
+, <b>MinorStandstill</b>
+, <b>PolarCircles</b>
+, <br />
+&#160;&#160;<b>ZenithPassage</b>
+, <b>NadirPassage</b>
+, <b>SelectedObject</b>
+, <b>CurrentSun</b>
+, <br />
+&#160;&#160;<b>CurrentMoon</b>
+, <b>CustomDeclination1</b>
+, <b>CustomDeclination2</b>
+, <b>SelectedObjectHourAngle</b>
+, <br />
+&#160;&#160;<b>SelectedObjectAzimuth</b>
+, <b>GeographicLocation1</b>
+, <b>GeographicLocation2</b>
+, <b>CustomAzimuth1</b>
+, <br />
+&#160;&#160;<b>CustomAzimuth2</b>
+, <b>CustomAltitude1</b>
+, <b>CustomAltitude2</b>
+<br />
+ }</td></tr>
+<tr class="separator:a97f963a2950933aa1611e7f5fefb991c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr><td colspan="2"><h3>Public Slots</h3></td></tr>
+<tr class="memitem:a667ee3fe31a8bb6c62a21248bf5dbb18"><td class="memItemLeft" align="right" valign="top"><a id="a667ee3fe31a8bb6c62a21248bf5dbb18"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>setColor</b> (const <a class="el" href="classVector3.html">Vec3f</a> &amp;c)</td></tr>
+<tr class="separator:a667ee3fe31a8bb6c62a21248bf5dbb18"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a82ab28591395cb4f7135e78e125c5fc3"><td class="memItemLeft" align="right" valign="top"><a id="a82ab28591395cb4f7135e78e125c5fc3"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>update</b> (const double deltaTime)</td></tr>
+<tr class="separator:a82ab28591395cb4f7135e78e125c5fc3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af73c3dcb57aa6ed920922367bdb2a8df"><td class="memItemLeft" align="right" valign="top"><a id="af73c3dcb57aa6ed920922367bdb2a8df"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>setFadeDuration</b> (const float duration)</td></tr>
+<tr class="separator:af73c3dcb57aa6ed920922367bdb2a8df"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af7be6d5cfd15717c5baefa2f60c84468"><td class="memItemLeft" align="right" valign="top"><a id="af7be6d5cfd15717c5baefa2f60c84468"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>setDisplayed</b> (const bool displayed)</td></tr>
+<tr class="separator:af7be6d5cfd15717c5baefa2f60c84468"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa4f11ca3e71455c63159f55a48cbe68e"><td class="memItemLeft" align="right" valign="top"><a id="aa4f11ca3e71455c63159f55a48cbe68e"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>setFontSize</b> (const int newSize)</td></tr>
+<tr class="separator:aa4f11ca3e71455c63159f55a48cbe68e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a035e3d69b6c42d5cd6b41b570707c3ab"><td class="memItemLeft" align="right" valign="top"><a id="a035e3d69b6c42d5cd6b41b570707c3ab"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__archaeoLines.html#a035e3d69b6c42d5cd6b41b570707c3ab">setFontSizeFromApp</a> (const int newSize)</td></tr>
+<tr class="memdesc:a035e3d69b6c42d5cd6b41b570707c3ab"><td class="mdescLeft">&#160;</td><td class="mdescRight">To be connected to <a class="el" href="classStelApp.html" title="Singleton main Stellarium application class.">StelApp</a> font size. newSize will be enlarged by 1. <br /></td></tr>
+<tr class="separator:a035e3d69b6c42d5cd6b41b570707c3ab"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a32a33f52d8ca2e1aa5225c41c8961f62"><td class="memItemLeft" align="right" valign="top"><a id="a32a33f52d8ca2e1aa5225c41c8961f62"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__archaeoLines.html#a32a33f52d8ca2e1aa5225c41c8961f62">setDefiningAngle</a> (const double angle)</td></tr>
+<tr class="memdesc:a32a33f52d8ca2e1aa5225c41c8961f62"><td class="mdescLeft">&#160;</td><td class="mdescRight">reset declination/azimuth angle (degrees) of this arc. Any azimuth angles MUST be given counted from north. <br /></td></tr>
+<tr class="separator:a32a33f52d8ca2e1aa5225c41c8961f62"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0b9899ccc457193675a339e620d80ac9"><td class="memItemLeft" align="right" valign="top"><a id="a0b9899ccc457193675a339e620d80ac9"></a>
+double&#160;</td><td class="memItemRight" valign="bottom"><b>getDefiningAngle</b> (void) const</td></tr>
+<tr class="separator:a0b9899ccc457193675a339e620d80ac9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6f5c1ae17c187becaef39fe361f01f61"><td class="memItemLeft" align="right" valign="top"><a id="a6f5c1ae17c187becaef39fe361f01f61"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__archaeoLines.html#a6f5c1ae17c187becaef39fe361f01f61">updateLabel</a> ()</td></tr>
+<tr class="memdesc:a6f5c1ae17c187becaef39fe361f01f61"><td class="mdescLeft">&#160;</td><td class="mdescRight">Re-translates the label. <br /></td></tr>
+<tr class="separator:a6f5c1ae17c187becaef39fe361f01f61"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8fd0bc9732044b7232ba64641e0f6d55"><td class="memItemLeft" align="right" valign="top"><a id="a8fd0bc9732044b7232ba64641e0f6d55"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>setLabelVisible</b> (const bool b)</td></tr>
+<tr class="separator:a8fd0bc9732044b7232ba64641e0f6d55"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a77911edc45ee833a92f545040ab54856"><td class="memItemLeft" align="right" valign="top"><a id="a77911edc45ee833a92f545040ab54856"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><b>isLabelVisible</b> () const</td></tr>
+<tr class="separator:a77911edc45ee833a92f545040ab54856"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2b2e588ac60cb5d7b85c72ebe100e0ae"><td class="memItemLeft" align="right" valign="top"><a id="a2b2e588ac60cb5d7b85c72ebe100e0ae"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>setLineType</b> (const ArchaeoLine::Line line)</td></tr>
+<tr class="separator:a2b2e588ac60cb5d7b85c72ebe100e0ae"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aed32276a542f1730d215cc568a3170d6"><td class="memItemLeft" align="right" valign="top"><a id="aed32276a542f1730d215cc568a3170d6"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__archaeoLines.html#aed32276a542f1730d215cc568a3170d6">setLabel</a> (const QString &amp;newLabel)</td></tr>
+<tr class="memdesc:aed32276a542f1730d215cc568a3170d6"><td class="mdescLeft">&#160;</td><td class="mdescRight">change label. Used only for selected-object line - the other labels should not be changed! <br /></td></tr>
+<tr class="separator:aed32276a542f1730d215cc568a3170d6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0732ef58ee14877823fe283b0842fd0a"><td class="memItemLeft" align="right" valign="top"><a id="a0732ef58ee14877823fe283b0842fd0a"></a>
+QString&#160;</td><td class="memItemRight" valign="bottom"><b>getLabel</b> () const</td></tr>
+<tr class="separator:a0732ef58ee14877823fe283b0842fd0a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr><td colspan="2"><h3>Signals</h3></td></tr>
+<tr class="memitem:a1931f61ee3f7eacd1ce336da47608a83"><td class="memItemLeft" align="right" valign="top"><a id="a1931f61ee3f7eacd1ce336da47608a83"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>colorChanged</b> (<a class="el" href="classVector3.html">Vec3f</a> c)</td></tr>
+<tr class="separator:a1931f61ee3f7eacd1ce336da47608a83"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9d455b599a9f21843273f9b13b215d03"><td class="memItemLeft" align="right" valign="top"><a id="a9d455b599a9f21843273f9b13b215d03"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>flagLabelChanged</b> (bool on)</td></tr>
+<tr class="separator:a9d455b599a9f21843273f9b13b215d03"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a28f9a13dac9f3e5291c84d55d55de113"><td class="memItemLeft" align="right" valign="top"><a id="a28f9a13dac9f3e5291c84d55d55de113"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>definingAngleChanged</b> (double angle)</td></tr>
+<tr class="separator:a28f9a13dac9f3e5291c84d55d55de113"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr><td colspan="2"><h3>Public Member Functions</h3></td></tr>
+<tr class="memitem:a59def42ad5d3dca93f12d1426f383bd2"><td class="memItemLeft" align="right" valign="top"><a id="a59def42ad5d3dca93f12d1426f383bd2"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><b>ArchaeoLine</b> (ArchaeoLine::Line lineType, double definingAngle)</td></tr>
+<tr class="separator:a59def42ad5d3dca93f12d1426f383bd2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adba1908231485eb8329af32cb42f2177"><td class="memItemLeft" align="right" valign="top"><a id="adba1908231485eb8329af32cb42f2177"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>draw</b> (<a class="el" href="classStelCore.html">StelCore</a> *core, float intensity=1.0f) const</td></tr>
+<tr class="separator:adba1908231485eb8329af32cb42f2177"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae0145cc381ffb5d4ba17445b3365e2be"><td class="memItemLeft" align="right" valign="top"><a id="ae0145cc381ffb5d4ba17445b3365e2be"></a>
+const <a class="el" href="classVector3.html">Vec3f</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>getColor</b> () const</td></tr>
+<tr class="separator:ae0145cc381ffb5d4ba17445b3365e2be"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab74e02423e1114e9c5b116b7f429583d"><td class="memItemLeft" align="right" valign="top"><a id="ab74e02423e1114e9c5b116b7f429583d"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><b>isDisplayed</b> (void) const</td></tr>
+<tr class="separator:ab74e02423e1114e9c5b116b7f429583d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr><td colspan="2"><h3>Properties</h3></td></tr>
+<tr class="memitem:a6ffa7f08c0ea3126ee9a24e26b85b442"><td class="memItemLeft" align="right" valign="top"><a id="a6ffa7f08c0ea3126ee9a24e26b85b442"></a>
+<a class="el" href="classVector3.html">Vec3f</a>&#160;</td><td class="memItemRight" valign="bottom"><b>color</b></td></tr>
+<tr class="separator:a6ffa7f08c0ea3126ee9a24e26b85b442"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3d9964f9945d1855bc845c0c0c851bae"><td class="memItemLeft" align="right" valign="top"><a id="a3d9964f9945d1855bc845c0c0c851bae"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><b>flagLabel</b></td></tr>
+<tr class="separator:a3d9964f9945d1855bc845c0c0c851bae"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac6544a7c62561945c0ce25ae6d61e21d"><td class="memItemLeft" align="right" valign="top"><a id="ac6544a7c62561945c0ce25ae6d61e21d"></a>
+double&#160;</td><td class="memItemRight" valign="bottom"><b>definingAngle</b></td></tr>
+<tr class="separator:ac6544a7c62561945c0ce25ae6d61e21d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+
 </div>
 </div>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Sun Sep 22 2024 21:34:54 for Stellarium by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1
+Generated on Sun Mar 23 2025 19:00:01 for Stellarium by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1
 </small></address>
 </body>
 </html>

@@ -191,6 +191,9 @@ const <a class="el" href="classSphericalCap.html">SphericalCap</a> &amp;&#160;</
 float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classStelProjector.html#ab59b4e99264d9338ab25c6b987c9dacb">getPixelPerRadAtCenter</a> () const</td></tr>
 <tr class="memdesc:ab59b4e99264d9338ab25c6b987c9dacb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get size of a radian in pixels at the center of the viewport disk. <br /></td></tr>
 <tr class="separator:ab59b4e99264d9338ab25c6b987c9dacb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa6eb2955e26c47a728fcdb04f53794cc"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classStelProjector.html#aa6eb2955e26c47a728fcdb04f53794cc">getScreenScale</a> () const</td></tr>
+<tr class="memdesc:aa6eb2955e26c47a728fcdb04f53794cc"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the scale factor for objects drawn on screen.  <a href="classStelProjector.html#aa6eb2955e26c47a728fcdb04f53794cc">More...</a><br /></td></tr>
+<tr class="separator:aa6eb2955e26c47a728fcdb04f53794cc"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a35f49b5a14df48aa992ff024150ddddb"><td class="memItemLeft" align="right" valign="top"><a id="a35f49b5a14df48aa992ff024150ddddb"></a>
 float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classStelProjector.html#a35f49b5a14df48aa992ff024150ddddb">getFov</a> () const</td></tr>
 <tr class="memdesc:a35f49b5a14df48aa992ff024150ddddb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the current FOV diameter in degrees. <br /></td></tr>
@@ -463,6 +466,26 @@ class&#160;</td><td class="memItemRight" valign="bottom"><b>StelCore</b></td></t
 <p>After transformation v[2] will always contain the length of the original v: sqrt(v[0]*v[0]+v[1]*v[1]+v[2]*v[2]) regardless of the projection type. This makes it possible to implement depth buffer testing in a way independent of the projection type. I would like to return the squared length instead of the length because of performance reasons. But then far away objects are not textured any more, perhaps because of a depth buffer overflow although the depth test is disabled? </p>
 
 <p>Implemented in <a class="el" href="classStelProjector2d.html#a3bfdaf5317e083b537949b65784b6dcc">StelProjector2d</a>, <a class="el" href="classStelProjectorMiller.html#a14a3662949bdb65295cf29ce421cd570">StelProjectorMiller</a>, <a class="el" href="classStelProjectorSinusoidal.html#a73616e44623cc35445a312b6279d2074">StelProjectorSinusoidal</a>, <a class="el" href="classStelProjectorOrthographic.html#a68a37d5b585f115f86b2f2ba0ac1ba10">StelProjectorOrthographic</a>, <a class="el" href="classStelProjectorMercator.html#ae9b116f266142af6d8784c93647fc10b">StelProjectorMercator</a>, <a class="el" href="classStelProjectorCylinder.html#aa83169145d5a4bea321aaed528336ffc">StelProjectorCylinder</a>, <a class="el" href="classStelProjectorHammer.html#a514e79c8c19872bd2d52257202e1696e">StelProjectorHammer</a>, <a class="el" href="classStelProjectorFisheye.html#a8a1f1a37818f4371996bb579850e5003">StelProjectorFisheye</a>, <a class="el" href="classStelProjectorStereographic.html#a4cd0f690de67a6e51d73cb85e2615871">StelProjectorStereographic</a>, <a class="el" href="classStelProjectorEqualArea.html#af573cc5bf5bfc4ac9f1662ce4a99a8a2">StelProjectorEqualArea</a>, and <a class="el" href="classStelProjectorPerspective.html#a5e5aa86c4b386089f6f158e702ebdc27">StelProjectorPerspective</a>.</p>
+
+</div>
+</div>
+<a id="aa6eb2955e26c47a728fcdb04f53794cc"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa6eb2955e26c47a728fcdb04f53794cc">&#9670;&nbsp;</a></span>getScreenScale()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">float StelProjector::getScreenScale </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Get the scale factor for objects drawn on screen. </p>
+<p>This takes into account font size and the OS-given high-DPI scaling setting (see <a class="el" href="classStelProjector.html#aac84765957160701573d001245f2b14a" title="Get the number of device pixels per &quot;Device Independent Pixels&quot; (value is usually 1,...">getDevicePixelsPerPixel</a>). </p>
 
 </div>
 </div>
@@ -934,7 +957,7 @@ class&#160;</td><td class="memItemRight" valign="bottom"><b>StelCore</b></td></t
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Sun Sep 22 2024 21:34:55 for Stellarium by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1
+Generated on Sun Mar 23 2025 19:00:02 for Stellarium by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1
 </small></address>
 </body>
 </html>

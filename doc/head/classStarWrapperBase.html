@@ -48,7 +48,7 @@ $(function() {
 </div><!--header-->
 <div class="contents">
 
-<p>A Star (<a class="el" href="structStar1.html">Star1</a>,<a class="el" href="structStar2.html">Star2</a>,<a class="el" href="structStar3.html">Star3</a>,...) cannot be a <a class="el" href="classStelObject.html" title="The base abstract class for sky objects used in Stellarium like Stars, Planets, Constellations etc....">StelObject</a>.  
+<p>A <a class="el" href="structStar.html">Star</a> (<a class="el" href="structStar1.html">Star1</a>,<a class="el" href="structStar2.html">Star2</a>,<a class="el" href="structStar3.html">Star3</a>,...) cannot be a <a class="el" href="classStelObject.html" title="The base abstract class for sky objects used in Stellarium like Stars, Planets, Constellations etc....">StelObject</a>.  
  <a href="classStarWrapperBase.html#details">More...</a></p>
 
 <p><code>#include &lt;StarWrapper.hpp&gt;</code></p>
@@ -84,9 +84,9 @@ virtual float&#160;</td><td class="memItemRight" valign="bottom"><b>getBV</b> (v
 <tr class="memitem:aab275c32767521d5cb4618184681d0ce inherit pro_methods_classStelObject"><td class="memItemLeft" align="right" valign="top">QString&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classStelObject.html#aab275c32767521d5cb4618184681d0ce">getCommonInfoString</a> (const <a class="el" href="classStelCore.html">StelCore</a> *core, const InfoStringGroup &amp;flags) const</td></tr>
 <tr class="memdesc:aab275c32767521d5cb4618184681d0ce inherit pro_methods_classStelObject"><td class="mdescLeft">&#160;</td><td class="mdescRight">Format the positional info string containing J2000/of date/altaz/hour angle positions and constellation, sidereal time, etc.  <a href="classStelObject.html#aab275c32767521d5cb4618184681d0ce">More...</a><br /></td></tr>
 <tr class="separator:aab275c32767521d5cb4618184681d0ce inherit pro_methods_classStelObject"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a557aa5ab5579eb354ec3164b979c10b5 inherit pro_methods_classStelObject"><td class="memItemLeft" align="right" valign="top">virtual QString&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classStelObject.html#a557aa5ab5579eb354ec3164b979c10b5">getMagnitudeInfoString</a> (const <a class="el" href="classStelCore.html">StelCore</a> *core, const InfoStringGroup &amp;flags, const int decimals=1) const</td></tr>
-<tr class="memdesc:a557aa5ab5579eb354ec3164b979c10b5 inherit pro_methods_classStelObject"><td class="mdescLeft">&#160;</td><td class="mdescRight">Format the magnitude info string for the object.  <a href="classStelObject.html#a557aa5ab5579eb354ec3164b979c10b5">More...</a><br /></td></tr>
-<tr class="separator:a557aa5ab5579eb354ec3164b979c10b5 inherit pro_methods_classStelObject"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab3a899efd49117041fab7a8c973741a2 inherit pro_methods_classStelObject"><td class="memItemLeft" align="right" valign="top">virtual QString&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classStelObject.html#ab3a899efd49117041fab7a8c973741a2">getMagnitudeInfoString</a> (const <a class="el" href="classStelCore.html">StelCore</a> *core, const InfoStringGroup &amp;flags, const int decimals=1, const float &amp;magOffset=0.f) const</td></tr>
+<tr class="memdesc:ab3a899efd49117041fab7a8c973741a2 inherit pro_methods_classStelObject"><td class="mdescLeft">&#160;</td><td class="mdescRight">Format the magnitude info string for the object.  <a href="classStelObject.html#ab3a899efd49117041fab7a8c973741a2">More...</a><br /></td></tr>
+<tr class="separator:ab3a899efd49117041fab7a8c973741a2 inherit pro_methods_classStelObject"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a89c1c888d273b598a6fa8aed39836a52 inherit pro_methods_classStelObject"><td class="memItemLeft" align="right" valign="top">QString&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classStelObject.html#a89c1c888d273b598a6fa8aed39836a52">getSolarLunarInfoString</a> (const <a class="el" href="classStelCore.html">StelCore</a> *core, const InfoStringGroup &amp;flags) const</td></tr>
 <tr class="memdesc:a89c1c888d273b598a6fa8aed39836a52 inherit pro_methods_classStelObject"><td class="mdescLeft">&#160;</td><td class="mdescRight">Add a section to the InfoString with just horizontal data for the Sun and Moon, when observed from Earth.  <a href="classStelObject.html#a89c1c888d273b598a6fa8aed39836a52">More...</a><br /></td></tr>
 <tr class="separator:a89c1c888d273b598a6fa8aed39836a52 inherit pro_methods_classStelObject"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -220,9 +220,9 @@ float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="cla
 virtual float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classStelObject.html#ae91334c055ba90cbc808a1433421b67e">getVMagnitude</a> (const <a class="el" href="classStelCore.html">StelCore</a> *core) const</td></tr>
 <tr class="memdesc:ae91334c055ba90cbc808a1433421b67e inherit pub_methods_classStelObject"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return object's apparent V magnitude as seen from observer, without including extinction. <br /></td></tr>
 <tr class="separator:ae91334c055ba90cbc808a1433421b67e inherit pub_methods_classStelObject"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a53d70a9c0951fbe6e98bbc7690993ce3 inherit pub_methods_classStelObject"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classStelObject.html#a53d70a9c0951fbe6e98bbc7690993ce3">getVMagnitudeWithExtinction</a> (const <a class="el" href="classStelCore.html">StelCore</a> *core, const float knownVMag=-1000.f) const</td></tr>
-<tr class="memdesc:a53d70a9c0951fbe6e98bbc7690993ce3 inherit pub_methods_classStelObject"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return object's apparent V magnitude as seen from observer including extinction.  <a href="classStelObject.html#a53d70a9c0951fbe6e98bbc7690993ce3">More...</a><br /></td></tr>
-<tr class="separator:a53d70a9c0951fbe6e98bbc7690993ce3 inherit pub_methods_classStelObject"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abb53a5d5b2b5bd0f124b25269627131f inherit pub_methods_classStelObject"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classStelObject.html#abb53a5d5b2b5bd0f124b25269627131f">getVMagnitudeWithExtinction</a> (const <a class="el" href="classStelCore.html">StelCore</a> *core, const float knownVMag=-1000.f, const float &amp;magOffset=0.f) const</td></tr>
+<tr class="memdesc:abb53a5d5b2b5bd0f124b25269627131f inherit pub_methods_classStelObject"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return object's apparent V magnitude as seen from observer including extinction.  <a href="classStelObject.html#abb53a5d5b2b5bd0f124b25269627131f">More...</a><br /></td></tr>
+<tr class="separator:abb53a5d5b2b5bd0f124b25269627131f inherit pub_methods_classStelObject"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a2890825555c11860eaabf6155ea2a700 inherit pub_methods_classStelObject"><td class="memItemLeft" align="right" valign="top"><a id="a2890825555c11860eaabf6155ea2a700"></a>
 virtual float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classStelObject.html#a2890825555c11860eaabf6155ea2a700">getSelectPriority</a> (const <a class="el" href="classStelCore.html">StelCore</a> *) const</td></tr>
 <tr class="memdesc:a2890825555c11860eaabf6155ea2a700 inherit pub_methods_classStelObject"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return a priority value which is used to discriminate objects by priority As for magnitudes, the lower is the higher priority. <br /></td></tr>
@@ -261,7 +261,7 @@ static constexpr InfoStringGroup&#160;</td><td class="memItemRight" valign="bott
 <tr class="separator:a29d74342a8788611f1729477a8947965 inherit pub_static_attribs_classStelObject"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><p>A Star (<a class="el" href="structStar1.html">Star1</a>,<a class="el" href="structStar2.html">Star2</a>,<a class="el" href="structStar3.html">Star3</a>,...) cannot be a <a class="el" href="classStelObject.html" title="The base abstract class for sky objects used in Stellarium like Stars, Planets, Constellations etc....">StelObject</a>. </p>
+<div class="textblock"><p>A <a class="el" href="structStar.html">Star</a> (<a class="el" href="structStar1.html">Star1</a>,<a class="el" href="structStar2.html">Star2</a>,<a class="el" href="structStar3.html">Star3</a>,...) cannot be a <a class="el" href="classStelObject.html" title="The base abstract class for sky objects used in Stellarium like Stars, Planets, Constellations etc....">StelObject</a>. </p>
 <p>The additional overhead of having a dynamic type would simply be too much. Therefore the <a class="el" href="classStarWrapper.html">StarWrapper</a> is needed when returning Stars as StelObjects, e.g. for searching, and for constellations. The <a class="el" href="classStarWrapper.html">StarWrapper</a> is destroyed when it is not needed anymore, by utilizing reference counting. So there is no chance that more than a few hundreds of StarWrappers are alive simultanousely. Another reason for having the <a class="el" href="classStarWrapper.html">StarWrapper</a> is to encapsulate the differences between the different kinds of Stars (<a class="el" href="structStar1.html">Star1</a>,<a class="el" href="structStar2.html">Star2</a>,<a class="el" href="structStar3.html">Star3</a>). </p>
 </div><h2 class="groupheader">Member Function Documentation</h2>
 <a id="a77816b2e91ab2f405caa3d9e09f6077e"></a>
@@ -324,7 +324,7 @@ PlainText </li>
 
 <p>Implements <a class="el" href="classStelObject.html#aba01f4a7783fb557cb28bd8d1319a6b8">StelObject</a>.</p>
 
-<p>Reimplemented in <a class="el" href="classStarWrapper1.html#aa682a37700c0c541893d00350b9b1b6a">StarWrapper1</a>.</p>
+<p>Reimplemented in <a class="el" href="classStarWrapper3.html#ae1a80e289118ce7aa2dba74a6921b5e5">StarWrapper3</a>, <a class="el" href="classStarWrapper2.html#a04bcc71ce9dc4249bec21ee15cbdaa0a">StarWrapper2</a>, and <a class="el" href="classStarWrapper1.html#aa682a37700c0c541893d00350b9b1b6a">StarWrapper1</a>.</p>
 
 </div>
 </div>
@@ -357,14 +357,14 @@ PlainText </li>
 
 <p>Implements <a class="el" href="classStelObject.html#af0b5fe283961e1b2f363325f20716a50">StelObject</a>.</p>
 
-<p>Reimplemented in <a class="el" href="classStarWrapper1.html#af6e7b7c931a4244f5490aa5bcc5a41f0">StarWrapper1</a>.</p>
+<p>Reimplemented in <a class="el" href="classStarWrapper3.html#a6972ae5d118e5c5f1355d5d0d953f430">StarWrapper3</a>, <a class="el" href="classStarWrapper2.html#a719ab8b81084b3d811952d4fd7d2bc53">StarWrapper2</a>, and <a class="el" href="classStarWrapper1.html#af6e7b7c931a4244f5490aa5bcc5a41f0">StarWrapper1</a>.</p>
 
 </div>
 </div>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Sun Sep 22 2024 21:34:55 for Stellarium by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1
+Generated on Sun Mar 23 2025 19:00:02 for Stellarium by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1
 </small></address>
 </body>
 </html>

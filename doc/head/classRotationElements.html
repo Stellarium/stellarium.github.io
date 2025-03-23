@@ -51,6 +51,11 @@ $(function() {
 <div class="title">RotationElements Class Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
+
+<p>Class used to store rotational elements, i.e.  
+ <a href="classRotationElements.html#details">More...</a></p>
+
+<p><code>#include &lt;RotationElements.hpp&gt;</code></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="nested-classes"></a>
 Data Structures</h2></td></tr>
@@ -392,6 +397,9 @@ axisOriFuncType&#160;</td><td class="memItemRight" valign="bottom"><b>corrOri</b
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-static-attribs"></a>
 Static Public Attributes</h2></td></tr>
+<tr class="memitem:a41d631be4053ade0ce58559c8feebfab"><td class="memItemLeft" align="right" valign="top"><a id="a41d631be4053ade0ce58559c8feebfab"></a>
+static constexpr double&#160;</td><td class="memItemRight" valign="bottom"><b>J2000</b> = 2451545.0</td></tr>
+<tr class="separator:a41d631be4053ade0ce58559c8feebfab"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a0fcd96bb4e24565ff1e11d3209851614"><td class="memItemLeft" align="right" valign="top"><a id="a0fcd96bb4e24565ff1e11d3209851614"></a>
 static <a class="el" href="classRotationElements.html#structRotationElements_1_1PlanetCorrections">PlanetCorrections</a>&#160;</td><td class="memItemRight" valign="bottom"><b>planetCorrections</b></td></tr>
 <tr class="separator:a0fcd96bb4e24565ff1e11d3209851614"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -414,7 +422,16 @@ static double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" h
 <tr class="memdesc:ab438aed9dbd60a7ac12eb6554ac48006"><td class="mdescLeft">&#160;</td><td class="mdescRight">Annual drift of Great Red Spot position (degrees) <br /></td></tr>
 <tr class="separator:ab438aed9dbd60a7ac12eb6554ac48006"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
-<hr/><h2 class="groupheader">Data Structure Documentation</h2>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><p>Class used to store rotational elements, i.e. </p>
+<p>axis orientation for the planetary body. Data are read from ssystem_(major|minor).ini in SolarSystem.cpp::loadPlanets().</p>
+<p>Notes of early 2021: The original planet axis model in Stellarium seems to be an outdated model untraceable in the literature. Stellarium used to have elements w.r.t. VSOP87 (ecliptical) frame for planets, and elements w.r.t. the host planet's equator for planet moons: ascendingNode obliquity offset period We cannot remove these old data as long as some Moon orbits for the outer planets depend on them. The problem is that without a reference we have no idea whether any of these elements and algorithms are correct.</p>
+<p>IAU standards like the Report of the IAU Working Group on Cartographic Coordinates and Rotational elements 2009 (DOI:10.1007/s10569-010-9320-4) has axes given w.r.t. J2000 ICRF.</p>
+<p>Between V0.15 and 0.20.*, if the planet elements in ssystem.ini had elements "rot_pole_ra" and "rot_pole_de" given, the poles were transformed to ecliptically-based directions (VSOP87) obliquity/ascendingNode. But these were only ra/de_J2000 poles. Some axes have precession, which need to be modelled/updated. The new way (0.21+): We still allow using the previous 4 elements in <a class="el" href="classPlanet.html#a57aa7ad8c4ddeec94de56a28536fa192" title="Compute the transformation matrix from the local Planet coordinate to the parent Planet coordinate.">Planet::computeTransMatrix</a>(.,.) and <a class="el" href="classPlanet.html#a2b698358bc5c9dd6dab2d3550968bcab" title="Compute the axial z rotation (daily rotation around the polar axis) [degrees] to use from equatorial ...">Planet::getSiderealTime()</a>, but only if WGCCRE elements are not available.</p>
+<p>ra=ra0+T*ra1 de=de0+T*de1 ( --&gt; obliquity, ascendingNode) rot_rotation_offset [degrees] =W0 rot_periode [hours] = computed from rot_pole_W1[deg/day] if that exists. 360 [deg] / <em>rot</em> [hours] --&gt; 360 * <em>rot</em> / 24 [deg/hours]</p>
+<p>If rot_pole... values are given, then they are ICRF and transformed on the fly to VSOP87, stored in here.</p>
+<p>Since 0.21 we use the WGCCRE elements and orientations directly, so that axes behave properly. In addition, the objects with more complicated element behaviour are updated with two special functions. New keys in ssystem_*.ini, their storage in <a class="el" href="classRotationElements.html" title="Class used to store rotational elements, i.e.">RotationElements</a>, and their equivalents in the IAU report: rot_pole_ra [degrees] re.ra0 [rad] constant term for alpha_0 rot_pole_de [degrees] re.ra1 [rad/ct] constant term for delta_0 rot_pole_ra1 [degrees/cy] re.de0 [rad] T factor for alpha_0 rot_pole_de1 [degrees/cy] re.de1 [rad/ct] T factor for delta_0 rot_pole_W0 [degrees] re.W0 [degrees] constant term fo W. rot_pole_W1 [degrees/day] re.W1 [degrees/day] d factor for W </p>
+</div><hr/><h2 class="groupheader">Data Structure Documentation</h2>
 <a name="structRotationElements_1_1PlanetCorrections" id="structRotationElements_1_1PlanetCorrections"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#structRotationElements_1_1PlanetCorrections">&#9670;&nbsp;</a></span>RotationElements::PlanetCorrections</h2>
 
@@ -1007,7 +1024,7 @@ U9</td>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Sun Sep 22 2024 21:34:55 for Stellarium by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1
+Generated on Sun Mar 23 2025 19:00:02 for Stellarium by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1
 </small></address>
 </body>
 </html>
