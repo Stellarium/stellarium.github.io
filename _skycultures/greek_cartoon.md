@@ -2,7 +2,7 @@
 title: Perseus, Andromeda, and all the others
 author: Holger Kraemer
 classification: personal
-compat: 0.20+
+compat: 0.20-24.4
 skyculture_url: https://github.com/Stellarium/stellarium-data/releases/download/skycultures/greek_cartoon.zip
 image_url: /img/skycultures/greek_cartoon.jpg
 ---

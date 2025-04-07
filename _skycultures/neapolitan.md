@@ -4,7 +4,7 @@ region: Southern Europe
 author: UAN (Unione Astrofili Napoletani) - Gruppo Costellazioni
 classification: personal
 license: Creative Commons CC BY-NC-ND 4.0
-compat: 0.20+
+compat: 0.20-24.4
 skyculture_url: https://github.com/Stellarium/stellarium-data/releases/download/skycultures/neapolitan.zip
 image_url: /img/skycultures/neapolitan.jpg
 ---

@@ -2,7 +2,7 @@
 title: Hevelius
 author: Mark Crossley
 classification: single
-compat: 0.13+
+compat: 0.13-24.4
 skyculture_url: https://www.wilmslowastro.com/software/downloads/hevelius-v11.zip
 image_url: /img/skycultures/hevelius.jpg
 ---

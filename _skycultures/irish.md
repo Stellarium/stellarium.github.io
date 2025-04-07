@@ -2,7 +2,7 @@
 title: Irish
 author: Julie Ormonde, Alexander Wolf
 classification: personal
-compat: 0.20+
+compat: 0.20-24.4
 skyculture_url: https://github.com/Stellarium/stellarium-data/releases/download/skycultures/irish.zip
 image_url: /img/skycultures/irish.jpg
 ---
