@@ -21,7 +21,7 @@
   <td id="projectlogo"><img alt="Logo" src="stellarium-logo.png"/></td>
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">Stellarium
-   &#160;<span id="projectnumber">25.1</span>
+   &#160;<span id="projectnumber">25.2</span>
    </div>
   </td>
  </tr>
@@ -55,9 +55,9 @@ $(function() {
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:a5d392cea83cf29a67254dfb558d5f56a"><td class="memItemLeft" align="right" valign="top">virtual QList&lt; <a class="el" href="classQSharedPointerNoDelete.html">StelObjectP</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classStelObjectModule.html#a5d392cea83cf29a67254dfb558d5f56a">searchAround</a> (const <a class="el" href="classVector3.html">Vec3d</a> &amp;v, double limitFov, const <a class="el" href="classStelCore.html">StelCore</a> *core) const =0</td></tr>
-<tr class="memdesc:a5d392cea83cf29a67254dfb558d5f56a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Search for <a class="el" href="classStelObject.html" title="The base abstract class for sky objects used in Stellarium like Stars, Planets, Constellations etc....">StelObject</a> in an area around a specified point.  <a href="classStelObjectModule.html#a5d392cea83cf29a67254dfb558d5f56a">More...</a><br /></td></tr>
-<tr class="separator:a5d392cea83cf29a67254dfb558d5f56a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3f82c6bd4f1b8539ffdbc177c1d6e8a2"><td class="memItemLeft" align="right" valign="top">virtual QList&lt; <a class="el" href="classQSharedPointerNoDelete.html">StelObjectP</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classStelObjectModule.html#a3f82c6bd4f1b8539ffdbc177c1d6e8a2">searchAround</a> (const <a class="el" href="classVector3.html">Vec3d</a> &amp;v, double limitFov, const <a class="el" href="classStelCore.html">StelCore</a> *core) const</td></tr>
+<tr class="memdesc:a3f82c6bd4f1b8539ffdbc177c1d6e8a2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Search for <a class="el" href="classStelObject.html" title="The base abstract class for sky objects used in Stellarium like Stars, Planets, Constellations etc....">StelObject</a> in an area around a specified point.  <a href="classStelObjectModule.html#a3f82c6bd4f1b8539ffdbc177c1d6e8a2">More...</a><br /></td></tr>
+<tr class="separator:a3f82c6bd4f1b8539ffdbc177c1d6e8a2"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a618a45d5ffb1ddc1c0b35566ebfa3b54"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="classQSharedPointerNoDelete.html">StelObjectP</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classStelObjectModule.html#a618a45d5ffb1ddc1c0b35566ebfa3b54">searchByNameI18n</a> (const QString &amp;nameI18n) const =0</td></tr>
 <tr class="memdesc:a618a45d5ffb1ddc1c0b35566ebfa3b54"><td class="mdescLeft">&#160;</td><td class="mdescRight">Find a <a class="el" href="classStelObject.html" title="The base abstract class for sky objects used in Stellarium like Stars, Planets, Constellations etc....">StelObject</a> by name.  <a href="classStelObjectModule.html#a618a45d5ffb1ddc1c0b35566ebfa3b54">More...</a><br /></td></tr>
 <tr class="separator:a618a45d5ffb1ddc1c0b35566ebfa3b54"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -362,8 +362,8 @@ Additional Inherited Members</h2></td></tr>
 
 </div>
 </div>
-<a id="a5d392cea83cf29a67254dfb558d5f56a"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a5d392cea83cf29a67254dfb558d5f56a">&#9670;&nbsp;</a></span>searchAround()</h2>
+<a id="a3f82c6bd4f1b8539ffdbc177c1d6e8a2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3f82c6bd4f1b8539ffdbc177c1d6e8a2">&#9670;&nbsp;</a></span>searchAround()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -397,7 +397,7 @@ Additional Inherited Members</h2></td></tr>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
+<span class="mlabels"><span class="mlabel">virtual</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
@@ -412,8 +412,9 @@ Additional Inherited Members</h2></td></tr>
   </dd>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>the list of all the displayed objects contained in the defined zone. </dd></dl>
+<dl class="section note"><dt>Note</dt><dd>the default just returns an empty list. </dd></dl>
 
-<p>Implemented in <a class="el" href="classStarMgr.html#a7a0b40962053b8b8d6026d5d9d3fe998">StarMgr</a>, <a class="el" href="classSolarSystem.html#af0fb6ff9bd1514bb84b87eca54b19202">SolarSystem</a>, <a class="el" href="classNomenclatureMgr.html#a7824676a440369be31e3f13f87c378ee">NomenclatureMgr</a>, <a class="el" href="classNebulaMgr.html#accdc0642a6ae6b75c6d4510ff76b189f">NebulaMgr</a>, <a class="el" href="classHighlightMgr.html#a1563f8b0a0b33d915fb4e055ce90c1b8">HighlightMgr</a>, <a class="el" href="classCustomObjectMgr.html#a75db222b99cfbfb581ee3aed302210f5">CustomObjectMgr</a>, <a class="el" href="classConstellationMgr.html#acb5236751e9ae4ea5fd37cb224383d93">ConstellationMgr</a>, <a class="el" href="classAsterismMgr.html#a1e802988c1db900f5b7078d277e67b9d">AsterismMgr</a>, <a class="el" href="group__telescopeControl.html#a4cbb63c39320671ebb4a294426fef2c6">TelescopeControl</a>, <a class="el" href="group__historicalSupernovae.html#a810660c366a0696e7f050b2bc88397c0">Supernovae</a>, <a class="el" href="group__satellites.html#a5dc30fad3bee1a5fa46bf361f8fdfa06">Satellites</a>, <a class="el" href="group__quasars.html#ad227b04933ee66f5a7bda1a851058262">Quasars</a>, <a class="el" href="group__pulsars.html#a774328ed195c440531b0437761859cf4">Pulsars</a>, <a class="el" href="group__brightNovae.html#a68ec374e1fd7bc573779ff9b2ab5ff3c">Novae</a>, <a class="el" href="group__meteorShowers.html#a941e7d49e3a3078cf9ba1384fd113883">MeteorShowers</a>, and <a class="el" href="group__exoplanets.html#ab85aef93749e298367993f70cad144f0">Exoplanets</a>.</p>
+<p>Reimplemented in <a class="el" href="classStarMgr.html#a7a0b40962053b8b8d6026d5d9d3fe998">StarMgr</a>, <a class="el" href="classSolarSystem.html#af0fb6ff9bd1514bb84b87eca54b19202">SolarSystem</a>, <a class="el" href="classNomenclatureMgr.html#a7824676a440369be31e3f13f87c378ee">NomenclatureMgr</a>, <a class="el" href="classNebulaMgr.html#accdc0642a6ae6b75c6d4510ff76b189f">NebulaMgr</a>, <a class="el" href="classHighlightMgr.html#a1563f8b0a0b33d915fb4e055ce90c1b8">HighlightMgr</a>, <a class="el" href="classCustomObjectMgr.html#a75db222b99cfbfb581ee3aed302210f5">CustomObjectMgr</a>, <a class="el" href="classConstellationMgr.html#acb5236751e9ae4ea5fd37cb224383d93">ConstellationMgr</a>, <a class="el" href="group__telescopeControl.html#a4cbb63c39320671ebb4a294426fef2c6">TelescopeControl</a>, <a class="el" href="group__historicalSupernovae.html#a810660c366a0696e7f050b2bc88397c0">Supernovae</a>, <a class="el" href="group__satellites.html#a5dc30fad3bee1a5fa46bf361f8fdfa06">Satellites</a>, <a class="el" href="group__quasars.html#ad227b04933ee66f5a7bda1a851058262">Quasars</a>, <a class="el" href="group__pulsars.html#a774328ed195c440531b0437761859cf4">Pulsars</a>, <a class="el" href="group__brightNovae.html#a68ec374e1fd7bc573779ff9b2ab5ff3c">Novae</a>, <a class="el" href="group__meteorShowers.html#a941e7d49e3a3078cf9ba1384fd113883">MeteorShowers</a>, and <a class="el" href="group__exoplanets.html#ab85aef93749e298367993f70cad144f0">Exoplanets</a>.</p>
 
 </div>
 </div>
@@ -522,14 +523,14 @@ Additional Inherited Members</h2></td></tr>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>The matching <a class="el" href="classStelObject.html" title="The base abstract class for sky objects used in Stellarium like Stars, Planets, Constellations etc....">StelObject</a> if exists or the empty <a class="el" href="classStelObject.html" title="The base abstract class for sky objects used in Stellarium like Stars, Planets, Constellations etc....">StelObject</a> if not found. </dd></dl>
 
-<p>Implemented in <a class="el" href="classStarMgr.html#a06a05b0f52ac78fee833bd4bd829ed53">StarMgr</a>, <a class="el" href="classSolarSystem.html#a8aa8a6a7e40d1d76bc2afb2d6e94ed39">SolarSystem</a>, <a class="el" href="classNomenclatureMgr.html#aa328688aa5f347c9773e7e62d274a7a1">NomenclatureMgr</a>, <a class="el" href="classNebulaMgr.html#a6fa22f47efae32c349414021eab1e817">NebulaMgr</a>, <a class="el" href="classHighlightMgr.html#af6d0f5bc2edf32f8070a011cf7997944">HighlightMgr</a>, <a class="el" href="classCustomObjectMgr.html#af93a426f1dafe282c641361c7cb9cad1">CustomObjectMgr</a>, <a class="el" href="classConstellationMgr.html#a10d5bb54d55e13ee48e0650da28fa6d0">ConstellationMgr</a>, <a class="el" href="classAsterismMgr.html#a7590665cb495036a9c13587e6fda3b9e">AsterismMgr</a>, <a class="el" href="group__telescopeControl.html#acb18d101b6fcf7b07fb74c0271fdd6f7">TelescopeControl</a>, <a class="el" href="group__historicalSupernovae.html#aa39ff3db4437d90ab5e3b24fca0124af">Supernovae</a>, <a class="el" href="group__satellites.html#a6ecc193357ea74338042788194e84bc3">Satellites</a>, <a class="el" href="group__quasars.html#aa8186d93def1c2b64a13cbee066682ec">Quasars</a>, <a class="el" href="group__pulsars.html#ad40a114ed4838afac635a545793f822e">Pulsars</a>, <a class="el" href="group__brightNovae.html#af58bec0b2b8affd1154cb7f6e9a4784f">Novae</a>, <a class="el" href="group__meteorShowers.html#adb4aa527212af5f6ec3d0c04695c16a6">MeteorShowers</a>, and <a class="el" href="group__exoplanets.html#a07658c59e8b60c492bb996d8183e8f71">Exoplanets</a>.</p>
+<p>Implemented in <a class="el" href="classSolarSystem.html#a412f478450df1f231dd24e4f9a1256f9">SolarSystem</a>, <a class="el" href="classStarMgr.html#a06a05b0f52ac78fee833bd4bd829ed53">StarMgr</a>, <a class="el" href="classNomenclatureMgr.html#aa328688aa5f347c9773e7e62d274a7a1">NomenclatureMgr</a>, <a class="el" href="classNebulaMgr.html#a6fa22f47efae32c349414021eab1e817">NebulaMgr</a>, <a class="el" href="classHighlightMgr.html#af6d0f5bc2edf32f8070a011cf7997944">HighlightMgr</a>, <a class="el" href="classCustomObjectMgr.html#af93a426f1dafe282c641361c7cb9cad1">CustomObjectMgr</a>, <a class="el" href="classConstellationMgr.html#a10d5bb54d55e13ee48e0650da28fa6d0">ConstellationMgr</a>, <a class="el" href="classAsterismMgr.html#a7590665cb495036a9c13587e6fda3b9e">AsterismMgr</a>, <a class="el" href="group__telescopeControl.html#acb18d101b6fcf7b07fb74c0271fdd6f7">TelescopeControl</a>, <a class="el" href="group__historicalSupernovae.html#aa39ff3db4437d90ab5e3b24fca0124af">Supernovae</a>, <a class="el" href="group__satellites.html#a6ecc193357ea74338042788194e84bc3">Satellites</a>, <a class="el" href="group__quasars.html#aa8186d93def1c2b64a13cbee066682ec">Quasars</a>, <a class="el" href="group__pulsars.html#ad40a114ed4838afac635a545793f822e">Pulsars</a>, <a class="el" href="group__brightNovae.html#af58bec0b2b8affd1154cb7f6e9a4784f">Novae</a>, <a class="el" href="group__meteorShowers.html#adb4aa527212af5f6ec3d0c04695c16a6">MeteorShowers</a>, and <a class="el" href="group__exoplanets.html#a07658c59e8b60c492bb996d8183e8f71">Exoplanets</a>.</p>
 
 </div>
 </div>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Sun Mar 23 2025 19:00:02 for Stellarium by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1
+Generated on Sun Jun 22 2025 18:44:46 for Stellarium by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1
 </small></address>
 </body>
 </html>

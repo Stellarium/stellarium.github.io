@@ -21,7 +21,7 @@
   <td id="projectlogo"><img alt="Logo" src="stellarium-logo.png"/></td>
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">Stellarium
-   &#160;<span id="projectnumber">25.1</span>
+   &#160;<span id="projectnumber">25.2</span>
    </div>
   </td>
  </tr>
@@ -69,7 +69,7 @@ Data Structures</h2></td></tr>
 Public Types</h2></td></tr>
 <tr class="memitem:ad669cc932a8770face3267bd600192e9"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classLandscape.html#ad669cc932a8770face3267bd600192e9">horizonListMode</a> { <br />
 &#160;&#160;<b>invalid</b> =-1
-, <b>azDeg_altDeg</b> = 0
+, <a class="el" href="classLandscape.html#ad669cc932a8770face3267bd600192e9aaed10cccc18bd13ea860dbc214c0053f">azDeg_altDeg</a> = 0
 , <a class="el" href="classLandscape.html#ad669cc932a8770face3267bd600192e9a0a55b5bb9480013a741e2435cbf4def5">azDeg_zdDeg</a> = 1
 , <a class="el" href="classLandscape.html#ad669cc932a8770face3267bd600192e9a12374cb3b25185a4ad53141806d79494">azRad_altRad</a> = 2
 , <br />
@@ -163,11 +163,11 @@ QString&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="c
 <tr class="separator:aa2364751d2c782806f655b8ca7f1d357"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af06f81cd3c2edb880c9b5680d635f8e1"><td class="memItemLeft" align="right" valign="top"><a id="af06f81cd3c2edb880c9b5680d635f8e1"></a>
 const <a class="el" href="classStelLocation.html">StelLocation</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classLandscape.html#af06f81cd3c2edb880c9b5680d635f8e1">getLocation</a> () const</td></tr>
-<tr class="memdesc:af06f81cd3c2edb880c9b5680d635f8e1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return the associated location (may be empty!) <br /></td></tr>
+<tr class="memdesc:af06f81cd3c2edb880c9b5680d635f8e1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return the associated location (may be empty/invalid!) <br /></td></tr>
 <tr class="separator:af06f81cd3c2edb880c9b5680d635f8e1"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a016c29a73d0c45af6a3282f0247ed7d7"><td class="memItemLeft" align="right" valign="top"><a id="a016c29a73d0c45af6a3282f0247ed7d7"></a>
 bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classLandscape.html#a016c29a73d0c45af6a3282f0247ed7d7">hasLocation</a> () const</td></tr>
-<tr class="memdesc:a016c29a73d0c45af6a3282f0247ed7d7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return if the location is valid (a valid location has a valid planetName!) <br /></td></tr>
+<tr class="memdesc:a016c29a73d0c45af6a3282f0247ed7d7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return if the location is valid. <br /></td></tr>
 <tr class="separator:a016c29a73d0c45af6a3282f0247ed7d7"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a6b50dfb04e80328ca983025759adad95"><td class="memItemLeft" align="right" valign="top"><a id="a6b50dfb04e80328ca983025759adad95"></a>
 QVariant&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classLandscape.html#a6b50dfb04e80328ca983025759adad95">getDefaultLightPollutionLuminance</a> () const</td></tr>
@@ -277,98 +277,99 @@ std::unique_ptr&lt; QOpenGLShaderProgram &gt;&#160;</td><td class="memItemRight"
 double&#160;</td><td class="memItemRight" valign="bottom"><b>radius</b></td></tr>
 <tr class="separator:adbd6608011e47af838d113153613b999"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a5c370ac06ac51ce8b06a54e61785e36c"><td class="memItemLeft" align="right" valign="top"><a id="a5c370ac06ac51ce8b06a54e61785e36c"></a>
-QString&#160;</td><td class="memItemRight" valign="bottom"><b>name</b></td></tr>
+QString&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classLandscape.html#a5c370ac06ac51ce8b06a54e61785e36c">name</a></td></tr>
+<tr class="memdesc:a5c370ac06ac51ce8b06a54e61785e36c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Read from landscape.ini:[landscape]name. <br /></td></tr>
 <tr class="separator:a5c370ac06ac51ce8b06a54e61785e36c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab8ea1d5d833c35ca16faee2d13362026"><td class="memItemLeft" align="right" valign="top"><a id="ab8ea1d5d833c35ca16faee2d13362026"></a>
 QString&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classLandscape.html#ab8ea1d5d833c35ca16faee2d13362026">author</a></td></tr>
-<tr class="memdesc:ab8ea1d5d833c35ca16faee2d13362026"><td class="mdescLeft">&#160;</td><td class="mdescRight">Read from landscape.ini:[landscape]name. <br /></td></tr>
+<tr class="memdesc:ab8ea1d5d833c35ca16faee2d13362026"><td class="mdescLeft">&#160;</td><td class="mdescRight">Read from landscape.ini:[landscape]author. <br /></td></tr>
 <tr class="separator:ab8ea1d5d833c35ca16faee2d13362026"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a5801cbb202fc75666dad7c88f3c13077"><td class="memItemLeft" align="right" valign="top"><a id="a5801cbb202fc75666dad7c88f3c13077"></a>
 QString&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classLandscape.html#a5801cbb202fc75666dad7c88f3c13077">description</a></td></tr>
-<tr class="memdesc:a5801cbb202fc75666dad7c88f3c13077"><td class="mdescLeft">&#160;</td><td class="mdescRight">Read from landscape.ini:[landscape]author. <br /></td></tr>
+<tr class="memdesc:a5801cbb202fc75666dad7c88f3c13077"><td class="mdescLeft">&#160;</td><td class="mdescRight">Read from landscape.ini:[landscape]description. <br /></td></tr>
 <tr class="separator:a5801cbb202fc75666dad7c88f3c13077"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab6a2630c70675db0dbfafbe48d6923ee"><td class="memItemLeft" align="right" valign="top"><a id="ab6a2630c70675db0dbfafbe48d6923ee"></a>
 QString&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classLandscape.html#ab6a2630c70675db0dbfafbe48d6923ee">id</a></td></tr>
-<tr class="memdesc:ab6a2630c70675db0dbfafbe48d6923ee"><td class="mdescLeft">&#160;</td><td class="mdescRight">Read from landscape.ini:[landscape]description. <br /></td></tr>
+<tr class="memdesc:ab6a2630c70675db0dbfafbe48d6923ee"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set during load. Required for consistent caching. <br /></td></tr>
 <tr class="separator:ab6a2630c70675db0dbfafbe48d6923ee"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aba83966a5cc0cc9b476e7f5307eb32ad"><td class="memItemLeft" align="right" valign="top"><a id="aba83966a5cc0cc9b476e7f5307eb32ad"></a>
 float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classLandscape.html#aba83966a5cc0cc9b476e7f5307eb32ad">minBrightness</a></td></tr>
-<tr class="memdesc:aba83966a5cc0cc9b476e7f5307eb32ad"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set during load. Required for consistent caching. <br /></td></tr>
+<tr class="memdesc:aba83966a5cc0cc9b476e7f5307eb32ad"><td class="mdescLeft">&#160;</td><td class="mdescRight">Read from landscape.ini:[landscape]minimal_brightness. Allows minimum visibility that cannot be underpowered. <br /></td></tr>
 <tr class="separator:aba83966a5cc0cc9b476e7f5307eb32ad"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:afae289c38275105e0fff0a544f7c291d"><td class="memItemLeft" align="right" valign="top"><a id="afae289c38275105e0fff0a544f7c291d"></a>
 float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classLandscape.html#afae289c38275105e0fff0a544f7c291d">landscapeBrightness</a></td></tr>
-<tr class="memdesc:afae289c38275105e0fff0a544f7c291d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Read from landscape.ini:[landscape]minimal_brightness. Allows minimum visibility that cannot be underpowered. <br /></td></tr>
+<tr class="memdesc:afae289c38275105e0fff0a544f7c291d"><td class="mdescLeft">&#160;</td><td class="mdescRight">brightness [0..1] to draw the landscape. Computed by the <a class="el" href="classLandscapeMgr.html" title="Manages all the rendering at the level of the observer&#39;s surroundings.">LandscapeMgr</a>. <br /></td></tr>
 <tr class="separator:afae289c38275105e0fff0a544f7c291d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a0e4b7fe10460aa13b299a943fe1aa7b7"><td class="memItemLeft" align="right" valign="top"><a id="a0e4b7fe10460aa13b299a943fe1aa7b7"></a>
 <a class="el" href="classVector3.html">Vec3f</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classLandscape.html#a0e4b7fe10460aa13b299a943fe1aa7b7">landscapeTint</a></td></tr>
-<tr class="memdesc:a0e4b7fe10460aa13b299a943fe1aa7b7"><td class="mdescLeft">&#160;</td><td class="mdescRight">brightness [0..1] to draw the landscape. Computed by the <a class="el" href="classLandscapeMgr.html" title="Manages all the rendering at the level of the observer&#39;s surroundings.">LandscapeMgr</a>. <br /></td></tr>
+<tr class="memdesc:a0e4b7fe10460aa13b299a943fe1aa7b7"><td class="mdescLeft">&#160;</td><td class="mdescRight">color tint to draw the landscape (daylight texture only). Nice for sunrise/sunset. <br /></td></tr>
 <tr class="separator:a0e4b7fe10460aa13b299a943fe1aa7b7"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a61f7b7ff53f3909d695218f26dfdd60f"><td class="memItemLeft" align="right" valign="top"><a id="a61f7b7ff53f3909d695218f26dfdd60f"></a>
 float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classLandscape.html#a61f7b7ff53f3909d695218f26dfdd60f">lightScapeBrightness</a></td></tr>
-<tr class="memdesc:a61f7b7ff53f3909d695218f26dfdd60f"><td class="mdescLeft">&#160;</td><td class="mdescRight">color tint to draw the landscape (daylight texture only). Nice for sunrise/sunset. <br /></td></tr>
+<tr class="memdesc:a61f7b7ff53f3909d695218f26dfdd60f"><td class="mdescLeft">&#160;</td><td class="mdescRight">can be used to draw nightscape texture (e.g. city light pollution), if available. Computed by the <a class="el" href="classLandscapeMgr.html" title="Manages all the rendering at the level of the observer&#39;s surroundings.">LandscapeMgr</a>. <br /></td></tr>
 <tr class="separator:a61f7b7ff53f3909d695218f26dfdd60f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a681b9adac67b2694a0c5aa78cb96b174"><td class="memItemLeft" align="right" valign="top"><a id="a681b9adac67b2694a0c5aa78cb96b174"></a>
 bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classLandscape.html#a681b9adac67b2694a0c5aa78cb96b174">validLandscape</a></td></tr>
-<tr class="memdesc:a681b9adac67b2694a0c5aa78cb96b174"><td class="mdescLeft">&#160;</td><td class="mdescRight">can be used to draw nightscape texture (e.g. city light pollution), if available. Computed by the <a class="el" href="classLandscapeMgr.html" title="Manages all the rendering at the level of the observer&#39;s surroundings.">LandscapeMgr</a>. <br /></td></tr>
+<tr class="memdesc:a681b9adac67b2694a0c5aa78cb96b174"><td class="mdescLeft">&#160;</td><td class="mdescRight">was a landscape loaded properly? <br /></td></tr>
 <tr class="separator:a681b9adac67b2694a0c5aa78cb96b174"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a5132f458932a79c5518c722400e74aa9"><td class="memItemLeft" align="right" valign="top"><a id="a5132f458932a79c5518c722400e74aa9"></a>
 <a class="el" href="classLinearFader.html">LinearFader</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classLandscape.html#a5132f458932a79c5518c722400e74aa9">landFader</a></td></tr>
-<tr class="memdesc:a5132f458932a79c5518c722400e74aa9"><td class="mdescLeft">&#160;</td><td class="mdescRight">was a landscape loaded properly? <br /></td></tr>
+<tr class="memdesc:a5132f458932a79c5518c722400e74aa9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Used to slowly fade in/out landscape painting. <br /></td></tr>
 <tr class="separator:a5132f458932a79c5518c722400e74aa9"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af170b63fbeb4bc25b7d26425d6d608d3"><td class="memItemLeft" align="right" valign="top"><a id="af170b63fbeb4bc25b7d26425d6d608d3"></a>
 <a class="el" href="classLinearFader.html">LinearFader</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classLandscape.html#af170b63fbeb4bc25b7d26425d6d608d3">fogFader</a></td></tr>
-<tr class="memdesc:af170b63fbeb4bc25b7d26425d6d608d3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Used to slowly fade in/out landscape painting. <br /></td></tr>
+<tr class="memdesc:af170b63fbeb4bc25b7d26425d6d608d3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Used to slowly fade in/out fog painting. <br /></td></tr>
 <tr class="separator:af170b63fbeb4bc25b7d26425d6d608d3"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae38fdfb5bbe8570e74346b2fbde0fb8f"><td class="memItemLeft" align="right" valign="top"><a id="ae38fdfb5bbe8570e74346b2fbde0fb8f"></a>
 unsigned int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classLandscape.html#ae38fdfb5bbe8570e74346b2fbde0fb8f">rows</a></td></tr>
-<tr class="memdesc:ae38fdfb5bbe8570e74346b2fbde0fb8f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Used to slowly fade in/out landscape feature labels. <br /></td></tr>
+<tr class="memdesc:ae38fdfb5bbe8570e74346b2fbde0fb8f"><td class="mdescLeft">&#160;</td><td class="mdescRight">horizontal rows. May be given in landscape.ini:[landscape]tesselate_rows. More indicates higher accuracy, but is slower. <br /></td></tr>
 <tr class="separator:ae38fdfb5bbe8570e74346b2fbde0fb8f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a2e46544e8d149246634f7323a0a1bcc7"><td class="memItemLeft" align="right" valign="top"><a id="a2e46544e8d149246634f7323a0a1bcc7"></a>
 unsigned int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classLandscape.html#a2e46544e8d149246634f7323a0a1bcc7">cols</a></td></tr>
-<tr class="memdesc:a2e46544e8d149246634f7323a0a1bcc7"><td class="mdescLeft">&#160;</td><td class="mdescRight">horizontal rows. May be given in landscape.ini:[landscape]tesselate_rows. More indicates higher accuracy, but is slower. <br /></td></tr>
+<tr class="memdesc:a2e46544e8d149246634f7323a0a1bcc7"><td class="mdescLeft">&#160;</td><td class="mdescRight">vertical columns. May be given in landscape.ini:[landscape]tesselate_cols. More indicates higher accuracy, but is slower. <br /></td></tr>
 <tr class="separator:a2e46544e8d149246634f7323a0a1bcc7"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac40c7bac9e1f7b22c8dbf0652c75aa81"><td class="memItemLeft" align="right" valign="top"><a id="ac40c7bac9e1f7b22c8dbf0652c75aa81"></a>
 float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classLandscape.html#ac40c7bac9e1f7b22c8dbf0652c75aa81">angleRotateZ</a></td></tr>
-<tr class="memdesc:ac40c7bac9e1f7b22c8dbf0652c75aa81"><td class="mdescLeft">&#160;</td><td class="mdescRight">vertical columns. May be given in landscape.ini:[landscape]tesselate_cols. More indicates higher accuracy, but is slower. <br /></td></tr>
+<tr class="memdesc:ac40c7bac9e1f7b22c8dbf0652c75aa81"><td class="mdescLeft">&#160;</td><td class="mdescRight">[radians] if pano does not have its left border in the east, rotate in azimuth. Configured in landscape.ini[landscape]angle_rotatez (or decor_angle_rotatez for old_style landscapes) <br /></td></tr>
 <tr class="separator:ac40c7bac9e1f7b22c8dbf0652c75aa81"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab294162e7f4e92f6ba129bcfa3ccfe54"><td class="memItemLeft" align="right" valign="top"><a id="ab294162e7f4e92f6ba129bcfa3ccfe54"></a>
-float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classLandscape.html#ab294162e7f4e92f6ba129bcfa3ccfe54">angleRotateZOffset</a></td></tr>
-<tr class="memdesc:ab294162e7f4e92f6ba129bcfa3ccfe54"><td class="mdescLeft">&#160;</td><td class="mdescRight">[radians] if pano does not have its left border in the east, rotate in azimuth. Configured in landscape.ini[landscape]angle_rotatez (or decor_angle_rotatez for old_style landscapes) <br /></td></tr>
+<tr class="memitem:ab294162e7f4e92f6ba129bcfa3ccfe54"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classLandscape.html#ab294162e7f4e92f6ba129bcfa3ccfe54">angleRotateZOffset</a></td></tr>
+<tr class="memdesc:ab294162e7f4e92f6ba129bcfa3ccfe54"><td class="mdescLeft">&#160;</td><td class="mdescRight">[radians] This is a rotation changeable at runtime via setZRotation (called by <a class="el" href="classLandscapeMgr.html#acf8ed76c3c54942450c7af185a451fca" title="Set the rotation of the landscape about the z-axis.">LandscapeMgr::setZRotation</a>).  <a href="classLandscape.html#ab294162e7f4e92f6ba129bcfa3ccfe54">More...</a><br /></td></tr>
 <tr class="separator:ab294162e7f4e92f6ba129bcfa3ccfe54"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aad1281f81f9d525ab9722bdc7a873398"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classLandscape.html#aad1281f81f9d525ab9722bdc7a873398">sinMinAltitudeLimit</a></td></tr>
-<tr class="memdesc:aad1281f81f9d525ab9722bdc7a873398"><td class="mdescLeft">&#160;</td><td class="mdescRight">[radians] This is a rotation changeable at runtime via setZRotation (called by <a class="el" href="classLandscapeMgr.html#acf8ed76c3c54942450c7af185a451fca" title="Set the rotation of the landscape about the z-axis.">LandscapeMgr::setZRotation</a>).  <a href="classLandscape.html#aad1281f81f9d525ab9722bdc7a873398">More...</a><br /></td></tr>
+<tr class="memitem:aad1281f81f9d525ab9722bdc7a873398"><td class="memItemLeft" align="right" valign="top"><a id="aad1281f81f9d525ab9722bdc7a873398"></a>
+double&#160;</td><td class="memItemRight" valign="bottom"><b>sinMinAltitudeLimit</b></td></tr>
 <tr class="separator:aad1281f81f9d525ab9722bdc7a873398"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:abbe8f573ae0e590f15aff5738c7a3767"><td class="memItemLeft" align="right" valign="top"><a id="abbe8f573ae0e590f15aff5738c7a3767"></a>
-<a class="el" href="classStelLocation.html">StelLocation</a>&#160;</td><td class="memItemRight" valign="bottom"><b>location</b></td></tr>
+<a class="el" href="classStelLocation.html">StelLocation</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classLandscape.html#abbe8f573ae0e590f15aff5738c7a3767">location</a></td></tr>
+<tr class="memdesc:abbe8f573ae0e590f15aff5738c7a3767"><td class="mdescLeft">&#160;</td><td class="mdescRight">OPTIONAL. If present, can be used to set location. <br /></td></tr>
 <tr class="separator:abbe8f573ae0e590f15aff5738c7a3767"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a9456d92fc935d36e26ba79a25a5d35ab"><td class="memItemLeft" align="right" valign="top">QVariant&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classLandscape.html#a9456d92fc935d36e26ba79a25a5d35ab">defaultLightPollutionLuminance</a></td></tr>
-<tr class="memdesc:a9456d92fc935d36e26ba79a25a5d35ab"><td class="mdescLeft">&#160;</td><td class="mdescRight">OPTIONAL. If present, can be used to set location.  <a href="classLandscape.html#a9456d92fc935d36e26ba79a25a5d35ab">More...</a><br /></td></tr>
+<tr class="memdesc:a9456d92fc935d36e26ba79a25a5d35ab"><td class="mdescLeft">&#160;</td><td class="mdescRight">May be given in landscape.ini:light_pollution_luminance in cd/m².  <a href="classLandscape.html#a9456d92fc935d36e26ba79a25a5d35ab">More...</a><br /></td></tr>
 <tr class="separator:a9456d92fc935d36e26ba79a25a5d35ab"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a71f9f926b2784d5e52c5bd8c2863b34b"><td class="memItemLeft" align="right" valign="top"><a id="a71f9f926b2784d5e52c5bd8c2863b34b"></a>
-int&#160;</td><td class="memItemRight" valign="bottom"><b>defaultFogSetting</b></td></tr>
+int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classLandscape.html#a71f9f926b2784d5e52c5bd8c2863b34b">defaultFogSetting</a></td></tr>
+<tr class="memdesc:a71f9f926b2784d5e52c5bd8c2863b34b"><td class="mdescLeft">&#160;</td><td class="mdescRight">May be given in landscape.ini:[location]display_fog: -1(no change), 0(off), 1(on). Default: -1. <br /></td></tr>
 <tr class="separator:a71f9f926b2784d5e52c5bd8c2863b34b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae9e7f8360cef4cb30968c564f56f8f22"><td class="memItemLeft" align="right" valign="top"><a id="ae9e7f8360cef4cb30968c564f56f8f22"></a>
 double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classLandscape.html#ae9e7f8360cef4cb30968c564f56f8f22">defaultExtinctionCoefficient</a></td></tr>
-<tr class="memdesc:ae9e7f8360cef4cb30968c564f56f8f22"><td class="mdescLeft">&#160;</td><td class="mdescRight">May be given in landscape.ini:[location]display_fog: -1(no change), 0(off), 1(on). Default: -1. <br /></td></tr>
+<tr class="memdesc:ae9e7f8360cef4cb30968c564f56f8f22"><td class="mdescLeft">&#160;</td><td class="mdescRight">May be given in landscape.ini:[location]atmospheric_extinction_coefficient. Default -1 (no change). <br /></td></tr>
 <tr class="separator:ae9e7f8360cef4cb30968c564f56f8f22"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a1870e531bfdafe396681b33a87123b24"><td class="memItemLeft" align="right" valign="top"><a id="a1870e531bfdafe396681b33a87123b24"></a>
 double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classLandscape.html#a1870e531bfdafe396681b33a87123b24">defaultTemperature</a></td></tr>
-<tr class="memdesc:a1870e531bfdafe396681b33a87123b24"><td class="mdescLeft">&#160;</td><td class="mdescRight">May be given in landscape.ini:[location]atmospheric_extinction_coefficient. Default -1 (no change). <br /></td></tr>
+<tr class="memdesc:a1870e531bfdafe396681b33a87123b24"><td class="mdescLeft">&#160;</td><td class="mdescRight">[Celsius] May be given in landscape.ini:[location]atmospheric_temperature. default: -1000.0 (no change) <br /></td></tr>
 <tr class="separator:a1870e531bfdafe396681b33a87123b24"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a28996c554cc469e5ea5de5bb41b34080"><td class="memItemLeft" align="right" valign="top"><a id="a28996c554cc469e5ea5de5bb41b34080"></a>
 double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classLandscape.html#a28996c554cc469e5ea5de5bb41b34080">defaultPressure</a></td></tr>
-<tr class="memdesc:a28996c554cc469e5ea5de5bb41b34080"><td class="mdescLeft">&#160;</td><td class="mdescRight">[Celsius] May be given in landscape.ini:[location]atmospheric_temperature. default: -1000.0 (no change) <br /></td></tr>
+<tr class="memdesc:a28996c554cc469e5ea5de5bb41b34080"><td class="mdescLeft">&#160;</td><td class="mdescRight">[mbar] May be given in landscape.ini:[location]atmospheric_pressure. Default -2 to indicate "no change"; use -1.0 to compute from [location]/altitude). <br /></td></tr>
 <tr class="separator:a28996c554cc469e5ea5de5bb41b34080"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a7b2c1a9d744136a0633ccbadb9e4a5bb"><td class="memItemLeft" align="right" valign="top"><a id="a7b2c1a9d744136a0633ccbadb9e4a5bb"></a>
-<a class="el" href="classSphericalRegionP.html">SphericalRegionP</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classLandscape.html#a7b2c1a9d744136a0633ccbadb9e4a5bb">horizonPolygon</a></td></tr>
-<tr class="memdesc:a7b2c1a9d744136a0633ccbadb9e4a5bb"><td class="mdescLeft">&#160;</td><td class="mdescRight">[mbar] May be given in landscape.ini:[location]atmospheric_pressure. Default -1.0 (compute from [location]/altitude), use -2 to indicate "no change". <br /></td></tr>
+<tr class="memitem:a7b2c1a9d744136a0633ccbadb9e4a5bb"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classSphericalRegionP.html">SphericalRegionP</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classLandscape.html#a7b2c1a9d744136a0633ccbadb9e4a5bb">horizonPolygon</a></td></tr>
+<tr class="memdesc:a7b2c1a9d744136a0633ccbadb9e4a5bb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Optional element describing the horizon line.  <a href="classLandscape.html#a7b2c1a9d744136a0633ccbadb9e4a5bb">More...</a><br /></td></tr>
 <tr class="separator:a7b2c1a9d744136a0633ccbadb9e4a5bb"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ade5f02d147237ada15f48ec87db6de8f"><td class="memItemLeft" align="right" valign="top"><a id="ade5f02d147237ada15f48ec87db6de8f"></a>
-QList&lt; <a class="el" href="classLandscape.html#structLandscape_1_1LandscapeLabel">LandscapeLabel</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classLandscape.html#ade5f02d147237ada15f48ec87db6de8f">landscapeLabels</a></td></tr>
-<tr class="memdesc:ade5f02d147237ada15f48ec87db6de8f"><td class="mdescLeft">&#160;</td><td class="mdescRight">[0...5] used to draw the horizon polygon, if defined. Set 0 to switch off. <br /></td></tr>
+QList&lt; <a class="el" href="classLandscape.html#structLandscape_1_1LandscapeLabel">LandscapeLabel</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>landscapeLabels</b></td></tr>
 <tr class="separator:ade5f02d147237ada15f48ec87db6de8f"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a43e1b6c6b3ee561c2d7fbf40e634d21c"><td class="memItemLeft" align="right" valign="top">unsigned int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classLandscape.html#a43e1b6c6b3ee561c2d7fbf40e634d21c">memorySize</a></td></tr>
-<tr class="memdesc:a43e1b6c6b3ee561c2d7fbf40e634d21c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Rotation angle for landscape labels, degrees. Useful for landscapes with many labels.  <a href="classLandscape.html#a43e1b6c6b3ee561c2d7fbf40e634d21c">More...</a><br /></td></tr>
+<tr class="memitem:a43e1b6c6b3ee561c2d7fbf40e634d21c"><td class="memItemLeft" align="right" valign="top"><a id="a43e1b6c6b3ee561c2d7fbf40e634d21c"></a>
+unsigned int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classLandscape.html#a43e1b6c6b3ee561c2d7fbf40e634d21c">memorySize</a></td></tr>
+<tr class="memdesc:a43e1b6c6b3ee561c2d7fbf40e634d21c"><td class="mdescLeft">&#160;</td><td class="mdescRight">holds an approximate value of memory consumption (for cache cost estimate) <br /></td></tr>
 <tr class="separator:a43e1b6c6b3ee561c2d7fbf40e634d21c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a6d3843edd88d07a58b8183ebcaf6156d"><td class="memItemLeft" align="right" valign="top"><a id="a6d3843edd88d07a58b8183ebcaf6156d"></a>
 bool&#160;</td><td class="memItemRight" valign="bottom"><b>multisamplingEnabled_</b></td></tr>
@@ -381,32 +382,34 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><b>initialized</b> = fal
 Static Protected Attributes</h2></td></tr>
 <tr class="memitem:afcb65cdb544c36dd229a8a5f2f116f26"><td class="memItemLeft" align="right" valign="top"><a id="afcb65cdb544c36dd229a8a5f2f116f26"></a>
 static <a class="el" href="classLinearFader.html">LinearFader</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classLandscape.html#afcb65cdb544c36dd229a8a5f2f116f26">illumFader</a></td></tr>
-<tr class="memdesc:afcb65cdb544c36dd229a8a5f2f116f26"><td class="mdescLeft">&#160;</td><td class="mdescRight">Used to slowly fade in/out fog painting. <br /></td></tr>
+<tr class="memdesc:afcb65cdb544c36dd229a8a5f2f116f26"><td class="mdescLeft">&#160;</td><td class="mdescRight">Used to slowly fade in/out illumination painting. <br /></td></tr>
 <tr class="separator:afcb65cdb544c36dd229a8a5f2f116f26"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a8897360e0391f6d52c839234313c6bad"><td class="memItemLeft" align="right" valign="top"><a id="a8897360e0391f6d52c839234313c6bad"></a>
 static <a class="el" href="classLinearFader.html">LinearFader</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classLandscape.html#a8897360e0391f6d52c839234313c6bad">labelFader</a></td></tr>
-<tr class="memdesc:a8897360e0391f6d52c839234313c6bad"><td class="mdescLeft">&#160;</td><td class="mdescRight">Used to slowly fade in/out illumination painting. <br /></td></tr>
+<tr class="memdesc:a8897360e0391f6d52c839234313c6bad"><td class="mdescLeft">&#160;</td><td class="mdescRight">Used to slowly fade in/out landscape feature labels. <br /></td></tr>
 <tr class="separator:a8897360e0391f6d52c839234313c6bad"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a5b81d3314c82b936522227b276804716"><td class="memItemLeft" align="right" valign="top"><a id="a5b81d3314c82b936522227b276804716"></a>
 static double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classLandscape.html#a5b81d3314c82b936522227b276804716">landscapeTransparency</a></td></tr>
 <tr class="memdesc:a5b81d3314c82b936522227b276804716"><td class="mdescLeft">&#160;</td><td class="mdescRight">Minimal altitude of landscape cover. Can be used to construct bounding caps, so that e.g. no stars are drawn below this altitude. Default -0.035, i.e. sin(-2 degrees). <br /></td></tr>
 <tr class="separator:a5b81d3314c82b936522227b276804716"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae0a15ff6c548065dfcec0315286677b9"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="classVector3.html">Vec3f</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classLandscape.html#ae0a15ff6c548065dfcec0315286677b9">horizonPolygonLineColor</a></td></tr>
-<tr class="memdesc:ae0a15ff6c548065dfcec0315286677b9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Optional element describing the horizon line.  <a href="classLandscape.html#ae0a15ff6c548065dfcec0315286677b9">More...</a><br /></td></tr>
+<tr class="memdesc:ae0a15ff6c548065dfcec0315286677b9"><td class="mdescLeft">&#160;</td><td class="mdescRight">for all horizon types, the horizonPolygon line, if specified, will be drawn in this color  <a href="classLandscape.html#ae0a15ff6c548065dfcec0315286677b9">More...</a><br /></td></tr>
 <tr class="separator:ae0a15ff6c548065dfcec0315286677b9"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a986a2822d53465e5def535ec6da4de23"><td class="memItemLeft" align="right" valign="top">static int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classLandscape.html#a986a2822d53465e5def535ec6da4de23">horizonPolygonLineThickness</a></td></tr>
-<tr class="memdesc:a986a2822d53465e5def535ec6da4de23"><td class="mdescLeft">&#160;</td><td class="mdescRight">for all horizon types, the horizonPolygon line, if specified, will be drawn in this color  <a href="classLandscape.html#a986a2822d53465e5def535ec6da4de23">More...</a><br /></td></tr>
+<tr class="memitem:a986a2822d53465e5def535ec6da4de23"><td class="memItemLeft" align="right" valign="top"><a id="a986a2822d53465e5def535ec6da4de23"></a>
+static int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classLandscape.html#a986a2822d53465e5def535ec6da4de23">horizonPolygonLineThickness</a></td></tr>
+<tr class="memdesc:a986a2822d53465e5def535ec6da4de23"><td class="mdescLeft">&#160;</td><td class="mdescRight">[0...5] used to draw the horizon polygon, if defined. Set 0 to switch off. <br /></td></tr>
 <tr class="separator:a986a2822d53465e5def535ec6da4de23"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:addfcc9bbf05a33f18d1af99a3f6393ea"><td class="memItemLeft" align="right" valign="top"><a id="addfcc9bbf05a33f18d1af99a3f6393ea"></a>
-static int&#160;</td><td class="memItemRight" valign="bottom"><b>fontSize</b></td></tr>
+static int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classLandscape.html#addfcc9bbf05a33f18d1af99a3f6393ea">fontSize</a></td></tr>
+<tr class="memdesc:addfcc9bbf05a33f18d1af99a3f6393ea"><td class="mdescLeft">&#160;</td><td class="mdescRight">Used for landscape labels (optionally indicating landscape features) <br /></td></tr>
 <tr class="separator:addfcc9bbf05a33f18d1af99a3f6393ea"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a1413c6bfa6d07fae4feaaeae59cb877e"><td class="memItemLeft" align="right" valign="top"><a id="a1413c6bfa6d07fae4feaaeae59cb877e"></a>
 static <a class="el" href="classVector3.html">Vec3f</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classLandscape.html#a1413c6bfa6d07fae4feaaeae59cb877e">labelColor</a></td></tr>
-<tr class="memdesc:a1413c6bfa6d07fae4feaaeae59cb877e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Used for landscape labels (optionally indicating landscape features) <br /></td></tr>
+<tr class="memdesc:a1413c6bfa6d07fae4feaaeae59cb877e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Color for the landscape labels. <br /></td></tr>
 <tr class="separator:a1413c6bfa6d07fae4feaaeae59cb877e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad5e6cea622ca2330cdb2e34e6e821e69"><td class="memItemLeft" align="right" valign="top"><a id="ad5e6cea622ca2330cdb2e34e6e821e69"></a>
 static int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classLandscape.html#ad5e6cea622ca2330cdb2e34e6e821e69">labelAngle</a></td></tr>
-<tr class="memdesc:ad5e6cea622ca2330cdb2e34e6e821e69"><td class="mdescLeft">&#160;</td><td class="mdescRight">Color for the landscape labels. <br /></td></tr>
+<tr class="memdesc:ad5e6cea622ca2330cdb2e34e6e821e69"><td class="mdescLeft">&#160;</td><td class="mdescRight">Rotation angle for landscape labels, degrees. Useful for landscapes with many labels. <br /></td></tr>
 <tr class="separator:ad5e6cea622ca2330cdb2e34e6e821e69"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
@@ -484,15 +487,17 @@ name</td>
 
 <p>The list of azimuths (counted from True North towards East) and altitudes can come in various formats. We read the first two elements, which can be of formats: </p>
 <table class="fieldtable">
-<tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a id="ad669cc932a8770face3267bd600192e9a0a55b5bb9480013a741e2435cbf4def5"></a>azDeg_zdDeg&#160;</td><td class="fielddoc"><p>azimuth[degrees] altitude[degrees] </p>
+<tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a id="ad669cc932a8770face3267bd600192e9aaed10cccc18bd13ea860dbc214c0053f"></a>azDeg_altDeg&#160;</td><td class="fielddoc"><p>azimuth[degrees] altitude[degrees] </p>
 </td></tr>
-<tr><td class="fieldname"><a id="ad669cc932a8770face3267bd600192e9a12374cb3b25185a4ad53141806d79494"></a>azRad_altRad&#160;</td><td class="fielddoc"><p>azimuth[degrees] zenithDistance[degrees] </p>
+<tr><td class="fieldname"><a id="ad669cc932a8770face3267bd600192e9a0a55b5bb9480013a741e2435cbf4def5"></a>azDeg_zdDeg&#160;</td><td class="fielddoc"><p>azimuth[degrees] zenithDistance[degrees] </p>
 </td></tr>
-<tr><td class="fieldname"><a id="ad669cc932a8770face3267bd600192e9a4c2617671f1b9a3686660af5d8b562b2"></a>azRad_zdRad&#160;</td><td class="fielddoc"><p>azimuth[radians] altitude[radians] </p>
+<tr><td class="fieldname"><a id="ad669cc932a8770face3267bd600192e9a12374cb3b25185a4ad53141806d79494"></a>azRad_altRad&#160;</td><td class="fielddoc"><p>azimuth[radians] altitude[radians] </p>
 </td></tr>
-<tr><td class="fieldname"><a id="ad669cc932a8770face3267bd600192e9a03168c1dd7c35d80de7f307a106461ef"></a>azGrad_altGrad&#160;</td><td class="fielddoc"><p>azimuth[radians] zenithDistance[radians] </p>
+<tr><td class="fieldname"><a id="ad669cc932a8770face3267bd600192e9a4c2617671f1b9a3686660af5d8b562b2"></a>azRad_zdRad&#160;</td><td class="fielddoc"><p>azimuth[radians] zenithDistance[radians] </p>
 </td></tr>
-<tr><td class="fieldname"><a id="ad669cc932a8770face3267bd600192e9af4fa3c4769aa20c24ba63c42c33dc8a2"></a>azGrad_zdGrad&#160;</td><td class="fielddoc"><p>azimuth[new_degrees] altitude[new_degrees] (may be found on theodolites) </p>
+<tr><td class="fieldname"><a id="ad669cc932a8770face3267bd600192e9a03168c1dd7c35d80de7f307a106461ef"></a>azGrad_altGrad&#160;</td><td class="fielddoc"><p>azimuth[new_degrees] altitude[new_degrees] (may be found on theodolites) </p>
+</td></tr>
+<tr><td class="fieldname"><a id="ad669cc932a8770face3267bd600192e9af4fa3c4769aa20c24ba63c42c33dc8a2"></a>azGrad_zdGrad&#160;</td><td class="fielddoc"><p>azimuth[new_degrees] zenithDistance[new_degrees] (may be found on theodolites) </p>
 </td></tr>
 </table>
 
@@ -850,6 +855,31 @@ name</td>
 </div>
 </div>
 <h2 class="groupheader">Field Documentation</h2>
+<a id="ab294162e7f4e92f6ba129bcfa3ccfe54"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab294162e7f4e92f6ba129bcfa3ccfe54">&#9670;&nbsp;</a></span>angleRotateZOffset</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">float Landscape::angleRotateZOffset</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>[radians] This is a rotation changeable at runtime via setZRotation (called by <a class="el" href="classLandscapeMgr.html#acf8ed76c3c54942450c7af185a451fca" title="Set the rotation of the landscape about the z-axis.">LandscapeMgr::setZRotation</a>). </p>
+<p>Not in landscape.ini: Used in special cases where the horizon may rotate, e.g. on a ship. </p>
+
+</div>
+</div>
 <a id="a9456d92fc935d36e26ba79a25a5d35ab"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a9456d92fc935d36e26ba79a25a5d35ab">&#9670;&nbsp;</a></span>defaultLightPollutionLuminance</h2>
 
@@ -870,8 +900,33 @@ name</td>
 </table>
 </div><div class="memdoc">
 
-<p>OPTIONAL. If present, can be used to set location. </p>
-<p>May be given in landscape.ini:light_pollution_luminance in cd/m². Default: no change. Another way (deprecated) is to use landscape.ini:[location]light_pollution to set Bortle scale index. Default: -1 (no change). </p>
+<p>May be given in landscape.ini:light_pollution_luminance in cd/m². </p>
+<p>Default: no change. Another way (deprecated) is to use landscape.ini:[location]light_pollution to set Bortle scale index. Default: -1 (no change). </p>
+
+</div>
+</div>
+<a id="a7b2c1a9d744136a0633ccbadb9e4a5bb"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7b2c1a9d744136a0633ccbadb9e4a5bb">&#9670;&nbsp;</a></span>horizonPolygon</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classSphericalRegionP.html">SphericalRegionP</a> Landscape::horizonPolygon</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Optional element describing the horizon line. </p>
+<p>Data shall be read from the file given as landscape.ini[landscape]polygonal_horizon_list For <a class="el" href="classLandscapePolygonal.html" title="This uses the list of (usually measured) horizon altitudes to define the horizon.">LandscapePolygonal</a>, this is the only horizon data item. </p>
 
 </div>
 </div>
@@ -895,90 +950,15 @@ name</td>
 </table>
 </div><div class="memdoc">
 
-<p>Optional element describing the horizon line. </p>
-<p>Data shall be read from the file given as landscape.ini[landscape]polygonal_horizon_list For <a class="el" href="classLandscapePolygonal.html" title="This uses the list of (usually measured) horizon altitudes to define the horizon.">LandscapePolygonal</a>, this is the only horizon data item. </p>
-
-</div>
-</div>
-<a id="a986a2822d53465e5def535ec6da4de23"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a986a2822d53465e5def535ec6da4de23">&#9670;&nbsp;</a></span>horizonPolygonLineThickness</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">int Landscape::horizonPolygonLineThickness</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">static</span><span class="mlabel">protected</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
 <p>for all horizon types, the horizonPolygon line, if specified, will be drawn in this color </p>
 <p>DEPRECATED PER-LANDSCAPE: if still specified in landscape.ini[landscape]horizon_line_color, it will be ignored. Negative red (default) indicated "don't draw". </p>
-
-</div>
-</div>
-<a id="a43e1b6c6b3ee561c2d7fbf40e634d21c"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a43e1b6c6b3ee561c2d7fbf40e634d21c">&#9670;&nbsp;</a></span>memorySize</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">unsigned int Landscape::memorySize</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Rotation angle for landscape labels, degrees. Useful for landscapes with many labels. </p>
-<p>holds an approximate value of memory consumption (for cache cost estimate) </p>
-
-</div>
-</div>
-<a id="aad1281f81f9d525ab9722bdc7a873398"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aad1281f81f9d525ab9722bdc7a873398">&#9670;&nbsp;</a></span>sinMinAltitudeLimit</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">double Landscape::sinMinAltitudeLimit</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>[radians] This is a rotation changeable at runtime via setZRotation (called by <a class="el" href="classLandscapeMgr.html#acf8ed76c3c54942450c7af185a451fca" title="Set the rotation of the landscape about the z-axis.">LandscapeMgr::setZRotation</a>). </p>
-<p>Not in landscape.ini: Used in special cases where the horizon may rotate, e.g. on a ship. </p>
 
 </div>
 </div>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Sun Mar 23 2025 19:00:02 for Stellarium by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1
+Generated on Sun Jun 22 2025 18:44:45 for Stellarium by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1
 </small></address>
 </body>
 </html>

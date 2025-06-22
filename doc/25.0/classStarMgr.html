@@ -21,7 +21,7 @@
   <td id="projectlogo"><img alt="Logo" src="stellarium-logo.png"/></td>
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">Stellarium
-   &#160;<span id="projectnumber">25.1</span>
+   &#160;<span id="projectnumber">25.2</span>
    </div>
   </td>
  </tr>
@@ -180,6 +180,9 @@ double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="cl
 QList&lt; <a class="el" href="classQSharedPointerNoDelete.html">StelObjectP</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classStarMgr.html#a7a0b40962053b8b8d6026d5d9d3fe998">searchAround</a> (const <a class="el" href="classVector3.html">Vec3d</a> &amp;v, double limitFov, const <a class="el" href="classStelCore.html">StelCore</a> *core) const override</td></tr>
 <tr class="memdesc:a7a0b40962053b8b8d6026d5d9d3fe998"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return a list containing the stars located inside the limFov circle around position v. <br /></td></tr>
 <tr class="separator:a7a0b40962053b8b8d6026d5d9d3fe998"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a043769668f5dd8b064a73aac456ebcaf"><td class="memItemLeft" align="right" valign="top">QList&lt; <a class="el" href="classQSharedPointerNoDelete.html">StelObjectP</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classStarMgr.html#a043769668f5dd8b064a73aac456ebcaf">searchWithin</a> (const <a class="el" href="classSphericalRegionP.html">SphericalRegionP</a> region, const <a class="el" href="classStelCore.html">StelCore</a> *core, const bool hipOnly=true, const float maxMag=25.f) const</td></tr>
+<tr class="memdesc:a043769668f5dd8b064a73aac456ebcaf"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return a list containing the stars located inside the region.  <a href="classStarMgr.html#a043769668f5dd8b064a73aac456ebcaf">More...</a><br /></td></tr>
+<tr class="separator:a043769668f5dd8b064a73aac456ebcaf"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a06a05b0f52ac78fee833bd4bd829ed53"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classQSharedPointerNoDelete.html">StelObjectP</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classStarMgr.html#a06a05b0f52ac78fee833bd4bd829ed53">searchByNameI18n</a> (const QString &amp;nameI18n) const override</td></tr>
 <tr class="memdesc:a06a05b0f52ac78fee833bd4bd829ed53"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return the matching Stars object's pointer if exists or Q_NULLPTR.  <a href="classStarMgr.html#a06a05b0f52ac78fee833bd4bd829ed53">More...</a><br /></td></tr>
 <tr class="separator:a06a05b0f52ac78fee833bd4bd829ed53"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -194,17 +197,15 @@ QList&lt; <a class="el" href="classQSharedPointerNoDelete.html">StelObjectP</a> 
 <tr class="memdesc:a38c5da40e2d62a0cd0b35a0abdfb67bf"><td class="mdescLeft">&#160;</td><td class="mdescRight">Find and return the list of at most maxNbItem objects auto-completing the passed object English name.  <a href="classStarMgr.html#a38c5da40e2d62a0cd0b35a0abdfb67bf">More...</a><br /></td></tr>
 <tr class="separator:a38c5da40e2d62a0cd0b35a0abdfb67bf"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a1bc329f8d381d6dc745ff7c9b92062b7"><td class="memItemLeft" align="right" valign="top">QStringList&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classStarMgr.html#a1bc329f8d381d6dc745ff7c9b92062b7">listAllObjects</a> (bool inEnglish) const override</td></tr>
+<tr class="memdesc:a1bc329f8d381d6dc745ff7c9b92062b7"><td class="mdescLeft">&#160;</td><td class="mdescRight">List all currently loaded names.  <a href="classStarMgr.html#a1bc329f8d381d6dc745ff7c9b92062b7">More...</a><br /></td></tr>
 <tr class="separator:a1bc329f8d381d6dc745ff7c9b92062b7"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a78c7c1313e12b28989730b5a95236f72"><td class="memItemLeft" align="right" valign="top">QStringList&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classStarMgr.html#a78c7c1313e12b28989730b5a95236f72">listAllObjectsByType</a> (const QString &amp;objType, bool inEnglish) const override</td></tr>
-<tr class="memdesc:a78c7c1313e12b28989730b5a95236f72"><td class="mdescLeft">&#160;</td><td class="mdescRight">List all StelObjects by type.  <a href="classStarMgr.html#a78c7c1313e12b28989730b5a95236f72">More...</a><br /></td></tr>
 <tr class="separator:a78c7c1313e12b28989730b5a95236f72"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac60bd54727f743fd979387217689fd83"><td class="memItemLeft" align="right" valign="top"><a id="ac60bd54727f743fd979387217689fd83"></a>
 QString&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classStarMgr.html#ac60bd54727f743fd979387217689fd83">getName</a> () const override</td></tr>
 <tr class="memdesc:ac60bd54727f743fd979387217689fd83"><td class="mdescLeft">&#160;</td><td class="mdescRight">Gets a user-displayable name of the object category. <br /></td></tr>
 <tr class="separator:ac60bd54727f743fd979387217689fd83"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a6999f5f1410d26ca656cdac6d93167f1"><td class="memItemLeft" align="right" valign="top"><a id="a6999f5f1410d26ca656cdac6d93167f1"></a>
-QString&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classStarMgr.html#a6999f5f1410d26ca656cdac6d93167f1">getStelObjectType</a> () const override</td></tr>
-<tr class="memdesc:a6999f5f1410d26ca656cdac6d93167f1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the name that will be returned by <a class="el" href="classStelObject.html#acf26bf2f7442e0317cc44597a984f54d" title="Return object&#39;s type. It should be the name of the class.">StelObject::getType()</a> for the objects this module manages. <br /></td></tr>
+<tr class="memitem:a6999f5f1410d26ca656cdac6d93167f1"><td class="memItemLeft" align="right" valign="top">QString&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classStarMgr.html#a6999f5f1410d26ca656cdac6d93167f1">getStelObjectType</a> () const override</td></tr>
 <tr class="separator:a6999f5f1410d26ca656cdac6d93167f1"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a9646db7565b5f7585ff6e04b529701bb"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classQSharedPointerNoDelete.html">StelObjectP</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classStarMgr.html#a9646db7565b5f7585ff6e04b529701bb">searchHP</a> (int hip) const</td></tr>
 <tr class="memdesc:a9646db7565b5f7585ff6e04b529701bb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Search by Hipparcos catalogue number.  <a href="classStarMgr.html#a9646db7565b5f7585ff6e04b529701bb">More...</a><br /></td></tr>
@@ -222,21 +223,21 @@ QVariantList&#160;</td><td class="memItemRight" valign="bottom"><b>getCatalogsDe
 const QList&lt; <a class="el" href="classQSharedPointerNoDelete.html">StelObjectP</a> &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classStarMgr.html#afb3d0bbbd90223ac72b59a23d1e2f781">getHipparcosStars</a> () const</td></tr>
 <tr class="memdesc:afb3d0bbbd90223ac72b59a23d1e2f781"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the list of all Hipparcos stars. <br /></td></tr>
 <tr class="separator:afb3d0bbbd90223ac72b59a23d1e2f781"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a484f4eaa1a68fb922495c4bf539de5b5"><td class="memItemLeft" align="right" valign="top"><a id="a484f4eaa1a68fb922495c4bf539de5b5"></a>
-const QList&lt; QMap&lt; <a class="el" href="classQSharedPointerNoDelete.html">StelObjectP</a>, float &gt; &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>getHipparcosHighPMStars</b> () const</td></tr>
-<tr class="separator:a484f4eaa1a68fb922495c4bf539de5b5"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a5341938f167d32364814009ea8b0ac20"><td class="memItemLeft" align="right" valign="top"><a id="a5341938f167d32364814009ea8b0ac20"></a>
-const QList&lt; QMap&lt; <a class="el" href="classQSharedPointerNoDelete.html">StelObjectP</a>, float &gt; &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>getHipparcosDoubleStars</b> () const</td></tr>
-<tr class="separator:a5341938f167d32364814009ea8b0ac20"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a9ddd941864e0cf1b7aed82d9cbdab3c5"><td class="memItemLeft" align="right" valign="top"><a id="a9ddd941864e0cf1b7aed82d9cbdab3c5"></a>
-const QList&lt; QMap&lt; <a class="el" href="classQSharedPointerNoDelete.html">StelObjectP</a>, float &gt; &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>getHipparcosVariableStars</b> () const</td></tr>
-<tr class="separator:a9ddd941864e0cf1b7aed82d9cbdab3c5"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aabc1dca0890c68a8ce2ccf5b9f23dabe"><td class="memItemLeft" align="right" valign="top"><a id="aabc1dca0890c68a8ce2ccf5b9f23dabe"></a>
-const QList&lt; QMap&lt; <a class="el" href="classQSharedPointerNoDelete.html">StelObjectP</a>, float &gt; &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>getHipparcosAlgolTypeStars</b> () const</td></tr>
-<tr class="separator:aabc1dca0890c68a8ce2ccf5b9f23dabe"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab61d55c03b500f0aac4c83ee50dc5daf"><td class="memItemLeft" align="right" valign="top"><a id="ab61d55c03b500f0aac4c83ee50dc5daf"></a>
-const QList&lt; QMap&lt; <a class="el" href="classQSharedPointerNoDelete.html">StelObjectP</a>, float &gt; &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>getHipparcosClassicalCepheidsTypeStars</b> () const</td></tr>
-<tr class="separator:ab61d55c03b500f0aac4c83ee50dc5daf"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5c1478fb7a0973a16510db92804bbd48"><td class="memItemLeft" align="right" valign="top"><a id="a5c1478fb7a0973a16510db92804bbd48"></a>
+const QList&lt; QPair&lt; <a class="el" href="classQSharedPointerNoDelete.html">StelObjectP</a>, float &gt; &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>getHipparcosHighPMStars</b> () const</td></tr>
+<tr class="separator:a5c1478fb7a0973a16510db92804bbd48"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5b6cc6220c6b30feaa56f9dc4012c62d"><td class="memItemLeft" align="right" valign="top"><a id="a5b6cc6220c6b30feaa56f9dc4012c62d"></a>
+const QList&lt; QPair&lt; <a class="el" href="classQSharedPointerNoDelete.html">StelObjectP</a>, float &gt; &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>getHipparcosDoubleStars</b> () const</td></tr>
+<tr class="separator:a5b6cc6220c6b30feaa56f9dc4012c62d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7a60893b07d63f6fcb7b03bccb99b330"><td class="memItemLeft" align="right" valign="top"><a id="a7a60893b07d63f6fcb7b03bccb99b330"></a>
+const QList&lt; QPair&lt; <a class="el" href="classQSharedPointerNoDelete.html">StelObjectP</a>, float &gt; &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>getHipparcosVariableStars</b> () const</td></tr>
+<tr class="separator:a7a60893b07d63f6fcb7b03bccb99b330"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af4461ffe3d6daad7ff716c64b7333a8f"><td class="memItemLeft" align="right" valign="top"><a id="af4461ffe3d6daad7ff716c64b7333a8f"></a>
+const QList&lt; QPair&lt; <a class="el" href="classQSharedPointerNoDelete.html">StelObjectP</a>, float &gt; &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>getHipparcosAlgolTypeStars</b> () const</td></tr>
+<tr class="separator:af4461ffe3d6daad7ff716c64b7333a8f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a31dc2296d0c82d362514e4375e7833f7"><td class="memItemLeft" align="right" valign="top"><a id="a31dc2296d0c82d362514e4375e7833f7"></a>
+const QList&lt; QPair&lt; <a class="el" href="classQSharedPointerNoDelete.html">StelObjectP</a>, float &gt; &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>getHipparcosClassicalCepheidsTypeStars</b> () const</td></tr>
+<tr class="separator:a31dc2296d0c82d362514e4375e7833f7"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a95b8d6562fe9388f0ff537305e0497eb"><td class="memItemLeft" align="right" valign="top"><a id="a95b8d6562fe9388f0ff537305e0497eb"></a>
 const QList&lt; <a class="el" href="classQSharedPointerNoDelete.html">StelObjectP</a> &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>getHipparcosCarbonStars</b> () const</td></tr>
 <tr class="separator:a95b8d6562fe9388f0ff537305e0497eb"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -291,33 +292,40 @@ virtual QString&#160;</td><td class="memItemRight" valign="bottom"><a class="el"
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-static-methods"></a>
 Static Public Member Functions</h2></td></tr>
-<tr class="memitem:a35935cbe9f8010bcd7e188cc06d7ddf4"><td class="memItemLeft" align="right" valign="top">static QString&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classStarMgr.html#a35935cbe9f8010bcd7e188cc06d7ddf4">getCommonName</a> (StarId hip)</td></tr>
-<tr class="memdesc:a35935cbe9f8010bcd7e188cc06d7ddf4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the (translated) common name for a star with a specified Hipparcos or Gaia catalogue number.  <a href="classStarMgr.html#a35935cbe9f8010bcd7e188cc06d7ddf4">More...</a><br /></td></tr>
-<tr class="separator:a35935cbe9f8010bcd7e188cc06d7ddf4"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a85ef62bdeee7ec70b49e7653fe3cb32b"><td class="memItemLeft" align="right" valign="top">static QString&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classStarMgr.html#a85ef62bdeee7ec70b49e7653fe3cb32b">getSciName</a> (StarId hip)</td></tr>
-<tr class="memdesc:a85ef62bdeee7ec70b49e7653fe3cb32b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the (translated) scientific name for a star with a specified Hipparcos or Gaia catalogue number.  <a href="classStarMgr.html#a85ef62bdeee7ec70b49e7653fe3cb32b">More...</a><br /></td></tr>
-<tr class="separator:a85ef62bdeee7ec70b49e7653fe3cb32b"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac6a34d50b79b0c2fda74b9d5bf12ac62"><td class="memItemLeft" align="right" valign="top">static QString&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classStarMgr.html#ac6a34d50b79b0c2fda74b9d5bf12ac62">getSciExtraName</a> (StarId hip)</td></tr>
-<tr class="memdesc:ac6a34d50b79b0c2fda74b9d5bf12ac62"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the (translated) scientific extra name for a star with a specified Hipparcos or Gaia catalogue number.  <a href="classStarMgr.html#ac6a34d50b79b0c2fda74b9d5bf12ac62">More...</a><br /></td></tr>
-<tr class="separator:ac6a34d50b79b0c2fda74b9d5bf12ac62"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a50dd6c944947b65253d79a00515d2d15"><td class="memItemLeft" align="right" valign="top">static QString&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classStarMgr.html#a50dd6c944947b65253d79a00515d2d15">getGcvsName</a> (StarId hip)</td></tr>
-<tr class="memdesc:a50dd6c944947b65253d79a00515d2d15"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the (translated) scientific name for a variable star with a specified Hipparcos or Gaia catalogue number.  <a href="classStarMgr.html#a50dd6c944947b65253d79a00515d2d15">More...</a><br /></td></tr>
-<tr class="separator:a50dd6c944947b65253d79a00515d2d15"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a88ea0f73636458cda9848490ea30ec81"><td class="memItemLeft" align="right" valign="top">static QString&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classStarMgr.html#a88ea0f73636458cda9848490ea30ec81">getWdsName</a> (StarId hip)</td></tr>
-<tr class="memdesc:a88ea0f73636458cda9848490ea30ec81"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the (translated) scientific name for a double star with a specified Hipparcos or Gaia catalogue number.  <a href="classStarMgr.html#a88ea0f73636458cda9848490ea30ec81">More...</a><br /></td></tr>
-<tr class="separator:a88ea0f73636458cda9848490ea30ec81"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6401539690994671bbd69f8012363a38"><td class="memItemLeft" align="right" valign="top">static QString&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classStarMgr.html#a6401539690994671bbd69f8012363a38">getCulturalScreenLabel</a> (StarId hip)</td></tr>
+<tr class="memdesc:a6401539690994671bbd69f8012363a38"><td class="mdescLeft">&#160;</td><td class="mdescRight">cultural names Return screen label (to be used in the sky display.  <a href="classStarMgr.html#a6401539690994671bbd69f8012363a38">More...</a><br /></td></tr>
+<tr class="separator:a6401539690994671bbd69f8012363a38"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a02b7d9500fc49d58066747f15988c6f9"><td class="memItemLeft" align="right" valign="top">static QString&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classStarMgr.html#a02b7d9500fc49d58066747f15988c6f9">getCulturalInfoLabel</a> (StarId hip)</td></tr>
+<tr class="memdesc:a02b7d9500fc49d58066747f15988c6f9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return InfoString label (to be used in the InfoString).  <a href="classStarMgr.html#a02b7d9500fc49d58066747f15988c6f9">More...</a><br /></td></tr>
+<tr class="separator:a02b7d9500fc49d58066747f15988c6f9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4ca7dccccf01548c42bf245624853414"><td class="memItemLeft" align="right" valign="top"><a id="a4ca7dccccf01548c42bf245624853414"></a>
+static QStringList&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classStarMgr.html#a4ca7dccccf01548c42bf245624853414">getCultureLabels</a> (StarId hip, <a class="el" href="classStelObject.html#abe8ee891d3661c8c474cfd25446867be">StelObject::CulturalDisplayStyle</a> style)</td></tr>
+<tr class="memdesc:a4ca7dccccf01548c42bf245624853414"><td class="mdescLeft">&#160;</td><td class="mdescRight">Underlying worker that processes the culturalNames. <br /></td></tr>
+<tr class="separator:a4ca7dccccf01548c42bf245624853414"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3782c31ccb7203ab914f335d962e17b9"><td class="memItemLeft" align="right" valign="top">static QString&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classStarMgr.html#a3782c31ccb7203ab914f335d962e17b9">getSciDesignation</a> (StarId hip)</td></tr>
+<tr class="memdesc:a3782c31ccb7203ab914f335d962e17b9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the scientific (Bayer/Flamsteed) name for a star with a specified Hipparcos or Gaia catalogue number.  <a href="classStarMgr.html#a3782c31ccb7203ab914f335d962e17b9">More...</a><br /></td></tr>
+<tr class="separator:a3782c31ccb7203ab914f335d962e17b9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8a9d9e84bcc3fcf28775c9e3a136bf34"><td class="memItemLeft" align="right" valign="top">static QString&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classStarMgr.html#a8a9d9e84bcc3fcf28775c9e3a136bf34">getSciExtraDesignation</a> (StarId hip)</td></tr>
+<tr class="memdesc:a8a9d9e84bcc3fcf28775c9e3a136bf34"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get additional scientific name(s) for a star with a specified Hipparcos or Gaia catalogue number.  <a href="classStarMgr.html#a8a9d9e84bcc3fcf28775c9e3a136bf34">More...</a><br /></td></tr>
+<tr class="separator:a8a9d9e84bcc3fcf28775c9e3a136bf34"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0c129b1ca53619878103b3a22b5360f6"><td class="memItemLeft" align="right" valign="top">static QString&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classStarMgr.html#a0c129b1ca53619878103b3a22b5360f6">getGcvsDesignation</a> (StarId hip)</td></tr>
+<tr class="memdesc:a0c129b1ca53619878103b3a22b5360f6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the GCVS catalog designation for a variable star with a specified Hipparcos or Gaia catalogue number.  <a href="classStarMgr.html#a0c129b1ca53619878103b3a22b5360f6">More...</a><br /></td></tr>
+<tr class="separator:a0c129b1ca53619878103b3a22b5360f6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac665919c32250bf1d0c8de9af8e9f5ff"><td class="memItemLeft" align="right" valign="top">static QString&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classStarMgr.html#ac665919c32250bf1d0c8de9af8e9f5ff">getWdsDesignation</a> (StarId hip)</td></tr>
+<tr class="memdesc:ac665919c32250bf1d0c8de9af8e9f5ff"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the WDS catalog designation for a double star with a specified Hipparcos or Gaia catalogue number.  <a href="classStarMgr.html#ac665919c32250bf1d0c8de9af8e9f5ff">More...</a><br /></td></tr>
+<tr class="separator:ac665919c32250bf1d0c8de9af8e9f5ff"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a160833a9489954a4ee2dd38dd3282934"><td class="memItemLeft" align="right" valign="top">static QString&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classStarMgr.html#a160833a9489954a4ee2dd38dd3282934">getCommonEnglishName</a> (StarId hip)</td></tr>
 <tr class="memdesc:a160833a9489954a4ee2dd38dd3282934"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the (English) common name for a star with a specified Hipparcos or Gaia catalogue number.  <a href="classStarMgr.html#a160833a9489954a4ee2dd38dd3282934">More...</a><br /></td></tr>
 <tr class="separator:a160833a9489954a4ee2dd38dd3282934"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a4bea0f77f5a605b3ba497a15157b2a49"><td class="memItemLeft" align="right" valign="top">static QString&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classStarMgr.html#a4bea0f77f5a605b3ba497a15157b2a49">getAdditionalNames</a> (StarId hip)</td></tr>
-<tr class="memdesc:a4bea0f77f5a605b3ba497a15157b2a49"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the (translated) additional names for a star with a specified Hipparcos or Gaia catalogue number.  <a href="classStarMgr.html#a4bea0f77f5a605b3ba497a15157b2a49">More...</a><br /></td></tr>
-<tr class="separator:a4bea0f77f5a605b3ba497a15157b2a49"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a081845e16e4dca3b70b550bac98c48f6"><td class="memItemLeft" align="right" valign="top">static QString&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classStarMgr.html#a081845e16e4dca3b70b550bac98c48f6">getAdditionalEnglishNames</a> (StarId hip)</td></tr>
-<tr class="memdesc:a081845e16e4dca3b70b550bac98c48f6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the English additional names for a star with a specified Hipparcos or Gaia catalogue number.  <a href="classStarMgr.html#a081845e16e4dca3b70b550bac98c48f6">More...</a><br /></td></tr>
-<tr class="separator:a081845e16e4dca3b70b550bac98c48f6"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a927ef916300561bcef69ae57234bfa8d"><td class="memItemLeft" align="right" valign="top">static QString&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classStarMgr.html#a927ef916300561bcef69ae57234bfa8d">getCrossIdentificationDesignations</a> (QString hip)</td></tr>
-<tr class="memdesc:a927ef916300561bcef69ae57234bfa8d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the cross-identification designations for a star with a specified Hipparcos or Gaia catalogue number.  <a href="classStarMgr.html#a927ef916300561bcef69ae57234bfa8d">More...</a><br /></td></tr>
-<tr class="separator:a927ef916300561bcef69ae57234bfa8d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a02ddad77e45d8cc8eb603bec6a9f0245"><td class="memItemLeft" align="right" valign="top">static QString&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classStarMgr.html#a02ddad77e45d8cc8eb603bec6a9f0245">getCommonNameI18n</a> (StarId hip)</td></tr>
+<tr class="memdesc:a02ddad77e45d8cc8eb603bec6a9f0245"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the (translated) common name for a star with a specified Hipparcos or Gaia catalogue number.  <a href="classStarMgr.html#a02ddad77e45d8cc8eb603bec6a9f0245">More...</a><br /></td></tr>
+<tr class="separator:a02ddad77e45d8cc8eb603bec6a9f0245"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a24c2549d3fc1ed30be18994ec75ef03a"><td class="memItemLeft" align="right" valign="top">static QList&lt; <a class="el" href="structStelObject_1_1CulturalName.html">StelObject::CulturalName</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classStarMgr.html#a24c2549d3fc1ed30be18994ec75ef03a">getCulturalNames</a> (StarId hip)</td></tr>
+<tr class="memdesc:a24c2549d3fc1ed30be18994ec75ef03a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the additional names for a star with a specified Hipparcos or Gaia catalogue number.  <a href="classStarMgr.html#a24c2549d3fc1ed30be18994ec75ef03a">More...</a><br /></td></tr>
+<tr class="separator:a24c2549d3fc1ed30be18994ec75ef03a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a330aec962fcbf2a951e6bddc7908c2ca"><td class="memItemLeft" align="right" valign="top">static QString&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classStarMgr.html#a330aec962fcbf2a951e6bddc7908c2ca">getCrossIdentificationDesignations</a> (const QString &amp;hip)</td></tr>
+<tr class="memdesc:a330aec962fcbf2a951e6bddc7908c2ca"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the cross-identification designations for a star with a specified Hipparcos or Gaia catalogue number.  <a href="classStarMgr.html#a330aec962fcbf2a951e6bddc7908c2ca">More...</a><br /></td></tr>
+<tr class="separator:a330aec962fcbf2a951e6bddc7908c2ca"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a0f66b74ac8c5c153b71418ea77748d5a"><td class="memItemLeft" align="right" valign="top">static QString&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classStarMgr.html#a0f66b74ac8c5c153b71418ea77748d5a">getGcvsVariabilityType</a> (StarId hip)</td></tr>
 <tr class="memdesc:a0f66b74ac8c5c153b71418ea77748d5a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the type of variability for a variable star with a specified Hipparcos or Gaia catalogue number.  <a href="classStarMgr.html#a0f66b74ac8c5c153b71418ea77748d5a">More...</a><br /></td></tr>
 <tr class="separator:a0f66b74ac8c5c153b71418ea77748d5a"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -471,76 +479,6 @@ Additional Inherited Members</h2></td></tr>
 
 </div>
 </div>
-<a id="a081845e16e4dca3b70b550bac98c48f6"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a081845e16e4dca3b70b550bac98c48f6">&#9670;&nbsp;</a></span>getAdditionalEnglishNames()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">static QString StarMgr::getAdditionalEnglishNames </td>
-          <td>(</td>
-          <td class="paramtype">StarId&#160;</td>
-          <td class="paramname"><em>hip</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">static</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Get the English additional names for a star with a specified Hipparcos or Gaia catalogue number. </p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">hip</td><td>The Hipparcos/Gaia number of star </td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="section return"><dt>Returns</dt><dd>additional names of star </dd></dl>
-
-</div>
-</div>
-<a id="a4bea0f77f5a605b3ba497a15157b2a49"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a4bea0f77f5a605b3ba497a15157b2a49">&#9670;&nbsp;</a></span>getAdditionalNames()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">static QString StarMgr::getAdditionalNames </td>
-          <td>(</td>
-          <td class="paramtype">StarId&#160;</td>
-          <td class="paramname"><em>hip</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">static</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Get the (translated) additional names for a star with a specified Hipparcos or Gaia catalogue number. </p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">hip</td><td>The Hipparcos/Gaia number of star </td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="section return"><dt>Returns</dt><dd>translated additional names of star </dd></dl>
-
-</div>
-</div>
 <a id="a2c113b20ee5e1d8d1e1e29dc03a2fe35"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a2c113b20ee5e1d8d1e1e29dc03a2fe35">&#9670;&nbsp;</a></span>getBinaryOrbitData()</h2>
 
@@ -601,18 +539,18 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Get the (English) common name for a star with a specified Hipparcos or Gaia catalogue number. </p>
-<dl class="params"><dt>Parameters</dt><dd>
+<p>This is at most one name per star, and no name can appear more than once, giving a 1:1 relationship. </p><dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">hip</td><td>The Hipparcos/Gaia number of star </td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd>common name of star (from skyculture file star_names.fab) </dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>common name of star (from file skycultures/common_star_names.fab) </dd></dl>
 
 </div>
 </div>
-<a id="a35935cbe9f8010bcd7e188cc06d7ddf4"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a35935cbe9f8010bcd7e188cc06d7ddf4">&#9670;&nbsp;</a></span>getCommonName()</h2>
+<a id="a02ddad77e45d8cc8eb603bec6a9f0245"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a02ddad77e45d8cc8eb603bec6a9f0245">&#9670;&nbsp;</a></span>getCommonNameI18n()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -621,7 +559,7 @@ Additional Inherited Members</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">static QString StarMgr::getCommonName </td>
+          <td class="memname">static QString StarMgr::getCommonNameI18n </td>
           <td>(</td>
           <td class="paramtype">StarId&#160;</td>
           <td class="paramname"><em>hip</em></td><td>)</td>
@@ -636,18 +574,18 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Get the (translated) common name for a star with a specified Hipparcos or Gaia catalogue number. </p>
-<dl class="params"><dt>Parameters</dt><dd>
+<p>This is at most one name per star, and no name can appear more than once, giving a 1:1 relationship. </p><dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">hip</td><td>The Hipparcos/Gaia number of star </td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd>translated common name of star </dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>translated common name of star (based on file skycultures/common_star_names.fab) </dd></dl>
 
 </div>
 </div>
-<a id="a927ef916300561bcef69ae57234bfa8d"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a927ef916300561bcef69ae57234bfa8d">&#9670;&nbsp;</a></span>getCrossIdentificationDesignations()</h2>
+<a id="a330aec962fcbf2a951e6bddc7908c2ca"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a330aec962fcbf2a951e6bddc7908c2ca">&#9670;&nbsp;</a></span>getCrossIdentificationDesignations()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -658,7 +596,7 @@ Additional Inherited Members</h2></td></tr>
         <tr>
           <td class="memname">static QString StarMgr::getCrossIdentificationDesignations </td>
           <td>(</td>
-          <td class="paramtype">QString&#160;</td>
+          <td class="paramtype">const QString &amp;&#160;</td>
           <td class="paramname"><em>hip</em></td><td>)</td>
           <td></td>
         </tr>
@@ -673,11 +611,153 @@ Additional Inherited Members</h2></td></tr>
 <p>Get the cross-identification designations for a star with a specified Hipparcos or Gaia catalogue number. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">hip</td><td>The Hipparcos/Gaia number of star </td></tr>
+    <tr><td class="paramname">hip</td><td>The Hipparcos/Gaia number of star, including HIP component letters </td></tr>
   </table>
   </dd>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>cross-identification data </dd></dl>
+
+</div>
+</div>
+<a id="a02b7d9500fc49d58066747f15988c6f9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a02b7d9500fc49d58066747f15988c6f9">&#9670;&nbsp;</a></span>getCulturalInfoLabel()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static QString StarMgr::getCulturalInfoLabel </td>
+          <td>(</td>
+          <td class="paramtype">StarId&#160;</td>
+          <td class="paramname"><em>hip</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Return InfoString label (to be used in the InfoString). </p>
+<p>When dealing with foreign skycultures, many users will want this to be longer, with more name components. </p>
+
+</div>
+</div>
+<a id="a24c2549d3fc1ed30be18994ec75ef03a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a24c2549d3fc1ed30be18994ec75ef03a">&#9670;&nbsp;</a></span>getCulturalNames()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static QList&lt;<a class="el" href="structStelObject_1_1CulturalName.html">StelObject::CulturalName</a>&gt; StarMgr::getCulturalNames </td>
+          <td>(</td>
+          <td class="paramtype">StarId&#160;</td>
+          <td class="paramname"><em>hip</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Get the additional names for a star with a specified Hipparcos or Gaia catalogue number. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">hip</td><td>The Hipparcos/Gaia number of star </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>translated additional names of star Get the English additional names for a star with a specified Hipparcos or Gaia catalogue number. </dd></dl>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">hip</td><td>The Hipparcos/Gaia number of star </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>additional names of star Get the cultural names for a star with a specified Hipparcos or Gaia catalogue number. </dd></dl>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">hip</td><td>The Hipparcos/Gaia number of star </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>cultural names of star </dd></dl>
+
+</div>
+</div>
+<a id="a6401539690994671bbd69f8012363a38"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6401539690994671bbd69f8012363a38">&#9670;&nbsp;</a></span>getCulturalScreenLabel()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static QString StarMgr::getCulturalScreenLabel </td>
+          <td>(</td>
+          <td class="paramtype">StarId&#160;</td>
+          <td class="paramname"><em>hip</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>cultural names Return screen label (to be used in the sky display. </p>
+<p>Most users will use some short label) </p>
+
+</div>
+</div>
+<a id="a0c129b1ca53619878103b3a22b5360f6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0c129b1ca53619878103b3a22b5360f6">&#9670;&nbsp;</a></span>getGcvsDesignation()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static QString StarMgr::getGcvsDesignation </td>
+          <td>(</td>
+          <td class="paramtype">StarId&#160;</td>
+          <td class="paramname"><em>hip</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Get the GCVS catalog designation for a variable star with a specified Hipparcos or Gaia catalogue number. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">hip</td><td>The Hipparcos/Gaia number of star </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>GCVS designation of variable star </dd></dl>
 
 </div>
 </div>
@@ -867,41 +947,6 @@ Additional Inherited Members</h2></td></tr>
 
 </div>
 </div>
-<a id="a50dd6c944947b65253d79a00515d2d15"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a50dd6c944947b65253d79a00515d2d15">&#9670;&nbsp;</a></span>getGcvsName()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">static QString StarMgr::getGcvsName </td>
-          <td>(</td>
-          <td class="paramtype">StarId&#160;</td>
-          <td class="paramname"><em>hip</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">static</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Get the (translated) scientific name for a variable star with a specified Hipparcos or Gaia catalogue number. </p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">hip</td><td>The Hipparcos/Gaia number of star </td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="section return"><dt>Returns</dt><dd>translated scientific name of variable star </dd></dl>
-
-</div>
-</div>
 <a id="a94c6c73f805212f735191c247d71e9d3"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a94c6c73f805212f735191c247d71e9d3">&#9670;&nbsp;</a></span>getGcvsPeriod()</h2>
 
@@ -1071,8 +1116,8 @@ Additional Inherited Members</h2></td></tr>
 
 </div>
 </div>
-<a id="ac6a34d50b79b0c2fda74b9d5bf12ac62"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ac6a34d50b79b0c2fda74b9d5bf12ac62">&#9670;&nbsp;</a></span>getSciExtraName()</h2>
+<a id="a3782c31ccb7203ab914f335d962e17b9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3782c31ccb7203ab914f335d962e17b9">&#9670;&nbsp;</a></span>getSciDesignation()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -1081,7 +1126,7 @@ Additional Inherited Members</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">static QString StarMgr::getSciExtraName </td>
+          <td class="memname">static QString StarMgr::getSciDesignation </td>
           <td>(</td>
           <td class="paramtype">StarId&#160;</td>
           <td class="paramname"><em>hip</em></td><td>)</td>
@@ -1095,19 +1140,20 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Get the (translated) scientific extra name for a star with a specified Hipparcos or Gaia catalogue number. </p>
+<p>Get the scientific (Bayer/Flamsteed) name for a star with a specified Hipparcos or Gaia catalogue number. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">hip</td><td>The Hipparcos/Gaia number of star </td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd>translated scientific name of star </dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>scientific name(s) of star. </dd></dl>
+<dl class="section note"><dt>Note</dt><dd>Multiple entries are packed into a string and delimited with " - ". </dd></dl>
 
 </div>
 </div>
-<a id="a85ef62bdeee7ec70b49e7653fe3cb32b"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a85ef62bdeee7ec70b49e7653fe3cb32b">&#9670;&nbsp;</a></span>getSciName()</h2>
+<a id="a8a9d9e84bcc3fcf28775c9e3a136bf34"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8a9d9e84bcc3fcf28775c9e3a136bf34">&#9670;&nbsp;</a></span>getSciExtraDesignation()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -1116,7 +1162,7 @@ Additional Inherited Members</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">static QString StarMgr::getSciName </td>
+          <td class="memname">static QString StarMgr::getSciExtraDesignation </td>
           <td>(</td>
           <td class="paramtype">StarId&#160;</td>
           <td class="paramname"><em>hip</em></td><td>)</td>
@@ -1130,14 +1176,78 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Get the (translated) scientific name for a star with a specified Hipparcos or Gaia catalogue number. </p>
+<p>Get additional scientific name(s) for a star with a specified Hipparcos or Gaia catalogue number. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">hip</td><td>The Hipparcos/Gaia number of star </td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd>translated scientific name of star </dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>scientific name(s) of star other than Bayer/Flamsteed designations, for example double star or variable star designations. </dd></dl>
+<dl class="section note"><dt>Note</dt><dd>Multiple entries are packed into a string and delimited with " - ". </dd></dl>
+
+</div>
+</div>
+<a id="a6999f5f1410d26ca656cdac6d93167f1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6999f5f1410d26ca656cdac6d93167f1">&#9670;&nbsp;</a></span>getStelObjectType()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">QString StarMgr::getStelObjectType </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">override</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<dl class="section return"><dt>Returns</dt><dd>"Star" </dd></dl>
+
+<p>Implements <a class="el" href="classStelObjectModule.html#a9da9461b962af1db754eced359fb35ce">StelObjectModule</a>.</p>
+
+</div>
+</div>
+<a id="ac665919c32250bf1d0c8de9af8e9f5ff"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac665919c32250bf1d0c8de9af8e9f5ff">&#9670;&nbsp;</a></span>getWdsDesignation()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static QString StarMgr::getWdsDesignation </td>
+          <td>(</td>
+          <td class="paramtype">StarId&#160;</td>
+          <td class="paramname"><em>hip</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Get the WDS catalog designation for a double star with a specified Hipparcos or Gaia catalogue number. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">hip</td><td>The Hipparcos/Gaia number of star </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>WDS designation of double star </dd></dl>
 
 </div>
 </div>
@@ -1246,41 +1356,6 @@ Additional Inherited Members</h2></td></tr>
 
 </div>
 </div>
-<a id="a88ea0f73636458cda9848490ea30ec81"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a88ea0f73636458cda9848490ea30ec81">&#9670;&nbsp;</a></span>getWdsName()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">static QString StarMgr::getWdsName </td>
-          <td>(</td>
-          <td class="paramtype">StarId&#160;</td>
-          <td class="paramname"><em>hip</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">static</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Get the (translated) scientific name for a double star with a specified Hipparcos or Gaia catalogue number. </p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">hip</td><td>The Hipparcos/Gaia number of star </td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="section return"><dt>Returns</dt><dd>translated scientific name of double star </dd></dl>
-
-</div>
-</div>
 <a id="a7b2fbe0c555073253d2e56674954e8a4"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a7b2fbe0c555073253d2e56674954e8a4">&#9670;&nbsp;</a></span>init()</h2>
 
@@ -1341,7 +1416,16 @@ Additional Inherited Members</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
-<dl class="section note"><dt>Note</dt><dd>Loading stars with the common names only. </dd></dl>
+
+<p>List all currently loaded names. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">inEnglish</td><td>list EnglishNames (true) or translated (false) </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>a list of matching object name by order of relevance, or an empty list if nothing matches </dd></dl>
+<dl class="section note"><dt>Note</dt><dd>Listing stars with the common names only, not skyculture-related. </dd></dl>
 
 <p>Implements <a class="el" href="classStelObjectModule.html#a91e6d1950686f1c4f7290f22de085b89">StelObjectModule</a>.</p>
 
@@ -1380,16 +1464,14 @@ Additional Inherited Members</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
-
-<p>List all StelObjects by type. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">objType</td><td>object type </td></tr>
-    <tr><td class="paramname">inEnglish</td><td>list translated names (false) or in English (true) </td></tr>
+    <tr><td class="paramname">objType</td><td>a string with int number 0...8. 0..Interesting double stars 1..Interesting variable stars 2..Bright double stars 3..Bright variable stars 4..high proper motion stars 5..Algol-type eclipsing systems 6..Classical delta Cepheid stars 7..Bright carbon stars 8..Bright Barium stars </td></tr>
+    <tr><td class="paramname">inEnglish</td><td>return English, not translated star names </td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd>a list of matching object name by order of relevance, or an empty list if nothing matches </dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>a QStringList with all known star names </dd></dl>
 
 <p>Reimplemented from <a class="el" href="classStelObjectModule.html#a59dca198e7fe4b0de8bd730119422214">StelObjectModule</a>.</p>
 
@@ -1576,6 +1658,56 @@ Additional Inherited Members</h2></td></tr>
 
 </div>
 </div>
+<a id="a043769668f5dd8b064a73aac456ebcaf"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a043769668f5dd8b064a73aac456ebcaf">&#9670;&nbsp;</a></span>searchWithin()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">QList&lt;<a class="el" href="classQSharedPointerNoDelete.html">StelObjectP</a> &gt; StarMgr::searchWithin </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classSphericalRegionP.html">SphericalRegionP</a>&#160;</td>
+          <td class="paramname"><em>region</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="classStelCore.html">StelCore</a> *&#160;</td>
+          <td class="paramname"><em>core</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const bool&#160;</td>
+          <td class="paramname"><em>hipOnly</em> = <code>true</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const float&#160;</td>
+          <td class="paramname"><em>maxMag</em> = <code>25.f</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Return a list containing the stars located inside the region. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">hipOnly</td><td>Only return Hipparcos stars. </td></tr>
+    <tr><td class="paramname">maxMag</td><td>only return results brighter than that (default 25). </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section note"><dt>Note</dt><dd>May become large! </dd></dl>
+
+</div>
+</div>
 <a id="accdf1e9a9b4021c735b8dd8694ccc425"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#accdf1e9a9b4021c735b8dd8694ccc425">&#9670;&nbsp;</a></span>setLabelsAmount</h2>
 
@@ -1644,7 +1776,7 @@ Additional Inherited Members</h2></td></tr>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Sun Mar 23 2025 19:00:02 for Stellarium by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1
+Generated on Sun Jun 22 2025 18:44:46 for Stellarium by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1
 </small></address>
 </body>
 </html>

@@ -72,16 +72,19 @@ virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" hr
 virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classZoneArray.html#aa725248db89d2586998ac09ae109f9d9">searchAround</a> (const <a class="el" href="classStelCore.html">StelCore</a> *core, int index, const <a class="el" href="classVector3.html">Vec3d</a> &amp;v, const double withParallax, const <a class="el" href="classVector3.html">Vec3d</a> diffPos, double cosLimFov, QList&lt; <a class="el" href="classQSharedPointerNoDelete.html">StelObjectP</a> &gt; &amp;result)=0</td></tr>
 <tr class="memdesc:aa725248db89d2586998ac09ae109f9d9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Pure virtual method. See subclass implementation. <br /></td></tr>
 <tr class="separator:aa725248db89d2586998ac09ae109f9d9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3f138f4f5da7e8a852f5174a9d5c612a"><td class="memItemLeft" align="right" valign="top"><a id="a3f138f4f5da7e8a852f5174a9d5c612a"></a>
+virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>searchWithin</b> (const <a class="el" href="classStelCore.html">StelCore</a> *core, int index, const <a class="el" href="classSphericalRegionP.html">SphericalRegionP</a> region, const double withParallax, const <a class="el" href="classVector3.html">Vec3d</a> diffPos, const bool hipOnly, const float maxMag, QList&lt; <a class="el" href="classQSharedPointerNoDelete.html">StelObjectP</a> &gt; &amp;result) const =0</td></tr>
+<tr class="separator:a3f138f4f5da7e8a852f5174a9d5c612a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a58afbaae37edc54f692aa21f0b9fef17"><td class="memItemLeft" align="right" valign="top"><a id="a58afbaae37edc54f692aa21f0b9fef17"></a>
 virtual <a class="el" href="classQSharedPointerNoDelete.html">StelObjectP</a>&#160;</td><td class="memItemRight" valign="bottom"><b>searchGaiaID</b> (int index, const StarId source_id, int &amp;matched) const =0</td></tr>
 <tr class="separator:a58afbaae37edc54f692aa21f0b9fef17"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa38d27dfaf40f7c64fd818c0a1643a5f"><td class="memItemLeft" align="right" valign="top"><a id="aa38d27dfaf40f7c64fd818c0a1643a5f"></a>
 virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>searchGaiaIDepochPos</b> (const StarId source_id, float dyrs, double &amp;RA, double &amp;DEC, double &amp;Plx, double &amp;pmra, double &amp;pmdec, double &amp;RV) const =0</td></tr>
 <tr class="separator:aa38d27dfaf40f7c64fd818c0a1643a5f"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aa9b95c80bba1dbc982e2bf7e0adcb41c"><td class="memItemLeft" align="right" valign="top"><a id="aa9b95c80bba1dbc982e2bf7e0adcb41c"></a>
-virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classZoneArray.html#aa9b95c80bba1dbc982e2bf7e0adcb41c">draw</a> (<a class="el" href="classStelPainter.html">StelPainter</a> *sPainter, int index, bool is_inside, const <a class="el" href="structRCMag.html">RCMag</a> *rcmag_table, int limitMagIndex, <a class="el" href="classStelCore.html">StelCore</a> *core, int maxMagStarName, float names_brightness, const QVector&lt; <a class="el" href="classSphericalCap.html">SphericalCap</a> &gt; &amp;boundingCaps, const bool withAberration, const <a class="el" href="classVector3.html">Vec3d</a> vel, const double withParallax, const <a class="el" href="classVector3.html">Vec3d</a> diffPos) const =0</td></tr>
-<tr class="memdesc:aa9b95c80bba1dbc982e2bf7e0adcb41c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Pure virtual method. See subclass implementation. <br /></td></tr>
-<tr class="separator:aa9b95c80bba1dbc982e2bf7e0adcb41c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9496b5d6c1e2522f644830b7ac7830c7"><td class="memItemLeft" align="right" valign="top"><a id="a9496b5d6c1e2522f644830b7ac7830c7"></a>
+virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classZoneArray.html#a9496b5d6c1e2522f644830b7ac7830c7">draw</a> (<a class="el" href="classStelPainter.html">StelPainter</a> *sPainter, int index, bool is_inside, const <a class="el" href="structRCMag.html">RCMag</a> *rcmag_table, int limitMagIndex, <a class="el" href="classStelCore.html">StelCore</a> *core, int maxMagStarName, float names_brightness, const QVector&lt; <a class="el" href="classSphericalCap.html">SphericalCap</a> &gt; &amp;boundingCaps, const bool withAberration, const <a class="el" href="classVector3.html">Vec3d</a> vel, const double withParallax, const <a class="el" href="classVector3.html">Vec3d</a> diffPos, const bool withCommonNameI18n) const =0</td></tr>
+<tr class="memdesc:a9496b5d6c1e2522f644830b7ac7830c7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Pure virtual method. See subclass implementation. <br /></td></tr>
+<tr class="separator:a9496b5d6c1e2522f644830b7ac7830c7"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af9fd1763656b93dc07f77c4586b94d89"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classZoneArray.html#af9fd1763656b93dc07f77c4586b94d89">isInitialized</a> (void) const</td></tr>
 <tr class="memdesc:af9fd1763656b93dc07f77c4586b94d89"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get whether or not the catalog was successfully loaded.  <a href="classZoneArray.html#af9fd1763656b93dc07f77c4586b94d89">More...</a><br /></td></tr>
 <tr class="separator:af9fd1763656b93dc07f77c4586b94d89"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -283,7 +286,7 @@ QFile *&#160;</td><td class="memItemRight" valign="bottom"><b>file</b></td></tr>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Sun Mar 23 2025 19:00:03 for Stellarium by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1
+Generated on Sun Jun 22 2025 18:44:46 for Stellarium by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1
 </small></address>
 </body>
 </html>

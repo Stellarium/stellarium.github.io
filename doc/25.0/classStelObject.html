@@ -21,7 +21,7 @@
   <td id="projectlogo"><img alt="Logo" src="stellarium-logo.png"/></td>
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">Stellarium
-   &#160;<span id="projectnumber">25.1</span>
+   &#160;<span id="projectnumber">25.2</span>
    </div>
   </td>
  </tr>
@@ -42,6 +42,7 @@ $(function() {
 </div><!-- top -->
 <div class="header">
   <div class="summary">
+<a href="#nested-classes">Data Structures</a> &#124;
 <a href="#pub-types">Public Types</a> &#124;
 <a href="#pub-slots">Public Slots</a> &#124;
 <a href="#pub-methods">Public Member Functions</a> &#124;
@@ -57,6 +58,12 @@ $(function() {
 
 <p><code>#include &lt;StelObject.hpp&gt;</code></p>
 <table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="nested-classes"></a>
+Data Structures</h2></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structStelObject_1_1CulturalName.html">CulturalName</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Contains name components belonging to an object.  <a href="structStelObject_1_1CulturalName.html#details">More...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-types"></a>
 Public Types</h2></td></tr>
 <tr class="memitem:acf243e7987796a3a44e409140ecea8c6"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classStelObject.html#acf243e7987796a3a44e409140ecea8c6">InfoStringGroupFlags</a> { <br />
@@ -100,6 +107,95 @@ Public Types</h2></td></tr>
  }</td></tr>
 <tr class="memdesc:acf243e7987796a3a44e409140ecea8c6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Used as named bitfield flags as specifiers to filter results of getInfoString.  <a href="classStelObject.html#acf243e7987796a3a44e409140ecea8c6">More...</a><br /></td></tr>
 <tr class="separator:acf243e7987796a3a44e409140ecea8c6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abe8ee891d3661c8c474cfd25446867be"><td class="memItemLeft" align="right" valign="top">enum class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classStelObject.html#abe8ee891d3661c8c474cfd25446867be">CulturalDisplayStyle</a> { <br />
+&#160;&#160;<b>NONE</b> = 0x00
+, <b>Modern</b> = 0x01
+, <b>IPA</b> = 0x02
+, <b>IPA_Modern</b> = 0x03
+, <br />
+&#160;&#160;<b>Translated</b> = 0x04
+, <b>Translated_Modern</b> = 0x05
+, <b>Translated_IPA</b> = 0x06
+, <b>Translated_IPA_Modern</b> = 0x07
+, <br />
+&#160;&#160;<b>Translit</b> = 0x08
+, <b>Translit_Modern</b> = 0x09
+, <b>Translit_IPA</b> = 0x0A
+, <b>Translit_IPA_Modern</b> = 0x0B
+, <br />
+&#160;&#160;<b>Translit_Translated</b> = 0x0C
+, <b>Translit_Translated_Modern</b> = 0x0D
+, <b>Translit_Translated_IPA</b> = 0x0E
+, <b>Translit_Translated_IPA_Modern</b> = 0x0F
+, <br />
+&#160;&#160;<b>Pronounce</b> = 0x10
+, <b>Pronounce_Modern</b> = 0x11
+, <b>Pronounce_IPA</b> = 0x12
+, <b>Pronounce_IPA_Modern</b> = 0x13
+, <br />
+&#160;&#160;<b>Pronounce_Translated</b> = 0x14
+, <b>Pronounce_Translated_Modern</b> = 0x15
+, <b>Pronounce_Translated_IPA</b> = 0x16
+, <b>Pronounce_Translated_IPA_Modern</b> = 0x17
+, <br />
+&#160;&#160;<b>Pronounce_Translit</b> = 0x18
+, <b>Pronounce_Translit_Modern</b> = 0x19
+, <b>Pronounce_Translit_IPA</b> = 0x1A
+, <b>Pronounce_Translit_IPA_Modern</b> = 0x1B
+, <br />
+&#160;&#160;<b>Pronounce_Translit_Translated</b> = 0x1C
+, <b>Pronounce_Translit_Translated_Modern</b> = 0x1D
+, <b>Pronounce_Translit_Translated_IPA</b> = 0x1E
+, <b>Pronounce_Translit_Translated_IPA_Modern</b> = 0x1F
+, <br />
+&#160;&#160;<b>Native</b> = 0x20
+, <b>Native_Modern</b> = 0x21
+, <b>Native_IPA</b> = 0x22
+, <b>Native_IPA_Modern</b> = 0x23
+, <br />
+&#160;&#160;<b>Native_Translated</b> = 0x24
+, <b>Native_Translated_Modern</b> = 0x25
+, <b>Native_Translated_IPA</b> = 0x26
+, <b>Native_Translated_IPA_Modern</b> = 0x27
+, <br />
+&#160;&#160;<b>Native_Translit</b> = 0x28
+, <b>Native_Translit_Modern</b> = 0x29
+, <b>Native_Translit_IPA</b> = 0x2A
+, <b>Native_Translit_IPA_Modern</b> = 0x2B
+, <br />
+&#160;&#160;<b>Native_Translit_Translated</b> = 0x2C
+, <b>Native_Translit_Translated_Modern</b> = 0x2D
+, <b>Native_Translit_Translated_IPA</b> = 0x2E
+, <b>Native_Translit_Translated_IPA_Modern</b> = 0x2F
+, <br />
+&#160;&#160;<b>Native_Pronounce</b> = 0x30
+, <b>Native_Pronounce_Modern</b> = 0x31
+, <b>Native_Pronounce_IPA</b> = 0x32
+, <b>Native_Pronounce_IPA_Modern</b> = 0x33
+, <br />
+&#160;&#160;<b>Native_Pronounce_Translated</b> = 0x34
+, <b>Native_Pronounce_Translated_Modern</b> = 0x35
+, <b>Native_Pronounce_Translated_IPA</b> = 0x36
+, <b>Native_Pronounce_Translated_IPA_Modern</b> = 0x37
+, <br />
+&#160;&#160;<b>Native_Pronounce_Translit</b> = 0x38
+, <b>Native_Pronounce_Translit_Modern</b> = 0x39
+, <b>Native_Pronounce_Translit_IPA</b> = 0x3A
+, <b>Native_Pronounce_Translit_IPA_Modern</b> = 0x3B
+, <br />
+&#160;&#160;<b>Native_Pronounce_Translit_Translated</b> = 0x3C
+, <b>Native_Pronounce_Translit_Translated_Modern</b> = 0x3D
+, <b>Native_Pronounce_Translit_Translated_IPA</b> = 0x3E
+, <b>Native_Pronounce_Translit_Translated_IPA_Modern</b> = 0x3F
+<br />
+ }</td></tr>
+<tr class="memdesc:abe8ee891d3661c8c474cfd25446867be"><td class="mdescLeft">&#160;</td><td class="mdescRight">A 6-bit code with all options for displaying relevant <a class="el" href="structStelObject_1_1CulturalName.html" title="Contains name components belonging to an object.">CulturalName</a> parts.  <a href="classStelObject.html#abe8ee891d3661c8c474cfd25446867be">More...</a><br /></td></tr>
+<tr class="separator:abe8ee891d3661c8c474cfd25446867be"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af200e173b7bd34c36c750f8d51cbe2cb"><td class="memItemLeft" align="right" valign="top">enum class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classStelObject.html#af200e173b7bd34c36c750f8d51cbe2cb">CulturalNameSpecial</a> { <a class="el" href="classStelObject.html#af200e173b7bd34c36c750f8d51cbe2cba6adf97f83acf6453d4a6a4b1070f3754">None</a> = 0
+, <a class="el" href="classStelObject.html#af200e173b7bd34c36c750f8d51cbe2cbab311a3fe13ac9b0ee02985f4759a2e46">Morning</a> = 1
+, <a class="el" href="classStelObject.html#af200e173b7bd34c36c750f8d51cbe2cba0b8bd8e7a923442b0de1b614af46944f">Evening</a> = 2
+ }</td></tr>
+<tr class="separator:af200e173b7bd34c36c750f8d51cbe2cb"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-slots"></a>
 Public Slots</h2></td></tr>
@@ -144,14 +240,33 @@ virtual QString&#160;</td><td class="memItemRight" valign="bottom"><a class="el"
 <tr class="memitem:ab11e911fb1974d75b8a9b629a57f243b"><td class="memItemLeft" align="right" valign="top">virtual QString&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classStelObject.html#ab11e911fb1974d75b8a9b629a57f243b">getID</a> () const =0</td></tr>
 <tr class="memdesc:ab11e911fb1974d75b8a9b629a57f243b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns a unique identifier for this object.  <a href="classStelObject.html#ab11e911fb1974d75b8a9b629a57f243b">More...</a><br /></td></tr>
 <tr class="separator:ab11e911fb1974d75b8a9b629a57f243b"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a2c31b0cc0daaa1998600b5a4c18eb032"><td class="memItemLeft" align="right" valign="top"><a id="a2c31b0cc0daaa1998600b5a4c18eb032"></a>
-virtual QString&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classStelObject.html#a2c31b0cc0daaa1998600b5a4c18eb032">getEnglishName</a> () const =0</td></tr>
-<tr class="memdesc:a2c31b0cc0daaa1998600b5a4c18eb032"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return object's name in english. <br /></td></tr>
+<tr class="memitem:a2c31b0cc0daaa1998600b5a4c18eb032"><td class="memItemLeft" align="right" valign="top">virtual QString&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classStelObject.html#a2c31b0cc0daaa1998600b5a4c18eb032">getEnglishName</a> () const =0</td></tr>
+<tr class="memdesc:a2c31b0cc0daaa1998600b5a4c18eb032"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return object's name in english.  <a href="classStelObject.html#a2c31b0cc0daaa1998600b5a4c18eb032">More...</a><br /></td></tr>
 <tr class="separator:a2c31b0cc0daaa1998600b5a4c18eb032"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad10fa1bc85e91eb812f9451a07a1c862"><td class="memItemLeft" align="right" valign="top"><a id="ad10fa1bc85e91eb812f9451a07a1c862"></a>
 virtual QString&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classStelObject.html#ad10fa1bc85e91eb812f9451a07a1c862">getNameI18n</a> () const =0</td></tr>
-<tr class="memdesc:ad10fa1bc85e91eb812f9451a07a1c862"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return translated object's name. <br /></td></tr>
+<tr class="memdesc:ad10fa1bc85e91eb812f9451a07a1c862"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return translated object's name For non-default skycultures, this is the user language translation of the english name (which should be native translated to english). <br /></td></tr>
 <tr class="separator:ad10fa1bc85e91eb812f9451a07a1c862"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3a4e8d522a75df0850fb3ce07611e3a9"><td class="memItemLeft" align="right" valign="top">virtual QString&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classStelObject.html#a3a4e8d522a75df0850fb3ce07611e3a9">getNameNative</a> () const</td></tr>
+<tr class="memdesc:a3a4e8d522a75df0850fb3ce07611e3a9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return object's native name in the glyphs as written in skyculture descriptions (index.json).  <a href="classStelObject.html#a3a4e8d522a75df0850fb3ce07611e3a9">More...</a><br /></td></tr>
+<tr class="separator:a3a4e8d522a75df0850fb3ce07611e3a9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa6a176787324797c303e523b05aa396f"><td class="memItemLeft" align="right" valign="top">virtual QString&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classStelObject.html#aa6a176787324797c303e523b05aa396f">getNamePronounce</a> () const</td></tr>
+<tr class="memdesc:aa6a176787324797c303e523b05aa396f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return a Latin-letter based transliteration geared at english pronounciation of the native name.  <a href="classStelObject.html#aa6a176787324797c303e523b05aa396f">More...</a><br /></td></tr>
+<tr class="separator:aa6a176787324797c303e523b05aa396f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a65c54a8e6d4ce3571dc879471d101dda"><td class="memItemLeft" align="right" valign="top">virtual QString&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classStelObject.html#a65c54a8e6d4ce3571dc879471d101dda">getNameTransliteration</a> () const</td></tr>
+<tr class="memdesc:a65c54a8e6d4ce3571dc879471d101dda"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return a secondary scientific transliteration of the native name.  <a href="classStelObject.html#a65c54a8e6d4ce3571dc879471d101dda">More...</a><br /></td></tr>
+<tr class="separator:a65c54a8e6d4ce3571dc879471d101dda"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a27c2568ae79ce1d0c0a63e0f9bd7b3db"><td class="memItemLeft" align="right" valign="top"><a id="a27c2568ae79ce1d0c0a63e0f9bd7b3db"></a>
+virtual QString&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classStelObject.html#a27c2568ae79ce1d0c0a63e0f9bd7b3db">getNameIPA</a> () const</td></tr>
+<tr class="memdesc:a27c2568ae79ce1d0c0a63e0f9bd7b3db"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return native name in International Phonetic Alphabet. Optional. <br /></td></tr>
+<tr class="separator:a27c2568ae79ce1d0c0a63e0f9bd7b3db"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad5a746b7fb51f2ad2bf211360ee462b5"><td class="memItemLeft" align="right" valign="top"><a id="ad5a746b7fb51f2ad2bf211360ee462b5"></a>
+virtual QString&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classStelObject.html#ad5a746b7fb51f2ad2bf211360ee462b5">getScreenLabel</a> () const</td></tr>
+<tr class="memdesc:ad5a746b7fb51f2ad2bf211360ee462b5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return screen label (to be used in the sky display. Most users will use some short label) <br /></td></tr>
+<tr class="separator:ad5a746b7fb51f2ad2bf211360ee462b5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a398ded5b22e80d00a1e86722c7c2e50f"><td class="memItemLeft" align="right" valign="top">virtual QString&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classStelObject.html#a398ded5b22e80d00a1e86722c7c2e50f">getInfoLabel</a> () const</td></tr>
+<tr class="memdesc:a398ded5b22e80d00a1e86722c7c2e50f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return InfoString label (to be used in the InfoString).  <a href="classStelObject.html#a398ded5b22e80d00a1e86722c7c2e50f">More...</a><br /></td></tr>
+<tr class="separator:a398ded5b22e80d00a1e86722c7c2e50f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a50ac8b2a9be97d2cf58987c58af6b740"><td class="memItemLeft" align="right" valign="top"><a id="a50ac8b2a9be97d2cf58987c58af6b740"></a>
 virtual <a class="el" href="classVector3.html">Vec3d</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classStelObject.html#a50ac8b2a9be97d2cf58987c58af6b740">getJ2000EquatorialPos</a> (const <a class="el" href="classStelCore.html">StelCore</a> *core) const =0</td></tr>
 <tr class="memdesc:a50ac8b2a9be97d2cf58987c58af6b740"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get observer-centered equatorial coordinates at equinox J2000, including aberration. <br /></td></tr>
@@ -269,6 +384,68 @@ Protected Member Functions</h2></td></tr>
 <div class="textblock"><p>The base abstract class for sky objects used in Stellarium like Stars, Planets, Constellations etc... </p>
 <p>Normally you should use StelObjectP instead of StelObject* which have by default the same behaviour, but which can be added reference counting if needed. </p><dl class="section see"><dt>See also</dt><dd>StelObjectP </dd></dl>
 </div><h2 class="groupheader">Member Enumeration Documentation</h2>
+<a id="abe8ee891d3661c8c474cfd25446867be"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abe8ee891d3661c8c474cfd25446867be">&#9670;&nbsp;</a></span>CulturalDisplayStyle</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">enum <a class="el" href="classStelObject.html#abe8ee891d3661c8c474cfd25446867be">StelObject::CulturalDisplayStyle</a></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">strong</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>A 6-bit code with all options for displaying relevant <a class="el" href="structStelObject_1_1CulturalName.html" title="Contains name components belonging to an object.">CulturalName</a> parts. </p>
+<p>Describes how to display culture aware labels for constellation, planets, star names, .... The viewDialog GUI has checkboxes which corresponds to these values. It is necessary to have different settings for screen labels (usually shorter) and InfoString labels (may be set to more complete) This setting is handled by methods <a class="el" href="classStelObject.html#ad5a746b7fb51f2ad2bf211360ee462b5" title="Return screen label (to be used in the sky display. Most users will use some short label)">getScreenLabel()</a> and <a class="el" href="classStelObject.html#a398ded5b22e80d00a1e86722c7c2e50f" title="Return InfoString label (to be used in the InfoString).">getInfoLabel()</a> in <a class="el" href="classStelObject.html" title="The base abstract class for sky objects used in Stellarium like Stars, Planets, Constellations etc....">StelObject</a> and descendants. The names are explicitly long and descriptive, usable in config.ini. Example: Native_Pronounce_Translit_Translated_IPA_Modern shows everything:</p><ul>
+<li>native name,</li>
+<li>simple translatable pronunciation</li>
+<li>non-translatable scientific transliteration (in rare cases only)</li>
+<li>translated meaning</li>
+<li>IPA reading/pronunciation aid in International Phonetic Alphabet</li>
+<li>Modern name (useful for stars and planets only). Helpful to see the modern name in context. </li>
+</ul>
+
+</div>
+</div>
+<a id="af200e173b7bd34c36c750f8d51cbe2cb"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af200e173b7bd34c36c750f8d51cbe2cb">&#9670;&nbsp;</a></span>CulturalNameSpecial</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">enum <a class="el" href="classStelObject.html#af200e173b7bd34c36c750f8d51cbe2cb">StelObject::CulturalNameSpecial</a></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">strong</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<table class="fieldtable">
+<tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a id="af200e173b7bd34c36c750f8d51cbe2cba6adf97f83acf6453d4a6a4b1070f3754"></a>None&#160;</td><td class="fielddoc"><p>Nothing special. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="af200e173b7bd34c36c750f8d51cbe2cbab311a3fe13ac9b0ee02985f4759a2e46"></a>Morning&#160;</td><td class="fielddoc"><p>This name is used for Mercury or Venus in Western elongation, i.e., "morning star". </p>
+</td></tr>
+<tr><td class="fieldname"><a id="af200e173b7bd34c36c750f8d51cbe2cba0b8bd8e7a923442b0de1b614af46944f"></a>Evening&#160;</td><td class="fielddoc"><p>This name is used for Mercury or Venus in Eastern elongation, i.e., "evening star". </p>
+</td></tr>
+</table>
+
+</div>
+</div>
 <a id="acf243e7987796a3a44e409140ecea8c6"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#acf243e7987796a3a44e409140ecea8c6">&#9670;&nbsp;</a></span>InfoStringGroupFlags</h2>
 
@@ -286,7 +463,7 @@ Protected Member Functions</h2></td></tr>
 <table class="fieldtable">
 <tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a id="acf243e7987796a3a44e409140ecea8c6a9574f41db6e66de0ece6bfb40439dc49"></a>None&#160;</td><td class="fielddoc"><p>Show Nothing. </p>
 </td></tr>
-<tr><td class="fieldname"><a id="acf243e7987796a3a44e409140ecea8c6ab14de19b496f04e198a835899cefd934"></a>Name&#160;</td><td class="fielddoc"><p>An object's name. </p>
+<tr><td class="fieldname"><a id="acf243e7987796a3a44e409140ecea8c6ab14de19b496f04e198a835899cefd934"></a>Name&#160;</td><td class="fielddoc"><p>An object's name as further defined by CulturalDisplayStyle found in SkyCultureMgr. </p>
 </td></tr>
 <tr><td class="fieldname"><a id="acf243e7987796a3a44e409140ecea8c6a57d62b46f2f2849da8e3e234c7d27b0e"></a>CatalogNumber&#160;</td><td class="fielddoc"><p>Catalog numbers. </p>
 </td></tr>
@@ -326,7 +503,7 @@ Protected Member Functions</h2></td></tr>
 </td></tr>
 <tr><td class="fieldname"><a id="acf243e7987796a3a44e409140ecea8c6aa9490c2d0bae26d11a36a7b6f9f8720e"></a>EclipticCoordOfDate&#160;</td><td class="fielddoc"><p>The ecliptic position (of date) </p>
 </td></tr>
-<tr><td class="fieldname"><a id="acf243e7987796a3a44e409140ecea8c6a9e1f6ceb04288616cb5928944ee3ee6e"></a>IAUConstellation&#160;</td><td class="fielddoc"><p>Three-letter constellation code (And, Boo, Cas, ...) </p>
+<tr><td class="fieldname"><a id="acf243e7987796a3a44e409140ecea8c6a9e1f6ceb04288616cb5928944ee3ee6e"></a>IAUConstellation&#160;</td><td class="fielddoc"><p>Three-letter constellation code (And, Boo, Cas, ...), and Zodiacal sign and Lunar station/mansion where defined. </p>
 </td></tr>
 <tr><td class="fieldname"><a id="acf243e7987796a3a44e409140ecea8c6a6b1acde73a84cc7314489ff6c5793264"></a>SiderealTime&#160;</td><td class="fielddoc"><p>Mean and Apparent Sidereal Time. </p>
 </td></tr>
@@ -553,6 +730,36 @@ Protected Member Functions</h2></td></tr>
 
 </div>
 </div>
+<a id="a2c31b0cc0daaa1998600b5a4c18eb032"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2c31b0cc0daaa1998600b5a4c18eb032">&#9670;&nbsp;</a></span>getEnglishName()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual QString StelObject::getEnglishName </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Return object's name in english. </p>
+<p>For non-default skycultures, this is the english translation of the native name. </p>
+
+<p>Implemented in <a class="el" href="classStarWrapper1.html#a9a5ed4776ff2f7697eb0dc243247e967">StarWrapper1</a>, <a class="el" href="classStarWrapperBase.html#ad19608309e4635c5f02409b0b79d89e9">StarWrapperBase</a>, <a class="el" href="classPlanet.html#a081e043e41e5703d587c4389fbf5e0ce">Planet</a>, <a class="el" href="classNomenclatureItem.html#aaa84913efff4157ffbe9ba900f7b228c">NomenclatureItem</a>, <a class="el" href="classMinorPlanet.html#a65c913f0a956773fdd95978d4fc040d4">MinorPlanet</a>, <a class="el" href="classCustomObject.html#a6ba29f9dfe18b8cb06fce3e5fdef4205">CustomObject</a>, <a class="el" href="classCoordObject.html#adc0b51b6ad0e21124efdf43e4987a124">CoordObject</a>, <a class="el" href="classTelescopeClient.html#adfe638c42890353ffb5e32e7639d91ad">TelescopeClient</a>, <a class="el" href="group__historicalSupernovae.html#ae12019015e13a84a538dffed33cd6142">Supernova</a>, <a class="el" href="group__satellites.html#a4c384e4d7d6101bda6f188af7ee8a46b">Satellite</a>, <a class="el" href="group__quasars.html#aa25625c22b820f5c0eb81124faf54369">Quasar</a>, <a class="el" href="group__pulsars.html#a8898fe6c492b07f175d05684358dd9e5">Pulsar</a>, <a class="el" href="group__brightNovae.html#aa0dee37b668dff6260f16d0446c0b1cd">Nova</a>, <a class="el" href="group__meteorShowers.html#a496310428eaaea585797a4c1186482cc">MeteorShower</a>, <a class="el" href="group__exoplanets.html#ae17b13871546d82a8b612647b3be4b06">Exoplanet</a>, and <a class="el" href="classNebula.html#a6c6d429c39dea99bd7a48d5ec7dc36ed">Nebula</a>.</p>
+
+</div>
+</div>
 <a id="a21b0171ccb2ad2bdc66da7c6ed1661b2"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a21b0171ccb2ad2bdc66da7c6ed1661b2">&#9670;&nbsp;</a></span>getExtraInfoStrings</h2>
 
@@ -610,7 +817,37 @@ Protected Member Functions</h2></td></tr>
 <p>With this it should be possible to at least identify the same object in a different instance of Stellarium running the same version, but it would even be better if the ID provides some degree of forward-compatibility. For some object types (e.g. planets) this may simply return <a class="el" href="classStelObject.html#a2c31b0cc0daaa1998600b5a4c18eb032" title="Return object&#39;s name in english.">getEnglishName()</a>, but better candidates may be official designations or at least (stable) internal IDs.</p>
 <p>An object may have multiple IDs (different catalog numbers, etc). <a class="el" href="classStelObjectMgr.html#af0a33f6ff1448db085288eea46937399" title="Find an object of the given type and ID.">StelObjectMgr::searchByID()</a> should search through all ID variants, but this method only returns one of them. </p>
 
-<p>Implemented in <a class="el" href="classStarWrapper3.html#a4979d223c75d39c4732848bea64854aa">StarWrapper3</a>, <a class="el" href="classStarWrapper2.html#ab0a0726b15e3ee2f83a8414c09a1e0b6">StarWrapper2</a>, <a class="el" href="classStarWrapper1.html#a84815039519d850464ba5920eaab1d03">StarWrapper1</a>, <a class="el" href="classPlanet.html#afc8b35a4dbe3ffbc19b185b1756dec3b">Planet</a>, <a class="el" href="classNomenclatureItem.html#a7d07abc3f8622c6e74654b300481085c">NomenclatureItem</a>, <a class="el" href="classCustomObject.html#a8f4024b7545d92d238bfc84242c3085e">CustomObject</a>, <a class="el" href="group__historicalSupernovae.html#af8937b63a267296e217236ef94c938d6">Supernova</a>, <a class="el" href="group__satellites.html#acef25976b5556e85c469613173ca99be">Satellite</a>, <a class="el" href="group__quasars.html#ab7a936c1f7b44311dd68202d20c6aa98">Quasar</a>, <a class="el" href="group__pulsars.html#a7d408613fc80fb0689e1a74a016bd959">Pulsar</a>, <a class="el" href="group__brightNovae.html#a41a0e6685f8ca6253d23704eb73666c8">Nova</a>, <a class="el" href="group__meteorShowers.html#abb69cd1cdef198da84af1221937aab60">MeteorShower</a>, <a class="el" href="group__exoplanets.html#a8dd501da2a920a29de8f6c21305b4a51">Exoplanet</a>, <a class="el" href="classNebula.html#a432449f12c356050e28af0fbe8ba58e2">Nebula</a>, and <a class="el" href="classTelescopeClient.html#aa0c350795e88317e8c0a6414f3f531fe">TelescopeClient</a>.</p>
+<p>Implemented in <a class="el" href="classStarWrapper3.html#a4979d223c75d39c4732848bea64854aa">StarWrapper3</a>, <a class="el" href="classStarWrapper2.html#ab0a0726b15e3ee2f83a8414c09a1e0b6">StarWrapper2</a>, <a class="el" href="classStarWrapper1.html#a84815039519d850464ba5920eaab1d03">StarWrapper1</a>, <a class="el" href="classPlanet.html#afc8b35a4dbe3ffbc19b185b1756dec3b">Planet</a>, <a class="el" href="classNomenclatureItem.html#a7d07abc3f8622c6e74654b300481085c">NomenclatureItem</a>, <a class="el" href="classCustomObject.html#a8f4024b7545d92d238bfc84242c3085e">CustomObject</a>, <a class="el" href="classCoordObject.html#a01f387727a07df12397f376d7b516850">CoordObject</a>, <a class="el" href="group__historicalSupernovae.html#af8937b63a267296e217236ef94c938d6">Supernova</a>, <a class="el" href="group__satellites.html#acef25976b5556e85c469613173ca99be">Satellite</a>, <a class="el" href="group__quasars.html#ab7a936c1f7b44311dd68202d20c6aa98">Quasar</a>, <a class="el" href="group__pulsars.html#a7d408613fc80fb0689e1a74a016bd959">Pulsar</a>, <a class="el" href="group__brightNovae.html#a41a0e6685f8ca6253d23704eb73666c8">Nova</a>, <a class="el" href="group__meteorShowers.html#abb69cd1cdef198da84af1221937aab60">MeteorShower</a>, <a class="el" href="group__exoplanets.html#a8dd501da2a920a29de8f6c21305b4a51">Exoplanet</a>, <a class="el" href="classNebula.html#a432449f12c356050e28af0fbe8ba58e2">Nebula</a>, and <a class="el" href="classTelescopeClient.html#aa0c350795e88317e8c0a6414f3f531fe">TelescopeClient</a>.</p>
+
+</div>
+</div>
+<a id="a398ded5b22e80d00a1e86722c7c2e50f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a398ded5b22e80d00a1e86722c7c2e50f">&#9670;&nbsp;</a></span>getInfoLabel()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual QString StelObject::getInfoLabel </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Return InfoString label (to be used in the InfoString). </p>
+<p>When dealing with foreign skycultures, many users will want this to be longer, with more name components. </p>
+
+<p>Reimplemented in <a class="el" href="classPlanet.html#ac2dab3ee97d358a0fea9a2dc9e223f21">Planet</a>, and <a class="el" href="classNebula.html#a02a35d00c5e1248dd74232dc76236a21">Nebula</a>.</p>
 
 </div>
 </div>
@@ -741,7 +978,7 @@ Protected Member Functions</h2></td></tr>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>an HTML string containing information about the <a class="el" href="classStelObject.html" title="The base abstract class for sky objects used in Stellarium like Stars, Planets, Constellations etc....">StelObject</a>. </dd></dl>
 
-<p>Implemented in <a class="el" href="classStarWrapper3.html#ae1a80e289118ce7aa2dba74a6921b5e5">StarWrapper3</a>, <a class="el" href="classStarWrapper2.html#a04bcc71ce9dc4249bec21ee15cbdaa0a">StarWrapper2</a>, <a class="el" href="classStarWrapper1.html#aa682a37700c0c541893d00350b9b1b6a">StarWrapper1</a>, <a class="el" href="classStarWrapperBase.html#a77816b2e91ab2f405caa3d9e09f6077e">StarWrapperBase</a>, <a class="el" href="classPlanet.html#a3a0ef0865157bb2eb67acd0c55932ddc">Planet</a>, <a class="el" href="classNomenclatureItem.html#aa79518e2df8b4a62738467ef32ef6138">NomenclatureItem</a>, <a class="el" href="classNebula.html#a06ec5e6d7b0fe786b499ffee24c6afb6">Nebula</a>, <a class="el" href="classCustomObject.html#ac151116647fd05315a2b6f77957af951">CustomObject</a>, <a class="el" href="classTelescopeClient.html#ac97ed287c8026bdd84d0e9b2dc3a6860">TelescopeClient</a>, <a class="el" href="group__historicalSupernovae.html#abd54c1085dd730bb6c5a1fe25017883f">Supernova</a>, <a class="el" href="group__satellites.html#a96404f75aded98b1596398bd5ddf9b0f">Satellite</a>, <a class="el" href="group__quasars.html#a3c375efcb6cec5602411925ae321eb76">Quasar</a>, <a class="el" href="group__pulsars.html#a622b998ac341c205d8c02d4430143c81">Pulsar</a>, <a class="el" href="group__brightNovae.html#a534420bd12d86647f3c83b9fd6341bdb">Nova</a>, <a class="el" href="group__meteorShowers.html#af372e31c1cedbd450a51c34e5f262271">MeteorShower</a>, and <a class="el" href="group__exoplanets.html#aa9bdcb1d381ddd7c58b79ffd60a70648">Exoplanet</a>.</p>
+<p>Implemented in <a class="el" href="classCoordObject.html#a514fd6990a58c2d2ffc6937739cc0cff">CoordObject</a>, <a class="el" href="classStarWrapper3.html#ae1a80e289118ce7aa2dba74a6921b5e5">StarWrapper3</a>, <a class="el" href="classStarWrapper2.html#a04bcc71ce9dc4249bec21ee15cbdaa0a">StarWrapper2</a>, <a class="el" href="classStarWrapper1.html#aa682a37700c0c541893d00350b9b1b6a">StarWrapper1</a>, <a class="el" href="classStarWrapperBase.html#a77816b2e91ab2f405caa3d9e09f6077e">StarWrapperBase</a>, <a class="el" href="classPlanet.html#a3a0ef0865157bb2eb67acd0c55932ddc">Planet</a>, <a class="el" href="classNomenclatureItem.html#aa79518e2df8b4a62738467ef32ef6138">NomenclatureItem</a>, <a class="el" href="classNebula.html#a06ec5e6d7b0fe786b499ffee24c6afb6">Nebula</a>, <a class="el" href="classCustomObject.html#ac151116647fd05315a2b6f77957af951">CustomObject</a>, <a class="el" href="classTelescopeClient.html#ac97ed287c8026bdd84d0e9b2dc3a6860">TelescopeClient</a>, <a class="el" href="group__historicalSupernovae.html#abd54c1085dd730bb6c5a1fe25017883f">Supernova</a>, <a class="el" href="group__satellites.html#a96404f75aded98b1596398bd5ddf9b0f">Satellite</a>, <a class="el" href="group__quasars.html#a3c375efcb6cec5602411925ae321eb76">Quasar</a>, <a class="el" href="group__pulsars.html#a622b998ac341c205d8c02d4430143c81">Pulsar</a>, <a class="el" href="group__brightNovae.html#a534420bd12d86647f3c83b9fd6341bdb">Nova</a>, <a class="el" href="group__meteorShowers.html#af372e31c1cedbd450a51c34e5f262271">MeteorShower</a>, and <a class="el" href="group__exoplanets.html#aa9bdcb1d381ddd7c58b79ffd60a70648">Exoplanet</a>.</p>
 
 </div>
 </div>
@@ -806,6 +1043,95 @@ Protected Member Functions</h2></td></tr>
 
 </div>
 </div>
+<a id="a3a4e8d522a75df0850fb3ce07611e3a9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3a4e8d522a75df0850fb3ce07611e3a9">&#9670;&nbsp;</a></span>getNameNative()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual QString StelObject::getNameNative </td>
+          <td>(</td>
+          <td class="paramtype">void&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Return object's native name in the glyphs as written in skyculture descriptions (index.json). </p>
+<p>For non-default skycultures, this is as close to the original as possible. </p>
+
+<p>Reimplemented in <a class="el" href="classPlanet.html#af5bda2112c1fbd72e8851cd371402d52">Planet</a>.</p>
+
+</div>
+</div>
+<a id="aa6a176787324797c303e523b05aa396f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa6a176787324797c303e523b05aa396f">&#9670;&nbsp;</a></span>getNamePronounce()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual QString StelObject::getNamePronounce </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Return a Latin-letter based transliteration geared at english pronounciation of the native name. </p>
+<p>This is optional but essential for all skycultures in languages which use non-Latin glyphs. When user language is English, this is the string from index.json. TBD: When user language is different, this may appear adapted to user language. </p>
+
+<p>Reimplemented in <a class="el" href="classPlanet.html#a4782efc65960cf9376771da6f97361fb">Planet</a>, and <a class="el" href="classNebula.html#a17a926eea2cd78f74d17fd908d86cd3c">Nebula</a>.</p>
+
+</div>
+</div>
+<a id="a65c54a8e6d4ce3571dc879471d101dda"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a65c54a8e6d4ce3571dc879471d101dda">&#9670;&nbsp;</a></span>getNameTransliteration()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual QString StelObject::getNameTransliteration </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Return a secondary scientific transliteration of the native name. </p>
+<p>This is optional and in fact rarely used. An example would be Wylie-transliteration of Tibetan. </p>
+
+</div>
+</div>
 <a id="af0b5fe283961e1b2f363325f20716a50"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#af0b5fe283961e1b2f363325f20716a50">&#9670;&nbsp;</a></span>getObjectType()</h2>
 
@@ -832,7 +1158,7 @@ Protected Member Functions</h2></td></tr>
 <p>Return object's type. </p>
 <p>It should be English lowercase name of the astronomical type of the object. The purpose of this string is a distinction or further refinement over object class name retrieved with <a class="el" href="classStelObject.html#acf26bf2f7442e0317cc44597a984f54d" title="Return object&#39;s type. It should be the name of the class.">getType()</a>: <a class="el" href="classPlanet.html" title="The Planet class is used for the major planets, moons, &quot;Observer&quot; planets, and artificial objects (&quot;S...">Planet</a> objects can be planets, moons, or even the Sun. The Sun should however return "star". <a class="el" href="classNebula.html">Nebula</a> objects should return their actual type like "open cluster", "galaxy", "nebula", ... </p>
 
-<p>Implemented in <a class="el" href="classStarWrapperBase.html#a01ef6ebe1613901419b3cf7575ba9264">StarWrapperBase</a>, <a class="el" href="classPlanet.html#aa73bf82fb70ce27274ec3388f0d2e8cb">Planet</a>, <a class="el" href="classNomenclatureItem.html#ae93ae4a7fd7e9ed8f55b5ada76c6c95b">NomenclatureItem</a>, <a class="el" href="classCustomObject.html#a057ae05418ed90b64bbefcd6c32c4440">CustomObject</a>, <a class="el" href="classTelescopeClient.html#ad8178af1708d5a28d69d7b6fe8cf8c4c">TelescopeClient</a>, <a class="el" href="group__historicalSupernovae.html#a969f8cd7fee99edf2afcc4000345a83d">Supernova</a>, <a class="el" href="group__satellites.html#a6d182a4b3d1055761e191789279d2386">Satellite</a>, <a class="el" href="group__quasars.html#ad3b6a5b3742c3a58ff34d080b68ee432">Quasar</a>, <a class="el" href="group__pulsars.html#ae700c3db9deb631b890a6443f6cbda20">Pulsar</a>, <a class="el" href="group__brightNovae.html#a2b5129a937febeb4b35e19061c91f6ab">Nova</a>, <a class="el" href="group__meteorShowers.html#ac55c5f8d773024525f5932834c6f1e61">MeteorShower</a>, <a class="el" href="group__exoplanets.html#a4c38d696c5e48dee77eaf5349f813b7d">Exoplanet</a>, <a class="el" href="classStarWrapper3.html#a6972ae5d118e5c5f1355d5d0d953f430">StarWrapper3</a>, <a class="el" href="classStarWrapper2.html#a719ab8b81084b3d811952d4fd7d2bc53">StarWrapper2</a>, <a class="el" href="classStarWrapper1.html#af6e7b7c931a4244f5490aa5bcc5a41f0">StarWrapper1</a>, and <a class="el" href="classNebula.html#a5922482d97c9b205083e1bf688665b5c">Nebula</a>.</p>
+<p>Implemented in <a class="el" href="classStarWrapperBase.html#a01ef6ebe1613901419b3cf7575ba9264">StarWrapperBase</a>, <a class="el" href="classPlanet.html#aa73bf82fb70ce27274ec3388f0d2e8cb">Planet</a>, <a class="el" href="classNomenclatureItem.html#ae93ae4a7fd7e9ed8f55b5ada76c6c95b">NomenclatureItem</a>, <a class="el" href="classCustomObject.html#a057ae05418ed90b64bbefcd6c32c4440">CustomObject</a>, <a class="el" href="classCoordObject.html#a26024781028f3bfbb27e5ded551fd5a3">CoordObject</a>, <a class="el" href="classTelescopeClient.html#ad8178af1708d5a28d69d7b6fe8cf8c4c">TelescopeClient</a>, <a class="el" href="group__historicalSupernovae.html#a969f8cd7fee99edf2afcc4000345a83d">Supernova</a>, <a class="el" href="group__satellites.html#a6d182a4b3d1055761e191789279d2386">Satellite</a>, <a class="el" href="group__quasars.html#ad3b6a5b3742c3a58ff34d080b68ee432">Quasar</a>, <a class="el" href="group__pulsars.html#ae700c3db9deb631b890a6443f6cbda20">Pulsar</a>, <a class="el" href="group__brightNovae.html#a2b5129a937febeb4b35e19061c91f6ab">Nova</a>, <a class="el" href="group__meteorShowers.html#ac55c5f8d773024525f5932834c6f1e61">MeteorShower</a>, <a class="el" href="group__exoplanets.html#a4c38d696c5e48dee77eaf5349f813b7d">Exoplanet</a>, <a class="el" href="classStarWrapper3.html#a6972ae5d118e5c5f1355d5d0d953f430">StarWrapper3</a>, <a class="el" href="classStarWrapper2.html#a719ab8b81084b3d811952d4fd7d2bc53">StarWrapper2</a>, <a class="el" href="classStarWrapper1.html#af6e7b7c931a4244f5490aa5bcc5a41f0">StarWrapper1</a>, and <a class="el" href="classNebula.html#a5922482d97c9b205083e1bf688665b5c">Nebula</a>.</p>
 
 </div>
 </div>
@@ -1249,10 +1575,10 @@ This is an abbreviated version of the method implemented in the <a class="el" hr
   </tr>
 </table>
 </div><div class="memdoc">
-<b>Initial value:</b><div class="fragment"><div class="line">= <span class="keyword">static_cast&lt;</span>InfoStringGroup<span class="keyword">&gt;</span>(<a class="code" href="classStelObject.html#acf243e7987796a3a44e409140ecea8c6ab14de19b496f04e198a835899cefd934" title="An object&#39;s name.">Name</a>|<a class="code" href="classStelObject.html#acf243e7987796a3a44e409140ecea8c6a57d62b46f2f2849da8e3e234c7d27b0e" title="Catalog numbers.">CatalogNumber</a>|<a class="code" href="classStelObject.html#acf243e7987796a3a44e409140ecea8c6a04e5ef1bf85944db7b25b57f2663c79d" title="Magnitude related data.">Magnitude</a>|<a class="code" href="classStelObject.html#acf243e7987796a3a44e409140ecea8c6aefb86264a540d299b32c5931ca302ced" title="The equatorial position (J2000 ref)">RaDecJ2000</a>|<a class="code" href="classStelObject.html#acf243e7987796a3a44e409140ecea8c6aa35179832c380519fd22fc147b9e8fa9" title="The equatorial position (of date)">RaDecOfDate</a>|<a class="code" href="classStelObject.html#acf243e7987796a3a44e409140ecea8c6a5c984f02cfcd92d0f516b0c87d30c716" title="The position (Altitude/Azimuth)">AltAzi</a>|</div>
+<b>Initial value:</b><div class="fragment"><div class="line">= <span class="keyword">static_cast&lt;</span>InfoStringGroup<span class="keyword">&gt;</span>(<a class="code" href="classStelObject.html#acf243e7987796a3a44e409140ecea8c6ab14de19b496f04e198a835899cefd934" title="An object&#39;s name as further defined by CulturalDisplayStyle found in SkyCultureMgr.">Name</a>|<a class="code" href="classStelObject.html#acf243e7987796a3a44e409140ecea8c6a57d62b46f2f2849da8e3e234c7d27b0e" title="Catalog numbers.">CatalogNumber</a>|<a class="code" href="classStelObject.html#acf243e7987796a3a44e409140ecea8c6a04e5ef1bf85944db7b25b57f2663c79d" title="Magnitude related data.">Magnitude</a>|<a class="code" href="classStelObject.html#acf243e7987796a3a44e409140ecea8c6aefb86264a540d299b32c5931ca302ced" title="The equatorial position (J2000 ref)">RaDecJ2000</a>|<a class="code" href="classStelObject.html#acf243e7987796a3a44e409140ecea8c6aa35179832c380519fd22fc147b9e8fa9" title="The equatorial position (of date)">RaDecOfDate</a>|<a class="code" href="classStelObject.html#acf243e7987796a3a44e409140ecea8c6a5c984f02cfcd92d0f516b0c87d30c716" title="The position (Altitude/Azimuth)">AltAzi</a>|</div>
 <div class="line">                                       <a class="code" href="classStelObject.html#acf243e7987796a3a44e409140ecea8c6a64a2a3b3403c2dbaab74d0d94c68ec56" title="Info about an object&#39;s distance.">Distance</a>|<a class="code" href="classStelObject.html#acf243e7987796a3a44e409140ecea8c6a97119a90e59b2b398d7619917ca73dd2" title="Info about elongation, phase angle etc. Most useful for Planets, but possible for all objects.">Elongation</a>|<a class="code" href="classStelObject.html#acf243e7987796a3a44e409140ecea8c6a865d3094d10bd62b0032930abb2fe48d" title="Info about an object&#39;s size.">Size</a>|<a class="code" href="classStelObject.html#acf243e7987796a3a44e409140ecea8c6a86056d9129162a8f544c474789f2b709" title="Info about object&#39;s velocity.">Velocity</a>|<a class="code" href="classStelObject.html#acf243e7987796a3a44e409140ecea8c6a03e7afe5478d07ed1d7ec6819b7e77c5" title="Annual proper motion (for stars) or hourly motion (for Planets)">ProperMotion</a>|<a class="code" href="classStelObject.html#acf243e7987796a3a44e409140ecea8c6ae65e8c0135e59a4fa6f1eeb42aa74a97" title="Derived class-specific extra fields.">Extra</a>|<a class="code" href="classStelObject.html#acf243e7987796a3a44e409140ecea8c6af23ea4040195fe66b4d564b555d32eb8" title="The hour angle + DE (of date)">HourAngle</a>|<a class="code" href="classStelObject.html#acf243e7987796a3a44e409140ecea8c6a19948f98c49dd3f1327c440358194688" title="The absolute magnitude.">AbsoluteMagnitude</a>|</div>
 <div class="line">                                       <a class="code" href="classStelObject.html#acf243e7987796a3a44e409140ecea8c6a24d50180f90932013c35bfb51a4726c8" title="The galactic position.">GalacticCoord</a>|<a class="code" href="classStelObject.html#acf243e7987796a3a44e409140ecea8c6a78e2f84bcdbb984213db9c7c4dd169a2" title="The supergalactic position.">SupergalacticCoord</a>|<a class="code" href="classStelObject.html#acf243e7987796a3a44e409140ecea8c6a3187e7e8e1608f5c1813aba687b78110" title="Unspecified additional coordinates. These can be &quot;injected&quot; into the extraInfoStrings by plugins.">OtherCoord</a>|<a class="code" href="classStelObject.html#acf243e7987796a3a44e409140ecea8c6a06c3c53f2370753e8b1b088dd31909a9" title="The type of the object (star, planet, etc.)">ObjectType</a>|<a class="code" href="classStelObject.html#acf243e7987796a3a44e409140ecea8c6ac3f35973b913dd7614c824a311d6980b" title="The ecliptic position (J2000.0 ref) [+ XYZ of VSOP87A (used mainly for debugging, not public)].">EclipticCoordJ2000</a>|</div>
-<div class="line">                                       <a class="code" href="classStelObject.html#acf243e7987796a3a44e409140ecea8c6aa9490c2d0bae26d11a36a7b6f9f8720e" title="The ecliptic position (of date)">EclipticCoordOfDate</a>|<a class="code" href="classStelObject.html#acf243e7987796a3a44e409140ecea8c6a9e1f6ceb04288616cb5928944ee3ee6e" title="Three-letter constellation code (And, Boo, Cas, ...)">IAUConstellation</a>|<a class="code" href="classStelObject.html#acf243e7987796a3a44e409140ecea8c6a6b1acde73a84cc7314489ff6c5793264" title="Mean and Apparent Sidereal Time.">SiderealTime</a>|<a class="code" href="classStelObject.html#acf243e7987796a3a44e409140ecea8c6a0a4945c66b17aebfce6b1ef5a681e74e" title="Time of rise, transit and set of celestial object.">RTSTime</a>|<a class="code" href="classStelObject.html#acf243e7987796a3a44e409140ecea8c6a738f66c455ddb886d805dcaa17cfb7c2" title="Show Solar and Lunar horizontal position (on Earth location only)">SolarLunarPosition</a>)</div>
+<div class="line">                                       <a class="code" href="classStelObject.html#acf243e7987796a3a44e409140ecea8c6aa9490c2d0bae26d11a36a7b6f9f8720e" title="The ecliptic position (of date)">EclipticCoordOfDate</a>|<a class="code" href="classStelObject.html#acf243e7987796a3a44e409140ecea8c6a9e1f6ceb04288616cb5928944ee3ee6e" title="Three-letter constellation code (And, Boo, Cas, ...), and Zodiacal sign and Lunar station/mansion whe...">IAUConstellation</a>|<a class="code" href="classStelObject.html#acf243e7987796a3a44e409140ecea8c6a6b1acde73a84cc7314489ff6c5793264" title="Mean and Apparent Sidereal Time.">SiderealTime</a>|<a class="code" href="classStelObject.html#acf243e7987796a3a44e409140ecea8c6a0a4945c66b17aebfce6b1ef5a681e74e" title="Time of rise, transit and set of celestial object.">RTSTime</a>|<a class="code" href="classStelObject.html#acf243e7987796a3a44e409140ecea8c6a738f66c455ddb886d805dcaa17cfb7c2" title="Show Solar and Lunar horizontal position (on Earth location only)">SolarLunarPosition</a>)</div>
 </div><!-- fragment -->
 <p>A pre-defined "all available" set of specifiers for the getInfoString flags argument to getInfoString. </p>
 
@@ -1277,8 +1603,8 @@ This is an abbreviated version of the method implemented in the <a class="el" hr
   </tr>
 </table>
 </div><div class="memdoc">
-<b>Initial value:</b><div class="fragment"><div class="line">= <span class="keyword">static_cast&lt;</span>InfoStringGroup<span class="keyword">&gt;</span>(<a class="code" href="classStelObject.html#acf243e7987796a3a44e409140ecea8c6ab14de19b496f04e198a835899cefd934" title="An object&#39;s name.">Name</a>|<a class="code" href="classStelObject.html#acf243e7987796a3a44e409140ecea8c6a57d62b46f2f2849da8e3e234c7d27b0e" title="Catalog numbers.">CatalogNumber</a>|<a class="code" href="classStelObject.html#acf243e7987796a3a44e409140ecea8c6a04e5ef1bf85944db7b25b57f2663c79d" title="Magnitude related data.">Magnitude</a>|<a class="code" href="classStelObject.html#acf243e7987796a3a44e409140ecea8c6aa35179832c380519fd22fc147b9e8fa9" title="The equatorial position (of date)">RaDecOfDate</a>|<a class="code" href="classStelObject.html#acf243e7987796a3a44e409140ecea8c6af23ea4040195fe66b4d564b555d32eb8" title="The hour angle + DE (of date)">HourAngle</a>|<a class="code" href="classStelObject.html#acf243e7987796a3a44e409140ecea8c6a5c984f02cfcd92d0f516b0c87d30c716" title="The position (Altitude/Azimuth)">AltAzi</a>|<a class="code" href="classStelObject.html#acf243e7987796a3a44e409140ecea8c6a3187e7e8e1608f5c1813aba687b78110" title="Unspecified additional coordinates. These can be &quot;injected&quot; into the extraInfoStrings by plugins.">OtherCoord</a>|</div>
-<div class="line">                                              <a class="code" href="classStelObject.html#acf243e7987796a3a44e409140ecea8c6a64a2a3b3403c2dbaab74d0d94c68ec56" title="Info about an object&#39;s distance.">Distance</a>|<a class="code" href="classStelObject.html#acf243e7987796a3a44e409140ecea8c6a97119a90e59b2b398d7619917ca73dd2" title="Info about elongation, phase angle etc. Most useful for Planets, but possible for all objects.">Elongation</a>|<a class="code" href="classStelObject.html#acf243e7987796a3a44e409140ecea8c6a865d3094d10bd62b0032930abb2fe48d" title="Info about an object&#39;s size.">Size</a>|<a class="code" href="classStelObject.html#acf243e7987796a3a44e409140ecea8c6a86056d9129162a8f544c474789f2b709" title="Info about object&#39;s velocity.">Velocity</a>|<a class="code" href="classStelObject.html#acf243e7987796a3a44e409140ecea8c6ae65e8c0135e59a4fa6f1eeb42aa74a97" title="Derived class-specific extra fields.">Extra</a>|<a class="code" href="classStelObject.html#acf243e7987796a3a44e409140ecea8c6a9e1f6ceb04288616cb5928944ee3ee6e" title="Three-letter constellation code (And, Boo, Cas, ...)">IAUConstellation</a>|<a class="code" href="classStelObject.html#acf243e7987796a3a44e409140ecea8c6a6b1acde73a84cc7314489ff6c5793264" title="Mean and Apparent Sidereal Time.">SiderealTime</a>|<a class="code" href="classStelObject.html#acf243e7987796a3a44e409140ecea8c6a0a4945c66b17aebfce6b1ef5a681e74e" title="Time of rise, transit and set of celestial object.">RTSTime</a>)</div>
+<b>Initial value:</b><div class="fragment"><div class="line">= <span class="keyword">static_cast&lt;</span>InfoStringGroup<span class="keyword">&gt;</span>(<a class="code" href="classStelObject.html#acf243e7987796a3a44e409140ecea8c6ab14de19b496f04e198a835899cefd934" title="An object&#39;s name as further defined by CulturalDisplayStyle found in SkyCultureMgr.">Name</a>|<a class="code" href="classStelObject.html#acf243e7987796a3a44e409140ecea8c6a57d62b46f2f2849da8e3e234c7d27b0e" title="Catalog numbers.">CatalogNumber</a>|<a class="code" href="classStelObject.html#acf243e7987796a3a44e409140ecea8c6a04e5ef1bf85944db7b25b57f2663c79d" title="Magnitude related data.">Magnitude</a>|<a class="code" href="classStelObject.html#acf243e7987796a3a44e409140ecea8c6aa35179832c380519fd22fc147b9e8fa9" title="The equatorial position (of date)">RaDecOfDate</a>|<a class="code" href="classStelObject.html#acf243e7987796a3a44e409140ecea8c6af23ea4040195fe66b4d564b555d32eb8" title="The hour angle + DE (of date)">HourAngle</a>|<a class="code" href="classStelObject.html#acf243e7987796a3a44e409140ecea8c6a5c984f02cfcd92d0f516b0c87d30c716" title="The position (Altitude/Azimuth)">AltAzi</a>|<a class="code" href="classStelObject.html#acf243e7987796a3a44e409140ecea8c6a3187e7e8e1608f5c1813aba687b78110" title="Unspecified additional coordinates. These can be &quot;injected&quot; into the extraInfoStrings by plugins.">OtherCoord</a>|</div>
+<div class="line">                                              <a class="code" href="classStelObject.html#acf243e7987796a3a44e409140ecea8c6a64a2a3b3403c2dbaab74d0d94c68ec56" title="Info about an object&#39;s distance.">Distance</a>|<a class="code" href="classStelObject.html#acf243e7987796a3a44e409140ecea8c6a97119a90e59b2b398d7619917ca73dd2" title="Info about elongation, phase angle etc. Most useful for Planets, but possible for all objects.">Elongation</a>|<a class="code" href="classStelObject.html#acf243e7987796a3a44e409140ecea8c6a865d3094d10bd62b0032930abb2fe48d" title="Info about an object&#39;s size.">Size</a>|<a class="code" href="classStelObject.html#acf243e7987796a3a44e409140ecea8c6a86056d9129162a8f544c474789f2b709" title="Info about object&#39;s velocity.">Velocity</a>|<a class="code" href="classStelObject.html#acf243e7987796a3a44e409140ecea8c6ae65e8c0135e59a4fa6f1eeb42aa74a97" title="Derived class-specific extra fields.">Extra</a>|<a class="code" href="classStelObject.html#acf243e7987796a3a44e409140ecea8c6a9e1f6ceb04288616cb5928944ee3ee6e" title="Three-letter constellation code (And, Boo, Cas, ...), and Zodiacal sign and Lunar station/mansion whe...">IAUConstellation</a>|<a class="code" href="classStelObject.html#acf243e7987796a3a44e409140ecea8c6a6b1acde73a84cc7314489ff6c5793264" title="Mean and Apparent Sidereal Time.">SiderealTime</a>|<a class="code" href="classStelObject.html#acf243e7987796a3a44e409140ecea8c6a0a4945c66b17aebfce6b1ef5a681e74e" title="Time of rise, transit and set of celestial object.">RTSTime</a>)</div>
 </div><!-- fragment -->
 <p>A pre-defined "default" set of specifiers for the getInfoString flags argument to getInfoString It appears useful to propose this set as post-install settings and let users configure more on demand. </p>
 
@@ -1287,7 +1613,7 @@ This is an abbreviated version of the method implemented in the <a class="el" hr
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Sun Mar 23 2025 19:00:02 for Stellarium by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1
+Generated on Sun Jun 22 2025 18:44:46 for Stellarium by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1
 </small></address>
 </body>
 </html>

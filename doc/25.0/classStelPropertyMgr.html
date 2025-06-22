@@ -21,7 +21,7 @@
   <td id="projectlogo"><img alt="Logo" src="stellarium-logo.png"/></td>
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">Stellarium
-   &#160;<span id="projectnumber">25.1</span>
+   &#160;<span id="projectnumber">25.2</span>
    </div>
   </td>
  </tr>
@@ -97,9 +97,9 @@ const StelPropertyMap &amp;&#160;</td><td class="memItemRight" valign="bottom"><
 <tr class="memitem:a26f6f7929b8977e412e0a571b6c2dfdf"><td class="memItemLeft" align="right" valign="top">QVariant&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classStelPropertyMgr.html#a26f6f7929b8977e412e0a571b6c2dfdf">getStelPropertyValue</a> (const QString &amp;id, const bool noWarning=false) const</td></tr>
 <tr class="memdesc:a26f6f7929b8977e412e0a571b6c2dfdf"><td class="mdescLeft">&#160;</td><td class="mdescRight">Retrieves the current value of the given <a class="el" href="classStelProperty.html" title="Wrapper around a Q_PROPERTY (see the Qt property system for more information) of a specific object,...">StelProperty</a>, without requiring the retrieval of its object first.  <a href="classStelPropertyMgr.html#a26f6f7929b8977e412e0a571b6c2dfdf">More...</a><br /></td></tr>
 <tr class="separator:a26f6f7929b8977e412e0a571b6c2dfdf"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a45b8b91aa586e203f939cd80b7e2b628"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classStelPropertyMgr.html#a45b8b91aa586e203f939cd80b7e2b628">setStelPropertyValue</a> (const QString &amp;id, const QVariant &amp;value) const</td></tr>
-<tr class="memdesc:a45b8b91aa586e203f939cd80b7e2b628"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the value of the given <a class="el" href="classStelProperty.html" title="Wrapper around a Q_PROPERTY (see the Qt property system for more information) of a specific object,...">StelProperty</a>, without requiring the retrieval of its object first.  <a href="classStelPropertyMgr.html#a45b8b91aa586e203f939cd80b7e2b628">More...</a><br /></td></tr>
-<tr class="separator:a45b8b91aa586e203f939cd80b7e2b628"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a040669bd6a783f14c4f9f0127bc4045d"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classStelPropertyMgr.html#a040669bd6a783f14c4f9f0127bc4045d">setStelPropertyValue</a> (const QString &amp;id, const QVariant &amp;value, const bool noWarning=false) const</td></tr>
+<tr class="memdesc:a040669bd6a783f14c4f9f0127bc4045d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the value of the given <a class="el" href="classStelProperty.html" title="Wrapper around a Q_PROPERTY (see the Qt property system for more information) of a specific object,...">StelProperty</a>, without requiring the retrieval of its object first.  <a href="classStelPropertyMgr.html#a040669bd6a783f14c4f9f0127bc4045d">More...</a><br /></td></tr>
+<tr class="separator:a040669bd6a783f14c4f9f0127bc4045d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a121bc1b38bdc0d373eea9a2ea9c12b0c"><td class="memItemLeft" align="right" valign="top"><a id="a121bc1b38bdc0d373eea9a2ea9c12b0c"></a>
 QMetaProperty&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classStelPropertyMgr.html#a121bc1b38bdc0d373eea9a2ea9c12b0c">getMetaProperty</a> (const QString &amp;id) const</td></tr>
 <tr class="memdesc:a121bc1b38bdc0d373eea9a2ea9c12b0c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the QMetaProperty information for the given <code>id</code>. <br /></td></tr>
@@ -237,8 +237,8 @@ QMetaProperty&#160;</td><td class="memItemRight" valign="bottom"><a class="el" h
 
 </div>
 </div>
-<a id="a45b8b91aa586e203f939cd80b7e2b628"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a45b8b91aa586e203f939cd80b7e2b628">&#9670;&nbsp;</a></span>setStelPropertyValue()</h2>
+<a id="a040669bd6a783f14c4f9f0127bc4045d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a040669bd6a783f14c4f9f0127bc4045d">&#9670;&nbsp;</a></span>setStelPropertyValue()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -253,7 +253,13 @@ QMetaProperty&#160;</td><td class="memItemRight" valign="bottom"><a class="el" h
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">const QVariant &amp;&#160;</td>
-          <td class="paramname"><em>value</em>&#160;</td>
+          <td class="paramname"><em>value</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const bool&#160;</td>
+          <td class="paramname"><em>noWarning</em> = <code>false</code>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -264,7 +270,7 @@ QMetaProperty&#160;</td><td class="memItemRight" valign="bottom"><a class="el" h
 </div><div class="memdoc">
 
 <p>Sets the value of the given <a class="el" href="classStelProperty.html" title="Wrapper around a Q_PROPERTY (see the Qt property system for more information) of a specific object,...">StelProperty</a>, without requiring the retrieval of its object first. </p>
-<dl class="section return"><dt>Returns</dt><dd><code>true</code> when the value of the <a class="el" href="classStelProperty.html" title="Wrapper around a Q_PROPERTY (see the Qt property system for more information) of a specific object,...">StelProperty</a> with the ID <code>id</code> has been successfully changed, and <code>false</code> if the value change failed or when no property with the given ID is found. </dd></dl>
+<dl class="section return"><dt>Returns</dt><dd><code>true</code> when the value of the <a class="el" href="classStelProperty.html" title="Wrapper around a Q_PROPERTY (see the Qt property system for more information) of a specific object,...">StelProperty</a> with the ID <code>id</code> has been successfully changed, and <code>false</code> if the value change failed or when no property with the given ID is found. If not found, a warning is written to logfile unless noWarning is true. This may be useful to suppress warnings about plugin module properties when these are not loaded, but should else be left true. </dd></dl>
 
 </div>
 </div>
@@ -316,7 +322,7 @@ QMetaProperty&#160;</td><td class="memItemRight" valign="bottom"><a class="el" h
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Sun Mar 23 2025 19:00:02 for Stellarium by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1
+Generated on Sun Jun 22 2025 18:44:46 for Stellarium by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1
 </small></address>
 </body>
 </html>
