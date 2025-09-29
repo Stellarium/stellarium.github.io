@@ -21,7 +21,7 @@
   <td id="projectlogo"><img alt="Logo" src="stellarium-logo.png"/></td>
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">Stellarium
-   &#160;<span id="projectnumber">25.2</span>
+   &#160;<span id="projectnumber">25.3</span>
    </div>
   </td>
  </tr>
@@ -473,6 +473,9 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="clas
 <tr class="separator:a7a1f5a0f4485d9add01df83046bab034"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae5d75fa0a6d8066c5443e464d4765aab"><td class="memItemLeft" align="right" valign="top">QString&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classConstellationMgr.html#ae5d75fa0a6d8066c5443e464d4765aab">getLunarSystemCoordinate</a> (<a class="el" href="classVector3.html">Vec3d</a> eqNow) const</td></tr>
 <tr class="separator:ae5d75fa0a6d8066c5443e464d4765aab"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a137d99811a0d441b531d87a202376437"><td class="memItemLeft" align="right" valign="top">QList&lt; <a class="el" href="classConstellation.html">Constellation</a> * &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classConstellationMgr.html#a137d99811a0d441b531d87a202376437">isObjectIn</a> (const <a class="el" href="classStelObject.html">StelObject</a> *s, bool useHull) const</td></tr>
+<tr class="memdesc:a137d99811a0d441b531d87a202376437"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return list of constellations the object is member of.  <a href="classConstellationMgr.html#a137d99811a0d441b531d87a202376437">More...</a><br /></td></tr>
+<tr class="separator:a137d99811a0d441b531d87a202376437"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pub_methods_classStelObjectModule"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_classStelObjectModule')"><img src="closed.png" alt="-"/>&#160;Public Member Functions inherited from <a class="el" href="classStelObjectModule.html">StelObjectModule</a></td></tr>
 <tr class="memitem:a86f697c46562f699ecdf940071981000 inherit pub_methods_classStelObjectModule"><td class="memItemLeft" align="right" valign="top">virtual QStringList&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classStelObjectModule.html#a86f697c46562f699ecdf940071981000">listMatchingObjects</a> (const QString &amp;objPrefix, int maxNbItem=5, bool useStartOfWords=false) const</td></tr>
 <tr class="memdesc:a86f697c46562f699ecdf940071981000 inherit pub_methods_classStelObjectModule"><td class="mdescLeft">&#160;</td><td class="mdescRight">Find and return the list of at most maxNbItem objects auto-completing passed object name.  <a href="classStelObjectModule.html#a86f697c46562f699ecdf940071981000">More...</a><br /></td></tr>
@@ -887,6 +890,42 @@ Additional Inherited Members</h2></td></tr>
 <p>Reads from the configuration parser object and updates the loading bar as constellation objects are loaded for the required sky culture. </p>
 
 <p>Implements <a class="el" href="classStelModule.html#a32818e53cc8d640f15f84c38c454eab9">StelModule</a>.</p>
+
+</div>
+</div>
+<a id="a137d99811a0d441b531d87a202376437"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a137d99811a0d441b531d87a202376437">&#9670;&nbsp;</a></span>isObjectIn()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">QList&lt;<a class="el" href="classConstellation.html">Constellation</a>*&gt; ConstellationMgr::isObjectIn </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classStelObject.html">StelObject</a> *&#160;</td>
+          <td class="paramname"><em>s</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>useHull</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Return list of constellations the object is member of. </p>
+<p>In case of IAU constellations, the list is guaranteed to be of length 1. </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">useHull</td><td>Prefer to use constellation hull, not IAU borders </td></tr>
+  </table>
+  </dd>
+</dl>
 
 </div>
 </div>
@@ -1701,7 +1740,7 @@ Additional Inherited Members</h2></td></tr>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Sun Jun 22 2025 18:44:45 for Stellarium by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1
+Generated on Mon Sep 29 2025 21:09:09 for Stellarium by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1
 </small></address>
 </body>
 </html>

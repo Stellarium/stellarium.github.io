@@ -21,7 +21,7 @@
   <td id="projectlogo"><img alt="Logo" src="stellarium-logo.png"/></td>
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">Stellarium
-   &#160;<span id="projectnumber">25.2</span>
+   &#160;<span id="projectnumber">25.3</span>
    </div>
   </td>
  </tr>
@@ -208,6 +208,9 @@ $(function() {
 <li>removeCachedLandscape()
 : <a class="el" href="classLandscapeMgr.html#a483980d7a129f294cb27bcdbde8485d6">LandscapeMgr</a>
 </li>
+<li>removeConstellation()
+: <a class="el" href="classscm_1_1ScmSkyCulture.html#ab7223b169e46fc0d4c6d9537fa22edd4">scm::ScmSkyCulture</a>
+</li>
 <li>removeCustomObject()
 : <a class="el" href="classCustomObjectMgr.html#a4fe3827e47e8b20472a247ff4b8dcc1a">CustomObjectMgr</a>
 </li>
@@ -237,7 +240,7 @@ $(function() {
 : <a class="el" href="classStelMainScriptAPI.html#a62ff9880d931c77c95028f0cd3b91fe0">StelMainScriptAPI</a>
 </li>
 <li>removeSkyLayer()
-: <a class="el" href="classStelSkyLayerMgr.html#a7465ec84908a7b66fb975c4466b78d68">StelSkyLayerMgr</a>
+: <a class="el" href="classStelSkyLayerMgr.html#a9ae3f9379b0192518cc40b759808ca09">StelSkyLayerMgr</a>
 </li>
 <li>removeSsoWithName()
 : <a class="el" href="classSolarSystemEditor.html#afbe1cb5bc14e9846dd6210203a57b392">SolarSystemEditor</a>
@@ -290,8 +293,15 @@ $(function() {
 <li>reset()
 : <a class="el" href="classAABBox.html#af917a6aa5fc15e5c37dbd67919ae8319">AABBox</a>
 , <a class="el" href="classInterpolatedPosition.html#a1ad75211b383de7a87b0b02e566fffe9">InterpolatedPosition</a>
+, <a class="el" href="classscm_1_1ScmConstellationArtwork.html#ada83f4b8531f56c7606de3cd0bc440aa">scm::ScmConstellationArtwork</a>
 , <a class="el" href="classStelScriptOutput.html#a42708a2421290aad24b0879dbe0c7bb3">StelScriptOutput</a>
 , <a class="el" href="classTrailGroup.html#ad65b94e7cdc90e75193a7e0f3e75c555">TrailGroup</a>
+</li>
+<li>resetAnchors()
+: <a class="el" href="classScmConstellationImage.html#a6c461eb35e3b0d4c9875e6fec14a8929">ScmConstellationImage</a>
+</li>
+<li>resetArtwork()
+: <a class="el" href="classScmConstellationImage.html#aaf7e1d000e3990f2b154ec6ee884e6cd">ScmConstellationImage</a>
 </li>
 <li>resetCollisions()
 : <a class="el" href="classShortcutsDialog.html#a486783eb543de757068ad65e6c2bf3ba">ShortcutsDialog</a>
@@ -299,12 +309,31 @@ $(function() {
 <li>resetConfiguration()
 : <a class="el" href="group__observability.html#a44cbf002a16289669518713a3c8c5040">Observability</a>
 </li>
+<li>resetConstellations()
+: <a class="el" href="classScmSkyCultureDialog.html#ab2beafcbb5e5c8188864a4804cd920e8">ScmSkyCultureDialog</a>
+</li>
+<li>resetDialog()
+: <a class="el" href="classScmConstellationDialog.html#a686ba2313c0b50d3009fc2c4c9a9dc2e">ScmConstellationDialog</a>
+, <a class="el" href="classScmSkyCultureDialog.html#a2f0f232e8ab87687648c3600882d4ca1">ScmSkyCultureDialog</a>
+</li>
+<li>resetDrawing()
+: <a class="el" href="classscm_1_1ScmDraw.html#a4fb4db2fbd5277870cbf31960020cc2d">scm::ScmDraw</a>
+</li>
 <li>resetInitViewPos()
 : <a class="el" href="classStelMovementMgr.html#a7092f62a7ed938983bfaabfd1cf451c3">StelMovementMgr</a>
 </li>
 <li>resetOutput()
 : <a class="el" href="classStelMainScriptAPI.html#a2c255f8a1d0606b2ca800b6850729d09">StelMainScriptAPI</a>
 , <a class="el" href="classStelScriptMgr.html#a3f82e776255ce7e28191f08de3d545b6">StelScriptMgr</a>
+</li>
+<li>resetScmDialogs()
+: <a class="el" href="classSkyCultureMaker.html#ae126e2028bac0f45ccdf46395760b16e">SkyCultureMaker</a>
+</li>
+<li>resetScmDialogsVisibilityState()
+: <a class="el" href="classSkyCultureMaker.html#ae141a7ddabf185ef0b3ad4cd03625a03">SkyCultureMaker</a>
+</li>
+<li>resetScmDraw()
+: <a class="el" href="classSkyCultureMaker.html#a7ead79f6f89c0ca2f5f9a36cbb2874eb">SkyCultureMaker</a>
 </li>
 <li>resetSolarSystemToDefault()
 : <a class="el" href="classSolarSystemEditor.html#a0f4f1be668d0d563e8be2f71274aa704">SolarSystemEditor</a>
@@ -388,6 +417,9 @@ $(function() {
 </li>
 <li>restoreDefaultTleSources()
 : <a class="el" href="group__satellites.html#aa129a1966e949689e269fa1efe1a34fc">Satellites</a>
+</li>
+<li>restoreScmDialogVisibilityState()
+: <a class="el" href="classSkyCultureMaker.html#a04ca93c7a292940121de7c64d139498e">SkyCultureMaker</a>
 </li>
 <li>resumeScript()
 : <a class="el" href="classStelScriptMgr.html#abd675fd803cbe6d558b87c10499d55c7">StelScriptMgr</a>
@@ -511,7 +543,7 @@ $(function() {
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Sun Jun 22 2025 18:44:46 for Stellarium by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1
+Generated on Mon Sep 29 2025 21:09:10 for Stellarium by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1
 </small></address>
 </body>
 </html>

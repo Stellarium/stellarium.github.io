@@ -21,7 +21,7 @@
   <td id="projectlogo"><img alt="Logo" src="stellarium-logo.png"/></td>
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">Stellarium
-   &#160;<span id="projectnumber">25.2</span>
+   &#160;<span id="projectnumber">25.3</span>
    </div>
   </td>
  </tr>
@@ -89,6 +89,10 @@ QString&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="c
 virtual QString&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classStelObject.html#a27c2568ae79ce1d0c0a63e0f9bd7b3db">getNameIPA</a> () const</td></tr>
 <tr class="memdesc:a27c2568ae79ce1d0c0a63e0f9bd7b3db inherit pub_methods_classStelObject"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return native name in International Phonetic Alphabet. Optional. <br /></td></tr>
 <tr class="separator:a27c2568ae79ce1d0c0a63e0f9bd7b3db inherit pub_methods_classStelObject"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5a7a55da9a4809b49f94b406b46ea0d4 inherit pub_methods_classStelObject"><td class="memItemLeft" align="right" valign="top"><a id="a5a7a55da9a4809b49f94b406b46ea0d4"></a>
+virtual QString&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classStelObject.html#a5a7a55da9a4809b49f94b406b46ea0d4">getByname</a> () const</td></tr>
+<tr class="memdesc:a5a7a55da9a4809b49f94b406b46ea0d4 inherit pub_methods_classStelObject"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return byname. Optional. <br /></td></tr>
+<tr class="separator:a5a7a55da9a4809b49f94b406b46ea0d4 inherit pub_methods_classStelObject"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad5a746b7fb51f2ad2bf211360ee462b5 inherit pub_methods_classStelObject"><td class="memItemLeft" align="right" valign="top"><a id="ad5a746b7fb51f2ad2bf211360ee462b5"></a>
 virtual QString&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classStelObject.html#ad5a746b7fb51f2ad2bf211360ee462b5">getScreenLabel</a> () const</td></tr>
 <tr class="memdesc:ad5a746b7fb51f2ad2bf211360ee462b5 inherit pub_methods_classStelObject"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return screen label (to be used in the sky display. Most users will use some short label) <br /></td></tr>
@@ -293,9 +297,89 @@ Additional Inherited Members</h2></td></tr>
 , <b>Native_Pronounce_Translit_Translated_Modern</b> = 0x3D
 , <b>Native_Pronounce_Translit_Translated_IPA</b> = 0x3E
 , <b>Native_Pronounce_Translit_Translated_IPA_Modern</b> = 0x3F
+, <br />
+&#160;&#160;<b>Byname</b> = 0x40
+, <b>Byname_Modern</b> = 0x41
+, <b>IPA_Byname</b> = 0x42
+, <b>IPA_Byname_Modern</b> = 0x43
+, <br />
+&#160;&#160;<b>Translated_Byname</b> = 0x44
+, <b>Translated_Byname_Modern</b> = 0x45
+, <b>Translated_IPA_Byname</b> = 0x46
+, <b>Translated_IPA_Byname_Modern</b> = 0x47
+, <br />
+&#160;&#160;<b>Translit_Byname</b> = 0x48
+, <b>Translit_Byname_Modern</b> = 0x49
+, <b>Translit_IPA_Byname</b> = 0x4A
+, <b>Translit_IPA_Byname_Modern</b> = 0x4B
+, <br />
+&#160;&#160;<b>Translit_Translated_Byname</b> = 0x4C
+, <b>Translit_Translated_Byname_Modern</b> = 0x4D
+, <b>Translit_Translated_IPA_Byname</b> = 0x4E
+, <b>Translit_Translated_IPA_Byname_Modern</b> = 0x4F
+, <br />
+&#160;&#160;<b>Pronounce_Byname</b> = 0x50
+, <b>Pronounce_Byname_Modern</b> = 0x51
+, <b>Pronounce_IPA_Byname</b> = 0x52
+, <b>Pronounce_IPA_Byname_Modern</b> = 0x53
+, <br />
+&#160;&#160;<b>Pronounce_Translated_Byname</b> = 0x54
+, <b>Pronounce_Translated_Byname_Modern</b> = 0x55
+, <b>Pronounce_Translated_IPA_Byname</b> = 0x56
+, <b>Pronounce_Translated_IPA_Byname_Modern</b> = 0x57
+, <br />
+&#160;&#160;<b>Pronounce_Translit_Byname</b> = 0x58
+, <b>Pronounce_Translit_Byname_Modern</b> = 0x59
+, <b>Pronounce_Translit_IPA_Byname</b> = 0x5A
+, <b>Pronounce_Translit_IPA_Byname_Modern</b> = 0x5B
+, <br />
+&#160;&#160;<b>Pronounce_Translit_Translated_Byname</b> = 0x5C
+, <b>Pronounce_Translit_Translated_Byname_Modern</b> = 0x5D
+, <b>Pronounce_Translit_Translated_IPA_Byname</b> = 0x5E
+, <b>Pronounce_Translit_Translated_IPA_Byname_Modern</b> = 0x5F
+, <br />
+&#160;&#160;<b>Native_Byname</b> = 0x60
+, <b>Native_Byname_Modern</b> = 0x61
+, <b>Native_IPA_Byname</b> = 0x62
+, <b>Native_IPA_Byname_Modern</b> = 0x63
+, <br />
+&#160;&#160;<b>Native_Translated_Byname</b> = 0x64
+, <b>Native_Translated_Byname_Modern</b> = 0x65
+, <b>Native_Translated_IPA_Byname</b> = 0x66
+, <b>Native_Translated_IPA_Byname_Modern</b> = 0x67
+, <br />
+&#160;&#160;<b>Native_Translit_Byname</b> = 0x68
+, <b>Native_Translit_Byname_Modern</b> = 0x69
+, <b>Native_Translit_IPA_Byname</b> = 0x6A
+, <b>Native_Translit_IPA_Byname_Modern</b> = 0x6B
+, <br />
+&#160;&#160;<b>Native_Translit_Translated_Byname</b> = 0x6C
+, <b>Native_Translit_Translated_Byname_Modern</b> = 0x6D
+, <b>Native_Translit_Translated_IPA_Byname</b> = 0x6E
+, <b>Native_Translit_Translated_IPA_Byname_Modern</b> = 0x6F
+, <br />
+&#160;&#160;<b>Native_Pronounce_Byname</b> = 0x70
+, <b>Native_Pronounce_Byname_Modern</b> = 0x71
+, <b>Native_Pronounce_IPA_Byname</b> = 0x72
+, <b>Native_Pronounce_IPA_Byname_Modern</b> = 0x73
+, <br />
+&#160;&#160;<b>Native_Pronounce_Translated_Byname</b> = 0x74
+, <b>Native_Pronounce_Translated_Byname_Modern</b> = 0x75
+, <b>Native_Pronounce_Translated_IPA_Byname</b> = 0x76
+, <b>Native_Pronounce_Translated_IPA_Byname_Modern</b> = 0x77
+, <br />
+&#160;&#160;<b>Native_Pronounce_Translit_Byname</b> = 0x78
+, <b>Native_Pronounce_Translit_Byname_Modern</b> = 0x79
+, <b>Native_Pronounce_Translit_IPA_Byname</b> = 0x7A
+, <b>Native_Pronounce_Translit_IPA_Byname_Modern</b> = 0x7B
+, <br />
+&#160;&#160;<b>Native_Pronounce_Translit_Translated_Byname</b> = 0x7C
+, <b>Native_Pronounce_Translit_Translated_Byname_Modern</b> = 0x7D
+, <b>Native_Pronounce_Translit_Translated_IPA_Byname</b> = 0x7E
+, <b>Native_Pronounce_Translit_Translated_IPA_Byname_Modern</b> = 0x7F
 <br />
  }</td></tr>
-<tr class="memdesc:abe8ee891d3661c8c474cfd25446867be"><td class="mdescLeft">&#160;</td><td class="mdescRight">A 6-bit code with all options for displaying relevant <a class="el" href="structStelObject_1_1CulturalName.html" title="Contains name components belonging to an object.">CulturalName</a> parts.  <a href="classStelObject.html#abe8ee891d3661c8c474cfd25446867be">More...</a><br /></td></tr>
+<tr class="memdesc:abe8ee891d3661c8c474cfd25446867be"><td class="mdescLeft">&#160;</td><td class="mdescRight">A 7-bit code with all options for displaying relevant <a class="el" href="structStelObject_1_1CulturalName.html" title="Contains name components belonging to an object.">CulturalName</a> parts.  <a href="classStelObject.html#abe8ee891d3661c8c474cfd25446867be">More...</a><br /></td></tr>
 <tr class="separator:abe8ee891d3661c8c474cfd25446867be inherit pub_types_classStelObject"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af200e173b7bd34c36c750f8d51cbe2cb inherit pub_types_classStelObject"><td class="memItemLeft" align="right" valign="top">enum class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classStelObject.html#af200e173b7bd34c36c750f8d51cbe2cb">CulturalNameSpecial</a> { <a class="el" href="classStelObject.html#af200e173b7bd34c36c750f8d51cbe2cba6adf97f83acf6453d4a6a4b1070f3754">None</a> = 0
 , <a class="el" href="classStelObject.html#af200e173b7bd34c36c750f8d51cbe2cbab311a3fe13ac9b0ee02985f4759a2e46">Morning</a> = 1
@@ -330,9 +414,8 @@ static constexpr InfoStringGroup&#160;</td><td class="memItemRight" valign="bott
 <tr class="memitem:ac968390526a5a144b8db66c3c5aa696b inherit pro_methods_classStarWrapper"><td class="memItemLeft" align="right" valign="top"><a id="ac968390526a5a144b8db66c3c5aa696b"></a>
 &#160;</td><td class="memItemRight" valign="bottom"><b>StarWrapper</b> (const <a class="el" href="classSpecialZoneArray.html">SpecialZoneArray</a>&lt; <a class="el" href="structStar3.html">Star3</a> &gt; *array, const <a class="el" href="structSpecialZoneData.html">SpecialZoneData</a>&lt; <a class="el" href="structStar3.html">Star3</a> &gt; *zone, const <a class="el" href="structStar3.html">Star3</a> *star)</td></tr>
 <tr class="separator:ac968390526a5a144b8db66c3c5aa696b inherit pro_methods_classStarWrapper"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a31c9c31aa1c862ec9a545ff59c5ef474 inherit pro_methods_classStarWrapper"><td class="memItemLeft" align="right" valign="top"><a id="a31c9c31aa1c862ec9a545ff59c5ef474"></a>
-<a class="el" href="classVector3.html">Vec3d</a>&#160;</td><td class="memItemRight" valign="bottom"><b>getJ2000EquatorialPos</b> (const <a class="el" href="classStelCore.html">StelCore</a> *core) const override</td></tr>
-<tr class="memdesc:a31c9c31aa1c862ec9a545ff59c5ef474 inherit pro_methods_classStarWrapper"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get observer-centered equatorial coordinates at equinox J2000, including aberration. <br /></td></tr>
+<tr class="memitem:a31c9c31aa1c862ec9a545ff59c5ef474 inherit pro_methods_classStarWrapper"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classVector3.html">Vec3d</a>&#160;</td><td class="memItemRight" valign="bottom"><b>getJ2000EquatorialPos</b> (const <a class="el" href="classStelCore.html">StelCore</a> *core) const override</td></tr>
+<tr class="memdesc:a31c9c31aa1c862ec9a545ff59c5ef474 inherit pro_methods_classStarWrapper"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get observer-centered equatorial coordinates at equinox J2000, including aberration.  <a href="classStarWrapper.html#a31c9c31aa1c862ec9a545ff59c5ef474">More...</a><br /></td></tr>
 <tr class="separator:a31c9c31aa1c862ec9a545ff59c5ef474 inherit pro_methods_classStarWrapper"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a8979b969d0980260eb7a66a529ac1255 inherit pro_methods_classStarWrapper"><td class="memItemLeft" align="right" valign="top"><a id="a8979b969d0980260eb7a66a529ac1255"></a>
 <a class="el" href="classVector3.html">Vec3f</a>&#160;</td><td class="memItemRight" valign="bottom"><b>getInfoColor</b> (void) const override</td></tr>
@@ -510,7 +593,7 @@ PlainText </li>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Sun Jun 22 2025 18:44:46 for Stellarium by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1
+Generated on Mon Sep 29 2025 21:09:10 for Stellarium by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1
 </small></address>
 </body>
 </html>

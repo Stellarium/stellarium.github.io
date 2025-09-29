@@ -21,7 +21,7 @@
   <td id="projectlogo"><img alt="Logo" src="stellarium-logo.png"/></td>
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">Stellarium
-   &#160;<span id="projectnumber">25.2</span>
+   &#160;<span id="projectnumber">25.3</span>
    </div>
   </td>
  </tr>
@@ -102,8 +102,7 @@ void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="clas
 <tr class="memitem:aa564f9fbaf51a774d7286465dbddd3c2"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classStelPainter.html#aa564f9fbaf51a774d7286465dbddd3c2">drawText</a> (float x, float y, const QString &amp;str, float angleDeg=0.f, float xshift=0.f, float yshift=0.f, bool noGravity=true)</td></tr>
 <tr class="memdesc:aa564f9fbaf51a774d7286465dbddd3c2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Draw the string at the given position and angle with the given font.  <a href="classStelPainter.html#aa564f9fbaf51a774d7286465dbddd3c2">More...</a><br /></td></tr>
 <tr class="separator:aa564f9fbaf51a774d7286465dbddd3c2"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a52fb324913cab79a60309fbd707fa9c2"><td class="memItemLeft" align="right" valign="top"><a id="a52fb324913cab79a60309fbd707fa9c2"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>drawText</b> (const <a class="el" href="classVector3.html">Vec3d</a> &amp;v, const QString &amp;str, float angleDeg=0.f, float xshift=0.f, float yshift=0.f, bool noGravity=true)</td></tr>
+<tr class="memitem:a52fb324913cab79a60309fbd707fa9c2"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classStelPainter.html#a52fb324913cab79a60309fbd707fa9c2">drawText</a> (const <a class="el" href="classVector3.html">Vec3d</a> &amp;v, const QString &amp;str, float angleDeg=0.f, float xshift=0.f, float yshift=0.f, bool noGravity=true)</td></tr>
 <tr class="separator:a52fb324913cab79a60309fbd707fa9c2"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a1abccc1bb022f27b5b20c5cffd24e7d6"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classStelPainter.html#a1abccc1bb022f27b5b20c5cffd24e7d6">drawSphericalRegion</a> (<a class="el" href="classSphericalRegion.html">SphericalRegion</a> *region, <a class="el" href="classStelPainter.html#a7100a2d0bc030e0b7b82739cb4b16e4e">SphericalPolygonDrawMode</a> drawMode=<a class="el" href="classStelPainter.html#a7100a2d0bc030e0b7b82739cb4b16e4ea0d6835cf395c741271488728fc77ca28">SphericalPolygonDrawModeFill</a>, const <a class="el" href="classSphericalCap.html">SphericalCap</a> *clippingCap=Q_NULLPTR, bool doSubDivise=true, double maxSqDistortion=5., const <a class="el" href="classVector3.html">Vec3d</a> &amp;observerVelocity=<a class="el" href="classVector3.html">Vec3d</a>(0.))</td></tr>
 <tr class="memdesc:a1abccc1bb022f27b5b20c5cffd24e7d6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Draw the given <a class="el" href="classSphericalRegion.html" title="Abstract class defining a region of the sphere.">SphericalRegion</a>.  <a href="classStelPainter.html#a1abccc1bb022f27b5b20c5cffd24e7d6">More...</a><br /></td></tr>
@@ -1132,8 +1131,71 @@ class&#160;</td><td class="memItemRight" valign="bottom"><b>StelTexture</b></td>
 
 </div>
 </div>
+<a id="a52fb324913cab79a60309fbd707fa9c2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a52fb324913cab79a60309fbd707fa9c2">&#9670;&nbsp;</a></span>drawText() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void StelPainter::drawText </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classVector3.html">Vec3d</a> &amp;&#160;</td>
+          <td class="paramname"><em>v</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const QString &amp;&#160;</td>
+          <td class="paramname"><em>str</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float&#160;</td>
+          <td class="paramname"><em>angleDeg</em> = <code>0.f</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float&#160;</td>
+          <td class="paramname"><em>xshift</em> = <code>0.f</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float&#160;</td>
+          <td class="paramname"><em>yshift</em> = <code>0.f</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>noGravity</em> = <code>true</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">v</td><td>direction vector of object to draw. Will draw only if this is in the visible hemisphere. </td></tr>
+    <tr><td class="paramname">str</td><td>the text to print. </td></tr>
+    <tr><td class="paramname">angleDeg</td><td>rotation angle in degree. Rotation is around x,y. Only used if noGravity=true </td></tr>
+    <tr><td class="paramname">xshift</td><td>shift in pixel in the rotated x direction. </td></tr>
+    <tr><td class="paramname">yshift</td><td>shift in pixel in the rotated y direction. </td></tr>
+    <tr><td class="paramname">noGravity</td><td>don't take into account the fact that the text should be written with gravity. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
 <a id="aa564f9fbaf51a774d7286465dbddd3c2"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aa564f9fbaf51a774d7286465dbddd3c2">&#9670;&nbsp;</a></span>drawText()</h2>
+<h2 class="memtitle"><span class="permalink"><a href="#aa564f9fbaf51a774d7286465dbddd3c2">&#9670;&nbsp;</a></span>drawText() <span class="overload">[2/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -1198,7 +1260,6 @@ class&#160;</td><td class="memItemRight" valign="bottom"><b>StelTexture</b></td>
     <tr><td class="paramname">xshift</td><td>shift in pixel in the rotated x direction. </td></tr>
     <tr><td class="paramname">yshift</td><td>shift in pixel in the rotated y direction. </td></tr>
     <tr><td class="paramname">noGravity</td><td>don't take into account the fact that the text should be written with gravity. </td></tr>
-    <tr><td class="paramname">v</td><td>direction vector of object to draw. GZ20120826: Will draw only if this is in the visible hemisphere. </td></tr>
   </table>
   </dd>
 </dl>
@@ -1383,7 +1444,7 @@ class&#160;</td><td class="memItemRight" valign="bottom"><b>StelTexture</b></td>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Sun Jun 22 2025 18:44:46 for Stellarium by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1
+Generated on Mon Sep 29 2025 21:09:10 for Stellarium by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1
 </small></address>
 </body>
 </html>

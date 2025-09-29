@@ -21,7 +21,7 @@
   <td id="projectlogo"><img alt="Logo" src="stellarium-logo.png"/></td>
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">Stellarium
-   &#160;<span id="projectnumber">25.2</span>
+   &#160;<span id="projectnumber">25.3</span>
    </div>
   </td>
  </tr>
@@ -73,9 +73,9 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>visibleChanged</b> (b
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:a27705aef8549620f50de24f634854246"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classHipsSurvey.html#a27705aef8549620f50de24f634854246">HipsSurvey</a> (const QString &amp;url, const QString &amp;frame, const QString &amp;type, const QMap&lt; QString, QString &gt; &amp;hipslistProps, double releaseDate=0.0)</td></tr>
-<tr class="memdesc:a27705aef8549620f50de24f634854246"><td class="mdescLeft">&#160;</td><td class="mdescRight">Create a new <a class="el" href="classHipsSurvey.html">HipsSurvey</a> from its url.  <a href="classHipsSurvey.html#a27705aef8549620f50de24f634854246">More...</a><br /></td></tr>
-<tr class="separator:a27705aef8549620f50de24f634854246"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab7c77ea32dbf4d745aeb8cbfe041622f"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classHipsSurvey.html#ab7c77ea32dbf4d745aeb8cbfe041622f">HipsSurvey</a> (const QString &amp;url, const QString &amp;group, const QString &amp;frame, const QString &amp;type, const QMap&lt; QString, QString &gt; &amp;hipslistProps, double releaseDate=0.0)</td></tr>
+<tr class="memdesc:ab7c77ea32dbf4d745aeb8cbfe041622f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Create a new <a class="el" href="classHipsSurvey.html">HipsSurvey</a> from its url.  <a href="classHipsSurvey.html#ab7c77ea32dbf4d745aeb8cbfe041622f">More...</a><br /></td></tr>
+<tr class="separator:ab7c77ea32dbf4d745aeb8cbfe041622f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a01a68549ad17557b7d162e326d39a356"><td class="memItemLeft" align="right" valign="top"><a id="a01a68549ad17557b7d162e326d39a356"></a>
 bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classHipsSurvey.html#a01a68549ad17557b7d162e326d39a356">isVisible</a> () const</td></tr>
 <tr class="memdesc:a01a68549ad17557b7d162e326d39a356"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get whether the survey is visible. <br /></td></tr>
@@ -102,6 +102,10 @@ QString&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="c
 QString&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classHipsSurvey.html#ab2255920bfc3a312d458f5fa16fc9f6a">getType</a> () const</td></tr>
 <tr class="memdesc:ab2255920bfc3a312d458f5fa16fc9f6a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return the type of the survey (its <code>type</code> property). <br /></td></tr>
 <tr class="separator:ab2255920bfc3a312d458f5fa16fc9f6a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab76bd78120d2a5012a6121ec4ca89171"><td class="memItemLeft" align="right" valign="top"><a id="ab76bd78120d2a5012a6121ec4ca89171"></a>
+QString&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classHipsSurvey.html#ab76bd78120d2a5012a6121ec4ca89171">getGroup</a> () const</td></tr>
+<tr class="memdesc:ab76bd78120d2a5012a6121ec4ca89171"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return the group of of color/normals/horizons surveys that this survey belongs to. <br /></td></tr>
+<tr class="separator:ab76bd78120d2a5012a6121ec4ca89171"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a25d251d6ff6240df3cf9fce46785f528"><td class="memItemLeft" align="right" valign="top"><a id="a25d251d6ff6240df3cf9fce46785f528"></a>
 bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classHipsSurvey.html#a25d251d6ff6240df3cf9fce46785f528">isLoading</a> (void) const</td></tr>
 <tr class="memdesc:a25d251d6ff6240df3cf9fce46785f528"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get whether the survey is still loading. <br /></td></tr>
@@ -118,10 +122,13 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>setHorizonsSurvey</b>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-static-methods"></a>
 Static Public Member Functions</h2></td></tr>
-<tr class="memitem:a48996293749dd3debe58d537215fb0e0"><td class="memItemLeft" align="right" valign="top"><a id="a48996293749dd3debe58d537215fb0e0"></a>
-static QList&lt; HipsSurveyP &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classHipsSurvey.html#a48996293749dd3debe58d537215fb0e0">parseHipslist</a> (const QString &amp;data)</td></tr>
-<tr class="memdesc:a48996293749dd3debe58d537215fb0e0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Parse a hipslist file into a list of surveys. <br /></td></tr>
-<tr class="separator:a48996293749dd3debe58d537215fb0e0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a44081d1ead8e3d20aa5b8979383cb9db"><td class="memItemLeft" align="right" valign="top"><a id="a44081d1ead8e3d20aa5b8979383cb9db"></a>
+static QString&#160;</td><td class="memItemRight" valign="bottom"><b>frameToPlanetName</b> (const QString &amp;frame)</td></tr>
+<tr class="separator:a44081d1ead8e3d20aa5b8979383cb9db"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aedd280a23367056c4627f50736e1664d"><td class="memItemLeft" align="right" valign="top"><a id="aedd280a23367056c4627f50736e1664d"></a>
+static QList&lt; HipsSurveyP &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classHipsSurvey.html#aedd280a23367056c4627f50736e1664d">parseHipslist</a> (const QString &amp;hipslistURL, const QString &amp;data)</td></tr>
+<tr class="memdesc:aedd280a23367056c4627f50736e1664d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Parse a hipslist file into a list of surveys. <br /></td></tr>
+<tr class="separator:aedd280a23367056c4627f50736e1664d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="properties"></a>
 Properties</h2></td></tr>
@@ -149,8 +156,8 @@ class&#160;</td><td class="memItemRight" valign="bottom"><b>HipsMgr</b></td></tr
 <tr class="separator:a263de44cdd9d9ae1c9bf1842e3dcadd0"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
-<a id="a27705aef8549620f50de24f634854246"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a27705aef8549620f50de24f634854246">&#9670;&nbsp;</a></span>HipsSurvey()</h2>
+<a id="ab7c77ea32dbf4d745aeb8cbfe041622f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab7c77ea32dbf4d745aeb8cbfe041622f">&#9670;&nbsp;</a></span>HipsSurvey()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -160,6 +167,12 @@ class&#160;</td><td class="memItemRight" valign="bottom"><b>HipsMgr</b></td></tr
           <td>(</td>
           <td class="paramtype">const QString &amp;&#160;</td>
           <td class="paramname"><em>url</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const QString &amp;&#160;</td>
+          <td class="paramname"><em>group</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
@@ -197,6 +210,7 @@ class&#160;</td><td class="memItemRight" valign="bottom"><b>HipsMgr</b></td></tr
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">url</td><td>The location of the survey. </td></tr>
+    <tr><td class="paramname">group</td><td>A string that identifies a group of color/normals/horizons surveys that this survey belongs to. </td></tr>
     <tr><td class="paramname">frame</td><td>The reference frame from the survey's <code>hips_frame</code> property. </td></tr>
     <tr><td class="paramname">type</td><td>Survey type from the survey's <code>type</code> property. </td></tr>
     <tr><td class="paramname">releaseDate</td><td>If known the UTC JD release date of the survey. Used for cache busting. </td></tr>
@@ -254,7 +268,7 @@ class&#160;</td><td class="memItemRight" valign="bottom"><b>HipsMgr</b></td></tr
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Sun Jun 22 2025 18:44:45 for Stellarium by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1
+Generated on Mon Sep 29 2025 21:09:09 for Stellarium by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1
 </small></address>
 </body>
 </html>

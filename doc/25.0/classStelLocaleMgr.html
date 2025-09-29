@@ -21,7 +21,7 @@
   <td id="projectlogo"><img alt="Logo" src="stellarium-logo.png"/></td>
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">Stellarium
-   &#160;<span id="projectnumber">25.2</span>
+   &#160;<span id="projectnumber">25.3</span>
    </div>
   </td>
  </tr>
@@ -99,9 +99,6 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="clas
 <tr class="memitem:a5d8f3fa7609c5db651ce50f95e86e584"><td class="memItemLeft" align="right" valign="top">QString&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classStelLocaleMgr.html#a5d8f3fa7609c5db651ce50f95e86e584">getSkyLanguage</a> () const</td></tr>
 <tr class="memdesc:a5d8f3fa7609c5db651ce50f95e86e584"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the language currently used for sky objects.  <a href="classStelLocaleMgr.html#a5d8f3fa7609c5db651ce50f95e86e584">More...</a><br /></td></tr>
 <tr class="separator:a5d8f3fa7609c5db651ce50f95e86e584"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a0a0cb414fd441f479463bb1fe0d4175d"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classStelLocaleMgr.html#a0a0cb414fd441f479463bb1fe0d4175d">setSkyLanguage</a> (const QString &amp;newSkyLangName, bool refreshAll=true)</td></tr>
-<tr class="memdesc:a0a0cb414fd441f479463bb1fe0d4175d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the sky language and reload the sky object names with the new translation.  <a href="classStelLocaleMgr.html#a0a0cb414fd441f479463bb1fe0d4175d">More...</a><br /></td></tr>
-<tr class="separator:a0a0cb414fd441f479463bb1fe0d4175d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:adb2f00af8086b87b1299dfc2a69673fc"><td class="memItemLeft" align="right" valign="top"><a id="adb2f00af8086b87b1299dfc2a69673fc"></a>
 const <a class="el" href="classStelTranslator.html">StelTranslator</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classStelLocaleMgr.html#adb2f00af8086b87b1299dfc2a69673fc">getSkyTranslator</a> () const</td></tr>
 <tr class="memdesc:adb2f00af8086b87b1299dfc2a69673fc"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get a reference to the <a class="el" href="classStelTranslator.html" title="Class used to translate strings to any language.">StelTranslator</a> object currently used for sky objects. <br /></td></tr>
@@ -134,6 +131,10 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="clas
 <tr class="memitem:a4a8bdfc74a6d54566cec4e652a12dd3b"><td class="memItemLeft" align="right" valign="top"><a id="a4a8bdfc74a6d54566cec4e652a12dd3b"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><b>setDateFormatStr</b> (const QString &amp;df)</td></tr>
 <tr class="separator:a4a8bdfc74a6d54566cec4e652a12dd3b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0dc66500175b8038c5cc3522a5d28668"><td class="memItemLeft" align="right" valign="top"><a id="a0dc66500175b8038c5cc3522a5d28668"></a>
+QString&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classStelLocaleMgr.html#a0dc66500175b8038c5cc3522a5d28668">getQtTimeFormatStr</a> (void) const</td></tr>
+<tr class="memdesc:a0dc66500175b8038c5cc3522a5d28668"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the format string which describes the current time format (Qt style). <br /></td></tr>
+<tr class="separator:a0dc66500175b8038c5cc3522a5d28668"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a3d3c00609dbdd8acd66f39daddb88c2a"><td class="memItemLeft" align="right" valign="top"><a id="a3d3c00609dbdd8acd66f39daddb88c2a"></a>
 QString&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classStelLocaleMgr.html#a3d3c00609dbdd8acd66f39daddb88c2a">getQtDateFormatStr</a> (void) const</td></tr>
 <tr class="memdesc:a3d3c00609dbdd8acd66f39daddb88c2a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the format string which describes the current date format (Qt style). <br /></td></tr>
@@ -601,42 +602,6 @@ static QString&#160;</td><td class="memItemRight" valign="bottom"><a class="el" 
 
 </div>
 </div>
-<a id="a0a0cb414fd441f479463bb1fe0d4175d"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a0a0cb414fd441f479463bb1fe0d4175d">&#9670;&nbsp;</a></span>setSkyLanguage()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">void StelLocaleMgr::setSkyLanguage </td>
-          <td>(</td>
-          <td class="paramtype">const QString &amp;&#160;</td>
-          <td class="paramname"><em>newSkyLangName</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">bool&#160;</td>
-          <td class="paramname"><em>refreshAll</em> = <code>true</code>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Set the sky language and reload the sky object names with the new translation. </p>
-<p>This function has no permanent effect on the global locale. </p><dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">newSkyLangName</td><td>The abbreviated name of the locale (e.g fr) to use for sky object labels. </td></tr>
-  </table>
-  </dd>
-</dl>
-
-</div>
-</div>
 <a id="a5a5a66bbda40f76c9a76e1ecd2c69b29"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a5a5a66bbda40f76c9a76e1ecd2c69b29">&#9670;&nbsp;</a></span>setTimeFormatStr()</h2>
 
@@ -674,7 +639,7 @@ static QString&#160;</td><td class="memItemRight" valign="bottom"><a class="el" 
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Sun Jun 22 2025 18:44:46 for Stellarium by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1
+Generated on Mon Sep 29 2025 21:09:10 for Stellarium by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1
 </small></address>
 </body>
 </html>

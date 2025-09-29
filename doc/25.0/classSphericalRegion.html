@@ -21,7 +21,7 @@
   <td id="projectlogo"><img alt="Logo" src="stellarium-logo.png"/></td>
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">Stellarium
-   &#160;<span id="projectnumber">25.2</span>
+   &#160;<span id="projectnumber">25.3</span>
    </div>
   </td>
  </tr>
@@ -133,8 +133,8 @@ virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" hr
 <tr class="memitem:ac18b6da8cd0b663b609c8c71c1f86ec3"><td class="memItemLeft" align="right" valign="top"><a id="ac18b6da8cd0b663b609c8c71c1f86ec3"></a>
 bool&#160;</td><td class="memItemRight" valign="bottom"><b>contains</b> (const <a class="el" href="classSphericalRegionP.html">SphericalRegionP</a> r) const</td></tr>
 <tr class="separator:ac18b6da8cd0b663b609c8c71c1f86ec3"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a3827b730e962487dbc09a1e0b582ab43"><td class="memItemLeft" align="right" valign="top"><a id="a3827b730e962487dbc09a1e0b582ab43"></a>
-virtual bool&#160;</td><td class="memItemRight" valign="bottom"><b>contains</b> (const <a class="el" href="classVector3.html">Vec3d</a> &amp;p) const</td></tr>
+<tr class="memitem:a3827b730e962487dbc09a1e0b582ab43"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSphericalRegion.html#a3827b730e962487dbc09a1e0b582ab43">contains</a> (const <a class="el" href="classVector3.html">Vec3d</a> &amp;p) const</td></tr>
+<tr class="memdesc:a3827b730e962487dbc09a1e0b582ab43"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns whether p is included.  <a href="classSphericalRegion.html#a3827b730e962487dbc09a1e0b582ab43">More...</a><br /></td></tr>
 <tr class="separator:a3827b730e962487dbc09a1e0b582ab43"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a95f2c768c483e31d5ad7262f4ede5206"><td class="memItemLeft" align="right" valign="top"><a id="a95f2c768c483e31d5ad7262f4ede5206"></a>
 virtual bool&#160;</td><td class="memItemRight" valign="bottom"><b>contains</b> (const <a class="el" href="classSphericalPolygon.html">SphericalPolygon</a> &amp;r) const</td></tr>
@@ -211,7 +211,7 @@ virtual <a class="el" href="classSphericalRegionP.html">SphericalRegionP</a>&#16
 <p>It provides default implementation for the general non-convex polygon which can extend on more than 180 deg based on the <a class="el" href="classOctahedronPolygon.html" title="Manage a non-convex polygon which can extend on more than 180 deg.">OctahedronPolygon</a> class. Subclasses provides special faster implementations of many methods. </p>
 </div><h2 class="groupheader">Member Function Documentation</h2>
 <a id="a6b33f8e4c031f9bab57be88387d720de"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a6b33f8e4c031f9bab57be88387d720de">&#9670;&nbsp;</a></span>contains()</h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a6b33f8e4c031f9bab57be88387d720de">&#9670;&nbsp;</a></span>contains() <span class="overload">[1/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -228,6 +228,37 @@ virtual <a class="el" href="classSphericalRegionP.html">SphericalRegionP</a>&#16
 
 <p>Returns whether a <a class="el" href="classSphericalRegion.html" title="Abstract class defining a region of the sphere.">SphericalRegion</a> is contained into this region. </p>
 <p>A default potentially very slow implementation is provided for each case. </p>
+
+</div>
+</div>
+<a id="a3827b730e962487dbc09a1e0b582ab43"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3827b730e962487dbc09a1e0b582ab43">&#9670;&nbsp;</a></span>contains() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual bool SphericalRegion::contains </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classVector3.html">Vec3d</a> &amp;&#160;</td>
+          <td class="paramname"><em>p</em></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Returns whether p is included. </p>
+<dl class="section note"><dt>Note</dt><dd>p should be normalized. </dd></dl>
+
+<p>Reimplemented in <a class="el" href="classSphericalCap.html#a603facfeda9318d3c1314ea46181f893">SphericalCap</a>, <a class="el" href="classSphericalConvexPolygon.html#ada010658871c774a289a6974dd8f08c9">SphericalConvexPolygon</a>, <a class="el" href="classSphericalPolygon.html#aa43c04535423a6af344f8c0109e1d84f">SphericalPolygon</a>, <a class="el" href="classSphericalPoint.html#a26068f07c3f4828da919a6e3e84191dd">SphericalPoint</a>, <a class="el" href="classEmptySphericalRegion.html#a47002c895db4cfe0d943aaf4c256670c">EmptySphericalRegion</a>, and <a class="el" href="classAllSkySphericalRegion.html#aa484dbe1098bf580b016ffff82e21bc5">AllSkySphericalRegion</a>.</p>
 
 </div>
 </div>
@@ -510,7 +541,7 @@ virtual <a class="el" href="classSphericalRegionP.html">SphericalRegionP</a>&#16
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Sun Jun 22 2025 18:44:46 for Stellarium by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1
+Generated on Mon Sep 29 2025 21:09:10 for Stellarium by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1
 </small></address>
 </body>
 </html>
