@@ -1,9 +1,9 @@
 ---
-title: Irish (old)
+title: Irish
 author: Alexander Wolf (after Julie Ormonde)
-classification: personal
-compat: 0.20-24.4
-skyculture_url: https://github.com/Stellarium/stellarium-data/releases/download/skycultures/irish.zip
+classification: single
+compat: 25.1+
+skyculture_url: https://github.com/Stellarium/stellarium-data/releases/download/skycultures/irish_25plus.zip
 image_url: /img/skycultures/irish.jpg
 license:   <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY-NC-SA 4.0</a>
 ---
