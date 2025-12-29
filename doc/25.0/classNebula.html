@@ -21,7 +21,7 @@
   <td id="projectlogo"><img alt="Logo" src="stellarium-logo.png"/></td>
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">Stellarium
-   &#160;<span id="projectnumber">25.3</span>
+   &#160;<span id="projectnumber">25.4</span>
    </div>
   </td>
  </tr>
@@ -47,6 +47,7 @@ $(function() {
 <a href="#pub-static-methods">Static Public Member Functions</a> &#124;
 <a href="#pub-static-attribs">Static Public Attributes</a> &#124;
 <a href="#pro-methods">Protected Member Functions</a> &#124;
+<a href="#pro-static-methods">Static Protected Member Functions</a> &#124;
 <a href="#friends">Friends</a>  </div>
   <div class="headertitle">
 <div class="title">Nebula Class Reference</div>  </div>
@@ -199,15 +200,16 @@ Public Types</h2></td></tr>
 , <br />
 &#160;&#160;<a class="el" href="classStelObject.html#acf243e7987796a3a44e409140ecea8c6aa9490c2d0bae26d11a36a7b6f9f8720e">EclipticCoordOfDate</a> = 0x00080000
 , <a class="el" href="classStelObject.html#acf243e7987796a3a44e409140ecea8c6a9e1f6ceb04288616cb5928944ee3ee6e">IAUConstellation</a> = 0x00100000
-, <a class="el" href="classStelObject.html#acf243e7987796a3a44e409140ecea8c6a6b1acde73a84cc7314489ff6c5793264">SiderealTime</a> = 0x00200000
-, <a class="el" href="classStelObject.html#acf243e7987796a3a44e409140ecea8c6a0a4945c66b17aebfce6b1ef5a681e74e">RTSTime</a> = 0x00400000
+, <a class="el" href="classStelObject.html#acf243e7987796a3a44e409140ecea8c6a800e0c7f479eae800b6840d8e8cd9d12">CulturalConstellation</a> = 0x00200000
+, <a class="el" href="classStelObject.html#acf243e7987796a3a44e409140ecea8c6a6b1acde73a84cc7314489ff6c5793264">SiderealTime</a> = 0x00400000
 , <br />
-&#160;&#160;<a class="el" href="classStelObject.html#acf243e7987796a3a44e409140ecea8c6a738f66c455ddb886d805dcaa17cfb7c2">SolarLunarPosition</a> = 0x00800000
-, <a class="el" href="classStelObject.html#acf243e7987796a3a44e409140ecea8c6add2bc965197f9ae3b3976f8494e60771">Script</a> = 0x01000000
-, <a class="el" href="classStelObject.html#acf243e7987796a3a44e409140ecea8c6ace2821b66545f2aa2a8a0a60debf238e">DebugAid</a> = 0x02000000
-, <b>NoFont</b> = 0x04000000
+&#160;&#160;<a class="el" href="classStelObject.html#acf243e7987796a3a44e409140ecea8c6a0a4945c66b17aebfce6b1ef5a681e74e">RTSTime</a> = 0x00800000
+, <a class="el" href="classStelObject.html#acf243e7987796a3a44e409140ecea8c6a738f66c455ddb886d805dcaa17cfb7c2">SolarLunarPosition</a> = 0x01000000
+, <a class="el" href="classStelObject.html#acf243e7987796a3a44e409140ecea8c6add2bc965197f9ae3b3976f8494e60771">Script</a> = 0x02000000
+, <a class="el" href="classStelObject.html#acf243e7987796a3a44e409140ecea8c6ace2821b66545f2aa2a8a0a60debf238e">DebugAid</a> = 0x04000000
 , <br />
-&#160;&#160;<a class="el" href="classStelObject.html#acf243e7987796a3a44e409140ecea8c6aa651fd9d370fc652c77c663cd41a18ce">PlainText</a> = 0x08000000
+&#160;&#160;<b>NoFont</b> = 0x08000000
+, <a class="el" href="classStelObject.html#acf243e7987796a3a44e409140ecea8c6aa651fd9d370fc652c77c663cd41a18ce">PlainText</a> = 0x10000000
 <br />
  }</td></tr>
 <tr class="memdesc:acf243e7987796a3a44e409140ecea8c6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Used as named bitfield flags as specifiers to filter results of getInfoString.  <a href="classStelObject.html#acf243e7987796a3a44e409140ecea8c6">More...</a><br /></td></tr>
@@ -520,6 +522,10 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><b>objectInDisplayedCata
 <tr class="memitem:ade5171e99c8ac028e5e608f077ceb652"><td class="memItemLeft" align="right" valign="top"><a id="ade5171e99c8ac028e5e608f077ceb652"></a>
 bool&#160;</td><td class="memItemRight" valign="bottom"><b>objectInAllowedSizeRangeLimits</b> () const</td></tr>
 <tr class="separator:ade5171e99c8ac028e5e608f077ceb652"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a774cef1227da18e72542a9b1dcbc14c7"><td class="memItemLeft" align="right" valign="top"><a id="a774cef1227da18e72542a9b1dcbc14c7"></a>
+QString&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classNebula.html#a774cef1227da18e72542a9b1dcbc14c7">getNarration</a> (const <a class="el" href="classStelCore.html">StelCore</a> *core, const InfoStringGroup &amp;flags=<a class="el" href="classStelObject.html#a3e8279a6b66819734b11daf48a8e684b">StelObject::AllInfo</a>) const override</td></tr>
+<tr class="memdesc:a774cef1227da18e72542a9b1dcbc14c7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return a narration text ready for synthesized speech output. <br /></td></tr>
+<tr class="separator:a774cef1227da18e72542a9b1dcbc14c7"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pub_methods_classStelObject"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_classStelObject')"><img src="closed.png" alt="-"/>&#160;Public Member Functions inherited from <a class="el" href="classStelObject.html">StelObject</a></td></tr>
 <tr class="memitem:ad0775c8610cb47dc4cdac8bfb6136752 inherit pub_methods_classStelObject"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classSphericalRegionP.html">SphericalRegionP</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classStelObject.html#ad0775c8610cb47dc4cdac8bfb6136752">getRegion</a> () const override</td></tr>
 <tr class="memdesc:ad0775c8610cb47dc4cdac8bfb6136752 inherit pub_methods_classStelObject"><td class="mdescLeft">&#160;</td><td class="mdescRight">Default implementation of the getRegion method.  <a href="classStelObject.html#ad0775c8610cb47dc4cdac8bfb6136752">More...</a><br /></td></tr>
@@ -636,12 +642,30 @@ QString&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="c
 <tr class="memitem:aab275c32767521d5cb4618184681d0ce inherit pro_methods_classStelObject"><td class="memItemLeft" align="right" valign="top">QString&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classStelObject.html#aab275c32767521d5cb4618184681d0ce">getCommonInfoString</a> (const <a class="el" href="classStelCore.html">StelCore</a> *core, const InfoStringGroup &amp;flags) const</td></tr>
 <tr class="memdesc:aab275c32767521d5cb4618184681d0ce inherit pro_methods_classStelObject"><td class="mdescLeft">&#160;</td><td class="mdescRight">Format the positional info string containing J2000/of date/altaz/hour angle positions and constellation, sidereal time, etc.  <a href="classStelObject.html#aab275c32767521d5cb4618184681d0ce">More...</a><br /></td></tr>
 <tr class="separator:aab275c32767521d5cb4618184681d0ce inherit pro_methods_classStelObject"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab280f8bbdd42a941d751e5cff658fe19 inherit pro_methods_classStelObject"><td class="memItemLeft" align="right" valign="top">QString&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classStelObject.html#ab280f8bbdd42a941d751e5cff658fe19">getCommonNarration</a> (const <a class="el" href="classStelCore.html">StelCore</a> *core, const InfoStringGroup &amp;flags) const</td></tr>
+<tr class="memdesc:ab280f8bbdd42a941d751e5cff658fe19 inherit pro_methods_classStelObject"><td class="mdescLeft">&#160;</td><td class="mdescRight">Format the positional narration containing J2000/of date/altaz/hour angle positions and constellation, sidereal time, etc.  <a href="classStelObject.html#ab280f8bbdd42a941d751e5cff658fe19">More...</a><br /></td></tr>
+<tr class="separator:ab280f8bbdd42a941d751e5cff658fe19 inherit pro_methods_classStelObject"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a73e7f86c795f69b582bfbad041fb13df inherit pro_methods_classStelObject"><td class="memItemLeft" align="right" valign="top"><a id="a73e7f86c795f69b582bfbad041fb13df"></a>
+virtual QString&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classStelObject.html#a73e7f86c795f69b582bfbad041fb13df">getMagnitudeNarration</a> (const <a class="el" href="classStelCore.html">StelCore</a> *core, const InfoStringGroup &amp;flags, const int decimals=1, const float &amp;magOffset=0.f) const</td></tr>
+<tr class="memdesc:a73e7f86c795f69b582bfbad041fb13df inherit pro_methods_classStelObject"><td class="mdescLeft">&#160;</td><td class="mdescRight">Narration version of <a class="el" href="classStelObject.html#ab3a899efd49117041fab7a8c973741a2" title="Format the magnitude info string for the object.">getMagnitudeInfoString()</a>. <br /></td></tr>
+<tr class="separator:a73e7f86c795f69b582bfbad041fb13df inherit pro_methods_classStelObject"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a89c1c888d273b598a6fa8aed39836a52 inherit pro_methods_classStelObject"><td class="memItemLeft" align="right" valign="top">QString&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classStelObject.html#a89c1c888d273b598a6fa8aed39836a52">getSolarLunarInfoString</a> (const <a class="el" href="classStelCore.html">StelCore</a> *core, const InfoStringGroup &amp;flags) const</td></tr>
 <tr class="memdesc:a89c1c888d273b598a6fa8aed39836a52 inherit pro_methods_classStelObject"><td class="mdescLeft">&#160;</td><td class="mdescRight">Add a section to the InfoString with just horizontal data for the Sun and Moon, when observed from Earth.  <a href="classStelObject.html#a89c1c888d273b598a6fa8aed39836a52">More...</a><br /></td></tr>
 <tr class="separator:a89c1c888d273b598a6fa8aed39836a52 inherit pro_methods_classStelObject"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aeed88ff3721979bc798b2f1045c2a8bc inherit pro_methods_classStelObject"><td class="memItemLeft" align="right" valign="top"><a id="aeed88ff3721979bc798b2f1045c2a8bc"></a>
+QString&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classStelObject.html#aeed88ff3721979bc798b2f1045c2a8bc">getSolarLunarNarration</a> (const <a class="el" href="classStelCore.html">StelCore</a> *core, const InfoStringGroup &amp;flags) const</td></tr>
+<tr class="memdesc:aeed88ff3721979bc798b2f1045c2a8bc inherit pro_methods_classStelObject"><td class="mdescLeft">&#160;</td><td class="mdescRight">Narration version of <a class="el" href="classStelObject.html#a89c1c888d273b598a6fa8aed39836a52" title="Add a section to the InfoString with just horizontal data for the Sun and Moon, when observed from Ea...">getSolarLunarInfoString()</a> <br /></td></tr>
+<tr class="separator:aeed88ff3721979bc798b2f1045c2a8bc inherit pro_methods_classStelObject"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a53ece72260ecfe9c4783d740862021f8 inherit pro_methods_classStelObject"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classStelObject.html#a53ece72260ecfe9c4783d740862021f8">postProcessInfoString</a> (QString &amp;str, const InfoStringGroup &amp;flags) const</td></tr>
 <tr class="memdesc:a53ece72260ecfe9c4783d740862021f8 inherit pro_methods_classStelObject"><td class="mdescLeft">&#160;</td><td class="mdescRight">Apply post processing on the info string.  <a href="classStelObject.html#a53ece72260ecfe9c4783d740862021f8">More...</a><br /></td></tr>
 <tr class="separator:a53ece72260ecfe9c4783d740862021f8 inherit pro_methods_classStelObject"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-static-methods"></a>
+Static Protected Member Functions</h2></td></tr>
+<tr class="memitem:ae441149cab1e08773b0192ef8e0228d0"><td class="memItemLeft" align="right" valign="top"><a id="ae441149cab1e08773b0192ef8e0228d0"></a>
+static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classNebula.html#ae441149cab1e08773b0192ef8e0228d0">updateI18n</a> ()</td></tr>
+<tr class="memdesc:ae441149cab1e08773b0192ef8e0228d0"><td class="mdescLeft">&#160;</td><td class="mdescRight">(Re-)Fill TypeI18nNebulaStringMap. Called by <a class="el" href="classNebulaMgr.html" title="Stellarium is prepared to manage more than one set of nebulae (Deep-Sky Objects).">NebulaMgr</a> when required. <br /></td></tr>
+<tr class="separator:ae441149cab1e08773b0192ef8e0228d0"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="friends"></a>
 Friends</h2></td></tr>
@@ -1284,7 +1308,7 @@ Additional Inherited Members</h2></td></tr>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Mon Sep 29 2025 21:09:09 for Stellarium by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1
+Generated on Mon Dec 29 2025 19:07:17 for Stellarium by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1
 </small></address>
 </body>
 </html>

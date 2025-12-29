@@ -21,7 +21,7 @@
   <td id="projectlogo"><img alt="Logo" src="stellarium-logo.png"/></td>
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">Stellarium
-   &#160;<span id="projectnumber">25.3</span>
+   &#160;<span id="projectnumber">25.4</span>
    </div>
   </td>
  </tr>
@@ -314,6 +314,10 @@ static QStringList&#160;</td><td class="memItemRight" valign="bottom"><a class="
 <tr class="memitem:ae33b4858c8b934be739880e7992ee670"><td class="memItemLeft" align="right" valign="top">static QVariantMap&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classStelMainScriptAPI.html#ae33b4858c8b934be739880e7992ee670">getScreenXYFromAltAzi</a> (const QString &amp;alt, const QString &amp;azi)</td></tr>
 <tr class="memdesc:ae33b4858c8b934be739880e7992ee670"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get screen coordinates from some specified altitude and azimuth angles may be specified in a format recognised by <a class="el" href="namespaceStelUtils.html#acd88f8194549c7d46656952428720427" title="Convert a string longitude, latitude, RA or declination angle to radians.">StelUtils::getDecAngle()</a>  <a href="classStelMainScriptAPI.html#ae33b4858c8b934be739880e7992ee670">More...</a><br /></td></tr>
 <tr class="separator:ae33b4858c8b934be739880e7992ee670"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aef8b016f2fca7f4f7a91ac33d45303ac"><td class="memItemLeft" align="right" valign="top"><a id="aef8b016f2fca7f4f7a91ac33d45303ac"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classStelMainScriptAPI.html#aef8b016f2fca7f4f7a91ac33d45303ac">say</a> (const QString &amp;text)</td></tr>
+<tr class="memdesc:aef8b016f2fca7f4f7a91ac33d45303ac"><td class="mdescLeft">&#160;</td><td class="mdescRight">Narrate a text with speech engine. (Requires Qt6.6 or later.) <br /></td></tr>
+<tr class="separator:aef8b016f2fca7f4f7a91ac33d45303ac"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a4f6444ccc86ecec0a40d888d95f3ff03"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classStelMainScriptAPI.html#a4f6444ccc86ecec0a40d888d95f3ff03">loadSound</a> (const QString &amp;filename, const QString &amp;id)</td></tr>
 <tr class="memdesc:a4f6444ccc86ecec0a40d888d95f3ff03"><td class="mdescLeft">&#160;</td><td class="mdescRight">Load a sound from a file.  <a href="classStelMainScriptAPI.html#a4f6444ccc86ecec0a40d888d95f3ff03">More...</a><br /></td></tr>
 <tr class="separator:a4f6444ccc86ecec0a40d888d95f3ff03"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -571,7 +575,8 @@ double&#160;</td><td class="memItemRight" valign="bottom"><b>timeSpeed</b></td><
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Provide script API for Stellarium global functions. </p>
-<p>Public slots in this class may be used in Stellarium scripts, and are accessed as member function to the "core" scripting object. Module-specific functions, such as setting and clearing of display flags (e.g. <a class="el" href="classLandscapeMgr.html#a9692b777a833b81d7fb4e9f4e59b03e2" title="Set flag for displaying Atmosphere.">LandscapeMgr::setFlagAtmosphere</a>) can be accessed directly via the scripting object with the class name, e.g. by using the scripting command: LandscapeMgr.setFlagAtmosphere(true); </p>
+<p>Public slots in this class may be used in Stellarium scripts, and are accessed as member function to the "core" scripting object. Module-specific functions, such as setting and clearing of display flags (e.g. <a class="el" href="classLandscapeMgr.html#a9692b777a833b81d7fb4e9f4e59b03e2" title="Set flag for displaying Atmosphere.">LandscapeMgr::setFlagAtmosphere</a>) can be accessed directly via the scripting object with the class name, e.g. by using the scripting command: LandscapeMgr.setFlagAtmosphere(true);</p>
+<dl class="section note"><dt>Note</dt><dd>You can finetune the amount of scripting-related messages in the logfile by configuring the logging category stel.Scripting. For this, e.g. set environment variable QT_LOGGING_RULES="*.debug=false;stel.Scripting.debug=true;". By default, only Info and more severe messages are displayed. </dd></dl>
 </div><h2 class="groupheader">Member Function Documentation</h2>
 <a id="a12fd45f70f92b6004f64c91e5089e2f5"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a12fd45f70f92b6004f64c91e5089e2f5">&#9670;&nbsp;</a></span>addToSelectedObjectInfoString</h2>
@@ -5765,7 +5770,7 @@ See also <a class="el" href="classStelMainScriptAPI.html#ae5dc2cdfd5bd18b0634ec4
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Mon Sep 29 2025 21:09:10 for Stellarium by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1
+Generated on Mon Dec 29 2025 19:07:17 for Stellarium by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1
 </small></address>
 </body>
 </html>

@@ -231,8 +231,9 @@ QString&#160;</td><td class="memItemRight" valign="bottom"><b>runningScriptId</b
 <div class="textblock"><p>Manage scripting in Stellarium Notes on migration from QtScript to QJSEngine. </p>
 <ul>
 <li>The old engine had isEvaluating(). We must use a mutex for the same idea.</li>
-<li>There is no script.pause() function. We can only stop a running script. </li>
+<li>There is no script.pause() function. We can only stop a running script.</li>
 </ul>
+<dl class="section note"><dt>Note</dt><dd>You can finetune the amount of scripting-related messages in the logfile by configuring the logging category stel.Scripting. For this, e.g. set environment variable QT_LOGGING_RULES="*.debug=false;stel.Scripting.debug=true;". By default, only Info and more severe messages are displayed. </dd></dl>
 </div><h2 class="groupheader">Member Function Documentation</h2>
 <a id="a1e29a591b411d3130134eff6c056c4dd"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a1e29a591b411d3130134eff6c056c4dd">&#9670;&nbsp;</a></span>addObject()</h2>
@@ -750,7 +751,7 @@ QString&#160;</td><td class="memItemRight" valign="bottom"><b>runningScriptId</b
 </div><div class="memdoc">
 
 <p>Preprocess script, esp. </p>
-<p>process include instructions. if the command line option &ndash;verbose has been given, this dumps the preprocessed script with line numbers attached to log. This helps to understand the line number given by the usual error message. </p>
+<p>process include instructions. If logging level is set to stel.Scripting.debug, this dumps the preprocessed script with line numbers attached to log. This helps to understand the line number given by the usual error message. </p>
 
 </div>
 </div>
@@ -1167,7 +1168,7 @@ QString&#160;</td><td class="memItemRight" valign="bottom"><b>runningScriptId</b
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Mon Sep 29 2025 21:09:10 for Stellarium by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1
+Generated on Mon Dec 29 2025 19:07:17 for Stellarium by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1
 </small></address>
 </body>
 </html>

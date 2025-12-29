@@ -45,6 +45,7 @@ $(function() {
 <a href="#pub-slots">Public Slots</a> &#124;
 <a href="#signals">Signals</a> &#124;
 <a href="#pub-methods">Public Member Functions</a> &#124;
+<a href="#pub-static-methods">Static Public Member Functions</a> &#124;
 <a href="#properties">Properties</a>  </div>
   <div class="headertitle">
 <div class="title">ConstellationMgr Class Reference</div>  </div>
@@ -411,6 +412,10 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>constellationsDisplay
 <tr class="memitem:a49455d276569d775562d82806bc1ce3e"><td class="memItemLeft" align="right" valign="top"><a id="a49455d276569d775562d82806bc1ce3e"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><b>constellationLineThicknessChanged</b> (int thickness)</td></tr>
 <tr class="separator:a49455d276569d775562d82806bc1ce3e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a320397790b238e7abcce39b9708e3475"><td class="memItemLeft" align="right" valign="top"><a id="a320397790b238e7abcce39b9708e3475"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classConstellationMgr.html#a320397790b238e7abcce39b9708e3475">hasUpdatedSkyCulture</a> ()</td></tr>
+<tr class="memdesc:a320397790b238e7abcce39b9708e3475"><td class="mdescLeft">&#160;</td><td class="mdescRight">emitted at end of updateSkyCulture() <br /></td></tr>
+<tr class="separator:a320397790b238e7abcce39b9708e3475"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
@@ -469,10 +474,10 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="clas
 <tr class="separator:a16fefeef2760ccc8fcd40d99c06b8882"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a2c47eeed998c5de12ab55cb342ae9da1"><td class="memItemLeft" align="right" valign="top">QString&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classConstellationMgr.html#a2c47eeed998c5de12ab55cb342ae9da1">getLunarSystemName</a> () const</td></tr>
 <tr class="separator:a2c47eeed998c5de12ab55cb342ae9da1"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a7a1f5a0f4485d9add01df83046bab034"><td class="memItemLeft" align="right" valign="top">QString&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classConstellationMgr.html#a7a1f5a0f4485d9add01df83046bab034">getZodiacCoordinate</a> (<a class="el" href="classVector3.html">Vec3d</a> eqNow) const</td></tr>
-<tr class="separator:a7a1f5a0f4485d9add01df83046bab034"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ae5d75fa0a6d8066c5443e464d4765aab"><td class="memItemLeft" align="right" valign="top">QString&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classConstellationMgr.html#ae5d75fa0a6d8066c5443e464d4765aab">getLunarSystemCoordinate</a> (<a class="el" href="classVector3.html">Vec3d</a> eqNow) const</td></tr>
-<tr class="separator:ae5d75fa0a6d8066c5443e464d4765aab"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab439398a8073e36f1f9f2cc982440e98"><td class="memItemLeft" align="right" valign="top">QString&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classConstellationMgr.html#ab439398a8073e36f1f9f2cc982440e98">getZodiacCoordinate</a> (<a class="el" href="classVector3.html">Vec3d</a> eqNow, bool narration=false) const</td></tr>
+<tr class="separator:ab439398a8073e36f1f9f2cc982440e98"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad8a044bdf3c2e00d8bde6a79a0513dde"><td class="memItemLeft" align="right" valign="top">QString&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classConstellationMgr.html#ad8a044bdf3c2e00d8bde6a79a0513dde">getLunarSystemCoordinate</a> (<a class="el" href="classVector3.html">Vec3d</a> eqNow, bool narration=false) const</td></tr>
+<tr class="separator:ad8a044bdf3c2e00d8bde6a79a0513dde"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a137d99811a0d441b531d87a202376437"><td class="memItemLeft" align="right" valign="top">QList&lt; <a class="el" href="classConstellation.html">Constellation</a> * &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classConstellationMgr.html#a137d99811a0d441b531d87a202376437">isObjectIn</a> (const <a class="el" href="classStelObject.html">StelObject</a> *s, bool useHull) const</td></tr>
 <tr class="memdesc:a137d99811a0d441b531d87a202376437"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return list of constellations the object is member of.  <a href="classConstellationMgr.html#a137d99811a0d441b531d87a202376437">More...</a><br /></td></tr>
 <tr class="separator:a137d99811a0d441b531d87a202376437"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -527,6 +532,11 @@ virtual QString&#160;</td><td class="memItemRight" valign="bottom"><a class="el"
 <tr class="memitem:a361f28660ec3002520924cd5cee08ccd inherit pub_methods_classStelModule"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classStelModule.html#a361f28660ec3002520924cd5cee08ccd">configureGui</a> (bool show=true)</td></tr>
 <tr class="memdesc:a361f28660ec3002520924cd5cee08ccd inherit pub_methods_classStelModule"><td class="mdescLeft">&#160;</td><td class="mdescRight">Detect or show the configuration GUI elements for the module.  <a href="classStelModule.html#a361f28660ec3002520924cd5cee08ccd">More...</a><br /></td></tr>
 <tr class="separator:a361f28660ec3002520924cd5cee08ccd inherit pub_methods_classStelModule"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-static-methods"></a>
+Static Public Member Functions</h2></td></tr>
+<tr class="memitem:a7ccd84a6cb4073bec2f97f844ab84ebb"><td class="memItemLeft" align="right" valign="top">static QString&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classConstellationMgr.html#a7ccd84a6cb4073bec2f97f844ab84ebb">getIAUconstellationName</a> (const QString &amp;cst)</td></tr>
+<tr class="separator:a7ccd84a6cb4073bec2f97f844ab84ebb"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="properties"></a>
 Properties</h2></td></tr>
@@ -789,8 +799,35 @@ Additional Inherited Members</h2></td></tr>
 
 </div>
 </div>
-<a id="ae5d75fa0a6d8066c5443e464d4765aab"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ae5d75fa0a6d8066c5443e464d4765aab">&#9670;&nbsp;</a></span>getLunarSystemCoordinate()</h2>
+<a id="a7ccd84a6cb4073bec2f97f844ab84ebb"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7ccd84a6cb4073bec2f97f844ab84ebb">&#9670;&nbsp;</a></span>getIAUconstellationName()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static QString ConstellationMgr::getIAUconstellationName </td>
+          <td>(</td>
+          <td class="paramtype">const QString &amp;&#160;</td>
+          <td class="paramname"><em>cst</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<dl class="section return"><dt>Returns</dt><dd>the translated name of IAU constellation cst </dd></dl>
+
+</div>
+</div>
+<a id="ad8a044bdf3c2e00d8bde6a79a0513dde"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad8a044bdf3c2e00d8bde6a79a0513dde">&#9670;&nbsp;</a></span>getLunarSystemCoordinate()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -799,8 +836,18 @@ Additional Inherited Members</h2></td></tr>
           <td class="memname">QString ConstellationMgr::getLunarSystemCoordinate </td>
           <td>(</td>
           <td class="paramtype"><a class="el" href="classVector3.html">Vec3d</a>&#160;</td>
-          <td class="paramname"><em>eqNow</em></td><td>)</td>
-          <td> const</td>
+          <td class="paramname"><em>eqNow</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>narration</em> = <code>false</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td> const</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -826,8 +873,8 @@ Additional Inherited Members</h2></td></tr>
 
 </div>
 </div>
-<a id="a7a1f5a0f4485d9add01df83046bab034"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a7a1f5a0f4485d9add01df83046bab034">&#9670;&nbsp;</a></span>getZodiacCoordinate()</h2>
+<a id="ab439398a8073e36f1f9f2cc982440e98"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab439398a8073e36f1f9f2cc982440e98">&#9670;&nbsp;</a></span>getZodiacCoordinate()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -836,8 +883,18 @@ Additional Inherited Members</h2></td></tr>
           <td class="memname">QString ConstellationMgr::getZodiacCoordinate </td>
           <td>(</td>
           <td class="paramtype"><a class="el" href="classVector3.html">Vec3d</a>&#160;</td>
-          <td class="paramname"><em>eqNow</em></td><td>)</td>
-          <td> const</td>
+          <td class="paramname"><em>eqNow</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>narration</em> = <code>false</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td> const</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -1740,7 +1797,7 @@ Additional Inherited Members</h2></td></tr>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Mon Sep 29 2025 21:09:09 for Stellarium by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1
+Generated on Mon Dec 29 2025 19:07:16 for Stellarium by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1
 </small></address>
 </body>
 </html>

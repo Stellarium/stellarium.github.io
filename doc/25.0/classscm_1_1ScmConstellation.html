@@ -21,7 +21,7 @@
   <td id="projectlogo"><img alt="Logo" src="stellarium-logo.png"/></td>
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">Stellarium
-   &#160;<span id="projectnumber">25.3</span>
+   &#160;<span id="projectnumber">25.4</span>
    </div>
   </td>
  </tr>
@@ -47,6 +47,7 @@ $(function() {
 <div class="header">
   <div class="summary">
 <a href="#pub-methods">Public Member Functions</a> &#124;
+<a href="#pub-attribs">Data Fields</a> &#124;
 <a href="#pub-static-attribs">Static Public Attributes</a>  </div>
   <div class="headertitle">
 <div class="title">scm::ScmConstellation Class Reference</div>  </div>
@@ -55,9 +56,9 @@ $(function() {
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:a4d721bf7f86bf982bdcf8816dded60ad"><td class="memItemLeft" align="right" valign="top"><a id="a4d721bf7f86bf982bdcf8816dded60ad"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><b>ScmConstellation</b> (const QString &amp;id, const std::vector&lt; <a class="el" href="structscm_1_1CoordinateLine.html">CoordinateLine</a> &gt; &amp;coordinates, const std::vector&lt; <a class="el" href="structscm_1_1StarLine.html">StarLine</a> &gt; &amp;stars, const bool isDarkConstellation)</td></tr>
-<tr class="separator:a4d721bf7f86bf982bdcf8816dded60ad"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae212dd74fb93023c36e00a6b8fabd314"><td class="memItemLeft" align="right" valign="top"><a id="ae212dd74fb93023c36e00a6b8fabd314"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><b>ScmConstellation</b> (const QString &amp;id, const std::vector&lt; <a class="el" href="structscm_1_1ConstellationLine.html">ConstellationLine</a> &gt; &amp;lines, const bool isDarkConstellation)</td></tr>
+<tr class="separator:ae212dd74fb93023c36e00a6b8fabd314"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a7ce2babc322e7787dfbcb5cdd3d7ae9f"><td class="memItemLeft" align="right" valign="top">QString&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classscm_1_1ScmConstellation.html#a7ce2babc322e7787dfbcb5cdd3d7ae9f">getId</a> () const</td></tr>
 <tr class="memdesc:a7ce2babc322e7787dfbcb5cdd3d7ae9f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Gets the id of the constellation.  <a href="classscm_1_1ScmConstellation.html#a7ce2babc322e7787dfbcb5cdd3d7ae9f">More...</a><br /></td></tr>
 <tr class="separator:a7ce2babc322e7787dfbcb5cdd3d7ae9f"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -85,50 +86,52 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a1e7523c5cbf033c900f16e0df731a8ba"><td class="memItemLeft" align="right" valign="top">std::optional&lt; QString &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classscm_1_1ScmConstellation.html#a1e7523c5cbf033c900f16e0df731a8ba">getIPA</a> () const</td></tr>
 <tr class="memdesc:a1e7523c5cbf033c900f16e0df731a8ba"><td class="mdescLeft">&#160;</td><td class="mdescRight">Gets the IPA.  <a href="classscm_1_1ScmConstellation.html#a1e7523c5cbf033c900f16e0df731a8ba">More...</a><br /></td></tr>
 <tr class="separator:a1e7523c5cbf033c900f16e0df731a8ba"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aebb110b76efbc7893c5066a72c599a04"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classscm_1_1ScmConstellation.html#aebb110b76efbc7893c5066a72c599a04">setDescription</a> (const QString &amp;description)</td></tr>
+<tr class="memdesc:aebb110b76efbc7893c5066a72c599a04"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the description of the constellation.  <a href="classscm_1_1ScmConstellation.html#aebb110b76efbc7893c5066a72c599a04">More...</a><br /></td></tr>
+<tr class="separator:aebb110b76efbc7893c5066a72c599a04"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac89b090ad4594a944bcd8647e7e5603b"><td class="memItemLeft" align="right" valign="top">QString&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classscm_1_1ScmConstellation.html#ac89b090ad4594a944bcd8647e7e5603b">getDescription</a> () const</td></tr>
+<tr class="memdesc:ac89b090ad4594a944bcd8647e7e5603b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Gets the description of the constellation.  <a href="classscm_1_1ScmConstellation.html#ac89b090ad4594a944bcd8647e7e5603b">More...</a><br /></td></tr>
+<tr class="separator:ac89b090ad4594a944bcd8647e7e5603b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a6082df9478c0a0bba22393a9f09ab961"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classscm_1_1ScmConstellation.html#a6082df9478c0a0bba22393a9f09ab961">setArtwork</a> (const <a class="el" href="classscm_1_1ScmConstellationArtwork.html">ScmConstellationArtwork</a> &amp;artwork)</td></tr>
 <tr class="memdesc:a6082df9478c0a0bba22393a9f09ab961"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the artwork.  <a href="classscm_1_1ScmConstellation.html#a6082df9478c0a0bba22393a9f09ab961">More...</a><br /></td></tr>
 <tr class="separator:a6082df9478c0a0bba22393a9f09ab961"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a5874c7dcbb778fd61d27b854141bfa7b"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="classscm_1_1ScmConstellationArtwork.html">ScmConstellationArtwork</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classscm_1_1ScmConstellation.html#a5874c7dcbb778fd61d27b854141bfa7b">getArtwork</a> () const</td></tr>
 <tr class="memdesc:a5874c7dcbb778fd61d27b854141bfa7b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Gets the artwork.  <a href="classscm_1_1ScmConstellation.html#a5874c7dcbb778fd61d27b854141bfa7b">More...</a><br /></td></tr>
 <tr class="separator:a5874c7dcbb778fd61d27b854141bfa7b"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a7ff365902bb55643ab1d733aba4b4da0"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classscm_1_1ScmConstellation.html#a7ff365902bb55643ab1d733aba4b4da0">setConstellation</a> (const std::vector&lt; <a class="el" href="structscm_1_1CoordinateLine.html">CoordinateLine</a> &gt; &amp;coordinates, const std::vector&lt; <a class="el" href="structscm_1_1StarLine.html">StarLine</a> &gt; &amp;stars)</td></tr>
-<tr class="memdesc:a7ff365902bb55643ab1d733aba4b4da0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the coordinate lines and star lines of the constellation.  <a href="classscm_1_1ScmConstellation.html#a7ff365902bb55643ab1d733aba4b4da0">More...</a><br /></td></tr>
-<tr class="separator:a7ff365902bb55643ab1d733aba4b4da0"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a0c4f0c79e06a81cab8da46a03e57860d"><td class="memItemLeft" align="right" valign="top">const std::vector&lt; <a class="el" href="structscm_1_1CoordinateLine.html">CoordinateLine</a> &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classscm_1_1ScmConstellation.html#a0c4f0c79e06a81cab8da46a03e57860d">getCoordinates</a> () const</td></tr>
-<tr class="memdesc:a0c4f0c79e06a81cab8da46a03e57860d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Gets the coordinates of the constellation.  <a href="classscm_1_1ScmConstellation.html#a0c4f0c79e06a81cab8da46a03e57860d">More...</a><br /></td></tr>
-<tr class="separator:a0c4f0c79e06a81cab8da46a03e57860d"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a67ba77d76535fab583a91626f7416bc9"><td class="memItemLeft" align="right" valign="top">const std::vector&lt; <a class="el" href="structscm_1_1StarLine.html">StarLine</a> &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classscm_1_1ScmConstellation.html#a67ba77d76535fab583a91626f7416bc9">getStars</a> () const</td></tr>
-<tr class="memdesc:a67ba77d76535fab583a91626f7416bc9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Gets the stars of the constellation.  <a href="classscm_1_1ScmConstellation.html#a67ba77d76535fab583a91626f7416bc9">More...</a><br /></td></tr>
-<tr class="separator:a67ba77d76535fab583a91626f7416bc9"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a423b9e9c235542997f6d99cead0b47ff"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classscm_1_1ScmConstellation.html#a423b9e9c235542997f6d99cead0b47ff">drawConstellation</a> (<a class="el" href="classStelCore.html">StelCore</a> *core, const <a class="el" href="classVector3.html">Vec3f</a> &amp;lineColor, const <a class="el" href="classVector3.html">Vec3f</a> &amp;labelColor) const</td></tr>
-<tr class="memdesc:a423b9e9c235542997f6d99cead0b47ff"><td class="mdescLeft">&#160;</td><td class="mdescRight">Draws the constellation based on the coordinates.  <a href="classscm_1_1ScmConstellation.html#a423b9e9c235542997f6d99cead0b47ff">More...</a><br /></td></tr>
-<tr class="separator:a423b9e9c235542997f6d99cead0b47ff"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a74fe80b2c69bc362f1ee2264d20104c1"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classscm_1_1ScmConstellation.html#a74fe80b2c69bc362f1ee2264d20104c1">drawConstellation</a> (<a class="el" href="classStelCore.html">StelCore</a> *core) const</td></tr>
-<tr class="memdesc:a74fe80b2c69bc362f1ee2264d20104c1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Draws the constellation based on the coordinates using the default color.  <a href="classscm_1_1ScmConstellation.html#a74fe80b2c69bc362f1ee2264d20104c1">More...</a><br /></td></tr>
-<tr class="separator:a74fe80b2c69bc362f1ee2264d20104c1"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a5fd5949f3851576f23456f0c1ee87bd3"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classscm_1_1ScmConstellation.html#a5fd5949f3851576f23456f0c1ee87bd3">drawNames</a> (<a class="el" href="classStelCore.html">StelCore</a> *core, <a class="el" href="classStelPainter.html">StelPainter</a> &amp;painter, const <a class="el" href="classVector3.html">Vec3f</a> &amp;labelColor) const</td></tr>
-<tr class="memdesc:a5fd5949f3851576f23456f0c1ee87bd3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Draws the label of the constellation.  <a href="classscm_1_1ScmConstellation.html#a5fd5949f3851576f23456f0c1ee87bd3">More...</a><br /></td></tr>
-<tr class="separator:a5fd5949f3851576f23456f0c1ee87bd3"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ae08342041809ff74c15595139724b82a"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classscm_1_1ScmConstellation.html#ae08342041809ff74c15595139724b82a">drawNames</a> (<a class="el" href="classStelCore.html">StelCore</a> *core, <a class="el" href="classStelPainter.html">StelPainter</a> &amp;painter) const</td></tr>
-<tr class="memdesc:ae08342041809ff74c15595139724b82a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Draws the label of the constellation using the default color.  <a href="classscm_1_1ScmConstellation.html#ae08342041809ff74c15595139724b82a">More...</a><br /></td></tr>
-<tr class="separator:ae08342041809ff74c15595139724b82a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:abee7d70fef8171508debbc4973eb8fe8"><td class="memItemLeft" align="right" valign="top">QJsonObject&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classscm_1_1ScmConstellation.html#abee7d70fef8171508debbc4973eb8fe8">toJson</a> (const QString &amp;skyCultureId) const</td></tr>
-<tr class="memdesc:abee7d70fef8171508debbc4973eb8fe8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the constellation data as a JSON object.  <a href="classscm_1_1ScmConstellation.html#abee7d70fef8171508debbc4973eb8fe8">More...</a><br /></td></tr>
-<tr class="separator:abee7d70fef8171508debbc4973eb8fe8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2fea6ba645a526c3ff762dfc13d87978"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classscm_1_1ScmConstellation.html#a2fea6ba645a526c3ff762dfc13d87978">setLines</a> (const std::vector&lt; <a class="el" href="structscm_1_1ConstellationLine.html">ConstellationLine</a> &gt; &amp;lines)</td></tr>
+<tr class="memdesc:a2fea6ba645a526c3ff762dfc13d87978"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the lines of the constellation.  <a href="classscm_1_1ScmConstellation.html#a2fea6ba645a526c3ff762dfc13d87978">More...</a><br /></td></tr>
+<tr class="separator:a2fea6ba645a526c3ff762dfc13d87978"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2c7eba4a360bb37b843965e0d7386384"><td class="memItemLeft" align="right" valign="top">const std::vector&lt; <a class="el" href="structscm_1_1ConstellationLine.html">ConstellationLine</a> &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classscm_1_1ScmConstellation.html#a2c7eba4a360bb37b843965e0d7386384">getLines</a> () const</td></tr>
+<tr class="memdesc:a2c7eba4a360bb37b843965e0d7386384"><td class="mdescLeft">&#160;</td><td class="mdescRight">Gets the lines of the constellation.  <a href="classscm_1_1ScmConstellation.html#a2c7eba4a360bb37b843965e0d7386384">More...</a><br /></td></tr>
+<tr class="separator:a2c7eba4a360bb37b843965e0d7386384"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7816b9f6ab89ce62a85ef84ad0a4c5a1"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classscm_1_1ScmConstellation.html#a7816b9f6ab89ce62a85ef84ad0a4c5a1">draw</a> (<a class="el" href="classStelCore.html">StelCore</a> *core) const</td></tr>
+<tr class="memdesc:a7816b9f6ab89ce62a85ef84ad0a4c5a1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Draws the constellation lines, name and artwork using default colors.  <a href="classscm_1_1ScmConstellation.html#a7816b9f6ab89ce62a85ef84ad0a4c5a1">More...</a><br /></td></tr>
+<tr class="separator:a7816b9f6ab89ce62a85ef84ad0a4c5a1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abcfd8b65493658c7d6ec13db7c4a77d6"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classscm_1_1ScmConstellation.html#abcfd8b65493658c7d6ec13db7c4a77d6">drawLines</a> (<a class="el" href="classStelPainter.html">StelPainter</a> &amp;sPainter, const <a class="el" href="classVector3.html">Vec3f</a> &amp;lineColor) const</td></tr>
+<tr class="memdesc:abcfd8b65493658c7d6ec13db7c4a77d6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Draws the constellation lines.  <a href="classscm_1_1ScmConstellation.html#abcfd8b65493658c7d6ec13db7c4a77d6">More...</a><br /></td></tr>
+<tr class="separator:abcfd8b65493658c7d6ec13db7c4a77d6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a498c6c297f0ff6c66b33901fc026266f"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classscm_1_1ScmConstellation.html#a498c6c297f0ff6c66b33901fc026266f">drawName</a> (<a class="el" href="classStelCore.html">StelCore</a> *core, <a class="el" href="classStelPainter.html">StelPainter</a> &amp;painter, const <a class="el" href="classVector3.html">Vec3f</a> &amp;labelColor) const</td></tr>
+<tr class="memdesc:a498c6c297f0ff6c66b33901fc026266f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Draws the label of the constellation.  <a href="classscm_1_1ScmConstellation.html#a498c6c297f0ff6c66b33901fc026266f">More...</a><br /></td></tr>
+<tr class="separator:a498c6c297f0ff6c66b33901fc026266f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7512086b4024a362b1323ba40d11aacf"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classscm_1_1ScmConstellation.html#a7512086b4024a362b1323ba40d11aacf">drawArtwork</a> (<a class="el" href="classStelCore.html">StelCore</a> *core, <a class="el" href="classStelPainter.html">StelPainter</a> &amp;painter) const</td></tr>
+<tr class="memdesc:a7512086b4024a362b1323ba40d11aacf"><td class="mdescLeft">&#160;</td><td class="mdescRight">Draws the artwork of the constellation.  <a href="classscm_1_1ScmConstellation.html#a7512086b4024a362b1323ba40d11aacf">More...</a><br /></td></tr>
+<tr class="separator:a7512086b4024a362b1323ba40d11aacf"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3d784531d34567354b9bd4a880161f32"><td class="memItemLeft" align="right" valign="top">QJsonObject&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classscm_1_1ScmConstellation.html#a3d784531d34567354b9bd4a880161f32">toJson</a> (const QString &amp;skyCultureId, const bool mergeLines) const</td></tr>
+<tr class="memdesc:a3d784531d34567354b9bd4a880161f32"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the constellation data as a JSON object.  <a href="classscm_1_1ScmConstellation.html#a3d784531d34567354b9bd4a880161f32">More...</a><br /></td></tr>
+<tr class="separator:a3d784531d34567354b9bd4a880161f32"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a96e0ecac2463a3fe27d3eeb80003675b"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classscm_1_1ScmConstellation.html#a96e0ecac2463a3fe27d3eeb80003675b">saveArtwork</a> (const QString &amp;directory)</td></tr>
 <tr class="memdesc:a96e0ecac2463a3fe27d3eeb80003675b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Saves the artwork of this constellation, if art is attached, to the give filepath.  <a href="classscm_1_1ScmConstellation.html#a96e0ecac2463a3fe27d3eeb80003675b">More...</a><br /></td></tr>
 <tr class="separator:a96e0ecac2463a3fe27d3eeb80003675b"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a37515ee9938c10907ea724bcfd10d9b8"><td class="memItemLeft" align="right" valign="top"><a id="a37515ee9938c10907ea724bcfd10d9b8"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classscm_1_1ScmConstellation.html#a37515ee9938c10907ea724bcfd10d9b8">hide</a> ()</td></tr>
-<tr class="memdesc:a37515ee9938c10907ea724bcfd10d9b8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Hides the constellation from being drawn. <br /></td></tr>
-<tr class="separator:a37515ee9938c10907ea724bcfd10d9b8"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a2a885794450e3a26b65cede9daeed9de"><td class="memItemLeft" align="right" valign="top"><a id="a2a885794450e3a26b65cede9daeed9de"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classscm_1_1ScmConstellation.html#a2a885794450e3a26b65cede9daeed9de">show</a> ()</td></tr>
-<tr class="memdesc:a2a885794450e3a26b65cede9daeed9de"><td class="mdescLeft">&#160;</td><td class="mdescRight">Enables the constellation to be drawn. <br /></td></tr>
-<tr class="separator:a2a885794450e3a26b65cede9daeed9de"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af82eeb173b9cff7cfa4d5168dac0ad91"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classscm_1_1ScmConstellation.html#af82eeb173b9cff7cfa4d5168dac0ad91">getIsDarkConstellation</a> () const</td></tr>
 <tr class="memdesc:af82eeb173b9cff7cfa4d5168dac0ad91"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns whether the constellation is a dark constellation.  <a href="classscm_1_1ScmConstellation.html#af82eeb173b9cff7cfa4d5168dac0ad91">More...</a><br /></td></tr>
 <tr class="separator:af82eeb173b9cff7cfa4d5168dac0ad91"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-attribs"></a>
+Data Fields</h2></td></tr>
+<tr class="memitem:ae9e34bec5eff6acbd8e80023d49e0365"><td class="memItemLeft" align="right" valign="top"><a id="ae9e34bec5eff6acbd8e80023d49e0365"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classscm_1_1ScmConstellation.html#ae9e34bec5eff6acbd8e80023d49e0365">isHidden</a> = false</td></tr>
+<tr class="memdesc:ae9e34bec5eff6acbd8e80023d49e0365"><td class="mdescLeft">&#160;</td><td class="mdescRight">Whether the constellation should be drawn or not. <br /></td></tr>
+<tr class="separator:ae9e34bec5eff6acbd8e80023d49e0365"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-static-attribs"></a>
 Static Public Attributes</h2></td></tr>
@@ -138,14 +141,14 @@ static const <a class="el" href="classStelCore.html#af18f0c34c957103a7fa3008e2aa
 <tr class="separator:a247bc45932a597288dbd8c421a8f6cb4"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Member Function Documentation</h2>
-<a id="a74fe80b2c69bc362f1ee2264d20104c1"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a74fe80b2c69bc362f1ee2264d20104c1">&#9670;&nbsp;</a></span>drawConstellation() <span class="overload">[1/2]</span></h2>
+<a id="a7816b9f6ab89ce62a85ef84ad0a4c5a1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7816b9f6ab89ce62a85ef84ad0a4c5a1">&#9670;&nbsp;</a></span>draw()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">void scm::ScmConstellation::drawConstellation </td>
+          <td class="memname">void scm::ScmConstellation::draw </td>
           <td>(</td>
           <td class="paramtype"><a class="el" href="classStelCore.html">StelCore</a> *&#160;</td>
           <td class="paramname"><em>core</em></td><td>)</td>
@@ -154,7 +157,7 @@ static const <a class="el" href="classStelCore.html#af18f0c34c957103a7fa3008e2aa
       </table>
 </div><div class="memdoc">
 
-<p>Draws the constellation based on the coordinates using the default color. </p>
+<p>Draws the constellation lines, name and artwork using default colors. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">core</td><td>The core used for drawing. </td></tr>
@@ -164,57 +167,14 @@ static const <a class="el" href="classStelCore.html#af18f0c34c957103a7fa3008e2aa
 
 </div>
 </div>
-<a id="a423b9e9c235542997f6d99cead0b47ff"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a423b9e9c235542997f6d99cead0b47ff">&#9670;&nbsp;</a></span>drawConstellation() <span class="overload">[2/2]</span></h2>
+<a id="a7512086b4024a362b1323ba40d11aacf"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7512086b4024a362b1323ba40d11aacf">&#9670;&nbsp;</a></span>drawArtwork()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">void scm::ScmConstellation::drawConstellation </td>
-          <td>(</td>
-          <td class="paramtype"><a class="el" href="classStelCore.html">StelCore</a> *&#160;</td>
-          <td class="paramname"><em>core</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">const <a class="el" href="classVector3.html">Vec3f</a> &amp;&#160;</td>
-          <td class="paramname"><em>lineColor</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">const <a class="el" href="classVector3.html">Vec3f</a> &amp;&#160;</td>
-          <td class="paramname"><em>labelColor</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td> const</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Draws the constellation based on the coordinates. </p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">core</td><td>The core used for drawing. </td></tr>
-    <tr><td class="paramname">color</td><td>The color to use for drawing the constellation. </td></tr>
-  </table>
-  </dd>
-</dl>
-
-</div>
-</div>
-<a id="ae08342041809ff74c15595139724b82a"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ae08342041809ff74c15595139724b82a">&#9670;&nbsp;</a></span>drawNames() <span class="overload">[1/2]</span></h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">void scm::ScmConstellation::drawNames </td>
+          <td class="memname">void scm::ScmConstellation::drawArtwork </td>
           <td>(</td>
           <td class="paramtype"><a class="el" href="classStelCore.html">StelCore</a> *&#160;</td>
           <td class="paramname"><em>core</em>, </td>
@@ -233,7 +193,7 @@ static const <a class="el" href="classStelCore.html#af18f0c34c957103a7fa3008e2aa
       </table>
 </div><div class="memdoc">
 
-<p>Draws the label of the constellation using the default color. </p>
+<p>Draws the artwork of the constellation. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">core</td><td>The core used for drawing. </td></tr>
@@ -244,14 +204,51 @@ static const <a class="el" href="classStelCore.html#af18f0c34c957103a7fa3008e2aa
 
 </div>
 </div>
-<a id="a5fd5949f3851576f23456f0c1ee87bd3"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a5fd5949f3851576f23456f0c1ee87bd3">&#9670;&nbsp;</a></span>drawNames() <span class="overload">[2/2]</span></h2>
+<a id="abcfd8b65493658c7d6ec13db7c4a77d6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abcfd8b65493658c7d6ec13db7c4a77d6">&#9670;&nbsp;</a></span>drawLines()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">void scm::ScmConstellation::drawNames </td>
+          <td class="memname">void scm::ScmConstellation::drawLines </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classStelPainter.html">StelPainter</a> &amp;&#160;</td>
+          <td class="paramname"><em>sPainter</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="classVector3.html">Vec3f</a> &amp;&#160;</td>
+          <td class="paramname"><em>lineColor</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Draws the constellation lines. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">sPainter</td><td>The painter used for drawing. </td></tr>
+    <tr><td class="paramname">lineColor</td><td>The color of the lines. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a498c6c297f0ff6c66b33901fc026266f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a498c6c297f0ff6c66b33901fc026266f">&#9670;&nbsp;</a></span>drawName()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void scm::ScmConstellation::drawName </td>
           <td>(</td>
           <td class="paramtype"><a class="el" href="classStelCore.html">StelCore</a> *&#160;</td>
           <td class="paramname"><em>core</em>, </td>
@@ -308,23 +305,31 @@ static const <a class="el" href="classStelCore.html#af18f0c34c957103a7fa3008e2aa
 
 </div>
 </div>
-<a id="a0c4f0c79e06a81cab8da46a03e57860d"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a0c4f0c79e06a81cab8da46a03e57860d">&#9670;&nbsp;</a></span>getCoordinates()</h2>
+<a id="ac89b090ad4594a944bcd8647e7e5603b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac89b090ad4594a944bcd8647e7e5603b">&#9670;&nbsp;</a></span>getDescription()</h2>
 
 <div class="memitem">
 <div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">const std::vector&lt;<a class="el" href="structscm_1_1CoordinateLine.html">CoordinateLine</a>&gt;&amp; scm::ScmConstellation::getCoordinates </td>
+          <td class="memname">QString scm::ScmConstellation::getDescription </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td> const</td>
         </tr>
       </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
 </div><div class="memdoc">
 
-<p>Gets the coordinates of the constellation. </p>
-<dl class="section return"><dt>Returns</dt><dd>The coordinates of the constellation. </dd></dl>
+<p>Gets the description of the constellation. </p>
+<dl class="section return"><dt>Returns</dt><dd>The description. </dd></dl>
 
 </div>
 </div>
@@ -416,6 +421,26 @@ static const <a class="el" href="classStelCore.html#af18f0c34c957103a7fa3008e2aa
 
 </div>
 </div>
+<a id="a2c7eba4a360bb37b843965e0d7386384"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2c7eba4a360bb37b843965e0d7386384">&#9670;&nbsp;</a></span>getLines()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const std::vector&lt;<a class="el" href="structscm_1_1ConstellationLine.html">ConstellationLine</a>&gt;&amp; scm::ScmConstellation::getLines </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Gets the lines of the constellation. </p>
+<dl class="section return"><dt>Returns</dt><dd>The lines of the constellation. </dd></dl>
+
+</div>
+</div>
 <a id="aac3b3febd49a842aa330bd99d73d9271"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#aac3b3febd49a842aa330bd99d73d9271">&#9670;&nbsp;</a></span>getNativeName()</h2>
 
@@ -453,26 +478,6 @@ static const <a class="el" href="classStelCore.html#af18f0c34c957103a7fa3008e2aa
 
 <p>Gets the pronounciation of the constellation. </p>
 <dl class="section return"><dt>Returns</dt><dd>The pronounciation </dd></dl>
-
-</div>
-</div>
-<a id="a67ba77d76535fab583a91626f7416bc9"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a67ba77d76535fab583a91626f7416bc9">&#9670;&nbsp;</a></span>getStars()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">const std::vector&lt;<a class="el" href="structscm_1_1StarLine.html">StarLine</a>&gt;&amp; scm::ScmConstellation::getStars </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td> const</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Gets the stars of the constellation. </p>
-<dl class="section return"><dt>Returns</dt><dd>The stars of the constellation. </dd></dl>
 
 </div>
 </div>
@@ -531,37 +536,34 @@ false Failed to save. </dd></dl>
 
 </div>
 </div>
-<a id="a7ff365902bb55643ab1d733aba4b4da0"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a7ff365902bb55643ab1d733aba4b4da0">&#9670;&nbsp;</a></span>setConstellation()</h2>
+<a id="aebb110b76efbc7893c5066a72c599a04"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aebb110b76efbc7893c5066a72c599a04">&#9670;&nbsp;</a></span>setDescription()</h2>
 
 <div class="memitem">
 <div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">void scm::ScmConstellation::setConstellation </td>
+          <td class="memname">void scm::ScmConstellation::setDescription </td>
           <td>(</td>
-          <td class="paramtype">const std::vector&lt; <a class="el" href="structscm_1_1CoordinateLine.html">CoordinateLine</a> &gt; &amp;&#160;</td>
-          <td class="paramname"><em>coordinates</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
+          <td class="paramtype">const QString &amp;&#160;</td>
+          <td class="paramname"><em>description</em></td><td>)</td>
           <td></td>
-          <td class="paramtype">const std::vector&lt; <a class="el" href="structscm_1_1StarLine.html">StarLine</a> &gt; &amp;&#160;</td>
-          <td class="paramname"><em>stars</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
         </tr>
       </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
 </div><div class="memdoc">
 
-<p>Sets the coordinate lines and star lines of the constellation. </p>
+<p>Sets the description of the constellation. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">coordinates</td><td>The coordinates of the constellation. </td></tr>
-    <tr><td class="paramname">stars</td><td>The equivalent stars to the coordinates. </td></tr>
+    <tr><td class="paramname">description</td><td>The description. </td></tr>
   </table>
   </dd>
 </dl>
@@ -620,6 +622,32 @@ false Failed to save. </dd></dl>
 
 </div>
 </div>
+<a id="a2fea6ba645a526c3ff762dfc13d87978"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2fea6ba645a526c3ff762dfc13d87978">&#9670;&nbsp;</a></span>setLines()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void scm::ScmConstellation::setLines </td>
+          <td>(</td>
+          <td class="paramtype">const std::vector&lt; <a class="el" href="structscm_1_1ConstellationLine.html">ConstellationLine</a> &gt; &amp;&#160;</td>
+          <td class="paramname"><em>lines</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Sets the lines of the constellation. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">lines</td><td>The lines of the constellation. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
 <a id="aeb717429ba758c173c3f092e6922f0c7"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#aeb717429ba758c173c3f092e6922f0c7">&#9670;&nbsp;</a></span>setNativeName()</h2>
 
@@ -672,8 +700,8 @@ false Failed to save. </dd></dl>
 
 </div>
 </div>
-<a id="abee7d70fef8171508debbc4973eb8fe8"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#abee7d70fef8171508debbc4973eb8fe8">&#9670;&nbsp;</a></span>toJson()</h2>
+<a id="a3d784531d34567354b9bd4a880161f32"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3d784531d34567354b9bd4a880161f32">&#9670;&nbsp;</a></span>toJson()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -682,8 +710,18 @@ false Failed to save. </dd></dl>
           <td class="memname">QJsonObject scm::ScmConstellation::toJson </td>
           <td>(</td>
           <td class="paramtype">const QString &amp;&#160;</td>
-          <td class="paramname"><em>skyCultureId</em></td><td>)</td>
-          <td> const</td>
+          <td class="paramname"><em>skyCultureId</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const bool&#160;</td>
+          <td class="paramname"><em>mergeLines</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td> const</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -692,6 +730,7 @@ false Failed to save. </dd></dl>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">skyCultureId</td><td>The ID of the sky culture to which this constellation belongs. </td></tr>
+    <tr><td class="paramname">mergeLines</td><td>Whether to merge lines into polylines where possible. </td></tr>
   </table>
   </dd>
 </dl>
@@ -702,7 +741,7 @@ false Failed to save. </dd></dl>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Mon Sep 29 2025 21:09:10 for Stellarium by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1
+Generated on Mon Dec 29 2025 19:07:17 for Stellarium by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1
 </small></address>
 </body>
 </html>

@@ -21,7 +21,7 @@
   <td id="projectlogo"><img alt="Logo" src="stellarium-logo.png"/></td>
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">Stellarium
-   &#160;<span id="projectnumber">25.3</span>
+   &#160;<span id="projectnumber">25.4</span>
    </div>
   </td>
  </tr>
@@ -269,6 +269,9 @@ $(function() {
 <li>flagHorizontalCoordinates
 : <a class="el" href="group__oculars.html#ac50230aaeef31c8a17ee97464fc37590">Oculars</a>
 </li>
+<li>flagImmediateSave
+: <a class="el" href="classStelApp.html#a35354cd3d73daa9f1732045285d9c6d6">StelApp</a>
+</li>
 <li>flagInitDirectionUsage
 : <a class="el" href="group__oculars.html#a6978200e91b051eb2d12b839761b06a7">Oculars</a>
 </li>
@@ -313,6 +316,9 @@ $(function() {
 </li>
 <li>flagOverrideUseCommonNamesChanged()
 : <a class="el" href="classStelSkyCultureMgr.html#a32a4da428ba37135839e34a1b54c7692">StelSkyCultureMgr</a>
+</li>
+<li>flagOverwriteInfoColor
+: <a class="el" href="classStelApp.html#a2268f0ecf2e2b887ee2bac238b6c1f73">StelApp</a>
 </li>
 <li>flagOverwriteScreenshots
 : <a class="el" href="classStelMainView.html#aea4667d920213844416a1b1afedd049b">StelMainView</a>
@@ -359,6 +365,9 @@ $(function() {
 <li>flagShowCcdCropOverlayPixelGrid
 : <a class="el" href="group__oculars.html#ac4845717b7df10def9248313c0fdc88e">Oculars</a>
 </li>
+<li>flagShowDecimalDegrees
+: <a class="el" href="classStelApp.html#a6acb7707377d0fb29b9a0631a66b0cd7">StelApp</a>
+</li>
 <li>flagShowFocuserOverlay
 : <a class="el" href="group__oculars.html#a76ccbd776c2676f2c76c177e6d24396e">Oculars</a>
 </li>
@@ -395,11 +404,20 @@ $(function() {
 <li>flagUseAberrationChanged()
 : <a class="el" href="classStelCore.html#a8e6748bc68526158b878df500f95fe4f">StelCore</a>
 </li>
+<li>flagUseAzimuthFromSouth
+: <a class="el" href="classStelApp.html#a15ec3f4c594043699f328edaa64b987f">StelApp</a>
+</li>
+<li>flagUseCCSDesignation
+: <a class="el" href="classStelApp.html#a28e3caa0f67a489d1e4de5cf457c6b6c">StelApp</a>
+</li>
 <li>flagUseCustomScreenshotSize
 : <a class="el" href="classStelMainView.html#a7be818dacca15665835d23507b92a4c8">StelMainView</a>
 </li>
 <li>flagUseDSTChanged()
 : <a class="el" href="classStelCore.html#a6f07f60b5f1f5bbabc8261526a044133">StelCore</a>
+</li>
+<li>flagUseFormattingOutput
+: <a class="el" href="classStelApp.html#aa22dc7ac4a5aa79ba07cb355c576b54e">StelApp</a>
 </li>
 <li>flagUseFov
 : <a class="el" href="classObsListDialog.html#aff1ec804b8b003bf7b0f1f8d5f94803b">ObsListDialog</a>
@@ -419,11 +437,17 @@ $(function() {
 <li>flagUseMediumFocuserOverlay
 : <a class="el" href="group__oculars.html#a8a80a2a3eb003d6ded7c3e2e1fd85c36">Oculars</a>
 </li>
+<li>flagUseNegativeHourAngles
+: <a class="el" href="classStelApp.html#a3263b11fd8365d3b11272693981c19bf">StelApp</a>
+</li>
 <li>flagUseNutationChanged()
 : <a class="el" href="classStelCore.html#ae6c0d1df999794bff00e3c3360e0899c">StelCore</a>
 </li>
 <li>flagUseParallaxChanged()
 : <a class="el" href="classStelCore.html#af4cd49aab13afea42bcc28b18a7322c2">StelCore</a>
+</li>
+<li>flagUsePolarDistance
+: <a class="el" href="classStelApp.html#a1c5f1bf52ab6961a97d8dd7a04e0e55c">StelApp</a>
 </li>
 <li>flagUseSmallFocuserOverlay
 : <a class="el" href="group__oculars.html#a563d71f0c801995a2b945d1984bfa0aa">Oculars</a>
@@ -481,7 +505,7 @@ $(function() {
 </li>
 <li>forward()
 : <a class="el" href="classExtinction.html#a9c054b734f052f20a20fa1fee02d6190">Extinction</a>
-, <a class="el" href="classRefraction.html#ab60692d6a1b4d6cf68b5b5757734f93e">Refraction</a>
+, <a class="el" href="classRefraction.html#a5a0313ac975741fe7c0ad9dc4e48f2cd">Refraction</a>
 , <a class="el" href="classStelProjector2d.html#a3bfdaf5317e083b537949b65784b6dcc">StelProjector2d</a>
 , <a class="el" href="classStelProjector.html#abd6860a25765a570691ead7786e47a2a">StelProjector</a>
 , <a class="el" href="classStelProjectorCylinder.html#aa83169145d5a4bea321aaed528336ffc">StelProjectorCylinder</a>
@@ -577,7 +601,7 @@ $(function() {
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Mon Sep 29 2025 21:09:10 for Stellarium by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1
+Generated on Mon Dec 29 2025 19:07:17 for Stellarium by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1
 </small></address>
 </body>
 </html>

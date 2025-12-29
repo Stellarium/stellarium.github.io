@@ -21,7 +21,7 @@
   <td id="projectlogo"><img alt="Logo" src="stellarium-logo.png"/></td>
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">Stellarium
-   &#160;<span id="projectnumber">25.3</span>
+   &#160;<span id="projectnumber">25.4</span>
    </div>
   </td>
  </tr>
@@ -199,7 +199,9 @@ class&#160;</td><td class="memItemRight" valign="bottom"><b>StelPropertyMgr</b><
 </div><!-- fragment --><p>The <a class="el" href="classStelProperty.html#ae6572c259550481cd34d6f690e214270" title="Emitted when the value of the property changed.">changed()</a> signal can be used to detect whenever the property changes. To connect the <a class="el" href="classStelProperty.html#ae6572c259550481cd34d6f690e214270" title="Emitted when the value of the property changed.">changed()</a> signal to slots which expect a specific type instead of a QVariant, a <a class="el" href="classStelPropertyProxy.html" title="Abstract base class for a StelProperty proxy implementation, which allow reacting to the StelProperty...">StelPropertyProxy</a> implementation can be used. This file defines <a class="el" href="classStelPropertyIntProxy.html" title="A StelPropertyProxy for int-based properties.">StelPropertyIntProxy</a>, <a class="el" href="classStelPropertyBoolProxy.html" title="A StelPropertyProxy for bool-based properties.">StelPropertyBoolProxy</a> and <a class="el" href="classStelPropertyDoubleProxy.html" title="A StelPropertyProxy for double-based properties.">StelPropertyDoubleProxy</a>, which use QVariant-based type conversion if necessary.</p>
 <p>Of course, the whole <a class="el" href="classStelProperty.html" title="Wrapper around a Q_PROPERTY (see the Qt property system for more information) of a specific object,...">StelProperty</a> system does not prevent you from directly using/connecting the properties' signals and slots, which is still recommended if you don't need two-way data binding (for example only reading the current value) because of a lower overhead. Other connections using a <a class="el" href="classStelProperty.html" title="Wrapper around a Q_PROPERTY (see the Qt property system for more information) of a specific object,...">StelProperty</a> will work seamlessly.</p>
 <p><a class="el" href="classStelDialog.html" title="Base class for all the GUI windows in Stellarium.">StelDialog</a> supports helper methods for two-way binding using common Qt Widgets and datatypes.</p>
-<dl class="section note"><dt>Note</dt><dd>Good candidates for a <a class="el" href="classStelProperty.html" title="Wrapper around a Q_PROPERTY (see the Qt property system for more information) of a specific object,...">StelProperty</a> are properties that do not change too often. This includes most settings configurable through the GUI. Bad examples are properties which potentially change very often (e.g. each frame), such as the current view vector, field of view etc. They may cause considerable overhead if used, and therefore should be avoided. </dd></dl>
+<dl class="section note"><dt>Note</dt><dd>Good candidates for a <a class="el" href="classStelProperty.html" title="Wrapper around a Q_PROPERTY (see the Qt property system for more information) of a specific object,...">StelProperty</a> are properties that do not change too often. This includes most settings configurable through the GUI. Bad examples are properties which potentially change very often (e.g. each frame), such as the current view vector, field of view etc. They may cause considerable overhead if used, and therefore should be avoided.</dd>
+<dd>
+You can finetune the amount of Property-related messages in the logfile by configuring the logging category stel.Properties. For this, e.g. set environment variable QT_LOGGING_RULES="*.debug=false;stel.Properties.debug=true;". By default, only Info and more severe messages are displayed.</dd></dl>
 <dl class="section see"><dt>See also</dt><dd><a class="el" href="classStelPropertyMgr.html" title="Manages the registration of specific object properties with the StelProperty system.">StelPropertyMgr</a>, <a class="el" href="classStelDialog.html" title="Base class for all the GUI windows in Stellarium.">StelDialog</a>, <a class="el" href="classStelAction.html" title="Wrapper around an argumentless QObject slot or a bool Q_PROPERTY with WRITE method,...">StelAction</a> </dd></dl>
 </div><h2 class="groupheader">Member Function Documentation</h2>
 <a id="a696228d455df8251310d45d7c03de668"></a>
@@ -262,7 +264,7 @@ class&#160;</td><td class="memItemRight" valign="bottom"><b>StelPropertyMgr</b><
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Mon Sep 29 2025 21:09:10 for Stellarium by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1
+Generated on Mon Dec 29 2025 19:07:17 for Stellarium by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1
 </small></address>
 </body>
 </html>

@@ -94,15 +94,16 @@ Public Types</h2></td></tr>
 , <br />
 &#160;&#160;<a class="el" href="classStelObject.html#acf243e7987796a3a44e409140ecea8c6aa9490c2d0bae26d11a36a7b6f9f8720e">EclipticCoordOfDate</a> = 0x00080000
 , <a class="el" href="classStelObject.html#acf243e7987796a3a44e409140ecea8c6a9e1f6ceb04288616cb5928944ee3ee6e">IAUConstellation</a> = 0x00100000
-, <a class="el" href="classStelObject.html#acf243e7987796a3a44e409140ecea8c6a6b1acde73a84cc7314489ff6c5793264">SiderealTime</a> = 0x00200000
-, <a class="el" href="classStelObject.html#acf243e7987796a3a44e409140ecea8c6a0a4945c66b17aebfce6b1ef5a681e74e">RTSTime</a> = 0x00400000
+, <a class="el" href="classStelObject.html#acf243e7987796a3a44e409140ecea8c6a800e0c7f479eae800b6840d8e8cd9d12">CulturalConstellation</a> = 0x00200000
+, <a class="el" href="classStelObject.html#acf243e7987796a3a44e409140ecea8c6a6b1acde73a84cc7314489ff6c5793264">SiderealTime</a> = 0x00400000
 , <br />
-&#160;&#160;<a class="el" href="classStelObject.html#acf243e7987796a3a44e409140ecea8c6a738f66c455ddb886d805dcaa17cfb7c2">SolarLunarPosition</a> = 0x00800000
-, <a class="el" href="classStelObject.html#acf243e7987796a3a44e409140ecea8c6add2bc965197f9ae3b3976f8494e60771">Script</a> = 0x01000000
-, <a class="el" href="classStelObject.html#acf243e7987796a3a44e409140ecea8c6ace2821b66545f2aa2a8a0a60debf238e">DebugAid</a> = 0x02000000
-, <b>NoFont</b> = 0x04000000
+&#160;&#160;<a class="el" href="classStelObject.html#acf243e7987796a3a44e409140ecea8c6a0a4945c66b17aebfce6b1ef5a681e74e">RTSTime</a> = 0x00800000
+, <a class="el" href="classStelObject.html#acf243e7987796a3a44e409140ecea8c6a738f66c455ddb886d805dcaa17cfb7c2">SolarLunarPosition</a> = 0x01000000
+, <a class="el" href="classStelObject.html#acf243e7987796a3a44e409140ecea8c6add2bc965197f9ae3b3976f8494e60771">Script</a> = 0x02000000
+, <a class="el" href="classStelObject.html#acf243e7987796a3a44e409140ecea8c6ace2821b66545f2aa2a8a0a60debf238e">DebugAid</a> = 0x04000000
 , <br />
-&#160;&#160;<a class="el" href="classStelObject.html#acf243e7987796a3a44e409140ecea8c6aa651fd9d370fc652c77c663cd41a18ce">PlainText</a> = 0x08000000
+&#160;&#160;<b>NoFont</b> = 0x08000000
+, <a class="el" href="classStelObject.html#acf243e7987796a3a44e409140ecea8c6aa651fd9d370fc652c77c663cd41a18ce">PlainText</a> = 0x10000000
 <br />
  }</td></tr>
 <tr class="memdesc:acf243e7987796a3a44e409140ecea8c6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Used as named bitfield flags as specifiers to filter results of getInfoString.  <a href="classStelObject.html#acf243e7987796a3a44e409140ecea8c6">More...</a><br /></td></tr>
@@ -434,6 +435,9 @@ virtual double&#160;</td><td class="memItemRight" valign="bottom"><b>getParentSa
 <tr class="memitem:a130c03fcbe42dffb19726f0d672dd844"><td class="memItemLeft" align="right" valign="top">virtual float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classStelObject.html#a130c03fcbe42dffb19726f0d672dd844">getAirmass</a> (const <a class="el" href="classStelCore.html">StelCore</a> *core) const</td></tr>
 <tr class="memdesc:a130c03fcbe42dffb19726f0d672dd844"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return airmass value for the object (for atmosphere-dependent calculations)  <a href="classStelObject.html#a130c03fcbe42dffb19726f0d672dd844">More...</a><br /></td></tr>
 <tr class="separator:a130c03fcbe42dffb19726f0d672dd844"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aced50f771f0d8f8d384a943425384c3b"><td class="memItemLeft" align="right" valign="top">virtual QString&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classStelObject.html#aced50f771f0d8f8d384a943425384c3b">getNarration</a> (const <a class="el" href="classStelCore.html">StelCore</a> *core, const InfoStringGroup &amp;flags=<a class="el" href="classStelObject.html#a3e8279a6b66819734b11daf48a8e684b">StelObject::AllInfo</a>) const</td></tr>
+<tr class="memdesc:aced50f771f0d8f8d384a943425384c3b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return a narration text ready for synthesized speech output.  <a href="classStelObject.html#aced50f771f0d8f8d384a943425384c3b">More...</a><br /></td></tr>
+<tr class="separator:aced50f771f0d8f8d384a943425384c3b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-static-attribs"></a>
 Static Public Attributes</h2></td></tr>
@@ -453,12 +457,23 @@ Protected Member Functions</h2></td></tr>
 <tr class="memitem:aab275c32767521d5cb4618184681d0ce"><td class="memItemLeft" align="right" valign="top">QString&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classStelObject.html#aab275c32767521d5cb4618184681d0ce">getCommonInfoString</a> (const <a class="el" href="classStelCore.html">StelCore</a> *core, const InfoStringGroup &amp;flags) const</td></tr>
 <tr class="memdesc:aab275c32767521d5cb4618184681d0ce"><td class="mdescLeft">&#160;</td><td class="mdescRight">Format the positional info string containing J2000/of date/altaz/hour angle positions and constellation, sidereal time, etc.  <a href="classStelObject.html#aab275c32767521d5cb4618184681d0ce">More...</a><br /></td></tr>
 <tr class="separator:aab275c32767521d5cb4618184681d0ce"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab280f8bbdd42a941d751e5cff658fe19"><td class="memItemLeft" align="right" valign="top">QString&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classStelObject.html#ab280f8bbdd42a941d751e5cff658fe19">getCommonNarration</a> (const <a class="el" href="classStelCore.html">StelCore</a> *core, const InfoStringGroup &amp;flags) const</td></tr>
+<tr class="memdesc:ab280f8bbdd42a941d751e5cff658fe19"><td class="mdescLeft">&#160;</td><td class="mdescRight">Format the positional narration containing J2000/of date/altaz/hour angle positions and constellation, sidereal time, etc.  <a href="classStelObject.html#ab280f8bbdd42a941d751e5cff658fe19">More...</a><br /></td></tr>
+<tr class="separator:ab280f8bbdd42a941d751e5cff658fe19"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab3a899efd49117041fab7a8c973741a2"><td class="memItemLeft" align="right" valign="top">virtual QString&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classStelObject.html#ab3a899efd49117041fab7a8c973741a2">getMagnitudeInfoString</a> (const <a class="el" href="classStelCore.html">StelCore</a> *core, const InfoStringGroup &amp;flags, const int decimals=1, const float &amp;magOffset=0.f) const</td></tr>
 <tr class="memdesc:ab3a899efd49117041fab7a8c973741a2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Format the magnitude info string for the object.  <a href="classStelObject.html#ab3a899efd49117041fab7a8c973741a2">More...</a><br /></td></tr>
 <tr class="separator:ab3a899efd49117041fab7a8c973741a2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a73e7f86c795f69b582bfbad041fb13df"><td class="memItemLeft" align="right" valign="top"><a id="a73e7f86c795f69b582bfbad041fb13df"></a>
+virtual QString&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classStelObject.html#a73e7f86c795f69b582bfbad041fb13df">getMagnitudeNarration</a> (const <a class="el" href="classStelCore.html">StelCore</a> *core, const InfoStringGroup &amp;flags, const int decimals=1, const float &amp;magOffset=0.f) const</td></tr>
+<tr class="memdesc:a73e7f86c795f69b582bfbad041fb13df"><td class="mdescLeft">&#160;</td><td class="mdescRight">Narration version of <a class="el" href="classStelObject.html#ab3a899efd49117041fab7a8c973741a2" title="Format the magnitude info string for the object.">getMagnitudeInfoString()</a>. <br /></td></tr>
+<tr class="separator:a73e7f86c795f69b582bfbad041fb13df"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a89c1c888d273b598a6fa8aed39836a52"><td class="memItemLeft" align="right" valign="top">QString&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classStelObject.html#a89c1c888d273b598a6fa8aed39836a52">getSolarLunarInfoString</a> (const <a class="el" href="classStelCore.html">StelCore</a> *core, const InfoStringGroup &amp;flags) const</td></tr>
 <tr class="memdesc:a89c1c888d273b598a6fa8aed39836a52"><td class="mdescLeft">&#160;</td><td class="mdescRight">Add a section to the InfoString with just horizontal data for the Sun and Moon, when observed from Earth.  <a href="classStelObject.html#a89c1c888d273b598a6fa8aed39836a52">More...</a><br /></td></tr>
 <tr class="separator:a89c1c888d273b598a6fa8aed39836a52"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aeed88ff3721979bc798b2f1045c2a8bc"><td class="memItemLeft" align="right" valign="top"><a id="aeed88ff3721979bc798b2f1045c2a8bc"></a>
+QString&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classStelObject.html#aeed88ff3721979bc798b2f1045c2a8bc">getSolarLunarNarration</a> (const <a class="el" href="classStelCore.html">StelCore</a> *core, const InfoStringGroup &amp;flags) const</td></tr>
+<tr class="memdesc:aeed88ff3721979bc798b2f1045c2a8bc"><td class="mdescLeft">&#160;</td><td class="mdescRight">Narration version of <a class="el" href="classStelObject.html#a89c1c888d273b598a6fa8aed39836a52" title="Add a section to the InfoString with just horizontal data for the Sun and Moon, when observed from Ea...">getSolarLunarInfoString()</a> <br /></td></tr>
+<tr class="separator:aeed88ff3721979bc798b2f1045c2a8bc"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a53ece72260ecfe9c4783d740862021f8"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classStelObject.html#a53ece72260ecfe9c4783d740862021f8">postProcessInfoString</a> (QString &amp;str, const InfoStringGroup &amp;flags) const</td></tr>
 <tr class="memdesc:a53ece72260ecfe9c4783d740862021f8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Apply post processing on the info string.  <a href="classStelObject.html#a53ece72260ecfe9c4783d740862021f8">More...</a><br /></td></tr>
 <tr class="separator:a53ece72260ecfe9c4783d740862021f8"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -588,6 +603,8 @@ Protected Member Functions</h2></td></tr>
 <tr><td class="fieldname"><a id="acf243e7987796a3a44e409140ecea8c6aa9490c2d0bae26d11a36a7b6f9f8720e"></a>EclipticCoordOfDate&#160;</td><td class="fielddoc"><p>The ecliptic position (of date) </p>
 </td></tr>
 <tr><td class="fieldname"><a id="acf243e7987796a3a44e409140ecea8c6a9e1f6ceb04288616cb5928944ee3ee6e"></a>IAUConstellation&#160;</td><td class="fielddoc"><p>Three-letter constellation code (And, Boo, Cas, ...), and Zodiacal sign and Lunar station/mansion where defined. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="acf243e7987796a3a44e409140ecea8c6a800e0c7f479eae800b6840d8e8cd9d12"></a>CulturalConstellation&#160;</td><td class="fielddoc"><p>Culture-relevant constellation info (within boundaries of..., Zodiac, Lunar Mansion where applicable) </p>
 </td></tr>
 <tr><td class="fieldname"><a id="acf243e7987796a3a44e409140ecea8c6a6b1acde73a84cc7314489ff6c5793264"></a>SiderealTime&#160;</td><td class="fielddoc"><p>Mean and Apparent Sidereal Time. </p>
 </td></tr>
@@ -814,6 +831,45 @@ Protected Member Functions</h2></td></tr>
 
 </div>
 </div>
+<a id="ab280f8bbdd42a941d751e5cff658fe19"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab280f8bbdd42a941d751e5cff658fe19">&#9670;&nbsp;</a></span>getCommonNarration()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">QString StelObject::getCommonNarration </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classStelCore.html">StelCore</a> *&#160;</td>
+          <td class="paramname"><em>core</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const InfoStringGroup &amp;&#160;</td>
+          <td class="paramname"><em>flags</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Format the positional narration containing J2000/of date/altaz/hour angle positions and constellation, sidereal time, etc. </p>
+<p>for the object FIXME: We should split this and provide shorter virtual methods for various parts of the NarrationString. The ExtraInfoStrings should be placed per flag, where they best fit. </p>
+
+</div>
+</div>
 <a id="a2c31b0cc0daaa1998600b5a4c18eb032"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a2c31b0cc0daaa1998600b5a4c18eb032">&#9670;&nbsp;</a></span>getEnglishName()</h2>
 
@@ -840,7 +896,7 @@ Protected Member Functions</h2></td></tr>
 <p>Return object's name in english. </p>
 <p>For non-default skycultures, this is the english translation of the native name. </p>
 
-<p>Implemented in <a class="el" href="classStarWrapper1.html#a9a5ed4776ff2f7697eb0dc243247e967">StarWrapper1</a>, <a class="el" href="classStarWrapperBase.html#ad19608309e4635c5f02409b0b79d89e9">StarWrapperBase</a>, <a class="el" href="classPlanet.html#a081e043e41e5703d587c4389fbf5e0ce">Planet</a>, <a class="el" href="classNomenclatureItem.html#aaa84913efff4157ffbe9ba900f7b228c">NomenclatureItem</a>, <a class="el" href="classMinorPlanet.html#a65c913f0a956773fdd95978d4fc040d4">MinorPlanet</a>, <a class="el" href="classCustomObject.html#a6ba29f9dfe18b8cb06fce3e5fdef4205">CustomObject</a>, <a class="el" href="classCoordObject.html#adc0b51b6ad0e21124efdf43e4987a124">CoordObject</a>, <a class="el" href="classTelescopeClient.html#adfe638c42890353ffb5e32e7639d91ad">TelescopeClient</a>, <a class="el" href="group__historicalSupernovae.html#ae12019015e13a84a538dffed33cd6142">Supernova</a>, <a class="el" href="group__satellites.html#a4c384e4d7d6101bda6f188af7ee8a46b">Satellite</a>, <a class="el" href="group__quasars.html#aa25625c22b820f5c0eb81124faf54369">Quasar</a>, <a class="el" href="group__pulsars.html#a8898fe6c492b07f175d05684358dd9e5">Pulsar</a>, <a class="el" href="group__brightNovae.html#aa0dee37b668dff6260f16d0446c0b1cd">Nova</a>, <a class="el" href="group__meteorShowers.html#a496310428eaaea585797a4c1186482cc">MeteorShower</a>, <a class="el" href="group__exoplanets.html#ae17b13871546d82a8b612647b3be4b06">Exoplanet</a>, and <a class="el" href="classNebula.html#a6c6d429c39dea99bd7a48d5ec7dc36ed">Nebula</a>.</p>
+<p>Implemented in <a class="el" href="classStarWrapper1.html#a9a5ed4776ff2f7697eb0dc243247e967">StarWrapper1</a>, <a class="el" href="classStarWrapperBase.html#ad19608309e4635c5f02409b0b79d89e9">StarWrapperBase</a>, <a class="el" href="classPlanet.html#a081e043e41e5703d587c4389fbf5e0ce">Planet</a>, <a class="el" href="classNomenclatureItem.html#aaa84913efff4157ffbe9ba900f7b228c">NomenclatureItem</a>, <a class="el" href="classMinorPlanet.html#a65c913f0a956773fdd95978d4fc040d4">MinorPlanet</a>, <a class="el" href="classCustomObject.html#a6ba29f9dfe18b8cb06fce3e5fdef4205">CustomObject</a>, <a class="el" href="classCoordObject.html#adc0b51b6ad0e21124efdf43e4987a124">CoordObject</a>, <a class="el" href="classTelescopeClient.html#adfe638c42890353ffb5e32e7639d91ad">TelescopeClient</a>, <a class="el" href="group__historicalSupernovae.html#ae12019015e13a84a538dffed33cd6142">Supernova</a>, <a class="el" href="group__satellites.html#a4c384e4d7d6101bda6f188af7ee8a46b">Satellite</a>, <a class="el" href="group__quasars.html#aa25625c22b820f5c0eb81124faf54369">Quasar</a>, <a class="el" href="group__pulsars.html#a8898fe6c492b07f175d05684358dd9e5">Pulsar</a>, <a class="el" href="group__brightNovae.html#aa0dee37b668dff6260f16d0446c0b1cd">Nova</a>, <a class="el" href="group__meteorShowers.html#a496310428eaaea585797a4c1186482cc">MeteorShower</a>, <a class="el" href="group__exoplanets.html#ae17b13871546d82a8b612647b3be4b06">Exoplanet</a>, <a class="el" href="classNebula.html#a6c6d429c39dea99bd7a48d5ec7dc36ed">Nebula</a>, and <a class="el" href="classConstellation.html#a012e40c5813c8fbc39c1fc14f0025c5c">Constellation</a>.</p>
 
 </div>
 </div>
@@ -901,7 +957,7 @@ Protected Member Functions</h2></td></tr>
 <p>With this it should be possible to at least identify the same object in a different instance of Stellarium running the same version, but it would even be better if the ID provides some degree of forward-compatibility. For some object types (e.g. planets) this may simply return <a class="el" href="classStelObject.html#a2c31b0cc0daaa1998600b5a4c18eb032" title="Return object&#39;s name in english.">getEnglishName()</a>, but better candidates may be official designations or at least (stable) internal IDs.</p>
 <p>An object may have multiple IDs (different catalog numbers, etc). <a class="el" href="classStelObjectMgr.html#af0a33f6ff1448db085288eea46937399" title="Find an object of the given type and ID.">StelObjectMgr::searchByID()</a> should search through all ID variants, but this method only returns one of them. </p>
 
-<p>Implemented in <a class="el" href="classStarWrapper3.html#a4979d223c75d39c4732848bea64854aa">StarWrapper3</a>, <a class="el" href="classStarWrapper2.html#ab0a0726b15e3ee2f83a8414c09a1e0b6">StarWrapper2</a>, <a class="el" href="classStarWrapper1.html#a84815039519d850464ba5920eaab1d03">StarWrapper1</a>, <a class="el" href="classPlanet.html#afc8b35a4dbe3ffbc19b185b1756dec3b">Planet</a>, <a class="el" href="classNomenclatureItem.html#a7d07abc3f8622c6e74654b300481085c">NomenclatureItem</a>, <a class="el" href="classCustomObject.html#a8f4024b7545d92d238bfc84242c3085e">CustomObject</a>, <a class="el" href="classCoordObject.html#a01f387727a07df12397f376d7b516850">CoordObject</a>, <a class="el" href="group__historicalSupernovae.html#af8937b63a267296e217236ef94c938d6">Supernova</a>, <a class="el" href="group__satellites.html#acef25976b5556e85c469613173ca99be">Satellite</a>, <a class="el" href="group__quasars.html#ab7a936c1f7b44311dd68202d20c6aa98">Quasar</a>, <a class="el" href="group__pulsars.html#a7d408613fc80fb0689e1a74a016bd959">Pulsar</a>, <a class="el" href="group__brightNovae.html#a41a0e6685f8ca6253d23704eb73666c8">Nova</a>, <a class="el" href="group__meteorShowers.html#abb69cd1cdef198da84af1221937aab60">MeteorShower</a>, <a class="el" href="group__exoplanets.html#a8dd501da2a920a29de8f6c21305b4a51">Exoplanet</a>, <a class="el" href="classNebula.html#a432449f12c356050e28af0fbe8ba58e2">Nebula</a>, and <a class="el" href="classTelescopeClient.html#aa0c350795e88317e8c0a6414f3f531fe">TelescopeClient</a>.</p>
+<p>Implemented in <a class="el" href="classStarWrapper3.html#a4979d223c75d39c4732848bea64854aa">StarWrapper3</a>, <a class="el" href="classStarWrapper2.html#ab0a0726b15e3ee2f83a8414c09a1e0b6">StarWrapper2</a>, <a class="el" href="classStarWrapper1.html#a84815039519d850464ba5920eaab1d03">StarWrapper1</a>, <a class="el" href="classPlanet.html#afc8b35a4dbe3ffbc19b185b1756dec3b">Planet</a>, <a class="el" href="classNomenclatureItem.html#a7d07abc3f8622c6e74654b300481085c">NomenclatureItem</a>, <a class="el" href="classCustomObject.html#a8f4024b7545d92d238bfc84242c3085e">CustomObject</a>, <a class="el" href="classCoordObject.html#a01f387727a07df12397f376d7b516850">CoordObject</a>, <a class="el" href="group__historicalSupernovae.html#af8937b63a267296e217236ef94c938d6">Supernova</a>, <a class="el" href="group__satellites.html#acef25976b5556e85c469613173ca99be">Satellite</a>, <a class="el" href="group__quasars.html#ab7a936c1f7b44311dd68202d20c6aa98">Quasar</a>, <a class="el" href="group__pulsars.html#a7d408613fc80fb0689e1a74a016bd959">Pulsar</a>, <a class="el" href="group__brightNovae.html#a41a0e6685f8ca6253d23704eb73666c8">Nova</a>, <a class="el" href="group__meteorShowers.html#abb69cd1cdef198da84af1221937aab60">MeteorShower</a>, <a class="el" href="group__exoplanets.html#a8dd501da2a920a29de8f6c21305b4a51">Exoplanet</a>, <a class="el" href="classNebula.html#a432449f12c356050e28af0fbe8ba58e2">Nebula</a>, <a class="el" href="classConstellation.html#a4e3585bfef7c4a9a72aa0a8aadea2f56">Constellation</a>, and <a class="el" href="classTelescopeClient.html#aa0c350795e88317e8c0a6414f3f531fe">TelescopeClient</a>.</p>
 
 </div>
 </div>
@@ -975,8 +1031,10 @@ Protected Member Functions</h2></td></tr>
 <li>airmass : number of airmasses the object's light had to pass through the atmosphere. For negative altitudes this number may be meaningless.</li>
 <li>ra : right ascension angle (current date frame) in decimal degrees</li>
 <li>dec : declination angle (current date frame) in decimal degrees</li>
+<li>pd : polar distance angle (current date frame) in decimal degrees</li>
 <li>raJ2000 : right ascension angle (J2000 frame) in decimal degrees</li>
 <li>decJ2000 : declination angle (J2000 frame) in decimal degrees</li>
+<li>pdJ2000 : polar distance angle (J2000 frame) in decimal degrees</li>
 <li>parallacticAngle : parallactic angle in decimal degrees (for non-star objects only)</li>
 <li>hourAngle-dd : hour angle in decimal degrees</li>
 <li>hourAngle-hms : hour angle in HMS format (formatted string)</li>
@@ -1062,7 +1120,7 @@ Protected Member Functions</h2></td></tr>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>an HTML string containing information about the <a class="el" href="classStelObject.html" title="The base abstract class for sky objects used in Stellarium like Stars, Planets, Constellations etc....">StelObject</a>. </dd></dl>
 
-<p>Implemented in <a class="el" href="classCoordObject.html#a514fd6990a58c2d2ffc6937739cc0cff">CoordObject</a>, <a class="el" href="classStarWrapper3.html#ae1a80e289118ce7aa2dba74a6921b5e5">StarWrapper3</a>, <a class="el" href="classStarWrapper2.html#a04bcc71ce9dc4249bec21ee15cbdaa0a">StarWrapper2</a>, <a class="el" href="classStarWrapper1.html#aa682a37700c0c541893d00350b9b1b6a">StarWrapper1</a>, <a class="el" href="classStarWrapperBase.html#a77816b2e91ab2f405caa3d9e09f6077e">StarWrapperBase</a>, <a class="el" href="classPlanet.html#a3a0ef0865157bb2eb67acd0c55932ddc">Planet</a>, <a class="el" href="classNomenclatureItem.html#aa79518e2df8b4a62738467ef32ef6138">NomenclatureItem</a>, <a class="el" href="classNebula.html#a06ec5e6d7b0fe786b499ffee24c6afb6">Nebula</a>, <a class="el" href="classCustomObject.html#ac151116647fd05315a2b6f77957af951">CustomObject</a>, <a class="el" href="classTelescopeClient.html#ac97ed287c8026bdd84d0e9b2dc3a6860">TelescopeClient</a>, <a class="el" href="group__historicalSupernovae.html#abd54c1085dd730bb6c5a1fe25017883f">Supernova</a>, <a class="el" href="group__satellites.html#a96404f75aded98b1596398bd5ddf9b0f">Satellite</a>, <a class="el" href="group__quasars.html#a3c375efcb6cec5602411925ae321eb76">Quasar</a>, <a class="el" href="group__pulsars.html#a622b998ac341c205d8c02d4430143c81">Pulsar</a>, <a class="el" href="group__brightNovae.html#a534420bd12d86647f3c83b9fd6341bdb">Nova</a>, <a class="el" href="group__meteorShowers.html#af372e31c1cedbd450a51c34e5f262271">MeteorShower</a>, and <a class="el" href="group__exoplanets.html#aa9bdcb1d381ddd7c58b79ffd60a70648">Exoplanet</a>.</p>
+<p>Implemented in <a class="el" href="classCoordObject.html#a514fd6990a58c2d2ffc6937739cc0cff">CoordObject</a>, <a class="el" href="classStarWrapper3.html#ae1a80e289118ce7aa2dba74a6921b5e5">StarWrapper3</a>, <a class="el" href="classStarWrapper2.html#a04bcc71ce9dc4249bec21ee15cbdaa0a">StarWrapper2</a>, <a class="el" href="classStarWrapper1.html#aa682a37700c0c541893d00350b9b1b6a">StarWrapper1</a>, <a class="el" href="classStarWrapperBase.html#a77816b2e91ab2f405caa3d9e09f6077e">StarWrapperBase</a>, <a class="el" href="classPlanet.html#a3a0ef0865157bb2eb67acd0c55932ddc">Planet</a>, <a class="el" href="classNomenclatureItem.html#aa79518e2df8b4a62738467ef32ef6138">NomenclatureItem</a>, <a class="el" href="classNebula.html#a06ec5e6d7b0fe786b499ffee24c6afb6">Nebula</a>, <a class="el" href="classCustomObject.html#ac151116647fd05315a2b6f77957af951">CustomObject</a>, <a class="el" href="classTelescopeClient.html#ac97ed287c8026bdd84d0e9b2dc3a6860">TelescopeClient</a>, <a class="el" href="group__historicalSupernovae.html#abd54c1085dd730bb6c5a1fe25017883f">Supernova</a>, <a class="el" href="group__satellites.html#a96404f75aded98b1596398bd5ddf9b0f">Satellite</a>, <a class="el" href="group__quasars.html#a3c375efcb6cec5602411925ae321eb76">Quasar</a>, <a class="el" href="group__pulsars.html#a622b998ac341c205d8c02d4430143c81">Pulsar</a>, <a class="el" href="group__brightNovae.html#a534420bd12d86647f3c83b9fd6341bdb">Nova</a>, <a class="el" href="group__meteorShowers.html#af372e31c1cedbd450a51c34e5f262271">MeteorShower</a>, <a class="el" href="group__exoplanets.html#aa9bdcb1d381ddd7c58b79ffd60a70648">Exoplanet</a>, and <a class="el" href="classConstellation.html#af7a7e22a3445c5ff7828b1f7671b8b3e">Constellation</a>.</p>
 
 </div>
 </div>
@@ -1093,7 +1151,7 @@ Protected Member Functions</h2></td></tr>
 <p>Get observer-centered equatorial coordinates at equinox J2000, including aberration. </p>
 <dl class="section note"><dt>Note</dt><dd>: The vector may not be normalized! </dd></dl>
 
-<p>Implemented in <a class="el" href="classTelescopeClientJsonRts2.html#a628a858f858406c79dc3f1b92d2cc174">TelescopeClientJsonRts2</a>, <a class="el" href="classStarWrapper.html#a31c9c31aa1c862ec9a545ff59c5ef474">StarWrapper&lt; Star &gt;</a>, <a class="el" href="classStarWrapper.html#a31c9c31aa1c862ec9a545ff59c5ef474">StarWrapper&lt; Star2 &gt;</a>, <a class="el" href="classStarWrapper.html#a31c9c31aa1c862ec9a545ff59c5ef474">StarWrapper&lt; Star3 &gt;</a>, <a class="el" href="classStarWrapper.html#a31c9c31aa1c862ec9a545ff59c5ef474">StarWrapper&lt; Star1 &gt;</a>, <a class="el" href="classPlanet.html#ad4860a8051f11bb3350037ac79d8c7ef">Planet</a>, <a class="el" href="classNebula.html#adb096283cce42893ef2d63b282e68d84">Nebula</a>, <a class="el" href="classCustomObject.html#a45b7c1339d78a3f268cb6451a49631b4">CustomObject</a>, <a class="el" href="classCoordObject.html#a687196e2cfbc3ba187ec654d6ee6a6b9">CoordObject</a>, <a class="el" href="classTelescopeClientINDI.html#ae8f788c410c9ad5670653e9bd2687d4f">TelescopeClientINDI</a>, <a class="el" href="classTelescopeClientASCOM.html#a3d59f4213038750302a54b823be91cfe">TelescopeClientASCOM</a>, <a class="el" href="group__historicalSupernovae.html#abbda96a5b16a3606d4a01d11bdfcd75a">Supernova</a>, <a class="el" href="group__quasars.html#a9b2e872cce0e56a33cd63fff63ae5ecf">Quasar</a>, <a class="el" href="group__pulsars.html#a1ced6aa89039816354e4c758650dc173">Pulsar</a>, <a class="el" href="group__brightNovae.html#abd8bfd09ca2523a628aea13063608754">Nova</a>, <a class="el" href="group__exoplanets.html#a19f1051230b5331e50b0d36f5c874587">Exoplanet</a>, <a class="el" href="classNomenclatureItem.html#a50e84eba1ce7d753ad835bba7cea46eb">NomenclatureItem</a>, <a class="el" href="classTelescopeClientDummy.html#a2240f366eb2ecf0256f2430dab72f893">TelescopeClientDummy</a>, <a class="el" href="group__satellites.html#a11a6ca887ef094ce63a548e1f1e1fa60">Satellite</a>, and <a class="el" href="group__meteorShowers.html#a0c893d39fc2d8b837bfa020d8ac31864">MeteorShower</a>.</p>
+<p>Implemented in <a class="el" href="classTelescopeClientJsonRts2.html#a628a858f858406c79dc3f1b92d2cc174">TelescopeClientJsonRts2</a>, <a class="el" href="classStarWrapper.html#a31c9c31aa1c862ec9a545ff59c5ef474">StarWrapper&lt; Star &gt;</a>, <a class="el" href="classStarWrapper.html#a31c9c31aa1c862ec9a545ff59c5ef474">StarWrapper&lt; Star2 &gt;</a>, <a class="el" href="classStarWrapper.html#a31c9c31aa1c862ec9a545ff59c5ef474">StarWrapper&lt; Star3 &gt;</a>, <a class="el" href="classStarWrapper.html#a31c9c31aa1c862ec9a545ff59c5ef474">StarWrapper&lt; Star1 &gt;</a>, <a class="el" href="classPlanet.html#ad4860a8051f11bb3350037ac79d8c7ef">Planet</a>, <a class="el" href="classNebula.html#adb096283cce42893ef2d63b282e68d84">Nebula</a>, <a class="el" href="classCustomObject.html#a45b7c1339d78a3f268cb6451a49631b4">CustomObject</a>, <a class="el" href="classCoordObject.html#a687196e2cfbc3ba187ec654d6ee6a6b9">CoordObject</a>, <a class="el" href="classTelescopeClientINDI.html#ae8f788c410c9ad5670653e9bd2687d4f">TelescopeClientINDI</a>, <a class="el" href="classTelescopeClientASCOM.html#a3d59f4213038750302a54b823be91cfe">TelescopeClientASCOM</a>, <a class="el" href="group__historicalSupernovae.html#abbda96a5b16a3606d4a01d11bdfcd75a">Supernova</a>, <a class="el" href="group__quasars.html#a9b2e872cce0e56a33cd63fff63ae5ecf">Quasar</a>, <a class="el" href="group__pulsars.html#a1ced6aa89039816354e4c758650dc173">Pulsar</a>, <a class="el" href="group__brightNovae.html#abd8bfd09ca2523a628aea13063608754">Nova</a>, <a class="el" href="group__exoplanets.html#a19f1051230b5331e50b0d36f5c874587">Exoplanet</a>, <a class="el" href="classNomenclatureItem.html#a50e84eba1ce7d753ad835bba7cea46eb">NomenclatureItem</a>, <a class="el" href="classConstellation.html#a438fd90f24f28f032776c8b8f486a1f3">Constellation</a>, <a class="el" href="classTelescopeClientDummy.html#a2240f366eb2ecf0256f2430dab72f893">TelescopeClientDummy</a>, <a class="el" href="group__satellites.html#a11a6ca887ef094ce63a548e1f1e1fa60">Satellite</a>, and <a class="el" href="group__meteorShowers.html#a0c893d39fc2d8b837bfa020d8ac31864">MeteorShower</a>.</p>
 
 </div>
 </div>
@@ -1185,7 +1243,7 @@ Protected Member Functions</h2></td></tr>
 <p>Return object's native name in the glyphs as written in skyculture descriptions (index.json). </p>
 <p>For non-default skycultures, this is as close to the original as possible. </p>
 
-<p>Reimplemented in <a class="el" href="classPlanet.html#af5bda2112c1fbd72e8851cd371402d52">Planet</a>.</p>
+<p>Reimplemented in <a class="el" href="classPlanet.html#af5bda2112c1fbd72e8851cd371402d52">Planet</a>, and <a class="el" href="classConstellation.html#a18d7a9dd5349ef7560784be4a87a7492">Constellation</a>.</p>
 
 </div>
 </div>
@@ -1215,7 +1273,7 @@ Protected Member Functions</h2></td></tr>
 <p>Return a Latin-letter based transliteration geared at english pronounciation of the native name. </p>
 <p>This is optional but essential for all skycultures in languages which use non-Latin glyphs. When user language is English, this is the string from index.json. TBD: When user language is different, this may appear adapted to user language. </p>
 
-<p>Reimplemented in <a class="el" href="classPlanet.html#a4782efc65960cf9376771da6f97361fb">Planet</a>, and <a class="el" href="classNebula.html#a17a926eea2cd78f74d17fd908d86cd3c">Nebula</a>.</p>
+<p>Reimplemented in <a class="el" href="classPlanet.html#a4782efc65960cf9376771da6f97361fb">Planet</a>, <a class="el" href="classNebula.html#a17a926eea2cd78f74d17fd908d86cd3c">Nebula</a>, and <a class="el" href="classConstellation.html#afeb6fb8630acd8f4b1e22dd1ae57cc28">Constellation</a>.</p>
 
 </div>
 </div>
@@ -1247,6 +1305,52 @@ Protected Member Functions</h2></td></tr>
 
 </div>
 </div>
+<a id="aced50f771f0d8f8d384a943425384c3b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aced50f771f0d8f8d384a943425384c3b">&#9670;&nbsp;</a></span>getNarration()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual QString StelObject::getNarration </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classStelCore.html">StelCore</a> *&#160;</td>
+          <td class="paramname"><em>core</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const InfoStringGroup &amp;&#160;</td>
+          <td class="paramname"><em>flags</em> = <code><a class="el" href="classStelObject.html#a3e8279a6b66819734b11daf48a8e684b">StelObject::AllInfo</a></code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Return a narration text ready for synthesized speech output. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">flags</td><td>selection of required bits of information </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p>Reimplemented in <a class="el" href="classStarWrapper3.html#afe83e6777b0538c50be4f46d19a31406">StarWrapper3</a>, <a class="el" href="classStarWrapper2.html#a1b6d9e583ec9acd943f4383cdd1b568f">StarWrapper2</a>, <a class="el" href="classStarWrapper1.html#ad0f24cce23b9387a0f3e01477179555a">StarWrapper1</a>, <a class="el" href="classPlanet.html#a12610b0597f42068945ffa48d871b548">Planet</a>, <a class="el" href="classNebula.html#a774cef1227da18e72542a9b1dcbc14c7">Nebula</a>, <a class="el" href="classConstellation.html#a7300502a2a85bbfc4ea4a18bc0edff59">Constellation</a>, and <a class="el" href="classNomenclatureItem.html#a800db2913dcaa6314d6ceedcf491b834">NomenclatureItem</a>.</p>
+
+</div>
+</div>
 <a id="af0b5fe283961e1b2f363325f20716a50"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#af0b5fe283961e1b2f363325f20716a50">&#9670;&nbsp;</a></span>getObjectType()</h2>
 
@@ -1273,7 +1377,7 @@ Protected Member Functions</h2></td></tr>
 <p>Return object's type. </p>
 <p>It should be English lowercase name of the astronomical type of the object. The purpose of this string is a distinction or further refinement over object class name retrieved with <a class="el" href="classStelObject.html#acf26bf2f7442e0317cc44597a984f54d" title="Return object&#39;s type. It should be the name of the class.">getType()</a>: <a class="el" href="classPlanet.html" title="The Planet class is used for the major planets, moons, &quot;Observer&quot; planets, and artificial objects (&quot;S...">Planet</a> objects can be planets, moons, or even the Sun. The Sun should however return "star". <a class="el" href="classNebula.html">Nebula</a> objects should return their actual type like "open cluster", "galaxy", "nebula", ... </p>
 
-<p>Implemented in <a class="el" href="classStarWrapperBase.html#a01ef6ebe1613901419b3cf7575ba9264">StarWrapperBase</a>, <a class="el" href="classPlanet.html#aa73bf82fb70ce27274ec3388f0d2e8cb">Planet</a>, <a class="el" href="classNomenclatureItem.html#ae93ae4a7fd7e9ed8f55b5ada76c6c95b">NomenclatureItem</a>, <a class="el" href="classCustomObject.html#a057ae05418ed90b64bbefcd6c32c4440">CustomObject</a>, <a class="el" href="classCoordObject.html#a26024781028f3bfbb27e5ded551fd5a3">CoordObject</a>, <a class="el" href="classTelescopeClient.html#ad8178af1708d5a28d69d7b6fe8cf8c4c">TelescopeClient</a>, <a class="el" href="group__historicalSupernovae.html#a969f8cd7fee99edf2afcc4000345a83d">Supernova</a>, <a class="el" href="group__satellites.html#a6d182a4b3d1055761e191789279d2386">Satellite</a>, <a class="el" href="group__quasars.html#ad3b6a5b3742c3a58ff34d080b68ee432">Quasar</a>, <a class="el" href="group__pulsars.html#ae700c3db9deb631b890a6443f6cbda20">Pulsar</a>, <a class="el" href="group__brightNovae.html#a2b5129a937febeb4b35e19061c91f6ab">Nova</a>, <a class="el" href="group__meteorShowers.html#ac55c5f8d773024525f5932834c6f1e61">MeteorShower</a>, <a class="el" href="group__exoplanets.html#a4c38d696c5e48dee77eaf5349f813b7d">Exoplanet</a>, <a class="el" href="classStarWrapper3.html#a6972ae5d118e5c5f1355d5d0d953f430">StarWrapper3</a>, <a class="el" href="classStarWrapper2.html#a719ab8b81084b3d811952d4fd7d2bc53">StarWrapper2</a>, <a class="el" href="classStarWrapper1.html#af6e7b7c931a4244f5490aa5bcc5a41f0">StarWrapper1</a>, and <a class="el" href="classNebula.html#a5922482d97c9b205083e1bf688665b5c">Nebula</a>.</p>
+<p>Implemented in <a class="el" href="classStarWrapperBase.html#a01ef6ebe1613901419b3cf7575ba9264">StarWrapperBase</a>, <a class="el" href="classPlanet.html#aa73bf82fb70ce27274ec3388f0d2e8cb">Planet</a>, <a class="el" href="classNomenclatureItem.html#ae93ae4a7fd7e9ed8f55b5ada76c6c95b">NomenclatureItem</a>, <a class="el" href="classCustomObject.html#a057ae05418ed90b64bbefcd6c32c4440">CustomObject</a>, <a class="el" href="classCoordObject.html#a26024781028f3bfbb27e5ded551fd5a3">CoordObject</a>, <a class="el" href="classTelescopeClient.html#ad8178af1708d5a28d69d7b6fe8cf8c4c">TelescopeClient</a>, <a class="el" href="group__historicalSupernovae.html#a969f8cd7fee99edf2afcc4000345a83d">Supernova</a>, <a class="el" href="group__satellites.html#a6d182a4b3d1055761e191789279d2386">Satellite</a>, <a class="el" href="group__quasars.html#ad3b6a5b3742c3a58ff34d080b68ee432">Quasar</a>, <a class="el" href="group__pulsars.html#ae700c3db9deb631b890a6443f6cbda20">Pulsar</a>, <a class="el" href="group__brightNovae.html#a2b5129a937febeb4b35e19061c91f6ab">Nova</a>, <a class="el" href="group__meteorShowers.html#ac55c5f8d773024525f5932834c6f1e61">MeteorShower</a>, <a class="el" href="group__exoplanets.html#a4c38d696c5e48dee77eaf5349f813b7d">Exoplanet</a>, <a class="el" href="classStarWrapper3.html#a6972ae5d118e5c5f1355d5d0d953f430">StarWrapper3</a>, <a class="el" href="classStarWrapper2.html#a719ab8b81084b3d811952d4fd7d2bc53">StarWrapper2</a>, <a class="el" href="classStarWrapper1.html#af6e7b7c931a4244f5490aa5bcc5a41f0">StarWrapper1</a>, <a class="el" href="classNebula.html#a5922482d97c9b205083e1bf688665b5c">Nebula</a>, and <a class="el" href="classConstellation.html#a846ef1d0ba415eda10f25d8fa5e88b13">Constellation</a>.</p>
 
 </div>
 </div>
@@ -1728,7 +1832,7 @@ This is an abbreviated version of the method implemented in the <a class="el" hr
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Mon Sep 29 2025 21:09:10 for Stellarium by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1
+Generated on Mon Dec 29 2025 19:07:17 for Stellarium by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1
 </small></address>
 </body>
 </html>
