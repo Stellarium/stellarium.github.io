@@ -1,9 +1,9 @@
 ---
 title: Woodhenge near Stonehenge
-author: <a href="http://www.brontovox.co.uk/">Hugo Jenks</a>
+author: <a href="https://web.archive.org/web/20130113231524/http://www.brontovox.co.uk:80/">Hugo Jenks</a>
 compat: 0.9+
-landscape_url: http://www.brontovox.co.uk/Downloads/woodhenge.zip
-image_url: http://www.brontovox.co.uk/Downloads/woodhenge_winter_solstice_sunset_ts.png
+landscape_url: https://web.archive.org/web/20130113231524/http://www.brontovox.co.uk:80/Downloads/woodhenge.zip
+image_url: https://web.archive.org/web/20130113231524/http://www.brontovox.co.uk:80/Downloads/woodhenge_winter_solstice_sunset_ts.png
 ---
 Woodhenge near Stonehenge was constructed around 2200 BC. It comprised numerous wooden posts set into the chalky ground. These posts of course decayed, and their positions today are marked with concrete cylinders. 
 
