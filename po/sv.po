@@ -1,26 +1,28 @@
 # Translations template for stellarium-website.
-# Copyright (C) 2023 Stellarium's team
+# Copyright (C) 2026 Stellarium's team
 # This file is distributed under the same license as the stellarium-website
 # project.
-# FIRST AUTHOR <EMAIL@ADDRESS>, 2023.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2026.
 # 
 # Translators:
 # Alexander V. Wolf <alex.v.wolf@gmail.com>, 2017
 # spcsmrf <spcsmrf@gmail.com>, 2019
 # cardinot <mcardinot@gmail.com>, 2023
-# Karl Birgersson <birgerssonkarl@outlook.com>, 2024
+# Tomas Marklund, 2025
+# Karl Birgersson <birgerssonkarl@outlook.com>, 2025
+# Daniel Nylander <po@danielnylander.se>, 2026
 # 
 #, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: stellarium-website 1.0\n"
 "Report-Msgid-Bugs-To: stellarium@googlegroups.com\n"
-"POT-Creation-Date: 2023-12-28 22:19+0700\n"
+"POT-Creation-Date: 2026-03-24 18:39+0700\n"
 "PO-Revision-Date: 2017-11-29 10:47+0000\n"
-"Last-Translator: Karl Birgersson <birgerssonkarl@outlook.com>, 2024\n"
+"Last-Translator: Daniel Nylander <po@danielnylander.se>, 2026\n"
 "Language-Team: Swedish (https://app.transifex.com/stellarium/teams/80998/sv/)\n"
 "MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Generated-By: Babel 2.9.1\n"
 "Language: sv\n"
@@ -194,7 +196,7 @@ msgstr "polarområdena"
 msgid "special"
 msgstr "speciell"
 
-#: _layouts/index.html:146 _layouts/landscapes-africa.html:23
+#: _layouts/index.html:149 _layouts/landscapes-africa.html:23
 #: _layouts/landscapes-africa.html:28 _layouts/landscapes-asia.html:23
 #: _layouts/landscapes-asia.html:28 _layouts/landscapes-australasia.html:23
 #: _layouts/landscapes-australasia.html:28 _layouts/landscapes-europe.html:23
@@ -225,7 +227,7 @@ msgstr ""
 msgid "Collection"
 msgstr "Samling"
 
-#: _layouts/index.html:51 _layouts/index.html:147
+#: _layouts/index.html:53 _layouts/index.html:150
 #: _layouts/scenery3d-collection.html:15
 msgid "3D sceneries"
 msgstr "3D-landskap"
@@ -238,24 +240,32 @@ msgstr "3D-scener"
 msgid "user contributed sky cultures"
 msgstr "himmelskulturer av användare"
 
-#: _layouts/skycultures-list.html:10 _layouts/skycultures.html:10
+#: _layouts/skycultures-list.html:10
 msgid ""
-"We have few user contributed sky cultures which are not included into "
-"default package for some reasons."
+"We have a few user contributed sky cultures which are not included in the "
+"default package for various reasons."
 msgstr ""
-"Vi har några användarskapade himmelskulturer som av olika anledningar inte "
-"är inkluderade i standardinstallationen."
+"Vi har ett antal himmelskulturer som användare har bidragit med och som av "
+"olika skäl inte ingår i standardpaketet."
 
-#: _layouts/skycultures-list.html:12 _layouts/skycultures.html:12
+#: _layouts/skycultures-list.html:11
+msgid ""
+"Note that the file format has changed in version 25.1. You can use the "
+"format converter as described in the User Guide."
+msgstr ""
+"Observera att filformatet har ändrats i version 25.1. Du kan använda "
+"formatkonverteraren enligt beskrivningen i användarhandboken."
+
+#: _layouts/skycultures-list.html:13 _layouts/skycultures.html:12
 msgid "list of sky cultures"
 msgstr "lista över himmelskulturer"
 
-#: _layouts/index.html:148 _layouts/skycultures-list.html:15
-#: _layouts/skycultures-list.html:20
+#: _layouts/index.html:151 _layouts/skycultures-list.html:16
+#: _layouts/skycultures-list.html:21
 msgid "sky cultures"
 msgstr "himmelskulturer"
 
-#: _layouts/skycultures-list.html:21
+#: _layouts/skycultures-list.html:22
 msgid "list"
 msgstr "lista"
 
@@ -271,6 +281,12 @@ msgid ""
 "has declared the QtScript module deprecated, so the API may change again a "
 "bit. It will remain available in later Qt5 versions, though."
 msgstr ""
+"Från och med version 0.10.1 använder Stellarium QtScript-motorn. Den "
+"tidigare använda StratoScript är inte längre tillgänglig. Även i version "
+"0.16 förändras Stellariums skriptfunktioner och API under den fortsatta "
+"utvecklingen. Qt5.8 har deklarerat att QtScript-modulen är föråldrad, så "
+"API:et kan komma att ändras lite igen. Det kommer dock att förbli "
+"tillgängligt i senare Qt5-versioner."
 
 #: _layouts/scripts.html:12
 msgid "installing scripts"
@@ -284,10 +300,15 @@ msgid ""
 "older versions of Stellarium, and the instructions provided with the script "
 "may be out of date."
 msgstr ""
+"För att installera ett skript kopierar du skriptfilen (.ssc-tillägget) och "
+"alla texturfiler som den använder till underkatalogen scripts i din User "
+"Data Directory. Instruktionerna till många av dessa skript som donerats av "
+"samhället kan vara från äldre versioner av Stellarium, och instruktionerna "
+"som medföljer skriptet kan vara inaktuella."
 
 #: _layouts/docs.html:14 _layouts/scripts.html:15
 msgid "api documentation"
-msgstr ""
+msgstr "api-dokumentation"
 
 #: _layouts/scripts.html:16
 msgid ""
@@ -296,8 +317,13 @@ msgid ""
 ".../stellarium/builds/doc/html which contains the API documentation in HTML "
 "format or you follow this link <a href='/doc/head/'>Doxygen-API</a>"
 msgstr ""
+"Efter att ha byggt Stellarium själv från Git-koden, gör \"make apidoc\" (du "
+"behöver Doxygen installerat). Detta kommer att skapa en katalog: "
+".../stellarium/builds/doc/html som innehåller API-dokumentationen i HTML-"
+"format eller så följer du den här länken <a href='/doc/head/'>Doxygen-"
+"API</a>"
 
-#: _layouts/index.html:145 _layouts/scripts.html:20
+#: _layouts/index.html:148 _layouts/scripts.html:20
 msgid "scripts"
 msgstr "skript"
 
@@ -318,18 +344,20 @@ msgid ""
 "Sourceforge, which has pushed many terabytes of data for Stellarium during "
 "the life of the project."
 msgstr ""
+"Sourceforge, som har skickat många terabyte data till Stellarium under "
+"projektets gång."
 
 #: _layouts/sponsors.html:16
 msgid "Launchpad for hosting the project trackers."
-msgstr ""
+msgstr "Launchpad för att vara värd för projektspårare."
 
 #: _layouts/sponsors.html:17
 msgid "Github for hosting the project trackers."
-msgstr ""
+msgstr "Github för att vara värd för projektets spårare."
 
 #: _layouts/sponsors.html:18
 msgid "Transifex for hosting the project translation system."
-msgstr ""
+msgstr "Transifex för att vara värd för projektets översättningssystem."
 
 #: _layouts/sponsors.html:23
 msgid "community"
@@ -379,11 +407,11 @@ msgstr ""
 
 #: _layouts/sponsors.html:39
 msgid "graphic designer"
-msgstr ""
+msgstr "grafisk formgivare"
 
 #: _layouts/sponsors.html:40
 msgid "doc author/developer"
-msgstr ""
+msgstr "dokumentationsförfattare/utvecklare"
 
 #: _layouts/sponsors.html:41 _layouts/sponsors.html:42
 #: _layouts/sponsors.html:43 _layouts/sponsors.html:44
@@ -394,25 +422,23 @@ msgstr "utvecklare"
 
 #: _layouts/sponsors.html:48 _layouts/sponsors.html:51
 msgid "tester"
-msgstr ""
+msgstr "testare"
 
 #: _layouts/sponsors.html:50
 msgid "continuous integration"
-msgstr ""
-
-#: _layouts/sponsors.html:54
-msgid "friends"
-msgstr "vänner"
+msgstr "kontinuerlig integration"
 
 #: _layouts/landscapes.html:25
 msgid "how to install landscapes"
-msgstr ""
+msgstr "hur man installerar landskap"
 
 #: _layouts/landscapes.html:26
 msgid ""
 "After you have downloaded the .zip file for a landscape from this page, you "
 "need to install it in Stellarium."
 msgstr ""
+"När du har hämtat .zip-filen för ett landskap från den här sidan måste du "
+"installera den i Stellarium."
 
 #: _layouts/landscapes.html:27
 msgid "automatic"
@@ -423,17 +449,23 @@ msgid ""
 "If you have Stellarium 0.10.6 or later version, you can use the 'Add/remove "
 "landscapes' feature to install landscapes automatically:"
 msgstr ""
+"Om du har Stellarium 0.10.6 eller senare version kan du använda funktionen "
+"\"Lägg till/ta bort landskap\" för att installera landskap automatiskt:"
 
 #: _layouts/landscapes.html:30
 msgid ""
 "Open the 'Sky and viewing options' window by clicking on the appropriate "
 "button in the left button bar (or press the F4 key)."
 msgstr ""
+"Öppna fönstret \"Sky and viewing options\" genom att klicka på lämplig knapp"
+" i den vänstra knappraden (eller tryck på F4-tangenten)."
 
 #: _layouts/landscapes.html:31
 msgid ""
 "The 'Add/remove landscapes' button is at the bottom of the 'Landscape' tab."
 msgstr ""
+"Knappen \"Lägg till/ta bort landskap\" finns längst ner på fliken "
+"\"Landskap\"."
 
 #: _layouts/landscapes.html:32
 msgid ""
@@ -441,18 +473,25 @@ msgid ""
 " you to install .zip files containing landscapes. It also lists the user-"
 "installed landscapes and allows you to remove them."
 msgstr ""
+"När du trycker på den visas fönstret \"Add/remove landscapes\". Här kan du "
+"installera .zip-filer som innehåller landskap. Det visar också de "
+"användarinstallerade landskapen och låter dig ta bort dem."
 
 #: _layouts/landscapes.html:34
 msgid ""
 "Note that while this makes installing landscapes easier, it may also cause "
 "you to overlook what else is included in the ZIP archive."
 msgstr ""
+"Observera att även om det här gör det enklare att installera landskap kan "
+"det också leda till att du förbiser vad mer som ingår i ZIP-arkivet."
 
 #: _layouts/landscapes.html:35
 msgid ""
 "Landscape packages created without this feature in mind may contain other "
 "files, such as alternative textures in different sizes."
 msgstr ""
+"Landskapspaket som skapats utan denna funktion i åtanke kan innehålla andra "
+"filer, t.ex. alternativa texturer i olika storlekar."
 
 #: _layouts/landscapes.html:38 _layouts/skycultures.html:19
 msgid "manual"
@@ -463,29 +502,37 @@ msgid ""
 "If you are using an earlier version of Stellarium, you can follow this "
 "procedure to install a landscape package:"
 msgstr ""
+"Om du använder en tidigare version av Stellarium kan du följa den här "
+"proceduren för att installera ett landskapspaket:"
 
 #: _layouts/landscapes.html:41 _layouts/skycultures.html:22
 msgid ""
 "Browse to your User Data Directory, which varies according to your operating"
 " system."
 msgstr ""
+"Bläddra till din User Data Directory, som varierar beroende på ditt "
+"operativsystem."
 
 #: _layouts/landscapes.html:42
 msgid ""
 "Create a sub-directory called <em>landscapes</em> in your user directory (if"
 " it doesn't exist)."
 msgstr ""
+"Skapa en underkatalog med namnet <em>landscapes</em> i din användarkatalog "
+"(om den inte redan finns)."
 
 #: _layouts/landscapes.html:43
 msgid ""
 "Unzip the landscape .zip file in the <em>landscapes</em> directory (if it's "
 "done right, a sub-directory should be created for each landscape)."
 msgstr ""
+"Packa upp landskapets .zip-fil i <em>landskapskatalogen</em> (om det görs på"
+" rätt sätt bör en underkatalog skapas för varje landskap)."
 
 #: _layouts/landscapes.html:45 _layouts/scenery3d.html:25
 #: _layouts/skycultures.html:26
 msgid "contributions"
-msgstr ""
+msgstr "bidrag"
 
 #: _layouts/landscapes.html:46
 msgid ""
@@ -495,6 +542,10 @@ msgid ""
 "altitude and planet for the location of the landscape (see one of the pre-"
 "existing landscapes for an example)."
 msgstr ""
+"Du är välkommen att bidra med dina egna landskap här. Gör miniatyrbilderna "
+"200x114 pixlar så att de passar med resten av sidan. Inkludera ett "
+"platsavsnitt i din landscape.ini-fil med longitud, latitud, höjd och planet "
+"för landskapets plats (se ett av de befintliga landskapen för ett exempel)."
 
 #: _layouts/landscapes.html:47
 msgid ""
@@ -502,31 +553,42 @@ msgid ""
 "Guide, and examine existing landscapes. If you are having problems, posting "
 "to the forums is a good way to get some advice."
 msgstr ""
+"Om du vill veta mer om hur du skapar ett landskap kan du läsa Stellariums "
+"användarhandbok och undersöka befintliga landskap. Om du har problem är det "
+"ett bra sätt att få råd genom att posta inlägg i forumet."
 
 #: _layouts/landscapes.html:48 _layouts/scenery3d.html:28
 #: _layouts/skycultures.html:29
 msgid "important note on image dimensions"
-msgstr ""
+msgstr "viktig anmärkning om bilddimensioner"
 
-#: _layouts/landscapes.html:49 _layouts/skycultures.html:30
+#: _layouts/landscapes.html:49
 msgid ""
 "IMPORTANT: Make sure all textures have dimensions which are integer powers "
 "of 2, i.e. 256, 512, 1024, 2048, 4096, 8192, 16384, ... e.g. 4096 by 1024, "
 "2048 by 2048 and so on."
 msgstr ""
+"VIKTIGT: Se till att alla texturer har dimensioner som är heltalspotenser av"
+" 2, dvs. 256, 512, 1024, 2048, 4096, 8192, 16384, ... t.ex. 4096 gånger "
+"1024, 2048 gånger 2048 och så vidare."
 
-#: _layouts/landscapes.html:50 _layouts/skycultures.html:31
+#: _layouts/landscapes.html:50
 msgid ""
 "This is a limitation of OpenGL. Some video hardware will work OK with images"
 " with different image dimensions, but many will not display properly, suffer"
 " vastly reduced frame rates, and even crash the computer."
 msgstr ""
+"Detta är en begränsning i OpenGL. En del videohårdvara fungerar bra med "
+"bilder med olika bilddimensioner, men många kommer inte att visas korrekt, "
+"få kraftigt reducerad bildfrekvens och till och med krascha datorn."
 
 #: _layouts/landscapes.html:51
 msgid ""
 "Please make sure all contributed landscapes conform to these requirements, "
 "or your link may be removed."
 msgstr ""
+"Se till att alla landskap som du bidrar med uppfyller dessa krav, annars kan"
+" din länk tas bort."
 
 #: _layouts/landscapes.html:52 _layouts/skycultures.html:33
 msgid ""
@@ -534,11 +596,14 @@ msgid ""
 "textures. This is hardware and driver dependent. A typical maximum image "
 "size is 2048x2048 or 4096x4096."
 msgstr ""
+"Tänk på att många människors videohårdvara inte kan hantera mycket stora "
+"texturer. Detta är beroende av hårdvara och drivrutiner. En typisk maximal "
+"bildstorlek är 2048x2048 eller 4096x4096."
 
 #: _layouts/landscapes.html:53 _layouts/scenery3d.html:32
 #: _layouts/skycultures.html:34
 msgid "package contents"
-msgstr ""
+msgstr "paketets innehåll"
 
 #: _layouts/landscapes.html:54
 msgid ""
@@ -546,6 +611,9 @@ msgid ""
 "directory in the .zip file. This should be unique to your landscape, and it "
 "would be nice if it was all lower-case with no spaces."
 msgstr ""
+"Vänligen paketera ditt landskap i en .zip-fil med alla filer i en katalog i "
+".zip-filen. Detta ska vara unikt för ditt landskap, och det skulle vara "
+"trevligt om det var alla små bokstäver utan mellanslag."
 
 #: _layouts/landscapes.html:55
 msgid ""
@@ -553,9 +621,12 @@ msgid ""
 "specifies any usage restrictions or licensing terms for the images used in "
 "the landscape."
 msgstr ""
+"Du bör också inkludera en readme.txt-fil som beskriver landskapet och anger "
+"eventuella användningsbegränsningar eller licensvillkor för de bilder som "
+"används i landskapet."
 
 #: _layouts/landscapes.html:56 _layouts/scenery3d.html:37
-#: _layouts/skycultures.html:37
+#: _layouts/skycultures.html:36
 msgid "licensing"
 msgstr "licensiering"
 
@@ -567,21 +638,29 @@ msgid ""
 "terms of some agreement with the copyright holder (e.g. Creative Commons "
 "licensed images found on the web)."
 msgstr ""
+"Innan du distribuerar bilder som en del av ett Stellarium-landskap ska du se"
+" till att du har laglig rätt till det - du måste vara upphovsrättsinnehavare"
+" till bilderna eller kunna distribuera dem för användning med Stellarium "
+"enligt villkoren i något avtal med upphovsrättsinnehavaren (t.ex. Creative "
+"Commons-licensierade bilder som finns på webben)."
 
 #: _layouts/landscapes.html:58
 msgid ""
 "It is important to explicitly state what use may be made of images for your "
 "landscape. This should be done in the readme.txt file inside the .zip file."
 msgstr ""
+"Det är viktigt att uttryckligen ange hur bilderna får användas för ditt "
+"landskap. Detta bör göras i filen readme.txt som finns i .zip-filen."
 
-#: _layouts/landscapes.html:59 _layouts/skycultures.html:40
+#: _layouts/landscapes.html:59 _layouts/skycultures.html:39
 msgid ""
 "We recommend an open source license compatible with Stellarium itself (i.e. "
 "the GNU GPL), or one of the Creative Commons licenses."
 msgstr ""
+"Vi rekommenderar en öppen källkodslicens som är kompatibel med Stellarium "
+"självt (dvs. GNU GPL), eller en av Creative Commons-licenserna."
 
 #: _layouts/landscapes.html:60 _layouts/scenery3d.html:41
-#: _layouts/skycultures.html:41
 msgid "file encoding"
 msgstr "filkodning"
 
@@ -593,9 +672,14 @@ msgid ""
 "OK in Stellarium, but Windows users will have an ugly time reading the "
 "readme.txt if it uses *nix-style newlines."
 msgstr ""
+"Filerna landscape.ini och readme.txt bör vara UTF-8-kodad text eller vanlig "
+"ASCII. Det är förmodligen en bra idé att använda Windows kodning för "
+"radavslut (dvs. CR LF). Både Windows- och *nix-stilens kodning av radavslut "
+"bör fungera OK i Stellarium, men Windows-användare kommer att ha svårt att "
+"läsa readme.txt om den använder *nix-stilens nya linjer."
 
 #: _layouts/landscapes.html:62 _layouts/scenery3d.html:43
-#: _layouts/skycultures.html:43
+#: _layouts/skycultures.html:40
 msgid "need hosting?"
 msgstr "behövs hosting?"
 
@@ -604,6 +688,9 @@ msgid ""
 "If you have a landscape you would like to share but have no web-space to put"
 " it, email to any Stellarium developers and we'll put it on our site."
 msgstr ""
+"Om du har ett landskap som du skulle vilja dela med dig av men inte har "
+"någon plats på webben att lägga upp det på, skicka ett e-postmeddelande till"
+" någon av Stellariums utvecklare så lägger vi upp det på vår webbplats."
 
 #: _layouts/index.html:9
 msgid "features"
@@ -618,16 +705,16 @@ msgid "default catalogue of over 600,000 stars"
 msgstr "standardkatalog med över 600 000 stjärnor"
 
 #: _layouts/index.html:14
-msgid "extra catalogues with more than 177 million stars"
-msgstr ""
+msgid "extra catalogues with more than 220 million stars"
+msgstr "extrakataloger med fler än 220 miljoner stjärnor"
 
 #: _layouts/index.html:15
 msgid "default catalogue of over 80,000 deep-sky objects"
-msgstr ""
+msgstr "standardkatalog med över 80.000 deepsky-objekt"
 
 #: _layouts/index.html:16
 msgid "extra catalogue with more than 1 million deep-sky objects"
-msgstr ""
+msgstr "extra katalog med mer än 1 miljon deep-sky-objekt"
 
 #: _layouts/index.html:17
 msgid "asterisms and illustrations of the constellations"
@@ -635,11 +722,11 @@ msgstr "asterismer och illustrationer över stjärnbilderna"
 
 #: _layouts/index.html:18
 msgid "constellations for 40+ different cultures"
-msgstr ""
+msgstr "konstellationer för 40+ olika kulturer"
 
 #: _layouts/index.html:19
 msgid "calendars of 35+ different cultures"
-msgstr ""
+msgstr "kalendrar från 35+ olika kulturer"
 
 #: _layouts/index.html:20
 msgid "images of nebulae (full Messier catalogue)"
@@ -654,137 +741,185 @@ msgid "very realistic atmosphere, sunrise and sunset"
 msgstr "mycket realistisk atmosfär, soluppgång och solnedgång"
 
 #: _layouts/index.html:23
+msgid "full 6D astrometry for bright stars"
+msgstr "6-dimensionell astrometri för ljusa stjärnor"
+
+#: _layouts/index.html:24
+msgid "modelling movement for various of binary stars"
+msgstr "modellerade rörelse för flertalet dubbelstjärnor"
+
+#: _layouts/index.html:25
 msgid "the planets and their satellites"
 msgstr "planeterna och deras satelliter"
 
-#: _layouts/index.html:24
+#: _layouts/index.html:26
 msgid "all-sky surveys (DSS, HiPS)"
-msgstr ""
+msgstr "all-sky-undersökningar (DSS, HiPS)"
 
-#: _layouts/index.html:27
+#: _layouts/index.html:29
 msgid "interface"
 msgstr "gränssnitt"
 
-#: _layouts/index.html:29
+#: _layouts/index.html:31
 msgid "a powerful zoom"
 msgstr "kraftfull zoomning"
 
-#: _layouts/index.html:30
+#: _layouts/index.html:32
 msgid "time control"
 msgstr "tidskontroll"
 
-#: _layouts/index.html:31
+#: _layouts/index.html:33
 msgid "multilingual interface"
 msgstr "flerspråkigt gränssnitt"
 
-#: _layouts/index.html:32
+#: _layouts/index.html:34
 msgid "scripting interface"
-msgstr ""
+msgstr "skriptgränssnitt"
 
-#: _layouts/index.html:33
+#: _layouts/index.html:35
 msgid "fisheye projection for planetarium domes"
 msgstr "fiskögeprojektion för planetariumkupoler"
 
-#: _layouts/index.html:34
+#: _layouts/index.html:36
 msgid "spheric mirror projection for your own low-cost dome"
 msgstr "sfärisk spegelprojektion för din egen lågkostnadskupol"
 
-#: _layouts/index.html:35
-msgid "graphical interface and extensive keyboard control"
-msgstr ""
-
-#: _layouts/index.html:36
-msgid "HTTP interface (web-based control, remote control API)"
-msgstr ""
-
 #: _layouts/index.html:37
+msgid "graphical interface and extensive keyboard control"
+msgstr "grafiskt gränssnitt och omfattande tangentbordsstyrning"
+
+#: _layouts/index.html:38
+msgid "HTTP interface (web-based control, remote control API)"
+msgstr "HTTP-gränssnitt (webbaserad styrning, API för fjärrstyrning)"
+
+#: _layouts/index.html:39
 msgid "telescope control"
 msgstr "teleskopkontroll"
 
-#: _layouts/index.html:40
+#: _layouts/index.html:42
 msgid "visualisation"
 msgstr "visualisering"
 
-#: _layouts/index.html:42
-msgid "several coordinate grids"
-msgstr ""
-
-#: _layouts/index.html:43
-msgid "precession circles"
-msgstr ""
-
 #: _layouts/index.html:44
+msgid "several coordinate grids"
+msgstr "flera koordinatnät"
+
+#: _layouts/index.html:45
+msgid "precession circles"
+msgstr "precessionscirklar"
+
+#: _layouts/index.html:46
 msgid "star twinkling"
 msgstr "blinkande stjärnor"
 
-#: _layouts/index.html:45
+#: _layouts/index.html:47
 msgid "shooting stars"
 msgstr "fallande stjärnor"
 
-#: _layouts/index.html:46
+#: _layouts/index.html:48
 msgid "tails of comets"
-msgstr ""
+msgstr "svansar av kometer"
 
-#: _layouts/index.html:47
+#: _layouts/index.html:49
 msgid "eclipse simulation"
 msgstr "förmörkelsesimulering"
 
-#: _layouts/index.html:48
-msgid "supernovae and novae simulation"
-msgstr ""
-
-#: _layouts/index.html:49
-msgid "exoplanet locations"
-msgstr ""
-
 #: _layouts/index.html:50
-msgid "ocular view simulation"
-msgstr ""
+msgid "supernovae and novae simulation"
+msgstr "simulering av supernovor och novor"
+
+#: _layouts/index.html:51
+msgid "exoplanet locations"
+msgstr "platser för exoplaneter"
 
 #: _layouts/index.html:52
-msgid "skinnable landscapes with spheric panorama projection"
-msgstr ""
+msgid "ocular view simulation"
+msgstr "simulering av okulär vy"
 
-#: _layouts/index.html:55
+#: _layouts/index.html:54
+msgid "skinnable landscapes with spheric panorama projection"
+msgstr "skinnbara landskap med sfärisk panoramaprojektion"
+
+#: _layouts/index.html:57
 msgid "customizability"
 msgstr "anpassningsbarhet"
 
-#: _layouts/index.html:57
+#: _layouts/index.html:59
 msgid ""
 "plugin system adding artifical satellites, ocular simulation, telescope "
 "control and more"
 msgstr ""
+"plugin-system som lägger till artificiella satelliter, okulär simulering, "
+"teleskopkontroll och mycket mer"
 
-#: _layouts/index.html:58
+#: _layouts/index.html:60
 msgid "ability to add new solar system objects from online resources..."
 msgstr "möjlighet att lägga till nya solsystemobjekt från onlineresurser…"
 
-#: _layouts/index.html:59
+#: _layouts/index.html:61
 msgid ""
 "add your own deep sky objects, landscapes, constellation images, scripts..."
 msgstr "lägg till egna djuprymdsobjekt, landskap, stjärnbildsgrafik, skript…"
 
-#: _layouts/index.html:62
-msgid "presentations"
-msgstr ""
-
 #: _layouts/index.html:64
+msgid "presentations"
+msgstr "presentationer"
+
+#: _layouts/index.html:66
+msgid ""
+"Susanne M. Hoffmann gave a <a "
+"href='https://www.youtube.com/watch?v=JF3Fy1iQfWE' target='_blank'>public "
+"lecture &quot;Painting Babylonian - Constellations of Ancient "
+"Mesopotamia&quot; (YouTube)</a> for the <a "
+"href='https://hk.space.museum/en/web/spm/home.html'>HK Space Museum</a> on "
+"November 22th, 2024"
+msgstr ""
+"Susanne M. Hoffmann höll en <a "
+"href='https://www.youtube.com/watch?v=JF3Fy1iQfWE' target='_blank'>offentlig"
+" föreläsning &quot;Painting Babylonian - Constellations of Ancient "
+"Mesopotamia&quot; (YouTube) </a>för <a "
+"href='https://hk.space.museum/en/web/spm/home.html'>HK Space Museum </a>den "
+"22 november 2024"
+
+#: _layouts/index.html:67
+msgid ""
+"A. Wolf gave a <a "
+"href='https://rutube.ru/video/792ee7ab639739c902a9e69471729f32/' "
+"target='_blank'>common review of Stellarium's features (RuTube)</a> for the "
+"<a href='https://astroteacher.ru'>Open distance methodological seminar for "
+"teachers of astronomy and astropedagogues</a> on November 20th, 2024"
+msgstr ""
+"A. Wolf gav en <a "
+"href='https://rutube.ru/video/792ee7ab639739c902a9e69471729f32/' "
+"target='_blank'>gemensam genomgång av Stellariums funktioner (RuTube)</a> "
+"för <a href='https://astroteacher.ru'>Open distance methodological seminar "
+"for teachers of astronomy and astropedagogues</a> den 20 november 2024"
+
+#: _layouts/index.html:68
 msgid ""
 "G. Zotti gave a <a href='https://www.youtube.com/watch?v=H9WXLDzbFYU' "
 "target='_blank'>presentation about Virtual Archaeoastronomy with Stellarium "
 "(YouTube)</a> for the <a href='https://scaas.org'>Society for Cultural "
 "Astronomy in the American Southwest (SCAAS)</a> on February 25th, 2023"
 msgstr ""
+"G. Zotti höll en <a href='https://www.youtube.com/watch?v=H9WXLDzbFYU' "
+"target='_blank'>presentation om Virtual Archaeoastronomy with Stellarium "
+"(YouTube)</a> för <a href='https://scaas.org'>Society for Cultural Astronomy"
+" in the American Southwest (SCAAS)</a> den 25 februari 2023"
 
-#: _layouts/index.html:65
+#: _layouts/index.html:69
 msgid ""
 "A. Wolf gave a <a href='https://www.youtube.com/watch?v=mx7waXJ3v_Q&t=4724s'"
 " target='_blank'>presentation about Stellarium 1.0 (YouTube)</a> at the <a "
 "href='https://sibastro.ru/report/uindex?year=2022'>Siberian Astronomical "
 "Forum SibAstro 2022</a> on September 25th, 2022"
 msgstr ""
+"A. Wolf gav en <a href='https://www.youtube.com/watch?v=mx7waXJ3v_Q&t=4724s'"
+" target='_blank'>presentation om Stellarium 1.0 (YouTube)</a> vid <a "
+"href='https://sibastro.ru/report/uindex?year=2022'>Siberian Astronomical "
+"Forum SibAstro 2022</a> den 25 september 2022"
 
-#: _layouts/index.html:66
+#: _layouts/index.html:70
 msgid ""
 "A. Wolf gave a <a href='https://www.youtube.com/watch?v=wlmTv28USvY' "
 "target='_blank'>presentation about Stellarium &mdash; key changes in the "
@@ -792,24 +927,37 @@ msgid ""
 "href='https://sibastro.ru/report/uindex?year=2021'>Siberian Astronomical "
 "Forum SibAstro 2021</a> on September 25th, 2021"
 msgstr ""
+"A. Wolf gav en <a href='https://www.youtube.com/watch?v=wlmTv28USvY' "
+"target='_blank'>presentation om Stellarium - viktiga förändringar under de "
+"senaste 5 åren (YouTube)</a> på <a "
+"href='https://sibastro.ru/report/uindex?year=2021'>Siberian Astronomical "
+"Forum SibAstro 2021</a> den 25 september 2021"
 
-#: _layouts/index.html:67
+#: _layouts/index.html:71
 msgid ""
 "G. Zotti gave a <a href='https://www.youtube.com/watch?v=FNdLMYwBgA4' "
 "target='_blank'>presentation about Stellarium (YouTube)</a> for the <a "
 "href='https://nadc.china-vo.org/article/20210105092323'>China-VO (Virtual "
 "Observatory of the Chinese Academy of Sciences)</a> on February 1st, 2021"
 msgstr ""
+"G. Zotti höll en <a href='https://www.youtube.com/watch?v=FNdLMYwBgA4' "
+"target='_blank'>presentation om Stellarium (YouTube)</a> för <a "
+"href='https://nadc.china-vo.org/article/20210105092323'>China-VO (Virtual "
+"Observatory of the Chinese Academy of Sciences)</a> den 1 februari 2021"
 
-#: _layouts/index.html:68
+#: _layouts/index.html:72
 msgid ""
 "G. Zotti gave an <a href='https://www.youtube.com/watch?v=uJBu_7qOSqQ' "
 "target='_blank'>invited talk (YouTube)</a> at the <a "
 "href='http://sion.frm.utn.edu.ar/iaus367/index.php/georg-zotti/'>IAU "
 "Symposium 367</a> on December 9th, 2020"
 msgstr ""
+"G. Zotti höll ett <a href='https://www.youtube.com/watch?v=uJBu_7qOSqQ' "
+"target='_blank'>inbjudet föredrag (YouTube)</a> vid <a "
+"href='http://sion.frm.utn.edu.ar/iaus367/index.php/georg-zotti/'>IAU "
+"Symposium 367</a> den 9 december 2020"
 
-#: _layouts/index.html:69
+#: _layouts/index.html:73
 msgid ""
 "G. Zotti gave a <a href='https://www.youtube.com/watch?v=7QdENQLx8FE' "
 "target='_blank'>talk about creating 3D sceneries (YouTube)</a> at the <a "
@@ -817,124 +965,132 @@ msgid ""
 "skyscapes-material-forms-of-cultural-engagement-with-the-heavens/'>TAG2016 "
 "Skyscapes session</a> on December 20th, 2016"
 msgstr ""
+"G. Zotti höll ett föredrag om hur <a "
+"href='https://www.youtube.com/watch?v=7QdENQLx8FE' target='_blank'>man "
+"skapar 3D-scenarier (YouTube)</a> vid <a "
+"href='https://dougsarchaeology.wordpress.com/2017/10/02/visualising-"
+"skyscapes-material-forms-of-cultural-engagement-with-the-heavens/'>TAG2016 "
+"Skyscapes-sessionen</a> den 20 december 2016"
 
-#: _layouts/index.html:74
+#: _layouts/index.html:78
 msgid "news"
 msgstr "nyheter"
 
-#: _layouts/index.html:85
+#: _layouts/index.html:89
 msgid "system requirements"
 msgstr "systemkrav"
 
-#: _layouts/index.html:87
+#: _layouts/index.html:91
 msgid "minimal"
 msgstr "minimikrav"
 
-#: _layouts/index.html:89
-msgid "Linux/Unix; Windows 7 and above; macOS 11.0 and above"
+#: _layouts/index.html:93 _layouts/index.html:104
+msgid "64-bit operating system"
+msgstr "64-bitars operativsystem"
+
+#: _layouts/index.html:94
+msgid ""
+"Linux/Unix; Windows 7 and above; Windows 10 on Arm64; macOS 10.13 and above"
 msgstr ""
 
-#: _layouts/index.html:90
+#: _layouts/index.html:95
 msgid ""
 "3D graphics card which supports OpenGL 2.1 and GLSL 1.3 or OpenGL ES 2.0"
 msgstr ""
+"3D-grafikkort med stöd för OpenGL 2.1 och GLSL 1.3 eller OpenGL ES 2.0"
 
-#: _layouts/index.html:91
-msgid "512 MiB RAM"
-msgstr "512 MB RAM-minne"
-
-#: _layouts/index.html:92
-msgid "600 MiB on disk"
-msgstr ""
-
-#: _layouts/index.html:93 _layouts/index.html:104
-msgid "Keyboard"
-msgstr ""
-
-#: _layouts/index.html:94 _layouts/index.html:105
-msgid "Mouse, Touchpad or similar pointing device"
-msgstr ""
+#: _layouts/index.html:96
+msgid "1 GiB RAM"
+msgstr "1 GiB RAM"
 
 #: _layouts/index.html:97
+msgid "1 GiB on disk"
+msgstr "1 GiB på disk"
+
+#: _layouts/index.html:98 _layouts/index.html:109
+msgid "Keyboard"
+msgstr "Tangentbord"
+
+#: _layouts/index.html:99 _layouts/index.html:110
+msgid "Mouse, Touchpad or similar pointing device"
+msgstr "Mus, pekplatta eller liknande pekdon"
+
+#: _layouts/index.html:102
 msgid "recommended"
 msgstr "rekommenderat"
 
-#: _layouts/index.html:99
-msgid "64-bit operating system"
+#: _layouts/index.html:105
+msgid ""
+"Linux/Unix; Windows 10 and above; Windows 11 on Arm64; macOS 12.0 and above"
 msgstr ""
 
-#: _layouts/index.html:100
-msgid "Linux/Unix; Windows 10 and above; macOS 11.0 and above"
-msgstr ""
-
-#: _layouts/index.html:101
+#: _layouts/index.html:106
 msgid "3D graphics card which supports OpenGL 3.3 and above"
 msgstr "3D-grafikkort med stöd för OpenGL 3.3 eller senare"
 
-#: _layouts/index.html:102
-msgid "1 GiB RAM or more"
-msgstr "1 GB RAM-minne eller mer"
+#: _layouts/index.html:107
+msgid "4 GiB RAM or more"
+msgstr "4 GiB RAM eller mer"
 
-#: _layouts/index.html:103
-msgid "1.5 GiB on disk"
-msgstr "1,5 GB ledigt utrymme på disk"
+#: _layouts/index.html:108
+msgid "10 GiB on disk"
+msgstr "10 GiB på disk"
 
-#: _layouts/index.html:106
+#: _layouts/index.html:111
 msgid "Moderately dark environment (deep shadow or indoors)"
-msgstr ""
+msgstr "Måttligt mörk miljö (djup skugga eller inomhus)"
 
-#: _layouts/index.html:109
+#: _layouts/index.html:114
 msgid "developers"
 msgstr "utvecklare"
 
-#: _layouts/index.html:111
+#: _layouts/index.html:116
 msgid "Project coordinator:"
 msgstr "Projektsamordnare:"
 
-#: _layouts/index.html:112
+#: _layouts/index.html:117
 msgid "Graphic designer:"
-msgstr ""
+msgstr "Grafisk formgivare:"
 
-#: _layouts/index.html:113
+#: _layouts/index.html:118
 msgid "Developers:"
-msgstr ""
-
-#: _layouts/index.html:114
-msgid "Sky cultures researcher:"
-msgstr ""
-
-#: _layouts/index.html:115
-msgid "Collaborators:"
-msgstr ""
-
-#: _layouts/index.html:116
-msgid "and everyone else in the community"
-msgstr ""
+msgstr "Utvecklare:"
 
 #: _layouts/index.html:119
-msgid "financial support"
-msgstr ""
+msgid "Sky cultures researcher:"
+msgstr "Sky cultures-forskare:"
+
+#: _layouts/index.html:120
+msgid "Collaborators:"
+msgstr "Medarbetare:"
 
 #: _layouts/index.html:121
+msgid "and everyone else in the community"
+msgstr "och alla andra i samhället"
+
+#: _layouts/index.html:124
+msgid "financial support"
+msgstr "finansiellt stöd"
+
+#: _layouts/index.html:126
 msgid ""
 "Many individuals and organizations are supporting the development of "
 "Stellarium by donations, and the most generous financial contributors (with "
 "donations of $250 or more) are"
 msgstr ""
+"Många privatpersoner och organisationer stöder utvecklingen av Stellarium "
+"genom donationer, och de mest generösa ekonomiska bidragsgivarna (med "
+"donationer på 250 USD eller mer) är"
 
-#: _layouts/index.html:126
-msgid "silver sponsor"
-msgstr ""
+#: _layouts/index.html:132
+msgid "silver sponsors"
+msgstr "silversponsorer"
 
-#: _layouts/index.html:131
-msgid "social media"
-msgstr "sociala medier"
-
-#: _layouts/index.html:138
+#: _layouts/index.html:141
 msgid "collaborate"
 msgstr "engagera dig"
 
-#: _layouts/index.html:139
+#: _layouts/index.html:142
 msgid ""
 "You can learn more about Stellarium, get support and help the project from "
 "these links"
@@ -942,114 +1098,125 @@ msgstr ""
 "Du kan lära dig mer om Stellarium, få support och hjälpa till med projektet "
 "via dessa länkar"
 
-#: _layouts/index.html:141
+#: _layouts/index.html:144
 msgid "discussions"
-msgstr ""
+msgstr "diskussioner"
 
-#: _layouts/index.html:142
+#: _layouts/index.html:145
 msgid "mailing list"
 msgstr "e-postlista"
 
-#: _layouts/index.html:143
+#: _layouts/index.html:146
 msgid "wiki"
 msgstr "wiki"
 
-#: _layouts/index.html:144
+#: _layouts/index.html:147
 msgid "FAQ"
 msgstr "vanliga frågor och svar"
 
-#: _layouts/index.html:149
+#: _layouts/index.html:152
 msgid "developers documentation"
 msgstr "dokumentation för utvecklare"
 
-#: _layouts/index.html:150
+#: _layouts/index.html:153
 msgid "scripting"
 msgstr "skriptmotor"
 
-#: _layouts/index.html:151
+#: _layouts/index.html:154
 msgid "translations"
 msgstr "översättningar"
 
-#: _layouts/index.html:152
+#: _layouts/index.html:155
 msgid "get support, report bugs, request new features"
-msgstr ""
+msgstr "få support, rapportera buggar, begära nya funktioner"
 
-#: _layouts/index.html:153
+#: _layouts/index.html:156
 msgid "all releases"
 msgstr "alla utgåvor"
 
-#: _layouts/index.html:154 _layouts/index.html:155
-msgid "user guide"
-msgstr ""
-
-#: _layouts/index.html:156
-msgid "weekly snapshots"
-msgstr ""
-
 #: _layouts/index.html:157
-msgid "ppa for ubuntu linux"
-msgstr ""
+msgid "user guide"
+msgstr "användarhandbok"
 
 #: _layouts/index.html:158
+msgid "weekly snapshots"
+msgstr "veckovisa ögonblicksbilder"
+
+#: _layouts/index.html:159
+msgid "ppa for ubuntu linux"
+msgstr "ppa för ubuntu linux"
+
+#: _layouts/index.html:160
 msgid "archive"
-msgstr ""
+msgstr "arkiv"
 
-#: _layouts/index.html:161
+#: _layouts/index.html:163
 msgid "acknowledgment"
-msgstr ""
+msgstr "tillkännagivande"
 
-#: _layouts/index.html:162
+#: _layouts/index.html:164
 msgid ""
 "If the Stellarium planetarium was helpful for your research work, please "
 "cite the following paper in your acknowledgment:"
 msgstr ""
+"Om Stellarium-planetariet var till hjälp för ditt forskningsarbete, hänvisa "
+"till följande dokument i din bekräftelse:"
 
-#: _layouts/index.html:163
+#: _layouts/index.html:165
 msgid "This research has made use of the Stellarium planetarium"
-msgstr ""
+msgstr "Den här forskningen har använt Stellariums planetarium"
 
-#: _layouts/index.html:167
+#: _layouts/index.html:169
 msgid ""
 "Or you may <a href='/files/stellarium.bib'>download the BibTeX file of the "
 "paper</a> to create another citation format."
 msgstr ""
+"Du kan också <a href='/files/stellarium.bib'>ladda ner BibTeX-filen</a> för "
+"att skapa ett annat citeringsformat."
 
-#: _layouts/index.html:168
+#: _layouts/index.html:170
 msgid ""
 "Please note that the software has several releases since these fundamentals "
 "were published:"
 msgstr ""
+"Observera att programvaran har uppdaterats flera gånger sedan dessa "
+"grundläggande principer publicerades:"
 
-#: _layouts/index.html:175
+#: _layouts/index.html:178
 msgid "git"
 msgstr "git"
 
-#: _layouts/index.html:176
+#: _layouts/index.html:179
 msgid ""
 "The latest development snapshot of Stellarium is kept on github. If you want"
 " to compile development versions of Stellarium, this is the place to get the"
 " source code."
 msgstr ""
+"Den senaste utvecklingsbilden av Stellarium finns på github. Om du vill "
+"kompilera utvecklingsversioner av Stellarium är det här du ska hämta "
+"källkoden."
 
-#: _layouts/index.html:178
+#: _layouts/index.html:181
 msgid "browse GitHub"
 msgstr "öppna GitHub"
 
-#: _layouts/index.html:181
+#: _layouts/index.html:184
 msgid "books"
-msgstr ""
+msgstr "böcker"
 
-#: _layouts/index.html:182
+#: _layouts/index.html:185
 msgid ""
 "Documentation and description of the sky cultures, state March 2022, plus a "
 "lot of additional research"
 msgstr ""
+"Dokumentation och beskrivning av himmelskulturerna, stat mars 2022, plus en "
+"hel del ytterligare forskning"
 
-#: _layouts/index.html:188
+#: _layouts/index.html:191
 msgid "irc"
 msgstr "irc"
 
-#: _layouts/index.html:189
+#: _layouts/index.html:192
 msgid ""
 "Real time chat about Stellarium can be had in the <a "
 "href='irc://irc.freenode.org/stellarium'>#stellarium</a> IRC channel on the "
@@ -1059,17 +1226,27 @@ msgid ""
 " href='http://webchat.freenode.net/?channels=stellarium&uio=MTE9MjQ255'>web-"
 "based interface</a>."
 msgstr ""
+"Realtidschatt om Stellarium kan du ha i IRC-kanalen <a "
+"href='irc://irc.freenode.org/stellarium'>#stellarium</a> på IRC-nätverket <a"
+" href='http://freenode.net'>freenode</a>. Använd din favorit IRC-klient för "
+"att ansluta till <a "
+"href='irc://irc.freenode.org/stellarium'>chat.freenode.net</a> eller prova "
+"det <a "
+"href='http://webchat.freenode.net/?channels=stellarium&uio=MTE9MjQ255'>webbaserade"
+" gränssnittet</a>."
 
-#: _layouts/index.html:192
+#: _layouts/index.html:195
 msgid "supporters and friends"
 msgstr "samarbetspartner och vänner"
 
-#: _layouts/index.html:194
+#: _layouts/index.html:197
 msgid ""
 "Stellarium is produced by the efforts of the developer team, with the help "
 "and support of the <a href='/%lang%/sponsors.html'>following people and "
 "organisations</a>"
 msgstr ""
+"Stellarium produceras av utvecklarteamet med hjälp och stöd från <a "
+"href='/%lang%/sponsors.html'>följande personer och organisationer</a>"
 
 #: _layouts/screenshots.html:8
 msgid ""
@@ -1088,6 +1265,10 @@ msgid ""
 " Garching, near Munich, Germany. ESO is the European Organisation for "
 "Astronomical Research in the Southern Hemisphere."
 msgstr ""
+"Fönstret för position.  Det första du måste göra är att ställa in din "
+"observationsposition och spara den. Landskapet är ett panorama från ESO:s "
+"anläggningar i Garching, nära München i Tyskland. ESO är den europeiska "
+"organisationen för astronomisk forskning på södra halvklotet."
 
 #: _layouts/screenshots.html:10
 msgid ""
@@ -1114,6 +1295,8 @@ msgid ""
 "Selecting a planet and pressing Ctrl+G flies you there.  Here, we see Mars "
 "from a rover&#39;s viewpoint."
 msgstr ""
+"Genom att välja en planet och trycka Ctrl+G flyger du dit.  Här ser vi Mars "
+"från en rovers synvinkel."
 
 #: _layouts/screenshots.html:18
 msgid ""
@@ -1138,37 +1321,47 @@ msgstr "Välj en bild."
 
 #: _layouts/scenery3d.html:17
 msgid "how to install 3D sceneries"
-msgstr ""
+msgstr "hur man installerar 3D-landskap"
 
 #: _layouts/scenery3d.html:18
 msgid ""
 "After you have downloaded the .zip file for a 3D scenery, you need to "
 "install it in Stellarium."
 msgstr ""
+"När du har laddat ner .zip-filen för ett 3D-landskap måste du installera det"
+" i Stellarium."
 
 #: _layouts/scenery3d.html:20
 msgid ""
 "Browse to your User Data Directory, which varies according to your operating"
 " system. (See User Guide)"
 msgstr ""
+"Bläddra till din User Data Directory, som varierar beroende på ditt "
+"operativsystem. (Se användarhandboken)"
 
 #: _layouts/scenery3d.html:21
 msgid ""
 "Create a sub-directory called <em>scenery3d</em> in your User Data Directory"
 " (if it doesn't exist)."
 msgstr ""
+"Skapa en underkatalog med namnet <em>scenery3d</em> i din User Data "
+"Directory (om den inte redan finns)."
 
 #: _layouts/scenery3d.html:22
 msgid ""
 "Unzip the scenery .zip file in the <em>scenery3d</em> directory (if it's "
 "done right, a sub-directory should be created for each scenery)."
 msgstr ""
+"Packa upp zip-filen för sceneriet i <em>scenery3d-katalogen</em> (om det "
+"görs rätt bör en underkatalog skapas för varje landskap)."
 
 #: _layouts/scenery3d.html:23
 msgid ""
 "If there is also a landscapes subdirectory in the ZIP file, move its "
 "contents to the <em>landscapes</em> subdirectory."
 msgstr ""
+"Om det också finns en underkatalog för landskap i ZIP-filen flyttar du "
+"innehållet till underkatalogen för <em>landskap</em>."
 
 #: _layouts/scenery3d.html:26
 msgid ""
@@ -1178,6 +1371,11 @@ msgid ""
 "altitude and planet for the location of the scenery (see one of the pre-"
 "existing sceneries for an example)."
 msgstr ""
+"Du är välkommen att bidra med dina egna anpassade 3D-landskap här. Gör "
+"miniatyrbilderna 200x114 pixlar för att passa med resten av sidan. Inkludera"
+" ett platsavsnitt i din scenery3d.ini-fil med longitud, latitud, höjd och "
+"planet för platsen där landskapet finns (se ett av de befintliga landskapen "
+"för ett exempel)."
 
 #: _layouts/scenery3d.html:27
 msgid ""
@@ -1185,6 +1383,9 @@ msgid ""
 "Guide, and examine existing examples. If you are having problems, posting to"
 " the forums is a good way to get some advice."
 msgstr ""
+"Om du vill veta mer om hur du skapar ett 3D-scenario kan du läsa Stellariums"
+" användarhandbok och undersöka befintliga exempel. Om du har problem är ett "
+"inlägg i forumet ett bra sätt att få råd."
 
 #: _layouts/scenery3d.html:29
 msgid ""
@@ -1192,6 +1393,9 @@ msgid ""
 " i.e. 256, 512, 1024, 2048, 4096, 8192, 16384, ... e.g. 4096 by 1024, 2048 "
 "by 2048 and so on."
 msgstr ""
+"VIKTIGT: Försök att fortfarande använda texturer med dimensioner av "
+"heltalspotenser av 2, dvs. 256, 512, 1024, 2048, 4096, 8192, 16384, ... "
+"t.ex. 4096 gånger 1024, 2048 gånger 2048 och så vidare."
 
 #: _layouts/scenery3d.html:30
 msgid ""
@@ -1200,6 +1404,10 @@ msgid ""
 "not display properly, suffer vastly reduced frame rates, and even crash the "
 "computer."
 msgstr ""
+"Detta är en begränsning i äldre OpenGL-hårdvara. De flesta videohårdvaror "
+"fungerar idag bra med bilder med olika bilddimensioner, men vissa kommer "
+"inte att visas korrekt, få kraftigt reducerad bildfrekvens och till och med "
+"krascha datorn."
 
 #: _layouts/scenery3d.html:31
 msgid ""
@@ -1207,6 +1415,9 @@ msgid ""
 "textures. This is hardware and driver dependent. Maximum compatibility is "
 "achieved with image size not exceeding 2048x2048."
 msgstr ""
+"Tänk på att många människors videohårdvara inte kan hantera mycket stora "
+"texturer. Detta är maskinvaru- och drivrutinsberoende. Maximal "
+"kompatibilitet uppnås med en bildstorlek som inte överstiger 2048x2048."
 
 #: _layouts/scenery3d.html:33
 msgid ""
@@ -1214,12 +1425,17 @@ msgid ""
 "subdirectory in the .zip file. This should be unique to your scenery, and "
 "must be all lower-case with no spaces."
 msgstr ""
+"Vänligen paketera ditt 3D-scenario i en .zip-fil med alla filer i en "
+"underkatalog i .zip-filen. Detta ska vara unikt för ditt landskap och måste "
+"vara alla små bokstäver utan mellanslag."
 
 #: _layouts/scenery3d.html:34
 msgid ""
 "If you enclose your scenery with a landscape, provide this in a "
 "landscapes/name subdirectory in the ZIP file."
 msgstr ""
+"Om du bifogar ditt landskap med ett landskap ska du lägga det i "
+"underkatalogen landscapes/name i ZIP-filen."
 
 #: _layouts/scenery3d.html:35
 msgid ""
@@ -1228,6 +1444,10 @@ msgid ""
 "about it. Please make this a self-contained explanation that does not only "
 "point to external links."
 msgstr ""
+"Filen <em>description.en.utf8</em> (och eventuella översatta versioner som "
+"du kanske vill tillhandahålla själv) beskriver landskapet och vad som är "
+"speciellt med det. Vänligen gör detta till en fristående förklaring som inte"
+" bara pekar på externa länkar."
 
 #: _layouts/scenery3d.html:36
 msgid ""
@@ -1235,6 +1455,9 @@ msgid ""
 "landscape and specifies any usage restrictions or licensing terms for the "
 "images used in the 3D scenery."
 msgstr ""
+"Du bör också inkludera en readme.txt-fil som kortfattat beskriver landskapet"
+" och anger eventuella användningsbegränsningar eller licensvillkor för de "
+"bilder som används i 3D-landskapet."
 
 #: _layouts/scenery3d.html:38
 msgid ""
@@ -1244,18 +1467,28 @@ msgid ""
 "Stellarium under the terms of some agreement with the copyright holder (e.g."
 " Creative Commons licensed images found on the web)."
 msgstr ""
+"Innan du distribuerar bilder som en del av ett 3D-scenario eller landskap i "
+"Stellarium ska du kontrollera att du har laglig rätt till det - du måste "
+"vara upphovsrättsinnehavare till bilderna eller kunna distribuera dem för "
+"användning med Stellarium enligt villkoren i något avtal med "
+"upphovsrättsinnehavaren (t.ex. Creative Commons-licensierade bilder som "
+"finns på webben)."
 
 #: _layouts/scenery3d.html:39
 msgid ""
 "It is important to explicitly state what use may be made of images for your "
 "3D scenery. This should be done in the readme.txt file inside the .zip file."
 msgstr ""
+"Det är viktigt att uttryckligen ange hur bilderna får användas för "
+"3D-scener. Detta bör göras i filen readme.txt som finns i .zip-filen."
 
 #: _layouts/scenery3d.html:40
 msgid ""
 "We recommend an open source license compatible with Stellarium itself (i.e.,"
 " the GNU GPL), or one of the Creative Commons licenses."
 msgstr ""
+"Vi rekommenderar en licens för öppen källkod som är kompatibel med "
+"Stellarium själv (dvs. GNU GPL) eller en av Creative Commons-licenserna."
 
 #: _layouts/scenery3d.html:42
 msgid ""
@@ -1265,6 +1498,11 @@ msgid ""
 "OK in Stellarium, but Windows users will have an ugly time reading the "
 "readme.txt if it uses *nix-style newlines."
 msgstr ""
+"Filerna scenery3d.ini och readme.txt bör vara UTF-8-kodad text eller vanlig "
+"ASCII. Det är förmodligen en bra idé att använda Windows kodning för "
+"radavslut (dvs. CR LF). Både Windows- och *nix-stilens kodning av radavslut "
+"bör fungera OK i Stellarium, men Windows-användare kommer att ha svårt att "
+"läsa readme.txt om den använder *nix-stilens nya linjer."
 
 #: _layouts/scenery3d.html:44
 msgid ""
@@ -1272,42 +1510,62 @@ msgid ""
 "share but have no web-space to put it, email to any Stellarium developers "
 "and we'll put it on our site."
 msgstr ""
+"Om du har ett 3D-landskap av kulturellt astronomiskt intresse som du skulle "
+"vilja dela med dig av men inte har något webbutrymme att lägga ut det på, "
+"mejla till någon av Stellariums utvecklare så lägger vi ut det på vår "
+"webbplats."
 
 #: _layouts/default.html:11
 msgid "Other languages:"
 msgstr "Andra språk:"
 
+#: _layouts/skycultures.html:10
+msgid ""
+"We have few user contributed sky cultures which are not included into "
+"default package for some reasons."
+msgstr ""
+"Vi har några användarskapade himmelskulturer som av olika anledningar inte "
+"är inkluderade i standardinstallationen."
+
 #: _layouts/skycultures.html:17
 msgid "how to install sky cultures"
-msgstr ""
+msgstr "hur man installerar himmelskulturer"
 
 #: _layouts/skycultures.html:18
 msgid ""
 "After you have downloaded the .zip file for a sky culture from this page, "
 "you need to install it in Stellarium."
 msgstr ""
+"När du har hämtat .zip-filen för en himmelskultur från den här sidan måste "
+"du installera den i Stellarium."
 
 #: _layouts/skycultures.html:20
 msgid "Please follow this procedure to install a sky culture package:"
-msgstr ""
+msgstr "Följ denna procedur för att installera ett himmelskulturpaket:"
 
 #: _layouts/skycultures.html:23
 msgid ""
 "Create a sub-directory called <em>skycultures</em> in your user directory "
 "(if it doesn't exist)."
 msgstr ""
+"Skapa en underkatalog med namnet <em>skycultures</em> i din användarkatalog "
+"(om den inte redan finns)."
 
 #: _layouts/skycultures.html:24
 msgid ""
 "Unzip the sky culture .zip file in the <em>skycultures</em> directory (if "
 "it's done right, a sub-directory should be created for each sky culture)."
 msgstr ""
+"Packa upp zip-filen med himmelskulturen i katalogen <em>skycultures</em> (om"
+" det görs rätt ska en underkatalog skapas för varje himmelskultur)."
 
 #: _layouts/skycultures.html:27
 msgid ""
 "Please feel free to contribute your own custom sky culture here. Make "
 "thumbnails 300x170 pixels to fit with the rest of the page."
 msgstr ""
+"Du är välkommen att bidra med din egen anpassade himmelskultur här. Gör "
+"miniatyrbilderna 300x170 pixlar för att passa med resten av sidan."
 
 #: _layouts/skycultures.html:28
 msgid ""
@@ -1315,28 +1573,48 @@ msgid ""
 "Guide, and examine existing sky cultures. If you are having problems, "
 "posting to the forums is a good way to get some advice."
 msgstr ""
+"Om du vill veta mer om hur du skapar en himmelskultur kan du läsa "
+"Stellariums användarhandbok och undersöka befintliga himmelskulturer. Om du "
+"har problem är ett inlägg i forumet ett bra sätt att få råd."
+
+#: _layouts/skycultures.html:30
+msgid ""
+"IMPORTANT: Make sure all textures have dimensions which are integer powers "
+"of 2, i.e. 256, 512, 1024, 2048, 4096, ... e.g. 4096 by 1024, 2048 by 2048 "
+"and so on."
+msgstr ""
+"VIKTIGT: Se till att alla texturer har dimensioner som är heltalspotenser av"
+" 2, dvs. 256, 512, 1024, 2048, 4096, ... t.ex. 4096 x 1024, 2048 x 2048 och "
+"så vidare."
+
+#: _layouts/skycultures.html:31
+msgid ""
+"This is a limitation of OpenGL. Most video hardware will work OK with images"
+" with different image dimensions, but some may not display properly, suffer "
+"vastly reduced frame rates, and even crash the computer."
+msgstr ""
+"Detta är en begränsning i OpenGL. De flesta grafikkort fungerar utan problem"
+" med bilder med olika bilddimensioner, men vissa kan visa bilderna "
+"felaktigt, få kraftigt reducerad bildfrekvens och till och med krascha "
+"datorn."
 
 #: _layouts/skycultures.html:32
 msgid ""
 "Please make sure all contributed sky cultures conform to these requirements,"
 " or your link may be removed."
 msgstr ""
+"Se till att alla bidragande himmelskulturer uppfyller dessa krav, annars kan"
+" din länk tas bort."
 
 #: _layouts/skycultures.html:35
 msgid ""
 "Please package your sky culture in a .zip file with all files inside a "
-"directory in the .zip file. This should be unique to your sky culture, and "
-"it would be nice if it was all lower-case with no spaces."
+"directory in the .zip file. The format is described in the User Guide."
 msgstr ""
+"Paketera din sky culture i en .zip-fil med alla filer i en katalog i .zip-"
+"filen. Formatet beskrivs i användarhandboken."
 
-#: _layouts/skycultures.html:36
-msgid ""
-"You should also include a description.en.utf8 file which describes the sky "
-"culture and specifies any usage restrictions or licensing terms for the "
-"images used in the sky culture."
-msgstr ""
-
-#: _layouts/skycultures.html:38
+#: _layouts/skycultures.html:37
 msgid ""
 "Before you distribute images as part of a Stellarium sky culture, please "
 "ensure you are legally entitled to - you must be the copyright holder for "
@@ -1344,28 +1622,30 @@ msgid ""
 "terms of some agreement with the copyright holder (e.g. Creative Commons "
 "licensed images found on the web)."
 msgstr ""
+"Innan du distribuerar bilder som en del av en himmelskultur i Stellarium ska"
+" du kontrollera att du har laglig rätt till det - du måste vara "
+"upphovsrättsinnehavare till bilderna eller kunna distribuera dem för "
+"användning med Stellarium enligt villkoren i något avtal med "
+"upphovsrättsinnehavaren (t.ex. Creative Commons-licensierade bilder som "
+"finns på webben)."
 
-#: _layouts/skycultures.html:39
+#: _layouts/skycultures.html:38
 msgid ""
 "It is important to explicitly state what use may be made of images for your "
-"sky culture. This should be done in the description.en.utf8 file (and value "
-"for option 'license' in info.ini file) inside the .zip file."
+"sky culture. This should be done in the description.md file inside the .zip "
+"file."
 msgstr ""
+"Det är viktigt att tydligt ange hur bilderna får användas för din sky "
+"culture. Detta ska anges i filen description.md i .zip-filen."
 
-#: _layouts/skycultures.html:42
-msgid ""
-"The info.ini and description.en.utf8 files should be UTF-8 encoded text or "
-"plain ASCII. It's probably a good idea to adopt the Windows line ending "
-"encoding, (i.e. CR LF). Both Windows and *nix style line ending encoding "
-"should work OK in Stellarium, but Windows users will have an ugly time "
-"reading the description.en.utf8 if it uses *nix-style newlines."
-msgstr ""
-
-#: _layouts/skycultures.html:44
+#: _layouts/skycultures.html:41
 msgid ""
 "If you have a sky culture you would like to share but have no web-space to "
 "put it, email to any Stellarium developers and we'll put it on our site."
 msgstr ""
+"Om du har en himmelskultur som du skulle vilja dela med dig av men inte har "
+"någon plats på webben att lägga upp den på, skicka ett e-postmeddelande till"
+" någon av Stellariums utvecklare så lägger vi upp den på vår webbplats."
 
 #: _layouts/docs.html:7
 msgid ""
@@ -1374,11 +1654,15 @@ msgid ""
 "may lag behind a little as the documentation is only uploaded every so "
 "often)."
 msgstr ""
+"Här kan du hitta API-dokumentation för olika serier av Stellarium. "
+"<em>head</em> hänvisar till den senaste versionen från utvecklingen (även om"
+" detta kan släpa efter lite eftersom dokumentationen bara laddas upp då och "
+"då)."
 
 #: _layouts/docs.html:23
 msgid "plugins api documentation"
-msgstr ""
+msgstr "plugins Api-dokumentation"
 
 #: _layouts/docs.html:31
 msgid "changes between packages"
-msgstr ""
+msgstr "ändringar mellan paket"

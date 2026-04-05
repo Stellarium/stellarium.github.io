@@ -1,0 +1,3 @@
+---
+layout: scenery3d
+---
