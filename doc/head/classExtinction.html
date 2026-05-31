@@ -101,7 +101,7 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>setForwardTransformUn
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>This class performs extinction computations, following literature from atmospheric optics and astronomy. </p>
-<p>Airmass computations are limited to meaningful altitudes. The solution provided here will [hopefully!] result in a visible "zone of avoidance" near the horizon down to altitude -2, and may show stars in their full brightness below -2 degrees. Typical horizons do not go down below -1, so all natural sites should be covered. Note that forward/backward are no absolute reverse operations! All the computations should be in effect (1) only if atmosphere effects are true (2) only for terrestrial locations, not on Moon/Mars/Saturn etc config.ini:astro/flag_extinction_below_horizon=true|false controls if extinction kills objects below -2 degrees altitude by setting airmass to 42. </p>
+<p>Airmass computations are limited to meaningful altitudes. The solution provided here will [hopefully!] result in a visible "zone of avoidance" near the horizon down to altitude -2, and may show stars in their full brightness below -2 degrees. Typical horizons do not go down below -1, so all natural sites should be covered. Note that forward/backward are no absolute reverse operations! All the computations should be in effect (1) only if atmosphere effects are true (2) only for terrestrial locations, not on Moon/Mars/Saturn etc config.ini:astro/extinction_mode_below_horizon=zero|max|mirror controls if extinction kills objects below -2 degrees altitude by setting airmass to 42 (max), sets it fully transparent (zero, default) or mirrors it to above-horizon values. </p>
 </div><h2 class="groupheader">Member Enumeration Documentation</h2>
 <a id="a3cc18c4d77126fba1b15c0caeeb778df"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a3cc18c4d77126fba1b15c0caeeb778df">&#9670;&nbsp;</a></span>UndergroundExtinctionMode</h2>
@@ -291,7 +291,7 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>setForwardTransformUn
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Tue Feb 17 2026 22:25:24 for Stellarium by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1
+Generated on Mon Jun 1 2026 02:12:46 for Stellarium by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1
 </small></address>
 </body>
 </html>

@@ -43,6 +43,7 @@ $(function() {
 <div class="header">
   <div class="summary">
 <a href="#pro-methods">Protected Member Functions</a> &#124;
+<a href="#pro-static-methods">Static Protected Member Functions</a> &#124;
 <a href="#pro-attribs">Protected Attributes</a>  </div>
   <div class="headertitle">
 <div class="title">StarWrapper&lt; Star &gt; Class Template Reference</div>  </div>
@@ -54,6 +55,12 @@ Protected Member Functions</h2></td></tr>
 <tr class="memitem:ac968390526a5a144b8db66c3c5aa696b"><td class="memItemLeft" align="right" valign="top"><a id="ac968390526a5a144b8db66c3c5aa696b"></a>
 &#160;</td><td class="memItemRight" valign="bottom"><b>StarWrapper</b> (const <a class="el" href="classSpecialZoneArray.html">SpecialZoneArray</a>&lt; <a class="el" href="structStar.html">Star</a> &gt; *array, const <a class="el" href="structSpecialZoneData.html">SpecialZoneData</a>&lt; <a class="el" href="structStar.html">Star</a> &gt; *zone, const <a class="el" href="structStar.html">Star</a> *star)</td></tr>
 <tr class="separator:ac968390526a5a144b8db66c3c5aa696b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9cae603b749324eea7ad6198c2916424"><td class="memItemLeft" align="right" valign="top"><a id="a9cae603b749324eea7ad6198c2916424"></a>
+virtual StarId&#160;</td><td class="memItemRight" valign="bottom"><b>getStarId</b> () const</td></tr>
+<tr class="separator:a9cae603b749324eea7ad6198c2916424"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab96a5d317850dacbf435a3c24f6b451f"><td class="memItemLeft" align="right" valign="top">QString&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classStarWrapper.html#ab96a5d317850dacbf435a3c24f6b451f">getID</a> (void) const override</td></tr>
+<tr class="memdesc:ab96a5d317850dacbf435a3c24f6b451f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns a unique identifier for this object.  <a href="classStarWrapper.html#ab96a5d317850dacbf435a3c24f6b451f">More...</a><br /></td></tr>
+<tr class="separator:ab96a5d317850dacbf435a3c24f6b451f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a31c9c31aa1c862ec9a545ff59c5ef474"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classVector3.html">Vec3d</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classStarWrapper.html#a31c9c31aa1c862ec9a545ff59c5ef474">getJ2000EquatorialPos</a> (const <a class="el" href="classStelCore.html">StelCore</a> *core) const override</td></tr>
 <tr class="memdesc:a31c9c31aa1c862ec9a545ff59c5ef474"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get observer-centered equatorial coordinates at equinox J2000, including aberration.  <a href="classStarWrapper.html#a31c9c31aa1c862ec9a545ff59c5ef474">More...</a><br /></td></tr>
 <tr class="separator:a31c9c31aa1c862ec9a545ff59c5ef474"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -65,25 +72,45 @@ Protected Member Functions</h2></td></tr>
 float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classStarWrapper.html#af542d99a01a06b2da4b2b198c41b09e7">getVMagnitude</a> (const <a class="el" href="classStelCore.html">StelCore</a> *core) const override</td></tr>
 <tr class="memdesc:af542d99a01a06b2da4b2b198c41b09e7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return object's apparent V magnitude as seen from observer, without including extinction. <br /></td></tr>
 <tr class="separator:af542d99a01a06b2da4b2b198c41b09e7"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a145d2562eed8d7575ebb54c0567f3f32"><td class="memItemLeft" align="right" valign="top"><a id="a145d2562eed8d7575ebb54c0567f3f32"></a>
-float&#160;</td><td class="memItemRight" valign="bottom"><b>getBV</b> (void) const override</td></tr>
-<tr class="separator:a145d2562eed8d7575ebb54c0567f3f32"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aa570e363d153bee16e2ea5c664e5d7a8"><td class="memItemLeft" align="right" valign="top"><a id="aa570e363d153bee16e2ea5c664e5d7a8"></a>
-QString&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classStarWrapper.html#aa570e363d153bee16e2ea5c664e5d7a8">getNameI18n</a> (void) const override</td></tr>
-<tr class="memdesc:aa570e363d153bee16e2ea5c664e5d7a8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return translated object's name For non-default skycultures, this is the user language translation of the english name (which should be native translated to english). <br /></td></tr>
-<tr class="separator:aa570e363d153bee16e2ea5c664e5d7a8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a021957f3ac41d6f7cb4fcb1686e896bd"><td class="memItemLeft" align="right" valign="top"><a id="a021957f3ac41d6f7cb4fcb1686e896bd"></a>
+float&#160;</td><td class="memItemRight" valign="bottom"><b>getBV</b> (void) const override final</td></tr>
+<tr class="separator:a021957f3ac41d6f7cb4fcb1686e896bd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1e2f40d2ba20671f7b4e8e10d71aafd1"><td class="memItemLeft" align="right" valign="top"><a id="a1e2f40d2ba20671f7b4e8e10d71aafd1"></a>
+QString&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classStarWrapper.html#a1e2f40d2ba20671f7b4e8e10d71aafd1">getNameI18n</a> (void) const override final</td></tr>
+<tr class="memdesc:a1e2f40d2ba20671f7b4e8e10d71aafd1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return translated object's name For non-default skycultures, this is the user language translation of the english name (which should be native translated to english). <br /></td></tr>
+<tr class="separator:a1e2f40d2ba20671f7b4e8e10d71aafd1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab47330580e72e6afd7bdb9c4a2f98ecb"><td class="memItemLeft" align="right" valign="top"><a id="ab47330580e72e6afd7bdb9c4a2f98ecb"></a>
+QString&#160;</td><td class="memItemRight" valign="bottom"><b>getVariabilityRangeInfoString</b> (const <a class="el" href="classStelCore.html">StelCore</a> *core, const InfoStringGroup &amp;flags) const</td></tr>
+<tr class="separator:ab47330580e72e6afd7bdb9c4a2f98ecb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a96fca6c6ca1e71f66e9f4a2a042c6a4e"><td class="memItemLeft" align="right" valign="top"><a id="a96fca6c6ca1e71f66e9f4a2a042c6a4e"></a>
+QString&#160;</td><td class="memItemRight" valign="bottom"><b>getVariabilityRangeNarration</b> (const <a class="el" href="classStelCore.html">StelCore</a> *core, const InfoStringGroup &amp;flags) const</td></tr>
+<tr class="separator:a96fca6c6ca1e71f66e9f4a2a042c6a4e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a960780fe81d06b4cba67075076745c6c"><td class="memItemLeft" align="right" valign="top"><a id="a960780fe81d06b4cba67075076745c6c"></a>
+QString&#160;</td><td class="memItemRight" valign="bottom"><b>getGcvsDataInfoString</b> (const <a class="el" href="classStelCore.html">StelCore</a> *core, StarId star_id, QString spec=QString()) const</td></tr>
+<tr class="separator:a960780fe81d06b4cba67075076745c6c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a16d61b9c79c2884c760295b6c96d7902"><td class="memItemLeft" align="right" valign="top"><a id="a16d61b9c79c2884c760295b6c96d7902"></a>
+QString&#160;</td><td class="memItemRight" valign="bottom"><b>getGcvsDataNarration</b> (const <a class="el" href="classStelCore.html">StelCore</a> *core, StarId star_id, QString spec=QString()) const</td></tr>
+<tr class="separator:a16d61b9c79c2884c760295b6c96d7902"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a88a512d8d846733018df58e1d4393890"><td class="memItemLeft" align="right" valign="top"><a id="a88a512d8d846733018df58e1d4393890"></a>
+QString&#160;</td><td class="memItemRight" valign="bottom"><b>getDistanceInfoString</b> (const <a class="el" href="classStelCore.html">StelCore</a> *core, const InfoStringGroup &amp;flags, const float Plx, const float PlxErr) const</td></tr>
+<tr class="separator:a88a512d8d846733018df58e1d4393890"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a93640b7f5f616a044ff18c96efdba222"><td class="memItemLeft" align="right" valign="top"><a id="a93640b7f5f616a044ff18c96efdba222"></a>
+QString&#160;</td><td class="memItemRight" valign="bottom"><b>getDistanceNarration</b> (const <a class="el" href="classStelCore.html">StelCore</a> *core, const InfoStringGroup &amp;flags, const float Plx, const float PlxErr) const</td></tr>
+<tr class="separator:a93640b7f5f616a044ff18c96efdba222"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a48f96c994b59f73665421991689f5e55"><td class="memItemLeft" align="right" valign="top">QString&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classStarWrapper.html#a48f96c994b59f73665421991689f5e55">getObjectType</a> () const override</td></tr>
+<tr class="separator:a48f96c994b59f73665421991689f5e55"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8f481c0fce0a7722fbc325eda5b0cf79"><td class="memItemLeft" align="right" valign="top"><a id="a8f481c0fce0a7722fbc325eda5b0cf79"></a>
+QString&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classStarWrapper.html#a8f481c0fce0a7722fbc325eda5b0cf79">getObjectTypeI18n</a> () const override</td></tr>
+<tr class="memdesc:a8f481c0fce0a7722fbc325eda5b0cf79"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return object's type. It should be translated lowercase name of the type of the object. <br /></td></tr>
+<tr class="separator:a8f481c0fce0a7722fbc325eda5b0cf79"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aaf5512ae388d1e678d745652abac314f"><td class="memItemLeft" align="right" valign="top">QVariantMap&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classStarWrapper.html#aaf5512ae388d1e678d745652abac314f">getInfoMap</a> (const <a class="el" href="classStelCore.html">StelCore</a> *core) const override</td></tr>
+<tr class="memdesc:aaf5512ae388d1e678d745652abac314f"><td class="mdescLeft">&#160;</td><td class="mdescRight">In addition to the entries from <a class="el" href="classStelObject.html#a16e447c2dc2cbbe6e4e308376ae0c5ca" title="Return a key/value map with data about an object&#39;s position, magnitude and so on.">StelObject::getInfoMap()</a>, <a class="el" href="classStarWrapper.html">StarWrapper</a> objects provide.  <a href="classStarWrapper.html#aaf5512ae388d1e678d745652abac314f">More...</a><br /></td></tr>
+<tr class="separator:aaf5512ae388d1e678d745652abac314f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pro_methods_classStarWrapperBase"><td colspan="2" onclick="javascript:toggleInherit('pro_methods_classStarWrapperBase')"><img src="closed.png" alt="-"/>&#160;Protected Member Functions inherited from <a class="el" href="classStarWrapperBase.html">StarWrapperBase</a></td></tr>
 <tr class="memitem:a685c3ee1a5bc394d022af6e866614e9f inherit pro_methods_classStarWrapperBase"><td class="memItemLeft" align="right" valign="top"><a id="a685c3ee1a5bc394d022af6e866614e9f"></a>
 QString&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classStarWrapperBase.html#a685c3ee1a5bc394d022af6e866614e9f">getType</a> (void) const override</td></tr>
 <tr class="memdesc:a685c3ee1a5bc394d022af6e866614e9f inherit pro_methods_classStarWrapperBase"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return object's type. It should be the name of the class. <br /></td></tr>
 <tr class="separator:a685c3ee1a5bc394d022af6e866614e9f inherit pro_methods_classStarWrapperBase"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a01ef6ebe1613901419b3cf7575ba9264 inherit pro_methods_classStarWrapperBase"><td class="memItemLeft" align="right" valign="top">QString&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classStarWrapperBase.html#a01ef6ebe1613901419b3cf7575ba9264">getObjectType</a> (void) const override</td></tr>
-<tr class="memdesc:a01ef6ebe1613901419b3cf7575ba9264 inherit pro_methods_classStarWrapperBase"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return object's type.  <a href="classStarWrapperBase.html#a01ef6ebe1613901419b3cf7575ba9264">More...</a><br /></td></tr>
-<tr class="separator:a01ef6ebe1613901419b3cf7575ba9264 inherit pro_methods_classStarWrapperBase"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:af9357d3454a273e9c4a3a79025d5e6d9 inherit pro_methods_classStarWrapperBase"><td class="memItemLeft" align="right" valign="top"><a id="af9357d3454a273e9c4a3a79025d5e6d9"></a>
-QString&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classStarWrapperBase.html#af9357d3454a273e9c4a3a79025d5e6d9">getObjectTypeI18n</a> (void) const override</td></tr>
-<tr class="memdesc:af9357d3454a273e9c4a3a79025d5e6d9 inherit pro_methods_classStarWrapperBase"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return object's type. It should be translated lowercase name of the type of the object. <br /></td></tr>
-<tr class="separator:af9357d3454a273e9c4a3a79025d5e6d9 inherit pro_methods_classStarWrapperBase"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad19608309e4635c5f02409b0b79d89e9 inherit pro_methods_classStarWrapperBase"><td class="memItemLeft" align="right" valign="top">QString&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classStarWrapperBase.html#ad19608309e4635c5f02409b0b79d89e9">getEnglishName</a> (void) const override</td></tr>
 <tr class="memdesc:ad19608309e4635c5f02409b0b79d89e9 inherit pro_methods_classStarWrapperBase"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return object's name in english.  <a href="classStarWrapperBase.html#ad19608309e4635c5f02409b0b79d89e9">More...</a><br /></td></tr>
 <tr class="separator:ad19608309e4635c5f02409b0b79d89e9 inherit pro_methods_classStarWrapperBase"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -114,6 +141,24 @@ QString&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="c
 <tr class="memitem:a53ece72260ecfe9c4783d740862021f8 inherit pro_methods_classStelObject"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classStelObject.html#a53ece72260ecfe9c4783d740862021f8">postProcessInfoString</a> (QString &amp;str, const InfoStringGroup &amp;flags) const</td></tr>
 <tr class="memdesc:a53ece72260ecfe9c4783d740862021f8 inherit pro_methods_classStelObject"><td class="mdescLeft">&#160;</td><td class="mdescRight">Apply post processing on the info string.  <a href="classStelObject.html#a53ece72260ecfe9c4783d740862021f8">More...</a><br /></td></tr>
 <tr class="separator:a53ece72260ecfe9c4783d740862021f8 inherit pro_methods_classStelObject"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-static-methods"></a>
+Static Protected Member Functions</h2></td></tr>
+<tr class="memitem:a3f9b883dd0dc0fde4c736bc7a6b3da71"><td class="memItemLeft" align="right" valign="top"><a id="a3f9b883dd0dc0fde4c736bc7a6b3da71"></a>
+static QString&#160;</td><td class="memItemRight" valign="bottom"><b>getProperMotionInfoString</b> (const <a class="el" href="classStelCore.html">StelCore</a> *core, const InfoStringGroup &amp;flags, const float pmra, const float pmdec)</td></tr>
+<tr class="separator:a3f9b883dd0dc0fde4c736bc7a6b3da71"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abcc0a76eaaa0aa93ef286b8e2146c09f"><td class="memItemLeft" align="right" valign="top"><a id="abcc0a76eaaa0aa93ef286b8e2146c09f"></a>
+static QString&#160;</td><td class="memItemRight" valign="bottom"><b>getProperMotionNarration</b> (const <a class="el" href="classStelCore.html">StelCore</a> *core, const InfoStringGroup &amp;flags, const float pmra, const float pmdec)</td></tr>
+<tr class="separator:abcc0a76eaaa0aa93ef286b8e2146c09f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="inherit_header pro_static_methods_classStelObject"><td colspan="2" onclick="javascript:toggleInherit('pro_static_methods_classStelObject')"><img src="closed.png" alt="-"/>&#160;Static Protected Member Functions inherited from <a class="el" href="classStelObject.html">StelObject</a></td></tr>
+<tr class="memitem:a21f2c19aaa2062a5a2962f47db3a3552 inherit pro_static_methods_classStelObject"><td class="memItemLeft" align="right" valign="top"><a id="a21f2c19aaa2062a5a2962f47db3a3552"></a>
+static QString&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classStelObject.html#a21f2c19aaa2062a5a2962f47db3a3552">getB_VInfoString</a> (float b_v)</td></tr>
+<tr class="memdesc:a21f2c19aaa2062a5a2962f47db3a3552 inherit pro_static_methods_classStelObject"><td class="mdescLeft">&#160;</td><td class="mdescRight">Format B-V color index information for InfoString (including trailing linebreak). <br /></td></tr>
+<tr class="separator:a21f2c19aaa2062a5a2962f47db3a3552 inherit pro_static_methods_classStelObject"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a96bff3a4eaba9680d75c32ac46992cfd inherit pro_static_methods_classStelObject"><td class="memItemLeft" align="right" valign="top"><a id="a96bff3a4eaba9680d75c32ac46992cfd"></a>
+static QString&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classStelObject.html#a96bff3a4eaba9680d75c32ac46992cfd">getB_VNarration</a> (float b_v)</td></tr>
+<tr class="memdesc:a96bff3a4eaba9680d75c32ac46992cfd inherit pro_static_methods_classStelObject"><td class="mdescLeft">&#160;</td><td class="mdescRight">Format B-V color index information for Narration (excluding trailing line stop to allow longer combinations). <br /></td></tr>
+<tr class="separator:a96bff3a4eaba9680d75c32ac46992cfd inherit pro_static_methods_classStelObject"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-attribs"></a>
 Protected Attributes</h2></td></tr>
@@ -361,12 +406,6 @@ Additional Inherited Members</h2></td></tr>
 <tr class="memitem:adf8c048d80b8115db74774727b90e57f inherit pub_methods_classStelObject"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classVector3.html">Vec3d</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classStelObject.html#adf8c048d80b8115db74774727b90e57f">getPointInRegion</a> () const override</td></tr>
 <tr class="memdesc:adf8c048d80b8115db74774727b90e57f inherit pub_methods_classStelObject"><td class="mdescLeft">&#160;</td><td class="mdescRight">Default implementation of the getPointInRegion method.  <a href="classStelObject.html#adf8c048d80b8115db74774727b90e57f">More...</a><br /></td></tr>
 <tr class="separator:adf8c048d80b8115db74774727b90e57f inherit pub_methods_classStelObject"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a16e447c2dc2cbbe6e4e308376ae0c5ca inherit pub_methods_classStelObject"><td class="memItemLeft" align="right" valign="top">virtual QVariantMap&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classStelObject.html#a16e447c2dc2cbbe6e4e308376ae0c5ca">getInfoMap</a> (const <a class="el" href="classStelCore.html">StelCore</a> *core) const</td></tr>
-<tr class="memdesc:a16e447c2dc2cbbe6e4e308376ae0c5ca inherit pub_methods_classStelObject"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return a key/value map with data about an object's position, magnitude and so on.  <a href="classStelObject.html#a16e447c2dc2cbbe6e4e308376ae0c5ca">More...</a><br /></td></tr>
-<tr class="separator:a16e447c2dc2cbbe6e4e308376ae0c5ca inherit pub_methods_classStelObject"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab11e911fb1974d75b8a9b629a57f243b inherit pub_methods_classStelObject"><td class="memItemLeft" align="right" valign="top">virtual QString&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classStelObject.html#ab11e911fb1974d75b8a9b629a57f243b">getID</a> () const =0</td></tr>
-<tr class="memdesc:ab11e911fb1974d75b8a9b629a57f243b inherit pub_methods_classStelObject"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns a unique identifier for this object.  <a href="classStelObject.html#ab11e911fb1974d75b8a9b629a57f243b">More...</a><br /></td></tr>
-<tr class="separator:ab11e911fb1974d75b8a9b629a57f243b inherit pub_methods_classStelObject"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a3a4e8d522a75df0850fb3ce07611e3a9 inherit pub_methods_classStelObject"><td class="memItemLeft" align="right" valign="top">virtual QString&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classStelObject.html#a3a4e8d522a75df0850fb3ce07611e3a9">getNameNative</a> () const</td></tr>
 <tr class="memdesc:a3a4e8d522a75df0850fb3ce07611e3a9 inherit pub_methods_classStelObject"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return object's native name in the glyphs as written in skyculture descriptions (index.json).  <a href="classStelObject.html#a3a4e8d522a75df0850fb3ce07611e3a9">More...</a><br /></td></tr>
 <tr class="separator:a3a4e8d522a75df0850fb3ce07611e3a9 inherit pub_methods_classStelObject"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -479,6 +518,86 @@ static constexpr InfoStringGroup&#160;</td><td class="memItemRight" valign="bott
 <tr class="separator:a29d74342a8788611f1729477a8947965 inherit pub_static_attribs_classStelObject"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Member Function Documentation</h2>
+<a id="ab96a5d317850dacbf435a3c24f6b451f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab96a5d317850dacbf435a3c24f6b451f">&#9670;&nbsp;</a></span>getID()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class Star &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">QString <a class="el" href="classStarWrapper.html">StarWrapper</a>&lt; <a class="el" href="structStar.html">Star</a> &gt;::getID </td>
+          <td>(</td>
+          <td class="paramtype">void&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">override</span><span class="mlabel">protected</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Returns a unique identifier for this object. </p>
+<p>The ID should be unique for all objects of the same type, but may freely conflict with IDs of other types, so <a class="el" href="classStarWrapperBase.html#a685c3ee1a5bc394d022af6e866614e9f" title="Return object&#39;s type. It should be the name of the class.">getType()</a> must also be tested.</p>
+<p>With this it should be possible to at least identify the same object in a different instance of Stellarium running the same version, but it would even be better if the ID provides some degree of forward-compatibility. For some object types (e.g. planets) this may simply return <a class="el" href="classStarWrapperBase.html#ad19608309e4635c5f02409b0b79d89e9" title="Return object&#39;s name in english.">getEnglishName()</a>, but better candidates may be official designations or at least (stable) internal IDs.</p>
+<p>An object may have multiple IDs (different catalog numbers, etc). <a class="el" href="classStelObjectMgr.html#af0a33f6ff1448db085288eea46937399" title="Find an object of the given type and ID.">StelObjectMgr::searchByID()</a> should search through all ID variants, but this method only returns one of them. </p>
+
+<p>Implements <a class="el" href="classStelObject.html#ab11e911fb1974d75b8a9b629a57f243b">StelObject</a>.</p>
+
+</div>
+</div>
+<a id="aaf5512ae388d1e678d745652abac314f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aaf5512ae388d1e678d745652abac314f">&#9670;&nbsp;</a></span>getInfoMap()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class Star &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">QVariantMap <a class="el" href="classStarWrapper.html">StarWrapper</a>&lt; <a class="el" href="structStar.html">Star</a> &gt;::getInfoMap </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classStelCore.html">StelCore</a> *&#160;</td>
+          <td class="paramname"><em>core</em></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">override</span><span class="mlabel">protected</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>In addition to the entries from <a class="el" href="classStelObject.html#a16e447c2dc2cbbe6e4e308376ae0c5ca" title="Return a key/value map with data about an object&#39;s position, magnitude and so on.">StelObject::getInfoMap()</a>, <a class="el" href="classStarWrapper.html">StarWrapper</a> objects provide. </p>
+<ul>
+<li>variable-star (no|eruptive|pulsating|rotating|cataclysmic|eclipsing-binary|variable)</li>
+<li>star-type (star|double-star)</li>
+<li>bV : B-V Color Index A few tags are only present if data known, or for variable or double stars from the WDS catalog:</li>
+<li>absolute-mag</li>
+<li>distance-ly</li>
+<li>parallax</li>
+<li>spectral-class</li>
+<li>period (days)</li>
+<li>wds-year (year of validity of wds... fields)</li>
+<li>wds-position-angle</li>
+<li>wds-separation (arcseconds; 0 for spectroscopic binaries) </li>
+</ul>
+
+<p>Reimplemented from <a class="el" href="classStelObject.html#a16e447c2dc2cbbe6e4e308376ae0c5ca">StelObject</a>.</p>
+
+</div>
+</div>
 <a id="a31c9c31aa1c862ec9a545ff59c5ef474"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a31c9c31aa1c862ec9a545ff59c5ef474">&#9670;&nbsp;</a></span>getJ2000EquatorialPos()</h2>
 
@@ -512,10 +631,41 @@ template&lt;class Star &gt; </div>
 
 </div>
 </div>
+<a id="a48f96c994b59f73665421991689f5e55"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a48f96c994b59f73665421991689f5e55">&#9670;&nbsp;</a></span>getObjectType()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class Star &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">QString <a class="el" href="classStarWrapper.html">StarWrapper</a>&lt; <a class="el" href="structStar.html">Star</a> &gt;::getObjectType </td>
+          <td>(</td>
+          <td class="paramtype">void&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">override</span><span class="mlabel">protected</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<dl class="section return"><dt>Returns</dt><dd>either a generalized variable star type or "star" </dd></dl>
+
+<p>Reimplemented from <a class="el" href="classStarWrapperBase.html#a01ef6ebe1613901419b3cf7575ba9264">StarWrapperBase</a>.</p>
+
+</div>
+</div>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Tue Feb 17 2026 22:25:25 for Stellarium by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1
+Generated on Mon Jun 1 2026 02:12:46 for Stellarium by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1
 </small></address>
 </body>
 </html>

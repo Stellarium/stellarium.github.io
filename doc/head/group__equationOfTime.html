@@ -269,9 +269,6 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>textColorChanged</b> 
 <tr class="memitem:a2155d458be232e0a971945a63ca5511c"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__equationOfTime.html#a2155d458be232e0a971945a63ca5511c">init</a> () override</td></tr>
 <tr class="memdesc:a2155d458be232e0a971945a63ca5511c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Initialize itself.  <a href="group__equationOfTime.html#a2155d458be232e0a971945a63ca5511c">More...</a><br /></td></tr>
 <tr class="separator:a2155d458be232e0a971945a63ca5511c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a076e09bb43e4a5c5e3b904dc5dd616d3"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__equationOfTime.html#a076e09bb43e4a5c5e3b904dc5dd616d3">deinit</a> () override</td></tr>
-<tr class="memdesc:a076e09bb43e4a5c5e3b904dc5dd616d3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Called before the module will be deleted, and before the OpenGL context is suppressed.  <a href="group__equationOfTime.html#a076e09bb43e4a5c5e3b904dc5dd616d3">More...</a><br /></td></tr>
-<tr class="separator:a076e09bb43e4a5c5e3b904dc5dd616d3"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a66c72dbd80d5e5b5a4ee306b9c14f53b"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__equationOfTime.html#a66c72dbd80d5e5b5a4ee306b9c14f53b">draw</a> (<a class="el" href="classStelCore.html">StelCore</a> *core) override</td></tr>
 <tr class="memdesc:a66c72dbd80d5e5b5a4ee306b9c14f53b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Execute all the drawing functions for this module.  <a href="group__equationOfTime.html#a66c72dbd80d5e5b5a4ee306b9c14f53b">More...</a><br /></td></tr>
 <tr class="separator:a66c72dbd80d5e5b5a4ee306b9c14f53b"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -318,6 +315,9 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><b>getFlagShowEOTButton<
 &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classStelModule.html#afe8d617047a16139f392b8e732d8beae">StelModule</a> ()</td></tr>
 <tr class="memdesc:afe8d617047a16139f392b8e732d8beae inherit pub_methods_classStelModule"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructor. Every derived class MUST call setObjectName(className) in its constructor. <br /></td></tr>
 <tr class="separator:afe8d617047a16139f392b8e732d8beae inherit pub_methods_classStelModule"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad2655f22c4eb31d09f1a826ac4c7611f inherit pub_methods_classStelModule"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classStelModule.html#ad2655f22c4eb31d09f1a826ac4c7611f">deinit</a> ()</td></tr>
+<tr class="memdesc:ad2655f22c4eb31d09f1a826ac4c7611f inherit pub_methods_classStelModule"><td class="mdescLeft">&#160;</td><td class="mdescRight">Called before the module will be deleted, and before the OpenGL context is suppressed.  <a href="classStelModule.html#ad2655f22c4eb31d09f1a826ac4c7611f">More...</a><br /></td></tr>
+<tr class="separator:ad2655f22c4eb31d09f1a826ac4c7611f inherit pub_methods_classStelModule"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a5c024983a5f851d62560c4d64fc1d8f1 inherit pub_methods_classStelModule"><td class="memItemLeft" align="right" valign="top">virtual QSettings *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classStelModule.html#a5c024983a5f851d62560c4d64fc1d8f1">getSettings</a> ()</td></tr>
 <tr class="memdesc:a5c024983a5f851d62560c4d64fc1d8f1 inherit pub_methods_classStelModule"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return module-specific settings.  <a href="classStelModule.html#a5c024983a5f851d62560c4d64fc1d8f1">More...</a><br /></td></tr>
 <tr class="separator:a5c024983a5f851d62560c4d64fc1d8f1 inherit pub_methods_classStelModule"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -425,36 +425,6 @@ Additional Inherited Members</h2></td></tr>
 <dl class="section return"><dt>Returns</dt><dd>true if the module has a configuration GUI, else false. </dd></dl>
 
 <p>Reimplemented from <a class="el" href="classStelModule.html#a361f28660ec3002520924cd5cee08ccd">StelModule</a>.</p>
-
-</div>
-</div>
-<a id="a076e09bb43e4a5c5e3b904dc5dd616d3"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a076e09bb43e4a5c5e3b904dc5dd616d3">&#9670;&nbsp;</a></span>deinit()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">void EquationOfTime::deinit </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">override</span><span class="mlabel">virtual</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Called before the module will be deleted, and before the OpenGL context is suppressed. </p>
-<p>Deinitialize all OpenGL texture in this method. </p>
-
-<p>Reimplemented from <a class="el" href="classStelModule.html#ad2655f22c4eb31d09f1a826ac4c7611f">StelModule</a>.</p>
 
 </div>
 </div>
@@ -609,7 +579,7 @@ Additional Inherited Members</h2></td></tr>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Tue Feb 17 2026 22:25:24 for Stellarium by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1
+Generated on Mon Jun 1 2026 02:12:46 for Stellarium by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1
 </small></address>
 </body>
 </html>

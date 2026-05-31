@@ -115,12 +115,12 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:adbd09f5a1ac04d277b2f2a89af6b6717"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classStelObjectMgr.html#adbd09f5a1ac04d277b2f2a89af6b6717">findAndSelect</a> (const QString &amp;name, const QString &amp;objtype, <a class="el" href="classStelModule.html#a03668e7d4ec822bbf5555d43806607ce">StelModule::StelModuleSelectAction</a> action=<a class="el" href="classStelModule.html#a03668e7d4ec822bbf5555d43806607cead07fa7954654c2a44eaa20ed4a9c4f16">StelModule::ReplaceSelection</a>)</td></tr>
 <tr class="memdesc:adbd09f5a1ac04d277b2f2a89af6b6717"><td class="mdescLeft">&#160;</td><td class="mdescRight">Find and select an object from its standard program name and object type name (i.e., the Stellarium class name).  <a href="classStelObjectMgr.html#adbd09f5a1ac04d277b2f2a89af6b6717">More...</a><br /></td></tr>
 <tr class="separator:adbd09f5a1ac04d277b2f2a89af6b6717"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a29a58fdba3c6ad4111f4ea8fd98c6c31"><td class="memItemLeft" align="right" valign="top">QStringList&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classStelObjectMgr.html#a29a58fdba3c6ad4111f4ea8fd98c6c31">listMatchingObjects</a> (const QString &amp;objPrefix, int maxNbItem=5, bool useStartOfWords=false) const</td></tr>
-<tr class="memdesc:a29a58fdba3c6ad4111f4ea8fd98c6c31"><td class="mdescLeft">&#160;</td><td class="mdescRight">Find and return the list of at most maxNbItem objects auto-completing the passed object name.  <a href="classStelObjectMgr.html#a29a58fdba3c6ad4111f4ea8fd98c6c31">More...</a><br /></td></tr>
-<tr class="separator:a29a58fdba3c6ad4111f4ea8fd98c6c31"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a38758580022ca98ce0903766b6035ce4"><td class="memItemLeft" align="right" valign="top"><a id="a38758580022ca98ce0903766b6035ce4"></a>
-QStringList&#160;</td><td class="memItemRight" valign="bottom"><b>listAllModuleObjects</b> (const QString &amp;moduleId, bool inEnglish) const</td></tr>
-<tr class="separator:a38758580022ca98ce0903766b6035ce4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a07e7422eb852cbef4eb0cd4da8ba975e"><td class="memItemLeft" align="right" valign="top">QVector&lt; QPair&lt; QString, <a class="el" href="classQSharedPointerNoDelete.html">StelObjectP</a> &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classStelObjectMgr.html#a07e7422eb852cbef4eb0cd4da8ba975e">listMatchingObjects</a> (const QString &amp;objPrefix, int maxNbItem=5, bool useStartOfWords=false) const</td></tr>
+<tr class="memdesc:a07e7422eb852cbef4eb0cd4da8ba975e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Find and return the list of at most maxNbItem objects auto-completing the passed object name.  <a href="classStelObjectMgr.html#a07e7422eb852cbef4eb0cd4da8ba975e">More...</a><br /></td></tr>
+<tr class="separator:a07e7422eb852cbef4eb0cd4da8ba975e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa482967ae15c1e6138018f8ca4e25bba"><td class="memItemLeft" align="right" valign="top"><a id="aa482967ae15c1e6138018f8ca4e25bba"></a>
+QVector&lt; QPair&lt; QString, <a class="el" href="classQSharedPointerNoDelete.html">StelObjectP</a> &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>listAllModuleObjects</b> (const QString &amp;moduleId, bool inEnglish) const</td></tr>
+<tr class="separator:aa482967ae15c1e6138018f8ca4e25bba"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a88cec934ff7ae601a47278b51a8be61e"><td class="memItemLeft" align="right" valign="top"><a id="a88cec934ff7ae601a47278b51a8be61e"></a>
 QMap&lt; QString, QString &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>objectModulesMap</b> () const</td></tr>
 <tr class="separator:a88cec934ff7ae601a47278b51a8be61e"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -721,14 +721,14 @@ Additional Inherited Members</h2></td></tr>
 
 </div>
 </div>
-<a id="a29a58fdba3c6ad4111f4ea8fd98c6c31"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a29a58fdba3c6ad4111f4ea8fd98c6c31">&#9670;&nbsp;</a></span>listMatchingObjects()</h2>
+<a id="a07e7422eb852cbef4eb0cd4da8ba975e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a07e7422eb852cbef4eb0cd4da8ba975e">&#9670;&nbsp;</a></span>listMatchingObjects()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">QStringList StelObjectMgr::listMatchingObjects </td>
+          <td class="memname">QVector&lt;QPair&lt;QString,<a class="el" href="classQSharedPointerNoDelete.html">StelObjectP</a>&gt; &gt; StelObjectMgr::listMatchingObjects </td>
           <td>(</td>
           <td class="paramtype">const QString &amp;&#160;</td>
           <td class="paramname"><em>objPrefix</em>, </td>
@@ -1064,7 +1064,7 @@ This should be used with caution. Usually you want to use <a class="el" href="cl
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Tue Feb 17 2026 22:25:25 for Stellarium by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1
+Generated on Mon Jun 1 2026 02:12:47 for Stellarium by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1
 </small></address>
 </body>
 </html>
