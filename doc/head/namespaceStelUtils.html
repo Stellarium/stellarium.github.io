@@ -550,6 +550,17 @@ template&lt;typename T , template&lt; typename &gt; typename Container&gt; </td>
 QString&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceStelUtils.html#a7b67fa68473c8c8bdf3e0848d334f63b">getGreekLetterByName</a> (const QString &amp;potentialGreekLetterName)</td></tr>
 <tr class="memdesc:a7b67fa68473c8c8bdf3e0848d334f63b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the Greek unicode character for the specified letter string (i.e. "alpha", "beta", ...) <br /></td></tr>
 <tr class="separator:a7b67fa68473c8c8bdf3e0848d334f63b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7131c5cadef915aa5bdded8a720abdc9"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceStelUtils.html#a7131c5cadef915aa5bdded8a720abdc9">circlesIntersectionArea</a> (double R1, double R2, double d)</td></tr>
+<tr class="memdesc:a7131c5cadef915aa5bdded8a720abdc9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Computes the area of intersection of two circles with given parameters.  <a href="namespaceStelUtils.html#a7131c5cadef915aa5bdded8a720abdc9">More...</a><br /></td></tr>
+<tr class="separator:a7131c5cadef915aa5bdded8a720abdc9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a41f1a23557cac40ece6866d286b4c26d"><td class="memItemLeft" align="right" valign="top"><a id="a41f1a23557cac40ece6866d286b4c26d"></a>
+double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceStelUtils.html#a41f1a23557cac40ece6866d286b4c26d">visibleSolidAngleOfSun</a> (double sunAngularRadius, double moonAngularRadius, double angleBetweenSunAndMoon)</td></tr>
+<tr class="memdesc:a41f1a23557cac40ece6866d286b4c26d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Compute solid angle of the Sun visible taking into account eclipsing by the (assumed spherical) Moon. <br /></td></tr>
+<tr class="separator:a41f1a23557cac40ece6866d286b4c26d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:affcbdd1560f494248db85d13c1c16dd0"><td class="memItemLeft" align="right" valign="top"><a id="affcbdd1560f494248db85d13c1c16dd0"></a>
+double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceStelUtils.html#affcbdd1560f494248db85d13c1c16dd0">sunVisibilityDueToMoon</a> (double sunAngularRadius, double moonAngularRadius, double angleBetweenSunAndMoon)</td></tr>
+<tr class="memdesc:affcbdd1560f494248db85d13c1c16dd0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Compute percentage of the Sun visible taking into account eclipsing by the (assumed spherical) Moon. <br /></td></tr>
+<tr class="separator:affcbdd1560f494248db85d13c1c16dd0"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="var-members"></a>
 Variables</h2></td></tr>
@@ -599,6 +610,50 @@ second_argument_type</td>
 </div>
 </div>
 <h2 class="groupheader">Function Documentation</h2>
+<a id="a7131c5cadef915aa5bdded8a720abdc9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7131c5cadef915aa5bdded8a720abdc9">&#9670;&nbsp;</a></span>circlesIntersectionArea()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">double StelUtils::circlesIntersectionArea </td>
+          <td>(</td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>R1</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>R2</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>d</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Computes the area of intersection of two circles with given parameters. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">R1</td><td>radius of the second circle </td></tr>
+    <tr><td class="paramname">R2</td><td>radius of the second circle </td></tr>
+    <tr><td class="paramname">d</td><td>distance between centers of the circles </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
 <a id="aae7cce0f56e3276d36e7051764be3cd6"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#aae7cce0f56e3276d36e7051764be3cd6">&#9670;&nbsp;</a></span>compareVersions()</h2>
 
@@ -4534,7 +4589,7 @@ template&lt;class T &gt; </div>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Mon Jun 1 2026 02:12:47 for Stellarium by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1
+Generated on Wed Jun 17 2026 16:09:16 for Stellarium by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1
 </small></address>
 </body>
 </html>
