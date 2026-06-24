@@ -21,7 +21,7 @@
   <td id="projectlogo"><img alt="Logo" src="stellarium-logo.png"/></td>
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">Stellarium
-   &#160;<span id="projectnumber">26.1</span>
+   &#160;<span id="projectnumber">26.2</span>
    </div>
   </td>
  </tr>
@@ -104,14 +104,17 @@ Static Public Member Functions</h2></td></tr>
 static <a class="el" href="classStelLocation.html">StelLocation</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classStelLocation.html#a958821f3ab9b5d9548aa78118671d185">createFromLine</a> (const QString &amp;line)</td></tr>
 <tr class="memdesc:a958821f3ab9b5d9548aa78118671d185"><td class="mdescLeft">&#160;</td><td class="mdescRight">Parse a location from a line serialization. <br /></td></tr>
 <tr class="separator:a958821f3ab9b5d9548aa78118671d185"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab708919c05eb12ceaefa7cfe32aa4bd0"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="classVector3.html">Vec3d</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classStelLocation.html#ab708919c05eb12ceaefa7cfe32aa4bd0">pointAtDistanceDegrees</a> (const double centerLon, const double centerLat, const double distDeg, const double bearing)</td></tr>
+<tr class="memdesc:ab708919c05eb12ceaefa7cfe32aa4bd0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Compute a point at <code>distDeg</code> degrees away from the center along the great circle with the given <code>bearing</code>.  <a href="classStelLocation.html#ab708919c05eb12ceaefa7cfe32aa4bd0">More...</a><br /></td></tr>
+<tr class="separator:ab708919c05eb12ceaefa7cfe32aa4bd0"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad22387194b961d549b245639559d8c42"><td class="memItemLeft" align="right" valign="top"><a id="ad22387194b961d549b245639559d8c42"></a>
 static float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classStelLocation.html#ad22387194b961d549b245639559d8c42">distanceDegrees</a> (const float long1, const float lat1, const float long2, const float lat2)</td></tr>
 <tr class="memdesc:ad22387194b961d549b245639559d8c42"><td class="mdescLeft">&#160;</td><td class="mdescRight">Compute great-circle distance between two locations on a spherical body arguments given in decimal degrees. <br /></td></tr>
 <tr class="separator:ad22387194b961d549b245639559d8c42"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a1caa6f78a80d7580523e2fd6aa69bc15"><td class="memItemLeft" align="right" valign="top"><a id="a1caa6f78a80d7580523e2fd6aa69bc15"></a>
-static double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classStelLocation.html#a1caa6f78a80d7580523e2fd6aa69bc15">distanceKm</a> (<a class="el" href="classPlanet.html">Planet</a> *planet, const double long1, const double lat1, const double long2, const double lat2)</td></tr>
-<tr class="memdesc:a1caa6f78a80d7580523e2fd6aa69bc15"><td class="mdescLeft">&#160;</td><td class="mdescRight">Compute great-circle distance between two locations on the current planet (takes flattening into account) arguments given in decimal degrees Source: Jean Meeus, Astronomical Algorithms, 2nd edition, ch.11. <br /></td></tr>
-<tr class="separator:a1caa6f78a80d7580523e2fd6aa69bc15"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6ca3cf2412934c0ae237cff03f979ed7"><td class="memItemLeft" align="right" valign="top"><a id="a6ca3cf2412934c0ae237cff03f979ed7"></a>
+static double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classStelLocation.html#a6ca3cf2412934c0ae237cff03f979ed7">distanceKm</a> (const <a class="el" href="classPlanet.html">Planet</a> &amp;planet, const double long1, const double lat1, const double long2, const double lat2)</td></tr>
+<tr class="memdesc:a6ca3cf2412934c0ae237cff03f979ed7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Compute great-circle distance between two locations on the current planet (takes flattening into account) arguments given in decimal degrees Source: Jean Meeus, Astronomical Algorithms, 2nd edition, ch.11. <br /></td></tr>
+<tr class="separator:a6ca3cf2412934c0ae237cff03f979ed7"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a620274c3135455954c0fd983ebaaceee"><td class="memItemLeft" align="right" valign="top">static double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classStelLocation.html#a620274c3135455954c0fd983ebaaceee">getAzimuthForLocation</a> (double longObs, double latObs, double longTarget, double latTarget)</td></tr>
 <tr class="memdesc:a620274c3135455954c0fd983ebaaceee"><td class="mdescLeft">&#160;</td><td class="mdescRight">Compute azimuth from Obs towards Target.  <a href="classStelLocation.html#a620274c3135455954c0fd983ebaaceee">More...</a><br /></td></tr>
 <tr class="separator:a620274c3135455954c0fd983ebaaceee"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -453,6 +456,57 @@ static const float&#160;</td><td class="memItemRight" valign="bottom"><b>DEFAULT
 
 </div>
 </div>
+<a id="ab708919c05eb12ceaefa7cfe32aa4bd0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab708919c05eb12ceaefa7cfe32aa4bd0">&#9670;&nbsp;</a></span>pointAtDistanceDegrees()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static <a class="el" href="classVector3.html">Vec3d</a> StelLocation::pointAtDistanceDegrees </td>
+          <td>(</td>
+          <td class="paramtype">const double&#160;</td>
+          <td class="paramname"><em>centerLon</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const double&#160;</td>
+          <td class="paramname"><em>centerLat</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const double&#160;</td>
+          <td class="paramname"><em>distDeg</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const double&#160;</td>
+          <td class="paramname"><em>bearing</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Compute a point at <code>distDeg</code> degrees away from the center along the great circle with the given <code>bearing</code>. </p>
+<p>To compute latitude and longitude from this Cartesian point, use <a class="el" href="namespaceStelUtils.html#a199474b7df3ed57733eff4408bce3ef3" title="Convert from Rectangular direction to spherical coordinate components.">StelUtils::rectToSphe</a>. </p>
+
+</div>
+</div>
 <h2 class="groupheader">Field Documentation</h2>
 <a id="a354f87bb129a48fe6295de1050fc2736"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a354f87bb129a48fe6295de1050fc2736">&#9670;&nbsp;</a></span>ianaTimeZone</h2>
@@ -502,7 +556,7 @@ static const float&#160;</td><td class="memItemRight" valign="bottom"><b>DEFAULT
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Sun Apr 5 2026 19:06:38 for Stellarium by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1
+Generated on Thu Jun 25 2026 00:02:15 for Stellarium by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1
 </small></address>
 </body>
 </html>

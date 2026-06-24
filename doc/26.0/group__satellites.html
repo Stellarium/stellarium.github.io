@@ -21,7 +21,7 @@
   <td id="projectlogo"><img alt="Logo" src="stellarium-logo.png"/></td>
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">Stellarium
-   &#160;<span id="projectnumber">26.1</span>
+   &#160;<span id="projectnumber">26.2</span>
    </div>
   </td>
  </tr>
@@ -3683,9 +3683,10 @@ virtual QString&#160;</td><td class="memItemRight" valign="bottom"><a class="el"
 <tr class="memdesc:a372fd47ff9580f1e776c35877ef5af6f inherit pub_methods_classStelModule"><td class="mdescLeft">&#160;</td><td class="mdescRight">Handle pinch gesture events.  <a href="classStelModule.html#a372fd47ff9580f1e776c35877ef5af6f">More...</a><br /></td></tr>
 <tr class="separator:a372fd47ff9580f1e776c35877ef5af6f inherit pub_methods_classStelModule"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr><td colspan="2"><h3>Static Public Member Functions</h3></td></tr>
-<tr class="memitem:ace2d8206d0b761b75064f4cb24642856"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__satellites.html#ace2d8206d0b761b75064f4cb24642856">parseTleFile</a> (QFile &amp;openFile, TleDataHash &amp;tleList, bool addFlagValue=false, const QString &amp;tleURL=&quot;&quot;)</td></tr>
-<tr class="memdesc:ace2d8206d0b761b75064f4cb24642856"><td class="mdescLeft">&#160;</td><td class="mdescRight">Reads a TLE list from a file to the supplied hash.  <a href="group__satellites.html#ace2d8206d0b761b75064f4cb24642856">More...</a><br /></td></tr>
-<tr class="separator:ace2d8206d0b761b75064f4cb24642856"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aca05bdc4a86d90f144036613496b1d69"><td class="memItemLeft" align="right" valign="top"><a id="aca05bdc4a86d90f144036613496b1d69"></a>
+static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__satellites.html#aca05bdc4a86d90f144036613496b1d69">parseDataFile</a> (QFile &amp;openFile, TleDataHash &amp;tleList, bool addFlagValue=false, const QString &amp;tleURL=&quot;&quot;)</td></tr>
+<tr class="memdesc:aca05bdc4a86d90f144036613496b1d69"><td class="mdescLeft">&#160;</td><td class="mdescRight">Depending on file contents, calls either #parseTleFile or #parseCsvFile, forwarding the arguments to the callee. <br /></td></tr>
+<tr class="separator:aca05bdc4a86d90f144036613496b1d69"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad9a819033302a40af69179a85f3791ac"><td class="memItemLeft" align="right" valign="top">static QString&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__satellites.html#ad9a819033302a40af69179a85f3791ac">getSatIdFromLine2</a> (const QString &amp;line)</td></tr>
 <tr class="memdesc:ad9a819033302a40af69179a85f3791ac"><td class="mdescLeft">&#160;</td><td class="mdescRight">Insert a three line TLE into the hash array.  <a href="group__satellites.html#ad9a819033302a40af69179a85f3791ac">More...</a><br /></td></tr>
 <tr class="separator:ad9a819033302a40af69179a85f3791ac"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -4635,65 +4636,6 @@ Additional Inherited Members</h2></td></tr>
 
 <p>Read (or re-read) the plugin's settings from the configuration file. </p>
 <p>This will be called from <a class="el" href="group__satellites.html#a9644f743e0c58300acd1c8f6bf7d4566" title="Initialize itself.">init()</a> and also when restoring defaults (i.e. from the configuration dialog / restore defaults button). </p>
-
-</div>
-</div>
-<a id="ace2d8206d0b761b75064f4cb24642856"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ace2d8206d0b761b75064f4cb24642856">&#9670;&nbsp;</a></span>parseTleFile()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">static void Satellites::parseTleFile </td>
-          <td>(</td>
-          <td class="paramtype">QFile &amp;&#160;</td>
-          <td class="paramname"><em>openFile</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">TleDataHash &amp;&#160;</td>
-          <td class="paramname"><em>tleList</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">bool&#160;</td>
-          <td class="paramname"><em>addFlagValue</em> = <code>false</code>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">const QString &amp;&#160;</td>
-          <td class="paramname"><em>tleURL</em> = <code>&quot;&quot;</code>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">static</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Reads a TLE list from a file to the supplied hash. </p>
-<p>If an entry with the same ID exists in the given hash, its contents are overwritten with the new values. </p><dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramdir"></td><td class="paramname">openFile</td><td>a reference to an <b>open</b> file. </td></tr>
-    <tr><td class="paramdir">[in,out]</td><td class="paramname">tleList</td><td>a hash with satellite IDs as keys. </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">addFlagValue</td><td>value to be set to <a class="el" href="group__satellites.html#a2f14c125c0d78b59d499b8ecc40d8d8a" title="Flag indicating whether this satellite should be added.">TleData::addThis</a> for all. </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">tleURL</td><td>a URL of TLE's source (e.g. Celestrak URL) </td></tr>
-  </table>
-  </dd>
-</dl>
 
 </div>
 </div>
@@ -6116,7 +6058,7 @@ Additional Inherited Members</h2></td></tr>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Sun Apr 5 2026 19:06:37 for Stellarium by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1
+Generated on Thu Jun 25 2026 00:02:14 for Stellarium by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1
 </small></address>
 </body>
 </html>

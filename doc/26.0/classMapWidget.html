@@ -21,7 +21,7 @@
   <td id="projectlogo"><img alt="Logo" src="stellarium-logo.png"/></td>
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">Stellarium
-   &#160;<span id="projectnumber">26.1</span>
+   &#160;<span id="projectnumber">26.2</span>
    </div>
   </td>
  </tr>
@@ -42,6 +42,7 @@ $(function() {
 </div><!-- top -->
 <div class="header">
   <div class="summary">
+<a href="#nested-classes">Data Structures</a> &#124;
 <a href="#signals">Signals</a> &#124;
 <a href="#pub-methods">Public Member Functions</a> &#124;
 <a href="#pro-methods">Protected Member Functions</a>  </div>
@@ -55,6 +56,13 @@ $(function() {
 
 <p><code>#include &lt;MapWidget.hpp&gt;</code></p>
 <table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="nested-classes"></a>
+Data Structures</h2></td></tr>
+<tr class="memitem:structMapWidget_1_1LonLat"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMapWidget.html#structMapWidget_1_1LonLat">LonLat</a></td></tr>
+<tr class="separator:structMapWidget_1_1LonLat"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:structMapWidget_1_1MapPoint"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMapWidget.html#structMapWidget_1_1MapPoint">MapPoint</a></td></tr>
+<tr class="separator:structMapWidget_1_1MapPoint"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="signals"></a>
 Signals</h2></td></tr>
 <tr class="memitem:aaa33f689eac34fd965cc96447a0de2ae"><td class="memItemLeft" align="right" valign="top"><a id="aaa33f689eac34fd965cc96447a0de2ae"></a>
@@ -74,6 +82,9 @@ Public Member Functions</h2></td></tr>
 void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMapWidget.html#a1001102b0920b4b4f56f761e4626a66f">setMarkerVisible</a> (bool visible)</td></tr>
 <tr class="memdesc:a1001102b0920b4b4f56f761e4626a66f"><td class="mdescLeft">&#160;</td><td class="mdescRight">allow hiding the location arrow (if sitting on an observer) <br /></td></tr>
 <tr class="separator:a1001102b0920b4b4f56f761e4626a66f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a84befa1e24d24e1ed7b1a5e9ec274b54"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMapWidget.html#a84befa1e24d24e1ed7b1a5e9ec274b54">setLocationFilter</a> (double longitude, double latitude, double searchRadius)</td></tr>
+<tr class="memdesc:a84befa1e24d24e1ed7b1a5e9ec274b54"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the search circle to mark the locations available.  <a href="classMapWidget.html#a84befa1e24d24e1ed7b1a5e9ec274b54">More...</a><br /></td></tr>
+<tr class="separator:a84befa1e24d24e1ed7b1a5e9ec274b54"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a83a9be7d223a26204251c5aa854e7a44"><td class="memItemLeft" align="right" valign="top"><a id="a83a9be7d223a26204251c5aa854e7a44"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><b>setMap</b> (const QPixmap &amp;map)</td></tr>
 <tr class="separator:a83a9be7d223a26204251c5aa854e7a44"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -83,13 +94,134 @@ Protected Member Functions</h2></td></tr>
 <tr class="memitem:aa48e5f8c7c771113afef4c63d8c0f6c4"><td class="memItemLeft" align="right" valign="top"><a id="aa48e5f8c7c771113afef4c63d8c0f6c4"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><b>mousePressEvent</b> (QMouseEvent *event) override</td></tr>
 <tr class="separator:aa48e5f8c7c771113afef4c63d8c0f6c4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac4fa5570db0c7035e90f990ae9c0ea27"><td class="memItemLeft" align="right" valign="top"><a id="ac4fa5570db0c7035e90f990ae9c0ea27"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>mouseMoveEvent</b> (QMouseEvent *event) override</td></tr>
+<tr class="separator:ac4fa5570db0c7035e90f990ae9c0ea27"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a88af0745f1ebbbdd1b5d48518dbcd4d9"><td class="memItemLeft" align="right" valign="top"><a id="a88af0745f1ebbbdd1b5d48518dbcd4d9"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>mouseReleaseEvent</b> (QMouseEvent *event) override</td></tr>
+<tr class="separator:a88af0745f1ebbbdd1b5d48518dbcd4d9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a417abfa08f513ccdb2d205145891985d"><td class="memItemLeft" align="right" valign="top"><a id="a417abfa08f513ccdb2d205145891985d"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>wheelEvent</b> (QWheelEvent *event) override</td></tr>
+<tr class="separator:a417abfa08f513ccdb2d205145891985d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a5f8bd5f995e15b66ac48b7fbb9243726"><td class="memItemLeft" align="right" valign="top"><a id="a5f8bd5f995e15b66ac48b7fbb9243726"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><b>paintEvent</b> (QPaintEvent *event) override</td></tr>
 <tr class="separator:a5f8bd5f995e15b66ac48b7fbb9243726"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab592d95fedf75d119f24d735cee48731"><td class="memItemLeft" align="right" valign="top"><a id="ab592d95fedf75d119f24d735cee48731"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>resizeEvent</b> (QResizeEvent *event) override</td></tr>
+<tr class="separator:ab592d95fedf75d119f24d735cee48731"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a27195a92fbb2ae2111664c71bf2dbce9"><td class="memItemLeft" align="right" valign="top"><a id="a27195a92fbb2ae2111664c71bf2dbce9"></a>
+<a class="el" href="classMapWidget.html#structMapWidget_1_1LonLat">LonLat</a>&#160;</td><td class="memItemRight" valign="bottom"><b>mapPointToLonLat</b> (const QPointF &amp;mapPoint) const</td></tr>
+<tr class="separator:a27195a92fbb2ae2111664c71bf2dbce9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adcd225b907073aa7ea45a68c30899646"><td class="memItemLeft" align="right" valign="top"><a id="adcd225b907073aa7ea45a68c30899646"></a>
+<a class="el" href="classMapWidget.html#structMapWidget_1_1MapPoint">MapPoint</a>&#160;</td><td class="memItemRight" valign="bottom"><b>lonLatToMapPoint</b> (double lon, double lat) const</td></tr>
+<tr class="separator:adcd225b907073aa7ea45a68c30899646"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Special widget that shows a world map. </p>
-</div><h2 class="groupheader">Member Function Documentation</h2>
+</div><hr/><h2 class="groupheader">Data Structure Documentation</h2>
+<a name="structMapWidget_1_1LonLat" id="structMapWidget_1_1LonLat"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#structMapWidget_1_1LonLat">&#9670;&nbsp;</a></span>MapWidget::LonLat</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">struct MapWidget::LonLat</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<div class="textblock"></div><table class="fieldtable">
+<tr><th colspan="3">Data Fields</th></tr>
+<tr><td class="fieldtype">
+<a id="ac18223081ab000da696a4f21a19cfa1d"></a>double</td>
+<td class="fieldname">
+latitude</td>
+<td class="fielddoc">
+</td></tr>
+<tr><td class="fieldtype">
+<a id="a82787643b3bf738c79c54bee9fabb2e6"></a>double</td>
+<td class="fieldname">
+longitude</td>
+<td class="fielddoc">
+</td></tr>
+</table>
+
+</div>
+</div>
+<a name="structMapWidget_1_1MapPoint" id="structMapWidget_1_1MapPoint"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#structMapWidget_1_1MapPoint">&#9670;&nbsp;</a></span>MapWidget::MapPoint</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">struct MapWidget::MapPoint</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<div class="textblock"></div><table class="fieldtable">
+<tr><th colspan="3">Data Fields</th></tr>
+<tr><td class="fieldtype">
+<a id="a0a01c5b3c0c8edc9205743b65b0cb606"></a>double</td>
+<td class="fieldname">
+x</td>
+<td class="fielddoc">
+</td></tr>
+<tr><td class="fieldtype">
+<a id="a78497feafebcf9287180e84c9cc6e446"></a>double</td>
+<td class="fieldname">
+y</td>
+<td class="fielddoc">
+</td></tr>
+</table>
+
+</div>
+</div>
+<h2 class="groupheader">Member Function Documentation</h2>
+<a id="a84befa1e24d24e1ed7b1a5e9ec274b54"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a84befa1e24d24e1ed7b1a5e9ec274b54">&#9670;&nbsp;</a></span>setLocationFilter()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void MapWidget::setLocationFilter </td>
+          <td>(</td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>longitude</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>latitude</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>searchRadius</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Set the search circle to mark the locations available. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">longitude</td><td>longitude in degrees in the range [-180;180[ </td></tr>
+    <tr><td class="paramname">latitude</td><td>latitude in degrees in the range [-90;90] </td></tr>
+    <tr><td class="paramname">searchRadius</td><td>search radius in degrees in the range ]0;180]. If <code>searchRadius</code> is set to 180, filtering is considered disabled. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
 <a id="a246ca7dc841fa829fce0e5d54f5a27d5"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a246ca7dc841fa829fce0e5d54f5a27d5">&#9670;&nbsp;</a></span>setMarkerPos()</h2>
 
@@ -130,7 +262,7 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>paintEvent</b> (QPain
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Sun Apr 5 2026 19:06:38 for Stellarium by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1
+Generated on Thu Jun 25 2026 00:02:14 for Stellarium by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1
 </small></address>
 </body>
 </html>

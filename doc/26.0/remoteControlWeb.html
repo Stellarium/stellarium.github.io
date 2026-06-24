@@ -21,7 +21,7 @@
   <td id="projectlogo"><img alt="Logo" src="stellarium-logo.png"/></td>
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">Stellarium
-   &#160;<span id="projectnumber">26.1</span>
+   &#160;<span id="projectnumber">26.2</span>
    </div>
   </td>
  </tr>
@@ -365,9 +365,9 @@ api/flags</h3>
 <p>This is a utility module, which can be used to implement checkboxes for enum flag types, where each checkbox sets a specific bit of a single value. The module should be constructed with <code>new</code>, the constructor takes the parent element of a list of checkboxes (<code>input</code> of type checkbox) and a method which is called back when the internal value changes (i.e. the user clicks a checkbox). It provides the <code>setValue</code> method to set the current value and check the correct checkboxes. The bit value of each <code>input</code> should be specified as its <code>value</code> property, in hexadecimal string format (for example <code>0x0004</code>)</p>
 <h3><a class="anchor" id="rcApiLocation"></a>
 api/location</h3>
-<p>Module which connects to the <a class="el" href="group__remoteControl.html#classLocationService" title="Provides methods to look up location-related information, and change the current location.">LocationService</a> and the <a class="el" href="group__remoteControl.html#classLocationSearchService" title="Provides predefined location search functionality, using the StelLocationMgr.">LocationSearchService</a>. It emits the following events whenever the specified field changed: <code>planetChanged</code>,<code>nameChanged</code>, <code>countryChanged</code>, <code>altitudeChanged</code>, <code>latitudeChanged</code>, <code>longitudeChanged</code>, <code>positionChanged</code> (emitted when either lat or lon changed)</p>
+<p>Module which connects to the <a class="el" href="group__remoteControl.html#classLocationService" title="Provides methods to look up location-related information, and change the current location.">LocationService</a> and the <a class="el" href="group__remoteControl.html#classLocationSearchService" title="Provides predefined location search functionality, using the StelLocationMgr.">LocationSearchService</a>. It emits the following events whenever the specified field changed: <code>planetChanged</code>,<code>nameChanged</code>, <code>regionChanged</code>, <code>altitudeChanged</code>, <code>latitudeChanged</code>, <code>longitudeChanged</code>, <code>positionChanged</code> (emitted when either lat or lon changed)</p>
 <p>It also has <code>set</code> methods for these fields. Furthermore, it provides <code>performLocationSearch</code>, which searches the predefined locations for a specific search string, and <code>performNearbySearch</code>, which searches predefined locations near a given lat/lon on the current planet. These methods take a callback parameter to notify the caller of the results. The <code>setLocationById</code> method can then be used to set the location to a result of these 2 methods.</p>
-<p>It also provides a <code>loadCountryList</code> and a <code>loadPlanetList</code> which load the specified lists and return the results with a callback.</p>
+<p>It also provides a <code>loadRegionList</code> and a <code>loadPlanetList</code> which load the specified lists and return the results with a callback.</p>
 <h3><a class="anchor" id="rcApiProperties"></a>
 api/properties</h3>
 <p>Processes <a class="el" href="classStelProperty.html" title="Wrapper around a Q_PROPERTY (see the Qt property system for more information) of a specific object,...">StelProperty</a> related things. Like the <a class="el" href="remoteControlWeb.html#rcApiActions">api/actions</a> module, it emits 2 events when it detects a <a class="el" href="classStelProperty.html" title="Wrapper around a Q_PROPERTY (see the Qt property system for more information) of a specific object,...">StelProperty</a> changed:</p><ul>
@@ -469,7 +469,7 @@ ui/viewoptions</h3>
 </div><!-- PageDoc -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Sun Apr 5 2026 19:06:37 for Stellarium by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1
+Generated on Thu Jun 25 2026 00:02:14 for Stellarium by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1
 </small></address>
 </body>
 </html>
