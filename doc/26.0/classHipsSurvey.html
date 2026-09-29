@@ -21,7 +21,7 @@
   <td id="projectlogo"><img alt="Logo" src="stellarium-logo.png"/></td>
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">Stellarium
-   &#160;<span id="projectnumber">26.2</span>
+   &#160;<span id="projectnumber">26.3</span>
    </div>
   </td>
  </tr>
@@ -55,6 +55,12 @@ $(function() {
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-types"></a>
 Public Types</h2></td></tr>
+<tr class="memitem:a9908dcb374aa0a6446165a0eabf2c11a"><td class="memItemLeft" align="right" valign="top"><a id="a9908dcb374aa0a6446165a0eabf2c11a"></a>enum &#160;</td><td class="memItemRight" valign="bottom"><b>ColorChannel</b> { <b>ColorChannelRgb</b> = 0
+, <b>ColorChannelRed</b> = 1
+, <b>ColorChannelGreen</b> = 2
+, <b>ColorChannelBlue</b> = 3
+ }</td></tr>
+<tr class="separator:a9908dcb374aa0a6446165a0eabf2c11a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a1980048b46cdb7ecf0abd6457729f727"><td class="memItemLeft" align="right" valign="top"><a id="a1980048b46cdb7ecf0abd6457729f727"></a>
 typedef std::function&lt; void(const QVector&lt; <a class="el" href="classVector3.html">Vec3d</a> &gt; &amp;verts, const QVector&lt; <a class="el" href="classVector2.html">Vec2f</a> &gt; &amp;tex, const QVector&lt; uint16_t &gt; &amp;indices)&gt;&#160;</td><td class="memItemRight" valign="bottom"><b>DrawCallback</b></td></tr>
 <tr class="separator:a1980048b46cdb7ecf0abd6457729f727"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -70,6 +76,9 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>statusChanged</b> (vo
 <tr class="memitem:a0c1ef8822f068fc088775145933b461c"><td class="memItemLeft" align="right" valign="top"><a id="a0c1ef8822f068fc088775145933b461c"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><b>visibleChanged</b> (bool)</td></tr>
 <tr class="separator:a0c1ef8822f068fc088775145933b461c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9b40a658eec39d18a971c54ca6bc0c85"><td class="memItemLeft" align="right" valign="top"><a id="a9b40a658eec39d18a971c54ca6bc0c85"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>displaySettingsChanged</b> (void)</td></tr>
+<tr class="separator:a9b40a658eec39d18a971c54ca6bc0c85"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
@@ -90,9 +99,9 @@ float&#160;</td><td class="memItemRight" valign="bottom"><b>getInterstate</b> ()
 <tr class="memitem:af349fb207fb247e7b9cd40035b4efea4"><td class="memItemLeft" align="right" valign="top"><a id="af349fb207fb247e7b9cd40035b4efea4"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><b>hideProgressBar</b> ()</td></tr>
 <tr class="separator:af349fb207fb247e7b9cd40035b4efea4"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a3c98ea85f868b30c4583f48f6bccd74e"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classHipsSurvey.html#a3c98ea85f868b30c4583f48f6bccd74e">draw</a> (<a class="el" href="classStelPainter.html">StelPainter</a> *sPainter, double angle=2.0 *M_PI, DrawCallback callback=Q_NULLPTR)</td></tr>
-<tr class="memdesc:a3c98ea85f868b30c4583f48f6bccd74e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Render the survey.  <a href="classHipsSurvey.html#a3c98ea85f868b30c4583f48f6bccd74e">More...</a><br /></td></tr>
-<tr class="separator:a3c98ea85f868b30c4583f48f6bccd74e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad9d026712fcf6c4253a0b2c5a668fb31"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classHipsSurvey.html#ad9d026712fcf6c4253a0b2c5a668fb31">draw</a> (<a class="el" href="classStelPainter.html">StelPainter</a> *sPainter, double angle=2.0 *M_PI, DrawCallback callback=Q_NULLPTR, bool withAtmosphericExtinction=false)</td></tr>
+<tr class="memdesc:ad9d026712fcf6c4253a0b2c5a668fb31"><td class="mdescLeft">&#160;</td><td class="mdescRight">Render the survey.  <a href="classHipsSurvey.html#ad9d026712fcf6c4253a0b2c5a668fb31">More...</a><br /></td></tr>
+<tr class="separator:ad9d026712fcf6c4253a0b2c5a668fb31"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab702aa879f254ae42dd96404247a1d8e"><td class="memItemLeft" align="right" valign="top"><a id="ab702aa879f254ae42dd96404247a1d8e"></a>
 const QString &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classHipsSurvey.html#ab702aa879f254ae42dd96404247a1d8e">getUrl</a> () const</td></tr>
 <tr class="memdesc:ab702aa879f254ae42dd96404247a1d8e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return the source URL of the survey. <br /></td></tr>
@@ -122,6 +131,57 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>setNormalsSurvey</b> 
 <tr class="memitem:a25b60326f9d6a4e87ac714abd0a4a5cc"><td class="memItemLeft" align="right" valign="top"><a id="a25b60326f9d6a4e87ac714abd0a4a5cc"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><b>setHorizonsSurvey</b> (const HipsSurveyP &amp;horizons)</td></tr>
 <tr class="separator:a25b60326f9d6a4e87ac714abd0a4a5cc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a63e108fb0fe1ebb5fa7372e721889527"><td class="memItemLeft" align="right" valign="top"><a id="a63e108fb0fe1ebb5fa7372e721889527"></a>
+float&#160;</td><td class="memItemRight" valign="bottom"><b>getGamma</b> () const</td></tr>
+<tr class="separator:a63e108fb0fe1ebb5fa7372e721889527"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2ed320054fb73e696e77cb2c1dbed199"><td class="memItemLeft" align="right" valign="top"><a id="a2ed320054fb73e696e77cb2c1dbed199"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>setGamma</b> (float value)</td></tr>
+<tr class="separator:a2ed320054fb73e696e77cb2c1dbed199"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad32baf5a6ae8891648f6296a628238f7"><td class="memItemLeft" align="right" valign="top"><a id="ad32baf5a6ae8891648f6296a628238f7"></a>
+float&#160;</td><td class="memItemRight" valign="bottom"><b>getSaturation</b> () const</td></tr>
+<tr class="separator:ad32baf5a6ae8891648f6296a628238f7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac4c6282a0750871d412cf6d1d6e5f36f"><td class="memItemLeft" align="right" valign="top"><a id="ac4c6282a0750871d412cf6d1d6e5f36f"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>setSaturation</b> (float value)</td></tr>
+<tr class="separator:ac4c6282a0750871d412cf6d1d6e5f36f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa461b3962604cbef9f95244e16509ee0"><td class="memItemLeft" align="right" valign="top"><a id="aa461b3962604cbef9f95244e16509ee0"></a>
+float&#160;</td><td class="memItemRight" valign="bottom"><b>getBrightness</b> () const</td></tr>
+<tr class="separator:aa461b3962604cbef9f95244e16509ee0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a99c87b06a205e0498051e3bbed0008e1"><td class="memItemLeft" align="right" valign="top"><a id="a99c87b06a205e0498051e3bbed0008e1"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>setBrightness</b> (float value)</td></tr>
+<tr class="separator:a99c87b06a205e0498051e3bbed0008e1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a41bf34b07fd5cdc5dd9885f321f73543"><td class="memItemLeft" align="right" valign="top"><a id="a41bf34b07fd5cdc5dd9885f321f73543"></a>
+float&#160;</td><td class="memItemRight" valign="bottom"><b>getContrast</b> () const</td></tr>
+<tr class="separator:a41bf34b07fd5cdc5dd9885f321f73543"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a791c234f354b017c450e5369cad838b3"><td class="memItemLeft" align="right" valign="top"><a id="a791c234f354b017c450e5369cad838b3"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>setContrast</b> (float value)</td></tr>
+<tr class="separator:a791c234f354b017c450e5369cad838b3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a63dbe2eaa71e416a3c42e1937f636e6e"><td class="memItemLeft" align="right" valign="top"><a id="a63dbe2eaa71e416a3c42e1937f636e6e"></a>
+float&#160;</td><td class="memItemRight" valign="bottom"><b>getOpacity</b> () const</td></tr>
+<tr class="separator:a63dbe2eaa71e416a3c42e1937f636e6e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0e83b2b843526a80347474cdef160593"><td class="memItemLeft" align="right" valign="top"><a id="a0e83b2b843526a80347474cdef160593"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>setOpacity</b> (float value)</td></tr>
+<tr class="separator:a0e83b2b843526a80347474cdef160593"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a212cd27520b7f3785d3fac2267abfb0a"><td class="memItemLeft" align="right" valign="top"><a id="a212cd27520b7f3785d3fac2267abfb0a"></a>
+int&#160;</td><td class="memItemRight" valign="bottom"><b>getColorChannel</b> () const</td></tr>
+<tr class="separator:a212cd27520b7f3785d3fac2267abfb0a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad13e15fde6209d48c641713acad0e4de"><td class="memItemLeft" align="right" valign="top"><a id="ad13e15fde6209d48c641713acad0e4de"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>setColorChannel</b> (int value)</td></tr>
+<tr class="separator:ad13e15fde6209d48c641713acad0e4de"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a60aac5c07c02811748020a82f22b1b95"><td class="memItemLeft" align="right" valign="top"><a id="a60aac5c07c02811748020a82f22b1b95"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><b>getInvertedColors</b> () const</td></tr>
+<tr class="separator:a60aac5c07c02811748020a82f22b1b95"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1462f41f8ca2b030425ef76806e776c3"><td class="memItemLeft" align="right" valign="top"><a id="a1462f41f8ca2b030425ef76806e776c3"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>setInvertedColors</b> (bool value)</td></tr>
+<tr class="separator:a1462f41f8ca2b030425ef76806e776c3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adb51c0a3bfa4ab973a4727ba2a175e7d"><td class="memItemLeft" align="right" valign="top"><a id="adb51c0a3bfa4ab973a4727ba2a175e7d"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>setDisplaySettings</b> (float gamma, float saturation, float brightness, float contrast, float opacity, int colorChannel, bool invertedColors)</td></tr>
+<tr class="separator:adb51c0a3bfa4ab973a4727ba2a175e7d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a94f89bd5f7696cc32e86d05c5488997f"><td class="memItemLeft" align="right" valign="top"><a id="a94f89bd5f7696cc32e86d05c5488997f"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>resetDisplaySettings</b> ()</td></tr>
+<tr class="separator:a94f89bd5f7696cc32e86d05c5488997f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7ae362adcfa6412d87d62a2270d3d38c"><td class="memItemLeft" align="right" valign="top"><a id="a7ae362adcfa6412d87d62a2270d3d38c"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><b>hasDefaultDisplaySettings</b> () const</td></tr>
+<tr class="separator:a7ae362adcfa6412d87d62a2270d3d38c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-static-methods"></a>
 Static Public Member Functions</h2></td></tr>
@@ -147,6 +207,27 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><b>isLoading</b></td></t
 <tr class="memitem:ad3042ade93ac39d9d46e6ea26507272e"><td class="memItemLeft" align="right" valign="top"><a id="ad3042ade93ac39d9d46e6ea26507272e"></a>
 bool&#160;</td><td class="memItemRight" valign="bottom"><b>visible</b></td></tr>
 <tr class="separator:ad3042ade93ac39d9d46e6ea26507272e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a445e67de84b09e95bf1b08a078fd8381"><td class="memItemLeft" align="right" valign="top"><a id="a445e67de84b09e95bf1b08a078fd8381"></a>
+float&#160;</td><td class="memItemRight" valign="bottom"><b>gamma</b> = 1.f</td></tr>
+<tr class="separator:a445e67de84b09e95bf1b08a078fd8381"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aaf7e9a260f7224f55d27478b5ba323c7"><td class="memItemLeft" align="right" valign="top"><a id="aaf7e9a260f7224f55d27478b5ba323c7"></a>
+float&#160;</td><td class="memItemRight" valign="bottom"><b>saturation</b> = 1.f</td></tr>
+<tr class="separator:aaf7e9a260f7224f55d27478b5ba323c7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a633955aacde4e0a28238b16970c560d8"><td class="memItemLeft" align="right" valign="top"><a id="a633955aacde4e0a28238b16970c560d8"></a>
+float&#160;</td><td class="memItemRight" valign="bottom"><b>brightness</b> = 1.f</td></tr>
+<tr class="separator:a633955aacde4e0a28238b16970c560d8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab841515e4b409a0318aa6be04eb7fc00"><td class="memItemLeft" align="right" valign="top"><a id="ab841515e4b409a0318aa6be04eb7fc00"></a>
+float&#160;</td><td class="memItemRight" valign="bottom"><b>contrast</b> = 1.f</td></tr>
+<tr class="separator:ab841515e4b409a0318aa6be04eb7fc00"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac9150284386d975ecddab0748f42679c"><td class="memItemLeft" align="right" valign="top"><a id="ac9150284386d975ecddab0748f42679c"></a>
+float&#160;</td><td class="memItemRight" valign="bottom"><b>opacity</b> = 1.f</td></tr>
+<tr class="separator:ac9150284386d975ecddab0748f42679c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afba744508a9c31d3f652bffe76928b32"><td class="memItemLeft" align="right" valign="top"><a id="afba744508a9c31d3f652bffe76928b32"></a>
+int&#160;</td><td class="memItemRight" valign="bottom"><b>colorChannel</b> = ColorChannelRgb</td></tr>
+<tr class="separator:afba744508a9c31d3f652bffe76928b32"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1d6ffc181dd060d5d6ee3a78ea71288f"><td class="memItemLeft" align="right" valign="top"><a id="a1d6ffc181dd060d5d6ee3a78ea71288f"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><b>invertedColors</b> = false</td></tr>
+<tr class="separator:a1d6ffc181dd060d5d6ee3a78ea71288f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a94a4dafe2b29e434b88bd51105d3e297"><td class="memItemLeft" align="right" valign="top"><a id="a94a4dafe2b29e434b88bd51105d3e297"></a>
 QString&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classHipsSurvey.html#a94a4dafe2b29e434b88bd51105d3e297">planet</a></td></tr>
 <tr class="memdesc:a94a4dafe2b29e434b88bd51105d3e297"><td class="mdescLeft">&#160;</td><td class="mdescRight">The name of the planet the survey is attached to, or empty if this is a skysurvey. <br /></td></tr>
@@ -224,8 +305,8 @@ class&#160;</td><td class="memItemRight" valign="bottom"><b>HipsMgr</b></td></tr
 </div>
 </div>
 <h2 class="groupheader">Member Function Documentation</h2>
-<a id="a3c98ea85f868b30c4583f48f6bccd74e"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a3c98ea85f868b30c4583f48f6bccd74e">&#9670;&nbsp;</a></span>draw()</h2>
+<a id="ad9d026712fcf6c4253a0b2c5a668fb31"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad9d026712fcf6c4253a0b2c5a668fb31">&#9670;&nbsp;</a></span>draw()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -246,7 +327,13 @@ class&#160;</td><td class="memItemRight" valign="bottom"><b>HipsMgr</b></td></tr
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">DrawCallback&#160;</td>
-          <td class="paramname"><em>callback</em> = <code>Q_NULLPTR</code>&#160;</td>
+          <td class="paramname"><em>callback</em> = <code>Q_NULLPTR</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>withAtmosphericExtinction</em> = <code>false</code>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -271,7 +358,7 @@ class&#160;</td><td class="memItemRight" valign="bottom"><b>HipsMgr</b></td></tr
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Thu Jun 25 2026 00:02:14 for Stellarium by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1
+Generated on Mon Sep 28 2026 22:15:27 for Stellarium by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1
 </small></address>
 </body>
 </html>

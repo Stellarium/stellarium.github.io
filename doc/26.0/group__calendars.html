@@ -21,7 +21,7 @@
   <td id="projectlogo"><img alt="Logo" src="stellarium-logo.png"/></td>
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">Stellarium
-   &#160;<span id="projectnumber">26.2</span>
+   &#160;<span id="projectnumber">26.3</span>
    </div>
   </td>
  </tr>
@@ -5581,7 +5581,9 @@ argument order is different from CC:UE </dd></dl>
 </table>
 </div><div class="memdoc">
 <dl class="section return"><dt>Returns</dt><dd>equation of time in fractions of a day </dd></dl>
-<dl class="section note"><dt>Note</dt><dd>We use functions from Stellarium instead of the functions from CC:UE 14.20. </dd></dl>
+<dl class="section note"><dt>Note</dt><dd>We use functions from Stellarium and Meeus, Astronomical Algorithms 2nd ed. 28.3, instead of the very similar functions from CC:UE 14.20. </dd>
+<dd>
+This introduces a slight deviation from <a class="el" href="classStelCore.html#a602478b5e58e460bcf54930f757c383b" title="Get solution of equation of time [minutes].">StelCore::getSolutionEquationOfTime()</a> which is more accurate. </dd></dl>
 
 </div>
 </div>
@@ -8858,6 +8860,14 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="grou
 void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__calendars.html#adc43a74d4d57fe78e7438394933afce2">showTibetan</a> (bool b)</td></tr>
 <tr class="memdesc:adc43a74d4d57fe78e7438394933afce2"><td class="mdescLeft">&#160;</td><td class="mdescRight">activate display of Tibetan <br /></td></tr>
 <tr class="separator:adc43a74d4d57fe78e7438394933afce2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa638cfd912dea0aaece23c10b7457fcb"><td class="memItemLeft" align="right" valign="top"><a id="aa638cfd912dea0aaece23c10b7457fcb"></a>
+int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__calendars.html#aa638cfd912dea0aaece23c10b7457fcb">getMayaCorrelationJD</a> ()</td></tr>
+<tr class="memdesc:aa638cfd912dea0aaece23c10b7457fcb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get correlation constant. RD's default is 584283, but there are others. <br /></td></tr>
+<tr class="separator:aa638cfd912dea0aaece23c10b7457fcb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a243b744124e818f4d679c6a9ff19a0dd"><td class="memItemLeft" align="right" valign="top"><a id="a243b744124e818f4d679c6a9ff19a0dd"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__calendars.html#a243b744124e818f4d679c6a9ff19a0dd">setMayaCorrelationJD</a> (const int jd)</td></tr>
+<tr class="memdesc:a243b744124e818f4d679c6a9ff19a0dd"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set correlation constant. RD's default is 584283, but there are others. <br /></td></tr>
+<tr class="separator:a243b744124e818f4d679c6a9ff19a0dd"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr><td colspan="2"><h3>Signals</h3></td></tr>
 <tr class="memitem:a537bd95b9d3c4cc414205a5bd923b47f"><td class="memItemLeft" align="right" valign="top"><a id="a537bd95b9d3c4cc414205a5bd923b47f"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><b>enabledChanged</b> (bool b)</td></tr>
@@ -8982,6 +8992,9 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>showBahaiAstronomical
 <tr class="memitem:ac2fd6b471f9eda64eb95d98e0dc7680f"><td class="memItemLeft" align="right" valign="top"><a id="ac2fd6b471f9eda64eb95d98e0dc7680f"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><b>showTibetanChanged</b> (bool b)</td></tr>
 <tr class="separator:ac2fd6b471f9eda64eb95d98e0dc7680f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae6f0ea79863efdd8aa44c4f82a544e95"><td class="memItemLeft" align="right" valign="top"><a id="ae6f0ea79863efdd8aa44c4f82a544e95"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>mayaCorrelationJDChanged</b> (int jd)</td></tr>
+<tr class="separator:ae6f0ea79863efdd8aa44c4f82a544e95"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr><td colspan="2"><h3>Public Member Functions</h3></td></tr>
 <tr class="memitem:a37bcd6a013f613e328607f5637adb320"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__calendars.html#a37bcd6a013f613e328607f5637adb320">init</a> () override</td></tr>
 <tr class="memdesc:a37bcd6a013f613e328607f5637adb320"><td class="mdescLeft">&#160;</td><td class="mdescRight">Initialize itself.  <a href="group__calendars.html#a37bcd6a013f613e328607f5637adb320">More...</a><br /></td></tr>
@@ -9171,6 +9184,9 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><b>flagShowBahaiAstronom
 <tr class="memitem:a887a191f6054c7719508c275b2a576d6"><td class="memItemLeft" align="right" valign="top"><a id="a887a191f6054c7719508c275b2a576d6"></a>
 bool&#160;</td><td class="memItemRight" valign="bottom"><b>flagShowTibetan</b></td></tr>
 <tr class="separator:a887a191f6054c7719508c275b2a576d6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af49e86341211c665e94b9104413bbbfa"><td class="memItemLeft" align="right" valign="top"><a id="af49e86341211c665e94b9104413bbbfa"></a>
+int&#160;</td><td class="memItemRight" valign="bottom"><b>mayaCorrelationJD</b></td></tr>
+<tr class="separator:af49e86341211c665e94b9104413bbbfa"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="inherited"></a>
 Additional Inherited Members</h2></td></tr>
@@ -9258,7 +9274,7 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Get a pointer to the respective <a class="el" href="group__calendars.html#classCalendar" title="Superclass for all calendars, capable of a multitude of astronomical calculations.">Calendar</a>. </p>
-<p>Returns nullptr if not found. Valid names: Julian, RevisedJulian, Gregorian, ISO, Icelandic, Roman, Olympic, Egyptian, Armenian, Zoroastrian, Coptic, Ethiopic, Islamic, Hebrew, OldHinduSolar, OldHinduLunar, NewHinduSolar, NewHinduLunar, Balinese, Tibetan, BahaiArithmetic, BahaiAstronomical, MayaLongCount, MayaHaab, MayaTzolkin, AztecXihuitl, AztecTonalpohualli TODO: ADD HERE: Chinese, ... </p>
+<p>Returns nullptr if not found. Valid names: Julian, RevisedJulian, Gregorian, ISO, Icelandic, Roman, Byzantine, Olympic, Egyptian, Armenian, Zoroastrian, Coptic, Ethiopic, Chinese, Japanese, Korean, Vietnamese, Islamic, Hebrew, OldHinduSolar, OldHinduLunar, NewHinduSolar, NewHinduLunar, AstroHinduSolar, AstroHinduLunar, MayaLongCount, MayaHaab, MayaTzolkin, AztecXihuitl, AztecTonalpohualli Balinese, FrenchAstronomical, FrenchArithmetic, PersianArithmetic, PersianAstronomical, BahaiArithmetic, BahaiAstronomical, Tibetan. </p>
 
 </div>
 </div>
@@ -21693,7 +21709,7 @@ QVector&lt; int &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Thu Jun 25 2026 00:02:14 for Stellarium by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1
+Generated on Mon Sep 28 2026 22:15:27 for Stellarium by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1
 </small></address>
 </body>
 </html>

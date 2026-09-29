@@ -21,7 +21,7 @@
   <td id="projectlogo"><img alt="Logo" src="stellarium-logo.png"/></td>
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">Stellarium
-   &#160;<span id="projectnumber">26.2</span>
+   &#160;<span id="projectnumber">26.3</span>
    </div>
   </td>
  </tr>
@@ -165,12 +165,12 @@ static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" hre
 <tr class="memitem:ab59603f6e7d520ba480eba24f8660979"><td class="memItemLeft" align="right" valign="top">static double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classStelMainScriptAPI.html#ab59603f6e7d520ba480eba24f8660979">getViewDecJ2000Angle</a> ()</td></tr>
 <tr class="memdesc:ab59603f6e7d520ba480eba24f8660979"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the current viewing direction Declination angle in J2000 frame at center of view.  <a href="classStelMainScriptAPI.html#ab59603f6e7d520ba480eba24f8660979">More...</a><br /></td></tr>
 <tr class="separator:ab59603f6e7d520ba480eba24f8660979"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aa1a1ad62d965da0a268a7a3298a8e93b"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classStelMainScriptAPI.html#aa1a1ad62d965da0a268a7a3298a8e93b">moveToObject</a> (const QString &amp;name, float duration=1.)</td></tr>
-<tr class="memdesc:aa1a1ad62d965da0a268a7a3298a8e93b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Move the current viewing direction to some object.  <a href="classStelMainScriptAPI.html#aa1a1ad62d965da0a268a7a3298a8e93b">More...</a><br /></td></tr>
-<tr class="separator:aa1a1ad62d965da0a268a7a3298a8e93b"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a589ac48c07c4fecfd13a784d29499a8c"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classStelMainScriptAPI.html#a589ac48c07c4fecfd13a784d29499a8c">moveToSelectedObject</a> (float duration=1.)</td></tr>
-<tr class="memdesc:a589ac48c07c4fecfd13a784d29499a8c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Move the current viewing direction to selected object.  <a href="classStelMainScriptAPI.html#a589ac48c07c4fecfd13a784d29499a8c">More...</a><br /></td></tr>
-<tr class="separator:a589ac48c07c4fecfd13a784d29499a8c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abc81a6a75c61edd3e8222d837469e27b"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classStelMainScriptAPI.html#abc81a6a75c61edd3e8222d837469e27b">moveToObject</a> (const QString &amp;name, float duration=1.f, float shift=0.f)</td></tr>
+<tr class="memdesc:abc81a6a75c61edd3e8222d837469e27b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Move the current viewing direction to some object.  <a href="classStelMainScriptAPI.html#abc81a6a75c61edd3e8222d837469e27b">More...</a><br /></td></tr>
+<tr class="separator:abc81a6a75c61edd3e8222d837469e27b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac26baab3b8a9cc8f051ed73085760c98"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classStelMainScriptAPI.html#ac26baab3b8a9cc8f051ed73085760c98">moveToSelectedObject</a> (float duration=1.f, float shift=0.f)</td></tr>
+<tr class="memdesc:ac26baab3b8a9cc8f051ed73085760c98"><td class="mdescLeft">&#160;</td><td class="mdescRight">Move the current viewing direction to selected object.  <a href="classStelMainScriptAPI.html#ac26baab3b8a9cc8f051ed73085760c98">More...</a><br /></td></tr>
+<tr class="separator:ac26baab3b8a9cc8f051ed73085760c98"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a6f4f7cb803c989a9d14aeaf722e0a2fd"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classStelMainScriptAPI.html#a6f4f7cb803c989a9d14aeaf722e0a2fd">moveToAltAzi</a> (const QString &amp;alt, const QString &amp;azi, float duration=1.)</td></tr>
 <tr class="memdesc:a6f4f7cb803c989a9d14aeaf722e0a2fd"><td class="mdescLeft">&#160;</td><td class="mdescRight">move the current viewing direction to some specified altitude and azimuth.  <a href="classStelMainScriptAPI.html#a6f4f7cb803c989a9d14aeaf722e0a2fd">More...</a><br /></td></tr>
 <tr class="separator:a6f4f7cb803c989a9d14aeaf722e0a2fd"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -3230,8 +3230,8 @@ More complicated value types like lists are only indicated by their type name. Y
 
 </div>
 </div>
-<a id="aa1a1ad62d965da0a268a7a3298a8e93b"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aa1a1ad62d965da0a268a7a3298a8e93b">&#9670;&nbsp;</a></span>moveToObject</h2>
+<a id="abc81a6a75c61edd3e8222d837469e27b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abc81a6a75c61edd3e8222d837469e27b">&#9670;&nbsp;</a></span>moveToObject</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -3249,7 +3249,13 @@ More complicated value types like lists are only indicated by their type name. Y
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">float&#160;</td>
-          <td class="paramname"><em>duration</em> = <code>1.</code>&#160;</td>
+          <td class="paramname"><em>duration</em> = <code>1.f</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float&#160;</td>
+          <td class="paramname"><em>shift</em> = <code>0.f</code>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -3269,6 +3275,7 @@ More complicated value types like lists are only indicated by their type name. Y
   <table class="params">
     <tr><td class="paramname">name</td><td>is the English name of the object </td></tr>
     <tr><td class="paramname">duration</td><td>the duration of the movement in seconds </td></tr>
+    <tr><td class="paramname">shift</td><td>the shift of object from center of FOV in degrees (for domes) </td></tr>
   </table>
   </dd>
 </dl>
@@ -3379,8 +3386,8 @@ More complicated value types like lists are only indicated by their type name. Y
 
 </div>
 </div>
-<a id="a589ac48c07c4fecfd13a784d29499a8c"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a589ac48c07c4fecfd13a784d29499a8c">&#9670;&nbsp;</a></span>moveToSelectedObject</h2>
+<a id="ac26baab3b8a9cc8f051ed73085760c98"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac26baab3b8a9cc8f051ed73085760c98">&#9670;&nbsp;</a></span>moveToSelectedObject</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -3392,8 +3399,18 @@ More complicated value types like lists are only indicated by their type name. Y
           <td class="memname">static void StelMainScriptAPI::moveToSelectedObject </td>
           <td>(</td>
           <td class="paramtype">float&#160;</td>
-          <td class="paramname"><em>duration</em> = <code>1.</code></td><td>)</td>
+          <td class="paramname"><em>duration</em> = <code>1.f</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
           <td></td>
+          <td class="paramtype">float&#160;</td>
+          <td class="paramname"><em>shift</em> = <code>0.f</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
         </tr>
       </table>
   </td>
@@ -3407,6 +3424,7 @@ More complicated value types like lists are only indicated by their type name. Y
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">duration</td><td>the duration of the movement in seconds </td></tr>
+    <tr><td class="paramname">shift</td><td>the shift of object from center of FOV in degrees (for domes) </td></tr>
   </table>
   </dd>
 </dl>
@@ -5814,7 +5832,7 @@ See also <a class="el" href="classStelMainScriptAPI.html#ae5dc2cdfd5bd18b0634ec4
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Thu Jun 25 2026 00:02:15 for Stellarium by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1
+Generated on Mon Sep 28 2026 22:15:27 for Stellarium by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1
 </small></address>
 </body>
 </html>

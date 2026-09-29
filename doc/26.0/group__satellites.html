@@ -21,7 +21,7 @@
   <td id="projectlogo"><img alt="Logo" src="stellarium-logo.png"/></td>
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">Stellarium
-   &#160;<span id="projectnumber">26.2</span>
+   &#160;<span id="projectnumber">26.3</span>
    </div>
   </td>
  </tr>
@@ -2027,8 +2027,7 @@ double&#160;</td><td class="memItemRight" valign="bottom"><b>getInclination</b> 
 , <a class="el" href="classStelObject.html#acf243e7987796a3a44e409140ecea8c6add2bc965197f9ae3b3976f8494e60771">Script</a> = 0x02000000
 , <a class="el" href="classStelObject.html#acf243e7987796a3a44e409140ecea8c6ace2821b66545f2aa2a8a0a60debf238e">DebugAid</a> = 0x04000000
 , <br />
-&#160;&#160;<b>NoFont</b> = 0x08000000
-, <a class="el" href="classStelObject.html#acf243e7987796a3a44e409140ecea8c6aa651fd9d370fc652c77c663cd41a18ce">PlainText</a> = 0x10000000
+&#160;&#160;<a class="el" href="classStelObject.html#acf243e7987796a3a44e409140ecea8c6aa651fd9d370fc652c77c663cd41a18ce">PlainText</a> = 0x10000000
 <br />
  }</td></tr>
 <tr class="memdesc:acf243e7987796a3a44e409140ecea8c6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Used as named bitfield flags as specifiers to filter results of getInfoString.  <a href="classStelObject.html#acf243e7987796a3a44e409140ecea8c6">More...</a><br /></td></tr>
@@ -3688,8 +3687,11 @@ static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" hre
 <tr class="memdesc:aca05bdc4a86d90f144036613496b1d69"><td class="mdescLeft">&#160;</td><td class="mdescRight">Depending on file contents, calls either #parseTleFile or #parseCsvFile, forwarding the arguments to the callee. <br /></td></tr>
 <tr class="separator:aca05bdc4a86d90f144036613496b1d69"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad9a819033302a40af69179a85f3791ac"><td class="memItemLeft" align="right" valign="top">static QString&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__satellites.html#ad9a819033302a40af69179a85f3791ac">getSatIdFromLine2</a> (const QString &amp;line)</td></tr>
-<tr class="memdesc:ad9a819033302a40af69179a85f3791ac"><td class="mdescLeft">&#160;</td><td class="mdescRight">Insert a three line TLE into the hash array.  <a href="group__satellites.html#ad9a819033302a40af69179a85f3791ac">More...</a><br /></td></tr>
+<tr class="memdesc:ad9a819033302a40af69179a85f3791ac"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get a satellite (NORAD) identifier from second line from TLE.  <a href="group__satellites.html#ad9a819033302a40af69179a85f3791ac">More...</a><br /></td></tr>
 <tr class="separator:ad9a819033302a40af69179a85f3791ac"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a42093c0f179e1d245f65d18d44d4fabd"><td class="memItemLeft" align="right" valign="top">static QString&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__satellites.html#a42093c0f179e1d245f65d18d44d4fabd">decodeSatIDFromAlpha5</a> (QString &amp;satId)</td></tr>
+<tr class="memdesc:a42093c0f179e1d245f65d18d44d4fabd"><td class="mdescLeft">&#160;</td><td class="mdescRight">Decoding Alpha-5 Propagator.  <a href="group__satellites.html#a42093c0f179e1d245f65d18d44d4fabd">More...</a><br /></td></tr>
+<tr class="separator:a42093c0f179e1d245f65d18d44d4fabd"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr><td colspan="2"><h3>Properties</h3></td></tr>
 <tr class="memitem:ad631035d27e7509b34cd2e3d728ffd5a"><td class="memItemLeft" align="right" valign="top"><a id="ad631035d27e7509b34cd2e3d728ffd5a"></a>
 bool&#160;</td><td class="memItemRight" valign="bottom"><b>flagHintsVisible</b></td></tr>
@@ -3971,6 +3973,40 @@ Additional Inherited Members</h2></td></tr>
 
 <p>Emitted when custom filters of the plugin have been changed. </p>
 <p>Used to communicate with the configuration window. </p>
+
+</div>
+</div>
+<a id="a42093c0f179e1d245f65d18d44d4fabd"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a42093c0f179e1d245f65d18d44d4fabd">&#9670;&nbsp;</a></span>decodeSatIDFromAlpha5()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static QString Satellites::decodeSatIDFromAlpha5 </td>
+          <td>(</td>
+          <td class="paramtype">QString &amp;&#160;</td>
+          <td class="paramname"><em>satId</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Decoding Alpha-5 Propagator. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">satId</td><td>The identifier of satellite </td></tr>
+  </table>
+  </dd>
+</dl>
 
 </div>
 </div>
@@ -4295,7 +4331,7 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Insert a three line TLE into the hash array. </p>
+<p>Get a satellite (NORAD) identifier from second line from TLE. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramdir">[in]</td><td class="paramname">line</td><td>The second line from the TLE </td></tr>
@@ -6058,7 +6094,7 @@ Additional Inherited Members</h2></td></tr>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Thu Jun 25 2026 00:02:14 for Stellarium by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1
+Generated on Mon Sep 28 2026 22:15:27 for Stellarium by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1
 </small></address>
 </body>
 </html>

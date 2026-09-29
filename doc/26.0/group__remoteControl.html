@@ -21,7 +21,7 @@
   <td id="projectlogo"><img alt="Logo" src="stellarium-logo.png"/></td>
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">Stellarium
-   &#160;<span id="projectnumber">26.2</span>
+   &#160;<span id="projectnumber">26.3</span>
    </div>
   </td>
  </tr>
@@ -1359,6 +1359,18 @@ void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="grou
 void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__remoteControl.html#aa147f72eea6aa51caa6be9edb3a3e0f3">stopServer</a> ()</td></tr>
 <tr class="memdesc:aa147f72eea6aa51caa6be9edb3a3e0f3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Stops the HTTP server gracefully. <br /></td></tr>
 <tr class="separator:aa147f72eea6aa51caa6be9edb3a3e0f3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a859519729fbaa1a7cfe35e22a3c5f1b1"><td class="memItemLeft" align="right" valign="top"><a id="a859519729fbaa1a7cfe35e22a3c5f1b1"></a>
+int&#160;</td><td class="memItemRight" valign="bottom"><b>getMaxRequestSize</b> () const</td></tr>
+<tr class="separator:a859519729fbaa1a7cfe35e22a3c5f1b1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a822cedc08c5a1dd92a1cf2a2d74c4515"><td class="memItemLeft" align="right" valign="top"><a id="a822cedc08c5a1dd92a1cf2a2d74c4515"></a>
+int&#160;</td><td class="memItemRight" valign="bottom"><b>getMaxMultipartSize</b> () const</td></tr>
+<tr class="separator:a822cedc08c5a1dd92a1cf2a2d74c4515"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae216823581b2d51444ffccfe3c4098c7"><td class="memItemLeft" align="right" valign="top"><a id="ae216823581b2d51444ffccfe3c4098c7"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>setMaxRequestSize</b> (const int size)</td></tr>
+<tr class="separator:ae216823581b2d51444ffccfe3c4098c7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a89dc26701e157e928cd288710574338d"><td class="memItemLeft" align="right" valign="top"><a id="a89dc26701e157e928cd288710574338d"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>setMaxMultipartSize</b> (const int size)</td></tr>
+<tr class="separator:a89dc26701e157e928cd288710574338d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr><td colspan="2"><h3>Signals</h3></td></tr>
 <tr class="memitem:a5dcc52d9a308ce8197f3ac26a0d82b61"><td class="memItemLeft" align="right" valign="top"><a id="a5dcc52d9a308ce8197f3ac26a0d82b61"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><b>flagEnabledChanged</b> (bool val)</td></tr>
@@ -1381,6 +1393,12 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>passwordChanged</b> (
 <tr class="memitem:ab023a70ed37aab551e4eb06ff38d1382"><td class="memItemLeft" align="right" valign="top"><a id="ab023a70ed37aab551e4eb06ff38d1382"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><b>corsOriginChanged</b> (const QString &amp;val)</td></tr>
 <tr class="separator:ab023a70ed37aab551e4eb06ff38d1382"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad6a2275220958bbd5cb3751e2768e7f2"><td class="memItemLeft" align="right" valign="top"><a id="ad6a2275220958bbd5cb3751e2768e7f2"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>maxRequestSizeChanged</b> (int val)</td></tr>
+<tr class="separator:ad6a2275220958bbd5cb3751e2768e7f2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac6074e7d68fe1eee80663cab641a7936"><td class="memItemLeft" align="right" valign="top"><a id="ac6074e7d68fe1eee80663cab641a7936"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>maxMultipartSizeChanged</b> (int val)</td></tr>
+<tr class="separator:ac6074e7d68fe1eee80663cab641a7936"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr><td colspan="2"><h3>Public Member Functions</h3></td></tr>
 <tr class="memitem:a9c7adfe644dc9838ef12db7418b435b2"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__remoteControl.html#a9c7adfe644dc9838ef12db7418b435b2">init</a> () override</td></tr>
 <tr class="memdesc:a9c7adfe644dc9838ef12db7418b435b2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Initialize itself.  <a href="group__remoteControl.html#a9c7adfe644dc9838ef12db7418b435b2">More...</a><br /></td></tr>
@@ -1468,9 +1486,18 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="grou
 <tr class="memitem:a39cf7631f9ddf783a0f5b622db1c2183"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__remoteControl.html#a39cf7631f9ddf783a0f5b622db1c2183">usePassword</a></td></tr>
 <tr class="memdesc:a39cf7631f9ddf783a0f5b622db1c2183"><td class="mdescLeft">&#160;</td><td class="mdescRight">If true, the password set with <a class="el" href="group__remoteControl.html#a317c3bdb67f93ffb3a8895eabbd4d714" title="Sets the password that is optionally enabled with setFlagUsePassword().">setPassword()</a> is required for all requests.  <a href="group__remoteControl.html#a39cf7631f9ddf783a0f5b622db1c2183">More...</a><br /></td></tr>
 <tr class="separator:a39cf7631f9ddf783a0f5b622db1c2183"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2056834d40a5c077f6823d4f02e0cdb8"><td class="memItemLeft" align="right" valign="top"><a id="a2056834d40a5c077f6823d4f02e0cdb8"></a>
+int&#160;</td><td class="memItemRight" valign="bottom"><b>port</b></td></tr>
+<tr class="separator:a2056834d40a5c077f6823d4f02e0cdb8"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a943f8b91ba725954e966bcda86b6cbf9"><td class="memItemLeft" align="right" valign="top"><a id="a943f8b91ba725954e966bcda86b6cbf9"></a>
 bool&#160;</td><td class="memItemRight" valign="bottom"><b>enableCors</b></td></tr>
 <tr class="separator:a943f8b91ba725954e966bcda86b6cbf9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3641203f61f1234cd030e2efa8b73768"><td class="memItemLeft" align="right" valign="top"><a id="a3641203f61f1234cd030e2efa8b73768"></a>
+int&#160;</td><td class="memItemRight" valign="bottom"><b>maxRequestSize</b></td></tr>
+<tr class="separator:a3641203f61f1234cd030e2efa8b73768"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a403fa679a03f2a3e553356ca154efb89"><td class="memItemLeft" align="right" valign="top"><a id="a403fa679a03f2a3e553356ca154efb89"></a>
+int&#160;</td><td class="memItemRight" valign="bottom"><b>maxMultipartSize</b></td></tr>
+<tr class="separator:a403fa679a03f2a3e553356ca154efb89"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="inherited"></a>
 Additional Inherited Members</h2></td></tr>
@@ -2713,7 +2740,7 @@ static const Qt::ConnectionType&#160;</td><td class="memItemRight" valign="botto
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Thu Jun 25 2026 00:02:14 for Stellarium by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1
+Generated on Mon Sep 28 2026 22:15:27 for Stellarium by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1
 </small></address>
 </body>
 </html>

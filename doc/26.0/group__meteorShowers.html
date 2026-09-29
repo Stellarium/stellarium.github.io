@@ -21,7 +21,7 @@
   <td id="projectlogo"><img alt="Logo" src="stellarium-logo.png"/></td>
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">Stellarium
-   &#160;<span id="projectnumber">26.2</span>
+   &#160;<span id="projectnumber">26.3</span>
    </div>
   </td>
  </tr>
@@ -633,8 +633,7 @@ typedef QPair&lt; QString, int &gt;&#160;</td><td class="memItemRight" valign="b
 , <a class="el" href="classStelObject.html#acf243e7987796a3a44e409140ecea8c6add2bc965197f9ae3b3976f8494e60771">Script</a> = 0x02000000
 , <a class="el" href="classStelObject.html#acf243e7987796a3a44e409140ecea8c6ace2821b66545f2aa2a8a0a60debf238e">DebugAid</a> = 0x04000000
 , <br />
-&#160;&#160;<b>NoFont</b> = 0x08000000
-, <a class="el" href="classStelObject.html#acf243e7987796a3a44e409140ecea8c6aa651fd9d370fc652c77c663cd41a18ce">PlainText</a> = 0x10000000
+&#160;&#160;<a class="el" href="classStelObject.html#acf243e7987796a3a44e409140ecea8c6aa651fd9d370fc652c77c663cd41a18ce">PlainText</a> = 0x10000000
 <br />
  }</td></tr>
 <tr class="memdesc:acf243e7987796a3a44e409140ecea8c6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Used as named bitfield flags as specifiers to filter results of getInfoString.  <a href="classStelObject.html#acf243e7987796a3a44e409140ecea8c6">More...</a><br /></td></tr>
@@ -875,10 +874,6 @@ QString&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="g
 float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__meteorShowers.html#a930fb12a348c5a8960dd525436124696">getSelectPriority</a> (const <a class="el" href="classStelCore.html">StelCore</a> *) const override</td></tr>
 <tr class="memdesc:a930fb12a348c5a8960dd525436124696"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return a priority value which is used to discriminate objects by priority As for magnitudes, the lower is the higher priority. <br /></td></tr>
 <tr class="separator:a930fb12a348c5a8960dd525436124696"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ace5aed068358e279bdbc6e4778a3af3f"><td class="memItemLeft" align="right" valign="top"><a id="ace5aed068358e279bdbc6e4778a3af3f"></a>
-<a class="el" href="classVector3.html">Vec3f</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__meteorShowers.html#ace5aed068358e279bdbc6e4778a3af3f">getInfoColor</a> (void) const override</td></tr>
-<tr class="memdesc:ace5aed068358e279bdbc6e4778a3af3f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get a color used to display info about the object. <br /></td></tr>
-<tr class="separator:ace5aed068358e279bdbc6e4778a3af3f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pub_methods_classStelObject"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_classStelObject')"><img src="closed.png" alt="-"/>&#160;Public Member Functions inherited from <a class="el" href="classStelObject.html">StelObject</a></td></tr>
 <tr class="memitem:ad0775c8610cb47dc4cdac8bfb6136752 inherit pub_methods_classStelObject"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classSphericalRegionP.html">SphericalRegionP</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classStelObject.html#ad0775c8610cb47dc4cdac8bfb6136752">getRegion</a> () const override</td></tr>
 <tr class="memdesc:ad0775c8610cb47dc4cdac8bfb6136752 inherit pub_methods_classStelObject"><td class="mdescLeft">&#160;</td><td class="mdescRight">Default implementation of the getRegion method.  <a href="classStelObject.html#ad0775c8610cb47dc4cdac8bfb6136752">More...</a><br /></td></tr>
@@ -965,6 +960,10 @@ virtual float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" h
 <tr class="memitem:abb53a5d5b2b5bd0f124b25269627131f inherit pub_methods_classStelObject"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classStelObject.html#abb53a5d5b2b5bd0f124b25269627131f">getVMagnitudeWithExtinction</a> (const <a class="el" href="classStelCore.html">StelCore</a> *core, const float knownVMag=-1000.f, const float &amp;magOffset=0.f) const</td></tr>
 <tr class="memdesc:abb53a5d5b2b5bd0f124b25269627131f inherit pub_methods_classStelObject"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return object's apparent V magnitude as seen from observer including extinction.  <a href="classStelObject.html#abb53a5d5b2b5bd0f124b25269627131f">More...</a><br /></td></tr>
 <tr class="separator:abb53a5d5b2b5bd0f124b25269627131f inherit pub_methods_classStelObject"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a05768a80f663fac5389b4547b2994207 inherit pub_methods_classStelObject"><td class="memItemLeft" align="right" valign="top"><a id="a05768a80f663fac5389b4547b2994207"></a>
+virtual <a class="el" href="classVector3.html">Vec3f</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classStelObject.html#a05768a80f663fac5389b4547b2994207">getInfoColor</a> () const</td></tr>
+<tr class="memdesc:a05768a80f663fac5389b4547b2994207 inherit pub_methods_classStelObject"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get a color used to display info about the object. <br /></td></tr>
+<tr class="separator:a05768a80f663fac5389b4547b2994207 inherit pub_methods_classStelObject"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac53c60ca5d6527c6c2e3581f108b69f3 inherit pub_methods_classStelObject"><td class="memItemLeft" align="right" valign="top"><a id="ac53c60ca5d6527c6c2e3581f108b69f3"></a>
 virtual double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classStelObject.html#ac53c60ca5d6527c6c2e3581f108b69f3">getCloseViewFov</a> (const <a class="el" href="classStelCore.html">StelCore</a> *) const</td></tr>
 <tr class="memdesc:ac53c60ca5d6527c6c2e3581f108b69f3 inherit pub_methods_classStelObject"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return the best FOV in degree to use for a close view of the object. <br /></td></tr>
@@ -3451,7 +3450,7 @@ Additional Inherited Members</h2></td></tr>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Thu Jun 25 2026 00:02:14 for Stellarium by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1
+Generated on Mon Sep 28 2026 22:15:27 for Stellarium by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1
 </small></address>
 </body>
 </html>

@@ -21,7 +21,7 @@
   <td id="projectlogo"><img alt="Logo" src="stellarium-logo.png"/></td>
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">Stellarium
-   &#160;<span id="projectnumber">26.2</span>
+   &#160;<span id="projectnumber">26.3</span>
    </div>
   </td>
  </tr>
@@ -60,9 +60,9 @@ $(function() {
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:a7d3fc621c8cddb5089f062e50e6b248f"><td class="memItemLeft" align="right" valign="top"><a id="a7d3fc621c8cddb5089f062e50e6b248f"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><b>StelTextureParams</b> (bool qgenerateMipmaps=false, GLint afiltering=GL_LINEAR, GLint awrapMode=GL_CLAMP_TO_EDGE, bool qfilterMipmaps=false, int decimateBy=1)</td></tr>
-<tr class="separator:a7d3fc621c8cddb5089f062e50e6b248f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a004f27852d6c0c5f0009086c0094d10f"><td class="memItemLeft" align="right" valign="top"><a id="a004f27852d6c0c5f0009086c0094d10f"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><b>StelTextureParams</b> (bool qgenerateMipmaps=false, GLint afiltering=GL_LINEAR, GLint awrapMode=GL_CLAMP_TO_EDGE, bool qfilterMipmaps=false, int decimateBy=1, bool <a class="el" href="structStelTexture_1_1StelTextureParams.html#ae928c2c26da87f1487ce760ee74fdd82">allowHttp2</a>=true)</td></tr>
+<tr class="separator:a004f27852d6c0c5f0009086c0094d10f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-attribs"></a>
 Data Fields</h2></td></tr>
@@ -84,10 +84,30 @@ GLint&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="str
 <tr class="memitem:a6df71322085e3f18a3c7e0f929485e8a"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structStelTexture_1_1StelTextureParams.html#a6df71322085e3f18a3c7e0f929485e8a">decimation</a></td></tr>
 <tr class="memdesc:a6df71322085e3f18a3c7e0f929485e8a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Allow a reduction of the size of the texture image (useful for very limited hardware) The image size will be divided by this factor (e.g.  <a href="structStelTexture_1_1StelTextureParams.html#a6df71322085e3f18a3c7e0f929485e8a">More...</a><br /></td></tr>
 <tr class="separator:a6df71322085e3f18a3c7e0f929485e8a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae928c2c26da87f1487ce760ee74fdd82"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structStelTexture_1_1StelTextureParams.html#ae928c2c26da87f1487ce760ee74fdd82">allowHttp2</a></td></tr>
+<tr class="memdesc:ae928c2c26da87f1487ce760ee74fdd82"><td class="mdescLeft">&#160;</td><td class="mdescRight">Allow the use of HTTP/2 when loading this texture.  <a href="structStelTexture_1_1StelTextureParams.html#ae928c2c26da87f1487ce760ee74fdd82">More...</a><br /></td></tr>
+<tr class="separator:ae928c2c26da87f1487ce760ee74fdd82"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Contains the parameters defining how a texture is created. </p>
 </div><h2 class="groupheader">Field Documentation</h2>
+<a id="ae928c2c26da87f1487ce760ee74fdd82"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae928c2c26da87f1487ce760ee74fdd82">&#9670;&nbsp;</a></span>allowHttp2</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool StelTexture::StelTextureParams::allowHttp2</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Allow the use of HTTP/2 when loading this texture. </p>
+<p>If set to <code>false</code>, HTTP/1.1 will be used by Qt, limiting maximum concurrency of downloads to 6 and avoiding HTTP 420 error when we abort many downloads at once. The error is due to CVE-2023-44487, but our use case is when a HiPS is downloading many tiles that then go out of the viewport before the download is completed. </p>
+
+</div>
+</div>
 <a id="a6df71322085e3f18a3c7e0f929485e8a"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a6df71322085e3f18a3c7e0f929485e8a">&#9670;&nbsp;</a></span>decimation</h2>
 
@@ -125,7 +145,7 @@ GLint&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="str
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Thu Jun 25 2026 00:02:15 for Stellarium by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1
+Generated on Mon Sep 28 2026 22:15:28 for Stellarium by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1
 </small></address>
 </body>
 </html>

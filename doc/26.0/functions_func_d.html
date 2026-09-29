@@ -21,7 +21,7 @@
   <td id="projectlogo"><img alt="Logo" src="stellarium-logo.png"/></td>
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">Stellarium
-   &#160;<span id="projectnumber">26.2</span>
+   &#160;<span id="projectnumber">26.3</span>
    </div>
   </td>
  </tr>
@@ -124,6 +124,9 @@ $(function() {
 </li>
 <li>declination()
 : <a class="el" href="group__calendars.html#a4c3b0a19569ae05a54bfeb729a018b0e">Calendar</a>
+</li>
+<li>decodeSatIDFromAlpha5()
+: <a class="el" href="group__satellites.html#a42093c0f179e1d245f65d18d44d4fabd">Satellites</a>
 </li>
 <li>decreaseTimeSpeed()
 : <a class="el" href="classStelCore.html#a9f35e12f299dd5a9af557437692a2f6d">StelCore</a>
@@ -300,7 +303,7 @@ $(function() {
 , <a class="el" href="classHelloStelModule.html#a4d31edde5200d0e980a8bdce0913ce85">HelloStelModule</a>
 , <a class="el" href="classHighlightMgr.html#a4a5031dab2b3bd21a95d9a5e4ea8b8ac">HighlightMgr</a>
 , <a class="el" href="classHipsMgr.html#a617f29237ec0db5f2933177ed31a5068">HipsMgr</a>
-, <a class="el" href="classHipsSurvey.html#a3c98ea85f868b30c4583f48f6bccd74e">HipsSurvey</a>
+, <a class="el" href="classHipsSurvey.html#ad9d026712fcf6c4253a0b2c5a668fb31">HipsSurvey</a>
 , <a class="el" href="classLabelMgr.html#aa4677feba7d4f77d15240e787074d2d2">LabelMgr</a>
 , <a class="el" href="classLandscape.html#a93cd08d5c353ee3b2d77f6643fd6243f">Landscape</a>
 , <a class="el" href="classLandscapeFisheye.html#aee56182669f79d8f67b6ceec453d89ec">LandscapeFisheye</a>
@@ -321,6 +324,7 @@ $(function() {
 , <a class="el" href="classNebulaTextures.html#a4fdb59aef31814030d4bcda59837b333">NebulaTextures</a>
 , <a class="el" href="classNomenclatureMgr.html#aa6c72fdf051bfed6861aa3bac4e3d15a">NomenclatureMgr</a>
 , <a class="el" href="group__brightNovae.html#a6e5279bd64ecbe9adc355cd8e6addf0f">Novae</a>
+, <a class="el" href="group__objectVisibility.html#a3c1112aaff14152647e1a0550dba4d63">ObjectVisibility</a>
 , <a class="el" href="group__observability.html#abb2ec34ef4e786f7b4f200e019a56f72">Observability</a>
 , <a class="el" href="group__oculars.html#ad07b0ef1df977142f8c4200c3283eae8">Oculars</a>
 , <a class="el" href="classPlanes.html#ac8aaa36ea7822c8ab6ce9022527a1091">Planes</a>
@@ -332,7 +336,7 @@ $(function() {
 , <a class="el" href="group__satellites.html#a857c2a3b4d5f837cf3dd898c4e76690b">Satellites</a>
 , <a class="el" href="group__scenery3D.html#ab481e93a49e1a87ae55cbb1a57c63c59">Scenery3d</a>
 , <a class="el" href="classscm_1_1ScmConstellation.html#a7816b9f6ab89ce62a85ef84ad0a4c5a1">scm::ScmConstellation</a>
-, <a class="el" href="classscm_1_1ScmConstellationArtwork.html#a80443837746cbd97fce39f3b23f34c0b">scm::ScmConstellationArtwork</a>
+, <a class="el" href="classscm_1_1ScmConstellationArtwork.html#ae08e11bca4ae364f054ab45523d82585">scm::ScmConstellationArtwork</a>
 , <a class="el" href="classscm_1_1ScmSkyCulture.html#ae8418e0608d4443d76df6c529ef491b9">scm::ScmSkyCulture</a>
 , <a class="el" href="classScreenImage.html#abe7ca16120482c7d687e452ddcc6853a">ScreenImage</a>
 , <a class="el" href="classScreenImageMgr.html#afa3f1abf8f4ee45e02173ccc3c93a44a">ScreenImageMgr</a>
@@ -347,7 +351,7 @@ $(function() {
 , <a class="el" href="classStelApp.html#a457b344389ef41af2b06b411292301d5">StelApp</a>
 , <a class="el" href="classStelModule.html#a18fde2820af998395aea9e30bb1138b2">StelModule</a>
 , <a class="el" href="classStelMovementMgr.html#a95473c8db70df89ab1135b46ec1a4240">StelMovementMgr</a>
-, <a class="el" href="classStelOpenGLArray.html#a622909d61788046bfd7469948794a728">StelOpenGLArray</a>
+, <a class="el" href="classStelOpenGLArray.html#a466bda8cebe62838118d0932869a1d61">StelOpenGLArray</a>
 , <a class="el" href="classStelSkyImageTile.html#a0ae8a86c5bbd42814553c02f7861dbec">StelSkyImageTile</a>
 , <a class="el" href="classStelSkyLayer.html#a66532ab4ba74b819cdfe08f6e4d33c78">StelSkyLayer</a>
 , <a class="el" href="classStelSkyLayerMgr.html#a23c3bf7fadbed578b7d3d52ff7c51a84">StelSkyLayerMgr</a>
@@ -439,7 +443,7 @@ $(function() {
 : <a class="el" href="classStelPainter.html#a1abccc1bb022f27b5b20c5cffd24e7d6">StelPainter</a>
 </li>
 <li>drawSprite2dMode()
-: <a class="el" href="classStelPainter.html#a5b67ee9b5f4c7829a0e1fb650d0bcd44">StelPainter</a>
+: <a class="el" href="classStelPainter.html#a93788ae73fd167a4f36a56558f627917">StelPainter</a>
 </li>
 <li>drawSprite2dModeNoDeviceScale()
 : <a class="el" href="classStelPainter.html#ae7d55d93fc6bc5d527cf3fa3de3b4166">StelPainter</a>
@@ -492,7 +496,7 @@ $(function() {
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Thu Jun 25 2026 00:02:15 for Stellarium by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1
+Generated on Mon Sep 28 2026 22:15:28 for Stellarium by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1
 </small></address>
 </body>
 </html>

@@ -21,7 +21,7 @@
   <td id="projectlogo"><img alt="Logo" src="stellarium-logo.png"/></td>
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">Stellarium
-   &#160;<span id="projectnumber">26.2</span>
+   &#160;<span id="projectnumber">26.3</span>
    </div>
   </td>
  </tr>
@@ -141,6 +141,12 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><b>getFlagShowTz</b> () 
 <tr class="separator:adb04f51df1cbcf485bbb8ac8b6ffce1a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a6b4690e269a010fa052f0a09951b8e77"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classBottomStelBar.html#a6b4690e269a010fa052f0a09951b8e77">getGap</a> () const</td></tr>
 <tr class="separator:a6b4690e269a010fa052f0a09951b8e77"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa4dec531d2784619e277d4f766d7ac5a"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classBottomStelBar.html#aa4dec531d2784619e277d4f766d7ac5a">setBarAtTop</a> (bool b)</td></tr>
+<tr class="memdesc:aa4dec531d2784619e277d4f766d7ac5a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set whether the toolbar is at the top or the bottom of the screen.  <a href="classBottomStelBar.html#aa4dec531d2784619e277d4f766d7ac5a">More...</a><br /></td></tr>
+<tr class="separator:aa4dec531d2784619e277d4f766d7ac5a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af40c20d788512e3af3a76461bf7c20b7"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classBottomStelBar.html#af40c20d788512e3af3a76461bf7c20b7">getBarAtTop</a> () const</td></tr>
+<tr class="memdesc:af40c20d788512e3af3a76461bf7c20b7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get whether the toolbar is at the top or the bottom of the screen.  <a href="classBottomStelBar.html#af40c20d788512e3af3a76461bf7c20b7">More...</a><br /></td></tr>
+<tr class="separator:af40c20d788512e3af3a76461bf7c20b7"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aef03a543c8f09f4669cb37497012bd69"><td class="memItemLeft" align="right" valign="top"><a id="aef03a543c8f09f4669cb37497012bd69"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classBottomStelBar.html#aef03a543c8f09f4669cb37497012bd69">enableTopoCentricUpdate</a> (bool enable)</td></tr>
 <tr class="memdesc:aef03a543c8f09f4669cb37497012bd69"><td class="mdescLeft">&#160;</td><td class="mdescRight">enable connection to <a class="el" href="classStelCore.html#aca162600e2a3c1c72470f43017fd8b6a" title="This signal indicates a switch in use of topocentric coordinates.">StelCore::flagUseTopocentricCoordinatesChanged()</a> Recommended in operations that temporarily switch off and back on. <br /></td></tr>
@@ -191,6 +197,34 @@ void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="clas
 
 </div>
 </div>
+<a id="af40c20d788512e3af3a76461bf7c20b7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af40c20d788512e3af3a76461bf7c20b7">&#9670;&nbsp;</a></span>getBarAtTop()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool BottomStelBar::getBarAtTop </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Get whether the toolbar is at the top or the bottom of the screen. </p>
+<p>This is used to decide whether the buttons are above or below the text row. </p>
+
+</div>
+</div>
 <a id="adb04f51df1cbcf485bbb8ac8b6ffce1a"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#adb04f51df1cbcf485bbb8ac8b6ffce1a">&#9670;&nbsp;</a></span>getButtonsBoundingRect()</h2>
 
@@ -235,10 +269,31 @@ void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="clas
 
 </div>
 </div>
+<a id="aa4dec531d2784619e277d4f766d7ac5a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa4dec531d2784619e277d4f766d7ac5a">&#9670;&nbsp;</a></span>setBarAtTop()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void BottomStelBar::setBarAtTop </td>
+          <td>(</td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>b</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Set whether the toolbar is at the top or the bottom of the screen. </p>
+<p>This is used to decide whether the buttons are above or below the text row. </p>
+
+</div>
+</div>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Thu Jun 25 2026 00:02:14 for Stellarium by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1
+Generated on Mon Sep 28 2026 22:15:27 for Stellarium by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1
 </small></address>
 </body>
 </html>

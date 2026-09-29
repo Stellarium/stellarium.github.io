@@ -21,7 +21,7 @@
   <td id="projectlogo"><img alt="Logo" src="stellarium-logo.png"/></td>
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">Stellarium
-   &#160;<span id="projectnumber">26.2</span>
+   &#160;<span id="projectnumber">26.3</span>
    </div>
   </td>
  </tr>
@@ -138,7 +138,9 @@ $(function() {
 </li>
 </ul>
 </div>
-<div class="textblock"><p>The <a class="el" href="group__remoteControl.html">RemoteControl plugin</a> provides an HTTP-based interface to Stellarium, implemented on the server-side through implementations of <a class="el" href="group__remoteControl.html#classAbstractAPIService" title="Abstract base class for all RemoteControlServiceInterface implementations which are provided by the R...">AbstractAPIService</a>. The <a class="el" href="group__remoteControl.html#classAPIController" title="This class handles the API-specific requests and dispatches them to the correct RemoteControlServiceI...">APIController</a> maintains the list of registered services, and dispatches HTTP requests to the right service. The API is accessible under the server path <code>/api/</code>. For example, if you have the server running on the default port of 8090, you can access the operation <a class="el" href="remoteControlApi.html#rcObjectServiceFind">find</a> of the <a class="el" href="group__remoteControl.html#classObjectService" title="Provides operations to look up objects in the Stellarium catalogs.">ObjectService</a> to look for objects with <code>moon</code> in their name by accessing </p><div class="fragment"><div class="line">http:<span class="comment">//localhost:8090/api/objects/find?str=moon</span></div>
+<div class="textblock"><p>The <a class="el" href="group__remoteControl.html">RemoteControl plugin</a> provides an HTTP-based interface to Stellarium, implemented on the server-side through implementations of <a class="el" href="group__remoteControl.html#classAbstractAPIService" title="Abstract base class for all RemoteControlServiceInterface implementations which are provided by the R...">AbstractAPIService</a>. The <a class="el" href="group__remoteControl.html#classAPIController" title="This class handles the API-specific requests and dispatches them to the correct RemoteControlServiceI...">APIController</a> maintains the list of registered services, and dispatches HTTP requests to the right service. The API is accessible under the server path <code>/api/</code>.</p>
+<p>The API of a running <a class="el" href="group__remoteControl.html#classRemoteControl" title="Main class of the RemoteControl plug-in, implementing the StelModule interface.">RemoteControl</a> plugin webserver instance of Stellarium can be explored interactively using a <a href="https://swagger.io/open-source/swagger-ui/">Swagger UI</a> at <a href="http://localhost:8090/docs/index.html">http://localhost:8090/docs/index.html</a>.</p>
+<p>To actually use the API in a web-based application, for example, if you have the server running on the default port of 8090, you can access the operation <a class="el" href="remoteControlApi.html#rcObjectServiceFind">find</a> of the <a class="el" href="group__remoteControl.html#classObjectService" title="Provides operations to look up objects in the Stellarium catalogs.">ObjectService</a> to look for objects with <code>moon</code> in their name by accessing </p><div class="fragment"><div class="line">http:<span class="comment">//localhost:8090/api/objects/find?str=moon</span></div>
 <div class="line">|____________________|___|_______|____|_______|</div>
 <div class="line">          |            |     |      |     |------ Standard HTTP query <span class="keywordtype">string</span> <span class="keywordflow">for</span> parameters (key=value)</div>
 <div class="line">          |            |     |      |------------ find operation (defined by service)</div>
@@ -347,13 +349,14 @@ list</h4>
 info</h4>
 <p>Parameters: <code>id (String) [html (any type)] </code><br  />
 Returns information about the script identified by <code>id</code>. If the optional parameter <code>html</code> is present (its value is ignored), the info is formatted using <a class="el" href="classStelScriptMgr.html#a98b64eeddb5015e9e4979a7603839cc9" title="Returns a HTML description of the specified script.">StelScriptMgr::getHtmlDescription</a> and suitable for inclusion into an <code>iframe</code> element, otherwise this operation returns a JSON object of format: </p><div class="fragment"><div class="line">{</div>
-<div class="line">    id, //the script ID</div>
-<div class="line">    name,   //the english name of the script</div>
-<div class="line">    name_localized, //the localized name of the script</div>
-<div class="line">    description,    //the english description of the script</div>
-<div class="line">    description_localized,  //the localized description of the script</div>
-<div class="line">    author, //the author(s) of the script</div>
-<div class="line">    license //the license of the script</div>
+<div class="line">    id,                    // script ID</div>
+<div class="line">    name,                  // english name of the script</div>
+<div class="line">    name_localized,        // localized name of the script</div>
+<div class="line">    description,           // english description of the script</div>
+<div class="line">    description_localized, // localized description of the script</div>
+<div class="line">    author,                // author(s) of the script</div>
+<div class="line">    license,               // license of the script</div>
+<div class="line">    version                // version of the script</div>
 <div class="line">}</div>
 </div><!-- fragment --><h4><a class="anchor" id="rcScriptServiceStatus"></a>
 status</h4>
@@ -410,12 +413,13 @@ list</h4>
 <div class="line">    //translated StelAction group name</div>
 <div class="line">    &lt;groupName&gt; : [</div>
 <div class="line">        //all StelActions in the group &lt;groupName&gt;</div>
-<div class="line">        &lt;actionName&gt; : {</div>
+<div class="line">        {</div>
 <div class="line">                id, //the ID of the action</div>
 <div class="line">                isCheckable,    //true if the action represents a boolean value</div>
 <div class="line">                isChecked,  //if &quot;isCheckable&quot; is true, shows the current boolean state</div>
 <div class="line">                text    //the translated description of the action</div>
-<div class="line">        }</div>
+<div class="line">        }, </div>
+<div class="line">        ...</div>
 <div class="line">    ]</div>
 <div class="line">}</div>
 </div><!-- fragment --><h3><a class="anchor" id="rcStelActionServicePOST"></a>
@@ -424,7 +428,7 @@ POST operations</h3>
 <h4><a class="anchor" id="rcStelActionServiceDo"></a>
 do</h4>
 <p>Parameters: <code>id (String)</code><br  />
-Triggers or toggles the <a class="el" href="classStelAction.html" title="Wrapper around an argumentless QObject slot or a bool Q_PROPERTY with WRITE method,...">StelAction</a> specified by <code>id</code>. If it was a boolean action, returns the new state of the action (strings "true"/"false").</p>
+Triggers or toggles the <a class="el" href="classStelAction.html" title="Wrapper around an argumentless QObject slot or a bool Q_PROPERTY with WRITE method,...">StelAction</a> specified by <code>id</code>. If it was a boolean action, returns the new state of the action (strings "true"/"false"), else "ok". Special-case behavior for actionQuit_Global / actionShow_Remote_Control: these trigger asynchronously and the response body becomes "error: Stellarium or remote control closing!"</p>
 <h2><a class="anchor" id="rcStelPropertyService"></a>
 StelProperty operations (/api/stelproperty/)</h2>
 <h3><a class="anchor" id="rcStelPropertyServiceGET"></a>
@@ -434,11 +438,13 @@ GET operations</h3>
 list</h4>
 <p>Lists all registered StelProperties, in the format </p><div class="fragment"><div class="line">{</div>
 <div class="line">    &lt;propId&gt; : {</div>
-<div class="line">        value, //the current value of the StelProperty</div>
-<div class="line">        variantType, //the type string of the &quot;value&quot;, as determined by QVariant::typeName</div>
-<div class="line">        typeString, //the type string of the StelProperty, as determined by QMetaProperty::typeName (may not be equal to &quot;variantType&quot;)</div>
-<div class="line">        typeEnum, //the enum value of the type of the StelProperty, as determined by StelProperty::getType</div>
-<div class="line">    }</div>
+<div class="line">        value,       // current value of the StelProperty</div>
+<div class="line">        variantType, // type string of the &quot;value&quot;, as determined by QVariant::typeName</div>
+<div class="line">        typeString,  // type string of the StelProperty, as determined by QMetaProperty::typeName (may not be equal to &quot;variantType&quot;)</div>
+<div class="line">        typeEnum,    // numeric QMetaType/QMetaProperty type value returned by StelProperty::getType() (Qt5: QMetaProperty::type() / Qt6: QMetaProperty::typeId()).</div>
+<div class="line">        canNotify,   // should be true</div>
+<div class="line">        isWritable   // should be true almost everywhere</div>
+<div class="line">     }</div>
 <div class="line">}</div>
 </div><!-- fragment --> <dl class="section note"><dt>Note</dt><dd>The generic type conversions are done by QJsonValue::fromVariant</dd></dl>
 <h3><a class="anchor" id="rcStelPropertyServicePOST"></a>
@@ -458,15 +464,16 @@ list</h4>
 <p>Returns the list of all stored location IDs (keys of <a class="el" href="classStelLocationMgr.html#a2abc18f3b1db9f1c6cc2dae6a1820107" title="Returns a map of all loaded locations. The key is the location ID, suitable for a list view.">StelLocationMgr::getAllMap</a>) as JSON string array</p>
 <h4><a class="anchor" id="rcLocationServiceRegionlist"></a>
 regionlist</h4>
-<p>Returns the list of all known regions (<a class="el" href="classStelLocationMgr.html#ae5bb48ef0f059a4857d6b25e12dc2617" title="return a QStringList of region names by planet (return all list of regions if planet name is empty)">StelLocationMgr::getRegionNames</a>), as a JSON array of objects of format </p><div class="fragment"><div class="line">{</div>
-<div class="line">    name, <span class="comment">//the english country name</span></div>
-<div class="line">    name_i18n <span class="comment">//the localized country name (current language)</span></div>
+<p>Parameters: <code>[planet (String)]</code><br  />
+ Returns the list of all known regions (optionally restricted to one <code>planet</code>) (<a class="el" href="classStelLocationMgr.html#ae5bb48ef0f059a4857d6b25e12dc2617" title="return a QStringList of region names by planet (return all list of regions if planet name is empty)">StelLocationMgr::getRegionNames</a>), as a JSON array of objects of format </p><div class="fragment"><div class="line">{</div>
+<div class="line">    name,     <span class="comment">// the english region name</span></div>
+<div class="line">    name_i18n <span class="comment">// the localized region name (current language)</span></div>
 <div class="line">}</div>
 </div><!-- fragment --><h4><a class="anchor" id="rcLocationServicePlanetlist"></a>
 planetlist</h4>
-<p>Returns the list of all solar system planet names (<a class="el" href="classSolarSystem.html#a1b142643098b71ca20f2b0509d2187bd" title="Get the list of all the planet english names.">SolarSystem::getAllPlanetEnglishNames</a>), as a JSON array of objects of format </p><div class="fragment"><div class="line">{</div>
-<div class="line">    name, <span class="comment">//the english planet</span></div>
-<div class="line">    name_i18n <span class="comment">//the localized planet name (current language)</span></div>
+<p>Returns the list of all solar system planet names as a JSON array of objects of format </p><div class="fragment"><div class="line">{</div>
+<div class="line">    name,     <span class="comment">// english planet name</span></div>
+<div class="line">    name_i18n <span class="comment">// localized planet name (current language)</span></div>
 <div class="line">}</div>
 </div><!-- fragment --><h4><a class="anchor" id="rcLocationServicePlanetimage"></a>
 planetimage</h4>
@@ -532,7 +539,7 @@ projectiondescription</h4>
 </div><!-- PageDoc -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Thu Jun 25 2026 00:02:14 for Stellarium by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1
+Generated on Mon Sep 28 2026 22:15:26 for Stellarium by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1
 </small></address>
 </body>
 </html>

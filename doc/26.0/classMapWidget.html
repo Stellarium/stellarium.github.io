@@ -21,7 +21,7 @@
   <td id="projectlogo"><img alt="Logo" src="stellarium-logo.png"/></td>
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">Stellarium
-   &#160;<span id="projectnumber">26.2</span>
+   &#160;<span id="projectnumber">26.3</span>
    </div>
   </td>
  </tr>
@@ -69,6 +69,9 @@ Signals</h2></td></tr>
 void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMapWidget.html#aaa33f689eac34fd965cc96447a0de2ae">positionChanged</a> (double longitude, double latitude, const QColor &amp;color)</td></tr>
 <tr class="memdesc:aaa33f689eac34fd965cc96447a0de2ae"><td class="mdescLeft">&#160;</td><td class="mdescRight">Signal emitted when we click on the map. It also delivers the color value at the clicked point. <br /></td></tr>
 <tr class="separator:aaa33f689eac34fd965cc96447a0de2ae"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afe4d0bd4d673f41d224d46aa727e7212"><td class="memItemLeft" align="right" valign="top"><a id="afe4d0bd4d673f41d224d46aa727e7212"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>mapViewChanged</b> (double centerLongitude, double centerLatitude, double zoom)</td></tr>
+<tr class="separator:afe4d0bd4d673f41d224d46aa727e7212"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
@@ -88,6 +91,12 @@ void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="clas
 <tr class="memitem:a83a9be7d223a26204251c5aa854e7a44"><td class="memItemLeft" align="right" valign="top"><a id="a83a9be7d223a26204251c5aa854e7a44"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><b>setMap</b> (const QPixmap &amp;map)</td></tr>
 <tr class="separator:a83a9be7d223a26204251c5aa854e7a44"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad77d5a5a690c6f23de1924b738531e04"><td class="memItemLeft" align="right" valign="top"><a id="ad77d5a5a690c6f23de1924b738531e04"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>getMapView</b> (double &amp;centerLongitude, double &amp;centerLatitude, double &amp;zoom) const</td></tr>
+<tr class="separator:ad77d5a5a690c6f23de1924b738531e04"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2a69226cbc89a041a811348d30aacbd0"><td class="memItemLeft" align="right" valign="top"><a id="a2a69226cbc89a041a811348d30aacbd0"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>setMapView</b> (double centerLongitude, double centerLatitude, double zoom)</td></tr>
+<tr class="separator:a2a69226cbc89a041a811348d30aacbd0"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-methods"></a>
 Protected Member Functions</h2></td></tr>
@@ -109,6 +118,12 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>paintEvent</b> (QPain
 <tr class="memitem:ab592d95fedf75d119f24d735cee48731"><td class="memItemLeft" align="right" valign="top"><a id="ab592d95fedf75d119f24d735cee48731"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><b>resizeEvent</b> (QResizeEvent *event) override</td></tr>
 <tr class="separator:ab592d95fedf75d119f24d735cee48731"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad26965f8f068c104971edbe384f93e8c"><td class="memItemLeft" align="right" valign="top"><a id="ad26965f8f068c104971edbe384f93e8c"></a>
+int&#160;</td><td class="memItemRight" valign="bottom"><b>canvasWidth</b> () const</td></tr>
+<tr class="separator:ad26965f8f068c104971edbe384f93e8c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac520731818085a0b269f433c50a5d4bb"><td class="memItemLeft" align="right" valign="top"><a id="ac520731818085a0b269f433c50a5d4bb"></a>
+int&#160;</td><td class="memItemRight" valign="bottom"><b>canvasHeight</b> () const</td></tr>
+<tr class="separator:ac520731818085a0b269f433c50a5d4bb"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a27195a92fbb2ae2111664c71bf2dbce9"><td class="memItemLeft" align="right" valign="top"><a id="a27195a92fbb2ae2111664c71bf2dbce9"></a>
 <a class="el" href="classMapWidget.html#structMapWidget_1_1LonLat">LonLat</a>&#160;</td><td class="memItemRight" valign="bottom"><b>mapPointToLonLat</b> (const QPointF &amp;mapPoint) const</td></tr>
 <tr class="separator:a27195a92fbb2ae2111664c71bf2dbce9"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -262,7 +277,7 @@ y</td>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Thu Jun 25 2026 00:02:14 for Stellarium by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1
+Generated on Mon Sep 28 2026 22:15:27 for Stellarium by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1
 </small></address>
 </body>
 </html>
