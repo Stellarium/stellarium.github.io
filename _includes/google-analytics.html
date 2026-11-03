@@ -1,7 +1,22 @@
+  <!-- Google Analytics 4 with Consent Mode v2. In the EEA, the UK and
+       Switzerland the tag runs with consent denied: no cookies, cookieless
+       pings only (Google models the rest); no consent banner on this site.
+       Elsewhere analytics is on. Advertising storage is denied everywhere. -->
   <script async src="https://www.googletagmanager.com/gtag/js?id={{ site.google_analytics }}"></script>
   <script>
     window.dataLayer = window.dataLayer || [];
     function gtag(){dataLayer.push(arguments);}
+    gtag('consent', 'default', {
+      ad_storage: 'denied', ad_user_data: 'denied', ad_personalization: 'denied',
+      analytics_storage: 'granted'
+    });
+    gtag('consent', 'default', {
+      ad_storage: 'denied', ad_user_data: 'denied', ad_personalization: 'denied',
+      analytics_storage: 'denied',
+      region: ['AT','BE','BG','HR','CY','CZ','DK','EE','FI','FR','DE','GR','HU','IE',
+               'IT','LV','LT','LU','MT','NL','PL','PT','RO','SK','SI','ES','SE',
+               'IS','LI','NO','GB','CH']
+    });
     gtag('js', new Date());
-    gtag('config', '{{ site.google_analytics }}', { 'anonymize_ip': true });
+    gtag('config', '{{ site.google_analytics }}');
   </script>
